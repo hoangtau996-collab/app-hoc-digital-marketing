@@ -7,6 +7,7 @@ import LiveNewsFeed from './components/LiveNewsFeed';
 import ManagerTools from './components/ManagerTools';
 import CertificateModal from './components/CertificateModal';
 import AIStrategyAdvisor from './components/AIStrategyAdvisor';
+import MobileBottomNav from './components/MobileBottomNav';
 
 import { COURSE_MODULES } from './data/courseData';
 import { INITIAL_NEWS_ITEMS } from './data/newsData';
@@ -72,7 +73,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#070d0a] text-slate-100 flex flex-col font-sans selection:bg-emerald-500 selection:text-slate-950">
+    <div className="min-h-screen bg-[#070d0a] text-slate-100 flex flex-col font-sans selection:bg-emerald-500 selection:text-slate-950 pb-16 lg:pb-0">
       
       {/* Top Header Bar */}
       <Header
@@ -87,10 +88,10 @@ export default function App() {
       />
 
       {/* Main Container */}
-      <main className="flex-1 max-w-7xl w-full mx-auto px-4 lg:px-8 py-8">
-        <div className="flex flex-col lg:flex-row gap-8">
+      <main className="flex-1 max-w-7xl w-full mx-auto px-3 sm:px-6 lg:px-8 py-4 sm:py-8">
+        <div className="flex flex-col lg:flex-row gap-4 sm:gap-8">
           
-          {/* Left Sidebar */}
+          {/* Left Sidebar / Mobile Touch Module Selector */}
           <Sidebar
             modules={COURSE_MODULES}
             selectedModuleId={selectedModuleId}
@@ -105,7 +106,7 @@ export default function App() {
             
             {activeTab === 'course' && (
               selectedModule ? (
-                <div className="space-y-8">
+                <div className="space-y-6 sm:space-y-8">
                   <LessonViewer
                     module={selectedModule}
                     onBack={() => setSelectedModuleId(null)}
@@ -152,6 +153,15 @@ export default function App() {
         onClose={() => setIsCertOpen(false)}
         passedCount={completedModules.length}
         totalModules={COURSE_MODULES.length}
+      />
+
+      {/* Mobile Bottom Navigation Bar */}
+      <MobileBottomNav
+        activeTab={activeTab}
+        setActiveTab={setActiveTab}
+        passedCount={completedModules.length}
+        totalModules={COURSE_MODULES.length}
+        onOpenCertificate={() => setIsCertOpen(true)}
       />
 
       {/* Footer */}
