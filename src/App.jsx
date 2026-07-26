@@ -449,6 +449,9 @@ export default function App() {
         passedCount={completedModules.length}
         totalModules={COURSE_MODULES.length}
         onOpenCertificate={() => setIsCertOpen(true)}
+        currentUser={currentUser}
+        onOpenAuthModal={() => setIsAuthOpen(true)}
+        onOpenProfileModal={() => setIsProfileOpen(true)}
       />
 
       {/* Footer */}

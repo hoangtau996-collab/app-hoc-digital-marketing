@@ -181,17 +181,17 @@ export default function Header({
               className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-emerald-950 border border-emerald-700 hover:border-emerald-500 text-emerald-300 text-xs font-bold transition shrink-0 cursor-pointer"
             >
               <div className="w-5 h-5 rounded-full bg-emerald-500 text-slate-950 flex items-center justify-center font-black text-[10px]">
-                {currentUser.name.charAt(0)}
+                {currentUser.name ? currentUser.name.charAt(0) : 'U'}
               </div>
-              <span className="truncate max-w-[100px]">{currentUser.name}</span>
+              <span className="truncate max-w-[120px]">{currentUser.name || 'Học Viên'}</span>
             </button>
           ) : (
             <button
               onClick={onOpenAuthModal}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition shrink-0 cursor-pointer shadow-md shadow-emerald-950"
+              className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-gradient-to-r from-emerald-600 to-teal-600 hover:brightness-110 text-white text-xs font-bold transition shrink-0 cursor-pointer shadow-md"
             >
               <User className="w-4 h-4" />
-              <span>Đăng nhập</span>
+              <span>Đăng Ký / Đăng Nhập</span>
             </button>
           )}
         </div>
@@ -214,14 +214,15 @@ export default function Header({
               onClick={onOpenProfileModal}
               className="w-8 h-8 rounded-lg bg-emerald-950 border border-emerald-600 flex items-center justify-center text-emerald-400 font-bold text-xs"
             >
-              {currentUser.name.charAt(0)}
+              {currentUser.name ? currentUser.name.charAt(0) : 'U'}
             </button>
           ) : (
             <button
               onClick={onOpenAuthModal}
-              className="px-2 py-1 rounded-lg bg-emerald-600 text-white text-xs font-bold flex items-center gap-1"
+              className="px-2.5 py-1 rounded-lg bg-emerald-600 text-white text-xs font-bold flex items-center gap-1"
             >
               <User className="w-3.5 h-3.5" />
+              <span>Đăng Nhập</span>
             </button>
           )}
 
