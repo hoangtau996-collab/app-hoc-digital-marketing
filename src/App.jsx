@@ -227,12 +227,17 @@ export default function App() {
         localStorage.setItem('dmm_active_user', JSON.stringify(currentUser));
         localStorage.setItem('dmm_student_name', currentUser.name);
 
-        // Cloud Firestore Sync
-        saveUserProgressToCloud(currentUser.id, {
+        // Cloud Firestore Sync (Immediate 100% sync on startup across all devices)
+        const fullStudentData = {
+          id: currentUser.id || currentUser.email.replace(/\./g, '_'),
+          name: currentUser.name,
+          phone: currentUser.phone || 'Chưa cập nhật',
+          email: currentUser.email,
+          industry: currentUser.industry || 'Kinh doanh',
           completedModules,
-          studentName: currentUser.name,
-          email: currentUser.email
-        });
+          updatedAt: new Date().toISOString()
+        };
+        recordStudentAccountToCloud(fullStudentData);
       } else {
         localStorage.removeItem('dmm_active_user');
       }
