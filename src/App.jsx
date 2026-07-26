@@ -135,6 +135,8 @@ export default function App() {
 
   const selectedModule = COURSE_MODULES.find(m => m.id === selectedModuleId);
 
+  const [migrationNotice, setMigrationNotice] = useState('');
+
   const handlePassModule = (moduleId) => {
     if (!completedModules.includes(moduleId)) {
       setCompletedModules(prev => [...prev, moduleId]);
@@ -142,6 +144,39 @@ export default function App() {
   };
 
   const handleLoginSuccess = (user) => {
+    try {
+      // 1. Read guest/trial progress from localStorage
+      const guestSaved = localStorage.getItem('dmm_completed_modules');
+      const guestModules = guestSaved ? JSON.parse(guestSaved) : [];
+
+      // 2. Read user progress if already exists
+      const userKey = getProgressStorageKey(user);
+      const userSaved = localStorage.getItem(userKey);
+      const userModules = userSaved ? JSON.parse(userSaved) : [];
+
+      // 3. Merge guest progress into user progress
+      const mergedModules = Array.from(new Set([...userModules, ...guestModules]));
+
+      // 4. Save merged progress
+      localStorage.setItem(userKey, JSON.stringify(mergedModules));
+      setCompletedModules(mergedModules);
+
+      // 5. Sync to Cloud Firestore
+      saveUserProgressToCloud(user.id, {
+        completedModules: mergedModules,
+        studentName: user.name,
+        email: user.email
+      });
+
+      // 6. Display migration notice if guest progress was migrated
+      if (guestModules.length > 0) {
+        setMigrationNotice(`🎉 Đã tự động chuyển tiếp ${guestModules.length} chuyên đề bạn đã học thử vào tài khoản mới!`);
+        setTimeout(() => setMigrationNotice(''), 6000);
+      }
+    } catch (e) {
+      console.error("Error migrating guest progress", e);
+    }
+
     setCurrentUser(user);
   };
 
@@ -194,6 +229,21 @@ export default function App() {
         onOpenAuthModal={() => setIsAuthOpen(true)}
         onOpenProfileModal={() => setIsProfileOpen(true)}
       />
+
+      {/* Guest Progress Migration Toast Banner */}
+      {migrationNotice && (
+        <div className="max-w-7xl w-full mx-auto px-3 sm:px-6 lg:px-8 pt-4">
+          <div className="p-4 rounded-2xl bg-gradient-to-r from-emerald-950 via-[#0d221a] to-teal-950 border border-emerald-500/60 text-emerald-300 text-xs font-bold flex items-center justify-between shadow-xl animate-bounce">
+            <span>{migrationNotice}</span>
+            <button 
+              onClick={() => setMigrationNotice('')}
+              className="text-slate-400 hover:text-white px-2 py-1"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* Main Container */}
       <main className="flex-1 max-w-7xl w-full mx-auto px-3 sm:px-6 lg:px-8 py-4 sm:py-8">
