@@ -249,6 +249,20 @@ export default function LessonViewer({
 }) {
   const [activeSubTab, setActiveSubTab] = useState('theory'); // 'theory', 'quiz'
 
+  if (!module) {
+    return (
+      <div className="p-8 text-center glass-panel rounded-2xl border border-emerald-900/40 text-slate-300 space-y-4">
+        <p className="text-sm font-bold text-emerald-400">Không tìm thấy dữ liệu bài học này.</p>
+        <button 
+          onClick={onBack}
+          className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 text-slate-950 font-bold text-xs"
+        >
+          Quay Lại Danh Sách Chuyên Đề
+        </button>
+      </div>
+    );
+  }
+
   return (
     <div className="space-y-6">
       
