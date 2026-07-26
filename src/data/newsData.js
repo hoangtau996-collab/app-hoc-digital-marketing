@@ -6,6 +6,7 @@ export const INITIAL_NEWS_ITEMS = [
     title: "Meta ra mắt thuật toán AI Andromeda 2.0: Tự động hóa 90% ngân sách nhóm quảng cáo",
     date: "Vừa xong (Live Update)",
     isHot: true,
+    coverImage: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1000&auto=format&fit=crop",
     summary: "Meta nâng cấp hệ thống Advantage+ Shopping Campaigns với khả năng tự phân bổ thầu real-time dựa trên hành vi đa ứng dụng (Instagram Reels + Messenger).",
     impact: "Trưởng phòng cần dừng cấu trúc nhóm Ads thủ công rườm rà, tập trung 80% thời gian vào sản xuất 15-20 góc Creative (Broad Targeting).",
     actionChecklist: [
@@ -21,6 +22,7 @@ export const INITIAL_NEWS_ITEMS = [
     title: "TikTok Shop thay đổi thuật toán đề xuất GMV Max: Ưu tiên Shop có chỉ số CSAT > 4.5",
     date: "10 phút trước",
     isHot: true,
+    coverImage: "https://images.unsplash.com/photo-1611605698335-8b1569810432?q=80&w=1000&auto=format&fit=crop",
     summary: "TikTok vừa thông báo điều chỉnh chỉ số phân phối Livestream: Các shop có tỷ lệ hủy đơn cao hoặc đánh giá dưới 4.2 sao sẽ bị bóp 50% lượng view tự nhiên.",
     impact: "Chỉ số vận hành (Fulfillment) ảnh hưởng trực tiếp đến traffic quảng cáo. Trưởng phòng Marketing phải siết chặt phối hợp với bộ phận Kho & CSKH.",
     actionChecklist: [
@@ -36,6 +38,7 @@ export const INITIAL_NEWS_ITEMS = [
     title: "Google AI Overviews cập nhật tại Việt Nam: Kết quả tìm kiếm tự nhiên giảm 35% lượt nhấp",
     date: "30 phút trước",
     isHot: false,
+    coverImage: "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?q=80&w=1000&auto=format&fit=crop",
     summary: "Google bắt đầu hiển thị câu trả lời tổng hợp bằng AI ngay đầu trang tìm kiếm. Người dùng đọc xong câu trả lời mà không cần bấm vào trang web (Zero-Click Searches).",
     impact: "SEO truyền thống kéo traffic thông tin thuần túy bị suy giảm. Cần dịch chuyển sang GEO (Generative Engine Optimization) và tối ưu từ khóa mua hàng (High-intent keywords).",
     actionChecklist: [
@@ -51,6 +54,7 @@ export const INITIAL_NEWS_ITEMS = [
     title: "OpenAI & Adobe hợp tác ra mắt công cụ dựng Video Ads chuẩn 4K trong 60 giây",
     date: "1 giờ trước",
     isHot: true,
+    coverImage: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop",
     summary: "Công cụ AI mới cho phép biến bài viết landing page thành 10 phiên bản Video quảng cáo ngắn khác nhau với giọng đọc cá nhân hóa và hiệu ứng điện ảnh.",
     impact: "Tốc độ sản xuất Creative tăng gấp 10 lần. Trưởng phòng có thể A/B testing 50 mẫu quảng cáo mỗi tuần với chi phí gần như bằng 0.",
     actionChecklist: [
@@ -66,6 +70,7 @@ export const INITIAL_NEWS_ITEMS = [
     title: "Meta áp dụng quy định mới về chính sách bảo mật dữ liệu quảng cáo Châu Á",
     date: "3 giờ trước",
     isHot: false,
+    coverImage: "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1000&auto=format&fit=crop",
     summary: "Bắt buộc các tài khoản doanh nghiệp (Business Manager) xác thực danh tính hai lớp và khai báo nguồn dữ liệu khách hàng tải lên custom audience.",
     impact: "Tránh nguy cơ bị khóa tài khoản quảng cáo hàng loạt trong đợt quét định kỳ.",
     actionChecklist: [

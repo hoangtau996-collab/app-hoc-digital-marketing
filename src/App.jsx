@@ -178,6 +178,13 @@ export default function App() {
     return () => unsubscribe();
   }, []);
 
+  const [adminCertStudentName, setAdminCertStudentName] = useState("");
+
+  const handleAdminIssueCertificate = (studentName) => {
+    setAdminCertStudentName(studentName);
+    setIsCertOpen(true);
+  };
+
   // Persistent user progress in localStorage scoped to currentUser
   const getProgressStorageKey = (user) => user ? `dmm_completed_modules_${user.id}` : 'dmm_completed_modules';
 
@@ -487,9 +494,14 @@ export default function App() {
       {/* Certificate Modal */}
       <CertificateModal
         isOpen={isCertOpen}
-        onClose={() => setIsCertOpen(false)}
+        onClose={() => {
+          setIsCertOpen(false);
+          setAdminCertStudentName("");
+        }}
         passedCount={completedModules.length}
         totalModules={COURSE_MODULES.length}
+        adminOverride={Boolean(adminCertStudentName)}
+        customStudentName={adminCertStudentName}
       />
 
       {/* Auth Login / Register Modal */}
@@ -525,6 +537,7 @@ export default function App() {
         onClose={() => setIsAdminOpen(false)}
         currentUser={currentUser}
         trafficStats={trafficStats}
+        onIssueCertificateForStudent={handleAdminIssueCertificate}
         t={t}
       />
 

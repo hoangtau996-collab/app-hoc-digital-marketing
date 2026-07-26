@@ -29,6 +29,7 @@ export default function AdminDashboardModal({
   onClose,
   currentUser,
   trafficStats,
+  onIssueCertificateForStudent,
   t
 }) {
   const [students, setStudents] = useState([]);
@@ -400,13 +401,24 @@ export default function AdminDashboardModal({
                       </td>
                       <td className="p-3 font-mono text-slate-400 text-[11px]">{std.createdAt || '2026-07-26'}</td>
                       <td className="p-3 text-center">
-                        <button
-                          onClick={() => handleDeleteStudent(std.id, std.email)}
-                          className="p-1.5 rounded-lg bg-rose-950/60 border border-rose-800 text-rose-300 hover:bg-rose-900 transition cursor-pointer"
-                          title="Xóa tài khoản học viên"
-                        >
-                          <Trash2 className="w-3.5 h-3.5" />
-                        </button>
+                        <div className="flex items-center justify-center gap-1.5">
+                          <button
+                            onClick={() => onIssueCertificateForStudent && onIssueCertificateForStudent(std.name)}
+                            className="px-2.5 py-1 rounded-lg bg-gradient-to-r from-amber-500/20 to-emerald-500/20 border border-amber-400/60 text-amber-300 hover:brightness-125 text-[10px] font-black flex items-center gap-1 transition cursor-pointer shadow-md"
+                            title="Tạo & Xuất Bằng Chứng Nhận chính thức cho Học viên này"
+                          >
+                            <Award className="w-3.5 h-3.5 text-amber-400" />
+                            <span>Cấp Bằng</span>
+                          </button>
+
+                          <button
+                            onClick={() => handleDeleteStudent(std.id, std.email)}
+                            className="p-1.5 rounded-lg bg-rose-950/60 border border-rose-800 text-rose-300 hover:bg-rose-900 transition cursor-pointer"
+                            title="Xóa tài khoản học viên"
+                          >
+                            <Trash2 className="w-3.5 h-3.5" />
+                          </button>
+                        </div>
                       </td>
                     </tr>
                   );

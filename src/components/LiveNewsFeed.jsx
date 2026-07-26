@@ -115,6 +115,22 @@ export default function LiveNewsFeed({ newsList, onAddNewNews }) {
               {news.title}
             </h3>
 
+            {/* News Cover Image Illustration */}
+            {news.coverImage && (
+              <div className="w-full h-44 sm:h-56 rounded-xl overflow-hidden border border-emerald-900/40 relative group">
+                <img 
+                  src={news.coverImage} 
+                  alt={news.title} 
+                  className="w-full h-full object-cover group-hover:scale-105 transition duration-500" 
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#070d0a] via-transparent to-transparent opacity-60" />
+                <span className="absolute bottom-2 right-2 text-[10px] font-bold px-2 py-0.5 rounded bg-slate-950/80 text-emerald-300 border border-emerald-800/60 backdrop-blur-sm">
+                  📷 Ảnh gốc minh họa bài đăng
+                </span>
+              </div>
+            )}
+
             {/* Summary */}
             <p className="text-xs md:text-sm text-slate-300 leading-relaxed bg-[#0b1411]/60 p-4 rounded-xl border border-emerald-950">
               {news.summary}

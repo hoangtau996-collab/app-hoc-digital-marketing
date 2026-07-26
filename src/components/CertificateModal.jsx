@@ -18,9 +18,12 @@ export default function CertificateModal({
   isOpen, 
   onClose, 
   passedCount, 
-  totalModules 
+  totalModules,
+  adminOverride = false,
+  customStudentName = ""
 }) {
   const [studentName, setStudentName] = useState(() => {
+    if (customStudentName) return customStudentName.toUpperCase();
     try {
       return localStorage.getItem('dmm_student_name') || "NGUYỄN VĂN A";
     } catch (e) {
@@ -31,8 +34,16 @@ export default function CertificateModal({
   const [isExporting, setIsExporting] = useState(false);
 
   useEffect(() => {
+    if (customStudentName) {
+      setStudentName(customStudentName.toUpperCase());
+    }
+  }, [customStudentName]);
+
+  useEffect(() => {
     try {
-      localStorage.setItem('dmm_student_name', studentName);
+      if (studentName) {
+        localStorage.setItem('dmm_student_name', studentName);
+      }
     } catch (e) {
       console.error("Error saving student name", e);
     }
@@ -40,7 +51,7 @@ export default function CertificateModal({
 
   if (!isOpen) return null;
 
-  const isEligible = passedCount === totalModules && totalModules > 0;
+  const isEligible = adminOverride || (passedCount === totalModules && totalModules > 0);
   const progressPercent = Math.round((passedCount / totalModules) * 100);
   const currentDate = new Date().toLocaleDateString('vi-VN');
 
