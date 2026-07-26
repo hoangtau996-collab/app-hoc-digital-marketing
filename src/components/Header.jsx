@@ -29,8 +29,21 @@ export default function Header({
       <div className="max-w-7xl mx-auto flex items-center justify-between gap-2 sm:gap-4">
         
         {/* Logo & Course Title */}
-        <div className="flex items-center gap-2.5 cursor-pointer shrink-0" onClick={() => setActiveTab('course')}>
-          <PMarcomLogo className="w-9 h-9 sm:w-10 sm:h-10" showText={true} />
+        <div className="flex items-center gap-3 cursor-pointer shrink-0" onClick={() => setActiveTab('course')}>
+          <PMarcomLogo className="w-10 h-10 sm:w-11 sm:h-11" showText={false} />
+          <div>
+            <div className="flex items-center gap-1.5">
+              <span className="text-[10px] sm:text-xs font-extrabold px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 border border-emerald-700/60 uppercase tracking-wider">
+                HỌC VIỆN P MARCOM
+              </span>
+              <span className="hidden sm:flex items-center gap-1 text-[10px] text-amber-400 font-medium">
+                <Flame className="w-3 h-3 animate-pulse" /> Live Feed
+              </span>
+            </div>
+            <h1 className="text-sm sm:text-base md:text-lg font-black text-white tracking-wide truncate max-w-[200px] sm:max-w-none mt-0.5">
+              HỌC VIỆN P MARCOM
+            </h1>
+          </div>
         </div>
 
         {/* Desktop Live Ticker Banner */}

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PMarcomLogo from './PMarcomLogo';
 import { 
   CheckCircle2, 
   PlayCircle, 
@@ -45,12 +46,12 @@ export default function CourseOverview({
         <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none" />
         
         <div className="relative z-10 max-w-3xl space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-950/80 border border-emerald-700/60 text-emerald-400 text-xs font-semibold">
-            <span className="text-base">♟</span> CHƯƠNG TRÌNH ĐÀO TẠO THỰC CHUYÊN SÂU
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-950/80 border border-emerald-700/60 text-emerald-400 text-xs font-bold uppercase tracking-wider">
+            <PMarcomLogo className="w-5 h-5" showText={false} /> HỌC VIỆN P MARCOM • CHƯƠNG TRÌNH ĐÀO TẠO THỰC CHUYÊN SÂU
           </div>
 
           <h1 className="text-3xl md:text-5xl font-black text-white leading-tight tracking-tight">
-            KHÓA ĐÀO TẠO <br />
+            HỌC VIỆN P MARCOM <br />
             <span className="text-gradient-emerald">TRƯỞNG PHÒNG DIGITAL MARKETING</span>
           </h1>
 
