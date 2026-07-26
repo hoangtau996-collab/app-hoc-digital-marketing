@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PMarcomLogo from './PMarcomLogo';
 import { 
   Award, 
   Flame, 
@@ -29,22 +30,7 @@ export default function Header({
         
         {/* Logo & Course Title */}
         <div className="flex items-center gap-2.5 cursor-pointer shrink-0" onClick={() => setActiveTab('course')}>
-          <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-700 flex items-center justify-center shadow-lg shadow-emerald-950/50 border border-emerald-400/30">
-            <span className="text-lg sm:text-xl font-black text-slate-950">♟</span>
-          </div>
-          <div>
-            <div className="flex items-center gap-1.5">
-              <span className="text-[10px] sm:text-xs font-bold px-1.5 py-0.5 rounded bg-emerald-950 text-emerald-400 border border-emerald-800/60">
-                E-LEARNING MANAGER
-              </span>
-              <span className="hidden sm:flex items-center gap-1 text-[10px] text-amber-400 font-medium">
-                <Flame className="w-3 h-3 animate-pulse" /> Live Feed
-              </span>
-            </div>
-            <h1 className="text-xs sm:text-sm md:text-base font-bold text-white tracking-wide truncate max-w-[160px] sm:max-w-none">
-              TRƯỞNG PHÒNG DIGITAL MARKETING
-            </h1>
-          </div>
+          <PMarcomLogo className="w-9 h-9 sm:w-10 sm:h-10" showText={true} />
         </div>
 
         {/* Desktop Live Ticker Banner */}

@@ -171,7 +171,7 @@ Trưởng phòng Digital Marketing thông minh không chọn một trong hai mà
           "Chạy quảng cáo ép khách hàng mua hàng ngay tại trang landing page sơ sài",
           "Tạo nội dung Inbound nhưng giấu kín không cho ai truy cập"
         ],
-        correct: 1,
+        correct: 0,
         explanation: "Dùng Outbound Ads giúp phân phối nội dung Inbound đến đúng người nhanh hơn gấp 100 lần so với việc chờ đợi tự nhiên, từ đó kích hoạt bánh đà tăng trưởng."
       }
     ]

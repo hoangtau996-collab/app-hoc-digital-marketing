@@ -232,9 +232,11 @@ export default function LessonViewer({
       ) : (
         /* Quiz Tab */
         <QuizComponent 
+          key={module.id}
           module={module}
           onPassModule={onPassModule}
           isCompleted={isCompleted}
+          onGoToTheory={() => setActiveSubTab('theory')}
         />
       )}
 
