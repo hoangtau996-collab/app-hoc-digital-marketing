@@ -18,7 +18,8 @@ import {
   LogIn, 
   ShieldCheck, 
   AlertCircle,
-  CheckCircle2
+  CheckCircle2,
+  Home
 } from 'lucide-react';
 
 const INDUSTRY_OPTIONS = [
@@ -38,7 +39,8 @@ const INDUSTRY_OPTIONS = [
 export default function AuthModal({ 
   isOpen, 
   onClose, 
-  onLoginSuccess 
+  onLoginSuccess,
+  onReturnHome
 }) {
   const [mode, setMode] = useState('register'); // 'register', 'login'
   const [fullName, setFullName] = useState('');
@@ -229,8 +231,12 @@ export default function AuthModal({
         
         {/* Close Button */}
         <button
-          onClick={onClose}
+          onClick={() => {
+            if (onReturnHome) onReturnHome();
+            onClose();
+          }}
           className="absolute top-4 right-4 w-8 h-8 rounded-full bg-slate-900 border border-emerald-900 text-slate-400 hover:text-white flex items-center justify-center transition cursor-pointer"
+          title="Đóng & Trở về trang chủ"
         >
           <X className="w-4 h-4" />
         </button>
@@ -413,6 +419,21 @@ export default function AuthModal({
             </button>
           </div>
         )}
+
+        {/* Return Home Secondary Action Button */}
+        <div className="pt-2 border-t border-emerald-900/30 flex flex-col items-center gap-2">
+          <button
+            type="button"
+            onClick={() => {
+              if (onReturnHome) onReturnHome();
+              onClose();
+            }}
+            className="w-full py-2.5 rounded-xl bg-slate-800/80 hover:bg-slate-700 text-slate-200 font-bold text-xs transition cursor-pointer flex items-center justify-center gap-2 border border-slate-700 shadow-sm"
+          >
+            <Home className="w-4 h-4 text-emerald-400" />
+            <span>Trở Về Trang Chủ (Xem Tổng Quan)</span>
+          </button>
+        </div>
 
       </div>
     </div>

@@ -294,6 +294,34 @@ html.light select {
   border-color: #cbd5e1 !important;
 }
 
+/* High Contrast Toast Banner Rules */
+.app-toast-banner {
+  background-color: #0f291e !important;
+  border: 1.5px solid #10b981 !important;
+  color: #a7f3d0 !important;
+}
+
+.app-toast-banner span,
+.app-toast-banner p,
+.app-toast-banner div {
+  color: #a7f3d0 !important;
+  font-weight: 800 !important;
+}
+
+html.light .app-toast-banner {
+  background-color: #fffbeb !important;
+  border: 2px solid #d97706 !important;
+  color: #78350f !important;
+  box-shadow: 0 10px 25px -5px rgba(217, 119, 6, 0.25) !important;
+}
+
+html.light .app-toast-banner span,
+html.light .app-toast-banner p,
+html.light .app-toast-banner div {
+  color: #78350f !important;
+  font-weight: 900 !important;
+}
+
 html.light input::placeholder,
 html.light textarea::placeholder {
   color: #64748b !important;

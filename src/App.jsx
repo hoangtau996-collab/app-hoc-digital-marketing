@@ -361,13 +361,13 @@ export default function App() {
       {/* Guest Progress / Auth Protection Toast Banner */}
       {migrationNotice && (
         <div className="max-w-7xl w-full mx-auto px-3 sm:px-6 lg:px-8 pt-4">
-          <div className="p-3.5 sm:p-4 rounded-2xl bg-amber-400 text-slate-950 border-2 border-amber-300 text-xs sm:text-sm font-extrabold flex items-center justify-between shadow-2xl animate-bounce">
-            <span className="flex items-center gap-2 text-slate-950 font-black">
+          <div className="app-toast-banner p-3.5 sm:p-4 rounded-2xl text-xs sm:text-sm font-extrabold flex items-center justify-between shadow-2xl animate-bounce">
+            <span className="flex items-center gap-2">
               {migrationNotice}
             </span>
             <button 
               onClick={() => setMigrationNotice('')}
-              className="bg-slate-950 text-white hover:bg-slate-800 px-3 py-1 rounded-xl text-xs font-bold transition cursor-pointer shrink-0 ml-2"
+              className="bg-amber-500 hover:bg-amber-400 text-slate-950 px-3 py-1 rounded-xl text-xs font-black transition cursor-pointer shrink-0 ml-2"
             >
               ✕ Đóng
             </button>
@@ -453,6 +453,10 @@ export default function App() {
         isOpen={isAuthOpen}
         onClose={() => setIsAuthOpen(false)}
         onLoginSuccess={handleLoginSuccess}
+        onReturnHome={() => {
+          setActiveTab('course');
+          setSelectedModuleId(null);
+        }}
       />
 
       {/* User Profile & Backup Sync Modal */}
