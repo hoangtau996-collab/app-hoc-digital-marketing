@@ -11,6 +11,14 @@ import MobileBottomNav from './components/MobileBottomNav';
 import AuthModal from './components/AuthModal';
 import UserProfileModal from './components/UserProfileModal';
 
+import { 
+  auth, 
+  onAuthStateChanged, 
+  saveUserProgressToCloud, 
+  getUserProgressFromCloud,
+  signOut
+} from './firebase';
+
 import { COURSE_MODULES } from './data/courseData';
 import { INITIAL_NEWS_ITEMS } from './data/newsData';
 
@@ -31,6 +39,28 @@ export default function App() {
       return null;
     }
   });
+
+  // Listen to Firebase Auth state
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, async (user) => {
+      if (user) {
+        const studentUser = {
+          id: user.uid,
+          email: user.email,
+          name: user.displayName || user.email.split('@')[0].toUpperCase(),
+          createdAt: new Date().toLocaleDateString('vi-VN')
+        };
+        setCurrentUser(studentUser);
+
+        // Fetch cloud progress from Cloud Firestore
+        const cloudData = await getUserProgressFromCloud(user.uid);
+        if (cloudData && Array.isArray(cloudData.completedModules)) {
+          setCompletedModules(cloudData.completedModules);
+        }
+      }
+    });
+    return () => unsubscribe();
+  }, []);
 
   // Persistent user progress in localStorage scoped to currentUser
   const getProgressStorageKey = (user) => user ? `dmm_completed_modules_${user.id}` : 'dmm_completed_modules';
@@ -57,15 +87,24 @@ export default function App() {
     }
   });
 
-  // Re-load completedModules whenever currentUser changes
+  // Re-load completedModules whenever currentUser changes & sync to Cloud
   useEffect(() => {
     const key = getProgressStorageKey(currentUser);
     try {
       const saved = localStorage.getItem(key);
-      setCompletedModules(saved ? JSON.parse(saved) : []);
+      if (saved) {
+        setCompletedModules(JSON.parse(saved));
+      }
       if (currentUser) {
         localStorage.setItem('dmm_active_user', JSON.stringify(currentUser));
         localStorage.setItem('dmm_student_name', currentUser.name);
+
+        // Cloud Firestore Sync
+        saveUserProgressToCloud(currentUser.id, {
+          completedModules,
+          studentName: currentUser.name,
+          email: currentUser.email
+        });
       } else {
         localStorage.removeItem('dmm_active_user');
       }
@@ -78,6 +117,13 @@ export default function App() {
     const key = getProgressStorageKey(currentUser);
     try {
       localStorage.setItem(key, JSON.stringify(completedModules));
+      if (currentUser) {
+        saveUserProgressToCloud(currentUser.id, {
+          completedModules,
+          studentName: currentUser.name,
+          email: currentUser.email
+        });
+      }
     } catch (e) {}
   }, [completedModules, currentUser]);
 
@@ -99,7 +145,10 @@ export default function App() {
     setCurrentUser(user);
   };
 
-  const handleLogout = () => {
+  const handleLogout = async () => {
+    try {
+      await signOut(auth);
+    } catch (e) {}
     setCurrentUser(null);
     setIsProfileOpen(false);
   };

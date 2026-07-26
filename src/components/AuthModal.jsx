@@ -1,6 +1,13 @@
 import React, { useState } from 'react';
 import PMarcomLogo from './PMarcomLogo';
 import { 
+  auth, 
+  signInWithEmailAndPassword, 
+  createUserWithEmailAndPassword,
+  updateProfile,
+  saveUserProgressToCloud
+} from '../firebase';
+import { 
   X, 
   User, 
   Lock, 
@@ -8,7 +15,6 @@ import {
   UserPlus, 
   LogIn, 
   ShieldCheck, 
-  Sparkles,
   AlertCircle,
   CheckCircle2
 } from 'lucide-react';
@@ -24,16 +30,16 @@ export default function AuthModal({
   const [fullName, setFullName] = useState('');
   const [errorMsg, setErrorMsg] = useState('');
   const [successMsg, setSuccessMsg] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
   if (!isOpen) return null;
 
-  // Helper to fetch user database from localStorage
+  // Helper to fetch user database from localStorage as local cache
   const getUsersDB = () => {
     try {
       const saved = localStorage.getItem('dmm_users_db');
       if (saved) return JSON.parse(saved);
     } catch (e) {}
-    // Seed default demo student
     return [
       {
         id: 'user-demo-01',
@@ -45,73 +51,134 @@ export default function AuthModal({
     ];
   };
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
     setErrorMsg('');
     setSuccessMsg('');
+    setIsLoading(true);
 
     if (!email || !password) {
       setErrorMsg('Vui lòng nhập đầy đủ Email và Mật khẩu.');
+      setIsLoading(false);
       return;
     }
 
-    const users = getUsersDB();
-    const foundUser = users.find(u => u.email.toLowerCase() === email.trim().toLowerCase() && u.password === password);
+    try {
+      // 1. Try Firebase Cloud Authentication
+      const userCredential = await signInWithEmailAndPassword(auth, email.trim(), password);
+      const fbUser = userCredential.user;
 
-    if (foundUser) {
-      setSuccessMsg('Đăng nhập thành công! Đang tải dữ liệu học viên...');
+      const studentUser = {
+        id: fbUser.uid,
+        email: fbUser.email,
+        name: fbUser.displayName || fullName || email.split('@')[0].toUpperCase(),
+        createdAt: new Date().toLocaleDateString('vi-VN')
+      };
+
+      setSuccessMsg('🟢 Đăng nhập thành công qua Firebase Cloud!');
       setTimeout(() => {
-        onLoginSuccess(foundUser);
+        onLoginSuccess(studentUser);
         onClose();
       }, 500);
-    } else {
-      setErrorMsg('Email hoặc mật khẩu không chính xác. Hãy thử tài khoản mẫu hocvien@pmarcom.edu.vn / 123');
+    } catch (firebaseErr) {
+      console.warn("Firebase Auth Error, trying local DB fallback:", firebaseErr.message);
+
+      // 2. Fallback to local accounts
+      const users = getUsersDB();
+      const foundUser = users.find(u => u.email.toLowerCase() === email.trim().toLowerCase() && u.password === password);
+
+      if (foundUser) {
+        setSuccessMsg('🟢 Đăng nhập thành công!');
+        setTimeout(() => {
+          onLoginSuccess(foundUser);
+          onClose();
+        }, 500);
+      } else {
+        setErrorMsg('Email hoặc mật khẩu không chính xác. Thử tài khoản hocvien@pmarcom.edu.vn / 123');
+      }
+    } finally {
+      setIsLoading(false);
     }
   };
 
-  const handleRegister = (e) => {
+  const handleRegister = async (e) => {
     e.preventDefault();
     setErrorMsg('');
     setSuccessMsg('');
+    setIsLoading(true);
 
     if (!fullName || !email || !password) {
       setErrorMsg('Vui lòng điền đầy đủ Họ tên, Email và Mật khẩu.');
+      setIsLoading(false);
       return;
     }
 
-    if (password.length < 3) {
-      setErrorMsg('Mật khẩu phải chứa ít nhất 3 ký tự.');
+    if (password.length < 6) {
+      setErrorMsg('Mật khẩu bảo mật phải từ 6 ký tự trở lên.');
+      setIsLoading(false);
       return;
     }
 
-    const users = getUsersDB();
-    const existing = users.find(u => u.email.toLowerCase() === email.trim().toLowerCase());
-
-    if (existing) {
-      setErrorMsg('Email này đã được đăng ký. Vui lòng sử dụng Email khác hoặc chuyển sang Đăng nhập.');
-      return;
-    }
-
-    const newUser = {
-      id: `user-${Date.now()}`,
-      email: email.trim(),
-      password: password,
-      name: fullName.trim().toUpperCase(),
-      createdAt: new Date().toLocaleDateString('vi-VN')
-    };
-
-    const updatedUsers = [...users, newUser];
     try {
-      localStorage.setItem('dmm_users_db', JSON.stringify(updatedUsers));
-    } catch (err) {
-      console.error("Error saving new user", err);
-    }
+      // 1. Register via Firebase Cloud Auth
+      const userCredential = await createUserWithEmailAndPassword(auth, email.trim(), password);
+      const fbUser = userCredential.user;
 
-    setSuccessMsg('Tạo tài khoản học viên P MARCOM thành công! Đang đăng nhập...');
-    setTimeout(() => {
-      onLoginSuccess(newUser);
-      onClose();
-    }, 600);
+      // Set display name in Firebase Profile
+      await updateProfile(fbUser, { displayName: fullName.trim().toUpperCase() });
+
+      const studentUser = {
+        id: fbUser.uid,
+        email: fbUser.email,
+        name: fullName.trim().toUpperCase(),
+        createdAt: new Date().toLocaleDateString('vi-VN')
+      };
+
+      // Save initial student profile to Cloud Firestore
+      await saveUserProgressToCloud(fbUser.uid, {
+        name: fullName.trim().toUpperCase(),
+        email: fbUser.email,
+        createdAt: new Date().toISOString()
+      });
+
+      setSuccessMsg('🎉 Đăng ký tài khoản Đám mây Firebase thành công!');
+      setTimeout(() => {
+        onLoginSuccess(studentUser);
+        onClose();
+      }, 600);
+    } catch (firebaseErr) {
+      console.warn("Firebase Register Error, falling back to local storage:", firebaseErr.message);
+
+      // Fallback local registration if offline or demo key
+      const users = getUsersDB();
+      const existing = users.find(u => u.email.toLowerCase() === email.trim().toLowerCase());
+
+      if (existing) {
+        setErrorMsg('Email này đã được đăng ký. Vui lòng chọn Đăng nhập.');
+        setIsLoading(false);
+        return;
+      }
+
+      const newUser = {
+        id: `user-${Date.now()}`,
+        email: email.trim(),
+        password: password,
+        name: fullName.trim().toUpperCase(),
+        createdAt: new Date().toLocaleDateString('vi-VN')
+      };
+
+      try {
+        localStorage.setItem('dmm_users_db', JSON.stringify([...users, newUser]));
+      } catch (e) {}
+
+      setSuccessMsg('Tạo tài khoản học viên P MARCOM thành công!');
+      setTimeout(() => {
+        onLoginSuccess(newUser);
+        onClose();
+      }, 600);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const fillQuickDemo = () => {
