@@ -279,70 +279,130 @@ export function listenToAllStudentsFromCloud(callback) {
   }
 }
 
-/**
- * Record Real Web Traffic Visit in Cloud Firestore & Local Persistence
- * Starts from baseline 500 today, then accumulates real visits.
- */
-export async function recordRealTrafficVisit() {
-  const trafficDocRef = doc(db, 'analytics', 'traffic_v2_today');
-  
-  // Starting baseline: 500 + real cumulative visits
-  const baseCreationTraffic = 500;
-  let localTotal = 1;
-  try {
-    const stored = parseInt(localStorage.getItem('dmm_real_traffic_v2_total') || '0', 10);
-    localTotal = stored + 1;
-    localStorage.setItem('dmm_real_traffic_v2_total', localTotal.toString());
-  } catch (e) {}
+/* ============================================================
+   THỐNG KÊ LƯỢT TRUY CẬP WEB
 
+   Công thức:  Tổng hiển thị = 100 (mốc khởi điểm) + tổng lượt cộng dồn theo ngày
+
+   "1 lượt truy cập" = 1 khách ghé thăm trong 1 ngày.
+   KHÔNG cộng thêm khi khách bấm F5 hay chuyển qua lại giữa các chuyên đề —
+   nếu đếm theo mỗi lần tải trang thì con số sẽ phồng lên vô nghĩa và không
+   dùng để xem tỉ lệ khách ghé thăm được.
+   ============================================================ */
+
+export const TRAFFIC_BASELINE = 100;
+
+const TRAFFIC_DOC = 'traffic_daily_v3';
+const LS_TRAFFIC_TOTAL = 'dmm_traffic_total_v3';
+const LS_TRAFFIC_LAST_DATE = 'dmm_traffic_last_date_v3';
+
+/**
+ * Chốt ngày theo giờ Việt Nam (UTC+7, không có quy ước giờ mùa hè) để mốc
+ * sang ngày trùng với ngày làm việc thực tế, không lệch theo múi giờ máy khách.
+ */
+export function getVietnamDateKey(now = Date.now()) {
+  return new Date(now + 7 * 60 * 60 * 1000).toISOString().slice(0, 10);
+}
+
+function readLocalTraffic() {
   try {
-    // Atomically increment real Cloud Firestore hit counter
-    await setDoc(trafficDocRef, {
-      totalViews: increment(1),
-      lastVisitAt: serverTimestamp()
-    }, { merge: true });
+    const n = parseInt(localStorage.getItem(LS_TRAFFIC_TOTAL) || '0', 10);
+    return Number.isFinite(n) && n > 0 ? n : 0;
   } catch (e) {
-    console.warn("Cloud traffic increment fallback to local persistence:", e);
+    return 0;
+  }
+}
+
+// Chặn đếm lặp trong cùng một lần tải trang. Cần thiết vì <StrictMode> ở
+// main.jsx cố tình chạy useEffect hai lần khi dev.
+let hasRecordedThisPageLoad = false;
+
+/**
+ * Ghi nhận 1 lượt truy cập trong ngày (nếu hôm nay máy này chưa được tính).
+ * Trả về ngay số để hiển thị, KHÔNG chờ Cloud phản hồi.
+ *
+ * Quan trọng: tuyệt đối không 'await' lệnh ghi Firestore ở đây. Khi không kết
+ * nối được server, Firestore xếp lệnh ghi vào hàng đợi offline và Promise của
+ * setDoc() treo vô thời hạn (không reject). Nếu await, cả hàm này sẽ không bao
+ * giờ resolve -> bộ đếm trên giao diện đứng im vĩnh viễn.
+ */
+export function recordRealTrafficVisit() {
+  const today = getVietnamDateKey();
+  let localTotal = readLocalTraffic();
+  let isNewVisitToday = false;
+
+  if (!hasRecordedThisPageLoad) {
+    hasRecordedThisPageLoad = true;
+    try {
+      if (localStorage.getItem(LS_TRAFFIC_LAST_DATE) !== today) {
+        isNewVisitToday = true;
+        localTotal += 1;
+        localStorage.setItem(LS_TRAFFIC_TOTAL, String(localTotal));
+        localStorage.setItem(LS_TRAFFIC_LAST_DATE, today);
+      }
+    } catch (e) {
+      // Trình duyệt chặn localStorage (chế độ ẩn danh): vẫn tính 1 lượt cho phiên này.
+      isNewVisitToday = true;
+      localTotal = Math.max(localTotal, 1);
+    }
   }
 
-  return baseCreationTraffic + localTotal;
+  if (isNewVisitToday) {
+    // Bắn lên Cloud rồi đi tiếp, không chờ. Nếu offline, Firestore tự gửi lại
+    // khi có mạng; số hiển thị đã có sẵn từ bản đếm tại máy.
+    try {
+      setDoc(doc(db, 'analytics', TRAFFIC_DOC), {
+        totalVisits: increment(1),
+        // Lưu thêm số lượt của từng ngày để xem được biểu đồ traffic theo ngày.
+        daily: { [today]: increment(1) },
+        lastVisitAt: serverTimestamp()
+      }, { merge: true }).catch((e) => {
+        console.warn("Không ghi được lượt truy cập lên Cloud, dùng số đếm tại máy:", e);
+      });
+    } catch (e) {
+      console.warn("Không ghi được lượt truy cập lên Cloud, dùng số đếm tại máy:", e);
+    }
+  }
+
+  return Promise.resolve(TRAFFIC_BASELINE + localTotal);
 }
 
 /**
- * Real-time listener for Cloud Firestore Web Traffic & Active Online Sessions
+ * Theo dõi realtime tổng lượt truy cập + lượt của riêng hôm nay.
  */
 export function listenToRealTraffic(callback) {
-  try {
-    const trafficDocRef = doc(db, 'analytics', 'traffic_v2_today');
-    const baseCreationTraffic = 500;
-    
-    const getLocalTraffic = () => {
-      try {
-        const stored = parseInt(localStorage.getItem('dmm_real_traffic_v2_total') || '1', 10);
-        return baseCreationTraffic + stored;
-      } catch (e) {
-        return baseCreationTraffic + 1;
-      }
-    };
+  const fallback = () => callback({
+    totalViews: TRAFFIC_BASELINE + readLocalTraffic(),
+    todayViews: 0,
+    daily: {}
+  });
 
-    const unsubscribe = onSnapshot(trafficDocRef, (snapshot) => {
-      if (snapshot.exists()) {
-        const data = snapshot.data();
-        const cloudViews = data.totalViews || 0;
-        callback({
-          totalViews: baseCreationTraffic + Math.max(cloudViews, parseInt(localStorage.getItem('dmm_real_traffic_v2_total') || '1', 10))
-        });
-      } else {
-        callback({ totalViews: getLocalTraffic() });
+  try {
+    const unsubscribe = onSnapshot(doc(db, 'analytics', TRAFFIC_DOC), (snapshot) => {
+      if (!snapshot.exists()) {
+        fallback();
+        return;
       }
-    }, (err) => {
-      callback({ totalViews: getLocalTraffic() });
-    });
+
+      const data = snapshot.data() || {};
+      const daily = data.daily || {};
+      const cloudTotal = Number(data.totalVisits) || 0;
+
+      // Cloud là con số toàn cục nên là nguồn chuẩn. Số đếm tại máy chỉ dùng khi
+      // Cloud chưa ghi được (sai quyền / mất mạng). Cả hai giờ cùng đơn vị
+      // "lượt/ngày" nên lấy giá trị lớn hơn là hợp lệ, đồng thời bảo đảm bộ đếm
+      // không bao giờ tụt ngược trên màn hình.
+      callback({
+        totalViews: TRAFFIC_BASELINE + Math.max(cloudTotal, readLocalTraffic()),
+        todayViews: Number(daily[getVietnamDateKey()]) || 0,
+        daily
+      });
+    }, () => fallback());
 
     return unsubscribe;
   } catch (e) {
     console.warn("listenToRealTraffic error", e);
-    callback({ totalViews: 501 });
+    fallback();
     return () => {};
   }
 }

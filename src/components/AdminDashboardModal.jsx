@@ -6,7 +6,8 @@ import {
   recordStudentAccountToCloud,
   db,
   doc,
-  deleteDoc
+  deleteDoc,
+  TRAFFIC_BASELINE
 } from '../firebase';
 import { 
   X, 
@@ -497,9 +498,12 @@ export default function AdminDashboardModal({
               <Eye className="w-3.5 h-3.5 text-teal-400" />
             </div>
             <p className="text-lg sm:text-xl font-black text-teal-300">
-              {trafficStats ? (trafficStats.totalTraffic || 501).toLocaleString('vi-VN') : '501'}
+              {(trafficStats?.totalTraffic || TRAFFIC_BASELINE).toLocaleString('vi-VN')}
             </p>
-            <p className="text-[9px] text-teal-400 font-semibold">Đếm lượt truy cập tích lũy 100%</p>
+            <p className="text-[9px] text-teal-400 font-semibold">
+              Hôm nay: <strong className="text-teal-200">+{(trafficStats?.todayTraffic || 0).toLocaleString('vi-VN')}</strong> lượt
+              <span className="text-slate-500"> · mốc {TRAFFIC_BASELINE}</span>
+            </p>
           </div>
 
           <div className="p-2.5 rounded-xl glass-panel border border-emerald-800/60 space-y-0.5">

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import PMarcomLogo from './PMarcomLogo';
-import { 
-  CheckCircle2, 
+import { TRAFFIC_BASELINE } from '../firebase';
+import {
+  CheckCircle2,
   PlayCircle, 
   Clock, 
   HelpCircle, 
@@ -24,11 +25,15 @@ export default function CourseOverview({
   onSelectModule, 
   completedModules,
   searchQuery,
+  // Mặc định phải là mốc khởi điểm thật, không phải số đẹp bịa ra:
+  // App.jsx luôn truyền trafficStats xuống, nhưng nếu component được dùng lại
+  // ở chỗ khác mà quên truyền thì thà hiện 100 còn hơn hiện 158.421 lượt ảo.
   trafficStats = {
-    totalTraffic: 158421,
-    totalEnrolled: 4850,
-    totalGraduates: 3240,
-    onlineActive: 36
+    totalTraffic: TRAFFIC_BASELINE,
+    todayTraffic: 0,
+    totalEnrolled: 0,
+    totalGraduates: 0,
+    onlineActive: 1
   }
 }) {
   const [partFilter, setPartFilter] = useState('all');
@@ -95,10 +100,10 @@ export default function CourseOverview({
               </span>
             </div>
             <div className="text-xl sm:text-2xl font-black text-white tracking-tight">
-              {(trafficStats?.totalTraffic || 501).toLocaleString('vi-VN')}
+              {(trafficStats?.totalTraffic || TRAFFIC_BASELINE).toLocaleString('vi-VN')}
             </div>
             <div className="text-[10px] text-slate-400 flex items-center gap-1 mt-0.5">
-              <Activity className="w-3 h-3 text-emerald-400 animate-pulse" /> Đếm tất cả tổng số lượt truy cập web tích lũy
+              <Activity className="w-3 h-3 text-emerald-400 animate-pulse" /> Cộng dồn lượt khách ghé thăm mỗi ngày
             </div>
           </div>
 

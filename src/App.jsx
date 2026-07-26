@@ -22,6 +22,7 @@ import {
   signOut,
   recordRealTrafficVisit,
   listenToRealTraffic,
+  TRAFFIC_BASELINE,
   recordRealStudentEnrollment,
   recordRealStudentGraduate,
   listenToRealStats
@@ -110,7 +111,8 @@ export default function App() {
 
   // Real Web Traffic & Student Statistics (100% Real numbers measured strictly from real data)
   const [trafficStats, setTrafficStats] = useState({
-    totalTraffic: 1,
+    totalTraffic: TRAFFIC_BASELINE,
+    todayTraffic: 0,
     totalEnrolled: 1,
     totalGraduates: 0,
     onlineActive: 1
@@ -119,10 +121,12 @@ export default function App() {
   // Real-time Web Traffic & Student Stats tracker from Firebase Cloud & Local persistence
   useEffect(() => {
     // 1. Record real page view & real enrollment
+    // Hiển thị ngay số đếm tại máy, không đợi Cloud. Lấy max để con số
+    // không bao giờ nhảy giật lùi khi Cloud trả về ngay sau đó.
     recordRealTrafficVisit().then(initialCount => {
       setTrafficStats(prev => ({
         ...prev,
-        totalTraffic: initialCount
+        totalTraffic: Math.max(prev.totalTraffic, initialCount)
       }));
     });
 
@@ -137,7 +141,8 @@ export default function App() {
     const unsubscribeTraffic = listenToRealTraffic((data) => {
       setTrafficStats(prev => ({
         ...prev,
-        totalTraffic: data.totalViews || prev.totalTraffic
+        totalTraffic: Math.max(prev.totalTraffic, data.totalViews || 0),
+        todayTraffic: data.todayViews ?? prev.todayTraffic
       }));
     });
 
