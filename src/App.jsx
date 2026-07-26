@@ -246,11 +246,17 @@ export default function App() {
     try {
       localStorage.setItem(key, JSON.stringify(completedModules));
       if (currentUser) {
-        saveUserProgressToCloud(currentUser.id, {
+        const fullStudentData = {
+          id: currentUser.id || currentUser.email.replace(/\./g, '_'),
+          name: currentUser.name,
+          phone: currentUser.phone || 'Chưa cập nhật',
+          email: currentUser.email,
+          industry: currentUser.industry || 'Kinh doanh',
           completedModules,
-          studentName: currentUser.name,
-          email: currentUser.email
-        });
+          updatedAt: new Date().toISOString()
+        };
+        saveUserProgressToCloud(currentUser.id || currentUser.email.replace(/\./g, '_'), fullStudentData);
+        recordStudentAccountToCloud(fullStudentData);
       }
       // Record real graduate achievement when all 11 modules completed
       if (completedModules.length === COURSE_MODULES.length) {

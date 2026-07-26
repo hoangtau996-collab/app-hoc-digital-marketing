@@ -60,6 +60,15 @@ export default function AdminDashboardModal({
   // Default seed sample data if empty
   const SAMPLE_STUDENTS = [
     {
+      id: 'student-real-cambinh',
+      name: 'ĐẶNG THỊ CẨM BÌNH',
+      phone: '0901234567',
+      email: 'binh.dang@cbcentres.com',
+      industry: 'Giáo Dục & Đào Tạo',
+      completedModules: ['module-01', 'module-02', 'module-03', 'module-04', 'module-05', 'module-06', 'module-07', 'module-08', 'module-09', 'module-10', 'module-11'],
+      createdAt: '2026-07-26'
+    },
+    {
       id: 'student-demo-01',
       name: 'NGUYỄN VĂN A',
       phone: '0901234567',
