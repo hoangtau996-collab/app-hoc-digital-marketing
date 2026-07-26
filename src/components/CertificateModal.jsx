@@ -276,12 +276,12 @@ export default function CertificateModal({
                   <Award className="w-4 h-4 text-amber-400" /> CERTIFICATE OF COMPLETION
                 </div>
 
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-white tracking-wider uppercase">
+                <h2 className="text-sm sm:text-base md:text-lg font-extrabold text-amber-300 tracking-widest uppercase whitespace-nowrap">
                   CHỨNG NHẬN HOÀN THÀNH KHÓA HỌC
                 </h2>
-                <p className="text-xs sm:text-sm text-emerald-400 font-bold uppercase tracking-widest">
-                  CHƯƠNG TRÌNH ĐÀO TẠO KHÓA HỌC DIGITAL THỰC CHIẾN
-                </p>
+                <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-emerald-400 tracking-wide uppercase drop-shadow-md mt-1">
+                  KHÓA HỌC DIGITAL THỰC CHIẾN
+                </h1>
               </div>
 
               <div className="w-32 h-0.5 bg-gradient-to-r from-transparent via-emerald-500 to-transparent mx-auto" />
