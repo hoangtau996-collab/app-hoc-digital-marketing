@@ -180,14 +180,16 @@ export default function CertificateModal({
             <div id="certificate-print-area" className="p-6 sm:p-10 md:p-12 rounded-2xl bg-[#08120d] border-2 border-emerald-500/50 relative overflow-hidden text-center space-y-6 shadow-2xl">
               
               {/* Watermark Logo */}
-              <div className="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none select-none">
-                <PMarcomLogo className="w-96 h-96" showText={false} />
+              <div className="absolute inset-0 flex items-center justify-center opacity-[0.07] pointer-events-none select-none">
+                <img src="/pmarcom-logo.jpg" alt="P Marcom Logo Watermark" className="w-[450px] h-[450px] object-cover rounded-3xl" />
               </div>
 
               {/* Certificate Header Branding */}
               <div className="space-y-3 relative z-10">
-                <div className="flex justify-center mb-1">
-                  <PMarcomLogo className="w-12 h-12 sm:w-14 sm:h-14" showText={true} textClassName="text-xl sm:text-2xl font-black text-white" />
+                <div className="flex justify-center items-center gap-3 mb-2">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden border-2 border-amber-500/70 shadow-xl shadow-amber-950/70">
+                    <img src="/pmarcom-logo.jpg" alt="Học viện P Marcom Logo" className="w-full h-full object-cover" />
+                  </div>
                 </div>
 
                 <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-emerald-950 border border-emerald-700 text-amber-300 text-xs font-bold uppercase tracking-widest">
