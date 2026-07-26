@@ -40,8 +40,9 @@ export default function Header({
 }) {
   const [showMobileSearch, setShowMobileSearch] = useState(false);
   const [showThemeMenu, setShowThemeMenu] = useState(false);
-  const overallProgress = Math.round((passedCount / totalModules) * 100);
-  const latestNews = newsFeed[0];
+  const textDict = t || {};
+  const overallProgress = totalModules > 0 ? Math.round((passedCount / totalModules) * 100) : 0;
+  const latestNews = Array.isArray(newsFeed) && newsFeed.length > 0 ? newsFeed[0] : null;
 
   return (
     <header className="sticky top-0 z-40 bg-[#070d0a]/95 backdrop-blur-md border-b border-emerald-900/40 px-3 sm:px-6 py-2.5">

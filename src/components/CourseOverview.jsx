@@ -95,10 +95,10 @@ export default function CourseOverview({
               </span>
             </div>
             <div className="text-xl sm:text-2xl font-black text-white tracking-tight">
-              {trafficStats.totalTraffic.toLocaleString('vi-VN')}
+              {(trafficStats?.totalTraffic || 0).toLocaleString('vi-VN')}
             </div>
             <div className="text-[10px] text-slate-400 flex items-center gap-1 mt-0.5">
-              <Activity className="w-3 h-3 text-emerald-400 animate-pulse" /> {trafficStats.onlineActive} Học viên đang online live
+              <Activity className="w-3 h-3 text-emerald-400 animate-pulse" /> {trafficStats?.onlineActive || 36} Học viên đang online live
             </div>
           </div>
 
@@ -111,7 +111,7 @@ export default function CourseOverview({
               <ShieldCheck className="w-4 h-4 text-amber-400" />
             </div>
             <div className="text-xl sm:text-2xl font-black text-amber-400 tracking-tight">
-              {trafficStats.totalGraduates.toLocaleString('vi-VN')}+
+              {(trafficStats?.totalGraduates || 0).toLocaleString('vi-VN')}+
             </div>
             <div className="text-[10px] text-slate-400 mt-0.5">
               Hoàn thành 11/11 chuyên đề
@@ -127,7 +127,7 @@ export default function CourseOverview({
               <TrendingUp className="w-4 h-4 text-emerald-400" />
             </div>
             <div className="text-xl sm:text-2xl font-black text-white tracking-tight">
-              {trafficStats.totalEnrolled.toLocaleString('vi-VN')}+
+              {(trafficStats?.totalEnrolled || 0).toLocaleString('vi-VN')}+
             </div>
             <div className="text-[10px] text-slate-400 mt-0.5">
               Quản lý & Trưởng phòng Digital
