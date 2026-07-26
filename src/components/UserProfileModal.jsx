@@ -119,7 +119,7 @@ export default function UserProfileModal({
 
       const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(backupObject, null, 2));
       const downloadAnchor = document.createElement('a');
-      const safeName = currentUser.name.replace(/\s+/g, '_');
+      const safeName = (currentUser && typeof currentUser.name === 'string' ? currentUser.name : 'HocVien').replace(/\s+/g, '_');
       downloadAnchor.setAttribute("href", dataStr);
       downloadAnchor.setAttribute("download", `Backup_PMARCOM_${safeName}_${Date.now()}.json`);
       document.body.appendChild(downloadAnchor);

@@ -28,9 +28,12 @@ const firebaseConfig = {
   projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID || "pmarcom-academy",
   storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET || "pmarcom-academy.appspot.com",
   messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID || "889200000000",
-  appId: import.meta.env.VITE_FIREBASE_APP_ID || "1:889200000000:web:pmarcom001",
-  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID || "G-786T4R3QYY"
+  appId: import.meta.env.VITE_FIREBASE_APP_ID || "1:889200000000:web:pmarcom001"
 };
+
+if (import.meta.env.VITE_FIREBASE_MEASUREMENT_ID) {
+  firebaseConfig.measurementId = import.meta.env.VITE_FIREBASE_MEASUREMENT_ID;
+}
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
