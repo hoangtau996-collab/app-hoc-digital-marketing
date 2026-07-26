@@ -50,11 +50,28 @@ export default function AuthModal({
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
+  const [rememberMe, setRememberMe] = useState(true);
   const [industry, setIndustry] = useState(INDUSTRY_OPTIONS[0]);
   
   const [errorMsg, setErrorMsg] = useState('');
   const [successMsg, setSuccessMsg] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+
+  // Pre-fill remembered login email if stored
+  React.useEffect(() => {
+    if (isOpen) {
+      try {
+        const savedEmail = localStorage.getItem('dmm_remembered_email');
+        const savedChoice = localStorage.getItem('dmm_remember_me_choice');
+        if (savedEmail) {
+          setEmail(savedEmail);
+        }
+        if (savedChoice !== null) {
+          setRememberMe(savedChoice === 'true');
+        }
+      } catch (e) {}
+    }
+  }, [isOpen]);
 
   if (!isOpen) return null;
 
@@ -77,6 +94,18 @@ export default function AuthModal({
     ];
   };
 
+  const saveRememberedState = () => {
+    try {
+      if (rememberMe) {
+        localStorage.setItem('dmm_remembered_email', email.trim());
+        localStorage.setItem('dmm_remember_me_choice', 'true');
+      } else {
+        localStorage.removeItem('dmm_remembered_email');
+        localStorage.setItem('dmm_remember_me_choice', 'false');
+      }
+    } catch (e) {}
+  };
+
   const handleLogin = async (e) => {
     e.preventDefault();
     setErrorMsg('');
@@ -88,6 +117,8 @@ export default function AuthModal({
       setIsLoading(false);
       return;
     }
+
+    saveRememberedState();
 
     try {
       // 1. Try Firebase Cloud Authentication
@@ -152,6 +183,8 @@ export default function AuthModal({
       setIsLoading(false);
       return;
     }
+
+    saveRememberedState();
 
     try {
       // 1. Register via Firebase Cloud Auth
@@ -424,6 +457,19 @@ export default function AuthModal({
                 )}
               </button>
             </div>
+          </div>
+
+          {/* Remember Me Checkbox */}
+          <div className="flex items-center justify-between pt-1 pb-0.5">
+            <label className="flex items-center gap-2 cursor-pointer text-xs text-slate-300 hover:text-emerald-400 transition select-none">
+              <input
+                type="checkbox"
+                checked={rememberMe}
+                onChange={(e) => setRememberMe(e.target.checked)}
+                className="w-4 h-4 rounded border-emerald-800 bg-slate-900 text-emerald-500 focus:ring-emerald-500 cursor-pointer accent-emerald-500"
+              />
+              <span className="font-semibold text-[11px] sm:text-xs">Ghi nhớ đăng nhập trên thiết bị này</span>
+            </label>
           </div>
 
           <button
