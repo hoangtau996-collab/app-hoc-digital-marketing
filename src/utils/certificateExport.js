@@ -96,6 +96,68 @@ export function makeVerifyCode(seed, year = new Date().getFullYear()) {
   return `PMC-${year}-${out.slice(0, 4)}-${out.slice(4)}`;
 }
 
+/* ---------- Hoạ tiết công nghệ: vàng đồng + xanh ngọc bích ----------
+   Toàn bộ dựng bằng div + linear-gradient + transform.
+   KHÔNG dùng SVG hay radial-gradient: html2canvas 1.4.1 dựng hai thứ đó rất
+   kém, hoạ tiết sẽ mất hoặc méo khi tải file về.
+
+   Hàm này là NGUỒN DUY NHẤT cho cả file xuất lẫn bản xem trước, để hai bên
+   không bao giờ lệch nhau. */
+
+const GOLD = '#b8860b';        // vàng đồng đậm
+const GOLD_LIGHT = '#d4af37';  // vàng đồng sáng
+const JADE = '#0e9f6e';        // xanh ngọc bích
+const JADE_SOFT = 'rgba(14,159,110,0.45)';
+
+/**
+ * @param {number} scale Bản xem trước hẹp hơn khung xuất file (1400px) nên
+ *   cần thu nhỏ hoạ tiết theo, không thì góc trang trí sẽ to lấn nội dung.
+ */
+export function certificateDecorHtml({ scale = 1 } = {}) {
+  const s = (n) => Math.round(n * scale);
+
+  // Góc phải ôm sát mép: lề + nhánh phải nhỏ hơn padding nội dung (92px),
+  // nếu không nhánh sẽ cắt ngang chữ ở chân bằng.
+  const inset = s(30);
+  const arm = s(48);
+  const node = s(9);
+  const stub = s(20);
+  const stubOff = s(13);
+  const half = Math.round(node / 2);
+
+  // Góc mạch điện: 2 nhánh vàng đồng + hạt kim cương ngọc bích + 2 đường mạch mảnh.
+  const corner = (v, h) => `
+    <div style="position:absolute;${v}:${inset}px;${h}:${inset}px;width:${arm}px;height:2px;background:${GOLD_LIGHT};"></div>
+    <div style="position:absolute;${v}:${inset}px;${h}:${inset}px;width:2px;height:${arm}px;background:${GOLD_LIGHT};"></div>
+    <div style="position:absolute;${v}:${inset - half}px;${h}:${inset - half}px;width:${node}px;height:${node}px;background:${JADE};transform:rotate(45deg);"></div>
+    <div style="position:absolute;${v}:${inset + stubOff}px;${h}:${inset}px;width:${stub}px;height:1px;background:${JADE_SOFT};"></div>
+    <div style="position:absolute;${v}:${inset}px;${h}:${inset + stubOff}px;width:1px;height:${stub}px;background:${JADE_SOFT};"></div>
+  `;
+
+  return `
+    <div style="position:absolute;top:0;left:0;right:0;height:${s(6)}px;background:linear-gradient(90deg,rgba(255,255,255,0) 0%,${JADE} 18%,${GOLD_LIGHT} 50%,${JADE} 82%,rgba(255,255,255,0) 100%);"></div>
+    <div style="position:absolute;bottom:0;left:0;right:0;height:${s(3)}px;background:linear-gradient(90deg,rgba(255,255,255,0) 0%,${GOLD_LIGHT} 22%,${JADE} 50%,${GOLD_LIGHT} 78%,rgba(255,255,255,0) 100%);"></div>
+
+    <div style="position:absolute;top:${s(18)}px;left:${s(18)}px;right:${s(18)}px;bottom:${s(18)}px;border:1px solid rgba(14,159,110,0.30);border-radius:${s(16)}px;"></div>
+    <div style="position:absolute;top:${s(25)}px;left:${s(25)}px;right:${s(25)}px;bottom:${s(25)}px;border:1px solid rgba(184,134,11,0.24);border-radius:${s(12)}px;"></div>
+
+    ${corner('top', 'left')}${corner('top', 'right')}${corner('bottom', 'left')}${corner('bottom', 'right')}
+  `;
+}
+
+/** Dải phân cách có hạt kim cương hai đầu, dùng chung cho file xuất & xem trước. */
+export function certificateDividerHtml({ scale = 1 } = {}) {
+  const s = (n) => Math.round(n * scale);
+  const d = s(9);
+  return `
+    <div style="display:flex;align-items:center;justify-content:center;gap:${s(12)}px;">
+      <div style="width:${d}px;height:${d}px;background:${GOLD_LIGHT};transform:rotate(45deg);"></div>
+      <div style="width:${s(200)}px;height:2px;background:linear-gradient(90deg,rgba(255,255,255,0) 0%,${JADE} 50%,rgba(255,255,255,0) 100%);"></div>
+      <div style="width:${d}px;height:${d}px;background:${GOLD_LIGHT};transform:rotate(45deg);"></div>
+    </div>
+  `;
+}
+
 /** Tên dài thì thu nhỏ cỡ chữ để không tràn khung. */
 function nameFontSize(name) {
   const len = name.length;
@@ -110,9 +172,9 @@ function buildMarkup({ studentName, totalModules, issueDate, verifyCode, logoSrc
   const fs = nameFontSize(name);
 
   return `
-    <div style="position:absolute;top:0;left:0;right:0;height:6px;background:linear-gradient(90deg,rgba(255,255,255,0) 0%,#10b981 20%,#d97706 50%,#10b981 80%,rgba(255,255,255,0) 100%);"></div>
+    ${certificateDecorHtml({ scale: 1 })}
 
-    <div style="position:relative;width:100%;height:100%;box-sizing:border-box;padding:52px 76px 46px 76px;display:flex;flex-direction:column;align-items:center;text-align:center;">
+    <div style="position:relative;width:100%;height:100%;box-sizing:border-box;padding:58px 92px 64px 92px;display:flex;flex-direction:column;align-items:center;text-align:center;">
 
       <!-- Hai spacer 0.55 : 1 kẹp khối nội dung, giữ nó cân giữa nhưng trọng tâm
            hơi cao — nếu không có, bỏ con dấu đi sẽ để lại một mảng trắng hoác
@@ -135,7 +197,7 @@ function buildMarkup({ studentName, totalModules, issueDate, verifyCode, logoSrc
         KHÓA HỌC DIGITAL THỰC CHIẾN
       </div>
 
-      <div style="margin-top:22px;width:240px;height:2px;background:linear-gradient(90deg,rgba(255,255,255,0) 0%,#10b981 50%,rgba(255,255,255,0) 100%);"></div>
+      <div style="margin-top:22px;">${certificateDividerHtml({ scale: 1 })}</div>
 
       <div style="margin-top:26px;color:#64748b;font-size:16px;font-style:italic;line-height:1.2;">
         Chứng nhận cấp cho Học viên:

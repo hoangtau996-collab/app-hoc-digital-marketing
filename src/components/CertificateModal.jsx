@@ -2,10 +2,15 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { jsPDF } from 'jspdf';
 import {
   renderCertificateCanvas,
+  certificateDecorHtml,
+  certificateDividerHtml,
   makeVerifyCode,
   slugifyName,
   isIOSorIPad,
 } from '../utils/certificateExport';
+
+// Bản xem trước hẹp hơn khung xuất file (1400px) nên hoạ tiết phải thu nhỏ theo.
+const PREVIEW_DECOR_SCALE = 0.5;
 import PMarcomLogo from './PMarcomLogo';
 import { 
   Award, 
@@ -314,7 +319,16 @@ export default function CertificateModal({
               giao diện sáng/tối của app — nếu để lớp Tailwind, ở chế độ tối học
               viên sẽ xem bằng nền đen nhưng tải về lại ra bằng nền trắng.
             */}
-            <div id="certificate-print-area" className="p-6 sm:p-10 md:p-12 rounded-2xl relative overflow-hidden text-center space-y-6 shadow-2xl" style={{ backgroundColor: '#ffffff', border: '1px solid #e2e8f0' }}>
+            <div id="certificate-print-area" className="p-10 sm:p-12 md:p-14 rounded-2xl relative overflow-hidden text-center space-y-6 shadow-2xl" style={{ backgroundColor: '#ffffff', border: '1px solid #e2e8f0' }}>
+
+              {/* Hoạ tiết công nghệ — dựng từ đúng hàm mà file xuất dùng, nên
+                  xem trước và file tải về không thể lệch nhau. */}
+              <div
+                aria-hidden="true"
+                className="pointer-events-none select-none"
+                style={{ position: 'absolute', inset: 0, margin: 0, zIndex: 0 }}
+                dangerouslySetInnerHTML={{ __html: certificateDecorHtml({ scale: PREVIEW_DECOR_SCALE }) }}
+              />
 
               {/* Certificate Header Branding */}
               <div className="space-y-3 relative z-10">
@@ -336,7 +350,10 @@ export default function CertificateModal({
                 </h1>
               </div>
 
-              <div className="w-32 h-0.5 mx-auto" style={{ background: 'linear-gradient(90deg,rgba(255,255,255,0) 0%,#10b981 50%,rgba(255,255,255,0) 100%)' }} />
+              <div
+                className="relative z-10"
+                dangerouslySetInnerHTML={{ __html: certificateDividerHtml({ scale: PREVIEW_DECOR_SCALE }) }}
+              />
 
               {/* Editable Student Name */}
               <div className="space-y-2 relative z-10">
