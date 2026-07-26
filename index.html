@@ -31,6 +31,21 @@
     <meta name="twitter:description" content="Chương trình đào tạo Trưởng phòng Digital Marketing bài bản với 11 chuyên đề thực chiến, kiểm tra trắc nghiệm, từ điển chỉ số CPM/ROAS/CAC và cấp Bằng Chứng Nhận chính thức." />
     <meta name="twitter:image" content="/og-cover.png" />
 
+    <!-- Dynamic Subdomain Open Graph URL Fixer -->
+    <script>
+      try {
+        if (typeof window !== 'undefined' && window.location) {
+          const origin = window.location.origin;
+          const ogImg = document.querySelector('meta[property="og:image"]');
+          const ogImgSecure = document.querySelector('meta[property="og:image:secure_url"]');
+          const twitterImg = document.querySelector('meta[name="twitter:image"]');
+          if (ogImg) ogImg.setAttribute('content', origin + '/og-cover.png');
+          if (ogImgSecure) ogImgSecure.setAttribute('content', origin + '/og-cover.png');
+          if (twitterImg) twitterImg.setAttribute('content', origin + '/og-cover.png');
+        }
+      } catch (e) {}
+    </script>
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
