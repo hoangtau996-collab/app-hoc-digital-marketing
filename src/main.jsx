@@ -29,12 +29,17 @@ class ErrorBoundary extends Component {
                 try {
                   localStorage.clear();
                   sessionStorage.clear();
+                  if ('serviceWorker' in navigator) {
+                    navigator.serviceWorker.getRegistrations().then(regs => {
+                      regs.forEach(r => r.unregister());
+                    });
+                  }
                 } catch (e) {}
-                window.location.href = window.location.origin + '/?v=' + Date.now();
+                window.location.href = window.location.origin;
               }}
               style={{ padding: '12px 24px', background: '#00E676', color: '#070d0a', border: 'none', borderRadius: '12px', fontWeight: 'bold', cursor: 'pointer', fontSize: '14px' }}
             >
-              🔄 Tải Lại Trang & Cập Nhật Dữ Liệu
+              🔄 Khôi Phục & Tải Lại Trang
             </button>
           </div>
         </div>

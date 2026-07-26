@@ -146,11 +146,23 @@ export default function App() {
     };
   }, []);
 
-  // Active student account
+  // Active student account with fail-safe sanitization
   const [currentUser, setCurrentUser] = useState(() => {
     try {
       const saved = localStorage.getItem('dmm_active_user');
-      return saved ? JSON.parse(saved) : null;
+      if (!saved || saved === 'undefined' || saved === 'null') return null;
+      const parsed = JSON.parse(saved);
+      if (parsed && typeof parsed === 'object') {
+        return {
+          id: parsed.id || 'guest',
+          email: typeof parsed.email === 'string' ? parsed.email : '',
+          name: typeof parsed.name === 'string' && parsed.name.trim() ? parsed.name : (typeof parsed.email === 'string' && parsed.email.includes('@') ? parsed.email.split('@')[0].toUpperCase() : 'HỌC VIÊN'),
+          phone: typeof parsed.phone === 'string' ? parsed.phone : 'Chưa có SĐT',
+          industry: typeof parsed.industry === 'string' ? parsed.industry : 'Digital Marketing',
+          coverBg: typeof parsed.coverBg === 'string' ? parsed.coverBg : 'emerald'
+        };
+      }
+      return null;
     } catch (e) {
       return null;
     }
@@ -162,8 +174,8 @@ export default function App() {
       if (user) {
         const studentUser = {
           id: user.uid,
-          email: user.email,
-          name: user.displayName || user.email.split('@')[0].toUpperCase(),
+          email: user.email || '',
+          name: (user.displayName || (user.email ? user.email.split('@')[0] : 'HỌC VIÊN')).toUpperCase(),
           createdAt: new Date().toLocaleDateString('vi-VN')
         };
         setCurrentUser(studentUser);

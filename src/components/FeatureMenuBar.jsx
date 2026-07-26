@@ -106,13 +106,13 @@ export default function FeatureMenuBar({
               title="Tuỳ chỉnh thông tin cá nhân học viên & hình nền"
             >
               <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-amber-400 to-yellow-500 text-slate-950 font-black text-xs flex items-center justify-center shadow shrink-0">
-                {currentUser.name ? currentUser.name.charAt(0).toUpperCase() : 'U'}
+                {currentUser && typeof currentUser.name === 'string' && currentUser.name.trim() ? currentUser.name.trim().charAt(0).toUpperCase() : 'U'}
               </div>
 
               <div>
                 <div className="flex items-center gap-1.5">
                   <span className="text-xs font-black text-amber-300 uppercase tracking-wide truncate max-w-[120px] sm:max-w-[160px]">
-                    {currentUser.name}
+                    {currentUser && typeof currentUser.name === 'string' && currentUser.name.trim() ? currentUser.name : 'HỌC VIÊN'}
                   </span>
                   <span className="text-[9px] font-black px-1.5 py-0.2 rounded bg-amber-500 text-slate-950 uppercase border border-amber-400">
                     Hồ Sơ
