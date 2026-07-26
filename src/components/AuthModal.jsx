@@ -233,8 +233,9 @@ export default function AuthModal({
         createdAt: new Date().toLocaleDateString('vi-VN')
       };
 
-      // Save complete student profile to Cloud Firestore
-      await saveUserProgressToCloud(fbUser.uid, {
+      // Record complete student profile to Cloud Firestore & Storage
+      recordStudentAccountToCloud(studentUser);
+      saveUserProgressToCloud(fbUser.uid, {
         name: fullName.trim().toUpperCase(),
         phone: phone.trim(),
         email: fbUser.email,

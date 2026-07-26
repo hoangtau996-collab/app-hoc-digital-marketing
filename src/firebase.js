@@ -41,8 +41,10 @@ export const auth = getAuth(app);
 export const db = getFirestore(app);
 
 /**
-// Direct Realtime Cloud Database REST Endpoint for 100% Zero-Config Global Sync
-const PUBLIC_SYNC_URL = "https://pmarcom-learning-default-rtdb.asia-southeast1.firebasedatabase.app/students";
+// Dynamic Direct Realtime Cloud Database REST Endpoints for 100% Zero-Config Global Sync
+const activeProjectId = import.meta.env.VITE_FIREBASE_PROJECT_ID || "pmarcomacademy";
+const PUBLIC_SYNC_URL = `https://${activeProjectId}-default-rtdb.asia-southeast1.firebasedatabase.app/students`;
+const PUBLIC_SYNC_URL_ALT = `https://${activeProjectId}-default-rtdb.firebaseio.com/students`;
 
 /**
  * Record or sync a student account to Cloud Firestore & Direct Cloud REST
@@ -59,6 +61,8 @@ export async function recordStudentAccountToCloud(studentData) {
     phone: studentData.phone || 'Chưa cập nhật',
     email: cleanEmail,
     industry: studentData.industry || 'Kinh doanh',
+    avatarUrl: studentData.avatarUrl || '',
+    coverBg: studentData.coverBg || 'emerald',
     completedModules: Array.isArray(studentData.completedModules) ? studentData.completedModules : [],
     createdAt: studentData.createdAt || new Date().toISOString(),
     updatedAt: new Date().toISOString()
@@ -77,17 +81,20 @@ export async function recordStudentAccountToCloud(studentData) {
     localStorage.setItem('dmm_users_db', JSON.stringify(usersList));
   } catch (e) {}
 
-  // 2. Direct Cloud REST API Sync (Instant cross-device write on ALL networks)
+  // 2. Direct Cloud REST API Sync
   try {
-    await fetch(`${PUBLIC_SYNC_URL}/${safeId}.json`, {
+    fetch(`${PUBLIC_SYNC_URL}/${safeId}.json`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)
-    });
-    console.log("⚡ Direct Realtime Cloud Sync Success:", cleanEmail);
-  } catch (e) {
-    console.warn("Direct Cloud REST sync error:", e);
-  }
+    }).catch(() => {});
+
+    fetch(`${PUBLIC_SYNC_URL_ALT}/${safeId}.json`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    }).catch(() => {});
+  } catch (e) {}
 
   // 3. Cloud Firestore Native Writes
   try {
@@ -96,7 +103,10 @@ export async function recordStudentAccountToCloud(studentData) {
     if (studentData.id && studentData.id !== safeId) {
       await setDoc(doc(db, 'students', studentData.id), payload, { merge: true });
     }
-  } catch (e) {}
+    console.log("🟢 Record Student to Cloud Firestore Success:", cleanEmail);
+  } catch (e) {
+    console.warn("Cloud Firestore setDoc fallback:", e);
+  }
 }
 
 /**
@@ -122,20 +132,16 @@ export async function saveUserProgressToCloud(userId, progressData) {
         })
       }).catch(() => {});
     }
+  } catch (e) {}
 
-    await setDoc(doc(db, 'students', safeId), {
+  try {
+    const userDocRef = doc(db, 'students', safeId);
+    await setDoc(userDocRef, {
       ...progressData,
-      updatedAt: new Date().toISOString()
+      updatedAt: serverTimestamp()
     }, { merge: true });
-
-    if (progressData.email) {
-      await setDoc(doc(db, 'registrations', safeId), {
-        ...progressData,
-        updatedAt: new Date().toISOString()
-      }, { merge: true });
-    }
   } catch (e) {
-    console.warn("Cloud sync saved locally (Offline or Auth fallback)", e);
+    console.warn("Failed to save progress to Cloud Firestore", e);
   }
 }
 
@@ -162,19 +168,19 @@ export async function getUserProgressFromCloud(userId) {
 export async function getAllRegisteredStudentsFromCloud() {
   const emailMap = new Map();
 
-  // 1. Direct Realtime Cloud REST API Read (Instant cross-device fetch)
+  // 1. Read Local Persistent Users Database
   try {
-    const res = await fetch(`${PUBLIC_SYNC_URL}.json`);
-    if (res.ok) {
-      const data = await res.json();
-      if (data) {
-        Object.values(data).forEach((item) => {
+    const localUsers = localStorage.getItem('dmm_users_db');
+    if (localUsers) {
+      const parsed = JSON.parse(localUsers);
+      if (Array.isArray(parsed)) {
+        parsed.forEach(item => {
           if (item && item.email) {
             const cleanEmail = item.email.trim().toLowerCase();
             emailMap.set(cleanEmail, {
               ...item,
               id: item.id || cleanEmail.replace(/[^a-z0-9]/g, '_'),
-              name: (item.name || item.studentName || cleanEmail.split('@')[0]).toUpperCase(),
+              name: (item.name || cleanEmail.split('@')[0]).toUpperCase(),
               phone: item.phone || 'Chưa cập nhật',
               industry: item.industry || 'Kinh doanh',
               completedModules: Array.isArray(item.completedModules) ? item.completedModules : []
@@ -183,14 +189,54 @@ export async function getAllRegisteredStudentsFromCloud() {
         });
       }
     }
-  } catch (e) {
-    console.warn("Direct REST read fallback:", e);
-  }
+  } catch (e) {}
 
-  // 2. Query Firestore Native Collections
+  // 2. Direct Realtime Cloud REST API Read
+  try {
+    const res = await fetch(`${PUBLIC_SYNC_URL}.json`);
+    if (res.ok) {
+      const data = await res.json();
+      if (data) {
+        Object.values(data).forEach((item) => {
+          if (item && item.email) {
+            const cleanEmail = item.email.trim().toLowerCase();
+            const existing = emailMap.get(cleanEmail);
+            emailMap.set(cleanEmail, {
+              ...existing,
+              ...item,
+              id: item.id || cleanEmail.replace(/[^a-z0-9]/g, '_'),
+              name: (item.name || item.studentName || cleanEmail.split('@')[0]).toUpperCase(),
+              phone: item.phone || existing?.phone || 'Chưa cập nhật',
+              industry: item.industry || existing?.industry || 'Kinh doanh',
+              completedModules: Array.isArray(item.completedModules) ? item.completedModules : (existing?.completedModules || [])
+            });
+          }
+        });
+      }
+    }
+  } catch (e) {}
+
+  // 3. Query Firestore 'students' and 'registrations' collections
   try {
     const snapshot = await getDocs(collection(db, 'students'));
     snapshot.forEach((docSnap) => {
+      const data = docSnap.data();
+      if (data && data.email) {
+        const cleanEmail = data.email.trim().toLowerCase();
+        const existing = emailMap.get(cleanEmail);
+        emailMap.set(cleanEmail, {
+          ...existing,
+          ...data,
+          id: docSnap.id,
+          email: cleanEmail
+        });
+      }
+    });
+  } catch (e) {}
+
+  try {
+    const snapshot2 = await getDocs(collection(db, 'registrations'));
+    snapshot2.forEach((docSnap) => {
       const data = docSnap.data();
       if (data && data.email) {
         const cleanEmail = data.email.trim().toLowerCase();
@@ -212,21 +258,25 @@ export async function getAllRegisteredStudentsFromCloud() {
  * Real-time listener for All Student Registrations from Cloud Firestore
  */
 export function listenToAllStudentsFromCloud(callback) {
-  const studentsColRef = collection(db, 'students');
-  const unsubscribe = onSnapshot(studentsColRef, (snapshot) => {
-    const students = [];
-    snapshot.forEach((docSnap) => {
-      students.push({
-        id: docSnap.id,
-        ...docSnap.data()
+  try {
+    const studentsColRef = collection(db, 'students');
+    const unsubscribe = onSnapshot(studentsColRef, (snapshot) => {
+      const students = [];
+      snapshot.forEach((docSnap) => {
+        students.push({
+          id: docSnap.id,
+          ...docSnap.data()
+        });
       });
+      callback(students);
+    }, (err) => {
+      console.warn("Real-time students listener fallback:", err);
     });
-    callback(students);
-  }, (err) => {
-    console.warn("Real-time students listener fallback:", err);
-  });
 
-  return unsubscribe;
+    return unsubscribe;
+  } catch (e) {
+    return () => {};
+  }
 }
 
 /**
