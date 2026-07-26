@@ -8,7 +8,8 @@ import {
   Newspaper, 
   Wrench,
   X,
-  User
+  User,
+  Sparkles
 } from 'lucide-react';
 
 export default function Header({ 
@@ -90,6 +91,14 @@ export default function Header({
               }`}
             >
               <BookOpen className="w-3.5 h-3.5" /> Khóa học
+            </button>
+            <button
+              onClick={() => setActiveTab('glossary')}
+              className={`flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium transition ${
+                activeTab === 'glossary' ? 'bg-emerald-600 text-white shadow' : 'text-slate-400 hover:text-white'
+              }`}
+            >
+              <Sparkles className="w-3.5 h-3.5 text-amber-400" /> Từ điển
             </button>
             <button
               onClick={() => setActiveTab('news')}

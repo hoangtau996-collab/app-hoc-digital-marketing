@@ -170,6 +170,23 @@ export default function Sidebar({
 
         <div className="grid grid-cols-1 gap-2">
           <button
+            onClick={() => setActiveTab('glossary')}
+            className={`p-3 rounded-xl border text-left transition flex items-center gap-3 ${
+              activeTab === 'glossary'
+                ? 'bg-emerald-950 border-emerald-500 text-white'
+                : 'bg-[#0a120f] border-emerald-900/30 text-slate-300 hover:border-emerald-700/50'
+            }`}
+          >
+            <div className="w-8 h-8 rounded-lg bg-emerald-900/40 border border-emerald-700/40 flex items-center justify-center text-amber-400">
+              <Sparkles className="w-4 h-4" />
+            </div>
+            <div>
+              <div className="text-xs font-bold">Từ Điển Thuật Ngữ Marketing</div>
+              <div className="text-[10px] text-slate-400">CPM, ROAS, CAC, SOSTAC...</div>
+            </div>
+          </button>
+
+          <button
             onClick={() => setActiveTab('news')}
             className={`p-3 rounded-xl border text-left transition flex items-center gap-3 ${
               activeTab === 'news'

@@ -10,6 +10,7 @@ import AIStrategyAdvisor from './components/AIStrategyAdvisor';
 import MobileBottomNav from './components/MobileBottomNav';
 import AuthModal from './components/AuthModal';
 import UserProfileModal from './components/UserProfileModal';
+import DigitalGlossary from './components/DigitalGlossary';
 
 import { 
   auth, 
@@ -287,6 +288,10 @@ export default function App() {
                   searchQuery={searchQuery}
                 />
               )
+            )}
+
+            {activeTab === 'glossary' && (
+              <DigitalGlossary />
             )}
 
             {activeTab === 'news' && (

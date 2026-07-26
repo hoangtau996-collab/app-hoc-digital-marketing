@@ -1,5 +1,5 @@
 import React from 'react';
-import { BookOpen, Flame, Wrench, Award } from 'lucide-react';
+import { BookOpen, Flame, Wrench, Award, Sparkles } from 'lucide-react';
 
 export default function MobileBottomNav({ 
   activeTab, 
@@ -9,13 +9,13 @@ export default function MobileBottomNav({
   onOpenCertificate 
 }) {
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-40 block lg:hidden glass-panel border-t border-emerald-900/60 p-1.5 px-3 bg-[#070d0a]/95 backdrop-blur-lg">
+    <div className="fixed bottom-0 left-0 right-0 z-40 block lg:hidden glass-panel border-t border-emerald-900/60 p-1 px-2 bg-[#070d0a]/95 backdrop-blur-lg">
       <div className="flex items-center justify-around">
         
         {/* Tab 1: Course */}
         <button
           onClick={() => setActiveTab('course')}
-          className={`flex flex-col items-center gap-0.5 py-1 px-3 rounded-xl transition ${
+          className={`flex flex-col items-center gap-0.5 py-1 px-2 rounded-xl transition ${
             activeTab === 'course'
               ? 'text-emerald-400 font-bold'
               : 'text-slate-400 hover:text-slate-200'
@@ -25,10 +25,23 @@ export default function MobileBottomNav({
           <span className="text-[10px]">Khóa Học</span>
         </button>
 
-        {/* Tab 2: News */}
+        {/* Tab 2: Glossary */}
+        <button
+          onClick={() => setActiveTab('glossary')}
+          className={`flex flex-col items-center gap-0.5 py-1 px-2 rounded-xl transition ${
+            activeTab === 'glossary'
+              ? 'text-emerald-400 font-bold'
+              : 'text-slate-400 hover:text-slate-200'
+          }`}
+        >
+          <Sparkles className="w-4 h-4 text-amber-400" />
+          <span className="text-[10px]">Từ Điển</span>
+        </button>
+
+        {/* Tab 3: News */}
         <button
           onClick={() => setActiveTab('news')}
-          className={`flex flex-col items-center gap-0.5 py-1 px-3 rounded-xl transition relative ${
+          className={`flex flex-col items-center gap-0.5 py-1 px-2 rounded-xl transition relative ${
             activeTab === 'news'
               ? 'text-emerald-400 font-bold'
               : 'text-slate-400 hover:text-slate-200'
@@ -41,10 +54,10 @@ export default function MobileBottomNav({
           <span className="text-[10px]">Tin Live</span>
         </button>
 
-        {/* Tab 3: Tools */}
+        {/* Tab 4: Tools */}
         <button
           onClick={() => setActiveTab('tools')}
-          className={`flex flex-col items-center gap-0.5 py-1 px-3 rounded-xl transition ${
+          className={`flex flex-col items-center gap-0.5 py-1 px-2 rounded-xl transition ${
             activeTab === 'tools'
               ? 'text-emerald-400 font-bold'
               : 'text-slate-400 hover:text-slate-200'
@@ -54,13 +67,13 @@ export default function MobileBottomNav({
           <span className="text-[10px]">Công Cụ</span>
         </button>
 
-        {/* Tab 4: Certificate */}
+        {/* Tab 5: Certificate */}
         <button
           onClick={onOpenCertificate}
-          className="flex flex-col items-center gap-0.5 py-1 px-3 rounded-xl text-amber-400 hover:text-amber-300 transition"
+          className="flex flex-col items-center gap-0.5 py-1 px-2 rounded-xl text-amber-400 hover:text-amber-300 transition"
         >
           <Award className="w-4 h-4" />
-          <span className="text-[10px]">Chứng Chỉ ({passedCount}/{totalModules})</span>
+          <span className="text-[10px]">Bằng Cấp ({passedCount}/{totalModules})</span>
         </button>
 
       </div>
