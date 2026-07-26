@@ -13,7 +13,13 @@ import {
   FileJson,
   Sparkles,
   Key,
-  RefreshCw
+  RefreshCw,
+  Sun,
+  Moon,
+  Monitor,
+  Eye,
+  Tag,
+  Palette
 } from 'lucide-react';
 
 export default function UserProfileModal({ 
@@ -24,7 +30,10 @@ export default function UserProfileModal({
   passedCount,
   totalModules,
   completedModules,
-  onImportBackupData
+  onImportBackupData,
+  theme = 'system',
+  setTheme = () => {},
+  trafficStats
 }) {
   const [importStatus, setImportStatus] = useState('');
   const [newPassword, setNewPassword] = useState('');
@@ -171,6 +180,51 @@ export default function UserProfileModal({
           </div>
         </div>
 
+        {/* Theme Customization Section */}
+        <div className="space-y-2">
+          <h4 className="text-xs font-bold text-emerald-400 uppercase tracking-wider flex items-center gap-1.5">
+            <Palette className="w-4 h-4 text-emerald-400" /> Tùy Chỉnh Giao Diện Trải Nghiệm
+          </h4>
+
+          <div className="grid grid-cols-3 gap-2">
+            <button
+              onClick={() => setTheme('light')}
+              className={`p-2.5 rounded-xl border text-xs font-bold flex items-center justify-center gap-1.5 transition cursor-pointer ${
+                theme === 'light'
+                  ? 'bg-emerald-600 text-white border-emerald-400 shadow-md'
+                  : 'bg-[#08120d] text-slate-300 border-emerald-900/60 hover:border-emerald-500'
+              }`}
+            >
+              <Sun className="w-4 h-4 text-amber-400" />
+              <span>Giao diện Sáng</span>
+            </button>
+
+            <button
+              onClick={() => setTheme('dark')}
+              className={`p-2.5 rounded-xl border text-xs font-bold flex items-center justify-center gap-1.5 transition cursor-pointer ${
+                theme === 'dark'
+                  ? 'bg-emerald-600 text-white border-emerald-400 shadow-md'
+                  : 'bg-[#08120d] text-slate-300 border-emerald-900/60 hover:border-emerald-500'
+              }`}
+            >
+              <Moon className="w-4 h-4 text-emerald-400" />
+              <span>Giao diện Tối</span>
+            </button>
+
+            <button
+              onClick={() => setTheme('system')}
+              className={`p-2.5 rounded-xl border text-xs font-bold flex items-center justify-center gap-1.5 transition cursor-pointer ${
+                theme === 'system'
+                  ? 'bg-emerald-600 text-white border-emerald-400 shadow-md'
+                  : 'bg-[#08120d] text-slate-300 border-emerald-900/60 hover:border-emerald-500'
+              }`}
+            >
+              <Monitor className="w-4 h-4 text-teal-400" />
+              <span>Theo Hệ Thống</span>
+            </button>
+          </div>
+        </div>
+
         {/* Learning Progress Overview */}
         <div className="p-4 rounded-2xl bg-[#08120d] border border-emerald-900/60 space-y-3">
           <div className="flex items-center justify-between text-xs font-bold">
@@ -187,12 +241,18 @@ export default function UserProfileModal({
             />
           </div>
 
-          <p className="text-[11px] text-slate-400">
-            {passedCount === totalModules 
-              ? '🎉 Chúc mừng! Bạn đã hoàn thành 100% khóa học và đủ điều kiện cấp Bằng Chứng Nhận.'
-              : `Còn ${totalModules - passedCount} chuyên đề cần vượt qua bài kiểm tra.`
-            }
-          </p>
+          {/* Value Badge inside profile */}
+          <div className="flex items-center justify-between pt-1 text-[11px] text-slate-400 border-t border-emerald-900/40">
+            <span>Trị giá khóa học: <strong className="text-amber-400">2.999.999 VNĐ</strong></span>
+            <span className="text-emerald-400 font-bold">Tài trợ 100% Học phí</span>
+          </div>
+
+          {trafficStats && (
+            <div className="flex items-center justify-between text-[10px] text-teal-400 font-medium">
+              <span>Real-Time Web Traffic: {trafficStats.totalTraffic.toLocaleString('vi-VN')} views</span>
+              <span>{trafficStats.totalGraduates.toLocaleString('vi-VN')}+ Đạt chứng nhận</span>
+            </div>
+          )}
         </div>
 
         {/* Backup & Sync Section */}
@@ -272,3 +332,4 @@ export default function UserProfileModal({
     </div>
   );
 }
+

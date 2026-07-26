@@ -232,11 +232,12 @@ export default function CertificateModal({
               <div className="grid grid-cols-2 gap-4 pt-6 border-t border-emerald-900/50 max-w-2xl mx-auto text-xs relative z-10 items-end">
                 
                 {/* Verification Metadata */}
-                <div className="text-left space-y-1.5 text-slate-400">
+                <div className="text-left space-y-1 text-slate-400">
                   <div className="flex items-center gap-1.5 text-emerald-400 font-bold text-xs">
                     <ShieldCheck className="w-4 h-4" /> BẢO CHỨNG BỞI P MARCOM
                   </div>
                   <div>Mã xác thực: <strong className="text-slate-200">PMC-2026-8892</strong></div>
+                  <div>Giá trị đào tạo: <strong className="text-amber-400 font-bold">2.999.999 VNĐ</strong> (Tài trợ 100%)</div>
                   <div>Ngày cấp: <strong className="text-slate-200">{currentDate}</strong></div>
                 </div>
 

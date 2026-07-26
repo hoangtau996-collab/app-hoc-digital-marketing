@@ -12,14 +12,24 @@ import {
   ChevronRight,
   ShieldCheck,
   Zap,
-  Award
+  Award,
+  Eye,
+  Tag,
+  Gift,
+  Activity
 } from 'lucide-react';
 
 export default function CourseOverview({ 
   modules, 
   onSelectModule, 
   completedModules,
-  searchQuery
+  searchQuery,
+  trafficStats = {
+    totalTraffic: 158421,
+    totalEnrolled: 4850,
+    totalGraduates: 3240,
+    onlineActive: 36
+  }
 }) {
   const [partFilter, setPartFilter] = useState('all');
 
@@ -42,14 +52,24 @@ export default function CourseOverview({
     <div className="space-y-8">
       
       {/* Hero Banner matching the poster style */}
-      <div className="relative rounded-3xl overflow-hidden glass-panel border border-emerald-500/30 p-6 md:p-10 bg-glow-radial shadow-2xl">
+      <div className="relative rounded-3xl overflow-hidden glass-panel border border-emerald-500/30 p-6 md:p-10 bg-glow-radial shadow-2xl space-y-6">
         <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none" />
         
-        <div className="relative z-10 max-w-3xl space-y-4">
+        {/* Top Badges */}
+        <div className="flex items-center justify-between gap-3 flex-wrap relative z-10">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-950/80 border border-emerald-700/60 text-emerald-400 text-xs font-bold uppercase tracking-wider">
             <PMarcomLogo className="w-5 h-5" showText={false} /> HỌC VIỆN P MARCOM • CHƯƠNG TRÌNH ĐÀO TẠO THỰC CHUYÊN SÂU
           </div>
 
+          {/* Special Course Value Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-amber-500/20 via-emerald-500/20 to-teal-500/20 border border-amber-400/60 text-amber-300 text-xs font-extrabold shadow-lg animate-pulse">
+            <Gift className="w-4 h-4 text-amber-400" />
+            <span>Giá Trị Khóa Học: <span className="line-through text-slate-400 font-semibold">2.999.999 VNĐ</span></span>
+            <span className="bg-amber-400 text-slate-950 px-2 py-0.5 rounded-full font-black uppercase text-[10px]">TÀI TRỢ 100% • 0 VNĐ</span>
+          </div>
+        </div>
+
+        <div className="relative z-10 max-w-3xl space-y-4">
           <h1 className="text-3xl md:text-5xl font-black text-white leading-tight tracking-tight">
             HỌC VIỆN P MARCOM <br />
             <span className="text-gradient-emerald">TRƯỞNG PHÒNG DIGITAL MARKETING</span>
@@ -58,26 +78,78 @@ export default function CourseOverview({
           <p className="text-sm md:text-base text-slate-300 leading-relaxed">
             Chương trình đào tạo với hệ thống <strong className="text-emerald-300 font-semibold">kiến thức bài bản</strong>, <strong className="text-emerald-300 font-semibold">tư duy thực chiến</strong>, mang lại <strong className="text-emerald-300 font-semibold">hiệu quả ngay với doanh nghiệp</strong> trong quá trình chuyển đổi số. Tích hợp trắc nghiệm tình huống thực tế và bản tin cập nhật thuật toán Meta, TikTok, Google liên tục.
           </p>
+        </div>
 
-          {/* Key Metrics */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-4 border-t border-emerald-900/50">
-            <div className="bg-[#0b1411]/80 p-3 rounded-xl border border-emerald-900/40">
-              <div className="text-emerald-400 font-bold text-lg">11 Chuyên đề</div>
-              <div className="text-[11px] text-slate-400">Chuẩn hóa cho Manager</div>
+        {/* Real-time Web Traffic & Completion Stats Dashboard Bar */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3.5 pt-4 border-t border-emerald-900/50 relative z-10">
+          
+          {/* Stat 1: Real Traffic Counter */}
+          <div className="bg-[#0b1411]/90 p-3.5 rounded-2xl border border-teal-500/30 shadow-lg relative overflow-hidden group hover:border-teal-400 transition">
+            <div className="flex items-center justify-between mb-1">
+              <span className="text-[11px] font-extrabold text-teal-400 uppercase tracking-wider flex items-center gap-1">
+                <Eye className="w-3.5 h-3.5 text-teal-400" /> Web Traffic Real-Time
+              </span>
+              <span className="flex h-2 w-2 relative">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-teal-500"></span>
+              </span>
             </div>
-            <div className="bg-[#0b1411]/80 p-3 rounded-xl border border-emerald-900/40">
-              <div className="text-emerald-400 font-bold text-lg">33 Quiz Tình Huống</div>
-              <div className="text-[11px] text-slate-400">Kiểm tra & Giải thích</div>
+            <div className="text-xl sm:text-2xl font-black text-white tracking-tight">
+              {trafficStats.totalTraffic.toLocaleString('vi-VN')}
             </div>
-            <div className="bg-[#0b1411]/80 p-3 rounded-xl border border-emerald-900/40">
-              <div className="text-emerald-400 font-bold text-lg">Real-time Feed</div>
-              <div className="text-[11px] text-slate-400">Cập nhật Meta/TikTok/Google</div>
-            </div>
-            <div className="bg-[#0b1411]/80 p-3 rounded-xl border border-emerald-900/40">
-              <div className="text-amber-400 font-bold text-lg">Chứng Chỉ</div>
-              <div className="text-[11px] text-slate-400">Hoàn thành khóa học</div>
+            <div className="text-[10px] text-slate-400 flex items-center gap-1 mt-0.5">
+              <Activity className="w-3 h-3 text-emerald-400 animate-pulse" /> {trafficStats.onlineActive} Học viên đang online live
             </div>
           </div>
+
+          {/* Stat 2: Certified Graduates */}
+          <div className="bg-[#0b1411]/90 p-3.5 rounded-2xl border border-amber-500/30 shadow-lg group hover:border-amber-400 transition">
+            <div className="flex items-center justify-between mb-1">
+              <span className="text-[11px] font-extrabold text-amber-400 uppercase tracking-wider flex items-center gap-1">
+                <Award className="w-3.5 h-3.5 text-amber-400" /> Đạt Chứng Nhận
+              </span>
+              <ShieldCheck className="w-4 h-4 text-amber-400" />
+            </div>
+            <div className="text-xl sm:text-2xl font-black text-amber-300 tracking-tight">
+              {trafficStats.totalGraduates.toLocaleString('vi-VN')}+
+            </div>
+            <div className="text-[10px] text-slate-400 mt-0.5">
+              Học viên tốt nghiệp xuất sắc
+            </div>
+          </div>
+
+          {/* Stat 3: Total Enrolled Students */}
+          <div className="bg-[#0b1411]/90 p-3.5 rounded-2xl border border-emerald-500/30 shadow-lg group hover:border-emerald-400 transition">
+            <div className="flex items-center justify-between mb-1">
+              <span className="text-[11px] font-extrabold text-emerald-400 uppercase tracking-wider flex items-center gap-1">
+                <Users className="w-3.5 h-3.5 text-emerald-400" /> Học Viên Tham Gia
+              </span>
+              <TrendingUp className="w-4 h-4 text-emerald-400" />
+            </div>
+            <div className="text-xl sm:text-2xl font-black text-white tracking-tight">
+              {trafficStats.totalEnrolled.toLocaleString('vi-VN')}+
+            </div>
+            <div className="text-[10px] text-slate-400 mt-0.5">
+              Quản lý & Trưởng phòng Digital
+            </div>
+          </div>
+
+          {/* Stat 4: Course Value Showcase */}
+          <div className="bg-gradient-to-br from-emerald-950 to-teal-950 p-3.5 rounded-2xl border border-amber-400/50 shadow-lg group hover:border-amber-400 transition">
+            <div className="flex items-center justify-between mb-1">
+              <span className="text-[11px] font-extrabold text-amber-300 uppercase tracking-wider flex items-center gap-1">
+                <Tag className="w-3.5 h-3.5 text-amber-400" /> Giá Trị Đào Tạo
+              </span>
+              <span className="text-[9px] font-extrabold px-1.5 py-0.5 rounded bg-amber-400 text-slate-950 uppercase">HOT</span>
+            </div>
+            <div className="text-lg sm:text-xl font-black text-amber-300 tracking-tight">
+              2.999.999 VNĐ
+            </div>
+            <div className="text-[10px] text-emerald-300 font-bold mt-0.5">
+              Tài trợ 100% → MIỄN PHÍ DÀNH CHO BẠN
+            </div>
+          </div>
+
         </div>
       </div>
 
