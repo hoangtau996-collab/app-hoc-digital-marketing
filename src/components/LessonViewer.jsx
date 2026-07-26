@@ -12,6 +12,7 @@ import {
   ChevronRight
 } from 'lucide-react';
 import QuizComponent from './QuizComponent';
+import DigitalGlossary from './DigitalGlossary';
 
 // Helper function to format bold **text** and bullet points nicely without raw ** asterisks
 function FormattedBlock({ text }) {
@@ -135,10 +136,10 @@ export default function LessonViewer({
         </div>
 
         {/* Subtab Toggle */}
-        <div className="flex items-center bg-[#0d1713] p-1 rounded-xl border border-emerald-900/40 shrink-0">
+        <div className="flex items-center bg-[#0d1713] p-1 rounded-xl border border-emerald-900/40 shrink-0 overflow-x-auto no-scrollbar">
           <button
             onClick={() => setActiveSubTab('theory')}
-            className={`flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-bold transition ${
+            className={`flex items-center gap-1.5 px-3 py-1.5 md:px-4 md:py-2 rounded-lg text-xs font-bold transition shrink-0 ${
               activeSubTab === 'theory'
                 ? 'bg-emerald-600 text-white shadow'
                 : 'text-slate-400 hover:text-white'
@@ -149,8 +150,20 @@ export default function LessonViewer({
           </button>
           
           <button
+            onClick={() => setActiveSubTab('glossary')}
+            className={`flex items-center gap-1.5 px-3 py-1.5 md:px-4 md:py-2 rounded-lg text-xs font-bold transition shrink-0 ${
+              activeSubTab === 'glossary'
+                ? 'bg-emerald-600 text-white shadow'
+                : 'text-slate-400 hover:text-white'
+            }`}
+          >
+            <Sparkles className="w-4 h-4 text-amber-400" />
+            <span>Thuật Ngữ & Công Thức</span>
+          </button>
+
+          <button
             onClick={() => setActiveSubTab('quiz')}
-            className={`flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-bold transition relative ${
+            className={`flex items-center gap-1.5 px-3 py-1.5 md:px-4 md:py-2 rounded-lg text-xs font-bold transition relative shrink-0 ${
               activeSubTab === 'quiz'
                 ? 'bg-emerald-600 text-white shadow'
                 : 'text-slate-400 hover:text-white'
@@ -229,6 +242,9 @@ export default function LessonViewer({
           </div>
 
         </div>
+      ) : activeSubTab === 'glossary' ? (
+        /* Glossary & Calculator Tab inside Lesson */
+        <DigitalGlossary />
       ) : (
         /* Quiz Tab */
         <QuizComponent 
