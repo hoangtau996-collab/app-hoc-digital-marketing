@@ -28,6 +28,7 @@ import {
 
 import { COURSE_MODULES } from './data/courseData';
 import { INITIAL_NEWS_ITEMS } from './data/newsData';
+import { TRANSLATIONS } from './data/translations';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('course'); // 'course', 'news', 'tools'
@@ -36,6 +37,25 @@ export default function App() {
   const [isCertOpen, setIsCertOpen] = useState(false);
   const [isAuthOpen, setIsAuthOpen] = useState(false);
   const [isProfileOpen, setIsProfileOpen] = useState(false);
+
+  // Bilingual Language State: 'vi' | 'en'
+  const [lang, setLang] = useState(() => {
+    try {
+      return localStorage.getItem('dmm_language') || 'vi';
+    } catch (e) {
+      return 'vi';
+    }
+  });
+
+  const toggleLanguage = () => {
+    const nextLang = lang === 'vi' ? 'en' : 'vi';
+    setLang(nextLang);
+    try {
+      localStorage.setItem('dmm_language', nextLang);
+    } catch (e) {}
+  };
+
+  const t = TRANSLATIONS[lang] || TRANSLATIONS.vi;
 
   // Theme State: 'light' | 'dark' | 'system'
   const [theme, setTheme] = useState(() => {
@@ -353,6 +373,9 @@ export default function App() {
         theme={theme}
         setTheme={setTheme}
         trafficStats={trafficStats}
+        lang={lang}
+        toggleLanguage={toggleLanguage}
+        t={t}
       />
 
       {/* Feature Menu Bar (UX Navigation Bar) */}
@@ -372,6 +395,8 @@ export default function App() {
         totalModules={COURSE_MODULES.length}
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
+        lang={lang}
+        t={t}
       />
 
       {/* Guest Progress / Auth Protection Toast Banner */}
@@ -385,7 +410,7 @@ export default function App() {
               onClick={() => setMigrationNotice('')}
               className="bg-amber-500 hover:bg-amber-400 text-slate-950 px-3 py-1 rounded-xl text-xs font-black transition cursor-pointer shrink-0 ml-2"
             >
-              ✕ Đóng
+              ✕ {t.btnClose || 'Đóng'}
             </button>
           </div>
         </div>
@@ -473,6 +498,7 @@ export default function App() {
           setActiveTab('course');
           setSelectedModuleId(null);
         }}
+        t={t}
       />
 
       {/* User Profile & Backup Sync Modal */}

@@ -19,15 +19,31 @@ export default function FeatureMenuBar({
   passedCount,
   totalModules,
   searchQuery,
-  setSearchQuery
+  setSearchQuery,
+  t
 }) {
+  const textDict = t || {
+    menuCourseTitle: "Khóa Học Trưởng Phòng",
+    menuCourseSub: "11 Chuyên đề thực chiến",
+    menuGlossaryTitle: "Từ Điển Digital",
+    menuGlossarySub: "60+ Thuật ngữ chuyên sâu",
+    menuNewsTitle: "Tin Tức Meta/TikTok",
+    menuNewsSub: "Cập nhật thuật toán Live",
+    menuToolsTitle: "Bộ Công Cụ Quản Lý",
+    menuToolsSub: "Tính ngân sách, ROI & Team",
+    menuAiTitle: "Trợ Lý AI Chiến Lược",
+    menuAiSub: "Tư vấn Kế hoạch Marcom",
+    menuCertTitle: "Giấy Chứng Nhận",
+    searchPlaceholder: "Tra cứu bài học / Thuật ngữ..."
+  };
+
   const MENU_ITEMS = [
     {
       id: 'course',
-      title: 'Khóa Học Trưởng Phòng',
-      subtitle: '11 Chuyên đề thực chiến',
+      title: textDict.menuCourseTitle,
+      subtitle: textDict.menuCourseSub,
       icon: BookOpen,
-      badge: 'Chính',
+      badge: 'Main',
       badgeBg: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40',
       action: () => {
         setActiveTab('course');
@@ -36,8 +52,8 @@ export default function FeatureMenuBar({
     },
     {
       id: 'glossary',
-      title: 'Từ Điển Digital',
-      subtitle: '60+ Thuật ngữ chuyên sâu',
+      title: textDict.menuGlossaryTitle,
+      subtitle: textDict.menuGlossarySub,
       icon: Sparkles,
       badge: 'Hot',
       badgeBg: 'bg-amber-500/20 text-amber-300 border-amber-500/40',
@@ -45,8 +61,8 @@ export default function FeatureMenuBar({
     },
     {
       id: 'news',
-      title: 'Tin Tức Meta/TikTok',
-      subtitle: 'Cập nhật thuật toán Live',
+      title: textDict.menuNewsTitle,
+      subtitle: textDict.menuNewsSub,
       icon: Newspaper,
       badge: 'Live',
       badgeBg: 'bg-rose-500/20 text-rose-300 border-rose-500/40',
@@ -54,8 +70,8 @@ export default function FeatureMenuBar({
     },
     {
       id: 'tools',
-      title: 'Bộ Công Cụ Quản Lý',
-      subtitle: 'Tính ngân sách, ROI & Team',
+      title: textDict.menuToolsTitle,
+      subtitle: textDict.menuToolsSub,
       icon: Wrench,
       badge: 'Pro',
       badgeBg: 'bg-teal-500/20 text-teal-300 border-teal-500/40',
@@ -63,8 +79,8 @@ export default function FeatureMenuBar({
     },
     {
       id: 'ai-advisor',
-      title: 'Trợ Lý AI Chiến Lược',
-      subtitle: 'Tư vấn Kế hoạch Marcom',
+      title: textDict.menuAiTitle,
+      subtitle: textDict.menuAiSub,
       icon: Bot,
       badge: 'AI 24/7',
       badgeBg: 'bg-cyan-500/20 text-cyan-300 border-cyan-500/40',
@@ -75,8 +91,8 @@ export default function FeatureMenuBar({
     },
     {
       id: 'cert',
-      title: 'Giấy Chứng Nhận',
-      subtitle: `${passedCount}/${totalModules} Chuyên đề đã đạt`,
+      title: textDict.menuCertTitle,
+      subtitle: `${passedCount}/${totalModules} ${textDict.passedModulesCount || 'Done'}`,
       icon: Award,
       badge: `${passedCount}/${totalModules}`,
       badgeBg: 'bg-amber-500/20 text-amber-300 border-amber-500/40',

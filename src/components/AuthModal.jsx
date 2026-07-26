@@ -42,8 +42,27 @@ export default function AuthModal({
   isOpen, 
   onClose, 
   onLoginSuccess,
-  onReturnHome
+  onReturnHome,
+  t
 }) {
+  const textDict = t || {
+    authTitleRegister: "ĐĂNG KÝ TÀI KHOẢN HỌC VIÊN",
+    authTitleLogin: "ĐĂNG NHẬP HỌC VIÊN",
+    authSubtitle: "Đăng ký tài khoản để tham gia học 11 chuyên đề & nhận Giấy Chứng Nhận",
+    tabRegister: "1. Đăng Ký Mới",
+    tabLogin: "2. Đăng Nhập",
+    labelFullName: "Họ và Tên Học Viên:",
+    labelPhone: "Số Điện Thoại (Zalo):",
+    labelIndustry: "Ngành Nghề Kinh Doanh:",
+    labelEmail: "Địa chỉ Email:",
+    labelPassword: "Mật khẩu bảo mật:",
+    rememberMeLabel: "Ghi nhớ đăng nhập trên thiết bị này",
+    btnRegisterSubmit: "HOÀN TẤT ĐĂNG KÝ HỌC VIÊN",
+    btnLoginSubmit: "XÁC NHẬN ĐĂNG NHẬP",
+    btnReturnHome: "Trở Về Trang Chủ (Xem Tổng Quan)",
+    btnQuickDemo: "🔑 Dùng Tài Khoản Mẫu (hocvien@pmarcom.edu.vn)"
+  };
+
   const [mode, setMode] = useState('register'); // 'register', 'login'
   const [fullName, setFullName] = useState('');
   const [phone, setPhone] = useState('');

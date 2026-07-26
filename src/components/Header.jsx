@@ -31,7 +31,10 @@ export default function Header({
   onOpenProfileModal,
   theme = 'system',
   setTheme = () => {},
-  trafficStats
+  trafficStats,
+  lang = 'vi',
+  toggleLanguage,
+  t
 }) {
   const [showMobileSearch, setShowMobileSearch] = useState(false);
   const [showThemeMenu, setShowThemeMenu] = useState(false);
@@ -116,6 +119,18 @@ export default function Header({
               <Wrench className="w-3.5 h-3.5" /> Công cụ
             </button>
           </div>
+
+          {/* Language Selector Switcher Button */}
+          {toggleLanguage && (
+            <button
+              onClick={toggleLanguage}
+              title={lang === 'vi' ? "Chuyển sang Tiếng Anh (English)" : "Switch to Vietnamese (Tiếng Việt)"}
+              className="px-2.5 py-1.5 rounded-lg bg-[#0d1713] border border-emerald-900/50 hover:border-emerald-500 text-slate-200 hover:text-white transition flex items-center gap-1.5 text-xs font-bold shrink-0 cursor-pointer shadow-sm"
+            >
+              <span className="text-sm">{lang === 'vi' ? '🇻🇳' : '🇬🇧'}</span>
+              <span className="uppercase text-[11px] font-extrabold text-emerald-400">{lang === 'vi' ? 'VI' : 'EN'}</span>
+            </button>
+          )}
 
           {/* Theme Customization Toggle Button */}
           <div className="relative shrink-0">
