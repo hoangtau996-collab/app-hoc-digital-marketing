@@ -178,22 +178,37 @@ export default function App() {
     }
   });
 
-  // Listen to Firebase Auth state
+  // Listen to Firebase Auth state & merge saved profile attributes
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
       if (user) {
+        let existingUser = null;
+        try {
+          const saved = localStorage.getItem('dmm_active_user');
+          if (saved) existingUser = JSON.parse(saved);
+        } catch (e) {}
+
+        const cloudProfile = await getUserProgressFromCloud(user.uid);
+
         const studentUser = {
           id: user.uid,
-          email: user.email || '',
-          name: (user.displayName || (user.email ? user.email.split('@')[0] : 'HỌC VIÊN')).toUpperCase(),
-          createdAt: new Date().toLocaleDateString('vi-VN')
+          email: user.email || (existingUser?.email || ''),
+          name: (existingUser?.name || cloudProfile?.name || user.displayName || (user.email ? user.email.split('@')[0] : 'HỌC VIÊN')).toUpperCase(),
+          phone: existingUser?.phone || cloudProfile?.phone || 'Chưa cập nhật',
+          industry: existingUser?.industry || cloudProfile?.industry || 'Digital Marketing',
+          coverBg: existingUser?.coverBg || cloudProfile?.coverBg || 'emerald',
+          avatarUrl: existingUser?.avatarUrl || cloudProfile?.avatarUrl || '',
+          createdAt: existingUser?.createdAt || cloudProfile?.createdAt || new Date().toLocaleDateString('vi-VN')
         };
+
         setCurrentUser(studentUser);
+        try {
+          localStorage.setItem('dmm_active_user', JSON.stringify(studentUser));
+        } catch (e) {}
 
         // Fetch cloud progress from Cloud Firestore
-        const cloudData = await getUserProgressFromCloud(user.uid);
-        if (cloudData && Array.isArray(cloudData.completedModules)) {
-          setCompletedModules(cloudData.completedModules);
+        if (cloudProfile && Array.isArray(cloudProfile.completedModules)) {
+          setCompletedModules(cloudProfile.completedModules);
         }
       }
     });

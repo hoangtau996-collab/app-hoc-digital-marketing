@@ -80,7 +80,9 @@ export default function UserProfileModal({
   };
 
   const handleSaveProfile = (e) => {
-    e.preventDefault();
+    if (e && typeof e.preventDefault === 'function') {
+      e.preventDefault();
+    }
     if (!name || !name.trim()) {
       setSaveStatus('❌ Họ và tên không được để trống.');
       return;
@@ -89,17 +91,17 @@ export default function UserProfileModal({
     const updated = {
       ...currentUser,
       name: name.trim().toUpperCase(),
-      phone: phone.trim(),
-      industry,
-      coverBg,
-      avatarUrl
+      phone: phone ? phone.trim() : '',
+      industry: industry || 'Digital Marketing',
+      coverBg: coverBg || 'emerald',
+      avatarUrl: avatarUrl || ''
     };
 
     if (onUpdateProfile) {
       onUpdateProfile(updated);
     }
 
-    setSaveStatus('🟢 Đã lưu thay đổi thông tin & ảnh đại diện!');
+    setSaveStatus('🟢 Đã lưu thay đổi thông tin thành công!');
     setIsEditing(false);
     
     // Auto-close modal and return to main page
