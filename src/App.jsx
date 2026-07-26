@@ -297,6 +297,25 @@ export default function App() {
     setNewsFeed(prev => [newNewsItem, ...prev]);
   };
 
+  // Protected Action Wrapper: Require Registration to Learn & Use Tools
+  const handleProtectedSelectModule = (id) => {
+    if (!currentUser) {
+      setMigrationNotice('🔒 Vui lòng Đăng Ký / Đăng Nhập tài khoản học viên để bắt đầu học chuyên đề!');
+      setIsAuthOpen(true);
+      return;
+    }
+    setSelectedModuleId(id);
+  };
+
+  const handleProtectedSelectTab = (tab) => {
+    if (!currentUser && tab !== 'course') {
+      setMigrationNotice('🔒 Vui lòng Đăng Ký / Đăng Nhập tài khoản học viên để sử dụng các tính năng công cụ!');
+      setIsAuthOpen(true);
+      return;
+    }
+    setActiveTab(tab);
+  };
+
   const handleNextModule = () => {
     const currentIndex = COURSE_MODULES.findIndex(m => m.id === selectedModuleId);
     if (currentIndex < COURSE_MODULES.length - 1) {
@@ -317,11 +336,18 @@ export default function App() {
       {/* Top Header Bar */}
       <Header
         activeTab={activeTab}
-        setActiveTab={setActiveTab}
+        setActiveTab={handleProtectedSelectTab}
         passedCount={completedModules.length}
         totalModules={COURSE_MODULES.length}
         newsFeed={newsFeed}
-        onOpenCertificate={() => setIsCertOpen(true)}
+        onOpenCertificate={() => {
+          if (!currentUser) {
+            setMigrationNotice('🔒 Vui lòng Đăng Ký / Đăng Nhập để xem bằng cấp!');
+            setIsAuthOpen(true);
+          } else {
+            setIsCertOpen(true);
+          }
+        }}
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
         currentUser={currentUser}
@@ -332,10 +358,10 @@ export default function App() {
         trafficStats={trafficStats}
       />
 
-      {/* Guest Progress Migration Toast Banner */}
+      {/* Guest Progress / Auth Protection Toast Banner */}
       {migrationNotice && (
         <div className="max-w-7xl w-full mx-auto px-3 sm:px-6 lg:px-8 pt-4">
-          <div className="p-4 rounded-2xl bg-gradient-to-r from-emerald-950 via-[#0d221a] to-teal-950 border border-emerald-500/60 text-emerald-300 text-xs font-bold flex items-center justify-between shadow-xl animate-bounce">
+          <div className="p-4 rounded-2xl bg-gradient-to-r from-emerald-950 via-[#0d221a] to-teal-950 border border-emerald-500/60 text-emerald-300 text-xs sm:text-sm font-bold flex items-center justify-between shadow-xl animate-bounce">
             <span>{migrationNotice}</span>
             <button 
               onClick={() => setMigrationNotice('')}
@@ -355,10 +381,10 @@ export default function App() {
           <Sidebar
             modules={COURSE_MODULES}
             selectedModuleId={selectedModuleId}
-            onSelectModule={(id) => setSelectedModuleId(id)}
+            onSelectModule={handleProtectedSelectModule}
             completedModules={completedModules}
             activeTab={activeTab}
-            setActiveTab={setActiveTab}
+            setActiveTab={handleProtectedSelectTab}
           />
 
           {/* Main View Area */}
@@ -384,7 +410,7 @@ export default function App() {
               ) : (
                 <CourseOverview
                   modules={COURSE_MODULES}
-                  onSelectModule={(id) => setSelectedModuleId(id)}
+                  onSelectModule={handleProtectedSelectModule}
                   completedModules={completedModules}
                   searchQuery={searchQuery}
                   trafficStats={trafficStats}

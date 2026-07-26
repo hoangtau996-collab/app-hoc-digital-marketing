@@ -43,8 +43,8 @@ export default function Header({
       <div className="max-w-7xl mx-auto flex items-center justify-between gap-2 sm:gap-4">
         
         {/* Logo & Course Title */}
-        <div className="flex items-center gap-3 cursor-pointer shrink-0" onClick={() => setActiveTab('course')}>
-          <PMarcomLogo className="w-10 h-10 sm:w-11 sm:h-11" showText={false} />
+        <div className="flex items-center gap-2.5 cursor-pointer shrink-0" onClick={() => setActiveTab('course')}>
+          <PMarcomLogo className="w-9 h-9 sm:w-11 sm:h-11" showText={false} />
           <div>
             <div className="flex items-center gap-1.5 flex-wrap">
               <span className="text-[10px] sm:text-xs font-extrabold px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 border border-emerald-700/60 uppercase tracking-wider">
@@ -52,26 +52,26 @@ export default function Header({
               </span>
               
               {/* Course Value Tag Header */}
-              <span className="hidden md:inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/40">
+              <span className="hidden xl:inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/40">
                 <Tag className="w-3 h-3 text-amber-400" /> Trị Giá: 2.999.999 VNĐ (MIỄN PHÍ)
               </span>
 
               {/* Real Traffic Counter */}
               {trafficStats && (
-                <span className="hidden lg:inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded bg-teal-950 text-teal-300 border border-teal-700/60">
+                <span className="hidden 2xl:inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded bg-teal-950 text-teal-300 border border-teal-700/60">
                   <Eye className="w-3 h-3 text-teal-400" /> {trafficStats.totalTraffic.toLocaleString('vi-VN')} Lượt Xem Real-Time
                 </span>
               )}
             </div>
-            <h1 className="text-sm sm:text-base md:text-lg font-black text-white tracking-wide truncate max-w-[200px] sm:max-w-none mt-0.5">
-              HỌC VIỆN P MARCOM
+            <h1 className="text-xs sm:text-base font-black text-white tracking-wide truncate max-w-[150px] sm:max-w-none mt-0.5">
+              TRƯỞNG PHÒNG DIGITAL MARKETING
             </h1>
           </div>
         </div>
 
         {/* Desktop Search & Controls */}
-        <div className="hidden lg:flex items-center gap-3">
-          <div className="relative w-40 lg:w-52">
+        <div className="hidden lg:flex items-center gap-2 xl:gap-3 shrink-0">
+          <div className="relative hidden xl:block w-36 lg:w-44">
             <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
             <input 
               type="text" 
@@ -85,7 +85,7 @@ export default function Header({
           <div className="flex items-center bg-[#0d1713] p-1 rounded-lg border border-emerald-900/40">
             <button
               onClick={() => setActiveTab('course')}
-              className={`flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium transition ${
+              className={`flex items-center gap-1 px-2 py-1 rounded-md text-xs font-medium transition ${
                 activeTab === 'course' ? 'bg-emerald-600 text-white shadow' : 'text-slate-400 hover:text-white'
               }`}
             >
@@ -93,7 +93,7 @@ export default function Header({
             </button>
             <button
               onClick={() => setActiveTab('glossary')}
-              className={`flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium transition ${
+              className={`flex items-center gap-1 px-2 py-1 rounded-md text-xs font-medium transition ${
                 activeTab === 'glossary' ? 'bg-emerald-600 text-white shadow' : 'text-slate-400 hover:text-white'
               }`}
             >
@@ -101,7 +101,7 @@ export default function Header({
             </button>
             <button
               onClick={() => setActiveTab('news')}
-              className={`flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium transition ${
+              className={`flex items-center gap-1 px-2 py-1 rounded-md text-xs font-medium transition ${
                 activeTab === 'news' ? 'bg-emerald-600 text-white shadow' : 'text-slate-400 hover:text-white'
               }`}
             >
@@ -109,7 +109,7 @@ export default function Header({
             </button>
             <button
               onClick={() => setActiveTab('tools')}
-              className={`flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium transition ${
+              className={`flex items-center gap-1 px-2 py-1 rounded-md text-xs font-medium transition ${
                 activeTab === 'tools' ? 'bg-emerald-600 text-white shadow' : 'text-slate-400 hover:text-white'
               }`}
             >
@@ -118,7 +118,7 @@ export default function Header({
           </div>
 
           {/* Theme Customization Toggle Button */}
-          <div className="relative">
+          <div className="relative shrink-0">
             <button
               onClick={() => setShowThemeMenu(!showThemeMenu)}
               title="Tuỳ chỉnh Giao diện: Sáng / Tối / Mặc định hệ thống"
@@ -165,7 +165,7 @@ export default function Header({
 
           <button
             onClick={onOpenCertificate}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gradient-to-r from-amber-500/20 to-emerald-500/20 border border-amber-500/40 hover:border-amber-400 text-amber-300 text-xs font-medium transition shrink-0 cursor-pointer"
+            className="hidden xl:flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gradient-to-r from-amber-500/20 to-emerald-500/20 border border-amber-500/40 hover:border-amber-400 text-amber-300 text-xs font-medium transition shrink-0 cursor-pointer"
           >
             <Award className="w-4 h-4 text-amber-400" />
             <span>Chứng chỉ</span>
@@ -174,7 +174,7 @@ export default function Header({
             </span>
           </button>
 
-          {/* User Account / Auth Button */}
+          {/* User Account / Auth Button (GUARANTEED VISIBLE SHRINK-0) */}
           {currentUser ? (
             <button
               onClick={onOpenProfileModal}
@@ -183,7 +183,7 @@ export default function Header({
               <div className="w-5 h-5 rounded-full bg-emerald-500 text-slate-950 flex items-center justify-center font-black text-[10px]">
                 {currentUser.name ? currentUser.name.charAt(0) : 'U'}
               </div>
-              <span className="truncate max-w-[120px]">{currentUser.name || 'Học Viên'}</span>
+              <span className="truncate max-w-[100px]">{currentUser.name || 'Học Viên'}</span>
             </button>
           ) : (
             <button
