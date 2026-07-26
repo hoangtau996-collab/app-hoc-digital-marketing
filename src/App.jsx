@@ -84,15 +84,25 @@ export default function App() {
       }
     };
 
-    if (theme === 'system') {
-      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-      applyTheme(mediaQuery.matches ? 'dark' : 'light');
+    if (theme === 'system' && typeof window !== 'undefined' && window.matchMedia) {
+      try {
+        const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+        applyTheme(mediaQuery.matches ? 'dark' : 'light');
 
-      const handleChange = (e) => {
-        applyTheme(e.matches ? 'dark' : 'light');
-      };
-      mediaQuery.addEventListener('change', handleChange);
-      return () => mediaQuery.removeEventListener('change', handleChange);
+        const handleChange = (e) => {
+          applyTheme(e.matches ? 'dark' : 'light');
+        };
+
+        if (mediaQuery.addEventListener) {
+          mediaQuery.addEventListener('change', handleChange);
+          return () => mediaQuery.removeEventListener('change', handleChange);
+        } else if (mediaQuery.addListener) {
+          mediaQuery.addListener(handleChange);
+          return () => mediaQuery.removeListener(handleChange);
+        }
+      } catch (e) {
+        applyTheme('dark');
+      }
     } else {
       applyTheme(theme);
     }
