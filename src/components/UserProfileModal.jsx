@@ -27,6 +27,7 @@ export default function UserProfileModal({
   onClose, 
   currentUser, 
   onLogout,
+  onUpdateProfile,
   passedCount,
   totalModules,
   completedModules,
@@ -38,10 +39,50 @@ export default function UserProfileModal({
   const [importStatus, setImportStatus] = useState('');
   const [newPassword, setNewPassword] = useState('');
   const [passUpdateMsg, setPassUpdateMsg] = useState('');
+  const [isEditing, setIsEditing] = useState(false);
+
+  const [name, setName] = useState(currentUser?.name || '');
+  const [phone, setPhone] = useState(currentUser?.phone || '');
+  const [industry, setIndustry] = useState(currentUser?.industry || 'Digital Marketing');
+  const [coverBg, setCoverBg] = useState(currentUser?.coverBg || 'emerald');
+  const [saveStatus, setSaveStatus] = useState('');
+
+  useEffect(() => {
+    if (currentUser) {
+      setName(currentUser.name || '');
+      setPhone(currentUser.phone || '');
+      setIndustry(currentUser.industry || 'Digital Marketing');
+      setCoverBg(currentUser.coverBg || 'emerald');
+    }
+  }, [currentUser]);
 
   if (!isOpen || !currentUser) return null;
 
   const progressPercent = Math.round((passedCount / totalModules) * 100);
+
+  const handleSaveProfile = (e) => {
+    e.preventDefault();
+    if (!name || !name.trim()) {
+      setSaveStatus('❌ Họ và tên không được để trống.');
+      return;
+    }
+
+    const updated = {
+      ...currentUser,
+      name: name.trim().toUpperCase(),
+      phone: phone.trim(),
+      industry,
+      coverBg
+    };
+
+    if (onUpdateProfile) {
+      onUpdateProfile(updated);
+    }
+
+    setSaveStatus('🟢 Đã lưu thay đổi thông tin & hình nền!');
+    setIsEditing(false);
+    setTimeout(() => setSaveStatus(''), 4000);
+  };
 
   // Export progress data as JSON backup
   const handleExportBackup = () => {
@@ -162,23 +203,125 @@ export default function UserProfileModal({
         </button>
 
         {/* User Card Header */}
-        <div className="flex items-center gap-4 border-b border-emerald-900/40 pb-5">
-          <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-700 flex items-center justify-center text-slate-950 font-black text-xl border-2 border-emerald-400/40 shadow-lg shadow-emerald-950 shrink-0">
-            {currentUser.name.charAt(0)}
+        <div className="flex items-center justify-between border-b border-emerald-900/40 pb-5">
+          <div className="flex items-center gap-4">
+            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-400 to-emerald-500 flex items-center justify-center text-slate-950 font-black text-xl border-2 border-amber-400/60 shadow-lg shrink-0">
+              {currentUser.name ? currentUser.name.charAt(0).toUpperCase() : 'U'}
+            </div>
+
+            <div className="min-w-0 flex-1">
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-950 text-emerald-400 border border-emerald-800 text-[10px] font-bold uppercase tracking-wider mb-1">
+                <ShieldCheck className="w-3 h-3" /> HỌC VIỆN P MARCOM
+              </div>
+              <h3 className="text-lg font-black text-white truncate">
+                {currentUser.name}
+              </h3>
+              <p className="text-xs text-slate-400 truncate">
+                {currentUser.email} • {currentUser.phone || 'Chưa có SĐT'}
+              </p>
+            </div>
           </div>
 
-          <div className="min-w-0 flex-1">
-            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-950 text-emerald-400 border border-emerald-800 text-[10px] font-bold uppercase tracking-wider mb-1">
-              <ShieldCheck className="w-3 h-3" /> HỌC VIỆN P MARCOM
-            </div>
-            <h3 className="text-lg font-black text-white truncate">
-              {currentUser.name}
-            </h3>
-            <p className="text-xs text-slate-400 truncate">
-              {currentUser.email}
-            </p>
-          </div>
+          <button
+            onClick={() => setIsEditing(!isEditing)}
+            className="px-3 py-1.5 rounded-xl bg-amber-500/20 border border-amber-500/40 text-amber-300 text-xs font-bold hover:bg-amber-500/30 transition cursor-pointer shrink-0"
+          >
+            {isEditing ? '✕ Hủy' : '✏️ Thấu hiểu & Sửa Hồ Sơ'}
+          </button>
         </div>
+
+        {saveStatus && (
+          <div className="p-3 rounded-xl bg-emerald-950 border border-emerald-500 text-emerald-200 text-xs font-bold">
+            {saveStatus}
+          </div>
+        )}
+
+        {/* Editable Profile Form */}
+        {isEditing && (
+          <form onSubmit={handleSaveProfile} className="p-4 rounded-2xl bg-[#091611] border border-amber-500/40 space-y-3.5">
+            <h4 className="text-xs font-bold text-amber-300 uppercase tracking-wider flex items-center gap-1.5 border-b border-emerald-900/60 pb-2">
+              <User className="w-4 h-4 text-amber-400" /> Cập Nhật Thông Tin Cá Nhân Học Viên
+            </h4>
+
+            <div className="space-y-1">
+              <label className="text-xs font-bold text-slate-300">Họ và Tên Học Viên (In Bằng):</label>
+              <input
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                placeholder="Ví dụ: ĐẶNG THỊ CẨM BÌNH"
+                className="w-full bg-[#08120d] border border-emerald-900/80 rounded-xl px-3 py-2 text-xs text-white uppercase font-bold focus:outline-none focus:border-amber-400"
+                required
+              />
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div className="space-y-1">
+                <label className="text-xs font-bold text-slate-300">Số Điện Thoại (Zalo):</label>
+                <input
+                  type="text"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                  placeholder="0901234567"
+                  className="w-full bg-[#08120d] border border-emerald-900/80 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-amber-400"
+                />
+              </div>
+
+              <div className="space-y-1">
+                <label className="text-xs font-bold text-slate-300">Ngành Nghề Kinh Doanh:</label>
+                <input
+                  type="text"
+                  value={industry}
+                  onChange={(e) => setIndustry(e.target.value)}
+                  placeholder="Bất Động Sản / Spa / E-Commerce..."
+                  className="w-full bg-[#08120d] border border-emerald-900/80 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-amber-400"
+                />
+              </div>
+            </div>
+
+            {/* Custom Background Image Selector */}
+            <div className="space-y-1">
+              <label className="text-xs font-bold text-slate-300 flex items-center gap-1">
+                <Palette className="w-3.5 h-3.5 text-amber-400" /> Chọn Phong Cách Hình Nền Ứng Dụng:
+              </label>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-1">
+                {[
+                  { id: 'emerald', label: '🌲 Xanh Ngọc', color: 'from-emerald-950 to-slate-950 border-emerald-500' },
+                  { id: 'gold', label: '⚜️ Vàng Hoàng Gia', color: 'from-amber-950 to-slate-950 border-amber-500' },
+                  { id: 'dark', label: '🌌 Tối Huyền Bí', color: 'from-slate-950 to-black border-slate-700' },
+                  { id: 'teal', label: '🚀 Công Nghệ Tech', color: 'from-teal-950 to-slate-950 border-teal-500' }
+                ].map((bg) => (
+                  <button
+                    key={bg.id}
+                    type="button"
+                    onClick={() => setCoverBg(bg.id)}
+                    className={`p-2 rounded-xl border text-[11px] font-bold transition bg-gradient-to-br ${bg.color} ${
+                      coverBg === bg.id ? 'ring-2 ring-amber-400 shadow-md text-white' : 'text-slate-400 opacity-70 hover:opacity-100'
+                    }`}
+                  >
+                    {bg.label}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div className="pt-2 flex justify-end gap-2">
+              <button
+                type="button"
+                onClick={() => setIsEditing(false)}
+                className="px-3.5 py-2 rounded-xl bg-slate-800 text-slate-300 text-xs font-bold hover:bg-slate-700 transition cursor-pointer"
+              >
+                Hủy
+              </button>
+              <button
+                type="submit"
+                className="px-4 py-2 rounded-xl bg-gradient-to-r from-amber-500 to-yellow-500 text-slate-950 text-xs font-black hover:brightness-110 transition shadow cursor-pointer"
+              >
+                💾 Lưu Thay Đổi
+              </button>
+            </div>
+          </form>
+        )}
 
         {/* Theme Customization Section */}
         <div className="space-y-2">

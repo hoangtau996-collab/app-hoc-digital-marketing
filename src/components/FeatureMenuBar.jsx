@@ -20,6 +20,9 @@ export default function FeatureMenuBar({
   totalModules,
   searchQuery,
   setSearchQuery,
+  currentUser,
+  onOpenAuthModal,
+  onOpenProfileModal,
   t
 }) {
   const textDict = t || {
@@ -78,21 +81,9 @@ export default function FeatureMenuBar({
       action: () => setActiveTab('tools')
     },
     {
-      id: 'ai-advisor',
-      title: textDict.menuAiTitle,
-      subtitle: textDict.menuAiSub,
-      icon: Bot,
-      badge: 'AI 24/7',
-      badgeBg: 'bg-cyan-500/20 text-cyan-300 border-cyan-500/40',
-      action: () => {
-        setActiveTab('course');
-        onSelectModule('module-11');
-      }
-    },
-    {
       id: 'cert',
       title: textDict.menuCertTitle,
-      subtitle: `${passedCount}/${totalModules} ${textDict.passedModulesCount || 'Done'}`,
+      subtitle: `${passedCount}/${totalModules} ${textDict.passedModulesCount || 'Đã Đạt'}`,
       icon: Award,
       badge: `${passedCount}/${totalModules}`,
       badgeBg: 'bg-amber-500/20 text-amber-300 border-amber-500/40',
@@ -101,11 +92,53 @@ export default function FeatureMenuBar({
   ];
 
   return (
-    <div className="w-full bg-[#0a1410]/90 backdrop-blur-lg border-b border-emerald-900/50 py-3 px-3 sm:px-6 sticky top-[60px] z-30 shadow-lg">
+    <div className="w-full bg-[#0a1410]/95 backdrop-blur-lg border-b border-emerald-900/50 py-2.5 px-3 sm:px-6 sticky top-[60px] z-30 shadow-xl">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3">
         
         {/* Swappable Horizontal Feature Menu Row */}
         <div className="w-full md:w-auto flex items-center gap-2 overflow-x-auto no-scrollbar py-1 scroll-smooth">
+          
+          {/* STUDENT PROFILE / ACCOUNT BUTTON ON MENU BAR */}
+          {currentUser ? (
+            <button
+              onClick={onOpenProfileModal}
+              className="flex items-center gap-2.5 px-3.5 py-2 rounded-xl text-left transition shrink-0 border border-amber-400/60 bg-gradient-to-r from-amber-500/20 via-emerald-950 to-teal-950 hover:brightness-125 text-white shadow-lg cursor-pointer group"
+              title="Tuỳ chỉnh thông tin cá nhân học viên & hình nền"
+            >
+              <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-amber-400 to-yellow-500 text-slate-950 font-black text-xs flex items-center justify-center shadow shrink-0">
+                {currentUser.name ? currentUser.name.charAt(0).toUpperCase() : 'U'}
+              </div>
+
+              <div>
+                <div className="flex items-center gap-1.5">
+                  <span className="text-xs font-black text-amber-300 uppercase tracking-wide truncate max-w-[120px] sm:max-w-[160px]">
+                    {currentUser.name}
+                  </span>
+                  <span className="text-[9px] font-black px-1.5 py-0.2 rounded bg-amber-500 text-slate-950 uppercase border border-amber-400">
+                    Hồ Sơ
+                  </span>
+                </div>
+                <p className="text-[10px] text-slate-300 font-medium whitespace-nowrap">
+                  ⚙️ Tuỳ chỉnh thông tin & Hình nền
+                </p>
+              </div>
+            </button>
+          ) : (
+            <button
+              onClick={onOpenAuthModal}
+              className="flex items-center gap-2 px-3.5 py-2 rounded-xl text-left transition shrink-0 border border-emerald-500 bg-gradient-to-r from-emerald-600 to-teal-600 hover:brightness-110 text-white shadow-lg cursor-pointer"
+            >
+              <div className="p-1 rounded-lg bg-white/20 text-white">
+                <Search className="w-4 h-4" />
+              </div>
+              <div>
+                <div className="text-xs font-bold whitespace-nowrap">🔑 Đăng Ký / Đăng Nhập</div>
+                <p className="text-[10px] text-emerald-100 font-medium">Tạo hồ sơ học viên ngay</p>
+              </div>
+            </button>
+          )}
+
+          {/* MAIN MENU ITEMS */}
           {MENU_ITEMS.map((item) => {
             const Icon = item.icon;
             const isActive = activeTab === item.id;

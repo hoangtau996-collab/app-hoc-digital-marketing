@@ -333,6 +333,13 @@ export default function App() {
     setIsProfileOpen(false);
   };
 
+  const handleUpdateUserProfile = (updatedUser) => {
+    setCurrentUser(updatedUser);
+    localStorage.setItem('dmm_active_user', JSON.stringify(updatedUser));
+    localStorage.setItem('dmm_student_name', updatedUser.name);
+    recordStudentAccountToCloud(updatedUser);
+  };
+
   const handleImportBackupData = (importedModules) => {
     if (Array.isArray(importedModules)) {
       setCompletedModules(importedModules);
@@ -538,6 +545,7 @@ export default function App() {
         onClose={() => setIsProfileOpen(false)}
         currentUser={currentUser}
         onLogout={handleLogout}
+        onUpdateProfile={handleUpdateUserProfile}
         passedCount={completedModules.length}
         totalModules={COURSE_MODULES.length}
         completedModules={completedModules}
