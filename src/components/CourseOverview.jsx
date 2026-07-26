@@ -84,7 +84,7 @@ export default function CourseOverview({
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3.5 pt-4 border-t border-emerald-900/50 relative z-10">
           
           {/* Stat 1: Real Traffic Counter */}
-          <div className="bg-[#0b1411]/90 p-3.5 rounded-2xl border border-teal-500/30 shadow-lg relative overflow-hidden group hover:border-teal-400 transition">
+          <div className="glass-panel p-3.5 rounded-2xl border border-teal-500/30 shadow-lg relative overflow-hidden group hover:border-teal-400 transition">
             <div className="flex items-center justify-between mb-1">
               <span className="text-[11px] font-extrabold text-teal-400 uppercase tracking-wider flex items-center gap-1">
                 <Eye className="w-3.5 h-3.5 text-teal-400" /> Web Traffic Real-Time
@@ -103,14 +103,14 @@ export default function CourseOverview({
           </div>
 
           {/* Stat 2: Certified Graduates */}
-          <div className="bg-[#0b1411]/90 p-3.5 rounded-2xl border border-amber-500/30 shadow-lg group hover:border-amber-400 transition">
+          <div className="glass-panel p-3.5 rounded-2xl border border-amber-500/30 shadow-lg group hover:border-amber-400 transition">
             <div className="flex items-center justify-between mb-1">
               <span className="text-[11px] font-extrabold text-amber-400 uppercase tracking-wider flex items-center gap-1">
                 <Award className="w-3.5 h-3.5 text-amber-400" /> Đạt Chứng Nhận
               </span>
               <ShieldCheck className="w-4 h-4 text-amber-400" />
             </div>
-            <div className="text-xl sm:text-2xl font-black text-amber-300 tracking-tight">
+            <div className="text-xl sm:text-2xl font-black text-amber-400 tracking-tight">
               {trafficStats.totalGraduates.toLocaleString('vi-VN')}+
             </div>
             <div className="text-[10px] text-slate-400 mt-0.5">
@@ -119,7 +119,7 @@ export default function CourseOverview({
           </div>
 
           {/* Stat 3: Total Enrolled Students */}
-          <div className="bg-[#0b1411]/90 p-3.5 rounded-2xl border border-emerald-500/30 shadow-lg group hover:border-emerald-400 transition">
+          <div className="glass-panel p-3.5 rounded-2xl border border-emerald-500/30 shadow-lg group hover:border-emerald-400 transition">
             <div className="flex items-center justify-between mb-1">
               <span className="text-[11px] font-extrabold text-emerald-400 uppercase tracking-wider flex items-center gap-1">
                 <Users className="w-3.5 h-3.5 text-emerald-400" /> Học Viên Tham Gia
@@ -135,17 +135,17 @@ export default function CourseOverview({
           </div>
 
           {/* Stat 4: Course Value Showcase */}
-          <div className="bg-gradient-to-br from-emerald-950 to-teal-950 p-3.5 rounded-2xl border border-amber-400/50 shadow-lg group hover:border-amber-400 transition">
+          <div className="glass-panel p-3.5 rounded-2xl border border-amber-400/50 shadow-lg group hover:border-amber-400 transition">
             <div className="flex items-center justify-between mb-1">
-              <span className="text-[11px] font-extrabold text-amber-300 uppercase tracking-wider flex items-center gap-1">
+              <span className="text-[11px] font-extrabold text-amber-400 uppercase tracking-wider flex items-center gap-1">
                 <Tag className="w-3.5 h-3.5 text-amber-400" /> Giá Trị Đào Tạo
               </span>
               <span className="text-[9px] font-extrabold px-1.5 py-0.5 rounded bg-amber-400 text-slate-950 uppercase">HOT</span>
             </div>
-            <div className="text-lg sm:text-xl font-black text-amber-300 tracking-tight">
+            <div className="text-lg sm:text-xl font-black text-amber-400 tracking-tight">
               2.999.999 VNĐ
             </div>
-            <div className="text-[10px] text-emerald-300 font-bold mt-0.5">
+            <div className="text-[10px] text-emerald-400 font-bold mt-0.5">
               Tài trợ 100% → MIỄN PHÍ DÀNH CHO BẠN
             </div>
           </div>

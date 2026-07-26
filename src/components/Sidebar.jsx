@@ -127,8 +127,8 @@ export default function Sidebar({
                 }}
                 className={`w-full text-left p-2.5 rounded-xl transition flex items-center justify-between group ${
                   isSelected
-                    ? 'bg-gradient-to-r from-emerald-900/80 to-teal-950 border border-emerald-500/50 text-white shadow-md'
-                    : 'bg-[#0b1411]/60 hover:bg-emerald-950/40 text-slate-300 border border-emerald-950/40'
+                    ? 'bg-gradient-to-r from-emerald-600 to-teal-700 text-white font-bold shadow-md border border-emerald-500/50'
+                    : 'bg-slate-900/40 hover:bg-emerald-950/40 text-slate-200 border border-slate-800/60'
                 }`}
               >
                 <div className="flex items-center gap-3 min-w-0">
@@ -137,13 +137,13 @@ export default function Sidebar({
                       ? 'bg-emerald-500 text-slate-950'
                       : isSelected
                       ? 'bg-emerald-400/20 text-emerald-300 border border-emerald-400/40'
-                      : 'bg-slate-900 text-slate-400 border border-slate-800'
+                      : 'bg-slate-800 text-slate-300 border border-slate-700'
                   }`}>
                     {isCompleted ? <CheckCircle2 className="w-4 h-4 stroke-[3]" /> : mod.number}
                   </div>
 
                   <div className="min-w-0">
-                    <h4 className="text-xs font-bold truncate group-hover:text-emerald-300 transition">
+                    <h4 className="text-xs font-bold truncate group-hover:text-emerald-500 transition">
                       {mod.number}. {mod.title}
                     </h4>
                     <p className="text-[11px] text-slate-400 truncate">
@@ -152,8 +152,8 @@ export default function Sidebar({
                   </div>
                 </div>
 
-                <ChevronRight className={`w-4 h-4 text-slate-500 transition group-hover:translate-x-0.5 ${
-                  isSelected ? 'text-emerald-400' : ''
+                <ChevronRight className={`w-4 h-4 text-slate-400 transition group-hover:translate-x-0.5 ${
+                  isSelected ? 'text-emerald-300' : ''
                 }`} />
               </button>
             );
@@ -163,7 +163,7 @@ export default function Sidebar({
 
       {/* Desktop Feature Shortcuts */}
       <div className="hidden lg:block glass-panel rounded-2xl p-4 border border-emerald-900/40 space-y-3">
-        <h4 className="text-xs font-bold text-emerald-400 uppercase tracking-wider flex items-center gap-1.5">
+        <h4 className="text-xs font-bold text-emerald-500 uppercase tracking-wider flex items-center gap-1.5">
           <Sparkles className="w-3.5 h-3.5" />
           Tiện Ích Trưởng Phòng
         </h4>
@@ -173,8 +173,8 @@ export default function Sidebar({
             onClick={() => setActiveTab('glossary')}
             className={`p-3 rounded-xl border text-left transition flex items-center gap-3 ${
               activeTab === 'glossary'
-                ? 'bg-emerald-950 border-emerald-500 text-white'
-                : 'bg-[#0a120f] border-emerald-900/30 text-slate-300 hover:border-emerald-700/50'
+                ? 'bg-emerald-600 border-emerald-500 text-white font-bold'
+                : 'bg-slate-900/40 border-slate-800 text-slate-200 hover:border-emerald-500/50'
             }`}
           >
             <div className="w-8 h-8 rounded-lg bg-emerald-900/40 border border-emerald-700/40 flex items-center justify-center text-amber-400">
@@ -190,8 +190,8 @@ export default function Sidebar({
             onClick={() => setActiveTab('news')}
             className={`p-3 rounded-xl border text-left transition flex items-center gap-3 ${
               activeTab === 'news'
-                ? 'bg-emerald-950 border-emerald-500 text-white'
-                : 'bg-[#0a120f] border-emerald-900/30 text-slate-300 hover:border-emerald-700/50'
+                ? 'bg-emerald-600 border-emerald-500 text-white font-bold'
+                : 'bg-slate-900/40 border-slate-800 text-slate-200 hover:border-emerald-500/50'
             }`}
           >
             <div className="w-8 h-8 rounded-lg bg-emerald-900/40 border border-emerald-700/40 flex items-center justify-center text-emerald-400">
@@ -207,8 +207,8 @@ export default function Sidebar({
             onClick={() => setActiveTab('tools')}
             className={`p-3 rounded-xl border text-left transition flex items-center gap-3 ${
               activeTab === 'tools'
-                ? 'bg-emerald-950 border-emerald-500 text-white'
-                : 'bg-[#0a120f] border-emerald-900/30 text-slate-300 hover:border-emerald-700/50'
+                ? 'bg-emerald-600 border-emerald-500 text-white font-bold'
+                : 'bg-slate-900/40 border-slate-800 text-slate-200 hover:border-emerald-500/50'
             }`}
           >
             <div className="w-8 h-8 rounded-lg bg-emerald-900/40 border border-emerald-700/40 flex items-center justify-center text-emerald-400">
