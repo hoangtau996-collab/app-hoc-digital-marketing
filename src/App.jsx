@@ -8,6 +8,8 @@ import ManagerTools from './components/ManagerTools';
 import CertificateModal from './components/CertificateModal';
 import AIStrategyAdvisor from './components/AIStrategyAdvisor';
 import MobileBottomNav from './components/MobileBottomNav';
+import AuthModal from './components/AuthModal';
+import UserProfileModal from './components/UserProfileModal';
 
 import { COURSE_MODULES } from './data/courseData';
 import { INITIAL_NEWS_ITEMS } from './data/newsData';
@@ -17,11 +19,28 @@ export default function App() {
   const [selectedModuleId, setSelectedModuleId] = useState(null); // null = overview, string = module view
   const [searchQuery, setSearchQuery] = useState('');
   const [isCertOpen, setIsCertOpen] = useState(false);
+  const [isAuthOpen, setIsAuthOpen] = useState(false);
+  const [isProfileOpen, setIsProfileOpen] = useState(false);
 
-  // Persistent user progress in localStorage
+  // Active student account
+  const [currentUser, setCurrentUser] = useState(() => {
+    try {
+      const saved = localStorage.getItem('dmm_active_user');
+      return saved ? JSON.parse(saved) : null;
+    } catch (e) {
+      return null;
+    }
+  });
+
+  // Persistent user progress in localStorage scoped to currentUser
+  const getProgressStorageKey = (user) => user ? `dmm_completed_modules_${user.id}` : 'dmm_completed_modules';
+
   const [completedModules, setCompletedModules] = useState(() => {
     try {
-      const saved = localStorage.getItem('dmm_completed_modules');
+      const savedUser = localStorage.getItem('dmm_active_user');
+      const userObj = savedUser ? JSON.parse(savedUser) : null;
+      const key = getProgressStorageKey(userObj);
+      const saved = localStorage.getItem(key);
       return saved ? JSON.parse(saved) : [];
     } catch (e) {
       return [];
@@ -38,12 +57,34 @@ export default function App() {
     }
   });
 
+  // Re-load completedModules whenever currentUser changes
   useEffect(() => {
-    localStorage.setItem('dmm_completed_modules', JSON.stringify(completedModules));
-  }, [completedModules]);
+    const key = getProgressStorageKey(currentUser);
+    try {
+      const saved = localStorage.getItem(key);
+      setCompletedModules(saved ? JSON.parse(saved) : []);
+      if (currentUser) {
+        localStorage.setItem('dmm_active_user', JSON.stringify(currentUser));
+        localStorage.setItem('dmm_student_name', currentUser.name);
+      } else {
+        localStorage.removeItem('dmm_active_user');
+      }
+    } catch (e) {
+      console.error("Error loading user progress", e);
+    }
+  }, [currentUser]);
 
   useEffect(() => {
-    localStorage.setItem('dmm_news_feed', JSON.stringify(newsFeed));
+    const key = getProgressStorageKey(currentUser);
+    try {
+      localStorage.setItem(key, JSON.stringify(completedModules));
+    } catch (e) {}
+  }, [completedModules, currentUser]);
+
+  useEffect(() => {
+    try {
+      localStorage.setItem('dmm_news_feed', JSON.stringify(newsFeed));
+    } catch (e) {}
   }, [newsFeed]);
 
   const selectedModule = COURSE_MODULES.find(m => m.id === selectedModuleId);
@@ -51,6 +92,21 @@ export default function App() {
   const handlePassModule = (moduleId) => {
     if (!completedModules.includes(moduleId)) {
       setCompletedModules(prev => [...prev, moduleId]);
+    }
+  };
+
+  const handleLoginSuccess = (user) => {
+    setCurrentUser(user);
+  };
+
+  const handleLogout = () => {
+    setCurrentUser(null);
+    setIsProfileOpen(false);
+  };
+
+  const handleImportBackupData = (importedModules) => {
+    if (Array.isArray(importedModules)) {
+      setCompletedModules(importedModules);
     }
   };
 
@@ -85,6 +141,9 @@ export default function App() {
         onOpenCertificate={() => setIsCertOpen(true)}
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
+        currentUser={currentUser}
+        onOpenAuthModal={() => setIsAuthOpen(true)}
+        onOpenProfileModal={() => setIsProfileOpen(true)}
       />
 
       {/* Main Container */}
@@ -155,6 +214,25 @@ export default function App() {
         totalModules={COURSE_MODULES.length}
       />
 
+      {/* Auth Login / Register Modal */}
+      <AuthModal
+        isOpen={isAuthOpen}
+        onClose={() => setIsAuthOpen(false)}
+        onLoginSuccess={handleLoginSuccess}
+      />
+
+      {/* User Profile & Backup Sync Modal */}
+      <UserProfileModal
+        isOpen={isProfileOpen}
+        onClose={() => setIsProfileOpen(false)}
+        currentUser={currentUser}
+        onLogout={handleLogout}
+        passedCount={completedModules.length}
+        totalModules={COURSE_MODULES.length}
+        completedModules={completedModules}
+        onImportBackupData={handleImportBackupData}
+      />
+
       {/* Mobile Bottom Navigation Bar */}
       <MobileBottomNav
         activeTab={activeTab}
@@ -174,3 +252,4 @@ export default function App() {
     </div>
   );
 }
+

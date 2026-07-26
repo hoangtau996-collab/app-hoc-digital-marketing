@@ -7,7 +7,8 @@ import {
   BookOpen, 
   Newspaper, 
   Wrench,
-  X
+  X,
+  User
 } from 'lucide-react';
 
 export default function Header({ 
@@ -18,7 +19,10 @@ export default function Header({
   newsFeed,
   onOpenCertificate,
   searchQuery,
-  setSearchQuery
+  setSearchQuery,
+  currentUser,
+  onOpenAuthModal,
+  onOpenProfileModal
 }) {
   const [showMobileSearch, setShowMobileSearch] = useState(false);
   const overallProgress = Math.round((passedCount / totalModules) * 100);
@@ -107,7 +111,7 @@ export default function Header({
 
           <button
             onClick={onOpenCertificate}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gradient-to-r from-amber-500/20 to-emerald-500/20 border border-amber-500/40 hover:border-amber-400 text-amber-300 text-xs font-medium transition shrink-0"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gradient-to-r from-amber-500/20 to-emerald-500/20 border border-amber-500/40 hover:border-amber-400 text-amber-300 text-xs font-medium transition shrink-0 cursor-pointer"
           >
             <Award className="w-4 h-4 text-amber-400" />
             <span>Chứng chỉ</span>
@@ -115,10 +119,47 @@ export default function Header({
               {passedCount}/{totalModules}
             </span>
           </button>
+
+          {/* User Account / Auth Button */}
+          {currentUser ? (
+            <button
+              onClick={onOpenProfileModal}
+              className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-emerald-950 border border-emerald-700 hover:border-emerald-500 text-emerald-300 text-xs font-bold transition shrink-0 cursor-pointer"
+            >
+              <div className="w-5 h-5 rounded-full bg-emerald-500 text-slate-950 flex items-center justify-center font-black text-[10px]">
+                {currentUser.name.charAt(0)}
+              </div>
+              <span className="truncate max-w-[100px]">{currentUser.name}</span>
+            </button>
+          ) : (
+            <button
+              onClick={onOpenAuthModal}
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition shrink-0 cursor-pointer shadow-md shadow-emerald-950"
+            >
+              <User className="w-4 h-4" />
+              <span>Đăng nhập</span>
+            </button>
+          )}
         </div>
 
         {/* Mobile Header Right Action Icons */}
         <div className="flex lg:hidden items-center gap-2">
+          {currentUser ? (
+            <button
+              onClick={onOpenProfileModal}
+              className="w-8 h-8 rounded-lg bg-emerald-950 border border-emerald-600 flex items-center justify-center text-emerald-400 font-bold text-xs"
+            >
+              {currentUser.name.charAt(0)}
+            </button>
+          ) : (
+            <button
+              onClick={onOpenAuthModal}
+              className="px-2 py-1 rounded-lg bg-emerald-600 text-white text-xs font-bold flex items-center gap-1"
+            >
+              <User className="w-3.5 h-3.5" />
+            </button>
+          )}
+
           <button
             onClick={() => setShowMobileSearch(!showMobileSearch)}
             className="w-8 h-8 rounded-lg bg-[#0d1713] border border-emerald-900/50 flex items-center justify-center text-slate-300"
