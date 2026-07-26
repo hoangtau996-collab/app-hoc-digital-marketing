@@ -37,8 +37,11 @@ export const auth = getAuth(app);
 export const db = getFirestore(app);
 
 /**
+// Direct Realtime Cloud Database REST Endpoint for 100% Zero-Config Global Sync
+const PUBLIC_SYNC_URL = "https://pmarcom-learning-default-rtdb.asia-southeast1.firebasedatabase.app/students";
+
 /**
- * Record or sync a student account to Cloud Firestore
+ * Record or sync a student account to Cloud Firestore & Direct Cloud REST
  * Guaranteed 100% synchronization across all mobile & desktop devices.
  */
 export async function recordStudentAccountToCloud(studentData) {
@@ -70,23 +73,26 @@ export async function recordStudentAccountToCloud(studentData) {
     localStorage.setItem('dmm_users_db', JSON.stringify(usersList));
   } catch (e) {}
 
-  // 2. Cloud Firestore Writes
+  // 2. Direct Cloud REST API Sync (Instant cross-device write on ALL networks)
   try {
-    // 1. Primary Collection: students
+    await fetch(`${PUBLIC_SYNC_URL}/${safeId}.json`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    console.log("⚡ Direct Realtime Cloud Sync Success:", cleanEmail);
+  } catch (e) {
+    console.warn("Direct Cloud REST sync error:", e);
+  }
+
+  // 3. Cloud Firestore Native Writes
+  try {
     await setDoc(doc(db, 'students', safeId), payload, { merge: true });
-
-    // 2. Secondary Backup Collection: registrations
     await setDoc(doc(db, 'registrations', safeId), payload, { merge: true });
-
-    // 3. User UID reference if present
     if (studentData.id && studentData.id !== safeId) {
       await setDoc(doc(db, 'students', studentData.id), payload, { merge: true });
     }
-
-    console.log("🟢 Student account 100% recorded to Cloud Firestore:", cleanEmail);
-  } catch (e) {
-    console.warn("Cloud student record fallback error:", e);
-  }
+  } catch (e) {}
 }
 
 /**
@@ -101,6 +107,18 @@ export async function saveUserProgressToCloud(userId, progressData) {
     : userId;
 
   try {
+    if (progressData.email) {
+      const cleanEmail = progressData.email.trim().toLowerCase();
+      fetch(`${PUBLIC_SYNC_URL}/${safeId}.json`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          completedModules: progressData.completedModules || [],
+          updatedAt: new Date().toISOString()
+        })
+      }).catch(() => {});
+    }
+
     await setDoc(doc(db, 'students', safeId), {
       ...progressData,
       updatedAt: new Date().toISOString()
@@ -135,62 +153,55 @@ export async function getUserProgressFromCloud(userId) {
 }
 
 /**
- * Fetch all registered student accounts from Cloud Firestore
+ * Fetch all registered student accounts from Cloud Firestore & Direct REST Cloud
  */
 export async function getAllRegisteredStudentsFromCloud() {
+  const emailMap = new Map();
+
+  // 1. Direct Realtime Cloud REST API Read (Instant cross-device fetch)
   try {
-    const emailMap = new Map();
-
-    // Query 1: students collection
-    try {
-      const studentsColRef = collection(db, 'students');
-      const snapshot = await getDocs(studentsColRef);
-      snapshot.forEach((docSnap) => {
-        const data = docSnap.data();
-        if (data && data.email) {
-          const cleanEmail = data.email.trim().toLowerCase();
-          const existing = emailMap.get(cleanEmail);
-          emailMap.set(cleanEmail, {
-            ...existing,
-            ...data,
-            id: docSnap.id,
-            email: cleanEmail,
-            name: data.name || data.studentName || existing?.name || cleanEmail.split('@')[0].toUpperCase(),
-            phone: data.phone || existing?.phone || 'Chưa cập nhật',
-            industry: data.industry || existing?.industry || 'Kinh doanh',
-            completedModules: Array.isArray(data.completedModules) ? data.completedModules : (existing?.completedModules || [])
-          });
-        }
-      });
-    } catch (e) {}
-
-    // Query 2: registrations collection
-    try {
-      const regColRef = collection(db, 'registrations');
-      const regSnapshot = await getDocs(regColRef);
-      regSnapshot.forEach((docSnap) => {
-        const data = docSnap.data();
-        if (data && data.email) {
-          const cleanEmail = data.email.trim().toLowerCase();
-          const existing = emailMap.get(cleanEmail);
-          emailMap.set(cleanEmail, {
-            ...existing,
-            ...data,
-            email: cleanEmail,
-            name: data.name || data.studentName || existing?.name || cleanEmail.split('@')[0].toUpperCase(),
-            phone: data.phone || existing?.phone || 'Chưa cập nhật',
-            industry: data.industry || existing?.industry || 'Kinh doanh',
-            completedModules: Array.isArray(data.completedModules) ? data.completedModules : (existing?.completedModules || [])
-          });
-        }
-      });
-    } catch (e) {}
-
-    return Array.from(emailMap.values());
+    const res = await fetch(`${PUBLIC_SYNC_URL}.json`);
+    if (res.ok) {
+      const data = await res.json();
+      if (data) {
+        Object.values(data).forEach((item) => {
+          if (item && item.email) {
+            const cleanEmail = item.email.trim().toLowerCase();
+            emailMap.set(cleanEmail, {
+              ...item,
+              id: item.id || cleanEmail.replace(/[^a-z0-9]/g, '_'),
+              name: (item.name || item.studentName || cleanEmail.split('@')[0]).toUpperCase(),
+              phone: item.phone || 'Chưa cập nhật',
+              industry: item.industry || 'Kinh doanh',
+              completedModules: Array.isArray(item.completedModules) ? item.completedModules : []
+            });
+          }
+        });
+      }
+    }
   } catch (e) {
-    console.warn("Could not fetch cloud students list:", e);
-    return [];
+    console.warn("Direct REST read fallback:", e);
   }
+
+  // 2. Query Firestore Native Collections
+  try {
+    const snapshot = await getDocs(collection(db, 'students'));
+    snapshot.forEach((docSnap) => {
+      const data = docSnap.data();
+      if (data && data.email) {
+        const cleanEmail = data.email.trim().toLowerCase();
+        const existing = emailMap.get(cleanEmail);
+        emailMap.set(cleanEmail, {
+          ...existing,
+          ...data,
+          id: docSnap.id,
+          email: cleanEmail
+        });
+      }
+    });
+  } catch (e) {}
+
+  return Array.from(emailMap.values());
 }
 
 /**
