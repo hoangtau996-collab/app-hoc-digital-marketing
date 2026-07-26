@@ -71,13 +71,13 @@ export async function getUserProgressFromCloud(userId) {
 
 /**
  * Record Real Web Traffic Visit in Cloud Firestore & Local Persistence
- * Tracks true pageviews from app creation to present without fake numbers.
+ * Tracks true pageviews strictly from 1 on every real visit.
  */
 export async function recordRealTrafficVisit() {
   const trafficDocRef = doc(db, 'analytics', 'traffic_global');
   
-  // Real persistent local counter fallback
-  const baseCreationTraffic = 1420;
+  // Real persistent local counter
+  const baseCreationTraffic = 0;
   let localTotal = 1;
   try {
     const stored = parseInt(localStorage.getItem('dmm_real_traffic_total') || '0', 10);
@@ -103,7 +103,7 @@ export async function recordRealTrafficVisit() {
  */
 export function listenToRealTraffic(callback) {
   const trafficDocRef = doc(db, 'analytics', 'traffic_global');
-  const baseCreationTraffic = 1420;
+  const baseCreationTraffic = 0;
   
   const getLocalTraffic = () => {
     try {

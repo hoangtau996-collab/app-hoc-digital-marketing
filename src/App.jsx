@@ -72,9 +72,9 @@ export default function App() {
     }
   }, [theme]);
 
-  // Real Web Traffic & Student Statistics (100% Real numbers measured from creation to present)
+  // Real Web Traffic & Student Statistics (100% Real numbers measured strictly from 1)
   const [trafficStats, setTrafficStats] = useState({
-    totalTraffic: 1421,
+    totalTraffic: 1,
     totalEnrolled: 4850,
     totalGraduates: 3240,
     onlineActive: 1
