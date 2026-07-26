@@ -195,12 +195,13 @@ export default function CertificateModal({
     <div className="fixed inset-0 z-[70] flex items-center justify-center p-3 sm:p-4 bg-slate-950/85 backdrop-blur-md overflow-y-auto">
       <div className="relative w-full max-w-4xl glass-panel rounded-3xl border border-emerald-500/40 p-4 sm:p-8 md:p-10 shadow-2xl space-y-6">
         
-        {/* Close Button */}
+        {/* Top Right Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 w-9 h-9 rounded-full bg-slate-900 border border-emerald-900 text-slate-400 hover:text-white flex items-center justify-center transition cursor-pointer z-20"
+          className="absolute top-3 right-3 sm:top-5 sm:right-5 w-10 h-10 rounded-full bg-slate-900 border-2 border-emerald-500/80 text-emerald-400 hover:bg-emerald-600 hover:text-slate-950 flex items-center justify-center transition cursor-pointer z-30 shadow-xl"
+          title="Đóng xem trước chứng nhận"
         >
-          <X className="w-5 h-5" />
+          <X className="w-5 h-5 font-black" />
         </button>
 
         {/* LOCKED STATE VIEW (When student has NOT completed all modules) */}
@@ -391,6 +392,15 @@ export default function CertificateModal({
                 >
                   <Printer className="w-4 h-4 text-emerald-400" />
                   <span>In Bằng</span>
+                </button>
+
+                {/* Explicit Close Button for Admin */}
+                <button
+                  onClick={onClose}
+                  className="px-4 py-2.5 rounded-xl bg-rose-950/80 hover:bg-rose-900 border border-rose-700/60 text-rose-300 text-xs font-extrabold flex items-center justify-center gap-1.5 transition cursor-pointer shadow-md"
+                >
+                  <X className="w-4 h-4 text-rose-400" />
+                  <span>Đóng Xem Trước</span>
                 </button>
 
               </div>
