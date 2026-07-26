@@ -64,7 +64,6 @@ export const TRANSLATIONS = {
     btnRegisterSubmit: "HOÀN TẤT ĐĂNG KÝ HỌC VIÊN",
     btnLoginSubmit: "XÁC NHẬN ĐĂNG NHẬP",
     btnReturnHome: "Trở Về Trang Chủ (Xem Tổng Quan)",
-    btnQuickDemo: "🔑 Dùng Tài Khoản Mẫu (hocvien@pmarcom.edu.vn)",
 
     // Certificate Modal
     certTitle: "GIẤY CHỨNG NHẬN HOÀN THÀNH KHOÁ HỌC",
@@ -145,7 +144,6 @@ export const TRANSLATIONS = {
     btnRegisterSubmit: "COMPLETE REGISTRATION",
     btnLoginSubmit: "CONFIRM LOGIN",
     btnReturnHome: "Return to Homepage (Overview)",
-    btnQuickDemo: "🔑 Use Demo Account (hocvien@pmarcom.edu.vn)",
 
     // Certificate Modal
     certTitle: "CERTIFICATE OF COURSE COMPLETION",

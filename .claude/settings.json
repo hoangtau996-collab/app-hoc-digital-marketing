@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"${CLAUDE_PROJECT_DIR:-.}/.claude/hooks/auto-push.sh\"",
+            "timeout": 120,
+            "statusMessage": "Đang đẩy code lên GitHub..."
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"${CLAUDE_PROJECT_DIR:-.}/.claude/hooks/auto-push.sh\"",
+            "timeout": 120,
+            "statusMessage": "Đang đẩy nốt lên GitHub..."
+          }
+        ]
+      }
+    ]
+  }
+}

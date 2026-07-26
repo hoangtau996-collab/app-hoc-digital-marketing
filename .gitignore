@@ -12,6 +12,13 @@ dist
 dist-ssr
 *.local
 
+# Biến môi trường / khoá bí mật.
+# Bắt buộc phải có: hook auto-push chạy 'git add -A' nên file .env không được
+# bỏ qua ở đây sẽ bị đẩy thẳng lên GitHub công khai.
+.env
+.env.*
+!.env.example
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

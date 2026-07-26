@@ -565,6 +565,7 @@ export default function App() {
         totalModules={COURSE_MODULES.length}
         adminOverride={Boolean(adminCertStudentName)}
         customStudentName={adminCertStudentName}
+        studentEmail={adminCertStudentName ? "" : (currentUser?.email || "")}
       />
 
       {/* Auth Login / Register Modal */}

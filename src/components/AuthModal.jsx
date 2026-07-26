@@ -25,6 +25,36 @@ import {
   EyeOff
 } from 'lucide-react';
 
+// Tài khoản dùng thử của bản demo trước đây - đã ngừng hoạt động, không cho đăng nhập nữa.
+const BLOCKED_DEMO_EMAILS = ['hocvien@pmarcom.edu.vn'];
+
+const isBlockedDemoAccount = (mail) =>
+  BLOCKED_DEMO_EMAILS.includes(String(mail || '').trim().toLowerCase());
+
+/**
+ * Máy nào đã từng chạy bản cũ vẫn còn tài khoản dùng thử (kèm mật khẩu) nằm
+ * trong localStorage. Dọn ngay khi mở form đăng nhập, không đợi tới lúc có
+ * người bấm đăng nhập.
+ */
+const purgeDemoAccountsFromStorage = () => {
+  try {
+    const saved = localStorage.getItem('dmm_users_db');
+    if (saved) {
+      const parsed = JSON.parse(saved);
+      if (Array.isArray(parsed)) {
+        const cleaned = parsed.filter((u) => !isBlockedDemoAccount(u?.email));
+        if (cleaned.length !== parsed.length) {
+          localStorage.setItem('dmm_users_db', JSON.stringify(cleaned));
+        }
+      }
+    }
+    // Đừng tự điền lại email dùng thử vào ô đăng nhập.
+    if (isBlockedDemoAccount(localStorage.getItem('dmm_remembered_email'))) {
+      localStorage.removeItem('dmm_remembered_email');
+    }
+  } catch (e) {}
+};
+
 const INDUSTRY_OPTIONS = [
   'Bất Động Sản',
   'Thương Mại Điện Tử & Bán Lẻ (E-Commerce)',
@@ -60,8 +90,7 @@ export default function AuthModal({
     rememberMeLabel: "Ghi nhớ đăng nhập trên thiết bị này",
     btnRegisterSubmit: "HOÀN TẤT ĐĂNG KÝ HỌC VIÊN",
     btnLoginSubmit: "XÁC NHẬN ĐĂNG NHẬP",
-    btnReturnHome: "Trở Về Trang Chủ (Xem Tổng Quan)",
-    btnQuickDemo: "🔑 Dùng Tài Khoản Mẫu (hocvien@pmarcom.edu.vn)"
+    btnReturnHome: "Trở Về Trang Chủ (Xem Tổng Quan)"
   };
 
   const [mode, setMode] = useState('register'); // 'register', 'login'
@@ -80,6 +109,7 @@ export default function AuthModal({
   // Pre-fill remembered login email if stored
   React.useEffect(() => {
     if (isOpen) {
+      purgeDemoAccountsFromStorage();
       try {
         const savedEmail = localStorage.getItem('dmm_remembered_email');
         const savedChoice = localStorage.getItem('dmm_remember_me_choice');
@@ -99,7 +129,18 @@ export default function AuthModal({
   const getUsersDB = () => {
     try {
       const saved = localStorage.getItem('dmm_users_db');
-      if (saved) return JSON.parse(saved);
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (Array.isArray(parsed)) {
+          // Máy nào đã từng chạy bản cũ sẽ còn tài khoản dùng thử nằm trong
+          // localStorage -> phải lọc bỏ, nếu không nó vẫn đăng nhập được.
+          const cleaned = parsed.filter((u) => !isBlockedDemoAccount(u?.email));
+          if (cleaned.length !== parsed.length) {
+            try { localStorage.setItem('dmm_users_db', JSON.stringify(cleaned)); } catch (e) {}
+          }
+          return cleaned;
+        }
+      }
     } catch (e) {}
     return [
       {
@@ -110,15 +151,6 @@ export default function AuthModal({
         phone: '0999999999',
         industry: 'Ban Quản Trị Học Viện',
         role: 'admin',
-        createdAt: new Date().toLocaleDateString('vi-VN')
-      },
-      {
-        id: 'user-demo-01',
-        email: 'hocvien@pmarcom.edu.vn',
-        password: '123',
-        name: 'NGUYỄN VĂN A',
-        phone: '0901234567',
-        industry: 'Bất Động Sản',
         createdAt: new Date().toLocaleDateString('vi-VN')
       }
     ];
@@ -144,6 +176,14 @@ export default function AuthModal({
 
     if (!email || !password) {
       setErrorMsg('Vui lòng nhập đầy đủ Email và Mật khẩu.');
+      setIsLoading(false);
+      return;
+    }
+
+    // Chặn trước cả bước gọi Firebase, phòng trường hợp tài khoản dùng thử
+    // vẫn còn tồn tại trên Cloud Auth.
+    if (isBlockedDemoAccount(email)) {
+      setErrorMsg('Tài khoản dùng thử đã ngừng hoạt động. Vui lòng đăng ký tài khoản học viên riêng của bạn.');
       setIsLoading(false);
       return;
     }
@@ -183,7 +223,7 @@ export default function AuthModal({
           onClose();
         }, 500);
       } else {
-        setErrorMsg('Email hoặc mật khẩu không chính xác. Thử tài khoản hocvien@pmarcom.edu.vn / 123');
+        setErrorMsg('Email hoặc mật khẩu không chính xác. Vui lòng kiểm tra lại hoặc đăng ký tài khoản học viên mới.');
       }
     } finally {
       setIsLoading(false);
@@ -210,6 +250,12 @@ export default function AuthModal({
 
     if (password.length < 6) {
       setErrorMsg('Mật khẩu bảo mật phải từ 6 ký tự trở lên.');
+      setIsLoading(false);
+      return;
+    }
+
+    if (isBlockedDemoAccount(email)) {
+      setErrorMsg('Email này thuộc tài khoản dùng thử đã ngừng hoạt động. Vui lòng dùng email cá nhân của bạn.');
       setIsLoading(false);
       return;
     }
@@ -285,20 +331,6 @@ export default function AuthModal({
     } finally {
       setIsLoading(false);
     }
-  };
-
-  const fillQuickDemo = () => {
-    setEmail('hocvien@pmarcom.edu.vn');
-    setPassword('123');
-    setMode('login');
-    setErrorMsg('');
-  };
-
-  const fillAdminDemo = () => {
-    setEmail('admin@pmarcom.edu.vn');
-    setPassword('admin');
-    setMode('login');
-    setErrorMsg('');
   };
 
   return (

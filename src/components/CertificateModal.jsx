@@ -1,6 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import html2canvas from 'html2canvas';
+import React, { useState, useEffect, useMemo } from 'react';
 import { jsPDF } from 'jspdf';
+import {
+  renderCertificateCanvas,
+  makeVerifyCode,
+  slugifyName,
+  isIOSorIPad,
+} from '../utils/certificateExport';
 import PMarcomLogo from './PMarcomLogo';
 import { 
   Award, 
@@ -20,7 +25,8 @@ export default function CertificateModal({
   passedCount, 
   totalModules,
   adminOverride = false,
-  customStudentName = ""
+  customStudentName = "",
+  studentEmail = ""
 }) {
   const [studentName, setStudentName] = useState(() => {
     if (customStudentName) return customStudentName.toUpperCase();
@@ -49,51 +55,54 @@ export default function CertificateModal({
     }
   }, [studentName]);
 
+  // Mã xác thực riêng của từng học viên. Ưu tiên bám vào email tài khoản để mã
+  // không đổi khi học viên sửa lại họ tên; bằng do Admin cấp thì bám theo tên.
+  const verifyCode = useMemo(
+    () => makeVerifyCode(studentEmail || customStudentName || studentName),
+    [studentEmail, customStudentName, studentName]
+  );
+
   if (!isOpen) return null;
 
   const isEligible = adminOverride || (passedCount === totalModules && totalModules > 0);
   const progressPercent = Math.round((passedCount / totalModules) * 100);
   const currentDate = new Date().toLocaleDateString('vi-VN');
 
-  // Detect iOS / iPad device
-  const isIOSorIPad = typeof navigator !== 'undefined' && (
-    /iPad|iPhone|iPod/.test(navigator.userAgent) ||
-    (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
-  );
+  // Mọi nút xuất file đều dựng lại bằng từ template A4 riêng (src/utils/certificateExport.js)
+  // thay vì chụp DOM Tailwind, vì html2canvas không đọc được oklch()/color-mix() của Tailwind v4.
+  const buildCanvas = () => renderCertificateCanvas({
+    studentName,
+    totalModules,
+    issueDate: currentDate,
+    verifyCode,
+  });
+
+  const exportFileName = (ext) => `ChungNhan_PMARCOM_${slugifyName(studentName)}.${ext}`;
 
   // Handle PNG Image Download
   const handleDownloadPNG = async () => {
     if (!isEligible) return;
-    const certArea = document.getElementById('certificate-print-area');
-    if (!certArea) return;
+
+    // Safari trên iOS/iPadOS không tôn trọng thuộc tính download -> mở tab để nhấn giữ lưu ảnh.
+    if (isIOSorIPad) {
+      await handleOpenForIPad();
+      return;
+    }
 
     try {
       setIsExporting(true);
-      const canvas = await html2canvas(certArea, {
-        scale: 2,
-        useCORS: true,
-        allowTaint: true,
-        backgroundColor: '#08120d',
-        logging: false
-      });
+      const canvas = await buildCanvas();
       const dataUrl = canvas.toDataURL('image/png');
 
-      // If iPad / iOS Safari, trigger window open fallback
-      if (isIOSorIPad) {
-        handleOpenForIPad();
-        return;
-      }
-
       const link = document.createElement('a');
-      const filename = `ChungNhan_PMARCOM_${studentName.trim().replace(/\s+/g, '_')}.png`;
-      link.download = filename;
+      link.download = exportFileName('png');
       link.href = dataUrl;
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
     } catch (err) {
       console.error("Error exporting certificate image", err);
-      handleOpenForIPad();
+      alert("Không xuất được file ảnh: " + (err?.message || err));
     } finally {
       setIsExporting(false);
     }
@@ -102,18 +111,10 @@ export default function CertificateModal({
   // Dedicated Handler for iPad / iPhone Users (Opens image in tab to allow Long-Press -> Save to Photos)
   const handleOpenForIPad = async () => {
     if (!isEligible) return;
-    const certArea = document.getElementById('certificate-print-area');
-    if (!certArea) return;
 
     try {
       setIsExporting(true);
-      const canvas = await html2canvas(certArea, {
-        scale: 2,
-        useCORS: true,
-        allowTaint: true,
-        backgroundColor: '#08120d',
-        logging: false
-      });
+      const canvas = await buildCanvas();
       const dataUrl = canvas.toDataURL('image/png');
       const newWin = window.open('');
       if (newWin) {
@@ -146,49 +147,99 @@ export default function CertificateModal({
   // Handle PDF Document Download
   const handleDownloadPDF = async () => {
     if (!isEligible) return;
-    const certArea = document.getElementById('certificate-print-area');
-    if (!certArea) return;
 
     try {
       setIsExporting(true);
-      const canvas = await html2canvas(certArea, {
-        scale: 2,
-        useCORS: true,
-        allowTaint: true,
-        backgroundColor: '#08120d',
-        logging: false
-      });
+      const canvas = await buildCanvas();
       const imgData = canvas.toDataURL('image/png');
-      
+
       const pdf = new jsPDF({
         orientation: 'landscape',
         unit: 'mm',
-        format: 'a4'
+        format: 'a4',
+        compress: true
       });
 
-      const pdfWidth = pdf.internal.pageSize.getWidth();
-      const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
-      
-      pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
-      const filename = `ChungNhan_PMARCOM_${studentName.trim().replace(/\s+/g, '_')}.pdf`;
-      
+      const pageW = pdf.internal.pageSize.getWidth();
+      const pageH = pdf.internal.pageSize.getHeight();
+
+      // Nền tối phủ kín trang để viền không bị trắng.
+      pdf.setFillColor(8, 18, 13);
+      pdf.rect(0, 0, pageW, pageH, 'F');
+
+      // Co ảnh vừa trang theo cạnh chật hơn -> không bao giờ bị tràn/cắt mất đáy bằng.
+      const imgRatio = canvas.width / canvas.height;
+      const pageRatio = pageW / pageH;
+      const drawW = imgRatio > pageRatio ? pageW : pageH * imgRatio;
+      const drawH = imgRatio > pageRatio ? pageW / imgRatio : pageH;
+
+      pdf.addImage(
+        imgData, 'PNG',
+        (pageW - drawW) / 2, (pageH - drawH) / 2,
+        drawW, drawH,
+        undefined, 'FAST'
+      );
+
+      pdf.setProperties({
+        title: `Chứng Nhận Hoàn Thành - ${studentName}`,
+        subject: 'Khóa Học Digital Thực Chiến',
+        author: 'HỌC VIỆN P MARCOM'
+      });
+
       if (isIOSorIPad) {
-        const pdfBlob = pdf.output('bloburl');
-        window.open(pdfBlob, '_blank');
+        window.open(pdf.output('bloburl'), '_blank');
       } else {
-        pdf.save(filename);
+        pdf.save(exportFileName('pdf'));
       }
     } catch (err) {
       console.error("Error exporting PDF", err);
-      handleOpenForIPad();
+      alert("Không xuất được file PDF: " + (err?.message || err));
     } finally {
       setIsExporting(false);
     }
   };
 
-  const handlePrint = () => {
+  // In từ ảnh bằng đã dựng sẵn thay vì window.print() (dự án không có @media print,
+  // gọi thẳng window.print() sẽ in nguyên trang app kèm menu/nút bấm).
+  const handlePrint = async () => {
     if (!isEligible) return;
-    window.print();
+
+    try {
+      setIsExporting(true);
+      const canvas = await buildCanvas();
+      const dataUrl = canvas.toDataURL('image/png');
+
+      const win = window.open('');
+      if (!win) {
+        alert("Vui lòng cho phép trình duyệt mở cửa sổ bật lên (Pop-up) để in bằng!");
+        return;
+      }
+
+      win.document.write(`
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <meta charset="utf-8" />
+            <title>${exportFileName('pdf')}</title>
+            <style>
+              @page { size: A4 landscape; margin: 0; }
+              html, body { margin: 0; padding: 0; background: #08120d; }
+              img { display: block; width: 100%; height: auto; }
+              @media print { body { -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
+            </style>
+          </head>
+          <body>
+            <img src="${dataUrl}" onload="window.focus();window.print();" />
+          </body>
+        </html>
+      `);
+      win.document.close();
+    } catch (err) {
+      console.error("Error printing certificate", err);
+      alert("Không in được bằng: " + (err?.message || err));
+    } finally {
+      setIsExporting(false);
+    }
   };
 
   return (
@@ -298,8 +349,8 @@ export default function CertificateModal({
                     placeholder="NHẬP HỌ VÀ TÊN HỌC VIÊN"
                     className="text-2xl sm:text-3xl md:text-4xl font-black text-emerald-400 bg-transparent text-center border-b-2 border-emerald-500/60 focus:border-amber-400 focus:outline-none pb-1.5 w-full uppercase tracking-wider transition"
                   />
-                  <span className="text-[10px] text-slate-500 block mt-1">
-                    (Click vào ô trên để chỉnh sửa họ tên học viên theo ý muốn)
+                  <span className="text-[10px] text-slate-500 block mt-1 print:hidden">
+                    (Click vào ô trên để chỉnh sửa họ tên — dòng hướng dẫn này không xuất hiện trong file tải về)
                   </span>
                 </div>
               </div>
@@ -317,7 +368,7 @@ export default function CertificateModal({
                   <div className="flex items-center gap-1.5 text-emerald-400 font-bold text-xs">
                     <ShieldCheck className="w-4 h-4" /> BẢO CHỨNG BỞI P MARCOM
                   </div>
-                  <div>Mã xác thực: <strong className="text-slate-200">PMC-2026-8892</strong></div>
+                  <div>Mã xác thực: <strong className="text-slate-200">{verifyCode}</strong></div>
                   <div>Ngày cấp: <strong className="text-slate-200">{currentDate}</strong></div>
                 </div>
 
@@ -387,8 +438,9 @@ export default function CertificateModal({
 
                 {/* Print Direct Button */}
                 <button
+                  disabled={isExporting}
                   onClick={handlePrint}
-                  className="px-3.5 py-2.5 rounded-xl bg-slate-900 border border-emerald-900/60 hover:border-emerald-500 text-slate-300 text-xs font-semibold flex items-center justify-center gap-1.5 transition cursor-pointer"
+                  className="px-3.5 py-2.5 rounded-xl bg-slate-900 border border-emerald-900/60 hover:border-emerald-500 text-slate-300 text-xs font-semibold flex items-center justify-center gap-1.5 transition cursor-pointer disabled:opacity-50"
                 >
                   <Printer className="w-4 h-4 text-emerald-400" />
                   <span>In Bằng</span>

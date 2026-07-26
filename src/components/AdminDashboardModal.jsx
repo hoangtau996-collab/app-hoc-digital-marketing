@@ -77,15 +77,6 @@ export default function AdminDashboardModal({
       createdAt: '2026-07-26'
     },
     {
-      id: 'student-demo-01',
-      name: 'NGUYỄN VĂN A',
-      phone: '0901234567',
-      email: 'hocvien@pmarcom.edu.vn',
-      industry: 'Bất Động Sản',
-      completedModules: ['module-01', 'module-02', 'module-03', 'module-04', 'module-05', 'module-06', 'module-07', 'module-08', 'module-09', 'module-10', 'module-11'],
-      createdAt: '2026-07-25'
-    },
-    {
       id: 'student-demo-02',
       name: 'TRAN THI B',
       phone: '0988765432',
@@ -819,7 +810,7 @@ export default function AdminDashboardModal({
                       <label className="text-xs font-bold text-slate-300">Địa chỉ Email:</label>
                       <input
                         type="email"
-                        placeholder="hocvien@pmarcom.edu.vn"
+                        placeholder="email.hocvien@example.com"
                         value={manualEmail}
                         onChange={(e) => setManualEmail(e.target.value)}
                         className="w-full bg-slate-900 border border-emerald-900/80 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-amber-400"
