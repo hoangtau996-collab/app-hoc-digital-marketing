@@ -450,6 +450,9 @@ export default function App() {
         totalModules={COURSE_MODULES.length}
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
+        currentUser={currentUser}
+        onOpenAuthModal={() => setIsAuthOpen(true)}
+        onOpenProfileModal={() => setIsProfileOpen(true)}
         lang={lang}
         t={t}
       />
