@@ -163,8 +163,8 @@ export default function CertificateModal({
       const pageW = pdf.internal.pageSize.getWidth();
       const pageH = pdf.internal.pageSize.getHeight();
 
-      // Nền tối phủ kín trang để viền không bị trắng.
-      pdf.setFillColor(8, 18, 13);
+      // Phủ trắng kín trang để phần viền thừa không bị lệch màu với bằng.
+      pdf.setFillColor(255, 255, 255);
       pdf.rect(0, 0, pageW, pageH, 'F');
 
       // Co ảnh vừa trang theo cạnh chật hơn -> không bao giờ bị tràn/cắt mất đáy bằng.
@@ -223,7 +223,7 @@ export default function CertificateModal({
             <title>${exportFileName('pdf')}</title>
             <style>
               @page { size: A4 landscape; margin: 0; }
-              html, body { margin: 0; padding: 0; background: #08120d; }
+              html, body { margin: 0; padding: 0; background: #ffffff; }
               img { display: block; width: 100%; height: auto; }
               @media print { body { -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
             </style>
@@ -308,88 +308,89 @@ export default function CertificateModal({
         ) : (
           /* UNLOCKED CERTIFICATE VIEW (Only when student completed ALL 11 modules) */
           <>
-            {/* Certificate Container (Print Target) */}
-            <div id="certificate-print-area" className="p-6 sm:p-10 md:p-12 rounded-2xl bg-[#08120d] border-2 border-emerald-500/50 relative overflow-hidden text-center space-y-6 shadow-2xl">
-              
-              {/* Watermark Logo */}
-              <div className="absolute inset-0 flex items-center justify-center opacity-[0.07] pointer-events-none select-none">
-                <img src="/pmarcom-logo.jpg" alt="P Marcom Logo Watermark" className="w-[450px] h-[450px] object-cover rounded-3xl" />
-              </div>
+            {/*
+              Bản xem trước dùng ĐÚNG bảng màu nền trắng của template xuất file
+              (src/utils/certificateExport.js). Màu đặt inline để không phụ thuộc
+              giao diện sáng/tối của app — nếu để lớp Tailwind, ở chế độ tối học
+              viên sẽ xem bằng nền đen nhưng tải về lại ra bằng nền trắng.
+            */}
+            <div id="certificate-print-area" className="p-6 sm:p-10 md:p-12 rounded-2xl relative overflow-hidden text-center space-y-6 shadow-2xl" style={{ backgroundColor: '#ffffff', border: '1px solid #e2e8f0' }}>
 
               {/* Certificate Header Branding */}
               <div className="space-y-3 relative z-10">
                 <div className="flex justify-center items-center gap-3 mb-2">
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden border-2 border-amber-500/70 shadow-xl shadow-amber-950/70">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden shadow-lg" style={{ border: '2px solid #d97706' }}>
                     <img src="/pmarcom-logo.jpg" alt="Học viện P Marcom Logo" className="w-full h-full object-cover" />
                   </div>
                 </div>
 
-                <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-emerald-950 border border-emerald-700 text-amber-300 text-xs font-bold uppercase tracking-widest">
-                  <Award className="w-4 h-4 text-amber-400" /> CERTIFICATE OF COMPLETION
+                <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest" style={{ backgroundColor: '#ecfdf5', border: '1px solid #10b981', color: '#047857' }}>
+                  <Award className="w-4 h-4" style={{ color: '#d97706' }} /> CERTIFICATE OF COMPLETION
                 </div>
 
-                <h2 className="text-sm sm:text-base md:text-lg font-extrabold text-amber-300 tracking-widest uppercase whitespace-nowrap">
+                <h2 className="text-sm sm:text-base md:text-lg font-extrabold tracking-widest uppercase whitespace-nowrap" style={{ color: '#b45309' }}>
                   CHỨNG NHẬN HOÀN THÀNH KHÓA HỌC
                 </h2>
-                <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-emerald-400 tracking-wide uppercase drop-shadow-md mt-1">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl font-black tracking-wide uppercase mt-1" style={{ color: '#047857' }}>
                   KHÓA HỌC DIGITAL THỰC CHIẾN
                 </h1>
               </div>
 
-              <div className="w-32 h-0.5 bg-gradient-to-r from-transparent via-emerald-500 to-transparent mx-auto" />
+              <div className="w-32 h-0.5 mx-auto" style={{ background: 'linear-gradient(90deg,rgba(255,255,255,0) 0%,#10b981 50%,rgba(255,255,255,0) 100%)' }} />
 
               {/* Editable Student Name */}
               <div className="space-y-2 relative z-10">
-                <p className="text-xs text-slate-400 italic">Chứng nhận cấp cho Học viên:</p>
+                <p className="text-xs italic" style={{ color: '#64748b' }}>Chứng nhận cấp cho Học viên:</p>
                 <div className="relative max-w-lg mx-auto">
                   <input
                     type="text"
                     value={studentName}
                     onChange={(e) => setStudentName(e.target.value.toUpperCase())}
                     placeholder="NHẬP HỌ VÀ TÊN HỌC VIÊN"
-                    className="text-2xl sm:text-3xl md:text-4xl font-black text-emerald-400 bg-transparent text-center border-b-2 border-emerald-500/60 focus:border-amber-400 focus:outline-none pb-1.5 w-full uppercase tracking-wider transition"
+                    className="text-2xl sm:text-3xl md:text-4xl font-black bg-transparent text-center focus:outline-none pb-1.5 w-full uppercase tracking-wider transition"
+                    style={{ color: '#0f172a', borderBottom: '2px solid #10b981' }}
                   />
-                  <span className="text-[10px] text-slate-500 block mt-1 print:hidden">
+                  <span className="text-[10px] block mt-1 print:hidden" style={{ color: '#94a3b8' }}>
                     (Click vào ô trên để chỉnh sửa họ tên — dòng hướng dẫn này không xuất hiện trong file tải về)
                   </span>
                 </div>
               </div>
 
               {/* Description */}
-              <p className="text-xs sm:text-sm text-slate-300 max-w-2xl mx-auto leading-relaxed relative z-10">
-                Đã hoàn tất xuất sắc toàn bộ <strong>{totalModules} Chuyên đề đào tạo thực chiến</strong> và vượt qua <strong>33 bài tập kiểm tra đánh giá năng lực quản lý Digital Marketing</strong> tại <strong>HỌC VIỆN P MARCOM</strong> (Bao gồm Goals, Budgeting, Staffing, Campaign Creative, Planning & Effectiveness).
+              <p className="text-xs sm:text-sm max-w-2xl mx-auto leading-relaxed relative z-10" style={{ color: '#334155' }}>
+                Đã hoàn tất xuất sắc toàn bộ <strong style={{ color: '#047857' }}>{totalModules} Chuyên đề đào tạo thực chiến</strong> và vượt qua <strong style={{ color: '#047857' }}>33 bài tập kiểm tra đánh giá năng lực quản lý Digital Marketing</strong> tại <strong style={{ color: '#b45309' }}>HỌC VIỆN P MARCOM</strong> <span style={{ color: '#64748b' }}>(Bao gồm Goals, Budgeting, Staffing, Campaign Creative, Planning &amp; Effectiveness).</span>
               </p>
 
               {/* Footer Signatures & Metadata */}
-              <div className="grid grid-cols-2 gap-4 pt-6 border-t border-emerald-900/50 max-w-2xl mx-auto text-xs relative z-10 items-end">
-                
+              <div className="grid grid-cols-2 gap-4 pt-6 max-w-2xl mx-auto text-xs relative z-10 items-end" style={{ borderTop: '1px solid #e2e8f0' }}>
+
                 {/* Verification Metadata */}
-                <div className="text-left space-y-1 text-slate-400">
-                  <div className="flex items-center gap-1.5 text-emerald-400 font-bold text-xs">
+                <div className="text-left space-y-1" style={{ color: '#64748b' }}>
+                  <div className="flex items-center gap-1.5 font-bold text-xs" style={{ color: '#047857' }}>
                     <ShieldCheck className="w-4 h-4" /> BẢO CHỨNG BỞI P MARCOM
                   </div>
-                  <div>Mã xác thực: <strong className="text-slate-200">{verifyCode}</strong></div>
-                  <div>Ngày cấp: <strong className="text-slate-200">{currentDate}</strong></div>
+                  <div>Mã xác thực: <strong style={{ color: '#0f172a' }}>{verifyCode}</strong></div>
+                  <div>Ngày cấp: <strong style={{ color: '#0f172a' }}>{currentDate}</strong></div>
                 </div>
 
                 {/* Founder & CEO Signature Block */}
                 <div className="text-center sm:text-right space-y-0.5">
-                  <div className="text-amber-400 font-extrabold tracking-wide uppercase text-[10px]">
+                  <div className="font-extrabold tracking-wide uppercase text-[10px]" style={{ color: '#b45309' }}>
                     HỘI ĐỒNG THẨM ĐỊNH ACADEMY
                   </div>
-                  
+
                   {/* Handwritten Signature Artwork (Refined smaller size) */}
                   <div className="py-0.5 flex justify-center sm:justify-end">
-                    <div className="font-serif italic font-bold text-base sm:text-lg text-amber-300 tracking-wide select-none border-b border-amber-500/30 px-2 py-0.5">
+                    <div className="font-serif italic font-bold text-base sm:text-lg tracking-wide select-none px-2 py-0.5" style={{ color: '#b45309', borderBottom: '1px solid #d97706' }}>
                       Lê Thành Phong
                     </div>
                   </div>
 
-                  <div className="text-[11px] font-bold text-white uppercase tracking-wider">
+                  <div className="text-[11px] font-bold uppercase tracking-wider" style={{ color: '#0f172a' }}>
                     LÊ THÀNH PHONG
                   </div>
-                  <div className="text-[10px] text-emerald-400 font-semibold">
-                    Founder & CEO Lê Thành Phong
+                  <div className="text-[10px] font-semibold" style={{ color: '#047857' }}>
+                    Founder &amp; CEO Lê Thành Phong
                   </div>
                 </div>
 
