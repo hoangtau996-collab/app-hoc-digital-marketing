@@ -262,33 +262,39 @@ export async function recordRealTrafficVisit() {
  * Real-time listener for Cloud Firestore Web Traffic & Active Online Sessions
  */
 export function listenToRealTraffic(callback) {
-  const trafficDocRef = doc(db, 'analytics', 'traffic_v2_today');
-  const baseCreationTraffic = 500;
-  
-  const getLocalTraffic = () => {
-    try {
-      const stored = parseInt(localStorage.getItem('dmm_real_traffic_v2_total') || '1', 10);
-      return baseCreationTraffic + stored;
-    } catch (e) {
-      return baseCreationTraffic + 1;
-    }
-  };
+  try {
+    const trafficDocRef = doc(db, 'analytics', 'traffic_v2_today');
+    const baseCreationTraffic = 500;
+    
+    const getLocalTraffic = () => {
+      try {
+        const stored = parseInt(localStorage.getItem('dmm_real_traffic_v2_total') || '1', 10);
+        return baseCreationTraffic + stored;
+      } catch (e) {
+        return baseCreationTraffic + 1;
+      }
+    };
 
-  const unsubscribe = onSnapshot(trafficDocRef, (snapshot) => {
-    if (snapshot.exists()) {
-      const data = snapshot.data();
-      const cloudViews = data.totalViews || 0;
-      callback({
-        totalViews: baseCreationTraffic + Math.max(cloudViews, parseInt(localStorage.getItem('dmm_real_traffic_v2_total') || '1', 10))
-      });
-    } else {
+    const unsubscribe = onSnapshot(trafficDocRef, (snapshot) => {
+      if (snapshot.exists()) {
+        const data = snapshot.data();
+        const cloudViews = data.totalViews || 0;
+        callback({
+          totalViews: baseCreationTraffic + Math.max(cloudViews, parseInt(localStorage.getItem('dmm_real_traffic_v2_total') || '1', 10))
+        });
+      } else {
+        callback({ totalViews: getLocalTraffic() });
+      }
+    }, (err) => {
       callback({ totalViews: getLocalTraffic() });
-    }
-  }, (err) => {
-    callback({ totalViews: getLocalTraffic() });
-  });
+    });
 
-  return unsubscribe;
+    return unsubscribe;
+  } catch (e) {
+    console.warn("listenToRealTraffic error", e);
+    callback({ totalViews: 501 });
+    return () => {};
+  }
 }
 
 /**
@@ -347,34 +353,40 @@ export async function recordRealStudentGraduate() {
  * Real-time listener for Student Enrollment & Graduate Counters
  */
 export function listenToRealStats(callback) {
-  const statsDocRef = doc(db, 'analytics', 'stats_global');
-  
-  const getLocalStats = () => {
-    try {
-      const enrolled = parseInt(localStorage.getItem('dmm_real_enrolled_count') || '1', 10);
-      const graduates = parseInt(localStorage.getItem('dmm_real_graduates_count') || '0', 10);
-      return { enrolled, graduates };
-    } catch (e) {
-      return { enrolled: 1, graduates: 0 };
-    }
-  };
+  try {
+    const statsDocRef = doc(db, 'analytics', 'stats_global');
+    
+    const getLocalStats = () => {
+      try {
+        const enrolled = parseInt(localStorage.getItem('dmm_real_enrolled_count') || '1', 10);
+        const graduates = parseInt(localStorage.getItem('dmm_real_graduates_count') || '0', 10);
+        return { totalEnrolled: enrolled, totalGraduates: graduates };
+      } catch (e) {
+        return { totalEnrolled: 1, totalGraduates: 0 };
+      }
+    };
 
-  const unsubscribe = onSnapshot(statsDocRef, (snapshot) => {
-    if (snapshot.exists()) {
-      const data = snapshot.data();
-      const local = getLocalStats();
-      callback({
-        totalEnrolled: Math.max(data.totalEnrolled || 0, local.enrolled),
-        totalGraduates: Math.max(data.totalGraduates || 0, local.graduates)
-      });
-    } else {
+    const unsubscribe = onSnapshot(statsDocRef, (snapshot) => {
+      if (snapshot.exists()) {
+        const data = snapshot.data();
+        const local = getLocalStats();
+        callback({
+          totalEnrolled: Math.max(data.totalEnrolled || 0, local.totalEnrolled),
+          totalGraduates: Math.max(data.totalGraduates || 0, local.totalGraduates)
+        });
+      } else {
+        callback(getLocalStats());
+      }
+    }, (err) => {
       callback(getLocalStats());
-    }
-  }, (err) => {
-    callback(getLocalStats());
-  });
+    });
 
-  return unsubscribe;
+    return unsubscribe;
+  } catch (e) {
+    console.warn("listenToRealStats error", e);
+    callback({ totalEnrolled: 1, totalGraduates: 0 });
+    return () => {};
+  }
 }
 
 export {
