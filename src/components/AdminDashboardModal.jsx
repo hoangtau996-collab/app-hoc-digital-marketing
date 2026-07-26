@@ -46,6 +46,14 @@ export default function AdminDashboardModal({
   const [isLoading, setIsLoading] = useState(false);
   const [notice, setNotice] = useState('');
 
+  // Pagination State (20 to 50 students / page)
+  const [currentPage, setCurrentPage] = useState(1);
+  const [pageSize, setPageSize] = useState(20); // 20, 30, 50, or 'ALL'
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [searchQuery, selectedIndustry, pageSize]);
+
   // Certificate Generator Modal state
   const [isCertGenOpen, setIsCertGenOpen] = useState(false);
   const [certGenTab, setCertGenTab] = useState('manual'); // 'manual', 'excel'
@@ -200,6 +208,13 @@ export default function AdminDashboardModal({
 
     return matchesSearch && matchesIndustry;
   });
+
+  // Pagination Calculations (20 - 50 students / page)
+  const effectivePageSize = pageSize === 'ALL' ? (filteredStudents.length || 1) : Number(pageSize);
+  const totalPages = Math.ceil(filteredStudents.length / effectivePageSize) || 1;
+  const safeCurrentPage = Math.min(Math.max(currentPage, 1), totalPages);
+  const startIndex = (safeCurrentPage - 1) * effectivePageSize;
+  const paginatedStudents = pageSize === 'ALL' ? filteredStudents : filteredStudents.slice(startIndex, startIndex + effectivePageSize);
 
   // Unique Industries List for Filter
   const uniqueIndustries = Array.from(new Set(students.map(s => s.industry).filter(Boolean)));
@@ -534,6 +549,21 @@ export default function AdminDashboardModal({
                 ))}
               </select>
             </div>
+
+            {/* Page Size Selector (20 - 50 per page) */}
+            <div className="relative shrink-0">
+              <select
+                value={pageSize}
+                onChange={(e) => setPageSize(e.target.value === 'ALL' ? 'ALL' : Number(e.target.value))}
+                className="bg-slate-900/80 border border-amber-500/40 text-amber-300 font-bold rounded-xl px-3 py-2 text-xs focus:outline-none cursor-pointer"
+                title="Chọn số lượng học viên hiển thị trên mỗi trang"
+              >
+                <option value={20}>20 học viên / trang</option>
+                <option value={30}>30 học viên / trang</option>
+                <option value={50}>50 học viên / trang</option>
+                <option value="ALL">Tất cả ({filteredStudents.length})</option>
+              </select>
+            </div>
           </div>
 
           {/* Action Buttons: Export CSV / Print */}
@@ -589,17 +619,22 @@ export default function AdminDashboardModal({
               </tr>
             </thead>
             <tbody className="divide-y divide-emerald-900/30 text-xs text-slate-200">
-              {filteredStudents.length > 0 ? (
-                filteredStudents.map((std, idx) => {
+              {paginatedStudents.length > 0 ? (
+                paginatedStudents.map((std, idx) => {
                   const completedCount = (std.completedModules || []).length;
                   const isGraduate = completedCount >= 11;
+                  const sttIndex = startIndex + idx + 1;
 
                   return (
                     <tr key={std.id || idx} className="hover:bg-emerald-950/40 transition">
-                      <td className="p-3 font-mono text-slate-400">{idx + 1}</td>
+                      <td className="p-3 font-mono text-slate-400">{sttIndex}</td>
                       <td className="p-3 font-bold text-white flex items-center gap-2">
-                        <div className="w-6 h-6 rounded-full bg-emerald-950 border border-emerald-700 text-emerald-400 font-extrabold text-[10px] flex items-center justify-center shrink-0">
-                          {std.name ? std.name.charAt(0) : 'U'}
+                        <div className="w-6 h-6 rounded-full bg-emerald-950 border border-emerald-700 text-emerald-400 font-extrabold text-[10px] flex items-center justify-center shrink-0 overflow-hidden">
+                          {std.avatarUrl ? (
+                            <img src={std.avatarUrl} alt="Avatar" className="w-full h-full object-cover" />
+                          ) : (
+                            <span>{std.name ? std.name.charAt(0) : 'U'}</span>
+                          )}
                         </div>
                         <span>{std.name}</span>
                       </td>
@@ -654,9 +689,49 @@ export default function AdminDashboardModal({
           </table>
         </div>
 
-        {/* Modal Bottom Action Bar */}
-        <div className="pt-3 border-t border-emerald-900/40 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-400 shrink-0">
-          <span>Hiển thị {filteredStudents.length} / {totalStudentsCount} học viên đã đăng ký</span>
+        {/* Modal Bottom Action & Pagination Bar */}
+        <div className="pt-3 border-t border-emerald-900/40 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-slate-400 shrink-0">
+          <div className="flex items-center gap-2">
+            <span>
+              Hiển thị <strong>{filteredStudents.length > 0 ? startIndex + 1 : 0}</strong> - <strong>{Math.min(startIndex + (pageSize === 'ALL' ? filteredStudents.length : pageSize), filteredStudents.length)}</strong> trong tổng số <strong>{filteredStudents.length}</strong> học viên ({totalStudentsCount} học viên toàn hệ thống)
+            </span>
+          </div>
+
+          {/* Page Buttons & Navigation Controls */}
+          {pageSize !== 'ALL' && totalPages > 1 && (
+            <div className="flex items-center gap-1.5">
+              <button
+                onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+                disabled={safeCurrentPage === 1}
+                className="px-2.5 py-1 rounded-lg bg-slate-900 border border-emerald-900 text-emerald-400 hover:bg-emerald-950 disabled:opacity-40 disabled:cursor-not-allowed text-xs font-bold transition"
+              >
+                ◀ Trang Trước
+              </button>
+
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map((pageNum) => (
+                <button
+                  key={pageNum}
+                  onClick={() => setCurrentPage(pageNum)}
+                  className={`w-7 h-7 rounded-lg text-xs font-black transition ${
+                    safeCurrentPage === pageNum
+                      ? 'bg-amber-500 text-slate-950 font-black shadow-md'
+                      : 'bg-slate-900 text-slate-300 hover:text-white border border-emerald-900/60'
+                  }`}
+                >
+                  {pageNum}
+                </button>
+              ))}
+
+              <button
+                onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+                disabled={safeCurrentPage === totalPages}
+                className="px-2.5 py-1 rounded-lg bg-slate-900 border border-emerald-900 text-emerald-400 hover:bg-emerald-950 disabled:opacity-40 disabled:cursor-not-allowed text-xs font-bold transition"
+              >
+                Trang Sau ▶
+              </button>
+            </div>
+          )}
+
           <div className="flex items-center gap-2">
             <button
               onClick={onClose}
