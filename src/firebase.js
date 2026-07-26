@@ -131,6 +131,92 @@ export function listenToRealTraffic(callback) {
   return unsubscribe;
 }
 
+/**
+ * Record Real Student Enrollment in Cloud Firestore
+ */
+export async function recordRealStudentEnrollment() {
+  const statsDocRef = doc(db, 'analytics', 'stats_global');
+  
+  let localEnrolled = 1;
+  try {
+    const stored = parseInt(localStorage.getItem('dmm_real_enrolled_count') || '0', 10);
+    if (stored === 0) {
+      localEnrolled = 1;
+      localStorage.setItem('dmm_real_enrolled_count', '1');
+    } else {
+      localEnrolled = stored;
+    }
+  } catch (e) {}
+
+  try {
+    await setDoc(statsDocRef, {
+      totalEnrolled: increment(1),
+      updatedAt: serverTimestamp()
+    }, { merge: true });
+  } catch (e) {
+    console.warn("Cloud stats increment fallback to local persistence:", e);
+  }
+
+  return localEnrolled;
+}
+
+/**
+ * Record Real Graduate Achievement when student completes 11/11 modules
+ */
+export async function recordRealStudentGraduate() {
+  const statsDocRef = doc(db, 'analytics', 'stats_global');
+  
+  try {
+    const isGraduated = localStorage.getItem('dmm_student_has_graduated') === 'true';
+    if (!isGraduated) {
+      localStorage.setItem('dmm_student_has_graduated', 'true');
+      const storedGrads = parseInt(localStorage.getItem('dmm_real_graduates_count') || '0', 10) + 1;
+      localStorage.setItem('dmm_real_graduates_count', storedGrads.toString());
+
+      await setDoc(statsDocRef, {
+        totalGraduates: increment(1),
+        updatedAt: serverTimestamp()
+      }, { merge: true });
+    }
+  } catch (e) {
+    console.warn("Cloud graduate increment fallback:", e);
+  }
+}
+
+/**
+ * Real-time listener for Student Enrollment & Graduate Counters
+ */
+export function listenToRealStats(callback) {
+  const statsDocRef = doc(db, 'analytics', 'stats_global');
+  
+  const getLocalStats = () => {
+    try {
+      const enrolled = parseInt(localStorage.getItem('dmm_real_enrolled_count') || '1', 10);
+      const graduates = parseInt(localStorage.getItem('dmm_real_graduates_count') || '0', 10);
+      return { enrolled, graduates };
+    } catch (e) {
+      return { enrolled: 1, graduates: 0 };
+    }
+  };
+
+  const unsubscribe = onSnapshot(statsDocRef, (snapshot) => {
+    if (snapshot.exists()) {
+      const data = snapshot.data();
+      const local = getLocalStats();
+      callback({
+        totalEnrolled: Math.max(data.totalEnrolled || 0, local.enrolled),
+        totalGraduates: Math.max(data.totalGraduates || 0, local.graduates)
+      });
+    } else {
+      callback(getLocalStats());
+    }
+  }, (err) => {
+    callback(getLocalStats());
+  });
+
+  return unsubscribe;
+}
+
 export {
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,

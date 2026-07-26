@@ -19,7 +19,10 @@ import {
   getUserProgressFromCloud,
   signOut,
   recordRealTrafficVisit,
-  listenToRealTraffic
+  listenToRealTraffic,
+  recordRealStudentEnrollment,
+  recordRealStudentGraduate,
+  listenToRealStats
 } from './firebase';
 
 import { COURSE_MODULES } from './data/courseData';
@@ -72,21 +75,28 @@ export default function App() {
     }
   }, [theme]);
 
-  // Real Web Traffic & Student Statistics (100% Real numbers measured strictly from 1)
+  // Real Web Traffic & Student Statistics (100% Real numbers measured strictly from real data)
   const [trafficStats, setTrafficStats] = useState({
     totalTraffic: 1,
-    totalEnrolled: 4850,
-    totalGraduates: 3240,
+    totalEnrolled: 1,
+    totalGraduates: 0,
     onlineActive: 1
   });
 
-  // Real-time Web Traffic tracker from Firebase Cloud & Local persistence
+  // Real-time Web Traffic & Student Stats tracker from Firebase Cloud & Local persistence
   useEffect(() => {
-    // 1. Record real page view
+    // 1. Record real page view & real enrollment
     recordRealTrafficVisit().then(initialCount => {
       setTrafficStats(prev => ({
         ...prev,
         totalTraffic: initialCount
+      }));
+    });
+
+    recordRealStudentEnrollment().then(enrolledCount => {
+      setTrafficStats(prev => ({
+        ...prev,
+        totalEnrolled: enrolledCount
       }));
     });
 
@@ -98,7 +108,19 @@ export default function App() {
       }));
     });
 
-    return () => unsubscribeTraffic();
+    // 3. Subscribe to real-time Cloud Firestore student stats (Enrolled & Graduates)
+    const unsubscribeStats = listenToRealStats((data) => {
+      setTrafficStats(prev => ({
+        ...prev,
+        totalEnrolled: data.totalEnrolled || prev.totalEnrolled,
+        totalGraduates: data.totalGraduates !== undefined ? data.totalGraduates : prev.totalGraduates
+      }));
+    });
+
+    return () => {
+      unsubscribeTraffic();
+      unsubscribeStats();
+    };
   }, []);
 
   // Active student account
@@ -195,7 +217,13 @@ export default function App() {
           email: currentUser.email
         });
       }
-    } catch (e) {}
+      // Record real graduate achievement when all 11 modules completed
+      if (completedModules.length === COURSE_MODULES.length) {
+        recordRealStudentGraduate();
+      }
+    } catch (e) {
+      console.error("Error saving completed modules", e);
+    }
   }, [completedModules, currentUser]);
 
   useEffect(() => {
