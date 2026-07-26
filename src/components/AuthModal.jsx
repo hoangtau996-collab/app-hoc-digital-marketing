@@ -518,29 +518,6 @@ export default function AuthModal({
           </button>
         </form>
 
-        {/* Quick Demo Hint */}
-        {mode === 'login' && (
-          <div className="pt-2 border-t border-emerald-900/40 text-center space-y-2">
-            <p className="text-[11px] text-slate-400">Tài khoản dùng thử nghiệm:</p>
-            <div className="flex items-center justify-center gap-2 flex-wrap">
-              <button
-                type="button"
-                onClick={fillQuickDemo}
-                className="px-2.5 py-1 rounded-lg bg-emerald-950 border border-emerald-800 text-emerald-300 text-[11px] font-semibold hover:border-emerald-500 transition cursor-pointer"
-              >
-                👤 Học Viên Mẫu
-              </button>
-              <button
-                type="button"
-                onClick={fillAdminDemo}
-                className="px-2.5 py-1 rounded-lg bg-amber-950 border border-amber-800 text-amber-300 text-[11px] font-semibold hover:border-amber-500 transition cursor-pointer"
-              >
-                🔑 Admin Mẫu (admin@pmarcom.edu.vn)
-              </button>
-            </div>
-          </div>
-        )}
-
         {/* Return Home Secondary Action Button */}
         <div className="pt-2 border-t border-emerald-900/30 flex flex-col items-center gap-2">
           <button
