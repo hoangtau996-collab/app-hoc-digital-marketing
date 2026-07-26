@@ -302,7 +302,7 @@ export default function AuthModal({
             {mode === 'register' ? 'ĐĂNG KÝ TÀI KHOẢN HỌC VIÊN' : 'ĐĂNG NHẬP HỌC VIÊN'}
           </h3>
           <p className="text-[11px] text-emerald-400 font-semibold">
-            Đăng ký để học trọn bộ 11 chuyên đề & sử dụng công cụ Trưởng Phòng
+            Đăng ký tài khoản để tham gia học 11 chuyên đề & nhận Giấy Chứng Nhận
           </p>
         </div>
 

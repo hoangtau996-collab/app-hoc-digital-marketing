@@ -298,10 +298,10 @@ export default function App() {
     setNewsFeed(prev => [newNewsItem, ...prev]);
   };
 
-  // Protected Action Wrapper: Require Registration to Learn & Use Tools
+  // Protected Action Wrapper: Require Registration ONLY for Course Lessons & Quizzes
   const handleProtectedSelectModule = (id) => {
     if (!currentUser) {
-      setMigrationNotice('🔒 Vui lòng Đăng Ký / Đăng Nhập tài khoản học viên để bắt đầu học chuyên đề!');
+      setMigrationNotice('🔒 Vui lòng Đăng Ký / Đăng Nhập tài khoản học viên để tham gia học & làm bài trắc nghiệm!');
       setIsAuthOpen(true);
       return;
     }
@@ -309,11 +309,7 @@ export default function App() {
   };
 
   const handleProtectedSelectTab = (tab) => {
-    if (!currentUser && tab !== 'course') {
-      setMigrationNotice('🔒 Vui lòng Đăng Ký / Đăng Nhập tài khoản học viên để sử dụng các tính năng công cụ!');
-      setIsAuthOpen(true);
-      return;
-    }
+    // Guests are free to use tools, glossary, news, and overview!
     setActiveTab(tab);
   };
 
