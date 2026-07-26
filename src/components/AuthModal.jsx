@@ -229,13 +229,28 @@ export default function AuthModal({
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/85 backdrop-blur-md overflow-y-auto">
       <div className="relative w-full max-w-md glass-panel rounded-3xl border border-emerald-500/40 p-6 sm:p-8 shadow-2xl space-y-5 my-8">
         
-        {/* Close Button */}
+        {/* Return to Homepage Button (Top-Left Corner) */}
         <button
+          type="button"
           onClick={() => {
             if (onReturnHome) onReturnHome();
             onClose();
           }}
-          className="absolute top-4 right-4 w-8 h-8 rounded-full bg-slate-900 border border-emerald-900 text-slate-400 hover:text-white flex items-center justify-center transition cursor-pointer"
+          className="absolute top-4 left-4 px-2.5 sm:px-3 py-1 rounded-full bg-emerald-950 border border-emerald-700 hover:border-emerald-400 text-emerald-300 hover:text-white flex items-center gap-1.5 text-xs font-bold transition cursor-pointer shadow-md"
+          title="Trở về Trang chủ"
+        >
+          <Home className="w-3.5 h-3.5 text-emerald-400" />
+          <span>Trang chủ</span>
+        </button>
+
+        {/* Close Button (Top-Right Corner) */}
+        <button
+          type="button"
+          onClick={() => {
+            if (onReturnHome) onReturnHome();
+            onClose();
+          }}
+          className="absolute top-4 right-4 w-8 h-8 rounded-full bg-slate-900 border border-emerald-900 text-slate-400 hover:text-white flex items-center justify-center transition cursor-pointer shadow-md"
           title="Đóng & Trở về trang chủ"
         >
           <X className="w-4 h-4" />
