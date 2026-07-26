@@ -248,11 +248,8 @@ export default function CourseOverview({
               {/* Bottom Card Footer */}
               <div className="pt-4 mt-4 border-t border-emerald-900/30 flex items-center justify-between text-xs text-slate-400">
                 <div className="flex items-center gap-4">
-                  <span className="flex items-center gap-1">
-                    <Clock className="w-3.5 h-3.5 text-emerald-500" /> {mod.duration}
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <HelpCircle className="w-3.5 h-3.5 text-amber-500" /> {mod.quizCount} Quiz
+                  <span className="flex items-center gap-1 font-semibold text-slate-300">
+                    <HelpCircle className="w-3.5 h-3.5 text-amber-400" /> {mod.quizCount || 3} Trắc nghiệm tình huống
                   </span>
                 </div>
 
