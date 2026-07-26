@@ -317,7 +317,6 @@ export default function CertificateModal({
                     <ShieldCheck className="w-4 h-4" /> BẢO CHỨNG BỞI P MARCOM
                   </div>
                   <div>Mã xác thực: <strong className="text-slate-200">PMC-2026-8892</strong></div>
-                  <div>Giá trị đào tạo: <strong className="text-amber-400 font-bold">2.999.999 VNĐ</strong> (Tài trợ 100%)</div>
                   <div>Ngày cấp: <strong className="text-slate-200">{currentDate}</strong></div>
                 </div>
 
