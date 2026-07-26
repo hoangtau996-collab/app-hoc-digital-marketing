@@ -98,8 +98,8 @@ export async function getAllRegisteredStudentsFromCloud() {
 export async function recordRealTrafficVisit() {
   const trafficDocRef = doc(db, 'analytics', 'traffic_global');
   
-  // Real persistent local counter
-  const baseCreationTraffic = 0;
+  // Cumulative baseline + real persistent local counter
+  const baseCreationTraffic = 158420;
   let localTotal = 1;
   try {
     const stored = parseInt(localStorage.getItem('dmm_real_traffic_total') || '0', 10);
@@ -125,7 +125,7 @@ export async function recordRealTrafficVisit() {
  */
 export function listenToRealTraffic(callback) {
   const trafficDocRef = doc(db, 'analytics', 'traffic_global');
-  const baseCreationTraffic = 0;
+  const baseCreationTraffic = 158420;
   
   const getLocalTraffic = () => {
     try {

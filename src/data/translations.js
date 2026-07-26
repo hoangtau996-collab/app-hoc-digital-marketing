@@ -4,7 +4,7 @@ export const TRANSLATIONS = {
     academyName: "HỌC VIỆN P MARCOM",
     courseTitle: "KHÓA HỌC DIGITAL THỰC CHIẾN",
     courseValue: "Trị Giá: 2.999.999 VNĐ (CHỈ CÒN 39 SUẤT MIỄN PHÍ - ĐĂNG KÝ NGAY)",
-    realtimeTraffic: "Lượt Xem Real-Time",
+    realtimeTraffic: "Tổng Lượt Truy Cập Web",
     searchPlaceholder: "Tìm bài học...",
     
     // Tabs
@@ -35,7 +35,7 @@ export const TRANSLATIONS = {
     // Hero Banner
     heroTitlePrefix: "HỌC VIỆN P MARCOM",
     heroTitleSuffix: "KHÓA HỌC DIGITAL THỰC CHIẾN",
-    heroDesc: "Chương trình đào tạo với hệ thống kiến thức bài bản, tư duy thực chiến, mang lại hiệu quả ngay với doanh nghiệp trong quá trình chuyển đổi số. Tích hợp trắc nghiệm tình huống thực tế và bản tin cập nhật thuật toán Meta, TikTok, Google liên tục.",
+    heroDesc: "Chương trình đào tạo với hệ thống kiến thức bài bản, tư tư duy thực chiến, mang lại hiệu quả ngay với doanh nghiệp trong quá trình chuyển đổi số. Tích hợp trắc nghiệm tình huống thực tế và bản tin cập nhật thuật toán Meta, TikTok, Google liên tục.",
     heroValueLabel: "Giá Trị Khóa Học:",
     heroFreeBadge: "TÀI TRỢ 100% • CHỈ CÒN 39 SUẤT MIỄN PHÍ - ĐĂNG KÝ NGAY",
     
@@ -43,7 +43,7 @@ export const TRANSLATIONS = {
     totalModulesCount: "11 Chuyên Đề Bài Bản",
     passedModulesCount: "Đã Hoàn Thành",
     graduatesCount: "Học Viên Tốt Nghiệp",
-    trafficCount: "Lượt Xem Trang Web",
+    trafficCount: "Tổng Lượt Truy Cập Web",
     startLearningNow: "Bắt đầu học ngay",
     continueLearning: "Tiếp tục bài học",
     moduleListTitle: "DANH SÁCH 11 CHUYÊN ĐỀ ĐÀO TẠO",
