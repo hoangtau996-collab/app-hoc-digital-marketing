@@ -57,6 +57,20 @@ export async function recordStudentAccountToCloud(studentData) {
     updatedAt: new Date().toISOString()
   };
 
+  // 1. Persistent Shared Storage Backup
+  try {
+    const existingStr = localStorage.getItem('dmm_users_db');
+    let usersList = existingStr ? JSON.parse(existingStr) : [];
+    const index = usersList.findIndex(u => u.email && u.email.toLowerCase() === cleanEmail);
+    if (index >= 0) {
+      usersList[index] = { ...usersList[index], ...payload };
+    } else {
+      usersList.push(payload);
+    }
+    localStorage.setItem('dmm_users_db', JSON.stringify(usersList));
+  } catch (e) {}
+
+  // 2. Cloud Firestore Writes
   try {
     // 1. Primary Collection: students
     await setDoc(doc(db, 'students', safeId), payload, { merge: true });
