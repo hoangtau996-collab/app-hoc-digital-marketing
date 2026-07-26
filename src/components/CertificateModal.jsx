@@ -44,6 +44,12 @@ export default function CertificateModal({
   const progressPercent = Math.round((passedCount / totalModules) * 100);
   const currentDate = new Date().toLocaleDateString('vi-VN');
 
+  // Detect iOS / iPad device
+  const isIOSorIPad = typeof navigator !== 'undefined' && (
+    /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+    (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
+  );
+
   // Handle PNG Image Download
   const handleDownloadPNG = async () => {
     if (!isEligible) return;
@@ -53,19 +59,74 @@ export default function CertificateModal({
     try {
       setIsExporting(true);
       const canvas = await html2canvas(certArea, {
-        scale: 3,
+        scale: 2,
         useCORS: true,
+        allowTaint: true,
         backgroundColor: '#08120d',
         logging: false
       });
       const dataUrl = canvas.toDataURL('image/png');
+
+      // If iPad / iOS Safari, trigger window open fallback
+      if (isIOSorIPad) {
+        handleOpenForIPad();
+        return;
+      }
+
       const link = document.createElement('a');
       const filename = `ChungNhan_PMARCOM_${studentName.trim().replace(/\s+/g, '_')}.png`;
       link.download = filename;
       link.href = dataUrl;
+      document.body.appendChild(link);
       link.click();
+      document.body.removeChild(link);
     } catch (err) {
       console.error("Error exporting certificate image", err);
+      handleOpenForIPad();
+    } finally {
+      setIsExporting(false);
+    }
+  };
+
+  // Dedicated Handler for iPad / iPhone Users (Opens image in tab to allow Long-Press -> Save to Photos)
+  const handleOpenForIPad = async () => {
+    if (!isEligible) return;
+    const certArea = document.getElementById('certificate-print-area');
+    if (!certArea) return;
+
+    try {
+      setIsExporting(true);
+      const canvas = await html2canvas(certArea, {
+        scale: 2,
+        useCORS: true,
+        allowTaint: true,
+        backgroundColor: '#08120d',
+        logging: false
+      });
+      const dataUrl = canvas.toDataURL('image/png');
+      const newWin = window.open('');
+      if (newWin) {
+        newWin.document.write(`
+          <!DOCTYPE html>
+          <html>
+            <head>
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <title>Bằng Chứng Nhận P MARCOM</title>
+            </head>
+            <body style="margin:0;background:#070d0a;display:flex;flex-direction:column;align-items:center;padding:16px;font-family:sans-serif;color:white;text-align:center;">
+              <div style="background:#091a14;border:1px solid #10b981;padding:12px 20px;border-radius:12px;margin-bottom:16px;max-width:500px;">
+                <h3 style="color:#00E676;margin:0 0 4px 0;font-size:16px;">📱 Hướng Dẫn Lưu Bằng Trên iPad / iPhone:</h3>
+                <p style="font-size:13px;color:#e2e8f0;margin:0;line-height:1.4;">Chạm & <strong>Nhấn Giữ vào bức ảnh bằng</strong> dưới đây ➔ Chọn <strong>"Thêm vào Ảnh" (Save Image)</strong> hoặc <strong>"Lưu vào Tệp"</strong>.</p>
+              </div>
+              <img src="${dataUrl}" style="max-width:100%;height:auto;border-radius:12px;box-shadow:0 12px 40px rgba(0,230,118,0.2);" />
+            </body>
+          </html>
+        `);
+      } else {
+        alert("Vui lòng cho phép Safari mở cửa sổ bật lên (Pop-up) để xem và lưu bằng!");
+      }
+    } catch (e) {
+      alert("Lỗi xuất bằng: " + e.message);
     } finally {
       setIsExporting(false);
     }
@@ -80,8 +141,9 @@ export default function CertificateModal({
     try {
       setIsExporting(true);
       const canvas = await html2canvas(certArea, {
-        scale: 3,
+        scale: 2,
         useCORS: true,
+        allowTaint: true,
         backgroundColor: '#08120d',
         logging: false
       });
@@ -98,9 +160,16 @@ export default function CertificateModal({
       
       pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
       const filename = `ChungNhan_PMARCOM_${studentName.trim().replace(/\s+/g, '_')}.pdf`;
-      pdf.save(filename);
+      
+      if (isIOSorIPad) {
+        const pdfBlob = pdf.output('bloburl');
+        window.open(pdfBlob, '_blank');
+      } else {
+        pdf.save(filename);
+      }
     } catch (err) {
       console.error("Error exporting PDF", err);
+      handleOpenForIPad();
     } finally {
       setIsExporting(false);
     }
@@ -242,22 +311,22 @@ export default function CertificateModal({
                 </div>
 
                 {/* Founder & CEO Signature Block */}
-                <div className="text-center sm:text-right space-y-1">
-                  <div className="text-amber-400 font-extrabold tracking-wide uppercase text-xs">
+                <div className="text-center sm:text-right space-y-0.5">
+                  <div className="text-amber-400 font-extrabold tracking-wide uppercase text-[10px]">
                     HỘI ĐỒNG THẨM ĐỊNH ACADEMY
                   </div>
                   
-                  {/* Handwritten Signature Artwork */}
-                  <div className="py-1 flex justify-center sm:justify-end">
-                    <div className="font-serif italic font-extrabold text-2xl sm:text-3xl text-gradient-amber tracking-wider select-none border-b border-amber-500/30 px-3 py-0.5">
+                  {/* Handwritten Signature Artwork (Refined smaller size) */}
+                  <div className="py-0.5 flex justify-center sm:justify-end">
+                    <div className="font-serif italic font-bold text-base sm:text-lg text-amber-300 tracking-wide select-none border-b border-amber-500/30 px-2 py-0.5">
                       Lê Thành Phong
                     </div>
                   </div>
 
-                  <div className="text-xs font-bold text-white uppercase">
+                  <div className="text-[11px] font-bold text-white uppercase tracking-wider">
                     LÊ THÀNH PHONG
                   </div>
-                  <div className="text-[11px] text-emerald-400/90 font-semibold">
+                  <div className="text-[10px] text-emerald-400 font-semibold">
                     Founder & CEO Lê Thành Phong
                   </div>
                 </div>
@@ -282,6 +351,17 @@ export default function CertificateModal({
                 >
                   <Download className="w-4 h-4" />
                   <span>{isExporting ? 'Đang xuất...' : 'Tải File Ảnh (PNG)'}</span>
+                </button>
+
+                {/* Dedicated iPad / iPhone Fallback Button */}
+                <button
+                  disabled={isExporting}
+                  onClick={handleOpenForIPad}
+                  className="flex-1 sm:flex-none px-3.5 py-2.5 rounded-xl bg-slate-900 border border-teal-500/60 hover:border-teal-400 text-teal-300 text-xs font-bold flex items-center justify-center gap-1.5 transition cursor-pointer shadow-md"
+                  title="Dành riêng cho máy iPad / iPhone để lưu ảnh trực tiếp"
+                >
+                  <Download className="w-4 h-4 text-teal-400" />
+                  <span>📱 Mở & Lưu Trực Tiếp Trên iPad</span>
                 </button>
 
                 {/* Download PDF Button */}

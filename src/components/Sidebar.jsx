@@ -51,12 +51,12 @@ export default function Sidebar({
                     setActiveTab('course');
                     onSelectModule(mod.id);
                   }}
-                  className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold shrink-0 transition ${
+                  className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold shrink-0 transition cursor-pointer ${
                     isSelected
-                      ? 'bg-emerald-500 text-slate-950 shadow-md'
+                      ? 'bg-emerald-500 text-slate-950 shadow-md font-extrabold'
                       : isCompleted
-                      ? 'bg-emerald-950 text-emerald-300 border border-emerald-800'
-                      : 'bg-emerald-950/20 text-slate-200 border border-emerald-900/40'
+                      ? 'glass-panel text-emerald-400 border border-emerald-500/50'
+                      : 'glass-panel text-slate-200 hover:text-emerald-400 border border-emerald-900/40'
                   }`}
                 >
                   <span>{mod.number}.</span>
@@ -125,25 +125,25 @@ export default function Sidebar({
                   setActiveTab('course');
                   onSelectModule(mod.id);
                 }}
-                className={`w-full text-left p-2.5 rounded-xl transition flex items-center justify-between group ${
+                className={`w-full text-left p-2.5 rounded-xl transition flex items-center justify-between group cursor-pointer ${
                   isSelected
-                    ? 'bg-gradient-to-r from-emerald-600 to-teal-700 text-white font-bold shadow-md border border-emerald-500/50'
-                    : 'bg-emerald-950/20 hover:bg-emerald-900/30 text-slate-200 border border-emerald-900/40'
+                    ? 'bg-gradient-to-r from-emerald-600 to-teal-700 text-white font-bold shadow-md border border-emerald-400'
+                    : 'glass-panel text-slate-200 hover:text-emerald-400 border border-emerald-900/40'
                 }`}
               >
                 <div className="flex items-center gap-3 min-w-0">
                   <div className={`w-7 h-7 rounded-lg flex items-center justify-center text-xs font-bold shrink-0 ${
                     isCompleted
-                      ? 'bg-emerald-500 text-slate-950'
+                      ? 'bg-emerald-500 text-slate-950 font-black'
                       : isSelected
                       ? 'bg-emerald-400/20 text-emerald-300 border border-emerald-400/40'
-                      : 'bg-emerald-900/20 text-emerald-400 border border-emerald-800/40'
+                      : 'bg-emerald-950/40 text-emerald-400 border border-emerald-800/40'
                   }`}>
                     {isCompleted ? <CheckCircle2 className="w-4 h-4 stroke-[3]" /> : mod.number}
                   </div>
 
                   <div className="min-w-0">
-                    <h4 className="text-xs font-bold truncate group-hover:text-emerald-500 transition">
+                    <h4 className="text-xs font-bold truncate group-hover:text-emerald-400 transition">
                       {mod.number}. {mod.title}
                     </h4>
                     <p className="text-[11px] text-slate-400 truncate">

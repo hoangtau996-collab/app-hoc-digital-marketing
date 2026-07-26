@@ -257,6 +257,42 @@ html.light [class*="bg-emerald-950"] {
   border-color: #a7f3d0 !important;
 }
 
+/* Force High Contrast for all custom Dark Hex Backgrounds in Light Mode */
+html.light div[class*="bg-[#"],
+html.light button[class*="bg-[#"],
+html.light section[class*="bg-[#"],
+html.light aside[class*="bg-[#"] {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+
+html.light div[class*="bg-[#"] *,
+html.light button[class*="bg-[#"] *,
+html.light section[class*="bg-[#"] * {
+  color: #0f172a;
+}
+
+/* Specific Takeaway & Key Manager Note Box in Light Mode */
+html.light .bg-\[\#091a14\],
+html.light div.bg-\[\#091a14\] {
+  background-color: #ecfdf5 !important;
+  border: 2px solid #059669 !important;
+  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.1) !important;
+}
+
+html.light .bg-\[\#091a14\] strong,
+html.light .bg-\[\#091a14\] div,
+html.light .bg-\[\#091a14\] span,
+html.light .bg-\[\#091a14\] p {
+  color: #064e3b !important;
+}
+
+html.light .bg-\[\#091a14\] .text-emerald-400 {
+  color: #047857 !important;
+  font-weight: 800 !important;
+}
+
 html.light .bg-teal-950,
 html.light [class*="bg-teal-950"] {
   background-color: #f0fdfa !important;
