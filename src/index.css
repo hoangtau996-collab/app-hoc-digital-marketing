@@ -139,7 +139,12 @@ html.light footer {
   border-color: #cbd5e1;
 }
 
-/* Overriding any background colors starting with bg-[# or bg-slate-900 / bg-slate-950 */
+/* Overriding any background colors starting with bg-[# or bg-slate-900 / bg-slate-950 / emerald darks */
+html.light [class*="from-emerald-950"],
+html.light [class*="from-emerald-900"],
+html.light [class*="bg-emerald-950"],
+html.light [class*="bg-emerald-900"],
+html.light [class*="bg-emerald-800"],
 html.light [class*="bg-[#0"],
 html.light [class*="bg-[#1"],
 html.light [class*="bg-[#2"],
@@ -148,6 +153,7 @@ html.light [class*="bg-slate-900"],
 html.light [class*="bg-slate-950"],
 html.light [class*="bg-slate-800"] {
   background-color: #ffffff !important;
+  background-image: none !important;
   color: #0f172a !important;
 }
 

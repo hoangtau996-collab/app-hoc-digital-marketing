@@ -342,14 +342,14 @@ export default function LessonViewer({
         <div className="space-y-8">
           
           {/* Module Banner Description */}
-          <div className="p-6 rounded-2xl bg-gradient-to-r from-emerald-950/80 via-[#0d1c16] to-[#070d0a] border border-emerald-800/40">
+          <div className="p-6 rounded-2xl bg-[#0c1813] border-2 border-emerald-500/50 shadow-xl">
             <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-2xl bg-emerald-900/40 border border-emerald-500/30 flex items-center justify-center text-emerald-400 font-black text-xl shrink-0">
+              <div className="w-12 h-12 rounded-2xl bg-emerald-500/20 border border-emerald-400/60 flex items-center justify-center text-emerald-300 font-black text-xl shrink-0 shadow-md">
                 {module.number}
               </div>
               <div>
-                <h3 className="text-base font-bold text-white">{module.subtitle}</h3>
-                <p className="text-xs text-slate-300 leading-relaxed mt-1">{module.description}</p>
+                <h3 className="text-lg font-black text-emerald-300 tracking-wide">{module.subtitle}</h3>
+                <p className="text-xs sm:text-sm text-slate-100 font-medium leading-relaxed mt-1">{module.description}</p>
               </div>
             </div>
           </div>
