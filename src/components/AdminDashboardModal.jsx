@@ -3,6 +3,7 @@ import PMarcomLogo from './PMarcomLogo';
 import { 
   getAllRegisteredStudentsFromCloud, 
   listenToAllStudentsFromCloud,
+  recordStudentAccountToCloud,
   db,
   doc,
   deleteDoc
@@ -22,7 +23,13 @@ import {
   ShieldCheck, 
   Briefcase, 
   FileSpreadsheet,
-  TrendingUp
+  TrendingUp,
+  Upload,
+  PlusCircle,
+  FileText,
+  Sparkles,
+  UserPlus,
+  FileCheck
 } from 'lucide-react';
 
 export default function AdminDashboardModal({
@@ -38,6 +45,17 @@ export default function AdminDashboardModal({
   const [selectedIndustry, setSelectedIndustry] = useState('ALL');
   const [isLoading, setIsLoading] = useState(false);
   const [notice, setNotice] = useState('');
+
+  // Certificate Generator Modal state
+  const [isCertGenOpen, setIsCertGenOpen] = useState(false);
+  const [certGenTab, setCertGenTab] = useState('manual'); // 'manual', 'excel'
+  const [manualName, setManualName] = useState('');
+  const [manualPhone, setManualPhone] = useState('');
+  const [manualEmail, setManualEmail] = useState('');
+  const [manualIndustry, setManualIndustry] = useState('Digital Marketing');
+  const [excelParsedStudents, setExcelParsedStudents] = useState([]);
+  const [rawPastedText, setRawPastedText] = useState('');
+  const [isProcessing, setIsProcessing] = useState(false);
 
   // Default seed sample data if empty
   const SAMPLE_STUDENTS = [
@@ -246,6 +264,158 @@ export default function AdminDashboardModal({
     }
   };
 
+  // CSV Text Parsing Helper
+  const parseCSVText = (text) => {
+    if (!text || !text.trim()) return [];
+    const lines = text.split(/\r?\n/).filter(l => l.trim().length > 0);
+    const result = [];
+
+    lines.forEach((line, idx) => {
+      // Skip header line if detected
+      const lower = line.toLowerCase();
+      if (idx === 0 && (lower.includes('họ') || lower.includes('name') || lower.includes('stt') || lower.includes('ho_ten'))) {
+        return;
+      }
+
+      const parts = line.split(/[,;\t]/).map(p => p.trim().replace(/^["']|["']$/g, ''));
+      if (parts.length > 0 && parts[0]) {
+        const isFirstNum = /^\d+$/.test(parts[0]) && parts.length > 1;
+        const nameIdx = isFirstNum ? 1 : 0;
+        const name = parts[nameIdx];
+        const phone = parts[nameIdx + 1] || '0901234567';
+        const email = parts[nameIdx + 2] || `hocvien.${Date.now()}.${idx}@pmarcom.edu.vn`;
+        const industry = parts[nameIdx + 3] || 'Digital Marketing';
+
+        if (name && name.length >= 2) {
+          result.push({
+            name: name.toUpperCase(),
+            phone: phone,
+            email: email,
+            industry: industry
+          });
+        }
+      }
+    });
+
+    return result;
+  };
+
+  const handleFileUpload = (e) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      const text = event.target?.result || '';
+      const parsed = parseCSVText(text);
+      if (parsed.length > 0) {
+        setExcelParsedStudents(parsed);
+        setNotice(`📥 Đã đọc thành công ${parsed.length} học viên từ file CSV/Excel!`);
+      } else {
+        alert("Không thể đọc được danh sách học viên từ file này. Vui lòng kiểm tra định dạng file (CSV/TXT).");
+      }
+    };
+    reader.readAsText(file);
+  };
+
+  const handleParseRawText = (text) => {
+    setRawPastedText(text);
+    const parsed = parseCSVText(text);
+    setExcelParsedStudents(parsed);
+  };
+
+  const handleDownloadSampleTemplate = () => {
+    const sampleCSV = "\uFEFF" + "STT,Ho_Ten,So_Dien_Thoai,Email,Nganh_Nghe\n" +
+      "1,LÊ THÀNH PHONG,0901234567,phong.le@pmarcom.edu.vn,Digital Marketing\n" +
+      "2,NGUYỄN VĂN A,0987654321,nguyenvana@gmail.com,Bất Động Sản\n" +
+      "3,TRẦN THỊ B,0912345678,tranthib@fnb-group.com,F&B - Nông Sản\n";
+
+    const blob = new Blob([sampleCSV], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.setAttribute("href", url);
+    link.setAttribute("download", "File_Mau_Import_Cap_Chung_Nhan_P_MARCOM.csv");
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  const handleCreateManualCert = async (e) => {
+    e.preventDefault();
+    if (!manualName.trim()) {
+      alert("Vui lòng nhập Họ và Tên học viên.");
+      return;
+    }
+
+    setIsProcessing(true);
+    const nameUpper = manualName.trim().toUpperCase();
+    const studentEmail = manualEmail.trim() || `cert.${Date.now()}@pmarcom.edu.vn`;
+    const allModules = ['module-01', 'module-02', 'module-03', 'module-04', 'module-05', 'module-06', 'module-07', 'module-08', 'module-09', 'module-10', 'module-11'];
+
+    const newCertStudent = {
+      id: `cert-manual-${Date.now()}`,
+      name: nameUpper,
+      phone: manualPhone.trim() || '0901234567',
+      email: studentEmail,
+      industry: manualIndustry || 'Digital Marketing',
+      completedModules: allModules,
+      createdAt: new Date().toLocaleDateString('vi-VN')
+    };
+
+    // 1. Sync to Cloud Firestore
+    await recordStudentAccountToCloud(newCertStudent);
+
+    // 2. Add to local list
+    setStudents(prev => [newCertStudent, ...prev]);
+
+    // 3. Reset form
+    setManualName('');
+    setManualPhone('');
+    setManualEmail('');
+    setIsProcessing(false);
+    setIsCertGenOpen(false);
+
+    setNotice(`🎓 Đã cấp Bằng Chứng Nhận thành công cho học viên ${nameUpper}`);
+
+    // 4. Open Certificate viewer
+    if (onIssueCertificateForStudent) {
+      onIssueCertificateForStudent(nameUpper);
+    }
+  };
+
+  const handleCreateBulkExcelCerts = async () => {
+    if (excelParsedStudents.length === 0) {
+      alert("Vui lòng chọn file Excel/CSV hoặc dán danh sách học viên.");
+      return;
+    }
+
+    setIsProcessing(true);
+    const allModules = ['module-01', 'module-02', 'module-03', 'module-04', 'module-05', 'module-06', 'module-07', 'module-08', 'module-09', 'module-10', 'module-11'];
+
+    const createdList = [];
+    for (let idx = 0; idx < excelParsedStudents.length; idx++) {
+      const std = excelParsedStudents[idx];
+      const studentObj = {
+        id: `cert-bulk-${Date.now()}-${idx}`,
+        name: std.name.toUpperCase(),
+        phone: std.phone || '0901234567',
+        email: std.email || `bulk.${Date.now()}.${idx}@pmarcom.edu.vn`,
+        industry: std.industry || 'Digital Marketing',
+        completedModules: allModules,
+        createdAt: new Date().toLocaleDateString('vi-VN')
+      };
+      await recordStudentAccountToCloud(studentObj);
+      createdList.push(studentObj);
+    }
+
+    setStudents(prev => [...createdList, ...prev]);
+    setNotice(`🎉 Đã cấp Bằng Chứng Nhận thành công cho ${createdList.length} học viên từ Excel/CSV!`);
+    setIsProcessing(false);
+    setExcelParsedStudents([]);
+    setRawPastedText('');
+    setIsCertGenOpen(false);
+  };
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-slate-950/90 backdrop-blur-md overflow-y-auto">
       <div className="relative w-full max-w-5xl glass-panel rounded-3xl border border-emerald-500/40 p-5 sm:p-8 shadow-2xl space-y-6 my-6 max-h-[90vh] flex flex-col">
@@ -368,6 +538,15 @@ export default function AdminDashboardModal({
             </button>
 
             <button
+              onClick={() => setIsCertGenOpen(true)}
+              className="px-3.5 py-2 rounded-xl bg-gradient-to-r from-amber-500 to-yellow-500 text-slate-950 text-xs font-black hover:brightness-110 transition flex items-center gap-1.5 cursor-pointer shadow-lg shrink-0"
+              title="Tạo thủ công hoặc upload file Excel tạo chứng nhận hàng loạt"
+            >
+              <Award className="w-4 h-4 text-slate-950" />
+              <span>Tạo Chứng Nhận</span>
+            </button>
+
+            <button
               onClick={handlePrintReport}
               className="px-3 py-2 rounded-xl bg-slate-800 border border-slate-700 text-slate-200 text-xs font-bold hover:bg-slate-700 transition flex items-center gap-1.5 cursor-pointer shadow-md"
             >
@@ -478,6 +657,215 @@ export default function AdminDashboardModal({
             </button>
           </div>
         </div>
+
+        {/* Certificate Creation Sub-Modal (Manual & Bulk Excel Import) */}
+        {isCertGenOpen && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/90 backdrop-blur-md">
+            <div className="relative w-full max-w-2xl glass-panel rounded-3xl border border-amber-500/40 p-6 shadow-2xl space-y-5">
+              
+              {/* Header */}
+              <div className="flex items-center justify-between border-b border-emerald-900/60 pb-3">
+                <div className="flex items-center gap-2.5">
+                  <div className="p-2 rounded-xl bg-amber-500/20 text-amber-400 border border-amber-500/40">
+                    <Award className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h3 className="text-base font-black text-white uppercase tracking-wider">
+                      🎓 TẠO & CẤP BẰNG CHỨNG NHẬN HỌC VIÊN
+                    </h3>
+                    <p className="text-xs text-slate-400">Tạo cấp bằng thủ công hoặc tải file Excel tạo hàng loạt</p>
+                  </div>
+                </div>
+
+                <button
+                  onClick={() => setIsCertGenOpen(false)}
+                  className="w-8 h-8 rounded-full bg-slate-900 border border-slate-700 text-slate-400 hover:text-white flex items-center justify-center transition"
+                >
+                  <X className="w-4 h-4" />
+                </button>
+              </div>
+
+              {/* Sub-Tabs Switcher */}
+              <div className="flex items-center bg-slate-900 p-1 rounded-xl border border-emerald-900/60 text-xs font-bold">
+                <button
+                  onClick={() => setCertGenTab('manual')}
+                  className={`flex-1 py-2 rounded-lg transition flex items-center justify-center gap-2 ${
+                    certGenTab === 'manual' ? 'bg-amber-500 text-slate-950 shadow' : 'text-slate-400 hover:text-white'
+                  }`}
+                >
+                  <UserPlus className="w-4 h-4" /> 1. Tạo Thủ Công (1 Học Viên)
+                </button>
+                <button
+                  onClick={() => setCertGenTab('excel')}
+                  className={`flex-1 py-2 rounded-lg transition flex items-center justify-center gap-2 ${
+                    certGenTab === 'excel' ? 'bg-amber-500 text-slate-950 shadow' : 'text-slate-400 hover:text-white'
+                  }`}
+                >
+                  <FileSpreadsheet className="w-4 h-4" /> 2. Upload Excel / CSV (Hàng Loạt)
+                </button>
+              </div>
+
+              {/* TAB 1: Manual Certificate Creation */}
+              {certGenTab === 'manual' && (
+                <form onSubmit={handleCreateManualCert} className="space-y-4">
+                  <div className="space-y-1">
+                    <label className="text-xs font-bold text-slate-300">Họ và Tên Học Viên (In Bằng): <span className="text-rose-400">*</span></label>
+                    <input
+                      type="text"
+                      placeholder="Ví dụ: LÊ THÀNH PHONG"
+                      value={manualName}
+                      onChange={(e) => setManualName(e.target.value)}
+                      className="w-full bg-slate-900 border border-emerald-900/80 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-amber-400 uppercase tracking-wide font-bold"
+                      required
+                    />
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div className="space-y-1">
+                      <label className="text-xs font-bold text-slate-300">Số Điện Thoại (Zalo):</label>
+                      <input
+                        type="text"
+                        placeholder="0901234567"
+                        value={manualPhone}
+                        onChange={(e) => setManualPhone(e.target.value)}
+                        className="w-full bg-slate-900 border border-emerald-900/80 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-amber-400"
+                      />
+                    </div>
+                    <div className="space-y-1">
+                      <label className="text-xs font-bold text-slate-300">Địa chỉ Email:</label>
+                      <input
+                        type="email"
+                        placeholder="hocvien@pmarcom.edu.vn"
+                        value={manualEmail}
+                        onChange={(e) => setManualEmail(e.target.value)}
+                        className="w-full bg-slate-900 border border-emerald-900/80 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-amber-400"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="space-y-1">
+                    <label className="text-xs font-bold text-slate-300">Ngành Nghề Kinh Doanh:</label>
+                    <input
+                      type="text"
+                      placeholder="Digital Marketing / Bất Động Sản..."
+                      value={manualIndustry}
+                      onChange={(e) => setManualIndustry(e.target.value)}
+                      className="w-full bg-slate-900 border border-emerald-900/80 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-amber-400"
+                    />
+                  </div>
+
+                  <div className="p-3 rounded-xl bg-amber-950/40 border border-amber-500/30 text-amber-300 text-xs font-medium space-y-1">
+                    <div className="font-bold text-amber-400 flex items-center gap-1">
+                      <ShieldCheck className="w-4 h-4" /> Tự động chứng nhận 11/11 Chuyên đề
+                    </div>
+                    <p className="text-[11px] opacity-90">Học viên được cấp bằng sẽ lập tức nhận danh hiệu Tốt Nghiệp và có thể tra cứu/tải chứng nhận sắc nét.</p>
+                  </div>
+
+                  <div className="pt-2 flex justify-end gap-2">
+                    <button
+                      type="button"
+                      onClick={() => setIsCertGenOpen(false)}
+                      className="px-4 py-2.5 rounded-xl bg-slate-800 text-slate-300 font-bold text-xs hover:bg-slate-700 transition cursor-pointer"
+                    >
+                      Hủy Bỏ
+                    </button>
+                    <button
+                      type="submit"
+                      disabled={isProcessing}
+                      className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-yellow-500 text-slate-950 font-black text-xs hover:brightness-110 transition shadow-lg flex items-center gap-2 cursor-pointer"
+                    >
+                      <Award className="w-4 h-4" />
+                      <span>{isProcessing ? 'Đang cấp bằng...' : '🎓 Cấp Bằng & Xem Chứng Nhận Ngay'}</span>
+                    </button>
+                  </div>
+                </form>
+              )}
+
+              {/* TAB 2: Bulk Excel / CSV Import */}
+              {certGenTab === 'excel' && (
+                <div className="space-y-4">
+                  
+                  {/* File Selector & Sample CSV Download Bar */}
+                  <div className="flex flex-col sm:flex-row items-center justify-between gap-3 p-4 rounded-2xl bg-slate-900/90 border border-emerald-900/80">
+                    <div>
+                      <h4 className="text-xs font-bold text-white flex items-center gap-1.5">
+                        <Upload className="w-4 h-4 text-emerald-400" /> Chọn File Excel / CSV (.csv)
+                      </h4>
+                      <p className="text-[11px] text-slate-400">File chứa danh sách: Họ Tên, SĐT, Email, Ngành nghề</p>
+                    </div>
+
+                    <div className="flex items-center gap-2">
+                      <button
+                        onClick={handleDownloadSampleTemplate}
+                        className="px-3 py-1.5 rounded-xl bg-slate-800 border border-slate-700 text-amber-300 text-[11px] font-bold hover:bg-slate-700 transition flex items-center gap-1 cursor-pointer"
+                      >
+                        <Download className="w-3.5 h-3.5" /> File Mẫu CSV
+                      </button>
+
+                      <label className="px-3.5 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-[11px] font-extrabold cursor-pointer transition shadow flex items-center gap-1">
+                        <Upload className="w-3.5 h-3.5" /> Chọn File...
+                        <input type="file" accept=".csv, .txt, .xlsx" onChange={handleFileUpload} className="hidden" />
+                      </label>
+                    </div>
+                  </div>
+
+                  {/* Or Paste Raw Text Box */}
+                  <div className="space-y-1">
+                    <label className="text-xs font-bold text-slate-300">Hoặc Dán Trực Tiếp Cột Excel Vào Đây:</label>
+                    <textarea
+                      rows="4"
+                      placeholder="Dán dữ liệu Excel (Ví dụ: LÊ THÀNH PHONG, 0901234567, phong.le@gmail.com, Digital Marketing)"
+                      value={rawPastedText}
+                      onChange={(e) => handleParseRawText(e.target.value)}
+                      className="w-full bg-slate-900 border border-emerald-900/80 rounded-xl p-3 text-xs text-slate-200 placeholder-slate-500 focus:outline-none focus:border-amber-400 font-mono"
+                    />
+                  </div>
+
+                  {/* Parsed Preview List */}
+                  {excelParsedStudents.length > 0 && (
+                    <div className="space-y-2">
+                      <div className="flex items-center justify-between text-xs font-bold text-emerald-400">
+                        <span>Danh Sách {excelParsedStudents.length} Học Viên Đã Đọc Từ File:</span>
+                        <span className="text-[10px] text-amber-300">Sẵn sàng cấp bằng 11/11 chuyên đề</span>
+                      </div>
+                      <div className="max-h-36 overflow-y-auto rounded-xl border border-emerald-900/60 bg-slate-950 p-2 space-y-1">
+                        {excelParsedStudents.map((std, idx) => (
+                          <div key={idx} className="flex items-center justify-between text-xs p-1.5 rounded bg-slate-900/60 text-slate-300">
+                            <span className="font-bold text-white">{idx + 1}. {std.name}</span>
+                            <span className="text-[11px] text-slate-400">{std.phone} • {std.email}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  <div className="pt-2 flex justify-end gap-2">
+                    <button
+                      onClick={() => setIsCertGenOpen(false)}
+                      className="px-4 py-2.5 rounded-xl bg-slate-800 text-slate-300 font-bold text-xs hover:bg-slate-700 transition cursor-pointer"
+                    >
+                      Hủy Bỏ
+                    </button>
+                    <button
+                      onClick={handleCreateBulkExcelCerts}
+                      disabled={isProcessing || excelParsedStudents.length === 0}
+                      className={`px-5 py-2.5 rounded-xl text-xs font-black transition shadow-lg flex items-center gap-2 ${
+                        excelParsedStudents.length > 0 
+                          ? 'bg-gradient-to-r from-amber-500 to-yellow-500 text-slate-950 hover:brightness-110 cursor-pointer' 
+                          : 'bg-slate-800 text-slate-500 cursor-not-allowed'
+                      }`}
+                    >
+                      <Sparkles className="w-4 h-4" />
+                      <span>{isProcessing ? 'Đang xử lý...' : `⚡ Cấp Bằng Hàng Loạt (${excelParsedStudents.length} Học Viên)`}</span>
+                    </button>
+                  </div>
+
+                </div>
+              )}
+
+            </div>
+          </div>
+        )}
 
       </div>
     </div>
