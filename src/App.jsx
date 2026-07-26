@@ -11,6 +11,7 @@ import MobileBottomNav from './components/MobileBottomNav';
 import AuthModal from './components/AuthModal';
 import UserProfileModal from './components/UserProfileModal';
 import DigitalGlossary from './components/DigitalGlossary';
+import FeatureMenuBar from './components/FeatureMenuBar';
 
 import { 
   auth, 
@@ -356,6 +357,25 @@ export default function App() {
         theme={theme}
         setTheme={setTheme}
         trafficStats={trafficStats}
+      />
+
+      {/* Feature Menu Bar (UX Navigation Bar) */}
+      <FeatureMenuBar
+        activeTab={activeTab}
+        setActiveTab={handleProtectedSelectTab}
+        onSelectModule={handleProtectedSelectModule}
+        onOpenCertificate={() => {
+          if (!currentUser) {
+            setMigrationNotice('🔒 Vui lòng Đăng Ký / Đăng Nhập để xem bằng cấp!');
+            setIsAuthOpen(true);
+          } else {
+            setIsCertOpen(true);
+          }
+        }}
+        passedCount={completedModules.length}
+        totalModules={COURSE_MODULES.length}
+        searchQuery={searchQuery}
+        setSearchQuery={setSearchQuery}
       />
 
       {/* Guest Progress / Auth Protection Toast Banner */}
