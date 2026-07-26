@@ -16,6 +16,7 @@ import {
   increment,
   serverTimestamp,
   collection,
+  getDocs,
   deleteDoc
 } from 'firebase/firestore';
 
@@ -67,6 +68,27 @@ export async function getUserProgressFromCloud(userId) {
     console.warn("Failed to fetch cloud progress, fallback to cache", e);
   }
   return null;
+}
+
+/**
+ * Fetch all registered student accounts from Cloud Firestore
+ */
+export async function getAllRegisteredStudentsFromCloud() {
+  try {
+    const studentsColRef = collection(db, 'students');
+    const snapshot = await getDocs(studentsColRef);
+    const students = [];
+    snapshot.forEach((docSnap) => {
+      students.push({
+        id: docSnap.id,
+        ...docSnap.data()
+      });
+    });
+    return students;
+  } catch (e) {
+    console.warn("Could not fetch cloud students list:", e);
+    return [];
+  }
 }
 
 /**
@@ -226,6 +248,7 @@ export {
   doc,
   setDoc,
   getDoc,
-  onSnapshot
+  onSnapshot,
+  deleteDoc
 };
 

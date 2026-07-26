@@ -14,7 +14,8 @@ import {
   Moon,
   Monitor,
   Eye,
-  Tag
+  Tag,
+  ShieldCheck
 } from 'lucide-react';
 
 export default function Header({ 
@@ -29,6 +30,7 @@ export default function Header({
   currentUser,
   onOpenAuthModal,
   onOpenProfileModal,
+  onOpenAdminModal,
   theme = 'system',
   setTheme = () => {},
   trafficStats,
@@ -188,6 +190,18 @@ export default function Header({
               {passedCount}/{totalModules}
             </span>
           </button>
+
+          {/* Admin Master Dashboard Access Button */}
+          {onOpenAdminModal && (
+            <button
+              onClick={onOpenAdminModal}
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-amber-500/20 hover:bg-amber-500/30 border border-amber-500/40 text-amber-300 text-xs font-bold transition shrink-0 cursor-pointer shadow-sm"
+              title="Mở Bảng Quản Trị Học Viên & Xuất Báo Cáo Data"
+            >
+              <ShieldCheck className="w-4 h-4 text-amber-400" />
+              <span>🔑 Quản Trị</span>
+            </button>
+          )}
 
           {/* User Account / Auth Button (GUARANTEED VISIBLE SHRINK-0) */}
           {currentUser ? (

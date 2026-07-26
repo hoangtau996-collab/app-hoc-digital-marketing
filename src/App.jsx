@@ -12,6 +12,7 @@ import AuthModal from './components/AuthModal';
 import UserProfileModal from './components/UserProfileModal';
 import DigitalGlossary from './components/DigitalGlossary';
 import FeatureMenuBar from './components/FeatureMenuBar';
+import AdminDashboardModal from './components/AdminDashboardModal';
 
 import { 
   auth, 
@@ -37,6 +38,7 @@ export default function App() {
   const [isCertOpen, setIsCertOpen] = useState(false);
   const [isAuthOpen, setIsAuthOpen] = useState(false);
   const [isProfileOpen, setIsProfileOpen] = useState(false);
+  const [isAdminOpen, setIsAdminOpen] = useState(false);
 
   // Bilingual Language State: 'vi' | 'en'
   const [lang, setLang] = useState(() => {
@@ -370,6 +372,7 @@ export default function App() {
         currentUser={currentUser}
         onOpenAuthModal={() => setIsAuthOpen(true)}
         onOpenProfileModal={() => setIsProfileOpen(true)}
+        onOpenAdminModal={() => setIsAdminOpen(true)}
         theme={theme}
         setTheme={setTheme}
         trafficStats={trafficStats}
@@ -514,6 +517,15 @@ export default function App() {
         theme={theme}
         setTheme={setTheme}
         trafficStats={trafficStats}
+      />
+
+      {/* Admin Master Dashboard Modal */}
+      <AdminDashboardModal
+        isOpen={isAdminOpen}
+        onClose={() => setIsAdminOpen(false)}
+        currentUser={currentUser}
+        trafficStats={trafficStats}
+        t={t}
       />
 
       {/* Mobile Bottom Navigation Bar */}

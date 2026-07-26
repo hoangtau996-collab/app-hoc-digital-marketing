@@ -102,6 +102,16 @@ export default function AuthModal({
     } catch (e) {}
     return [
       {
+        id: 'admin-master-01',
+        email: 'admin@pmarcom.edu.vn',
+        password: 'admin',
+        name: 'QUẢN TRỊ VIÊN ADMIN',
+        phone: '0999999999',
+        industry: 'Ban Quản Trị Học Viện',
+        role: 'admin',
+        createdAt: new Date().toLocaleDateString('vi-VN')
+      },
+      {
         id: 'user-demo-01',
         email: 'hocvien@pmarcom.edu.vn',
         password: '123',
@@ -280,6 +290,13 @@ export default function AuthModal({
     setErrorMsg('');
   };
 
+  const fillAdminDemo = () => {
+    setEmail('admin@pmarcom.edu.vn');
+    setPassword('admin');
+    setMode('login');
+    setErrorMsg('');
+  };
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/85 backdrop-blur-md overflow-y-auto">
       <div className="relative w-full max-w-md glass-panel rounded-3xl border border-emerald-500/40 p-6 sm:p-8 shadow-2xl space-y-5 my-8">
@@ -318,10 +335,10 @@ export default function AuthModal({
           </div>
 
           <h3 className="text-lg sm:text-xl font-black text-white tracking-wide">
-            {mode === 'register' ? 'ĐĂNG KÝ TÀI KHOẢN HỌC VIÊN' : 'ĐĂNG NHẬP HỌC VIÊN'}
+            {mode === 'register' ? textDict.authTitleRegister : textDict.authTitleLogin}
           </h3>
           <p className="text-[11px] text-emerald-400 font-semibold">
-            Đăng ký tài khoản để tham gia học 11 chuyên đề & nhận Giấy Chứng Nhận
+            {textDict.authSubtitle}
           </p>
         </div>
 
@@ -334,7 +351,7 @@ export default function AuthModal({
               mode === 'register' ? 'bg-emerald-600 text-white shadow' : 'text-slate-300 hover:text-white'
             }`}
           >
-            <UserPlus className="w-3.5 h-3.5" /> 1. Đăng Ký Mới
+            <UserPlus className="w-3.5 h-3.5" /> {textDict.tabRegister}
           </button>
           <button
             type="button"
@@ -343,7 +360,7 @@ export default function AuthModal({
               mode === 'login' ? 'bg-emerald-600 text-white shadow' : 'text-slate-300 hover:text-white'
             }`}
           >
-            <LogIn className="w-3.5 h-3.5" /> 2. Đăng Nhập
+            <LogIn className="w-3.5 h-3.5" /> {textDict.tabLogin}
           </button>
         </div>
 
@@ -370,7 +387,7 @@ export default function AuthModal({
               {/* Field 1: Họ và tên */}
               <div className="space-y-1">
                 <label className="text-xs font-semibold text-slate-300 flex items-center justify-between">
-                  <span>Họ và Tên Học Viên:</span>
+                  <span>{textDict.labelFullName}</span>
                   <span className="text-[10px] text-emerald-400 font-bold">*Bắt buộc</span>
                 </label>
                 <div className="relative">
@@ -389,7 +406,7 @@ export default function AuthModal({
               {/* Field 2: Số điện thoại */}
               <div className="space-y-1">
                 <label className="text-xs font-semibold text-slate-300 flex items-center justify-between">
-                  <span>Số Điện Thoại (Zalo):</span>
+                  <span>{textDict.labelPhone}</span>
                   <span className="text-[10px] text-emerald-400 font-bold">*Bắt buộc</span>
                 </label>
                 <div className="relative">
@@ -408,7 +425,7 @@ export default function AuthModal({
               {/* Field 4: Ngành nghề kinh doanh */}
               <div className="space-y-1">
                 <label className="text-xs font-semibold text-slate-300 flex items-center justify-between">
-                  <span>Ngành Nghề Kinh Doanh:</span>
+                  <span>{textDict.labelIndustry}</span>
                   <span className="text-[10px] text-emerald-400 font-bold">*Bắt buộc</span>
                 </label>
                 <div className="relative">
@@ -432,7 +449,7 @@ export default function AuthModal({
           {/* Field 3: Email */}
           <div className="space-y-1">
             <label className="text-xs font-semibold text-slate-300 flex items-center justify-between">
-              <span>Địa chỉ Email:</span>
+              <span>{textDict.labelEmail}</span>
               <span className="text-[10px] text-emerald-400 font-bold">*Bắt buộc</span>
             </label>
             <div className="relative">
@@ -450,7 +467,7 @@ export default function AuthModal({
 
           <div className="space-y-1">
             <label className="text-xs font-semibold text-slate-300 flex items-center justify-between">
-              <span>Mật khẩu bảo mật:</span>
+              <span>{textDict.labelPassword}</span>
               <span className="text-[10px] text-emerald-400 font-bold">*Bắt buộc</span>
             </label>
             <div className="relative">
@@ -487,7 +504,7 @@ export default function AuthModal({
                 onChange={(e) => setRememberMe(e.target.checked)}
                 className="w-4 h-4 rounded border-emerald-800 bg-slate-900 text-emerald-500 focus:ring-emerald-500 cursor-pointer accent-emerald-500"
               />
-              <span className="font-semibold text-[11px] sm:text-xs">Ghi nhớ đăng nhập trên thiết bị này</span>
+              <span className="font-semibold text-[11px] sm:text-xs">{textDict.rememberMeLabel || "Ghi nhớ đăng nhập trên thiết bị này"}</span>
             </label>
           </div>
 
@@ -497,21 +514,30 @@ export default function AuthModal({
             className="w-full py-3 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 text-slate-950 font-extrabold text-xs hover:brightness-110 shadow-lg transition cursor-pointer flex items-center justify-center gap-2 mt-2"
           >
             <ShieldCheck className="w-4 h-4" />
-            <span>{isLoading ? 'Đang Xử Lý...' : mode === 'register' ? 'HOÀN TẤT ĐĂNG KÝ HỌC VIÊN' : 'XÁC NHẬN ĐĂNG NHẬP'}</span>
+            <span>{isLoading ? 'Đang Xử Lý...' : mode === 'register' ? textDict.btnRegisterSubmit : textDict.btnLoginSubmit}</span>
           </button>
         </form>
 
         {/* Quick Demo Hint */}
         {mode === 'login' && (
           <div className="pt-2 border-t border-emerald-900/40 text-center space-y-2">
-            <p className="text-[11px] text-slate-400">Bạn muốn trải nghiệm thử tài khoản mẫu?</p>
-            <button
-              type="button"
-              onClick={fillQuickDemo}
-              className="px-3 py-1.5 rounded-lg bg-emerald-950 border border-emerald-800 text-emerald-300 text-[11px] font-semibold hover:border-emerald-500 transition cursor-pointer"
-            >
-              🔑 Dùng Tài Khoản Mẫu (hocvien@pmarcom.edu.vn)
-            </button>
+            <p className="text-[11px] text-slate-400">Tài khoản dùng thử nghiệm:</p>
+            <div className="flex items-center justify-center gap-2 flex-wrap">
+              <button
+                type="button"
+                onClick={fillQuickDemo}
+                className="px-2.5 py-1 rounded-lg bg-emerald-950 border border-emerald-800 text-emerald-300 text-[11px] font-semibold hover:border-emerald-500 transition cursor-pointer"
+              >
+                👤 Học Viên Mẫu
+              </button>
+              <button
+                type="button"
+                onClick={fillAdminDemo}
+                className="px-2.5 py-1 rounded-lg bg-amber-950 border border-amber-800 text-amber-300 text-[11px] font-semibold hover:border-amber-500 transition cursor-pointer"
+              >
+                🔑 Admin Mẫu (admin@pmarcom.edu.vn)
+              </button>
+            </div>
           </div>
         )}
 
