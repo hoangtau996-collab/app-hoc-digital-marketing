@@ -386,11 +386,8 @@ export default function CertificateModal({
                     </div>
                   </div>
 
-                  <div className="text-[11px] font-bold uppercase tracking-wider" style={{ color: '#0f172a' }}>
-                    LÊ THÀNH PHONG
-                  </div>
-                  <div className="text-[10px] font-semibold" style={{ color: '#047857' }}>
-                    Founder &amp; CEO Lê Thành Phong
+                  <div className="text-[10px] font-semibold mt-1" style={{ color: '#047857' }}>
+                    Founder &amp; CEO
                   </div>
                 </div>
 

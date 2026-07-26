@@ -175,11 +175,8 @@ function buildMarkup({ studentName, totalModules, issueDate, verifyCode, logoSrc
           <div style="margin-top:8px;display:inline-block;padding:0 12px 8px 12px;border-bottom:1px solid #d97706;font-family:Georgia,'Times New Roman',serif;font-style:italic;font-weight:700;font-size:32px;color:#b45309;line-height:1.25;">
             Lê Thành Phong
           </div>
-          <div style="margin-top:9px;color:#0f172a;font-size:14px;font-weight:800;letter-spacing:1.5px;line-height:1.4;">
-            LÊ THÀNH PHONG
-          </div>
-          <div style="margin-top:2px;color:#047857;font-size:13px;font-weight:700;line-height:1.4;">
-            Founder &amp; CEO Lê Thành Phong
+          <div style="margin-top:9px;color:#047857;font-size:13px;font-weight:700;line-height:1.4;">
+            Founder &amp; CEO
           </div>
         </div>
 
