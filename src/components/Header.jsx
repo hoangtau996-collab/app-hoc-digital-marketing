@@ -210,8 +210,12 @@ export default function Header({
               onClick={onOpenProfileModal}
               className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-emerald-950 border border-emerald-700 hover:border-emerald-500 text-emerald-300 text-xs font-bold transition shrink-0 cursor-pointer"
             >
-              <div className="w-5 h-5 rounded-full bg-emerald-500 text-slate-950 flex items-center justify-center font-black text-[10px]">
-                {currentUser.name ? currentUser.name.charAt(0) : 'U'}
+              <div className="w-6 h-6 rounded-full bg-amber-400 text-slate-950 flex items-center justify-center font-black text-[10px] overflow-hidden shrink-0">
+                {currentUser.avatarUrl ? (
+                  <img src={currentUser.avatarUrl} alt="Avatar" className="w-full h-full object-cover" />
+                ) : (
+                  currentUser.name ? currentUser.name.charAt(0) : 'U'
+                )}
               </div>
               <span className="truncate max-w-[100px]">{currentUser.name || 'Học Viên'}</span>
             </button>

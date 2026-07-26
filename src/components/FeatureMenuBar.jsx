@@ -105,8 +105,12 @@ export default function FeatureMenuBar({
               className="flex items-center gap-2.5 px-3.5 py-2 rounded-xl text-left transition shrink-0 border border-amber-400/60 bg-gradient-to-r from-amber-500/20 via-emerald-950 to-teal-950 hover:brightness-125 text-white shadow-lg cursor-pointer group"
               title="Tuỳ chỉnh thông tin cá nhân học viên & hình nền"
             >
-              <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-amber-400 to-yellow-500 text-slate-950 font-black text-xs flex items-center justify-center shadow shrink-0">
-                {currentUser && typeof currentUser.name === 'string' && currentUser.name.trim() ? currentUser.name.trim().charAt(0).toUpperCase() : 'U'}
+              <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-amber-400 to-yellow-500 text-slate-950 font-black text-xs flex items-center justify-center shadow shrink-0 overflow-hidden">
+                {currentUser.avatarUrl ? (
+                  <img src={currentUser.avatarUrl} alt="Avatar" className="w-full h-full object-cover" />
+                ) : (
+                  currentUser && typeof currentUser.name === 'string' && currentUser.name.trim() ? currentUser.name.trim().charAt(0).toUpperCase() : 'U'
+                )}
               </div>
 
               <div>

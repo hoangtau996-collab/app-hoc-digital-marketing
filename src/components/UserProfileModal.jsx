@@ -45,6 +45,7 @@ export default function UserProfileModal({
   const [phone, setPhone] = useState(currentUser?.phone || '');
   const [industry, setIndustry] = useState(currentUser?.industry || 'Digital Marketing');
   const [coverBg, setCoverBg] = useState(currentUser?.coverBg || 'emerald');
+  const [avatarUrl, setAvatarUrl] = useState(currentUser?.avatarUrl || '');
   const [saveStatus, setSaveStatus] = useState('');
 
   useEffect(() => {
@@ -53,12 +54,30 @@ export default function UserProfileModal({
       setPhone(currentUser.phone || '');
       setIndustry(currentUser.industry || 'Digital Marketing');
       setCoverBg(currentUser.coverBg || 'emerald');
+      setAvatarUrl(currentUser.avatarUrl || '');
     }
   }, [currentUser]);
 
   if (!isOpen || !currentUser) return null;
 
   const progressPercent = Math.round((passedCount / totalModules) * 100);
+
+  const handleAvatarFileChange = (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    if (file.size > 3 * 1024 * 1024) {
+      setSaveStatus('⚠️ Dung lượng ảnh đại diện tối đa 3MB.');
+      return;
+    }
+
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      setAvatarUrl(event.target.result);
+      setSaveStatus('🟢 Đã chọn ảnh đại diện thành công!');
+    };
+    reader.readAsDataURL(file);
+  };
 
   const handleSaveProfile = (e) => {
     e.preventDefault();
@@ -72,16 +91,21 @@ export default function UserProfileModal({
       name: name.trim().toUpperCase(),
       phone: phone.trim(),
       industry,
-      coverBg
+      coverBg,
+      avatarUrl
     };
 
     if (onUpdateProfile) {
       onUpdateProfile(updated);
     }
 
-    setSaveStatus('🟢 Đã lưu thay đổi thông tin & hình nền!');
+    setSaveStatus('🟢 Đã lưu thay đổi thông tin & ảnh đại diện!');
     setIsEditing(false);
-    setTimeout(() => setSaveStatus(''), 4000);
+    
+    // Auto-close modal and return to main page
+    setTimeout(() => {
+      onClose();
+    }, 400);
   };
 
   // Export progress data as JSON backup
@@ -205,8 +229,12 @@ export default function UserProfileModal({
         {/* User Card Header */}
         <div className="flex items-center justify-between border-b border-emerald-900/40 pb-5">
           <div className="flex items-center gap-4">
-            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-400 to-emerald-500 flex items-center justify-center text-slate-950 font-black text-xl border-2 border-amber-400/60 shadow-lg shrink-0">
-              {currentUser.name ? currentUser.name.charAt(0).toUpperCase() : 'U'}
+            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-400 to-emerald-500 flex items-center justify-center text-slate-950 font-black text-xl border-2 border-amber-400/60 shadow-lg shrink-0 overflow-hidden">
+              {(avatarUrl || currentUser.avatarUrl) ? (
+                <img src={avatarUrl || currentUser.avatarUrl} alt="Avatar" className="w-full h-full object-cover" />
+              ) : (
+                <span>{currentUser.name ? currentUser.name.charAt(0).toUpperCase() : 'U'}</span>
+              )}
             </div>
 
             <div className="min-w-0 flex-1">
@@ -240,8 +268,47 @@ export default function UserProfileModal({
         {isEditing && (
           <form onSubmit={handleSaveProfile} className="p-4 rounded-2xl bg-[#091611] border border-amber-500/40 space-y-3.5">
             <h4 className="text-xs font-bold text-amber-300 uppercase tracking-wider flex items-center gap-1.5 border-b border-emerald-900/60 pb-2">
-              <User className="w-4 h-4 text-amber-400" /> Cập Nhật Thông Tin Cá Nhân Học Viên
+              <User className="w-4 h-4 text-amber-400" /> Cập Nhật Thông Tin Cá Nhân & Ảnh Đại Diện
             </h4>
+
+            {/* Avatar Upload Section */}
+            <div className="p-3 rounded-xl bg-[#07110d] border border-emerald-900/60 space-y-2">
+              <label className="text-xs font-bold text-slate-200 flex items-center gap-1.5">
+                <Upload className="w-3.5 h-3.5 text-amber-400" /> Tải Ảnh Đại Diện Cá Nhân:
+              </label>
+              
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-xl bg-slate-900 border border-amber-400/60 flex items-center justify-center text-amber-300 font-bold overflow-hidden shrink-0">
+                  {avatarUrl ? (
+                    <img src={avatarUrl} alt="Avatar Preview" className="w-full h-full object-cover" />
+                  ) : (
+                    <span className="text-xs">Chưa có</span>
+                  )}
+                </div>
+
+                <div className="flex-1 flex flex-wrap items-center gap-2">
+                  <label className="px-3 py-1.5 rounded-xl bg-emerald-950 border border-emerald-600 hover:border-emerald-400 text-emerald-300 text-xs font-bold transition cursor-pointer flex items-center gap-1.5">
+                    <Upload className="w-3.5 h-3.5 text-emerald-400" /> Choose Photo...
+                    <input
+                      type="file"
+                      accept="image/*"
+                      onChange={handleAvatarFileChange}
+                      className="hidden"
+                    />
+                  </label>
+
+                  {avatarUrl && (
+                    <button
+                      type="button"
+                      onClick={() => setAvatarUrl('')}
+                      className="px-2.5 py-1.5 rounded-xl bg-rose-950/60 border border-rose-800 text-rose-300 text-xs font-semibold hover:bg-rose-900 transition cursor-pointer"
+                    >
+                      ✕ Bỏ Ảnh
+                    </button>
+                  )}
+                </div>
+              </div>
+            </div>
 
             <div className="space-y-1">
               <label className="text-xs font-bold text-slate-300">Họ và Tên Học Viên (In Bằng):</label>
