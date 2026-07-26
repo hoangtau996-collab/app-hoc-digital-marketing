@@ -361,13 +361,15 @@ export default function App() {
       {/* Guest Progress / Auth Protection Toast Banner */}
       {migrationNotice && (
         <div className="max-w-7xl w-full mx-auto px-3 sm:px-6 lg:px-8 pt-4">
-          <div className="p-4 rounded-2xl bg-gradient-to-r from-emerald-950 via-[#0d221a] to-teal-950 border border-emerald-500/60 text-emerald-300 text-xs sm:text-sm font-bold flex items-center justify-between shadow-xl animate-bounce">
-            <span>{migrationNotice}</span>
+          <div className="p-3.5 sm:p-4 rounded-2xl bg-amber-400 text-slate-950 border-2 border-amber-300 text-xs sm:text-sm font-extrabold flex items-center justify-between shadow-2xl animate-bounce">
+            <span className="flex items-center gap-2 text-slate-950 font-black">
+              {migrationNotice}
+            </span>
             <button 
               onClick={() => setMigrationNotice('')}
-              className="text-slate-400 hover:text-white px-2 py-1"
+              className="bg-slate-950 text-white hover:bg-slate-800 px-3 py-1 rounded-xl text-xs font-bold transition cursor-pointer shrink-0 ml-2"
             >
-              ✕
+              ✕ Đóng
             </button>
           </div>
         </div>
