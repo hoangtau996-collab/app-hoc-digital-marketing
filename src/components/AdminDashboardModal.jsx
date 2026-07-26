@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PMarcomLogo from './PMarcomLogo';
 import { 
   getAllRegisteredStudentsFromCloud, 
+  listenToAllStudentsFromCloud,
   db,
   doc,
   deleteDoc
@@ -93,23 +94,26 @@ export default function AdminDashboardModal({
     // 2. Fetch from Firebase Cloud Firestore
     try {
       const cloudList = await getAllRegisteredStudentsFromCloud();
-      if (cloudList && cloudList.length > 0) {
-        // Merge cloud & local unique users by email
-        const emailMap = new Map();
-        [...SAMPLE_STUDENTS, ...list, ...cloudList].forEach(item => {
-          if (item.email) {
-            emailMap.set(item.email.toLowerCase(), {
-              ...item,
-              name: item.name || item.studentName || item.email.split('@')[0].toUpperCase(),
-              phone: item.phone || '0901234567',
-              industry: item.industry || 'Bất Động Sản',
-              completedModules: item.completedModules || (item.completedCount ? Array(item.completedCount).fill(1) : []),
-              createdAt: item.createdAt ? new Date(item.createdAt).toLocaleDateString('vi-VN') : new Date().toLocaleDateString('vi-VN')
-            });
-          }
-        });
-        list = Array.from(emailMap.values());
-      }
+      const emailMap = new Map();
+
+      [...SAMPLE_STUDENTS, ...list, ...(cloudList || [])].forEach(item => {
+        if (item && item.email) {
+          const emailKey = item.email.toLowerCase();
+          const existing = emailMap.get(emailKey);
+          emailMap.set(emailKey, {
+            ...existing,
+            ...item,
+            id: item.id || existing?.id || `user-${Date.now()}`,
+            name: item.name || item.studentName || existing?.name || item.email.split('@')[0].toUpperCase(),
+            phone: item.phone || existing?.phone || 'Chưa cập nhật',
+            industry: item.industry || existing?.industry || 'Bất Động Sản',
+            completedModules: Array.isArray(item.completedModules) ? item.completedModules : (item.completedCount ? Array(item.completedCount).fill(1) : (existing?.completedModules || [])),
+            createdAt: item.createdAt ? (typeof item.createdAt === 'string' ? item.createdAt : new Date(item.createdAt).toLocaleDateString('vi-VN')) : (existing?.createdAt || new Date().toLocaleDateString('vi-VN'))
+          });
+        }
+      });
+
+      list = Array.from(emailMap.values());
     } catch (e) {
       console.warn("Error loading students list:", e);
     }
@@ -125,6 +129,34 @@ export default function AdminDashboardModal({
   useEffect(() => {
     if (isOpen) {
       loadStudentsList();
+
+      // Live subscription for all new student registrations on Cloud Firestore
+      const unsub = listenToAllStudentsFromCloud((cloudStudents) => {
+        if (cloudStudents && cloudStudents.length > 0) {
+          setStudents(prev => {
+            const emailMap = new Map();
+            [...SAMPLE_STUDENTS, ...prev, ...cloudStudents].forEach(item => {
+              if (item && item.email) {
+                const emailKey = item.email.toLowerCase();
+                const existing = emailMap.get(emailKey);
+                emailMap.set(emailKey, {
+                  ...existing,
+                  ...item,
+                  id: item.id || existing?.id || `user-${Date.now()}`,
+                  name: item.name || item.studentName || existing?.name || item.email.split('@')[0].toUpperCase(),
+                  phone: item.phone || existing?.phone || 'Chưa cập nhật',
+                  industry: item.industry || existing?.industry || 'Kinh doanh',
+                  completedModules: Array.isArray(item.completedModules) ? item.completedModules : (existing?.completedModules || []),
+                  createdAt: item.createdAt ? (typeof item.createdAt === 'string' ? item.createdAt : new Date(item.createdAt).toLocaleDateString('vi-VN')) : (existing?.createdAt || new Date().toLocaleDateString('vi-VN'))
+                });
+              }
+            });
+            return Array.from(emailMap.values());
+          });
+        }
+      });
+
+      return () => unsub();
     }
   }, [isOpen]);
 

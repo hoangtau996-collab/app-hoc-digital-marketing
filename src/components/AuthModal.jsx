@@ -5,7 +5,8 @@ import {
   signInWithEmailAndPassword, 
   createUserWithEmailAndPassword,
   updateProfile,
-  saveUserProgressToCloud
+  saveUserProgressToCloud,
+  recordStudentAccountToCloud
 } from '../firebase';
 import { 
   X, 
@@ -271,6 +272,8 @@ export default function AuthModal({
 
       try {
         localStorage.setItem('dmm_users_db', JSON.stringify([...users, newUser]));
+        // Sync fallback registration to Cloud Firestore as well
+        recordStudentAccountToCloud(newUser);
       } catch (e) {}
 
       setSuccessMsg('🎉 Tạo tài khoản học viên P MARCOM thành công! Bạn có thể bắt đầu học ngay.');

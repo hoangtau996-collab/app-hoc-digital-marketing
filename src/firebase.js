@@ -37,6 +37,33 @@ export const auth = getAuth(app);
 export const db = getFirestore(app);
 
 /**
+/**
+ * Record or sync a student account to Cloud Firestore
+ */
+export async function recordStudentAccountToCloud(studentData) {
+  if (!studentData || !studentData.email) return;
+  const docId = studentData.id || studentData.email.replace(/\./g, '_');
+  try {
+    const userDocRef = doc(db, 'students', docId);
+    await setDoc(userDocRef, {
+      ...studentData,
+      updatedAt: new Date().toISOString()
+    }, { merge: true });
+
+    // Secondary backup collection
+    const regDocRef = doc(db, 'registrations', studentData.email.replace(/\./g, '_'));
+    await setDoc(regDocRef, {
+      ...studentData,
+      updatedAt: new Date().toISOString()
+    }, { merge: true });
+
+    console.log("🟢 Student account recorded to Cloud Firestore:", studentData.email);
+  } catch (e) {
+    console.warn("Cloud student record fallback to local persistence:", e);
+  }
+}
+
+/**
  * Save student progress to Cloud Firestore
  */
 export async function saveUserProgressToCloud(userId, progressData) {
@@ -47,7 +74,14 @@ export async function saveUserProgressToCloud(userId, progressData) {
       ...progressData,
       updatedAt: new Date().toISOString()
     }, { merge: true });
-    console.log("🟢 Progress synced to Firebase Cloud for user:", userId);
+
+    if (progressData.email) {
+      const regDocRef = doc(db, 'registrations', progressData.email.replace(/\./g, '_'));
+      await setDoc(regDocRef, {
+        ...progressData,
+        updatedAt: new Date().toISOString()
+      }, { merge: true });
+    }
   } catch (e) {
     console.warn("Cloud sync saved locally (Offline or Auth fallback)", e);
   }
@@ -75,8 +109,39 @@ export async function getUserProgressFromCloud(userId) {
  */
 export async function getAllRegisteredStudentsFromCloud() {
   try {
+    const emailMap = new Map();
+
     const studentsColRef = collection(db, 'students');
     const snapshot = await getDocs(studentsColRef);
+    snapshot.forEach((docSnap) => {
+      const data = docSnap.data();
+      if (data.email) {
+        emailMap.set(data.email.toLowerCase(), { id: docSnap.id, ...data });
+      }
+    });
+
+    const regColRef = collection(db, 'registrations');
+    const regSnapshot = await getDocs(regColRef);
+    regSnapshot.forEach((docSnap) => {
+      const data = docSnap.data();
+      if (data.email && !emailMap.has(data.email.toLowerCase())) {
+        emailMap.set(data.email.toLowerCase(), { id: docSnap.id, ...data });
+      }
+    });
+
+    return Array.from(emailMap.values());
+  } catch (e) {
+    console.warn("Could not fetch cloud students list:", e);
+    return [];
+  }
+}
+
+/**
+ * Real-time listener for All Student Registrations from Cloud Firestore
+ */
+export function listenToAllStudentsFromCloud(callback) {
+  const studentsColRef = collection(db, 'students');
+  const unsubscribe = onSnapshot(studentsColRef, (snapshot) => {
     const students = [];
     snapshot.forEach((docSnap) => {
       students.push({
@@ -84,11 +149,12 @@ export async function getAllRegisteredStudentsFromCloud() {
         ...docSnap.data()
       });
     });
-    return students;
-  } catch (e) {
-    console.warn("Could not fetch cloud students list:", e);
-    return [];
-  }
+    callback(students);
+  }, (err) => {
+    console.warn("Real-time students listener fallback:", err);
+  });
+
+  return unsubscribe;
 }
 
 /**
