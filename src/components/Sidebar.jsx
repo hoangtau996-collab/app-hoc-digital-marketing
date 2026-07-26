@@ -56,7 +56,7 @@ export default function Sidebar({
                       ? 'bg-emerald-500 text-slate-950 shadow-md'
                       : isCompleted
                       ? 'bg-emerald-950 text-emerald-300 border border-emerald-800'
-                      : 'bg-[#0d1713] text-slate-300 border border-emerald-900/40'
+                      : 'bg-emerald-950/20 text-slate-200 border border-emerald-900/40'
                   }`}
                 >
                   <span>{mod.number}.</span>
@@ -84,7 +84,7 @@ export default function Sidebar({
                   className={`w-full text-left p-2 rounded-xl transition flex items-center justify-between text-xs ${
                     isSelected
                       ? 'bg-emerald-600 text-slate-950 font-bold'
-                      : 'bg-[#0b1411] text-slate-300 border border-emerald-950'
+                      : 'bg-emerald-950/20 text-slate-200 border border-emerald-900/40'
                   }`}
                 >
                   <div className="flex items-center gap-2 min-w-0">
@@ -103,7 +103,7 @@ export default function Sidebar({
       <div className="hidden lg:block glass-panel rounded-2xl p-4 border border-emerald-900/40 shadow-xl">
         
         <div className="flex items-center justify-between pb-3 border-b border-emerald-900/40 mb-3">
-          <div className="flex items-center gap-2 text-emerald-400 font-bold text-sm">
+          <div className="flex items-center gap-2 text-emerald-500 font-bold text-sm">
             <BookOpen className="w-4 h-4" />
             <span>DANH SÁCH CHUYÊN ĐỀ</span>
           </div>
@@ -128,7 +128,7 @@ export default function Sidebar({
                 className={`w-full text-left p-2.5 rounded-xl transition flex items-center justify-between group ${
                   isSelected
                     ? 'bg-gradient-to-r from-emerald-600 to-teal-700 text-white font-bold shadow-md border border-emerald-500/50'
-                    : 'bg-slate-900/40 hover:bg-emerald-950/40 text-slate-200 border border-slate-800/60'
+                    : 'bg-emerald-950/20 hover:bg-emerald-900/30 text-slate-200 border border-emerald-900/40'
                 }`}
               >
                 <div className="flex items-center gap-3 min-w-0">
@@ -137,7 +137,7 @@ export default function Sidebar({
                       ? 'bg-emerald-500 text-slate-950'
                       : isSelected
                       ? 'bg-emerald-400/20 text-emerald-300 border border-emerald-400/40'
-                      : 'bg-slate-800 text-slate-300 border border-slate-700'
+                      : 'bg-emerald-900/20 text-emerald-400 border border-emerald-800/40'
                   }`}>
                     {isCompleted ? <CheckCircle2 className="w-4 h-4 stroke-[3]" /> : mod.number}
                   </div>
@@ -174,7 +174,7 @@ export default function Sidebar({
             className={`p-3 rounded-xl border text-left transition flex items-center gap-3 ${
               activeTab === 'glossary'
                 ? 'bg-emerald-600 border-emerald-500 text-white font-bold'
-                : 'bg-slate-900/40 border-slate-800 text-slate-200 hover:border-emerald-500/50'
+                : 'bg-emerald-950/20 border-emerald-900/30 text-slate-200 hover:border-emerald-500/50'
             }`}
           >
             <div className="w-8 h-8 rounded-lg bg-emerald-900/40 border border-emerald-700/40 flex items-center justify-center text-amber-400">
@@ -191,7 +191,7 @@ export default function Sidebar({
             className={`p-3 rounded-xl border text-left transition flex items-center gap-3 ${
               activeTab === 'news'
                 ? 'bg-emerald-600 border-emerald-500 text-white font-bold'
-                : 'bg-slate-900/40 border-slate-800 text-slate-200 hover:border-emerald-500/50'
+                : 'bg-emerald-950/20 border-emerald-900/30 text-slate-200 hover:border-emerald-500/50'
             }`}
           >
             <div className="w-8 h-8 rounded-lg bg-emerald-900/40 border border-emerald-700/40 flex items-center justify-center text-emerald-400">
@@ -208,7 +208,7 @@ export default function Sidebar({
             className={`p-3 rounded-xl border text-left transition flex items-center gap-3 ${
               activeTab === 'tools'
                 ? 'bg-emerald-600 border-emerald-500 text-white font-bold'
-                : 'bg-slate-900/40 border-slate-800 text-slate-200 hover:border-emerald-500/50'
+                : 'bg-emerald-950/20 border-emerald-900/30 text-slate-200 hover:border-emerald-500/50'
             }`}
           >
             <div className="w-8 h-8 rounded-lg bg-emerald-900/40 border border-emerald-700/40 flex items-center justify-center text-emerald-400">

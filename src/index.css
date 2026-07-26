@@ -11,8 +11,8 @@
   }
 
   html.light body {
-    background-color: #f8fafc;
-    color: #0f172a;
+    background-color: #f8fafc !important;
+    color: #0f172a !important;
   }
 }
 
@@ -50,8 +50,8 @@ html.light ::-webkit-scrollbar-thumb {
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .no-scrollbar {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 /* Glowing Background Effects */
@@ -73,6 +73,7 @@ html.light .bg-glow-radial {
               radial-gradient(circle at 10% 90%, rgba(5, 150, 105, 0.08) 0%, rgba(248, 250, 252, 0) 60%);
 }
 
+/* Glass Panels */
 .glass-panel {
   background: rgba(13, 24, 20, 0.75);
   backdrop-filter: blur(12px);
@@ -84,7 +85,7 @@ html.light .glass-panel {
   background: #ffffff !important;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid #e2e8f0 !important;
+  border: 1px solid #cbd5e1 !important;
   box-shadow: 0 4px 25px -4px rgba(0, 0, 0, 0.06) !important;
 }
 
@@ -123,49 +124,58 @@ html.light .text-gradient-gold {
 }
 
 /* ========================================================
-   COMPREHENSIVE LIGHT MODE HIGH-CONTRAST OVERRIDES
+   ABSOLUTE LIGHT MODE HIGH-CONTRAST & NO DARK BLOB RULES
    ======================================================== */
 
-/* 1. All arbitrary dark background classes with or without opacity modifiers (/90, /80, /60, /40) */
-html.light [class*="bg-[#0b1411]"],
-html.light [class*="bg-[#0d1713]"],
-html.light [class*="bg-[#0a120f]"],
-html.light [class*="bg-[#08120d]"],
-html.light [class*="bg-[#0a1511]"],
-html.light [class*="bg-[#070d0a]"],
-html.light [class*="bg-[#050907]"] {
+/* Force all buttons, cards, pills, containers to NEVER be dark in light mode */
+html.light div,
+html.light button,
+html.light aside,
+html.light section,
+html.light main,
+html.light article,
+html.light header,
+html.light footer {
+  border-color: #cbd5e1;
+}
+
+/* Overriding any background colors starting with bg-[# or bg-slate-900 / bg-slate-950 */
+html.light [class*="bg-[#0"],
+html.light [class*="bg-[#1"],
+html.light [class*="bg-[#2"],
+html.light [class*="bg-[#3"],
+html.light [class*="bg-slate-900"],
+html.light [class*="bg-slate-950"],
+html.light [class*="bg-slate-800"] {
   background-color: #ffffff !important;
   color: #0f172a !important;
 }
 
-html.light [class*="bg-slate-900"],
-html.light [class*="bg-slate-950"] {
-  background-color: #f1f5f9 !important;
+/* Specific Unselected Tab / Pill / Item state in Light mode */
+html.light button:not(.bg-emerald-500):not(.bg-emerald-600):not(.bg-amber-400):not([class*="from-emerald"]) {
+  background-color: #ffffff !important;
   color: #0f172a !important;
+  border-color: #cbd5e1 !important;
 }
 
-/* Hover effects for cards & sidebar in light mode */
-html.light [class*="hover:bg-emerald-950"]:hover,
-html.light [class*="hover:bg-[#"]:hover {
+html.light button:not(.bg-emerald-500):not(.bg-emerald-600):not([class*="from-emerald"]):hover {
   background-color: #f0fdf4 !important;
-}
-
-/* Fix hover title text in sidebar */
-html.light .group:hover [class*="group-hover:text-emerald-300"] {
   color: #047857 !important;
+  border-color: #059669 !important;
 }
 
-/* 2. Text Colors in Light Mode - Forced High Contrast Slate & Dark Emerald */
+/* Text rules for Light mode */
 html.light h1, html.light h2, html.light h3, html.light h4, html.light h5, html.light h6 {
   color: #0f172a !important;
+  font-weight: 800 !important;
 }
 
 html.light p, 
-html.light span:not(.bg-emerald-500):not(.bg-emerald-600):not(.bg-amber-400), 
+html.light span, 
 html.light div, 
-html.light button:not(.bg-emerald-500):not(.bg-emerald-600), 
 html.light a, 
-html.light li {
+html.light li,
+html.light label {
   color: #1e293b;
 }
 
@@ -173,12 +183,9 @@ html.light .text-white {
   color: #0f172a !important;
 }
 
-html.light .text-slate-100 {
-  color: #0f172a !important;
-}
-
+html.light .text-slate-100,
 html.light .text-slate-200 {
-  color: #1e293b !important;
+  color: #0f172a !important;
 }
 
 html.light .text-slate-300 {
@@ -187,6 +194,7 @@ html.light .text-slate-300 {
 
 html.light .text-slate-400 {
   color: #475569 !important;
+  font-weight: 500 !important;
 }
 
 html.light .text-slate-500 {
@@ -207,28 +215,30 @@ html.light strong.text-emerald-400 {
 html.light .text-teal-400,
 html.light .text-teal-300 {
   color: #0f766e !important;
+  font-weight: 700 !important;
 }
 
 html.light .text-amber-400,
 html.light .text-amber-300 {
   color: #b45309 !important;
+  font-weight: 700 !important;
 }
 
-html.light .text-rose-300,
-html.light .text-rose-400 {
-  color: #be123c !important;
+/* Active / Selected Emerald States in Light Mode */
+html.light .bg-emerald-500,
+html.light .bg-emerald-600,
+html.light [class*="from-emerald-600"] {
+  background-color: #059669 !important;
+  color: #ffffff !important;
 }
 
-/* 3. Stat Cards & Gradient Card Overrides in Light Mode */
-html.light [class*="from-emerald-950"] {
-  background: linear-gradient(135deg, #ecfdf5 0%, #f0fdfa 100%) !important;
-  border-color: #a7f3d0 !important;
+html.light .bg-emerald-500 *,
+html.light .bg-emerald-600 *,
+html.light [class*="from-emerald-600"] * {
+  color: #ffffff !important;
 }
 
-html.light [class*="from-emerald-950"] * {
-  color: #047857 !important;
-}
-
+/* Light Mode Badges (Soft Mint / Light Amber / Soft Teal) */
 html.light .bg-emerald-950,
 html.light [class*="bg-emerald-950"] {
   background-color: #ecfdf5 !important;
@@ -236,56 +246,33 @@ html.light [class*="bg-emerald-950"] {
   border-color: #a7f3d0 !important;
 }
 
-html.light .bg-teal-950 {
+html.light .bg-teal-950,
+html.light [class*="bg-teal-950"] {
   background-color: #f0fdfa !important;
   color: #0f766e !important;
   border-color: #99f6e4 !important;
 }
 
-html.light .bg-amber-950 {
+html.light .bg-amber-950,
+html.light [class*="bg-amber-950"] {
   background-color: #fffbeb !important;
   color: #b45309 !important;
   border-color: #fde68a !important;
 }
 
-/* Selected Button States in Light Mode */
-html.light .bg-emerald-500,
-html.light .bg-emerald-600 {
-  background-color: #059669 !important;
-  color: #ffffff !important;
-}
-
-html.light .bg-emerald-500 *,
-html.light .bg-emerald-600 * {
-  color: #ffffff !important;
-}
-
-/* 4. Borders in Light Mode */
-html.light [class*="border-emerald-900"],
-html.light [class*="border-emerald-950"],
-html.light [class*="border-emerald-800"],
-html.light [class*="border-slate-800"],
-html.light [class*="border-slate-900"] {
-  border-color: #e2e8f0 !important;
-}
-
-html.light [class*="border-emerald-500"] {
-  border-color: #059669 !important;
-}
-
-/* Header & Navigation Elements */
+/* Header & Footer */
 html.light header {
-  background-color: rgba(255, 255, 255, 0.98) !important;
-  border-bottom: 1px solid #e2e8f0 !important;
+  background-color: #ffffff !important;
+  border-bottom: 1px solid #cbd5e1 !important;
 }
 
 html.light footer {
   background-color: #f1f5f9 !important;
-  border-top: 1px solid #e2e8f0 !important;
+  border-top: 1px solid #cbd5e1 !important;
   color: #475569 !important;
 }
 
-/* Inputs & Form Controls */
+/* Form Inputs */
 html.light input[type="text"],
 html.light input[type="password"],
 html.light input[type="search"],
@@ -305,5 +292,3 @@ html.light input:focus,
 html.light textarea:focus {
   border-color: #059669 !important;
 }
-
-
