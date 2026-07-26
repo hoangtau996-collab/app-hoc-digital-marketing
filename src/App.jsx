@@ -194,7 +194,8 @@ export default function App() {
       const userObj = savedUser ? JSON.parse(savedUser) : null;
       const key = getProgressStorageKey(userObj);
       const saved = localStorage.getItem(key);
-      return saved ? JSON.parse(saved) : [];
+      const parsed = saved ? JSON.parse(saved) : [];
+      return Array.isArray(parsed) ? parsed : [];
     } catch (e) {
       return [];
     }
@@ -204,10 +205,14 @@ export default function App() {
   const [newsFeed, setNewsFeed] = useState(() => {
     try {
       const saved = localStorage.getItem('dmm_news_feed');
-      return saved ? JSON.parse(saved) : INITIAL_NEWS_ITEMS;
-    } catch (e) {
-      return INITIAL_NEWS_ITEMS;
-    }
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (Array.isArray(parsed) && parsed.length > 0) {
+          return parsed;
+        }
+      }
+    } catch (e) {}
+    return INITIAL_NEWS_ITEMS;
   });
 
   // Re-load completedModules whenever currentUser changes & sync to Cloud

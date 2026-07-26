@@ -27,9 +27,10 @@ class ErrorBoundary extends Component {
             <button 
               onClick={() => {
                 try {
-                  localStorage.removeItem('dmm_news_feed');
+                  localStorage.clear();
+                  sessionStorage.clear();
                 } catch (e) {}
-                window.location.reload();
+                window.location.href = window.location.origin + '/?v=' + Date.now();
               }}
               style={{ padding: '12px 24px', background: '#00E676', color: '#070d0a', border: 'none', borderRadius: '12px', fontWeight: 'bold', cursor: 'pointer', fontSize: '14px' }}
             >

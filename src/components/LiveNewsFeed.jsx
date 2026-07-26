@@ -148,7 +148,7 @@ export default function LiveNewsFeed({ newsList, onAddNewNews }) {
               </div>
 
               {/* Checklist */}
-              {news.actionChecklist && (
+              {Array.isArray(news.actionChecklist) && news.actionChecklist.length > 0 && (
                 <div className="p-4 rounded-xl bg-emerald-950/30 border border-emerald-900/40 text-xs text-emerald-200 space-y-1">
                   <div className="font-bold text-emerald-400 flex items-center gap-1.5">
                     <CheckSquare className="w-4 h-4" /> Hành động chỉ đạo ngay:
