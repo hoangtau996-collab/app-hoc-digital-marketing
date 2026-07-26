@@ -1,8 +1,9 @@
 <!doctype html>
-<html lang="vi">
+<html lang="vi" prefix="og: https://ogp.me/ns#">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/jpeg" href="/pmarcom-logo.jpg" />
+    <link rel="apple-touch-icon" href="/pmarcom-logo.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <!-- Primary Meta Tags -->
@@ -11,39 +12,74 @@
     <meta name="description" content="Học viện P MARCOM - Chương trình đào tạo Trưởng phòng Digital Marketing bài bản với 11 chuyên đề thực chiến, kiểm tra đánh giá kiến thức, từ điển thuật ngữ và bản tin thuật toán Meta, TikTok, Google." />
     <meta name="keywords" content="Học viện P MARCOM, Digital Marketing, Trưởng phòng Digital Marketing, Học Marketing Online, CPM, ROAS, CAC, CPL, Meta Ads, TikTok Ads, Google Search Ads, SEO" />
     <meta name="author" content="HỌC VIỆN P MARCOM" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="theme-color" content="#070d0a" />
 
-    <!-- Open Graph / Facebook / Zalo / Messenger / LinkedIn / Telegram -->
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://pmarcom.edu.vn" />
+
+    <!-- Open Graph / Facebook / Zalo / WhatsApp / LinkedIn / Telegram / iMessage / Messenger -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="HỌC VIỆN P MARCOM" />
+    <meta property="og:locale" content="vi_VN" />
+    <meta property="og:url" content="https://pmarcom.edu.vn" />
     <meta property="og:title" content="HỌC VIỆN P MARCOM | Đào Tạo Trưởng Phòng Digital Marketing Thực Chiến" />
-    <meta property="og:description" content="Chương trình đào tạo Trưởng phòng Digital Marketing bài bản với 11 chuyên đề thực chiến, kiểm tra trắc nghiệm, từ điển chỉ số CPM/ROAS/CAC và cấp Bằng Chứng Nhận chính thức." />
+    <meta property="og:description" content="Chương trình đào tạo Trưởng phòng Digital Marketing bài bản với 11 chuyên đề thực chiến, trắc nghiệm tình huống thực tế, từ điển chỉ số CPM/ROAS/CAC và cấp Bằng Chứng Nhận chính thức." />
+    
+    <!-- Open Graph Image Preview (WhatsApp, LinkedIn, Zalo, Facebook, Slack) -->
     <meta property="og:image" content="/og-cover.png" />
+    <meta property="og:image:url" content="/og-cover.png" />
     <meta property="og:image:secure_url" content="/og-cover.png" />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="HỌC VIỆN P MARCOM - Banner Đào Tạo Trưởng Phòng Digital Marketing" />
 
-    <!-- Twitter Card -->
+    <!-- Twitter Card / X -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@pmarcom_academy" />
     <meta name="twitter:title" content="HỌC VIỆN P MARCOM | Đào Tạo Trưởng Phòng Digital Marketing Thực Chiến" />
-    <meta name="twitter:description" content="Chương trình đào tạo Trưởng phòng Digital Marketing bài bản với 11 chuyên đề thực chiến, kiểm tra trắc nghiệm, từ điển chỉ số CPM/ROAS/CAC và cấp Bằng Chứng Nhận chính thức." />
+    <meta name="twitter:description" content="Chương trình đào tạo Trưởng phòng Digital Marketing bài bản với 11 chuyên đề thực chiến, trắc nghiệm tình huống thực tế, từ điển chỉ số CPM/ROAS/CAC và cấp Bằng Chứng Nhận chính thức." />
     <meta name="twitter:image" content="/og-cover.png" />
+    <meta name="twitter:image:alt" content="HỌC VIỆN P MARCOM - Banner Đào Tạo Trưởng Phòng Digital Marketing" />
 
-    <!-- Dynamic Subdomain Open Graph URL Fixer -->
+    <!-- LinkedIn Specific Tags -->
+    <meta name="linkedin:title" content="HỌC VIỆN P MARCOM | Đào Tạo Trưởng Phòng Digital Marketing Thực Chiến" />
+    <meta name="linkedin:description" content="Chương trình đào tạo Trưởng phòng Digital Marketing bài bản với 11 chuyên đề thực chiến, trắc nghiệm tình huống thực tế, từ điển chỉ số CPM/ROAS/CAC và cấp Bằng Chứng Nhận chính thức." />
+    <meta name="linkedin:image" content="/og-cover.png" />
+
+    <!-- Dynamic Subdomain & Protocol Open Graph URL Resolver for WhatsApp & LinkedIn Crawlers -->
     <script>
-      try {
-        if (typeof window !== 'undefined' && window.location) {
-          const origin = window.location.origin;
-          const ogImg = document.querySelector('meta[property="og:image"]');
-          const ogImgSecure = document.querySelector('meta[property="og:image:secure_url"]');
-          const twitterImg = document.querySelector('meta[name="twitter:image"]');
-          if (ogImg) ogImg.setAttribute('content', origin + '/og-cover.png');
-          if (ogImgSecure) ogImgSecure.setAttribute('content', origin + '/og-cover.png');
-          if (twitterImg) twitterImg.setAttribute('content', origin + '/og-cover.png');
-        }
-      } catch (e) {}
+      (function() {
+        try {
+          if (typeof window !== 'undefined' && window.location) {
+            var origin = window.location.origin;
+            var currentUrl = window.location.href;
+
+            // Fix Canonical
+            var canonical = document.querySelector('link[rel="canonical"]');
+            if (canonical) canonical.setAttribute('href', currentUrl);
+
+            // Fix og:url
+            var ogUrl = document.querySelector('meta[property="og:url"]');
+            if (ogUrl) ogUrl.setAttribute('content', currentUrl);
+
+            // Fix absolute image URLs for WhatsApp, LinkedIn & Telegram crawlers
+            var absoluteCoverUrl = origin + '/og-cover.png';
+            var metaOgImg = document.querySelector('meta[property="og:image"]');
+            var metaOgImgUrl = document.querySelector('meta[property="og:image:url"]');
+            var metaOgImgSecure = document.querySelector('meta[property="og:image:secure_url"]');
+            var metaTwitterImg = document.querySelector('meta[name="twitter:image"]');
+            var metaLinkedinImg = document.querySelector('meta[name="linkedin:image"]');
+
+            if (metaOgImg) metaOgImg.setAttribute('content', absoluteCoverUrl);
+            if (metaOgImgUrl) metaOgImgUrl.setAttribute('content', absoluteCoverUrl);
+            if (metaOgImgSecure) metaOgImgSecure.setAttribute('content', absoluteCoverUrl);
+            if (metaTwitterImg) metaTwitterImg.setAttribute('content', absoluteCoverUrl);
+            if (metaLinkedinImg) metaLinkedinImg.setAttribute('content', absoluteCoverUrl);
+          }
+        } catch (e) {}
+      })();
     </script>
 
     <!-- Google Fonts -->
