@@ -3,7 +3,7 @@ export const TRANSLATIONS = {
     // Header & Brand
     academyName: "HỌC VIỆN P MARCOM",
     courseTitle: "TRƯỞNG PHÒNG DIGITAL MARKETING",
-    courseValue: "Trị Giá: 2.999.999 VNĐ (MIỄN PHÍ)",
+    courseValue: "Trị Giá: 2.999.999 VNĐ (CHỈ CÒN 39 SUẤT MIỄN PHÍ - ĐĂNG KÝ NGAY)",
     realtimeTraffic: "Lượt Xem Real-Time",
     searchPlaceholder: "Tìm bài học...",
     
@@ -37,7 +37,7 @@ export const TRANSLATIONS = {
     heroTitleSuffix: "TRƯỞNG PHÒNG DIGITAL MARKETING",
     heroDesc: "Chương trình đào tạo với hệ thống kiến thức bài bản, tư duy thực chiến, mang lại hiệu quả ngay với doanh nghiệp trong quá trình chuyển đổi số. Tích hợp trắc nghiệm tình huống thực tế và bản tin cập nhật thuật toán Meta, TikTok, Google liên tục.",
     heroValueLabel: "Giá Trị Khóa Học:",
-    heroFreeBadge: "TÀI TRỢ 100% • 0 VNĐ",
+    heroFreeBadge: "TÀI TRỢ 100% • CHỈ CÒN 39 SUẤT MIỄN PHÍ - ĐĂNG KÝ NGAY",
     
     // Course Overview Stats & Headings
     totalModulesCount: "11 Chuyên Đề Bài Bản",

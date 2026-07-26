@@ -86,7 +86,7 @@ function parseInlineBold(str) {
     if (part.startsWith('**') && part.endsWith('**')) {
       const innerText = part.slice(2, -2);
       return (
-        <strong key={idx} className="text-emerald-300 font-semibold">
+        <strong key={idx} className="text-emerald-300 font-extrabold px-0.5">
           {innerText}
         </strong>
       );
@@ -212,11 +212,17 @@ export default function LessonViewer({
                 </div>
 
                 {sec.takeaway && (
-                  <div className="mt-4 p-4 rounded-xl bg-gradient-to-r from-emerald-950 to-teal-950 border border-emerald-700/50 text-xs text-emerald-200 flex items-start gap-3">
-                    <Sparkles className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
-                    <div>
-                      <strong className="font-bold text-emerald-400 block mb-0.5">Lưu ý cốt lõi cho Manager:</strong>
-                      {parseInlineBold(sec.takeaway)}
+                  <div className="mt-5 p-4 sm:p-5 rounded-2xl bg-[#091a14] border-2 border-emerald-500/60 shadow-lg flex items-start gap-3.5">
+                    <div className="p-2 rounded-xl bg-emerald-500/20 text-emerald-400 shrink-0 mt-0.5 border border-emerald-500/40">
+                      <Sparkles className="w-5 h-5 text-emerald-400" />
+                    </div>
+                    <div className="space-y-1">
+                      <strong className="text-xs sm:text-sm font-black text-emerald-400 tracking-wide block uppercase">
+                        💡 Lưu ý cốt lõi cho Manager:
+                      </strong>
+                      <div className="text-xs sm:text-sm text-slate-100 font-medium leading-relaxed">
+                        {parseInlineBold(sec.takeaway)}
+                      </div>
                     </div>
                   </div>
                 )}
