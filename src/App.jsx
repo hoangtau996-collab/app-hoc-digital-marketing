@@ -543,7 +543,7 @@ export default function App() {
       {/* Footer */}
       <footer className="border-t border-emerald-950 bg-[#050907] py-6 px-4 text-center text-xs text-slate-500">
         <p>
-          © 2026 HỌC VIỆN P MARCOM. Hệ thống đào tạo Trưởng Phòng Digital Marketing Thực Chiến.
+          © 2026 HỌC VIỆN P MARCOM. Hệ thống Khóa Học Digital Thực Chiến.
         </p>
       </footer>
 

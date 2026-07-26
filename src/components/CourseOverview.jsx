@@ -72,7 +72,7 @@ export default function CourseOverview({
         <div className="relative z-10 max-w-3xl space-y-4">
           <h1 className="text-3xl md:text-5xl font-black text-white leading-tight tracking-tight">
             HỌC VIỆN P MARCOM <br />
-            <span className="text-gradient-emerald">TRƯỞNG PHÒNG DIGITAL MARKETING</span>
+            <span className="text-gradient-emerald">KHÓA HỌC DIGITAL THỰC CHIẾN</span>
           </h1>
 
           <p className="text-sm md:text-base text-slate-300 leading-relaxed">

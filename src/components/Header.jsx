@@ -68,8 +68,8 @@ export default function Header({
                 </span>
               )}
             </div>
-            <h1 className="text-xs sm:text-base font-black text-white tracking-wide truncate max-w-[150px] sm:max-w-none mt-0.5">
-              TRƯỞNG PHÒNG DIGITAL MARKETING
+            <h1 className="text-xs sm:text-base font-black text-white tracking-wide truncate max-w-[150px] sm:max-w-none mt-0.5 uppercase">
+              {textDict.courseTitle || "KHÓA HỌC DIGITAL THỰC CHIẾN"}
             </h1>
           </div>
         </div>

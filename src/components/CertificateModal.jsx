@@ -269,7 +269,7 @@ export default function CertificateModal({
                   CHỨNG NHẬN HOÀN THÀNH KHÓA HỌC
                 </h2>
                 <p className="text-xs sm:text-sm text-emerald-400 font-bold uppercase tracking-widest">
-                  CHƯƠNG TRÌNH ĐÀO TẠO TRƯỞNG PHÒNG DIGITAL MARKETING THỰC CHIẾN
+                  CHƯƠNG TRÌNH ĐÀO TẠO KHÓA HỌC DIGITAL THỰC CHIẾN
                 </p>
               </div>
 
