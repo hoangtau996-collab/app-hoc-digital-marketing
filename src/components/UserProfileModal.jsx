@@ -97,17 +97,17 @@ export default function UserProfileModal({
       avatarUrl: avatarUrl || ''
     };
 
+    // 1. Instantly update profile state & cloud sync
     if (onUpdateProfile) {
       onUpdateProfile(updated);
     }
 
-    setSaveStatus('🟢 Đã lưu thay đổi thông tin thành công!');
     setIsEditing(false);
     
-    // Auto-close modal and return to main page
-    setTimeout(() => {
+    // 2. Instantly close profile modal & return to main page
+    if (onClose) {
       onClose();
-    }, 400);
+    }
   };
 
   // Export progress data as JSON backup
