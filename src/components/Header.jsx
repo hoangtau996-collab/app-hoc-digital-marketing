@@ -65,7 +65,7 @@ export default function Header({
               {/* Total Cumulative Web Traffic Counter */}
               {trafficStats && (
                 <span className="hidden 2xl:inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded bg-teal-950 text-teal-300 border border-teal-700/60">
-                  <Eye className="w-3 h-3 text-teal-400" /> {(trafficStats.totalTraffic || 158421).toLocaleString('vi-VN')} Lượt Truy Cập Web
+                  <Eye className="w-3 h-3 text-teal-400" /> {(trafficStats.totalTraffic || 501).toLocaleString('vi-VN')} Lượt Truy Cập Web
                 </span>
               )}
             </div>

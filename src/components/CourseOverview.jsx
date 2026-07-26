@@ -95,7 +95,7 @@ export default function CourseOverview({
               </span>
             </div>
             <div className="text-xl sm:text-2xl font-black text-white tracking-tight">
-              {(trafficStats?.totalTraffic || 158421).toLocaleString('vi-VN')}
+              {(trafficStats?.totalTraffic || 501).toLocaleString('vi-VN')}
             </div>
             <div className="text-[10px] text-slate-400 flex items-center gap-1 mt-0.5">
               <Activity className="w-3 h-3 text-emerald-400 animate-pulse" /> Đếm tất cả tổng số lượt truy cập web tích lũy

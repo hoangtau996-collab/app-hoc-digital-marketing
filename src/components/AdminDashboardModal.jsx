@@ -491,7 +491,7 @@ export default function AdminDashboardModal({
               <Eye className="w-4 h-4 text-teal-400" />
             </div>
             <p className="text-xl sm:text-2xl font-black text-teal-300">
-              {trafficStats ? (trafficStats.totalTraffic || 158421).toLocaleString('vi-VN') : '158.421'}
+              {trafficStats ? (trafficStats.totalTraffic || 501).toLocaleString('vi-VN') : '501'}
             </p>
             <p className="text-[10px] text-teal-400 font-semibold">Đếm lượt truy cập tích lũy 100%</p>
           </div>

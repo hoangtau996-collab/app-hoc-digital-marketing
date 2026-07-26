@@ -202,18 +202,18 @@ export function listenToAllStudentsFromCloud(callback) {
 
 /**
  * Record Real Web Traffic Visit in Cloud Firestore & Local Persistence
- * Tracks true pageviews strictly from 1 on every real visit.
+ * Starts from baseline 500 today, then accumulates real visits.
  */
 export async function recordRealTrafficVisit() {
-  const trafficDocRef = doc(db, 'analytics', 'traffic_global');
+  const trafficDocRef = doc(db, 'analytics', 'traffic_v2_today');
   
-  // Cumulative baseline + real persistent local counter
-  const baseCreationTraffic = 158420;
+  // Starting baseline: 500 + real cumulative visits
+  const baseCreationTraffic = 500;
   let localTotal = 1;
   try {
-    const stored = parseInt(localStorage.getItem('dmm_real_traffic_total') || '0', 10);
+    const stored = parseInt(localStorage.getItem('dmm_real_traffic_v2_total') || '0', 10);
     localTotal = stored + 1;
-    localStorage.setItem('dmm_real_traffic_total', localTotal.toString());
+    localStorage.setItem('dmm_real_traffic_v2_total', localTotal.toString());
   } catch (e) {}
 
   try {
@@ -233,12 +233,12 @@ export async function recordRealTrafficVisit() {
  * Real-time listener for Cloud Firestore Web Traffic & Active Online Sessions
  */
 export function listenToRealTraffic(callback) {
-  const trafficDocRef = doc(db, 'analytics', 'traffic_global');
-  const baseCreationTraffic = 158420;
+  const trafficDocRef = doc(db, 'analytics', 'traffic_v2_today');
+  const baseCreationTraffic = 500;
   
   const getLocalTraffic = () => {
     try {
-      const stored = parseInt(localStorage.getItem('dmm_real_traffic_total') || '1', 10);
+      const stored = parseInt(localStorage.getItem('dmm_real_traffic_v2_total') || '1', 10);
       return baseCreationTraffic + stored;
     } catch (e) {
       return baseCreationTraffic + 1;
@@ -250,7 +250,7 @@ export function listenToRealTraffic(callback) {
       const data = snapshot.data();
       const cloudViews = data.totalViews || 0;
       callback({
-        totalViews: baseCreationTraffic + Math.max(cloudViews, parseInt(localStorage.getItem('dmm_real_traffic_total') || '1', 10))
+        totalViews: baseCreationTraffic + Math.max(cloudViews, parseInt(localStorage.getItem('dmm_real_traffic_v2_total') || '1', 10))
       });
     } else {
       callback({ totalViews: getLocalTraffic() });
