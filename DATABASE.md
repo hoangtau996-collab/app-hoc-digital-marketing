@@ -66,6 +66,7 @@ Số hiển thị trên giao diện = `TRAFFIC_BASELINE (100)` + giá trị lớ
 | `dmm_real_enrolled_count` | Bản sao cục bộ của `totalEnrolled` |
 | `dmm_real_graduates_count` | Bản sao cục bộ của `totalGraduates` |
 | `dmm_student_has_graduated` | Cờ chống đếm trùng khi tốt nghiệp |
+| `dmm_deleted_students` | Danh sách email học viên đã bị quản trị viên xoá ("bia mộ"). Lọc ở mọi đường đọc để bản ghi còn sót ở kho khác không quay lại |
 | `dmm_last_study_at` | Mốc thời gian học gần nhất (epoch ms) |
 | `dmm_study_reminder_snoozed_until` | Thời điểm hết tạm hoãn nhắc học (epoch ms) |
 

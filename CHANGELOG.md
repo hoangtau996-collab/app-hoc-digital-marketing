@@ -38,6 +38,7 @@ TODO — chưa có quy ước đánh phiên bản; cân nhắc gắn thẻ Git k
 
 ### Sửa lỗi
 
+- **Xoá học viên trong bảng quản trị không có tác dụng, F5 là dữ liệu quay lại.** Ba nguyên nhân cộng lại: (a) `SAMPLE_STUDENTS` luôn được trộn lại ở cả `loadStudentsList` lẫn listener realtime nên học viên mẫu không thể xoá; (b) lệnh xoá chỉ chạm Firestore `students` theo đúng một `studentId`, bỏ sót `registrations` và bỏ sót tài liệu mang id suy từ email; (c) sau khi xoá, mã ghi **danh sách hiển thị đã trộn dữ liệu mẫu** ngược vào `dmm_users_db`, khiến học viên mẫu bám vĩnh viễn. Nay thêm cơ chế bia mộ `dmm_deleted_students` làm chốt chặn cuối, cùng `deleteStudentEverywhere()` quét đủ 4 kho.
 - **Tải Bằng Chứng Nhận hỏng hoàn toàn.** html2canvas 1.4.1 ném lỗi `Attempting to parse an unsupported color function "oklab"` khi gặp `oklch()` / `color-mix()` do Tailwind v4 sinh ra. Cả PNG, PDF lẫn nút dành cho iPad đều chết cùng một chỗ. Đã tách template xuất file dùng màu hex nội tuyến.
 - **PDF bị cắt mất phần dưới.** Công thức chiều cao không kẹp vào khổ A4: khung 814×674 cho ra chiều cao 245,92 mm trên trang 210 mm, mất 14,6% phía dưới gồm chữ ký và mã xác thực.
 - **`recordRealTrafficVisit()` treo vĩnh viễn** do `await setDoc(...)` không bao giờ resolve khi offline, khiến bộ đếm đứng im.

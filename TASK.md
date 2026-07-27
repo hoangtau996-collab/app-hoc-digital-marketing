@@ -28,6 +28,7 @@ Các mục dưới đây bị chặn vì thiếu thông tin, không phải vì t
 
 Chi tiết đầy đủ ở [CHANGELOG.md](CHANGELOG.md).
 
+- **Sửa lỗi xoá học viên không có tác dụng** — quét đủ 4 kho lưu trữ, thêm cơ chế bia mộ chặn dữ liệu mẫu quay lại.
 - **Bỏ lưu mật khẩu dạng chữ thường trong localStorage** — mục ưu tiên cao nhất của [TODO.md](TODO.md#bảo-mật). Dùng SHA-256 + muối, bản ghi cũ tự nâng cấp khi đăng nhập.
 - Chốt quy trình làm việc **Context tối thiểu**, ghi vào [AI_MEMORY.md](AI_MEMORY.md#nguyên-tắc-context-tối-thiểu).
 - Lập bộ tài liệu AI Workspace: 14 tệp Markdown ở thư mục gốc.

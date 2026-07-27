@@ -32,6 +32,10 @@ Mức ưu tiên cao nhất.
 
 - [ ] **Gói JS chính vượt 500 kB sau rút gọn.** Chủ yếu do Firebase SDK, html2canvas và jsPDF. Hướng xử lý: nạp động html2canvas và jsPDF vì chúng chỉ cần khi bấm tải Bằng Chứng Nhận.
 
+## Lỗi đã phát hiện, chưa sửa
+
+- [ ] **Khối đồng bộ Realtime Database là mã chết.** `src/firebase.js` có một `/**` lạc ngay trước phần khai báo endpoint, nuốt trọn `activeProjectId`, `PUBLIC_SYNC_URL`, `PUBLIC_SYNC_URL_ALT` vào trong block comment. Mọi tham chiếu tới chúng ném `ReferenceError` nhưng đều nằm trong `try/catch` nên bị nuốt im lặng — **tính năng "Zero-Config Global Sync" chưa từng chạy**. Tôi cố ý **không** tự sửa: gỡ comment ra sẽ lập tức bắt đầu `PUT` hồ sơ học viên (tên, email, số điện thoại) lên một URL Realtime Database công khai mà chưa rõ Security Rules. Cần bạn xác nhận có muốn bật không, và rules ra sao.
+
 ## Chất lượng mã
 
 - [ ] **Cảnh báo lint còn tồn đọng** — biến `catch (e)` không dùng và import thừa ở nhiều tệp.

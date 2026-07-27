@@ -7,8 +7,10 @@ import {
   db,
   doc,
   deleteDoc,
-  TRAFFIC_BASELINE
+  TRAFFIC_BASELINE,
+  deleteStudentEverywhere
 } from '../firebase';
+import { markStudentDeleted, filterDeleted, getDeletedStudents } from '../utils/deletedStudents';
 import { 
   X, 
   Users, 
@@ -140,12 +142,14 @@ export default function AdminDashboardModal({
         }
       });
 
-      list = Array.from(emailMap.values());
+      list = filterDeleted(Array.from(emailMap.values()));
     } catch (e) {
       console.warn("Error loading students list:", e);
     }
 
-    if (list.length === 0) {
+    // Chỉ mồi dữ liệu mẫu khi CHƯA từng xoá ai. Nếu quản trị viên đã xoá sạch
+    // thì danh sách rỗng là đúng ý họ, không được mồi lại.
+    if (list.length === 0 && getDeletedStudents().length === 0) {
       list = SAMPLE_STUDENTS;
     }
 
@@ -178,7 +182,9 @@ export default function AdminDashboardModal({
                 });
               }
             });
-            return Array.from(emailMap.values());
+            // Lọc bia mộ ở đây nữa, nếu không listener realtime sẽ dựng lại
+            // học viên vừa xoá ngay khi Firestore đẩy dữ liệu về.
+            return filterDeleted(Array.from(emailMap.values()));
           });
         }
       });
@@ -261,17 +267,19 @@ export default function AdminDashboardModal({
     if (!window.confirm(`Bạn có chắc chắn muốn xóa học viên ${studentEmail} khỏi hệ thống?`)) return;
 
     try {
-      // 1. Delete from Cloud Firestore
-      try {
-        await deleteDoc(doc(db, 'students', studentId));
-      } catch (e) {}
+      // 1. Ghi bia mộ TRƯỚC. Đây là bước quyết định: dù kho nào còn sót bản ghi
+      //    thì nó cũng bị lọc ra khi tải lại. Cũng là cách duy nhất xoá được
+      //    học viên mẫu, vì SAMPLE_STUDENTS luôn được trộn lại mỗi lần tải.
+      markStudentDeleted(studentEmail);
 
-      // 2. Delete from LocalStorage
-      const updated = students.filter(s => s.id !== studentId && s.email !== studentEmail);
-      setStudents(updated);
-      try {
-        localStorage.setItem('dmm_users_db', JSON.stringify(updated));
-      } catch (e) {}
+      // 2. Xoá khỏi tất cả các kho: Firestore students + registrations,
+      //    Realtime DB REST, và localStorage.
+      await deleteStudentEverywhere(studentId, studentEmail);
+
+      // 3. Cập nhật giao diện. KHÔNG ghi danh sách hiển thị ngược vào
+      //    dmm_users_db nữa: danh sách đó đã trộn cả SAMPLE_STUDENTS nên bản cũ
+      //    vô tình ghi luôn học viên mẫu xuống đĩa vĩnh viễn.
+      setStudents(students.filter(s => s.id !== studentId && s.email !== studentEmail));
 
       setNotice(`🟢 Đã xóa thành công học viên ${studentEmail}`);
       setTimeout(() => setNotice(''), 4000);

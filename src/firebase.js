@@ -1,4 +1,5 @@
 import { initializeApp } from 'firebase/app';
+import { filterDeleted } from './utils/deletedStudents';
 import { 
   getAuth, 
   signInWithEmailAndPassword, 
@@ -112,6 +113,64 @@ export async function recordStudentAccountToCloud(studentData) {
 /**
  * Save student progress to Cloud Firestore
  */
+/**
+ * Xoá học viên khỏi TẤT CẢ các kho đang lưu.
+ *
+ * Hồ sơ học viên được ghi vào 4 nơi (xem recordStudentAccountToCloud):
+ *   1. Firestore students        2. Firestore registrations
+ *   3. Realtime Database qua REST (2 tên miền)   4. localStorage dmm_users_db
+ *
+ * Trước đây lệnh xoá chỉ chạm Firestore students và localStorage, nên bản ghi
+ * quay lại ngay khi tải lại trang. Mỗi bước đều bọc try/catch riêng để một kho
+ * lỗi không chặn các kho còn lại.
+ */
+export async function deleteStudentEverywhere(studentId, email) {
+  const cleanEmail = String(email || '').trim().toLowerCase();
+  const safeId = cleanEmail.replace(/[^a-z0-9]/g, '_');
+  // Cùng một học viên có thể tồn tại dưới 2 id khác nhau: id gốc và id suy ra
+  // từ email. Phải xoá cả hai.
+  const ids = [...new Set([studentId, safeId].filter(Boolean))];
+
+  // 1. localStorage trước tiên: đây là kho luôn xoá được, không phụ thuộc mạng.
+  try {
+    const raw = localStorage.getItem('dmm_users_db');
+    if (raw) {
+      const list = JSON.parse(raw);
+      if (Array.isArray(list)) {
+        localStorage.setItem(
+          'dmm_users_db',
+          JSON.stringify(list.filter((u) => String(u?.email || '').trim().toLowerCase() !== cleanEmail))
+        );
+      }
+    }
+  } catch (e) { /* bỏ qua */ }
+
+  // 2. Firestore: xoá ở cả hai collection và theo cả hai id.
+  //    KHÔNG await (xem DECISION.md ADR-002): khi không kết nối được máy chủ,
+  //    Firestore xếp lệnh vào hàng đợi offline và Promise treo vô thời hạn.
+  //    Await ở đây sẽ khiến giao diện không bao giờ cập nhật sau khi bấm xoá.
+  for (const col of ['students', 'registrations']) {
+    for (const id of ids) {
+      try {
+        deleteDoc(doc(db, col, id)).catch(() => {});
+      } catch (e) { /* không có tài liệu đó thì bỏ qua */ }
+    }
+  }
+
+  // 3. Realtime Database qua REST.
+  // Bọc cả khối trong try vì hiện PUBLIC_SYNC_URL đang nằm trong một block
+  // comment bị lỗi ở đầu tệp nên CHƯA ĐƯỢC KHAI BÁO (xem TODO.md). Tham chiếu
+  // biến chưa khai báo sẽ ném ReferenceError; nếu không bọc thì cả hàm dừng
+  // giữa chừng. Khi nào sửa comment đó thì nhánh này tự chạy.
+  try {
+    for (const base of [PUBLIC_SYNC_URL, PUBLIC_SYNC_URL_ALT]) {
+      for (const id of ids) {
+        fetch(`${base}/${id}.json`, { method: 'DELETE' }).catch(() => {});
+      }
+    }
+  } catch (e) { /* endpoint chưa khai báo */ }
+}
+
 export async function saveUserProgressToCloud(userId, progressData) {
   if (!progressData || !progressData.email) {
     if (!userId) return;
@@ -251,7 +310,9 @@ export async function getAllRegisteredStudentsFromCloud() {
     });
   } catch (e) {}
 
-  return Array.from(emailMap.values());
+  // Chốt chặn: bản ghi đã bị quản trị viên xoá thì không hiển thị lại,
+  // kể cả khi còn sót ở một kho nào đó.
+  return filterDeleted(Array.from(emailMap.values()));
 }
 
 /**
@@ -268,7 +329,7 @@ export function listenToAllStudentsFromCloud(callback) {
           ...docSnap.data()
         });
       });
-      callback(students);
+      callback(filterDeleted(students));
     }, (err) => {
       console.warn("Real-time students listener fallback:", err);
     });
