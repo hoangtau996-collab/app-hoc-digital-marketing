@@ -238,6 +238,21 @@ html.dark .text-gradient-gold {
   border-color: rgba(100, 149, 237, 0.22) !important;
 }
 
+/* Gradient có điểm dừng TỐI ở bất kỳ vị trí nào (from- / via- / to-).
+   Trước đây chỉ bắt "from-", nên các thẻ dùng "via-emerald-950" hay
+   "to-teal-950" vẫn giữ nền tối trên giao diện sáng, chữ chìm hẳn.
+   Gradient nằm ở background-image nên phải tắt riêng, background-color
+   không đè được nó. */
+:root:not(.dark) [class*="via-emerald-950"],
+:root:not(.dark) [class*="via-teal-950"],
+:root:not(.dark) [class*="via-slate-950"],
+:root:not(.dark) [class*="to-emerald-950"],
+:root:not(.dark) [class*="to-teal-950"],
+:root:not(.dark) [class*="to-slate-950"],
+:root:not(.dark) [class*="to-amber-950"],
+:root:not(.dark) [class*="from-teal-950"],
+:root:not(.dark) [class*="from-slate-950"],
+:root:not(.dark) [class*="from-amber-950"],
 :root:not(.dark) [class*="from-emerald-950"],
 :root:not(.dark) [class*="from-emerald-900"],
 :root:not(.dark) [class*="bg-emerald-950"],

@@ -10,7 +10,6 @@ Cập nhật: **2026-07-27**
 
 | Việc | Trạng thái | Ghi chú |
 |---|---|---|
-| Rà soát bộ màu mới trên các màn còn lại | Chưa bắt đầu | Bộ màu xanh/kem được **giữ lại** (huỷ lệnh hoàn tác ngày 2026-07-27). Mới kiểm tra màn tổng quan; chưa soát bài học, bài kiểm tra, chế độ tối |
 | — | — | Ngoài mục trên, không có việc nào đang chạy. Nhiệm vụ tiếp theo áp dụng [Nguyên tắc Context tối thiểu](AI_MEMORY.md#nguyên-tắc-context-tối-thiểu) |
 
 ## Chờ phản hồi từ chủ dự án
@@ -29,6 +28,7 @@ Các mục dưới đây bị chặn vì thiếu thông tin, không phải vì t
 
 Chi tiết đầy đủ ở [CHANGELOG.md](CHANGELOG.md).
 
+- **Rà soát tương phản 11 màn sau khi đổi màu** — đo theo chuẩn WCAG, sửa lỗi gradient tối sót lại.
 - **Chặn học viên truy cập Bảng Quản Trị** — sửa lỗi leo thang đặc quyền, vá 3 tầng.
 - **Thêm trợ lý Pipi** — nút nổi góc phải, tra thuật ngữ / tìm bài / tính chỉ số.
 - **Sửa lỗi xoá học viên không có tác dụng** — quét đủ 4 kho lưu trữ, thêm cơ chế bia mộ chặn dữ liệu mẫu quay lại.

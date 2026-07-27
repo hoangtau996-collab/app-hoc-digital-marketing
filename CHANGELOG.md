@@ -34,6 +34,7 @@ TODO — chưa có quy ước đánh phiên bản; cân nhắc gắn thẻ Git k
 - **Đổi bộ màu toàn ứng dụng** sang Indigo Dye `#6495ED` + Rose Pink `#FFDAE9` + Egg Shell `#F0EAD6`, nền sáng làm mặc định. Thực hiện bằng cách **định nghĩa lại thang màu Tailwind** trong `@theme` (`src/index.css`) nên khoảng 1.330 lượt dùng lớp `emerald-*` / `amber-*` / `teal-*` đổi theo mà không phải sửa 26 tệp; kèm ánh xạ 90 mã hex nền tối sang navy. **Bằng Chứng Nhận được miễn trừ** — vẫn giữ tông trắng + vàng đồng vì in ra giấy.
 - **Bỏ chữ "(MIỄN PHÍ)"** ở nhãn trị giá khoá học; ba ô "CHỈ CÒN 39 SUẤT" nay bấm được và dẫn thẳng tới đăng ký học viên (người đã đăng nhập thì vào thẳng Chuyên đề 01).
 - **Trợ lý Pipi chỉ còn một lối vào** — nút nổi góc phải; đã bỏ nút trùng trong thanh menu.
+- **Rà soát tương phản toàn bộ 11 màn** sau khi đổi màu (tổng quan, bài học, bài kiểm tra, từ điển, tin tức, công cụ, chứng nhận, quản trị, Pipi, và 2 màn ở chế độ tối) bằng phép đo tỉ lệ tương phản WCAG. Không còn chỗ nào dưới ngưỡng.
 - **Bằng Chứng Nhận chuyển sang nền trắng**, bỏ con dấu logo ở chân bằng, tên người ký chỉ còn xuất hiện một lần dưới dạng chữ ký vàng.
 - **Bản xem trước chứng nhận** đổi sang bảng màu cố định khớp template xuất file, không còn phụ thuộc giao diện sáng/tối.
 - **Công thức đếm lượt truy cập** — từ "mỗi lần tải trang" sang "một khách một ngày", mốc khởi điểm từ 500 xuống 100, ngày chốt theo giờ Việt Nam. Dùng document mới `traffic_daily_v3`, số liệu cũ không mang sang.
@@ -42,6 +43,8 @@ TODO — chưa có quy ước đánh phiên bản; cân nhắc gắn thẻ Git k
 - `README.md` thay bản mẫu Vite mặc định bằng tài liệu thật của dự án.
 
 ### Sửa lỗi
+
+- **Gradient nền tối không đổi theo giao diện sáng.** Quy tắc nền sáng chỉ bắt `from-emerald-950/900`, bỏ sót 13 chỗ dùng `via-` và `to-` với điểm dừng tối (`via-emerald-950`, `to-teal-950`, `to-slate-950`…). Các thẻ đó giữ nguyên nền tối trên giao diện sáng khiến chữ chìm — rõ nhất ở thẻ hồ sơ học viên trên thanh menu. Gradient nằm ở `background-image` nên `background-color` không đè được, phải tắt riêng.
 
 - **Xoá học viên trong bảng quản trị không có tác dụng, F5 là dữ liệu quay lại.** Ba nguyên nhân cộng lại: (a) `SAMPLE_STUDENTS` luôn được trộn lại ở cả `loadStudentsList` lẫn listener realtime nên học viên mẫu không thể xoá; (b) lệnh xoá chỉ chạm Firestore `students` theo đúng một `studentId`, bỏ sót `registrations` và bỏ sót tài liệu mang id suy từ email; (c) sau khi xoá, mã ghi **danh sách hiển thị đã trộn dữ liệu mẫu** ngược vào `dmm_users_db`, khiến học viên mẫu bám vĩnh viễn. Nay thêm cơ chế bia mộ `dmm_deleted_students` làm chốt chặn cuối, cùng `deleteStudentEverywhere()` quét đủ 4 kho.
 - **Tải Bằng Chứng Nhận hỏng hoàn toàn.** html2canvas 1.4.1 ném lỗi `Attempting to parse an unsupported color function "oklab"` khi gặp `oklch()` / `color-mix()` do Tailwind v4 sinh ra. Cả PNG, PDF lẫn nút dành cho iPad đều chết cùng một chỗ. Đã tách template xuất file dùng màu hex nội tuyến.
