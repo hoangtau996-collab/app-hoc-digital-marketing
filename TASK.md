@@ -1,0 +1,41 @@
+# TASK — Việc đang làm
+
+Việc **chưa bắt đầu** nằm ở [TODO.md](TODO.md). Việc **đã xong** nằm ở [CHANGELOG.md](CHANGELOG.md).
+
+Cập nhật: **2026-07-27**
+
+---
+
+## Đang làm
+
+| Việc | Trạng thái | Ghi chú |
+|---|---|---|
+| Lập bộ tài liệu AI Workspace | Đang làm | 14 tệp Markdown ở thư mục gốc. Chỉ viết tài liệu, không đụng mã nguồn |
+
+## Chờ phản hồi từ chủ dự án
+
+Các mục dưới đây bị chặn vì thiếu thông tin, không phải vì thiếu thời gian:
+
+| Việc | Cần biết gì |
+|---|---|
+| Hoàn thiện [DEPLOYMENT.md](DEPLOYMENT.md) | Ứng dụng đang triển khai ở đâu, bằng cách nào |
+| Ghi lại Firestore Security Rules | Nội dung rules đang áp dụng trên Firebase Console |
+| Điền giấy phép vào [README.md](README.md) | Chọn giấy phép nào |
+| Dựng lại [CHANGELOG.md](CHANGELOG.md) phần trước 2026-07-27 | 78 commit phần lớn là thông điệp tự động, không đủ chi tiết |
+| Gộp `students` và `registrations` | Vì sao ban đầu tách hai collection cùng nội dung |
+
+## Vừa hoàn thành trong phiên gần nhất
+
+Chi tiết đầy đủ ở [CHANGELOG.md](CHANGELOG.md).
+
+- Bổ sung 16 bài học chuyên sâu và 22 câu hỏi, nâng lên 36 bài / 55 câu.
+- Dựng 36 sơ đồ số liệu và 11 tranh minh hoạ chuyên đề.
+- Thêm popup nhắc học sau 2 ngày lơ là.
+- Đổi Bằng Chứng Nhận sang nền trắng kèm hoạ tiết vàng đồng và xanh ngọc bích.
+- Sửa 3 lỗi có sẵn: `lessonsCount` sai ở 10/11 chuyên đề, sơ đồ lặp ở mọi bài, `recordStudentAccountToCloud` chưa import.
+
+## Quy ước dùng file này
+
+- Một việc chỉ nằm ở **một** trong ba file: TASK (đang làm) / TODO (chưa bắt đầu) / CHANGELOG (đã xong).
+- Khi bắt đầu một việc trong TODO, chuyển nó sang đây.
+- Khi xong, chuyển sang CHANGELOG kèm mô tả kết quả thực tế.
