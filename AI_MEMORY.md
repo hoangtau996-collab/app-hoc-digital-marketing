@@ -6,6 +6,21 @@ Mẫu câu lệnh làm việc: [PROMPTS.md](PROMPTS.md). Quy ước mã: [CONTRI
 
 ---
 
+## Nguyên tắc Context tối thiểu
+
+Quy trình bắt buộc khi nhận một nhiệm vụ trong dự án này:
+
+1. **Đọc tài liệu trước**, theo thứ tự ưu tiên: [README.md](README.md) → [PROJECT.md](PROJECT.md) → [SUMMARY.md](SUMMARY.md) → AI_MEMORY.md → [TASK.md](TASK.md) → [CHANGELOG.md](CHANGELOG.md).
+2. **Chỉ mở mã nguồn khi tài liệu không đủ** để hoàn thành nhiệm vụ.
+3. **Chỉ mở đúng module liên quan.** Không quét toàn bộ dự án.
+4. **Không lặp lại mã không thay đổi.** Chỉ xuất patch hoặc diff.
+5. **Giải thích dưới 10 dòng.**
+6. **Xong việc thì cập nhật [CHANGELOG.md](CHANGELOG.md) và [TASK.md](TASK.md).**
+
+Lý do: dự án có 1.700 dòng dữ liệu khoá học và 19 thành phần; quét toàn bộ vừa lãng phí vừa làm loãng phần thực sự cần sửa. Tài liệu trong thư mục gốc được viết để thay thế việc đọc mã.
+
+Ngoại lệ: quy tắc 2 **không** áp dụng cho việc kiểm chứng. Vẫn phải chạy thật để xác nhận kết quả (xem quy tắc chung số 3 bên dưới).
+
 ## Quy tắc chung của dự án
 
 1. **Ngôn ngữ**: giao diện và chú thích trong mã dùng **tiếng Việt**.

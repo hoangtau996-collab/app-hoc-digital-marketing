@@ -10,6 +10,11 @@ TODO — chưa có quy ước đánh phiên bản; cân nhắc gắn thẻ Git k
 
 ## [Chưa phát hành] — 2026-07-27
 
+### Quy trình
+
+- **Chốt nguyên tắc làm việc Context tối thiểu** — đọc tài liệu trước, chỉ mở mã nguồn khi tài liệu không đủ, chỉ mở đúng module liên quan, chỉ xuất patch/diff, giải thích dưới 10 dòng, xong việc thì cập nhật `CHANGELOG.md` và `TASK.md`. Ghi tại [AI_MEMORY.md](AI_MEMORY.md#nguyên-tắc-context-tối-thiểu).
+- **Lập bộ tài liệu AI Workspace** — 14 tệp Markdown ở thư mục gốc: `README`, `PROJECT`, `SUMMARY`, `AI_MEMORY`, `TASK`, `TODO`, `CHANGELOG`, `DECISION`, `CONTRIBUTING`, `ARCHITECTURE`, `PROMPTS`, `API_INDEX`, `DATABASE`, `DEPLOYMENT`. Không đụng mã nguồn.
+
 ### Thêm mới
 
 - **Tranh minh hoạ chuyên đề** — 11 tranh khái niệm SVG nội tuyến, mỗi chuyên đề một tranh, kèm chú thích (`LessonIllustration.jsx`).

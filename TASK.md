@@ -10,7 +10,7 @@ Cập nhật: **2026-07-27**
 
 | Việc | Trạng thái | Ghi chú |
 |---|---|---|
-| Lập bộ tài liệu AI Workspace | Đang làm | 14 tệp Markdown ở thư mục gốc. Chỉ viết tài liệu, không đụng mã nguồn |
+| — | — | Không có việc nào đang chạy. Nhiệm vụ tiếp theo áp dụng [Nguyên tắc Context tối thiểu](AI_MEMORY.md#nguyên-tắc-context-tối-thiểu) |
 
 ## Chờ phản hồi từ chủ dự án
 
@@ -28,6 +28,8 @@ Các mục dưới đây bị chặn vì thiếu thông tin, không phải vì t
 
 Chi tiết đầy đủ ở [CHANGELOG.md](CHANGELOG.md).
 
+- Chốt quy trình làm việc **Context tối thiểu**, ghi vào [AI_MEMORY.md](AI_MEMORY.md#nguyên-tắc-context-tối-thiểu).
+- Lập bộ tài liệu AI Workspace: 14 tệp Markdown ở thư mục gốc.
 - Bổ sung 16 bài học chuyên sâu và 22 câu hỏi, nâng lên 36 bài / 55 câu.
 - Dựng 36 sơ đồ số liệu và 11 tranh minh hoạ chuyên đề.
 - Thêm popup nhắc học sau 2 ngày lơ là.
