@@ -188,7 +188,7 @@ export default function PipiChat({ onSelectModule, setActiveTab, setSearchQuery,
           nội dung phía sau trong lúc hỏi Pipi. */}
       {!isOpen ? null : createPortal(
         <div className="fixed z-[88] right-4 lg:right-6 bottom-[152px] lg:bottom-[104px] w-[calc(100vw-2rem)] sm:w-[380px] max-w-[380px] h-[58vh] sm:h-[520px] max-h-[calc(100vh-190px)]">
-          <div className="pipi-pop w-full h-full glass-panel rounded-3xl border border-emerald-500/40 shadow-2xl flex flex-col overflow-hidden">
+          <div className="pipi-pop w-full h-full pipi-panel rounded-3xl border border-emerald-500/40 shadow-2xl flex flex-col overflow-hidden">
 
             {/* Đầu khung */}
             <div className="flex items-center gap-3 px-4 py-3 border-b border-emerald-900/50 shrink-0">

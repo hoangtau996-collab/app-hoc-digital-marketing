@@ -114,6 +114,25 @@ html.dark ::-webkit-scrollbar-thumb {
   background: #6495ED;
 }
 
+/* ---------- Khung chat Pipi ----------
+   Cố ý KHÔNG dùng .glass-panel: khung này neo ở góc màn hình, không có lớp phủ
+   phía sau, nên nền mờ sẽ để nội dung trang lộ xuyên qua và chữ rất khó đọc.
+   Nền phải đục tuyệt đối. */
+
+.pipi-panel {
+  background: #ffffff;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border: 1px solid rgba(100, 149, 237, 0.38);
+  box-shadow: 0 20px 55px -12px rgba(23, 35, 61, 0.38), 0 4px 14px -6px rgba(23, 35, 61, 0.2);
+}
+
+html.dark .pipi-panel {
+  background: #111a2e;
+  border: 1px solid rgba(100, 149, 237, 0.32);
+  box-shadow: 0 20px 55px -12px rgba(0, 0, 0, 0.7);
+}
+
 /* ---------- Hiệu ứng cho trợ lý Pipi ---------- */
 
 @keyframes pipi-float {
