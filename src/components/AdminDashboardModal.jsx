@@ -195,6 +195,31 @@ export default function AdminDashboardModal({
 
   if (!isOpen) return null;
 
+  // Tầng chặn cuối. Kể cả khi isOpen bị bật bằng cách khác (sửa state qua
+  // devtools, lỗi truyền props), modal vẫn không được phép hiển thị danh sách
+  // học viên cho người không phải quản trị viên.
+  if (currentUser?.role !== 'admin') {
+    return (
+      <div className="fixed inset-0 z-[60] flex items-center justify-center p-4 bg-slate-950/85 backdrop-blur-md">
+        <div className="w-full max-w-sm glass-panel rounded-3xl border border-rose-500/50 p-7 text-center space-y-4 shadow-2xl">
+          <div className="w-16 h-16 rounded-2xl bg-rose-950/80 border border-rose-500/50 flex items-center justify-center mx-auto text-rose-400">
+            <ShieldCheck className="w-8 h-8" />
+          </div>
+          <h2 className="text-lg font-black text-white">Khu vực dành riêng Ban Quản Trị</h2>
+          <p className="text-xs text-slate-300 leading-relaxed">
+            Tài khoản của bạn không có quyền truy cập Bảng Quản Trị Học Viên.
+          </p>
+          <button
+            onClick={onClose}
+            className="px-5 py-2.5 rounded-xl bg-slate-900 border border-emerald-900/60 hover:border-emerald-500 text-slate-200 text-xs font-bold transition cursor-pointer"
+          >
+            Đóng
+          </button>
+        </div>
+      </div>
+    );
+  }
+
   // Filtered Students
   const filteredStudents = students.filter(std => {
     const matchesSearch = 

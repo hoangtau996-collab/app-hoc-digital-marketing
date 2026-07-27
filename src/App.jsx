@@ -185,7 +185,11 @@ export default function App() {
           name: typeof parsed.name === 'string' && parsed.name.trim() ? parsed.name : (typeof parsed.email === 'string' && parsed.email.includes('@') ? parsed.email.split('@')[0].toUpperCase() : 'HỌC VIÊN'),
           phone: typeof parsed.phone === 'string' ? parsed.phone : 'Chưa có SĐT',
           industry: typeof parsed.industry === 'string' ? parsed.industry : 'Digital Marketing',
-          coverBg: typeof parsed.coverBg === 'string' ? parsed.coverBg : 'emerald'
+          coverBg: typeof parsed.coverBg === 'string' ? parsed.coverBg : 'emerald',
+          // Bộ làm sạch này trước đây NUỐT MẤT trường role, nên không tầng nào
+          // phân biệt được admin với học viên. Chỉ chấp nhận đúng chuỗi 'admin',
+          // mọi giá trị khác quy về 'student'.
+          role: parsed.role === 'admin' ? 'admin' : 'student'
         };
       }
       return null;
@@ -427,6 +431,19 @@ export default function App() {
   };
 
   // Protected Action Wrapper: Require Registration ONLY for Course Lessons & Quizzes
+  // Chỉ tài khoản có role 'admin' mới được vào Bảng Quản Trị.
+  const isAdmin = currentUser?.role === 'admin';
+
+  // Chặn ở cả tầng hành động, không chỉ ẩn nút: ẩn nút mà vẫn để hàm mở tự do
+  // thì chỉ cần gọi được hàm là vào được.
+  const openAdminDashboard = () => {
+    if (!isAdmin) {
+      setMigrationNotice('🔒 Khu vực này chỉ dành cho Ban Quản Trị Học Viện.');
+      return;
+    }
+    setIsAdminOpen(true);
+  };
+
   const handleProtectedSelectModule = (id) => {
     if (!currentUser) {
       setMigrationNotice('🔒 Vui lòng Đăng Ký / Đăng Nhập tài khoản học viên để tham gia học & làm bài trắc nghiệm!');
@@ -481,7 +498,7 @@ export default function App() {
         currentUser={currentUser}
         onOpenAuthModal={() => setIsAuthOpen(true)}
         onOpenProfileModal={() => setIsProfileOpen(true)}
-        onOpenAdminModal={() => setIsAdminOpen(true)}
+        onOpenAdminModal={isAdmin ? openAdminDashboard : null}
         theme={theme}
         setTheme={setTheme}
         trafficStats={trafficStats}
