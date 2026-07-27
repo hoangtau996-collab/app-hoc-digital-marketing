@@ -25,7 +25,8 @@ import {
   TRAFFIC_BASELINE,
   recordRealStudentEnrollment,
   recordRealStudentGraduate,
-  listenToRealStats
+  listenToRealStats,
+  recordStudentAccountToCloud
 } from './firebase';
 
 import { COURSE_MODULES } from './data/courseData';
