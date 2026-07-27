@@ -25,6 +25,7 @@ export default function CourseOverview({
   onSelectModule, 
   completedModules,
   searchQuery,
+  onRegisterCTA = () => {},
   // Mặc định phải là mốc khởi điểm thật, không phải số đẹp bịa ra:
   // App.jsx luôn truyền trafficStats xuống, nhưng nếu component được dùng lại
   // ở chỗ khác mà quên truyền thì thà hiện 100 còn hơn hiện 158.421 lượt ảo.
@@ -66,12 +67,17 @@ export default function CourseOverview({
             <PMarcomLogo className="w-5 h-5" showText={false} /> HỌC VIỆN P MARCOM • CHƯƠNG TRÌNH ĐÀO TẠO THỰC CHUYÊN SÂU
           </div>
 
-          {/* Special Course Value Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-amber-500/20 via-emerald-500/20 to-teal-500/20 border border-amber-400/60 text-amber-300 text-xs font-extrabold shadow-lg animate-pulse">
+          {/* Special Course Value Badge — bấm vào dẫn tới đăng ký học viên */}
+          <button
+            type="button"
+            onClick={onRegisterCTA}
+            title="Đăng ký học viên ngay"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-amber-500/20 via-emerald-500/20 to-teal-500/20 border border-amber-400/60 text-amber-300 text-xs font-extrabold shadow-lg animate-pulse hover:brightness-125 hover:scale-[1.02] transition cursor-pointer"
+          >
             <Gift className="w-4 h-4 text-amber-400" />
             <span>Giá Trị Khóa Học: <span className="line-through text-slate-400 font-semibold">2.999.999 VNĐ</span></span>
-            <span className="bg-amber-400 text-slate-950 px-2.5 py-0.5 rounded-full font-black uppercase text-[10px]">TÀI TRỢ 100% • CHỈ CÒN 39 SUẤT MIỄN PHÍ - ĐĂNG KÝ NGAY</span>
-          </div>
+            <span className="bg-amber-400 text-slate-950 px-2.5 py-0.5 rounded-full font-black uppercase text-[10px]">CHỈ CÒN 39 SUẤT • ĐĂNG KÝ NGAY</span>
+          </button>
         </div>
 
         <div className="relative z-10 max-w-3xl space-y-4">
@@ -145,15 +151,26 @@ export default function CourseOverview({
               <span className="text-[11px] font-extrabold text-amber-400 uppercase tracking-wider flex items-center gap-1">
                 <Tag className="w-3.5 h-3.5 text-amber-400" /> Giá Trị Đào Tạo
               </span>
-              <span className="text-[9px] font-extrabold px-1.5 py-0.5 rounded bg-amber-400 text-slate-950 uppercase animate-bounce">CHỈ CÒN 39 SUẤT</span>
+              <button
+                type="button"
+                onClick={onRegisterCTA}
+                title="Đăng ký học viên ngay"
+                className="text-[9px] font-extrabold px-1.5 py-0.5 rounded bg-amber-400 text-slate-950 uppercase animate-bounce hover:brightness-110 cursor-pointer"
+              >
+                CHỈ CÒN 39 SUẤT
+              </button>
             </div>
-            <div className="text-lg sm:text-xl font-black text-amber-400 tracking-tight flex items-center gap-1.5">
-              <span>2.999.999 VNĐ</span>
-              <span className="text-xs font-bold text-emerald-400">(0 VNĐ)</span>
+            <div className="text-lg sm:text-xl font-black text-amber-400 tracking-tight">
+              2.999.999 VNĐ
             </div>
-            <div className="text-[10px] text-emerald-300 font-extrabold mt-0.5 flex items-center gap-1">
-              <span>🔥 CHỈ CÒN 39 SUẤT MIỄN PHÍ • ĐĂNG KÝ NGAY</span>
-            </div>
+            <button
+              type="button"
+              onClick={onRegisterCTA}
+              title="Đăng ký học viên ngay"
+              className="text-[10px] text-emerald-300 font-extrabold mt-0.5 flex items-center gap-1 hover:text-emerald-200 hover:underline cursor-pointer"
+            >
+              🔥 CHỈ CÒN 39 SUẤT • ĐĂNG KÝ NGAY
+            </button>
           </div>
 
         </div>

@@ -1,5 +1,4 @@
 import React from 'react';
-import PipiChat from './PipiChat';
 import { 
   BookOpen, 
   Sparkles, 
@@ -179,13 +178,6 @@ export default function FeatureMenuBar({
             );
           })}
         </div>
-
-        {/* Trợ lý Pipi - thay cho ô tìm kiếm cũ */}
-        <PipiChat
-          onSelectModule={onSelectModule}
-          setActiveTab={setActiveTab}
-          setSearchQuery={setSearchQuery}
-        />
 
       </div>
     </div>

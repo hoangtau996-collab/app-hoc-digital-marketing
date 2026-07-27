@@ -60,7 +60,7 @@ export default function Header({
               
               {/* Course Value Tag Header */}
               <span className="hidden xl:inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/40">
-                <Tag className="w-3 h-3 text-amber-400" /> Trị Giá: 2.999.999 VNĐ (MIỄN PHÍ)
+                <Tag className="w-3 h-3 text-amber-400" /> Trị Giá: 2.999.999 VNĐ
               </span>
 
               {/* Total Cumulative Web Traffic Counter */}

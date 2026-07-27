@@ -432,6 +432,18 @@ export default function App() {
   };
 
   // Protected Action Wrapper: Require Registration ONLY for Course Lessons & Quizzes
+  // Các ô "CHỈ CÒN 39 SUẤT" dẫn thẳng tới đăng ký học viên.
+  // Người đã đăng nhập thì không mở lại form đăng ký nữa mà đưa vào học luôn.
+  const handleRegisterCTA = () => {
+    if (currentUser) {
+      setActiveTab('course');
+      setSelectedModuleId(COURSE_MODULES[0]?.id ?? null);
+      return;
+    }
+    setMigrationNotice('🎓 Đăng ký tài khoản học viên để nhận suất học miễn phí!');
+    setIsAuthOpen(true);
+  };
+
   // Chỉ tài khoản có role 'admin' mới được vào Bảng Quản Trị.
   const isAdmin = currentUser?.role === 'admin';
 
@@ -590,6 +602,7 @@ export default function App() {
                   completedModules={completedModules}
                   searchQuery={searchQuery}
                   trafficStats={trafficStats}
+                  onRegisterCTA={handleRegisterCTA}
                 />
               )
             )}
