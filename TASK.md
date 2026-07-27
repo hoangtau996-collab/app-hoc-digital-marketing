@@ -10,7 +10,7 @@ Cập nhật: **2026-07-27**
 
 | Việc | Trạng thái | Ghi chú |
 |---|---|---|
-| Hoàn tác đổi màu | Đang chờ | Bộ màu xanh/kem đã bị hook commit; cần revert có chọn lọc để giữ Pipi và các bản sửa lỗi |
+| Rà soát bộ màu mới trên các màn còn lại | Chưa bắt đầu | Bộ màu xanh/kem được **giữ lại** (huỷ lệnh hoàn tác ngày 2026-07-27). Mới kiểm tra màn tổng quan; chưa soát bài học, bài kiểm tra, chế độ tối |
 | — | — | Ngoài mục trên, không có việc nào đang chạy. Nhiệm vụ tiếp theo áp dụng [Nguyên tắc Context tối thiểu](AI_MEMORY.md#nguyên-tắc-context-tối-thiểu) |
 
 ## Chờ phản hồi từ chủ dự án

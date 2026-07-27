@@ -31,6 +31,9 @@ TODO — chưa có quy ước đánh phiên bản; cân nhắc gắn thẻ Git k
 
 ### Thay đổi
 
+- **Đổi bộ màu toàn ứng dụng** sang Indigo Dye `#6495ED` + Rose Pink `#FFDAE9` + Egg Shell `#F0EAD6`, nền sáng làm mặc định. Thực hiện bằng cách **định nghĩa lại thang màu Tailwind** trong `@theme` (`src/index.css`) nên khoảng 1.330 lượt dùng lớp `emerald-*` / `amber-*` / `teal-*` đổi theo mà không phải sửa 26 tệp; kèm ánh xạ 90 mã hex nền tối sang navy. **Bằng Chứng Nhận được miễn trừ** — vẫn giữ tông trắng + vàng đồng vì in ra giấy.
+- **Bỏ chữ "(MIỄN PHÍ)"** ở nhãn trị giá khoá học; ba ô "CHỈ CÒN 39 SUẤT" nay bấm được và dẫn thẳng tới đăng ký học viên (người đã đăng nhập thì vào thẳng Chuyên đề 01).
+- **Trợ lý Pipi chỉ còn một lối vào** — nút nổi góc phải; đã bỏ nút trùng trong thanh menu.
 - **Bằng Chứng Nhận chuyển sang nền trắng**, bỏ con dấu logo ở chân bằng, tên người ký chỉ còn xuất hiện một lần dưới dạng chữ ký vàng.
 - **Bản xem trước chứng nhận** đổi sang bảng màu cố định khớp template xuất file, không còn phụ thuộc giao diện sáng/tối.
 - **Công thức đếm lượt truy cập** — từ "mỗi lần tải trang" sang "một khách một ngày", mốc khởi điểm từ 500 xuống 100, ngày chốt theo giờ Việt Nam. Dùng document mới `traffic_daily_v3`, số liệu cũ không mang sang.
