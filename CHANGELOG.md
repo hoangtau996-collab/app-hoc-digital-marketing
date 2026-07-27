@@ -17,6 +17,8 @@ TODO — chưa có quy ước đánh phiên bản; cân nhắc gắn thẻ Git k
 
 ### Thêm mới
 
+- **Trợ lý Pipi** thay ô tìm kiếm "Tra cứu bài học / Thuật ngữ", kèm **nút nổi góc phải** có hiệu ứng (trôi nhẹ, vòng sóng lan, chớp mắt, bóng chào định kỳ). Tra thuật ngữ, tìm bài học và tính ROAS / CPA / CPL / CTR / CVR / CPM / ngân sách. Chạy hoàn toàn tại máy, không gọi API.
+
 - **Tranh minh hoạ chuyên đề** — 11 tranh khái niệm SVG nội tuyến, mỗi chuyên đề một tranh, kèm chú thích (`LessonIllustration.jsx`).
 - **Popup nhắc học** — nhắc quay lại khi học viên nghỉ quá 2 ngày; hiển thị số ngày nghỉ, tiến độ và chuyên đề kế tiếp chưa học (`StudyReminderModal.jsx`, `utils/studyReminder.js`).
 - **Sơ đồ số liệu cho từng bài** — 36 sơ đồ, bộ kết xuất dữ liệu-hoá 5 kiểu `compare / bars / flow / funnel / stats` (`LessonVisual.jsx`, `data/lessonVisuals.js`).
@@ -57,6 +59,8 @@ TODO — chưa có quy ước đánh phiên bản; cân nhắc gắn thẻ Git k
 - Con dấu tròn "CERTIFIED" ở chân Bằng Chứng Nhận.
 
 ### Bảo mật
+
+- **Chặn học viên vào Bảng Quản Trị.** Trước đây không có kiểm tra quyền ở bất kỳ tầng nào: nút hiện với mọi người kể cả khách chưa đăng nhập, và ai bấm cũng xem/xuất được danh sách học viên kèm tên, email, số điện thoại. Kèm theo đó, bộ làm sạch `currentUser` trong App.jsx nuốt mất trường `role` nên không tầng nào phân biệt được admin. Nay giữ lại `role` và chặn ở 3 tầng: ẩn nút, guard hàm mở, và modal tự từ chối hiển thị. **Lưu ý:** `role` đọc từ localStorage nên đây là rào chắn giao diện, không thay thế được Firestore Security Rules.
 
 - **Bỏ lưu mật khẩu dạng chữ thường trong localStorage.** Nhánh đăng nhập dự phòng (`dmm_users_db`) trước đây ghi thẳng mật khẩu học viên xuống đĩa. Nay dùng SHA-256 kèm muối ngẫu nhiên riêng từng bản ghi (`utils/localCredentials.js`). Bản ghi cũ vẫn đăng nhập được và **tự nâng cấp sang muối + băm ngay lần đăng nhập kế tiếp**, trường `password` bị xoá khỏi bản ghi. Trên trang chạy http thuần (không có Web Crypto), tài khoản mới sẽ không lưu phần mật khẩu — mất khả năng đăng nhập offline nhưng không để lộ mật khẩu.
 - Thêm `.env` và `.env.*` vào `.gitignore`. Bắt buộc phải có trước khi bật hook tự động đẩy mã, vì script dùng `git add -A` nên tệp `.env` chứa khoá thật sẽ bị đẩy thẳng lên kho công khai.

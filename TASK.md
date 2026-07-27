@@ -10,7 +10,8 @@ Cập nhật: **2026-07-27**
 
 | Việc | Trạng thái | Ghi chú |
 |---|---|---|
-| — | — | Không có việc nào đang chạy. Nhiệm vụ tiếp theo áp dụng [Nguyên tắc Context tối thiểu](AI_MEMORY.md#nguyên-tắc-context-tối-thiểu) |
+| Hoàn tác đổi màu | Đang chờ | Bộ màu xanh/kem đã bị hook commit; cần revert có chọn lọc để giữ Pipi và các bản sửa lỗi |
+| — | — | Ngoài mục trên, không có việc nào đang chạy. Nhiệm vụ tiếp theo áp dụng [Nguyên tắc Context tối thiểu](AI_MEMORY.md#nguyên-tắc-context-tối-thiểu) |
 
 ## Chờ phản hồi từ chủ dự án
 
@@ -28,6 +29,8 @@ Các mục dưới đây bị chặn vì thiếu thông tin, không phải vì t
 
 Chi tiết đầy đủ ở [CHANGELOG.md](CHANGELOG.md).
 
+- **Chặn học viên truy cập Bảng Quản Trị** — sửa lỗi leo thang đặc quyền, vá 3 tầng.
+- **Thêm trợ lý Pipi** — nút nổi góc phải, tra thuật ngữ / tìm bài / tính chỉ số.
 - **Sửa lỗi xoá học viên không có tác dụng** — quét đủ 4 kho lưu trữ, thêm cơ chế bia mộ chặn dữ liệu mẫu quay lại.
 - **Bỏ lưu mật khẩu dạng chữ thường trong localStorage** — mục ưu tiên cao nhất của [TODO.md](TODO.md#bảo-mật). Dùng SHA-256 + muối, bản ghi cũ tự nâng cấp khi đăng nhập.
 - Chốt quy trình làm việc **Context tối thiểu**, ghi vào [AI_MEMORY.md](AI_MEMORY.md#nguyên-tắc-context-tối-thiểu).

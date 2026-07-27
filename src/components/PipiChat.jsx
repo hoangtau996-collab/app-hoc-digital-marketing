@@ -14,7 +14,7 @@ import { askPipi, PIPI_SUGGESTIONS } from '../utils/pipiBrain';
  */
 
 /* Ảnh đại diện Pipi, vẽ bằng SVG nội tuyến */
-export function PipiAvatar({ size = 40, talking = false }) {
+export function PipiAvatar({ size = 40, talking = false, blink = false }) {
   return (
     <svg viewBox="0 0 100 100" width={size} height={size} aria-label="Pipi" role="img">
       <defs>
@@ -30,8 +30,8 @@ export function PipiAvatar({ size = 40, talking = false }) {
       {/* mắt */}
       <ellipse cx="41" cy="36" rx="9" ry="11" fill="#fffdf7" />
       <ellipse cx="59" cy="36" rx="9" ry="11" fill="#fffdf7" />
-      <circle cx={talking ? 43 : 42} cy="38" r="3.4" fill="#17233d" />
-      <circle cx={talking ? 61 : 60} cy="38" r="3.4" fill="#17233d" />
+      <circle className={blink ? 'pipi-blink' : undefined} cx={talking ? 43 : 42} cy="38" r="3.4" fill="#17233d" />
+      <circle className={blink ? 'pipi-blink' : undefined} cx={talking ? 61 : 60} cy="38" r="3.4" fill="#17233d" />
       <circle cx="43.6" cy="36.6" r="1.1" fill="#ffffff" />
       <circle cx="61.6" cy="36.6" r="1.1" fill="#ffffff" />
       {/* mũi + vạch dọc */}
@@ -76,8 +76,9 @@ function RichLine({ text }) {
   );
 }
 
-export default function PipiChat({ onSelectModule, setActiveTab, setSearchQuery }) {
+export default function PipiChat({ onSelectModule, setActiveTab, setSearchQuery, variant = 'inline' }) {
   const [isOpen, setIsOpen] = useState(false);
+  const [showHello, setShowHello] = useState(false);
   const [input, setInput] = useState('');
   const [messages, setMessages] = useState([
     {
@@ -95,6 +96,19 @@ export default function PipiChat({ onSelectModule, setActiveTab, setSearchQuery 
   useEffect(() => {
     if (isOpen) endRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages, isOpen]);
+
+  // Bóng chào thi thoảng nhô ra để người dùng biết có trợ lý ở đây.
+  // Chỉ áp dụng cho nút nổi, và ngưng hẳn khi đã mở khung chat.
+  useEffect(() => {
+    if (variant !== 'fab' || isOpen) return;
+    const first = setTimeout(() => setShowHello(true), 2500);
+    const hide = setTimeout(() => setShowHello(false), 9000);
+    const loop = setInterval(() => {
+      setShowHello(true);
+      setTimeout(() => setShowHello(false), 6000);
+    }, 45000);
+    return () => { clearTimeout(first); clearTimeout(hide); clearInterval(loop); };
+  }, [variant, isOpen]);
 
   const send = (text) => {
     const q = String(text || '').trim();
@@ -118,20 +132,53 @@ export default function PipiChat({ onSelectModule, setActiveTab, setSearchQuery 
     setIsOpen(false);
   };
 
-  return (
-    <div className="relative w-full md:w-64 shrink-0">
-      {/* Nút mở, thay cho ô tìm kiếm cũ */}
+  const trigger =
+    variant === 'fab' ? (
+      /* Nút nổi góc phải. Trên màn nhỏ phải nâng lên khỏi MobileBottomNav
+         (thanh đó fixed bottom-0 z-40), nếu không sẽ đè lên nhau. */
+      <div className="fixed right-4 lg:right-6 bottom-20 lg:bottom-6 z-[85] flex flex-col items-end gap-2 pointer-events-none">
+        {showHello && (
+          <div className="pipi-pop pointer-events-auto max-w-[210px] px-3 py-2 rounded-2xl rounded-br-sm bg-[#111a2e] border border-emerald-500/50 shadow-xl">
+            <p className="text-[11px] text-slate-200 leading-snug">
+              Cần tra thuật ngữ hay tính chỉ số? <strong className="text-emerald-300">Hỏi Pipi nhé!</strong>
+            </p>
+          </div>
+        )}
+
+        <button
+          onClick={() => { setIsOpen(true); setShowHello(false); }}
+          aria-label="Mở trợ lý Pipi"
+          title="Hỏi Pipi — trợ lý tra cứu"
+          className="pipi-launcher pointer-events-auto relative w-16 h-16 rounded-full bg-gradient-to-br from-emerald-500 to-teal-500 shadow-2xl shadow-emerald-950/60 flex items-center justify-center cursor-pointer hover:scale-105 active:scale-95 transition-transform"
+        >
+          {/* vòng sóng lan toả */}
+          <span className="absolute inset-0 rounded-full bg-emerald-400 opacity-25 animate-ping" />
+          <span className="absolute inset-0 rounded-full ring-2 ring-emerald-300/50" />
+          <span className="pipi-head pipi-float relative">
+            <PipiAvatar size={46} blink />
+          </span>
+          {/* chấm báo đang sẵn sàng */}
+          <span className="absolute -top-0.5 -right-0.5 w-4 h-4 rounded-full bg-amber-400 border-2 border-[#0e1526]" />
+        </button>
+      </div>
+    ) : (
+      /* Nút trong thanh menu, thay cho ô tìm kiếm cũ */
       <button
         onClick={() => setIsOpen(true)}
         className="w-full flex items-center gap-2 bg-[#0e1526] border border-emerald-900/60 hover:border-emerald-400 rounded-xl pl-2 pr-3 py-1.5 text-xs text-slate-400 transition shadow-inner cursor-pointer group"
         title="Hỏi Pipi - trợ lý tra cứu"
       >
         <span className="shrink-0 group-hover:scale-110 transition-transform">
-          <PipiAvatar size={24} />
+          <PipiAvatar size={24} blink />
         </span>
         <span className="truncate">Hỏi Pipi bất cứ điều gì...</span>
         <Sparkles className="w-3.5 h-3.5 text-amber-400 ml-auto shrink-0" />
       </button>
+    );
+
+  return (
+    <div className={variant === 'fab' ? 'contents' : 'relative w-full md:w-64 shrink-0'}>
+      {trigger}
 
       {/* Đưa ra thẳng body: FeatureMenuBar có backdrop-blur, tạo containing
           block mới khiến position:fixed bám vào thanh menu thay vì viewport,

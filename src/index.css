@@ -114,6 +114,40 @@ html.dark ::-webkit-scrollbar-thumb {
   background: #6495ED;
 }
 
+/* ---------- Hiệu ứng cho trợ lý Pipi ---------- */
+
+@keyframes pipi-float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-6px); }
+}
+
+@keyframes pipi-blink {
+  0%, 92%, 100% { transform: scaleY(1); }
+  95%           { transform: scaleY(0.08); }
+}
+
+@keyframes pipi-wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25%      { transform: rotate(-10deg); }
+  75%      { transform: rotate(10deg); }
+}
+
+@keyframes pipi-pop {
+  0%   { opacity: 0; transform: translateY(6px) scale(0.9); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.pipi-float { animation: pipi-float 3.2s ease-in-out infinite; }
+.pipi-blink { animation: pipi-blink 4.5s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
+.pipi-pop   { animation: pipi-pop 0.35s ease-out both; }
+.pipi-launcher:hover .pipi-head { animation: pipi-wiggle 0.55s ease-in-out; }
+
+/* Tôn trọng người dùng đã tắt hiệu ứng chuyển động trong hệ điều hành */
+@media (prefers-reduced-motion: reduce) {
+  .pipi-float, .pipi-blink, .pipi-pop,
+  .pipi-launcher:hover .pipi-head { animation: none; }
+}
+
 /* Hide scrollbar for Chrome, Safari and Opera */
 .no-scrollbar::-webkit-scrollbar {
   display: none;

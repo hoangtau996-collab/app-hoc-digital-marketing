@@ -30,6 +30,7 @@ import {
 } from './firebase';
 
 import StudyReminderModal from './components/StudyReminderModal';
+import PipiChat from './components/PipiChat';
 import {
   markStudyActivity,
   shouldRemind,
@@ -614,6 +615,14 @@ export default function App() {
       </main>
 
       {/* Certificate Modal */}
+      {/* Trợ lý Pipi - nút nổi góc phải, hiện ở mọi màn */}
+      <PipiChat
+        variant="fab"
+        onSelectModule={handleProtectedSelectModule}
+        setActiveTab={handleProtectedSelectTab}
+        setSearchQuery={setSearchQuery}
+      />
+
       {/* Nhắc quay lại học khi lơ là quá 2 ngày */}
       <StudyReminderModal
         isOpen={isReminderOpen}
