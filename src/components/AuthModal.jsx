@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PMarcomLogo from './PMarcomLogo';
+import { createCredential, verifyCredential, upgradeRecord } from '../utils/localCredentials';
 import { 
   auth, 
   signInWithEmailAndPassword, 
@@ -146,6 +147,9 @@ export default function AuthModal({
       {
         id: 'admin-master-01',
         email: 'admin@pmarcom.edu.vn',
+        // Mật khẩu quản trị vẫn nằm trong mã nguồn (xem TODO.md, mục Bảo mật),
+        // nhưng ít nhất không ghi dạng chữ thường xuống localStorage nữa:
+        // bản ghi được nâng cấp thành muối + băm ngay lần đăng nhập đầu tiên.
         password: 'admin',
         name: 'QUẢN TRỊ VIÊN ADMIN',
         phone: '0999999999',
@@ -214,7 +218,23 @@ export default function AuthModal({
 
       // 2. Fallback to local accounts
       const users = getUsersDB();
-      const foundUser = users.find(u => u.email.toLowerCase() === email.trim().toLowerCase() && u.password === password);
+      const candidate = users.find(u => u.email && u.email.toLowerCase() === email.trim().toLowerCase());
+      const { ok, needsUpgrade } = await verifyCredential(password, candidate);
+      const foundUser = ok ? candidate : null;
+
+      // Bản ghi cũ còn lưu mật khẩu chữ thường -> nâng cấp thành muối + băm ngay.
+      if (ok && needsUpgrade) {
+        try {
+          const credential = await createCredential(password);
+          const upgraded = upgradeRecord(candidate, credential);
+          localStorage.setItem(
+            'dmm_users_db',
+            JSON.stringify(users.map(u => (u === candidate ? upgraded : u)))
+          );
+        } catch (e) {
+          console.warn('Không nâng cấp được bản ghi đăng nhập tại máy:', e);
+        }
+      }
 
       if (foundUser) {
         setSuccessMsg('🟢 Đăng nhập thành công!');
@@ -307,10 +327,15 @@ export default function AuthModal({
         return;
       }
 
+      // Không bao giờ ghi mật khẩu dạng chữ thường xuống localStorage.
+      // credential = null khi trang chạy trên http thuần (không có Web Crypto):
+      // khi đó bỏ luôn phần mật khẩu, tài khoản vẫn tạo được nhưng không đăng
+      // nhập offline được — vẫn hơn là để lộ mật khẩu.
+      const credential = await createCredential(password);
       const newUser = {
         id: `user-${Date.now()}`,
         email: email.trim(),
-        password: password,
+        ...(credential || {}),
         name: fullName.trim().toUpperCase(),
         phone: phone.trim(),
         industry: industry,

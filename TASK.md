@@ -28,6 +28,7 @@ Các mục dưới đây bị chặn vì thiếu thông tin, không phải vì t
 
 Chi tiết đầy đủ ở [CHANGELOG.md](CHANGELOG.md).
 
+- **Bỏ lưu mật khẩu dạng chữ thường trong localStorage** — mục ưu tiên cao nhất của [TODO.md](TODO.md#bảo-mật). Dùng SHA-256 + muối, bản ghi cũ tự nâng cấp khi đăng nhập.
 - Chốt quy trình làm việc **Context tối thiểu**, ghi vào [AI_MEMORY.md](AI_MEMORY.md#nguyên-tắc-context-tối-thiểu).
 - Lập bộ tài liệu AI Workspace: 14 tệp Markdown ở thư mục gốc.
 - Bổ sung 16 bài học chuyên sâu và 22 câu hỏi, nâng lên 36 bài / 55 câu.

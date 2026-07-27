@@ -57,6 +57,7 @@ TODO — chưa có quy ước đánh phiên bản; cân nhắc gắn thẻ Git k
 
 ### Bảo mật
 
+- **Bỏ lưu mật khẩu dạng chữ thường trong localStorage.** Nhánh đăng nhập dự phòng (`dmm_users_db`) trước đây ghi thẳng mật khẩu học viên xuống đĩa. Nay dùng SHA-256 kèm muối ngẫu nhiên riêng từng bản ghi (`utils/localCredentials.js`). Bản ghi cũ vẫn đăng nhập được và **tự nâng cấp sang muối + băm ngay lần đăng nhập kế tiếp**, trường `password` bị xoá khỏi bản ghi. Trên trang chạy http thuần (không có Web Crypto), tài khoản mới sẽ không lưu phần mật khẩu — mất khả năng đăng nhập offline nhưng không để lộ mật khẩu.
 - Thêm `.env` và `.env.*` vào `.gitignore`. Bắt buộc phải có trước khi bật hook tự động đẩy mã, vì script dùng `git add -A` nên tệp `.env` chứa khoá thật sẽ bị đẩy thẳng lên kho công khai.
 
 ---

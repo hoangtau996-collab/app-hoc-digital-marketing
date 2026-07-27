@@ -10,8 +10,8 @@ Mỗi mục đều xuất phát từ quan sát thực tế trên mã nguồn, kh
 
 Mức ưu tiên cao nhất.
 
-- [ ] **Mật khẩu lưu dạng chữ thường trong localStorage.** Nhánh dự phòng offline lưu cả mật khẩu vào `dmm_users_db`. Cần bỏ hẳn việc lưu mật khẩu ở phía client, hoặc bỏ luôn nhánh dự phòng này.
-- [ ] **Tài khoản quản trị nằm cứng trong mã.** `admin@pmarcom.edu.vn` với mật khẩu `admin` viết thẳng trong `AuthModal.jsx`. Cần chuyển sang tài khoản Firebase Auth thật kèm custom claim.
+- [x] ~~**Mật khẩu lưu dạng chữ thường trong localStorage.**~~ Đã xử lý bằng SHA-256 + muối, kèm nâng cấp bản ghi cũ. Xem [CHANGELOG.md](CHANGELOG.md).
+- [ ] **Tài khoản quản trị nằm cứng trong mã.** `admin@pmarcom.edu.vn` với mật khẩu `admin` viết thẳng trong `AuthModal.jsx`. Băm khi lưu xuống localStorage đã xử lý, nhưng **mật khẩu vẫn đọc được trong mã nguồn**. Cần chuyển sang tài khoản Firebase Auth thật kèm custom claim.
 - [ ] **Đưa Firestore Security Rules vào kho mã.** Ứng dụng không có backend nên rules là lớp bảo vệ duy nhất. Hiện chưa có `firestore.rules`. Xem [DATABASE.md](DATABASE.md#bảo-mật).
 - [ ] **Rà soát quyền ghi `analytics`.** Bộ đếm truy cập ghi trực tiếp từ trình duyệt bằng `increment(1)`; cần rules chặn ghi tuỳ tiện.
 
