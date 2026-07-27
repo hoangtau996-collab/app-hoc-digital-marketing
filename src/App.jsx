@@ -29,6 +29,14 @@ import {
   recordStudentAccountToCloud
 } from './firebase';
 
+import StudyReminderModal from './components/StudyReminderModal';
+import {
+  markStudyActivity,
+  shouldRemind,
+  getIdleDays,
+  snoozeReminder,
+} from './utils/studyReminder';
+
 import { COURSE_MODULES } from './data/courseData';
 import { INITIAL_NEWS_ITEMS } from './data/newsData';
 import { TRANSLATIONS } from './data/translations';
@@ -41,6 +49,8 @@ export default function App() {
   const [isAuthOpen, setIsAuthOpen] = useState(false);
   const [isProfileOpen, setIsProfileOpen] = useState(false);
   const [isAdminOpen, setIsAdminOpen] = useState(false);
+  const [isReminderOpen, setIsReminderOpen] = useState(false);
+  const [reminderIdleDays, setReminderIdleDays] = useState(0);
 
   // Bilingual Language State: 'vi' | 'en'
   const [lang, setLang] = useState(() => {
@@ -244,6 +254,29 @@ export default function App() {
     }
   });
 
+  // Kiểm tra lơ là: chạy sau khi đã biết học viên là ai và tiến độ tới đâu.
+  // Hoãn 1,2 giây để lời nhắc không đè lên lúc trang vừa tải xong.
+  useEffect(() => {
+    if (!currentUser) {
+      setIsReminderOpen(false);
+      return;
+    }
+    const timer = setTimeout(() => {
+      const due = shouldRemind({
+        hasUser: true,
+        completedCount: completedModules.length,
+        totalModules: COURSE_MODULES.length,
+      });
+      if (due) {
+        setReminderIdleDays(getIdleDays() ?? 0);
+        setIsReminderOpen(true);
+      }
+    }, 1200);
+    return () => clearTimeout(timer);
+    // Chỉ chạy khi đổi người dùng, không chạy lại mỗi lần tiến độ thay đổi
+    // để tránh popup bật lên ngay giữa lúc học viên đang làm bài.
+  }, [currentUser]);
+
   // News list state
   const [newsFeed, setNewsFeed] = useState(() => {
     try {
@@ -400,6 +433,9 @@ export default function App() {
       setIsAuthOpen(true);
       return;
     }
+    // Mở một chuyên đề được tính là có học -> đặt lại đồng hồ nhắc.
+    markStudyActivity();
+    setIsReminderOpen(false);
     setSelectedModuleId(id);
   };
 
@@ -561,6 +597,26 @@ export default function App() {
       </main>
 
       {/* Certificate Modal */}
+      {/* Nhắc quay lại học khi lơ là quá 2 ngày */}
+      <StudyReminderModal
+        isOpen={isReminderOpen}
+        idleDays={reminderIdleDays}
+        studentName={currentUser?.name || ''}
+        completedCount={completedModules.length}
+        totalModules={COURSE_MODULES.length}
+        nextModule={COURSE_MODULES.find((m) => !completedModules.includes(m.id)) || null}
+        onClose={() => setIsReminderOpen(false)}
+        onSnooze={() => {
+          snoozeReminder();
+          setIsReminderOpen(false);
+        }}
+        onContinue={() => {
+          const next = COURSE_MODULES.find((m) => !completedModules.includes(m.id));
+          setIsReminderOpen(false);
+          if (next) handleProtectedSelectModule(next.id);
+        }}
+      />
+
       <CertificateModal
         isOpen={isCertOpen}
         onClose={() => {

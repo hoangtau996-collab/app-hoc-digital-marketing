@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import LessonVisual from './LessonVisual';
+import LessonIllustration from './LessonIllustration';
 import { 
   BookOpen, 
   HelpCircle, 
@@ -213,6 +214,9 @@ export default function LessonViewer({
               </div>
             </div>
           </div>
+
+          {/* Ảnh minh hoạ khái quát cho cả chuyên đề */}
+          <LessonIllustration moduleId={module.id} />
 
           {/* Sections List */}
           <div className="space-y-6">
