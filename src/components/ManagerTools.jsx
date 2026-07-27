@@ -65,7 +65,7 @@ export default function ManagerTools() {
           </div>
 
           {/* Subtab Toggle */}
-          <div className="flex items-center bg-[#0d1713] p-1 rounded-xl border border-emerald-900/40 shrink-0">
+          <div className="flex items-center bg-[#18243d] p-1 rounded-xl border border-emerald-900/40 shrink-0">
             <button
               onClick={() => setActiveTool('budget')}
               className={`px-3 py-2 rounded-lg text-xs font-bold transition ${
@@ -114,7 +114,7 @@ export default function ManagerTools() {
                 value={targetRevenue}
                 step={100000000}
                 onChange={(e) => setTargetRevenue(Number(e.target.value))}
-                className="w-full bg-[#0b1411] border border-emerald-900/60 rounded-xl px-4 py-2.5 text-sm font-bold text-emerald-400 focus:outline-none focus:border-emerald-500"
+                className="w-full bg-[#152037] border border-emerald-900/60 rounded-xl px-4 py-2.5 text-sm font-bold text-emerald-400 focus:outline-none focus:border-emerald-500"
               />
               <p className="text-[11px] text-slate-400">
                 = {formatCurrency(targetRevenue)}
@@ -129,7 +129,7 @@ export default function ManagerTools() {
               <select
                 value={selectedIndustry}
                 onChange={(e) => setSelectedIndustry(e.target.value)}
-                className="w-full bg-[#0b1411] border border-emerald-900/60 rounded-xl px-4 py-2.5 text-xs text-slate-200 focus:outline-none focus:border-emerald-500"
+                className="w-full bg-[#152037] border border-emerald-900/60 rounded-xl px-4 py-2.5 text-xs text-slate-200 focus:outline-none focus:border-emerald-500"
               >
                 {Object.keys(INDUSTRY_BENCHMARKS).map(key => (
                   <option key={key} value={key}>
@@ -158,25 +158,25 @@ export default function ManagerTools() {
 
             {/* Breakdown Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="p-4 rounded-xl bg-[#0b1411] border border-emerald-900/40">
+              <div className="p-4 rounded-xl bg-[#152037] border border-emerald-900/40">
                 <div className="text-xs text-slate-400">Paid Ads (Meta, TikTok, Google)</div>
                 <div className="text-lg font-bold text-emerald-400 mt-1">{formatCurrency(adsBudget)}</div>
                 <div className="text-[11px] text-slate-500 mt-1">{(bench.adsRatio * 100)}% tổng ngân sách</div>
               </div>
 
-              <div className="p-4 rounded-xl bg-[#0b1411] border border-emerald-900/40">
+              <div className="p-4 rounded-xl bg-[#152037] border border-emerald-900/40">
                 <div className="text-xs text-slate-400">Sản xuất Content & Video Creative</div>
                 <div className="text-lg font-bold text-emerald-400 mt-1">{formatCurrency(contentBudget)}</div>
                 <div className="text-[11px] text-slate-500 mt-1">{(bench.contentRatio * 100)}% tổng ngân sách</div>
               </div>
 
-              <div className="p-4 rounded-xl bg-[#0b1411] border border-emerald-900/40">
+              <div className="p-4 rounded-xl bg-[#152037] border border-emerald-900/40">
                 <div className="text-xs text-slate-400">Brand Building & Booking KOL/KOC</div>
                 <div className="text-lg font-bold text-amber-400 mt-1">{formatCurrency(brandingBudget)}</div>
                 <div className="text-[11px] text-slate-500 mt-1">{(bench.brandingRatio * 100)}% tổng ngân sách</div>
               </div>
 
-              <div className="p-4 rounded-xl bg-[#0b1411] border border-emerald-900/40">
+              <div className="p-4 rounded-xl bg-[#152037] border border-emerald-900/40">
                 <div className="text-xs text-slate-400">Phần mềm MarTech (CRM, Automation, Tool)</div>
                 <div className="text-lg font-bold text-emerald-400 mt-1">{formatCurrency(techBudget)}</div>
                 <div className="text-[11px] text-slate-500 mt-1">{(bench.techRatio * 100)}% tổng ngân sách</div>
@@ -218,7 +218,7 @@ export default function ManagerTools() {
                   value={productPrice}
                   step={50000}
                   onChange={(e) => setProductPrice(Number(e.target.value))}
-                  className="w-full bg-[#0b1411] border border-emerald-900/60 rounded-xl px-4 py-2.5 text-sm font-bold text-emerald-400 focus:outline-none"
+                  className="w-full bg-[#152037] border border-emerald-900/60 rounded-xl px-4 py-2.5 text-sm font-bold text-emerald-400 focus:outline-none"
                 />
               </div>
 
@@ -232,12 +232,12 @@ export default function ManagerTools() {
                   max={100}
                   min={1}
                   onChange={(e) => setProfitMargin(Number(e.target.value))}
-                  className="w-full bg-[#0b1411] border border-emerald-900/60 rounded-xl px-4 py-2.5 text-sm font-bold text-emerald-400 focus:outline-none"
+                  className="w-full bg-[#152037] border border-emerald-900/60 rounded-xl px-4 py-2.5 text-sm font-bold text-emerald-400 focus:outline-none"
                 />
               </div>
             </div>
 
-            <div className="p-6 rounded-2xl bg-[#0b1411] border border-emerald-900/60 space-y-4">
+            <div className="p-6 rounded-2xl bg-[#152037] border border-emerald-900/60 space-y-4">
               <div>
                 <span className="text-xs text-slate-400">Chi phí Chi trả Quảng cáo Tối đa / Đơn (Max CPA):</span>
                 <div className="text-2xl font-black text-rose-400 mt-1">{formatCurrency(maxCPA)}</div>
@@ -271,7 +271,7 @@ export default function ManagerTools() {
               value={budgetLevel}
               step={20000000}
               onChange={(e) => setBudgetLevel(Number(e.target.value))}
-              className="w-full max-w-md bg-[#0b1411] border border-emerald-900/60 rounded-xl px-4 py-2.5 text-sm font-bold text-emerald-400 focus:outline-none"
+              className="w-full max-w-md bg-[#152037] border border-emerald-900/60 rounded-xl px-4 py-2.5 text-sm font-bold text-emerald-400 focus:outline-none"
             />
           </div>
 
@@ -282,7 +282,7 @@ export default function ManagerTools() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {STAFF_ROLES.slice(0, recommendedStaffCount + 1).map(role => (
-                <div key={role.id} className="p-4 rounded-xl bg-[#0b1411] border border-emerald-900/40 flex items-center justify-between">
+                <div key={role.id} className="p-4 rounded-xl bg-[#152037] border border-emerald-900/40 flex items-center justify-between">
                   <div>
                     <h5 className="text-xs font-bold text-white">{role.title}</h5>
                     <p className="text-[11px] text-slate-400">{role.desc}</p>

@@ -128,7 +128,7 @@ export default function QuizComponent({
         <div className="flex items-center gap-3">
           {/* Answer Progress Tracker */}
           {!submitted && (
-            <div className="flex items-center gap-2 bg-[#0a1511] px-3 py-1.5 rounded-xl border border-emerald-900/60 text-xs text-slate-300">
+            <div className="flex items-center gap-2 bg-[#152038] px-3 py-1.5 rounded-xl border border-emerald-900/60 text-xs text-slate-300">
               <span>Đã chọn:</span>
               <span className={`font-bold ${isAllAnswered ? 'text-emerald-400' : 'text-amber-400'}`}>
                 {answeredCount}/{totalQuestions}
@@ -167,7 +167,7 @@ export default function QuizComponent({
               className={`p-5 rounded-xl transition ${
                 isQuestionWarning 
                   ? 'bg-amber-950/20 border-2 border-amber-500/80 shadow-lg shadow-amber-950/50' 
-                  : 'bg-[#0b1411]/90 border border-emerald-900/40'
+                  : 'bg-[#152037]/90 border border-emerald-900/40'
               } space-y-4`}
             >
               
@@ -197,7 +197,7 @@ export default function QuizComponent({
               {/* Options */}
               <div className="space-y-2 pl-9">
                 {q.options.map((opt, optIndex) => {
-                  let optStyle = "bg-[#0d1814] border-emerald-950/60 text-slate-300 hover:border-emerald-700/50";
+                  let optStyle = "bg-[#18243e] border-emerald-950/60 text-slate-300 hover:border-emerald-700/50";
                   
                   if (selected === optIndex) {
                     optStyle = "bg-emerald-950/80 border-emerald-500 text-white font-medium shadow-sm";

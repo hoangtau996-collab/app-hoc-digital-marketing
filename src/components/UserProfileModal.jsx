@@ -268,13 +268,13 @@ export default function UserProfileModal({
 
         {/* Editable Profile Form */}
         {isEditing && (
-          <form onSubmit={handleSaveProfile} className="p-4 rounded-2xl bg-[#091611] border border-amber-500/40 space-y-3.5">
+          <form onSubmit={handleSaveProfile} className="p-4 rounded-2xl bg-[#131e34] border border-amber-500/40 space-y-3.5">
             <h4 className="text-xs font-bold text-amber-300 uppercase tracking-wider flex items-center gap-1.5 border-b border-emerald-900/60 pb-2">
               <User className="w-4 h-4 text-amber-400" /> Cập Nhật Thông Tin Cá Nhân & Ảnh Đại Diện
             </h4>
 
             {/* Avatar Upload Section */}
-            <div className="p-3 rounded-xl bg-[#07110d] border border-emerald-900/60 space-y-2">
+            <div className="p-3 rounded-xl bg-[#0f1728] border border-emerald-900/60 space-y-2">
               <label className="text-xs font-bold text-slate-200 flex items-center gap-1.5">
                 <Upload className="w-3.5 h-3.5 text-amber-400" /> Tải Ảnh Đại Diện Cá Nhân:
               </label>
@@ -319,7 +319,7 @@ export default function UserProfileModal({
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="Ví dụ: ĐẶNG THỊ CẨM BÌNH"
-                className="w-full bg-[#08120d] border border-emerald-900/80 rounded-xl px-3 py-2 text-xs text-white uppercase font-bold focus:outline-none focus:border-amber-400"
+                className="w-full bg-[#111a2e] border border-emerald-900/80 rounded-xl px-3 py-2 text-xs text-white uppercase font-bold focus:outline-none focus:border-amber-400"
                 required
               />
             </div>
@@ -332,7 +332,7 @@ export default function UserProfileModal({
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
                   placeholder="0901234567"
-                  className="w-full bg-[#08120d] border border-emerald-900/80 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-amber-400"
+                  className="w-full bg-[#111a2e] border border-emerald-900/80 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-amber-400"
                 />
               </div>
 
@@ -343,7 +343,7 @@ export default function UserProfileModal({
                   value={industry}
                   onChange={(e) => setIndustry(e.target.value)}
                   placeholder="Bất Động Sản / Spa / E-Commerce..."
-                  className="w-full bg-[#08120d] border border-emerald-900/80 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-amber-400"
+                  className="w-full bg-[#111a2e] border border-emerald-900/80 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-amber-400"
                 />
               </div>
             </div>
@@ -404,7 +404,7 @@ export default function UserProfileModal({
               className={`p-2.5 rounded-xl border text-xs font-bold flex items-center justify-center gap-1.5 transition cursor-pointer ${
                 theme === 'light'
                   ? 'bg-emerald-600 text-white border-emerald-400 shadow-md'
-                  : 'bg-[#08120d] text-slate-300 border-emerald-900/60 hover:border-emerald-500'
+                  : 'bg-[#111a2e] text-slate-300 border-emerald-900/60 hover:border-emerald-500'
               }`}
             >
               <Sun className="w-4 h-4 text-amber-400" />
@@ -416,7 +416,7 @@ export default function UserProfileModal({
               className={`p-2.5 rounded-xl border text-xs font-bold flex items-center justify-center gap-1.5 transition cursor-pointer ${
                 theme === 'dark'
                   ? 'bg-emerald-600 text-white border-emerald-400 shadow-md'
-                  : 'bg-[#08120d] text-slate-300 border-emerald-900/60 hover:border-emerald-500'
+                  : 'bg-[#111a2e] text-slate-300 border-emerald-900/60 hover:border-emerald-500'
               }`}
             >
               <Moon className="w-4 h-4 text-emerald-400" />
@@ -428,7 +428,7 @@ export default function UserProfileModal({
               className={`p-2.5 rounded-xl border text-xs font-bold flex items-center justify-center gap-1.5 transition cursor-pointer ${
                 theme === 'system'
                   ? 'bg-emerald-600 text-white border-emerald-400 shadow-md'
-                  : 'bg-[#08120d] text-slate-300 border-emerald-900/60 hover:border-emerald-500'
+                  : 'bg-[#111a2e] text-slate-300 border-emerald-900/60 hover:border-emerald-500'
               }`}
             >
               <Monitor className="w-4 h-4 text-teal-400" />
@@ -438,7 +438,7 @@ export default function UserProfileModal({
         </div>
 
         {/* Learning Progress Overview */}
-        <div className="p-4 rounded-2xl bg-[#08120d] border border-emerald-900/60 space-y-3">
+        <div className="p-4 rounded-2xl bg-[#111a2e] border border-emerald-900/60 space-y-3">
           <div className="flex items-center justify-between text-xs font-bold">
             <span className="text-slate-300 flex items-center gap-1.5">
               <Award className="w-4 h-4 text-amber-400" /> Tiến Độ Khóa Học:
@@ -483,14 +483,14 @@ export default function UserProfileModal({
             {/* Export Backup JSON Button */}
             <button
               onClick={handleExportBackup}
-              className="p-3 rounded-xl bg-[#0a1511] border border-emerald-900/60 hover:border-emerald-500 text-slate-200 text-xs font-semibold flex flex-col items-center justify-center gap-1.5 transition cursor-pointer group"
+              className="p-3 rounded-xl bg-[#152038] border border-emerald-900/60 hover:border-emerald-500 text-slate-200 text-xs font-semibold flex flex-col items-center justify-center gap-1.5 transition cursor-pointer group"
             >
               <Download className="w-4 h-4 text-emerald-400 group-hover:scale-110 transition" />
               <span>Xuất File Sao Lưu (.json)</span>
             </button>
 
             {/* Import Backup JSON Button */}
-            <label className="p-3 rounded-xl bg-[#0a1511] border border-emerald-900/60 hover:border-emerald-500 text-slate-200 text-xs font-semibold flex flex-col items-center justify-center gap-1.5 transition cursor-pointer group">
+            <label className="p-3 rounded-xl bg-[#152038] border border-emerald-900/60 hover:border-emerald-500 text-slate-200 text-xs font-semibold flex flex-col items-center justify-center gap-1.5 transition cursor-pointer group">
               <Upload className="w-4 h-4 text-amber-400 group-hover:scale-110 transition" />
               <span>Khôi Phục Dữ Liệu</span>
               <input 
@@ -513,7 +513,7 @@ export default function UserProfileModal({
                 placeholder="Đổi mật khẩu mới..."
                 value={newPassword}
                 onChange={(e) => setNewPassword(e.target.value)}
-                className="w-full bg-[#08120d] border border-emerald-900/60 focus:border-emerald-400 rounded-xl pl-8 pr-3 py-2 text-xs text-white placeholder-slate-500 focus:outline-none"
+                className="w-full bg-[#111a2e] border border-emerald-900/60 focus:border-emerald-400 rounded-xl pl-8 pr-3 py-2 text-xs text-white placeholder-slate-500 focus:outline-none"
               />
             </div>
 

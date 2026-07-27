@@ -155,7 +155,7 @@ export default function LessonViewer({
         </div>
 
         {/* Subtab Toggle */}
-        <div className="flex items-center bg-[#0d1713] p-1 rounded-xl border border-emerald-900/40 shrink-0 overflow-x-auto no-scrollbar">
+        <div className="flex items-center bg-[#18243d] p-1 rounded-xl border border-emerald-900/40 shrink-0 overflow-x-auto no-scrollbar">
           <button
             onClick={() => setActiveSubTab('theory')}
             className={`flex items-center gap-1.5 px-3 py-1.5 md:px-4 md:py-2 rounded-lg text-xs font-bold transition shrink-0 ${
@@ -203,7 +203,7 @@ export default function LessonViewer({
         <div className="space-y-8">
           
           {/* Module Banner Description */}
-          <div className="p-6 rounded-2xl bg-[#0c1813] border-2 border-emerald-500/50 shadow-xl">
+          <div className="p-6 rounded-2xl bg-[#16213a] border-2 border-emerald-500/50 shadow-xl">
             <div className="flex items-start gap-4">
               <div className="w-12 h-12 rounded-2xl bg-emerald-500/20 border border-emerald-400/60 flex items-center justify-center text-emerald-300 font-black text-xl shrink-0 shadow-md">
                 {module.number}
@@ -237,7 +237,7 @@ export default function LessonViewer({
                 <LessonVisual sectionId={sec.id} />
 
                 {sec.takeaway && (
-                  <div className="mt-5 p-4 sm:p-5 rounded-2xl bg-[#091a14] border-2 border-emerald-500/60 shadow-lg flex items-start gap-3.5">
+                  <div className="mt-5 p-4 sm:p-5 rounded-2xl bg-[#17233f] border-2 border-emerald-500/60 shadow-lg flex items-start gap-3.5">
                     <div className="p-2 rounded-xl bg-emerald-500/20 text-emerald-400 shrink-0 mt-0.5 border border-emerald-500/40">
                       <Sparkles className="w-5 h-5 text-emerald-400" />
                     </div>
@@ -291,14 +291,14 @@ export default function LessonViewer({
       <div className="flex items-center justify-between pt-4 border-t border-emerald-900/40">
         <button
           onClick={onPrevModule}
-          className="px-4 py-2 rounded-xl bg-[#0b1411] border border-emerald-900/50 hover:border-emerald-600 text-xs text-slate-300 font-semibold flex items-center gap-2 transition"
+          className="px-4 py-2 rounded-xl bg-[#152037] border border-emerald-900/50 hover:border-emerald-600 text-xs text-slate-300 font-semibold flex items-center gap-2 transition"
         >
           <ArrowLeft className="w-4 h-4 text-emerald-400" /> Chuyên đề Trước
         </button>
 
         <button
           onClick={onNextModule}
-          className="px-4 py-2 rounded-xl bg-[#0b1411] border border-emerald-900/50 hover:border-emerald-600 text-xs text-slate-300 font-semibold flex items-center gap-2 transition"
+          className="px-4 py-2 rounded-xl bg-[#152037] border border-emerald-900/50 hover:border-emerald-600 text-xs text-slate-300 font-semibold flex items-center gap-2 transition"
         >
           Chuyên đề Tiếp Theo <ArrowRight className="w-4 h-4 text-emerald-400" />
         </button>

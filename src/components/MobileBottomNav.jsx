@@ -12,7 +12,7 @@ export default function MobileBottomNav({
   onOpenProfileModal
 }) {
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-40 block lg:hidden glass-panel border-t border-emerald-900/60 p-1 px-2 bg-[#070d0a]/95 backdrop-blur-lg">
+    <div className="fixed bottom-0 left-0 right-0 z-40 block lg:hidden glass-panel border-t border-emerald-900/60 p-1 px-2 bg-[#0e1526]/95 backdrop-blur-lg">
       <div className="flex items-center justify-around">
         
         {/* Tab 1: Course */}

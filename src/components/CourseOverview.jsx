@@ -167,7 +167,7 @@ export default function CourseOverview({
             className={`px-4 py-2 rounded-xl text-xs font-bold transition shrink-0 ${
               partFilter === 'all'
                 ? 'bg-emerald-500 text-slate-950 shadow-lg shadow-emerald-950/50'
-                : 'bg-[#0d1713] text-slate-400 hover:text-white border border-emerald-900/40'
+                : 'bg-[#18243d] text-slate-400 hover:text-white border border-emerald-900/40'
             }`}
           >
             Tất cả 11 Chuyên đề
@@ -177,7 +177,7 @@ export default function CourseOverview({
             className={`px-4 py-2 rounded-xl text-xs font-bold transition shrink-0 ${
               partFilter === 'part1'
                 ? 'bg-emerald-500 text-slate-950 shadow-lg shadow-emerald-950/50'
-                : 'bg-[#0d1713] text-slate-400 hover:text-white border border-emerald-900/40'
+                : 'bg-[#18243d] text-slate-400 hover:text-white border border-emerald-900/40'
             }`}
           >
             Nội dung đào tạo (1/3)
@@ -187,7 +187,7 @@ export default function CourseOverview({
             className={`px-4 py-2 rounded-xl text-xs font-bold transition shrink-0 ${
               partFilter === 'part2'
                 ? 'bg-emerald-500 text-slate-950 shadow-lg shadow-emerald-950/50'
-                : 'bg-[#0d1713] text-slate-400 hover:text-white border border-emerald-900/40'
+                : 'bg-[#18243d] text-slate-400 hover:text-white border border-emerald-900/40'
             }`}
           >
             Nội dung đào tạo (2/3)
@@ -197,7 +197,7 @@ export default function CourseOverview({
             className={`px-4 py-2 rounded-xl text-xs font-bold transition shrink-0 ${
               partFilter === 'part3'
                 ? 'bg-emerald-500 text-slate-950 shadow-lg shadow-emerald-950/50'
-                : 'bg-[#0d1713] text-slate-400 hover:text-white border border-emerald-900/40'
+                : 'bg-[#18243d] text-slate-400 hover:text-white border border-emerald-900/40'
             }`}
           >
             Nội dung đào tạo (3/3)

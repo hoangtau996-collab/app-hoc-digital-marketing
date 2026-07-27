@@ -77,7 +77,7 @@ export default function LiveNewsFeed({ newsList, onAddNewNews }) {
             className={`px-4 py-2 rounded-xl text-xs font-bold transition shrink-0 ${
               selectedCategory === cat
                 ? 'bg-emerald-500 text-slate-950 shadow-md'
-                : 'bg-[#0d1713] text-slate-400 hover:text-white border border-emerald-900/40'
+                : 'bg-[#18243d] text-slate-400 hover:text-white border border-emerald-900/40'
             }`}
           >
             {cat === 'All' ? 'Tất cả nền tảng' : cat}
@@ -124,7 +124,7 @@ export default function LiveNewsFeed({ newsList, onAddNewNews }) {
                   className="w-full h-full object-cover group-hover:scale-105 transition duration-500" 
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#070d0a] via-transparent to-transparent opacity-60" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0e1526] via-transparent to-transparent opacity-60" />
                 <span className="absolute bottom-2 right-2 text-[10px] font-bold px-2 py-0.5 rounded bg-slate-950/80 text-emerald-300 border border-emerald-800/60 backdrop-blur-sm">
                   📷 Ảnh gốc minh họa bài đăng
                 </span>
@@ -132,7 +132,7 @@ export default function LiveNewsFeed({ newsList, onAddNewNews }) {
             )}
 
             {/* Summary */}
-            <p className="text-xs md:text-sm text-slate-300 leading-relaxed bg-[#0b1411]/60 p-4 rounded-xl border border-emerald-950">
+            <p className="text-xs md:text-sm text-slate-300 leading-relaxed bg-[#152037]/60 p-4 rounded-xl border border-emerald-950">
               {news.summary}
             </p>
 

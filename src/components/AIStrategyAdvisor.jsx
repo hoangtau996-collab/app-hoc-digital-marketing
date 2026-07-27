@@ -52,7 +52,7 @@ export default function AIStrategyAdvisor() {
               type="text"
               value={industry}
               onChange={(e) => setIndustry(e.target.value)}
-              className="w-full bg-[#0b1411] border border-emerald-900/60 rounded-xl px-4 py-2 text-xs text-slate-200 focus:outline-none"
+              className="w-full bg-[#152037] border border-emerald-900/60 rounded-xl px-4 py-2 text-xs text-slate-200 focus:outline-none"
             />
           </div>
 
@@ -63,7 +63,7 @@ export default function AIStrategyAdvisor() {
               value={budget}
               step={10000000}
               onChange={(e) => setBudget(Number(e.target.value))}
-              className="w-full bg-[#0b1411] border border-emerald-900/60 rounded-xl px-4 py-2 text-xs text-emerald-400 font-bold focus:outline-none"
+              className="w-full bg-[#152037] border border-emerald-900/60 rounded-xl px-4 py-2 text-xs text-emerald-400 font-bold focus:outline-none"
             />
           </div>
 
@@ -73,7 +73,7 @@ export default function AIStrategyAdvisor() {
               rows={3}
               value={goal}
               onChange={(e) => setGoal(e.target.value)}
-              className="w-full bg-[#0b1411] border border-emerald-900/60 rounded-xl p-3 text-xs text-slate-200 focus:outline-none"
+              className="w-full bg-[#152037] border border-emerald-900/60 rounded-xl p-3 text-xs text-slate-200 focus:outline-none"
             />
           </div>
 
@@ -90,7 +90,7 @@ export default function AIStrategyAdvisor() {
         {/* AI Result */}
         <div>
           {analysisResult ? (
-            <div className="p-6 rounded-2xl bg-[#0b1411] border border-emerald-900/60 space-y-4">
+            <div className="p-6 rounded-2xl bg-[#152037] border border-emerald-900/60 space-y-4">
               <div className="flex items-center gap-2 text-emerald-400 font-bold text-xs uppercase tracking-wider">
                 <CheckCircle2 className="w-4 h-4" /> KẾT QUẢ CHẨN ĐOÁN CHIẾN LƯỢC AI
               </div>
@@ -117,7 +117,7 @@ export default function AIStrategyAdvisor() {
               </div>
             </div>
           ) : (
-            <div className="h-full min-h-[250px] p-6 rounded-2xl bg-[#0b1411]/50 border border-dashed border-emerald-900/40 flex flex-col items-center justify-center text-center text-slate-500 text-xs space-y-2">
+            <div className="h-full min-h-[250px] p-6 rounded-2xl bg-[#152037]/50 border border-dashed border-emerald-900/40 flex flex-col items-center justify-center text-center text-slate-500 text-xs space-y-2">
               <Bot className="w-10 h-10 text-emerald-900" />
               <p>Nhập thông số doanh nghiệp của bạn bên trái và bấm <strong className="text-slate-400">"Chẩn Đoán & Xuất Đề Xuất Chiến Lược"</strong> để nhận lời khuyên thực chiến từ Trợ lý Digital Manager.</p>
             </div>

@@ -46,7 +46,7 @@ export default function Header({
   const latestNews = Array.isArray(newsFeed) && newsFeed.length > 0 ? newsFeed[0] : null;
 
   return (
-    <header className="sticky top-0 z-40 bg-[#070d0a]/95 backdrop-blur-md border-b border-emerald-900/40 px-3 sm:px-6 py-2.5">
+    <header className="sticky top-0 z-40 bg-[#0e1526]/95 backdrop-blur-md border-b border-emerald-900/40 px-3 sm:px-6 py-2.5">
       <div className="max-w-7xl mx-auto flex items-center justify-between gap-2 sm:gap-4">
         
         {/* Logo & Course Title */}
@@ -85,11 +85,11 @@ export default function Header({
               placeholder="Tìm bài học..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-[#0d1713] border border-emerald-900/50 rounded-lg pl-9 pr-3 py-1.5 text-xs text-slate-200 placeholder-slate-500 focus:outline-none focus:border-emerald-500 transition"
+              className="w-full bg-[#18243d] border border-emerald-900/50 rounded-lg pl-9 pr-3 py-1.5 text-xs text-slate-200 placeholder-slate-500 focus:outline-none focus:border-emerald-500 transition"
             />
           </div>
 
-          <div className="flex items-center bg-[#0d1713] p-1 rounded-lg border border-emerald-900/40">
+          <div className="flex items-center bg-[#18243d] p-1 rounded-lg border border-emerald-900/40">
             <button
               onClick={() => setActiveTab('course')}
               className={`flex items-center gap-1 px-2 py-1 rounded-md text-xs font-medium transition ${
@@ -129,7 +129,7 @@ export default function Header({
             <button
               onClick={toggleLanguage}
               title={lang === 'vi' ? "Chuyển sang Tiếng Anh (English)" : "Switch to Vietnamese (Tiếng Việt)"}
-              className="px-2.5 py-1.5 rounded-lg bg-[#0d1713] border border-emerald-900/50 hover:border-emerald-500 text-slate-200 hover:text-white transition flex items-center gap-1.5 text-xs font-bold shrink-0 cursor-pointer shadow-sm"
+              className="px-2.5 py-1.5 rounded-lg bg-[#18243d] border border-emerald-900/50 hover:border-emerald-500 text-slate-200 hover:text-white transition flex items-center gap-1.5 text-xs font-bold shrink-0 cursor-pointer shadow-sm"
             >
               <span className="text-sm">{lang === 'vi' ? '🇻🇳' : '🇬🇧'}</span>
               <span className="uppercase text-[11px] font-extrabold text-emerald-400">{lang === 'vi' ? 'VI' : 'EN'}</span>
@@ -141,7 +141,7 @@ export default function Header({
             <button
               onClick={() => setShowThemeMenu(!showThemeMenu)}
               title="Tuỳ chỉnh Giao diện: Sáng / Tối / Mặc định hệ thống"
-              className="p-2 rounded-lg bg-[#0d1713] border border-emerald-900/50 hover:border-emerald-500 text-slate-300 hover:text-white transition flex items-center gap-1 cursor-pointer"
+              className="p-2 rounded-lg bg-[#18243d] border border-emerald-900/50 hover:border-emerald-500 text-slate-300 hover:text-white transition flex items-center gap-1 cursor-pointer"
             >
               {theme === 'light' && <Sun className="w-4 h-4 text-amber-400" />}
               {theme === 'dark' && <Moon className="w-4 h-4 text-emerald-400" />}
@@ -236,7 +236,7 @@ export default function Header({
           {/* Quick Theme toggle icon for mobile */}
           <button
             onClick={() => setTheme(theme === 'dark' ? 'light' : theme === 'light' ? 'system' : 'dark')}
-            className="w-8 h-8 rounded-lg bg-[#0d1713] border border-emerald-900/50 flex items-center justify-center text-slate-300"
+            className="w-8 h-8 rounded-lg bg-[#18243d] border border-emerald-900/50 flex items-center justify-center text-slate-300"
             title="Tuỳ chỉnh giao diện"
           >
             {theme === 'light' && <Sun className="w-4 h-4 text-amber-400" />}
@@ -263,7 +263,7 @@ export default function Header({
 
           <button
             onClick={() => setShowMobileSearch(!showMobileSearch)}
-            className="w-8 h-8 rounded-lg bg-[#0d1713] border border-emerald-900/50 flex items-center justify-center text-slate-300"
+            className="w-8 h-8 rounded-lg bg-[#18243d] border border-emerald-900/50 flex items-center justify-center text-slate-300"
           >
             {showMobileSearch ? <X className="w-4 h-4" /> : <Search className="w-4 h-4" />}
           </button>
@@ -289,7 +289,7 @@ export default function Header({
               placeholder="Tìm kiếm chuyên đề, bài học..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-[#0d1713] border border-emerald-500 rounded-lg pl-9 pr-3 py-2 text-xs text-slate-200 placeholder-slate-500 focus:outline-none"
+              className="w-full bg-[#18243d] border border-emerald-500 rounded-lg pl-9 pr-3 py-2 text-xs text-slate-200 placeholder-slate-500 focus:outline-none"
             />
           </div>
         </div>

@@ -54,7 +54,7 @@ export default function StudyReminderModal({
           </p>
         </div>
 
-        <div className="p-4 rounded-2xl bg-[#08120d] border border-emerald-900/60 space-y-2">
+        <div className="p-4 rounded-2xl bg-[#111a2e] border border-emerald-900/60 space-y-2">
           <div className="flex items-center justify-between text-xs">
             <span className="text-slate-400">Tiến độ của bạn</span>
             <span className="font-bold text-emerald-400">{completedCount}/{totalModules} chuyên đề ({percent}%)</span>

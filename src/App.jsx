@@ -74,9 +74,9 @@ export default function App() {
   // Theme State: 'light' | 'dark' | 'system'
   const [theme, setTheme] = useState(() => {
     try {
-      return localStorage.getItem('dmm_theme') || 'system';
+      return localStorage.getItem('dmm_theme') || 'light';
     } catch (e) {
-      return 'system';
+      return 'light';
     }
   });
 
@@ -459,7 +459,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#070d0a] text-slate-100 flex flex-col font-sans selection:bg-emerald-500 selection:text-slate-950 pb-16 lg:pb-0">
+    <div className="min-h-screen bg-[#0e1526] text-slate-100 flex flex-col font-sans selection:bg-emerald-500 selection:text-slate-950 pb-16 lg:pb-0">
       
       {/* Top Header Bar */}
       <Header
@@ -681,7 +681,7 @@ export default function App() {
       />
 
       {/* Footer */}
-      <footer className="border-t border-emerald-950 bg-[#050907] py-6 px-4 text-center text-xs text-slate-500">
+      <footer className="border-t border-emerald-950 bg-[#0a1020] py-6 px-4 text-center text-xs text-slate-500">
         <p>
           © 2026 HỌC VIỆN P MARCOM. Hệ thống Khóa Học Digital Thực Chiến.
         </p>

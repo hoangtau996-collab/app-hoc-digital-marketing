@@ -139,7 +139,7 @@ export default function DigitalGlossary() {
             placeholder="Nhập thuật ngữ cần tra cứu (VD: ROAS, CPM, CAC, SEO, Hook 3s...)"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full bg-[#08120d] border border-emerald-500/60 focus:border-emerald-400 rounded-2xl pl-12 pr-4 py-3 text-xs md:text-sm text-white placeholder-slate-500 focus:outline-none transition shadow-inner"
+            className="w-full bg-[#111a2e] border border-emerald-500/60 focus:border-emerald-400 rounded-2xl pl-12 pr-4 py-3 text-xs md:text-sm text-white placeholder-slate-500 focus:outline-none transition shadow-inner"
           />
           {searchQuery && (
             <button
@@ -161,7 +161,7 @@ export default function DigitalGlossary() {
             className={`px-4 py-2 rounded-xl text-xs font-bold shrink-0 transition ${
               selectedCategory === cat.id
                 ? 'bg-emerald-500 text-slate-950 shadow-lg shadow-emerald-950/50'
-                : 'bg-[#0d1713] text-slate-300 border border-emerald-900/50 hover:border-emerald-700/60'
+                : 'bg-[#18243d] text-slate-300 border border-emerald-900/50 hover:border-emerald-700/60'
             }`}
           >
             {cat.label}
@@ -177,7 +177,7 @@ export default function DigitalGlossary() {
           return (
             <div 
               key={item.id}
-              className="glass-panel rounded-2xl p-5 border border-emerald-900/50 hover:border-emerald-500/60 transition flex flex-col justify-between space-y-4 group bg-[#08120d]/90 shadow-xl"
+              className="glass-panel rounded-2xl p-5 border border-emerald-900/50 hover:border-emerald-500/60 transition flex flex-col justify-between space-y-4 group bg-[#111a2e]/90 shadow-xl"
             >
               <div className="space-y-3">
                 {/* Header */}
@@ -222,7 +222,7 @@ export default function DigitalGlossary() {
               {/* Action Button */}
               <button
                 onClick={() => setSelectedTerm(item)}
-                className="w-full py-2 rounded-xl bg-[#0d1c16] border border-emerald-900/60 hover:border-emerald-500 text-emerald-300 text-xs font-semibold flex items-center justify-center gap-1.5 transition cursor-pointer"
+                className="w-full py-2 rounded-xl bg-[#1a2742] border border-emerald-900/60 hover:border-emerald-500 text-emerald-300 text-xs font-semibold flex items-center justify-center gap-1.5 transition cursor-pointer"
               >
                 <span>Xem Giải Thích & Ví Dụ</span>
                 <Sparkles className="w-3.5 h-3.5 text-amber-400" />
@@ -283,7 +283,7 @@ export default function DigitalGlossary() {
               )}
 
               {selectedTerm.example && (
-                <div className="p-4 rounded-xl bg-[#08140f] border border-emerald-900/60 space-y-1">
+                <div className="p-4 rounded-xl bg-[#121c31] border border-emerald-900/60 space-y-1">
                   <h4 className="font-bold text-amber-400 flex items-center gap-1.5">
                     💡 VÍ DỤ MINH HỌA THỰC TẾ:
                   </h4>
@@ -337,7 +337,7 @@ export default function DigitalGlossary() {
             </div>
 
             {/* Metric Type Selector */}
-            <div className="grid grid-cols-4 gap-1.5 bg-[#0b1411] p-1 rounded-xl border border-emerald-900/50">
+            <div className="grid grid-cols-4 gap-1.5 bg-[#152037] p-1 rounded-xl border border-emerald-900/50">
               {['roas', 'cac', 'cpl', 'cpm'].map(type => (
                 <button
                   key={type}
@@ -359,7 +359,7 @@ export default function DigitalGlossary() {
                   type="number"
                   value={spendInput}
                   onChange={(e) => setSpendInput(Number(e.target.value))}
-                  className="w-full bg-[#08120d] border border-emerald-900/60 focus:border-emerald-400 rounded-xl px-3 py-2 text-white font-bold"
+                  className="w-full bg-[#111a2e] border border-emerald-900/60 focus:border-emerald-400 rounded-xl px-3 py-2 text-white font-bold"
                 />
               </div>
 
@@ -370,7 +370,7 @@ export default function DigitalGlossary() {
                     type="number"
                     value={revenueInput}
                     onChange={(e) => setRevenueInput(Number(e.target.value))}
-                    className="w-full bg-[#08120d] border border-emerald-900/60 focus:border-emerald-400 rounded-xl px-3 py-2 text-white font-bold"
+                    className="w-full bg-[#111a2e] border border-emerald-900/60 focus:border-emerald-400 rounded-xl px-3 py-2 text-white font-bold"
                   />
                 </div>
               )}
@@ -384,7 +384,7 @@ export default function DigitalGlossary() {
                     type="number"
                     value={conversionsInput}
                     onChange={(e) => setConversionsInput(Number(e.target.value))}
-                    className="w-full bg-[#08120d] border border-emerald-900/60 focus:border-emerald-400 rounded-xl px-3 py-2 text-white font-bold"
+                    className="w-full bg-[#111a2e] border border-emerald-900/60 focus:border-emerald-400 rounded-xl px-3 py-2 text-white font-bold"
                   />
                 </div>
               )}
@@ -396,7 +396,7 @@ export default function DigitalGlossary() {
                     type="number"
                     value={impressionsInput}
                     onChange={(e) => setImpressionsInput(Number(e.target.value))}
-                    className="w-full bg-[#08120d] border border-emerald-900/60 focus:border-emerald-400 rounded-xl px-3 py-2 text-white font-bold"
+                    className="w-full bg-[#111a2e] border border-emerald-900/60 focus:border-emerald-400 rounded-xl px-3 py-2 text-white font-bold"
                   />
                 </div>
               )}

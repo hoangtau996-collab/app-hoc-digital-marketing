@@ -1,4 +1,5 @@
 import React from 'react';
+import PipiChat from './PipiChat';
 import { 
   BookOpen, 
   Sparkles, 
@@ -92,7 +93,7 @@ export default function FeatureMenuBar({
   ];
 
   return (
-    <div className="w-full bg-[#0a1410]/95 backdrop-blur-lg border-b border-emerald-900/50 py-2.5 px-3 sm:px-6 sticky top-[60px] z-30 shadow-xl">
+    <div className="w-full bg-[#141f36]/95 backdrop-blur-lg border-b border-emerald-900/50 py-2.5 px-3 sm:px-6 sticky top-[60px] z-30 shadow-xl">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3">
         
         {/* Swappable Horizontal Feature Menu Row */}
@@ -179,17 +180,12 @@ export default function FeatureMenuBar({
           })}
         </div>
 
-        {/* Quick Search Input */}
-        <div className="relative w-full md:w-64 shrink-0">
-          <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
-          <input
-            type="text"
-            placeholder="Tra cứu bài học / Thuật ngữ..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full bg-[#070d0a] border border-emerald-900/60 focus:border-emerald-400 rounded-xl pl-9 pr-3 py-1.5 text-xs text-white placeholder-slate-400 focus:outline-none transition shadow-inner"
-          />
-        </div>
+        {/* Trợ lý Pipi - thay cho ô tìm kiếm cũ */}
+        <PipiChat
+          onSelectModule={onSelectModule}
+          setActiveTab={setActiveTab}
+          setSearchQuery={setSearchQuery}
+        />
 
       </div>
     </div>

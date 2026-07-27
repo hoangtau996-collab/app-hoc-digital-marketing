@@ -54,7 +54,7 @@ const tone = (name) => TONE[name] || TONE.emerald;
 
 function Shell({ title, badge, children }) {
   return (
-    <div className="my-5 p-4 sm:p-5 rounded-2xl bg-[#06140e] border border-emerald-500/40 shadow-xl space-y-4">
+    <div className="my-5 p-4 sm:p-5 rounded-2xl bg-[#101a2e] border border-emerald-500/40 shadow-xl space-y-4">
       <div className="flex items-start justify-between gap-3 border-b border-emerald-900/60 pb-2">
         <span className="text-xs font-black text-emerald-400 uppercase tracking-wider leading-snug">
           {title}

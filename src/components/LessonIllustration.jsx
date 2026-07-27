@@ -11,22 +11,22 @@ import React from 'react';
  * tranh khái niệm cho cả chuyên đề.
  */
 
-const G1 = '#10b981'; // ngọc lục bảo
-const G2 = '#34d399';
-const A1 = '#f59e0b'; // vàng đồng
-const A2 = '#fcd34d';
-const T1 = '#14b8a6';
-const INK = '#0b1f18';
+const G1 = '#4a7ce4'; // xanh Indigo đậm
+const G2 = '#6495ED'; // xanh Indigo
+const A1 = '#ea4c8b'; // hồng đậm
+const A2 = '#FFDAE9'; // hồng nhạt
+const T1 = '#3a85dd';
+const INK = '#17233d';
 
 /* Nền chung: khung bo góc, lưới mờ, quầng sáng */
 function Scene({ children, caption }) {
   return (
-    <figure className="my-4 rounded-2xl overflow-hidden border border-emerald-500/30 bg-[#06140e] shadow-xl">
+    <figure className="my-4 rounded-2xl overflow-hidden border border-emerald-500/30 bg-[#101a2e] shadow-xl">
       <svg viewBox="0 0 640 200" className="w-full h-auto block" role="img" aria-label={caption}>
         <defs>
           <linearGradient id="li-bg" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stopColor="#07160f" />
-            <stop offset="100%" stopColor="#0a2018" />
+            <stop offset="0%" stopColor="#111b2f" />
+            <stop offset="100%" stopColor="#182440" />
           </linearGradient>
           <linearGradient id="li-em" x1="0" y1="0" x2="1" y2="0">
             <stop offset="0%" stopColor={G1} />
@@ -46,7 +46,7 @@ function Scene({ children, caption }) {
         <circle cx="580" cy="180" r="80" fill={A1} opacity="0.06" />
         {children}
       </svg>
-      <figcaption className="px-4 py-2 text-[11px] text-slate-400 border-t border-emerald-900/50 bg-[#04100b]">
+      <figcaption className="px-4 py-2 text-[11px] text-slate-400 border-t border-emerald-900/50 bg-[#0a1120]">
         {caption}
       </figcaption>
     </figure>

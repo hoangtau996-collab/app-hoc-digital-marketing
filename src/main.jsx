@@ -20,9 +20,9 @@ class ErrorBoundary extends Component {
   render() {
     if (this.state.hasError) {
       return (
-        <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', backgroundColor: '#070d0a', color: 'white', padding: '24px', textAlign: 'center', fontFamily: 'sans-serif' }}>
-          <div style={{ padding: '24px', background: '#091a14', border: '1px solid #10b981', borderRadius: '20px', maxWidth: '540px', width: '100%' }}>
-            <h2 style={{ color: '#00E676', margin: '0 0 12px 0' }}>HỌC VIỆN P MARCOM</h2>
+        <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', backgroundColor: '#0e1526', color: 'white', padding: '24px', textAlign: 'center', fontFamily: 'sans-serif' }}>
+          <div style={{ padding: '24px', background: '#17233f', border: '1px solid #10b981', borderRadius: '20px', maxWidth: '540px', width: '100%' }}>
+            <h2 style={{ color: '#6495ED', margin: '0 0 12px 0' }}>HỌC VIỆN P MARCOM</h2>
             <p style={{ color: '#e2e8f0', fontSize: '14px', marginBottom: '16px' }}>Đã ghi nhận cập nhật phiên bản mới. Vui lòng nhấn nút bên dưới để tải lại dữ liệu.</p>
             <button 
               onClick={() => {
@@ -37,12 +37,12 @@ class ErrorBoundary extends Component {
                 } catch (e) {}
                 window.location.href = window.location.origin + '/?reset=' + Date.now();
               }}
-              style={{ padding: '12px 24px', background: '#00E676', color: '#070d0a', border: 'none', borderRadius: '12px', fontWeight: 'bold', cursor: 'pointer', fontSize: '14px', width: '100%' }}
+              style={{ padding: '12px 24px', background: '#6495ED', color: '#0e1526', border: 'none', borderRadius: '12px', fontWeight: 'bold', cursor: 'pointer', fontSize: '14px', width: '100%' }}
             >
               🔄 Xóa Bộ Nhớ Cũ & Tải Lại Trang
             </button>
             {this.state.error && (
-              <details style={{ marginTop: '16px', textAlign: 'left', background: '#050d09', padding: '12px', borderRadius: '10px', fontSize: '11px', color: '#fbbf24', overflowX: 'auto' }}>
+              <details style={{ marginTop: '16px', textAlign: 'left', background: '#0b1220', padding: '12px', borderRadius: '10px', fontSize: '11px', color: '#fbbf24', overflowX: 'auto' }}>
                 <summary style={{ cursor: 'pointer', fontWeight: 'bold' }}>Chi tiết kỹ thuật (Developer Info)</summary>
                 <pre style={{ marginTop: '8px', whitespace: 'pre-wrap' }}>{String(this.state.error?.stack || this.state.error)}</pre>
               </details>

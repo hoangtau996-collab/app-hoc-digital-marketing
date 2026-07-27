@@ -130,9 +130,9 @@ export default function CertificateModal({
               <meta name="viewport" content="width=device-width, initial-scale=1.0">
               <title>Bằng Chứng Nhận P MARCOM</title>
             </head>
-            <body style="margin:0;background:#070d0a;display:flex;flex-direction:column;align-items:center;padding:16px;font-family:sans-serif;color:white;text-align:center;">
-              <div style="background:#091a14;border:1px solid #10b981;padding:12px 20px;border-radius:12px;margin-bottom:16px;max-width:500px;">
-                <h3 style="color:#00E676;margin:0 0 4px 0;font-size:16px;">📱 Hướng Dẫn Lưu Bằng Trên iPad / iPhone:</h3>
+            <body style="margin:0;background:#0e1526;display:flex;flex-direction:column;align-items:center;padding:16px;font-family:sans-serif;color:white;text-align:center;">
+              <div style="background:#17233f;border:1px solid #10b981;padding:12px 20px;border-radius:12px;margin-bottom:16px;max-width:500px;">
+                <h3 style="color:#6495ED;margin:0 0 4px 0;font-size:16px;">📱 Hướng Dẫn Lưu Bằng Trên iPad / iPhone:</h3>
                 <p style="font-size:13px;color:#e2e8f0;margin:0;line-height:1.4;">Chạm & <strong>Nhấn Giữ vào bức ảnh bằng</strong> dưới đây ➔ Chọn <strong>"Thêm vào Ảnh" (Save Image)</strong> hoặc <strong>"Lưu vào Tệp"</strong>.</p>
               </div>
               <img src="${dataUrl}" style="max-width:100%;height:auto;border-radius:12px;box-shadow:0 12px 40px rgba(0,230,118,0.2);" />
@@ -281,7 +281,7 @@ export default function CertificateModal({
             </div>
 
             {/* Progress Tracker Bar */}
-            <div className="max-w-md mx-auto p-4 rounded-2xl bg-[#08120d] border border-emerald-900/60 space-y-2">
+            <div className="max-w-md mx-auto p-4 rounded-2xl bg-[#111a2e] border border-emerald-900/60 space-y-2">
               <div className="flex items-center justify-between text-xs">
                 <span className="text-slate-400">Tiến độ khóa học của bạn:</span>
                 <span className="font-bold text-amber-400">{passedCount}/{totalModules} Chuyên đề ({progressPercent}%)</span>
