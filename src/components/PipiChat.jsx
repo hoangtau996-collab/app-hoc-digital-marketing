@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { createPortal } from 'react-dom';
-import { Send, X, Sparkles } from 'lucide-react';
+import { Send, Minus, Sparkles } from 'lucide-react';
 import { askPipi, PIPI_SUGGESTIONS } from '../utils/pipiBrain';
 
 /**
@@ -183,9 +183,12 @@ export default function PipiChat({ onSelectModule, setActiveTab, setSearchQuery,
       {/* Đưa ra thẳng body: FeatureMenuBar có backdrop-blur, tạo containing
           block mới khiến position:fixed bám vào thanh menu thay vì viewport,
           làm lớp phủ chỉ che được một dải nhỏ. */}
+      {/* Khung chat neo ở góc phải, ngay trên nút nổi.
+          KHÔNG dùng lớp phủ toàn màn: người dùng vẫn đọc và thao tác được với
+          nội dung phía sau trong lúc hỏi Pipi. */}
       {!isOpen ? null : createPortal(
-        <div className="fixed inset-0 z-[90] flex items-end sm:items-center justify-center p-0 sm:p-4 bg-slate-950/70 backdrop-blur-sm">
-          <div className="w-full sm:max-w-lg h-[85vh] sm:h-[70vh] glass-panel sm:rounded-3xl rounded-t-3xl border border-emerald-500/40 shadow-2xl flex flex-col overflow-hidden">
+        <div className="fixed z-[88] right-4 lg:right-6 bottom-[152px] lg:bottom-[104px] w-[calc(100vw-2rem)] sm:w-[380px] max-w-[380px] h-[58vh] sm:h-[520px] max-h-[calc(100vh-190px)]">
+          <div className="pipi-pop w-full h-full glass-panel rounded-3xl border border-emerald-500/40 shadow-2xl flex flex-col overflow-hidden">
 
             {/* Đầu khung */}
             <div className="flex items-center gap-3 px-4 py-3 border-b border-emerald-900/50 shrink-0">
@@ -198,10 +201,10 @@ export default function PipiChat({ onSelectModule, setActiveTab, setSearchQuery,
               </div>
               <button
                 onClick={() => setIsOpen(false)}
-                className="ml-auto w-9 h-9 rounded-full bg-slate-900 border border-emerald-700/60 text-emerald-400 hover:bg-emerald-600 hover:text-white flex items-center justify-center transition cursor-pointer shrink-0"
-                title="Đóng"
+                className="ml-auto w-8 h-8 rounded-lg text-slate-400 hover:bg-emerald-950 hover:text-emerald-300 flex items-center justify-center transition cursor-pointer shrink-0"
+                title="Thu nhỏ"
               >
-                <X className="w-4 h-4" />
+                <Minus className="w-4 h-4" />
               </button>
             </div>
 
