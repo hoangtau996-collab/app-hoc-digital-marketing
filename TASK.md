@@ -2,7 +2,7 @@
 
 Việc **chưa bắt đầu** nằm ở [TODO.md](TODO.md). Việc **đã xong** nằm ở [CHANGELOG.md](CHANGELOG.md).
 
-Cập nhật: **2026-07-27**
+Cập nhật: **2026-07-28**
 
 ---
 
@@ -28,6 +28,7 @@ Các mục dưới đây bị chặn vì thiếu thông tin, không phải vì t
 
 Chi tiết đầy đủ ở [CHANGELOG.md](CHANGELOG.md).
 
+- **Bổ sung 100 thuật ngữ cho Từ Điển Digital Marketing** — nâng từ 21 lên 121 mục, thêm 3 nhóm danh mục (Dữ Liệu & Đo Lường, E-commerce & Sàn TMĐT, AI & Tự Động Hóa), mở rộng `ICON_MAP` lên 113 icon và thêm dòng đếm kết quả kèm nút xóa bộ lọc.
 - **Rà soát tương phản 11 màn sau khi đổi màu** — đo theo chuẩn WCAG, sửa lỗi gradient tối sót lại.
 - **Chặn học viên truy cập Bảng Quản Trị** — sửa lỗi leo thang đặc quyền, vá 3 tầng.
 - **Thêm trợ lý Pipi** — nút nổi góc phải, tra thuật ngữ / tìm bài / tính chỉ số.

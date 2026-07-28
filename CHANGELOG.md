@@ -8,6 +8,25 @@ TODO — chưa có quy ước đánh phiên bản; cân nhắc gắn thẻ Git k
 
 ---
 
+## [Chưa phát hành] — 2026-07-28
+
+### Thêm mới
+
+- **Bổ sung 100 thuật ngữ cho Từ Điển Digital Marketing** — nâng từ 21 lên **121 thuật ngữ** (`src/data/glossaryData.js`). Mỗi mục đủ 7 trường: định nghĩa chuyên sâu, công thức (nếu là chỉ số đo được), ví dụ có số liệu Việt Nam và lưu ý cốt lõi cho Trưởng phòng.
+  - Chỉ Số & KPIs: thêm 26 mục — CPC, ROI, MER, Break-even ROAS, LTV/CAC, Churn, Retention, RPR, ARPU, GMV, Frequency, Reach, Impressions, Engagement Rate, Bounce Rate, Session Duration, CPV, VTR, Hook Rate, CPI, SOV, Share of Search, NPS, CSAT, CAC Payback, Gross Margin.
+  - Chiến Lược & Mô Hình: thêm 20 mục — STP, 4P, 7P, SWOT, PESTLE, 5 Áp Lực Porter, AIDA, See-Think-Do-Care, Customer Journey Map, Phễu TOFU/MOFU/BOFU, Buyer Persona, USP, Positioning Statement, Omnichannel, O2O, Growth Hacking, AARRR, Product-Market Fit, OKR, Always-on.
+  - Kênh & Công Nghệ Số: thêm 18 mục — PPC, SEM, GDN, Performance Max, YouTube Ads, TikTok Ads, Zalo Ads/OA, Programmatic, Native Ads, Affiliate, KOL/KOC, Email Marketing, SMS Brandname/ZNS, ASO, Landing Page, Lookalike Audience, Quality Score, Backlink.
+  - Sáng Tạo & Truyền Thông: thêm 14 mục — CTA, PAS, FAB, Storytelling, Content Pillar, Content Calendar, Tone of Voice, Key Visual, TVC, Seeding, Newsjacking, Brand Guideline, Creative Fatigue, Thumbnail & Tiêu đề.
+- **Ba nhóm danh mục mới** trong bộ lọc: **Dữ Liệu & Đo Lường** (12 mục: GA4, GTM, Meta Pixel, CAPI, UTM, Attribution Model, MMM, Cohort Analysis, A/B Testing, First-party Data, CDP, CRM), **E-commerce & Sàn TMĐT** (6 mục: Quảng cáo sàn, Livestream Commerce, Flash Sale, Cart Abandonment, Tối ưu listing, Return Rate), **AI & Tự Động Hóa** (4 mục: Marketing Automation, AI Chatbot, Prompt Engineering, Predictive Analytics).
+- **Dòng đếm kết quả** phía trên lưới thẻ ("Hiển thị X / 121 thuật ngữ") kèm nút **Xóa bộ lọc** hiện khi đang tìm kiếm hoặc lọc danh mục (`DigitalGlossary.jsx`).
+
+### Thay đổi
+
+- **Mở rộng `ICON_MAP`** từ 20 lên 113 icon lucide-react để 121 thuật ngữ không dùng chung một biểu tượng mặc định. Hai icon trùng tên với biến toàn cục của JavaScript được nhập kèm bí danh: `Infinity as InfinityIcon`, `Image as ImageIcon`.
+- **Mô tả đầu trang từ điển** đọc số lượng trực tiếp từ `GLOSSARY_ITEMS.length` thay vì ghi cứng "25+", nên không lệch khi thêm thuật ngữ sau này.
+
+---
+
 ## [Chưa phát hành] — 2026-07-27
 
 ### Quy trình
