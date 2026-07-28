@@ -32,6 +32,28 @@ Bản build hiện phát cảnh báo: gói JavaScript chính vượt 500 kB sau 
 
 ## Biến môi trường
 
+**Project Firebase chính thức: `hr-project-b982a`** (chủ dự án xác nhận 2026-07-28).
+
+### Sự cố đã xảy ra — đọc trước khi khai báo lại
+
+Trong một thời gian dài, Vercel trỏ tới project cũ `pmarcomacademy` với **hai giá trị bị rụng ký tự đầu**:
+
+| Trường | Giá trị sai trên Vercel | Đúng ra |
+|---|---|---|
+| `apiKey` | `IzaSyDlHrCSBN…` (38 ký tự) | `AIzaSyDlHrCSBN…` — mọi khoá Firebase bắt đầu bằng `AIza`, dài 39 ký tự |
+| `appId` | `770143242528:web:…` | `1:770143242528:web:…` |
+
+Dấu vết của việc bôi đen thiếu khi copy từ Console. Khoá sai một ký tự thì Firebase từ chối **toàn bộ**, mã lỗi `auth/api-key-not-valid`.
+
+Điều khiến sự cố này sống sót lâu đến vậy: **mọi lệnh gọi Firebase đều có nhánh dự phòng localStorage và đều bọc trong `try/catch` rỗng**, nên ứng dụng hỏng mà vẫn trông như chạy bình thường. Học viên vẫn đăng ký được, admin vẫn mở được Bảng Quản Trị, danh sách vẫn cập nhật tức thì — nhưng tất cả chỉ nằm trong localStorage của **riêng trình duyệt đó**. Mỗi máy một cơ sở dữ liệu riêng, không máy nào thấy dữ liệu của máy nào.
+
+Vì vậy sau khi khai báo biến, **bắt buộc phải kiểm tra thật**: đăng ký một tài khoản trên máy A rồi mở Bảng Quản Trị trên máy B xem có thấy không. Thấy dữ liệu trên cùng một máy **không chứng minh được điều gì**.
+
+Cách kiểm tra nhanh định dạng trước khi dán:
+
+- `apiKey` phải dài đúng **39** ký tự và bắt đầu bằng `AIza`
+- `appId` phải bắt đầu bằng `1:` và chứa đúng `messagingSenderId` ở giữa
+
 `src/firebase.js` đọc 7 biến. Vite chỉ nạp biến có tiền tố `VITE_`.
 
 | Biến | Bắt buộc |
