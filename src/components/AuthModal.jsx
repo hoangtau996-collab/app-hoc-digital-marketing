@@ -371,8 +371,12 @@ export default function AuthModal({
         createdAt: new Date().toLocaleDateString('vi-VN')
       };
 
-      // Record complete student profile to Cloud Firestore & Storage
-      recordStudentAccountToCloud(studentUser);
+      // Record complete student profile to Cloud Firestore & Storage.
+      //
+      // CÓ await và CÓ kiểm tra kết quả: đây là lúc duy nhất biết chắc hồ sơ có
+      // lên được máy chủ hay không. Ghi hỏng mà vẫn báo "thành công" thì học
+      // viên tưởng đã có tài khoản, còn quản trị viên không bao giờ thấy họ.
+      const cloudResult = await recordStudentAccountToCloud(studentUser);
       saveUserProgressToCloud(fbUser.uid, {
         name: fullName.trim().toUpperCase(),
         phone: phone.trim(),
@@ -381,11 +385,19 @@ export default function AuthModal({
         createdAt: new Date().toISOString()
       });
 
-      setSuccessMsg('🎉 Đăng ký tài khoản học viên P MARCOM thành công! Bạn có thể bắt đầu học ngay.');
+      if (cloudResult && cloudResult.ok === false) {
+        setErrorMsg(
+          `Tài khoản đã tạo được nhưng hồ sơ CHƯA lưu lên hệ thống (${cloudResult.code || 'lỗi không rõ'}). ` +
+          `Bạn vẫn học được, nhưng Ban Quản Trị chưa thấy hồ sơ của bạn. Vui lòng báo lại để được hỗ trợ.`
+        );
+      } else {
+        setSuccessMsg('🎉 Đăng ký tài khoản học viên P MARCOM thành công! Bạn có thể bắt đầu học ngay.');
+      }
+
       setTimeout(() => {
         onLoginSuccess(studentUser);
         onClose();
-      }, 600);
+      }, cloudResult && cloudResult.ok === false ? 3500 : 600);
     } catch (firebaseErr) {
       console.warn("Firebase Register Error, falling back to local storage:", firebaseErr.message);
 
@@ -416,11 +428,21 @@ export default function AuthModal({
 
       try {
         localStorage.setItem('dmm_users_db', JSON.stringify([...users, newUser]));
-        // Sync fallback registration to Cloud Firestore as well
+        // Vẫn thử đẩy lên Cloud, nhưng gần như chắc chắn hỏng: tới nhánh này là
+        // Firebase Auth đã từ chối, nên không có phiên đăng nhập, mà Firestore
+        // Rules đòi phải đăng nhập mới ghi được hồ sơ.
         recordStudentAccountToCloud(newUser);
       } catch (e) {}
 
-      setSuccessMsg('🎉 Tạo tài khoản học viên P MARCOM thành công! Bạn có thể bắt đầu học ngay.');
+      // Nói thật với học viên. Tài khoản này CHỈ nằm trên máy họ: đổi máy là
+      // mất, và Ban Quản Trị không bao giờ thấy. Trước đây chỗ này báo "🎉 Tạo
+      // tài khoản thành công" y hệt nhánh online — đó là lý do có học viên đăng
+      // ký xong mà không xuất hiện trong Bảng Quản Trị, không ai biết vì sao.
+      setErrorMsg(
+        `Không kết nối được hệ thống (${describeAuthError(firebaseErr)}) ` +
+        `Tài khoản đã tạo TẠM trên thiết bị này để bạn học ngay, nhưng CHƯA đăng ký lên hệ thống ` +
+        `và Ban Quản Trị chưa thấy hồ sơ của bạn. Khi có mạng trở lại, vui lòng đăng ký lại.`
+      );
       setTimeout(() => {
         onLoginSuccess(newUser);
         onClose();

@@ -143,15 +143,22 @@ export async function recordStudentAccountToCloud(studentData) {
   } catch (e) {}
 
   // 3. Cloud Firestore Native Writes
+  //
+  // Trả về kết quả thay vì nuốt lỗi. Nơi gọi ở màn đăng ký PHẢI biết hồ sơ có
+  // lên được máy chủ không: trước đây ghi hỏng vẫn báo "Đăng ký thành công",
+  // học viên yên tâm bỏ đi còn hồ sơ chỉ nằm ở localStorage máy họ — quản trị
+  // viên không bao giờ thấy, và không ai biết là đã mất.
   try {
     await setDoc(doc(db, 'students', safeId), payload, { merge: true });
     await setDoc(doc(db, 'registrations', safeId), payload, { merge: true });
     if (studentData.id && studentData.id !== safeId) {
       await setDoc(doc(db, 'students', studentData.id), payload, { merge: true });
     }
-    console.log("🟢 Record Student to Cloud Firestore Success:", cleanEmail);
+    console.log("🟢 Đã ghi hồ sơ học viên lên Firestore:", cleanEmail);
+    return { ok: true };
   } catch (e) {
-    console.warn("Cloud Firestore setDoc fallback:", e);
+    console.warn("Không ghi được hồ sơ học viên lên Firestore:", e);
+    return { ok: false, code: e?.code || '', message: e?.message || String(e) };
   }
 }
 

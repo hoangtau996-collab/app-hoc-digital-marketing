@@ -59,12 +59,18 @@ service cloud.firestore {
     }
 
     // Chỉ quản trị viên đọc được hồ sơ người khác. Học viên đọc hồ sơ của mình.
-    // Cho phép đọc tài liệu KHÔNG tồn tại vì getUserProgressFromCloud() dò theo
-    // uid trong khi bản ghi lưu theo email — đọc chỗ trống không lộ gì cả.
+    //
+    // Vẫn cho đọc tài liệu KHÔNG tồn tại, vì getUserProgressFromCloud() dò theo
+    // uid trong khi bản ghi lưu theo email nên thường xuyên chạm vào chỗ trống.
+    // NHƯNG bắt buộc phải đăng nhập trước.
+    //
+    // Bản đầu tiên đặt `resource == null` ngoài điều kiện `signedIn()`, và thế
+    // là hở một máy dò: người lạ thử đọc students/<email_đã_chuẩn_hoá>, nhận
+    // 404 thì email đó chưa đăng ký, nhận 403 thì đã đăng ký. Đủ để rà xem một
+    // người có học ở đây hay không mà không cần tài khoản nào.
     function canGetProfile() {
       return isAdmin()
-        || resource == null
-        || (signedIn() && resource.data.email == myEmail());
+        || (signedIn() && (resource == null || resource.data.email == myEmail()));
     }
 
     // Học viên chỉ tạo được hồ sơ mang đúng email của mình, và KHÔNG được kèm
