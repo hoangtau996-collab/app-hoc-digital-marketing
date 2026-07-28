@@ -7,6 +7,9 @@ import {
   db,
   doc,
   deleteDoc,
+  TRAFFIC_BASELINE,
+  ENROLLED_BASELINE,
+  GRADUATE_BASELINE,
   deleteStudentEverywhere,
   setStudentRoleInCloud,
   fetchAdminRosterFromCloud,
@@ -774,10 +777,13 @@ export default function AdminDashboardModal({
               <Users className="w-3.5 h-3.5 text-emerald-400" />
             </div>
             <p className="text-lg sm:text-xl font-black text-white">{totalStudentsCount}</p>
+            {/* Số THẬT, khớp đúng số dòng trong bảng bên dưới. Trang công khai
+                hiển thị con số này cộng mốc khởi điểm, nên hai nơi lệch nhau
+                đúng bằng mốc — ghi rõ ra để khỏi tưởng là lỗi. */}
             <p className="text-[9px] text-emerald-400 font-semibold">
-              Tài khoản đã đăng ký
-              <span className="text-amber-400"> · {adminAccounts.length} quản trị viên</span>
+              Số thật · trang chủ hiện {(ENROLLED_BASELINE + totalStudentsCount).toLocaleString('vi-VN')} (gồm mốc {ENROLLED_BASELINE})
             </p>
+            <p className="text-[9px] text-amber-400 font-semibold">{adminAccounts.length} quản trị viên</p>
           </div>
 
           <div className="p-2.5 rounded-xl glass-panel border border-emerald-800/60 space-y-0.5">
@@ -786,7 +792,9 @@ export default function AdminDashboardModal({
               <Award className="w-3.5 h-3.5 text-amber-400" />
             </div>
             <p className="text-lg sm:text-xl font-black text-amber-300">{totalGraduatesCount}</p>
-            <p className="text-[9px] text-amber-400 font-semibold">Đạt 11/11 chuyên đề</p>
+            <p className="text-[9px] text-amber-400 font-semibold">
+              Đạt 11/11 · trang chủ hiện {(GRADUATE_BASELINE + totalGraduatesCount).toLocaleString('vi-VN')} (gồm mốc {GRADUATE_BASELINE})
+            </p>
           </div>
 
           <div className="p-2.5 rounded-xl glass-panel border border-emerald-800/60 space-y-0.5">
@@ -799,7 +807,7 @@ export default function AdminDashboardModal({
             </p>
             <p className="text-[9px] text-teal-400 font-semibold">
               Hôm nay: <strong className="text-teal-200">+{(trafficStats?.todayTraffic || 0).toLocaleString('vi-VN')}</strong> lượt
-              <span className="text-slate-500"> · số thật, không cộng mốc</span>
+              <span className="text-slate-500"> · gồm mốc {TRAFFIC_BASELINE}</span>
             </p>
           </div>
 

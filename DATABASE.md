@@ -67,6 +67,8 @@ Số hiển thị trên giao diện = `TRAFFIC_BASELINE (100)` + giá trị lớ
 | `totalGraduates` | number | Số học viên đạt 11/11 |
 | `reconciledAt` | string (ISO) | Lần đối soát gần nhất với dữ liệu thật |
 
+**Giá trị lưu ở đây là SỐ THẬT, không bao gồm mốc khởi điểm.** Ba mốc hiển thị (`TRAFFIC_BASELINE = 190`, `ENROLLED_BASELINE = 69`, `GRADUATE_BASELINE = 30` trong `src/firebase.js`, chủ dự án ấn định 2026-07-28) chỉ được cộng ở **tầng hiển thị**. Ghi mốc xuống Firestore sẽ khiến mỗi lần đối soát cộng thêm một lần nữa và số phình lên vô hạn.
+
 **Đây là bộ nhớ đệm, không phải nguồn sự thật.** Nguồn đúng là đếm trực tiếp trên collection `students`, nhưng chỉ quản trị viên đọc được toàn bộ collection đó, nên trang công khai buộc phải đọc con số đã lưu sẵn ở đây.
 
 Hai đường ghi:

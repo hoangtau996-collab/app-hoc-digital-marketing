@@ -596,17 +596,35 @@ export function listenToAllStudentsFromCloud(callback) {
    dùng để xem tỉ lệ khách ghé thăm được.
    ============================================================ */
 
-/**
- * Mốc cộng thêm vào số lượt truy cập hiển thị.
- *
- * ĐẶT VỀ 0 — trước đây là 100, tức mọi con số "Lượt Truy Cập Web" trên giao diện
- * đều bị thổi lên 100 đơn vị so với thực tế. Một trang vừa mở đã hiện "103 lượt"
- * trong khi chỉ có 3 lượt thật. Đó là số liệu bịa, không phải số liệu.
- *
- * Giữ lại hằng số (thay vì xoá hẳn) để nếu sau này chủ dự án muốn cộng mốc khởi
- * điểm thì sửa đúng một chỗ, và để thấy rõ trong lịch sử là đã từng có mốc ảo.
- */
-export const TRAFFIC_BASELINE = 0;
+/* ============================================================
+   MỐC KHỞI ĐIỂM HIỂN THỊ
+
+   Ba con số cộng thêm vào số đo được, do chủ dự án ấn định (2026-07-28).
+
+   ĐỌC KỸ TRƯỚC KHI SỬA:
+
+   1. Đây KHÔNG phải số đo. Chúng là hằng số cộng vào lúc hiển thị, đại diện cho
+      phần hoạt động có trước khi hệ thống này vận hành (học viên đã học và bằng
+      đã cấp ngoài ứng dụng). Đừng đọc chúng như dữ liệu thống kê.
+
+   2. Chỉ cộng Ở TẦNG HIỂN THỊ. Tuyệt đối không ghi mốc xuống Firestore:
+      reconcileGlobalStats() ghi đè `stats_global` bằng con số đếm thật, nên nếu
+      mốc lọt vào giá trị lưu trữ thì mỗi lần đối soát sẽ cộng thêm một lần nữa,
+      và số sẽ phình lên vô hạn.
+
+   3. Bảng Quản Trị KHÔNG cộng mốc cho học viên/tốt nghiệp — nó là công cụ vận
+      hành, phải khớp đúng số dòng trong bảng. Cộng mốc vào đó sẽ thành "69 học
+      viên" trong khi danh sách chỉ có 3 dòng.
+   ============================================================ */
+
+/** Mốc lượt truy cập web. */
+export const TRAFFIC_BASELINE = 190;
+
+/** Mốc học viên đã tham gia. */
+export const ENROLLED_BASELINE = 69;
+
+/** Mốc học viên đã được cấp bằng. */
+export const GRADUATE_BASELINE = 30;
 
 const TRAFFIC_DOC = 'traffic_daily_v3';
 const LS_TRAFFIC_TOTAL = 'dmm_traffic_total_v3';
@@ -836,35 +854,34 @@ export function listenToRealStats(callback) {
   try {
     const statsDocRef = doc(db, 'analytics', 'stats_global');
     
-    const getLocalStats = () => {
-      try {
-        const enrolled = parseInt(localStorage.getItem('dmm_real_enrolled_count') || '1', 10);
-        const graduates = parseInt(localStorage.getItem('dmm_real_graduates_count') || '0', 10);
-        return { totalEnrolled: enrolled, totalGraduates: graduates };
-      } catch (e) {
-        return { totalEnrolled: 1, totalGraduates: 0 };
-      }
-    };
+    // Dự phòng khi chưa đọc được Cloud: chỉ còn mốc khởi điểm.
+    //
+    // Bản cũ đọc `dmm_real_enrolled_count` / `dmm_real_graduates_count` từ
+    // localStorage rồi lấy `Math.max` với số của Cloud — lại là trộn số toàn cục
+    // với số của riêng một máy, y như lỗi ở bộ đếm truy cập. Hai khoá localStorage
+    // đó là tàn dư của bộ đếm cũ, không phản ánh toàn hệ thống nên bỏ hẳn.
+    const baselineOnly = () => callback({
+      totalEnrolled: ENROLLED_BASELINE,
+      totalGraduates: GRADUATE_BASELINE
+    });
 
     const unsubscribe = onSnapshot(statsDocRef, (snapshot) => {
-      if (snapshot.exists()) {
-        const data = snapshot.data();
-        const local = getLocalStats();
-        callback({
-          totalEnrolled: Math.max(data.totalEnrolled || 0, local.totalEnrolled),
-          totalGraduates: Math.max(data.totalGraduates || 0, local.totalGraduates)
-        });
-      } else {
-        callback(getLocalStats());
+      if (!snapshot.exists()) {
+        baselineOnly();
+        return;
       }
-    }, (err) => {
-      callback(getLocalStats());
-    });
+      const data = snapshot.data();
+      // Mốc cộng Ở ĐÂY, tầng hiển thị. Giá trị lưu trên Firestore vẫn là số thật.
+      callback({
+        totalEnrolled: ENROLLED_BASELINE + (Number(data.totalEnrolled) || 0),
+        totalGraduates: GRADUATE_BASELINE + (Number(data.totalGraduates) || 0)
+      });
+    }, () => baselineOnly());
 
     return unsubscribe;
   } catch (e) {
     console.warn("listenToRealStats error", e);
-    callback({ totalEnrolled: 1, totalGraduates: 0 });
+    callback({ totalEnrolled: ENROLLED_BASELINE, totalGraduates: GRADUATE_BASELINE });
     return () => {};
   }
 }

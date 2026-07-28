@@ -22,6 +22,9 @@ import {
   signOut,
   recordRealTrafficVisit,
   listenToRealTraffic,
+  TRAFFIC_BASELINE,
+  ENROLLED_BASELINE,
+  GRADUATE_BASELINE,
   recordRealStudentGraduate,
   listenToRealStats,
   recordStudentAccountToCloud,
@@ -132,13 +135,14 @@ export default function App() {
   }, [theme]);
 
   // Real Web Traffic & Student Statistics (100% Real numbers measured strictly from real data)
-  // Khởi tạo bằng 0, không bằng số bịa. Con số thật do Cloud trả về ngay sau đó;
-  // trước khi có, hiển thị 0 vẫn trung thực hơn là hiển thị một mốc dựng sẵn.
+  // Khởi tạo đúng bằng mốc khởi điểm, không bằng 0: Cloud trả lời sau khoảng
+  // một nhịp mạng, khởi tạo 0 sẽ khiến con số nhảy giật từ 0 lên 190 ngay trước
+  // mắt người xem.
   const [trafficStats, setTrafficStats] = useState({
-    totalTraffic: 0,
+    totalTraffic: TRAFFIC_BASELINE,
     todayTraffic: 0,
-    totalEnrolled: 0,
-    totalGraduates: 0,
+    totalEnrolled: ENROLLED_BASELINE,
+    totalGraduates: GRADUATE_BASELINE,
     onlineActive: 1
   });
 
