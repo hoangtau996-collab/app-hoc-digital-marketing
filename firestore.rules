@@ -17,14 +17,15 @@ rules_version = '2';
 //
 // Nói ngắn: giao diện giả được, dữ liệu thì không.
 //
-// TRIỂN KHAI: xem DEPLOYMENT.md, mục "Security Rules". Chưa deploy tệp này thì
-// cơ sở dữ liệu vẫn đang mở theo cấu hình cũ trên Firebase Console.
+// TRIỂN KHAI: xem DEPLOYMENT.md, mục "Security Rules".
 // ============================================================================
 
 service cloud.firestore {
   match /databases/{database}/documents {
 
-    // ---- Danh tính -------------------------------------------------------
+    // ---- Hàm dùng chung --------------------------------------------------
+    // Khai báo trước mọi khối match bên dưới. Trình biên dịch rules đọc tuần tự
+    // nên hàm dùng ở đâu phải được định nghĩa trước chỗ đó.
 
     function signedIn() {
       return request.auth != null;
@@ -48,10 +49,68 @@ service cloud.firestore {
     // Quyền quản trị = có bản ghi trong sổ /admins. Sổ đó chỉ quản trị viên
     // hiện hành mới ghi được (xem match /admins bên dưới), nên người ngoài
     // không có đường nào tự đưa mình vào.
+    // Viết thẳng biểu thức trong $() thay vì gọi myEmail(): gọi hàm bên trong
+    // đường dẫn không phải cú pháp chắc chắn được chấp nhận. Điều kiện
+    // `email != null` đứng trước nên nhánh sau không bao giờ chạm vào null.
     function isAdmin() {
       return signedIn()
-        && myEmail() != ''
-        && exists(/databases/$(database)/documents/admins/$(myEmail()));
+        && request.auth.token.email != null
+        && exists(/databases/$(database)/documents/admins/$(request.auth.token.email.lower()));
+    }
+
+    // Chỉ quản trị viên đọc được hồ sơ người khác. Học viên đọc hồ sơ của mình.
+    // Cho phép đọc tài liệu KHÔNG tồn tại vì getUserProgressFromCloud() dò theo
+    // uid trong khi bản ghi lưu theo email — đọc chỗ trống không lộ gì cả.
+    function canGetProfile() {
+      return isAdmin()
+        || resource == null
+        || (signedIn() && resource.data.email == myEmail());
+    }
+
+    // Học viên chỉ tạo được hồ sơ mang đúng email của mình, và KHÔNG được kèm
+    // trường `role`. Đây là đường tự phong hiển nhiên nhất nếu bỏ ngỏ.
+    function canCreateProfile() {
+      return isAdmin()
+        || (signedIn()
+            && request.resource.data.email == myEmail()
+            && !('role' in request.resource.data));
+    }
+
+    // Tương tự khi cập nhật: học viên sửa hồ sơ của mình nhưng không được động
+    // vào `role`, và không được đổi email sang người khác.
+    function canUpdateProfile() {
+      return isAdmin()
+        || (signedIn()
+            && resource.data.email == myEmail()
+            && request.resource.data.email == myEmail()
+            && !request.resource.data.diff(resource.data).affectedKeys().hasAny(['role']));
+    }
+
+    // Bộ đếm chỉ được tăng, mỗi lần ghi tối đa 1. Viết tường minh từng trường
+    // thay vì truyền tên trường vào hàm, để không phụ thuộc vào cú pháp truy
+    // cập map bằng biến.
+    function visitsOk() {
+      return !('totalVisits' in request.resource.data)
+        || !('totalVisits' in resource.data)
+        || (request.resource.data.totalVisits is int
+            && request.resource.data.totalVisits >= resource.data.totalVisits
+            && request.resource.data.totalVisits <= resource.data.totalVisits + 1);
+    }
+
+    function enrolledOk() {
+      return !('totalEnrolled' in request.resource.data)
+        || !('totalEnrolled' in resource.data)
+        || (request.resource.data.totalEnrolled is int
+            && request.resource.data.totalEnrolled >= resource.data.totalEnrolled
+            && request.resource.data.totalEnrolled <= resource.data.totalEnrolled + 1);
+    }
+
+    function graduatesOk() {
+      return !('totalGraduates' in request.resource.data)
+        || !('totalGraduates' in resource.data)
+        || (request.resource.data.totalGraduates is int
+            && request.resource.data.totalGraduates >= resource.data.totalGraduates
+            && request.resource.data.totalGraduates <= resource.data.totalGraduates + 1);
     }
 
     // ---- /admins : sổ phân quyền ----------------------------------------
@@ -82,8 +141,8 @@ service cloud.firestore {
     }
 
     // ---- /students và /registrations : hồ sơ học viên ---------------------
-
     // Hai collection ghi cùng payload (xem DATABASE.md), nên dùng chung luật.
+
     match /students/{docId} {
       allow get: if canGetProfile();
       allow list: if isAdmin();
@@ -100,33 +159,6 @@ service cloud.firestore {
       allow delete: if isAdmin();
     }
 
-    // Chỉ quản trị viên đọc được hồ sơ người khác. Học viên đọc hồ sơ của mình.
-    // Cho phép đọc tài liệu KHÔNG tồn tại vì getUserProgressFromCloud() dò theo
-    // uid trong khi bản ghi lưu theo email — đọc chỗ trống không lộ gì cả.
-    function canGetProfile() {
-      return isAdmin() || resource == null
-        || (signedIn() && resource.data.email == myEmail());
-    }
-
-    // Học viên chỉ tạo được hồ sơ mang đúng email của mình, và KHÔNG được kèm
-    // trường `role`. Đây là đường tự phong hiển nhiên nhất nếu bỏ ngỏ.
-    function canCreateProfile() {
-      return isAdmin()
-        || (signedIn()
-            && request.resource.data.email == myEmail()
-            && !('role' in request.resource.data));
-    }
-
-    // Tương tự khi cập nhật: học viên sửa hồ sơ của mình nhưng không được động
-    // vào `role`, và không được đổi email sang người khác.
-    function canUpdateProfile() {
-      return isAdmin()
-        || (signedIn()
-            && resource.data.email == myEmail()
-            && request.resource.data.email == myEmail()
-            && !request.resource.data.diff(resource.data).affectedKeys().hasAny(['role']));
-    }
-
     // ---- /analytics : bộ đếm truy cập và thống kê ------------------------
 
     // Khách chưa đăng nhập cũng được tính lượt truy cập, nên buộc phải cho ghi
@@ -135,20 +167,8 @@ service cloud.firestore {
     match /analytics/{docId} {
       allow read: if true;
       allow create: if true;
+      allow update: if visitsOk() && enrolledOk() && graduatesOk();
       allow delete: if false;
-
-      allow update: if incrementsByAtMostOne('totalVisits')
-                    && incrementsByAtMostOne('totalEnrolled')
-                    && incrementsByAtMostOne('totalGraduates');
-    }
-
-    // Trường vắng mặt ở một trong hai phía thì coi như không đụng tới -> hợp lệ.
-    function incrementsByAtMostOne(field) {
-      return !(field in request.resource.data)
-        || !(field in resource.data)
-        || (request.resource.data[field] is int
-            && request.resource.data[field] <= resource.data[field] + 1
-            && request.resource.data[field] >= resource.data[field]);
     }
 
     // ---- Mặc định từ chối --------------------------------------------------

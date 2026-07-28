@@ -68,6 +68,17 @@ Cần bật trên Firebase Console:
 
 `firestore.rules` là **lớp bảo vệ duy nhất** của dự án. Ứng dụng chạy hoàn toàn trong trình duyệt nên không có chỗ nào khác đặt được ranh giới quyền: chưa deploy tệp này thì cơ sở dữ liệu vẫn chạy theo cấu hình cũ trên Console, và bất kỳ ai mở trang web cũng đọc được toàn bộ hồ sơ học viên bằng vài dòng lệnh trong devtools.
 
+**Cách 1 — dán vào Console (nhanh nhất).**
+
+1. Mở `firestore.rules` trong kho mã, chọn hết (`Ctrl+A`) rồi copy.
+2. Firebase Console → **Firestore Database** → tab **Rules**.
+3. Chọn hết nội dung đang có trong ô soạn thảo rồi **dán đè** — phải thay toàn bộ, không phải chèn thêm vào cuối.
+4. Bấm **Publish**.
+
+⚠️ Ô soạn thảo đó chỉ nhận **nội dung rules**. Dán lệnh terminal (`npx ...`) vào sẽ báo `Unexpected 'npx'`.
+
+**Cách 2 — dòng lệnh.** Chạy trong terminal, ở thư mục gốc dự án:
+
 ```bash
 npx firebase-tools login
 npx firebase-tools use <project-id>          # ví dụ: pmarcomacademy
@@ -76,16 +87,13 @@ npx firebase-tools deploy --only firestore:rules
 
 `firebase.json` trong kho mã đã trỏ sẵn tới `firestore.rules`. Không cần cài `firebase-tools` vào `package.json` vì đây là việc thỉnh thoảng mới chạy.
 
-Cách khác không cần dòng lệnh: mở **Firebase Console → Firestore Database → Rules**, dán nguyên nội dung `firestore.rules` vào rồi bấm **Publish**.
-
 ### Mồi tài khoản quản trị đầu tiên
 
-Rules dùng collection `admins` làm sổ phân quyền: id tài liệu là email chữ thường, có bản ghi nghĩa là có quyền. Sổ rỗng thì **không ai** cấp quyền được cho ai, nên phải mồi bản ghi đầu tiên.
+Rules dùng collection `admins` làm sổ phân quyền: id tài liệu là email chữ thường, có bản ghi nghĩa là có quyền. Sổ rỗng thì **không ai** cấp quyền được cho ai — vì chỉ quản trị viên mới ghi được vào sổ quyền. Phải có bản ghi đầu tiên thì vòng lặp đó mới mở ra.
 
-Có hai cách, chọn một:
+**Việc này tự động.** Rules mở đúng một ngoại lệ: tài khoản gốc tự tạo bản ghi của chính nó. `App.jsx` (`resolveAdminRole`) gọi bước mồi ngay lần đầu tài khoản gốc đăng nhập mà chưa có trong sổ. Bạn chỉ cần **đăng nhập lại bằng `admin@pmarcom.edu.vn` sau khi publish rules**.
 
-1. **Tự mồi (không cần làm gì thủ công).** Rules cho phép đúng một ngoại lệ: tài khoản `admin@pmarcom.edu.vn` tự tạo bản ghi của chính nó. Đăng nhập bằng tài khoản đó rồi mở Bảng Quản Trị, ứng dụng sẽ ghi bản ghi khi bạn nâng quyền cho người đầu tiên.
-2. **Tạo tay trên Console.** Firestore Database → Start collection → Collection ID `admins` → Document ID là email chữ thường (`admin@pmarcom.edu.vn`) → thêm trường `email` (string) là chính email đó.
+Nếu muốn kiểm tra hoặc tạo tay: Firestore Database → Start collection → Collection ID `admins` → Document ID là email chữ thường (`admin@pmarcom.edu.vn`) → thêm trường `email` (string) là chính email đó.
 
 ### Việc phải kiểm tra ngay: tài khoản gốc trên Firebase Auth
 

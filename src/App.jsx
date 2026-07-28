@@ -27,7 +27,8 @@ import {
   recordRealStudentGraduate,
   listenToRealStats,
   recordStudentAccountToCloud,
-  isAdminInCloud
+  isAdminInCloud,
+  grantAdminInCloud
 } from './firebase';
 
 import StudyReminderModal from './components/StudyReminderModal';
@@ -220,7 +221,25 @@ export default function App() {
       return 'admin';
     }
     if (verdict === false) {
-      if (isRootAdmin(email)) return 'admin';
+      if (isRootAdmin(email)) {
+        // Tự mồi sổ phân quyền.
+        //
+        // Sổ `admins` rỗng thì không ai là quản trị viên, mà chỉ quản trị viên
+        // mới ghi được vào sổ -> khoá chết, không ai cấp được cho ai. Firestore
+        // Rules mở đúng một ngoại lệ cho tình huống này: tài khoản gốc tự tạo
+        // bản ghi của CHÍNH NÓ. Không có bước này thì sau khi deploy rules,
+        // quản trị viên đăng nhập vào sẽ thấy bảng rỗng vì lệnh liệt kê học
+        // viên bị từ chối.
+        //
+        // Chạy được đúng một lần; những lần sau verdict đã là true.
+        try {
+          await grantAdminInCloud(email, email);
+        } catch (err) {
+          console.warn('Chưa mồi được sổ phân quyền trên Cloud:', err);
+        }
+        grantAdmin(email);
+        return 'admin';
+      }
       revokeAdmin(email);
       return 'student';
     }
