@@ -596,7 +596,17 @@ export function listenToAllStudentsFromCloud(callback) {
    dùng để xem tỉ lệ khách ghé thăm được.
    ============================================================ */
 
-export const TRAFFIC_BASELINE = 100;
+/**
+ * Mốc cộng thêm vào số lượt truy cập hiển thị.
+ *
+ * ĐẶT VỀ 0 — trước đây là 100, tức mọi con số "Lượt Truy Cập Web" trên giao diện
+ * đều bị thổi lên 100 đơn vị so với thực tế. Một trang vừa mở đã hiện "103 lượt"
+ * trong khi chỉ có 3 lượt thật. Đó là số liệu bịa, không phải số liệu.
+ *
+ * Giữ lại hằng số (thay vì xoá hẳn) để nếu sau này chủ dự án muốn cộng mốc khởi
+ * điểm thì sửa đúng một chỗ, và để thấy rõ trong lịch sử là đã từng có mốc ảo.
+ */
+export const TRAFFIC_BASELINE = 0;
 
 const TRAFFIC_DOC = 'traffic_daily_v3';
 const LS_TRAFFIC_TOTAL = 'dmm_traffic_total_v3';
@@ -694,12 +704,15 @@ export function listenToRealTraffic(callback) {
       const daily = data.daily || {};
       const cloudTotal = Number(data.totalVisits) || 0;
 
-      // Cloud là con số toàn cục nên là nguồn chuẩn. Số đếm tại máy chỉ dùng khi
-      // Cloud chưa ghi được (sai quyền / mất mạng). Cả hai giờ cùng đơn vị
-      // "lượt/ngày" nên lấy giá trị lớn hơn là hợp lệ, đồng thời bảo đảm bộ đếm
-      // không bao giờ tụt ngược trên màn hình.
+      // Cloud là con số TOÀN CỤC, số đếm tại máy là con số CỦA RIÊNG MÁY NÀY.
+      // Hai đại lượng khác nhau, không được trộn.
+      //
+      // Bản cũ lấy `Math.max(cloudTotal, readLocalTraffic())` với lý do "để số
+      // không tụt lùi". Nhưng một máy đã ghé 5 ngày sẽ hiện 5 kể cả khi toàn hệ
+      // thống mới có 3 lượt — con số hiện ra không phải toàn cục cũng chẳng phải
+      // của máy. Đã đọc được Cloud thì Cloud là đáp án duy nhất.
       callback({
-        totalViews: TRAFFIC_BASELINE + Math.max(cloudTotal, readLocalTraffic()),
+        totalViews: TRAFFIC_BASELINE + cloudTotal,
         todayViews: Number(daily[getVietnamDateKey()]) || 0,
         daily
       });
@@ -716,30 +729,26 @@ export function listenToRealTraffic(callback) {
 /**
  * Record Real Student Enrollment in Cloud Firestore
  */
+/**
+ * Cộng 1 vào số học viên ghi danh.
+ *
+ * CHỈ gọi khi hồ sơ học viên đã ghi thành công lên Firestore. Trước đây hàm này
+ * được gọi trong effect lúc tải trang, nên nó đếm lượt khách lần đầu vào web
+ * chứ không đếm người đăng ký — `totalEnrolled` từng lên 9 trong khi máy chủ
+ * gần như chưa có hồ sơ nào.
+ *
+ * Đây chỉ là bộ đếm cho cảm giác realtime giữa hai lần đối soát. Con số đúng do
+ * `reconcileGlobalStats()` ghi đè, đếm thẳng trên collection `students`.
+ */
 export async function recordRealStudentEnrollment() {
-  const statsDocRef = doc(db, 'analytics', 'stats_global');
-  
-  let localEnrolled = 1;
   try {
-    const stored = parseInt(localStorage.getItem('dmm_real_enrolled_count') || '0', 10);
-    if (stored === 0) {
-      localEnrolled = 1;
-      localStorage.setItem('dmm_real_enrolled_count', '1');
-    } else {
-      localEnrolled = stored;
-    }
-  } catch (e) {}
-
-  try {
-    await setDoc(statsDocRef, {
+    await setDoc(doc(db, 'analytics', 'stats_global'), {
       totalEnrolled: increment(1),
       updatedAt: serverTimestamp()
     }, { merge: true });
   } catch (e) {
-    console.warn("Cloud stats increment fallback to local persistence:", e);
+    console.warn("Không cộng được số ghi danh lên Cloud:", e);
   }
-
-  return localEnrolled;
 }
 
 /**
@@ -762,6 +771,61 @@ export async function recordRealStudentGraduate() {
     }
   } catch (e) {
     console.warn("Cloud graduate increment fallback:", e);
+  }
+}
+
+/**
+ * Đọc collection `students` THUẦN TỪ MÁY CHỦ, không trộn localStorage.
+ *
+ * Khác `getAllRegisteredStudentsFromCloud()` ở chỗ đó, và khác biệt này là thiết
+ * yếu khi đối soát số liệu: hàm kia hợp nhất dữ liệu máy chủ với dữ liệu máy
+ * hiện tại nên không phân biệt được "máy chủ có 3 học viên" với "máy này có 3
+ * học viên trong localStorage".
+ *
+ * Trả về `null` khi KHÔNG đọc được (mất mạng, thiếu quyền) — khác hẳn `[]` là
+ * đọc được và máy chủ đang rỗng. Nơi gọi bắt buộc phân biệt hai trường hợp,
+ * nếu không sẽ ghi đè số liệu toàn hệ thống bằng số 0.
+ */
+export async function fetchStudentsFromCloudOnly() {
+  try {
+    const snapshot = await getDocs(collection(db, 'students'));
+    return snapshot.docs.map((d) => ({ id: d.id, ...d.data() }));
+  } catch (e) {
+    console.warn('Không đọc được collection students từ máy chủ:', e);
+    return null;
+  }
+}
+
+/**
+ * Ghi ĐÈ số liệu học viên bằng con số đếm được từ dữ liệu thật.
+ *
+ * Vì sao cần: `totalEnrolled` và `totalGraduates` là bộ đếm cộng dồn, mà bộ đếm
+ * cộng dồn thì trôi. Chúng cộng cả những lần đăng ký thất bại, cộng lại từ đầu
+ * khi học viên xoá localStorage hoặc đổi trình duyệt, và không bao giờ trừ đi
+ * khi quản trị viên xoá một học viên. Có lúc `totalEnrolled` đã lên 9 trong khi
+ * máy chủ gần như chưa có hồ sơ nào.
+ *
+ * Nguồn đúng duy nhất là đếm trực tiếp trên collection `students`. Chỉ quản trị
+ * viên đọc được toàn bộ collection đó, nên chỉ quản trị viên đối soát được — và
+ * Firestore Rules cũng chỉ cho quản trị viên ghi giá trị tuỳ ý vào đây.
+ *
+ * Chỉ gọi khi ĐÃ đọc được danh sách từ Cloud. Gọi lúc chỉ có dữ liệu localStorage
+ * sẽ ghi đè số liệu toàn hệ thống bằng số của riêng một máy.
+ */
+export async function reconcileGlobalStats({ totalEnrolled, totalGraduates }) {
+  if (!Number.isFinite(totalEnrolled) || !Number.isFinite(totalGraduates)) return;
+  try {
+    await setDoc(doc(db, 'analytics', 'stats_global'), {
+      totalEnrolled,
+      totalGraduates,
+      reconciledAt: new Date().toISOString(),
+      updatedAt: serverTimestamp()
+    }, { merge: true });
+    console.log(`🟢 Đã đối soát số liệu: ${totalEnrolled} học viên, ${totalGraduates} tốt nghiệp`);
+    return { ok: true };
+  } catch (e) {
+    console.warn('Không đối soát được số liệu toàn cục:', e);
+    return { ok: false, code: e?.code || '', message: e?.message || String(e) };
   }
 }
 

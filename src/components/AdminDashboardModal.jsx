@@ -7,13 +7,14 @@ import {
   db,
   doc,
   deleteDoc,
-  TRAFFIC_BASELINE,
   deleteStudentEverywhere,
   setStudentRoleInCloud,
   fetchAdminRosterFromCloud,
   grantAdminInCloud,
   revokeAdminInCloud,
-  diagnoseCloudAccess
+  diagnoseCloudAccess,
+  reconcileGlobalStats,
+  fetchStudentsFromCloudOnly
 } from '../firebase';
 import { markStudentDeleted, filterDeleted, getDeletedStudents } from '../utils/deletedStudents';
 import {
@@ -267,10 +268,33 @@ export default function AdminDashboardModal({
     }
   };
 
+  /**
+   * Đối soát số liệu công khai bằng con số đếm trên máy chủ.
+   *
+   * Bảng Quản Trị là nơi duy nhất đọc được toàn bộ collection `students`, nên
+   * cũng là nơi duy nhất biết con số thật. Mỗi lần mở bảng là một lần sửa lại
+   * bộ đếm đã trôi.
+   *
+   * Điều kiện bắt buộc: chỉ ghi khi ĐỌC ĐƯỢC máy chủ. `null` nghĩa là không đọc
+   * được — ghi tiếp lúc đó sẽ đặt số liệu toàn hệ thống về 0.
+   */
+  const reconcileStats = async () => {
+    const cloudOnly = await fetchStudentsFromCloudOnly();
+    if (!Array.isArray(cloudOnly)) return;
+
+    const realStudents = filterDeleted(cloudOnly).filter(s => !isAdminAccount(s, adminRoster));
+    const graduates = realStudents.filter(s => (s.completedModules || []).length >= 11).length;
+
+    await reconcileGlobalStats({
+      totalEnrolled: realStudents.length,
+      totalGraduates: graduates
+    });
+  };
+
   useEffect(() => {
     if (isOpen) {
       loadStudentsList();
-      loadAdminRoster();
+      loadAdminRoster().then(reconcileStats);
 
       // Live subscription for all new student registrations on Cloud Firestore
       const unsub = listenToAllStudentsFromCloud((cloudStudents) => {
@@ -771,11 +795,11 @@ export default function AdminDashboardModal({
               <Eye className="w-3.5 h-3.5 text-teal-400" />
             </div>
             <p className="text-lg sm:text-xl font-black text-teal-300">
-              {(trafficStats?.totalTraffic || TRAFFIC_BASELINE).toLocaleString('vi-VN')}
+              {(trafficStats?.totalTraffic || 0).toLocaleString('vi-VN')}
             </p>
             <p className="text-[9px] text-teal-400 font-semibold">
               Hôm nay: <strong className="text-teal-200">+{(trafficStats?.todayTraffic || 0).toLocaleString('vi-VN')}</strong> lượt
-              <span className="text-slate-500"> · mốc {TRAFFIC_BASELINE}</span>
+              <span className="text-slate-500"> · số thật, không cộng mốc</span>
             </p>
           </div>
 

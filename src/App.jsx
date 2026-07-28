@@ -22,8 +22,6 @@ import {
   signOut,
   recordRealTrafficVisit,
   listenToRealTraffic,
-  TRAFFIC_BASELINE,
-  recordRealStudentEnrollment,
   recordRealStudentGraduate,
   listenToRealStats,
   recordStudentAccountToCloud,
@@ -134,10 +132,12 @@ export default function App() {
   }, [theme]);
 
   // Real Web Traffic & Student Statistics (100% Real numbers measured strictly from real data)
+  // Khởi tạo bằng 0, không bằng số bịa. Con số thật do Cloud trả về ngay sau đó;
+  // trước khi có, hiển thị 0 vẫn trung thực hơn là hiển thị một mốc dựng sẵn.
   const [trafficStats, setTrafficStats] = useState({
-    totalTraffic: TRAFFIC_BASELINE,
+    totalTraffic: 0,
     todayTraffic: 0,
-    totalEnrolled: 1,
+    totalEnrolled: 0,
     totalGraduates: 0,
     onlineActive: 1
   });
@@ -154,18 +154,22 @@ export default function App() {
       }));
     });
 
-    recordRealStudentEnrollment().then(enrolledCount => {
-      setTrafficStats(prev => ({
-        ...prev,
-        totalEnrolled: enrolledCount
-      }));
-    });
+    // KHÔNG gọi recordRealStudentEnrollment() ở đây.
+    //
+    // Effect này chạy khi TẢI TRANG, nên bộ đếm "học viên ghi danh" thực chất
+    // đang đếm lượt khách lần đầu vào web — kể cả người chỉ ghé xem rồi đi.
+    // Đó là lý do `totalEnrolled` từng lên 9 trong khi máy chủ gần như chưa có
+    // hồ sơ học viên nào. Số liệu ghi danh nay lấy từ `listenToRealStats` bên
+    // dưới, và được Bảng Quản Trị đối soát lại bằng số đếm thật trên máy chủ.
 
     // 2. Subscribe to real-time Cloud Firestore traffic updates
     const unsubscribeTraffic = listenToRealTraffic((data) => {
       setTrafficStats(prev => ({
         ...prev,
-        totalTraffic: Math.max(prev.totalTraffic, data.totalViews || 0),
+        // Lấy thẳng số của Cloud, KHÔNG dùng Math.max với giá trị cũ. Kẹp theo
+        // giá trị lớn nhất từng thấy sẽ khiến con số không bao giờ giảm được
+        // nữa — kể cả sau khi đối soát lại cho đúng.
+        totalTraffic: data.totalViews ?? prev.totalTraffic,
         todayTraffic: data.todayViews ?? prev.todayTraffic
       }));
     });
@@ -968,7 +972,6 @@ export default function App() {
         onImportBackupData={handleImportBackupData}
         theme={theme}
         setTheme={setTheme}
-        trafficStats={trafficStats}
       />
 
       {/* Admin Master Dashboard Modal */}

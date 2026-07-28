@@ -173,8 +173,13 @@ service cloud.firestore {
     match /analytics/{docId} {
       allow read: if true;
       allow create: if true;
-      allow update: if visitsOk() && enrolledOk() && graduatesOk();
       allow delete: if false;
+
+      // Quản trị viên được ghi giá trị tuỳ ý — cần cho việc đối soát số liệu
+      // (reconcileGlobalStats), tức là ghi đè bộ đếm đã trôi bằng con số đếm
+      // thật trên collection students. Người thường chỉ được cộng tối đa 1.
+      allow update: if isAdmin()
+                    || (visitsOk() && enrolledOk() && graduatesOk());
     }
 
     // ---- Mặc định từ chối --------------------------------------------------

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import PMarcomLogo from './PMarcomLogo';
-import { TRAFFIC_BASELINE } from '../firebase';
 import {
   Award,
   Search,
@@ -61,7 +60,7 @@ export default function Header({
               {/* Total Cumulative Web Traffic Counter */}
               {trafficStats && (
                 <span className="hidden 2xl:inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded bg-teal-950 text-teal-300 border border-teal-700/60">
-                  <Eye className="w-3 h-3 text-teal-400" /> {(trafficStats.totalTraffic || TRAFFIC_BASELINE).toLocaleString('vi-VN')} Lượt Truy Cập Web
+                  <Eye className="w-3 h-3 text-teal-400" /> {(trafficStats.totalTraffic || 0).toLocaleString('vi-VN')} Lượt Truy Cập Web
                 </span>
               )}
             </div>

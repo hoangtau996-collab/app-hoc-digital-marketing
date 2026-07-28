@@ -9,6 +9,7 @@ import {
   updateProfile,
   saveUserProgressToCloud,
   recordStudentAccountToCloud,
+  recordRealStudentEnrollment,
   isFirebaseConfigured,
   missingFirebaseEnv
 } from '../firebase';
@@ -391,6 +392,8 @@ export default function AuthModal({
           `Bạn vẫn học được, nhưng Ban Quản Trị chưa thấy hồ sơ của bạn. Vui lòng báo lại để được hỗ trợ.`
         );
       } else {
+        // Chỉ cộng bộ đếm ghi danh khi hồ sơ THẬT SỰ đã lên máy chủ.
+        recordRealStudentEnrollment();
         setSuccessMsg('🎉 Đăng ký tài khoản học viên P MARCOM thành công! Bạn có thể bắt đầu học ngay.');
       }
 

@@ -33,8 +33,7 @@ export default function UserProfileModal({
   completedModules,
   onImportBackupData,
   theme = 'system',
-  setTheme = () => {},
-  trafficStats
+  setTheme = () => {}
 }) {
   const [importStatus, setImportStatus] = useState('');
   const [newPassword, setNewPassword] = useState('');
@@ -459,12 +458,10 @@ export default function UserProfileModal({
             <span className="text-emerald-400 font-bold">Tài trợ 100% Học phí</span>
           </div>
 
-          {trafficStats && (
-            <div className="flex items-center justify-between text-[10px] text-teal-400 font-medium">
-              <span>Real-Time Web Traffic: {trafficStats.totalTraffic.toLocaleString('vi-VN')} views</span>
-              <span>{trafficStats.totalGraduates.toLocaleString('vi-VN')}+ Đạt chứng nhận</span>
-            </div>
-          )}
+          {/* Đã gỡ dòng "Real-Time Web Traffic / Đạt chứng nhận".
+              Đây là hồ sơ cá nhân của học viên — số liệu vận hành toàn hệ thống
+              không thuộc về chỗ này, và nó cũng chẳng nói lên điều gì về việc
+              học của họ. Số liệu đó vẫn còn ở Bảng Quản Trị và trang Tổng Quan. */}
         </div>
 
         {/* Backup & Sync Section */}

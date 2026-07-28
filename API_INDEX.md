@@ -47,9 +47,12 @@ Nguồn khẳng định quyền quản trị. Ranh giới thật do [firestore.r
 
 | Hàm | Tham số | Trả về | Tác dụng |
 |---|---|---|---|
-| `recordRealStudentEnrollment()` | — | `Promise<number>` | Tăng `totalEnrolled` |
-| `recordRealStudentGraduate()` | — | `Promise<number>` | Tăng `totalGraduates`, có chống đếm trùng |
+| `recordRealStudentEnrollment()` | — | `Promise<void>` | Cộng 1 vào `totalEnrolled`. **Chỉ gọi khi hồ sơ đã ghi thành công lên Firestore** — gọi lúc tải trang là đếm lượt khách, không phải lượt ghi danh |
+| `recordRealStudentGraduate()` | — | `Promise<void>` | Cộng 1 vào `totalGraduates`, chặn đếm trùng bằng cờ localStorage (chỉ hiệu lực trên một máy) |
+| `fetchStudentsFromCloudOnly()` | — | `Promise<Array\|null>` | Đọc `students` **thuần từ máy chủ**, không trộn localStorage. `null` = không đọc được, khác `[]` = máy chủ rỗng |
+| `reconcileGlobalStats({ totalEnrolled, totalGraduates })` | object | `Promise<{ok}>` | Ghi đè số liệu bằng con số đếm thật. Chỉ quản trị viên ghi được (theo rules) |
 | `listenToRealStats(callback)` | function | `unsubscribe` | Theo dõi realtime `{ totalEnrolled, totalGraduates }` |
+| `diagnoseCloudAccess()` | — | `Promise<Array>` | Chạy từng bước cấu hình → đăng nhập → sổ quyền → đọc danh sách, **không nuốt lỗi**, trả về mã lỗi Firebase nguyên văn |
 
 ### Xuất lại từ Firebase SDK
 

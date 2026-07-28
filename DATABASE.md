@@ -65,6 +65,16 @@ Số hiển thị trên giao diện = `TRAFFIC_BASELINE (100)` + giá trị lớ
 |---|---|---|
 | `totalEnrolled` | number | Số học viên ghi danh |
 | `totalGraduates` | number | Số học viên đạt 11/11 |
+| `reconciledAt` | string (ISO) | Lần đối soát gần nhất với dữ liệu thật |
+
+**Đây là bộ nhớ đệm, không phải nguồn sự thật.** Nguồn đúng là đếm trực tiếp trên collection `students`, nhưng chỉ quản trị viên đọc được toàn bộ collection đó, nên trang công khai buộc phải đọc con số đã lưu sẵn ở đây.
+
+Hai đường ghi:
+
+- **Cộng dồn** (`increment(1)`) khi có sự kiện thật — đăng ký thành công lên máy chủ, hoặc học viên đạt 11/11. Cho cảm giác realtime nhưng **trôi dần**: cộng cả lần thất bại, cộng lại khi học viên đổi máy, và không trừ khi quản trị viên xoá học viên.
+- **Đối soát** (`reconcileGlobalStats`) — Bảng Quản Trị đếm thật trên `students` rồi ghi đè giá trị chính xác, mỗi lần mở bảng. Firestore Rules chỉ cho quản trị viên ghi giá trị tuỳ ý; người thường chỉ được cộng tối đa 1.
+
+Lỗi đã sửa: `recordRealStudentEnrollment()` từng được gọi trong effect **lúc tải trang**, nên `totalEnrolled` thực chất đếm lượt khách lần đầu vào web. Có lúc nó lên 9 trong khi máy chủ gần như chưa có hồ sơ học viên nào.
 
 ## localStorage
 

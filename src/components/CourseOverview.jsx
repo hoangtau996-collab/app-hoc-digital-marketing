@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import PMarcomLogo from './PMarcomLogo';
-import { TRAFFIC_BASELINE } from '../firebase';
 import {
   CheckCircle2,
   PlayCircle, 
@@ -26,11 +25,11 @@ export default function CourseOverview({
   completedModules,
   searchQuery,
   onRegisterCTA = () => {},
-  // Mặc định phải là mốc khởi điểm thật, không phải số đẹp bịa ra:
-  // App.jsx luôn truyền trafficStats xuống, nhưng nếu component được dùng lại
-  // ở chỗ khác mà quên truyền thì thà hiện 100 còn hơn hiện 158.421 lượt ảo.
+  // Mặc định là 0 hết. App.jsx luôn truyền trafficStats xuống; nếu component
+  // được dùng lại ở chỗ khác mà quên truyền thì hiện 0 là trung thực nhất —
+  // chưa biết số thì đừng hiện số nào cả.
   trafficStats = {
-    totalTraffic: TRAFFIC_BASELINE,
+    totalTraffic: 0,
     todayTraffic: 0,
     totalEnrolled: 0,
     totalGraduates: 0,
@@ -106,7 +105,7 @@ export default function CourseOverview({
               </span>
             </div>
             <div className="text-xl sm:text-2xl font-black text-white tracking-tight">
-              {(trafficStats?.totalTraffic || TRAFFIC_BASELINE).toLocaleString('vi-VN')}
+              {(trafficStats?.totalTraffic || 0).toLocaleString('vi-VN')}
             </div>
             <div className="text-[10px] text-slate-400 flex items-center gap-1 mt-0.5">
               <Activity className="w-3 h-3 text-emerald-400 animate-pulse" /> Cộng dồn lượt khách ghé thăm mỗi ngày
@@ -121,8 +120,11 @@ export default function CourseOverview({
               </span>
               <ShieldCheck className="w-4 h-4 text-amber-400" />
             </div>
+            {/* Bỏ dấu "+" phía sau: con số nay là số đếm thật trên máy chủ,
+                không phải ước lượng làm tròn lên. "0+ Đạt chứng nhận" vừa sai
+                vừa khó hiểu. */}
             <div className="text-xl sm:text-2xl font-black text-amber-400 tracking-tight">
-              {(trafficStats?.totalGraduates || 0).toLocaleString('vi-VN')}+
+              {(trafficStats?.totalGraduates || 0).toLocaleString('vi-VN')}
             </div>
             <div className="text-[10px] text-slate-400 mt-0.5">
               Hoàn thành 11/11 chuyên đề
@@ -138,7 +140,7 @@ export default function CourseOverview({
               <TrendingUp className="w-4 h-4 text-emerald-400" />
             </div>
             <div className="text-xl sm:text-2xl font-black text-white tracking-tight">
-              {(trafficStats?.totalEnrolled || 0).toLocaleString('vi-VN')}+
+              {(trafficStats?.totalEnrolled || 0).toLocaleString('vi-VN')}
             </div>
             <div className="text-[10px] text-slate-400 mt-0.5">
               Quản lý & Trưởng phòng Digital
