@@ -244,7 +244,7 @@ export function askPipi(question) {
   if (/^(hi|hello|chao|xin chao|alo|hey)\b/.test(q)) {
     return {
       kind: 'greeting',
-      title: 'Chào bạn! Mình là Pipi 🔔',
+      title: 'Chào bạn! Mình là Pipi 🤖',
       lines: [
         'Mình giúp được ba việc trong khoá học này:',
         '**Tra thuật ngữ** — hỏi "ROAS là gì", "CAC nghĩa là gì"',

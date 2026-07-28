@@ -6,56 +6,89 @@ import { askPipi, PIPI_SUGGESTIONS } from '../utils/pipiBrain';
 /**
  * Pipi - trợ lý tra cứu của khoá học, thay cho ô tìm kiếm cũ.
  *
- * Nhân vật là robot mèo máy nguyên bản do dự án tự vẽ, lấy cảm hứng từ dòng
- * robot hoạt hình cổ điển (thân tròn, vòng cổ có chuông, túi trước bụng).
- * Cố ý KHÔNG sao chép tạo hình Doraemon vì đó là nhân vật có bản quyền.
+ * TẠO HÌNH: robot hiện đại nguyên bản — đầu bo góc vuông, kính che mặt tối màu
+ * với hai mắt phát sáng, ăng-ten, hai khối loa hai bên.
+ *
+ * Bản trước là mèo máy đầu tròn xanh, mặt trắng, mũi đỏ có vạch dọc, râu mèo,
+ * vòng cổ kèm chuông. Chú thích khi đó ghi "cố ý không sao chép Doraemon",
+ * nhưng đúng tập hợp đặc điểm ấy CHÍNH LÀ tạo hình Doraemon — nhân vật có bản
+ * quyền của Fujiko Pro. Đã vẽ lại hoàn toàn: đổi hình khối (vuông bo góc thay
+ * vì tròn), bỏ sạch mọi chi tiết nhận dạng của nhân vật cũ (râu, mũi đỏ, vạch
+ * dọc, chuông, vòng cổ đỏ), và chuyển sang bảng màu ngọc lục bảo của thương
+ * hiệu. KHÔNG khôi phục lại bản cũ.
  *
  * Câu trả lời do utils/pipiBrain.js sinh ra, chạy hoàn toàn tại máy.
  */
 
 /* Ảnh đại diện Pipi, vẽ bằng SVG nội tuyến */
 export function PipiAvatar({ size = 40, talking = false, blink = false }) {
+  // Id gradient phải duy nhất theo từng lần vẽ. Nhiều PipiAvatar cùng nằm trên
+  // một trang (nút nổi + đầu khung chat + từng dòng trả lời) mà trùng id thì
+  // trình duyệt lấy định nghĩa đầu tiên cho tất cả.
+  const uid = React.useId();
+  const gShell = `pipi-shell-${uid}`;
+  const gVisor = `pipi-visor-${uid}`;
+  const gGlow = `pipi-glow-${uid}`;
+
   return (
     <svg viewBox="0 0 100 100" width={size} height={size} aria-label="Pipi" role="img">
       <defs>
-        <linearGradient id="pipi-body" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#93b3f6" />
-          <stop offset="100%" stopColor="#4a7ce4" />
+        <linearGradient id={gShell} x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor="#f2f7fd" />
+          <stop offset="55%" stopColor="#d3e0f0" />
+          <stop offset="100%" stopColor="#a8bcd6" />
         </linearGradient>
+        <linearGradient id={gVisor} x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor="#1b2a44" />
+          <stop offset="100%" stopColor="#0b1424" />
+        </linearGradient>
+        <radialGradient id={gGlow}>
+          <stop offset="0%" stopColor="#34d399" stopOpacity="0.85" />
+          <stop offset="100%" stopColor="#34d399" stopOpacity="0" />
+        </radialGradient>
       </defs>
-      {/* thân/đầu tròn */}
-      <circle cx="50" cy="48" r="34" fill="url(#pipi-body)" />
-      {/* mặt */}
-      <ellipse cx="50" cy="55" rx="26" ry="24" fill="#fffdf7" />
-      {/* mắt */}
-      <ellipse cx="41" cy="36" rx="9" ry="11" fill="#fffdf7" />
-      <ellipse cx="59" cy="36" rx="9" ry="11" fill="#fffdf7" />
-      <circle className={blink ? 'pipi-blink' : undefined} cx={talking ? 43 : 42} cy="38" r="3.4" fill="#17233d" />
-      <circle className={blink ? 'pipi-blink' : undefined} cx={talking ? 61 : 60} cy="38" r="3.4" fill="#17233d" />
-      <circle cx="43.6" cy="36.6" r="1.1" fill="#ffffff" />
-      <circle cx="61.6" cy="36.6" r="1.1" fill="#ffffff" />
-      {/* mũi + vạch dọc */}
-      <circle cx="50" cy="48" r="4.6" fill="#ea4c8b" />
-      <circle cx="48.6" cy="46.6" r="1.4" fill="#ffdaf0" />
-      <line x1="50" y1="52" x2="50" y2="62" stroke="#17233d" strokeWidth="1.6" strokeLinecap="round" />
-      {/* miệng */}
-      {talking ? (
-        <ellipse cx="50" cy="67" rx="7" ry="5.5" fill="#b01f59" />
-      ) : (
-        <path d="M36 62q14 12 28 0" fill="none" stroke="#17233d" strokeWidth="1.8" strokeLinecap="round" />
-      )}
-      {/* râu */}
-      <g stroke="#17233d" strokeWidth="1.3" strokeLinecap="round" opacity="0.75">
-        <line x1="26" y1="50" x2="36" y2="52" />
-        <line x1="26" y1="57" x2="36" y2="57" />
-        <line x1="74" y1="50" x2="64" y2="52" />
-        <line x1="74" y1="57" x2="64" y2="57" />
+
+      {/* Ăng-ten */}
+      <line x1="50" y1="20" x2="50" y2="9" stroke="#8aa2c0" strokeWidth="3" strokeLinecap="round" />
+      <circle cx="50" cy="7.5" r="5" fill={`url(#${gGlow})`} />
+      <circle cx="50" cy="7.5" r="3.2" fill="#34d399" />
+
+      {/* Khối loa hai bên */}
+      <rect x="6" y="42" width="10" height="20" rx="4" fill="#9db2cd" />
+      <rect x="84" y="42" width="10" height="20" rx="4" fill="#9db2cd" />
+
+      {/* Đầu: vuông bo góc — khác hẳn đầu tròn của bản cũ */}
+      <rect x="15" y="20" width="70" height="62" rx="20" fill={`url(#${gShell})`} stroke="#8aa2c0" strokeWidth="1.5" />
+
+      {/* Kính che mặt */}
+      <rect x="24" y="31" width="52" height="36" rx="15" fill={`url(#${gVisor})`} />
+      <rect x="27.5" y="34" width="45" height="12" rx="7" fill="#ffffff" opacity="0.07" />
+
+      {/* Mắt phát sáng */}
+      <g className={blink ? 'pipi-blink' : undefined}>
+        <circle cx={talking ? 39.5 : 39} cy="47" r="9" fill={`url(#${gGlow})`} />
+        <circle cx={talking ? 60.5 : 61} cy="47" r="9" fill={`url(#${gGlow})`} />
+        <rect x={talking ? 35.5 : 35} y="42" width="8" height="10" rx="4" fill="#34d399" />
+        <rect x={talking ? 56.5 : 57} y="42" width="8" height="10" rx="4" fill="#34d399" />
+        <circle cx={talking ? 37.8 : 37.3} cy="44.8" r="1.4" fill="#eafff6" />
+        <circle cx={talking ? 58.8 : 59.3} cy="44.8" r="1.4" fill="#eafff6" />
       </g>
-      {/* vòng cổ + chuông */}
-      <rect x="24" y="78" width="52" height="7" rx="3.5" fill="#ea4c8b" />
-      <circle cx="50" cy="86" r="7" fill="#FFDAE9" stroke="#b01f59" strokeWidth="1.6" />
-      <line x1="44" y1="85" x2="56" y2="85" stroke="#b01f59" strokeWidth="1.3" />
-      <circle cx="50" cy="88" r="1.7" fill="#b01f59" />
+
+      {/* Miệng: dải sóng âm khi nói, vạch LED khi im */}
+      {talking ? (
+        <g fill="#34d399">
+          <rect x="41" y="57" width="3" height="6" rx="1.5" />
+          <rect x="46" y="54.5" width="3" height="11" rx="1.5" />
+          <rect x="51" y="56" width="3" height="8" rx="1.5" />
+          <rect x="56" y="58" width="3" height="4" rx="1.5" />
+        </g>
+      ) : (
+        <rect x="42" y="58.5" width="16" height="3" rx="1.5" fill="#34d399" opacity="0.75" />
+      )}
+
+      {/* Cổ và vai */}
+      <rect x="43" y="82" width="14" height="6" rx="3" fill="#9db2cd" />
+      <path d="M26 100q6-11 24-11t24 11z" fill="#b6c8de" />
     </svg>
   );
 }
@@ -83,7 +116,7 @@ export default function PipiChat({ onSelectModule, setActiveTab, setSearchQuery,
   const [messages, setMessages] = useState([
     {
       from: 'pipi',
-      title: 'Chào bạn! Mình là Pipi 🔔',
+      title: 'Chào bạn! Mình là Pipi 🤖',
       lines: [
         'Mình tra giúp bạn **thuật ngữ**, tìm **bài học**, và **tính các chỉ số** Digital Marketing.',
         'Bấm một gợi ý bên dưới hoặc gõ câu hỏi nhé.',
