@@ -98,6 +98,21 @@ State chính:
 
 Không hỗ trợ bảng, khối mã, trích dẫn, liên kết. Viết sai cú pháp sẽ hiển thị ra văn bản thô. Xem [CONTRIBUTING.md](CONTRIBUTING.md#thêm-nội-dung-bài-học).
 
+## Hai khoá học chạy song song
+
+| Khoá | Dữ liệu | Tiến độ lưu ở | Điều kiện vào |
+|---|---|---|---|
+| Digital Marketing (chính) | `data/courseData.js` — `COURSE_MODULES`, 11 chuyên đề | `dmm_completed_modules_<userId>` | Mở tự do |
+| Trade Marketing (nâng cao) | `data/tradeCourseData.js` — `TRADE_MODULES`, 5 chuyên đề | `dmm_completed_trade_<userId>` | Hoàn thành đủ 11 chuyên đề khoá chính |
+
+Hai khoá dùng chung `LessonViewer` và `QuizComponent` — hai component này chỉ nhận một `module` và không tham chiếu tới `COURSE_MODULES`, nên thêm khoá mới không phải sửa chúng.
+
+**Điều kiện mở khoá** tính trong `App.jsx` bằng `isTradeCourseUnlocked`, đối chiếu theo **id chuyên đề** chứ không so độ dài mảng: dữ liệu tiến độ cũ trong máy có thể chứa id đã bị xoá, khiến phép đếm số lượng mở khoá nhầm. Cổng khoá đặt ở chỗ kết xuất trong `App.jsx`, không chỉ ở nút trên thanh menu — ẩn nút mới là che giao diện, chặn ở chỗ kết xuất mới là chặn thật.
+
+**Tiến độ khoá Trade không đồng bộ lên Firestore** (khác khoá chính). Đây là giới hạn hiện tại, không phải chủ ý thiết kế — xem [TODO.md](TODO.md).
+
+**Không được đặt trùng `sections[].id` giữa hai khoá.** Khoá chính dùng mẫu `m<n>-s<n>`, khoá Trade dùng `tm<n>-s<n>`. `LESSON_VISUALS` tra cứu theo `sectionId`, trùng id sẽ kéo nhầm sơ đồ của khoá kia sang.
+
 ## Hai lớp minh hoạ
 
 Hai lớp tách biệt, không trùng vai trò:

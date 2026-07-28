@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import CourseOverview from './components/CourseOverview';
@@ -39,6 +39,8 @@ import {
 } from './utils/studyReminder';
 
 import { COURSE_MODULES } from './data/courseData';
+import { TRADE_MODULES } from './data/tradeCourseData';
+import TradeMarketingCourse from './components/TradeMarketingCourse';
 import { INITIAL_NEWS_ITEMS } from './data/newsData';
 import { TRANSLATIONS } from './data/translations';
 
@@ -259,6 +261,39 @@ export default function App() {
     }
   });
 
+  // Tiến độ khoá nâng cao Trade Marketing. Giữ riêng khỏi completedModules vì
+  // hai khoá tính tốt nghiệp độc lập: điều kiện nhận Bằng Chứng Nhận và điều
+  // kiện mở khoá Trade đều chỉ đếm trên khoá chính.
+  const getTradeProgressStorageKey = (user) =>
+    user ? `dmm_completed_trade_${user.id}` : 'dmm_completed_trade';
+
+  const [completedTradeModules, setCompletedTradeModules] = useState(() => {
+    try {
+      const savedUser = localStorage.getItem('dmm_active_user');
+      const userObj = savedUser ? JSON.parse(savedUser) : null;
+      const saved = localStorage.getItem(getTradeProgressStorageKey(userObj));
+      const parsed = saved ? JSON.parse(saved) : [];
+      return Array.isArray(parsed) ? parsed : [];
+    } catch (e) {
+      return [];
+    }
+  });
+
+  const [selectedTradeModuleId, setSelectedTradeModuleId] = useState(null);
+
+  // Ghi nhớ tiến độ trong state đang thuộc về tài khoản nào, để effect lưu
+  // không ghi nhầm sang khoá của tài khoản vừa đăng nhập.
+  const tradeProgressOwnerRef = useRef(null);
+
+  // Điều kiện bắt buộc để mở khoá Trade Marketing: hoàn thành TOÀN BỘ khoá
+  // Digital Marketing. Dùng phép so khớp theo id chứ không so độ dài mảng —
+  // dữ liệu cũ trong máy có thể chứa id chuyên đề đã bị xoá, khiến đếm số
+  // lượng vẫn đủ trong khi thực tế còn chuyên đề chưa học.
+  const mainCompletedCount = COURSE_MODULES.filter((m) =>
+    completedModules.includes(m.id)
+  ).length;
+  const isTradeCourseUnlocked = mainCompletedCount === COURSE_MODULES.length;
+
   // Kiểm tra lơ là: chạy sau khi đã biết học viên là ai và tiến độ tới đâu.
   // Hoãn 1,2 giây để lời nhắc không đè lên lúc trang vừa tải xong.
   useEffect(() => {
@@ -356,6 +391,33 @@ export default function App() {
     }
   }, [completedModules, currentUser]);
 
+  // Nạp tiến độ Trade của đúng tài khoản đang đăng nhập.
+  // LUÔN gán state kể cả khi chưa có dữ liệu lưu — nếu chỉ gán khi tìm thấy,
+  // học viên mới trên máy dùng chung sẽ giữ nguyên tiến độ của người trước rồi
+  // effect lưu bên dưới ghi đè tiến độ đó sang khoá của họ.
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem(getTradeProgressStorageKey(currentUser));
+      const parsed = saved ? JSON.parse(saved) : [];
+      setCompletedTradeModules(Array.isArray(parsed) ? parsed : []);
+    } catch (e) {
+      setCompletedTradeModules([]);
+    }
+    tradeProgressOwnerRef.current = currentUser ? currentUser.id : null;
+    setSelectedTradeModuleId(null);
+  }, [currentUser]);
+
+  // Lưu tiến độ Trade. Chốt chặn bằng ref: ngay sau khi đổi tài khoản, effect
+  // này chạy trước khi state kịp cập nhật, nên nếu ghi ngay sẽ đổ tiến độ của
+  // người cũ vào khoá của người mới.
+  useEffect(() => {
+    const ownerId = currentUser ? currentUser.id : null;
+    if (tradeProgressOwnerRef.current !== ownerId) return;
+    try {
+      localStorage.setItem(getTradeProgressStorageKey(currentUser), JSON.stringify(completedTradeModules));
+    } catch (e) {}
+  }, [completedTradeModules, currentUser]);
+
   useEffect(() => {
     try {
       localStorage.setItem('dmm_news_feed_v2', JSON.stringify(newsFeed));
@@ -369,6 +431,30 @@ export default function App() {
   const handlePassModule = (moduleId) => {
     if (!completedModules.includes(moduleId)) {
       setCompletedModules(prev => [...prev, moduleId]);
+    }
+  };
+
+  const handlePassTradeModule = (moduleId) => {
+    if (!completedTradeModules.includes(moduleId)) {
+      setCompletedTradeModules(prev => [...prev, moduleId]);
+    }
+  };
+
+  const selectedTradeModule = TRADE_MODULES.find(m => m.id === selectedTradeModuleId);
+
+  const handleNextTradeModule = () => {
+    const i = TRADE_MODULES.findIndex(m => m.id === selectedTradeModuleId);
+    if (i > -1 && i < TRADE_MODULES.length - 1) {
+      setSelectedTradeModuleId(TRADE_MODULES[i + 1].id);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
+  const handlePrevTradeModule = () => {
+    const i = TRADE_MODULES.findIndex(m => m.id === selectedTradeModuleId);
+    if (i > 0) {
+      setSelectedTradeModuleId(TRADE_MODULES[i - 1].id);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
 
@@ -538,6 +624,9 @@ export default function App() {
         }}
         passedCount={completedModules.length}
         totalModules={COURSE_MODULES.length}
+        isTradeCourseUnlocked={isTradeCourseUnlocked}
+        tradePassedCount={completedTradeModules.length}
+        tradeTotalModules={TRADE_MODULES.length}
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
         currentUser={currentUser}
@@ -576,6 +665,9 @@ export default function App() {
             completedModules={completedModules}
             activeTab={activeTab}
             setActiveTab={handleProtectedSelectTab}
+            isTradeCourseUnlocked={isTradeCourseUnlocked}
+            tradePassedCount={completedTradeModules.length}
+            tradeTotalModules={TRADE_MODULES.length}
           />
 
           {/* Main View Area */}
@@ -606,6 +698,37 @@ export default function App() {
                   searchQuery={searchQuery}
                   trafficStats={trafficStats}
                   onRegisterCTA={handleRegisterCTA}
+                />
+              )
+            )}
+
+            {activeTab === 'trade' && (
+              // Cổng khoá kiểm tra ở ĐÂY chứ không chỉ ẩn nút trên menu: ẩn nút
+              // mới là che giao diện, còn chặn ở chỗ kết xuất mới là chặn thật.
+              isTradeCourseUnlocked && selectedTradeModule ? (
+                <LessonViewer
+                  module={selectedTradeModule}
+                  onBack={() => setSelectedTradeModuleId(null)}
+                  onNextModule={handleNextTradeModule}
+                  onPrevModule={handlePrevTradeModule}
+                  onPassModule={handlePassTradeModule}
+                  isCompleted={completedTradeModules.includes(selectedTradeModule.id)}
+                />
+              ) : (
+                <TradeMarketingCourse
+                  isUnlocked={isTradeCourseUnlocked}
+                  mainCompletedCount={mainCompletedCount}
+                  mainTotalModules={COURSE_MODULES.length}
+                  completedTradeModules={completedTradeModules}
+                  onSelectModule={(id) => {
+                    setSelectedTradeModuleId(id);
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }}
+                  onGoToMainCourse={() => {
+                    setActiveTab('course');
+                    setSelectedModuleId(COURSE_MODULES.find((m) => !completedModules.includes(m.id))?.id ?? null);
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }}
                 />
               )
             )}

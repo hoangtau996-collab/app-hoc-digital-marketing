@@ -36,6 +36,10 @@ Mức ưu tiên cao nhất.
 
 - [ ] **Khối đồng bộ Realtime Database là mã chết.** `src/firebase.js` có một `/**` lạc ngay trước phần khai báo endpoint, nuốt trọn `activeProjectId`, `PUBLIC_SYNC_URL`, `PUBLIC_SYNC_URL_ALT` vào trong block comment. Mọi tham chiếu tới chúng ném `ReferenceError` nhưng đều nằm trong `try/catch` nên bị nuốt im lặng — **tính năng "Zero-Config Global Sync" chưa từng chạy**. Tôi cố ý **không** tự sửa: gỡ comment ra sẽ lập tức bắt đầu `PUT` hồ sơ học viên (tên, email, số điện thoại) lên một URL Realtime Database công khai mà chưa rõ Security Rules. Cần bạn xác nhận có muốn bật không, và rules ra sao.
 
+- [ ] **Tiến độ khoá Trade Marketing chưa đồng bộ lên Firestore.** Chỉ lưu ở `localStorage` theo khoá `dmm_completed_trade_<userId>`, nên học viên đổi máy sẽ mất tiến độ khoá nâng cao trong khi tiến độ khoá chính vẫn còn. Cần thêm trường vào tài liệu học viên trên Firestore, giống cách `completedModules` đang làm.
+- [ ] **Effect nạp tiến độ khoá chính có thể để người dùng mới thừa hưởng tiến độ người trước.** Trong `App.jsx`, effect nạp lại `completedModules` khi đổi tài khoản chỉ gọi `setCompletedModules` **khi tìm thấy dữ liệu đã lưu**. Nếu tài khoản vừa đăng nhập chưa có bản ghi nào, state giữ nguyên tiến độ của người trước, rồi effect lưu ngay bên dưới ghi tiến độ đó sang khoá của người mới. Xảy ra trên máy dùng chung. Khoá Trade đã tránh lỗi này bằng cách luôn gán state và chốt chặn bằng ref; nên áp cùng cách cho khoá chính.
+- [ ] **55 câu hỏi khoá chính không bao giờ có đáp án đúng ở vị trí 3 hoặc 4.** Phân bố hiện tại: 20 câu đáp án ở vị trí 1, 35 câu ở vị trí 2, 0 câu ở vị trí 3 và 4. Học viên đoán mò trong hai lựa chọn đầu là qua được ngưỡng 66%. Cần rải lại vị trí đáp án đúng.
+
 ## Chất lượng mã
 
 - [ ] **Cảnh báo lint còn tồn đọng** — biến `catch (e)` không dùng và import thừa ở nhiều tệp.

@@ -8,7 +8,9 @@ import {
   Award, 
   Search,
   CheckCircle2,
-  ChevronRight
+  ChevronRight,
+  GraduationCap,
+  Lock
 } from 'lucide-react';
 
 export default function FeatureMenuBar({
@@ -18,6 +20,9 @@ export default function FeatureMenuBar({
   onOpenCertificate,
   passedCount,
   totalModules,
+  isTradeCourseUnlocked = false,
+  tradePassedCount = 0,
+  tradeTotalModules = 0,
   searchQuery,
   setSearchQuery,
   currentUser,
@@ -52,6 +57,22 @@ export default function FeatureMenuBar({
         setActiveTab('course');
         onSelectModule(null);
       }
+    },
+    {
+      // Khoá nâng cao. Vẫn hiện nút khi chưa mở khoá — bấm vào sẽ thấy màn giải
+      // thích điều kiện và tiến độ còn thiếu, hữu ích hơn là giấu hẳn khiến học
+      // viên không biết có khoá này.
+      id: 'trade',
+      title: 'Khoá Trade Marketing',
+      subtitle: isTradeCourseUnlocked
+        ? `${tradePassedCount}/${tradeTotalModules} chuyên đề nâng cao`
+        : 'Mở sau khi tốt nghiệp khoá chính',
+      icon: isTradeCourseUnlocked ? GraduationCap : Lock,
+      badge: isTradeCourseUnlocked ? 'Mở' : 'Khoá',
+      badgeBg: isTradeCourseUnlocked
+        ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40'
+        : 'bg-slate-500/20 text-slate-400 border-slate-500/40',
+      action: () => setActiveTab('trade')
     },
     {
       id: 'glossary',

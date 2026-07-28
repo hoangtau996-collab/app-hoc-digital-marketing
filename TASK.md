@@ -27,6 +27,7 @@ Các mục dưới đây bị chặn vì thiếu thông tin, không phải vì t
 
 Chi tiết đầy đủ ở [CHANGELOG.md](CHANGELOG.md).
 
+- **Thêm khoá nâng cao Trade Marketing** — 5 chuyên đề / 16 bài / 20 câu hỏi, khoá lại cho tới khi học viên hoàn thành đủ 11 chuyên đề khoá chính. Tiến độ lưu riêng theo từng tài khoản.
 - **Sửa thẻ chia sẻ để ảnh bìa hiện được trên Zalo, Facebook, WhatsApp, Viber, LINE** — chuyển toàn bộ URL sang tuyệt đối theo tên miền thật `academy.pmarcom.com`, gỡ đoạn script ghi đè canonical, bổ sung thẻ ảnh kiểu cũ và JSON-LD.
 - **Xác nhận địa chỉ triển khai** — `https://academy.pmarcom.com/` trên Vercel, đã ghi vào [DEPLOYMENT.md](DEPLOYMENT.md) và gỡ khỏi danh sách chờ phản hồi.
 - **Vẽ lại ảnh bìa chia sẻ theo bảng màu mới** — từ tông xanh lá + vàng đồng sang Egg Shell + Indigo Dye + Rose Pink, mang slogan "Học thật - Chiến thật - Kết quả thật"; kèm sửa ba lỗi có sẵn: tệp JPEG mang đuôi `.png`, ảnh vuông trong khi khai báo 1200x630, và dung lượng 581 KB.

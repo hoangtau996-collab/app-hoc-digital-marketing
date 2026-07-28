@@ -6,16 +6,21 @@ import {
   Wrench, 
   BookOpen, 
   Sparkles,
-  ChevronDown
+  ChevronDown,
+  GraduationCap,
+  Lock
 } from 'lucide-react';
 
-export default function Sidebar({ 
-  modules, 
-  selectedModuleId, 
-  onSelectModule, 
-  completedModules, 
-  activeTab, 
-  setActiveTab 
+export default function Sidebar({
+  modules,
+  selectedModuleId,
+  onSelectModule,
+  completedModules,
+  activeTab,
+  setActiveTab,
+  isTradeCourseUnlocked = false,
+  tradePassedCount = 0,
+  tradeTotalModules = 0
 }) {
   const [isMobileExpanded, setIsMobileExpanded] = useState(false);
 
@@ -169,6 +174,31 @@ export default function Sidebar({
         </h4>
 
         <div className="grid grid-cols-1 gap-2">
+          <button
+            onClick={() => setActiveTab('trade')}
+            className={`p-3 rounded-xl border text-left transition flex items-center gap-3 ${
+              activeTab === 'trade'
+                ? 'bg-emerald-600 border-emerald-500 text-white font-bold'
+                : 'bg-emerald-950/20 border-emerald-900/30 text-slate-200 hover:border-emerald-500/50'
+            }`}
+          >
+            <div className={`w-8 h-8 rounded-lg border flex items-center justify-center ${
+              isTradeCourseUnlocked
+                ? 'bg-emerald-900/40 border-emerald-700/40 text-emerald-400'
+                : 'bg-slate-900/60 border-slate-700/40 text-slate-500'
+            }`}>
+              {isTradeCourseUnlocked ? <GraduationCap className="w-4 h-4" /> : <Lock className="w-4 h-4" />}
+            </div>
+            <div>
+              <div className="text-xs font-bold">Khoá Trade Marketing</div>
+              <div className="text-[10px] text-slate-400">
+                {isTradeCourseUnlocked
+                  ? `${tradePassedCount}/${tradeTotalModules} chuyên đề nâng cao`
+                  : 'Mở sau khi tốt nghiệp khoá chính'}
+              </div>
+            </div>
+          </button>
+
           <button
             onClick={() => setActiveTab('glossary')}
             className={`p-3 rounded-xl border text-left transition flex items-center gap-3 ${
