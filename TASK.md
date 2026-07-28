@@ -27,6 +27,9 @@ Các mục dưới đây bị chặn vì thiếu thông tin, không phải vì t
 
 Chi tiết đầy đủ ở [CHANGELOG.md](CHANGELOG.md).
 
+- **Sửa lỗi học viên mới thừa hưởng tiến độ của người trước trên máy dùng chung** — kèm sửa điều kiện tốt nghiệp đếm theo độ dài mảng.
+- **Xáo thứ tự lựa chọn bài kiểm tra** — 55 câu khoá chính trước đây không có câu nào đáp án đúng ở vị trí 3 hoặc 4; phân bố mới 12/18/15/10.
+- **Đồng bộ tiến độ khoá Trade lên Firestore** và thêm mục Trade vào thanh điều hướng đáy trên điện thoại.
 - **Sửa lỗi tài khoản quản trị mất nút vào Bảng Quản Trị** — listener đăng nhập dựng lại `currentUser` thiếu trường `role` rồi ghi đè localStorage, làm mất quyền vĩnh viễn. Nay có bộ phân giải dùng chung, khôi phục được cả những máy đã bị xoá role.
 - **Tinh gọn thanh menu** — gỡ nhóm nút điều hướng trùng lặp trên Header, các mục chuyển sang một dòng và rút ngắn nhãn; tổng bề rộng từ hơn 1.400px xuống khoảng 1.036px nên không còn bị cắt mục cuối.
 - **Thêm khoá nâng cao Trade Marketing** — 5 chuyên đề / 16 bài / 20 câu hỏi, khoá lại cho tới khi học viên hoàn thành đủ 11 chuyên đề khoá chính. Tiến độ lưu riêng theo từng tài khoản.

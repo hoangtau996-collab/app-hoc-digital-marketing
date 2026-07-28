@@ -1,19 +1,20 @@
 import React from 'react';
-import { BookOpen, Flame, Wrench, Award, Sparkles, User } from 'lucide-react';
+import { BookOpen, Flame, Wrench, Award, Sparkles, User, GraduationCap, Lock } from 'lucide-react';
 
-export default function MobileBottomNav({ 
-  activeTab, 
-  setActiveTab, 
-  passedCount, 
-  totalModules, 
+export default function MobileBottomNav({
+  activeTab,
+  setActiveTab,
   onOpenCertificate,
   currentUser,
   onOpenAuthModal,
-  onOpenProfileModal
+  onOpenProfileModal,
+  isTradeCourseUnlocked = false
 }) {
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-40 block lg:hidden glass-panel border-t border-emerald-900/60 p-1 px-2 bg-[#0e1526]/95 backdrop-blur-lg">
-      <div className="flex items-center justify-around">
+    <div className="fixed bottom-0 left-0 right-0 z-40 block lg:hidden glass-panel border-t border-emerald-900/60 p-1 px-1.5 bg-[#0e1526]/95 backdrop-blur-lg">
+      {/* justify-between + px nhỏ: thêm mục thứ 7 nên phải bỏ khoảng đệm thừa
+          của justify-around, nếu không hàng nút tràn ngang trên máy hẹp. */}
+      <div className="flex items-center justify-between">
         
         {/* Tab 1: Course */}
         <button
@@ -28,7 +29,20 @@ export default function MobileBottomNav({
           <span className="text-[10px]">Khóa Học</span>
         </button>
 
-        {/* Tab 2: Glossary */}
+        {/* Tab 2: Trade Marketing (khoá nâng cao) */}
+        <button
+          onClick={() => setActiveTab('trade')}
+          className={`flex flex-col items-center gap-0.5 py-1 px-2 rounded-xl transition ${
+            activeTab === 'trade'
+              ? 'text-emerald-400 font-bold'
+              : 'text-slate-400 hover:text-slate-200'
+          }`}
+        >
+          {isTradeCourseUnlocked ? <GraduationCap className="w-4 h-4" /> : <Lock className="w-4 h-4" />}
+          <span className="text-[10px]">Trade</span>
+        </button>
+
+        {/* Tab 3: Glossary */}
         <button
           onClick={() => setActiveTab('glossary')}
           className={`flex flex-col items-center gap-0.5 py-1 px-2 rounded-xl transition ${

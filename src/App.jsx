@@ -260,9 +260,19 @@ export default function App() {
           localStorage.setItem('dmm_active_user', JSON.stringify(studentUser));
         } catch (e) {}
 
-        // Fetch cloud progress from Cloud Firestore
+        // Fetch cloud progress from Cloud Firestore.
+        // Hợp nhất chứ không ghi đè: học viên có thể đã học vài chuyên đề ở
+        // chế độ khách ngay trên máy này trước khi đăng nhập, ghi đè thẳng bằng
+        // dữ liệu đám mây sẽ xoá mất phần đó.
         if (cloudProfile && Array.isArray(cloudProfile.completedModules)) {
-          setCompletedModules(cloudProfile.completedModules);
+          setCompletedModules((prev) =>
+            Array.from(new Set([...(Array.isArray(prev) ? prev : []), ...cloudProfile.completedModules]))
+          );
+        }
+        if (cloudProfile && Array.isArray(cloudProfile.completedTradeModules)) {
+          setCompletedTradeModules((prev) =>
+            Array.from(new Set([...(Array.isArray(prev) ? prev : []), ...cloudProfile.completedTradeModules]))
+          );
         }
       }
     });
@@ -312,9 +322,42 @@ export default function App() {
 
   const [selectedTradeModuleId, setSelectedTradeModuleId] = useState(null);
 
-  // Ghi nhớ tiến độ trong state đang thuộc về tài khoản nào, để effect lưu
-  // không ghi nhầm sang khoá của tài khoản vừa đăng nhập.
-  const tradeProgressOwnerRef = useRef(null);
+  /**
+   * Gói hồ sơ học viên gửi lên Firestore: phần định danh dùng chung, cộng thêm
+   * đúng những trường tiến độ mà nơi gọi truyền vào.
+   *
+   * Ghi lên Firestore dùng `merge: true` nên bỏ trống một trường KHÔNG làm mất
+   * trường đó trên máy chủ. Nhờ vậy mỗi effect chỉ cần gửi phần dữ liệu nó sở
+   * hữu: effect khoá chính gửi `completedModules`, effect khoá Trade gửi
+   * `completedTradeModules`. Tách như vậy để không effect nào phải đọc state
+   * của effect kia — thứ vừa sinh ra cảnh báo thiếu dependency, vừa có nguy cơ
+   * ghi đè bằng giá trị cũ kẹt trong closure.
+   */
+  const buildStudentPayload = (user, progressFields = {}) => ({
+    id: user.id || user.email.replace(/\./g, '_'),
+    name: user.name,
+    phone: user.phone || 'Chưa cập nhật',
+    email: user.email,
+    industry: user.industry || 'Kinh doanh',
+    updatedAt: new Date().toISOString(),
+    ...progressFields
+  });
+
+  /**
+   * Cờ bỏ qua một lượt lưu ngay sau khi đổi tài khoản.
+   *
+   * Vì sao không so sánh id chủ sở hữu: effect nạp và effect lưu chạy trong
+   * CÙNG một lượt commit, effect nạp lại đứng trước. Tới lúc effect lưu chạy
+   * thì ref id đã trỏ sang tài khoản mới nhưng biến state `completedModules`
+   * vẫn đang giữ giá trị của tài khoản cũ (setState chưa được áp dụng), nên
+   * phép so id luôn khớp và vẫn ghi nhầm.
+   *
+   * Cờ này đánh dấu: lượt chạy kế tiếp của effect lưu là hệ quả của việc đổi
+   * tài khoản, không phải do học viên vừa làm xong bài — bỏ qua nó. Lượt sau
+   * đó, khi state đã mang dữ liệu của đúng người, việc lưu diễn ra bình thường.
+   */
+  const skipNextProgressSaveRef = useRef(false);
+  const skipNextTradeSaveRef = useRef(false);
 
   // Điều kiện bắt buộc để mở khoá Trade Marketing: hoàn thành TOÀN BỘ khoá
   // Digital Marketing. Dùng phép so khớp theo id chứ không so độ dài mảng —
@@ -365,29 +408,45 @@ export default function App() {
     return INITIAL_NEWS_ITEMS;
   });
 
-  // Re-load completedModules whenever currentUser changes & sync to Cloud
+  // Nạp lại tiến độ khoá chính mỗi khi đổi tài khoản, đồng thời đăng ký hồ sơ
+  // học viên lên Firestore.
+  //
+  // LUÔN gán state, kể cả khi tài khoản chưa có bản ghi nào. Bản trước chỉ gán
+  // khi `localStorage` có dữ liệu, nên học viên mới đăng nhập trên máy dùng
+  // chung giữ nguyên tiến độ của người trước; effect lưu ngay bên dưới rồi ghi
+  // tiến độ đó sang khoá của họ, và payload gửi lên Firestore cũng mang theo
+  // luôn. Một người vừa tạo tài khoản có thể "tốt nghiệp" ngay mà chưa học buổi
+  // nào, còn tiến độ thật của người kia thì bị nhân bản sai chỗ.
   useEffect(() => {
     const key = getProgressStorageKey(currentUser);
+    let loadedModules = [];
     try {
       const saved = localStorage.getItem(key);
-      if (saved) {
-        setCompletedModules(JSON.parse(saved));
-      }
+      const parsed = saved ? JSON.parse(saved) : [];
+      loadedModules = Array.isArray(parsed) ? parsed : [];
+    } catch (e) {
+      loadedModules = [];
+    }
+    setCompletedModules(loadedModules);
+    skipNextProgressSaveRef.current = true;
+
+    try {
       if (currentUser) {
         localStorage.setItem('dmm_active_user', JSON.stringify(currentUser));
         localStorage.setItem('dmm_student_name', currentUser.name);
 
-        // Cloud Firestore Sync (Immediate 100% sync on startup across all devices)
-        const fullStudentData = {
-          id: currentUser.id || currentUser.email.replace(/\./g, '_'),
-          name: currentUser.name,
-          phone: currentUser.phone || 'Chưa cập nhật',
-          email: currentUser.email,
-          industry: currentUser.industry || 'Kinh doanh',
-          completedModules,
-          updatedAt: new Date().toISOString()
-        };
-        recordStudentAccountToCloud(fullStudentData);
+        // Dùng `loadedModules` chứ không dùng biến state `completedModules`:
+        // trong lượt chạy này state vẫn đang giữ giá trị của tài khoản trước.
+        let loadedTrade = [];
+        try {
+          const t = localStorage.getItem(getTradeProgressStorageKey(currentUser));
+          const p = t ? JSON.parse(t) : [];
+          loadedTrade = Array.isArray(p) ? p : [];
+        } catch (e) {}
+        recordStudentAccountToCloud(buildStudentPayload(currentUser, {
+          completedModules: loadedModules,
+          completedTradeModules: loadedTrade
+        }));
       } else {
         localStorage.removeItem('dmm_active_user');
       }
@@ -396,25 +455,24 @@ export default function App() {
     }
   }, [currentUser]);
 
+  // Lưu tiến độ khoá chính.
   useEffect(() => {
+    if (skipNextProgressSaveRef.current) {
+      skipNextProgressSaveRef.current = false;
+      return;
+    }
+
     const key = getProgressStorageKey(currentUser);
     try {
       localStorage.setItem(key, JSON.stringify(completedModules));
       if (currentUser) {
-        const fullStudentData = {
-          id: currentUser.id || currentUser.email.replace(/\./g, '_'),
-          name: currentUser.name,
-          phone: currentUser.phone || 'Chưa cập nhật',
-          email: currentUser.email,
-          industry: currentUser.industry || 'Kinh doanh',
-          completedModules,
-          updatedAt: new Date().toISOString()
-        };
+        const fullStudentData = buildStudentPayload(currentUser, { completedModules });
         saveUserProgressToCloud(currentUser.id || currentUser.email.replace(/\./g, '_'), fullStudentData);
         recordStudentAccountToCloud(fullStudentData);
       }
-      // Record real graduate achievement when all 11 modules completed
-      if (completedModules.length === COURSE_MODULES.length) {
+      // Ghi nhận tốt nghiệp: đối chiếu theo id chuyên đề chứ không so độ dài
+      // mảng, vì dữ liệu cũ có thể chứa id chuyên đề đã bị xoá.
+      if (COURSE_MODULES.every((m) => completedModules.includes(m.id))) {
         recordRealStudentGraduate();
       }
     } catch (e) {
@@ -434,18 +492,24 @@ export default function App() {
     } catch (e) {
       setCompletedTradeModules([]);
     }
-    tradeProgressOwnerRef.current = currentUser ? currentUser.id : null;
+    skipNextTradeSaveRef.current = true;
     setSelectedTradeModuleId(null);
   }, [currentUser]);
 
-  // Lưu tiến độ Trade. Chốt chặn bằng ref: ngay sau khi đổi tài khoản, effect
-  // này chạy trước khi state kịp cập nhật, nên nếu ghi ngay sẽ đổ tiến độ của
-  // người cũ vào khoá của người mới.
+  // Lưu tiến độ Trade, đồng bộ lên Firestore để đổi máy không mất.
   useEffect(() => {
-    const ownerId = currentUser ? currentUser.id : null;
-    if (tradeProgressOwnerRef.current !== ownerId) return;
+    if (skipNextTradeSaveRef.current) {
+      skipNextTradeSaveRef.current = false;
+      return;
+    }
     try {
       localStorage.setItem(getTradeProgressStorageKey(currentUser), JSON.stringify(completedTradeModules));
+      if (currentUser) {
+        saveUserProgressToCloud(
+          currentUser.id || currentUser.email.replace(/\./g, '_'),
+          buildStudentPayload(currentUser, { completedTradeModules })
+        );
+      }
     } catch (e) {}
   }, [completedTradeModules, currentUser]);
 
@@ -866,8 +930,7 @@ export default function App() {
       <MobileBottomNav
         activeTab={activeTab}
         setActiveTab={setActiveTab}
-        passedCount={completedModules.length}
-        totalModules={COURSE_MODULES.length}
+        isTradeCourseUnlocked={isTradeCourseUnlocked}
         onOpenCertificate={() => setIsCertOpen(true)}
         currentUser={currentUser}
         onOpenAuthModal={() => setIsAuthOpen(true)}

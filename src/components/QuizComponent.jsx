@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import confetti from 'canvas-confetti';
 import { 
   CheckCircle2, 
@@ -11,13 +11,68 @@ import {
   BookOpen
 } from 'lucide-react';
 
-export default function QuizComponent({ 
+/**
+ * Xáo thứ tự lựa chọn của từng câu hỏi.
+ *
+ * Vì sao cần: trong 55 câu của khoá chính, đáp án đúng CHƯA BAO GIỜ nằm ở vị
+ * trí thứ ba hay thứ tư — 20 câu ở vị trí một, 35 câu ở vị trí hai. Học viên
+ * chỉ cần đoán trong hai lựa chọn đầu là vượt ngưỡng đạt 66%.
+ *
+ * Xáo ở tầng hiển thị thay vì sửa dữ liệu gốc: dữ liệu giữ nguyên nên dễ soát
+ * và dễ sửa nội dung, đồng thời mọi câu hỏi thêm về sau tự động được bảo vệ.
+ *
+ * Hạt giống lấy từ id câu hỏi nên thứ tự CỐ ĐỊNH giữa các lần mở. Nếu xáo ngẫu
+ * nhiên thật thì mỗi lần kết xuất lại một thứ tự khác, và đáp án học viên vừa
+ * chọn sẽ trỏ sang lựa chọn khác.
+ */
+function shuffleQuizOptions(quiz) {
+  if (!Array.isArray(quiz)) return [];
+
+  return quiz.map((q) => {
+    if (!Array.isArray(q.options) || q.options.length < 2) return q;
+
+    // Băm chuỗi id thành số nguyên (biến thể FNV-1a, đủ dùng cho mục đích này)
+    let seed = 2166136261;
+    const key = String(q.id || q.question || '');
+    for (let i = 0; i < key.length; i++) {
+      seed ^= key.charCodeAt(i);
+      seed = Math.imul(seed, 16777619) >>> 0;
+    }
+    const nextRandom = () => {
+      seed = (Math.imul(seed, 1664525) + 1013904223) >>> 0;
+      return seed / 4294967296;
+    };
+
+    // Fisher-Yates trên mảng chỉ số, rồi ánh xạ lại vị trí đáp án đúng
+    const order = q.options.map((_, i) => i);
+    for (let i = order.length - 1; i > 0; i--) {
+      const j = Math.floor(nextRandom() * (i + 1));
+      [order[i], order[j]] = [order[j], order[i]];
+    }
+
+    return {
+      ...q,
+      options: order.map((i) => q.options[i]),
+      correct: order.indexOf(q.correct)
+    };
+  });
+}
+
+export default function QuizComponent({
   module, 
   onPassModule, 
   isCompleted,
   onGoToTheory
 }) {
-  const storageKey = `dmm_quiz_results_${module.id}`;
+  // Hậu tố _v2: thứ tự lựa chọn nay được xáo (xem shuffleQuizOptions bên dưới).
+  // Kết quả lưu theo khoá cũ ghi đáp án đã chọn theo thứ tự GỐC, đọc lại bằng
+  // thứ tự mới sẽ tô sáng nhầm ô. Tiến độ hoàn thành chuyên đề lưu ở chỗ khác
+  // nên không bị ảnh hưởng, chỉ là bài đã làm hiện lại như chưa làm.
+  const storageKey = `dmm_quiz_results_v2_${module.id}`;
+
+  // Xáo một lần cho mỗi chuyên đề, không xáo lại ở mỗi lần kết xuất — nếu
+  // không, mỗi lần bấm chọn là các lựa chọn lại nhảy chỗ.
+  const quiz = useMemo(() => shuffleQuizOptions(module.quiz), [module.quiz]);
 
   const [selectedAnswers, setSelectedAnswers] = useState({});
   const [submitted, setSubmitted] = useState(false);
@@ -56,7 +111,7 @@ export default function QuizComponent({
   const answeredCount = Object.keys(selectedAnswers).filter(
     k => selectedAnswers[k] !== undefined && selectedAnswers[k] !== null
   ).length;
-  const totalQuestions = module.quiz ? module.quiz.length : 0;
+  const totalQuestions = quiz.length;
   const isAllAnswered = answeredCount === totalQuestions && totalQuestions > 0;
 
   const handleSubmit = () => {
@@ -66,7 +121,7 @@ export default function QuizComponent({
     }
 
     let correctCount = 0;
-    module.quiz.forEach((q, idx) => {
+    quiz.forEach((q, idx) => {
       if (selectedAnswers[idx] === q.correct) {
         correctCount += 1;
       }
@@ -156,7 +211,7 @@ export default function QuizComponent({
 
       {/* Questions List */}
       <div className="space-y-8">
-        {module.quiz.map((q, qIndex) => {
+        {quiz.map((q, qIndex) => {
           const selected = selectedAnswers[qIndex];
           const isUnanswered = selected === undefined || selected === null;
           const isQuestionWarning = showValidation && isUnanswered;
