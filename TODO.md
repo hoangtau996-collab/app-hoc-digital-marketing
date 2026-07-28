@@ -12,6 +12,7 @@ Mức ưu tiên cao nhất.
 
 - [x] ~~**Mật khẩu lưu dạng chữ thường trong localStorage.**~~ Đã xử lý bằng SHA-256 + muối, kèm nâng cấp bản ghi cũ. Xem [CHANGELOG.md](CHANGELOG.md).
 - [ ] **Tài khoản quản trị nằm cứng trong mã.** `admin@pmarcom.edu.vn` với mật khẩu `admin` viết thẳng trong `AuthModal.jsx`. Băm khi lưu xuống localStorage đã xử lý, nhưng **mật khẩu vẫn đọc được trong mã nguồn**. Cần chuyển sang tài khoản Firebase Auth thật kèm custom claim.
+- [ ] **Vai trò admin vẫn đọc từ localStorage nên sửa tay được.** `resolveUserRole` trong `App.jsx` tin `dmm_active_user.role` và sổ `dmm_users_db` — cả hai đều nằm trong localStorage, học viên mở devtools sửa một dòng là vào được Bảng Quản Trị. Đây là giới hạn cố hữu của ứng dụng không có backend, **không** phải lỗi mới sinh ra khi vá lỗi mất quyền admin: bản trước cũng tin đúng nguồn đó. Xử lý dứt điểm phải đi cùng mục "tài khoản quản trị nằm cứng trong mã" ở trên — chuyển sang Firebase Auth custom claim và kiểm tra ở Firestore Rules, vì lúc đó dữ liệu nhạy cảm mới thực sự được chặn ở phía máy chủ.
 - [ ] **Đưa Firestore Security Rules vào kho mã.** Ứng dụng không có backend nên rules là lớp bảo vệ duy nhất. Hiện chưa có `firestore.rules`. Xem [DATABASE.md](DATABASE.md#bảo-mật).
 - [ ] **Rà soát quyền ghi `analytics`.** Bộ đếm truy cập ghi trực tiếp từ trình duyệt bằng `increment(1)`; cần rules chặn ghi tuỳ tiện.
 

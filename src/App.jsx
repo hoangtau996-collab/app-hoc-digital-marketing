@@ -175,6 +175,31 @@ export default function App() {
     };
   }, []);
 
+  /**
+   * Xác định vai trò của tài khoản. Chỉ trả về 'admin' khi có nguồn khẳng định,
+   * mọi trường hợp còn lại quy về 'student'.
+   *
+   * Có tra thêm sổ tài khoản `dmm_users_db` theo email vì đó là nguồn khai báo
+   * gốc của tài khoản quản trị. Không có bước này thì những máy đã bị lỗi cũ
+   * xoá mất role trong `dmm_active_user` sẽ không bao giờ khôi phục được quyền,
+   * kể cả sau khi đăng nhập lại.
+   */
+  const resolveUserRole = (email, existingUser, cloudProfile) => {
+    if (existingUser?.role === 'admin' || cloudProfile?.role === 'admin') return 'admin';
+    try {
+      const db = JSON.parse(localStorage.getItem('dmm_users_db') || '[]');
+      const normalized = String(email || '').trim().toLowerCase();
+      if (
+        normalized &&
+        Array.isArray(db) &&
+        db.some((u) => String(u?.email || '').trim().toLowerCase() === normalized && u?.role === 'admin')
+      ) {
+        return 'admin';
+      }
+    } catch (e) {}
+    return 'student';
+  };
+
   // Active student account with fail-safe sanitization
   const [currentUser, setCurrentUser] = useState(() => {
     try {
@@ -190,9 +215,10 @@ export default function App() {
           industry: typeof parsed.industry === 'string' ? parsed.industry : 'Digital Marketing',
           coverBg: typeof parsed.coverBg === 'string' ? parsed.coverBg : 'emerald',
           // Bộ làm sạch này trước đây NUỐT MẤT trường role, nên không tầng nào
-          // phân biệt được admin với học viên. Chỉ chấp nhận đúng chuỗi 'admin',
-          // mọi giá trị khác quy về 'student'.
-          role: parsed.role === 'admin' ? 'admin' : 'student'
+          // phân biệt được admin với học viên. Dùng chung bộ phân giải với
+          // listener đăng nhập để máy nào đã bị xoá mất role vẫn khôi phục được
+          // ngay từ lần tải trang đầu, không phải chờ Firebase trả lời.
+          role: resolveUserRole(parsed.email, parsed, null)
         };
       }
       return null;
@@ -221,7 +247,12 @@ export default function App() {
           industry: existingUser?.industry || cloudProfile?.industry || 'Digital Marketing',
           coverBg: existingUser?.coverBg || cloudProfile?.coverBg || 'emerald',
           avatarUrl: existingUser?.avatarUrl || cloudProfile?.avatarUrl || '',
-          createdAt: existingUser?.createdAt || cloudProfile?.createdAt || new Date().toLocaleDateString('vi-VN')
+          createdAt: existingUser?.createdAt || cloudProfile?.createdAt || new Date().toLocaleDateString('vi-VN'),
+          // Trường role BẮT BUỘC phải dựng lại ở đây. Thiếu nó thì listener này
+          // vừa xoá quyền admin khỏi state, vừa ghi đè bản localStorage bên dưới
+          // nên quyền mất luôn ở những lần tải trang sau — đúng triệu chứng
+          // "admin không còn thấy nút Quản Trị".
+          role: resolveUserRole(user.email || existingUser?.email, existingUser, cloudProfile)
         };
 
         setCurrentUser(studentUser);
@@ -582,11 +613,9 @@ export default function App() {
       
       {/* Top Header Bar */}
       <Header
-        activeTab={activeTab}
         setActiveTab={handleProtectedSelectTab}
         passedCount={completedModules.length}
         totalModules={COURSE_MODULES.length}
-        newsFeed={newsFeed}
         onOpenCertificate={() => {
           if (!currentUser) {
             setMigrationNotice('🔒 Vui lòng Đăng Ký / Đăng Nhập để xem bằng cấp!');

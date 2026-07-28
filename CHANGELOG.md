@@ -29,6 +29,9 @@ TODO — chưa có quy ước đánh phiên bản; cân nhắc gắn thẻ Git k
 
 ### Thay đổi
 
+- **Tinh gọn thanh menu.** Gỡ nhóm bốn nút Khóa học / Từ điển / Tin tức / Công cụ trong `Header.jsx` — chúng lặp y nguyên các mục của `FeatureMenuBar` ngay bên dưới, chiếm khoảng 330px và đẩy nút Quản Trị cùng nút tài khoản ra khỏi tầm nhìn. Các mục menu chuyển từ hai dòng sang **một dòng** (biểu tượng + nhãn + badge), phần mô tả dài chuyển sang thuộc tính `title` hiện khi di chuột. Nhãn rút ngắn: "Khóa Học Digital Thực Chiến" thành "Khoá Học", "Bộ Công Cụ Quản Lý" thành "Công Cụ", "Giấy Chứng Nhận" thành "Chứng Nhận" (sửa trong `translations.js` nên cả bản tiếng Anh cùng gọn theo). Tổng bề rộng từ hơn 1.400px xuống khoảng 1.036px, nằm gọn trong khung 1.280px.
+- **Ô tên tài khoản trên Header nới từ 100px lên 150px** — tên "QUẢN TRỊ VIÊN ADMIN" trước đây bị cắt còn "QUẢN TRỊ VIÊN ...".
+- **Phụ đề mục Từ Điển cập nhật từ "60+ Thuật ngữ" thành "121 thuật ngữ"** cho khớp số liệu thật.
 - **Bản tin phân trang 5 tin mỗi lần**, kèm nút "Xem thêm 5 tin (còn N)" và dòng đếm kết quả. Đổi bộ lọc nền tảng thì quay lại trang đầu; bấm nạp tin mới thì nới thêm một ô hiển thị để tin vừa chèn không đẩy tin cuối trang ra khỏi tầm nhìn.
 - **Khoá lưu bản tin đổi sang `dmm_news_feed_v2`** (`App.jsx`) — dữ liệu lưu theo khoá cũ thiếu tranh minh hoạ và thân bài, nếu không đổi khoá thì người dùng cũ sẽ mãi thấy bản tin rút gọn. Giao diện vẫn giữ đường lùi hiển thị `coverImage` cho dữ liệu cũ.
 - **Mở rộng `ICON_MAP`** từ 20 lên 113 icon lucide-react để 121 thuật ngữ không dùng chung một biểu tượng mặc định. Hai icon trùng tên với biến toàn cục của JavaScript được nhập kèm bí danh: `Infinity as InfinityIcon`, `Image as ImageIcon`.
@@ -36,6 +39,8 @@ TODO — chưa có quy ước đánh phiên bản; cân nhắc gắn thẻ Git k
 
 ### Sửa lỗi
 
+- **Tài khoản quản trị mất nút vào Bảng Quản Trị.** Listener `onAuthStateChanged` trong `App.jsx` dựng lại đối tượng `currentUser` từ một danh sách trường ghi cứng nhưng **bỏ sót `role`**, rồi ghi đè luôn bản trong `localStorage`. Hệ quả: mở trang thì nút Quản Trị hiện lên chớp nhoáng (bộ khởi tạo state đọc đúng role), tới khi Firebase trả lời thì role thành `undefined` và nút biến mất — đồng thời role trong máy bị xoá nên những lần tải sau cũng mất. Nay cả bộ khởi tạo lẫn listener dùng chung `resolveUserRole`, có tra thêm sổ `dmm_users_db` theo email nên máy nào đã bị xoá mất role vẫn khôi phục được quyền.
+- **Mục cuối thanh menu bị cắt mất.** Bảy mục xếp hai dòng (tiêu đề + phụ đề) chiếm hơn 1.400px, tràn khỏi khung 1.280px, "Giấy Chứng Nhận" nằm ngoài tầm nhìn mà không có dấu hiệu nào cho biết còn nội dung bên phải.
 - **Ảnh bìa không hiện được trên Zalo, WhatsApp, Viber, LINE vì URL để tương đối.** Các trình quét này không chạy JavaScript và không phân giải `/og-cover.png`, nên bỏ qua ảnh và chỉ hiện tiêu đề trống. Toàn bộ URL nay ghi tuyệt đối theo tên miền thật `https://academy.pmarcom.com`.
 - **`canonical` và `og:url` trỏ về `https://pmarcom.edu.vn` — tên miền không tồn tại** (DNS trả về Non-existent domain). Đây là lỗi nặng nhất: một số trình quét phân giải ảnh tương đối dựa trên `og:url`, tức là chúng đi tìm ảnh ở một tên miền chết. Với Google, canonical trỏ sang tên miền không tồn tại còn làm hỏng việc lập chỉ mục. Đã đổi sang `https://academy.pmarcom.com/`.
 - **Gỡ đoạn script ghi đè `canonical` và `og:url` bằng `window.location.href`.** Ghi chú của nó nói là để phục vụ trình quét WhatsApp và LinkedIn, nhưng các trình quét mạng xã hội không chạy JavaScript nên chưa bao giờ nhận được gì. Ngược lại Googlebot có dựng JavaScript, nên đoạn này biến mọi URL có tham số theo dõi thành canonical của chính nó, làm loãng tín hiệu xếp hạng.

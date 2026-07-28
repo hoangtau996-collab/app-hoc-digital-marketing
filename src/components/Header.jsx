@@ -3,14 +3,9 @@ import PMarcomLogo from './PMarcomLogo';
 import { TRAFFIC_BASELINE } from '../firebase';
 import {
   Award,
-  Flame,
-  Search, 
-  BookOpen, 
-  Newspaper, 
-  Wrench,
+  Search,
   X,
   User,
-  Sparkles,
   Sun,
   Moon,
   Monitor,
@@ -19,12 +14,13 @@ import {
   ShieldCheck
 } from 'lucide-react';
 
-export default function Header({ 
-  activeTab, 
-  setActiveTab, 
-  passedCount, 
-  totalModules, 
-  newsFeed,
+export default function Header({
+  // Bỏ `activeTab` và `newsFeed`: sau khi gỡ nhóm nút điều hướng trùng lặp thì
+  // Header không còn cần biết đang ở tab nào, và biến tin mới nhất cũng chưa
+  // từng được dùng tới.
+  setActiveTab,
+  passedCount,
+  totalModules,
   onOpenCertificate,
   searchQuery,
   setSearchQuery,
@@ -43,7 +39,6 @@ export default function Header({
   const [showThemeMenu, setShowThemeMenu] = useState(false);
   const textDict = t || {};
   const overallProgress = totalModules > 0 ? Math.round((passedCount / totalModules) * 100) : 0;
-  const latestNews = Array.isArray(newsFeed) && newsFeed.length > 0 ? newsFeed[0] : null;
 
   return (
     <header className="sticky top-0 z-40 bg-[#0e1526]/95 backdrop-blur-md border-b border-emerald-900/40 px-3 sm:px-6 py-2.5">
@@ -89,40 +84,13 @@ export default function Header({
             />
           </div>
 
-          <div className="flex items-center bg-[#18243d] p-1 rounded-lg border border-emerald-900/40">
-            <button
-              onClick={() => setActiveTab('course')}
-              className={`flex items-center gap-1 px-2 py-1 rounded-md text-xs font-medium transition ${
-                activeTab === 'course' ? 'bg-emerald-600 text-white shadow' : 'text-slate-400 hover:text-white'
-              }`}
-            >
-              <BookOpen className="w-3.5 h-3.5" /> Khóa học
-            </button>
-            <button
-              onClick={() => setActiveTab('glossary')}
-              className={`flex items-center gap-1 px-2 py-1 rounded-md text-xs font-medium transition ${
-                activeTab === 'glossary' ? 'bg-emerald-600 text-white shadow' : 'text-slate-400 hover:text-white'
-              }`}
-            >
-              <Sparkles className="w-3.5 h-3.5 text-amber-400" /> Từ điển
-            </button>
-            <button
-              onClick={() => setActiveTab('news')}
-              className={`flex items-center gap-1 px-2 py-1 rounded-md text-xs font-medium transition ${
-                activeTab === 'news' ? 'bg-emerald-600 text-white shadow' : 'text-slate-400 hover:text-white'
-              }`}
-            >
-              <Newspaper className="w-3.5 h-3.5" /> Tin tức
-            </button>
-            <button
-              onClick={() => setActiveTab('tools')}
-              className={`flex items-center gap-1 px-2 py-1 rounded-md text-xs font-medium transition ${
-                activeTab === 'tools' ? 'bg-emerald-600 text-white shadow' : 'text-slate-400 hover:text-white'
-              }`}
-            >
-              <Wrench className="w-3.5 h-3.5" /> Công cụ
-            </button>
-          </div>
+          {/*
+            ĐÃ GỠ: nhóm bốn nút Khóa học / Từ điển / Tin tức / Công cụ.
+            Chúng lặp y nguyên các mục của FeatureMenuBar ngay bên dưới, mà
+            thanh đó còn ghi rõ nhãn và tiến độ. Hai hàng điều hướng cùng nội
+            dung vừa gây rối vừa chiếm khoảng 330px, đẩy nút Quản Trị và nút tài
+            khoản ra khỏi tầm nhìn trên màn hình hẹp. Đừng thêm lại.
+          */}
 
           {/* Language Selector Switcher Button */}
           {toggleLanguage && (
@@ -218,7 +186,9 @@ export default function Header({
                   currentUser.name ? currentUser.name.charAt(0) : 'U'
                 )}
               </div>
-              <span className="truncate max-w-[100px]">{currentUser.name || 'Học Viên'}</span>
+              {/* Nới từ 100px lên 150px: gỡ nhóm nút trùng lặp đã trả lại chỗ,
+                  tên "QUẢN TRỊ VIÊN ADMIN" trước đây bị cắt còn "QUẢN TRỊ VIÊN ..." */}
+              <span className="truncate max-w-[150px]">{currentUser.name || 'Học Viên'}</span>
             </button>
           ) : (
             <button

@@ -1,14 +1,11 @@
 import React from 'react';
-import { 
-  BookOpen, 
-  Sparkles, 
-  Newspaper, 
-  Wrench, 
-  Bot, 
-  Award, 
-  Search,
-  CheckCircle2,
-  ChevronRight,
+import {
+  BookOpen,
+  Sparkles,
+  Newspaper,
+  Wrench,
+  Award,
+  KeyRound,
   GraduationCap,
   Lock
 } from 'lucide-react';
@@ -30,18 +27,18 @@ export default function FeatureMenuBar({
   onOpenProfileModal,
   t
 }) {
+  // Nhãn giữ NGẮN để cả thanh menu nằm gọn trong khung 1.280px không phải cuộn
+  // ngang. Phần mô tả dài chuyển xuống phụ đề, hiện khi di chuột qua.
   const textDict = t || {
-    menuCourseTitle: "Khóa Học Trưởng Phòng",
-    menuCourseSub: "11 Chuyên đề thực chiến",
-    menuGlossaryTitle: "Từ Điển Digital",
-    menuGlossarySub: "60+ Thuật ngữ chuyên sâu",
-    menuNewsTitle: "Tin Tức Meta/TikTok",
-    menuNewsSub: "Cập nhật thuật toán Live",
-    menuToolsTitle: "Bộ Công Cụ Quản Lý",
-    menuToolsSub: "Tính ngân sách, ROI & Team",
-    menuAiTitle: "Trợ Lý AI Chiến Lược",
-    menuAiSub: "Tư vấn Kế hoạch Marcom",
-    menuCertTitle: "Giấy Chứng Nhận",
+    menuCourseTitle: "Khoá Học",
+    menuCourseSub: "Khoá chính — 11 chuyên đề thực chiến",
+    menuGlossaryTitle: "Từ Điển",
+    menuGlossarySub: "121 thuật ngữ Digital Marketing",
+    menuNewsTitle: "Tin Tức",
+    menuNewsSub: "Bản tin thuật toán Meta, TikTok, Google",
+    menuToolsTitle: "Công Cụ",
+    menuToolsSub: "Tính ngân sách, ROI và nhân sự",
+    menuCertTitle: "Chứng Nhận",
     searchPlaceholder: "Tra cứu bài học / Thuật ngữ..."
   };
 
@@ -63,7 +60,7 @@ export default function FeatureMenuBar({
       // thích điều kiện và tiến độ còn thiếu, hữu ích hơn là giấu hẳn khiến học
       // viên không biết có khoá này.
       id: 'trade',
-      title: 'Khoá Trade Marketing',
+      title: 'Trade Marketing',
       subtitle: isTradeCourseUnlocked
         ? `${tradePassedCount}/${tradeTotalModules} chuyên đề nâng cao`
         : 'Mở sau khi tốt nghiệp khoá chính',
@@ -123,10 +120,10 @@ export default function FeatureMenuBar({
           {currentUser ? (
             <button
               onClick={onOpenProfileModal}
-              className="flex items-center gap-2.5 px-3.5 py-2 rounded-xl text-left transition shrink-0 border border-amber-400/60 bg-gradient-to-r from-amber-500/20 via-emerald-950 to-teal-950 hover:brightness-125 text-white shadow-lg cursor-pointer group"
+              className="flex items-center gap-1.5 px-2 py-1.5 rounded-lg transition shrink-0 border border-amber-400/60 bg-gradient-to-r from-amber-500/20 via-emerald-950 to-teal-950 hover:brightness-125 text-white shadow cursor-pointer"
               title="Tuỳ chỉnh thông tin cá nhân học viên & hình nền"
             >
-              <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-amber-400 to-yellow-500 text-slate-950 font-black text-xs flex items-center justify-center shadow shrink-0 overflow-hidden">
+              <div className="w-6 h-6 rounded-md bg-gradient-to-br from-amber-400 to-yellow-500 text-slate-950 font-black text-[10px] flex items-center justify-center shrink-0 overflow-hidden">
                 {currentUser.avatarUrl ? (
                   <img src={currentUser.avatarUrl} alt="Avatar" className="w-full h-full object-cover" />
                 ) : (
@@ -134,67 +131,51 @@ export default function FeatureMenuBar({
                 )}
               </div>
 
-              <div>
-                <div className="flex items-center gap-1.5">
-                  <span className="text-xs font-black text-amber-300 uppercase tracking-wide truncate max-w-[120px] sm:max-w-[160px]">
-                    {currentUser && typeof currentUser.name === 'string' && currentUser.name.trim() ? currentUser.name : 'HỌC VIÊN'}
-                  </span>
-                  <span className="text-[9px] font-black px-1.5 py-0.2 rounded bg-amber-500 text-slate-950 uppercase border border-amber-400">
-                    Hồ Sơ
-                  </span>
-                </div>
-                <p className="text-[10px] text-slate-300 font-medium whitespace-nowrap">
-                  ⚙️ Tuỳ chỉnh thông tin & Hình nền
-                </p>
-              </div>
+              <span className="text-xs font-black text-amber-300 uppercase tracking-wide truncate max-w-[110px]">
+                {currentUser && typeof currentUser.name === 'string' && currentUser.name.trim() ? currentUser.name : 'HỌC VIÊN'}
+              </span>
+              <span className="text-[9px] font-black px-1.5 py-0.5 rounded bg-amber-500 text-slate-950 uppercase border border-amber-400 shrink-0">
+                Hồ Sơ
+              </span>
             </button>
           ) : (
             <button
               onClick={onOpenAuthModal}
-              className="flex items-center gap-2 px-3.5 py-2 rounded-xl text-left transition shrink-0 border border-emerald-500 bg-gradient-to-r from-emerald-600 to-teal-600 hover:brightness-110 text-white shadow-lg cursor-pointer"
+              title="Tạo hồ sơ học viên ngay"
+              className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg transition shrink-0 border border-emerald-500 bg-gradient-to-r from-emerald-600 to-teal-600 hover:brightness-110 text-white shadow cursor-pointer"
             >
-              <div className="p-1 rounded-lg bg-white/20 text-white">
-                <Search className="w-4 h-4" />
-              </div>
-              <div>
-                <div className="text-xs font-bold whitespace-nowrap">🔑 Đăng Ký / Đăng Nhập</div>
-                <p className="text-[10px] text-emerald-100 font-medium">Tạo hồ sơ học viên ngay</p>
-              </div>
+              <KeyRound className="w-4 h-4 shrink-0" />
+              <span className="text-xs font-bold whitespace-nowrap">Đăng Ký / Đăng Nhập</span>
             </button>
           )}
 
-          {/* MAIN MENU ITEMS */}
+          {/*
+            MỤC MENU CHÍNH — bố cục MỘT DÒNG.
+            Bản trước xếp hai dòng (tiêu đề + phụ đề) nên mỗi mục rộng khoảng
+            200px; bảy mục là hơn 1.400px, tràn khỏi khung 1.280px và mục cuối
+            "Giấy Chứng Nhận" bị cắt mất. Phụ đề chuyển sang thuộc tính title để
+            di chuột vẫn đọc được mà không tốn chỗ.
+          */}
           {MENU_ITEMS.map((item) => {
             const Icon = item.icon;
             const isActive = activeTab === item.id;
-            
+
             return (
               <button
                 key={item.id}
                 onClick={item.action}
-                className={`flex items-center gap-2 px-3 py-2 rounded-xl text-left transition shrink-0 border cursor-pointer group ${
-                  isActive 
-                    ? 'bg-gradient-to-r from-emerald-600 to-teal-600 text-white border-emerald-400 shadow-md font-bold' 
+                title={item.subtitle}
+                className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg transition shrink-0 border cursor-pointer ${
+                  isActive
+                    ? 'bg-gradient-to-r from-emerald-600 to-teal-600 text-white border-emerald-400 shadow-md'
                     : 'glass-panel hover:bg-emerald-950/40 text-slate-300 hover:text-white border-emerald-900/40'
                 }`}
               >
-                <div className={`p-1.5 rounded-lg transition ${
-                  isActive ? 'bg-white/20 text-white' : 'bg-emerald-950 text-emerald-400 group-hover:scale-110'
-                }`}>
-                  <Icon className="w-4 h-4" />
-                </div>
-
-                <div>
-                  <div className="flex items-center gap-1.5">
-                    <span className="text-xs font-bold whitespace-nowrap">{item.title}</span>
-                    <span className={`text-[9px] font-extrabold px-1.5 py-0.2 rounded border ${item.badgeBg}`}>
-                      {item.badge}
-                    </span>
-                  </div>
-                  <p className="text-[10px] opacity-80 whitespace-nowrap hidden sm:block">
-                    {item.subtitle}
-                  </p>
-                </div>
+                <Icon className={`w-4 h-4 shrink-0 ${isActive ? 'text-white' : 'text-emerald-400'}`} />
+                <span className="text-xs font-bold whitespace-nowrap">{item.title}</span>
+                <span className={`text-[9px] font-extrabold px-1.5 py-0.5 rounded border shrink-0 ${item.badgeBg}`}>
+                  {item.badge}
+                </span>
               </button>
             );
           })}
