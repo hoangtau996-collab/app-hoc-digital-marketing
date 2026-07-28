@@ -38,6 +38,8 @@ import {
   snoozeReminder,
 } from './utils/studyReminder';
 
+import { isAdminEmail } from './utils/adminRoles';
+
 import { COURSE_MODULES } from './data/courseData';
 import { TRADE_MODULES } from './data/tradeCourseData';
 import TradeMarketingCourse from './components/TradeMarketingCourse';
@@ -185,6 +187,10 @@ export default function App() {
    * kể cả sau khi đăng nhập lại.
    */
   const resolveUserRole = (email, existingUser, cloudProfile) => {
+    // Sổ phân quyền (`utils/adminRoles`) đứng trước: tài khoản gốc luôn là quản
+    // trị viên, và người vừa được nâng quyền phải nhận đúng vai trò ngay lần
+    // đăng nhập kế tiếp mà không phải chờ Firestore trả lời.
+    if (isAdminEmail(email) || isAdminEmail(existingUser?.email)) return 'admin';
     if (existingUser?.role === 'admin' || cloudProfile?.role === 'admin') return 'admin';
     try {
       const db = JSON.parse(localStorage.getItem('dmm_users_db') || '[]');

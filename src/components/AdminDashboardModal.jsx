@@ -8,9 +8,20 @@ import {
   doc,
   deleteDoc,
   TRAFFIC_BASELINE,
-  deleteStudentEverywhere
+  deleteStudentEverywhere,
+  setStudentRoleInCloud
 } from '../firebase';
 import { markStudentDeleted, filterDeleted, getDeletedStudents } from '../utils/deletedStudents';
+import {
+  ROOT_ADMIN_PROFILES,
+  normalizeEmail,
+  isRootAdmin,
+  getAccountRole,
+  isAdminAccount,
+  grantAdmin,
+  revokeAdmin,
+  canDeleteAccount
+} from '../utils/adminRoles';
 import { 
   X, 
   Users, 
@@ -32,8 +43,71 @@ import {
   FileText,
   Sparkles,
   UserPlus,
-  FileCheck
+  FileCheck,
+  Crown,
+  KeyRound,
+  UserMinus,
+  Lock
 } from 'lucide-react';
+
+/**
+ * Tài khoản Quản Trị Tối Cao phải LUÔN có mặt trong bảng.
+ *
+ * Bản ghi thật của nó chỉ sinh ra sau lần đăng nhập đầu tiên trên từng máy, và
+ * `filterDeleted` có thể loại nó đi nếu ai đó từng bấm xoá ở bản cũ. Không hiển
+ * thị thì quản trị viên không thấy được ai đang giữ quyền cao nhất — mà đó
+ * chính là dòng không được phép biến mất.
+ */
+const withRootAdmins = (list) => {
+  const rows = Array.isArray(list) ? [...list] : [];
+  ROOT_ADMIN_PROFILES.forEach((profile) => {
+    const at = rows.findIndex((s) => normalizeEmail(s?.email) === normalizeEmail(profile.email));
+    if (at >= 0) {
+      // Dữ liệu thật thắng hồ sơ mặc định, nhưng vai trò thì không được phép đè.
+      rows[at] = { ...profile, ...rows[at], role: 'admin' };
+    } else {
+      rows.unshift({ ...profile });
+    }
+  });
+  return rows;
+};
+
+/** Thứ tự hiển thị: quyền cao nhất lên đầu bảng. */
+const ROLE_ORDER = { root: 0, admin: 1, student: 2 };
+
+const ROLE_LABEL = {
+  root: 'Quản Trị Tối Cao',
+  admin: 'Quản Trị Viên',
+  student: 'Học viên'
+};
+
+function RoleBadge({ role }) {
+  if (role === 'root') {
+    return (
+      <span
+        className="px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/50 text-[10px] font-black inline-flex items-center gap-1 whitespace-nowrap"
+        title="Quyền quản trị cao nhất — không tài khoản nào được phép thu hồi hay xoá"
+      >
+        <Crown className="w-3 h-3" /> Quản Trị Tối Cao
+      </span>
+    );
+  }
+  if (role === 'admin') {
+    return (
+      <span
+        className="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/50 text-[10px] font-black inline-flex items-center gap-1 whitespace-nowrap"
+        title="Quản trị viên — có thể thu hồi quyền"
+      >
+        <ShieldCheck className="w-3 h-3" /> Quản Trị Viên
+      </span>
+    );
+  }
+  return (
+    <span className="px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 text-[10px] font-bold whitespace-nowrap">
+      Học viên
+    </span>
+  );
+}
 
 export default function AdminDashboardModal({
   isOpen,
@@ -46,6 +120,7 @@ export default function AdminDashboardModal({
   const [students, setStudents] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedIndustry, setSelectedIndustry] = useState('ALL');
+  const [selectedRole, setSelectedRole] = useState('ALL'); // 'ALL' | 'ADMIN' | 'STUDENT'
   const [isLoading, setIsLoading] = useState(false);
   const [notice, setNotice] = useState('');
 
@@ -55,7 +130,7 @@ export default function AdminDashboardModal({
 
   useEffect(() => {
     setCurrentPage(1);
-  }, [searchQuery, selectedIndustry, pageSize]);
+  }, [searchQuery, selectedIndustry, selectedRole, pageSize]);
 
   // Certificate Generator Modal state
   const [isCertGenOpen, setIsCertGenOpen] = useState(false);
@@ -153,7 +228,7 @@ export default function AdminDashboardModal({
       list = SAMPLE_STUDENTS;
     }
 
-    setStudents(list);
+    setStudents(withRootAdmins(list));
     setIsLoading(false);
   };
 
@@ -184,7 +259,7 @@ export default function AdminDashboardModal({
             });
             // Lọc bia mộ ở đây nữa, nếu không listener realtime sẽ dựng lại
             // học viên vừa xoá ngay khi Firestore đẩy dữ liệu về.
-            return filterDeleted(Array.from(emailMap.values()));
+            return withRootAdmins(filterDeleted(Array.from(emailMap.values())));
           });
         }
       });
@@ -222,41 +297,61 @@ export default function AdminDashboardModal({
 
   // Filtered Students
   const filteredStudents = students.filter(std => {
-    const matchesSearch = 
-      std.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      std.email.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      std.phone.includes(searchQuery);
-    
+    const matchesSearch =
+      (std.name || '').toLowerCase().includes(searchQuery.toLowerCase()) ||
+      (std.email || '').toLowerCase().includes(searchQuery.toLowerCase()) ||
+      (std.phone || '').includes(searchQuery);
+
     const matchesIndustry = selectedIndustry === 'ALL' || std.industry === selectedIndustry;
 
-    return matchesSearch && matchesIndustry;
+    const role = getAccountRole(std);
+    const matchesRole =
+      selectedRole === 'ALL' ||
+      (selectedRole === 'ADMIN' ? role !== 'student' : role === 'student');
+
+    return matchesSearch && matchesIndustry && matchesRole;
   });
 
+  // Quyền cao nhất đứng đầu bảng, trong cùng một nhóm thì giữ nguyên thứ tự gốc.
+  // Tính hạng trước rồi mới sắp xếp: getAccountRole() đọc localStorage nên gọi
+  // nó trong hàm so sánh sẽ thành O(n log n) lượt đọc thay vì đúng n lượt.
+  const orderedStudents = filteredStudents
+    .map((std, index) => ({ std, index, rank: ROLE_ORDER[getAccountRole(std)] }))
+    .sort((a, b) => a.rank - b.rank || a.index - b.index)
+    .map((row) => row.std);
+
   // Pagination Calculations (20 - 50 students / page)
-  const effectivePageSize = pageSize === 'ALL' ? (filteredStudents.length || 1) : Number(pageSize);
-  const totalPages = Math.ceil(filteredStudents.length / effectivePageSize) || 1;
+  const effectivePageSize = pageSize === 'ALL' ? (orderedStudents.length || 1) : Number(pageSize);
+  const totalPages = Math.ceil(orderedStudents.length / effectivePageSize) || 1;
   const safeCurrentPage = Math.min(Math.max(currentPage, 1), totalPages);
   const startIndex = (safeCurrentPage - 1) * effectivePageSize;
-  const paginatedStudents = pageSize === 'ALL' ? filteredStudents : filteredStudents.slice(startIndex, startIndex + effectivePageSize);
+  const paginatedStudents = pageSize === 'ALL' ? orderedStudents : orderedStudents.slice(startIndex, startIndex + effectivePageSize);
 
   // Unique Industries List for Filter
   const uniqueIndustries = Array.from(new Set(students.map(s => s.industry).filter(Boolean)));
 
   // Calculate Statistics
-  const totalStudentsCount = students.length;
-  const totalGraduatesCount = students.filter(s => (s.completedModules || []).length >= 11).length;
+  // Tách tài khoản quản trị ra khỏi số liệu đào tạo: quản trị viên không phải
+  // học viên, gộp vào sẽ làm tỷ lệ hoàn thành sai lệch.
+  const adminAccounts = students.filter(isAdminAccount);
+  const studentAccounts = students.filter(s => !isAdminAccount(s));
+  const totalStudentsCount = studentAccounts.length;
+  const totalGraduatesCount = studentAccounts.filter(s => (s.completedModules || []).length >= 11).length;
   const completionRate = totalStudentsCount > 0 ? Math.round((totalGraduatesCount / totalStudentsCount) * 100) : 0;
+
+  const currentUserEmail = normalizeEmail(currentUser?.email);
 
   // Export CSV Report Function (UTF-8 BOM Encoded for Excel compatibility)
   const handleExportCSV = () => {
     try {
-      const headers = ["STT", "Họ và Tên Học Viên", "Số Điện Thoại (Zalo)", "Email", "Ngành Nghề Kinh Doanh", "Tiến Độ (Bài đã đạt / 11)", "Trạng Thái Tốt Nghiệp", "Ngày Đăng Ký"];
-      
-      const rows = filteredStudents.map((std, idx) => [
+      const headers = ["STT", "Họ và Tên Học Viên", "Số Điện Thoại (Zalo)", "Email", "Phân Quyền", "Ngành Nghề Kinh Doanh", "Tiến Độ (Bài đã đạt / 11)", "Trạng Thái Tốt Nghiệp", "Ngày Đăng Ký"];
+
+      const rows = orderedStudents.map((std, idx) => [
         idx + 1,
-        `"${std.name.replace(/"/g, '""')}"`,
-        `"${std.phone}"`,
+        `"${(std.name || '').replace(/"/g, '""')}"`,
+        `"${std.phone || ''}"`,
         `"${std.email}"`,
+        `"${ROLE_LABEL[getAccountRole(std)]}"`,
         `"${(std.industry || 'Kinh doanh').replace(/"/g, '""')}"`,
         `"${(std.completedModules || []).length}/11"`,
         (std.completedModules || []).length >= 11 ? "Đã Tốt Nghiệp" : "Đang Học",
@@ -287,8 +382,91 @@ export default function AdminDashboardModal({
     window.print();
   };
 
+  const showNotice = (message, ms = 5000) => {
+    setNotice(message);
+    setTimeout(() => setNotice(''), ms);
+  };
+
+  /** Ghi vai trò mới vào danh sách đang hiển thị để bảng cập nhật ngay. */
+  const applyRoleToRow = (email, role) => {
+    const key = normalizeEmail(email);
+    setStudents(prev => prev.map(s => (normalizeEmail(s.email) === key ? { ...s, role } : s)));
+  };
+
+  // Nâng một tài khoản lên Quản Trị Viên
+  const handlePromoteToAdmin = async (student) => {
+    const email = normalizeEmail(student?.email);
+    if (!email) {
+      showNotice('⛔ Tài khoản không có email hợp lệ nên không thể nâng quyền.');
+      return;
+    }
+
+    const confirmed = window.confirm(
+      `Nâng quyền QUẢN TRỊ VIÊN cho ${email}?\n\n` +
+      `Tài khoản này sẽ xem được toàn bộ danh sách học viên, cấp Bằng Chứng Nhận ` +
+      `và nâng quyền cho tài khoản khác.`
+    );
+    if (!confirmed) return;
+
+    const result = grantAdmin(email);
+    if (!result.ok) {
+      showNotice(`⛔ ${result.message}`);
+      return;
+    }
+
+    applyRoleToRow(email, 'admin');
+    await setStudentRoleInCloud(email, 'admin');
+    showNotice(`🔑 ${result.message} Quyền có hiệu lực ở lần đăng nhập kế tiếp của họ.`, 6000);
+  };
+
+  // Thu hồi quyền quản trị
+  const handleRevokeAdmin = async (student) => {
+    const email = normalizeEmail(student?.email);
+
+    // Chốt chặn thứ nhất, ngay tại giao diện. Chốt chặn thật nằm trong
+    // revokeAdmin() — nút này còn không được vẽ ra cho tài khoản gốc.
+    if (isRootAdmin(email)) {
+      showNotice(`🔒 ${email} là Quản Trị Tối Cao — không tài khoản nào được phép gỡ quyền quản trị cao nhất.`, 6000);
+      return;
+    }
+
+    // Tự hạ quyền chính mình sẽ đá người đang thao tác ra khỏi bảng này ngay
+    // giữa chừng. Bắt phải nhờ một quản trị viên khác làm.
+    if (email && email === currentUserEmail) {
+      showNotice('⛔ Không thể tự thu hồi quyền của chính mình. Hãy nhờ một quản trị viên khác thực hiện.', 6000);
+      return;
+    }
+
+    const confirmed = window.confirm(
+      `Thu hồi quyền quản trị của ${email}?\n\n` +
+      `Tài khoản trở lại vai trò Học viên và mất quyền vào Bảng Quản Trị.`
+    );
+    if (!confirmed) return;
+
+    const result = revokeAdmin(email);
+    if (!result.ok) {
+      showNotice(`⛔ ${result.message}`, 7000);
+      return;
+    }
+
+    applyRoleToRow(email, 'student');
+    await setStudentRoleInCloud(email, 'student');
+    showNotice(`🟡 ${result.message}`);
+  };
+
   // Delete Student Record
-  const handleDeleteStudent = async (studentId, studentEmail) => {
+  const handleDeleteStudent = async (student) => {
+    const studentId = student?.id;
+    const studentEmail = student?.email;
+
+    // Không xoá được tài khoản quản trị: Quản Trị Tối Cao thì tuyệt đối, quản
+    // trị viên thường thì phải thu hồi quyền trước.
+    const permission = canDeleteAccount(student);
+    if (!permission.ok) {
+      showNotice(`🔒 ${permission.message}`, 6000);
+      return;
+    }
+
     if (!window.confirm(`Bạn có chắc chắn muốn xóa học viên ${studentEmail} khỏi hệ thống?`)) return;
 
     try {
@@ -513,7 +691,10 @@ export default function AdminDashboardModal({
               <Users className="w-3.5 h-3.5 text-emerald-400" />
             </div>
             <p className="text-lg sm:text-xl font-black text-white">{totalStudentsCount}</p>
-            <p className="text-[9px] text-emerald-400 font-semibold">Tài khoản đã đăng ký</p>
+            <p className="text-[9px] text-emerald-400 font-semibold">
+              Tài khoản đã đăng ký
+              <span className="text-amber-400"> · {adminAccounts.length} quản trị viên</span>
+            </p>
           </div>
 
           <div className="p-2.5 rounded-xl glass-panel border border-emerald-800/60 space-y-0.5">
@@ -550,10 +731,10 @@ export default function AdminDashboardModal({
         </div>
 
         {/* Filter Controls & Report Action Buttons Bar */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-2.5 shrink-0">
-          <div className="flex items-center gap-2 w-full sm:w-auto">
+        <div className="flex flex-col xl:flex-row items-center justify-between gap-2.5 shrink-0">
+          <div className="flex flex-wrap items-center gap-2 w-full xl:w-auto">
             {/* Search Input */}
-            <div className="relative flex-1 sm:w-64">
+            <div className="relative flex-1 min-w-[180px] sm:w-64">
               <Search className="w-3.5 h-3.5 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
               <input
                 type="text"
@@ -562,6 +743,20 @@ export default function AdminDashboardModal({
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full bg-slate-900/80 border border-emerald-900/60 rounded-xl pl-8 pr-3 py-1.5 text-xs text-white placeholder-slate-400 focus:outline-none focus:border-emerald-400 transition"
               />
+            </div>
+
+            {/* Role Filter Dropdown */}
+            <div className="relative shrink-0">
+              <select
+                value={selectedRole}
+                onChange={(e) => setSelectedRole(e.target.value)}
+                className="bg-slate-900/80 border border-emerald-900/60 rounded-xl px-3 py-1.5 text-xs text-white focus:outline-none cursor-pointer"
+                title="Lọc theo phân quyền tài khoản"
+              >
+                <option value="ALL">Tất cả Phân Quyền</option>
+                <option value="ADMIN">Chỉ Quản Trị Viên ({adminAccounts.length})</option>
+                <option value="STUDENT">Chỉ Học Viên ({studentAccounts.length})</option>
+              </select>
             </div>
 
             {/* Industry Filter Dropdown */}
@@ -589,13 +784,13 @@ export default function AdminDashboardModal({
                 <option value={20}>20 học viên / trang</option>
                 <option value={30}>30 học viên / trang</option>
                 <option value={50}>50 học viên / trang</option>
-                <option value="ALL">Tất cả ({filteredStudents.length})</option>
+                <option value="ALL">Tất cả ({orderedStudents.length})</option>
               </select>
             </div>
           </div>
 
           {/* Action Buttons: Export CSV / Print */}
-          <div className="flex items-center gap-2 w-full sm:w-auto justify-end">
+          <div className="flex flex-wrap items-center gap-2 w-full xl:w-auto justify-end">
             <button
               onClick={loadStudentsList}
               title="Làm mới danh sách"
@@ -631,15 +826,32 @@ export default function AdminDashboardModal({
           </div>
         </div>
 
+        {/* Quy tắc phân quyền — nói rõ ngay tại chỗ thao tác để không ai phải
+            bấm thử mới biết vì sao nút bị khoá. */}
+        <div className="shrink-0 flex flex-wrap items-center gap-x-4 gap-y-1 px-3 py-2 rounded-xl bg-slate-900/70 border border-amber-500/25 text-[11px] text-slate-300">
+          <span className="font-black text-amber-300 flex items-center gap-1.5">
+            <ShieldCheck className="w-3.5 h-3.5" /> Quy tắc phân quyền:
+          </span>
+          <span className="flex items-center gap-1">
+            <KeyRound className="w-3 h-3 text-emerald-400" />
+            Quản trị viên được <strong className="text-emerald-300">nâng quyền</strong> cho tài khoản khác.
+          </span>
+          <span className="flex items-center gap-1">
+            <Crown className="w-3 h-3 text-amber-400" />
+            Tài khoản <strong className="text-amber-300">Quản Trị Tối Cao</strong> không tài khoản nào được phép thu hồi quyền hay xoá.
+          </span>
+        </div>
+
         {/* Student Accounts Table View (Expanded Vertical Space) */}
         <div className="flex-1 min-h-[460px] overflow-y-auto rounded-2xl border border-emerald-900/50 glass-panel">
-          <table className="w-full text-left border-collapse min-w-[700px]">
+          <table className="w-full text-left border-collapse min-w-[900px]">
             <thead>
               <tr className="bg-slate-900/90 text-emerald-400 text-[11px] font-extrabold uppercase tracking-wider border-b border-emerald-900/50 sticky top-0 backdrop-blur-md z-10">
                 <th className="py-2.5 px-3">STT</th>
                 <th className="py-2.5 px-3">Họ và Tên Học Viên</th>
                 <th className="py-2.5 px-3">Số Điện Thoại</th>
                 <th className="py-2.5 px-3">Email</th>
+                <th className="py-2.5 px-3">Phân Quyền</th>
                 <th className="py-2.5 px-3">Ngành Nghề</th>
                 <th className="py-2.5 px-3 text-center">Tiến Độ (11/11)</th>
                 <th className="py-2.5 px-3">Ngày Đăng Ký</th>
@@ -652,6 +864,8 @@ export default function AdminDashboardModal({
                   const completedCount = (std.completedModules || []).length;
                   const isGraduate = completedCount >= 11;
                   const sttIndex = startIndex + idx + 1;
+                  const role = getAccountRole(std);
+                  const isSelf = normalizeEmail(std.email) === currentUserEmail;
 
                   return (
                     <tr key={std.id || idx} className="hover:bg-emerald-950/40 transition">
@@ -668,6 +882,9 @@ export default function AdminDashboardModal({
                       </td>
                       <td className="py-2 px-3 font-mono text-emerald-300">{std.phone || '0901234567'}</td>
                       <td className="py-2 px-3 font-mono text-slate-300">{std.email}</td>
+                      <td className="py-2 px-3">
+                        <RoleBadge role={role} />
+                      </td>
                       <td className="py-2 px-3">
                         <span className="px-2 py-0.5 rounded bg-slate-900 border border-slate-700 text-[10px] text-slate-300 font-medium">
                           {std.industry || 'Bất Động Sản'}
@@ -694,13 +911,62 @@ export default function AdminDashboardModal({
                             <span>Cấp Bằng</span>
                           </button>
 
-                          <button
-                            onClick={() => handleDeleteStudent(std.id, std.email)}
-                            className="p-1.5 rounded-lg bg-rose-950/60 border border-rose-800 text-rose-300 hover:bg-rose-900 transition cursor-pointer"
-                            title="Xóa tài khoản học viên"
-                          >
-                            <Trash2 className="w-3.5 h-3.5" />
-                          </button>
+                          {/* Phân quyền.
+                              Tài khoản Quản Trị Tối Cao KHÔNG có nút thu hồi —
+                              không vẽ ra chứ không phải vẽ rồi chặn. */}
+                          {role === 'root' ? (
+                            <span
+                              className="px-2 py-0.5 rounded-lg bg-slate-900 border border-amber-600/50 text-amber-400/90 text-[10px] font-black flex items-center gap-1 cursor-not-allowed"
+                              title="Quyền quản trị cao nhất được khoá vĩnh viễn: không tài khoản nào thu hồi hay xoá được"
+                            >
+                              <Lock className="w-3 h-3" />
+                              <span>Khoá quyền</span>
+                            </span>
+                          ) : role === 'admin' ? (
+                            <button
+                              onClick={() => handleRevokeAdmin(std)}
+                              disabled={isSelf}
+                              className={`px-2 py-0.5 rounded-lg border text-[10px] font-black flex items-center gap-1 transition ${
+                                isSelf
+                                  ? 'bg-slate-900 border-slate-700 text-slate-500 cursor-not-allowed'
+                                  : 'bg-orange-950/60 border-orange-700 text-orange-300 hover:bg-orange-900 cursor-pointer'
+                              }`}
+                              title={isSelf
+                                ? 'Không thể tự thu hồi quyền của chính mình'
+                                : 'Thu hồi quyền quản trị, đưa về vai trò Học viên'}
+                            >
+                              <UserMinus className="w-3 h-3" />
+                              <span>Thu Hồi Quyền</span>
+                            </button>
+                          ) : (
+                            <button
+                              onClick={() => handlePromoteToAdmin(std)}
+                              className="px-2 py-0.5 rounded-lg bg-emerald-950/70 border border-emerald-600 text-emerald-300 hover:bg-emerald-900 text-[10px] font-black flex items-center gap-1 transition cursor-pointer"
+                              title="Nâng tài khoản này lên Quản Trị Viên"
+                            >
+                              <KeyRound className="w-3 h-3" />
+                              <span>Nâng Quyền</span>
+                            </button>
+                          )}
+
+                          {role === 'student' ? (
+                            <button
+                              onClick={() => handleDeleteStudent(std)}
+                              className="p-1.5 rounded-lg bg-rose-950/60 border border-rose-800 text-rose-300 hover:bg-rose-900 transition cursor-pointer"
+                              title="Xóa tài khoản học viên"
+                            >
+                              <Trash2 className="w-3.5 h-3.5" />
+                            </button>
+                          ) : (
+                            <span
+                              className="p-1.5 rounded-lg bg-slate-900 border border-slate-700 text-slate-600 cursor-not-allowed inline-flex"
+                              title={role === 'root'
+                                ? 'Không thể xoá tài khoản Quản Trị Tối Cao'
+                                : 'Thu hồi quyền quản trị trước khi xoá tài khoản này'}
+                            >
+                              <Trash2 className="w-3.5 h-3.5" />
+                            </span>
+                          )}
                         </div>
                       </td>
                     </tr>
@@ -708,8 +974,8 @@ export default function AdminDashboardModal({
                 })
               ) : (
                 <tr>
-                  <td colSpan="8" className="p-8 text-center text-slate-400 text-xs">
-                    Không tìm thấy học viên nào phù hợp với bộ lọc.
+                  <td colSpan="9" className="p-8 text-center text-slate-400 text-xs">
+                    Không tìm thấy tài khoản nào phù hợp với bộ lọc.
                   </td>
                 </tr>
               )}
@@ -721,7 +987,8 @@ export default function AdminDashboardModal({
         <div className="pt-3 border-t border-emerald-900/40 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-slate-400 shrink-0">
           <div className="flex items-center gap-2">
             <span>
-              Hiển thị <strong>{filteredStudents.length > 0 ? startIndex + 1 : 0}</strong> - <strong>{Math.min(startIndex + (pageSize === 'ALL' ? filteredStudents.length : pageSize), filteredStudents.length)}</strong> trong tổng số <strong>{filteredStudents.length}</strong> học viên ({totalStudentsCount} học viên toàn hệ thống)
+              Hiển thị <strong>{orderedStudents.length > 0 ? startIndex + 1 : 0}</strong> - <strong>{Math.min(startIndex + (pageSize === 'ALL' ? orderedStudents.length : pageSize), orderedStudents.length)}</strong> trong tổng số <strong>{orderedStudents.length}</strong> tài khoản
+              {' '}(toàn hệ thống: {totalStudentsCount} học viên + <strong className="text-amber-400">{adminAccounts.length} quản trị viên</strong>)
             </span>
           </div>
 

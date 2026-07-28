@@ -20,6 +20,7 @@ Id tài liệu: `studentData.id` nếu có, hoặc email đã chuẩn hoá (`[^a
 | `avatarUrl` | string | Có thể rỗng |
 | `coverBg` | string | Mặc định `"emerald"` |
 | `completedModules` | array&lt;string&gt; | Danh sách id chuyên đề đã đạt |
+| `role` | string | `'admin'` hoặc vắng mặt. `recordStudentAccountToCloud()` **chỉ ghi khi bằng `'admin'`** — ghi cả `'student'` sẽ khiến máy chưa biết mình vừa được nâng quyền xoá mất quyền vừa cấp. Hạ quyền đi bằng `setStudentRoleInCloud()` |
 | `createdAt` | string (ISO) | |
 | `updatedAt` | string (ISO) | |
 
@@ -67,6 +68,7 @@ Số hiển thị trên giao diện = `TRAFFIC_BASELINE (100)` + giá trị lớ
 | `dmm_real_graduates_count` | Bản sao cục bộ của `totalGraduates` |
 | `dmm_student_has_graduated` | Cờ chống đếm trùng khi tốt nghiệp |
 | `dmm_deleted_students` | Danh sách email học viên đã bị quản trị viên xoá ("bia mộ"). Lọc ở mọi đường đọc để bản ghi còn sót ở kho khác không quay lại |
+| `dmm_admin_emails` | Email các tài khoản **được nâng quyền** quản trị. Không chứa tài khoản Quản Trị Tối Cao — danh sách đó nằm cứng trong `utils/adminRoles.js` nên không sửa được từ trình duyệt |
 | `dmm_last_study_at` | Mốc thời gian học gần nhất (epoch ms) |
 | `dmm_study_reminder_snoozed_until` | Thời điểm hết tạm hoãn nhắc học (epoch ms) |
 

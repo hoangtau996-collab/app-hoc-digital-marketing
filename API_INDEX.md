@@ -21,6 +21,8 @@
 | `getUserProgressFromCloud(userId)` | string | `Promise<object\|null>` | Đọc hồ sơ và tiến độ |
 | `getAllRegisteredStudentsFromCloud()` | — | `Promise<Array>` | Lấy toàn bộ học viên (dùng cho bảng quản trị) |
 | `listenToAllStudentsFromCloud(callback)` | function | `unsubscribe` | Theo dõi realtime danh sách học viên |
+| `setStudentRoleInCloud(email, role)` | string, string | `Promise<void>` | Ghi vai trò lên `students` + `registrations`. Đường duy nhất để quyền cấp ở máy này có hiệu lực trên máy khác |
+| `deleteStudentEverywhere(studentId, email)` | string, string | `Promise<void>` | Xoá học viên khỏi cả 4 kho: Firestore `students`, `registrations`, Realtime DB qua REST, và `dmm_users_db` |
 
 ### Thống kê lượt truy cập
 
@@ -55,6 +57,35 @@
 | `renderCertificateCanvas(options)` | async function | Dựng bằng ngoài màn hình rồi chụp, trả về `<canvas>` |
 
 `renderCertificateCanvas` nhận: `studentName`, `totalModules`, `issueDate`, `verifyCode`, `logoSrc`, `scale`.
+
+## `src/utils/adminRoles.js`
+
+Sổ phân quyền quản trị. **Không phải hàng rào bảo mật** — sổ nằm ở localStorage nên sửa được từ devtools; đây là quy tắc nghiệp vụ và nguồn khẳng định vai trò cho giao diện. Xem [TODO.md](TODO.md#bảo-mật).
+
+| Tên | Kiểu | Ghi chú |
+|---|---|---|
+| `ROOT_ADMIN_EMAILS` | array&lt;string&gt; | Email các tài khoản **Quản Trị Tối Cao**, nằm cứng trong mã |
+| `ROOT_ADMIN_PROFILES` | array&lt;object&gt; | Hồ sơ hiển thị của tài khoản gốc, dùng khi chưa có bản ghi thật |
+| `normalizeEmail(email)` | function | Cắt khoảng trắng và chuyển thường |
+| `isRootAdmin(email)` | function | Có phải Quản Trị Tối Cao không |
+| `getGrantedAdminEmails()` | function | Email đã được nâng quyền tại máy này |
+| `getAdminEmails()` | function | Tài khoản gốc + tài khoản được nâng quyền |
+| `isAdminEmail(email)` | function | Có quyền quản trị không |
+| `getAccountRole(account)` | function | `'root'` \| `'admin'` \| `'student'`. Nhận object hồ sơ hoặc chuỗi email |
+| `isAdminAccount(account)` | function | Vai trò khác `'student'` |
+| `grantAdmin(email)` | function | Nâng lên Quản Trị Viên. Trả về `{ ok, message }` |
+| `revokeAdmin(email)` | function | Thu hồi quyền. **Luôn từ chối với Quản Trị Tối Cao**, không tham số nào bỏ qua được |
+| `canDeleteAccount(account)` | function | Quản Trị Tối Cao: không bao giờ. Quản trị viên thường: phải thu hồi quyền trước |
+
+## `src/utils/deletedStudents.js`
+
+| Tên | Kiểu | Ghi chú |
+|---|---|---|
+| `getDeletedStudents()` | function | Danh sách email đã xoá ("bia mộ") |
+| `isStudentDeleted(email)` | function | Đã bị xoá chưa |
+| `markStudentDeleted(email)` | function | Ghi bia mộ |
+| `unmarkStudentDeleted(email)` | function | Khôi phục học viên đã xoá |
+| `filterDeleted(list)` | function | Lọc bỏ bản ghi đã xoá khỏi một danh sách |
 
 ## `src/utils/studyReminder.js`
 

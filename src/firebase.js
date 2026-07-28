@@ -69,6 +69,16 @@ export async function recordStudentAccountToCloud(studentData) {
     updatedAt: new Date().toISOString()
   };
 
+  // Chỉ ghi kèm `role` khi tài khoản đang là quản trị viên.
+  //
+  // Cố ý KHÔNG ghi 'student': hàm này chạy mỗi lần chính chủ lưu hồ sơ, mà một
+  // máy chưa biết mình vừa được nâng quyền sẽ gửi lên role 'student' và xoá mất
+  // quyền vừa cấp. Việc hạ quyền đi bằng đường riêng, có chủ đích:
+  // setStudentRoleInCloud().
+  if (studentData.role === 'admin') {
+    payload.role = 'admin';
+  }
+
   // 1. Persistent Shared Storage Backup
   try {
     const existingStr = localStorage.getItem('dmm_users_db');
@@ -108,6 +118,42 @@ export async function recordStudentAccountToCloud(studentData) {
   } catch (e) {
     console.warn("Cloud Firestore setDoc fallback:", e);
   }
+}
+
+/**
+ * Ghi vai trò của một tài khoản lên đám mây.
+ *
+ * Tách riêng khỏi recordStudentAccountToCloud vì đây là hành động có chủ đích
+ * của quản trị viên (nâng quyền / thu hồi quyền), khác hẳn việc học viên lưu hồ
+ * sơ thường ngày. Đây cũng là đường duy nhất để quyền cấp ở máy này có hiệu lực
+ * trên máy khác: sổ `dmm_admin_emails` chỉ nằm ở localStorage của một máy.
+ *
+ * Không await Firestore (xem DECISION.md ADR-002): khi mất kết nối, lệnh ghi bị
+ * xếp vào hàng đợi offline và Promise treo vô thời hạn, giao diện sẽ đứng im sau
+ * khi bấm nâng quyền. Quyền đã ghi xuống localStorage trước đó nên máy hiện tại
+ * vẫn đúng ngay lập tức.
+ */
+export async function setStudentRoleInCloud(email, role) {
+  const cleanEmail = String(email || '').trim().toLowerCase();
+  if (!cleanEmail) return;
+  const safeId = cleanEmail.replace(/[^a-z0-9]/g, '_');
+  const patch = { email: cleanEmail, role, updatedAt: new Date().toISOString() };
+
+  for (const col of ['students', 'registrations']) {
+    try {
+      setDoc(doc(db, col, safeId), patch, { merge: true }).catch(() => {});
+    } catch (e) { /* bỏ qua, các kho còn lại vẫn chạy */ }
+  }
+
+  try {
+    for (const base of [PUBLIC_SYNC_URL, PUBLIC_SYNC_URL_ALT]) {
+      fetch(`${base}/${safeId}.json`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(patch)
+      }).catch(() => {});
+    }
+  } catch (e) { /* endpoint REST hiện là mã chết, xem TODO.md */ }
 }
 
 /**

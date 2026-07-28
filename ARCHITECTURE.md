@@ -132,8 +132,28 @@ Hai lớp tách biệt, không trùng vai trò:
 |---|---|
 | `utils/certificateExport.js` | Dựng và xuất Bằng Chứng Nhận (PNG/PDF), sinh mã xác thực |
 | `utils/studyReminder.js` | Logic ngưỡng thời gian cho popup nhắc học |
+| `utils/adminRoles.js` | Sổ phân quyền quản trị hai tầng, kèm các quy tắc từ chối thu hồi/xoá |
+| `utils/deletedStudents.js` | Danh sách "bia mộ" học viên đã xoá, lọc ở mọi đường đọc |
+| `utils/localCredentials.js` | Băm SHA-256 + muối cho nhánh đăng nhập dự phòng tại máy |
 
-Cả hai đều là logic thuần, không phụ thuộc React, nên kiểm chứng được độc lập.
+Tất cả đều là logic thuần, không phụ thuộc React, nên kiểm chứng được độc lập.
+
+### Phân quyền quản trị
+
+Hai tầng, cố ý không bằng nhau:
+
+```
+Quản Trị Tối Cao   ROOT_ADMIN_EMAILS trong mã nguồn
+                   └─► không thu hồi được, không xoá được, không có nút để bấm
+
+Quản Trị Viên      localStorage `dmm_admin_emails`  (máy hiện tại)
+                   └─► Firestore students.role = 'admin'  (các máy khác)
+                         └─► resolveUserRole() ─► currentUser.role ─► nút Quản Trị
+```
+
+Tầng trên khoá cứng vì ứng dụng không có backend để khôi phục: nếu quyền cao nhất mà gỡ được thì chỉ một cú bấm nhầm là mất Bảng Quản Trị vĩnh viễn.
+
+**Đây không phải hàng rào bảo mật.** Cả hai nguồn đều nằm ở phía trình duyệt nên sửa được từ devtools; xem [TODO.md](TODO.md#bảo-mật). Chặn thật sự phải làm bằng Firebase Auth custom claim + Firestore Rules.
 
 ## Luồng dữ liệu quan trọng
 
