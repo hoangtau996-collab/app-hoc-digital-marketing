@@ -12,6 +12,10 @@ TODO — chưa có quy ước đánh phiên bản; cân nhắc gắn thẻ Git k
 
 ### Thêm mới
 
+- **Bản tin thuật toán được viết lại thành bài viết đầy đủ** — từ 5 tin rút gọn lên **16 bài** (`src/data/newsData.js`), mỗi bài có nguồn tham chiếu, ngày đăng, thời lượng đọc, thẻ chủ đề, 2-3 số liệu chính, thân bài 3-4 phần phân tích, mục "cái giá nếu bỏ qua" và mốc thời gian áp dụng. Tổng 63 phần thân bài. Kho tin mô phỏng nâng từ 3 lên 6 mục, cùng cấu trúc.
+- **14 tranh minh hoạ SVG nội tuyến cho tin tức** (`src/components/NewsIllustration.jsx`) — thay ảnh stock Unsplash trước đây. Mỗi tranh vẽ đúng nội dung bài: thuật toán phân bổ ngân sách, sức khoẻ gian hàng, tìm kiếm không nhấp chuột, nhân bản video bằng AI, xác thực tài khoản, hoa hồng liên kết, loại trừ từ khoá, bão hoà nội dung, tín hiệu dữ liệu, phát trực tiếp, đấu giá hiển thị, tự động hoá chăm sóc, nhãn nội dung AI, tốc độ trang. Cùng lý do kỹ thuật với `LessonIllustration`: không phát sinh yêu cầu mạng nên không vỡ ảnh, nét sắc ở mọi độ phân giải.
+- **Cửa sổ đọc chi tiết bài viết** — thẻ tin giữ phần tóm tắt để lướt nhanh, toàn bộ thân bài, tác động, rủi ro và danh sách việc cần chỉ đạo chuyển vào cửa sổ riêng.
+- **Băng ghi rõ đây là bản tin mô phỏng phục vụ đào tạo**, kèm nhắc đối chiếu thông báo chính thức của nền tảng trước khi áp dụng. Trường nguồn chỉ ghi tên kênh công bố, không kèm đường dẫn để tránh bị hiểu là trích dẫn thật.
 - **Bổ sung 100 thuật ngữ cho Từ Điển Digital Marketing** — nâng từ 21 lên **121 thuật ngữ** (`src/data/glossaryData.js`). Mỗi mục đủ 7 trường: định nghĩa chuyên sâu, công thức (nếu là chỉ số đo được), ví dụ có số liệu Việt Nam và lưu ý cốt lõi cho Trưởng phòng.
   - Chỉ Số & KPIs: thêm 26 mục — CPC, ROI, MER, Break-even ROAS, LTV/CAC, Churn, Retention, RPR, ARPU, GMV, Frequency, Reach, Impressions, Engagement Rate, Bounce Rate, Session Duration, CPV, VTR, Hook Rate, CPI, SOV, Share of Search, NPS, CSAT, CAC Payback, Gross Margin.
   - Chiến Lược & Mô Hình: thêm 20 mục — STP, 4P, 7P, SWOT, PESTLE, 5 Áp Lực Porter, AIDA, See-Think-Do-Care, Customer Journey Map, Phễu TOFU/MOFU/BOFU, Buyer Persona, USP, Positioning Statement, Omnichannel, O2O, Growth Hacking, AARRR, Product-Market Fit, OKR, Always-on.
@@ -22,6 +26,8 @@ TODO — chưa có quy ước đánh phiên bản; cân nhắc gắn thẻ Git k
 
 ### Thay đổi
 
+- **Bản tin phân trang 5 tin mỗi lần**, kèm nút "Xem thêm 5 tin (còn N)" và dòng đếm kết quả. Đổi bộ lọc nền tảng thì quay lại trang đầu; bấm nạp tin mới thì nới thêm một ô hiển thị để tin vừa chèn không đẩy tin cuối trang ra khỏi tầm nhìn.
+- **Khoá lưu bản tin đổi sang `dmm_news_feed_v2`** (`App.jsx`) — dữ liệu lưu theo khoá cũ thiếu tranh minh hoạ và thân bài, nếu không đổi khoá thì người dùng cũ sẽ mãi thấy bản tin rút gọn. Giao diện vẫn giữ đường lùi hiển thị `coverImage` cho dữ liệu cũ.
 - **Mở rộng `ICON_MAP`** từ 20 lên 113 icon lucide-react để 121 thuật ngữ không dùng chung một biểu tượng mặc định. Hai icon trùng tên với biến toàn cục của JavaScript được nhập kèm bí danh: `Infinity as InfinityIcon`, `Image as ImageIcon`.
 - **Mô tả đầu trang từ điển** đọc số lượng trực tiếp từ `GLOSSARY_ITEMS.length` thay vì ghi cứng "25+", nên không lệch khi thêm thuật ngữ sau này.
 

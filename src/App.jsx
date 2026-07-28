@@ -282,10 +282,13 @@ export default function App() {
     // để tránh popup bật lên ngay giữa lúc học viên đang làm bài.
   }, [currentUser]);
 
-  // News list state
+  // News list state.
+  // Khoá có hậu tố _v2: bản tin đã đổi cấu trúc (thêm tranh minh hoạ, thân bài,
+  // số liệu chính). Dữ liệu lưu theo khoá cũ thiếu các trường đó nên phải bỏ
+  // qua, nếu không người dùng cũ sẽ mãi thấy bản tin rút gọn.
   const [newsFeed, setNewsFeed] = useState(() => {
     try {
-      const saved = localStorage.getItem('dmm_news_feed');
+      const saved = localStorage.getItem('dmm_news_feed_v2');
       if (saved) {
         const parsed = JSON.parse(saved);
         if (Array.isArray(parsed) && parsed.length > 0) {
@@ -355,7 +358,7 @@ export default function App() {
 
   useEffect(() => {
     try {
-      localStorage.setItem('dmm_news_feed', JSON.stringify(newsFeed));
+      localStorage.setItem('dmm_news_feed_v2', JSON.stringify(newsFeed));
     } catch (e) {}
   }, [newsFeed]);
 
