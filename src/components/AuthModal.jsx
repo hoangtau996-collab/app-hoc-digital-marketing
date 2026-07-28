@@ -8,7 +8,9 @@ import {
   createUserWithEmailAndPassword,
   updateProfile,
   saveUserProgressToCloud,
-  recordStudentAccountToCloud
+  recordStudentAccountToCloud,
+  isFirebaseConfigured,
+  missingFirebaseEnv
 } from '../firebase';
 import { 
   X, 
@@ -70,30 +72,35 @@ const purgeDemoAccountsFromStorage = () => {
 const describeAuthError = (err) => {
   const code = String(err?.code || '');
 
-  switch (code) {
-    case 'auth/invalid-credential':
-    case 'auth/wrong-password':
-    case 'auth/user-not-found':
-      return 'Email hoặc mật khẩu không đúng. Nếu chưa có tài khoản, hãy chuyển sang tab "Đăng Ký Mới".';
-    case 'auth/invalid-email':
-      return 'Địa chỉ email không hợp lệ.';
-    case 'auth/user-disabled':
-      return 'Tài khoản này đã bị vô hiệu hoá trên Firebase.';
-    case 'auth/too-many-requests':
-      return 'Đăng nhập sai quá nhiều lần nên Firebase tạm khoá. Chờ vài phút rồi thử lại.';
-    case 'auth/network-request-failed':
-      return 'Không kết nối được máy chủ Firebase. Kiểm tra đường truyền rồi thử lại.';
-    case 'auth/operation-not-allowed':
-      return 'Phương thức Email/Password chưa được bật: Firebase Console → Authentication → Sign-in method.';
-    case 'auth/api-key-not-valid':
-    case 'auth/invalid-api-key':
-    case 'auth/configuration-not-found':
-      return 'Cấu hình Firebase chưa đúng (thiếu biến môi trường VITE_FIREBASE_*). Đây là lỗi cài đặt của ứng dụng, KHÔNG phải do mật khẩu — xem DEPLOYMENT.md.';
-    default:
-      return code
-        ? `Không đăng nhập được. Firebase báo: ${code}`
-        : 'Không đăng nhập được. Vui lòng thử lại.';
+  // So khớp theo TIỀN TỐ chứ không khớp chính xác. Firebase gắn thêm đuôi mô tả
+  // vào mã lỗi — mã thật trả về là
+  // `auth/api-key-not-valid.-please-pass-a-valid-api-key.` — nên `switch` khớp
+  // chính xác trượt hết và rơi về nhánh mặc định.
+  const is = (...prefixes) => prefixes.some((p) => code.startsWith(p));
+
+  if (is('auth/api-key-not-valid', 'auth/invalid-api-key', 'auth/configuration-not-found')) {
+    return `Ứng dụng chưa được cấu hình Firebase${
+      missingFirebaseEnv.length ? ` — thiếu: ${missingFirebaseEnv.join(', ')}` : ''
+    }. Đây là lỗi cài đặt, KHÔNG phải do mật khẩu. Xem DEPLOYMENT.md.`;
   }
+  if (is('auth/invalid-credential', 'auth/wrong-password', 'auth/user-not-found')) {
+    return 'Email hoặc mật khẩu không đúng. Nếu chưa có tài khoản, hãy chuyển sang tab "Đăng Ký Mới".';
+  }
+  if (is('auth/invalid-email')) return 'Địa chỉ email không hợp lệ.';
+  if (is('auth/user-disabled')) return 'Tài khoản này đã bị vô hiệu hoá trên Firebase.';
+  if (is('auth/too-many-requests')) {
+    return 'Đăng nhập sai quá nhiều lần nên Firebase tạm khoá. Chờ vài phút rồi thử lại.';
+  }
+  if (is('auth/network-request-failed')) {
+    return 'Không kết nối được máy chủ Firebase. Kiểm tra đường truyền rồi thử lại.';
+  }
+  if (is('auth/operation-not-allowed')) {
+    return 'Phương thức Email/Password chưa được bật: Firebase Console → Authentication → Sign-in method.';
+  }
+
+  return code
+    ? `Không đăng nhập được. Firebase báo: ${code}`
+    : 'Không đăng nhập được. Vui lòng thử lại.';
 };
 
 const INDUSTRY_OPTIONS = [
@@ -467,6 +474,21 @@ export default function AuthModal({
             {textDict.authSubtitle}
           </p>
         </div>
+
+        {/* Cảnh báo thiếu cấu hình Firebase.
+            Hiện TRƯỚC khi người dùng kịp gõ, thay vì để họ thử mật khẩu nhiều
+            lần rồi mới biết lỗi không nằm ở mật khẩu. */}
+        {!isFirebaseConfigured && (
+          <div className="p-3 rounded-xl bg-amber-950/60 border border-amber-500/50 text-amber-200 text-[11px] space-y-1">
+            <div className="font-black flex items-center gap-1.5 text-amber-300">
+              <AlertCircle className="w-4 h-4" /> Ứng dụng chưa được cấu hình Firebase
+            </div>
+            <p className="leading-relaxed">
+              Thiếu biến môi trường: <strong className="font-mono">{missingFirebaseEnv.join(', ')}</strong>.
+              Đăng nhập và đồng bộ dữ liệu sẽ không hoạt động cho tới khi khai báo. Xem <strong>DEPLOYMENT.md</strong>.
+            </p>
+          </div>
+        )}
 
         {/* Mode Selector Tabs */}
         <div className="flex bg-slate-900/60 p-1 rounded-xl border border-emerald-900/50">

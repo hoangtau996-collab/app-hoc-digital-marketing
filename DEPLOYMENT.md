@@ -48,13 +48,28 @@ Bản build hiện phát cảnh báo: gói JavaScript chính vượt 500 kB sau 
 
 Mỗi biến đều có giá trị dự phòng viết sẵn trong `src/firebase.js`. Các giá trị này là **chuỗi giữ chỗ, không phải cấu hình thật**, ví dụ khoá API dự phòng là `"AIzaSyD-PMarcomAcademyKeyDemo2026"`.
 
-Hệ quả: nếu triển khai mà **quên** đặt biến môi trường, ứng dụng vẫn khởi động bình thường nhưng mọi thao tác Firebase sẽ thất bại âm thầm và rơi về nhánh dự phòng localStorage. Sau khi triển khai phải kiểm tra thực tế rằng dữ liệu có lên Firestore.
+Hệ quả: nếu triển khai mà **quên** đặt biến môi trường, ứng dụng vẫn khởi động bình thường nhưng mọi thao tác Firebase thất bại. Triệu chứng dễ nhận nhất là **đăng nhập báo `auth/api-key-not-valid`** — trước đây màn đăng nhập lại hiển thị "Email hoặc mật khẩu không chính xác", khiến người dùng đi tìm sai chỗ hoàn toàn.
+
+Nay có hai lớp báo động:
+
+- `src/firebase.js` ghi `console.error` liệt kê đúng những biến còn thiếu, ngay khi nạp trang.
+- `AuthModal` hiện băng cảnh báo vàng **trước khi** người dùng kịp gõ mật khẩu, và thông báo lỗi đăng nhập nói đúng nguyên nhân thay vì đổ cho mật khẩu.
+
+Sau khi triển khai vẫn phải kiểm tra thực tế rằng đăng nhập chạy được và dữ liệu có lên Firestore.
 
 ### Tệp `.env`
 
-Kho mã hiện **không có** tệp `.env` nào. `.gitignore` đã chặn `.env` và `.env.*` (trừ `.env.example`).
+Chép [.env.example](.env.example) thành `.env` rồi điền giá trị thật:
 
-TODO — chưa có `.env.example`; nên bổ sung để người mới biết cần khai báo những gì.
+```bash
+cp .env.example .env
+```
+
+Giá trị lấy ở **Firebase Console → ⚙️ Project settings → General → Your apps → SDK setup and configuration → Config**. Tên trường trong đoạn `firebaseConfig` hiện ra ánh xạ 1-1 với các biến `VITE_FIREBASE_*`, đã ghi đối chiếu trong `.env.example`.
+
+Vite nạp biến **lúc đóng gói**, nên sửa `.env` xong phải khởi động lại `npm run dev`. Trên Vercel thì khai báo ở Project Settings → Environment Variables rồi deploy lại.
+
+`.gitignore` chặn `.env` và `.env.*` nhưng chừa `.env.example`.
 
 ## Firebase
 

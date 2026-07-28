@@ -27,8 +27,9 @@ Mức ưu tiên cao nhất.
 
 - [ ] **Chưa có cấu hình triển khai trong kho mã.** Cần xác nhận nơi triển khai rồi đưa cấu hình vào. Xem [DEPLOYMENT.md](DEPLOYMENT.md).
 - [ ] **Chưa có CI.** Tối thiểu nên chạy `npm run lint` và `npm run build` trên mỗi lần đẩy mã.
-- [ ] **Chưa có `.env.example`.** Người mới không biết cần khai báo biến nào.
-- [ ] **Giá trị Firebase dự phòng là chuỗi giữ chỗ.** Quên đặt biến môi trường thì ứng dụng vẫn chạy nhưng hỏng âm thầm. Cân nhắc báo lỗi rõ ràng khi thiếu cấu hình thay vì im lặng rơi về dự phòng.
+- [ ] **⚠️ Máy phát triển hiện CHƯA có tệp `.env`** nên Firebase không hoạt động: đăng nhập trả về `auth/api-key-not-valid`, không dữ liệu nào lên Cloud. Chép [.env.example](.env.example) thành `.env` rồi điền giá trị thật từ Firebase Console. Nếu bản chạy thật trên Vercel vẫn ổn thì biến môi trường đã có sẵn ở đó, chỉ thiếu ở máy phát triển.
+- [x] ~~**Chưa có `.env.example`.**~~ Đã có, kèm hướng dẫn lấy từng giá trị ở đâu trong Firebase Console.
+- [x] ~~**Giá trị Firebase dự phòng là chuỗi giữ chỗ, hỏng âm thầm.**~~ Nay báo động ở hai chỗ: `console.error` liệt kê đúng biến còn thiếu ngay khi nạp trang, và `AuthModal` hiện băng cảnh báo trước khi người dùng kịp gõ mật khẩu. Thông báo lỗi đăng nhập cũng đã nói đúng nguyên nhân thay vì đổ hết cho "sai mật khẩu". Xem [CHANGELOG.md](CHANGELOG.md).
 - [x] ~~**Xác nhận tên miền chính thức.**~~ Là `https://academy.pmarcom.com/` trên Vercel, chủ dự án xác nhận 2026-07-28. `index.html` đã trỏ đúng, đã ghi vào [DEPLOYMENT.md](DEPLOYMENT.md).
 
 ## Hiệu năng

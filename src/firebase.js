@@ -36,6 +36,41 @@ if (import.meta.env.VITE_FIREBASE_MEASUREMENT_ID) {
   firebaseConfig.measurementId = import.meta.env.VITE_FIREBASE_MEASUREMENT_ID;
 }
 
+/**
+ * Các biến môi trường Firebase còn thiếu.
+ *
+ * Vì sao cần: mọi giá trị dự phòng ở trên là **chuỗi giữ chỗ, không phải cấu
+ * hình thật**. Thiếu biến môi trường thì ứng dụng vẫn khởi động bình thường
+ * nhưng mọi thao tác Firebase hỏng âm thầm — đăng nhập báo "sai mật khẩu",
+ * dữ liệu không lên Cloud, và không chỗ nào nói ra nguyên nhân thật là
+ * `auth/api-key-not-valid`.
+ *
+ * Viết từng biến một chứ không lặp qua mảng tên: Vite thay thế
+ * `import.meta.env.VITE_X` ở khâu biên dịch, truy cập bằng khoá động không chắc
+ * còn giá trị sau khi đóng gói.
+ */
+export const missingFirebaseEnv = Object.entries({
+  VITE_FIREBASE_API_KEY: import.meta.env.VITE_FIREBASE_API_KEY,
+  VITE_FIREBASE_AUTH_DOMAIN: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  VITE_FIREBASE_PROJECT_ID: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  VITE_FIREBASE_STORAGE_BUCKET: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  VITE_FIREBASE_MESSAGING_SENDER_ID: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  VITE_FIREBASE_APP_ID: import.meta.env.VITE_FIREBASE_APP_ID
+})
+  .filter(([, value]) => !value)
+  .map(([name]) => name);
+
+export const isFirebaseConfigured = missingFirebaseEnv.length === 0;
+
+if (!isFirebaseConfigured) {
+  console.error(
+    '⚠️ Firebase CHƯA được cấu hình. Thiếu biến môi trường: ' +
+      missingFirebaseEnv.join(', ') +
+      '\nỨng dụng đang chạy bằng giá trị giữ chỗ nên đăng nhập và đồng bộ dữ liệu sẽ KHÔNG hoạt động.' +
+      '\nTạo tệp .env theo mẫu .env.example (xem DEPLOYMENT.md).'
+  );
+}
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
