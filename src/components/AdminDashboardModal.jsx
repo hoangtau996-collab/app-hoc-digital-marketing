@@ -9,7 +9,10 @@ import {
   deleteDoc,
   TRAFFIC_BASELINE,
   deleteStudentEverywhere,
-  setStudentRoleInCloud
+  setStudentRoleInCloud,
+  fetchAdminRosterFromCloud,
+  grantAdminInCloud,
+  revokeAdminInCloud
 } from '../firebase';
 import { markStudentDeleted, filterDeleted, getDeletedStudents } from '../utils/deletedStudents';
 import {
@@ -20,7 +23,8 @@ import {
   isAdminAccount,
   grantAdmin,
   revokeAdmin,
-  canDeleteAccount
+  canDeleteAccount,
+  replaceAdminCache
 } from '../utils/adminRoles';
 import { 
   X, 
@@ -121,6 +125,11 @@ export default function AdminDashboardModal({
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedIndustry, setSelectedIndustry] = useState('ALL');
   const [selectedRole, setSelectedRole] = useState('ALL'); // 'ALL' | 'ADMIN' | 'STUDENT'
+
+  // Sổ phân quyền đọc từ Firestore. `null` = chưa đọc được (mất mạng hoặc chưa
+  // deploy rules) -> rơi về bộ nhớ đệm tại máy, và hiện cảnh báo cho quản trị
+  // viên biết là đang xem dữ liệu cũ.
+  const [adminRoster, setAdminRoster] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [notice, setNotice] = useState('');
 
@@ -232,9 +241,21 @@ export default function AdminDashboardModal({
     setIsLoading(false);
   };
 
+  /** Đọc sổ phân quyền từ máy chủ và đồng bộ lại bộ nhớ đệm tại máy. */
+  const loadAdminRoster = async () => {
+    const emails = await fetchAdminRosterFromCloud();
+    if (Array.isArray(emails)) {
+      setAdminRoster(new Set(emails.map(normalizeEmail).filter(Boolean)));
+      replaceAdminCache(emails);
+    } else {
+      setAdminRoster(null);
+    }
+  };
+
   useEffect(() => {
     if (isOpen) {
       loadStudentsList();
+      loadAdminRoster();
 
       // Live subscription for all new student registrations on Cloud Firestore
       const unsub = listenToAllStudentsFromCloud((cloudStudents) => {
@@ -304,7 +325,7 @@ export default function AdminDashboardModal({
 
     const matchesIndustry = selectedIndustry === 'ALL' || std.industry === selectedIndustry;
 
-    const role = getAccountRole(std);
+    const role = getAccountRole(std, adminRoster);
     const matchesRole =
       selectedRole === 'ALL' ||
       (selectedRole === 'ADMIN' ? role !== 'student' : role === 'student');
@@ -316,7 +337,7 @@ export default function AdminDashboardModal({
   // Tính hạng trước rồi mới sắp xếp: getAccountRole() đọc localStorage nên gọi
   // nó trong hàm so sánh sẽ thành O(n log n) lượt đọc thay vì đúng n lượt.
   const orderedStudents = filteredStudents
-    .map((std, index) => ({ std, index, rank: ROLE_ORDER[getAccountRole(std)] }))
+    .map((std, index) => ({ std, index, rank: ROLE_ORDER[getAccountRole(std, adminRoster)] }))
     .sort((a, b) => a.rank - b.rank || a.index - b.index)
     .map((row) => row.std);
 
@@ -333,8 +354,8 @@ export default function AdminDashboardModal({
   // Calculate Statistics
   // Tách tài khoản quản trị ra khỏi số liệu đào tạo: quản trị viên không phải
   // học viên, gộp vào sẽ làm tỷ lệ hoàn thành sai lệch.
-  const adminAccounts = students.filter(isAdminAccount);
-  const studentAccounts = students.filter(s => !isAdminAccount(s));
+  const adminAccounts = students.filter(s => isAdminAccount(s, adminRoster));
+  const studentAccounts = students.filter(s => !isAdminAccount(s, adminRoster));
   const totalStudentsCount = studentAccounts.length;
   const totalGraduatesCount = studentAccounts.filter(s => (s.completedModules || []).length >= 11).length;
   const completionRate = totalStudentsCount > 0 ? Math.round((totalGraduatesCount / totalStudentsCount) * 100) : 0;
@@ -351,7 +372,7 @@ export default function AdminDashboardModal({
         `"${(std.name || '').replace(/"/g, '""')}"`,
         `"${std.phone || ''}"`,
         `"${std.email}"`,
-        `"${ROLE_LABEL[getAccountRole(std)]}"`,
+        `"${ROLE_LABEL[getAccountRole(std, adminRoster)]}"`,
         `"${(std.industry || 'Kinh doanh').replace(/"/g, '""')}"`,
         `"${(std.completedModules || []).length}/11"`,
         (std.completedModules || []).length >= 11 ? "Đã Tốt Nghiệp" : "Đang Học",
@@ -408,15 +429,21 @@ export default function AdminDashboardModal({
     );
     if (!confirmed) return;
 
-    const result = grantAdmin(email);
-    if (!result.ok) {
-      showNotice(`⛔ ${result.message}`);
+    // Máy chủ ghi TRƯỚC. Nếu Firestore Rules từ chối (người bấm không thực sự
+    // là quản trị viên), phải dừng ở đây — không được cập nhật giao diện rồi
+    // báo thành công cho một thao tác chưa hề xảy ra.
+    try {
+      await grantAdminInCloud(email, currentUser?.email);
+    } catch (err) {
+      showNotice(`⛔ Máy chủ từ chối nâng quyền cho ${email}: ${err.message}`, 8000);
       return;
     }
 
+    grantAdmin(email); // bộ nhớ đệm tại máy
+    setAdminRoster(prev => new Set([...(prev || []), email]));
     applyRoleToRow(email, 'admin');
     await setStudentRoleInCloud(email, 'admin');
-    showNotice(`🔑 ${result.message} Quyền có hiệu lực ở lần đăng nhập kế tiếp của họ.`, 6000);
+    showNotice(`🔑 Đã nâng ${email} lên Quản Trị Viên. Quyền có hiệu lực ở lần đăng nhập kế tiếp của họ.`, 6000);
   };
 
   // Thu hồi quyền quản trị
@@ -443,12 +470,29 @@ export default function AdminDashboardModal({
     );
     if (!confirmed) return;
 
+    // Chốt chặn tại máy, để báo lỗi cho dễ hiểu.
     const result = revokeAdmin(email);
     if (!result.ok) {
       showNotice(`⛔ ${result.message}`, 7000);
       return;
     }
 
+    // Chốt chặn thật nằm ở Firestore Rules: lệnh xoá bản ghi của Quản Trị Tối
+    // Cao bị máy chủ từ chối, không phụ thuộc vào việc giao diện có chặn hay không.
+    try {
+      await revokeAdminInCloud(email);
+    } catch (err) {
+      grantAdmin(email); // hoàn lại bộ nhớ đệm vì máy chủ không chấp nhận
+      showNotice(`⛔ Máy chủ từ chối thu hồi quyền của ${email}: ${err.message}`, 8000);
+      return;
+    }
+
+    setAdminRoster(prev => {
+      if (!prev) return prev;
+      const next = new Set(prev);
+      next.delete(email);
+      return next;
+    });
     applyRoleToRow(email, 'student');
     await setStudentRoleInCloud(email, 'student');
     showNotice(`🟡 ${result.message}`);
@@ -461,7 +505,7 @@ export default function AdminDashboardModal({
 
     // Không xoá được tài khoản quản trị: Quản Trị Tối Cao thì tuyệt đối, quản
     // trị viên thường thì phải thu hồi quyền trước.
-    const permission = canDeleteAccount(student);
+    const permission = canDeleteAccount(student, adminRoster);
     if (!permission.ok) {
       showNotice(`🔒 ${permission.message}`, 6000);
       return;
@@ -840,6 +884,12 @@ export default function AdminDashboardModal({
             <Crown className="w-3 h-3 text-amber-400" />
             Tài khoản <strong className="text-amber-300">Quản Trị Tối Cao</strong> không tài khoản nào được phép thu hồi quyền hay xoá.
           </span>
+          {adminRoster === null && (
+            <span className="flex items-center gap-1 text-orange-300 font-bold">
+              <Lock className="w-3 h-3" />
+              Chưa đọc được sổ phân quyền trên máy chủ — đang hiển thị theo bộ nhớ đệm tại máy.
+            </span>
+          )}
         </div>
 
         {/* Student Accounts Table View (Expanded Vertical Space) */}
@@ -864,7 +914,7 @@ export default function AdminDashboardModal({
                   const completedCount = (std.completedModules || []).length;
                   const isGraduate = completedCount >= 11;
                   const sttIndex = startIndex + idx + 1;
-                  const role = getAccountRole(std);
+                  const role = getAccountRole(std, adminRoster);
                   const isSelf = normalizeEmail(std.email) === currentUserEmail;
 
                   return (

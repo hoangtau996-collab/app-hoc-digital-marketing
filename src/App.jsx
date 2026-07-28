@@ -26,7 +26,8 @@ import {
   recordRealStudentEnrollment,
   recordRealStudentGraduate,
   listenToRealStats,
-  recordStudentAccountToCloud
+  recordStudentAccountToCloud,
+  isAdminInCloud
 } from './firebase';
 
 import StudyReminderModal from './components/StudyReminderModal';
@@ -38,7 +39,13 @@ import {
   snoozeReminder,
 } from './utils/studyReminder';
 
-import { isAdminEmail } from './utils/adminRoles';
+import {
+  normalizeEmail,
+  isRootAdmin,
+  isAdminEmail,
+  grantAdmin,
+  revokeAdmin
+} from './utils/adminRoles';
 
 import { COURSE_MODULES } from './data/courseData';
 import { TRADE_MODULES } from './data/tradeCourseData';
@@ -178,32 +185,46 @@ export default function App() {
   }, []);
 
   /**
-   * Xác định vai trò của tài khoản. Chỉ trả về 'admin' khi có nguồn khẳng định,
-   * mọi trường hợp còn lại quy về 'student'.
+   * Xác định vai trò của tài khoản.
    *
-   * Có tra thêm sổ tài khoản `dmm_users_db` theo email vì đó là nguồn khai báo
-   * gốc của tài khoản quản trị. Không có bước này thì những máy đã bị lỗi cũ
-   * xoá mất role trong `dmm_active_user` sẽ không bao giờ khôi phục được quyền,
-   * kể cả sau khi đăng nhập lại.
+   * QUY TẮC: quyền quản trị CHỈ cấp cho một phiên đăng nhập Firebase Auth thật,
+   * và chỉ khi máy chủ xác nhận. Tham số `authUser` phải là đối tượng do
+   * `onAuthStateChanged` đưa ra — email trong đó lấy từ ID token đã ký, không
+   * phải thứ trình duyệt tự khai.
+   *
+   * Vì sao bỏ hết các nguồn cũ (`dmm_active_user.role`, `dmm_users_db.role`,
+   * `dmm_admin_emails`): cả ba đều nằm trong localStorage, sửa một dòng trong
+   * devtools là tự phong quản trị viên. Nay chúng chỉ còn là bộ nhớ đệm cho
+   * trường hợp mất mạng, không tự sinh ra quyền cho email chưa từng được máy
+   * chủ xác nhận.
+   *
+   * Ba trạng thái trả lời của máy chủ được xử lý khác nhau:
+   *   true  -> có quyền, ghi vào bộ nhớ đệm
+   *   false -> không có quyền, xoá khỏi bộ nhớ đệm ngay (đây là cách việc thu
+   *            hồi quyền lan tới máy của chính người bị thu hồi)
+   *   null  -> chưa hỏi được (mất mạng / chưa deploy rules) -> dùng bộ nhớ đệm
+   *
+   * Tài khoản gốc là ngoại lệ có chủ đích: danh sách nằm cứng trong mã nguồn
+   * nên người dùng không sửa được, và điều kiện vẫn là phải đăng nhập được vào
+   * đúng tài khoản đó. Giữ ngoại lệ này để không khoá chết hệ thống trong lúc
+   * sổ `admins` trên Firestore chưa được mồi.
    */
-  const resolveUserRole = (email, existingUser, cloudProfile) => {
-    // Sổ phân quyền (`utils/adminRoles`) đứng trước: tài khoản gốc luôn là quản
-    // trị viên, và người vừa được nâng quyền phải nhận đúng vai trò ngay lần
-    // đăng nhập kế tiếp mà không phải chờ Firestore trả lời.
-    if (isAdminEmail(email) || isAdminEmail(existingUser?.email)) return 'admin';
-    if (existingUser?.role === 'admin' || cloudProfile?.role === 'admin') return 'admin';
-    try {
-      const db = JSON.parse(localStorage.getItem('dmm_users_db') || '[]');
-      const normalized = String(email || '').trim().toLowerCase();
-      if (
-        normalized &&
-        Array.isArray(db) &&
-        db.some((u) => String(u?.email || '').trim().toLowerCase() === normalized && u?.role === 'admin')
-      ) {
-        return 'admin';
-      }
-    } catch (e) {}
-    return 'student';
+  const resolveAdminRole = async (authUser) => {
+    const email = normalizeEmail(authUser?.email);
+    if (!email) return 'student';
+
+    const verdict = await isAdminInCloud(email);
+
+    if (verdict === true) {
+      grantAdmin(email);
+      return 'admin';
+    }
+    if (verdict === false) {
+      if (isRootAdmin(email)) return 'admin';
+      revokeAdmin(email);
+      return 'student';
+    }
+    return isRootAdmin(email) || isAdminEmail(email) ? 'admin' : 'student';
   };
 
   // Active student account with fail-safe sanitization
@@ -220,11 +241,14 @@ export default function App() {
           phone: typeof parsed.phone === 'string' ? parsed.phone : 'Chưa có SĐT',
           industry: typeof parsed.industry === 'string' ? parsed.industry : 'Digital Marketing',
           coverBg: typeof parsed.coverBg === 'string' ? parsed.coverBg : 'emerald',
-          // Bộ làm sạch này trước đây NUỐT MẤT trường role, nên không tầng nào
-          // phân biệt được admin với học viên. Dùng chung bộ phân giải với
-          // listener đăng nhập để máy nào đã bị xoá mất role vẫn khôi phục được
-          // ngay từ lần tải trang đầu, không phải chờ Firebase trả lời.
-          role: resolveUserRole(parsed.email, parsed, null)
+          // Luôn khởi tạo là 'student', KHÔNG đọc role từ localStorage.
+          //
+          // Đây chính là chỗ trước đây cho phép tự phong: chỉ cần sửa một dòng
+          // trong `dmm_active_user` là có nút Quản Trị ngay từ lần tải trang
+          // đầu. Quyền nay do listener `onAuthStateChanged` bên dưới cấp, sau
+          // khi máy chủ xác nhận — chậm hơn khoảng một nhịp mạng, đổi lại
+          // không giả được.
+          role: 'student'
         };
       }
       return null;
@@ -243,7 +267,8 @@ export default function App() {
           if (saved) existingUser = JSON.parse(saved);
         } catch (e) {}
 
-        const cloudProfile = await getUserProgressFromCloud(user.uid);
+        const cloudProfile = await getUserProgressFromCloud(user.uid, user.email);
+        const resolvedRole = await resolveAdminRole(user);
 
         const studentUser = {
           id: user.uid,
@@ -254,11 +279,9 @@ export default function App() {
           coverBg: existingUser?.coverBg || cloudProfile?.coverBg || 'emerald',
           avatarUrl: existingUser?.avatarUrl || cloudProfile?.avatarUrl || '',
           createdAt: existingUser?.createdAt || cloudProfile?.createdAt || new Date().toLocaleDateString('vi-VN'),
-          // Trường role BẮT BUỘC phải dựng lại ở đây. Thiếu nó thì listener này
-          // vừa xoá quyền admin khỏi state, vừa ghi đè bản localStorage bên dưới
-          // nên quyền mất luôn ở những lần tải trang sau — đúng triệu chứng
-          // "admin không còn thấy nút Quản Trị".
-          role: resolveUserRole(user.email || existingUser?.email, existingUser, cloudProfile)
+          // Đây là NƠI DUY NHẤT cấp quyền quản trị trong toàn ứng dụng, và chỉ
+          // cấp sau khi máy chủ xác nhận (xem resolveAdminRole).
+          role: resolvedRole
         };
 
         setCurrentUser(studentUser);
@@ -593,7 +616,14 @@ export default function App() {
       console.error("Error migrating guest progress", e);
     }
 
-    setCurrentUser(user);
+    // Gỡ bỏ mọi vai trò do phía đăng nhập gửi sang.
+    //
+    // Nhánh đăng nhập dự phòng đọc bản ghi thẳng từ `dmm_users_db` — một kho
+    // localStorage mà người dùng sửa được, nên `role` trong đó không đáng tin.
+    // Nếu tài khoản này thật sự có quyền, listener `onAuthStateChanged` sẽ cấp
+    // lại ngay sau khi máy chủ xác nhận.
+    const { role: _untrustedRole, ...safeUser } = user || {};
+    setCurrentUser({ ...safeUser, role: 'student' });
   };
 
   const handleLogout = async () => {

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PMarcomLogo from './PMarcomLogo';
 import { createCredential, verifyCredential, upgradeRecord } from '../utils/localCredentials';
+import { isRootAdmin } from '../utils/adminRoles';
 import { 
   auth, 
   signInWithEmailAndPassword, 
@@ -154,7 +155,15 @@ export default function AuthModal({
         name: 'QUẢN TRỊ VIÊN ADMIN',
         phone: '0999999999',
         industry: 'Ban Quản Trị Học Viện',
-        role: 'admin',
+        // CỐ Ý KHÔNG có `role: 'admin'` ở đây.
+        //
+        // Bản ghi này nằm trong localStorage và mật khẩu của nó đọc được ngay
+        // trong mã nguồn công khai — bất kỳ ai cũng đăng nhập được vào nhánh dự
+        // phòng này. Trước đây nó kèm `role: 'admin'` nên đó là đường chiếm
+        // quyền quản trị dễ nhất trong toàn ứng dụng, còn chẳng cần tự phong.
+        // Quyền quản trị nay chỉ cấp sau khi Firebase Auth xác thực và máy chủ
+        // xác nhận (xem App.jsx `resolveAdminRole`), nên nhánh dự phòng này chỉ
+        // còn cho đăng nhập ở mức học viên.
         createdAt: new Date().toLocaleDateString('vi-VN')
       }
     ];
@@ -276,6 +285,18 @@ export default function AuthModal({
 
     if (isBlockedDemoAccount(email)) {
       setErrorMsg('Email này thuộc tài khoản dùng thử đã ngừng hoạt động. Vui lòng dùng email cá nhân của bạn.');
+      setIsLoading(false);
+      return;
+    }
+
+    // Không cho đăng ký bằng email của tài khoản Quản Trị Tối Cao.
+    //
+    // Nếu tài khoản đó chưa tồn tại trên Firebase Auth thì bất kỳ ai cũng có thể
+    // đăng ký chiếm chỗ và trở thành quản trị viên cao nhất — chiếm quyền mà
+    // không cần tự phong. Chặn ở đây là lớp cuối; lớp thật là tài khoản đó phải
+    // đã được tạo sẵn trên Firebase Console (xem DEPLOYMENT.md).
+    if (isRootAdmin(email)) {
+      setErrorMsg('Email này thuộc Ban Quản Trị Học Viện, không dùng để đăng ký học viên.');
       setIsLoading(false);
       return;
     }

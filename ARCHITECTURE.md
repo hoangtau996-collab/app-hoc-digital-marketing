@@ -143,17 +143,38 @@ Tất cả đều là logic thuần, không phụ thuộc React, nên kiểm ch�
 Hai tầng, cố ý không bằng nhau:
 
 ```
-Quản Trị Tối Cao   ROOT_ADMIN_EMAILS trong mã nguồn
+Quản Trị Tối Cao   ROOT_ADMIN_EMAILS trong mã nguồn + rootAdminEmail() trong rules
                    └─► không thu hồi được, không xoá được, không có nút để bấm
 
-Quản Trị Viên      localStorage `dmm_admin_emails`  (máy hiện tại)
-                   └─► Firestore students.role = 'admin'  (các máy khác)
-                         └─► resolveUserRole() ─► currentUser.role ─► nút Quản Trị
+Quản Trị Viên      Firestore collection `admins`   ◄── NGUỒN KHẲNG ĐỊNH
+                   └─► localStorage `dmm_admin_emails`  (chỉ là bộ nhớ đệm)
+```
+
+Đường cấp quyền, chỉ có một:
+
+```
+đăng nhập Firebase Auth
+   └─► onAuthStateChanged trả về `user` (email lấy từ ID token đã ký)
+         └─► resolveAdminRole(user) ─► isAdminInCloud(email)
+               ├─ máy chủ trả lời "có"      ─► role = 'admin', ghi bộ nhớ đệm
+               ├─ máy chủ trả lời "không"   ─► role = 'student', xoá bộ nhớ đệm
+               └─ không hỏi được (mất mạng) ─► dùng bộ nhớ đệm lần gần nhất
 ```
 
 Tầng trên khoá cứng vì ứng dụng không có backend để khôi phục: nếu quyền cao nhất mà gỡ được thì chỉ một cú bấm nhầm là mất Bảng Quản Trị vĩnh viễn.
 
-**Đây không phải hàng rào bảo mật.** Cả hai nguồn đều nằm ở phía trình duyệt nên sửa được từ devtools; xem [TODO.md](TODO.md#bảo-mật). Chặn thật sự phải làm bằng Firebase Auth custom claim + Firestore Rules.
+### Ranh giới bảo mật nằm ở đâu
+
+Ở [firestore.rules](firestore.rules), không ở mã React. Rules chạy trên máy chủ Google và chỉ tin `request.auth.token` — ID token do Firebase Auth ký. Trình duyệt khai gì cũng được, nhưng không ký được token.
+
+| Chặn được | Không chặn được |
+|---|---|
+| Người ngoài tự đưa mình vào sổ `admins` | Người ngoài bật **giao diện** quản trị trên máy họ |
+| Người ngoài đọc hồ sơ học viên khác | |
+| Học viên tự ghi `role: 'admin'` vào hồ sơ của mình | |
+| Bất kỳ ai gỡ quyền của Quản Trị Tối Cao | |
+
+Cột phải là giới hạn cố hữu của ứng dụng chạy trong trình duyệt: người dùng sửa được cả mã JavaScript đang chạy, nên không có cách nào ngăn họ vẽ ra một cái bảng. Nhưng cái bảng đó rỗng — mọi lệnh đọc dữ liệu đều bị máy chủ từ chối. **Giao diện giả được, dữ liệu thì không.**
 
 ## Luồng dữ liệu quan trọng
 

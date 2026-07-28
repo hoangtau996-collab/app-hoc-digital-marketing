@@ -18,11 +18,22 @@
 |---|---|---|---|
 | `recordStudentAccountToCloud(studentData)` | object | `Promise<void>` | Ghi hồ sơ vào `students` và `registrations`, đồng thời sao lưu vào `dmm_users_db` |
 | `saveUserProgressToCloud(userId, progressData)` | string, object | `Promise<void>` | Lưu tiến độ học viên lên Firestore |
-| `getUserProgressFromCloud(userId)` | string | `Promise<object\|null>` | Đọc hồ sơ và tiến độ |
+| `getUserProgressFromCloud(userId, email?)` | string, string | `Promise<object\|null>` | Đọc hồ sơ và tiến độ. Dò theo **cả** uid lẫn id suy ra từ email, vì lệnh ghi lưu theo email |
 | `getAllRegisteredStudentsFromCloud()` | — | `Promise<Array>` | Lấy toàn bộ học viên (dùng cho bảng quản trị) |
 | `listenToAllStudentsFromCloud(callback)` | function | `unsubscribe` | Theo dõi realtime danh sách học viên |
-| `setStudentRoleInCloud(email, role)` | string, string | `Promise<void>` | Ghi vai trò lên `students` + `registrations`. Đường duy nhất để quyền cấp ở máy này có hiệu lực trên máy khác |
+| `setStudentRoleInCloud(email, role)` | string, string | `Promise<void>` | Ghi vai trò lên `students` + `registrations` (dữ liệu hiển thị, không phải căn cứ cấp quyền) |
 | `deleteStudentEverywhere(studentId, email)` | string, string | `Promise<void>` | Xoá học viên khỏi cả 4 kho: Firestore `students`, `registrations`, Realtime DB qua REST, và `dmm_users_db` |
+
+### Sổ phân quyền quản trị (collection `admins`)
+
+Nguồn khẳng định quyền quản trị. Ranh giới thật do [firestore.rules](firestore.rules) áp đặt ở phía máy chủ.
+
+| Hàm | Tham số | Trả về | Tác dụng |
+|---|---|---|---|
+| `isAdminInCloud(email)` | string | `Promise<boolean\|null>` | Email này có quyền không. **`null` = chưa hỏi được**, phải phân biệt với `false` |
+| `fetchAdminRosterFromCloud()` | — | `Promise<Array\|null>` | Toàn bộ sổ. Chỉ quản trị viên đọc được |
+| `grantAdminInCloud(email, byEmail)` | string, string | `Promise<void>` | Cấp quyền. **Ném lỗi** nếu máy chủ từ chối |
+| `revokeAdminInCloud(email)` | string | `Promise<void>` | Thu hồi quyền. Máy chủ từ chối với tài khoản gốc |
 
 ### Thống kê lượt truy cập
 
@@ -60,7 +71,7 @@
 
 ## `src/utils/adminRoles.js`
 
-Sổ phân quyền quản trị. **Không phải hàng rào bảo mật** — sổ nằm ở localStorage nên sửa được từ devtools; đây là quy tắc nghiệp vụ và nguồn khẳng định vai trò cho giao diện. Xem [TODO.md](TODO.md#bảo-mật).
+Quy tắc phân quyền phía giao diện + **bộ nhớ đệm** của collection `admins`. Nguồn khẳng định nằm ở máy chủ, xem `isAdminInCloud()` bên trên và [firestore.rules](firestore.rules).
 
 | Tên | Kiểu | Ghi chú |
 |---|---|---|
@@ -71,11 +82,12 @@ Sổ phân quyền quản trị. **Không phải hàng rào bảo mật** — s�
 | `getGrantedAdminEmails()` | function | Email đã được nâng quyền tại máy này |
 | `getAdminEmails()` | function | Tài khoản gốc + tài khoản được nâng quyền |
 | `isAdminEmail(email)` | function | Có quyền quản trị không |
-| `getAccountRole(account)` | function | `'root'` \| `'admin'` \| `'student'`. Nhận object hồ sơ hoặc chuỗi email |
-| `isAdminAccount(account)` | function | Vai trò khác `'student'` |
-| `grantAdmin(email)` | function | Nâng lên Quản Trị Viên. Trả về `{ ok, message }` |
-| `revokeAdmin(email)` | function | Thu hồi quyền. **Luôn từ chối với Quản Trị Tối Cao**, không tham số nào bỏ qua được |
-| `canDeleteAccount(account)` | function | Quản Trị Tối Cao: không bao giờ. Quản trị viên thường: phải thu hồi quyền trước |
+| `replaceAdminCache(emails)` | function | Ghi đè bộ nhớ đệm bằng sổ vừa đọc từ máy chủ |
+| `getAccountRole(account, roster?)` | function | `'root'` \| `'admin'` \| `'student'`. `roster` là `Set` email đọc từ máy chủ — truyền vào thì nó là căn cứ duy nhất |
+| `isAdminAccount(account, roster?)` | function | Vai trò khác `'student'` |
+| `grantAdmin(email)` | function | Ghi bộ nhớ đệm. Trả về `{ ok, message }` |
+| `revokeAdmin(email)` | function | Xoá khỏi bộ nhớ đệm. **Luôn từ chối với Quản Trị Tối Cao** |
+| `canDeleteAccount(account, roster?)` | function | Quản Trị Tối Cao: không bao giờ. Quản trị viên thường: phải thu hồi quyền trước |
 
 ## `src/utils/deletedStudents.js`
 

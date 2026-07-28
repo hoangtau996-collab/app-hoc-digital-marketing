@@ -120,6 +120,84 @@ export async function recordStudentAccountToCloud(studentData) {
   }
 }
 
+/* ============================================================
+   SỔ PHÂN QUYỀN QUẢN TRỊ (collection `admins`)
+
+   Id tài liệu = email đã chuẩn hoá về chữ thường.
+
+   Đây là nguồn khẳng định quyền quản trị, thay cho localStorage. Khác biệt cốt
+   lõi: Firestore Rules (xem firestore.rules) chỉ cho quản trị viên hiện hành ghi
+   vào sổ này, và luật đó chạy trên máy chủ Google nên sửa trình duyệt không vòng
+   qua được. Người ngoài vẫn bật được giao diện quản trị trên máy họ, nhưng mọi
+   lệnh đọc dữ liệu học viên sẽ bị máy chủ từ chối -> bảng rỗng.
+   ============================================================ */
+
+const ADMIN_COLLECTION = 'admins';
+
+const cleanEmailKey = (email) => String(email || '').trim().toLowerCase();
+
+/**
+ * Hỏi máy chủ: email này có quyền quản trị không?
+ *
+ * Trả về `true` / `false` khi hỏi được, và `null` khi KHÔNG hỏi được (mất mạng,
+ * chưa deploy rules, thiếu quyền đọc). Phía gọi phải phân biệt `false` với
+ * `null`: `false` là máy chủ trả lời "không có quyền", còn `null` là "chưa
+ * biết" — xử lý hai trường hợp này giống nhau sẽ khiến quản trị viên mất quyền
+ * mỗi lần rớt mạng.
+ */
+export async function isAdminInCloud(email) {
+  const key = cleanEmailKey(email);
+  if (!key) return false;
+  try {
+    const snap = await getDoc(doc(db, ADMIN_COLLECTION, key));
+    return snap.exists();
+  } catch (e) {
+    console.warn('Không đọc được sổ phân quyền trên Cloud:', e);
+    return null;
+  }
+}
+
+/** Toàn bộ sổ phân quyền. Chỉ quản trị viên đọc được (theo rules). */
+export async function fetchAdminRosterFromCloud() {
+  try {
+    const snapshot = await getDocs(collection(db, ADMIN_COLLECTION));
+    return snapshot.docs.map((d) => d.id);
+  } catch (e) {
+    console.warn('Không đọc được toàn bộ sổ phân quyền:', e);
+    return null;
+  }
+}
+
+/**
+ * Ghi một tài khoản vào sổ phân quyền.
+ *
+ * Có await và có ném lỗi ra ngoài — cố ý khác với các lệnh ghi khác trong tệp
+ * này. Nâng quyền là thao tác phải biết chắc kết quả: nếu máy chủ từ chối (người
+ * bấm không thực sự là quản trị viên) thì giao diện phải báo thất bại, chứ không
+ * được hiện "đã nâng quyền" rồi để đó.
+ */
+export async function grantAdminInCloud(email, grantedByEmail) {
+  const key = cleanEmailKey(email);
+  if (!key) throw new Error('Email không hợp lệ.');
+  await setDoc(doc(db, ADMIN_COLLECTION, key), {
+    email: key,
+    grantedBy: cleanEmailKey(grantedByEmail) || 'unknown',
+    grantedAt: new Date().toISOString()
+  });
+}
+
+/**
+ * Xoá một tài khoản khỏi sổ phân quyền.
+ *
+ * Với tài khoản Quản Trị Tối Cao, Firestore Rules sẽ từ chối lệnh này. Đó là
+ * chốt chặn thật — phía giao diện chặn trước chỉ để báo lỗi cho dễ hiểu.
+ */
+export async function revokeAdminInCloud(email) {
+  const key = cleanEmailKey(email);
+  if (!key) throw new Error('Email không hợp lệ.');
+  await deleteDoc(doc(db, ADMIN_COLLECTION, key));
+}
+
 /**
  * Ghi vai trò của một tài khoản lên đám mây.
  *
@@ -253,13 +331,23 @@ export async function saveUserProgressToCloud(userId, progressData) {
 /**
  * Fetch student progress from Cloud Firestore
  */
-export async function getUserProgressFromCloud(userId) {
-  if (!userId) return null;
+export async function getUserProgressFromCloud(userId, email) {
+  if (!userId && !email) return null;
+
+  // Dò theo CẢ HAI id. Lệnh ghi lưu tài liệu theo id suy ra từ email
+  // (recordStudentAccountToCloud), trong khi nơi gọi ở đây chỉ có uid của
+  // Firebase Auth. Chỉ dò theo uid thì hầu hết tài khoản đọc ra chỗ trống —
+  // đó là lý do hồ sơ đám mây (gồm cả trường `role`) trước nay gần như không
+  // bao giờ nạp được.
+  const emailKey = cleanEmailKey(email);
+  const candidates = [...new Set([userId, emailKey && emailKey.replace(/[^a-z0-9]/g, '_')].filter(Boolean))];
+
   try {
-    const userDocRef = doc(db, 'students', userId);
-    const docSnap = await getDoc(userDocRef);
-    if (docSnap.exists()) {
-      return docSnap.data();
+    for (const id of candidates) {
+      const docSnap = await getDoc(doc(db, 'students', id));
+      if (docSnap.exists()) {
+        return docSnap.data();
+      }
     }
   } catch (e) {
     console.warn("Failed to fetch cloud progress, fallback to cache", e);

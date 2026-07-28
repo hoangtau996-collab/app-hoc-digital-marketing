@@ -62,7 +62,37 @@ Cần bật trên Firebase Console:
 
 1. **Authentication** — phương thức Email/Password.
 2. **Cloud Firestore** — các collection và document mô tả tại [DATABASE.md](DATABASE.md).
-3. **Security Rules** — chưa có trong kho mã, xem [DATABASE.md](DATABASE.md#bảo-mật).
+3. **Security Rules** — tệp `firestore.rules` trong kho mã. **Phải deploy thì mới có tác dụng**, xem ngay bên dưới.
+
+### Security Rules — bắt buộc deploy
+
+`firestore.rules` là **lớp bảo vệ duy nhất** của dự án. Ứng dụng chạy hoàn toàn trong trình duyệt nên không có chỗ nào khác đặt được ranh giới quyền: chưa deploy tệp này thì cơ sở dữ liệu vẫn chạy theo cấu hình cũ trên Console, và bất kỳ ai mở trang web cũng đọc được toàn bộ hồ sơ học viên bằng vài dòng lệnh trong devtools.
+
+```bash
+npx firebase-tools login
+npx firebase-tools use <project-id>          # ví dụ: pmarcomacademy
+npx firebase-tools deploy --only firestore:rules
+```
+
+`firebase.json` trong kho mã đã trỏ sẵn tới `firestore.rules`. Không cần cài `firebase-tools` vào `package.json` vì đây là việc thỉnh thoảng mới chạy.
+
+Cách khác không cần dòng lệnh: mở **Firebase Console → Firestore Database → Rules**, dán nguyên nội dung `firestore.rules` vào rồi bấm **Publish**.
+
+### Mồi tài khoản quản trị đầu tiên
+
+Rules dùng collection `admins` làm sổ phân quyền: id tài liệu là email chữ thường, có bản ghi nghĩa là có quyền. Sổ rỗng thì **không ai** cấp quyền được cho ai, nên phải mồi bản ghi đầu tiên.
+
+Có hai cách, chọn một:
+
+1. **Tự mồi (không cần làm gì thủ công).** Rules cho phép đúng một ngoại lệ: tài khoản `admin@pmarcom.edu.vn` tự tạo bản ghi của chính nó. Đăng nhập bằng tài khoản đó rồi mở Bảng Quản Trị, ứng dụng sẽ ghi bản ghi khi bạn nâng quyền cho người đầu tiên.
+2. **Tạo tay trên Console.** Firestore Database → Start collection → Collection ID `admins` → Document ID là email chữ thường (`admin@pmarcom.edu.vn`) → thêm trường `email` (string) là chính email đó.
+
+### Việc phải kiểm tra ngay: tài khoản gốc trên Firebase Auth
+
+Quyền quản trị nay **chỉ cấp cho phiên đăng nhập Firebase Auth thật**. Kéo theo hai việc bắt buộc:
+
+- **`admin@pmarcom.edu.vn` phải tồn tại trong Authentication → Users, với mật khẩu mạnh.** Nếu tài khoản này chưa được tạo, bất kỳ ai cũng có thể đăng ký chiếm email đó và trở thành Quản Trị Tối Cao. Ứng dụng đã chặn đăng ký email này ở form (`AuthModal.jsx`), nhưng chặn ở trình duyệt thì vòng qua được — tạo sẵn tài khoản mới là biện pháp thật.
+- **Mật khẩu `admin` viết trong `AuthModal.jsx` không còn cấp quyền gì**, nhưng vẫn nên đổi. Xem [TODO.md](TODO.md#bảo-mật).
 
 ## Tài nguyên tĩnh
 

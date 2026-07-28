@@ -1,0 +1,162 @@
+rules_version = '2';
+
+// ============================================================================
+// P MARCOM ACADEMY — Firestore Security Rules
+//
+// VÌ SAO TỆP NÀY LÀ BẮT BUỘC
+//
+// Ứng dụng chạy hoàn toàn trong trình duyệt, không có backend. Mọi thứ ở phía
+// trình duyệt đều sửa được: localStorage, biến state, thậm chí cả mã JavaScript
+// đang chạy. Nghĩa là KHÔNG có cách nào chặn một người tự bật giao diện quản trị
+// trên máy của họ.
+//
+// Nhưng đó không phải điều cần chặn. Điều cần chặn là họ LẤY ĐƯỢC DỮ LIỆU và
+// SỬA ĐƯỢC PHÂN QUYỀN. Cả hai việc đó đều phải đi qua máy chủ Firestore, và máy
+// chủ chỉ tin ID token do Firebase Auth ký — không tin bất cứ thứ gì trình duyệt
+// tự khai. Tệp này là nơi duy nhất đặt được ranh giới đó.
+//
+// Nói ngắn: giao diện giả được, dữ liệu thì không.
+//
+// TRIỂN KHAI: xem DEPLOYMENT.md, mục "Security Rules". Chưa deploy tệp này thì
+// cơ sở dữ liệu vẫn đang mở theo cấu hình cũ trên Firebase Console.
+// ============================================================================
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ---- Danh tính -------------------------------------------------------
+
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    // Email lấy từ ID token đã được Firebase Auth ký, KHÔNG phải từ
+    // localStorage hay tham số do trình duyệt gửi lên. Đây là điểm mấu chốt:
+    // người dùng khai gì cũng được, nhưng không ký được token.
+    function myEmail() {
+      return signedIn() && request.auth.token.email != null
+        ? request.auth.token.email.lower()
+        : '';
+    }
+
+    // Tài khoản Quản Trị Tối Cao. Phải khớp ROOT_ADMIN_EMAILS trong
+    // src/utils/adminRoles.js — đổi một bên thì đổi cả hai.
+    function rootAdminEmail() {
+      return 'admin@pmarcom.edu.vn';
+    }
+
+    // Quyền quản trị = có bản ghi trong sổ /admins. Sổ đó chỉ quản trị viên
+    // hiện hành mới ghi được (xem match /admins bên dưới), nên người ngoài
+    // không có đường nào tự đưa mình vào.
+    function isAdmin() {
+      return signedIn()
+        && myEmail() != ''
+        && exists(/databases/$(database)/documents/admins/$(myEmail()));
+    }
+
+    // ---- /admins : sổ phân quyền ----------------------------------------
+
+    match /admins/{adminEmail} {
+
+      // Mỗi người chỉ đọc được bản ghi của chính mình (để biết mình có quyền
+      // không). Chỉ quản trị viên mới liệt kê được cả sổ.
+      allow get: if signedIn() && (adminEmail == myEmail() || isAdmin());
+      allow list: if isAdmin();
+
+      // NÂNG QUYỀN: chỉ quản trị viên hiện hành mới cấp được cho người khác.
+      //
+      // Ngoại lệ duy nhất là bước mồi lần đầu: tài khoản gốc tự tạo bản ghi của
+      // CHÍNH NÓ khi sổ còn rỗng. Không có ngoại lệ này thì sổ rỗng sẽ khoá
+      // vĩnh viễn — không ai là admin nên không ai cấp được cho ai.
+      // An toàn vì điều kiện buộc email trong token phải đúng bằng tài khoản
+      // gốc, tức là phải đăng nhập được vào chính tài khoản đó.
+      allow create: if isAdmin()
+                    || (adminEmail == rootAdminEmail() && myEmail() == rootAdminEmail());
+
+      // Không ai sửa hay xoá được bản ghi của Quản Trị Tối Cao — kể cả một quản
+      // trị viên khác, kể cả chính nó. Đây là chốt chặn "không tài khoản nào
+      // được phép gỡ quyền quản trị cao nhất", đặt ở phía máy chủ nên không
+      // vòng qua được bằng cách sửa giao diện.
+      allow update: if isAdmin() && adminEmail != rootAdminEmail();
+      allow delete: if isAdmin() && adminEmail != rootAdminEmail();
+    }
+
+    // ---- /students và /registrations : hồ sơ học viên ---------------------
+
+    // Hai collection ghi cùng payload (xem DATABASE.md), nên dùng chung luật.
+    match /students/{docId} {
+      allow get: if canGetProfile();
+      allow list: if isAdmin();
+      allow create: if canCreateProfile();
+      allow update: if canUpdateProfile();
+      allow delete: if isAdmin();
+    }
+
+    match /registrations/{docId} {
+      allow get: if canGetProfile();
+      allow list: if isAdmin();
+      allow create: if canCreateProfile();
+      allow update: if canUpdateProfile();
+      allow delete: if isAdmin();
+    }
+
+    // Chỉ quản trị viên đọc được hồ sơ người khác. Học viên đọc hồ sơ của mình.
+    // Cho phép đọc tài liệu KHÔNG tồn tại vì getUserProgressFromCloud() dò theo
+    // uid trong khi bản ghi lưu theo email — đọc chỗ trống không lộ gì cả.
+    function canGetProfile() {
+      return isAdmin() || resource == null
+        || (signedIn() && resource.data.email == myEmail());
+    }
+
+    // Học viên chỉ tạo được hồ sơ mang đúng email của mình, và KHÔNG được kèm
+    // trường `role`. Đây là đường tự phong hiển nhiên nhất nếu bỏ ngỏ.
+    function canCreateProfile() {
+      return isAdmin()
+        || (signedIn()
+            && request.resource.data.email == myEmail()
+            && !('role' in request.resource.data));
+    }
+
+    // Tương tự khi cập nhật: học viên sửa hồ sơ của mình nhưng không được động
+    // vào `role`, và không được đổi email sang người khác.
+    function canUpdateProfile() {
+      return isAdmin()
+        || (signedIn()
+            && resource.data.email == myEmail()
+            && request.resource.data.email == myEmail()
+            && !request.resource.data.diff(resource.data).affectedKeys().hasAny(['role']));
+    }
+
+    // ---- /analytics : bộ đếm truy cập và thống kê ------------------------
+
+    // Khách chưa đăng nhập cũng được tính lượt truy cập, nên buộc phải cho ghi
+    // khi chưa đăng nhập. Bù lại chặn thổi số: mỗi lần ghi chỉ được cộng tối đa
+    // 1, và không ai xoá được tài liệu.
+    match /analytics/{docId} {
+      allow read: if true;
+      allow create: if true;
+      allow delete: if false;
+
+      allow update: if incrementsByAtMostOne('totalVisits')
+                    && incrementsByAtMostOne('totalEnrolled')
+                    && incrementsByAtMostOne('totalGraduates');
+    }
+
+    // Trường vắng mặt ở một trong hai phía thì coi như không đụng tới -> hợp lệ.
+    function incrementsByAtMostOne(field) {
+      return !(field in request.resource.data)
+        || !(field in resource.data)
+        || (request.resource.data[field] is int
+            && request.resource.data[field] <= resource.data[field] + 1
+            && request.resource.data[field] >= resource.data[field]);
+    }
+
+    // ---- Mặc định từ chối --------------------------------------------------
+
+    // Collection nào chưa khai báo ở trên thì đóng. Thà hỏng rõ ràng còn hơn
+    // mở âm thầm.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

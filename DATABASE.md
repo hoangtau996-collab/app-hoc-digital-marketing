@@ -30,6 +30,25 @@ Ghi **cùng payload** với `students`, cùng id tài liệu. Đây là bản sa
 
 TODO — chưa rõ vì sao cần hai collection cùng nội dung; cần xác nhận với chủ dự án trước khi gộp.
 
+### Collection `admins` — sổ phân quyền
+
+Id tài liệu: **email đã chuẩn hoá về chữ thường** (ví dụ `admin@pmarcom.edu.vn`). Có bản ghi = có quyền quản trị.
+
+| Trường | Kiểu | Ghi chú |
+|---|---|---|
+| `email` | string | Chính là id tài liệu, lưu lại cho dễ đọc |
+| `grantedBy` | string | Email của quản trị viên đã cấp quyền |
+| `grantedAt` | string (ISO) | Thời điểm cấp |
+
+Đây là **nguồn khẳng định duy nhất** của quyền quản trị. `dmm_admin_emails` trong localStorage chỉ là bộ nhớ đệm của collection này.
+
+Ràng buộc do [firestore.rules](firestore.rules) áp đặt ở phía máy chủ:
+
+- Đọc bản ghi của chính mình: mọi tài khoản đã đăng nhập. Liệt kê cả sổ: chỉ quản trị viên.
+- Tạo bản ghi mới: **chỉ quản trị viên hiện hành**. Đây là điều chặn người ngoài tự phong — không có quyền thì không ghi được vào sổ quyền.
+- Ngoại lệ mồi lần đầu: tài khoản gốc tự tạo bản ghi của chính nó khi sổ còn rỗng.
+- Sửa/xoá bản ghi của tài khoản gốc: **không ai được phép**, kể cả quản trị viên khác.
+
 ### Document `analytics/traffic_daily_v3`
 
 | Trường | Kiểu | Ghi chú |
@@ -94,11 +113,23 @@ Không nằm trong cơ sở dữ liệu, đóng gói cùng ứng dụng:
 
 ## Bảo mật
 
-**Chưa có tệp Firestore Security Rules trong kho mã.** Vì ứng dụng không có backend, mọi ràng buộc ghi/đọc phụ thuộc hoàn toàn vào rules cấu hình trên Firebase Console.
+Rules nằm ở [firestore.rules](firestore.rules) trong kho mã. **Phải deploy thì mới có tác dụng** — xem [DEPLOYMENT.md](DEPLOYMENT.md#security-rules--bắt-buộc-deploy).
 
-TODO — cần đưa `firestore.rules` vào kho mã và ghi lại nội dung rules đang áp dụng.
+Vì ứng dụng không có backend, đây là lớp bảo vệ duy nhất. Mô hình quyền:
 
-Rủi ro đã ghi nhận, xem [TODO.md](TODO.md#bảo-mật):
+| Dữ liệu | Khách | Học viên đã đăng nhập | Quản trị viên |
+|---|---|---|---|
+| `admins` (sổ quyền) | — | đọc bản ghi của chính mình | đọc cả sổ, cấp quyền cho người khác |
+| `admins/admin@pmarcom.edu.vn` | — | — | **không sửa, không xoá được** |
+| `students`, `registrations` | — | đọc/sửa hồ sơ của chính mình, **không được ghi trường `role`** | đọc/sửa/xoá tất cả |
+| `analytics` | đọc, cộng tối đa 1 mỗi lần ghi | như khách | như khách |
+| Collection khác | đóng | đóng | đóng |
 
-- Cơ chế dự phòng `dmm_users_db` lưu **mật khẩu dạng chữ thường** trong localStorage.
-- Tài khoản quản trị `admin@pmarcom.edu.vn` có mật khẩu nằm cứng trong mã nguồn.
+Điểm mấu chốt: danh tính lấy từ `request.auth.token.email` — email nằm trong ID token do Firebase Auth ký, **không phải** thứ trình duyệt tự khai. Người dùng sửa được localStorage nhưng không ký được token, nên không tự đưa mình vào sổ `admins`, và không đọc được hồ sơ của người khác.
+
+Điều rules **không** làm được: chặn ai đó bật giao diện quản trị trên máy của họ. Đó là giới hạn cố hữu của ứng dụng chạy trong trình duyệt — sửa được cả mã JavaScript đang chạy. Nhưng giao diện giả sẽ không có dữ liệu, vì mọi lệnh đọc đều bị máy chủ từ chối.
+
+Rủi ro còn lại, xem [TODO.md](TODO.md#bảo-mật):
+
+- Tài khoản quản trị `admin@pmarcom.edu.vn` có mật khẩu nằm cứng trong mã nguồn (nay không còn cấp quyền, nhưng vẫn nên đổi).
+- Tài khoản đó **phải được tạo sẵn trên Firebase Auth**, nếu không người khác đăng ký chiếm chỗ là thành Quản Trị Tối Cao.

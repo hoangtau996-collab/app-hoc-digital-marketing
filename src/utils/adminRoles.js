@@ -14,12 +14,17 @@
  *      khác, ghi vào localStorage `dmm_admin_emails` và đồng bộ lên Firestore.
  *      Tầng này thu hồi được.
  *
- * GIỚI HẠN ĐÃ BIẾT: sổ này nằm ở localStorage nên người dùng mở devtools sửa
- * được. Đây là giới hạn cố hữu của ứng dụng không có backend, đã ghi trong
- * TODO.md mục "Vai trò admin vẫn đọc từ localStorage". Chặn thật sự phải làm
- * bằng Firebase Auth custom claim + Firestore Rules. Tệp này KHÔNG phải hàng
- * rào bảo mật — nó là quy tắc nghiệp vụ và là nguồn khẳng định vai trò cho
- * giao diện.
+ * NGUỒN KHẲNG ĐỊNH NẰM Ở MÁY CHỦ, KHÔNG PHẢI Ở ĐÂY.
+ *
+ * Sổ trong localStorage chỉ là BỘ NHỚ ĐỆM của câu trả lời gần nhất từ collection
+ * `admins` trên Firestore. Nó tồn tại để quản trị viên không mất quyền mỗi lần
+ * rớt mạng — chứ không để tự sinh ra quyền. Ai sửa `dmm_admin_emails` trong
+ * devtools cũng chỉ lừa được giao diện trên máy họ: mọi lệnh đọc dữ liệu học
+ * viên đều bị Firestore Rules chặn ở phía máy chủ, nên bảng hiện ra rỗng.
+ *
+ * Xem `firestore.rules` để biết ranh giới thật, và `App.jsx` (`resolveAdminRole`)
+ * để biết quyền được cấp ở đâu: chỉ sau khi có phiên đăng nhập Firebase Auth
+ * thật và máy chủ xác nhận.
  */
 
 const LS_KEY = 'dmm_admin_emails';
@@ -53,7 +58,7 @@ export function isRootAdmin(email) {
   return Boolean(key) && ROOT_ADMIN_EMAILS.includes(key);
 }
 
-/** Các email đã được nâng quyền tại máy này (không gồm tài khoản gốc). */
+/** Bộ nhớ đệm: các email máy chủ đã xác nhận là quản trị viên (không gồm tài khoản gốc). */
 export function getGrantedAdminEmails() {
   try {
     const raw = localStorage.getItem(LS_KEY);
@@ -70,28 +75,41 @@ export function getAdminEmails() {
   return [...ROOT_ADMIN_EMAILS, ...getGrantedAdminEmails()];
 }
 
+/** Theo bộ nhớ đệm tại máy. KHÔNG dùng làm căn cứ cấp quyền — xem chú thích đầu tệp. */
 export function isAdminEmail(email) {
   const key = normalizeEmail(email);
   return Boolean(key) && getAdminEmails().includes(key);
 }
 
+/** Ghi đè bộ nhớ đệm bằng sổ vừa đọc từ máy chủ. */
+export function replaceAdminCache(emails) {
+  if (!Array.isArray(emails)) return;
+  const granted = emails.map(normalizeEmail).filter((e) => e && !ROOT_ADMIN_EMAILS.includes(e));
+  try {
+    localStorage.setItem(LS_KEY, JSON.stringify(granted));
+  } catch (e) { /* hết chỗ lưu thì thôi, lần sau hỏi lại máy chủ */ }
+}
+
 /**
  * Vai trò hiệu lực của một tài khoản: 'root' | 'admin' | 'student'.
  *
- * Nhận vào cả object hồ sơ lẫn chuỗi email. Với object thì có xét thêm trường
- * `role` đồng bộ từ Firestore — đó là đường duy nhất để quyền vừa cấp ở máy này
- * có hiệu lực trên máy khác, vì `dmm_admin_emails` chỉ nằm ở localStorage.
+ * Nhận vào cả object hồ sơ lẫn chuỗi email.
+ *
+ * `roster` là sổ phân quyền vừa đọc từ Firestore (một Set các email). Truyền vào
+ * thì nó là căn cứ duy nhất — đó là câu trả lời của máy chủ. Bỏ trống thì rơi về
+ * bộ nhớ đệm tại máy, chỉ dùng khi chưa hỏi được máy chủ.
  */
-export function getAccountRole(account) {
+export function getAccountRole(account, roster) {
   const email = normalizeEmail(typeof account === 'string' ? account : account?.email);
   if (isRootAdmin(email)) return 'root';
+  if (roster instanceof Set) return roster.has(email) ? 'admin' : 'student';
   if (isAdminEmail(email)) return 'admin';
   if (account && typeof account === 'object' && account.role === 'admin') return 'admin';
   return 'student';
 }
 
-export function isAdminAccount(account) {
-  return getAccountRole(account) !== 'student';
+export function isAdminAccount(account, roster) {
+  return getAccountRole(account, roster) !== 'student';
 }
 
 /**
@@ -175,8 +193,8 @@ export function revokeAdmin(email) {
  * trước — bắt đi qua hai bước để không ai xoá nhầm một người đang có quyền chỉ
  * bằng một cú bấm.
  */
-export function canDeleteAccount(account) {
-  const role = getAccountRole(account);
+export function canDeleteAccount(account, roster) {
+  const role = getAccountRole(account, roster);
   if (role === 'root') {
     return {
       ok: false,
