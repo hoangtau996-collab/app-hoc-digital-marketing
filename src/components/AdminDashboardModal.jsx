@@ -12,7 +12,8 @@ import {
   setStudentRoleInCloud,
   fetchAdminRosterFromCloud,
   grantAdminInCloud,
-  revokeAdminInCloud
+  revokeAdminInCloud,
+  diagnoseCloudAccess
 } from '../firebase';
 import { markStudentDeleted, filterDeleted, getDeletedStudents } from '../utils/deletedStudents';
 import {
@@ -130,6 +131,20 @@ export default function AdminDashboardModal({
   // deploy rules) -> rơi về bộ nhớ đệm tại máy, và hiện cảnh báo cho quản trị
   // viên biết là đang xem dữ liệu cũ.
   const [adminRoster, setAdminRoster] = useState(null);
+
+  // Kết quả chẩn đoán kết nối Cloud. null = chưa chạy.
+  const [cloudCheck, setCloudCheck] = useState(null);
+  const [isChecking, setIsChecking] = useState(false);
+
+  const runCloudCheck = async () => {
+    setIsChecking(true);
+    try {
+      setCloudCheck(await diagnoseCloudAccess());
+    } catch (e) {
+      setCloudCheck([{ label: 'Chẩn đoán thất bại', ok: false, detail: e.message }]);
+    }
+    setIsChecking(false);
+  };
   const [isLoading, setIsLoading] = useState(false);
   const [notice, setNotice] = useState('');
 
@@ -844,6 +859,16 @@ export default function AdminDashboardModal({
             </button>
 
             <button
+              onClick={runCloudCheck}
+              disabled={isChecking}
+              title="Kiểm tra vì sao danh sách không có dữ liệu từ Cloud"
+              className="px-3 py-1.5 rounded-xl bg-slate-900 border border-cyan-700 text-cyan-300 text-xs font-bold hover:bg-slate-800 transition cursor-pointer flex items-center gap-1.5 shrink-0"
+            >
+              <ShieldCheck className="w-3.5 h-3.5" />
+              <span>{isChecking ? 'Đang kiểm tra...' : 'Kiểm Tra Cloud'}</span>
+            </button>
+
+            <button
               onClick={() => setIsCertGenOpen(true)}
               className="px-3 py-1.5 rounded-xl bg-gradient-to-r from-amber-500 to-yellow-500 text-slate-950 text-xs font-black hover:brightness-110 transition flex items-center gap-1.5 cursor-pointer shadow-lg shrink-0"
               title="Tạo thủ công hoặc upload file Excel tạo chứng nhận hàng loạt"
@@ -869,6 +894,62 @@ export default function AdminDashboardModal({
             </button>
           </div>
         </div>
+
+        {/* Kết quả chẩn đoán kết nối Cloud.
+            Hiện nguyên văn mã lỗi Firebase: đây là thứ duy nhất phân biệt được
+            "chưa ai đăng ký" với "bị máy chủ từ chối quyền đọc". */}
+        {cloudCheck && (
+          <div className="shrink-0 rounded-xl bg-slate-950/80 border border-cyan-800/60 p-3 space-y-1.5">
+            <div className="flex items-center justify-between">
+              <span className="text-[11px] font-black text-cyan-300 uppercase tracking-wide">
+                Chẩn đoán kết nối Cloud
+              </span>
+              <button
+                onClick={() => setCloudCheck(null)}
+                className="text-slate-500 hover:text-white text-xs"
+              >
+                ✕
+              </button>
+            </div>
+
+            {cloudCheck.map((step, idx) => (
+              <div key={idx} className="flex items-start gap-2 text-[11px]">
+                <span className={step.ok ? 'text-emerald-400' : 'text-rose-400'}>
+                  {step.ok ? '✓' : '✕'}
+                </span>
+                <span className="text-slate-300 font-semibold min-w-[210px]">{step.label}</span>
+                <span className={`font-mono ${step.ok ? 'text-slate-400' : 'text-rose-300'}`}>
+                  {step.detail}
+                </span>
+              </div>
+            ))}
+
+            {/* Kết luận: chỉ ra đúng bước hỏng đầu tiên và cách xử lý. */}
+            {(() => {
+              const failed = cloudCheck.find(s => !s.ok);
+              if (!failed) {
+                return (
+                  <p className="text-[11px] text-emerald-300 pt-1 border-t border-emerald-900/50">
+                    Đường lên Cloud thông suốt. Nếu danh sách vẫn trống thì đúng là chưa có học viên nào đăng ký thành công trên hệ thống online.
+                  </p>
+                );
+              }
+              const hint =
+                failed.label === 'Cấu hình Firebase'
+                  ? 'Khai báo biến môi trường VITE_FIREBASE_* rồi khởi động lại (local) hoặc redeploy (Vercel). Xem DEPLOYMENT.md.'
+                  : failed.label === 'Phiên đăng nhập Firebase Auth'
+                  ? 'Bạn đang đăng nhập bằng nhánh dự phòng tại máy, nhánh này KHÔNG cấp quyền quản trị. Phải đăng nhập bằng tài khoản có thật trên Firebase Authentication.'
+                  : failed.label === 'Có tên trong sổ phân quyền admins'
+                  ? 'Chưa có bản ghi quyền trên máy chủ nên Firestore từ chối cho đọc danh sách. Đăng xuất rồi đăng nhập lại bằng tài khoản Quản Trị Tối Cao để ứng dụng tự mồi sổ admins.'
+                  : 'Xem mã lỗi ở trên. `permission-denied` nghĩa là Firestore Rules chặn — thường do tài khoản chưa có trong sổ admins.';
+              return (
+                <p className="text-[11px] text-amber-300 pt-1 border-t border-amber-900/50">
+                  <strong>Hỏng ở bước:</strong> {failed.label}. {hint}
+                </p>
+              );
+            })()}
+          </div>
+        )}
 
         {/* Quy tắc phân quyền — nói rõ ngay tại chỗ thao tác để không ai phải
             bấm thử mới biết vì sao nút bị khoá. */}

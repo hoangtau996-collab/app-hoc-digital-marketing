@@ -234,6 +234,75 @@ export async function revokeAdminInCloud(email) {
 }
 
 /**
+ * Chẩn đoán đường kết nối tới Cloud, từng bước một.
+ *
+ * Vì sao cần: mọi lệnh gọi Firebase trong tệp này đều bọc `try/catch` rỗng và
+ * có nhánh dự phòng localStorage. Thiết kế đó giúp ứng dụng không chết khi mất
+ * mạng, nhưng cái giá là **hỏng và rỗng trông giống hệt nhau**: bị máy chủ từ
+ * chối quyền cũng ra bảng trống, chưa ai đăng ký cũng ra bảng trống.
+ *
+ * Hàm này chạy đúng những lệnh mà Bảng Quản Trị cần, KHÔNG nuốt lỗi, và trả về
+ * mã lỗi nguyên văn của Firebase để biết hỏng ở khâu nào.
+ */
+export async function diagnoseCloudAccess() {
+  const steps = [];
+  const add = (label, ok, detail) => steps.push({ label, ok, detail });
+
+  add(
+    'Cấu hình Firebase',
+    isFirebaseConfigured,
+    isFirebaseConfigured
+      ? `project: ${firebaseConfig.projectId}`
+      : `thiếu biến: ${missingFirebaseEnv.join(', ')}`
+  );
+
+  const user = auth.currentUser;
+  add(
+    'Phiên đăng nhập Firebase Auth',
+    Boolean(user),
+    user
+      ? user.email
+      : 'chưa đăng nhập qua Firebase — có thể đang dùng nhánh dự phòng tại máy, nhánh đó không cấp quyền quản trị'
+  );
+
+  const email = cleanEmailKey(user?.email);
+
+  if (email) {
+    try {
+      const snap = await getDoc(doc(db, ADMIN_COLLECTION, email));
+      add(
+        'Có tên trong sổ phân quyền admins',
+        snap.exists(),
+        snap.exists() ? email : `chưa có tài liệu admins/${email}`
+      );
+    } catch (e) {
+      add('Có tên trong sổ phân quyền admins', false, `${e.code || ''} ${e.message}`);
+    }
+  } else {
+    add('Có tên trong sổ phân quyền admins', false, 'chưa đăng nhập nên không kiểm tra được');
+  }
+
+  // Đây là lệnh Bảng Quản Trị thực sự cần. Rules đòi quyền quản trị mới cho
+  // liệt kê, nên bước này hỏng là bảng rỗng.
+  try {
+    const snapshot = await getDocs(collection(db, 'students'));
+    add('Đọc danh sách học viên trên Cloud', true, `${snapshot.size} bản ghi trên máy chủ`);
+  } catch (e) {
+    add('Đọc danh sách học viên trên Cloud', false, `${e.code || ''} ${e.message}`);
+  }
+
+  let localCount = 0;
+  try {
+    const raw = localStorage.getItem('dmm_users_db');
+    const list = raw ? JSON.parse(raw) : [];
+    localCount = Array.isArray(list) ? list.length : 0;
+  } catch (e) { /* localStorage bị chặn */ }
+  add('Bản ghi trong localStorage của máy này', true, `${localCount} bản ghi`);
+
+  return steps;
+}
+
+/**
  * Ghi vai trò của một tài khoản lên đám mây.
  *
  * Tách riêng khỏi recordStudentAccountToCloud vì đây là hành động có chủ đích
