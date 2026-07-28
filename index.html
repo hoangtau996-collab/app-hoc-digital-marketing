@@ -16,20 +16,34 @@
     <meta name="theme-color" content="#F0EAD6" />
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://pmarcom.edu.vn" />
+    <link rel="canonical" href="https://academy.pmarcom.com/" />
 
-    <!-- Open Graph / Facebook / Zalo / WhatsApp / LinkedIn / Telegram / iMessage / Messenger -->
+    <!--
+      Open Graph / Facebook / Zalo / WhatsApp / Viber / LINE / LinkedIn / Telegram / Messenger
+
+      MỌI URL Ở ĐÂY PHẢI TUYỆT ĐỐI. Trình quét của Zalo, WhatsApp, Viber và LINE
+      không chạy JavaScript và không phân giải đường dẫn tương đối - đưa cho
+      chúng "/og-cover.png" thì chúng bỏ qua ảnh và chỉ hiện tiêu đề trống.
+
+      Đổi tên miền thì phải sửa đồng loạt: canonical, og:url, 3 thẻ og:image,
+      twitter:image, linkedin:image, link[rel=image_src], itemprop=image và khối
+      JSON-LD ở cuối head.
+    -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="HỌC VIỆN P MARCOM" />
     <meta property="og:locale" content="vi_VN" />
-    <meta property="og:url" content="https://pmarcom.edu.vn" />
+    <meta property="og:url" content="https://academy.pmarcom.com/" />
     <meta property="og:title" content="HỌC VIỆN P MARCOM | Khóa Học Digital Thực Chiến" />
     <meta property="og:description" content="Khóa học Digital Thực chiến bài bản với 11 chuyên đề, trắc nghiệm tình huống thực tế, từ điển chỉ số CPM/ROAS/CAC và cấp Bằng Chứng Nhận chính thức." />
     
-    <!-- Open Graph Image Preview (WhatsApp, LinkedIn, Zalo, Facebook, Slack) -->
-    <meta property="og:image" content="/og-cover.png?v=2" />
-    <meta property="og:image:url" content="/og-cover.png?v=2" />
-    <meta property="og:image:secure_url" content="/og-cover.png?v=2" />
+    <!--
+      Ảnh bìa xem trước. Tên tệp có đuôi -v2 thay vì gắn ?v= vào sau: Zalo và
+      một vài trình quét cũ chuẩn hoá mất phần query rồi lấy lại bản cũ trong
+      bộ nhớ đệm, đổi hẳn tên tệp thì chắc chắn chúng phải tải lại.
+    -->
+    <meta property="og:image" content="https://academy.pmarcom.com/og-cover-v2.png" />
+    <meta property="og:image:url" content="https://academy.pmarcom.com/og-cover-v2.png" />
+    <meta property="og:image:secure_url" content="https://academy.pmarcom.com/og-cover-v2.png" />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -40,47 +54,52 @@
     <meta name="twitter:site" content="@pmarcom_academy" />
     <meta name="twitter:title" content="HỌC VIỆN P MARCOM | Đào Tạo Trưởng Phòng Digital Marketing Thực Chiến" />
     <meta name="twitter:description" content="Chương trình đào tạo Trưởng phòng Digital Marketing bài bản với 11 chuyên đề thực chiến, trắc nghiệm tình huống thực tế, từ điển chỉ số CPM/ROAS/CAC và cấp Bằng Chứng Nhận chính thức." />
-    <meta name="twitter:image" content="/og-cover.png?v=2" />
+    <meta name="twitter:image" content="https://academy.pmarcom.com/og-cover-v2.png" />
     <meta name="twitter:image:alt" content="HỌC VIỆN P MARCOM - Banner Đào Tạo Trưởng Phòng Digital Marketing" />
 
     <!-- LinkedIn Specific Tags -->
     <meta name="linkedin:title" content="HỌC VIỆN P MARCOM | Đào Tạo Trưởng Phòng Digital Marketing Thực Chiến" />
     <meta name="linkedin:description" content="Chương trình đào tạo Trưởng phòng Digital Marketing bài bản với 11 chuyên đề thực chiến, trắc nghiệm tình huống thực tế, từ điển chỉ số CPM/ROAS/CAC và cấp Bằng Chứng Nhận chính thức." />
-    <meta name="linkedin:image" content="/og-cover.png?v=2" />
+    <meta name="linkedin:image" content="https://academy.pmarcom.com/og-cover-v2.png" />
 
-    <!-- Dynamic Subdomain & Protocol Open Graph URL Resolver for WhatsApp & LinkedIn Crawlers -->
-    <script>
-      (function() {
-        try {
-          if (typeof window !== 'undefined' && window.location) {
-            var origin = window.location.origin;
-            var currentUrl = window.location.href;
+    <!--
+      Thẻ ảnh kiểu cũ. Viber và một số phiên bản Zalo, LINE đời trước không đọc
+      og:image mà tìm link[rel=image_src] hoặc microdata itemprop=image.
+      Giữ lại để phủ hết các máy khách cũ, chi phí gần như bằng không.
+    -->
+    <link rel="image_src" href="https://academy.pmarcom.com/og-cover-v2.png" />
+    <meta itemprop="name" content="HỌC VIỆN P MARCOM | Khóa Học Digital Thực Chiến" />
+    <meta itemprop="description" content="Chương trình đào tạo Trưởng phòng Digital Marketing bài bản với 11 chuyên đề thực chiến, từ điển 121 thuật ngữ và Bằng Chứng Nhận chính thức." />
+    <meta itemprop="image" content="https://academy.pmarcom.com/og-cover-v2.png" />
 
-            // Fix Canonical
-            var canonical = document.querySelector('link[rel="canonical"]');
-            if (canonical) canonical.setAttribute('href', currentUrl);
-
-            // Fix og:url
-            var ogUrl = document.querySelector('meta[property="og:url"]');
-            if (ogUrl) ogUrl.setAttribute('content', currentUrl);
-
-            // Fix absolute image URLs for WhatsApp, LinkedIn & Telegram crawlers
-            var absoluteCoverUrl = origin + '/og-cover.png?v=2';
-            var metaOgImg = document.querySelector('meta[property="og:image"]');
-            var metaOgImgUrl = document.querySelector('meta[property="og:image:url"]');
-            var metaOgImgSecure = document.querySelector('meta[property="og:image:secure_url"]');
-            var metaTwitterImg = document.querySelector('meta[name="twitter:image"]');
-            var metaLinkedinImg = document.querySelector('meta[name="linkedin:image"]');
-
-            if (metaOgImg) metaOgImg.setAttribute('content', absoluteCoverUrl);
-            if (metaOgImgUrl) metaOgImgUrl.setAttribute('content', absoluteCoverUrl);
-            if (metaOgImgSecure) metaOgImgSecure.setAttribute('content', absoluteCoverUrl);
-            if (metaTwitterImg) metaTwitterImg.setAttribute('content', absoluteCoverUrl);
-            if (metaLinkedinImg) metaLinkedinImg.setAttribute('content', absoluteCoverUrl);
-          }
-        } catch (e) {}
-      })();
+    <!--
+      Dữ liệu có cấu trúc cho Google. Cần cho kết quả tìm kiếm dạng thẻ, đồng
+      thời là một nguồn ảnh nữa cho các trình quét đọc JSON-LD.
+    -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "HỌC VIỆN P MARCOM",
+      "url": "https://academy.pmarcom.com/",
+      "logo": "https://academy.pmarcom.com/pmarcom-logo.jpg",
+      "image": "https://academy.pmarcom.com/og-cover-v2.png",
+      "description": "Chương trình đào tạo Trưởng phòng Digital Marketing bài bản với 11 chuyên đề thực chiến, 36 bài học, từ điển 121 thuật ngữ và Bằng Chứng Nhận chính thức.",
+      "slogan": "Học thật - Chiến thật - Kết quả thật",
+      "inLanguage": "vi-VN"
+    }
     </script>
+
+    <!--
+      ĐÃ GỠ: đoạn script trước đây ghi đè canonical và og:url bằng
+      window.location.href, kèm ghi chú nói là để phục vụ trình quét WhatsApp
+      và LinkedIn. Nó không làm được việc đó - các trình quét mạng xã hội không
+      chạy JavaScript, nên chúng chỉ thấy HTML tĩnh. Ngược lại Googlebot CÓ
+      dựng JavaScript, nên đoạn script đó biến mọi URL có tham số theo dõi
+      (?utm_source=...) thành canonical của chính nó, làm loãng tín hiệu xếp
+      hạng. Các thẻ tĩnh phía trên đã tuyệt đối và đầy đủ, không cần thay ở
+      thời điểm chạy. Đừng thêm lại.
+    -->
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

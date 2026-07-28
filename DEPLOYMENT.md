@@ -2,9 +2,17 @@
 
 ## Trạng thái hiện tại
 
-**Kho mã không chứa bất kỳ cấu hình triển khai hay CI/CD nào.** Đã kiểm tra và không tìm thấy: `vercel.json`, `netlify.toml`, `firebase.json`, `Dockerfile`, thư mục `.github/`.
+**Địa chỉ chạy thật: <https://academy.pmarcom.com/>** — chủ dự án xác nhận ngày 2026-07-28.
 
-TODO — cần xác nhận với chủ dự án: ứng dụng đang được triển khai ở đâu và bằng cách nào.
+Hạ tầng là **Vercel**: bản ghi DNS của `academy.pmarcom.com` trỏ tới `vercel-dns-017.com`. Việc triển khai chạy tự động theo commit, không qua bước thủ công nào.
+
+**Kho mã không chứa bất kỳ tệp cấu hình triển khai nào** — không có `vercel.json`, `netlify.toml`, `firebase.json`, `Dockerfile` hay thư mục `.github/`. Nghĩa là dự án đang dùng cấu hình mặc định Vercel tự dò cho Vite, và mọi thiết lập (biến môi trường, tên miền, nhánh deploy) chỉ tồn tại trên bảng điều khiển Vercel, không được ghi lại trong kho mã.
+
+TODO — cân nhắc thêm `vercel.json` để thiết lập bám theo kho mã thay vì chỉ nằm trên bảng điều khiển.
+
+### Tên miền phải sửa tay khi thay đổi
+
+`index.html` ghi cứng `https://academy.pmarcom.com` ở các thẻ chia sẻ mạng xã hội (canonical, `og:url`, ba thẻ `og:image`, `twitter:image`, `linkedin:image`, `link[rel=image_src]`, `itemprop=image` và khối JSON-LD). Bắt buộc phải tuyệt đối vì trình quét của Zalo, WhatsApp, Viber và LINE không chạy JavaScript nên không phân giải được đường dẫn tương đối. Đổi tên miền thì phải sửa hết các chỗ đó cùng lúc.
 
 ## Đóng gói
 

@@ -34,9 +34,13 @@ TODO — chưa có quy ước đánh phiên bản; cân nhắc gắn thẻ Git k
 
 ### Sửa lỗi
 
+- **Ảnh bìa không hiện được trên Zalo, WhatsApp, Viber, LINE vì URL để tương đối.** Các trình quét này không chạy JavaScript và không phân giải `/og-cover.png`, nên bỏ qua ảnh và chỉ hiện tiêu đề trống. Toàn bộ URL nay ghi tuyệt đối theo tên miền thật `https://academy.pmarcom.com`.
+- **`canonical` và `og:url` trỏ về `https://pmarcom.edu.vn` — tên miền không tồn tại** (DNS trả về Non-existent domain). Đây là lỗi nặng nhất: một số trình quét phân giải ảnh tương đối dựa trên `og:url`, tức là chúng đi tìm ảnh ở một tên miền chết. Với Google, canonical trỏ sang tên miền không tồn tại còn làm hỏng việc lập chỉ mục. Đã đổi sang `https://academy.pmarcom.com/`.
+- **Gỡ đoạn script ghi đè `canonical` và `og:url` bằng `window.location.href`.** Ghi chú của nó nói là để phục vụ trình quét WhatsApp và LinkedIn, nhưng các trình quét mạng xã hội không chạy JavaScript nên chưa bao giờ nhận được gì. Ngược lại Googlebot có dựng JavaScript, nên đoạn này biến mọi URL có tham số theo dõi thành canonical của chính nó, làm loãng tín hiệu xếp hạng.
 - **`og-cover.png` thật ra là tệp JPEG mang đuôi `.png`** trong khi thẻ `og:image:type` khai báo `image/png`. Bản vẽ lại là PNG thật nên phần khai báo nay khớp với nội dung tệp.
-- **Ảnh bìa vuông 1024x1024 nhưng khai báo 1200x630** — sai tỷ lệ khiến trình quét mạng xã hội cắt hoặc chèn viền. Bản mới đúng 1200x630, đồng thời nhẹ hơn: 64 KB thay vì 581 KB.
-- **Gắn `?v=2` vào URL ảnh bìa** ở cả 5 thẻ meta và đoạn script dựng URL tuyệt đối. Không có tham số này thì Facebook, Zalo, LinkedIn tiếp tục phục vụ bản bìa xanh lá cũ từ bộ nhớ đệm.
+- **Ảnh bìa vuông 1024x1024 nhưng khai báo 1200x630** — sai tỷ lệ khiến trình quét mạng xã hội cắt hoặc chèn viền. Bản mới đúng 1200x630, đồng thời nhẹ hơn: 64 KB thay vì 581 KB (dưới ngưỡng 600 KB của WhatsApp).
+- **Đổi tên tệp thành `og-cover-v2.png` thay vì gắn `?v=` vào sau.** Zalo và một số trình quét cũ chuẩn hoá mất phần query rồi lấy lại bản cũ trong bộ nhớ đệm; đổi hẳn tên tệp thì chúng buộc phải tải lại.
+- **Bổ sung thẻ ảnh kiểu cũ** `link[rel=image_src]` và microdata `itemprop=image` cho Viber cùng các phiên bản Zalo, LINE đời trước không đọc `og:image`; thêm khối JSON-LD `EducationalOrganization` cho Google.
 
 ---
 
