@@ -7,6 +7,7 @@ import {
   makeVerifyCode,
   slugifyName,
   isIOSorIPad,
+  getCertificateCourse,
 } from '../utils/certificateExport';
 
 // Bản xem trước hẹp hơn khung xuất file (1400px) nên hoạ tiết phải thu nhỏ theo.
@@ -31,8 +32,11 @@ export default function CertificateModal({
   totalModules,
   adminOverride = false,
   customStudentName = "",
-  studentEmail = ""
+  studentEmail = "",
+  // 'main' = khoá Digital Thực Chiến, 'trade' = khoá Trade Marketing Thực Chiến
+  course = 'main'
 }) {
+  const courseInfo = getCertificateCourse(course);
   const [studentName, setStudentName] = useState(() => {
     if (customStudentName) return customStudentName.toUpperCase();
     try {
@@ -62,10 +66,14 @@ export default function CertificateModal({
 
   // Mã xác thực riêng của từng học viên. Ưu tiên bám vào email tài khoản để mã
   // không đổi khi học viên sửa lại họ tên; bằng do Admin cấp thì bám theo tên.
-  const verifyCode = useMemo(
-    () => makeVerifyCode(studentEmail || customStudentName || studentName),
-    [studentEmail, customStudentName, studentName]
-  );
+  //
+  // Mỗi khoá phải ra một mã KHÁC nhau, nếu không hai tấm bằng của cùng một học
+  // viên sẽ mang chung mã và việc tra cứu không phân biệt được. Khoá chính cố ý
+  // KHÔNG thêm hậu tố: thêm vào sẽ làm đổi toàn bộ mã của những bằng đã cấp.
+  const verifyCode = useMemo(() => {
+    const seed = studentEmail || customStudentName || studentName;
+    return makeVerifyCode(course === 'main' ? seed : `${seed}|${course}`);
+  }, [studentEmail, customStudentName, studentName, course]);
 
   if (!isOpen) return null;
 
@@ -80,9 +88,10 @@ export default function CertificateModal({
     totalModules,
     issueDate: currentDate,
     verifyCode,
+    course,
   });
 
-  const exportFileName = (ext) => `ChungNhan_PMARCOM_${slugifyName(studentName)}.${ext}`;
+  const exportFileName = (ext) => `ChungNhan_${courseInfo.fileTag}_${slugifyName(studentName)}.${ext}`;
 
   // Handle PNG Image Download
   const handleDownloadPNG = async () => {
@@ -276,7 +285,7 @@ export default function CertificateModal({
                 HOÀN THÀNH KHÓA HỌC ĐỂ MỞ KHÓA CHỨNG CHỈ
               </h2>
               <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                Bạn cần hoàn thành và đạt chuẩn 100% tất cả <strong>{totalModules}/{totalModules} Chuyên đề đào tạo</strong> để chính thức nhận Bằng Chứng Nhận Trưởng Phòng Digital Marketing được đóng dấu bảo chứng bởi <strong>HỌC VIỆN P MARCOM</strong> và <strong>Founder & CEO Lê Thành Phong</strong>.
+                Bạn cần hoàn thành và đạt chuẩn 100% tất cả <strong>{totalModules}/{totalModules} Chuyên đề</strong> của <strong className="text-emerald-300">{courseInfo.title}</strong> để chính thức nhận Bằng Chứng Nhận được đóng dấu bảo chứng bởi <strong>HỌC VIỆN P MARCOM</strong> và <strong>Founder &amp; CEO Lê Thành Phong</strong>.
               </p>
             </div>
 
@@ -346,7 +355,7 @@ export default function CertificateModal({
                   CHỨNG NHẬN HOÀN THÀNH KHÓA HỌC
                 </h2>
                 <h1 className="text-2xl sm:text-3xl md:text-4xl font-black tracking-wide uppercase mt-1" style={{ color: '#047857' }}>
-                  KHÓA HỌC DIGITAL THỰC CHIẾN
+                  {courseInfo.title}
                 </h1>
               </div>
 
@@ -375,7 +384,11 @@ export default function CertificateModal({
 
               {/* Description */}
               <p className="text-xs sm:text-sm max-w-2xl mx-auto leading-relaxed relative z-10" style={{ color: '#334155' }}>
-                Đã hoàn tất xuất sắc toàn bộ <strong style={{ color: '#047857' }}>{totalModules} Chuyên đề đào tạo thực chiến</strong> và vượt qua <strong style={{ color: '#047857' }}>33 bài tập kiểm tra đánh giá năng lực quản lý Digital Marketing</strong> tại <strong style={{ color: '#b45309' }}>HỌC VIỆN P MARCOM</strong> <span style={{ color: '#64748b' }}>(Bao gồm Goals, Budgeting, Staffing, Campaign Creative, Planning &amp; Effectiveness).</span>
+                Đã hoàn tất xuất sắc toàn bộ <strong style={{ color: '#047857' }}>{totalModules} Chuyên đề đào tạo thực chiến</strong> và vượt qua <strong style={{ color: '#047857' }}>{courseInfo.quizCount} {courseInfo.quizLabel}</strong> tại <strong style={{ color: '#b45309' }}>HỌC VIỆN P MARCOM</strong>{' '}
+                {/* scope chứa thực thể HTML (&ndash;, &amp;) vì template xuất file
+                    là chuỗi HTML thuần; ở React phải giải mã lại, nếu không sẽ
+                    hiện nguyên chữ "&ndash;" trên màn hình. */}
+                <span style={{ color: '#64748b' }} dangerouslySetInnerHTML={{ __html: `(${courseInfo.scope}).` }} />
               </p>
 
               {/* Footer Signatures & Metadata */}

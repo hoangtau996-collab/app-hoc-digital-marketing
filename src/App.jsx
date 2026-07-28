@@ -60,6 +60,7 @@ export default function App() {
   const [selectedModuleId, setSelectedModuleId] = useState(null); // null = overview, string = module view
   const [searchQuery, setSearchQuery] = useState('');
   const [isCertOpen, setIsCertOpen] = useState(false);
+  const [isTradeCertOpen, setIsTradeCertOpen] = useState(false);
   const [isAuthOpen, setIsAuthOpen] = useState(false);
   const [isProfileOpen, setIsProfileOpen] = useState(false);
   const [isAdminOpen, setIsAdminOpen] = useState(false);
@@ -423,6 +424,18 @@ export default function App() {
     completedModules.includes(m.id)
   ).length;
   const isTradeCourseUnlocked = mainCompletedCount === COURSE_MODULES.length;
+
+  // Số chuyên đề Trade đã đạt, dùng làm điều kiện cấp bằng khoá Trade.
+  // Đối chiếu theo id vì cùng lý do như trên: đếm độ dài mảng sẽ tính nhầm khi
+  // tiến độ cũ trong máy còn id chuyên đề đã bị xoá.
+  //
+  // Không cần cờ "đủ điều kiện" riêng ở đây: CertificateModal tự chặn bằng
+  // `passedCount === totalModules`, và băng mời nhận bằng nằm trong
+  // TradeMarketingCourse tự kiểm tra lấy. Thêm cờ thứ ba là thêm một nguồn sự
+  // thật nữa phải giữ đồng bộ.
+  const tradeCompletedCount = TRADE_MODULES.filter((m) =>
+    completedTradeModules.includes(m.id)
+  ).length;
 
   // Kiểm tra lơ là: chạy sau khi đã biết học viên là ai và tiến độ tới đâu.
   // Hoãn 1,2 giây để lời nhắc không đè lên lúc trang vừa tải xong.
@@ -880,6 +893,7 @@ export default function App() {
                     setSelectedTradeModuleId(id);
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                   }}
+                  onOpenCertificate={() => setIsTradeCertOpen(true)}
                   onGoToMainCourse={() => {
                     setActiveTab('course');
                     setSelectedModuleId(COURSE_MODULES.find((m) => !completedModules.includes(m.id))?.id ?? null);
@@ -949,6 +963,20 @@ export default function App() {
         adminOverride={Boolean(adminCertStudentName)}
         customStudentName={adminCertStudentName}
         studentEmail={adminCertStudentName ? "" : (currentUser?.email || "")}
+        course="main"
+      />
+
+      {/* Bằng Chứng Nhận khoá nâng cao Trade Marketing.
+          Là một CertificateModal riêng chứ không dùng chung state với bằng khoá
+          chính: hai bằng có thể cùng mở ra trong một phiên, và tiến độ của
+          chúng đếm trên hai bộ dữ liệu độc lập. */}
+      <CertificateModal
+        isOpen={isTradeCertOpen}
+        onClose={() => setIsTradeCertOpen(false)}
+        passedCount={tradeCompletedCount}
+        totalModules={TRADE_MODULES.length}
+        studentEmail={currentUser?.email || ""}
+        course="trade"
       />
 
       {/* Auth Login / Register Modal */}

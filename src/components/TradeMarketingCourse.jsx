@@ -27,11 +27,17 @@ export default function TradeMarketingCourse({
   mainTotalModules,
   completedTradeModules = [],
   onSelectModule,
-  onGoToMainCourse
+  onGoToMainCourse,
+  onOpenCertificate = () => {}
 }) {
   const totalLessons = TRADE_MODULES.reduce((s, m) => s + m.sections.length, 0);
   const totalQuiz = TRADE_MODULES.reduce((s, m) => s + m.quiz.length, 0);
   const donePercent = Math.round((completedTradeModules.length / TRADE_MODULES.length) * 100);
+
+  // Đối chiếu theo id chứ không so độ dài mảng: tiến độ cũ lưu trong máy có thể
+  // còn id chuyên đề đã bị xoá, khiến đếm số lượng vẫn đủ trong khi thực tế
+  // còn chuyên đề chưa học.
+  const isCertificateReady = TRADE_MODULES.every((m) => completedTradeModules.includes(m.id));
   const mainPercent = mainTotalModules > 0 ? Math.round((mainCompletedCount / mainTotalModules) * 100) : 0;
   const remaining = Math.max(0, mainTotalModules - mainCompletedCount);
 
@@ -203,6 +209,38 @@ export default function TradeMarketingCourse({
 
         </div>
       </div>
+
+      {/* Băng cấp bằng — chỉ hiện khi đã đạt đủ toàn bộ chuyên đề của khoá này.
+          Đặt ngay trên lưới chuyên đề để học viên vừa học xong chuyên đề cuối
+          là thấy ngay, không phải đi tìm. */}
+      {isCertificateReady && (
+        <div className="rounded-3xl border border-amber-500/50 bg-gradient-to-r from-amber-950/60 via-slate-900/80 to-emerald-950/60 p-5 sm:p-6 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-xl">
+          <div className="flex items-center gap-4 text-center sm:text-left">
+            <div className="w-14 h-14 rounded-2xl bg-amber-500/20 border border-amber-400/60 flex items-center justify-center text-amber-300 shrink-0">
+              <Award className="w-7 h-7" />
+            </div>
+            <div className="space-y-1">
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-950 border border-emerald-600 text-emerald-300 text-[10px] font-black uppercase tracking-wider">
+                <CheckCircle2 className="w-3 h-3" /> Đã đạt {TRADE_MODULES.length}/{TRADE_MODULES.length} chuyên đề
+              </div>
+              <h3 className="text-base sm:text-lg font-black text-white">
+                Chúc mừng! Bạn đủ điều kiện nhận Bằng Chứng Nhận
+              </h3>
+              <p className="text-[11px] text-slate-300">
+                Chứng nhận hoàn thành <strong className="text-amber-300">TRADE MARKETING THỰC CHIẾN</strong> — tách riêng với bằng khoá Digital, có mã xác thực riêng.
+              </p>
+            </div>
+          </div>
+
+          <button
+            onClick={onOpenCertificate}
+            className="w-full sm:w-auto shrink-0 px-6 py-3 rounded-2xl bg-gradient-to-r from-amber-500 to-yellow-500 text-slate-950 font-black text-xs flex items-center justify-center gap-2 hover:brightness-110 shadow-lg transition cursor-pointer"
+          >
+            <Award className="w-4 h-4" />
+            <span>Nhận Bằng Chứng Nhận</span>
+          </button>
+        </div>
+      )}
 
       {/* Lưới chuyên đề */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">

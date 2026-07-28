@@ -69,8 +69,12 @@ Nguồn khẳng định quyền quản trị. Ranh giới thật do [firestore.r
 | `certificateDecorHtml({ scale })` | function | Hoạ tiết trang trí (khung, góc mạch điện) |
 | `certificateDividerHtml({ scale })` | function | Dải phân cách có hạt kim cương |
 | `renderCertificateCanvas(options)` | async function | Dựng bằng ngoài màn hình rồi chụp, trả về `<canvas>` |
+| `CERTIFICATE_COURSES` | object | Nội dung riêng của từng khoá trên bằng: `main` (Digital Thực Chiến) và `trade` (Trade Marketing Thực Chiến). Mỗi mục có `title`, `quizCount`, `quizLabel`, `scope`, `fileTag` |
+| `getCertificateCourse(key)` | function | Lấy cấu hình khoá, rơi về `main` nếu khoá không tồn tại |
 
-`renderCertificateCanvas` nhận: `studentName`, `totalModules`, `issueDate`, `verifyCode`, `logoSrc`, `scale`.
+`renderCertificateCanvas` nhận: `studentName`, `totalModules`, `issueDate`, `verifyCode`, `logoSrc`, `scale`, `course`.
+
+**Hai bằng, hai mã xác thực.** `CertificateModal` nhận prop `course` (`'main'` | `'trade'`). Mã xác thực của khoá Trade sinh từ hạt giống có hậu tố `|trade`; khoá chính cố ý **không** thêm hậu tố, vì thêm vào sẽ làm đổi toàn bộ mã của những bằng đã cấp.
 
 ## `src/utils/adminRoles.js`
 

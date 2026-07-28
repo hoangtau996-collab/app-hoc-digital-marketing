@@ -167,9 +167,42 @@ function nameFontSize(name) {
   return 52;
 }
 
-function buildMarkup({ studentName, totalModules, issueDate, verifyCode, logoSrc }) {
+/**
+ * Nội dung riêng của từng khoá trên tấm bằng.
+ *
+ * Trước đây tên khoá, số bài kiểm tra và phạm vi kiến thức ghi cứng ngay trong
+ * template. Thêm khoá thứ hai (Trade Marketing) mà cứ ghi cứng thì phải nhân
+ * đôi cả template, và hai bản sẽ trôi khỏi nhau ngay lần sửa hoạ tiết đầu tiên.
+ *
+ * `quizCount` đếm theo dữ liệu thật: khoá chính 33 bài, khoá Trade 20 câu hỏi
+ * trong 5 bài kiểm tra (xem data/tradeCourseData.js).
+ */
+export const CERTIFICATE_COURSES = {
+  main: {
+    key: 'main',
+    title: 'KHÓA HỌC DIGITAL THỰC CHIẾN',
+    quizCount: 33,
+    quizLabel: 'bài tập kiểm tra đánh giá năng lực quản lý Digital Marketing',
+    // Không kèm dấu chấm cuối câu — template tự đặt dấu chấm NGOÀI ngoặc đơn.
+    scope: 'Bao gồm Goals, Budgeting, Staffing, Campaign Creative, Planning &amp; Effectiveness',
+    fileTag: 'PMARCOM',
+  },
+  trade: {
+    key: 'trade',
+    title: 'TRADE MARKETING THỰC CHIẾN',
+    quizCount: 20,
+    quizLabel: 'câu hỏi kiểm tra đánh giá năng lực triển khai Trade Marketing',
+    scope: 'Bao gồm Shopper &ndash; Consumer &ndash; Customer, 4 kênh phân phối, bộ chỉ số Trade, lộ trình nghề và kế hoạch 90 ngày',
+    fileTag: 'PMARCOM_TRADE',
+  },
+};
+
+export const getCertificateCourse = (key) => CERTIFICATE_COURSES[key] || CERTIFICATE_COURSES.main;
+
+function buildMarkup({ studentName, totalModules, issueDate, verifyCode, logoSrc, course }) {
   const name = escapeHtml(String(studentName || 'HỌC VIÊN').trim().toUpperCase());
   const fs = nameFontSize(name);
+  const c = getCertificateCourse(course);
 
   return `
     ${certificateDecorHtml({ scale: 1 })}
@@ -194,7 +227,7 @@ function buildMarkup({ studentName, totalModules, issueDate, verifyCode, logoSrc
       </div>
 
       <div style="margin-top:10px;color:#047857;font-size:52px;font-weight:900;letter-spacing:1.5px;line-height:1.15;white-space:nowrap;">
-        KHÓA HỌC DIGITAL THỰC CHIẾN
+        ${escapeHtml(c.title)}
       </div>
 
       <div style="margin-top:22px;">${certificateDividerHtml({ scale: 1 })}</div>
@@ -209,9 +242,9 @@ function buildMarkup({ studentName, totalModules, issueDate, verifyCode, logoSrc
 
       <div style="margin-top:28px;max-width:1060px;color:#334155;font-size:16px;line-height:1.8;">
         Đã hoàn tất xuất sắc toàn bộ <strong style="color:#047857;font-weight:800;">${escapeHtml(totalModules)} Chuyên đề đào tạo thực chiến</strong>
-        và vượt qua <strong style="color:#047857;font-weight:800;">33 bài tập kiểm tra đánh giá năng lực quản lý Digital Marketing</strong>
+        và vượt qua <strong style="color:#047857;font-weight:800;">${escapeHtml(c.quizCount)} ${c.quizLabel}</strong>
         tại <strong style="color:#b45309;font-weight:800;">HỌC VIỆN P MARCOM</strong>
-        <span style="color:#64748b;">(Bao gồm Goals, Budgeting, Staffing, Campaign Creative, Planning &amp; Effectiveness).</span>
+        <span style="color:#64748b;">(${c.scope}).</span>
       </div>
 
       <div style="flex:1 1 0;min-height:24px;"></div>
@@ -258,6 +291,7 @@ export async function renderCertificateCanvas({
   verifyCode = makeVerifyCode(studentName),
   logoSrc = '/pmarcom-logo.jpg',
   scale = isIOSorIPad ? 2 : 3,
+  course = 'main',
 } = {}) {
   const logo = await getLogoDataUrl(logoSrc);
 
@@ -284,7 +318,7 @@ export async function renderCertificateCanvas({
     'pointer-events:none',
     'z-index:-1',
   ].join(';');
-  node.innerHTML = buildMarkup({ studentName, totalModules, issueDate, verifyCode, logoSrc: logo });
+  node.innerHTML = buildMarkup({ studentName, totalModules, issueDate, verifyCode, logoSrc: logo, course });
 
   document.body.appendChild(node);
   try {
