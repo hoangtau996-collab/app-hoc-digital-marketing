@@ -12,6 +12,7 @@ TODO — chưa có quy ước đánh phiên bản; cân nhắc gắn thẻ Git k
 
 ### Thêm mới
 
+- **Vẽ lại ảnh bìa chia sẻ `public/og-cover.png` theo bảng màu mới** — nền Egg Shell, thẻ trắng viền Indigo Dye, chip Rose Pink, tiêu đề navy, biểu đồ tăng trưởng chuyển từ Indigo sang Rose Pink, dải chuyển sắc ở chân thẻ. Bản cũ vẫn là tông xanh lá + vàng đồng vì là ảnh nướng sẵn, không ăn theo thang màu Tailwind như phần còn lại của app. Bìa dựng bằng GDI+ nên tái tạo lại được, số liệu trên bìa (11 chuyên đề, 36 bài học, 121 thuật ngữ, 55 câu hỏi) đọc từ dữ liệu thật.
 - **Bản tin thuật toán được viết lại thành bài viết đầy đủ** — từ 5 tin rút gọn lên **16 bài** (`src/data/newsData.js`), mỗi bài có nguồn tham chiếu, ngày đăng, thời lượng đọc, thẻ chủ đề, 2-3 số liệu chính, thân bài 3-4 phần phân tích, mục "cái giá nếu bỏ qua" và mốc thời gian áp dụng. Tổng 63 phần thân bài. Kho tin mô phỏng nâng từ 3 lên 6 mục, cùng cấu trúc.
 - **14 tranh minh hoạ SVG nội tuyến cho tin tức** (`src/components/NewsIllustration.jsx`) — thay ảnh stock Unsplash trước đây. Mỗi tranh vẽ đúng nội dung bài: thuật toán phân bổ ngân sách, sức khoẻ gian hàng, tìm kiếm không nhấp chuột, nhân bản video bằng AI, xác thực tài khoản, hoa hồng liên kết, loại trừ từ khoá, bão hoà nội dung, tín hiệu dữ liệu, phát trực tiếp, đấu giá hiển thị, tự động hoá chăm sóc, nhãn nội dung AI, tốc độ trang. Cùng lý do kỹ thuật với `LessonIllustration`: không phát sinh yêu cầu mạng nên không vỡ ảnh, nét sắc ở mọi độ phân giải.
 - **Cửa sổ đọc chi tiết bài viết** — thẻ tin giữ phần tóm tắt để lướt nhanh, toàn bộ thân bài, tác động, rủi ro và danh sách việc cần chỉ đạo chuyển vào cửa sổ riêng.
@@ -30,6 +31,12 @@ TODO — chưa có quy ước đánh phiên bản; cân nhắc gắn thẻ Git k
 - **Khoá lưu bản tin đổi sang `dmm_news_feed_v2`** (`App.jsx`) — dữ liệu lưu theo khoá cũ thiếu tranh minh hoạ và thân bài, nếu không đổi khoá thì người dùng cũ sẽ mãi thấy bản tin rút gọn. Giao diện vẫn giữ đường lùi hiển thị `coverImage` cho dữ liệu cũ.
 - **Mở rộng `ICON_MAP`** từ 20 lên 113 icon lucide-react để 121 thuật ngữ không dùng chung một biểu tượng mặc định. Hai icon trùng tên với biến toàn cục của JavaScript được nhập kèm bí danh: `Infinity as InfinityIcon`, `Image as ImageIcon`.
 - **Mô tả đầu trang từ điển** đọc số lượng trực tiếp từ `GLOSSARY_ITEMS.length` thay vì ghi cứng "25+", nên không lệch khi thêm thuật ngữ sau này.
+
+### Sửa lỗi
+
+- **`og-cover.png` thật ra là tệp JPEG mang đuôi `.png`** trong khi thẻ `og:image:type` khai báo `image/png`. Bản vẽ lại là PNG thật nên phần khai báo nay khớp với nội dung tệp.
+- **Ảnh bìa vuông 1024x1024 nhưng khai báo 1200x630** — sai tỷ lệ khiến trình quét mạng xã hội cắt hoặc chèn viền. Bản mới đúng 1200x630, đồng thời nhẹ hơn: 64 KB thay vì 581 KB.
+- **Gắn `?v=2` vào URL ảnh bìa** ở cả 5 thẻ meta và đoạn script dựng URL tuyệt đối. Không có tham số này thì Facebook, Zalo, LinkedIn tiếp tục phục vụ bản bìa xanh lá cũ từ bộ nhớ đệm.
 
 ---
 
