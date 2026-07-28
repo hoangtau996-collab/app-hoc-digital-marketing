@@ -57,6 +57,45 @@ const purgeDemoAccountsFromStorage = () => {
   } catch (e) {}
 };
 
+/**
+ * Diễn giải mã lỗi của Firebase Auth thành câu nói đúng nguyên nhân.
+ *
+ * Vì sao cần: trước đây MỌI thất bại đăng nhập đều hiện chung một câu "Email
+ * hoặc mật khẩu không chính xác" — kể cả khi nguyên nhân là thiếu biến môi
+ * trường Firebase, chưa bật phương thức Email/Password, hay mất mạng. Người
+ * dùng gõ lại mật khẩu mười lần cũng không qua được, vì mật khẩu chưa bao giờ
+ * là vấn đề. Thông báo sai nguyên nhân còn tốn thời gian hơn là không có
+ * thông báo.
+ */
+const describeAuthError = (err) => {
+  const code = String(err?.code || '');
+
+  switch (code) {
+    case 'auth/invalid-credential':
+    case 'auth/wrong-password':
+    case 'auth/user-not-found':
+      return 'Email hoặc mật khẩu không đúng. Nếu chưa có tài khoản, hãy chuyển sang tab "Đăng Ký Mới".';
+    case 'auth/invalid-email':
+      return 'Địa chỉ email không hợp lệ.';
+    case 'auth/user-disabled':
+      return 'Tài khoản này đã bị vô hiệu hoá trên Firebase.';
+    case 'auth/too-many-requests':
+      return 'Đăng nhập sai quá nhiều lần nên Firebase tạm khoá. Chờ vài phút rồi thử lại.';
+    case 'auth/network-request-failed':
+      return 'Không kết nối được máy chủ Firebase. Kiểm tra đường truyền rồi thử lại.';
+    case 'auth/operation-not-allowed':
+      return 'Phương thức Email/Password chưa được bật: Firebase Console → Authentication → Sign-in method.';
+    case 'auth/api-key-not-valid':
+    case 'auth/invalid-api-key':
+    case 'auth/configuration-not-found':
+      return 'Cấu hình Firebase chưa đúng (thiếu biến môi trường VITE_FIREBASE_*). Đây là lỗi cài đặt của ứng dụng, KHÔNG phải do mật khẩu — xem DEPLOYMENT.md.';
+    default:
+      return code
+        ? `Không đăng nhập được. Firebase báo: ${code}`
+        : 'Không đăng nhập được. Vui lòng thử lại.';
+  }
+};
+
 const INDUSTRY_OPTIONS = [
   'Bất Động Sản',
   'Thương Mại Điện Tử & Bán Lẻ (E-Commerce)',
@@ -223,7 +262,10 @@ export default function AuthModal({
         onClose();
       }, 500);
     } catch (firebaseErr) {
-      console.warn("Firebase Auth Error, trying local DB fallback:", firebaseErr.message);
+      console.warn(
+        `Firebase Auth thất bại (${firebaseErr?.code || 'không có mã lỗi'}), thử nhánh dự phòng tại máy:`,
+        firebaseErr?.message
+      );
 
       // 2. Fallback to local accounts
       const users = getUsersDB();
@@ -252,7 +294,9 @@ export default function AuthModal({
           onClose();
         }, 500);
       } else {
-        setErrorMsg('Email hoặc mật khẩu không chính xác. Vui lòng kiểm tra lại hoặc đăng ký tài khoản học viên mới.');
+        // Nhánh dự phòng cũng không khớp -> báo đúng lý do Firebase đã từ chối,
+        // thay vì đổ hết cho "sai mật khẩu".
+        setErrorMsg(describeAuthError(firebaseErr));
       }
     } finally {
       setIsLoading(false);
