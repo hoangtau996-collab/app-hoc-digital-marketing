@@ -21,6 +21,12 @@ TODO — chưa có quy ước đánh phiên bản; cân nhắc gắn thẻ Git k
   - Kênh theo dõi Firestore đặt ở `App.jsx` chứ không trong hộp thư: chuông trên Header cần đúng danh sách đó, mở hai kênh cho cùng một collection thì hai nơi lệch nhau đúng vào lúc có tin mới.
   - Năm hàm mới trong `src/firebase.js` — `sendSupportMessage()`, `listenToSupportMessages()`, `setSupportMessageStatus()`, `deleteSupportMessage()`, hằng `SUPPORT_MESSAGE_MAX`. Lược đồ collection: xem [DATABASE.md](DATABASE.md).
 
+### Sửa lỗi
+
+- **Thông báo khi gửi lời nhắn hỏng đã nói sai nguyên nhân.** Gặp `permission-denied`, bản đầu hiện "Hãy đăng nhập lại rồi thử lần nữa" — trong khi nguyên nhân thật là luật `support_messages` chưa có trên máy chủ. Đăng nhập lại không sửa được luật, nên câu đó chỉ khiến học viên thử đi thử lại một việc vô ích rồi bỏ cuộc mà không ai biết hệ thống đang hỏng. Nay nói thẳng đây là lỗi cài đặt của hệ thống chứ không phải lỗi tài khoản, kèm mã lỗi để báo lại, và ghi ra console đúng khối rules còn thiếu cùng cách Publish.
+- **Email trong lời nhắn lấy từ ID token, không lấy từ hồ sơ trong state.** Rules đối chiếu `request.resource.data.email` với `request.auth.token.email`; hồ sơ trong state lại ghép từ localStorage và Firestore nên có thể mang email cũ của người dùng trước trên máy dùng chung. Lệch một ký tự là máy chủ từ chối, mà thông báo hiện ra lại đổ cho quyền truy cập — lấy thẳng từ token thì cả lớp lỗi đó biến mất.
+- **`diagnoseCloudAccess()` thêm bước "Đọc hộp thư hỗ trợ".** Phân biệt được hai việc mà nhìn giao diện không phân biệt nổi: hộp thư trống thật, với luật chưa deploy nên không đọc được — cả hai đều ra một màn hình trắng trơn. Quản trị viên tự xác nhận được bằng nút kiểm tra kết nối sẵn có trong Bảng Quản Trị.
+
 ### Bảo mật
 
 - **Bịt lỗ chiếm chỗ hồ sơ học viên** (`firestore.rules`, `canCreateProfile`). Luật cũ chỉ soi **nội dung** tài liệu (`email` phải khớp email trong token) chứ không soi **chỗ đặt**, nên một tài khoản hợp lệ tạo được `students/<id_suy_từ_email_người_khác>` mang email của chính nó. Tài liệu đó chiếm sẵn chỗ của nạn nhân; tới lượt nạn nhân đăng ký, lệnh ghi trở thành `update` trên tài liệu của người khác và bị `canUpdateProfile()` từ chối — nạn nhân **vĩnh viễn không lưu được hồ sơ lên hệ thống**, và làm hàng loạt chỉ tốn một vòng lặp. Nay id tài liệu bắt buộc là id suy từ email của chính người gọi hoặc `uid` của họ. Quản trị viên vẫn đặt tuỳ ý vì còn phải cấp bằng thủ công cho người chưa có tài khoản.

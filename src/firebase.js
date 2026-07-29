@@ -286,12 +286,21 @@ const LS_SUPPORT_LAST_SENT = 'dmm_support_last_sent';
  * được nếu không dựng thêm hạ tầng — xem TODO.md.
  */
 export async function sendSupportMessage({ name, email, phone, message }) {
-  const cleanEmail = cleanEmailKey(email);
   const body = String(message || '').trim();
 
   if (!auth.currentUser) {
     return { ok: false, message: 'Bạn cần đăng nhập tài khoản học viên thì Ban Quản Trị mới biết ai đang cần hỗ trợ.' };
   }
+
+  // Email lấy từ PHIÊN ĐĂNG NHẬP, không lấy từ hồ sơ nơi gọi truyền vào.
+  //
+  // Rules đối chiếu `request.resource.data.email` với email trong ID token
+  // (`request.auth.token.email`). Hồ sơ trong state của ứng dụng lại ghép từ
+  // localStorage và Firestore, nên nó có thể mang email cũ của người dùng
+  // trước trên máy dùng chung — lệch một ký tự là máy chủ từ chối, và thông báo
+  // hiện ra sẽ đổ lỗi cho quyền truy cập trong khi nguyên nhân thật là hai
+  // email không khớp nhau. Lấy thẳng từ token thì cả lớp lỗi đó biến mất.
+  const cleanEmail = cleanEmailKey(auth.currentUser.email || email);
   if (!cleanEmail) {
     return { ok: false, message: 'Tài khoản không có email hợp lệ nên không gửi được lời nhắn.' };
   }
@@ -328,14 +337,40 @@ export async function sendSupportMessage({ name, email, phone, message }) {
     } catch (e) { /* hết chỗ lưu thì thôi */ }
     return { ok: true, id: ref.id, message: 'Đã gửi lời nhắn tới Ban Quản Trị.' };
   } catch (e) {
+    // `permission-denied` ở ĐÂY gần như luôn có một nguyên nhân: collection
+    // `support_messages` chưa có luật trên máy chủ, nên rơi vào nhánh từ chối
+    // mặc định ở cuối firestore.rules. Người dùng đã đăng nhập rồi (kiểm tra ở
+    // đầu hàm) và email đã lấy thẳng từ token, nên hai khả năng còn lại đều đã
+    // bị loại trừ trước khi tới đây.
+    //
+    // Vì vậy KHÔNG bảo họ "đăng nhập lại": đăng nhập lại không sửa được luật
+    // trên máy chủ, chỉ khiến người dùng thử đi thử lại một việc vô ích rồi bỏ
+    // cuộc mà không ai biết hệ thống đang hỏng. Nói đúng việc cần làm, và ghi
+    // nguyên nhân kỹ thuật ra console cho người quản trị.
+    if (e?.code === 'permission-denied') {
+      console.error(
+        'Firestore từ chối ghi vào `support_messages`.\n' +
+          'Nguyên nhân gần như chắc chắn: firestore.rules trên máy chủ chưa có khối ' +
+          '`match /support_messages/{msgId}`, nên lệnh ghi rơi vào nhánh từ chối mặc định.\n' +
+          'Cách sửa: Firebase Console -> Firestore Database -> Rules -> dán đè toàn bộ ' +
+          'nội dung firestore.rules trong kho mã -> Publish. Xem DEPLOYMENT.md.',
+        e
+      );
+      return {
+        ok: false,
+        code: 'permission-denied',
+        message:
+          'Hệ thống chưa mở kênh hỗ trợ nên máy chủ chưa nhận lời nhắn. ' +
+          'Đây là lỗi cài đặt của hệ thống, KHÔNG phải do tài khoản của bạn — ' +
+          'đăng nhập lại cũng không hết. Vui lòng báo Ban Quản Trị kèm mã lỗi: permission-denied.'
+      };
+    }
+
     console.warn('Không gửi được lời nhắn hỗ trợ:', e);
     return {
       ok: false,
       code: e?.code || '',
-      message:
-        e?.code === 'permission-denied'
-          ? 'Máy chủ từ chối lời nhắn. Hãy đăng nhập lại rồi thử lần nữa.'
-          : `Không gửi được lời nhắn (${e?.code || 'lỗi không rõ'}). Kiểm tra đường truyền rồi thử lại.`
+      message: `Không gửi được lời nhắn (${e?.code || 'lỗi không rõ'}). Kiểm tra đường truyền rồi thử lại.`
     };
   }
 }
@@ -468,6 +503,22 @@ export async function diagnoseCloudAccess() {
     add('Đọc danh sách học viên trên Cloud', true, `${snapshot.size} bản ghi trên máy chủ`);
   } catch (e) {
     add('Đọc danh sách học viên trên Cloud', false, `${e.code || ''} ${e.message}`);
+  }
+
+  // Phân biệt được HAI việc mà nhìn giao diện không phân biệt nổi: hộp thư
+  // trống thật, với luật `support_messages` chưa deploy nên không đọc được.
+  // Cả hai đều ra một màn hình trắng trơn nếu không hỏi thẳng máy chủ như đây.
+  try {
+    const snapshot = await getDocs(collection(db, SUPPORT_COLLECTION));
+    add('Đọc hộp thư hỗ trợ', true, `${snapshot.size} lời nhắn trên máy chủ`);
+  } catch (e) {
+    add(
+      'Đọc hộp thư hỗ trợ',
+      false,
+      e.code === 'permission-denied'
+        ? 'permission-denied — firestore.rules trên máy chủ chưa có khối support_messages. Publish lại rules (xem DEPLOYMENT.md).'
+        : `${e.code || ''} ${e.message}`
+    );
   }
 
   let localCount = 0;
