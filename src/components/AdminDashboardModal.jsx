@@ -20,6 +20,9 @@ import {
   fetchStudentsFromCloudOnly
 } from '../firebase';
 import { markStudentDeleted, filterDeleted, getDeletedStudents } from '../utils/deletedStudents';
+import { CERTIFICATE_COURSES, getCertificateCourse } from '../utils/certificateExport';
+import { COURSE_MODULES } from '../data/courseData';
+import { TRADE_MODULES } from '../data/tradeCourseData';
 import {
   ROOT_ADMIN_PROFILES,
   normalizeEmail,
@@ -80,6 +83,28 @@ const withRootAdmins = (list) => {
   });
   return rows;
 };
+
+/**
+ * Các khoá học có thể cấp bằng.
+ *
+ * Đọc thẳng từ cấu hình bằng (`utils/certificateExport`) chứ không liệt kê lại
+ * ở đây: thêm khoá mới vào cấu hình đó là danh sách này tự có, không phải nhớ
+ * sửa hai chỗ rồi quên mất một chỗ.
+ */
+const CERT_COURSE_OPTIONS = Object.values(CERTIFICATE_COURSES);
+
+/** Id toàn bộ chuyên đề của một khoá — dùng để đánh dấu học viên đã hoàn tất. */
+const moduleIdsOf = (courseKey) =>
+  (courseKey === 'trade' ? TRADE_MODULES : COURSE_MODULES).map((m) => m.id);
+
+/**
+ * Trường tiến độ tương ứng trên hồ sơ học viên.
+ *
+ * Hai khoá đếm trên hai trường tách biệt (xem App.jsx). Cấp bằng Trade mà ghi
+ * vào `completedModules` sẽ khiến học viên bỗng dưng "tốt nghiệp" khoá chính.
+ */
+const progressFieldOf = (courseKey) =>
+  courseKey === 'trade' ? 'completedTradeModules' : 'completedModules';
 
 /** Thứ tự hiển thị: quyền cao nhất lên đầu bảng. */
 const ROLE_ORDER = { root: 0, admin: 1, student: 2 };
@@ -159,6 +184,14 @@ export default function AdminDashboardModal({
   useEffect(() => {
     setCurrentPage(1);
   }, [searchQuery, selectedIndustry, selectedRole, pageSize]);
+
+  // Khoá học đang được chọn để cấp bằng.
+  //
+  // MỘT state duy nhất cho cả nút "Cấp Bằng" từng dòng lẫn form tạo bằng thủ
+  // công/hàng loạt. Tách làm hai lựa chọn riêng sẽ sinh ra tình huống chọn một
+  // đằng cấp một nẻo mà không ai nhận ra.
+  const [certCourse, setCertCourse] = useState('main');
+  const certCourseInfo = getCertificateCourse(certCourse);
 
   // Certificate Generator Modal state
   const [isCertGenOpen, setIsCertGenOpen] = useState(false);
@@ -663,7 +696,11 @@ export default function AdminDashboardModal({
     setIsProcessing(true);
     const nameUpper = manualName.trim().toUpperCase();
     const studentEmail = manualEmail.trim() || `cert.${Date.now()}@pmarcom.edu.vn`;
-    const allModules = ['module-01', 'module-02', 'module-03', 'module-04', 'module-05', 'module-06', 'module-07', 'module-08', 'module-09', 'module-10', 'module-11'];
+
+    // Id chuyên đề đọc từ dữ liệu khoá thật, không liệt kê tay. Danh sách ghi
+    // cứng 'module-01'..'module-11' sẽ sai ngay khi khoá học đổi cấu trúc, và
+    // hoàn toàn không dùng được cho khoá Trade (id khác hẳn).
+    const doneField = progressFieldOf(certCourse);
 
     const newCertStudent = {
       id: `cert-manual-${Date.now()}`,
@@ -671,7 +708,7 @@ export default function AdminDashboardModal({
       phone: manualPhone.trim() || '0901234567',
       email: studentEmail,
       industry: manualIndustry || 'Digital Marketing',
-      completedModules: allModules,
+      [doneField]: moduleIdsOf(certCourse),
       createdAt: new Date().toLocaleDateString('vi-VN')
     };
 
@@ -688,11 +725,11 @@ export default function AdminDashboardModal({
     setIsProcessing(false);
     setIsCertGenOpen(false);
 
-    setNotice(`🎓 Đã cấp Bằng Chứng Nhận thành công cho học viên ${nameUpper}`);
+    setNotice(`🎓 Đã cấp Bằng "${certCourseInfo.title}" cho học viên ${nameUpper}`);
 
-    // 4. Open Certificate viewer
+    // 4. Open Certificate viewer — mở đúng bằng của khoá vừa chọn
     if (onIssueCertificateForStudent) {
-      onIssueCertificateForStudent(nameUpper);
+      onIssueCertificateForStudent(nameUpper, certCourse);
     }
   };
 
@@ -703,7 +740,8 @@ export default function AdminDashboardModal({
     }
 
     setIsProcessing(true);
-    const allModules = ['module-01', 'module-02', 'module-03', 'module-04', 'module-05', 'module-06', 'module-07', 'module-08', 'module-09', 'module-10', 'module-11'];
+    const doneField = progressFieldOf(certCourse);
+    const allModules = moduleIdsOf(certCourse);
 
     const createdList = [];
     for (let idx = 0; idx < excelParsedStudents.length; idx++) {
@@ -714,7 +752,7 @@ export default function AdminDashboardModal({
         phone: std.phone || '0901234567',
         email: std.email || `bulk.${Date.now()}.${idx}@pmarcom.edu.vn`,
         industry: std.industry || 'Digital Marketing',
-        completedModules: allModules,
+        [doneField]: allModules,
         createdAt: new Date().toLocaleDateString('vi-VN')
       };
       await recordStudentAccountToCloud(studentObj);
@@ -722,7 +760,7 @@ export default function AdminDashboardModal({
     }
 
     setStudents(prev => [...createdList, ...prev]);
-    setNotice(`🎉 Đã cấp Bằng Chứng Nhận thành công cho ${createdList.length} học viên từ Excel/CSV!`);
+    setNotice(`🎉 Đã cấp Bằng "${certCourseInfo.title}" cho ${createdList.length} học viên từ Excel/CSV!`);
     setIsProcessing(false);
     setExcelParsedStudents([]);
     setRawPastedText('');
@@ -900,6 +938,19 @@ export default function AdminDashboardModal({
               <span>{isChecking ? 'Đang kiểm tra...' : 'Kiểm Tra Cloud'}</span>
             </button>
 
+            {/* Chọn khoá để cấp bằng. Cùng một state với form tạo bằng bên
+                trong, nên chọn ở đâu cũng ra một kết quả. */}
+            <select
+              value={certCourse}
+              onChange={(e) => setCertCourse(e.target.value)}
+              className="bg-slate-900/80 border border-amber-500/50 text-amber-300 font-bold rounded-xl px-3 py-1.5 text-xs focus:outline-none cursor-pointer shrink-0"
+              title="Chọn khoá học để cấp Bằng Chứng Nhận"
+            >
+              {CERT_COURSE_OPTIONS.map((c) => (
+                <option key={c.key} value={c.key}>🎓 {c.title}</option>
+              ))}
+            </select>
+
             <button
               onClick={() => setIsCertGenOpen(true)}
               className="px-3 py-1.5 rounded-xl bg-gradient-to-r from-amber-500 to-yellow-500 text-slate-950 text-xs font-black hover:brightness-110 transition flex items-center gap-1.5 cursor-pointer shadow-lg shrink-0"
@@ -1066,9 +1117,9 @@ export default function AdminDashboardModal({
                       <td className="py-2 px-3 text-center">
                         <div className="flex items-center justify-center gap-1.5">
                           <button
-                            onClick={() => onIssueCertificateForStudent && onIssueCertificateForStudent(std.name)}
+                            onClick={() => onIssueCertificateForStudent && onIssueCertificateForStudent(std.name, certCourse)}
                             className="px-2 py-0.5 rounded-lg bg-gradient-to-r from-amber-500/20 to-emerald-500/20 border border-amber-400/60 text-amber-300 hover:brightness-125 text-[10px] font-black flex items-center gap-1 transition cursor-pointer shadow-md"
-                            title="Tạo & Xuất Bằng Chứng Nhận chính thức cho Học viên này"
+                            title={`Cấp Bằng "${certCourseInfo.title}" cho học viên này`}
                           >
                             <Award className="w-3 h-3 text-amber-400" />
                             <span>Cấp Bằng</span>
@@ -1227,6 +1278,31 @@ export default function AdminDashboardModal({
                 </button>
               </div>
 
+              {/* Chọn khoá học để cấp bằng.
+                  Đặt TRÊN hai tab và trước mọi ô nhập: đây là lựa chọn quyết
+                  định tấm bằng in ra tên khoá nào, phải thấy trước khi gõ. */}
+              <div className="p-3 rounded-2xl bg-slate-900/90 border border-amber-500/40 space-y-2">
+                <label className="text-xs font-black text-amber-300 flex items-center gap-1.5">
+                  <Award className="w-4 h-4" /> Cấp bằng cho khoá học:
+                </label>
+                <select
+                  value={certCourse}
+                  onChange={(e) => setCertCourse(e.target.value)}
+                  className="w-full bg-slate-950 border border-amber-500/50 text-white font-bold rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:border-amber-400 cursor-pointer"
+                >
+                  {CERT_COURSE_OPTIONS.map((c) => (
+                    <option key={c.key} value={c.key}>{c.title}</option>
+                  ))}
+                </select>
+                <p className="text-[11px] text-slate-400">
+                  Học viên sẽ được ghi nhận hoàn tất{' '}
+                  <strong className="text-emerald-300">
+                    {moduleIdsOf(certCourse).length} chuyên đề
+                  </strong>{' '}
+                  của khoá này. Mỗi khoá có mã xác thực riêng.
+                </p>
+              </div>
+
               {/* Sub-Tabs Switcher */}
               <div className="flex items-center bg-slate-900 p-1 rounded-xl border border-emerald-900/60 text-xs font-bold">
                 <button
@@ -1298,9 +1374,11 @@ export default function AdminDashboardModal({
 
                   <div className="p-3 rounded-xl bg-amber-950/40 border border-amber-500/30 text-amber-300 text-xs font-medium space-y-1">
                     <div className="font-bold text-amber-400 flex items-center gap-1">
-                      <ShieldCheck className="w-4 h-4" /> Tự động chứng nhận 11/11 Chuyên đề
+                      <ShieldCheck className="w-4 h-4" /> Tự động chứng nhận {moduleIdsOf(certCourse).length}/{moduleIdsOf(certCourse).length} Chuyên đề
                     </div>
-                    <p className="text-[11px] opacity-90">Học viên được cấp bằng sẽ lập tức nhận danh hiệu Tốt Nghiệp và có thể tra cứu/tải chứng nhận sắc nét.</p>
+                    <p className="text-[11px] opacity-90">
+                      Học viên được ghi nhận hoàn tất <strong>{certCourseInfo.title}</strong> và có thể tải chứng nhận sắc nét ngay.
+                    </p>
                   </div>
 
                   <div className="pt-2 flex justify-end gap-2">
@@ -1368,7 +1446,7 @@ export default function AdminDashboardModal({
                     <div className="space-y-2">
                       <div className="flex items-center justify-between text-xs font-bold text-emerald-400">
                         <span>Danh Sách {excelParsedStudents.length} Học Viên Đã Đọc Từ File:</span>
-                        <span className="text-[10px] text-amber-300">Sẵn sàng cấp bằng 11/11 chuyên đề</span>
+                        <span className="text-[10px] text-amber-300">Sẵn sàng cấp bằng {certCourseInfo.title}</span>
                       </div>
                       <div className="max-h-36 overflow-y-auto rounded-xl border border-emerald-900/60 bg-slate-950 p-2 space-y-1">
                         {excelParsedStudents.map((std, idx) => (

@@ -12,6 +12,10 @@ TODO — chưa có quy ước đánh phiên bản; cân nhắc gắn thẻ Git k
 
 ### Thêm mới
 
+- **Bảng Quản Trị chọn được khoá học khi cấp bằng.** Thêm ô chọn khoá ở thanh công cụ và trong cửa sổ tạo chứng nhận; áp dụng cho cả nút "Cấp Bằng" từng dòng, tạo thủ công lẫn cấp hàng loạt từ Excel/CSV. Danh sách khoá đọc thẳng từ `CERTIFICATE_COURSES` nên thêm khoá mới vào cấu hình đó là tự xuất hiện, không phải sửa hai nơi.
+  - Dùng **một** state duy nhất cho cả ba lối cấp bằng. Tách thành nhiều lựa chọn riêng sẽ sinh ra cảnh chọn một đằng cấp một nẻo mà không ai nhận ra.
+  - Tiến độ ghi vào **đúng trường của khoá**: khoá chính vào `completedModules`, khoá Trade vào `completedTradeModules`. Ghi nhầm trường sẽ khiến học viên bỗng dưng "tốt nghiệp" khoá chưa hề học. Đã kiểm chứng id hai khoá không trùng nhau (`module-*` và `trade-*`).
+  - Bỏ danh sách id ghi cứng `'module-01'..'module-11'` trong hai hàm tạo bằng, đọc từ `COURSE_MODULES` / `TRADE_MODULES`. Danh sách ghi tay sai ngay khi khoá đổi cấu trúc và hoàn toàn không dùng được cho khoá Trade.
 - **Bằng Chứng Nhận riêng cho khoá Trade Marketing Thực Chiến.** Cấp khi học viên đạt đủ **5/5 chuyên đề** khoá Trade, độc lập với bằng khoá chính — hai bằng có **mã xác thực khác nhau** và tên tệp khác nhau (`ChungNhan_PMARCOM_*` và `ChungNhan_PMARCOM_TRADE_*`). Khoá chính cố ý không đổi cách sinh mã, nếu không toàn bộ mã của những bằng đã cấp sẽ đổi theo.
   - Nội dung riêng của từng khoá (tên khoá, số bài kiểm tra, phạm vi kiến thức) tách khỏi template thành `CERTIFICATE_COURSES` trong `utils/certificateExport.js`. Trước đây ghi cứng trong template; nhân đôi template cho khoá thứ hai thì hai bản sẽ trôi khỏi nhau ngay lần sửa hoạ tiết đầu tiên.
   - Băng mời nhận bằng hiện ngay trên lưới chuyên đề trong tab Trade khi vừa đạt đủ, để học viên không phải đi tìm.

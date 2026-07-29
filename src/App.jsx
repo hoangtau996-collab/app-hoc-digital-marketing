@@ -337,9 +337,12 @@ export default function App() {
   }, []);
 
   const [adminCertStudentName, setAdminCertStudentName] = useState("");
+  // Khoá học của tấm bằng mà quản trị viên đang cấp ('main' | 'trade').
+  const [adminCertCourse, setAdminCertCourse] = useState('main');
 
-  const handleAdminIssueCertificate = (studentName) => {
+  const handleAdminIssueCertificate = (studentName, course = 'main') => {
     setAdminCertStudentName(studentName);
+    setAdminCertCourse(course);
     setIsCertOpen(true);
   };
 
@@ -436,6 +439,11 @@ export default function App() {
   const tradeCompletedCount = TRADE_MODULES.filter((m) =>
     completedTradeModules.includes(m.id)
   ).length;
+
+  // Quản trị viên đang cấp bằng thủ công cho một học viên khác.
+  const isAdminIssuing = Boolean(adminCertStudentName);
+  const adminCertTotalModules =
+    adminCertCourse === 'trade' ? TRADE_MODULES.length : COURSE_MODULES.length;
 
   // Kiểm tra lơ là: chạy sau khi đã biết học viên là ai và tiến độ tới đâu.
   // Hoãn 1,2 giây để lời nhắc không đè lên lúc trang vừa tải xong.
@@ -952,18 +960,23 @@ export default function App() {
         }}
       />
 
+      {/* Bằng khoá chính, kiêm luôn khung xem bằng khi quản trị viên cấp thủ công.
+          Ở chế độ quản trị, tên khoá và số chuyên đề phải bám theo khoá được
+          chọn trong Bảng Quản Trị — nếu vẫn ghi cứng khoá chính thì cấp bằng
+          Trade sẽ in ra tấm bằng mang tên khoá Digital. */}
       <CertificateModal
         isOpen={isCertOpen}
         onClose={() => {
           setIsCertOpen(false);
           setAdminCertStudentName("");
+          setAdminCertCourse('main');
         }}
-        passedCount={completedModules.length}
-        totalModules={COURSE_MODULES.length}
-        adminOverride={Boolean(adminCertStudentName)}
+        passedCount={isAdminIssuing ? adminCertTotalModules : completedModules.length}
+        totalModules={isAdminIssuing ? adminCertTotalModules : COURSE_MODULES.length}
+        adminOverride={isAdminIssuing}
         customStudentName={adminCertStudentName}
-        studentEmail={adminCertStudentName ? "" : (currentUser?.email || "")}
-        course="main"
+        studentEmail={isAdminIssuing ? "" : (currentUser?.email || "")}
+        course={isAdminIssuing ? adminCertCourse : 'main'}
       />
 
       {/* Bằng Chứng Nhận khoá nâng cao Trade Marketing.
