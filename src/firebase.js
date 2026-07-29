@@ -8,17 +8,22 @@ import {
   onAuthStateChanged,
   updateProfile
 } from 'firebase/auth';
-import { 
-  getFirestore, 
-  doc, 
-  setDoc, 
-  getDoc, 
+import {
+  getFirestore,
+  doc,
+  setDoc,
+  getDoc,
   onSnapshot,
   increment,
   serverTimestamp,
   collection,
   getDocs,
-  deleteDoc
+  deleteDoc,
+  addDoc,
+  updateDoc,
+  query,
+  orderBy,
+  limit
 } from 'firebase/firestore';
 
 // Default Firebase Configuration for P MARCOM Academy
@@ -238,6 +243,173 @@ export async function revokeAdminInCloud(email) {
   const key = cleanEmailKey(email);
   if (!key) throw new Error('Email không hợp lệ.');
   await deleteDoc(doc(db, ADMIN_COLLECTION, key));
+}
+
+/* ============================================================
+   HỘP THƯ HỖ TRỢ (collection `support_messages`)
+
+   Học viên gửi lời nhắn từ khung chat Pipi; quản trị viên đọc và xử lý trong
+   Hộp Thư Hỗ Trợ. Id tài liệu do Firestore tự sinh — cố ý không đặt theo email:
+   một học viên gửi được nhiều lời nhắn, đặt id theo email thì lần sau ghi đè
+   mất lần trước.
+
+   RANH GIỚI THẬT NẰM Ở `firestore.rules`:
+     - Phải đăng nhập mới gửi được, và trường `email` bắt buộc khớp email trong
+       ID token. Không có điều kiện đó thì bất kỳ ai cũng gửi được lời nhắn mạo
+       danh học viên khác, hoặc bơm rác vào hộp thư từ một vòng lặp.
+     - Chỉ quản trị viên liệt kê được cả hộp thư. Học viên chỉ đọc lại được lời
+       nhắn của chính mình.
+     - Độ dài `message` bị chặn ngay trong rules chứ không chỉ ở giao diện: giới
+       hạn ở ô nhập chỉ là phép lịch sự, người gửi thẳng lệnh ghi thì không đi
+       qua ô đó.
+   ============================================================ */
+
+const SUPPORT_COLLECTION = 'support_messages';
+
+/** Trần độ dài lời nhắn. Phải khớp con số trong firestore.rules. */
+export const SUPPORT_MESSAGE_MAX = 2000;
+
+/** Khoảng nghỉ tối thiểu giữa hai lần gửi, tính bằng mili-giây. */
+const SUPPORT_COOLDOWN_MS = 20000;
+const LS_SUPPORT_LAST_SENT = 'dmm_support_last_sent';
+
+/**
+ * Gửi một lời nhắn hỗ trợ.
+ *
+ * Trả về `{ ok, message }` để nơi gọi hiển thị nguyên văn lý do khi bị từ chối,
+ * thay vì nuốt lỗi rồi báo "đã gửi" — học viên tưởng đã kêu được cứu còn Ban
+ * Quản Trị không bao giờ thấy.
+ *
+ * Khoảng nghỉ giữa hai lần gửi chặn ở phía máy khách, và chỉ ở phía máy khách:
+ * nó ngăn người dùng thật bấm nhầm hai lần, KHÔNG ngăn được người cố tình bơm
+ * rác. Chặn thật cần luật theo nhịp ở máy chủ, thứ Firestore Rules không làm
+ * được nếu không dựng thêm hạ tầng — xem TODO.md.
+ */
+export async function sendSupportMessage({ name, email, phone, message }) {
+  const cleanEmail = cleanEmailKey(email);
+  const body = String(message || '').trim();
+
+  if (!auth.currentUser) {
+    return { ok: false, message: 'Bạn cần đăng nhập tài khoản học viên thì Ban Quản Trị mới biết ai đang cần hỗ trợ.' };
+  }
+  if (!cleanEmail) {
+    return { ok: false, message: 'Tài khoản không có email hợp lệ nên không gửi được lời nhắn.' };
+  }
+  if (!body) {
+    return { ok: false, message: 'Bạn chưa nhập nội dung cần hỗ trợ.' };
+  }
+  if (body.length > SUPPORT_MESSAGE_MAX) {
+    return { ok: false, message: `Lời nhắn tối đa ${SUPPORT_MESSAGE_MAX} ký tự. Bạn rút gọn giúp mình nhé.` };
+  }
+
+  try {
+    const last = Number(localStorage.getItem(LS_SUPPORT_LAST_SENT) || 0);
+    const waited = Date.now() - last;
+    if (Number.isFinite(last) && last > 0 && waited < SUPPORT_COOLDOWN_MS) {
+      const left = Math.ceil((SUPPORT_COOLDOWN_MS - waited) / 1000);
+      return { ok: false, message: `Bạn vừa gửi một lời nhắn rồi. Chờ ${left} giây nữa nhé.` };
+    }
+  } catch (e) { /* localStorage bị chặn thì bỏ qua khoảng nghỉ */ }
+
+  const payload = {
+    name: String(name || '').trim().slice(0, 120) || cleanEmail.split('@')[0].toUpperCase(),
+    email: cleanEmail,
+    phone: String(phone || '').trim().slice(0, 40),
+    message: body,
+    status: 'new',
+    createdAt: new Date().toISOString(),
+    createdAtServer: serverTimestamp()
+  };
+
+  try {
+    const ref = await addDoc(collection(db, SUPPORT_COLLECTION), payload);
+    try {
+      localStorage.setItem(LS_SUPPORT_LAST_SENT, String(Date.now()));
+    } catch (e) { /* hết chỗ lưu thì thôi */ }
+    return { ok: true, id: ref.id, message: 'Đã gửi lời nhắn tới Ban Quản Trị.' };
+  } catch (e) {
+    console.warn('Không gửi được lời nhắn hỗ trợ:', e);
+    return {
+      ok: false,
+      code: e?.code || '',
+      message:
+        e?.code === 'permission-denied'
+          ? 'Máy chủ từ chối lời nhắn. Hãy đăng nhập lại rồi thử lần nữa.'
+          : `Không gửi được lời nhắn (${e?.code || 'lỗi không rõ'}). Kiểm tra đường truyền rồi thử lại.`
+    };
+  }
+}
+
+/**
+ * Theo dõi hộp thư theo thời gian thực. Chỉ quản trị viên đọc được (theo rules).
+ *
+ * Gọi lại với `null` khi KHÔNG đọc được, khác hẳn `[]` là đọc được và hộp thư
+ * đang rỗng. Nơi gọi bắt buộc phân biệt hai trường hợp — gộp lại thì lúc mất
+ * quyền hay rớt mạng, giao diện sẽ báo "không có lời nhắn nào" trong khi thực
+ * tế có học viên đang chờ trả lời.
+ *
+ * Giới hạn 300 bản ghi mới nhất: hộp thư chỉ để xử lý việc đang tồn, không phải
+ * kho lưu trữ. Sắp theo `createdAt` dạng chuỗi ISO nên so sánh chữ cũng ra đúng
+ * thứ tự thời gian, và một trường thì Firestore tự lo chỉ mục.
+ */
+export function listenToSupportMessages(callback) {
+  try {
+    const q = query(
+      collection(db, SUPPORT_COLLECTION),
+      orderBy('createdAt', 'desc'),
+      limit(300)
+    );
+    return onSnapshot(
+      q,
+      (snapshot) => {
+        callback(snapshot.docs.map((d) => ({ id: d.id, ...d.data() })));
+      },
+      (err) => {
+        console.warn('Không đọc được hộp thư hỗ trợ:', err);
+        callback(null);
+      }
+    );
+  } catch (e) {
+    console.warn('Không mở được kênh theo dõi hộp thư hỗ trợ:', e);
+    callback(null);
+    return () => {};
+  }
+}
+
+/**
+ * Đổi trạng thái một lời nhắn: 'new' -> 'read' -> 'done'.
+ *
+ * Có await và có trả kết quả: quản trị viên bấm "đã xử lý" mà máy chủ từ chối
+ * thì phải biết ngay, nếu không lời nhắn sẽ bật lại thành chưa đọc ở lần tải
+ * sau và không ai hiểu vì sao.
+ */
+export async function setSupportMessageStatus(id, status, handledByEmail) {
+  if (!id || !['new', 'read', 'done'].includes(status)) {
+    return { ok: false, message: 'Trạng thái không hợp lệ.' };
+  }
+  try {
+    await updateDoc(doc(db, SUPPORT_COLLECTION, id), {
+      status,
+      handledBy: cleanEmailKey(handledByEmail) || 'unknown',
+      handledAt: new Date().toISOString()
+    });
+    return { ok: true };
+  } catch (e) {
+    console.warn('Không đổi được trạng thái lời nhắn:', e);
+    return { ok: false, code: e?.code || '', message: e?.message || String(e) };
+  }
+}
+
+/** Xoá hẳn một lời nhắn. Chỉ quản trị viên (theo rules). */
+export async function deleteSupportMessage(id) {
+  if (!id) return { ok: false, message: 'Thiếu mã lời nhắn.' };
+  try {
+    await deleteDoc(doc(db, SUPPORT_COLLECTION, id));
+    return { ok: true };
+  } catch (e) {
+    console.warn('Không xoá được lời nhắn:', e);
+    return { ok: false, code: e?.code || '', message: e?.message || String(e) };
+  }
 }
 
 /**

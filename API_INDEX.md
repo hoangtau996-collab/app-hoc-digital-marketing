@@ -35,6 +35,18 @@ Nguồn khẳng định quyền quản trị. Ranh giới thật do [firestore.r
 | `grantAdminInCloud(email, byEmail)` | string, string | `Promise<void>` | Cấp quyền. **Ném lỗi** nếu máy chủ từ chối |
 | `revokeAdminInCloud(email)` | string | `Promise<void>` | Thu hồi quyền. Máy chủ từ chối với tài khoản gốc |
 
+### Hộp thư hỗ trợ (collection `support_messages`)
+
+Lời nhắn học viên gửi từ khung chat Pipi. Ranh giới thật do [firestore.rules](firestore.rules) áp đặt ở phía máy chủ.
+
+| Hàm | Tham số | Trả về | Tác dụng |
+|---|---|---|---|
+| `SUPPORT_MESSAGE_MAX` | — | `number` (2000) | Trần độ dài lời nhắn. **Phải khớp con số trong firestore.rules** |
+| `sendSupportMessage({name, email, phone, message})` | object | `Promise<{ok, message}>` | Gửi lời nhắn. Đòi phiên đăng nhập; có khoảng nghỉ 20 giây giữa hai lần gửi (chỉ ở máy khách) |
+| `listenToSupportMessages(callback)` | function | `unsubscribe` | Theo dõi realtime, 300 bản ghi mới nhất. **`null` = chưa đọc được**, phải phân biệt với `[]` = hộp thư rỗng |
+| `setSupportMessageStatus(id, status, byEmail)` | string, string, string | `Promise<{ok}>` | Đổi `new` / `read` / `done`. Chỉ quản trị viên |
+| `deleteSupportMessage(id)` | string | `Promise<{ok}>` | Xoá hẳn. Chỉ quản trị viên |
+
 ### Thống kê lượt truy cập
 
 | Hàm | Tham số | Trả về | Tác dụng |

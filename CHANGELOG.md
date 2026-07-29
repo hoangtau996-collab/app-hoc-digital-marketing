@@ -10,6 +10,24 @@ TODO — chưa có quy ước đánh phiên bản; cân nhắc gắn thẻ Git k
 
 ## [Chưa phát hành] — 2026-07-29
 
+### Thêm mới
+
+- **Hộp Thư Hỗ Trợ — học viên để lại lời nhắn từ khung chat Pipi, Ban Quản Trị nhận thông báo.** Trước đây học viên gặp trục trặc thì không có lối nào báo cho ai: Pipi chỉ tra được dữ liệu có sẵn trong app, và khi nó bí thì cuộc trò chuyện kết thúc ở đó.
+  - **Nút "Nhắn Ban Quản Trị" nằm thường trực trên đầu khung chat** (`PipiChat.jsx`), không chôn sau một câu hỏi mà Pipi phải trả lời trúng mới hiện ra — đúng lúc học viên bí nhất lại là lúc không tìm thấy nút. Khung soạn là một chế độ của chính khung chat chứ không phải cửa sổ mới, nên đoạn hội thoại vừa rồi vẫn nằm đó và học viên không phải kể lại từ đầu.
+  - **Pipi tự đề nghị chuyển lời** ở hai chỗ (`pipiBrain.js`): khi nhận ra ý định xin hỗ trợ ("cần hỗ trợ", "gặp admin", "báo lỗi", "khiếu nại"...), và ở câu trả lời `notfound` — câu hỏi Pipi không tra được mới đúng là câu cần người thật trả lời. Mẫu nhận ý định cố ý đòi diễn đạt rõ: bắt mỗi chữ "hỗ trợ" sẽ nuốt luôn những câu như "chỉ số nào hỗ trợ đo hiệu quả".
+  - **Chuông thông báo trên thanh đầu trang** (`Header.jsx`), chỉ dựng cho quản trị viên, huy hiệu đỏ đếm số **chưa đọc** chứ không phải tổng số — tổng thì đứng yên nên nhìn mãi cũng không biết có việc mới. Có ở cả bản màn nhỏ vì quản trị viên hay trực bằng điện thoại. Kèm băng báo nổi khi có lời nhắn mới tới giữa phiên, chỉ báo khi con số **tăng** và bỏ qua lượt nạp đầu — không bỏ thì cứ mở trang là lại bị báo về lời nhắn cũ đã biết.
+  - **Hộp thư đầy đủ** (`SupportInboxModal.jsx`): lọc theo `Chưa đọc / Đã đọc / Đã xử lý / Tất cả`, trả lời nhanh qua email hoặc gọi điện, đánh dấu đã đọc / đã xử lý / mở lại, xoá có hỏi lại. Nội dung giữ nguyên cách xuống dòng của người viết vì lời nhắn kể lỗi thường có danh sách bước.
+  - **`null` và `[]` không được gộp**, ở cả kênh theo dõi lẫn giao diện: `null` là chưa đọc được (mất mạng, thiếu quyền, chưa deploy rules), `[]` là đọc được và hộp thư rỗng. Gộp lại thì lúc hỏng, màn hình báo "chưa có lời nhắn nào" trong khi có học viên đang chờ trả lời — nên trạng thái hỏng có màn riêng, nói thẳng nguyên nhân thường gặp.
+  - Kênh theo dõi Firestore đặt ở `App.jsx` chứ không trong hộp thư: chuông trên Header cần đúng danh sách đó, mở hai kênh cho cùng một collection thì hai nơi lệch nhau đúng vào lúc có tin mới.
+  - Năm hàm mới trong `src/firebase.js` — `sendSupportMessage()`, `listenToSupportMessages()`, `setSupportMessageStatus()`, `deleteSupportMessage()`, hằng `SUPPORT_MESSAGE_MAX`. Lược đồ collection: xem [DATABASE.md](DATABASE.md).
+
+### Bảo mật
+
+- **Bịt lỗ chiếm chỗ hồ sơ học viên** (`firestore.rules`, `canCreateProfile`). Luật cũ chỉ soi **nội dung** tài liệu (`email` phải khớp email trong token) chứ không soi **chỗ đặt**, nên một tài khoản hợp lệ tạo được `students/<id_suy_từ_email_người_khác>` mang email của chính nó. Tài liệu đó chiếm sẵn chỗ của nạn nhân; tới lượt nạn nhân đăng ký, lệnh ghi trở thành `update` trên tài liệu của người khác và bị `canUpdateProfile()` từ chối — nạn nhân **vĩnh viễn không lưu được hồ sơ lên hệ thống**, và làm hàng loạt chỉ tốn một vòng lặp. Nay id tài liệu bắt buộc là id suy từ email của chính người gọi hoặc `uid` của họ. Quản trị viên vẫn đặt tuỳ ý vì còn phải cấp bằng thủ công cho người chưa có tài khoản.
+  - ⚠️ **Phải deploy rules thì mới có tác dụng, và phải kiểm chứng ngay sau khi Publish** — phép dựng lại id dùng `replace()` của ngôn ngữ rules, lệch một ký tự là học viên mới không đăng ký được. Các bước kiểm chứng và cách hoàn nguyên: xem [DEPLOYMENT.md](DEPLOYMENT.md#security-rules--bắt-buộc-deploy).
+- **Luật cho collection `support_messages`.** Phải đăng nhập mới gửi được và trường `email` bắt buộc khớp email trong ID token — thiếu điều kiện đó thì ai cũng gửi được lời nhắn mạo danh học viên khác. `status` lúc tạo ép cứng là `new` để người gửi không tự đánh dấu lời nhắn của mình là đã xử lý. Trần độ dài chặn **trong rules** chứ không chỉ ở ô nhập, vì lệnh ghi gửi thẳng thì không đi qua ô nhập. Khoảng nghỉ 20 giây giữa hai lần gửi chỉ chặn ở máy khách — nó ngăn bấm nhầm hai lần, **không** ngăn được người cố tình bơm rác.
+- **Đã rà lại và xác nhận đang đúng:** khoá API và Email/Password của Firebase còn hiệu lực; `firestore.rules` trong kho mã **đã được deploy thật** (đọc `students` và `admins` khi chưa đăng nhập đều bị từ chối, `analytics` đọc công khai được — khớp đúng tệp rules); `.env` bị `.gitignore` chặn và không nằm trong lịch sử Git.
+
 ### Thay đổi
 
 - **Quản trị viên xem được toàn bộ nội dung, không cổng khoá nào áp lên tài khoản này.** Ban Quản Trị phải soát được bài giảng, bài kiểm tra và mẫu bằng của mọi khoá để kiểm duyệt; bắt họ học lại từ đầu bằng chính tài khoản quản trị thì vừa vô nghĩa vừa làm bẩn số liệu tiến độ học viên.

@@ -49,6 +49,30 @@ Ràng buộc do [firestore.rules](firestore.rules) áp đặt ở phía máy ch�
 - Ngoại lệ mồi lần đầu: tài khoản gốc tự tạo bản ghi của chính nó khi sổ còn rỗng.
 - Sửa/xoá bản ghi của tài khoản gốc: **không ai được phép**, kể cả quản trị viên khác.
 
+### Collection `support_messages` — hộp thư hỗ trợ
+
+Id tài liệu: **do Firestore tự sinh**. Cố ý không đặt theo email — một học viên gửi được nhiều lời nhắn, đặt id theo email thì lần sau ghi đè mất lần trước.
+
+| Trường | Kiểu | Ghi chú |
+|---|---|---|
+| `name` | string | Tên học viên lúc gửi, tối đa 120 ký tự |
+| `email` | string | **Bắt buộc khớp email trong ID token** — rules chặn ở máy chủ |
+| `phone` | string | Lấy từ hồ sơ, để Ban Quản Trị gọi lại |
+| `message` | string | Nội dung, 1–2000 ký tự (trần khớp `SUPPORT_MESSAGE_MAX` trong `src/firebase.js`) |
+| `status` | string | `new` → `read` → `done`. Lúc tạo bắt buộc là `new` |
+| `createdAt` | string (ISO) | Dùng để sắp xếp — một trường nên Firestore tự lo chỉ mục |
+| `createdAtServer` | timestamp | `serverTimestamp()`, mốc thời gian không giả được từ máy khách |
+| `handledBy` | string | Email quản trị viên đã đổi trạng thái |
+| `handledAt` | string (ISO) | Thời điểm đổi trạng thái |
+
+Ràng buộc do [firestore.rules](firestore.rules) áp đặt ở phía máy chủ:
+
+- Gửi: **phải đăng nhập**, và `email` phải khớp email trong ID token. Không có điều kiện này thì ai cũng gửi được lời nhắn mạo danh học viên khác.
+- `status` lúc tạo ép cứng là `new`: người gửi không tự đánh dấu lời nhắn của mình là đã xử lý, nếu không nó sẽ không bao giờ nổi lên trong bộ đếm chưa đọc.
+- Độ dài `message` chặn **trong rules**, không chỉ ở ô nhập — giới hạn trên giao diện chỉ ràng buộc người dùng ô nhập đó.
+- Đọc: quản trị viên đọc tất cả; học viên chỉ đọc lại lời nhắn của chính mình.
+- Sửa trạng thái và xoá: **chỉ quản trị viên**. Học viên không sửa lại được lời nhắn đã gửi.
+
 ### Document `analytics/traffic_daily_v3`
 
 | Trường | Kiểu | Ghi chú |

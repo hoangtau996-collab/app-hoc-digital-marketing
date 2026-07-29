@@ -73,13 +73,39 @@ service cloud.firestore {
         || (signedIn() && (resource == null || resource.data.email == myEmail()));
     }
 
-    // Học viên chỉ tạo được hồ sơ mang đúng email của mình, và KHÔNG được kèm
-    // trường `role`. Đây là đường tự phong hiển nhiên nhất nếu bỏ ngỏ.
-    function canCreateProfile() {
+    // Id tài liệu hợp lệ của CHÍNH người đang gọi.
+    //
+    // Ứng dụng lưu hồ sơ theo hai id (xem recordStudentAccountToCloud): id suy
+    // ra từ email — email chữ thường, mọi ký tự ngoài [a-z0-9] đổi thành '_' —
+    // và uid của Firebase Auth. Phép biến đổi ở đây phải khớp ĐÚNG với phía
+    // JavaScript, lệch một ký tự là học viên không đăng ký được.
+    function myDocId() {
+      return myEmail().replace('[^a-z0-9]', '_');
+    }
+
+    // Học viên chỉ tạo được hồ sơ mang đúng email của mình, ĐẶT ĐÚNG CHỖ của
+    // mình, và KHÔNG được kèm trường `role`.
+    //
+    // Trường `role` là đường tự phong hiển nhiên nhất nếu bỏ ngỏ.
+    //
+    // Ràng buộc id tài liệu là chốt chặn thứ hai, và nó chặn một kiểu phá hoại
+    // khác hẳn: bản trước chỉ soi NỘI DUNG chứ không soi CHỖ ĐẶT, nên một tài
+    // khoản hợp lệ tạo được tài liệu students/<id_suy_từ_email_người_khác> mang
+    // email của chính nó. Tài liệu đó chiếm sẵn chỗ của nạn nhân; tới lượt nạn
+    // nhân đăng ký, lệnh ghi trở thành `update` trên tài liệu của người khác và
+    // bị canUpdateProfile() từ chối. Kết quả: nạn nhân vĩnh viễn không lưu được
+    // hồ sơ lên hệ thống, và làm hàng loạt chỉ tốn một vòng lặp. Quản trị viên
+    // vẫn được đặt tuỳ ý vì còn phải cấp bằng thủ công cho người chưa có tài
+    // khoản (xem AdminDashboardModal).
+    // `docId` truyền vào làm tham số chứ không đọc thẳng: biến bắt trong
+    // `match /students/{docId}` chỉ tồn tại bên trong khối đó, hàm khai báo ở
+    // tầng ngoài không nhìn thấy nó.
+    function canCreateProfile(docId) {
       return isAdmin()
         || (signedIn()
             && request.resource.data.email == myEmail()
-            && !('role' in request.resource.data));
+            && !('role' in request.resource.data)
+            && (docId == myDocId() || docId == request.auth.uid));
     }
 
     // Tương tự khi cập nhật: học viên sửa hồ sơ của mình nhưng không được động
@@ -152,7 +178,7 @@ service cloud.firestore {
     match /students/{docId} {
       allow get: if canGetProfile();
       allow list: if isAdmin();
-      allow create: if canCreateProfile();
+      allow create: if canCreateProfile(docId);
       allow update: if canUpdateProfile();
       allow delete: if isAdmin();
     }
@@ -160,8 +186,49 @@ service cloud.firestore {
     match /registrations/{docId} {
       allow get: if canGetProfile();
       allow list: if isAdmin();
-      allow create: if canCreateProfile();
+      allow create: if canCreateProfile(docId);
       allow update: if canUpdateProfile();
+      allow delete: if isAdmin();
+    }
+
+    // ---- /support_messages : hộp thư hỗ trợ của học viên ------------------
+    //
+    // Học viên gửi lời nhắn từ khung chat Pipi, quản trị viên đọc trong Hộp Thư
+    // Hỗ Trợ. Id tài liệu do Firestore tự sinh nên không đoán được — đó cũng là
+    // lý do cho phép chính chủ `get` mà không hở máy dò như ở /students.
+
+    match /support_messages/{msgId} {
+
+      // Quản trị viên đọc tất cả. Học viên chỉ đọc lại lời nhắn của chính mình,
+      // và chỉ khi tài liệu CÓ THẬT: bỏ điều kiện `resource != null` là mở lại
+      // đúng máy dò đã bịt ở canGetProfile().
+      allow get: if isAdmin()
+                 || (signedIn() && resource != null && resource.data.email == myEmail());
+      allow list: if isAdmin();
+
+      // Phải đăng nhập, và `email` bắt buộc khớp email trong ID token — không có
+      // điều kiện này thì ai cũng gửi được lời nhắn mạo danh học viên khác.
+      //
+      // Trạng thái ban đầu ép cứng là 'new': người gửi không được tự đánh dấu
+      // lời nhắn của mình là đã xử lý, vì như vậy nó sẽ không bao giờ nổi lên
+      // trong bộ đếm chưa đọc của quản trị viên.
+      //
+      // Giới hạn độ dài đặt Ở ĐÂY chứ không chỉ ở ô nhập: giới hạn trên giao
+      // diện chỉ ràng buộc người dùng ô nhập đó, còn lệnh ghi gửi thẳng thì
+      // không đi qua nó. 2000 phải khớp SUPPORT_MESSAGE_MAX trong src/firebase.js.
+      allow create: if signedIn()
+                    && request.resource.data.email == myEmail()
+                    && request.resource.data.status == 'new'
+                    && request.resource.data.message is string
+                    && request.resource.data.message.size() > 0
+                    && request.resource.data.message.size() <= 2000
+                    && request.resource.data.name is string
+                    && request.resource.data.name.size() <= 120;
+
+      // Đánh dấu đã đọc / đã xử lý và xoá: chỉ quản trị viên. Học viên không sửa
+      // lại được lời nhắn đã gửi — nội dung Ban Quản Trị đọc phải đúng nội dung
+      // lúc gửi.
+      allow update: if isAdmin();
       allow delete: if isAdmin();
     }
 

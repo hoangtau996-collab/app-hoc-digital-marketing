@@ -10,8 +10,41 @@ import {
   Monitor,
   Eye,
   Tag,
-  ShieldCheck
+  ShieldCheck,
+  Bell
 } from 'lucide-react';
+
+/**
+ * Chuông báo lời nhắn hỗ trợ. Chỉ dựng khi nơi gọi truyền `onOpen` — tức là chỉ
+ * quản trị viên thấy nó.
+ *
+ * Con số trên huy hiệu là số lời nhắn CHƯA ĐỌC, không phải tổng số: tổng thì
+ * đứng yên nên nhìn mãi cũng không biết có việc mới hay không.
+ */
+function SupportBell({ onOpen, unread = 0, compact = false }) {
+  const has = unread > 0;
+  return (
+    <button
+      onClick={onOpen}
+      title={has ? `${unread} lời nhắn hỗ trợ chưa đọc` : 'Hộp Thư Hỗ Trợ — chưa có lời nhắn mới'}
+      className={`relative flex items-center justify-center shrink-0 cursor-pointer transition border rounded-lg ${
+        compact ? 'w-8 h-8' : 'gap-1.5 px-3 py-1.5'
+      } ${
+        has
+          ? 'bg-rose-500/20 hover:bg-rose-500/30 border-rose-500/50 text-rose-200'
+          : 'bg-[#18243d] hover:border-emerald-500 border-emerald-900/50 text-slate-300'
+      }`}
+    >
+      <Bell className={`w-4 h-4 ${has ? 'text-rose-300' : 'text-slate-400'}`} />
+      {!compact && <span className="text-xs font-bold">Hộp Thư</span>}
+      {has && (
+        <span className="absolute -top-1.5 -right-1.5 min-w-[18px] h-[18px] px-1 rounded-full bg-rose-500 text-white text-[10px] font-black flex items-center justify-center border-2 border-[#0e1526] tabular-nums">
+          {unread > 99 ? '99+' : unread}
+        </span>
+      )}
+    </button>
+  );
+}
 
 export default function Header({
   // Bỏ `activeTab` và `newsFeed`: sau khi gỡ nhóm nút điều hướng trùng lặp thì
@@ -27,6 +60,10 @@ export default function Header({
   onOpenAuthModal,
   onOpenProfileModal,
   onOpenAdminModal,
+  // Chuông hộp thư hỗ trợ: truyền `null` cho tài khoản không phải quản trị viên
+  // thì nút không được dựng ra.
+  onOpenSupportInbox = null,
+  supportUnreadCount = 0,
   theme = 'system',
   setTheme = () => {},
   trafficStats,
@@ -160,6 +197,11 @@ export default function Header({
             </span>
           </button>
 
+          {/* Chuông Hộp Thư Hỗ Trợ (chỉ quản trị viên) */}
+          {onOpenSupportInbox && (
+            <SupportBell onOpen={onOpenSupportInbox} unread={supportUnreadCount} />
+          )}
+
           {/* Admin Master Dashboard Access Button */}
           {onOpenAdminModal && (
             <button
@@ -202,6 +244,12 @@ export default function Header({
 
         {/* Mobile Header Right Action Icons */}
         <div className="flex lg:hidden items-center gap-2">
+          {/* Chuông Hộp Thư Hỗ Trợ — quản trị viên hay trực bằng điện thoại,
+              nên nút này phải có ở cả bản màn nhỏ. */}
+          {onOpenSupportInbox && (
+            <SupportBell onOpen={onOpenSupportInbox} unread={supportUnreadCount} compact />
+          )}
+
           {/* Quick Theme toggle icon for mobile */}
           <button
             onClick={() => setTheme(theme === 'dark' ? 'light' : theme === 'light' ? 'system' : 'dark')}

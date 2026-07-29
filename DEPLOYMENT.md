@@ -124,6 +124,18 @@ npx firebase-tools deploy --only firestore:rules
 
 `firebase.json` trong kho mã đã trỏ sẵn tới `firestore.rules`. Không cần cài `firebase-tools` vào `package.json` vì đây là việc thỉnh thoảng mới chạy.
 
+#### Lần deploy sắp tới — hai thay đổi phải kiểm chứng ngay sau khi Publish
+
+Bản rules hiện tại trên máy chủ **chưa có** hai phần dưới đây. Chưa deploy thì Hộp Thư Hỗ Trợ hiện màn "Chưa đọc được hộp thư", và lỗ chiếm chỗ hồ sơ vẫn còn mở.
+
+1. **`support_messages`** — collection mới của Hộp Thư Hỗ Trợ. Kiểm chứng: đăng nhập bằng một tài khoản học viên, mở khung chat Pipi, bấm **Nhắn Ban Quản Trị**, gửi thử một dòng. Lời nhắn phải hiện trong Hộp Thư (chuông trên thanh đầu trang, chỉ quản trị viên thấy) kèm huy hiệu đỏ.
+
+2. **Ràng buộc id tài liệu khi tạo hồ sơ** (`canCreateProfile`). Phần này dùng `myEmail().replace('[^a-z0-9]', '_')` để dựng lại đúng id mà `recordStudentAccountToCloud()` sinh ra ở phía JavaScript. **Lệch một ký tự là học viên mới không đăng ký được.** Kiểm chứng bắt buộc: đăng ký một tài khoản thử với email có dấu chấm trong phần tên (ví dụ `kiem.tra.01@gmail.com`) và xác nhận:
+   - Form báo **"🎉 Đăng ký tài khoản học viên P MARCOM thành công"**, KHÔNG phải câu "hồ sơ CHƯA lưu lên hệ thống".
+   - Tài khoản đó xuất hiện trong Bảng Quản Trị.
+
+   Nếu hỏng, hoàn nguyên vế `&& (docId == myDocId() || docId == request.auth.uid)` trong `canCreateProfile()` rồi Publish lại — phần còn lại của rules không phụ thuộc vào nó.
+
 ### Mồi tài khoản quản trị đầu tiên
 
 Rules dùng collection `admins` làm sổ phân quyền: id tài liệu là email chữ thường, có bản ghi nghĩa là có quyền. Sổ rỗng thì **không ai** cấp quyền được cho ai — vì chỉ quản trị viên mới ghi được vào sổ quyền. Phải có bản ghi đầu tiên thì vòng lặp đó mới mở ra.

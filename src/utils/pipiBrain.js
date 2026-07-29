@@ -271,6 +271,24 @@ export function askPipi(question) {
     };
   }
 
+  // Xin gặp người thật.
+  //
+  // Đặt TRƯỚC các nhánh tra cứu vì đây là ý định dứt khoát: người đã nói "cần
+  // hỗ trợ" thì trả về một định nghĩa trong từ điển là trả lời lạc đề. Bù lại
+  // phải diễn đạt rõ mới nhận — chỉ bắt mỗi chữ "ho tro" sẽ nuốt luôn những câu
+  // như "chỉ số nào hỗ trợ đo hiệu quả".
+  if (/(can ho tro|xin ho tro|nho ho tro|ho tro voi|can giup do|gap nguoi that|gap admin|gap ban quan tri|gap giang vien|lien he|de lai loi nhan|gui loi nhan|nhan tin cho|bao loi|khieu nai|phan anh)/.test(q)) {
+    return {
+      kind: 'support',
+      title: 'Để mình chuyển lời tới Ban Quản Trị',
+      lines: [
+        'Việc này mình không tự giải quyết được, nhưng **Ban Quản Trị Học Viện** thì có.',
+        'Bấm nút bên dưới rồi viết nội dung cần hỗ trợ — lời nhắn sẽ hiện ngay trong hộp thư của Ban Quản Trị kèm tên, email và số điện thoại của bạn.',
+      ],
+      actions: [{ type: 'support', label: '✉️ Nhắn Ban Quản Trị' }],
+    };
+  }
+
   const nums = parseNumbers(raw);
   const asksDefinition = /(la gi|nghia la|dinh nghia|y nghia|hieu the nao|giai thich)/.test(q);
   const asksLesson = /(bai nao|bai hoc nao|chuyen de nao|hoc o dau|tim bai|noi ve|o dau noi)/.test(q);
@@ -359,9 +377,14 @@ export function askPipi(question) {
     lines: [
       `Không có mục nào trong khoá học khớp với "${raw}".`,
       'Thử hỏi theo cách khác, ví dụ: "ROAS là gì", "bài nào nói về nhân sự", "tính CPA chi phí 300 triệu 200 đơn".',
-      'Mình chỉ tra trong dữ liệu của khoá học nên không trả lời được câu ngoài phạm vi.',
+      'Mình chỉ tra trong dữ liệu của khoá học nên không trả lời được câu ngoài phạm vi — nhưng mình chuyển lời tới Ban Quản Trị được.',
     ],
-    actions: [{ type: 'search', query: raw, label: 'Tìm bằng bộ lọc khoá học' }],
+    // Đây là chỗ Pipi bí. Đưa lối gặp người thật ngay tại đây thay vì để học
+    // viên bỏ cuộc: câu hỏi không tra được mới đúng là câu cần người trả lời.
+    actions: [
+      { type: 'search', query: raw, label: 'Tìm bằng bộ lọc khoá học' },
+      { type: 'support', label: '✉️ Nhắn Ban Quản Trị' },
+    ],
   };
 }
 
@@ -371,6 +394,7 @@ export const PIPI_SUGGESTIONS = [
   'Bài nào nói về ngân sách?',
   'Tính CPA chi phí 300 triệu 200 đơn',
   'Pipi giúp được gì?',
+  'Mình cần hỗ trợ',
 ];
 
 export const PIPI_BENCHMARK_COUNT = Array.isArray(INDUSTRY_BENCHMARKS)

@@ -13,11 +13,12 @@ import UserProfileModal from './components/UserProfileModal';
 import DigitalGlossary from './components/DigitalGlossary';
 import FeatureMenuBar from './components/FeatureMenuBar';
 import AdminDashboardModal from './components/AdminDashboardModal';
+import SupportInboxModal from './components/SupportInboxModal';
 
-import { 
-  auth, 
-  onAuthStateChanged, 
-  saveUserProgressToCloud, 
+import {
+  auth,
+  onAuthStateChanged,
+  saveUserProgressToCloud,
   getUserProgressFromCloud,
   signOut,
   recordRealTrafficVisit,
@@ -29,7 +30,10 @@ import {
   listenToRealStats,
   recordStudentAccountToCloud,
   isAdminInCloud,
-  grantAdminInCloud
+  grantAdminInCloud,
+  listenToSupportMessages,
+  setSupportMessageStatus,
+  deleteSupportMessage
 } from './firebase';
 
 import StudyReminderModal from './components/StudyReminderModal';
@@ -617,6 +621,68 @@ export default function App() {
 
   const [migrationNotice, setMigrationNotice] = useState('');
 
+  /* ================= HỘP THƯ HỖ TRỢ ==================
+     Lời nhắn học viên gửi từ khung chat Pipi. Kênh theo dõi đặt Ở ĐÂY chứ không
+     đặt trong SupportInboxModal, vì chuông trên Header cũng cần đúng danh sách
+     này: mở hai kênh cho cùng một collection thì hai nơi sẽ lệch nhau đúng vào
+     lúc có tin mới — mà tin mới là lúc duy nhất bộ đếm có việc để làm. */
+
+  // `null` = CHƯA đọc được (chưa phải quản trị viên, mất mạng, thiếu quyền).
+  // `[]`   = đọc được và hộp thư đang rỗng.
+  // Không được gộp hai trạng thái: gộp thì lúc hỏng, giao diện báo "chưa có lời
+  // nhắn nào" trong khi có học viên đang chờ trả lời.
+  const [supportMessages, setSupportMessages] = useState(null);
+  const [isSupportInboxOpen, setIsSupportInboxOpen] = useState(false);
+
+  const supportUnreadCount = Array.isArray(supportMessages)
+    ? supportMessages.filter((m) => (m.status || 'new') === 'new').length
+    : 0;
+
+  useEffect(() => {
+    // Học viên thường không có quyền đọc collection này (xem firestore.rules),
+    // nên không mở kênh — mở ra chỉ tổ nhận về một lỗi permission-denied mỗi
+    // lần tải trang.
+    if (!isAdmin) {
+      setSupportMessages(null);
+      return;
+    }
+    const unsub = listenToSupportMessages((list) => setSupportMessages(list));
+    return () => { if (typeof unsub === 'function') unsub(); };
+  }, [isAdmin]);
+
+  // Số chưa đọc ở lượt trước, để phân biệt "có tin mới" với "vừa nạp xong lần
+  // đầu". Dùng ref chứ không dùng state: giá trị này chỉ để so sánh, đưa vào
+  // state sẽ kích hoạt thêm một lượt vẽ lại mà không đổi gì trên màn hình.
+  const prevSupportUnreadRef = useRef(null);
+
+  useEffect(() => {
+    if (!isAdmin || !Array.isArray(supportMessages)) {
+      prevSupportUnreadRef.current = null;
+      return;
+    }
+    const prev = prevSupportUnreadRef.current;
+    prevSupportUnreadRef.current = supportUnreadCount;
+
+    // Bỏ qua lượt nạp đầu tiên. Không bỏ thì cứ mở trang là quản trị viên lại
+    // bị báo về những lời nhắn cũ họ đã biết từ hôm trước.
+    if (prev === null || supportUnreadCount <= prev) return;
+    setMigrationNotice(
+      `✉️ Có ${supportUnreadCount - prev} lời nhắn hỗ trợ mới từ học viên. Mở Hộp Thư để xem.`
+    );
+  }, [isAdmin, supportMessages, supportUnreadCount]);
+
+  // Chặn ở tầng hành động chứ không chỉ ẩn nút — cùng lý do với Bảng Quản Trị.
+  const openSupportInbox = () => {
+    if (!isAdmin) {
+      setMigrationNotice('🔒 Hộp Thư Hỗ Trợ chỉ dành cho Ban Quản Trị Học Viện.');
+      return;
+    }
+    setIsSupportInboxOpen(true);
+  };
+
+  const handleSupportStatus = (id, status) =>
+    setSupportMessageStatus(id, status, currentUser?.email);
+
   const handlePassModule = (moduleId) => {
     if (!completedModules.includes(moduleId)) {
       setCompletedModules(prev => [...prev, moduleId]);
@@ -795,6 +861,8 @@ export default function App() {
         onOpenAuthModal={() => setIsAuthOpen(true)}
         onOpenProfileModal={() => setIsProfileOpen(true)}
         onOpenAdminModal={isAdmin ? openAdminDashboard : null}
+        onOpenSupportInbox={isAdmin ? openSupportInbox : null}
+        supportUnreadCount={supportUnreadCount}
         theme={theme}
         setTheme={setTheme}
         trafficStats={trafficStats}
@@ -956,6 +1024,11 @@ export default function App() {
         onSelectModule={handleProtectedSelectModule}
         setActiveTab={handleProtectedSelectTab}
         setSearchQuery={setSearchQuery}
+        currentUser={currentUser}
+        onRequireLogin={() => {
+          setMigrationNotice('🔒 Đăng nhập tài khoản học viên để gửi lời nhắn tới Ban Quản Trị.');
+          setIsAuthOpen(true);
+        }}
       />
 
       {/* Nhắc quay lại học khi lơ là quá 2 ngày */}
@@ -1047,6 +1120,19 @@ export default function App() {
         onIssueCertificateForStudent={handleAdminIssueCertificate}
         t={t}
       />
+
+      {/* Hộp Thư Hỗ Trợ — lời nhắn học viên gửi từ khung chat Pipi.
+          Dựng có điều kiện `isAdmin` chứ không chỉ dựa vào cờ isOpen: ẩn nút mà
+          vẫn để thành phần tồn tại thì chỉ cần gọi được hàm mở là vào được. */}
+      {isAdmin && (
+        <SupportInboxModal
+          isOpen={isSupportInboxOpen}
+          onClose={() => setIsSupportInboxOpen(false)}
+          messages={supportMessages}
+          onSetStatus={handleSupportStatus}
+          onDelete={deleteSupportMessage}
+        />
+      )}
 
       {/* Mobile Bottom Navigation Bar */}
       <MobileBottomNav

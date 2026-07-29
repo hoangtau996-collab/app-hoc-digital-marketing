@@ -1,7 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { createPortal } from 'react-dom';
-import { Send, Minus, Sparkles } from 'lucide-react';
+import { Send, Minus, Sparkles, Mail, LogIn, X } from 'lucide-react';
 import { askPipi, PIPI_SUGGESTIONS } from '../utils/pipiBrain';
+import { sendSupportMessage, SUPPORT_MESSAGE_MAX } from '../firebase';
 
 /**
  * Pipi - trợ lý tra cứu của khoá học, thay cho ô tìm kiếm cũ.
@@ -109,10 +110,26 @@ function RichLine({ text }) {
   );
 }
 
-export default function PipiChat({ onSelectModule, setActiveTab, setSearchQuery, variant = 'inline' }) {
+export default function PipiChat({
+  onSelectModule,
+  setActiveTab,
+  setSearchQuery,
+  variant = 'inline',
+  // Cần để biết gửi lời nhắn hỗ trợ dưới danh nghĩa ai. Không có phiên đăng
+  // nhập thì không gửi được: máy chủ đòi trường `email` khớp email trong ID
+  // token (xem firestore.rules, /support_messages).
+  currentUser = null,
+  onRequireLogin = null
+}) {
   const [isOpen, setIsOpen] = useState(false);
   const [showHello, setShowHello] = useState(false);
   const [input, setInput] = useState('');
+  // Khung soạn lời nhắn gửi Ban Quản Trị. Là một chế độ riêng của khung chat
+  // chứ không phải cửa sổ mới: học viên vẫn thấy đoạn hội thoại vừa rồi, nên
+  // không phải kể lại từ đầu vấn đề họ đang gặp.
+  const [isComposing, setIsComposing] = useState(false);
+  const [supportText, setSupportText] = useState('');
+  const [isSending, setIsSending] = useState(false);
   const [messages, setMessages] = useState([
     {
       from: 'pipi',
@@ -155,7 +172,31 @@ export default function PipiChat({ onSelectModule, setActiveTab, setSearchQuery,
     setInput('');
   };
 
+  /** Thêm một lượt trả lời của Pipi vào cuối hội thoại. */
+  const sayPipi = (title, lines) =>
+    setMessages((prev) => [...prev, { from: 'pipi', title, lines, actions: [] }]);
+
+  const openCompose = () => {
+    setIsOpen(true);
+    if (!currentUser) {
+      // Không tự bật khung soạn khi chưa đăng nhập: gõ xong cả đoạn rồi mới bị
+      // từ chối là mất công người viết.
+      sayPipi('Cần đăng nhập trước đã', [
+        'Ban Quản Trị phải biết **ai** đang cần hỗ trợ thì mới liên hệ lại được, nên lời nhắn phải gửi từ một tài khoản học viên.',
+        'Bạn đăng nhập rồi quay lại đây nhé — mình vẫn giữ nguyên đoạn hội thoại này.',
+      ]);
+      return;
+    }
+    setIsComposing(true);
+  };
+
   const runAction = (a) => {
+    // Lời nhắn hỗ trợ xử lý NGAY trong khung chat, nên không đóng khung như các
+    // hành động khác — các hành động kia đều điều hướng đi chỗ khác.
+    if (a.type === 'support') {
+      openCompose();
+      return;
+    }
     if (a.type === 'openModule' && onSelectModule) onSelectModule(a.id);
     if (a.type === 'openTab' && setActiveTab) setActiveTab(a.tab);
     if (a.type === 'search' && setSearchQuery) {
@@ -163,6 +204,44 @@ export default function PipiChat({ onSelectModule, setActiveTab, setSearchQuery,
       if (setActiveTab) setActiveTab('course');
     }
     setIsOpen(false);
+  };
+
+  const submitSupport = async (e) => {
+    e.preventDefault();
+    const body = supportText.trim();
+    if (!body || isSending) return;
+
+    setIsSending(true);
+    const result = await sendSupportMessage({
+      name: currentUser?.name,
+      email: currentUser?.email,
+      phone: currentUser?.phone,
+      message: body
+    });
+    setIsSending(false);
+
+    if (!result.ok) {
+      // Giữ nguyên nội dung đã gõ. Xoá đi khi gửi hỏng là bắt học viên viết lại
+      // từ đầu đúng lúc họ đang bực vì gặp trục trặc.
+      sayPipi('Chưa gửi được lời nhắn', [result.message]);
+      return;
+    }
+
+    setSupportText('');
+    setIsComposing(false);
+    setMessages((prev) => [
+      ...prev,
+      { from: 'user', title: body, lines: [], actions: [] },
+      {
+        from: 'pipi',
+        title: 'Đã gửi tới Ban Quản Trị ✅',
+        lines: [
+          'Lời nhắn của bạn đã nằm trong hộp thư của Ban Quản Trị Học Viện, kèm tên và thông tin liên hệ trong hồ sơ của bạn.',
+          'Ban Quản Trị sẽ liên hệ lại qua **email hoặc số điện thoại** bạn đã đăng ký. Trong lúc chờ, bạn cứ học tiếp nhé.',
+        ],
+        actions: []
+      }
+    ]);
   };
 
   const trigger =
@@ -232,9 +311,25 @@ export default function PipiChat({ onSelectModule, setActiveTab, setSearchQuery,
                   Trợ lý tra cứu của HỌC VIỆN P MARCOM
                 </div>
               </div>
+              {/* Lối gặp người thật, luôn nhìn thấy được. Chôn nó sau một câu
+                  hỏi mà Pipi phải trả lời trúng mới hiện ra thì đúng lúc học
+                  viên bí nhất lại là lúc không tìm thấy nút. */}
+              <button
+                onClick={openCompose}
+                className={`ml-auto h-8 px-2.5 rounded-lg flex items-center gap-1.5 text-[11px] font-bold transition cursor-pointer shrink-0 border ${
+                  isComposing
+                    ? 'bg-emerald-600 border-emerald-400 text-white'
+                    : 'bg-emerald-950 border-emerald-700/70 text-emerald-300 hover:border-emerald-400'
+                }`}
+                title="Để lại lời nhắn cho Ban Quản Trị Học Viện"
+              >
+                <Mail className="w-3.5 h-3.5" />
+                <span className="hidden sm:inline">Nhắn Ban Quản Trị</span>
+              </button>
+
               <button
                 onClick={() => setIsOpen(false)}
-                className="ml-auto w-8 h-8 rounded-lg text-slate-400 hover:bg-emerald-950 hover:text-emerald-300 flex items-center justify-center transition cursor-pointer shrink-0"
+                className="w-8 h-8 rounded-lg text-slate-400 hover:bg-emerald-950 hover:text-emerald-300 flex items-center justify-center transition cursor-pointer shrink-0"
                 title="Thu nhỏ"
               >
                 <Minus className="w-4 h-4" />
@@ -281,7 +376,7 @@ export default function PipiChat({ onSelectModule, setActiveTab, setSearchQuery,
             </div>
 
             {/* Gợi ý bấm nhanh */}
-            {messages.length <= 1 && (
+            {messages.length <= 1 && !isComposing && (
               <div className="px-4 pb-2 flex flex-wrap gap-1.5 shrink-0">
                 {PIPI_SUGGESTIONS.map((s) => (
                   <button
@@ -295,27 +390,93 @@ export default function PipiChat({ onSelectModule, setActiveTab, setSearchQuery,
               </div>
             )}
 
-            {/* Ô nhập */}
-            <form
-              onSubmit={(e) => { e.preventDefault(); send(input); }}
-              className="flex items-center gap-2 px-3 py-3 border-t border-emerald-900/50 shrink-0"
-            >
-              <input
-                autoFocus
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-                placeholder="Hỏi Pipi: ROAS là gì, tính CPA, tìm bài học..."
-                className="flex-1 bg-[#0e1526] border border-emerald-900/60 focus:border-emerald-400 rounded-xl px-3 py-2 text-xs text-white placeholder-slate-500 focus:outline-none transition"
-              />
-              <button
-                type="submit"
-                disabled={!input.trim()}
-                className="w-10 h-10 shrink-0 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 text-white flex items-center justify-center hover:brightness-110 transition cursor-pointer disabled:opacity-40"
-                title="Gửi"
+            {/* Lời mời đăng nhập, chỉ hiện cho khách chưa có tài khoản. */}
+            {!currentUser && onRequireLogin && (
+              <div className="px-3 pb-2 shrink-0">
+                <button
+                  onClick={() => { setIsOpen(false); onRequireLogin(); }}
+                  className="w-full flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-900 border border-emerald-800/70 hover:border-emerald-400 text-emerald-300 text-[11px] font-bold transition cursor-pointer"
+                >
+                  <LogIn className="w-3.5 h-3.5" />
+                  <span>Đăng nhập để nhắn được cho Ban Quản Trị</span>
+                </button>
+              </div>
+            )}
+
+            {isComposing ? (
+              /* Khung soạn lời nhắn gửi Ban Quản Trị */
+              <form
+                onSubmit={submitSupport}
+                className="px-3 py-3 border-t border-emerald-900/50 shrink-0 space-y-2"
               >
-                <Send className="w-4 h-4" />
-              </button>
-            </form>
+                <div className="flex items-center gap-1.5 text-[11px] font-black text-emerald-300">
+                  <Mail className="w-3.5 h-3.5" />
+                  <span>Lời nhắn gửi Ban Quản Trị</span>
+                  <button
+                    type="button"
+                    onClick={() => setIsComposing(false)}
+                    className="ml-auto w-6 h-6 rounded-lg text-slate-400 hover:bg-emerald-950 hover:text-emerald-300 flex items-center justify-center transition cursor-pointer"
+                    title="Huỷ, quay lại hỏi Pipi"
+                  >
+                    <X className="w-3.5 h-3.5" />
+                  </button>
+                </div>
+
+                {/* Nói rõ những gì được gửi kèm. Học viên có quyền biết lời nhắn
+                    mang theo thông tin gì của họ trước khi bấm gửi. */}
+                <p className="text-[10.5px] text-slate-400 leading-relaxed">
+                  Gửi kèm: <strong className="text-slate-200">{currentUser?.name || '—'}</strong>
+                  {currentUser?.email ? ` · ${currentUser.email}` : ''}
+                  {currentUser?.phone && currentUser.phone !== 'Chưa cập nhật' ? ` · ${currentUser.phone}` : ''}
+                </p>
+
+                <textarea
+                  autoFocus
+                  rows={3}
+                  value={supportText}
+                  maxLength={SUPPORT_MESSAGE_MAX}
+                  onChange={(e) => setSupportText(e.target.value)}
+                  placeholder="Bạn đang gặp vấn đề gì? Ví dụ: học xong chuyên đề 5 nhưng tiến độ không lưu, hoặc cần cấp lại bằng..."
+                  className="w-full bg-[#0e1526] border border-emerald-900/60 focus:border-emerald-400 rounded-xl px-3 py-2 text-xs text-white placeholder-slate-500 focus:outline-none transition resize-none"
+                />
+
+                <div className="flex items-center gap-2">
+                  <span className="text-[10px] text-slate-500 tabular-nums">
+                    {supportText.trim().length}/{SUPPORT_MESSAGE_MAX}
+                  </span>
+                  <button
+                    type="submit"
+                    disabled={!supportText.trim() || isSending}
+                    className="ml-auto px-4 py-2 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 text-slate-950 font-black text-[11px] flex items-center gap-1.5 hover:brightness-110 transition cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed"
+                  >
+                    <Send className="w-3.5 h-3.5" />
+                    <span>{isSending ? 'Đang gửi...' : 'Gửi lời nhắn'}</span>
+                  </button>
+                </div>
+              </form>
+            ) : (
+              /* Ô nhập */
+              <form
+                onSubmit={(e) => { e.preventDefault(); send(input); }}
+                className="flex items-center gap-2 px-3 py-3 border-t border-emerald-900/50 shrink-0"
+              >
+                <input
+                  autoFocus
+                  value={input}
+                  onChange={(e) => setInput(e.target.value)}
+                  placeholder="Hỏi Pipi: ROAS là gì, tính CPA, tìm bài học..."
+                  className="flex-1 bg-[#0e1526] border border-emerald-900/60 focus:border-emerald-400 rounded-xl px-3 py-2 text-xs text-white placeholder-slate-500 focus:outline-none transition"
+                />
+                <button
+                  type="submit"
+                  disabled={!input.trim()}
+                  className="w-10 h-10 shrink-0 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 text-white flex items-center justify-center hover:brightness-110 transition cursor-pointer disabled:opacity-40"
+                  title="Gửi"
+                >
+                  <Send className="w-4 h-4" />
+                </button>
+              </form>
+            )}
           </div>
         </div>,
         document.body
