@@ -35,6 +35,12 @@ Nguồn khẳng định quyền quản trị. Ranh giới thật do [firestore.r
 | `grantAdminInCloud(email, byEmail)` | string, string | `Promise<void>` | Cấp quyền. **Ném lỗi** nếu máy chủ từ chối |
 | `revokeAdminInCloud(email)` | string | `Promise<void>` | Thu hồi quyền. Máy chủ từ chối với tài khoản gốc |
 
+### Khảo sát nhu cầu học viên
+
+| Hàm | Tham số | Trả về | Tác dụng |
+|---|---|---|---|
+| `saveSurveyToCloud(email, survey)` | string, object | `Promise<{ok}>` | Ghi bản khảo sát vào **hồ sơ học viên** (`students` + `registrations`), không mở collection riêng. Email lấy từ ID token. Không `await` Firestore (ADR-002) |
+
 ### Hộp thư hỗ trợ (collection `support_messages`)
 
 Lời nhắn học viên gửi từ khung chat Pipi. Ranh giới thật do [firestore.rules](firestore.rules) áp đặt ở phía máy chủ.
@@ -131,11 +137,24 @@ Quy tắc phân quyền phía giao diện + **bộ nhớ đệm** của collecti
 | `shouldRemind({ hasUser, completedCount, totalModules, now })` | function | Quyết định có hiện popup không |
 | `resetStudyReminder()` | function | Xoá mốc thời gian, dùng cho kiểm thử |
 
+## `src/utils/surveyStorage.js`
+
+Bản khảo sát lưu tại máy, khoá `dmm_survey_<email>`. Đây là bản dùng để **quyết định có hỏi hay không** — đọc được ngay, không chờ mạng.
+
+| Tên | Kiểu | Ghi chú |
+|---|---|---|
+| `readSurvey(email)` | function | `{ answers, completedAt, skips, version }`, luôn trả về object hợp lệ |
+| `writeSurvey(email, record)` | function | Ghi đè bản tại máy |
+| `hasCompletedSurvey(email)` | function | Đã trả lời xong cả 5 câu chưa |
+| `recordSkip(email)` | function | Ghi nhận một lần bấm "Bỏ qua", trả về tổng số lần |
+| `mergeCloudSurvey(email, cloudSurvey)` | function | Kéo bản đám mây về máy. **Chỉ một chiều**: bản đám mây đã hoàn tất đè lên bản tại máy còn dở, không bao giờ ngược lại |
+
 ## Dữ liệu tĩnh
 
 | Module | Xuất khẩu |
 |---|---|
 | `data/courseData.js` | `COURSE_MODULES` |
+| `data/surveyQuestions.js` | `SURVEY_QUESTIONS`, `SURVEY_TOTAL`, `SURVEY_VERSION`, `otherKeyOf()`, `isAnswered()`, `isSurveyComplete()`, `answeredCount()`, `answerLabel()` — nguồn khẳng định duy nhất của bộ câu hỏi khảo sát |
 | `data/lessonVisuals.js` | `LESSON_VISUALS` |
 | `data/glossaryData.js` | `GLOSSARY_CATEGORIES`, `GLOSSARY_ITEMS` |
 | `data/newsData.js` | `INITIAL_NEWS_ITEMS`, `LIVE_NEWS_SIMULATOR_POOL` |

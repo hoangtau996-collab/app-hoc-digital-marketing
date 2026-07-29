@@ -20,6 +20,13 @@ import {
   fetchStudentsFromCloudOnly
 } from '../firebase';
 import { markStudentDeleted, filterDeleted, getDeletedStudents } from '../utils/deletedStudents';
+import {
+  SURVEY_QUESTIONS,
+  SURVEY_TOTAL,
+  answerLabel,
+  answeredCount,
+  isSurveyComplete
+} from '../data/surveyQuestions';
 import { CERTIFICATE_COURSES, getCertificateCourse } from '../utils/certificateExport';
 import { COURSE_MODULES } from '../data/courseData';
 import { TRADE_MODULES } from '../data/tradeCourseData';
@@ -59,8 +66,18 @@ import {
   Crown,
   KeyRound,
   UserMinus,
-  Lock
+  Lock,
+  ClipboardList
 } from 'lucide-react';
+
+/** Bản khảo sát của một dòng học viên. Hồ sơ cũ chưa có trường này. */
+const surveyOf = (std) => (std && typeof std.survey === 'object' ? std.survey : null);
+
+/** Học viên này đã trả lời xong khảo sát chưa. */
+const hasSurvey = (std) => {
+  const s = surveyOf(std);
+  return Boolean(s && s.completedAt && isSurveyComplete(s.answers));
+};
 
 /**
  * Tài khoản Quản Trị Tối Cao phải LUÔN có mặt trong bảng.
@@ -155,6 +172,11 @@ export default function AdminDashboardModal({
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedIndustry, setSelectedIndustry] = useState('ALL');
   const [selectedRole, setSelectedRole] = useState('ALL'); // 'ALL' | 'ADMIN' | 'STUDENT'
+  const [selectedSurvey, setSelectedSurvey] = useState('ALL'); // 'ALL' | 'DONE' | 'MISSING'
+  // Học viên đang xem chi tiết khảo sát. Một khung riêng chứ không nhồi 5 câu
+  // trả lời vào bảng: mỗi câu là một dòng dài, dựng thẳng vào bảng sẽ đẩy các
+  // cột thao tác ra khỏi tầm nhìn.
+  const [surveyDetailStudent, setSurveyDetailStudent] = useState(null);
 
   // Sổ phân quyền đọc từ Firestore. `null` = chưa đọc được (mất mạng hoặc chưa
   // deploy rules) -> rơi về bộ nhớ đệm tại máy, và hiện cảnh báo cho quản trị
@@ -405,7 +427,11 @@ export default function AdminDashboardModal({
       selectedRole === 'ALL' ||
       (selectedRole === 'ADMIN' ? role !== 'student' : role === 'student');
 
-    return matchesSearch && matchesIndustry && matchesRole;
+    const matchesSurvey =
+      selectedSurvey === 'ALL' ||
+      (selectedSurvey === 'DONE' ? hasSurvey(std) : !hasSurvey(std));
+
+    return matchesSearch && matchesIndustry && matchesRole && matchesSurvey;
   });
 
   // Quyền cao nhất đứng đầu bảng, trong cùng một nhóm thì giữ nguyên thứ tự gốc.
@@ -440,21 +466,54 @@ export default function AdminDashboardModal({
   // Export CSV Report Function (UTF-8 BOM Encoded for Excel compatibility)
   const handleExportCSV = () => {
     try {
-      const headers = ["STT", "Họ và Tên Học Viên", "Số Điện Thoại (Zalo)", "Email", "Phân Quyền", "Ngành Nghề Kinh Doanh", "Tiến Độ (Bài đã đạt / 11)", "Trạng Thái Tốt Nghiệp", "Ngày Đăng Ký"];
+      // Bọc MỌI ô trong dấu nháy kép và nhân đôi nháy có sẵn bên trong, chứ
+      // không chỉ bọc những ô "trông có vẻ nguy hiểm". Câu trả lời khảo sát có
+      // dấu phẩy sẵn trong nhãn (ví dụ "Facebook, Google, TikTok"), còn ô "Khác"
+      // thì học viên gõ gì cũng được — sót một ô là cả dòng lệch cột và bảng
+      // báo cáo thành vô dụng mà nhìn qua vẫn thấy bình thường.
+      const cell = (v) => `"${String(v ?? '').replace(/"/g, '""')}"`;
 
-      const rows = orderedStudents.map((std, idx) => [
-        idx + 1,
-        `"${(std.name || '').replace(/"/g, '""')}"`,
-        `"${std.phone || ''}"`,
-        `"${std.email}"`,
-        `"${ROLE_LABEL[getAccountRole(std, adminRoster)]}"`,
-        `"${(std.industry || 'Kinh doanh').replace(/"/g, '""')}"`,
-        `"${(std.completedModules || []).length}/11"`,
-        (std.completedModules || []).length >= 11 ? "Đã Tốt Nghiệp" : "Đang Học",
-        `"${std.createdAt || new Date().toLocaleDateString('vi-VN')}"`
-      ]);
+      // Tiêu đề cột khảo sát đọc từ chính bộ câu hỏi, không ghi tay: thêm hay
+      // sửa câu hỏi thì tệp xuất tự khớp theo, không phải nhớ sửa hai nơi.
+      const headers = [
+        "STT",
+        "Họ và Tên Học Viên",
+        "Số Điện Thoại (Zalo)",
+        "Email",
+        "Phân Quyền",
+        "Ngành Nghề Kinh Doanh",
+        `Tiến Độ Khoá Chính (/${COURSE_MODULES.length})`,
+        `Tiến Độ Khoá Trade (/${TRADE_MODULES.length})`,
+        "Trạng Thái Tốt Nghiệp",
+        "Ngày Đăng Ký",
+        "Đã Làm Khảo Sát",
+        ...SURVEY_QUESTIONS.map((q) => q.csvLabel),
+        "Số Lần Bỏ Qua Khảo Sát",
+        "Thời Điểm Làm Khảo Sát"
+      ];
 
-      const csvContent = "\uFEFF" + [headers.join(","), ...rows.map(r => r.join(","))].join("\n");
+      const rows = orderedStudents.map((std, idx) => {
+        const survey = surveyOf(std);
+        const answers = survey?.answers || {};
+        return [
+          idx + 1,
+          cell(std.name),
+          cell(std.phone),
+          cell(std.email),
+          cell(ROLE_LABEL[getAccountRole(std, adminRoster)]),
+          cell(std.industry || 'Kinh doanh'),
+          cell(`${(std.completedModules || []).length}/${COURSE_MODULES.length}`),
+          cell(`${(std.completedTradeModules || []).length}/${TRADE_MODULES.length}`),
+          cell((std.completedModules || []).length >= COURSE_MODULES.length ? "Đã Tốt Nghiệp" : "Đang Học"),
+          cell(std.createdAt || new Date().toLocaleDateString('vi-VN')),
+          cell(hasSurvey(std) ? 'Rồi' : `Chưa (${answeredCount(answers)}/${SURVEY_TOTAL} câu)`),
+          ...SURVEY_QUESTIONS.map((q) => cell(answerLabel(q.id, answers))),
+          cell(Number.isFinite(survey?.skips) ? survey.skips : 0),
+          cell(survey?.completedAt || '')
+        ];
+      });
+
+      const csvContent = "\uFEFF" + [headers.map(cell).join(","), ...rows.map(r => r.join(","))].join("\n");
       const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
       const url = URL.createObjectURL(blob);
       
@@ -466,8 +525,12 @@ export default function AdminDashboardModal({
       link.click();
       document.body.removeChild(link);
 
-      setNotice('✅ Đã xuất báo cáo CSV thành công!');
-      setTimeout(() => setNotice(''), 4000);
+      const withSurvey = orderedStudents.filter(hasSurvey).length;
+      setNotice(
+        `✅ Đã tải về ${orderedStudents.length} học viên · ${headers.length} cột · ` +
+        `${withSurvey} bản khảo sát đầy đủ. Mở bằng Excel hoặc Google Sheets.`
+      );
+      setTimeout(() => setNotice(''), 7000);
     } catch (e) {
       alert("Lỗi xuất file CSV: " + e.message);
     }
@@ -888,6 +951,21 @@ export default function AdminDashboardModal({
               </select>
             </div>
 
+            {/* Lọc theo khảo sát — đây là lối vào việc phân tệp: xem nhóm nào đã
+                khai nhu cầu, và ai còn thiếu để nhắc. */}
+            <div className="relative shrink-0">
+              <select
+                value={selectedSurvey}
+                onChange={(e) => setSelectedSurvey(e.target.value)}
+                className="bg-slate-900/80 border border-emerald-900/60 rounded-xl px-3 py-1.5 text-xs text-white focus:outline-none cursor-pointer"
+                title="Lọc theo tình trạng khảo sát nhu cầu"
+              >
+                <option value="ALL">Tất cả Khảo Sát</option>
+                <option value="DONE">Đã làm khảo sát ({students.filter(hasSurvey).length})</option>
+                <option value="MISSING">Chưa làm khảo sát ({students.filter((s) => !hasSurvey(s)).length})</option>
+              </select>
+            </div>
+
             {/* Industry Filter Dropdown */}
             <div className="relative shrink-0">
               <select
@@ -1068,6 +1146,7 @@ export default function AdminDashboardModal({
                 <th className="py-2.5 px-3">Phân Quyền</th>
                 <th className="py-2.5 px-3">Ngành Nghề</th>
                 <th className="py-2.5 px-3 text-center">Tiến Độ (11/11)</th>
+                <th className="py-2.5 px-3 text-center">Khảo Sát</th>
                 <th className="py-2.5 px-3">Ngày Đăng Ký</th>
                 <th className="py-2.5 px-3 text-center">Thao Tác</th>
               </tr>
@@ -1112,6 +1191,32 @@ export default function AdminDashboardModal({
                         }`}>
                           {isGraduate ? '🎓 Tốt nghiệp (11/11)' : `${completedCount}/11 Chuyên đề`}
                         </span>
+                      </td>
+                      {/* Khảo sát: bấm vào là mở đủ 5 câu trả lời. Bản chưa đầy
+                          đủ vẫn xem được — dở dang cũng là dữ liệu, và biết học
+                          viên dừng ở câu nào còn nói lên điều gì đó. */}
+                      <td className="py-2 px-3 text-center">
+                        {(() => {
+                          const done = hasSurvey(std);
+                          const answered = answeredCount(surveyOf(std)?.answers);
+                          if (!done && answered === 0) {
+                            return <span className="text-[10px] text-slate-500 font-semibold">— Chưa làm</span>;
+                          }
+                          return (
+                            <button
+                              onClick={() => setSurveyDetailStudent(std)}
+                              className={`px-2 py-0.5 rounded-full text-[10px] font-extrabold border transition cursor-pointer inline-flex items-center gap-1 ${
+                                done
+                                  ? 'bg-teal-500/20 text-teal-300 border-teal-500/40 hover:brightness-125'
+                                  : 'bg-orange-500/20 text-orange-300 border-orange-500/40 hover:brightness-125'
+                              }`}
+                              title="Xem câu trả lời khảo sát của học viên này"
+                            >
+                              <ClipboardList className="w-3 h-3" />
+                              {done ? 'Xem trả lời' : `Dở dang ${answered}/${SURVEY_TOTAL}`}
+                            </button>
+                          );
+                        })()}
                       </td>
                       <td className="py-2 px-3 font-mono text-slate-400 text-[11px]">{std.createdAt || '2026-07-26'}</td>
                       <td className="py-2 px-3 text-center">
@@ -1188,7 +1293,7 @@ export default function AdminDashboardModal({
                 })
               ) : (
                 <tr>
-                  <td colSpan="9" className="p-8 text-center text-slate-400 text-xs">
+                  <td colSpan="10" className="p-8 text-center text-slate-400 text-xs">
                     Không tìm thấy tài khoản nào phù hợp với bộ lọc.
                   </td>
                 </tr>
@@ -1482,6 +1587,94 @@ export default function AdminDashboardModal({
 
                 </div>
               )}
+
+            </div>
+          </div>
+        )}
+
+        {/* ===== CHI TIẾT KHẢO SÁT CỦA MỘT HỌC VIÊN ===== */}
+        {surveyDetailStudent && (
+          <div className="absolute inset-0 z-30 bg-slate-950/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 overflow-y-auto">
+            <div className="max-w-2xl mx-auto space-y-4">
+
+              <div className="flex items-start justify-between gap-4 pb-3 border-b border-emerald-900/60">
+                <div className="min-w-0">
+                  <span className="px-2 py-0.5 rounded bg-teal-950 text-teal-300 text-[10px] font-black border border-teal-700 uppercase tracking-wider">
+                    Khảo sát nhu cầu
+                  </span>
+                  <h3 className="text-base sm:text-lg font-black text-white mt-1 truncate">
+                    {surveyDetailStudent.name}
+                  </h3>
+                  <p className="text-[11px] text-slate-400 font-mono truncate">
+                    {surveyDetailStudent.email}
+                    {surveyDetailStudent.phone ? ` · ${surveyDetailStudent.phone}` : ''}
+                  </p>
+                </div>
+                <button
+                  onClick={() => setSurveyDetailStudent(null)}
+                  className="w-8 h-8 rounded-full bg-slate-900 border border-emerald-900 text-slate-400 hover:text-white flex items-center justify-center transition cursor-pointer shrink-0"
+                  title="Đóng"
+                >
+                  <X className="w-4 h-4" />
+                </button>
+              </div>
+
+              {(() => {
+                const survey = surveyOf(surveyDetailStudent);
+                const answers = survey?.answers || {};
+                return (
+                  <>
+                    <div className="flex flex-wrap items-center gap-2 text-[11px]">
+                      <span className={`px-2.5 py-1 rounded-lg font-black border ${
+                        hasSurvey(surveyDetailStudent)
+                          ? 'bg-teal-500/20 text-teal-300 border-teal-500/40'
+                          : 'bg-orange-500/20 text-orange-300 border-orange-500/40'
+                      }`}>
+                        {answeredCount(answers)}/{SURVEY_TOTAL} câu đã trả lời
+                      </span>
+                      {survey?.completedAt && (
+                        <span className="text-slate-400">
+                          Hoàn tất: {new Date(survey.completedAt).toLocaleString('vi-VN', { hour12: false })}
+                        </span>
+                      )}
+                      {Number.isFinite(survey?.skips) && survey.skips > 0 && (
+                        <span className="text-amber-400 font-semibold">
+                          Đã bỏ qua {survey.skips} lần trước khi trả lời
+                        </span>
+                      )}
+                    </div>
+
+                    <div className="space-y-2.5">
+                      {SURVEY_QUESTIONS.map((q, i) => {
+                        const label = answerLabel(q.id, answers);
+                        return (
+                          <div
+                            key={q.id}
+                            className="rounded-2xl border border-emerald-900/60 bg-slate-900/60 p-3.5 space-y-1.5"
+                          >
+                            <p className="text-[11px] text-slate-400 font-semibold leading-snug">
+                              {i + 1}. {q.title}
+                            </p>
+                            {label ? (
+                              <p className="text-xs sm:text-sm font-bold text-emerald-300 leading-relaxed">
+                                {label}
+                              </p>
+                            ) : (
+                              <p className="text-xs text-slate-500 italic">Chưa trả lời</p>
+                            )}
+                          </div>
+                        );
+                      })}
+                    </div>
+
+                    <p className="text-[10.5px] text-slate-500 leading-relaxed pt-1">
+                      Dữ liệu này dùng để phân tệp học viên, phục vụ thiết kế khoá nâng cao "đo ni đóng giày"
+                      cho từng nhóm (chuyên viên, quản lý, chủ doanh nghiệp). Tải toàn bộ bằng nút
+                      <strong className="text-slate-300"> Xuất CSV </strong> ở thanh công cụ.
+                    </p>
+                  </>
+                );
+              })()}
 
             </div>
           </div>

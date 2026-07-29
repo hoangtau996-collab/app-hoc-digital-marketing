@@ -14,6 +14,15 @@ import DigitalGlossary from './components/DigitalGlossary';
 import FeatureMenuBar from './components/FeatureMenuBar';
 import AdminDashboardModal from './components/AdminDashboardModal';
 import SupportInboxModal from './components/SupportInboxModal';
+import SurveyModal from './components/SurveyModal';
+import { SURVEY_VERSION } from './data/surveyQuestions';
+import {
+  hasCompletedSurvey,
+  writeSurvey,
+  recordSkip,
+  readSurvey,
+  mergeCloudSurvey
+} from './utils/surveyStorage';
 
 import {
   auth,
@@ -33,7 +42,8 @@ import {
   grantAdminInCloud,
   listenToSupportMessages,
   setSupportMessageStatus,
-  deleteSupportMessage
+  deleteSupportMessage,
+  saveSurveyToCloud
 } from './firebase';
 
 import StudyReminderModal from './components/StudyReminderModal';
@@ -334,6 +344,17 @@ export default function App() {
           setCompletedTradeModules((prev) =>
             Array.from(new Set([...(Array.isArray(prev) ? prev : []), ...cloudProfile.completedTradeModules]))
           );
+        }
+
+        // Kéo bản khảo sát từ đám mây về máy này. Cần bước này vì trạng thái
+        // "đã làm khảo sát chưa" đọc từ localStorage: học viên đã trả lời trên
+        // điện thoại mà đăng nhập bằng máy tính thì máy tính không biết, và sẽ
+        // hỏi lại từ đầu. `mergeCloudSurvey` chỉ ghi đè theo một chiều — bản
+        // đám mây đã hoàn tất đè lên bản tại máy còn dở, không bao giờ ngược
+        // lại.
+        if (cloudProfile && cloudProfile.survey) {
+          mergeCloudSurvey(user.email, cloudProfile.survey);
+          setSurveyRevision((n) => n + 1);
         }
       }
     });
@@ -683,6 +704,161 @@ export default function App() {
   const handleSupportStatus = (id, status) =>
     setSupportMessageStatus(id, status, currentUser?.email);
 
+  /* ================= KHẢO SÁT NHU CẦU HỌC VIÊN ==================
+     Lịch xuất hiện, theo đúng thứ tự leo thang:
+       1. Ngay sau khi đăng ký xong    -> bỏ qua được
+       2. Mỗi lần đăng nhập sau đó     -> bỏ qua được
+       3. Lúc bấm nhận Bằng Chứng Nhận -> KHÔNG bỏ qua được
+
+     Bước 3 là chốt chặn thật. Hai bước đầu chỉ là lời mời; đặt cả ba đều mời
+     thì bộ dữ liệu sẽ thủng đúng ở nhóm học viên đi tới cuối khoá — nhóm đáng
+     phân tệp nhất. */
+
+  const [isSurveyOpen, setIsSurveyOpen] = useState(false);
+  const [isSurveyMandatory, setIsSurveyMandatory] = useState(false);
+
+  // Tấm bằng đang chờ mở sau khi làm xong khảo sát: 'main' | 'trade' | null.
+  // Cần nhớ lại vì học viên bấm nút bằng nào thì phải mở đúng bằng đó, chứ
+  // không phải cứ xong khảo sát là mở bằng khoá chính.
+  const [certAfterSurvey, setCertAfterSurvey] = useState(null);
+
+  // Đếm số lần bản khảo sát tại máy thay đổi, để các giá trị suy ra từ nó được
+  // tính lại. `hasCompletedSurvey()` đọc localStorage — thứ React không theo
+  // dõi được — nên thiếu mốc này thì giao diện vẫn giữ nguyên trạng thái cũ sau
+  // khi học viên vừa bấm xong câu cuối.
+  const [surveyRevision, setSurveyRevision] = useState(0);
+
+  const surveyDone = React.useMemo(
+    () => (currentUser?.email ? hasCompletedSurvey(currentUser.email) : true),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [currentUser?.email, surveyRevision]
+  );
+
+  // Quản trị viên KHÔNG bị hỏi: khảo sát này để phân tệp học viên, còn Ban Quản
+  // Trị thì đã biết mình là ai. Chặn họ chỉ tổ làm bẩn dữ liệu phân tệp.
+  const shouldAskSurvey = Boolean(currentUser) && !isAdmin && !surveyDone;
+
+  const openSurvey = (mandatory = false) => {
+    setIsSurveyMandatory(mandatory);
+    setIsSurveyOpen(true);
+  };
+
+  // Phần đã trả lời ở lần trước, để bảng khảo sát mở lại đúng câu còn thiếu.
+  const savedSurveyAnswers = React.useMemo(
+    () => (currentUser?.email ? readSurvey(currentUser.email).answers : {}),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [currentUser?.email, surveyRevision]
+  );
+
+  const handleSurveySubmit = (record) => {
+    const email = currentUser?.email;
+    if (!email) {
+      // Không có email thì không lưu được, nhưng vẫn phải đóng bảng — để mở
+      // thì học viên kẹt lại với một nút "Đang lưu..." không bao giờ xong.
+      setIsSurveyOpen(false);
+      setIsSurveyMandatory(false);
+      setCertAfterSurvey(null);
+      return;
+    }
+
+    const previous = readSurvey(email);
+    const saved = { ...record, skips: previous.skips };
+
+    // Ghi tại máy TRƯỚC, rồi mới bắn lên Cloud. Máy chủ hỏng thì học viên vẫn
+    // không bị hỏi lại — đó là thứ họ cảm nhận được ngay, còn báo cáo của Ban
+    // Quản Trị thì chờ được tới lần đồng bộ sau.
+    writeSurvey(email, saved);
+    setSurveyRevision((n) => n + 1);
+    saveSurveyToCloud(email, saved);
+
+    setIsSurveyOpen(false);
+    setIsSurveyMandatory(false);
+
+    // Mở đúng tấm bằng đang chờ, nếu khảo sát này bật lên từ bước cấp bằng.
+    if (certAfterSurvey === 'main') setIsCertOpen(true);
+    if (certAfterSurvey === 'trade') setIsTradeCertOpen(true);
+    setCertAfterSurvey(null);
+
+    setMigrationNotice('🎉 Cảm ơn bạn! Học Viện sẽ dùng câu trả lời này để thiết kế khoá nâng cao phù hợp.');
+    setTimeout(() => setMigrationNotice(''), 6000);
+  };
+
+  /**
+   * Bỏ qua khảo sát — nhưng KHÔNG vứt phần đã bấm.
+   *
+   * Trả lời dở dang vẫn là dữ liệu: biết học viên dừng ở câu nào cũng nói lên
+   * điều gì đó, và giữ lại thì lần sau họ mở ra là tiếp đúng câu còn thiếu chứ
+   * không phải bấm lại từ đầu — thứ khiến người ta bỏ qua thêm một lần nữa.
+   *
+   * Ghi KHÔNG kèm `completedAt`, nên bản ghi này không bao giờ bị nhầm là đã
+   * hoàn tất: cả `hasCompletedSurvey()` lẫn cột trong Bảng Quản Trị đều đòi có
+   * `completedAt` VÀ đủ cả 5 câu.
+   */
+  const handleSurveySkip = (partialAnswers) => {
+    const email = currentUser?.email;
+    if (email) {
+      const skips = recordSkip(email);
+      const answers = partialAnswers && typeof partialAnswers === 'object' ? partialAnswers : {};
+      if (Object.keys(answers).length > 0) {
+        const partial = { answers, completedAt: '', skips, version: SURVEY_VERSION };
+        writeSurvey(email, partial);
+        saveSurveyToCloud(email, partial);
+      }
+      setSurveyRevision((n) => n + 1);
+    }
+    setIsSurveyOpen(false);
+    setCertAfterSurvey(null);
+  };
+
+  // Tài khoản đã được mời làm khảo sát trong phiên này.
+  //
+  // Thiếu mốc này thì bấm "Bỏ qua" xong bảng khảo sát bật lại ngay lập tức:
+  // effect bên dưới thấy `shouldAskSurvey` vẫn đúng nên mời tiếp, thành một
+  // vòng lặp không thoát ra được — đúng nghĩa đen là không bỏ qua nổi.
+  const surveyAskedForRef = useRef('');
+
+  useEffect(() => {
+    if (!shouldAskSurvey) return;
+    const email = currentUser?.email || '';
+    if (surveyAskedForRef.current === email) return;
+    surveyAskedForRef.current = email;
+
+    // Hoãn 900ms chứ không bật ngay: `resolveAdminRole()` còn đang hỏi máy chủ
+    // xem tài khoản này có phải quản trị viên không, mà quản trị viên thì không
+    // bị hỏi. Bật ngay sẽ loé bảng khảo sát trên màn hình của họ rồi tự tắt —
+    // trông như lỗi.
+    const timer = setTimeout(() => {
+      setIsSurveyMandatory(false);
+      setIsSurveyOpen(true);
+    }, 900);
+    return () => clearTimeout(timer);
+  }, [shouldAskSurvey, currentUser?.email]);
+
+  /**
+   * Cổng vào Bằng Chứng Nhận.
+   *
+   * Mọi lối mở bằng của học viên đều đi qua đây — Header, thanh menu, thanh
+   * dưới màn nhỏ, và băng mời trong khoá Trade. Gom về một chỗ vì chặn ở bốn
+   * nơi riêng lẻ thì chỉ cần bỏ sót một nơi là cả chốt chặn vô nghĩa.
+   *
+   * Không áp cho quản trị viên cấp bằng thủ công cho người khác: đường đó đi
+   * qua `handleAdminIssueCertificate`, không qua hàm này.
+   */
+  const requestCertificate = (course = 'main') => {
+    if (!currentUser) {
+      setMigrationNotice('🔒 Vui lòng Đăng Ký / Đăng Nhập để xem bằng cấp!');
+      setIsAuthOpen(true);
+      return;
+    }
+    if (shouldAskSurvey) {
+      setCertAfterSurvey(course);
+      openSurvey(true);
+      return;
+    }
+    if (course === 'trade') setIsTradeCertOpen(true);
+    else setIsCertOpen(true);
+  };
+
   const handlePassModule = (moduleId) => {
     if (!completedModules.includes(moduleId)) {
       setCompletedModules(prev => [...prev, moduleId]);
@@ -847,14 +1023,7 @@ export default function App() {
         setActiveTab={handleProtectedSelectTab}
         passedCount={completedModules.length}
         totalModules={COURSE_MODULES.length}
-        onOpenCertificate={() => {
-          if (!currentUser) {
-            setMigrationNotice('🔒 Vui lòng Đăng Ký / Đăng Nhập để xem bằng cấp!');
-            setIsAuthOpen(true);
-          } else {
-            setIsCertOpen(true);
-          }
-        }}
+        onOpenCertificate={() => requestCertificate('main')}
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
         currentUser={currentUser}
@@ -876,14 +1045,7 @@ export default function App() {
         activeTab={activeTab}
         setActiveTab={handleProtectedSelectTab}
         onSelectModule={handleProtectedSelectModule}
-        onOpenCertificate={() => {
-          if (!currentUser) {
-            setMigrationNotice('🔒 Vui lòng Đăng Ký / Đăng Nhập để xem bằng cấp!');
-            setIsAuthOpen(true);
-          } else {
-            setIsCertOpen(true);
-          }
-        }}
+        onOpenCertificate={() => requestCertificate('main')}
         passedCount={completedModules.length}
         totalModules={COURSE_MODULES.length}
         isTradeCourseUnlocked={isTradeCourseUnlocked}
@@ -987,7 +1149,7 @@ export default function App() {
                     setSelectedTradeModuleId(id);
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                   }}
-                  onOpenCertificate={() => setIsTradeCertOpen(true)}
+                  onOpenCertificate={() => requestCertificate('trade')}
                   onGoToMainCourse={() => {
                     setActiveTab('course');
                     setSelectedModuleId(COURSE_MODULES.find((m) => !completedModules.includes(m.id))?.id ?? null);
@@ -1121,6 +1283,21 @@ export default function App() {
         t={t}
       />
 
+      {/* Khảo sát nhu cầu học viên.
+          Chỉ dựng khi thật sự còn phải hỏi — dựng sẵn rồi ẩn bằng cờ isOpen thì
+          một lệnh gọi lạc là bảng bật lên với cả người đã trả lời xong. */}
+      {shouldAskSurvey && (
+        <SurveyModal
+          isOpen={isSurveyOpen}
+          mandatory={isSurveyMandatory}
+          studentName={currentUser?.name || ''}
+          initialAnswers={savedSurveyAnswers}
+          onClose={() => setIsSurveyOpen(false)}
+          onSubmit={handleSurveySubmit}
+          onSkip={handleSurveySkip}
+        />
+      )}
+
       {/* Hộp Thư Hỗ Trợ — lời nhắn học viên gửi từ khung chat Pipi.
           Dựng có điều kiện `isAdmin` chứ không chỉ dựa vào cờ isOpen: ẩn nút mà
           vẫn để thành phần tồn tại thì chỉ cần gọi được hàm mở là vào được. */}
@@ -1139,7 +1316,7 @@ export default function App() {
         activeTab={activeTab}
         setActiveTab={setActiveTab}
         isTradeCourseUnlocked={isTradeCourseUnlocked}
-        onOpenCertificate={() => setIsCertOpen(true)}
+        onOpenCertificate={() => requestCertificate('main')}
         currentUser={currentUser}
         onOpenAuthModal={() => setIsAuthOpen(true)}
         onOpenProfileModal={() => setIsProfileOpen(true)}

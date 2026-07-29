@@ -23,6 +23,22 @@ Id tài liệu: `studentData.id` nếu có, hoặc email đã chuẩn hoá (`[^a
 | `role` | string | `'admin'` hoặc vắng mặt. `recordStudentAccountToCloud()` **chỉ ghi khi bằng `'admin'`** — ghi cả `'student'` sẽ khiến máy chưa biết mình vừa được nâng quyền xoá mất quyền vừa cấp. Hạ quyền đi bằng `setStudentRoleInCloud()` |
 | `createdAt` | string (ISO) | |
 | `updatedAt` | string (ISO) | |
+| `survey` | map | Khảo sát nhu cầu đầu vào — xem bảng ngay dưới |
+
+#### Trường `survey` — khảo sát nhu cầu học viên
+
+Cất **trong** hồ sơ học viên chứ không mở collection riêng. Ba lý do: không cần thêm luật nào (`canUpdateProfile()` đã cho học viên sửa hồ sơ của chính mình); Bảng Quản Trị và tệp CSV đọc được ngay vì chúng vốn đã đọc `students`; và xoá học viên là mất luôn khảo sát của họ, không sót bản ghi mồ côi.
+
+| Trường | Kiểu | Ghi chú |
+|---|---|---|
+| `answers` | map&lt;string, string&gt; | Khoá là id câu hỏi (`field`, `position`, `goal`, `skill`, `format`), giá trị là **mã đáp án** chứ không phải nhãn hiển thị. Câu 1 chọn `other` thì có thêm khoá `fieldOther` chứa phần ghi tay |
+| `completedAt` | string (ISO) | Có giá trị = đã trả lời xong cả 5 câu |
+| `skips` | number | Số lần học viên bấm "Bỏ qua" trước khi chịu trả lời |
+| `version` | number | `SURVEY_VERSION` lúc trả lời, để về sau biết bản ghi thuộc bộ câu hỏi nào |
+
+Bộ câu hỏi và bảng tra mã đáp án → nhãn nằm ở [src/data/surveyQuestions.js](src/data/surveyQuestions.js), là **nguồn khẳng định duy nhất** cho cả modal khảo sát, cột trong Bảng Quản Trị lẫn tiêu đề cột của tệp xuất.
+
+Bản song song trong localStorage: `dmm_survey_<email>`. Bản tại máy là bản dùng để **quyết định có hỏi hay không** (đọc được ngay, không chờ mạng); bản trên Firestore là bản để Ban Quản Trị đọc và xuất báo cáo. Hợp nhất chỉ theo một chiều — bản đám mây đã hoàn tất đè lên bản tại máy còn dở, không bao giờ ngược lại.
 
 ### Collection `registrations`
 

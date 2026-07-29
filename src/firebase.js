@@ -245,6 +245,57 @@ export async function revokeAdminInCloud(email) {
   await deleteDoc(doc(db, ADMIN_COLLECTION, key));
 }
 
+/**
+ * Ghi bản khảo sát đầu vào của học viên lên Firestore.
+ *
+ * Cất TRONG hồ sơ học viên (`students` + `registrations`) chứ không mở
+ * collection riêng. Ba cái lợi, đều thật:
+ *   1. Không cần thêm luật nào — `canUpdateProfile()` đã cho học viên sửa hồ sơ
+ *      của chính mình, miễn không đụng vào `role`.
+ *   2. Bảng Quản Trị và tệp xuất đọc được ngay, vì chúng vốn đã đọc collection
+ *      `students`. Tách ra là phải ghép hai nguồn theo email — thêm một chỗ để
+ *      lệch nhau.
+ *   3. Xoá học viên là mất luôn khảo sát của họ, không sót lại bản ghi mồ côi.
+ *
+ * `email` gửi kèm trong patch và lấy từ ID TOKEN, không lấy từ tham số: rules
+ * đối chiếu `request.resource.data.email` với email trong token, nên hồ sơ mang
+ * email cũ (máy dùng chung) sẽ bị từ chối. Cùng lý do với sendSupportMessage().
+ *
+ * KHÔNG await Firestore (xem DECISION.md ADR-002): mất kết nối thì lệnh ghi bị
+ * xếp vào hàng đợi offline và Promise treo vô thời hạn. Bản tại máy đã ghi xong
+ * trước đó nên học viên không bị hỏi lại, và màn hình không đứng sau khi bấm.
+ */
+export async function saveSurveyToCloud(email, survey) {
+  const cleanEmail = cleanEmailKey(auth.currentUser?.email || email);
+  if (!cleanEmail || !survey) return { ok: false, message: 'Thiếu email hoặc dữ liệu khảo sát.' };
+
+  const safeId = cleanEmail.replace(/[^a-z0-9]/g, '_');
+  const patch = {
+    email: cleanEmail,
+    survey: {
+      answers: survey.answers || {},
+      // KHÔNG tự điền mốc thời gian khi nơi gọi để trống. Bản trả lời dở dang
+      // cũng đi qua hàm này, mà `completedAt` chính là dấu hiệu phân biệt "đã
+      // xong" với "đang dở" ở cả `hasCompletedSurvey()` lẫn Bảng Quản Trị —
+      // điền bừa vào là bản dở dang bỗng được tính như đã hoàn tất.
+      completedAt: survey.completedAt || '',
+      skips: Number.isFinite(survey.skips) ? survey.skips : 0,
+      version: Number.isFinite(survey.version) ? survey.version : 0
+    },
+    updatedAt: new Date().toISOString()
+  };
+
+  for (const col of ['students', 'registrations']) {
+    try {
+      setDoc(doc(db, col, safeId), patch, { merge: true }).catch((e) => {
+        console.warn(`Không ghi được khảo sát vào ${col}:`, e);
+      });
+    } catch (e) { /* kho này hỏng thì kho còn lại vẫn chạy */ }
+  }
+
+  return { ok: true };
+}
+
 /* ============================================================
    HỘP THƯ HỖ TRỢ (collection `support_messages`)
 
