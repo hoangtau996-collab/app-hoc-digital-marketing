@@ -8,6 +8,19 @@ TODO — chưa có quy ước đánh phiên bản; cân nhắc gắn thẻ Git k
 
 ---
 
+## [Chưa phát hành] — 2026-07-29
+
+### Thay đổi
+
+- **Quản trị viên xem được toàn bộ nội dung, không cổng khoá nào áp lên tài khoản này.** Ban Quản Trị phải soát được bài giảng, bài kiểm tra và mẫu bằng của mọi khoá để kiểm duyệt; bắt họ học lại từ đầu bằng chính tài khoản quản trị thì vừa vô nghĩa vừa làm bẩn số liệu tiến độ học viên.
+  - **Khoá Trade Marketing mở sẵn** — `isTradeCourseUnlocked` nay là `isAdmin || đủ 11 chuyên đề khoá chính` (`App.jsx`). Cờ này chảy sang Sidebar, FeatureMenuBar, MobileBottomNav và cổng kết xuất ở tab `trade`, nên sửa một chỗ là mở đúng mọi lối vào — không chỗ nào còn tự tính lại điều kiện.
+  - **Bằng Chứng Nhận cả hai khoá mở sẵn** — truyền `adminOverride` cho cả bằng khoá chính lẫn bằng khoá Trade. Dùng lại đúng cờ sẵn có của `CertificateModal` (vốn dựng cho việc quản trị viên cấp bằng thủ công) chứ không thêm nhánh điều kiện thứ hai.
+  - **Băng mời nhận bằng trong tab Trade hiện ngay** (`TradeMarketingCourse.jsx`) — đây là lối duy nhất mở mẫu bằng khoá Trade ra xem trên màn đó; không mở thì quản trị viên vẫn không soát được nó.
+  - Điều kiện đọc **`currentUser.role`**, thứ duy nhất được cấp sau khi máy chủ xác nhận (`resolveAdminRole`). Sửa localStorage không tự phong được quyền xem này vì `role` khi khôi phục phiên luôn khởi tạo lại là `'student'`. Học viên thường **không đổi gì**: mọi điều kiện cũ giữ nguyên.
+  - `isAdmin` dời lên khai báo cùng chỗ với các cổng khoá thay vì nằm rải trong thân hàm — các cờ khoá đều phải hỏi tới nó.
+
+---
+
 ## [Chưa phát hành] — 2026-07-28
 
 ### Thêm mới

@@ -419,14 +419,31 @@ export default function App() {
   const skipNextProgressSaveRef = useRef(false);
   const skipNextTradeSaveRef = useRef(false);
 
+  /**
+   * Quản trị viên xem được TOÀN BỘ nội dung: không cổng khoá nào áp lên tài
+   * khoản này. Ban Quản Trị phải soát được bài giảng, bài kiểm tra và mẫu bằng
+   * của mọi khoá để kiểm duyệt, mà bắt họ học lại từ đầu bằng chính tài khoản
+   * quản trị thì vừa vô nghĩa vừa làm bẩn số liệu tiến độ học viên.
+   *
+   * Đặt ở đây — trước mọi phép tính cổng khoá bên dưới — vì các cờ đó đều phải
+   * hỏi tới nó.
+   *
+   * Chỉ đọc `currentUser.role`, thứ duy nhất được cấp sau khi máy chủ xác nhận
+   * (xem `resolveAdminRole`). Sửa localStorage không tự phong được quyền xem
+   * này, vì `role` khi khôi phục phiên luôn khởi tạo lại là 'student'.
+   */
+  const isAdmin = currentUser?.role === 'admin';
+
   // Điều kiện bắt buộc để mở khoá Trade Marketing: hoàn thành TOÀN BỘ khoá
   // Digital Marketing. Dùng phép so khớp theo id chứ không so độ dài mảng —
   // dữ liệu cũ trong máy có thể chứa id chuyên đề đã bị xoá, khiến đếm số
   // lượng vẫn đủ trong khi thực tế còn chuyên đề chưa học.
+  //
+  // Quản trị viên đứng ngoài điều kiện này (xem `isAdmin` ở trên).
   const mainCompletedCount = COURSE_MODULES.filter((m) =>
     completedModules.includes(m.id)
   ).length;
-  const isTradeCourseUnlocked = mainCompletedCount === COURSE_MODULES.length;
+  const isTradeCourseUnlocked = isAdmin || mainCompletedCount === COURSE_MODULES.length;
 
   // Số chuyên đề Trade đã đạt, dùng làm điều kiện cấp bằng khoá Trade.
   // Đối chiếu theo id vì cùng lý do như trên: đếm độ dài mảng sẽ tính nhầm khi
@@ -712,9 +729,9 @@ export default function App() {
     setIsAuthOpen(true);
   };
 
-  // Chỉ tài khoản có role 'admin' mới được vào Bảng Quản Trị.
-  const isAdmin = currentUser?.role === 'admin';
-
+  // Chỉ tài khoản có role 'admin' mới được vào Bảng Quản Trị (`isAdmin` khai
+  // báo cùng chỗ với các cổng khoá nội dung, phía trên).
+  //
   // Chặn ở cả tầng hành động, không chỉ ẩn nút: ẩn nút mà vẫn để hàm mở tự do
   // thì chỉ cần gọi được hàm là vào được.
   const openAdminDashboard = () => {
@@ -894,6 +911,7 @@ export default function App() {
               ) : (
                 <TradeMarketingCourse
                   isUnlocked={isTradeCourseUnlocked}
+                  isAdmin={isAdmin}
                   mainCompletedCount={mainCompletedCount}
                   mainTotalModules={COURSE_MODULES.length}
                   completedTradeModules={completedTradeModules}
@@ -973,7 +991,7 @@ export default function App() {
         }}
         passedCount={isAdminIssuing ? adminCertTotalModules : completedModules.length}
         totalModules={isAdminIssuing ? adminCertTotalModules : COURSE_MODULES.length}
-        adminOverride={isAdminIssuing}
+        adminOverride={isAdminIssuing || isAdmin}
         customStudentName={adminCertStudentName}
         studentEmail={isAdminIssuing ? "" : (currentUser?.email || "")}
         course={isAdminIssuing ? adminCertCourse : 'main'}
@@ -988,6 +1006,7 @@ export default function App() {
         onClose={() => setIsTradeCertOpen(false)}
         passedCount={tradeCompletedCount}
         totalModules={TRADE_MODULES.length}
+        adminOverride={isAdmin}
         studentEmail={currentUser?.email || ""}
         course="trade"
       />

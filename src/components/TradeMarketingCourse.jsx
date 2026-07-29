@@ -23,6 +23,8 @@ const ICON_MAP = { Store, Network, Layers, TrendingUp, Rocket };
 
 export default function TradeMarketingCourse({
   isUnlocked,
+  // Quản trị viên: mọi cổng khoá trong màn này đều mở, kể cả băng cấp bằng.
+  isAdmin = false,
   mainCompletedCount,
   mainTotalModules,
   completedTradeModules = [],
@@ -37,7 +39,11 @@ export default function TradeMarketingCourse({
   // Đối chiếu theo id chứ không so độ dài mảng: tiến độ cũ lưu trong máy có thể
   // còn id chuyên đề đã bị xoá, khiến đếm số lượng vẫn đủ trong khi thực tế
   // còn chuyên đề chưa học.
-  const isCertificateReady = TRADE_MODULES.every((m) => completedTradeModules.includes(m.id));
+  //
+  // Quản trị viên thấy băng cấp bằng ngay từ đầu — đó là lối duy nhất mở mẫu
+  // bằng khoá Trade ra xem trên màn này.
+  const isCertificateReady =
+    isAdmin || TRADE_MODULES.every((m) => completedTradeModules.includes(m.id));
   const mainPercent = mainTotalModules > 0 ? Math.round((mainCompletedCount / mainTotalModules) * 100) : 0;
   const remaining = Math.max(0, mainTotalModules - mainCompletedCount);
 
