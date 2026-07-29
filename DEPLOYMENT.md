@@ -117,12 +117,13 @@ Cần bật trên Firebase Console:
 **Cách 2 — dòng lệnh.** Chạy trong terminal, ở thư mục gốc dự án:
 
 ```bash
-npx firebase-tools login
-npx firebase-tools use <project-id>          # ví dụ: pmarcomacademy
+npx firebase-tools login                      # mở trình duyệt để đăng nhập Google
 npx firebase-tools deploy --only firestore:rules
 ```
 
-`firebase.json` trong kho mã đã trỏ sẵn tới `firestore.rules`. Không cần cài `firebase-tools` vào `package.json` vì đây là việc thỉnh thoảng mới chạy.
+`firebase.json` đã trỏ sẵn tới `firestore.rules`, và `.firebaserc` đã ghi sẵn project `hr-project-b982a` nên **không cần** bước `use <project-id>` nữa. Không cài `firebase-tools` vào `package.json` vì đây là việc thỉnh thoảng mới chạy.
+
+⚠️ Bước `login` **bắt buộc phải chạy trong terminal mở được trình duyệt**. Phiên trợ lý AI không tự chạy được bước này — không có trình duyệt để hoàn tất OAuth — nên việc Publish rules luôn phải do người thật bấm.
 
 #### Lần deploy sắp tới — hai thay đổi phải kiểm chứng ngay sau khi Publish
 
