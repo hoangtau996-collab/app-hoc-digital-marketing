@@ -80,6 +80,32 @@ Id tài liệu: **do Firestore tự sinh**. Cố ý không đặt theo email —
 | `createdAtServer` | timestamp | `serverTimestamp()`, mốc thời gian không giả được từ máy khách |
 | `handledBy` | string | Email quản trị viên đã đổi trạng thái |
 | `handledAt` | string (ISO) | Thời điểm đổi trạng thái |
+| `lastReplyAt` | string (ISO) | Lượt trao đổi gần nhất |
+| `lastReplyFrom` | string | `'admin'` hoặc `'student'` — ai nói câu cuối |
+| `studentUnread` | boolean | Ban Quản Trị đã trả lời mà học viên chưa xem. Đây là thứ bật chấm đỏ trên nút Pipi |
+
+#### Subcollection `support_messages/{msgId}/replies` — các lượt trao đổi qua lại
+
+Mỗi lượt trả lời là **một tài liệu riêng**, không phải phần tử trong một mảng trên tài liệu cha. Mảng thì mỗi lần thêm phải ghi lại toàn bộ tài liệu — hai người cùng trả lời một lúc là mất một lượt — và luật không soi được từng phần tử bên trong, tức là không chặn được việc mạo danh.
+
+| Trường | Kiểu | Ghi chú |
+|---|---|---|
+| `from` | string | `'admin'` hoặc `'student'`. **Rules chỉ cho đặt `'admin'` khi người gửi thật sự có tên trong sổ `admins`** |
+| `text` | string | Nội dung, 1–2000 ký tự |
+| `threadEmail` | string | Email chủ cuộc trao đổi, chép sẵn để đọc không phải `get()` tài liệu cha |
+| `authorEmail` | string | Bắt buộc khớp email trong ID token |
+| `authorName` | string | Tên hiển thị lúc gửi |
+| `createdAt` | string (ISO) | Dùng để sắp xếp |
+| `createdAtServer` | timestamp | `serverTimestamp()` |
+
+Ràng buộc do [firestore.rules](firestore.rules) áp đặt:
+
+- Đọc: quản trị viên đọc tất cả; học viên đọc theo `threadEmail` khớp email trong token.
+- Gửi: `threadEmail` bắt buộc khớp tài liệu cha (chống chèn lượt trả lời vào cuộc của người khác), `authorEmail` khớp token, và **vế `from` là mấu chốt** — thiếu nó thì một học viên ghi được lượt trả lời mang nhãn `'admin'` vào cuộc trao đổi của mình, và giao diện sẽ hiển thị nó y như lời của Ban Quản Trị.
+- Sửa: **không ai được**, kể cả quản trị viên. Nội dung hai bên nhìn thấy phải là một, và phải đúng nội dung lúc gửi.
+- Xoá: chỉ quản trị viên.
+
+Học viên còn được sửa đúng bốn trường điều phối trên tài liệu cha (`status`, `studentUnread`, `lastReplyAt`, `lastReplyFrom`) qua `hasOnly` — nên `message` đã gửi và `email` định danh vẫn bất biến. Riêng `status`, học viên chỉ được đặt về `'new'`: cho đặt tuỳ ý thì họ tự đánh dấu `'done'` được, và cuộc trao đổi biến mất khỏi bộ đếm chưa đọc trong khi vẫn đang chờ trả lời.
 
 Ràng buộc do [firestore.rules](firestore.rules) áp đặt ở phía máy chủ:
 

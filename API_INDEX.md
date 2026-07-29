@@ -52,6 +52,10 @@ Lời nhắn học viên gửi từ khung chat Pipi. Ranh giới thật do [fire
 | `listenToSupportMessages(callback)` | function | `unsubscribe` | Theo dõi realtime, 300 bản ghi mới nhất. **`null` = chưa đọc được**, phải phân biệt với `[]` = hộp thư rỗng |
 | `setSupportMessageStatus(id, status, byEmail)` | string, string, string | `Promise<{ok}>` | Đổi `new` / `read` / `done`. Chỉ quản trị viên |
 | `deleteSupportMessage(id)` | string | `Promise<{ok}>` | Xoá hẳn. Chỉ quản trị viên |
+| `listenToMySupportThreads(email, callback)` | string, function | `unsubscribe` | Các cuộc trao đổi của chính học viên. **Bắt buộc lọc `where('email','==',...)`** — bỏ vế lọc là máy chủ từ chối cả lệnh. Không `orderBy` (tránh phải tạo chỉ mục ghép), sắp xếp tại máy |
+| `listenToSupportReplies(threadId, callback)` | string, function | `unsubscribe` | Các lượt trả lời, cũ trước mới sau. `null` = chưa đọc được |
+| `sendSupportReply(threadId, {from, text, threadEmail, authorName})` | string, object | `Promise<{ok, message}>` | Gửi một lượt. `from` khai báo ý định, **máy chủ mới cấp danh nghĩa**: rules chỉ nhận `'admin'` khi người gửi có tên trong sổ `admins`. Cập nhật luôn trạng thái tài liệu cha |
+| `markThreadSeenByStudent(threadId)` | string | `Promise<{ok}>` | Tắt `studentUnread` — chấm đỏ trên nút Pipi |
 
 ### Thống kê lượt truy cập
 

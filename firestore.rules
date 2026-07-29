@@ -204,7 +204,15 @@ service cloud.firestore {
       // đúng máy dò đã bịt ở canGetProfile().
       allow get: if isAdmin()
                  || (signedIn() && resource != null && resource.data.email == myEmail());
-      allow list: if isAdmin();
+
+      // Học viên liệt kê được cuộc trao đổi CỦA CHÍNH MÌNH — cần cho hộp thư
+      // trong khung chat Pipi. An toàn nhờ cách Firestore xét quyền cho truy
+      // vấn: lệnh liệt kê chỉ được chấp nhận khi bản thân truy vấn bảo đảm mọi
+      // tài liệu trả về đều thoả điều kiện, tức là phía máy khách BẮT BUỘC phải
+      // lọc `where('email','==', <email của mình>)`. Truy vấn không lọc sẽ bị
+      // máy chủ từ chối thẳng, chứ không phải lọc bớt rồi trả về.
+      allow list: if isAdmin()
+                  || (signedIn() && resource.data.email == myEmail());
 
       // Phải đăng nhập, và `email` bắt buộc khớp email trong ID token — không có
       // điều kiện này thì ai cũng gửi được lời nhắn mạo danh học viên khác.
@@ -225,10 +233,76 @@ service cloud.firestore {
                     && request.resource.data.name is string
                     && request.resource.data.name.size() <= 120;
 
-      // Đánh dấu đã đọc / đã xử lý và xoá: chỉ quản trị viên. Học viên không sửa
-      // lại được lời nhắn đã gửi — nội dung Ban Quản Trị đọc phải đúng nội dung
-      // lúc gửi.
-      allow update: if isAdmin();
+      // Đánh dấu đã đọc / đã xử lý và xoá: chỉ quản trị viên.
+      //
+      // Học viên được sửa ĐÚNG bốn trường điều phối của cuộc trao đổi, không
+      // hơn. `hasOnly` là mấu chốt: nó chặn mọi khoá ngoài danh sách, nên nội
+      // dung `message` đã gửi và trường `email` định danh vẫn bất biến — Ban
+      // Quản Trị luôn đọc đúng nội dung lúc gửi.
+      //
+      // Riêng `status`, học viên chỉ được đặt về 'new'. Cho phép đặt tuỳ ý thì
+      // họ tự đánh dấu 'done' được, và cuộc trao đổi biến mất khỏi bộ đếm chưa
+      // đọc của Ban Quản Trị trong khi vẫn đang chờ trả lời. Đặt về 'new' thì
+      // ngược lại — đó chính là việc cần xảy ra khi học viên nhắn tiếp.
+      allow update: if isAdmin()
+                    || (signedIn()
+                        && resource.data.email == myEmail()
+                        && request.resource.data.diff(resource.data).affectedKeys()
+                             .hasOnly(['status', 'studentUnread', 'lastReplyAt', 'lastReplyFrom'])
+                        && (!request.resource.data.diff(resource.data).affectedKeys().hasAny(['status'])
+                            || request.resource.data.status == 'new'));
+
+      allow delete: if isAdmin();
+    }
+
+    // ---- /support_messages/{msgId}/replies : lượt trao đổi qua lại ---------
+    //
+    // Mỗi lượt trả lời là một tài liệu riêng, không phải phần tử trong một mảng
+    // trên tài liệu cha. Mảng thì mỗi lần thêm phải ghi lại toàn bộ tài liệu —
+    // hai người cùng trả lời một lúc là mất một lượt — và luật không soi được
+    // từng phần tử bên trong, tức là không chặn được việc mạo danh.
+
+    match /support_messages/{msgId}/replies/{replyId} {
+
+      // Email của người mở cuộc trao đổi. Đọc từ tài liệu cha nên không giả được.
+      function threadOwner() {
+        return get(/databases/$(database)/documents/support_messages/$(msgId)).data.email;
+      }
+
+      // Đọc theo `threadEmail` chép sẵn trên chính lượt trả lời, KHÔNG gọi
+      // threadOwner(): đọc là việc diễn ra liên tục, mà mỗi lần gọi get() trong
+      // luật là một lượt đọc tính tiền. Ghi thì hiếm, nên chỗ đó mới đối chiếu
+      // với tài liệu cha (xem `create` bên dưới) — và chính phép đối chiếu lúc
+      // ghi mới là thứ bảo đảm `threadEmail` ở đây đáng tin.
+      allow get, list: if isAdmin()
+                       || (signedIn() && resource.data.threadEmail == myEmail());
+
+      // Ai gửi được, và gửi được DANH NGHĨA nào:
+      //   - Quản trị viên: gửi với `from == 'admin'`, vào bất kỳ cuộc nào.
+      //   - Học viên: chỉ vào cuộc trao đổi của chính mình, và chỉ với
+      //     `from == 'student'`.
+      //
+      // Vế `from` không phải chuyện hình thức: thiếu nó thì một học viên bất kỳ
+      // ghi được lượt trả lời mang nhãn 'admin' vào cuộc trao đổi của mình, và
+      // giao diện sẽ hiển thị nó y như lời của Ban Quản Trị Học Viện.
+      //
+      // `threadEmail` bắt buộc khớp tài liệu cha — nếu không, người ta chèn được
+      // lượt trả lời vào cuộc trao đổi của người khác chỉ bằng cách khai email
+      // của chính mình.
+      allow create: if signedIn()
+                    && request.resource.data.threadEmail == threadOwner()
+                    && request.resource.data.authorEmail == myEmail()
+                    && request.resource.data.text is string
+                    && request.resource.data.text.size() > 0
+                    && request.resource.data.text.size() <= 2000
+                    && (
+                         (isAdmin() && request.resource.data.from == 'admin')
+                         || (request.resource.data.from == 'student' && threadOwner() == myEmail())
+                       );
+
+      // Lượt đã gửi thì không ai sửa được, kể cả quản trị viên: nội dung hai bên
+      // nhìn thấy phải là một, và phải đúng nội dung lúc gửi.
+      allow update: if false;
       allow delete: if isAdmin();
     }
 

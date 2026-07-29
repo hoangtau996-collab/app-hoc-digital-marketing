@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PMarcomLogo from './PMarcomLogo';
+import SupportThread from './SupportThread';
+import { listenToSupportReplies, sendSupportReply } from '../firebase';
 import {
   X,
   Mail,
@@ -10,7 +12,9 @@ import {
   AlertTriangle,
   MailOpen,
   RotateCcw,
-  Clock
+  Clock,
+  MessageSquare,
+  ArrowLeft
 } from 'lucide-react';
 
 /**
@@ -56,17 +60,52 @@ export default function SupportInboxModal({
   onClose,
   messages,
   onSetStatus,
-  onDelete
+  onDelete,
+  currentUser = null
 }) {
   const [filter, setFilter] = useState('new');
   const [busyId, setBusyId] = useState('');
   const [notice, setNotice] = useState('');
+
+  // Cuộc trao đổi đang mở để trả lời. Giữ id chứ không giữ cả object: danh sách
+  // `messages` được cập nhật realtime, ôm một bản chụp cũ thì trạng thái trên
+  // màn trả lời sẽ đứng yên trong khi bảng bên ngoài đã đổi.
+  const [openThreadId, setOpenThreadId] = useState(null);
+  const [replies, setReplies] = useState(null);
+
+  useEffect(() => {
+    if (!openThreadId) {
+      setReplies(null);
+      return;
+    }
+    const unsub = listenToSupportReplies(openThreadId, setReplies);
+    return () => { if (typeof unsub === 'function') unsub(); };
+  }, [openThreadId]);
 
   if (!isOpen) return null;
 
   const list = Array.isArray(messages) ? messages : [];
   const countOf = (key) => (key === 'ALL' ? list.length : list.filter((m) => (m.status || 'new') === key).length);
   const shown = filter === 'ALL' ? list : list.filter((m) => (m.status || 'new') === filter);
+  const openThread = list.find((m) => m.id === openThreadId) || null;
+
+  /**
+   * Mở màn trả lời. Đánh dấu đã đọc luôn nếu còn 'new' — quản trị viên vừa mở
+   * cuộc trao đổi ra thì hiển nhiên là đã đọc, bắt bấm thêm một nút nữa để nói
+   * điều hiển nhiên đó chỉ khiến bộ đếm chưa đọc trôi khỏi thực tế.
+   */
+  const enterThread = (msg) => {
+    setOpenThreadId(msg.id);
+    if ((msg.status || 'new') === 'new') onSetStatus(msg.id, 'read');
+  };
+
+  const handleAdminReply = (text) =>
+    sendSupportReply(openThreadId, {
+      from: 'admin',
+      text,
+      threadEmail: openThread?.email,
+      authorName: currentUser?.name || 'Ban Quản Trị'
+    });
 
   const run = async (id, fn) => {
     setBusyId(id);
@@ -111,7 +150,50 @@ export default function SupportInboxModal({
           </div>
         )}
 
+        {/* ===== Màn trả lời một cuộc trao đổi ===== */}
+        {openThread && (
+          <div className="flex-1 min-h-0 flex flex-col">
+            <div className="flex items-center gap-2.5 pb-3 border-b border-emerald-900/50 shrink-0">
+              <button
+                onClick={() => setOpenThreadId(null)}
+                className="w-8 h-8 rounded-lg bg-slate-900 border border-emerald-900 text-slate-400 hover:text-white flex items-center justify-center transition cursor-pointer shrink-0"
+                title="Quay lại hộp thư"
+              >
+                <ArrowLeft className="w-4 h-4" />
+              </button>
+              <div className="min-w-0">
+                <p className="text-sm font-black text-white truncate">{openThread.name || '—'}</p>
+                <p className="text-[11px] text-slate-400 truncate">
+                  {openThread.email}
+                  {openThread.phone ? ` · ${openThread.phone}` : ''}
+                </p>
+              </div>
+              <span className={`ml-auto px-2 py-0.5 rounded text-[9.5px] font-black border uppercase tracking-wider shrink-0 ${
+                (STATUS_META[openThread.status || 'new'] || STATUS_META.new).cls
+              }`}>
+                {(STATUS_META[openThread.status || 'new'] || STATUS_META.new).label}
+              </span>
+              {(openThread.status || 'new') !== 'done' && (
+                <button
+                  onClick={() => run(openThread.id, () => onSetStatus(openThread.id, 'done'))}
+                  className="shrink-0 px-2.5 py-1.5 rounded-lg bg-emerald-600 border border-emerald-400 text-white text-[10.5px] font-bold hover:brightness-110 transition cursor-pointer flex items-center gap-1.5"
+                >
+                  <CheckCheck className="w-3 h-3" /> Đã xử lý xong
+                </button>
+              )}
+            </div>
+
+            <SupportThread
+              thread={openThread}
+              replies={replies}
+              me="admin"
+              onSend={handleAdminReply}
+            />
+          </div>
+        )}
+
         {/* Bộ lọc theo trạng thái */}
+        {!openThread && (
         <div className="flex flex-wrap gap-1.5 shrink-0">
           {FILTERS.map((f) => (
             <button
@@ -127,8 +209,10 @@ export default function SupportInboxModal({
             </button>
           ))}
         </div>
+        )}
 
         {/* Danh sách lời nhắn */}
+        {!openThread && (
         <div className="flex-1 overflow-y-auto space-y-2.5 pr-1">
 
           {messages === null ? (
@@ -204,8 +288,24 @@ export default function SupportInboxModal({
                     </p>
                   )}
 
+                  {m.lastReplyFrom === 'student' && (
+                    <p className="text-[10.5px] text-rose-300 font-bold">
+                      Học viên đã nhắn tiếp — đang chờ trả lời.
+                    </p>
+                  )}
+
                   {/* Việc cần làm */}
                   <div className="flex flex-wrap items-center gap-1.5">
+                    {/* Trả lời ngay trong ứng dụng — lối chính. Đặt trước nút
+                        email vì học viên nhận được phản hồi ngay trong khung
+                        chat Pipi, không phải đi mở hộp thư email. */}
+                    <button
+                      onClick={() => enterThread(m)}
+                      className="px-2.5 py-1.5 rounded-lg bg-gradient-to-r from-emerald-500 to-teal-500 text-slate-950 text-[10.5px] font-black hover:brightness-110 transition cursor-pointer flex items-center gap-1.5 shadow"
+                    >
+                      <MessageSquare className="w-3 h-3" /> Trả lời trong app
+                    </button>
+
                     {m.email && (
                       <a
                         href={`mailto:${m.email}?subject=${encodeURIComponent('Phản hồi từ Học Viện P MARCOM')}&body=${encodeURIComponent(`Chào ${m.name || 'bạn'},\n\nBan Quản Trị đã nhận được lời nhắn của bạn:\n"${m.message}"\n\n`)}`}
@@ -271,6 +371,7 @@ export default function SupportInboxModal({
             })
           )}
         </div>
+        )}
 
       </div>
     </div>

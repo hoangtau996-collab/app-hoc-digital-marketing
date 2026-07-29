@@ -1,8 +1,16 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { createPortal } from 'react-dom';
-import { Send, Minus, Sparkles, Mail, LogIn, X } from 'lucide-react';
+import { Send, Minus, Sparkles, Mail, LogIn, X, Inbox, ArrowLeft, ShieldCheck } from 'lucide-react';
 import { askPipi, PIPI_SUGGESTIONS } from '../utils/pipiBrain';
-import { sendSupportMessage, SUPPORT_MESSAGE_MAX } from '../firebase';
+import SupportThread from './SupportThread';
+import {
+  sendSupportMessage,
+  SUPPORT_MESSAGE_MAX,
+  listenToMySupportThreads,
+  listenToSupportReplies,
+  sendSupportReply,
+  markThreadSeenByStudent
+} from '../firebase';
 
 /**
  * Pipi - trợ lý tra cứu của khoá học, thay cho ô tìm kiếm cũ.
@@ -124,12 +132,70 @@ export default function PipiChat({
   const [isOpen, setIsOpen] = useState(false);
   const [showHello, setShowHello] = useState(false);
   const [input, setInput] = useState('');
-  // Khung soạn lời nhắn gửi Ban Quản Trị. Là một chế độ riêng của khung chat
-  // chứ không phải cửa sổ mới: học viên vẫn thấy đoạn hội thoại vừa rồi, nên
-  // không phải kể lại từ đầu vấn đề họ đang gặp.
-  const [isComposing, setIsComposing] = useState(false);
+  /**
+   * Khung chat có bốn chế độ, dùng chung một khung chứ không mở cửa sổ mới:
+   *   'chat'    — hỏi đáp với Pipi (mặc định)
+   *   'compose' — soạn lời nhắn mới gửi Ban Quản Trị
+   *   'inbox'   — danh sách các cuộc trao đổi của mình
+   *   'thread'  — một cuộc trao đổi cụ thể, nhắn qua lại được
+   *
+   * Giữ chung một khung để học viên không mất ngữ cảnh: đoạn hỏi Pipi vừa rồi
+   * vẫn còn nguyên khi quay lại, nên không phải kể lại từ đầu vấn đề đang gặp.
+   */
+  const [view, setView] = useState('chat');
+  const isComposing = view === 'compose';
   const [supportText, setSupportText] = useState('');
   const [isSending, setIsSending] = useState(false);
+
+  // Các cuộc trao đổi của chính học viên này.
+  // `null` = chưa đọc được, `[]` = đọc được và chưa có cuộc nào. Không gộp.
+  const [myThreads, setMyThreads] = useState(null);
+  const [activeThreadId, setActiveThreadId] = useState(null);
+  const [threadReplies, setThreadReplies] = useState(null);
+
+  const threadList = Array.isArray(myThreads) ? myThreads : [];
+  const activeThread = threadList.find((t) => t.id === activeThreadId) || null;
+
+  // Số cuộc trao đổi có lời mới của Ban Quản Trị mà học viên chưa xem. Đây là
+  // con số hiện lên chấm đỏ ở nút Pipi — thứ duy nhất báo cho học viên biết họ
+  // đã được trả lời, vì ứng dụng không gửi được thông báo đẩy.
+  const unreadReplies = threadList.filter((t) => t.studentUnread).length;
+
+  useEffect(() => {
+    const email = currentUser?.email;
+    if (!email) {
+      setMyThreads(null);
+      setActiveThreadId(null);
+      return;
+    }
+    const unsub = listenToMySupportThreads(email, setMyThreads);
+    return () => { if (typeof unsub === 'function') unsub(); };
+  }, [currentUser?.email]);
+
+  useEffect(() => {
+    if (!activeThreadId) {
+      setThreadReplies(null);
+      return;
+    }
+    const unsub = listenToSupportReplies(activeThreadId, setThreadReplies);
+    return () => { if (typeof unsub === 'function') unsub(); };
+  }, [activeThreadId]);
+
+  const openThread = (thread) => {
+    setActiveThreadId(thread.id);
+    setView('thread');
+    // Mở ra là coi như đã xem. Tắt huy hiệu ngay ở đây chứ không đợi học viên
+    // trả lời: rất nhiều lượt trao đổi kết thúc bằng việc đọc xong rồi thôi.
+    if (thread.studentUnread) markThreadSeenByStudent(thread.id);
+  };
+
+  const handleThreadReply = (text) =>
+    sendSupportReply(activeThreadId, {
+      from: 'student',
+      text,
+      threadEmail: activeThread?.email || currentUser?.email,
+      authorName: currentUser?.name
+    });
   const [messages, setMessages] = useState([
     {
       from: 'pipi',
@@ -187,7 +253,7 @@ export default function PipiChat({
       ]);
       return;
     }
-    setIsComposing(true);
+    setView('compose');
   };
 
   const runAction = (a) => {
@@ -228,7 +294,6 @@ export default function PipiChat({
     }
 
     setSupportText('');
-    setIsComposing(false);
     setMessages((prev) => [
       ...prev,
       { from: 'user', title: body, lines: [], actions: [] },
@@ -237,11 +302,20 @@ export default function PipiChat({
         title: 'Đã gửi tới Ban Quản Trị ✅',
         lines: [
           'Lời nhắn của bạn đã nằm trong hộp thư của Ban Quản Trị Học Viện, kèm tên và thông tin liên hệ trong hồ sơ của bạn.',
-          'Ban Quản Trị sẽ liên hệ lại qua **email hoặc số điện thoại** bạn đã đăng ký. Trong lúc chờ, bạn cứ học tiếp nhé.',
+          'Ban Quản Trị **trả lời ngay tại đây** — mở mục Hộp thư ở đầu khung này để xem và nhắn tiếp. Có phản hồi mới thì nút Pipi sẽ hiện chấm đỏ.',
         ],
         actions: []
       }
     ]);
+
+    // Vào thẳng cuộc trao đổi vừa mở. Học viên thấy ngay lời mình vừa gửi nằm
+    // đúng chỗ sẽ nhận được câu trả lời, chứ không phải tự đi tìm.
+    if (result.id) {
+      setActiveThreadId(result.id);
+      setView('thread');
+    } else {
+      setView('chat');
+    }
   };
 
   const trigger =
@@ -249,16 +323,30 @@ export default function PipiChat({
       /* Nút nổi góc phải. Trên màn nhỏ phải nâng lên khỏi MobileBottomNav
          (thanh đó fixed bottom-0 z-40), nếu không sẽ đè lên nhau. */
       <div className="fixed right-4 lg:right-6 bottom-20 lg:bottom-6 z-[85] flex flex-col items-end gap-2 pointer-events-none">
-        {showHello && (
-          <div className="pipi-pop pointer-events-auto max-w-[210px] px-3 py-2 rounded-2xl rounded-br-sm bg-[#111a2e] border border-emerald-500/50 shadow-xl">
-            <p className="text-[11px] text-slate-200 leading-snug">
-              Cần tra thuật ngữ hay tính chỉ số? <strong className="text-emerald-300">Hỏi Pipi nhé!</strong>
-            </p>
+        {/* Có phản hồi của Ban Quản Trị thì bóng chào đổi hẳn nội dung. Tin
+            được trả lời quan trọng hơn lời mời tra thuật ngữ. */}
+        {(showHello || unreadReplies > 0) && (
+          <div className="pipi-pop pointer-events-auto max-w-[230px] px-3 py-2 rounded-2xl rounded-br-sm bg-[#111a2e] border border-emerald-500/50 shadow-xl">
+            {unreadReplies > 0 ? (
+              <p className="text-[11px] text-slate-200 leading-snug">
+                <strong className="text-amber-300">Ban Quản Trị đã trả lời bạn!</strong> Bấm vào đây để xem.
+              </p>
+            ) : (
+              <p className="text-[11px] text-slate-200 leading-snug">
+                Cần tra thuật ngữ hay tính chỉ số? <strong className="text-emerald-300">Hỏi Pipi nhé!</strong>
+              </p>
+            )}
           </div>
         )}
 
         <button
-          onClick={() => { setIsOpen(true); setShowHello(false); }}
+          onClick={() => {
+            setIsOpen(true);
+            setShowHello(false);
+            // Có phản hồi chưa đọc thì mở thẳng hộp thư, đừng bắt học viên tự
+            // mò xem chấm đỏ đang báo về chuyện gì.
+            if (unreadReplies > 0) setView('inbox');
+          }}
           aria-label="Mở trợ lý Pipi"
           title="Hỏi Pipi — trợ lý tra cứu"
           className="pipi-launcher pointer-events-auto relative w-16 h-16 rounded-full bg-gradient-to-br from-emerald-500 to-teal-500 shadow-2xl shadow-emerald-950/60 flex items-center justify-center cursor-pointer hover:scale-105 active:scale-95 transition-transform"
@@ -269,8 +357,15 @@ export default function PipiChat({
           <span className="pipi-head pipi-float relative">
             <PipiAvatar size={46} blink />
           </span>
-          {/* chấm báo đang sẵn sàng */}
-          <span className="absolute -top-0.5 -right-0.5 w-4 h-4 rounded-full bg-amber-400 border-2 border-[#0e1526]" />
+          {/* Chấm báo. Vàng = đang sẵn sàng; đỏ kèm số = Ban Quản Trị đã trả
+              lời và học viên chưa xem. */}
+          {unreadReplies > 0 ? (
+            <span className="absolute -top-1 -right-1 min-w-[20px] h-5 px-1 rounded-full bg-rose-500 text-white text-[11px] font-black flex items-center justify-center border-2 border-[#0e1526] tabular-nums animate-pulse">
+              {unreadReplies > 9 ? '9+' : unreadReplies}
+            </span>
+          ) : (
+            <span className="absolute -top-0.5 -right-0.5 w-4 h-4 rounded-full bg-amber-400 border-2 border-[#0e1526]" />
+          )}
         </button>
       </div>
     ) : (
@@ -303,29 +398,77 @@ export default function PipiChat({
           <div className="pipi-pop w-full h-full pipi-panel rounded-3xl border border-emerald-500/40 shadow-2xl flex flex-col overflow-hidden">
 
             {/* Đầu khung */}
-            <div className="flex items-center gap-3 px-4 py-3 border-b border-emerald-900/50 shrink-0">
-              <PipiAvatar size={40} talking />
+            <div className="flex items-center gap-2.5 px-3.5 py-3 border-b border-emerald-900/50 shrink-0">
+              {view === 'thread' ? (
+                <button
+                  onClick={() => setView('inbox')}
+                  className="w-8 h-8 rounded-lg text-slate-400 hover:bg-emerald-950 hover:text-emerald-300 flex items-center justify-center transition cursor-pointer shrink-0"
+                  title="Quay lại danh sách"
+                >
+                  <ArrowLeft className="w-4 h-4" />
+                </button>
+              ) : (
+                <PipiAvatar size={36} talking />
+              )}
+
               <div className="min-w-0">
-                <div className="text-sm font-black text-emerald-300 leading-tight">Pipi</div>
+                <div className="text-sm font-black text-emerald-300 leading-tight">
+                  {view === 'thread' ? 'Trao đổi với Ban Quản Trị' : view === 'inbox' ? 'Hộp thư của bạn' : 'Pipi'}
+                </div>
                 <div className="text-[11px] text-slate-400 truncate">
-                  Trợ lý tra cứu của HỌC VIỆN P MARCOM
+                  {view === 'thread'
+                    ? 'Phản hồi hiện ngay tại đây'
+                    : view === 'inbox'
+                      ? `${threadList.length} cuộc trao đổi`
+                      : 'Trợ lý tra cứu của HỌC VIỆN P MARCOM'}
                 </div>
               </div>
+
+              {/* Đẩy nhóm nút sang phải bằng một khoảng đệm, chứ không gắn
+                  `ml-auto` lên từng nút: nút nào cũng có thể vắng mặt tuỳ chế
+                  độ, mà hai `ml-auto` cùng lúc sẽ xé nhóm nút ra làm đôi. */}
+              <div className="flex-1" />
+
+              {/* Hộp thư — chỉ dựng cho người đã đăng nhập, vì chưa đăng nhập
+                  thì không có cuộc trao đổi nào để mà xem. */}
+              {currentUser && view !== 'inbox' && view !== 'thread' && (
+                <button
+                  onClick={() => setView('inbox')}
+                  className={`relative h-8 px-2.5 rounded-lg flex items-center gap-1.5 text-[11px] font-bold transition cursor-pointer shrink-0 border ${
+                    unreadReplies > 0
+                      ? 'bg-rose-500/20 border-rose-500/60 text-rose-200'
+                      : 'bg-slate-900 border-emerald-900/60 text-slate-300 hover:border-emerald-400'
+                  }`}
+                  title="Xem các cuộc trao đổi với Ban Quản Trị"
+                >
+                  <Inbox className="w-3.5 h-3.5" />
+                  <span className="hidden sm:inline">Hộp thư</span>
+                  {unreadReplies > 0 && (
+                    <span className="absolute -top-1.5 -right-1.5 min-w-[16px] h-4 px-1 rounded-full bg-rose-500 text-white text-[9px] font-black flex items-center justify-center border-2 border-[#111a2e]">
+                      {unreadReplies}
+                    </span>
+                  )}
+                </button>
+              )}
               {/* Lối gặp người thật, luôn nhìn thấy được. Chôn nó sau một câu
                   hỏi mà Pipi phải trả lời trúng mới hiện ra thì đúng lúc học
-                  viên bí nhất lại là lúc không tìm thấy nút. */}
-              <button
-                onClick={openCompose}
-                className={`ml-auto h-8 px-2.5 rounded-lg flex items-center gap-1.5 text-[11px] font-bold transition cursor-pointer shrink-0 border ${
-                  isComposing
-                    ? 'bg-emerald-600 border-emerald-400 text-white'
-                    : 'bg-emerald-950 border-emerald-700/70 text-emerald-300 hover:border-emerald-400'
-                }`}
-                title="Để lại lời nhắn cho Ban Quản Trị Học Viện"
-              >
-                <Mail className="w-3.5 h-3.5" />
-                <span className="hidden sm:inline">Nhắn Ban Quản Trị</span>
-              </button>
+                  viên bí nhất lại là lúc không tìm thấy nút.
+                  Ẩn ở màn đang xem một cuộc trao đổi — ở đó đã có sẵn ô nhắn
+                  tiếp, mở thêm cuộc mới chỉ làm Ban Quản Trị khó theo dõi. */}
+              {view !== 'thread' && (
+                <button
+                  onClick={openCompose}
+                  className={`h-8 px-2.5 rounded-lg flex items-center gap-1.5 text-[11px] font-bold transition cursor-pointer shrink-0 border ${
+                    isComposing
+                      ? 'bg-emerald-600 border-emerald-400 text-white'
+                      : 'bg-emerald-950 border-emerald-700/70 text-emerald-300 hover:border-emerald-400'
+                  }`}
+                  title="Để lại lời nhắn mới cho Ban Quản Trị Học Viện"
+                >
+                  <Mail className="w-3.5 h-3.5" />
+                  <span className="hidden sm:inline">{view === 'inbox' ? 'Nhắn mới' : 'Nhắn Ban Quản Trị'}</span>
+                </button>
+              )}
 
               <button
                 onClick={() => setIsOpen(false)}
@@ -336,7 +479,74 @@ export default function PipiChat({
               </button>
             </div>
 
-            {/* Khung hội thoại */}
+            {/* ===== Màn xem một cuộc trao đổi ===== */}
+            {view === 'thread' && activeThread && (
+              <SupportThread
+                thread={activeThread}
+                replies={threadReplies}
+                me="student"
+                onSend={handleThreadReply}
+                compact
+              />
+            )}
+
+            {/* ===== Màn hộp thư ===== */}
+            {view === 'inbox' && (
+              <div className="flex-1 overflow-y-auto px-3 py-3 space-y-2 no-scrollbar">
+                {myThreads === null ? (
+                  <p className="text-[11px] text-amber-300 leading-relaxed p-3 rounded-xl bg-amber-950/50 border border-amber-600/50">
+                    Chưa đọc được hộp thư. Có thể do mất mạng hoặc hệ thống chưa mở kênh trao đổi hai chiều —
+                    đây <strong>không</strong> có nghĩa là bạn chưa từng nhắn gì.
+                  </p>
+                ) : threadList.length === 0 ? (
+                  <div className="h-full flex flex-col items-center justify-center gap-2 text-center px-4">
+                    <Inbox className="w-9 h-9 text-slate-600" />
+                    <p className="text-xs font-bold text-slate-400">Bạn chưa nhắn gì cho Ban Quản Trị</p>
+                    <p className="text-[11px] text-slate-500 leading-relaxed">
+                      Bấm <strong className="text-emerald-300">Nhắn mới</strong> ở trên để gửi câu hỏi.
+                      Phản hồi sẽ hiện ngay tại đây.
+                    </p>
+                  </div>
+                ) : (
+                  threadList.map((t) => (
+                    <button
+                      key={t.id}
+                      onClick={() => openThread(t)}
+                      className={`w-full text-left px-3 py-2.5 rounded-2xl border transition cursor-pointer space-y-1 ${
+                        t.studentUnread
+                          ? 'bg-rose-500/10 border-rose-600/50 hover:border-rose-400'
+                          : 'bg-slate-900/70 border-emerald-900/60 hover:border-emerald-500'
+                      }`}
+                    >
+                      <div className="flex items-center gap-2">
+                        <span className="text-[11px] text-slate-400 font-semibold">
+                          {String(t.createdAt || '').slice(0, 10)}
+                        </span>
+                        {t.studentUnread && (
+                          <span className="px-1.5 py-0.5 rounded bg-rose-500 text-white text-[9px] font-black uppercase tracking-wider">
+                            Có phản hồi mới
+                          </span>
+                        )}
+                        {t.status === 'done' && !t.studentUnread && (
+                          <span className="px-1.5 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-700 text-[9px] font-black uppercase tracking-wider">
+                            Đã xử lý
+                          </span>
+                        )}
+                      </div>
+                      <p className="text-xs text-slate-200 line-clamp-2 leading-snug">{t.message}</p>
+                      {t.lastReplyFrom === 'admin' && (
+                        <p className="text-[10px] text-amber-300 font-semibold flex items-center gap-1">
+                          <ShieldCheck className="w-3 h-3" /> Ban Quản Trị đã trả lời
+                        </p>
+                      )}
+                    </button>
+                  ))
+                )}
+              </div>
+            )}
+
+            {/* Khung hội thoại với Pipi */}
+            {view !== 'inbox' && view !== 'thread' && (
             <div className="flex-1 overflow-y-auto px-4 py-3 space-y-3 no-scrollbar">
               {messages.map((m, i) =>
                 m.from === 'user' ? (
@@ -374,9 +584,10 @@ export default function PipiChat({
               )}
               <div ref={endRef} />
             </div>
+            )}
 
             {/* Gợi ý bấm nhanh */}
-            {messages.length <= 1 && !isComposing && (
+            {view === 'chat' && messages.length <= 1 && (
               <div className="px-4 pb-2 flex flex-wrap gap-1.5 shrink-0">
                 {PIPI_SUGGESTIONS.map((s) => (
                   <button
@@ -403,7 +614,7 @@ export default function PipiChat({
               </div>
             )}
 
-            {isComposing ? (
+            {view === 'inbox' || view === 'thread' ? null : isComposing ? (
               /* Khung soạn lời nhắn gửi Ban Quản Trị */
               <form
                 onSubmit={submitSupport}
@@ -414,7 +625,7 @@ export default function PipiChat({
                   <span>Lời nhắn gửi Ban Quản Trị</span>
                   <button
                     type="button"
-                    onClick={() => setIsComposing(false)}
+                    onClick={() => setView('chat')}
                     className="ml-auto w-6 h-6 rounded-lg text-slate-400 hover:bg-emerald-950 hover:text-emerald-300 flex items-center justify-center transition cursor-pointer"
                     title="Huỷ, quay lại hỏi Pipi"
                   >

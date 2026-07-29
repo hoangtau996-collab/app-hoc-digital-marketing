@@ -23,7 +23,8 @@ import {
   updateDoc,
   query,
   orderBy,
-  limit
+  limit,
+  where
 } from 'firebase/firestore';
 
 // Default Firebase Configuration for P MARCOM Academy
@@ -483,6 +484,161 @@ export async function setSupportMessageStatus(id, status, handledByEmail) {
   } catch (e) {
     console.warn('Không đổi được trạng thái lời nhắn:', e);
     return { ok: false, code: e?.code || '', message: e?.message || String(e) };
+  }
+}
+
+/* ---------- Trao đổi qua lại trong một cuộc hỗ trợ ---------- */
+
+/**
+ * Theo dõi các cuộc trao đổi CỦA CHÍNH học viên đang đăng nhập.
+ *
+ * Bắt buộc lọc `where('email','==',...)`. Không phải để cho gọn: Firestore chỉ
+ * chấp nhận lệnh liệt kê khi bản thân truy vấn bảo đảm mọi tài liệu trả về đều
+ * thoả luật (xem firestore.rules). Bỏ vế lọc là máy chủ từ chối cả lệnh, chứ
+ * không phải trả về ít hơn.
+ *
+ * Không dùng `orderBy` ở đây, cố ý: ghép `where` với `orderBy` trên hai trường
+ * khác nhau đòi một chỉ mục ghép mà Firestore không tự tạo — lệnh sẽ hỏng bằng
+ * `failed-precondition` kèm một đường link phải bấm vào Console. Số cuộc trao
+ * đổi của một học viên đếm trên đầu ngón tay nên sắp xếp tại máy là đủ.
+ */
+export function listenToMySupportThreads(email, callback) {
+  const key = cleanEmailKey(email);
+  if (!key) {
+    callback([]);
+    return () => {};
+  }
+  try {
+    const q = query(collection(db, SUPPORT_COLLECTION), where('email', '==', key), limit(50));
+    return onSnapshot(
+      q,
+      (snapshot) => {
+        const rows = snapshot.docs.map((d) => ({ id: d.id, ...d.data() }));
+        rows.sort((a, b) => String(b.createdAt || '').localeCompare(String(a.createdAt || '')));
+        callback(rows);
+      },
+      (err) => {
+        console.warn('Không đọc được cuộc trao đổi của học viên:', err);
+        callback(null);
+      }
+    );
+  } catch (e) {
+    console.warn('Không mở được kênh theo dõi cuộc trao đổi:', e);
+    callback(null);
+    return () => {};
+  }
+}
+
+/** Theo dõi các lượt trả lời của một cuộc trao đổi, cũ trước mới sau. */
+export function listenToSupportReplies(threadId, callback) {
+  if (!threadId) {
+    callback([]);
+    return () => {};
+  }
+  try {
+    const q = query(
+      collection(db, SUPPORT_COLLECTION, threadId, 'replies'),
+      orderBy('createdAt', 'asc'),
+      limit(200)
+    );
+    return onSnapshot(
+      q,
+      (snapshot) => callback(snapshot.docs.map((d) => ({ id: d.id, ...d.data() }))),
+      (err) => {
+        console.warn('Không đọc được các lượt trả lời:', err);
+        callback(null);
+      }
+    );
+  } catch (e) {
+    console.warn('Không mở được kênh theo dõi lượt trả lời:', e);
+    callback(null);
+    return () => {};
+  }
+}
+
+/**
+ * Gửi một lượt trả lời vào cuộc trao đổi.
+ *
+ * `from` do NƠI GỌI truyền vào, nhưng máy chủ mới là bên quyết định: rules chỉ
+ * chấp nhận `from: 'admin'` khi người gửi thật sự có tên trong sổ quản trị. Nói
+ * cách khác, tham số này khai báo ý định chứ không cấp danh nghĩa.
+ *
+ * Cập nhật luôn tài liệu cha để hai bên biết có gì mới:
+ *   - quản trị viên trả lời -> `studentUnread = true`, và `status` chuyển sang
+ *     'read' vì rõ ràng là đã đọc rồi mới trả lời được;
+ *   - học viên trả lời      -> `status = 'new'` để nổi lại trong bộ đếm chưa
+ *     đọc, và `studentUnread = false`.
+ */
+export async function sendSupportReply(threadId, { from, text, threadEmail, authorName }) {
+  const body = String(text || '').trim();
+  if (!threadId) return { ok: false, message: 'Thiếu mã cuộc trao đổi.' };
+  if (!auth.currentUser) {
+    return { ok: false, message: 'Phiên đăng nhập đã hết hạn. Đăng nhập lại rồi gửi tiếp nhé.' };
+  }
+  if (!body) return { ok: false, message: 'Bạn chưa nhập nội dung.' };
+  if (body.length > SUPPORT_MESSAGE_MAX) {
+    return { ok: false, message: `Nội dung tối đa ${SUPPORT_MESSAGE_MAX} ký tự.` };
+  }
+
+  const isFromAdmin = from === 'admin';
+  const now = new Date().toISOString();
+
+  try {
+    await addDoc(collection(db, SUPPORT_COLLECTION, threadId, 'replies'), {
+      from: isFromAdmin ? 'admin' : 'student',
+      text: body,
+      threadEmail: cleanEmailKey(threadEmail),
+      authorEmail: cleanEmailKey(auth.currentUser.email),
+      authorName: String(authorName || '').trim().slice(0, 120),
+      createdAt: now,
+      createdAtServer: serverTimestamp()
+    });
+  } catch (e) {
+    console.warn('Không gửi được lượt trả lời:', e);
+    if (e?.code === 'permission-denied') {
+      console.error(
+        'Firestore từ chối ghi vào `support_messages/{id}/replies`.\n' +
+          'Nguyên nhân gần như chắc chắn: firestore.rules trên máy chủ chưa có khối ' +
+          '`match /support_messages/{msgId}/replies/{replyId}`.\n' +
+          'Cách sửa: Firebase Console -> Firestore Database -> Rules -> dán đè toàn bộ ' +
+          'nội dung firestore.rules trong kho mã -> Publish. Xem DEPLOYMENT.md.',
+        e
+      );
+      return {
+        ok: false,
+        code: 'permission-denied',
+        message: 'Hệ thống chưa mở kênh trao đổi hai chiều. Đây là lỗi cài đặt, không phải do tài khoản của bạn — vui lòng báo Ban Quản Trị kèm mã: permission-denied.'
+      };
+    }
+    return { ok: false, code: e?.code || '', message: `Không gửi được (${e?.code || 'lỗi không rõ'}).` };
+  }
+
+  // Cập nhật tài liệu cha là việc PHỤ. Hỏng ở đây thì lượt trả lời vẫn còn
+  // nguyên và hai bên vẫn đọc được nhau — chỉ có huy hiệu "chưa đọc" là lỗi
+  // thời. Không để nó kéo cả lệnh gửi thành thất bại.
+  try {
+    await updateDoc(doc(db, SUPPORT_COLLECTION, threadId), {
+      lastReplyAt: now,
+      lastReplyFrom: isFromAdmin ? 'admin' : 'student',
+      studentUnread: isFromAdmin,
+      status: isFromAdmin ? 'read' : 'new'
+    });
+  } catch (e) {
+    console.warn('Đã gửi lượt trả lời nhưng không cập nhật được trạng thái cuộc trao đổi:', e);
+  }
+
+  return { ok: true };
+}
+
+/** Học viên đã xem lượt trả lời mới nhất — tắt huy hiệu đỏ trên nút Pipi. */
+export async function markThreadSeenByStudent(threadId) {
+  if (!threadId) return { ok: false };
+  try {
+    await updateDoc(doc(db, SUPPORT_COLLECTION, threadId), { studentUnread: false });
+    return { ok: true };
+  } catch (e) {
+    console.warn('Không đánh dấu được là đã xem:', e);
+    return { ok: false, code: e?.code || '' };
   }
 }
 

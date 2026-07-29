@@ -126,11 +126,13 @@ npx firebase-tools deploy --only firestore:rules
 
 #### Lần deploy sắp tới — hai thay đổi phải kiểm chứng ngay sau khi Publish
 
-Bản rules hiện tại trên máy chủ **chưa có** hai phần dưới đây. Chưa deploy thì Hộp Thư Hỗ Trợ hiện màn "Chưa đọc được hộp thư", và lỗ chiếm chỗ hồ sơ vẫn còn mở.
+Bản rules hiện tại trên máy chủ **chưa có** ba phần dưới đây. Chưa deploy thì Hộp Thư Hỗ Trợ hiện màn "Chưa đọc được hộp thư", không trao đổi qua lại được, và lỗ chiếm chỗ hồ sơ vẫn còn mở.
 
 1. **`support_messages`** — collection mới của Hộp Thư Hỗ Trợ. Kiểm chứng: đăng nhập bằng một tài khoản học viên, mở khung chat Pipi, bấm **Nhắn Ban Quản Trị**, gửi thử một dòng. Lời nhắn phải hiện trong Hộp Thư (chuông trên thanh đầu trang, chỉ quản trị viên thấy) kèm huy hiệu đỏ.
 
-2. **Ràng buộc id tài liệu khi tạo hồ sơ** (`canCreateProfile`). Phần này dùng `myEmail().replace('[^a-z0-9]', '_')` để dựng lại đúng id mà `recordStudentAccountToCloud()` sinh ra ở phía JavaScript. **Lệch một ký tự là học viên mới không đăng ký được.** Kiểm chứng bắt buộc: đăng ký một tài khoản thử với email có dấu chấm trong phần tên (ví dụ `kiem.tra.01@gmail.com`) và xác nhận:
+2. **`support_messages/{msgId}/replies`** — trao đổi hai chiều. Kiểm chứng tiếp ngay sau bước 1: ở tài khoản quản trị bấm **Trả lời trong app**, gửi một dòng; rồi quay lại tài khoản học viên — nút Pipi phải hiện **chấm đỏ**, mở ra thấy đúng lời vừa gửi, và nhắn tiếp được. Khối này còn cần luật `list` mới trên `support_messages` (học viên liệt kê cuộc trao đổi của chính mình) — thiếu nó thì hộp thư phía học viên luôn báo "Chưa đọc được hộp thư" dù lời nhắn gửi đi bình thường.
+
+3. **Ràng buộc id tài liệu khi tạo hồ sơ** (`canCreateProfile`). Phần này dùng `myEmail().replace('[^a-z0-9]', '_')` để dựng lại đúng id mà `recordStudentAccountToCloud()` sinh ra ở phía JavaScript. **Lệch một ký tự là học viên mới không đăng ký được.** Kiểm chứng bắt buộc: đăng ký một tài khoản thử với email có dấu chấm trong phần tên (ví dụ `kiem.tra.01@gmail.com`) và xác nhận:
    - Form báo **"🎉 Đăng ký tài khoản học viên P MARCOM thành công"**, KHÔNG phải câu "hồ sơ CHƯA lưu lên hệ thống".
    - Tài khoản đó xuất hiện trong Bảng Quản Trị.
 

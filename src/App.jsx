@@ -1306,6 +1306,7 @@ export default function App() {
           isOpen={isSupportInboxOpen}
           onClose={() => setIsSupportInboxOpen(false)}
           messages={supportMessages}
+          currentUser={currentUser}
           onSetStatus={handleSupportStatus}
           onDelete={deleteSupportMessage}
         />
