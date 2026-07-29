@@ -73,14 +73,20 @@ export default function SupportInboxModal({
   const [openThreadId, setOpenThreadId] = useState(null);
   const [replies, setReplies] = useState(null);
 
+  // Email chủ cuộc trao đổi — bắt buộc cho truy vấn lượt trả lời. Tra ngay ở
+  // đây thay vì dùng biến `openThread` tính bên dưới, vì effect này chạy trước
+  // phần thân và không được đọc biến chưa khai báo.
+  const openThreadEmail = (Array.isArray(messages) ? messages : [])
+    .find((m) => m.id === openThreadId)?.email || '';
+
   useEffect(() => {
-    if (!openThreadId) {
+    if (!openThreadId || !openThreadEmail) {
       setReplies(null);
       return;
     }
-    const unsub = listenToSupportReplies(openThreadId, setReplies);
+    const unsub = listenToSupportReplies(openThreadId, openThreadEmail, setReplies);
     return () => { if (typeof unsub === 'function') unsub(); };
-  }, [openThreadId]);
+  }, [openThreadId, openThreadEmail]);
 
   if (!isOpen) return null;
 

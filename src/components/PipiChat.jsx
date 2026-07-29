@@ -172,14 +172,19 @@ export default function PipiChat({
     return () => { if (typeof unsub === 'function') unsub(); };
   }, [currentUser?.email]);
 
+  // Email chủ cuộc trao đổi — bắt buộc cho truy vấn lượt trả lời (xem chú thích
+  // ở listenToSupportReplies). Ưu tiên email ghi trên chính cuộc trao đổi; rơi
+  // về email tài khoản khi danh sách chưa kịp tải xong.
+  const activeThreadEmail = activeThread?.email || currentUser?.email || '';
+
   useEffect(() => {
-    if (!activeThreadId) {
+    if (!activeThreadId || !activeThreadEmail) {
       setThreadReplies(null);
       return;
     }
-    const unsub = listenToSupportReplies(activeThreadId, setThreadReplies);
+    const unsub = listenToSupportReplies(activeThreadId, activeThreadEmail, setThreadReplies);
     return () => { if (typeof unsub === 'function') unsub(); };
-  }, [activeThreadId]);
+  }, [activeThreadId, activeThreadEmail]);
 
   const openThread = (thread) => {
     setActiveThreadId(thread.id);

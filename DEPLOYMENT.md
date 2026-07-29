@@ -127,7 +127,7 @@ npx firebase-tools deploy --only firestore:rules
 
 #### Lần deploy sắp tới — hai thay đổi phải kiểm chứng ngay sau khi Publish
 
-Bản rules hiện tại trên máy chủ **chưa có** ba phần dưới đây. Chưa deploy thì Hộp Thư Hỗ Trợ hiện màn "Chưa đọc được hộp thư", không trao đổi qua lại được, và lỗ chiếm chỗ hồ sơ vẫn còn mở.
+**Cập nhật 2026-07-29: đã Publish.** Hai phần đầu đã kiểm chứng qua hành vi thật của ứng dụng; phần thứ ba vẫn **chưa ai thử**, xem mục 3.
 
 1. **`support_messages`** — collection mới của Hộp Thư Hỗ Trợ. Kiểm chứng: đăng nhập bằng một tài khoản học viên, mở khung chat Pipi, bấm **Nhắn Ban Quản Trị**, gửi thử một dòng. Lời nhắn phải hiện trong Hộp Thư (chuông trên thanh đầu trang, chỉ quản trị viên thấy) kèm huy hiệu đỏ.
 

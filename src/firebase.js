@@ -529,21 +529,47 @@ export function listenToMySupportThreads(email, callback) {
   }
 }
 
-/** Theo dõi các lượt trả lời của một cuộc trao đổi, cũ trước mới sau. */
-export function listenToSupportReplies(threadId, callback) {
-  if (!threadId) {
+/**
+ * Theo dõi các lượt trả lời của một cuộc trao đổi, cũ trước mới sau.
+ *
+ * BẮT BUỘC truyền `threadEmail` — email của người mở cuộc trao đổi, KHÔNG phải
+ * email người đang xem. Đây là chỗ đã từng hỏng, và hỏng theo kiểu chỉ học viên
+ * gặp còn quản trị viên thì không:
+ *
+ * Luật đọc là `isAdmin() || resource.data.threadEmail == myEmail()`. Với truy
+ * vấn liệt kê, Firestore không lọc bớt tài liệu rồi trả về phần được phép — nó
+ * xét xem BẢN THÂN TRUY VẤN có bảo đảm mọi tài liệu trả về đều thoả luật không,
+ * và từ chối cả lệnh nếu không. Truy vấn cũ không có vế lọc nào, nên với học
+ * viên nó không bảo đảm được gì -> permission-denied; còn quản trị viên vẫn qua
+ * vì vế `isAdmin()` đúng vô điều kiện, không phụ thuộc truy vấn.
+ *
+ * Lọc theo email CHỦ cuộc trao đổi thì một dạng truy vấn dùng được cho cả hai:
+ * với học viên, `threadEmail` chính là email của họ nên khớp luật; với quản trị
+ * viên, vế `isAdmin()` cho qua bất kể lọc gì.
+ *
+ * Không dùng `orderBy`, cùng lý do với listenToMySupportThreads(): ghép `where`
+ * với `orderBy` trên hai trường khác nhau đòi một chỉ mục ghép mà Firestore
+ * không tự tạo. Sắp xếp tại máy vì một cuộc trao đổi chỉ có vài lượt.
+ */
+export function listenToSupportReplies(threadId, threadEmail, callback) {
+  const key = cleanEmailKey(threadEmail);
+  if (!threadId || !key) {
     callback([]);
     return () => {};
   }
   try {
     const q = query(
       collection(db, SUPPORT_COLLECTION, threadId, 'replies'),
-      orderBy('createdAt', 'asc'),
+      where('threadEmail', '==', key),
       limit(200)
     );
     return onSnapshot(
       q,
-      (snapshot) => callback(snapshot.docs.map((d) => ({ id: d.id, ...d.data() }))),
+      (snapshot) => {
+        const rows = snapshot.docs.map((d) => ({ id: d.id, ...d.data() }));
+        rows.sort((a, b) => String(a.createdAt || '').localeCompare(String(b.createdAt || '')));
+        callback(rows);
+      },
       (err) => {
         console.warn('Không đọc được các lượt trả lời:', err);
         callback(null);
