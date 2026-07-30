@@ -10,6 +10,8 @@ import {
   Award,
   Key,
   Lock,
+  Eye,
+  EyeOff,
   Sun,
   Moon,
   Monitor,
@@ -31,6 +33,7 @@ export default function UserProfileModal({
   const [resetOk, setResetOk] = useState(false);
   const [isSendingReset, setIsSendingReset] = useState(false);
   const [newPassword, setNewPassword] = useState('');
+  const [showNewPassword, setShowNewPassword] = useState(false);
   const [isAddingPassword, setIsAddingPassword] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
 
@@ -437,15 +440,32 @@ export default function UserProfileModal({
                 từ đó. Lúc ấy mật khẩu là lối vào duy nhất.
               </p>
 
+              {/* Nút con mắt: gõ mật khẩu mà không nhìn thấy mình gõ gì là
+                  nguồn gốc của phần lớn ca "đặt mật khẩu xong không đăng nhập
+                  được". Ở đây lại càng nên có, vì đây là ô đặt mật khẩu MỚI —
+                  không có ô nhập lại để đối chiếu, gõ sai một ký tự là học viên
+                  tự khoá mình ra ngoài mà không hề hay biết. */}
               <div className="relative">
                 <Lock className="w-3.5 h-3.5 absolute left-3 top-1/2 -translate-y-1/2 text-slate-500" />
                 <input
-                  type="password"
+                  type={showNewPassword ? 'text' : 'password'}
                   placeholder="Mật khẩu mới (tối thiểu 6 ký tự)"
                   value={newPassword}
                   onChange={(e) => setNewPassword(e.target.value)}
-                  className="w-full bg-[#111a2e] border border-emerald-900/60 focus:border-emerald-400 rounded-xl pl-8 pr-3 py-2 text-xs text-white placeholder-slate-500 focus:outline-none"
+                  className="w-full bg-[#111a2e] border border-emerald-900/60 focus:border-emerald-400 rounded-xl pl-8 pr-10 py-2 text-xs text-white placeholder-slate-500 focus:outline-none"
                 />
+                <button
+                  type="button"
+                  onClick={() => setShowNewPassword(!showNewPassword)}
+                  className="absolute right-2.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-emerald-400 transition p-1 cursor-pointer"
+                  title={showNewPassword ? 'Ẩn mật khẩu' : 'Hiện mật khẩu'}
+                >
+                  {showNewPassword ? (
+                    <EyeOff className="w-4 h-4 text-emerald-400" />
+                  ) : (
+                    <Eye className="w-4 h-4" />
+                  )}
+                </button>
               </div>
 
               <button
