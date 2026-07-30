@@ -101,9 +101,13 @@ async function readFeed(feed) {
 
       const summary = pickTag(block, 'description').slice(0, 260);
       return {
+        // Đường dẫn bài gốc CỐ Ý KHÔNG trả về cho trình duyệt. Mục tin tức chỉ
+        // tổng hợp và ghi nguồn, không đẩy học viên sang trang ngoài — trang
+        // ngoài là môi trường không kiểm soát được. Giữ link ở đây chỉ để làm
+        // khoá phân biệt các mục trùng tên, và khoá đó không bao giờ được vẽ ra
+        // giao diện dưới dạng thẻ liên kết.
         id: `rss-${link}`,
         title,
-        link,
         summary,
         image: pickImage(block),
         publishedAt: toVnDate(pickTag(block, 'pubDate')),

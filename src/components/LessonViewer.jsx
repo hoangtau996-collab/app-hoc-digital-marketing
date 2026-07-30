@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import LessonVisual from './LessonVisual';
 import LessonIllustration from './LessonIllustration';
+import LessonPhoto from './LessonPhoto';
+import LessonCaseStudy from './LessonCaseStudy';
 import { 
   BookOpen, 
   HelpCircle, 
@@ -233,8 +235,15 @@ export default function LessonViewer({
                   <FormattedBlock text={sec.content} />
                 </div>
 
+                {/* Ảnh chụp thật gắn với case của bài, đặt trước sơ đồ để người
+                    học thấy bối cảnh có thật rồi mới tới phần trừu tượng hoá */}
+                <LessonPhoto sectionId={sec.id} />
+
                 {/* Visual Diagram & Infographic Blueprint */}
                 <LessonVisual sectionId={sec.id} />
+
+                {/* Case thương hiệu có thật, kèm nguồn kiểm chứng */}
+                <LessonCaseStudy sectionId={sec.id} />
 
                 {sec.takeaway && (
                   <div className="mt-5 p-4 sm:p-5 rounded-2xl bg-[#17233f] border-2 border-emerald-500/60 shadow-lg flex items-start gap-3.5">

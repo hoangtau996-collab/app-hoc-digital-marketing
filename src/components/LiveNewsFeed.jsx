@@ -14,7 +14,6 @@ import {
   Info,
   BadgeCheck,
   FlaskConical,
-  ExternalLink,
   Globe,
   X
 } from 'lucide-react';
@@ -145,12 +144,9 @@ function GlobalNewsStrip() {
       ) : (
         <div className="flex gap-3 overflow-x-auto pb-2 snap-x">
           {state.items.map((item) => (
-            <a
+            <article
               key={item.id}
-              href={item.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-64 shrink-0 snap-start rounded-2xl overflow-hidden bg-[#152037]/70 border border-emerald-900/40 hover:border-emerald-500/60 transition group"
+              className="w-64 shrink-0 snap-start rounded-2xl overflow-hidden bg-[#152037]/70 border border-emerald-900/40"
             >
               {item.image && (
                 <img
@@ -170,14 +166,14 @@ function GlobalNewsStrip() {
                   {item.source}
                   {item.publishedAt && <span className="text-slate-500 font-normal">- {item.publishedAt}</span>}
                 </div>
-                <p className="text-xs text-slate-200 font-semibold leading-snug line-clamp-3 group-hover:text-white">
+                <p className="text-xs text-slate-200 font-semibold leading-snug line-clamp-3">
                   {item.title}
                 </p>
-                <span className="text-[10px] text-slate-400 flex items-center gap-1">
-                  <ExternalLink className="w-3 h-3" /> Mở bài gốc
-                </span>
+                {item.summary && (
+                  <p className="text-[11px] text-slate-400 leading-relaxed line-clamp-3">{item.summary}</p>
+                )}
               </div>
-            </a>
+            </article>
           ))}
         </div>
       )}
@@ -321,10 +317,11 @@ export default function LiveNewsFeed({ newsList, onAddNewNews }) {
         <p>
           <strong className="text-slate-300">Bản tin gồm hai loại, đọc nhãn trên từng thẻ.</strong>{' '}
           Thẻ gắn nhãn <strong className="text-emerald-400">TIN THẬT - CÓ NGUỒN</strong> được biên tập lại từ bài
-          báo có thật, kèm ảnh bìa và đường dẫn tới bài gốc để tự đối chiếu. Thẻ gắn nhãn{' '}
+          báo có thật, kèm ảnh bìa và tên nguồn để tự tra cứu. Thẻ gắn nhãn{' '}
           <strong className="text-slate-300">MÔ PHỎNG ĐÀO TẠO</strong> là kịch bản dựng để luyện phản xạ ra quyết
-          định, số liệu chưa kiểm chứng. Dù đọc loại nào, hãy đối chiếu thông báo chính thức của nền tảng trước
-          khi áp dụng vào chiến dịch thật.
+          định, số liệu chưa kiểm chứng. Bản tin chỉ tổng hợp và ghi rõ nguồn, không đặt đường dẫn sang trang
+          ngoài — muốn đọc bản gốc, hãy tự tra tên nguồn. Dù đọc loại nào, hãy đối chiếu thông báo chính thức
+          của nền tảng trước khi áp dụng vào chiến dịch thật.
         </p>
       </div>
 
@@ -441,27 +438,13 @@ export default function LiveNewsFeed({ newsList, onAddNewNews }) {
                   </div>
                 )}
 
-                <div className="flex flex-col sm:flex-row gap-2">
-                  <button
-                    onClick={() => setOpenNews(news)}
-                    className="px-4 py-2.5 rounded-xl bg-[#1a2742] border border-emerald-900/60 hover:border-emerald-500 text-emerald-300 text-xs font-bold flex items-center justify-center gap-2 transition cursor-pointer"
-                  >
-                    <BookOpen className="w-4 h-4" />
-                    <span>Đọc phân tích đầy đủ &amp; việc cần làm</span>
-                  </button>
-
-                  {news.sourceUrl && (
-                    <a
-                      href={news.sourceUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="px-4 py-2.5 rounded-xl bg-[#152037] border border-emerald-900/60 hover:border-emerald-500 text-slate-300 hover:text-white text-xs font-bold flex items-center justify-center gap-2 transition cursor-pointer"
-                    >
-                      <ExternalLink className="w-4 h-4" />
-                      <span>Bài gốc</span>
-                    </a>
-                  )}
-                </div>
+                <button
+                  onClick={() => setOpenNews(news)}
+                  className="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-[#1a2742] border border-emerald-900/60 hover:border-emerald-500 text-emerald-300 text-xs font-bold flex items-center justify-center gap-2 transition cursor-pointer"
+                >
+                  <BookOpen className="w-4 h-4" />
+                  <span>Đọc phân tích đầy đủ &amp; việc cần làm</span>
+                </button>
 
               </div>
             </div>
@@ -540,17 +523,6 @@ export default function LiveNewsFeed({ newsList, onAddNewNews }) {
                     {openNews.sourceUrl ? 'Nguồn: ' : 'Nguồn tham chiếu: '}
                     {openNews.source}
                   </span>
-                )}
-                {openNews.sourceUrl && (
-                  <a
-                    href={openNews.sourceUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-1.5 text-emerald-400 hover:text-emerald-300 underline underline-offset-2"
-                  >
-                    <ExternalLink className="w-3.5 h-3.5" />
-                    Mở bài gốc
-                  </a>
                 )}
                 {openNews.publishedAt && (
                   <span className="flex items-center gap-1.5">
