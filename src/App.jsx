@@ -314,6 +314,20 @@ export default function App() {
    */
   const [needsProfileCompletion, setNeedsProfileCompletion] = useState(false);
 
+  /**
+   * Máy chủ đã trả lời xong câu "tài khoản này có phải quản trị viên không" chưa.
+   *
+   * Cần một cờ riêng vì `isAdmin` đọc từ `currentUser.role`, mà giá trị đó chỉ
+   * đúng SAU KHI `resolveAdminRole()` hỏi xong Firestore. Trước lúc đó mọi tài
+   * khoản đều mang tạm vai trò 'student' — nghĩa là "chưa biết", nhưng nhìn từ
+   * phần còn lại của ứng dụng thì không phân biệt được với "đã biết, là học viên".
+   *
+   * Chính chỗ đó làm bảng khảo sát loé lên trên màn hình quản trị viên: nó chờ
+   * 900ms rồi cứ thế bật, mà một vòng hỏi Firestore lúc mạng chậm hoặc máy chủ
+   * vừa khởi động thì lâu hơn thế nhiều.
+   */
+  const [roleResolved, setRoleResolved] = useState(false);
+
   // Lỗi của lần đăng nhập Google bằng cách chuyển trang, chuyển vào AuthModal.
   const [googleAuthError, setGoogleAuthError] = useState('');
 
@@ -366,6 +380,8 @@ export default function App() {
         };
 
         setCurrentUser(studentUser);
+        // Từ đây vai trò là câu trả lời của máy chủ, không còn là giá trị tạm.
+        setRoleResolved(true);
         try {
           localStorage.setItem('dmm_active_user', JSON.stringify(studentUser));
         } catch (e) {}
@@ -399,6 +415,15 @@ export default function App() {
         // Đăng xuất thì hạ chốt chặn xuống, nếu không màn hình hoàn tất hồ sơ
         // sẽ treo lại trên một phiên không còn tồn tại.
         setNeedsProfileCompletion(false);
+
+        // Không có phiên Firebase thì cũng không thể là quản trị viên — quyền
+        // chỉ cấp sau khi máy chủ xác nhận một phiên thật. Vậy là đã biết câu
+        // trả lời, không phải "chưa hỏi xong".
+        //
+        // Bắt buộc phải đặt cờ ở nhánh này: học viên đăng nhập bằng nhánh dự
+        // phòng tại máy không hề có phiên Firebase, bỏ sót thì họ không bao giờ
+        // được mời làm khảo sát nữa.
+        setRoleResolved(true);
       }
     });
     return () => unsubscribe();
@@ -797,7 +822,12 @@ export default function App() {
 
   // Quản trị viên KHÔNG bị hỏi: khảo sát này để phân tệp học viên, còn Ban Quản
   // Trị thì đã biết mình là ai. Chặn họ chỉ tổ làm bẩn dữ liệu phân tệp.
-  const shouldAskSurvey = Boolean(currentUser) && !isAdmin && !surveyDone;
+  //
+  // `roleResolved` là điều kiện quyết định, không phải để cho chắc: thiếu nó thì
+  // trong lúc còn chờ máy chủ trả lời, quản trị viên bị coi tạm là học viên và
+  // bảng khảo sát bật lên trên màn hình của họ. Chờ biết chắc rồi mới hỏi —
+  // muộn vài trăm mili-giây, đổi lại không bao giờ hỏi nhầm người.
+  const shouldAskSurvey = Boolean(currentUser) && roleResolved && !isAdmin && !surveyDone;
 
   const openSurvey = (mandatory = false) => {
     setIsSurveyMandatory(mandatory);
@@ -884,10 +914,13 @@ export default function App() {
     if (surveyAskedForRef.current === email) return;
     surveyAskedForRef.current = email;
 
-    // Hoãn 900ms chứ không bật ngay: `resolveAdminRole()` còn đang hỏi máy chủ
-    // xem tài khoản này có phải quản trị viên không, mà quản trị viên thì không
-    // bị hỏi. Bật ngay sẽ loé bảng khảo sát trên màn hình của họ rồi tự tắt —
-    // trông như lỗi.
+    // Hoãn 900ms cho đỡ đường đột — vừa đăng nhập xong đã bị đập ngay một bảng
+    // câu hỏi vào mặt thì phản xạ đầu tiên là bấm tắt.
+    //
+    // Khoảng hoãn này KHÔNG còn là thứ chặn quản trị viên nữa. Trước đây nó
+    // gánh luôn vai trò đó — chờ 900ms mong `resolveAdminRole()` kịp trả lời —
+    // và hỏng đúng những lúc mạng chậm. Việc chặn nay do `roleResolved` lo,
+    // dựa trên câu trả lời thật của máy chủ chứ không dựa vào đồng hồ.
     const timer = setTimeout(() => {
       setIsSurveyMandatory(false);
       setIsSurveyOpen(true);
@@ -992,6 +1025,14 @@ export default function App() {
     // lại ngay sau khi máy chủ xác nhận.
     const { role: _untrustedRole, ...safeUser } = user || {};
     setCurrentUser({ ...safeUser, role: 'student' });
+
+    // Nhánh đăng nhập dự phòng tại máy không tạo phiên Firebase, nên
+    // `onAuthStateChanged` sẽ không chạy lại để đặt cờ này. Không đặt ở đây thì
+    // học viên đăng nhập theo nhánh đó không bao giờ được mời làm khảo sát.
+    //
+    // Đặt 'student' là đúng chứ không phải tạm bợ: quyền quản trị chỉ cấp sau
+    // khi máy chủ xác nhận một phiên Firebase thật, mà nhánh này không có.
+    setRoleResolved(true);
   };
 
   const handleLogout = async () => {
