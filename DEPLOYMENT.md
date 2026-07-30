@@ -10,6 +10,14 @@ Kho mã có `vercel.json` với **đúng một mục đích**: chuyển tiếp �
 
 TODO — cân nhắc đưa nốt các thiết lập còn lại vào `vercel.json` để chúng bám theo kho mã.
 
+### Phiên bản Node — đừng hạ xuống
+
+`package.json` khai `"engines": { "node": "22.x" }`. Đây **không phải sở thích**: gói `firebase-admin@14` (hàm máy chủ `api/forgot-password.js` dùng để sinh mã đặt lại mật khẩu) khai `engines.node >= 22` và **không nạp được** trên Node cũ hơn.
+
+Kiểu hỏng rất dễ chẩn đoán nhầm: lỗi xảy ra lúc **nạp module**, trước khi chạy dòng đầu tiên của mã, nên **mọi** lệnh gọi đều trả về `500 FUNCTION_INVOCATION_FAILED` — kể cả lệnh GET lẽ ra phải trả `405`. Nhìn vào thì tưởng sai cấu hình biến môi trường hoặc sai khoá, mà thực ra chỉ là sai phiên bản Node. Đã dính một lần ngày 2026-07-30.
+
+Giá trị trong `package.json` được ưu tiên hơn thiết lập trên bảng điều khiển Vercel, nên để nguyên ở đây là đủ.
+
 ### Tên miền đăng nhập (custom auth domain)
 
 `VITE_FIREBASE_AUTH_DOMAIN` trên production là **`academy.pmarcom.com`**, không phải `hr-project-b982a.firebaseapp.com` như giá trị Firebase cấp sẵn. Hai lý do, cả hai đều thật:
