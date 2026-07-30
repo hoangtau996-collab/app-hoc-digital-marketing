@@ -1,16 +1,24 @@
 /**
  * Dữ liệu Bản tin thuật toán nền tảng.
  *
- * LƯU Ý VỀ BẢN CHẤT DỮ LIỆU: đây là bản tin MÔ PHỎNG phục vụ đào tạo Trưởng
- * phòng Digital, không phải nguồn tin đã kiểm chứng. Trường `source` ghi tên
- * kênh công bố để học viên biết chỗ tra cứu, KHÔNG kèm đường dẫn để tránh hiểu
- * nhầm là trích dẫn thật. Giao diện có băng ghi rõ điều này.
+ * BẢN TIN GỒM HAI LOẠI, KHÔNG ĐƯỢC TRỘN LẪN:
+ *
+ *   1. REAL_SOURCED_NEWS - tin THẬT, biên tập lại từ bài báo có thật. Bắt buộc
+ *      có `sourceUrl` trỏ đúng bài gốc và `image` là ảnh bìa do chính bài đó
+ *      đăng. Mọi con số trong tin phải lấy từ bài gốc, không được ước lượng.
+ *
+ *   2. SIMULATED_NEWS_ITEMS - tin MÔ PHỎNG phục vụ luyện phản xạ ra quyết định.
+ *      Không có bài báo thật đứng sau, nên TUYỆT ĐỐI không gắn `sourceUrl` hay
+ *      ảnh thật vào nhóm này: làm vậy là dựng chứng cứ giả. Nhóm này chỉ dùng
+ *      tranh SVG và được đánh dấu `isSimulated` để giao diện ghi rõ.
  *
  * Cấu trúc một tin:
  *   id, category, platformIcon, title      - định danh và tiêu đề
- *   date, publishedAt                      - thời gian tương đối và tuyệt đối
+ *   publishedAt                            - ngày đăng dạng dd/mm/yyyy
  *   isHot                                  - gắn nhãn đột biến
- *   illustration                           - khoá tranh trong NewsIllustration
+ *   illustration                           - khoá tranh SVG trong NewsIllustration
+ *   image {url, credit}                    - ảnh bìa thật (chỉ tin thật)
+ *   sourceUrl                              - link bài gốc (chỉ tin thật)
  *   source, readTime, tags                 - siêu dữ liệu bài viết
  *   summary                                - đoạn dẫn
  *   keyNumbers[]  {value, label}           - số liệu chính, hiện ngay trên thẻ
@@ -19,15 +27,503 @@
  *   ifIgnored                              - cái giá phải trả nếu bỏ qua
  *   actionChecklist[]                      - việc cần chỉ đạo ngay
  *   deadline                               - mốc thời gian áp dụng (tuỳ chọn)
+ *
+ * KHÔNG lưu chuỗi ngày tương đối kiểu '2 ngày trước' trong dữ liệu. Chuỗi đó
+ * không tự già đi nên sẽ sai chỉ sau một đêm. Nhãn tương đối được tính lúc vẽ
+ * giao diện từ `publishedAt`, xem src/utils/newsDate.js.
  */
 
-export const INITIAL_NEWS_ITEMS = [
+/* ------------------------------------------------------------------ *
+ * TIN THẬT - biên tập từ bài báo có thật, cập nhật ngày 30/07/2026    *
+ * ------------------------------------------------------------------ */
+const REAL_SOURCED_NEWS = [
+  {
+    id: 'real-2026-07-30-meta-q2',
+    category: 'Meta Ads',
+    platformIcon: 'Facebook',
+    title: 'Meta quý 2/2026: giá mỗi quảng cáo toàn cầu tăng 12%, riêng châu Á - Thái Bình Dương chỉ tăng 1%',
+    publishedAt: '30/07/2026',
+    isHot: true,
+    illustration: 'cpm-auction',
+    image: {
+      url: 'https://ppc.land/content/images/size/w1200/2026/07/meta-earnings.webp',
+      credit: 'Ảnh: PPC Land',
+    },
+    sourceUrl: 'https://ppc.land/meta-profit-drops-8-to-15-8bn-as-legal-charges-hit-ad-gains/',
+    source: 'PPC Land - Báo cáo tài chính Meta quý 2/2026',
+    readTime: '5 phút đọc',
+    tags: ['CPM', 'Ngân sách', 'Advantage+', 'Châu Á - TBD'],
+    summary:
+      'Doanh thu quảng cáo Meta đạt 59,36 tỷ USD, tăng 27% so với cùng kỳ. Giá trung bình mỗi quảng cáo tăng 12% trên toàn cầu, nhưng bóc tách theo khu vực lại lộ ra một khoảng chênh đáng để tận dụng: châu Á - Thái Bình Dương có lượt hiển thị tăng 17% trong khi giá chỉ nhích 1%.',
+    keyNumbers: [
+      { value: '+12%', label: 'giá mỗi quảng cáo toàn cầu' },
+      { value: '+1%', label: 'giá quảng cáo châu Á - TBD' },
+      { value: '+17%', label: 'lượt hiển thị châu Á - TBD' },
+    ],
+    content: [
+      {
+        heading: 'Con số quan trọng nhất không nằm ở dòng doanh thu',
+        body:
+          'Meta đạt doanh thu 60,80 tỷ USD trong quý, tăng 28%. Lợi nhuận ròng lại giảm 8% còn 15,8 tỷ USD do khoản chi pháp lý 2,4 tỷ USD và 1,18 tỷ USD chi phí cắt giảm 8.000 nhân sự. Nhưng với người mua quảng cáo, dòng đáng đọc là phần bóc tách giá theo khu vực.',
+      },
+      {
+        heading: 'Khoảng chênh giá giữa các khu vực',
+        body:
+          'Giá trung bình mỗi quảng cáo: Mỹ và Canada tăng 20%, châu Âu tăng 13%, châu Á - Thái Bình Dương chỉ tăng 1%. Trong khi đó lượt hiển thị ở châu Á - Thái Bình Dương tăng 17%, cao nhất trong ba khu vực. Nghĩa là kho hiển thị ở khu vực này đang nở nhanh hơn nhu cầu mua, giá vì thế gần như đứng yên.',
+      },
+      {
+        heading: 'Vì sao đây là cửa sổ cơ hội cho thị trường Việt Nam',
+        body:
+          'Việt Nam nằm trong khu vực châu Á - Thái Bình Dương. Cùng một mức ngân sách năm nay mua được nhiều lượt hiển thị hơn hẳn so với đồng nghiệp ở Mỹ, nơi giá đã tăng 20%. Cửa sổ này không mở mãi: khi các nhà quảng cáo khu vực nhận ra và đổ tiền vào, chênh lệch sẽ khép lại. Đây là lúc dồn ngân sách thử nghiệm để giành tệp khách trước khi giá bắt kịp.',
+      },
+      {
+        heading: 'Hệ thống tự động đang thật sự chạy được',
+        body:
+          'Meta cho biết Advantage+ đã đạt quy mô 75 tỷ USD tính theo năm. Mô hình xếp hạng GEM tăng 8,3% lượt nhấp và 15,7% lượt chuyển đổi trên Facebook. Có 9 triệu doanh nghiệp nhỏ dùng công cụ tạo nội dung bằng AI. Các con số này củng cố hướng đi: tiếp tục kháng cự tự động hoá là chống lại chính công cụ đang có hiệu quả đo được.',
+      },
+    ],
+    impact:
+      'Trưởng phòng nên tận dụng cửa sổ giá rẻ tạm thời của khu vực để đẩy mạnh giai đoạn phủ nhận diện và thu tệp khách hàng tiềm năng, thay vì chỉ chạy nhóm chuyển đổi cuối phễu. Đồng thời đưa Advantage+ vào thử nghiệm chính thức thay vì né tránh.',
+    ifIgnored:
+      'Giữ nguyên ngân sách và cấu trúc cũ trong lúc giá hiển thị khu vực đang thấp nghĩa là bỏ lỡ đúng giai đoạn mua tệp khách rẻ nhất. Sang năm khi giá khu vực bắt kịp mức tăng 20% của Mỹ, cùng số tiền đó sẽ mua được ít hơn đáng kể.',
+    actionChecklist: [
+      'Nâng tỷ trọng ngân sách cho chiến dịch phủ nhận diện và thu tệp trong quý 3, tận dụng giá hiển thị khu vực còn thấp',
+      'Ghi lại CPM trung bình hiện tại của tài khoản làm mốc so sánh cho các quý sau',
+      'Mở một chiến dịch Advantage+ chạy song song với cấu trúc thủ công, so sánh trong 4 tuần',
+      'Kiểm tra tệp khách hàng tiềm năng thu được có được nuôi dưỡng tiếp không, tránh mua rẻ rồi để nguội',
+    ],
+  },
+  {
+    id: 'real-2026-07-03-meta-location-fee',
+    category: 'Meta Ads',
+    platformIcon: 'Facebook',
+    title: 'Meta thu phụ phí theo vị trí 2-5% tại sáu thị trường, hiệu lực từ 01/07/2026',
+    publishedAt: '03/07/2026',
+    isHot: false,
+    illustration: 'ai-budget',
+    image: {
+      url: 'https://www.digitalapplied.com/blog/meta-europe-location-fees-july-2026-advertiser-guide/article-image',
+      credit: 'Ảnh: Digital Applied',
+    },
+    sourceUrl: 'https://www.digitalapplied.com/blog/meta-europe-location-fees-july-2026-advertiser-guide',
+    source: 'Digital Applied - Hướng dẫn phí theo vị trí của Meta',
+    readTime: '4 phút đọc',
+    tags: ['Chi phí', 'Ngân sách', 'Thuế dịch vụ số', 'Thị trường quốc tế'],
+    summary:
+      'Meta cộng thêm 2-5% vào hoá đơn cho quảng cáo hiển thị tại Áo, Pháp, Ý, Tây Ban Nha, Thổ Nhĩ Kỳ và Anh. Mức phí tính theo nơi quảng cáo thực sự hiển thị, không theo nơi nhắm mục tiêu, nên chọn tệp cẩn thận vẫn có thể bị tính phí ngoài dự kiến.',
+    keyNumbers: [
+      { value: '2-5%', label: 'mức phụ thu theo từng nước' },
+      { value: '6', label: 'thị trường bị áp dụng' },
+      { value: '01/07', label: 'ngày bắt đầu hiệu lực' },
+    ],
+    content: [
+      {
+        heading: 'Mức phí cụ thể từng nước',
+        body:
+          'Anh 2%. Pháp, Ý, Tây Ban Nha 3%. Áo và Thổ Nhĩ Kỳ 5%. Đây là khoản Meta chuyển phần thuế dịch vụ số mà chính phủ các nước này áp lên nền tảng sang cho người mua quảng cáo gánh.',
+      },
+      {
+        heading: 'Điểm dễ tính nhầm ngân sách',
+        body:
+          'Phí tính theo nơi quảng cáo thực sự được hiển thị, không phải nơi nhà quảng cáo chọn nhắm mục tiêu. Với các chiến dịch để hệ thống tự mở rộng phạm vi phân phối, quảng cáo có thể chạy sang các nước này mà người quản lý không chủ động chọn. Khoản phụ thu khi đó xuất hiện trên hoá đơn như một con số lạ.',
+      },
+      {
+        heading: 'Phí này không nằm trong CPM đấu giá',
+        body:
+          'Meta khẳng định giá CPM và CPC do cơ chế đấu giá quyết định, không bị phí vị trí đẩy lên. Phụ phí được cộng riêng vào hoá đơn sau khi quảng cáo đã chạy. Nghĩa là nhìn vào trình quản lý quảng cáo sẽ không thấy khoản này, phải mở hoá đơn thanh toán mới thấy.',
+      },
+      {
+        heading: 'Vì sao người làm thị trường Việt Nam vẫn nên đọc',
+        body:
+          'Google đã chuyển thuế dịch vụ số sang nhà quảng cáo từ tháng 11/2020, Amazon từ tháng 8/2024, và Meta cầm cự tới 2026 mới làm. Hướng đi chung của ngành đã rõ. Mọi thị trường ban hành thuế dịch vụ số đều có khả năng bị áp cơ chế tương tự, nên nên tính trước một khoảng đệm chi phí trong kế hoạch ngân sách năm sau.',
+      },
+    ],
+    impact:
+      'Trưởng phòng có chạy quảng cáo vào sáu thị trường trên phải cộng thêm 2-5% vào dự toán, nếu không mức chi thực tế sẽ vượt kế hoạch mà không tìm ra nguyên nhân trong trình quản lý quảng cáo.',
+    ifIgnored:
+      'Ngân sách quyết toán cuối kỳ vượt kế hoạch vài phần trăm, và vì khoản này không hiện trong trình quản lý quảng cáo nên đội ngũ sẽ mất nhiều ngày dò tìm sai ở đâu.',
+    actionChecklist: [
+      'Đối chiếu hoá đơn thanh toán Meta tháng 7 với báo cáo trong trình quản lý để xác định có bị phụ thu không',
+      'Nếu không chủ đích chạy vào sáu thị trường trên, khoá vùng phân phối lại thay vì để hệ thống tự mở rộng',
+      'Cộng khoảng đệm chi phí vào dự toán cho mọi chiến dịch có phân phối quốc tế',
+      'Đưa mục phí nền tảng thành một dòng riêng trong báo cáo ngân sách hằng tháng',
+    ],
+    deadline: 'Đã có hiệu lực từ 01/07/2026 tại Áo, Pháp, Ý, Tây Ban Nha, Thổ Nhĩ Kỳ và Anh',
+  },
+  {
+    id: 'real-2026-07-28-tiktok-q3-preview',
+    category: 'TikTok Shop & Ads',
+    platformIcon: 'Video',
+    title: 'TikTok công bố bộ tính năng quý 3/2026: loại trừ tối đa 40% vùng trong TopView, GMV Max Pro tính cả hoa hồng và mã giảm giá',
+    publishedAt: '28/07/2026',
+    isHot: true,
+    illustration: 'keyword-exclusion',
+    image: {
+      url: 'https://ppc.land/content/images/size/w1200/2026/07/tiktok.webp',
+      credit: 'Ảnh: PPC Land',
+    },
+    sourceUrl: 'https://ppc.land/tiktok-lets-advertisers-block-up-to-40-of-regions-in-topview-buys/',
+    source: 'PPC Land - Bản xem trước sản phẩm TikTok quý 3/2026',
+    readTime: '6 phút đọc',
+    tags: ['TopView', 'GMV Max', 'Tự động hoá', 'Biên lợi nhuận'],
+    summary:
+      'TikTok mở loạt điều khiển mới cho quý 3: chặn tối đa 40% số vùng trong chiến dịch TopView toàn quốc, tự quét ảnh và video sản phẩm từ trang đích của nhà quảng cáo, và quan trọng nhất là GMV Max Pro chuyển từ tối ưu theo doanh thu sang tối ưu có trừ hoa hồng, mã giảm giá và chi phí tiếp thị liên kết.',
+    keyNumbers: [
+      { value: '40%', label: 'tỷ lệ vùng được loại trừ tối đa' },
+      { value: '60%', label: 'tỷ lệ vùng bắt buộc phải giữ' },
+      { value: '7 ngày', label: 'chu kỳ ngân sách Seller Scale Up' },
+    ],
+    content: [
+      {
+        heading: 'GMV Max Pro là thay đổi đáng giá nhất',
+        body:
+          'Trước đây GMV Max chỉ tối ưu theo tổng giá trị hàng bán. Máy đẩy mạnh những đơn dễ ra nhất mà không quan tâm đơn đó còn lại bao nhiêu sau khi trừ mã giảm giá và hoa hồng cho nhà sáng tạo nội dung. GMV Max Pro nay tính cả ba khoản đó cùng với chi phí quảng cáo. Đây là lần đầu thuật toán của TikTok nhìn gần với chỉ số mà kế toán nhìn. Lưu ý: chưa mở tại Canada.',
+      },
+      {
+        heading: 'TopView chặn vùng, có trần cứng',
+        body:
+          'Tính năng TopView Geo Exclusion cho phép loại tối đa 40% số tỉnh, thành hoặc khu vực khỏi chiến dịch toàn quốc, dùng khi hàng chưa phủ hết, khi có ràng buộc cấm quảng cáo theo vùng, hoặc khi chạy khuyến mãi địa phương. Trần cứng: chiến dịch không được rớt xuống dưới 60% số vùng của một nước. Mở toàn cầu nhưng phải xin vào danh sách cho phép.',
+      },
+      {
+        heading: 'Máy tự lấy nội dung từ trang đích của bạn',
+        body:
+          'Catalog Image & Video Auto-Crawl tự động quét trang đích công khai của nhà quảng cáo để lấy ảnh và video sản phẩm, có bộ lọc chọn ra tài sản liên quan, không cần tải lên thủ công. Mặt trái: những ảnh cũ, ảnh sai giá hay ảnh chưa duyệt còn sót trên trang đều có thể bị máy nhặt đem chạy quảng cáo.',
+      },
+      {
+        heading: 'Một chi tiết đáng ngờ trong thông báo',
+        body:
+          'Bản công bố lần này không kèm bất kỳ số liệu hiệu quả nào, khác hẳn các đợt trước từng nêu rõ TopReach tăng 59% phạm vi tiếp cận tăng thêm hay Smart+ Catalog Ads giảm 36% chi phí mỗi chuyển đổi. Khi nền tảng ra tính năng mà không kèm con số chứng minh, nên coi đó là bản thử nghiệm và tự đo bằng ngân sách nhỏ trước.',
+      },
+      {
+        heading: 'Cửa cho tác tử AI vào trình quản lý',
+        body:
+          'TikTok Agentic Hub mở giao diện theo chuẩn Model Context Protocol để dựng tác tử AI làm việc trong Ads Manager, kèm sẵn các kỹ năng báo cáo, tìm tệp đối tượng, tối ưu ngân sách. Bản công bố không nói rõ tác tử được quyền ghi hay chỉ được đọc. Chưa rõ quyền thì chưa nên nối vào tài khoản đang tiêu tiền thật.',
+      },
+    ],
+    impact:
+      'Trưởng phòng nên chuyển chỉ số đánh giá gian hàng từ doanh thu sang lợi nhuận sau hoa hồng và mã giảm giá, đồng thời rà lại toàn bộ ảnh trên trang đích trước khi bật tính năng tự quét.',
+    ifIgnored:
+      'Tiếp tục chấm hiệu quả bằng tổng doanh thu sẽ khen nhầm những mã hàng bán chạy nhưng lỗ sau khi trừ hoa hồng. Bật tự quét mà không dọn trang đích thì ảnh sai giá hoặc ảnh khuyến mãi đã hết hạn sẽ lên quảng cáo.',
+    actionChecklist: [
+      'Đăng ký vào danh sách cho phép của GMV Max Pro và chạy thử trên nhóm hàng có biên lợi nhuận mỏng nhất trước',
+      'Rà soát toàn bộ ảnh và video trên trang đích, gỡ ảnh cũ và ảnh sai giá trước khi bật Auto-Crawl',
+      'Dựng báo cáo lợi nhuận sau hoa hồng cho từng mã hàng, thay cho báo cáo chỉ có doanh thu',
+      'Chưa nối tác tử AI vào tài khoản thật cho tới khi TikTok công bố rõ tác tử có quyền ghi hay không',
+    ],
+    deadline: 'Triển khai trong quý 3/2026, phần lớn tính năng yêu cầu đăng ký danh sách cho phép',
+  },
+  {
+    id: 'real-2026-07-12-tiktok-shop-cpsc',
+    category: 'TikTok Shop & Ads',
+    platformIcon: 'Video',
+    title: 'TikTok Shop: hàng thiếu hồ sơ chứng nhận nộp điện tử bị giữ ngay tại cửa khẩu Mỹ',
+    publishedAt: '12/07/2026',
+    isHot: false,
+    illustration: 'shop-health',
+    image: {
+      url: 'https://ppc.land/content/images/size/w1200/2026/07/Retail-Law.webp',
+      credit: 'Ảnh: PPC Land',
+    },
+    sourceUrl: 'https://ppc.land/tiktok-shop-sellers-face-shipment-seizure-risk-under-new-cpsc-filing-rule/',
+    source: 'PPC Land - Quy định nộp hồ sơ CPSC',
+    readTime: '4 phút đọc',
+    tags: ['Tuân thủ', 'Xuất khẩu', 'Sức khoẻ gian hàng', 'Chứng nhận sản phẩm'],
+    summary:
+      'Từ 08/07/2026, sản phẩm cần Giấy chứng nhận sản phẩm trẻ em hoặc Giấy chứng nhận hợp quy chung phải nộp dữ liệu chứng nhận dưới dạng điện tử trước khi hàng thông quan vào Mỹ. Thiếu hồ sơ là lô hàng bị giữ lại, không phải bị nhắc nhở.',
+    keyNumbers: [
+      { value: '08/07', label: 'ngày quy định liên bang hiệu lực' },
+      { value: '100%', label: 'lô hàng phải có hồ sơ trước thông quan' },
+    ],
+    content: [
+      {
+        heading: 'Quy định thay đổi ở chỗ nào',
+        body:
+          'Trước đây giấy chứng nhận là thứ xuất trình khi được yêu cầu. Nay dữ liệu chứng nhận phải được nộp điện tử trước thời điểm hàng thông quan. Không nộp trước thì lô hàng bị giữ tại cửa khẩu. Đây là quy định liên bang của Mỹ, không phải chính sách riêng của TikTok, nên không có cửa xin miễn trừ từ nền tảng.',
+      },
+      {
+        heading: 'Nhóm hàng bị ảnh hưởng',
+        body:
+          'Các mặt hàng cần Giấy chứng nhận sản phẩm trẻ em và các mặt hàng cần Giấy chứng nhận hợp quy chung. Nhóm này rộng hơn nhiều so với suy nghĩ thông thường: không chỉ đồ chơi mà cả quần áo trẻ em, đồ dùng ăn uống, phụ kiện và nhiều mặt hàng gia dụng.',
+      },
+      {
+        heading: 'TikTok siết song song ở phía tài khoản',
+        body:
+          'TikTok Shop đang chuyển từ cơ chế Điểm vi phạm mang tính phạt sang khung Xếp hạng Sức khoẻ Tài khoản linh hoạt, triển khai trong tháng 7/2026. Cùng lúc, chính sách bảo mật và tuân thủ mới cho phép TikTok Shop kéo dài thời gian đối soát hoa hồng đối với tài khoản nhà sáng tạo bị đánh dấu rủi ro cao hoặc đang chờ rà soát.',
+      },
+      {
+        heading: 'Ai ở Việt Nam cần quan tâm',
+        body:
+          'Các nhà bán hàng xuất khẩu qua TikTok Shop sang thị trường Mỹ. Rủi ro không dừng ở một lô hàng bị giữ: hàng không tới kịp làm tăng tỷ lệ giao trễ và huỷ đơn, hai chỉ số kéo thẳng điểm sức khoẻ gian hàng xuống, kéo theo lượng hiển thị tự nhiên bị cắt.',
+      },
+    ],
+    impact:
+      'Trưởng phòng phụ trách kênh xuất khẩu phải rà danh mục hàng cần chứng nhận và hoàn tất hồ sơ điện tử trước mỗi lô, đồng thời chuẩn bị dòng tiền cho khả năng hoa hồng bị giữ lâu hơn.',
+    ifIgnored:
+      'Một lô hàng bị giữ ở cửa khẩu kéo theo chuỗi hệ quả: giao trễ, huỷ đơn, điểm sức khoẻ gian hàng tụt, lượng hiển thị tự nhiên bị cắt. Mất doanh thu lớn hơn nhiều so với giá trị lô hàng đó.',
+    actionChecklist: [
+      'Lập danh sách mã hàng cần Giấy chứng nhận sản phẩm trẻ em hoặc Giấy chứng nhận hợp quy chung',
+      'Xác nhận với đơn vị vận chuyển rằng dữ liệu chứng nhận đã được nộp điện tử trước khi hàng rời kho',
+      'Tra lại chỉ số sức khoẻ gian hàng theo khung xếp hạng mới thay vì theo điểm vi phạm cũ',
+      'Dự phòng dòng tiền cho trường hợp hoa hồng nhà sáng tạo bị kéo dài thời gian đối soát',
+    ],
+    deadline: 'Quy định liên bang Mỹ đã hiệu lực từ 08/07/2026',
+  },
+  {
+    id: 'real-2026-07-29-ai-mode-shopping',
+    category: 'Google Ads & SEO',
+    platformIcon: 'Search',
+    title: 'Nghiên cứu 100.000 truy vấn: chế độ AI của Google hiển thị ít hơn 95% số sản phẩm so với tìm kiếm thường',
+    publishedAt: '29/07/2026',
+    isHot: true,
+    illustration: 'zero-click',
+    image: {
+      url: 'https://ppc.land/content/images/size/w1200/2026/07/shelves.webp',
+      credit: 'Ảnh: PPC Land',
+    },
+    sourceUrl: 'https://ppc.land/ai-mode-cuts-google-shopping-listings-95-productrise-finds/',
+    source: 'PPC Land - Nghiên cứu của Productrise',
+    readTime: '6 phút đọc',
+    tags: ['AI Mode', 'Google Shopping', 'Dữ liệu sản phẩm', 'Hiển thị tự nhiên'],
+    summary:
+      'Productrise theo dõi hơn 100.000 truy vấn mua sắm giống hệt nhau trong 21 ngày tại Mỹ và Anh. Kết quả: chế độ AI chỉ trả về sản phẩm cho 23% truy vấn, so với 88% ở tìm kiếm thường. Đáng lo hơn con số 95%: chỉ 0,8% sản phẩm hiện ở tìm kiếm thường cũng xuất hiện trong chế độ AI.',
+    keyNumbers: [
+      { value: '95%', label: 'số sản phẩm biến mất ở chế độ AI' },
+      { value: '0,8%', label: 'tỷ lệ trùng lặp giữa hai kết quả' },
+      { value: '4,3', label: 'sản phẩm mỗi trang, so với 22,5' },
+    ],
+    content: [
+      {
+        heading: 'Cách nghiên cứu được thực hiện',
+        body:
+          'Productrise chạy hơn 100.000 truy vấn mua sắm giống hệt nhau trong 21 ngày của tháng 7/2026, tại thị trường Mỹ và Anh, theo dõi hơn 2 triệu tin đăng sản phẩm mỗi ngày. Truy vấn dùng từ khoá thông thường chứ không phải câu hỏi hội thoại, tức phản ánh đúng cách người dùng thật gõ tìm kiếm.',
+      },
+      {
+        heading: 'Hai tầng suy giảm cộng dồn',
+        body:
+          'Tầng thứ nhất: tìm kiếm thường trả về sản phẩm cho khoảng 88% truy vấn, chế độ AI chỉ 23%. Tầng thứ hai: khi có trả về sản phẩm, tìm kiếm thường hiện trung bình 22,5 tin đăng mỗi trang, chế độ AI chỉ 4,3. Hai tầng nhân vào nhau ra con số khoảng 95% số tin đăng sản phẩm biến mất.',
+      },
+      {
+        heading: 'Con số 0,8% mới là điều đáng sợ',
+        body:
+          'Chỉ 0,8% sản phẩm hiện trong tìm kiếm thường cũng xuất hiện ở chế độ AI cho cùng truy vấn, trong cùng một ngày. Nghĩa là chế độ AI không đơn thuần cắt bớt danh sách cũ mà dùng một logic xếp hạng khác hẳn. Gian hàng đang đứng đầu băng chuyền sản phẩm truyền thống không có gì bảo đảm sẽ xuất hiện trong chế độ AI.',
+      },
+      {
+        heading: 'Lời giải thích từ phía nghiên cứu',
+        body:
+          'Hugo Huijer của Productrise nêu logic đằng sau: nếu Google đã kỳ vọng người dùng sẽ hỏi thêm một câu nữa, thì không cần bày ra hai mươi sản phẩm ngay từ đầu. Chế độ AI được thiết kế cho hành trình hội thoại nhiều lượt, không phải cho một lần gõ rồi chọn.',
+      },
+      {
+        heading: 'Việc phải làm đổi từ thứ hạng sang dữ liệu sản phẩm',
+        body:
+          'Khi chỉ còn 4,3 chỗ mỗi trang và logic xếp hạng khác hẳn, thủ thuật tối ưu thứ hạng cũ mất tác dụng. Thứ quyết định là chất lượng dữ liệu sản phẩm: tên gọi đúng, thuộc tính đầy đủ, mô tả trả lời được câu hỏi thật của người mua. Jason Berkowitz của Break The Web nhận định thương hiệu chủ động chuẩn hoá dữ liệu sản phẩm sẽ đi trước ba bước.',
+      },
+    ],
+    impact:
+      'Trưởng phòng cần chuyển ngân sách và nhân lực từ tối ưu thứ hạng tìm kiếm sang chuẩn hoá dữ liệu sản phẩm trong nguồn cấp dữ liệu, đồng thời ngừng coi vị trí tốt ở tìm kiếm thường là bảo chứng cho lượng truy cập tương lai.',
+    ifIgnored:
+      'Lượng truy cập tự nhiên từ tìm kiếm mua sắm sẽ giảm dần mà báo cáo thứ hạng vẫn đẹp, vì thứ hạng đo ở giao diện cũ trong khi người dùng đã chuyển sang giao diện mới. Phát hiện ra thì đã mất vài quý.',
+    actionChecklist: [
+      'Kiểm tra nguồn cấp dữ liệu sản phẩm: tên, thuộc tính, phân loại, mô tả phải đầy đủ và đúng, không viết tắt',
+      'Tự chạy thử 30 truy vấn quan trọng nhất ở cả tìm kiếm thường và chế độ AI, ghi lại sản phẩm nào xuất hiện',
+      'Ngừng dùng báo cáo thứ hạng làm chỉ số duy nhất, bổ sung chỉ số hiển thị trong chế độ AI',
+      'Viết lại mô tả sản phẩm theo hướng trả lời câu hỏi thật của người mua thay vì nhồi từ khoá',
+    ],
+  },
+  {
+    id: 'real-2026-07-01-google-ads-tos',
+    category: 'Google Ads & SEO',
+    platformIcon: 'Search',
+    title: 'Điều khoản Google Ads hiệu lực 01/07/2026: hệ thống được tự sinh từ khoá, mẫu quảng cáo và trang đích thay nhà quảng cáo',
+    publishedAt: '01/07/2026',
+    isHot: true,
+    illustration: 'ai-label',
+    image: {
+      url: 'https://searchengineland.com/wp-content/seloads/2026/02/Why-Google-Ads-auctions-now-run-on-intent-not-keywords.jpg',
+      credit: 'Ảnh: Search Engine Land',
+    },
+    sourceUrl: 'https://searchengineland.com/google-ads-updates-terms-of-service-ahead-of-july-2026-rollout-479255',
+    source: 'Search Engine Land - Anu Adegbola',
+    readTime: '5 phút đọc',
+    tags: ['AI Max', 'Điều khoản', 'Tự động hoá', 'Trách nhiệm pháp lý'],
+    summary:
+      'Điều khoản dịch vụ mới của Google Ads có hiệu lực 01/07/2026, cho phép hệ thống tự động định dạng, chọn hoặc tạo ra mục tiêu nhắm, mẫu quảng cáo và trang đích thay mặt nhà quảng cáo. Không có bước xác nhận lại: mọi tài khoản bị ràng buộc ngay khi điều khoản có hiệu lực.',
+    keyNumbers: [
+      { value: '01/07', label: 'ngày điều khoản có hiệu lực' },
+      { value: '0', label: 'bước xác nhận lại được yêu cầu' },
+      { value: '02/2027', label: 'mốc khai tử Dynamic Search Ads' },
+    ],
+    content: [
+      {
+        heading: 'Câu chữ thay đổi và ý nghĩa của nó',
+        body:
+          'Điều khoản mới trao cho Google quyền phân phối quảng cáo, bao gồm việc dùng các tính năng tự động để định dạng, chọn hoặc tạo ra mục tiêu nhắm, mẫu quảng cáo và trang đích thay mặt khách hàng. Chữ tạo ra ở đây là điểm mới: hệ thống không chỉ chọn trong những gì bạn cung cấp mà có thể sinh ra nội dung mới.',
+      },
+      {
+        heading: 'Không có nút đồng ý',
+        body:
+          'Không có lời nhắc khi đăng nhập, không có ô tích, không có bước chọn tham gia. Mọi tài khoản Google Ads tự động bị ràng buộc vào điều khoản sửa đổi ngay thời điểm nó có hiệu lực. Ai chưa đọc thì vẫn đang chạy dưới bộ quy tắc mới.',
+      },
+      {
+        heading: 'Trách nhiệm vẫn thuộc về nhà quảng cáo',
+        body:
+          'Điều khoản ghi rõ nhà quảng cáo vẫn chịu trách nhiệm rà soát, phê duyệt, chỉnh sửa hoặc gỡ bỏ chiến dịch và tài sản quảng cáo, kể cả những thứ do công cụ của Google tự tạo ra. Đây là điểm bất đối xứng cần nắm: máy được quyền tạo, nhưng người phải chịu trách nhiệm nếu nội dung máy tạo sai sự thật hoặc vi phạm quy định ngành.',
+      },
+      {
+        heading: 'Dữ liệu bạn gõ vào công cụ hội thoại',
+        body:
+          'Thông tin nhà quảng cáo nhập vào các công cụ hội thoại và tính năng tương tự trong Google Ads nay có thể được hệ thống của Google dùng để cải thiện hiệu quả chiến dịch trên toàn nền tảng. Điều khoản cũng cho phép Google truy cập và quét các đường dẫn cùng tài khoản mà nhà quảng cáo cấp quyền.',
+      },
+      {
+        heading: 'Lịch trình phải nhớ',
+        body:
+          'AI Max ra khỏi giai đoạn thử nghiệm với bộ điều khiển nhắm mục tiêu và nội dung mạnh hơn. Từ tháng 9/2026, các công cụ cũ như Dynamic Search Ads bắt đầu tự động nâng cấp lên AI Max, và khai tử hoàn toàn vào tháng 2/2027. Ngoài ra từ 13/07/2026 Google yêu cầu gắn nhãn với mẫu quảng cáo hiển thị và video có yếu tố do AI tạo.',
+      },
+    ],
+    impact:
+      'Trưởng phòng phải lập quy trình rà soát định kỳ các tài sản quảng cáo do hệ thống tự sinh, vì trách nhiệm pháp lý với nội dung sai vẫn thuộc về doanh nghiệp chứ không thuộc về Google.',
+    ifIgnored:
+      'Hệ thống tự sinh một mẫu quảng cáo nói sai về sản phẩm hoặc vi phạm quy định ngành, doanh nghiệp là bên chịu trách nhiệm. Với ngành có quy định chặt như dược, tài chính, giáo dục, hậu quả không dừng ở việc bị từ chối quảng cáo.',
+    actionChecklist: [
+      'Lập lịch rà soát hằng tuần toàn bộ tài sản quảng cáo do hệ thống tự sinh trong tài khoản',
+      'Rà lại các chiến dịch Dynamic Search Ads và lên kế hoạch chuyển sang AI Max trước tháng 9/2026',
+      'Gắn nhãn đúng quy định cho mọi mẫu quảng cáo hiển thị và video có yếu tố do AI tạo',
+      'Với ngành có quy định chặt, cân nhắc giới hạn quyền tự sinh nội dung và giữ khâu duyệt thủ công',
+    ],
+    deadline: 'Dynamic Search Ads tự nâng cấp lên AI Max từ tháng 9/2026, khai tử hoàn toàn tháng 2/2027',
+  },
+  {
+    id: 'real-2026-07-29-openai-ads',
+    category: 'AI Marketing',
+    platformIcon: 'Sparkles',
+    title: 'OpenAI dựng bộ máy bán quảng cáo cho ChatGPT: 32 vị trí tuyển dụng, mở kênh đại lý, bỏ mức chi tối thiểu',
+    publishedAt: '29/07/2026',
+    isHot: true,
+    illustration: 'data-signal',
+    image: {
+      url: 'https://ppc.land/content/images/size/w1200/2026/07/growth-1.webp',
+      credit: 'Ảnh: PPC Land',
+    },
+    sourceUrl: 'https://ppc.land/openai-builds-ads-sales-org-while-merchant-feed-role-stays-unfilled/',
+    source: 'PPC Land - Phân tích cơ cấu tổ chức OpenAI',
+    readTime: '5 phút đọc',
+    tags: ['ChatGPT Ads', 'Kênh mới', 'Nguồn cấp dữ liệu', 'Đại lý'],
+    summary:
+      'Trong vòng chưa đầy một năm kể từ khi thử nghiệm quảng cáo, OpenAI đã hạ CPM từ 60 xuống 25 USD, bỏ hoàn toàn mức chi tối thiểu và đang tuyển 32 vị trí liên quan tới quảng cáo để dựng mạng lưới đại lý. Nhưng có một khoảng trống đáng chú ý: chưa có vị trí nào phụ trách chất lượng dữ liệu nguồn cấp sản phẩm.',
+    keyNumbers: [
+      { value: '32', label: 'vị trí quảng cáo đang tuyển' },
+      { value: '25 USD', label: 'CPM hiện tại, giảm từ 60' },
+      { value: '0', label: 'mức chi tối thiểu sau 05/05' },
+    ],
+    content: [
+      {
+        heading: 'Tốc độ hạ rào cản chỉ trong sáu tháng',
+        body:
+          'Ngày 06/02/2026 thử nghiệm quảng cáo ChatGPT khởi động với mức cam kết tối thiểu 200.000 USD, đối tác đầu là WPP Media, Omnicom và Dentsu. Ngày 17/04 CPM giảm từ 60 xuống 25 USD, ngưỡng chi tối thiểu hạ còn 50.000 USD. Ngày 05/05 trình quản lý tự phục vụ mở cho mọi doanh nghiệp Mỹ, thêm hình thức đặt giá thầu theo lượt nhấp và bỏ hẳn mức chi tối thiểu.',
+      },
+      {
+        heading: 'Kênh đại lý đang được dựng',
+        body:
+          'Vị trí quan trọng nhất trong 32 tin tuyển dụng là Trưởng bộ phận Giải pháp Quảng cáo Quy mô, đặt tại San Francisco, mức lương 302.000 đến 385.000 USD kèm cổ phần. Người này sẽ dựng tổ chức bán hàng quy mô lớn cùng hệ sinh thái đối tác qua ba kênh: bán trực tiếp, đại lý bán lại và thuê ngoài quy trình. Nghĩa là sắp có tầng đại lý chính thức, mở đường cho các đại lý nhỏ và đại lý khu vực tiếp cận.',
+      },
+      {
+        heading: 'Khoảng trống nói lên nhiều điều',
+        body:
+          'Dù chiến dịch chạy theo nguồn cấp dữ liệu nằm trong nhóm hiệu quả nhất của chương trình, OpenAI chưa có vị trí nào chuyên trách chất lượng dữ liệu nguồn cấp sản phẩm. Đây là chức năng then chốt khi tiêu đề và mô tả quảng cáo được lấy thẳng từ nguồn cấp dữ liệu của nhà bán hàng. Không có ai ở phía nền tảng lo việc này nghĩa là gánh nặng dồn hết sang nhà quảng cáo.',
+      },
+      {
+        heading: 'Việc chuẩn bị không tốn thêm chi phí',
+        body:
+          'OpenAI dùng lại chính các tệp dữ liệu có cấu trúc mà nhà bán lẻ đã nộp cho nơi khác. Doanh nghiệp đang có nguồn cấp dữ liệu Google Shopping hoặc danh mục sản phẩm Meta có thể chuyển thẳng quy trình quản trị sang. Việc dọn dẹp dữ liệu sản phẩm vì thế phục vụ cả ba nền tảng cùng lúc, không phải công việc làm riêng cho một kênh chưa chắc chắn.',
+      },
+      {
+        heading: 'Phạm vi địa lý và điều chưa rõ',
+        body:
+          'Quảng cáo ChatGPT đã mở tới Canada, Úc, New Zealand vào cuối tháng 3, rồi Anh, Nhật, Hàn Quốc, Brazil, Mexico trong tháng 5 và 6. Việt Nam chưa có tên trong danh sách. Nhưng nhịp mở rộng cho thấy đây là câu chuyện của quý tới chứ không phải của năm sau.',
+      },
+    ],
+    impact:
+      'Trưởng phòng nên coi việc chuẩn hoá nguồn cấp dữ liệu sản phẩm là ưu tiên hạ tầng, vì cùng một bộ dữ liệu sạch sẽ phục vụ Google Shopping, danh mục Meta và kênh ChatGPT khi kênh này mở tới Việt Nam.',
+    ifIgnored:
+      'Khi kênh mở tới Việt Nam, doanh nghiệp có dữ liệu sản phẩm sạch chạy được ngay, còn doanh nghiệp chưa chuẩn hoá sẽ mất vài tháng dọn dẹp và nhường trước lợi thế cho đối thủ.',
+    actionChecklist: [
+      'Kiểm kê chất lượng nguồn cấp dữ liệu sản phẩm hiện tại: tỷ lệ mã hàng thiếu thuộc tính, sai giá, sai tồn kho',
+      'Chuẩn hoá tiêu đề sản phẩm theo cấu trúc đọc được thành câu, vì tiêu đề quảng cáo lấy thẳng từ đây',
+      'Giao một người chịu trách nhiệm chất lượng nguồn cấp dữ liệu, đừng để rơi giữa đội thương mại điện tử và đội quảng cáo',
+      'Theo dõi thông báo mở rộng thị trường của ChatGPT Ads để không vào sau đối thủ',
+    ],
+  },
+  {
+    id: 'real-2026-07-30-ai-scam-farm',
+    category: 'AI Marketing',
+    platformIcon: 'Sparkles',
+    title: 'Chi phí dựng trại lừa đảo bằng AI xuống còn 5.000 USD: rủi ro an toàn thương hiệu tăng nhanh hơn tốc độ nền tảng gỡ bỏ',
+    publishedAt: '30/07/2026',
+    isHot: false,
+    illustration: 'account-security',
+    image: {
+      url: 'https://ppc.land/content/images/size/w1200/2026/07/AI-Scams.webp',
+      credit: 'Ảnh: PPC Land',
+    },
+    sourceUrl: 'https://ppc.land/ai-cuts-scam-farm-entry-cost-to-5-000-human-security-research-shows/',
+    source: 'PPC Land - Nghiên cứu Satori của HUMAN Security',
+    readTime: '5 phút đọc',
+    tags: ['An toàn thương hiệu', 'Gian lận quảng cáo', 'Xác thực', 'Thu tệp khách'],
+    summary:
+      'Nhóm Satori của HUMAN Security công bố nghiên cứu ngày 28/07/2026 cho thấy dựng một trại điện thoại lừa đảo nay chỉ tốn 5.000 USD ban đầu, hoặc không tốn đồng nào nếu thuê điện thoại ảo trên đám mây. Hệ quả trực tiếp với người làm marketing: xác thực bằng số điện thoại không còn là tín hiệu tin cậy.',
+    keyNumbers: [
+      { value: '5.000 USD', label: 'chi phí dựng trại ban đầu' },
+      { value: '27,8 tỷ USD', label: 'thiệt hại mỗi năm do lừa đảo' },
+      { value: '3,5 tỷ', label: 'tài khoản giả Meta khoá năm 2025' },
+    ],
+    content: [
+      {
+        heading: 'Hai mô hình chi phí',
+        body:
+          'Mô hình dùng phần cứng: 5.000 USD ban đầu cộng 450 USD mỗi tháng, dựa trên các bo mạch điện thoại mua lại từ thị trường thứ cấp. Mô hình dùng điện thoại ảo trên đám mây: không tốn đồng nào ban đầu, 2.970 USD mỗi tháng. Đối chiếu với con số thiệt hại ước tính 27,8 tỷ USD mỗi năm từ lừa đảo tình cảm và lừa đảo đầu tư, động cơ tài chính quá rõ.',
+      },
+      {
+        heading: 'AI xoá bỏ rào cản kỹ thuật',
+        body:
+          'Nghiên cứu mổ xẻ một bộ công cụ trại điện thoại bán sẵn: phần mềm điều phối Auto.js giả lập thao tác nhấp, vuốt, gõ chữ; AI sinh kịch bản nên người vận hành không cần biết lập trình; dịch vụ điện thoại ảo cho phép giả mạo mã định danh thiết bị; dịch vụ proxy dân cư che giấu nguồn gốc. Một người nay điều khiển được hàng trăm cuộc hội thoại cùng lúc.',
+      },
+      {
+        heading: 'Vì sao đây là việc của phòng Marketing',
+        body:
+          'Thứ nhất, xác thực bằng số điện thoại vốn là tín hiệu tin cậy nay mất giá trị khi thiết bị ảo và thiết bị dùng một lần được cấp phát ở quy mô công nghiệp. Biểu mẫu thu tệp khách hàng tiềm năng chỉ xác thực bằng số điện thoại sẽ ngập dữ liệu rác. Thứ hai, tài khoản giả sinh ra nhanh hơn tốc độ nền tảng gỡ bỏ, nên quảng cáo của thương hiệu có thể xuất hiện cạnh nội dung lừa đảo.',
+      },
+      {
+        heading: 'Quy mô phía Meta',
+        body:
+          'Meta đã khoá 3,5 tỷ tài khoản giả trong năm 2025, gỡ 408.000 tài khoản lừa đảo tình cảm trong năm 2024 và loại 134 triệu quảng cáo lừa đảo trong năm 2025. Tài liệu nội bộ do Reuters công bố tháng 11/2025 ước tính 16 tỷ USD doanh thu từ quảng cáo lừa đảo trong năm 2024, với khoảng 15 tỷ lượt hiển thị quảng cáo rủi ro cao mỗi ngày.',
+      },
+      {
+        heading: 'Không có công cụ đơn lẻ nào giải quyết được',
+        body:
+          'Báo cáo kết luận không một công cụ phòng vệ nào xoá bỏ được hệ sinh thái phân tán này, cần nhiều lớp phòng vệ toàn ngành cộng với sự cảnh giác của người dùng. Với doanh nghiệp, nghĩa là phải tự dựng lớp bảo vệ riêng thay vì trông chờ nền tảng làm sạch.',
+      },
+    ],
+    impact:
+      'Trưởng phòng cần bổ sung lớp xác thực ngoài số điện thoại cho biểu mẫu thu tệp khách, và rà lại danh sách loại trừ vị trí hiển thị để quảng cáo thương hiệu không nằm cạnh nội dung lừa đảo.',
+    ifIgnored:
+      'Tệp khách hàng tiềm năng thu về đầy số điện thoại ảo, đội bán hàng đốt thời gian gọi vào số không có thật, chi phí mỗi khách hàng thật tăng gấp nhiều lần so với con số báo cáo. Nặng hơn là quảng cáo thương hiệu hiện cạnh nội dung lừa đảo và bị khách hàng chụp màn hình.',
+    actionChecklist: [
+      'Bổ sung xác thực bằng thư điện tử hoặc bước xác nhận thứ hai cho biểu mẫu thu tệp khách hàng tiềm năng',
+      'Rà lại báo cáo vị trí hiển thị, loại trừ các vị trí và nhóm đối tượng có tỷ lệ nội dung rủi ro cao',
+      'Đo tỷ lệ số điện thoại không liên hệ được trong tệp thu về, coi đó là chỉ số chất lượng bắt buộc báo cáo',
+      'Tránh chạy mở rộng phạm vi phân phối tự động mà không kèm danh sách loại trừ vị trí',
+    ],
+  },
+];
+
+/* ------------------------------------------------------------------ *
+ * TIN MÔ PHỎNG - kịch bản đào tạo, không có bài báo thật đứng sau     *
+ * ------------------------------------------------------------------ */
+const SIMULATED_NEWS_ITEMS = [
   {
     id: 'news-01',
     category: 'Meta Ads',
     platformIcon: 'Facebook',
     title: 'Meta ra mắt thuật toán AI Andromeda 2.0: tự động hoá 90% việc phân bổ ngân sách nhóm quảng cáo',
-    date: 'Vừa xong (Live Update)',
     publishedAt: '28/07/2026',
     isHot: true,
     illustration: 'ai-budget',
@@ -80,7 +576,6 @@ export const INITIAL_NEWS_ITEMS = [
     category: 'TikTok Shop & Ads',
     platformIcon: 'Video',
     title: 'TikTok Shop đổi thuật toán đề xuất GMV Max: ưu tiên shop có chỉ số CSAT trên 4.5',
-    date: '10 phút trước',
     publishedAt: '28/07/2026',
     isHot: true,
     illustration: 'shop-health',
@@ -128,7 +623,6 @@ export const INITIAL_NEWS_ITEMS = [
     category: 'Google Ads & SEO',
     platformIcon: 'Search',
     title: 'Google AI Overviews mở rộng tại Việt Nam: lượt nhấp vào kết quả tự nhiên giảm 35%',
-    date: '30 phút trước',
     publishedAt: '28/07/2026',
     isHot: true,
     illustration: 'zero-click',
@@ -181,7 +675,6 @@ export const INITIAL_NEWS_ITEMS = [
     category: 'Meta Ads',
     platformIcon: 'Facebook',
     title: 'Chi phí hiển thị Meta tại Việt Nam tăng 28% trong quý III do mùa cao điểm bắt đầu sớm',
-    date: '1 giờ trước',
     publishedAt: '28/07/2026',
     isHot: true,
     illustration: 'cpm-auction',
@@ -228,7 +721,6 @@ export const INITIAL_NEWS_ITEMS = [
     category: 'Meta Ads',
     platformIcon: 'Facebook',
     title: 'Meta siết chính sách dữ liệu quảng cáo khu vực Châu Á: bắt buộc khai báo nguồn tệp khách hàng tải lên',
-    date: '3 giờ trước',
     publishedAt: '28/07/2026',
     isHot: false,
     illustration: 'account-security',
@@ -275,7 +767,6 @@ export const INITIAL_NEWS_ITEMS = [
     category: 'TikTok Shop & Ads',
     platformIcon: 'Video',
     title: 'TikTok nâng hoa hồng liên kết mặc định với KOC ngành thời trang lên 15%',
-    date: '5 giờ trước',
     publishedAt: '28/07/2026',
     isHot: false,
     illustration: 'affiliate-commission',
@@ -321,7 +812,6 @@ export const INITIAL_NEWS_ITEMS = [
     category: 'Google Ads & SEO',
     platformIcon: 'Search',
     title: 'Performance Max bổ sung loại trừ từ khoá thương hiệu theo thời gian thực',
-    date: '8 giờ trước',
     publishedAt: '27/07/2026',
     isHot: false,
     illustration: 'keyword-exclusion',
@@ -367,7 +857,6 @@ export const INITIAL_NEWS_ITEMS = [
     category: 'AI Marketing',
     platformIcon: 'Sparkles',
     title: 'OpenAI và Adobe hợp tác ra mắt công cụ dựng video quảng cáo chuẩn 4K trong 60 giây',
-    date: '12 giờ trước',
     publishedAt: '27/07/2026',
     isHot: true,
     illustration: 'ai-video',
@@ -419,7 +908,6 @@ export const INITIAL_NEWS_ITEMS = [
     category: 'Meta Ads',
     platformIcon: 'Facebook',
     title: 'Tín hiệu chuyển đổi từ trình duyệt tiếp tục hụt: Meta khuyến nghị chuyển hẳn sang gửi dữ liệu từ máy chủ',
-    date: '1 ngày trước',
     publishedAt: '27/07/2026',
     isHot: false,
     illustration: 'data-signal',
@@ -470,7 +958,6 @@ export const INITIAL_NEWS_ITEMS = [
     category: 'TikTok Shop & Ads',
     platformIcon: 'Video',
     title: 'TikTok mở khung giờ ưu tiên cho phiên phát trực tiếp có kịch bản đăng ký trước',
-    date: '1 ngày trước',
     publishedAt: '27/07/2026',
     isHot: false,
     illustration: 'livestream',
@@ -516,7 +1003,6 @@ export const INITIAL_NEWS_ITEMS = [
     category: 'TikTok Shop & Ads',
     platformIcon: 'Video',
     title: 'TikTok bắt buộc gắn nhãn nội dung do AI tạo, áp dụng cho cả quảng cáo trả phí',
-    date: '2 ngày trước',
     publishedAt: '26/07/2026',
     isHot: false,
     illustration: 'ai-label',
@@ -563,7 +1049,6 @@ export const INITIAL_NEWS_ITEMS = [
     category: 'Google Ads & SEO',
     platformIcon: 'Search',
     title: 'Google đưa chỉ số phản hồi tương tác vào tiêu chí xếp hạng: ngưỡng 200ms thành bắt buộc',
-    date: '2 ngày trước',
     publishedAt: '26/07/2026',
     isHot: false,
     illustration: 'page-speed',
@@ -610,7 +1095,6 @@ export const INITIAL_NEWS_ITEMS = [
     category: 'Google Ads & SEO',
     platformIcon: 'Search',
     title: 'Google mở rộng Customer Match: dữ liệu khách hàng sở hữu thành lợi thế đấu thầu trực tiếp',
-    date: '3 ngày trước',
     publishedAt: '25/07/2026',
     isHot: false,
     illustration: 'crm-automation',
@@ -656,7 +1140,6 @@ export const INITIAL_NEWS_ITEMS = [
     category: 'Meta Ads',
     platformIcon: 'Facebook',
     title: 'Advantage+ Creative tự động chỉnh sửa nội dung: mẫu quảng cáo bão hoà nhanh hơn trước',
-    date: '3 ngày trước',
     publishedAt: '25/07/2026',
     isHot: false,
     illustration: 'creative-fatigue',
@@ -702,7 +1185,6 @@ export const INITIAL_NEWS_ITEMS = [
     category: 'AI Marketing',
     platformIcon: 'Sparkles',
     title: 'Sora mở bản thử nghiệm cho nhà quản lý Marketing dựng phim quảng cáo thương hiệu',
-    date: '4 ngày trước',
     publishedAt: '24/07/2026',
     isHot: false,
     illustration: 'ai-video',
@@ -748,7 +1230,6 @@ export const INITIAL_NEWS_ITEMS = [
     category: 'AI Marketing',
     platformIcon: 'Sparkles',
     title: 'Làn sóng tác tử AI tự tối ưu chiến dịch: cảnh báo về việc giao quyền không kiểm soát',
-    date: '5 ngày trước',
     publishedAt: '23/07/2026',
     isHot: false,
     illustration: 'ai-budget',
@@ -794,6 +1275,18 @@ export const INITIAL_NEWS_ITEMS = [
       'Yêu cầu công cụ xuất nhật ký thay đổi kèm lý do cho mỗi quyết định',
     ],
   },
+];
+
+/**
+ * Danh sách hiển thị: tin thật lên trước, tin mô phỏng nối sau.
+ *
+ * Cờ `isSimulated` được gắn ở đây thay vì gõ tay vào từng tin, để không bao giờ
+ * xảy ra trường hợp thêm tin mô phỏng mới mà quên đánh dấu — tin đó sẽ hiện lên
+ * như tin thật.
+ */
+export const INITIAL_NEWS_ITEMS = [
+  ...REAL_SOURCED_NEWS,
+  ...SIMULATED_NEWS_ITEMS.map((item) => ({ ...item, isSimulated: true })),
 ];
 
 export const LIVE_NEWS_SIMULATOR_POOL = [

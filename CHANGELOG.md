@@ -8,6 +8,29 @@ TODO — chưa có quy ước đánh phiên bản; cân nhắc gắn thẻ Git k
 
 ---
 
+## [Chưa phát hành] — 2026-07-30
+
+### Sửa lỗi
+
+- **Bản tin đứng yên ở 28/07/2026 dù dữ liệu có cập nhật.** Nguyên nhân không nằm ở nội dung mà ở chỗ lưu trữ: `App.jsx` hễ thấy `localStorage` có khoá `dmm_news_feed_v2` là trả về **nguyên xi** danh sách đã lưu, bỏ qua hoàn toàn file dữ liệu. Nghĩa là biên tập viên thêm tin mới rồi deploy cũng vô ích — mọi người đã từng mở ứng dụng đều bị đóng băng ở danh sách cũ vĩnh viễn.
+  - Nay **hợp nhất theo `id`**: tin biên tập luôn đọc lại từ `newsData.js`, phần lưu trong máy chỉ giữ tin do người dùng tự nạp bằng nút Live. Khoá đổi sang `_v3` và tự dọn khoá `_v2` cũ.
+- **Nhãn thời gian không tự già đi.** Mỗi tin lưu sẵn một chuỗi chữ như `'Vừa xong (Live Update)'` hay `'1 ngày trước'` ngay trong dữ liệu, nên tin đăng 28/07 vẫn khoe "Vừa xong" nhiều ngày sau, trong khi dòng ngày tuyệt đối ngay bên cạnh lại ghi 28/07 — **mâu thuẫn hiện trên cùng một thẻ**.
+  - Gỡ toàn bộ 22 chuỗi ngày cứng khỏi dữ liệu. Nay chỉ lưu `publishedAt` dạng `dd/mm/yyyy`, nhãn tương đối được tính lúc vẽ giao diện (`src/utils/newsDate.js`). Tin nạp từ nút Live hiện "Vừa xong" trong giờ đầu rồi rơi về cách tính theo ngày, thay vì kẹt mãi.
+- **Nút "Nạp Tin Cập Nhật Live Mới" bốc ngẫu nhiên nên ra lại tin vừa đọc.** Kho chỉ có 6 tin, bấm vài lần là trùng, người dùng tưởng nút hỏng. Nay chỉ bốc trong số tin **chưa có trong danh sách**, hiện số tin còn lại ngay trên nút và tự khoá khi hết.
+
+### Thêm mới
+
+- **Tám tin thật, biên tập tiếng Việt, có nguồn và ảnh bìa thật.** Mục Tin tức trước đây thuần mô phỏng đào tạo. Nay bổ sung nhóm tin biên tập lại từ bài báo có thật (Meta quý 2/2026, phí theo vị trí 2-5%, bộ tính năng TikTok quý 3, quy định CPSC, nghiên cứu AI Mode cắt 95% sản phẩm, điều khoản Google Ads 01/07, bộ máy quảng cáo OpenAI, nghiên cứu trại lừa đảo AI), mỗi tin kèm `sourceUrl` trỏ đúng bài gốc và ảnh bìa do chính bài đó đăng.
+  - **Hai loại tin không được trộn lẫn.** Tin mô phỏng **tuyệt đối không** gắn `sourceUrl` hay ảnh thật — làm vậy là dựng chứng cứ giả. Cờ `isSimulated` gắn tự động lúc gộp mảng chứ không gõ tay từng tin, để không bao giờ xảy ra chuyện thêm tin mô phỏng mà quên đánh dấu.
+  - Mỗi thẻ mang nhãn **TIN THẬT - CÓ NGUỒN** hoặc **MÔ PHỎNG ĐÀO TẠO**; cửa sổ chi tiết của tin mô phỏng nhắc lại bản chất ngay trong bài, vì người mở thẳng cửa sổ có thể không thấy băng ghi chú ở ngoài.
+- **Ảnh bìa thật thay cho tranh SVG, có đường lùi.** Ảnh nằm trên máy chủ của báo nên có thể đổi đường dẫn hoặc bị chặn bất cứ lúc nào; `onError` chuyển sang tranh SVG dựng sẵn thay vì để ô ảnh vỡ. Dùng `referrerPolicy="no-referrer"` để giảm khả năng bị chặn hotlink.
+- **Dải "Tin nóng từ nguồn quốc tế" tự cập nhật** — `api/news.js` kéo RSS từ PPC Land, Search Engine Land và Social Media Today, làm mới mỗi 30 phút.
+  - **Chạy ở máy chủ vì các báo này không mở CORS**, trình duyệt gọi thẳng sẽ bị chặn.
+  - **Không cài thư viện đọc RSS**: chỉ cần bốn trường nên vài biểu thức chính quy là đủ, thêm phụ thuộc là thêm bề mặt lỗi. Đổi lại mỗi nguồn được bọc riêng trong `try/catch` — một báo hỏng không kéo sập cả dải tin, và không kéo được nguồn nào thì dải tự ẩn thay vì bắn lỗi đỏ vào mặt học viên đang học bài.
+  - Trình bày gọn dạng thẻ ngang và ghi rõ "tiêu đề nguyên văn tiếng Anh", cố ý để không lấn phần bản tin phân tích tiếng Việt bên dưới.
+
+---
+
 ## [Chưa phát hành] — 2026-07-29
 
 ### Thêm mới

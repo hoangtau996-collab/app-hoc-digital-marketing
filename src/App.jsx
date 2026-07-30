@@ -70,6 +70,7 @@ import { COURSE_MODULES } from './data/courseData';
 import { TRADE_MODULES } from './data/tradeCourseData';
 import TradeMarketingCourse from './components/TradeMarketingCourse';
 import { INITIAL_NEWS_ITEMS } from './data/newsData';
+import { compareNewsRecency } from './utils/newsDate';
 import { TRANSLATIONS } from './data/translations';
 
 export default function App() {
@@ -597,20 +598,29 @@ export default function App() {
   }, [currentUser]);
 
   // News list state.
-  // Khoá có hậu tố _v2: bản tin đã đổi cấu trúc (thêm tranh minh hoạ, thân bài,
-  // số liệu chính). Dữ liệu lưu theo khoá cũ thiếu các trường đó nên phải bỏ
-  // qua, nếu không người dùng cũ sẽ mãi thấy bản tin rút gọn.
+  //
+  // Khoá có hậu tố _v3: bản tin đổi cấu trúc lần nữa (thêm ảnh bìa thật, link
+  // nguồn, bỏ chuỗi ngày cứng).
+  //
+  // QUAN TRỌNG — phải HỢP NHẤT chứ không được trả nguyên danh sách đã lưu.
+  // Bản trước hễ thấy localStorage có dữ liệu là trả về nguyên xi, nên biên tập
+  // viên thêm tin mới vào newsData.js rồi deploy cũng vô ích: mọi người đã từng
+  // mở ứng dụng đều bị đóng băng ở danh sách cũ vĩnh viễn. Đó chính là lý do
+  // bản tin đứng yên ở 28/07/2026. Nay tin biên tập luôn lấy từ file dữ liệu,
+  // phần lưu trong máy chỉ giữ lại những tin do người dùng tự nạp bằng nút Live.
   const [newsFeed, setNewsFeed] = useState(() => {
+    let userAdded = [];
     try {
-      const saved = localStorage.getItem('dmm_news_feed_v2');
-      if (saved) {
-        const parsed = JSON.parse(saved);
-        if (Array.isArray(parsed) && parsed.length > 0) {
-          return parsed;
-        }
+      const saved = localStorage.getItem('dmm_news_feed_v3');
+      const parsed = saved ? JSON.parse(saved) : [];
+      if (Array.isArray(parsed)) {
+        const curatedIds = new Set(INITIAL_NEWS_ITEMS.map((n) => n.id));
+        // Chỉ nhặt tin không có trong file dữ liệu, tức tin nạp từ nút Live.
+        // Tin biên tập luôn đọc lại từ file để sửa nội dung là thấy ngay.
+        userAdded = parsed.filter((n) => n && n.id && !curatedIds.has(n.id));
       }
     } catch (e) {}
-    return INITIAL_NEWS_ITEMS;
+    return [...userAdded, ...INITIAL_NEWS_ITEMS].sort(compareNewsRecency);
   });
 
   // Nạp lại tiến độ khoá chính mỗi khi đổi tài khoản, đồng thời đăng ký hồ sơ
@@ -718,9 +728,15 @@ export default function App() {
     } catch (e) {}
   }, [completedTradeModules, currentUser]);
 
+  // Chỉ lưu tin do người dùng tự nạp. Ghi cả danh sách xuống máy là thừa —
+  // tin biên tập đã nằm sẵn trong mã nguồn — và chính là thứ khoá cứng bản tin
+  // ở phiên bản cũ. Dọn luôn khoá _v2 để máy đã dùng lâu không giữ rác.
   useEffect(() => {
     try {
-      localStorage.setItem('dmm_news_feed_v2', JSON.stringify(newsFeed));
+      const curatedIds = new Set(INITIAL_NEWS_ITEMS.map((n) => n.id));
+      const userAdded = newsFeed.filter((n) => !curatedIds.has(n.id));
+      localStorage.setItem('dmm_news_feed_v3', JSON.stringify(userAdded));
+      localStorage.removeItem('dmm_news_feed_v2');
     } catch (e) {}
   }, [newsFeed]);
 
