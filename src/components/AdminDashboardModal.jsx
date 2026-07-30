@@ -20,6 +20,7 @@ import {
   fetchStudentsFromCloudOnly
 } from '../firebase';
 import { markStudentDeleted, filterDeleted, getDeletedStudents } from '../utils/deletedStudents';
+import { updateStudentEmail, deleteStudentsPermanently } from '../utils/adminApi';
 import {
   SURVEY_QUESTIONS,
   SURVEY_TOTAL,
@@ -67,7 +68,10 @@ import {
   KeyRound,
   UserMinus,
   Lock,
-  ClipboardList
+  ClipboardList,
+  Mail,
+  CheckSquare,
+  AlertTriangle
 } from 'lucide-react';
 
 /** Bản khảo sát của một dòng học viên. Hồ sơ cũ chưa có trường này. */
@@ -169,6 +173,20 @@ export default function AdminDashboardModal({
   t
 }) {
   const [students, setStudents] = useState([]);
+
+  /* --- Chọn hàng loạt ---
+     Lưu theo EMAIL chứ không theo `id`. Cùng một học viên có thể mang hai id
+     khác nhau tuỳ nguồn dữ liệu (uid của Firebase Auth, hay mã suy ra từ
+     email), còn email thì luôn là một — và cũng chính là thứ hàm máy chủ nhận
+     vào để xoá. Chọn theo id sẽ có lúc chọn một người mà xoá trượt. */
+  const [selectedEmails, setSelectedEmails] = useState([]);
+  const [isBulkWorking, setIsBulkWorking] = useState(false);
+
+  /* --- Đổi email học viên --- */
+  const [editingEmailFor, setEditingEmailFor] = useState(null);
+  const [newEmailValue, setNewEmailValue] = useState('');
+  const [isSavingEmail, setIsSavingEmail] = useState(false);
+
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedIndustry, setSelectedIndustry] = useState('ALL');
   const [selectedRole, setSelectedRole] = useState('ALL'); // 'ALL' | 'ADMIN' | 'STUDENT'
@@ -492,7 +510,16 @@ export default function AdminDashboardModal({
         "Thời Điểm Làm Khảo Sát"
       ];
 
-      const rows = orderedStudents.map((std, idx) => {
+      // Có chọn thì xuất đúng phần đã chọn, không chọn thì xuất tất cả sau bộ lọc.
+      //
+      // Giữ thứ tự của `orderedStudents` thay vì thứ tự bấm chọn: quản trị viên
+      // nhìn thấy bảng theo thứ tự nào thì tệp xuất ra phải theo thứ tự đó, nếu
+      // không sẽ mất công dò từng dòng để đối chiếu.
+      const exportSource = selectedEmails.length
+        ? orderedStudents.filter((s) => selectedEmails.includes(normalizeEmail(s.email)))
+        : orderedStudents;
+
+      const rows = exportSource.map((std, idx) => {
         const survey = surveyOf(std);
         const answers = survey?.answers || {};
         return [
@@ -520,7 +547,10 @@ export default function AdminDashboardModal({
       const link = document.createElement("a");
       const today = new Date().toISOString().slice(0, 10);
       link.setAttribute("href", url);
-      link.setAttribute("download", `Bao_Cao_Hoc_Vien_P_MARCOM_${today}.csv`);
+      // Tên tệp nói rõ đây là bản trích chọn, không phải toàn bộ. Hai tệp cùng
+      // tên mà nội dung khác nhau là cách nhanh nhất để báo cáo sai số liệu.
+      const suffix = selectedEmails.length ? `_Chon_${exportSource.length}_hoc_vien` : '';
+      link.setAttribute("download", `Bao_Cao_Hoc_Vien_P_MARCOM_${today}${suffix}.csv`);
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -670,6 +700,150 @@ export default function AdminDashboardModal({
       setTimeout(() => setNotice(''), 4000);
     } catch (e) {
       alert("Lỗi xóa học viên: " + e.message);
+    }
+  };
+
+  /* ============================================================
+     CHỌN HÀNG LOẠT
+     ============================================================ */
+
+  const toggleSelectStudent = (email) => {
+    const key = normalizeEmail(email);
+    if (!key) return;
+    setSelectedEmails((prev) =>
+      prev.includes(key) ? prev.filter((e) => e !== key) : [...prev, key]
+    );
+  };
+
+  /**
+   * Ô chọn ở đầu bảng: chọn/bỏ chọn TRANG HIỆN TẠI, không phải toàn bộ danh sách.
+   *
+   * Cố ý giới hạn trong trang đang nhìn thấy. Ô "chọn tất cả" mà quét luôn cả
+   * những dòng ở trang sau — thứ quản trị viên chưa hề nhìn qua — là cách dễ
+   * nhất để xoá nhầm hàng loạt: người bấm tưởng mình chọn 20 dòng trước mắt,
+   * thực ra chọn 300.
+   */
+  const pageEmails = paginatedStudents.map((s) => normalizeEmail(s.email)).filter(Boolean);
+  const allOnPageSelected = pageEmails.length > 0 && pageEmails.every((e) => selectedEmails.includes(e));
+
+  const toggleSelectPage = () => {
+    setSelectedEmails((prev) =>
+      allOnPageSelected
+        ? prev.filter((e) => !pageEmails.includes(e))
+        : [...new Set([...prev, ...pageEmails])]
+    );
+  };
+
+  const selectedStudents = students.filter((s) => selectedEmails.includes(normalizeEmail(s.email)));
+
+  /**
+   * Xoá vĩnh viễn các học viên đã chọn.
+   *
+   * Khác hẳn nút xoá từng dòng: nút này gọi hàm máy chủ nên xoá được CẢ TÀI
+   * KHOẢN ĐĂNG NHẬP. Nút xoá cũ chỉ xoá dữ liệu, học viên vẫn đăng nhập lại
+   * được và hồ sơ tự sinh lại — xoá mà không xoá.
+   */
+  const handleBulkDelete = async () => {
+    if (!selectedEmails.length) return;
+
+    // Chặn trước ở đây cho thông báo dễ hiểu; máy chủ vẫn có chốt riêng.
+    const blocked = selectedStudents.filter((s) => !canDeleteAccount(s, adminRoster).ok);
+    if (blocked.length) {
+      showNotice(
+        `🔒 Trong danh sách đã chọn có ${blocked.length} tài khoản quản trị (${blocked
+          .map((s) => s.email)
+          .join(', ')}). Thu hồi quyền trước rồi mới xoá được.`,
+        8000
+      );
+      return;
+    }
+
+    const names = selectedStudents.slice(0, 5).map((s) => `• ${s.name || s.email} (${s.email})`).join('\n');
+    const more = selectedStudents.length > 5 ? `\n… và ${selectedStudents.length - 5} người nữa` : '';
+
+    // Hỏi lại bằng danh sách TÊN THẬT chứ không phải con số.
+    //
+    // "Xoá 23 học viên?" thì ai cũng bấm OK. Nhìn thấy tên từng người mới là
+    // lúc phát hiện mình lỡ chọn nhầm — và đây là thao tác không hoàn tác được.
+    const confirmed = window.confirm(
+      `XOÁ VĨNH VIỄN ${selectedStudents.length} học viên sau đây?\n\n${names}${more}\n\n` +
+        `Sẽ mất: tiến độ học, kết quả trắc nghiệm, khảo sát, lịch sử hỗ trợ và CẢ TÀI KHOẢN ĐĂNG NHẬP.\n` +
+        `KHÔNG THỂ HOÀN TÁC.`
+    );
+    if (!confirmed) return;
+
+    setIsBulkWorking(true);
+    const result = await deleteStudentsPermanently(selectedEmails);
+    setIsBulkWorking(false);
+
+    const deleted = Array.isArray(result.deleted) ? result.deleted : [];
+
+    // Ghi bia mộ cho từng người đã xoá được. Cần bước này vì danh sách hiển thị
+    // còn trộn từ localStorage và học viên mẫu — không đánh dấu thì họ hiện lại
+    // ngay lần tải sau.
+    deleted.forEach((email) => markStudentDeleted(email));
+    if (deleted.length) {
+      setStudents((prev) => prev.filter((s) => !deleted.includes(normalizeEmail(s.email))));
+    }
+    setSelectedEmails(selectedEmails.filter((e) => !deleted.includes(e)));
+
+    showNotice(
+      result.ok ? `🟢 ${result.message}` : `⚠️ ${result.message || 'Xoá không thành công.'}`,
+      result.ok ? 5000 : 10000
+    );
+    if (Array.isArray(result.failed) && result.failed.length) {
+      console.warn('Các trường hợp xoá lỗi:', result.failed);
+    }
+  };
+
+  /* ============================================================
+     ĐỔI EMAIL HỌC VIÊN
+     ============================================================ */
+
+  const openEmailEditor = (student) => {
+    setEditingEmailFor(student);
+    setNewEmailValue('');
+  };
+
+  /**
+   * Lưu email mới.
+   *
+   * Việc nặng nằm ở máy chủ (`api/admin/update-student-email`) vì đổi email kéo
+   * theo dời cả hồ sơ, sổ phân quyền và lịch sử hỗ trợ sang mã tài liệu mới —
+   * mã đó suy ra từ chính email. Phía này chỉ kiểm tra sơ bộ cho người dùng đỡ
+   * mất một vòng mạng.
+   */
+  const handleSaveNewEmail = async () => {
+    const oldEmail = normalizeEmail(editingEmailFor?.email);
+    const newEmail = normalizeEmail(newEmailValue);
+
+    if (!newEmail) {
+      showNotice('⚠️ Chưa nhập email mới.', 4000);
+      return;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(newEmail)) {
+      showNotice('⚠️ Địa chỉ email mới không hợp lệ.', 4000);
+      return;
+    }
+    if (newEmail === oldEmail) {
+      showNotice('⚠️ Email mới trùng email cũ.', 4000);
+      return;
+    }
+
+    setIsSavingEmail(true);
+    const result = await updateStudentEmail(oldEmail, newEmail);
+    setIsSavingEmail(false);
+
+    if (result.ok) {
+      setStudents((prev) =>
+        prev.map((s) => (normalizeEmail(s.email) === oldEmail ? { ...s, email: newEmail } : s))
+      );
+      setSelectedEmails((prev) => prev.map((e) => (e === oldEmail ? newEmail : e)));
+      setEditingEmailFor(null);
+      setNewEmailValue('');
+      showNotice(`🟢 ${result.message}`, 6000);
+    } else {
+      showNotice(`⚠️ ${result.message || 'Không đổi được email.'}`, 10000);
     }
   };
 
@@ -1134,11 +1308,59 @@ export default function AdminDashboardModal({
           )}
         </div>
 
+        {/* Thanh thao tác hàng loạt.
+            Chỉ hiện khi thật sự có dòng được chọn — luôn hiện thì nó chiếm chỗ
+            và nhờn mắt, tới lúc cần thì không ai để ý nữa. */}
+        {selectedEmails.length > 0 && (
+          <div className="flex flex-wrap items-center justify-between gap-3 p-3 rounded-2xl bg-emerald-950/70 border border-emerald-500/50">
+            <div className="flex items-center gap-2 text-xs font-bold text-emerald-200">
+              <CheckSquare className="w-4 h-4 text-emerald-400 shrink-0" />
+              <span>Đã chọn {selectedEmails.length} học viên</span>
+              <button
+                onClick={() => setSelectedEmails([])}
+                className="ml-1 px-2 py-0.5 rounded-lg bg-slate-800 border border-slate-600 text-slate-300 hover:text-white text-[10px] font-bold transition cursor-pointer"
+              >
+                Bỏ chọn hết
+              </button>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <button
+                onClick={handleExportCSV}
+                disabled={isBulkWorking}
+                className="px-3 py-1.5 rounded-xl bg-emerald-600 hover:brightness-110 text-white text-[11px] font-black flex items-center gap-1.5 transition cursor-pointer disabled:opacity-60"
+              >
+                <Download className="w-3.5 h-3.5" />
+                <span>Xuất {selectedEmails.length} học viên đã chọn</span>
+              </button>
+
+              <button
+                onClick={handleBulkDelete}
+                disabled={isBulkWorking}
+                className="px-3 py-1.5 rounded-xl bg-rose-900/80 border border-rose-600 hover:bg-rose-800 text-rose-100 text-[11px] font-black flex items-center gap-1.5 transition cursor-pointer disabled:opacity-60"
+                title="Xoá vĩnh viễn, gồm cả tài khoản đăng nhập. Không hoàn tác được."
+              >
+                <Trash2 className="w-3.5 h-3.5" />
+                <span>{isBulkWorking ? 'Đang xoá...' : `Xoá vĩnh viễn ${selectedEmails.length}`}</span>
+              </button>
+            </div>
+          </div>
+        )}
+
         {/* Student Accounts Table View (Expanded Vertical Space) */}
         <div className="flex-1 min-h-[460px] overflow-y-auto rounded-2xl border border-emerald-900/50 glass-panel">
           <table className="w-full text-left border-collapse min-w-[900px]">
             <thead>
               <tr className="bg-slate-900/90 text-emerald-400 text-[11px] font-extrabold uppercase tracking-wider border-b border-emerald-900/50 sticky top-0 backdrop-blur-md z-10">
+                <th className="py-2.5 px-3 w-8">
+                  <input
+                    type="checkbox"
+                    checked={allOnPageSelected}
+                    onChange={toggleSelectPage}
+                    className="w-4 h-4 rounded border-emerald-700 bg-slate-900 accent-emerald-500 cursor-pointer align-middle"
+                    title="Chọn / bỏ chọn toàn bộ học viên trong trang này"
+                  />
+                </th>
                 <th className="py-2.5 px-3">STT</th>
                 <th className="py-2.5 px-3">Họ và Tên Học Viên</th>
                 <th className="py-2.5 px-3">Số Điện Thoại</th>
@@ -1160,8 +1382,22 @@ export default function AdminDashboardModal({
                   const role = getAccountRole(std, adminRoster);
                   const isSelf = normalizeEmail(std.email) === currentUserEmail;
 
+                  const rowEmail = normalizeEmail(std.email);
+                  const isPicked = selectedEmails.includes(rowEmail);
+
                   return (
-                    <tr key={std.id || idx} className="hover:bg-emerald-950/40 transition">
+                    <tr
+                      key={std.id || idx}
+                      className={`transition ${isPicked ? 'bg-emerald-950/60' : 'hover:bg-emerald-950/40'}`}
+                    >
+                      <td className="py-2 px-3">
+                        <input
+                          type="checkbox"
+                          checked={isPicked}
+                          onChange={() => toggleSelectStudent(std.email)}
+                          className="w-4 h-4 rounded border-emerald-700 bg-slate-900 accent-emerald-500 cursor-pointer align-middle"
+                        />
+                      </td>
                       <td className="py-2 px-3 font-mono text-slate-400">{sttIndex}</td>
                       <td className="py-2 px-3 font-bold text-white flex items-center gap-2">
                         <div className="w-5 h-5 rounded-full bg-emerald-950 border border-emerald-700 text-emerald-400 font-extrabold text-[9px] flex items-center justify-center shrink-0 overflow-hidden">
@@ -1268,6 +1504,17 @@ export default function AdminDashboardModal({
                             </button>
                           )}
 
+                          {/* Đổi email — dùng khi học viên gõ sai lúc đăng ký và
+                              không còn đăng nhập được để tự sửa. Xác minh danh
+                              tính qua số điện thoại trong hồ sơ trước khi đổi. */}
+                          <button
+                            onClick={() => openEmailEditor(std)}
+                            className="p-1.5 rounded-lg bg-sky-950/60 border border-sky-800 text-sky-300 hover:bg-sky-900 transition cursor-pointer"
+                            title={`Đổi email đăng nhập của ${std.email}`}
+                          >
+                            <Mail className="w-3.5 h-3.5" />
+                          </button>
+
                           {role === 'student' ? (
                             <button
                               onClick={() => handleDeleteStudent(std)}
@@ -1293,7 +1540,7 @@ export default function AdminDashboardModal({
                 })
               ) : (
                 <tr>
-                  <td colSpan="10" className="p-8 text-center text-slate-400 text-xs">
+                  <td colSpan="11" className="p-8 text-center text-slate-400 text-xs">
                     Không tìm thấy tài khoản nào phù hợp với bộ lọc.
                   </td>
                 </tr>
@@ -1676,6 +1923,78 @@ export default function AdminDashboardModal({
                 );
               })()}
 
+            </div>
+          </div>
+        )}
+
+        {/* Hộp thoại đổi email học viên.
+            Đặt trong lớp phủ riêng, z-index cao hơn Bảng Quản Trị: đây là thao
+            tác đổi danh tính đăng nhập, phải buộc người bấm dừng lại đọc chứ
+            không lẫn vào giữa bảng. */}
+        {editingEmailFor && (
+          <div className="fixed inset-0 z-[70] flex items-center justify-center p-4 bg-slate-950/85 backdrop-blur-md">
+            <div className="w-full max-w-md glass-panel rounded-3xl border border-sky-500/50 p-6 shadow-2xl space-y-4">
+              <div className="flex items-start justify-between gap-3">
+                <h3 className="text-base font-black text-white flex items-center gap-2">
+                  <Mail className="w-5 h-5 text-sky-400" /> ĐỔI EMAIL HỌC VIÊN
+                </h3>
+                <button
+                  onClick={() => setEditingEmailFor(null)}
+                  className="w-7 h-7 rounded-full bg-slate-900 border border-slate-700 text-slate-400 hover:text-white flex items-center justify-center shrink-0 transition cursor-pointer"
+                >
+                  <X className="w-4 h-4" />
+                </button>
+              </div>
+
+              <div className="p-3 rounded-xl bg-slate-900/80 border border-slate-700 space-y-1">
+                <div className="text-[10px] text-slate-400 font-semibold">Học viên</div>
+                <div className="text-xs text-white font-bold">{editingEmailFor.name || '(chưa có tên)'}</div>
+                <div className="text-[11px] text-slate-300 font-mono break-all">{editingEmailFor.email}</div>
+                <div className="text-[11px] text-emerald-300 font-mono">
+                  SĐT: {editingEmailFor.phone || 'chưa có'}
+                </div>
+              </div>
+
+              <div className="p-3 rounded-xl bg-amber-950/50 border border-amber-600/50 text-amber-200 text-[11px] leading-relaxed flex items-start gap-2">
+                <AlertTriangle className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
+                <span>
+                  <strong>Gọi điện xác minh trước khi đổi.</strong> Đổi email tức là đổi danh tính đăng nhập —
+                  người nắm email mới sẽ vào được tài khoản này cùng toàn bộ tiến độ và quyền nhận Giấy Chứng Nhận.
+                  Số điện thoại ở trên chính là để dùng lúc này.
+                </span>
+              </div>
+
+              <div className="space-y-1">
+                <label className="text-xs font-semibold text-slate-300">Email mới:</label>
+                <input
+                  type="email"
+                  autoFocus
+                  placeholder="hocvien@gmail.com"
+                  value={newEmailValue}
+                  onChange={(e) => setNewEmailValue(e.target.value)}
+                  className="w-full bg-slate-900/60 border border-sky-900/60 focus:border-sky-400 rounded-xl px-3 py-2.5 text-xs text-white placeholder-slate-500 focus:outline-none transition"
+                />
+                <p className="text-[10px] text-slate-400 leading-relaxed">
+                  Hồ sơ, tiến độ học, khảo sát và lịch sử hỗ trợ được dời sang email mới. Học viên đăng nhập
+                  bằng địa chỉ mới ngay sau khi lưu.
+                </p>
+              </div>
+
+              <div className="flex gap-2 pt-1">
+                <button
+                  onClick={() => setEditingEmailFor(null)}
+                  className="flex-1 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-slate-300 hover:text-white text-xs font-bold transition cursor-pointer"
+                >
+                  Huỷ
+                </button>
+                <button
+                  onClick={handleSaveNewEmail}
+                  disabled={isSavingEmail}
+                  className="flex-1 py-2.5 rounded-xl bg-sky-600 hover:brightness-110 text-white text-xs font-black transition cursor-pointer disabled:opacity-60"
+                >
+                  {isSavingEmail ? 'Đang lưu...' : 'Xác nhận đổi email'}
+                </button>
+              </div>
             </div>
           </div>
         )}
