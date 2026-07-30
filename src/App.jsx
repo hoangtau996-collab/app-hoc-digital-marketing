@@ -1132,6 +1132,35 @@ export default function App() {
         t={t}
       />
 
+      {/*
+        ẢNH BÌA TRANG CHỦ
+
+        Chỉ hiện ở màn hình Khoá Học khi chưa mở bài nào — tức đúng "trang chủ".
+        Không hiện khi học viên đang đọc bài, tra Từ Điển hay xem Tin Tức: ảnh
+        cao gần nửa màn hình, để nguyên ở mọi trang thì mỗi lần chuyển bài đều
+        phải cuộn qua nó mới tới nội dung.
+
+        `fetchPriority="high"` chứ không `loading="lazy"`: ảnh này nằm ngay đầu
+        trang, người dùng thấy nó trước cả khi cuộn. Đánh dấu lazy ở vị trí này
+        làm trình duyệt hoãn tải, đổi lại một khoảng trắng nhấp nháy lúc mở
+        trang — chậm hơn về mặt cảm nhận dù tổng thời gian không đổi.
+
+        Khai sẵn width/height thật (1672x941) để trình duyệt chừa đúng chỗ trước
+        khi ảnh về, không thì cả trang bị đẩy giật xuống một nhịp khi ảnh tải xong.
+      */}
+      {activeTab === 'course' && !selectedModuleId && (
+        <div className="max-w-7xl w-full mx-auto px-3 sm:px-6 lg:px-8 pt-4">
+          <img
+            src="/og-cover-v3.jpg"
+            alt="Chào mừng đến với P MARCOM ACADEMY — Kết nối tri thức, nâng tầm tư duy, bứt phá tương lai"
+            width="1672"
+            height="941"
+            fetchPriority="high"
+            className="w-full h-auto rounded-2xl border border-emerald-900/40 shadow-xl"
+          />
+        </div>
+      )}
+
       {/* Guest Progress / Auth Protection Toast Banner */}
       {migrationNotice && (
         <div className="max-w-7xl w-full mx-auto px-3 sm:px-6 lg:px-8 pt-4">
