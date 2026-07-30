@@ -10,13 +10,34 @@ Kho mã có `vercel.json` với **đúng một mục đích**: chuyển tiếp �
 
 TODO — cân nhắc đưa nốt các thiết lập còn lại vào `vercel.json` để chúng bám theo kho mã.
 
-### Phiên bản Node — đừng hạ xuống
+### `firebase-admin` phải ở nhánh 13 — ĐỪNG nâng lên 14
 
-`package.json` khai `"engines": { "node": "22.x" }`. Đây **không phải sở thích**: gói `firebase-admin@14` (hàm máy chủ `api/forgot-password.js` dùng để sinh mã đặt lại mật khẩu) khai `engines.node >= 22` và **không nạp được** trên Node cũ hơn.
+`package.json` ghim `"firebase-admin": "^13.10.0"`. Đây là ràng buộc bắt buộc, không phải ngại nâng cấp.
 
-Kiểu hỏng rất dễ chẩn đoán nhầm: lỗi xảy ra lúc **nạp module**, trước khi chạy dòng đầu tiên của mã, nên **mọi** lệnh gọi đều trả về `500 FUNCTION_INVOCATION_FAILED` — kể cả lệnh GET lẽ ra phải trả `405`. Nhìn vào thì tưởng sai cấu hình biến môi trường hoặc sai khoá, mà thực ra chỉ là sai phiên bản Node. Đã dính một lần ngày 2026-07-30.
+Nhánh 14 kéo theo `jwks-rsa@4`, gói này lại kéo `jose@6`. Mà `jose@6` là gói **chỉ chạy dạng ESM** (không có bản CommonJS), trong khi `jwks-rsa@4` vẫn nạp nó bằng `require()`. Hai thứ đó không chạy cùng nhau trong hàm máy chủ của Vercel:
 
-Giá trị trong `package.json` được ưu tiên hơn thiết lập trên bảng điều khiển Vercel, nên để nguyên ở đây là đủ.
+```
+ERR_REQUIRE_ESM require() of ES Module .../jose/dist/webapi/index.js
+from .../jwks-rsa/src/utils.js not supported
+```
+
+Nhánh 13 dùng `jwks-rsa@3 → jose@4`, và `jose@4` có bản CommonJS nên không vấn đề gì.
+
+**Vì sao cái bẫy này khó thấy:** lỗi chỉ nổ khi gọi `initializeApp()` lúc chạy thật trên máy chủ. Chạy `npm run build` vẫn xanh, `npm install` không cảnh báo gì, thử nạp module ở máy cũng bình thường — vì ở máy không ai gọi `initializeApp()`. Triệu chứng duy nhất nhìn thấy được là `500 FUNCTION_INVOCATION_FAILED` **ở mọi lệnh gọi**, kể cả lệnh GET lẽ ra phải trả `405`. Nhìn vào rất giống sai khoá hoặc thiếu biến môi trường, và đó là hướng chẩn đoán sai đã tốn một vòng deploy ngày 2026-07-30.
+
+Nếu buộc phải nâng nhánh 14 sau này, kiểm tra lại `npm ls jose` — phải ra bản có `"type": "commonjs"`.
+
+### Phiên bản Node
+
+`package.json` khai `"engines": { "node": "22.x" }`. Nhánh `firebase-admin@13` chỉ đòi Node >= 18, nên đây không còn là ràng buộc bắt buộc — nhưng cứ giữ: production đã chạy Node 22 ổn định (xác nhận qua `/api/ping`), và ghim trong kho mã thì thiết lập đi theo dự án thay vì nằm rời trên bảng điều khiển Vercel.
+
+### Hai đường dẫn chẩn đoán
+
+`/api/ping` — không import gì, chỉ trả về phiên bản Node. Dùng để tách bạch "hạ tầng hàm hỏng" với "mã của mình hỏng".
+
+`/api/diag` — nạp `firebase-admin` trong `try/catch` rồi thử gọi Firebase bằng khoá thật, trả về lỗi nguyên văn. Đây là thứ duy nhất chỉ ra được `ERR_REQUIRE_ESM` ở trên; nếu không có nó thì chỉ thấy `500` trống rỗng.
+
+Cả hai **chỉ báo có/không và độ dài** biến môi trường, không bao giờ in giá trị — chúng là đường dẫn công khai, ai cũng gọi được.
 
 ### Tên miền đăng nhập (custom auth domain)
 
