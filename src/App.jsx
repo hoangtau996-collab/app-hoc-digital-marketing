@@ -1187,8 +1187,14 @@ export default function App() {
         làm trình duyệt hoãn tải, đổi lại một khoảng trắng nhấp nháy lúc mở
         trang — chậm hơn về mặt cảm nhận dù tổng thời gian không đổi.
 
-        Khai sẵn width/height thật (1672x941) để trình duyệt chừa đúng chỗ trước
-        khi ảnh về, không thì cả trang bị đẩy giật xuống một nhịp khi ảnh tải xong.
+        CHIỀU CAO BỊ CHẶN CỨNG. Ảnh gốc là 1672x941; để `h-auto` thì trên khung
+        1.280px nó cao khoảng 720px — chiếm trọn màn hình đầu tiên, và học viên
+        phải cuộn qua một tấm quảng cáo mới thấy được bài học. Ảnh bìa là thứ
+        trang trí, không phải nội dung; nó không được chiếm chỗ của nội dung.
+
+        `object-cover` + `object-center` cắt bớt trên dưới và giữ phần giữa —
+        đúng phần có khối chữ "P MARCOM ACADEMY". Dùng `object-contain` sẽ ra
+        một dải ảnh tí hon nằm giữa hai mảng trống, trông như tải ảnh hỏng.
       */}
       {activeTab === 'course' && !selectedModuleId && (
         <div className="max-w-7xl w-full mx-auto px-3 sm:px-6 lg:px-8 pt-4">
@@ -1198,7 +1204,7 @@ export default function App() {
             width="1672"
             height="941"
             fetchPriority="high"
-            className="w-full h-auto rounded-2xl border border-emerald-900/40 shadow-xl"
+            className="w-full h-[120px] sm:h-[160px] lg:h-[200px] object-cover object-center rounded-2xl border border-emerald-900/40 shadow-lg"
           />
         </div>
       )}
