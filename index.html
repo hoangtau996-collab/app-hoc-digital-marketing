@@ -50,7 +50,9 @@
 
       Định dạng JPEG chứ không phải PNG: bản PNG gốc nặng 1.982 KB, quá nặng cho
       một ảnh hiện ngay khi mở trang trên 4G. Bản JPEG chất lượng 86 còn 279 KB,
-      mắt thường không phân biệt được. Bản gốc giữ ở src/assets/og-cover-v3-goc.png.
+      mắt thường không phân biệt được. Bản PNG gốc không giữ trong kho mã (nặng
+      2MB mà không file nào dùng tới); cần lại thì lấy từ lịch sử git:
+      git show 5a5d6e7:src/assets/og-cover-v3-goc.png > goc.png
     -->
     <meta property="og:image" content="https://academy.pmarcom.com/og-cover-v3.jpg" />
     <meta property="og:image:url" content="https://academy.pmarcom.com/og-cover-v3.jpg" />

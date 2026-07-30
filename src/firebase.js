@@ -10,7 +10,8 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
   signInWithRedirect,
-  getRedirectResult
+  getRedirectResult,
+  sendPasswordResetEmail
 } from 'firebase/auth';
 import {
   getFirestore,
@@ -178,6 +179,83 @@ export async function signInWithGoogle() {
  * từ chối, học viên quay về đúng màn hình cũ, không có phiên đăng nhập và không
  * một dòng giải thích nào — nhìn y hệt như bấm nhầm nút.
  */
+/* ============================================================
+   ĐỔI MẬT KHẨU
+
+   Đi bằng thư đặt lại mật khẩu, KHÔNG đổi thẳng trong ứng dụng.
+
+   Firebase có hàm updatePassword() đổi thẳng, nhưng nó đòi phiên đăng nhập còn
+   "mới" — đăng nhập từ sáng, chiều mới đổi là bị từ chối bằng
+   `auth/requires-recent-login`, và cách chữa là bắt học viên nhập lại mật khẩu
+   cũ ngay giữa chừng. Với người không nhớ nổi mật khẩu cũ — tức đúng nhóm cần
+   đổi mật khẩu nhất — đường đó tắc.
+
+   Thư đặt lại thì không có trạng thái nào để hỏng: bấm một nút, mở hộp thư, đặt
+   mật khẩu mới. Chạy được cả khi học viên đã quên sạch mật khẩu cũ.
+
+   Nội dung và tên người gửi của thư sửa ở Firebase Console → Authentication →
+   Templates. Mặc định thư đến từ `noreply@hr-project-b982a.firebaseapp.com`,
+   nhìn không giống thư của học viện — nên sửa lại.
+   ============================================================ */
+
+/**
+ * Tài khoản đang đăng nhập vào bằng những cách nào.
+ *
+ * Cần biết vì giao diện đổi mật khẩu chỉ có nghĩa với tài khoản CÓ mật khẩu.
+ * Học viên đăng nhập bằng Google không hề có mật khẩu nào ở hệ thống này —
+ * đưa cho họ ô đổi mật khẩu là mời họ đi làm một việc không tồn tại, rồi tự
+ * hỏi vì sao không được.
+ */
+export function getSignInMethods() {
+  const providers = Array.isArray(auth.currentUser?.providerData)
+    ? auth.currentUser.providerData
+    : [];
+  return {
+    isSignedIn: Boolean(auth.currentUser),
+    hasPassword: providers.some((p) => p?.providerId === 'password'),
+    hasGoogle: providers.some((p) => p?.providerId === 'google.com')
+  };
+}
+
+/**
+ * Gửi thư đặt lại mật khẩu.
+ *
+ * Trả về `{ ok, message }` để nơi gọi hiện nguyên văn lý do khi hỏng. Tuyệt đối
+ * không báo "đã gửi" khi chưa chắc: học viên sẽ ngồi chờ một lá thư không bao
+ * giờ tới, và không ai biết là hệ thống đang hỏng.
+ */
+export async function sendPasswordReset(email) {
+  const target = cleanEmailKey(auth.currentUser?.email || email);
+  if (!target) {
+    return { ok: false, message: 'Tài khoản không có email hợp lệ nên không gửi được thư.' };
+  }
+
+  try {
+    await sendPasswordResetEmail(auth, target);
+    return {
+      ok: true,
+      message: `Đã gửi thư đặt lại mật khẩu tới ${target}. Mở hộp thư và bấm vào đường dẫn trong thư. Nếu không thấy, kiểm tra cả mục Thư rác.`
+    };
+  } catch (e) {
+    const code = String(e?.code || '');
+    console.warn('Không gửi được thư đặt lại mật khẩu:', e);
+
+    if (code.startsWith('auth/user-not-found')) {
+      return {
+        ok: false,
+        message: 'Email này chưa có tài khoản trên hệ thống. Có thể tài khoản của bạn chỉ tồn tại trên thiết bị này — vui lòng báo Ban Quản Trị.'
+      };
+    }
+    if (code.startsWith('auth/too-many-requests')) {
+      return { ok: false, message: 'Bạn đã yêu cầu quá nhiều lần. Chờ vài phút rồi thử lại.' };
+    }
+    if (code.startsWith('auth/network-request-failed')) {
+      return { ok: false, message: 'Không kết nối được máy chủ. Kiểm tra đường truyền rồi thử lại.' };
+    }
+    return { ok: false, message: `Không gửi được thư (${code || 'lỗi không rõ'}). Vui lòng báo Ban Quản Trị.` };
+  }
+}
+
 export async function consumeGoogleRedirectResult() {
   try {
     const result = await getRedirectResult(auth);

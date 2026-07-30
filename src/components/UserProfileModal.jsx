@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { sendPasswordReset, getSignInMethods } from '../firebase';
 import {
   X,
   User,
@@ -24,8 +25,9 @@ export default function UserProfileModal({
   theme = 'system',
   setTheme = () => {}
 }) {
-  const [newPassword, setNewPassword] = useState('');
   const [passUpdateMsg, setPassUpdateMsg] = useState('');
+  const [resetOk, setResetOk] = useState(false);
+  const [isSendingReset, setIsSendingReset] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
 
   const [name, setName] = useState(currentUser?.name || '');
@@ -46,6 +48,11 @@ export default function UserProfileModal({
   if (!isOpen || !currentUser) return null;
 
   const progressPercent = Math.round((passedCount / totalModules) * 100);
+
+  // Đọc thẳng từ phiên Firebase Auth chứ không từ hồ sơ trong state: `providerData`
+  // là thứ máy chủ cấp, còn hồ sơ trong state ghép từ localStorage nên có thể là
+  // của người dùng trước trên máy dùng chung.
+  const signInMethods = getSignInMethods();
 
   const handleAvatarFileChange = (e) => {
     const file = e.target.files[0];
@@ -94,28 +101,22 @@ export default function UserProfileModal({
     }
   };
 
-  const handleUpdatePassword = (e) => {
-    e.preventDefault();
-    if (!newPassword || newPassword.length < 3) {
-      setPassUpdateMsg('Mật khẩu mới phải từ 3 ký tự trở lên.');
-      return;
-    }
-
-    try {
-      const savedUsers = JSON.parse(localStorage.getItem('dmm_users_db') || '[]');
-      const updated = savedUsers.map(u => {
-        if (u.id === currentUser.id) {
-          return { ...u, password: newPassword };
-        }
-        return u;
-      });
-      localStorage.setItem('dmm_users_db', JSON.stringify(updated));
-      setPassUpdateMsg('🟢 Đã đổi mật khẩu thành công!');
-      setNewPassword('');
-      setTimeout(() => setPassUpdateMsg(''), 4000);
-    } catch (e) {
-      setPassUpdateMsg('❌ Lỗi khi đổi mật khẩu.');
-    }
+  /**
+   * Gửi thư đặt lại mật khẩu về đúng email của tài khoản đang đăng nhập.
+   *
+   * Bản trước ở đây ghi mật khẩu mới vào localStorage rồi báo "🟢 Đã đổi mật
+   * khẩu thành công!" — trong khi mật khẩu thật trên Firebase KHÔNG hề đổi. Tệ
+   * hơn cả không có chức năng: học viên tin là đã đổi, lần sau đăng nhập bằng
+   * mật khẩu mới thì không vào được, và họ không có lý do gì để nghi ngờ cái
+   * thông báo màu xanh kia.
+   */
+  const handleSendPasswordReset = async () => {
+    setIsSendingReset(true);
+    setPassUpdateMsg('');
+    const result = await sendPasswordReset(currentUser?.email);
+    setPassUpdateMsg(result.message);
+    setResetOk(Boolean(result.ok));
+    setIsSendingReset(false);
   };
 
   return (
@@ -375,30 +376,52 @@ export default function UserProfileModal({
             đường tắt như vậy chỉ để tiện sao lưu — trong khi đám mây đã lo phần
             sao lưu — là đánh đổi sai. */}
 
-        {/* Password Update Accordion/Section */}
-        <div className="pt-3 border-t border-emerald-900/40 space-y-2">
-          <form onSubmit={handleUpdatePassword} className="flex items-center gap-2">
-            <div className="relative flex-1">
-              <Key className="w-3.5 h-3.5 absolute left-3 top-1/2 -translate-y-1/2 text-slate-500" />
-              <input
-                type="password"
-                placeholder="Đổi mật khẩu mới..."
-                value={newPassword}
-                onChange={(e) => setNewPassword(e.target.value)}
-                className="w-full bg-[#111a2e] border border-emerald-900/60 focus:border-emerald-400 rounded-xl pl-8 pr-3 py-2 text-xs text-white placeholder-slate-500 focus:outline-none"
-              />
-            </div>
+        {/* ĐỔI MẬT KHẨU
 
-            <button
-              type="submit"
-              className="px-3 py-2 rounded-xl bg-emerald-950 border border-emerald-700 hover:border-emerald-500 text-emerald-300 text-xs font-semibold transition shrink-0 cursor-pointer"
-            >
-              Lưu MK
-            </button>
-          </form>
+            Hiện đúng một trong hai thứ, tuỳ cách tài khoản này đăng nhập:
+              - có mật khẩu  -> nút gửi thư đặt lại
+              - chỉ có Google -> lời giải thích, không có nút nào
+
+            Không gộp thành một giao diện chung: học viên đăng nhập bằng Google
+            KHÔNG có mật khẩu nào ở hệ thống này, đưa cho họ nút đổi mật khẩu là
+            mời họ đi làm một việc không tồn tại. */}
+        <div className="pt-3 border-t border-emerald-900/40 space-y-2">
+          <h4 className="text-xs font-bold text-emerald-400 uppercase tracking-wider flex items-center gap-1.5">
+            <Key className="w-4 h-4" /> Mật Khẩu Đăng Nhập
+          </h4>
+
+          {signInMethods.hasPassword ? (
+            <>
+              <p className="text-[11px] text-slate-400 leading-relaxed">
+                Bấm nút dưới đây, hệ thống gửi một đường dẫn đặt lại mật khẩu về email{' '}
+                <strong className="text-slate-200">{currentUser.email}</strong>. Bạn không cần nhớ mật khẩu cũ.
+              </p>
+              <button
+                type="button"
+                onClick={handleSendPasswordReset}
+                disabled={isSendingReset}
+                className="w-full py-2.5 rounded-xl bg-emerald-950 border border-emerald-700 hover:border-emerald-500 text-emerald-300 text-xs font-bold transition cursor-pointer disabled:opacity-60"
+              >
+                {isSendingReset ? 'Đang gửi...' : 'Gửi email đặt lại mật khẩu'}
+              </button>
+            </>
+          ) : signInMethods.hasGoogle ? (
+            <p className="text-[11px] text-slate-400 leading-relaxed">
+              Bạn đăng nhập bằng <strong className="text-slate-200">tài khoản Google</strong> nên không có mật khẩu
+              riêng ở Học Viện — không có gì để đổi ở đây. Muốn đổi mật khẩu Google thì vào phần cài đặt
+              Tài khoản Google của bạn.
+            </p>
+          ) : (
+            <p className="text-[11px] text-slate-400 leading-relaxed">
+              Tài khoản này đang đăng nhập ở chế độ tạm trên thiết bị của bạn nên chưa đặt được mật khẩu.
+              Vui lòng đăng xuất rồi đăng ký lại khi có kết nối mạng.
+            </p>
+          )}
 
           {passUpdateMsg && (
-            <p className="text-[11px] text-emerald-400 font-medium">{passUpdateMsg}</p>
+            <p className={`text-[11px] font-medium leading-relaxed ${resetOk ? 'text-emerald-400' : 'text-rose-400'}`}>
+              {passUpdateMsg}
+            </p>
           )}
         </div>
 
