@@ -10,7 +10,10 @@
  * học viên thật cũng rơi vào hộp thư rác.
  */
 
+import crypto from 'node:crypto';
+
 const RESEND_ENDPOINT = 'https://api.resend.com/emails';
+const RESEND_BATCH_ENDPOINT = 'https://api.resend.com/emails/batch';
 
 /** Địa chỉ gửi. Đổi ở đây và trên Vercel, đừng rải ra nhiều chỗ. */
 export const MAIL_FROM = process.env.EMAIL_FROM || 'Học Viện P MARCOM <admin@mail.pmarcom.com>';
@@ -26,7 +29,56 @@ export const SITE_URL = process.env.SITE_URL || 'https://academy.pmarcom.com';
  * sạch và thư hiện ra trần trụi. Đây là chỗ duy nhất trong dự án nên viết như
  * vậy — không phải thói quen xấu lan sang phần web.
  */
-export function wrapEmail({ heading, bodyHtml, footerNote = '' }) {
+/* ============================================================
+   TỪ CHỐI NHẬN THƯ (opt-out)
+
+   Mỗi thư thông báo mang một đường dẫn huỷ nhận riêng, ký bằng HMAC. Không
+   ký thì bất kỳ ai cũng sửa email trên thanh địa chỉ để huỷ nhận thư THAY
+   NGƯỜI KHÁC — học viên bị cắt liên lạc mà không hề biết.
+
+   Khoá ký lấy từ khoá dịch vụ Firebase, thứ vốn đã là bí mật và đã có sẵn
+   trên máy chủ, để không phải thêm một biến môi trường nữa cho người vận
+   hành phải nhớ. Khai `UNSUBSCRIBE_SECRET` sẽ ghi đè nếu sau này cần tách bạch.
+
+   QUAN TRỌNG — đây là ranh giới không được lẫn: từ chối nhận thư chỉ áp cho
+   THƯ THÔNG BÁO. Thư đặt lại mật khẩu vẫn phải gửi, vì người đã huỷ nhận tin
+   tức vẫn có quyền lấy lại tài khoản của mình. Chặn cả loại đó là khoá học
+   viên ra khỏi tài khoản bằng một cú bấm mà họ tưởng chỉ để bớt thư rác.
+   ============================================================ */
+
+function unsubscribeSecret() {
+  if (process.env.UNSUBSCRIBE_SECRET) return process.env.UNSUBSCRIBE_SECRET;
+  const raw = process.env.FIREBASE_SERVICE_ACCOUNT || '';
+  const text = raw.trim().startsWith('{') ? raw : Buffer.from(raw, 'base64').toString('utf8');
+  try {
+    return JSON.parse(text).private_key || 'khong-co-khoa';
+  } catch {
+    return 'khong-co-khoa';
+  }
+}
+
+export function unsubscribeToken(email) {
+  return crypto
+    .createHmac('sha256', unsubscribeSecret())
+    .update(String(email || '').trim().toLowerCase())
+    .digest('hex')
+    .slice(0, 32);
+}
+
+/** So sánh theo thời gian hằng số để không lộ dần chữ ký qua việc đo thời gian. */
+export function verifyUnsubscribeToken(email, token) {
+  const expected = unsubscribeToken(email);
+  const a = Buffer.from(String(token || ''));
+  const b = Buffer.from(expected);
+  return a.length === b.length && crypto.timingSafeEqual(a, b);
+}
+
+export function unsubscribeUrl(email) {
+  const e = encodeURIComponent(String(email || '').trim().toLowerCase());
+  return `${SITE_URL}/api/unsubscribe?email=${e}&token=${unsubscribeToken(email)}`;
+}
+
+export function wrapEmail({ heading, bodyHtml, footerNote = '', optOutUrl = '' }) {
   return `<!doctype html>
 <html lang="vi">
 <body style="margin:0;padding:0;background:#f1f5f9;font-family:-apple-system,'Segoe UI',Roboto,Arial,sans-serif;">
@@ -52,6 +104,15 @@ export function wrapEmail({ heading, bodyHtml, footerNote = '' }) {
               Thư này gửi từ hệ thống Học Viện P MARCOM —
               <a href="${SITE_URL}" style="color:#047857;">academy.pmarcom.com</a>
             </div>
+            ${
+              optOutUrl
+                ? `<div style="margin-top:10px;padding-top:10px;border-top:1px solid #e2e8f0;">
+                     Không muốn nhận thư thông báo nữa?
+                     <a href="${optOutUrl}" style="color:#64748b;text-decoration:underline;">Huỷ nhận tại đây</a>.
+                     Bạn vẫn nhận được thư đặt lại mật khẩu khi cần.
+                   </div>`
+                : ''
+            }
           </td>
         </tr>
       </table>
@@ -119,6 +180,70 @@ export async function sendEmail({ to, subject, html, replyTo }) {
     return { ok: true, id: data?.id };
   } catch (e) {
     console.error('Lỗi mạng khi gọi Resend:', e);
+    return { ok: false, message: 'Không kết nối được dịch vụ gửi thư.' };
+  }
+}
+
+/** Trần số thư mỗi lần gọi API gộp của Resend. */
+export const BATCH_LIMIT = 100;
+
+/**
+ * Gửi nhiều thư trong MỘT lệnh gọi, mỗi người một thư riêng.
+ *
+ * MỖI NGƯỜI MỘT THƯ RIÊNG LÀ ĐIỀU KIỆN BẮT BUỘC, không phải chi tiết kỹ thuật.
+ * Nhét cả trăm địa chỉ vào chung một trường `to` cho nhanh sẽ để lộ TOÀN BỘ
+ * danh sách học viên cho từng người nhận — danh sách khách hàng của Học Viện,
+ * phát tán bằng một cú bấm và không thu hồi được. Cách này mỗi thư chỉ có đúng
+ * một người nhận.
+ *
+ * Dùng lệnh gọi gộp thay vì gửi lần lượt vì hàm máy chủ của Vercel có giới hạn
+ * thời gian chạy: gửi tuần tự một trăm thư sẽ bị cắt giữa chừng, và không ai
+ * biết nó dừng ở người thứ mấy.
+ *
+ * Header `List-Unsubscribe` giúp Gmail hiện nút huỷ nhận ngay trên giao diện
+ * thư. Có nó thì người không muốn nhận sẽ bấm nút đó; không có thì họ bấm
+ * "Báo spam", và một khi tên miền bị đánh dấu spam thì thư đặt lại mật khẩu của
+ * học viên thật cũng rơi vào hộp thư rác.
+ */
+export async function sendEmailBatch(messages) {
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
+    console.error('Thiếu RESEND_API_KEY — không gửi được thư nào.');
+    return { ok: false, message: 'Hệ thống gửi thư chưa được cấu hình.' };
+  }
+  if (!Array.isArray(messages) || !messages.length) {
+    return { ok: false, message: 'Không có thư nào để gửi.' };
+  }
+  if (messages.length > BATCH_LIMIT) {
+    return { ok: false, message: `Mỗi lần gửi tối đa ${BATCH_LIMIT} thư.` };
+  }
+
+  const payload = messages.map((m) => ({
+    from: MAIL_FROM,
+    to: [m.to],
+    subject: m.subject,
+    html: m.html,
+    ...(m.optOutUrl
+      ? { headers: { 'List-Unsubscribe': `<${m.optOutUrl}>`, 'List-Unsubscribe-Post': 'List-Unsubscribe=One-Click' } }
+      : {})
+  }));
+
+  try {
+    const res = await fetch(RESEND_BATCH_ENDPOINT, {
+      method: 'POST',
+      headers: { Authorization: `Bearer ${apiKey}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    const data = await res.json().catch(() => ({}));
+
+    if (!res.ok) {
+      console.error('Resend từ chối lệnh gửi gộp:', res.status, JSON.stringify(data));
+      return { ok: false, status: res.status, message: data?.message || 'Không gửi được thư.' };
+    }
+
+    return { ok: true, sent: Array.isArray(data?.data) ? data.data.length : messages.length };
+  } catch (e) {
+    console.error('Lỗi mạng khi gọi Resend (gộp):', e);
     return { ok: false, message: 'Không kết nối được dịch vụ gửi thư.' };
   }
 }
