@@ -6,9 +6,32 @@
 
 Hạ tầng là **Vercel**: bản ghi DNS của `academy.pmarcom.com` trỏ tới `vercel-dns-017.com`. Việc triển khai chạy tự động theo commit, không qua bước thủ công nào.
 
-**Kho mã không chứa bất kỳ tệp cấu hình triển khai nào** — không có `vercel.json`, `netlify.toml`, `firebase.json`, `Dockerfile` hay thư mục `.github/`. Nghĩa là dự án đang dùng cấu hình mặc định Vercel tự dò cho Vite, và mọi thiết lập (biến môi trường, tên miền, nhánh deploy) chỉ tồn tại trên bảng điều khiển Vercel, không được ghi lại trong kho mã.
+Kho mã có `vercel.json` với **đúng một mục đích**: chuyển tiếp đường `/__/auth/*` sang Firebase (xem mục "Tên miền đăng nhập" bên dưới). Mọi thiết lập khác — biến môi trường, tên miền, nhánh deploy — vẫn chỉ tồn tại trên bảng điều khiển Vercel, không được ghi lại trong kho mã.
 
-TODO — cân nhắc thêm `vercel.json` để thiết lập bám theo kho mã thay vì chỉ nằm trên bảng điều khiển.
+TODO — cân nhắc đưa nốt các thiết lập còn lại vào `vercel.json` để chúng bám theo kho mã.
+
+### Tên miền đăng nhập (custom auth domain)
+
+`VITE_FIREBASE_AUTH_DOMAIN` trên production là **`academy.pmarcom.com`**, không phải `hr-project-b982a.firebaseapp.com` như giá trị Firebase cấp sẵn. Hai lý do, cả hai đều thật:
+
+1. **Học viên nhìn thấy tên miền này.** Màn hình đăng nhập của Google hiện dòng "Tiếp tục tới …" kèm đúng giá trị `authDomain`. Để nguyên chuỗi `hr-project-b982a.firebaseapp.com` thì người dùng đang ở `academy.pmarcom.com` bỗng bị hỏi có muốn trao quyền cho một tên miền lạ hoắc không — đúng dấu hiệu của một trang lừa đảo.
+2. **Luồng đăng nhập bằng chuyển trang cần nó.** Khi `authDomain` khác tên miền đang chạy app, quá trình đăng nhập phải mượn bộ nhớ của bên thứ ba — thứ Safari và Chrome ẩn danh chặn thẳng, khiến học viên chuyển sang trang Google rồi quay về tay trắng. Cho `academy.pmarcom.com` tự phục vụ đường auth thì không còn bên thứ ba nào.
+
+Cơ chế: `vercel.json` chuyển tiếp `/__/auth/*` về `hr-project-b982a.firebaseapp.com`. Firebase phục vụ sẵn các đường đó, ta chỉ mượn lại dưới tên miền của mình.
+
+**Ba thứ phải khớp nhau, thiếu một là hỏng toàn bộ đăng nhập Google:**
+
+| Nơi khai báo | Giá trị |
+|---|---|
+| `vercel.json` → `rewrites[0].destination` | `https://hr-project-b982a.firebaseapp.com/__/auth/:path*` |
+| Vercel → Environment Variables → `VITE_FIREBASE_AUTH_DOMAIN` | `academy.pmarcom.com` |
+| Google Cloud → Google Auth Platform → Clients → Authorized redirect URIs | `https://academy.pmarcom.com/__/auth/handler` |
+
+Sót dòng thứ ba thì Google từ chối bằng `redirect_uri_mismatch` — hỏng ngay và hỏng với mọi học viên.
+
+**Tệp `.env` ở máy lập trình giữ nguyên `hr-project-b982a.firebaseapp.com`.** Cố ý khác production: `localhost` không có proxy nào chuyển tiếp `/__/auth/*`, khai tên miền thật vào đó là hỏng đăng nhập khi chạy `npm run dev`.
+
+**Cách quay lui** khi có sự cố: đổi `VITE_FIREBASE_AUTH_DOMAIN` trên Vercel về `hr-project-b982a.firebaseapp.com` rồi deploy lại. Không mất dữ liệu, không ai phải đăng nhập lại. `vercel.json` để nguyên cũng không sao — nó chỉ thành đường chuyển tiếp không ai đi qua.
 
 ### Tên miền phải sửa tay khi thay đổi
 
@@ -22,7 +45,7 @@ npm run build     # xuất ra thư mục dist/
 npm run preview   # xem thử bản đã đóng gói
 ```
 
-Kết quả là trang tĩnh trong `dist/`, phục vụ được bằng bất kỳ static host nào. Vì là SPA không dùng router, không cần cấu hình rewrite.
+Kết quả là trang tĩnh trong `dist/`, phục vụ được bằng bất kỳ static host nào. Vì là SPA không dùng router, không cần rewrite nào cho việc điều hướng. Rewrite duy nhất trong `vercel.json` phục vụ việc khác hẳn — chuyển tiếp đường đăng nhập, xem mục "Tên miền đăng nhập" ở trên — nên đừng xoá nó khi dọn cấu hình.
 
 `dist/` đã nằm trong `.gitignore`.
 
