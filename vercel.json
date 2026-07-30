@@ -3,6 +3,10 @@
     {
       "source": "/__/auth/:path*",
       "destination": "https://hr-project-b982a.firebaseapp.com/__/auth/:path*"
+    },
+    {
+      "source": "/doi-mat-khau",
+      "destination": "/index.html"
     }
   ]
 }

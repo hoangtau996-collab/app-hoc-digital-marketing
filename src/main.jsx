@@ -2,6 +2,7 @@ import React, { StrictMode, Component } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
+import ResetPasswordPage from './components/ResetPasswordPage.jsx'
 
 class ErrorBoundary extends Component {
   constructor(props) {
@@ -55,10 +56,41 @@ class ErrorBoundary extends Component {
   }
 }
 
+/**
+ * Chọn màn hình gốc: trang đặt lại mật khẩu, hay toàn bộ ứng dụng.
+ *
+ * Phân nhánh Ở ĐÂY chứ không phải bên trong App.jsx, có hai lý do:
+ *
+ * 1. App.jsx gọi hàng chục hook. Chèn một lệnh `return` sớm vào giữa đó là vi
+ *    phạm quy tắc thứ tự hook của React — lỗi kiểu chỉ hiện ra lúc chạy, và
+ *    hiện ở một chỗ chẳng liên quan gì tới đoạn vừa sửa.
+ *
+ * 2. Người bấm link trong thư chưa đăng nhập và chỉ cần đúng một việc. Không có
+ *    lý do gì bắt họ tải cả khoá học, bảng quản trị và bộ đếm truy cập.
+ *
+ * Đường dẫn `/doi-mat-khau` được `vercel.json` chuyển về index.html; thiếu khai
+ * báo đó thì máy chủ trả về 404 trước khi JavaScript kịp chạy.
+ */
+function Root() {
+  const isResetRoute = window.location.pathname.replace(/\/+$/, '') === '/doi-mat-khau';
+
+  if (isResetRoute) {
+    const oobCode = new URLSearchParams(window.location.search).get('oobCode');
+    return (
+      <ResetPasswordPage
+        oobCode={oobCode}
+        onDone={() => { window.location.href = '/'; }}
+      />
+    );
+  }
+
+  return <App />;
+}
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <ErrorBoundary>
-      <App />
+      <Root />
     </ErrorBoundary>
   </StrictMode>,
 )

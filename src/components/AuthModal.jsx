@@ -184,6 +184,7 @@ export default function AuthModal({
   const [errorMsg, setErrorMsg] = useState('');
   const [successMsg, setSuccessMsg] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [isSendingReset, setIsSendingReset] = useState(false);
 
   // Pre-fill remembered login email if stored
   React.useEffect(() => {
@@ -318,6 +319,51 @@ export default function AuthModal({
       onLoginSuccess(studentUser);
       onClose();
     }, 500);
+  };
+
+  /**
+   * "Quên mật khẩu?" — nhờ máy chủ gửi thư đặt lại.
+   *
+   * Gọi hàm máy chủ của chính mình (`/api/forgot-password`) chứ không gọi
+   * `sendPasswordResetEmail` của Firebase, dù hàm đó có sẵn và ngắn hơn nhiều.
+   * Lý do: thư của Firebase gửi từ `noreply@hr-project-b982a.firebaseapp.com`,
+   * nội dung tiếng Anh, và đường dẫn bên trong cũng mang tên miền đó — học viên
+   * nhận được sẽ thấy đúng mọi dấu hiệu của thư lừa đảo. Đường qua máy chủ cho
+   * ta tự quyết cả người gửi, nội dung lẫn tên miền của đường dẫn.
+   *
+   * Câu trả lời hiện ra LUÔN GIỐNG NHAU dù email có tài khoản hay không. Trả
+   * lời khác nhau là biến ô này thành công cụ dò xem ai đang là học viên.
+   */
+  const handleForgotPassword = async () => {
+    const target = email.trim();
+    setErrorMsg('');
+    setSuccessMsg('');
+
+    if (!target) {
+      setErrorMsg('Nhập địa chỉ email của bạn vào ô phía trên, rồi bấm lại "Quên mật khẩu?".');
+      return;
+    }
+
+    setIsSendingReset(true);
+    try {
+      const res = await fetch('/api/forgot-password', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: target })
+      });
+      const data = await res.json().catch(() => ({}));
+
+      if (res.ok && data.ok) {
+        setSuccessMsg(data.message);
+      } else {
+        setErrorMsg(data.message || 'Không gửi được thư. Vui lòng thử lại sau ít phút.');
+      }
+    } catch (e) {
+      console.warn('Không gọi được /api/forgot-password:', e);
+      setErrorMsg('Không kết nối được máy chủ. Kiểm tra đường truyền rồi thử lại.');
+    } finally {
+      setIsSendingReset(false);
+    }
   };
 
   const handleLogin = async (e) => {
@@ -812,6 +858,21 @@ export default function AuthModal({
               />
               <span className="font-semibold text-[11px] sm:text-xs">{textDict.rememberMeLabel || "Ghi nhớ đăng nhập trên thiết bị này"}</span>
             </label>
+
+            {/* "Quên mật khẩu?" chỉ hiện ở tab Đăng Nhập.
+                Ở tab Đăng Ký nó vô nghĩa — chưa có tài khoản thì chưa có mật
+                khẩu nào để quên — và còn làm người mới phân vân không biết mình
+                đang ở bước nào. */}
+            {mode === 'login' && (
+              <button
+                type="button"
+                onClick={handleForgotPassword}
+                disabled={isSendingReset}
+                className="text-[11px] sm:text-xs font-bold text-emerald-400 hover:text-emerald-300 underline underline-offset-2 transition cursor-pointer shrink-0 ml-2 disabled:opacity-60"
+              >
+                {isSendingReset ? 'Đang gửi...' : 'Quên mật khẩu?'}
+              </button>
+            )}
           </div>
 
           <button
