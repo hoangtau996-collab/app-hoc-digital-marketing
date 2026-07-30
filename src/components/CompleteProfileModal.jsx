@@ -18,12 +18,17 @@ import {
 } from 'lucide-react';
 
 /**
- * Bước "Hoàn tất hồ sơ" sau khi đăng nhập bằng tài khoản Google.
+ * Bước "Hoàn tất hồ sơ" — chặn đường vào học khi hồ sơ còn thiếu số điện thoại.
  *
- * VÌ SAO CÓ MÀN HÌNH NÀY: Google chỉ trả về email, tên hiển thị và ảnh đại diện.
- * Hồ sơ học viên còn cần SỐ ĐIỆN THOẠI và NGÀNH NGHỀ — hai trường mà form đăng
- * ký thường bắt buộc điền. Thiếu chúng thì Bảng Quản Trị có tên học viên nhưng
- * không có cách nào liên lạc, và tấm bằng cấp ra không gắn với ngành nào cả.
+ * VÌ SAO CÓ MÀN HÌNH NÀY: hồ sơ học viên cần SỐ ĐIỆN THOẠI và NGÀNH NGHỀ.
+ * Thiếu chúng thì Bảng Quản Trị có tên học viên nhưng không có cách nào liên
+ * lạc, và tấm bằng cấp ra không gắn với ngành nào cả.
+ *
+ * Hai lớp tài khoản rơi vào đây:
+ *   - đăng nhập bằng Google: Google chỉ trả về email, tên và ảnh đại diện,
+ *     không có hai trường kia
+ *   - tài khoản cũ tạo trước khi form đăng ký bắt buộc điền SĐT, và tài khoản
+ *     sinh ra từ nhánh đăng ký dự phòng tại máy
  *
  * MÀN HÌNH NÀY CHẶN ĐƯỜNG, cố ý: không có nút đóng, không bấm ra ngoài để thoát.
  * Chỉ hai lối ra là điền xong hoặc đăng xuất. Cho phép bỏ qua thì gần như chắc
@@ -139,8 +144,8 @@ export default function CompleteProfileModal({ isOpen, user, onComplete, onLogou
             HOÀN TẤT HỒ SƠ HỌC VIÊN
           </h3>
           <p className="text-[11px] text-emerald-400 font-semibold leading-relaxed">
-            Bạn đã đăng nhập bằng Google. Còn 2 thông tin Google không cung cấp,
-            xin bạn điền nốt để Ban Quản Trị liên hệ và cấp Giấy Chứng Nhận đúng tên.
+            Hồ sơ của bạn còn thiếu thông tin liên hệ. Xin bạn điền nốt để Ban Quản Trị
+            liên hệ được khi cần và cấp Giấy Chứng Nhận đúng tên.
           </p>
         </div>
 

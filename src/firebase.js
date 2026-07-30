@@ -10,7 +10,10 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
   signInWithRedirect,
-  getRedirectResult
+  getRedirectResult,
+  EmailAuthProvider,
+  linkWithCredential,
+  reauthenticateWithPopup
 } from 'firebase/auth';
 import {
   getFirestore,
@@ -231,6 +234,83 @@ export function getSignInMethods() {
    Bài học đắt: hai đường từng cùng tồn tại, nút ở màn hình đăng nhập dùng đường
    mới còn nút trong Hồ Sơ vẫn lặng lẽ dùng đường cũ. Không ai phát hiện cho tới
    khi có người nhận được lá thư xấu và hỏi lại. */
+
+/**
+ * Đặt thêm mật khẩu cho tài khoản đang đăng nhập bằng Google.
+ *
+ * Sau khi đặt, tài khoản có HAI cách vào — Google hoặc email + mật khẩu — và cả
+ * hai đều dẫn về đúng một hồ sơ, giữ nguyên tiến độ học lẫn Giấy Chứng Nhận.
+ *
+ * ĐÂY KHÔNG CHỈ LÀ TIỆN, NÓ VÁ MỘT LỖ THẬT: Google từ chối đăng nhập từ trình
+ * duyệt nhúng trong Zalo và Facebook. Học viên nhận link khoá học qua Zalo, bấm
+ * mở ngay trong đó, rồi bấm nút Google — Google chặn, và nếu tài khoản của họ
+ * chỉ có Google thì không còn đường nào vào được. Có mật khẩu là có lối vào thứ hai.
+ *
+ * PHIÊN ĐĂNG NHẬP PHẢI CÒN "MỚI". Firebase từ chối gắn thêm cách đăng nhập vào
+ * một phiên đã cũ (`auth/requires-recent-login`) — hợp lý, vì máy bị bỏ quên ở
+ * quán cà phê cũng là một phiên đang đăng nhập. Gặp lỗi đó thì phải xác minh
+ * lại danh tính qua Google một lần rồi thử lại; hàm này tự làm việc đó thay vì
+ * ném ra một mã lỗi tiếng Anh mà học viên không hiểu.
+ */
+export async function addPasswordToGoogleAccount(password) {
+  const user = auth.currentUser;
+  if (!user) {
+    return { ok: false, message: 'Phiên đăng nhập đã hết hạn. Đăng nhập lại rồi thử lại.' };
+  }
+  if (!user.email) {
+    return { ok: false, message: 'Tài khoản không có email nên không đặt được mật khẩu.' };
+  }
+  if (String(password || '').length < 6) {
+    return { ok: false, message: 'Mật khẩu phải từ 6 ký tự trở lên.' };
+  }
+
+  const credential = EmailAuthProvider.credential(user.email, password);
+
+  try {
+    await linkWithCredential(user, credential);
+    return {
+      ok: true,
+      message: `Đã đặt mật khẩu. Từ nay bạn vào học được bằng cả hai cách: nút Google, hoặc email ${user.email} kèm mật khẩu vừa đặt.`
+    };
+  } catch (e) {
+    const code = String(e?.code || '');
+
+    // Phiên quá cũ -> xác minh lại qua Google rồi thử đúng một lần nữa.
+    //
+    // Chỉ thử LẠI MỘT LẦN, không lặp: nếu lần hai vẫn hỏng thì nguyên nhân
+    // không phải phiên cũ, và lặp tiếp chỉ khiến cửa sổ Google bật lên liên tục.
+    if (code.includes('requires-recent-login')) {
+      try {
+        await reauthenticateWithPopup(user, buildGoogleProvider());
+        await linkWithCredential(auth.currentUser, credential);
+        return {
+          ok: true,
+          message: `Đã đặt mật khẩu. Từ nay bạn vào học được bằng cả hai cách: nút Google, hoặc email ${user.email} kèm mật khẩu vừa đặt.`
+        };
+      } catch (e2) {
+        const code2 = String(e2?.code || '');
+        if (code2.includes('popup-closed-by-user')) {
+          return { ok: false, message: 'Bạn đã đóng cửa sổ Google trước khi xác minh xong. Bấm lại để thử tiếp.' };
+        }
+        console.warn('Không đặt được mật khẩu sau khi xác minh lại:', e2);
+        return { ok: false, message: `Không đặt được mật khẩu (${code2 || 'lỗi không rõ'}). Vui lòng thử lại sau.` };
+      }
+    }
+
+    if (code.includes('provider-already-linked') || code.includes('email-already-in-use')) {
+      return { ok: false, message: 'Tài khoản này đã có mật khẩu rồi. Dùng nút "Gửi email đặt lại mật khẩu" nếu bạn quên.' };
+    }
+    if (code.includes('weak-password')) {
+      return { ok: false, message: 'Mật khẩu quá đơn giản. Hãy dùng mật khẩu dài hơn.' };
+    }
+    if (code.includes('network-request-failed')) {
+      return { ok: false, message: 'Không kết nối được máy chủ. Kiểm tra đường truyền rồi thử lại.' };
+    }
+
+    console.warn('Không đặt được mật khẩu cho tài khoản Google:', e);
+    return { ok: false, message: `Không đặt được mật khẩu (${code || 'lỗi không rõ'}).` };
+  }
+}
 
 export async function consumeGoogleRedirectResult() {
   try {

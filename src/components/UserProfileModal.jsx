@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { getSignInMethods } from '../firebase';
+import { getSignInMethods, addPasswordToGoogleAccount } from '../firebase';
 import { requestPasswordReset } from '../utils/requestPasswordReset';
 import {
   X,
@@ -9,6 +9,7 @@ import {
   ShieldCheck,
   Award,
   Key,
+  Lock,
   Sun,
   Moon,
   Monitor,
@@ -29,6 +30,8 @@ export default function UserProfileModal({
   const [passUpdateMsg, setPassUpdateMsg] = useState('');
   const [resetOk, setResetOk] = useState(false);
   const [isSendingReset, setIsSendingReset] = useState(false);
+  const [newPassword, setNewPassword] = useState('');
+  const [isAddingPassword, setIsAddingPassword] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
 
   const [name, setName] = useState(currentUser?.name || '');
@@ -100,6 +103,23 @@ export default function UserProfileModal({
     if (onClose) {
       onClose();
     }
+  };
+
+  /**
+   * Đặt thêm mật khẩu cho tài khoản đang đăng nhập bằng Google.
+   *
+   * Sau khi thành công, `getSignInMethods()` đọc lại từ phiên Firebase sẽ thấy
+   * tài khoản đã có mật khẩu, nên khối giao diện này tự chuyển sang dạng "gửi
+   * thư đặt lại" ở lần render kế tiếp. Không cần tải lại trang.
+   */
+  const handleAddPassword = async () => {
+    setIsAddingPassword(true);
+    setPassUpdateMsg('');
+    const result = await addPasswordToGoogleAccount(newPassword);
+    setPassUpdateMsg(result.message);
+    setResetOk(Boolean(result.ok));
+    if (result.ok) setNewPassword('');
+    setIsAddingPassword(false);
   };
 
   /**
@@ -407,11 +427,36 @@ export default function UserProfileModal({
               </button>
             </>
           ) : signInMethods.hasGoogle ? (
-            <p className="text-[11px] text-slate-400 leading-relaxed">
-              Bạn đăng nhập bằng <strong className="text-slate-200">tài khoản Google</strong> nên không có mật khẩu
-              riêng ở Học Viện — không có gì để đổi ở đây. Muốn đổi mật khẩu Google thì vào phần cài đặt
-              Tài khoản Google của bạn.
-            </p>
+            <>
+              <p className="text-[11px] text-slate-400 leading-relaxed">
+                Bạn đang đăng nhập bằng <strong className="text-slate-200">tài khoản Google</strong>.
+                Đặt thêm một mật khẩu riêng thì lần sau vào học được bằng <strong className="text-slate-200">cả hai cách</strong>.
+              </p>
+              <p className="text-[11px] text-amber-300/90 leading-relaxed">
+                Nên đặt: khi mở link khoá học <strong>ngay trong Zalo hoặc Facebook</strong>, Google chặn đăng nhập
+                từ đó. Lúc ấy mật khẩu là lối vào duy nhất.
+              </p>
+
+              <div className="relative">
+                <Lock className="w-3.5 h-3.5 absolute left-3 top-1/2 -translate-y-1/2 text-slate-500" />
+                <input
+                  type="password"
+                  placeholder="Mật khẩu mới (tối thiểu 6 ký tự)"
+                  value={newPassword}
+                  onChange={(e) => setNewPassword(e.target.value)}
+                  className="w-full bg-[#111a2e] border border-emerald-900/60 focus:border-emerald-400 rounded-xl pl-8 pr-3 py-2 text-xs text-white placeholder-slate-500 focus:outline-none"
+                />
+              </div>
+
+              <button
+                type="button"
+                onClick={handleAddPassword}
+                disabled={isAddingPassword}
+                className="w-full py-2.5 rounded-xl bg-emerald-950 border border-emerald-700 hover:border-emerald-500 text-emerald-300 text-xs font-bold transition cursor-pointer disabled:opacity-60"
+              >
+                {isAddingPassword ? 'Đang đặt mật khẩu...' : 'Đặt mật khẩu cho tài khoản này'}
+              </button>
+            </>
           ) : (
             <p className="text-[11px] text-slate-400 leading-relaxed">
               Tài khoản này đang đăng nhập ở chế độ tạm trên thiết bị của bạn nên chưa đặt được mật khẩu.

@@ -330,16 +330,6 @@ export default function App() {
         const cloudProfile = await getUserProgressFromCloud(user.uid, user.email);
         const resolvedRole = await resolveAdminRole(user);
 
-        // Tài khoản CHỈ có Google, chưa từng đặt mật khẩu -> chưa từng đi qua
-        // form đăng ký -> chưa có số điện thoại và ngành nghề.
-        //
-        // Tài khoản đã gộp hai phương thức (đăng ký bằng mật khẩu trước, sau đó
-        // đăng nhập bằng Google cùng email) không tính: họ đã điền đủ từ lúc
-        // đăng ký, bắt điền lại là làm phiền vô cớ.
-        const providers = Array.isArray(user.providerData) ? user.providerData : [];
-        const isGoogleOnlyAccount =
-          providers.length > 0 && providers.every((p) => p?.providerId === 'google.com');
-
         // Bản lưu tại máy CHỈ dùng khi đúng là của người đang đăng nhập. Trên
         // máy dùng chung, `dmm_active_user` còn là hồ sơ của người trước — lấy
         // số điện thoại của họ ra dùng thì chốt chặn tưởng hồ sơ đã đủ và cho
@@ -349,7 +339,18 @@ export default function App() {
         const knownPhone =
           (localMatchesUser ? existingUser?.phone : '') || cloudProfile?.phone || '';
 
-        setNeedsProfileCompletion(isGoogleOnlyAccount && !hasRealPhone(knownPhone));
+        // Chốt chặn áp cho MỌI học viên chưa có số điện thoại, không riêng người
+        // đăng nhập bằng Google.
+        //
+        // Form đăng ký hiện tại đã bắt buộc điền SĐT, nhưng còn cả một lớp tài
+        // khoản cũ tạo từ trước khi có ràng buộc đó — và nhánh đăng ký dự phòng
+        // tại máy cũng sinh ra hồ sơ thiếu. Với những người này, Bảng Quản Trị
+        // có tên mà không có cách nào liên lạc, nên mọi việc cần gọi điện —
+        // nhắc học, xác minh danh tính để đổi email, báo lịch — đều tắc.
+        //
+        // Quản trị viên được miễn, cố ý: chặn nhầm họ là khoá luôn Bảng Quản
+        // Trị, mà đó lại đúng là chỗ để đi sửa những hồ sơ thiếu này.
+        setNeedsProfileCompletion(resolvedRole !== 'admin' && !hasRealPhone(knownPhone));
 
         const studentUser = {
           id: user.uid,
