@@ -2,6 +2,14 @@
 <html lang="vi" prefix="og: https://ogp.me/ns#">
   <head>
     <meta charset="UTF-8" />
+    <!--
+      Nạp sớm ảnh màn hình chào.
+      Không có dòng này, trình duyệt chỉ biết tới /splash.jpg sau khi đã tải và
+      chạy xong gói JavaScript — tức là đúng lúc màn hình chào cần hiện thì ảnh
+      mới bắt đầu tải, và học viên nhìn thấy nền trơn trong phần lớn 3 giây đó.
+      `fetchpriority=high` để nó không xếp hàng sau các tệp khác.
+    -->
+    <link rel="preload" as="image" href="/splash.jpg" fetchpriority="high" />
     <link rel="icon" type="image/jpeg" href="/pmarcom-logo.jpg" />
     <link rel="apple-touch-icon" href="/pmarcom-logo.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />

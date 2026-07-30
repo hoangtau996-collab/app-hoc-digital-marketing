@@ -92,7 +92,7 @@ export default function SplashScreen({ onDone }) {
         </div>
       ) : (
         <img
-          src="/splash.png"
+          src="/splash.jpg"
           alt="Chào mừng đến với P MARCOM ACADEMY — Kết nối tri thức, nâng tầm tư duy, bứt phá tương lai"
           className="max-h-[82vh] max-w-[92vw] w-auto h-auto object-contain drop-shadow-2xl select-none"
           draggable="false"
