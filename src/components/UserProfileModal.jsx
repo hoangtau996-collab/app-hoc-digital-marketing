@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { sendPasswordReset, getSignInMethods } from '../firebase';
+import { getSignInMethods } from '../firebase';
+import { requestPasswordReset } from '../utils/requestPasswordReset';
 import {
   X,
   User,
@@ -113,7 +114,7 @@ export default function UserProfileModal({
   const handleSendPasswordReset = async () => {
     setIsSendingReset(true);
     setPassUpdateMsg('');
-    const result = await sendPasswordReset(currentUser?.email);
+    const result = await requestPasswordReset(currentUser?.email);
     setPassUpdateMsg(result.message);
     setResetOk(Boolean(result.ok));
     setIsSendingReset(false);

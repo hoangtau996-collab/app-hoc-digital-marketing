@@ -3,6 +3,7 @@ import PMarcomLogo from './PMarcomLogo';
 import { createCredential, verifyCredential, upgradeRecord } from '../utils/localCredentials';
 import { isRootAdmin } from '../utils/adminRoles';
 import { INDUSTRY_OPTIONS } from '../utils/industryOptions';
+import { requestPasswordReset } from '../utils/requestPasswordReset';
 import {
   auth,
   signInWithEmailAndPassword,
@@ -345,25 +346,13 @@ export default function AuthModal({
     }
 
     setIsSendingReset(true);
-    try {
-      const res = await fetch('/api/forgot-password', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: target })
-      });
-      const data = await res.json().catch(() => ({}));
-
-      if (res.ok && data.ok) {
-        setSuccessMsg(data.message);
-      } else {
-        setErrorMsg(data.message || 'Không gửi được thư. Vui lòng thử lại sau ít phút.');
-      }
-    } catch (e) {
-      console.warn('Không gọi được /api/forgot-password:', e);
-      setErrorMsg('Không kết nối được máy chủ. Kiểm tra đường truyền rồi thử lại.');
-    } finally {
-      setIsSendingReset(false);
+    const result = await requestPasswordReset(target);
+    if (result.ok) {
+      setSuccessMsg(result.message);
+    } else {
+      setErrorMsg(result.message);
     }
+    setIsSendingReset(false);
   };
 
   const handleLogin = async (e) => {

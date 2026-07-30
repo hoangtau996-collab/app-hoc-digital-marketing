@@ -10,8 +10,7 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
   signInWithRedirect,
-  getRedirectResult,
-  sendPasswordResetEmail
+  getRedirectResult
 } from 'firebase/auth';
 import {
   getFirestore,
@@ -217,44 +216,21 @@ export function getSignInMethods() {
   };
 }
 
-/**
- * Gửi thư đặt lại mật khẩu.
- *
- * Trả về `{ ok, message }` để nơi gọi hiện nguyên văn lý do khi hỏng. Tuyệt đối
- * không báo "đã gửi" khi chưa chắc: học viên sẽ ngồi chờ một lá thư không bao
- * giờ tới, và không ai biết là hệ thống đang hỏng.
- */
-export async function sendPasswordReset(email) {
-  const target = cleanEmailKey(auth.currentUser?.email || email);
-  if (!target) {
-    return { ok: false, message: 'Tài khoản không có email hợp lệ nên không gửi được thư.' };
-  }
+/* Hàm gửi thư đặt lại mật khẩu bằng `sendPasswordResetEmail` của Firebase ĐÃ
+   BỊ GỠ KHỎI TỆP NÀY — cố ý, và đừng thêm lại.
 
-  try {
-    await sendPasswordResetEmail(auth, target);
-    return {
-      ok: true,
-      message: `Đã gửi thư đặt lại mật khẩu tới ${target}. Mở hộp thư và bấm vào đường dẫn trong thư. Nếu không thấy, kiểm tra cả mục Thư rác.`
-    };
-  } catch (e) {
-    const code = String(e?.code || '');
-    console.warn('Không gửi được thư đặt lại mật khẩu:', e);
+   Nó gửi lá thư do Firebase soạn: tiếng Anh, người gửi
+   `noreply@hr-project-b982a.firebaseapp.com`, link cũng mang tên miền đó. Học
+   viên vừa học ở academy.pmarcom.com nhận được lá thư như vậy sẽ nghĩ là lừa
+   đảo — và họ suy luận đúng theo mọi hướng dẫn an toàn thông tin.
 
-    if (code.startsWith('auth/user-not-found')) {
-      return {
-        ok: false,
-        message: 'Email này chưa có tài khoản trên hệ thống. Có thể tài khoản của bạn chỉ tồn tại trên thiết bị này — vui lòng báo Ban Quản Trị.'
-      };
-    }
-    if (code.startsWith('auth/too-many-requests')) {
-      return { ok: false, message: 'Bạn đã yêu cầu quá nhiều lần. Chờ vài phút rồi thử lại.' };
-    }
-    if (code.startsWith('auth/network-request-failed')) {
-      return { ok: false, message: 'Không kết nối được máy chủ. Kiểm tra đường truyền rồi thử lại.' };
-    }
-    return { ok: false, message: `Không gửi được thư (${code || 'lỗi không rõ'}). Vui lòng báo Ban Quản Trị.` };
-  }
-}
+   Đường duy nhất còn lại: `src/utils/requestPasswordReset.js`, gọi hàm máy chủ
+   `/api/forgot-password`. Ở đó ta chỉ mượn Firebase phần sinh mã, còn người
+   gửi, nội dung và tên miền của link đều do Học Viện quyết.
+
+   Bài học đắt: hai đường từng cùng tồn tại, nút ở màn hình đăng nhập dùng đường
+   mới còn nút trong Hồ Sơ vẫn lặng lẽ dùng đường cũ. Không ai phát hiện cho tới
+   khi có người nhận được lá thư xấu và hỏi lại. */
 
 export async function consumeGoogleRedirectResult() {
   try {
