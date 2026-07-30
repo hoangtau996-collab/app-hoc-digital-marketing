@@ -285,7 +285,6 @@ export default function App() {
           name: typeof parsed.name === 'string' && parsed.name.trim() ? parsed.name : (typeof parsed.email === 'string' && parsed.email.includes('@') ? parsed.email.split('@')[0].toUpperCase() : 'HỌC VIÊN'),
           phone: typeof parsed.phone === 'string' ? parsed.phone : 'Chưa có SĐT',
           industry: typeof parsed.industry === 'string' ? parsed.industry : 'Digital Marketing',
-          coverBg: typeof parsed.coverBg === 'string' ? parsed.coverBg : 'emerald',
           // Luôn khởi tạo là 'student', KHÔNG đọc role từ localStorage.
           //
           // Đây chính là chỗ trước đây cho phép tự phong: chỉ cần sửa một dòng
@@ -358,7 +357,6 @@ export default function App() {
           name: (existingUser?.name || cloudProfile?.name || user.displayName || (user.email ? user.email.split('@')[0] : 'HỌC VIÊN')).toUpperCase(),
           phone: existingUser?.phone || cloudProfile?.phone || 'Chưa cập nhật',
           industry: existingUser?.industry || cloudProfile?.industry || 'Digital Marketing',
-          coverBg: existingUser?.coverBg || cloudProfile?.coverBg || 'emerald',
           avatarUrl: existingUser?.avatarUrl || cloudProfile?.avatarUrl || '',
           createdAt: existingUser?.createdAt || cloudProfile?.createdAt || new Date().toLocaleDateString('vi-VN'),
           // Đây là NƠI DUY NHẤT cấp quyền quản trị trong toàn ứng dụng, và chỉ
@@ -1033,12 +1031,6 @@ export default function App() {
     setIsAuthOpen(false);
   };
 
-  const handleImportBackupData = (importedModules) => {
-    if (Array.isArray(importedModules)) {
-      setCompletedModules(importedModules);
-    }
-  };
-
   const handleAddNewNews = (newNewsItem) => {
     setNewsFeed(prev => [newNewsItem, ...prev]);
   };
@@ -1136,11 +1128,6 @@ export default function App() {
         isTradeCourseUnlocked={isTradeCourseUnlocked}
         tradePassedCount={completedTradeModules.length}
         tradeTotalModules={TRADE_MODULES.length}
-        searchQuery={searchQuery}
-        setSearchQuery={setSearchQuery}
-        currentUser={currentUser}
-        onOpenAuthModal={() => setIsAuthOpen(true)}
-        onOpenProfileModal={() => setIsProfileOpen(true)}
         lang={lang}
         t={t}
       />
@@ -1364,8 +1351,6 @@ export default function App() {
         onUpdateProfile={handleUpdateUserProfile}
         passedCount={completedModules.length}
         totalModules={COURSE_MODULES.length}
-        completedModules={completedModules}
-        onImportBackupData={handleImportBackupData}
         theme={theme}
         setTheme={setTheme}
       />

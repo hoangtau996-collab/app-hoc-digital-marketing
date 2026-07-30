@@ -1,24 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import PMarcomLogo from './PMarcomLogo';
-import { 
-  X, 
-  User, 
-  LogOut, 
-  Download, 
-  Upload, 
-  ShieldCheck, 
-  Award, 
-  BookOpen, 
-  CheckCircle2,
-  FileJson,
-  Sparkles,
+import {
+  X,
+  User,
+  Upload,
+  LogOut,
+  ShieldCheck,
+  Award,
   Key,
-  RefreshCw,
   Sun,
   Moon,
   Monitor,
-  Eye,
-  Tag,
   Palette
 } from 'lucide-react';
 
@@ -30,12 +21,9 @@ export default function UserProfileModal({
   onUpdateProfile,
   passedCount,
   totalModules,
-  completedModules,
-  onImportBackupData,
   theme = 'system',
   setTheme = () => {}
 }) {
-  const [importStatus, setImportStatus] = useState('');
   const [newPassword, setNewPassword] = useState('');
   const [passUpdateMsg, setPassUpdateMsg] = useState('');
   const [isEditing, setIsEditing] = useState(false);
@@ -43,7 +31,6 @@ export default function UserProfileModal({
   const [name, setName] = useState(currentUser?.name || '');
   const [phone, setPhone] = useState(currentUser?.phone || '');
   const [industry, setIndustry] = useState(currentUser?.industry || 'Digital Marketing');
-  const [coverBg, setCoverBg] = useState(currentUser?.coverBg || 'emerald');
   const [avatarUrl, setAvatarUrl] = useState(currentUser?.avatarUrl || '');
   const [saveStatus, setSaveStatus] = useState('');
 
@@ -52,7 +39,6 @@ export default function UserProfileModal({
       setName(currentUser.name || '');
       setPhone(currentUser.phone || '');
       setIndustry(currentUser.industry || 'Digital Marketing');
-      setCoverBg(currentUser.coverBg || 'emerald');
       setAvatarUrl(currentUser.avatarUrl || '');
     }
   }, [currentUser]);
@@ -92,7 +78,6 @@ export default function UserProfileModal({
       name: name.trim().toUpperCase(),
       phone: phone ? phone.trim() : '',
       industry: industry || 'Digital Marketing',
-      coverBg: coverBg || 'emerald',
       avatarUrl: avatarUrl || ''
     };
 
@@ -107,88 +92,6 @@ export default function UserProfileModal({
     if (onClose) {
       onClose();
     }
-  };
-
-  // Export progress data as JSON backup
-  const handleExportBackup = () => {
-    try {
-      // Gather all quiz results for this user
-      const quizResults = {};
-      for (let i = 1; i <= 11; i++) {
-        const modId = `module-${i < 10 ? '0' + i : i}`;
-        const key = `dmm_quiz_results_${modId}`;
-        const saved = localStorage.getItem(key);
-        if (saved) {
-          quizResults[modId] = JSON.parse(saved);
-        }
-      }
-
-      const backupObject = {
-        app: "HỌC VIỆN P MARCOM",
-        version: "1.0.0",
-        timestamp: Date.now(),
-        exportedAt: new Date().toLocaleString('vi-VN'),
-        user: {
-          id: currentUser.id,
-          name: currentUser.name,
-          email: currentUser.email
-        },
-        progress: {
-          completedModules,
-          passedCount,
-          totalModules,
-          progressPercent
-        },
-        quizResults
-      };
-
-      const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(backupObject, null, 2));
-      const downloadAnchor = document.createElement('a');
-      const safeName = (currentUser && typeof currentUser.name === 'string' ? currentUser.name : 'HocVien').replace(/\s+/g, '_');
-      downloadAnchor.setAttribute("href", dataStr);
-      downloadAnchor.setAttribute("download", `Backup_PMARCOM_${safeName}_${Date.now()}.json`);
-      document.body.appendChild(downloadAnchor);
-      downloadAnchor.click();
-      downloadAnchor.remove();
-
-      setImportStatus('🟢 Xuất file sao lưu .json thành công!');
-      setTimeout(() => setImportStatus(''), 4000);
-    } catch (e) {
-      console.error("Error exporting backup", e);
-      setImportStatus('❌ Lỗi khi tạo file sao lưu.');
-    }
-  };
-
-  // Import progress data from JSON backup file
-  const handleFileImport = (event) => {
-    const file = event.target.files[0];
-    if (!file) return;
-
-    const reader = new FileReader();
-    reader.onload = (e) => {
-      try {
-        const content = JSON.parse(e.target.result);
-        if (content && content.progress && Array.isArray(content.progress.completedModules)) {
-          // Restore quiz results if present
-          if (content.quizResults) {
-            Object.keys(content.quizResults).forEach(modId => {
-              const key = `dmm_quiz_results_${modId}`;
-              localStorage.setItem(key, JSON.stringify(content.quizResults[modId]));
-            });
-          }
-
-          onImportBackupData(content.progress.completedModules);
-          setImportStatus('✅ Khôi phục dữ liệu tiến độ bài học thành công!');
-          setTimeout(() => setImportStatus(''), 4000);
-        } else {
-          setImportStatus('❌ File sao lưu không hợp lệ.');
-        }
-      } catch (err) {
-        console.error("Error parsing backup JSON", err);
-        setImportStatus('❌ Không thể đọc file JSON.');
-      }
-    };
-    reader.readAsText(file);
   };
 
   const handleUpdatePassword = (e) => {
@@ -347,31 +250,18 @@ export default function UserProfileModal({
               </div>
             </div>
 
-            {/* Custom Background Image Selector */}
-            <div className="space-y-1">
-              <label className="text-xs font-bold text-slate-300 flex items-center gap-1">
-                <Palette className="w-3.5 h-3.5 text-amber-400" /> Chọn Phong Cách Hình Nền Ứng Dụng:
-              </label>
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-1">
-                {[
-                  { id: 'emerald', label: '🌲 Xanh Ngọc', color: 'from-emerald-950 to-slate-950 border-emerald-500' },
-                  { id: 'gold', label: '⚜️ Vàng Hoàng Gia', color: 'from-amber-950 to-slate-950 border-amber-500' },
-                  { id: 'dark', label: '🌌 Tối Huyền Bí', color: 'from-slate-950 to-black border-slate-700' },
-                  { id: 'teal', label: '🚀 Công Nghệ Tech', color: 'from-teal-950 to-slate-950 border-teal-500' }
-                ].map((bg) => (
-                  <button
-                    key={bg.id}
-                    type="button"
-                    onClick={() => setCoverBg(bg.id)}
-                    className={`p-2 rounded-xl border text-[11px] font-bold transition bg-gradient-to-br ${bg.color} ${
-                      coverBg === bg.id ? 'ring-2 ring-amber-400 shadow-md text-white' : 'text-slate-400 opacity-70 hover:opacity-100'
-                    }`}
-                  >
-                    {bg.label}
-                  </button>
-                ))}
-              </div>
-            </div>
+            {/* ĐÃ GỠ: bộ chọn "Phong Cách Hình Nền Ứng Dụng" (Xanh Ngọc / Vàng
+                Hoàng Gia / Tối Huyền Bí / Công Nghệ Tech).
+
+                Bốn nút đó bấm được, sáng viền lên, lưu xuống hồ sơ và đồng bộ
+                cả lên Firestore — nhưng KHÔNG có chỗ nào trong ứng dụng đọc giá
+                trị `coverBg` ra để vẽ. Nói cách khác, học viên chọn xong thì
+                không có gì thay đổi cả.
+
+                Một nút bấm không làm gì còn tệ hơn là không có nút: người dùng
+                tưởng mình làm sai, thử đi thử lại, rồi kết luận ứng dụng hỏng.
+                Việc đổi sáng/tối thật sự có tác dụng nằm ngay bên dưới, ở mục
+                "Tùy Chỉnh Giao Diện Trải Nghiệm". */}
 
             <div className="pt-2 flex justify-end gap-2">
               <button
@@ -464,41 +354,26 @@ export default function UserProfileModal({
               học của họ. Số liệu đó vẫn còn ở Bảng Quản Trị và trang Tổng Quan. */}
         </div>
 
-        {/* Backup & Sync Section */}
-        <div className="space-y-3">
-          <h4 className="text-xs font-bold text-emerald-400 uppercase tracking-wider flex items-center gap-1.5">
-            <FileJson className="w-4 h-4" /> Sao Lưu & Bảo Mật Dữ Liệu Học Viên
-          </h4>
+        {/* ĐÃ GỠ: mục "Sao Lưu & Bảo Mật Dữ Liệu Học Viên" (Xuất File Sao Lưu
+            .json / Khôi Phục Dữ Liệu).
 
-          {importStatus && (
-            <div className="p-2.5 rounded-xl bg-emerald-950/80 border border-emerald-500/60 text-emerald-200 text-xs">
-              {importStatus}
-            </div>
-          )}
+            Hai lý do, lý do thứ hai mới là lý do thật:
 
-          <div className="grid grid-cols-2 gap-3">
-            {/* Export Backup JSON Button */}
-            <button
-              onClick={handleExportBackup}
-              className="p-3 rounded-xl bg-[#152038] border border-emerald-900/60 hover:border-emerald-500 text-slate-200 text-xs font-semibold flex flex-col items-center justify-center gap-1.5 transition cursor-pointer group"
-            >
-              <Download className="w-4 h-4 text-emerald-400 group-hover:scale-110 transition" />
-              <span>Xuất File Sao Lưu (.json)</span>
-            </button>
+            1. Thừa. Tiến độ học nay đồng bộ lên Firestore và tự nạp lại mỗi lần
+               đăng nhập (xem getUserProgressFromCloud trong App.jsx). Học viên
+               xoá trình duyệt hay đổi máy đều không mất gì. Nút sao lưu tay là
+               di sản từ thời đồng bộ đám mây chưa chạy.
 
-            {/* Import Backup JSON Button */}
-            <label className="p-3 rounded-xl bg-[#152038] border border-emerald-900/60 hover:border-emerald-500 text-slate-200 text-xs font-semibold flex flex-col items-center justify-center gap-1.5 transition cursor-pointer group">
-              <Upload className="w-4 h-4 text-amber-400 group-hover:scale-110 transition" />
-              <span>Khôi Phục Dữ Liệu</span>
-              <input 
-                type="file" 
-                accept=".json"
-                onChange={handleFileImport}
-                className="hidden" 
-              />
-            </label>
-          </div>
-        </div>
+            2. Nút "Khôi Phục Dữ Liệu" là một lỗ hổng với tấm bằng. Nó nhận
+               thẳng mảng `completedModules` từ tệp JSON người dùng đưa vào,
+               không đối chiếu email, không kiểm tra gì cả. Nghĩa là mở tệp bằng
+               Notepad, sửa thành đủ 11 chuyên đề, nạp lên — là đủ điều kiện
+               nhận Giấy Chứng Nhận mà không học buổi nào. Tệp còn chia sẻ được
+               cho người khác dùng chung.
+
+            Giấy Chứng Nhận là thứ có giá trị nhất mà học viện cấp ra. Giữ một
+            đường tắt như vậy chỉ để tiện sao lưu — trong khi đám mây đã lo phần
+            sao lưu — là đánh đổi sai. */}
 
         {/* Password Update Accordion/Section */}
         <div className="pt-3 border-t border-emerald-900/40 space-y-2">

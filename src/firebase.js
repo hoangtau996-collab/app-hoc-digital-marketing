@@ -210,7 +210,6 @@ export async function recordStudentAccountToCloud(studentData) {
     email: cleanEmail,
     industry: studentData.industry || 'Kinh doanh',
     avatarUrl: studentData.avatarUrl || '',
-    coverBg: studentData.coverBg || 'emerald',
     completedModules: Array.isArray(studentData.completedModules) ? studentData.completedModules : [],
     createdAt: studentData.createdAt || new Date().toISOString(),
     updatedAt: new Date().toISOString()

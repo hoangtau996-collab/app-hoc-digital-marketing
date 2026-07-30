@@ -5,11 +5,23 @@ import {
   Newspaper,
   Wrench,
   Award,
-  KeyRound,
   GraduationCap,
   Lock
 } from 'lucide-react';
 
+/**
+ * Thanh chọn khu vực: Khoá Học, Trade Marketing, Từ Điển, Tin Tức, Công Cụ,
+ * Chứng Nhận.
+ *
+ * KHÔNG chứa nút hồ sơ / đăng nhập, cố ý. Trước đây có, và nó trùng y hệt nút
+ * trong Header — cùng tên học viên, cùng ảnh đại diện, bấm vào mở cùng một hộp
+ * thoại, chỉ khác chỗ đứng. Người dùng thấy hai lần thì phải dừng lại đoán xem
+ * hai nút có khác nhau không, mà câu trả lời là không.
+ *
+ * Giữ lại nút ở Header vì đó là chỗ ai cũng tìm tài khoản của mình, và Header
+ * đã lo đủ cả hai trạng thái (đã đăng nhập / chưa) trên cả máy tính lẫn điện
+ * thoại. Thanh này chỉ còn đúng một loại việc: chuyển khu vực.
+ */
 export default function FeatureMenuBar({
   activeTab,
   setActiveTab,
@@ -20,11 +32,6 @@ export default function FeatureMenuBar({
   isTradeCourseUnlocked = false,
   tradePassedCount = 0,
   tradeTotalModules = 0,
-  searchQuery,
-  setSearchQuery,
-  currentUser,
-  onOpenAuthModal,
-  onOpenProfileModal,
   t
 }) {
   // Nhãn giữ NGẮN để cả thanh menu nằm gọn trong khung 1.280px không phải cuộn
@@ -116,39 +123,6 @@ export default function FeatureMenuBar({
         {/* Swappable Horizontal Feature Menu Row */}
         <div className="w-full md:w-auto flex items-center gap-2 overflow-x-auto no-scrollbar py-1 scroll-smooth">
           
-          {/* STUDENT PROFILE / ACCOUNT BUTTON ON MENU BAR */}
-          {currentUser ? (
-            <button
-              onClick={onOpenProfileModal}
-              className="flex items-center gap-1.5 px-2 py-1.5 rounded-lg transition shrink-0 border border-amber-400/60 bg-gradient-to-r from-amber-500/20 via-emerald-950 to-teal-950 hover:brightness-125 text-white shadow cursor-pointer"
-              title="Tuỳ chỉnh thông tin cá nhân học viên & hình nền"
-            >
-              <div className="w-6 h-6 rounded-md bg-gradient-to-br from-amber-400 to-yellow-500 text-slate-950 font-black text-[10px] flex items-center justify-center shrink-0 overflow-hidden">
-                {currentUser.avatarUrl ? (
-                  <img src={currentUser.avatarUrl} alt="Avatar" className="w-full h-full object-cover" />
-                ) : (
-                  currentUser && typeof currentUser.name === 'string' && currentUser.name.trim() ? currentUser.name.trim().charAt(0).toUpperCase() : 'U'
-                )}
-              </div>
-
-              <span className="text-xs font-black text-amber-300 uppercase tracking-wide truncate max-w-[110px]">
-                {currentUser && typeof currentUser.name === 'string' && currentUser.name.trim() ? currentUser.name : 'HỌC VIÊN'}
-              </span>
-              <span className="text-[9px] font-black px-1.5 py-0.5 rounded bg-amber-500 text-slate-950 uppercase border border-amber-400 shrink-0">
-                Hồ Sơ
-              </span>
-            </button>
-          ) : (
-            <button
-              onClick={onOpenAuthModal}
-              title="Tạo hồ sơ học viên ngay"
-              className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg transition shrink-0 border border-emerald-500 bg-gradient-to-r from-emerald-600 to-teal-600 hover:brightness-110 text-white shadow cursor-pointer"
-            >
-              <KeyRound className="w-4 h-4 shrink-0" />
-              <span className="text-xs font-bold whitespace-nowrap">Đăng Ký / Đăng Nhập</span>
-            </button>
-          )}
-
           {/*
             MỤC MENU CHÍNH — bố cục MỘT DÒNG.
             Bản trước xếp hai dòng (tiêu đề + phụ đề) nên mỗi mục rộng khoảng
