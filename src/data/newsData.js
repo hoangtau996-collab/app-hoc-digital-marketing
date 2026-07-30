@@ -41,56 +41,61 @@ const REAL_SOURCED_NEWS = [
     id: 'real-2026-07-30-meta-q2',
     category: 'Meta Ads',
     platformIcon: 'Facebook',
-    title: 'Meta quý 2/2026: giá mỗi quảng cáo toàn cầu tăng 12%, riêng châu Á - Thái Bình Dương chỉ tăng 1%',
+    title: 'Meta quý 2/2026: doanh thu quảng cáo tăng 27%, nhưng gần hết tiền mặt kiếm được đổ vào hạ tầng AI',
     publishedAt: '30/07/2026',
     isHot: true,
     illustration: 'cpm-auction',
     image: {
-      url: 'https://ppc.land/content/images/size/w1200/2026/07/meta-earnings.webp',
-      credit: 'Ảnh: PPC Land',
+      url: 'https://imgproxy.divecdn.com/KWwsfohqVsNQrjGytYpu_6DCuUnC3I1cRivni7CK-ec/g:nowe:0:0/c:5300:2994/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0xMTc4MTQxNTg3LmpwZw==.webp',
+      credit: 'Ảnh: Marketing Dive',
     },
-    sourceUrl: 'https://ppc.land/meta-profit-drops-8-to-15-8bn-as-legal-charges-hit-ad-gains/',
-    source: 'PPC Land - Báo cáo tài chính Meta quý 2/2026',
+    sourceUrl: 'https://www.marketingdive.com/news/meta-touts-industry-leading-ad-revenue-growth-but-ai-unease-rises/826583/',
+    source: 'Marketing Dive',
     readTime: '5 phút đọc',
-    tags: ['CPM', 'Ngân sách', 'Advantage+', 'Châu Á - TBD'],
+    tags: ['Advantage+', 'Ngân sách', 'Cá nhân hoá', 'Xếp hạng quảng cáo'],
     summary:
-      'Doanh thu quảng cáo Meta đạt 59,36 tỷ USD, tăng 27% so với cùng kỳ. Giá trung bình mỗi quảng cáo tăng 12% trên toàn cầu, nhưng bóc tách theo khu vực lại lộ ra một khoảng chênh đáng để tận dụng: châu Á - Thái Bình Dương có lượt hiển thị tăng 17% trong khi giá chỉ nhích 1%.',
+      'Doanh thu quảng cáo Meta đạt 59,4 tỷ USD, tăng 27% so với cùng kỳ, và bộ công cụ tự động Advantage+ đã chạm quy mô 75 tỷ USD tính theo năm. Nhưng Meta đồng thời nâng mức chi đầu tư cả năm lên 130-145 tỷ USD và cảnh báo chính sách châu Âu buộc giảm cá nhân hoá quảng cáo có thể kéo doanh thu quý sau.',
     keyNumbers: [
-      { value: '+12%', label: 'giá mỗi quảng cáo toàn cầu' },
-      { value: '+1%', label: 'giá quảng cáo châu Á - TBD' },
-      { value: '+17%', label: 'lượt hiển thị châu Á - TBD' },
+      { value: '+27%', label: 'doanh thu quảng cáo so cùng kỳ' },
+      { value: '75 tỷ USD', label: 'quy mô Advantage+ theo năm' },
+      { value: '130-145 tỷ', label: 'USD chi đầu tư AI cả năm' },
     ],
     content: [
       {
-        heading: 'Con số quan trọng nhất không nằm ở dòng doanh thu',
+        heading: 'Cỗ máy quảng cáo vẫn chạy rất mạnh',
         body:
-          'Meta đạt doanh thu 60,80 tỷ USD trong quý, tăng 28%. Lợi nhuận ròng lại giảm 8% còn 15,8 tỷ USD do khoản chi pháp lý 2,4 tỷ USD và 1,18 tỷ USD chi phí cắt giảm 8.000 nhân sự. Nhưng với người mua quảng cáo, dòng đáng đọc là phần bóc tách giá theo khu vực.',
+          'Doanh thu quảng cáo tăng 27% lên 59,4 tỷ USD, tổng doanh thu tăng 28% lên 60,8 tỷ USD cho kỳ kết thúc ngày 30/6. Mark Zuckerberg nhấn mạnh trong buổi công bố rằng tính theo giá trị tuyệt đối, mảng quảng cáo của Meta đang tăng trưởng nhanh hơn mọi mảng quảng cáo được công bố của bất kỳ công ty nào khác.',
       },
       {
-        heading: 'Khoảng chênh giá giữa các khu vực',
+        heading: 'Cách máy xếp hạng quảng cáo vừa đổi về bản chất',
         body:
-          'Giá trung bình mỗi quảng cáo: Mỹ và Canada tăng 20%, châu Âu tăng 13%, châu Á - Thái Bình Dương chỉ tăng 1%. Trong khi đó lượt hiển thị ở châu Á - Thái Bình Dương tăng 17%, cao nhất trong ba khu vực. Nghĩa là kho hiển thị ở khu vực này đang nở nhanh hơn nhu cầu mua, giá vì thế gần như đứng yên.',
+          'Giám đốc tài chính Susan Li mô tả mô hình Meta Generative Recommender mới: thay vì chấm điểm từng quảng cáo riêng lẻ, hệ thống nay dùng mô hình ngôn ngữ lớn để suy luận đồng thời về nội dung quảng cáo và sở thích người dùng. Đây là thay đổi đáng chú ý nhất với người làm nghề: máy bắt đầu đọc hiểu nội dung mẫu quảng cáo, chứ không chỉ đối chiếu tín hiệu hành vi.',
       },
       {
-        heading: 'Vì sao đây là cửa sổ cơ hội cho thị trường Việt Nam',
+        heading: 'Vì sao điều đó đổi việc của phòng Marketing',
         body:
-          'Việt Nam nằm trong khu vực châu Á - Thái Bình Dương. Cùng một mức ngân sách năm nay mua được nhiều lượt hiển thị hơn hẳn so với đồng nghiệp ở Mỹ, nơi giá đã tăng 20%. Cửa sổ này không mở mãi: khi các nhà quảng cáo khu vực nhận ra và đổ tiền vào, chênh lệch sẽ khép lại. Đây là lúc dồn ngân sách thử nghiệm để giành tệp khách trước khi giá bắt kịp.',
+          'Khi máy chấm điểm bằng cách hiểu nội dung, chất lượng và độ rõ ràng của thông điệp trong mẫu quảng cáo trở thành yếu tố xếp hạng chứ không còn là chuyện thẩm mỹ. Mẫu nói mập mờ, không rõ sản phẩm dành cho ai, giải quyết vấn đề gì, sẽ khó được máy ghép đúng người hơn trước. Ngược lại, việc chia tệp thủ công càng mất giá trị.',
       },
       {
-        heading: 'Hệ thống tự động đang thật sự chạy được',
+        heading: 'Điều Meta tự cảnh báo trong dự báo quý sau',
         body:
-          'Meta cho biết Advantage+ đã đạt quy mô 75 tỷ USD tính theo năm. Mô hình xếp hạng GEM tăng 8,3% lượt nhấp và 15,7% lượt chuyển đổi trên Facebook. Có 9 triệu doanh nghiệp nhỏ dùng công cụ tạo nội dung bằng AI. Các con số này củng cố hướng đi: tiếp tục kháng cự tự động hoá là chống lại chính công cụ đang có hiệu quả đo được.',
+          'Meta dự báo doanh thu quý 3 ở mức 61-64 tỷ USD, thấp hơn kỳ vọng của giới đầu tư, và nêu lý do có thể đến từ thay đổi chính sách tại châu Âu buộc quảng cáo phải bớt cá nhân hoá. Đây là tín hiệu đáng theo dõi: khi chính nền tảng coi việc bị hạn chế cá nhân hoá là rủi ro doanh thu, thì doanh nghiệp phụ thuộc hoàn toàn vào nhắm mục tiêu chi tiết cũng đang ngồi trên cùng rủi ro đó.',
+      },
+      {
+        heading: 'Mặt trái nhà đầu tư đang lo',
+        body:
+          'Meta nâng sàn chi đầu tư cả năm từ 125 lên 130 tỷ USD, trần giữ ở 145 tỷ USD. Nhà phân tích Mike Proulx nhận xét mảng quảng cáo vẫn là một con quái vật, nhưng mọi thứ khác thì đắt lên, và gần như toàn bộ tiền mặt tạo ra trong quý đã bị chi phí hạ tầng AI ăn hết. Với người mua quảng cáo, điều này hàm ý áp lực tăng hiệu quả kiếm tiền trên nền tảng sẽ còn tiếp diễn.',
       },
     ],
     impact:
-      'Trưởng phòng nên tận dụng cửa sổ giá rẻ tạm thời của khu vực để đẩy mạnh giai đoạn phủ nhận diện và thu tệp khách hàng tiềm năng, thay vì chỉ chạy nhóm chuyển đổi cuối phễu. Đồng thời đưa Advantage+ vào thử nghiệm chính thức thay vì né tránh.',
+      'Trưởng phòng nên dồn nguồn lực vào chất lượng thông điệp trong mẫu quảng cáo, vì máy nay xếp hạng bằng cách đọc hiểu nội dung. Đồng thời giảm dần mức phụ thuộc vào nhắm mục tiêu chi tiết, thứ đang bị siết ở châu Âu và có thể lan sang nơi khác.',
     ifIgnored:
-      'Giữ nguyên ngân sách và cấu trúc cũ trong lúc giá hiển thị khu vực đang thấp nghĩa là bỏ lỡ đúng giai đoạn mua tệp khách rẻ nhất. Sang năm khi giá khu vực bắt kịp mức tăng 20% của Mỹ, cùng số tiền đó sẽ mua được ít hơn đáng kể.',
+      'Tiếp tục đổ công sức vào chia tệp thủ công trong khi bỏ mặc chất lượng nội dung sẽ khiến hiệu quả tụt dần theo đúng hướng thuật toán đang đi. Và nếu quy định hạn chế cá nhân hoá lan tới thị trường của mình, doanh nghiệp không có tệp dữ liệu sở hữu riêng sẽ mất kênh tiếp cận gần như trong một đêm.',
     actionChecklist: [
-      'Nâng tỷ trọng ngân sách cho chiến dịch phủ nhận diện và thu tệp trong quý 3, tận dụng giá hiển thị khu vực còn thấp',
-      'Ghi lại CPM trung bình hiện tại của tài khoản làm mốc so sánh cho các quý sau',
+      'Rà lại mẫu quảng cáo theo tiêu chí máy đọc hiểu được: nói rõ sản phẩm cho ai, giải quyết vấn đề gì, ngay trong 3 giây đầu',
       'Mở một chiến dịch Advantage+ chạy song song với cấu trúc thủ công, so sánh trong 4 tuần',
-      'Kiểm tra tệp khách hàng tiềm năng thu được có được nuôi dưỡng tiếp không, tránh mua rẻ rồi để nguội',
+      'Xây tệp dữ liệu khách hàng sở hữu riêng để không lệ thuộc hoàn toàn vào nhắm mục tiêu của nền tảng',
+      'Ghi lại CPM và chi phí mỗi kết quả hiện tại làm mốc, theo dõi biến động các quý sau',
     ],
   },
   {
@@ -159,11 +164,11 @@ const REAL_SOURCED_NEWS = [
     isHot: true,
     illustration: 'keyword-exclusion',
     image: {
-      url: 'https://ppc.land/content/images/size/w1200/2026/07/tiktok.webp',
-      credit: 'Ảnh: PPC Land',
+      url: 'https://lf-tt4b.tiktokcdn.com/obj/i18nblog/tt4b_cms/en-US/tipdilz7wysq-2lvhf0jkj4jJgUU292hXZc.png',
+      credit: 'Ảnh: TikTok For Business',
     },
-    sourceUrl: 'https://ppc.land/tiktok-lets-advertisers-block-up-to-40-of-regions-in-topview-buys/',
-    source: 'PPC Land - Bản xem trước sản phẩm TikTok quý 3/2026',
+    sourceUrl: 'https://ads.tiktok.com/business/en/blog/tiktok-product-preview',
+    source: 'TikTok For Business - Bản xem trước sản phẩm quý 3/2026 (nguồn chính thức)',
     readTime: '6 phút đọc',
     tags: ['TopView', 'GMV Max', 'Tự động hoá', 'Biên lợi nhuận'],
     summary:
@@ -192,7 +197,7 @@ const REAL_SOURCED_NEWS = [
       {
         heading: 'Một chi tiết đáng ngờ trong thông báo',
         body:
-          'Bản công bố lần này không kèm bất kỳ số liệu hiệu quả nào, khác hẳn các đợt trước từng nêu rõ TopReach tăng 59% phạm vi tiếp cận tăng thêm hay Smart+ Catalog Ads giảm 36% chi phí mỗi chuyển đổi. Khi nền tảng ra tính năng mà không kèm con số chứng minh, nên coi đó là bản thử nghiệm và tự đo bằng ngân sách nhỏ trước.',
+          'Bản công bố lần này mô tả tính năng nhưng không kèm bất kỳ số liệu hiệu quả nào để chứng minh. Khi nền tảng ra tính năng mà không đưa ra con số, nên coi đó là bản thử nghiệm và tự đo bằng ngân sách nhỏ trước khi chuyển ngân sách chính sang. Phần lớn tính năng trong đợt này cũng yêu cầu đăng ký danh sách cho phép hoặc giới hạn theo khu vực, riêng GMV Max không mở tại Canada.',
       },
       {
         heading: 'Cửa cho tác tử AI vào trình quản lý',
@@ -392,125 +397,125 @@ const REAL_SOURCED_NEWS = [
     deadline: 'Dynamic Search Ads tự nâng cấp lên AI Max từ tháng 9/2026, khai tử hoàn toàn tháng 2/2027',
   },
   {
-    id: 'real-2026-07-29-openai-ads',
+    id: 'real-2026-07-30-gsc-ai-bay',
     category: 'AI Marketing',
     platformIcon: 'Sparkles',
-    title: 'OpenAI dựng bộ máy bán quảng cáo cho ChatGPT: 32 vị trí tuyển dụng, mở kênh đại lý, bỏ mức chi tối thiểu',
-    publishedAt: '29/07/2026',
+    title: 'Báo cáo AI mới trong Search Console là một cái bẫy: đếm lượt hiển thị nhưng giấu lượt nhấp',
+    publishedAt: '30/07/2026',
     isHot: true,
-    illustration: 'data-signal',
+    illustration: 'zero-click',
     image: {
-      url: 'https://ppc.land/content/images/size/w1200/2026/07/growth-1.webp',
-      credit: 'Ảnh: PPC Land',
+      url: 'https://cdn.searchenginejournal.com/wp-content/uploads/2026/07/gsc-trap-859.png',
+      credit: 'Ảnh: Search Engine Journal',
     },
-    sourceUrl: 'https://ppc.land/openai-builds-ads-sales-org-while-merchant-feed-role-stays-unfilled/',
-    source: 'PPC Land - Phân tích cơ cấu tổ chức OpenAI',
+    sourceUrl: 'https://www.searchenginejournal.com/googles-generative-ai-search-console-data-is-a-trap-for-marketers/584018/',
+    source: 'Search Engine Journal',
     readTime: '5 phút đọc',
-    tags: ['ChatGPT Ads', 'Kênh mới', 'Nguồn cấp dữ liệu', 'Đại lý'],
+    tags: ['Search Console', 'Đo lường', 'AI Overviews', 'Báo cáo'],
     summary:
-      'Trong vòng chưa đầy một năm kể từ khi thử nghiệm quảng cáo, OpenAI đã hạ CPM từ 60 xuống 25 USD, bỏ hoàn toàn mức chi tối thiểu và đang tuyển 32 vị trí liên quan tới quảng cáo để dựng mạng lưới đại lý. Nhưng có một khoảng trống đáng chú ý: chưa có vị trí nào phụ trách chất lượng dữ liệu nguồn cấp sản phẩm.',
+      'Google mở báo cáo AI Overviews trong Search Console từ đầu tháng 6/2026. Sau gần tám tuần dữ liệu, giới hạn đã lộ rõ: báo cáo chỉ đếm lượt hiển thị, không có lượt nhấp, không có truy vấn, không có giá trị chuyển đổi. Tệ hơn, cách tính thứ hạng của nó làm báo cáo đẹp lên trong khi doanh thu đi xuống.',
     keyNumbers: [
-      { value: '32', label: 'vị trí quảng cáo đang tuyển' },
-      { value: '25 USD', label: 'CPM hiện tại, giảm từ 60' },
-      { value: '0', label: 'mức chi tối thiểu sau 05/05' },
+      { value: '0', label: 'lượt nhấp được báo cáo' },
+      { value: 'Vị trí 1', label: 'gán cho mọi đường dẫn trong khối AI' },
+      { value: '8 tuần', label: 'dữ liệu đã đủ để thấy vấn đề' },
     ],
     content: [
       {
-        heading: 'Tốc độ hạ rào cản chỉ trong sáu tháng',
+        heading: 'Báo cáo cho gì và giấu gì',
         body:
-          'Ngày 06/02/2026 thử nghiệm quảng cáo ChatGPT khởi động với mức cam kết tối thiểu 200.000 USD, đối tác đầu là WPP Media, Omnicom và Dentsu. Ngày 17/04 CPM giảm từ 60 xuống 25 USD, ngưỡng chi tối thiểu hạ còn 50.000 USD. Ngày 05/05 trình quản lý tự phục vụ mở cho mọi doanh nghiệp Mỹ, thêm hình thức đặt giá thầu theo lượt nhấp và bỏ hẳn mức chi tối thiểu.',
+          'Báo cáo đưa ra số lượt hiển thị trong khung trả lời AI Overviews và bảng AI Mode. Không có số lượt nhấp, không có chi tiết truy vấn, không có giá trị kinh tế của chuyển đổi. Nguyên nhân nằm ở bản chất: câu trả lời do AI tóm tắt đã làm người dùng thoả mãn ngay trên trang kết quả, nên họ không bấm đi đâu nữa.',
       },
       {
-        heading: 'Kênh đại lý đang được dựng',
+        heading: 'Méo mó thứ nhất: hiển thị không ra tiền',
         body:
-          'Vị trí quan trọng nhất trong 32 tin tuyển dụng là Trưởng bộ phận Giải pháp Quảng cáo Quy mô, đặt tại San Francisco, mức lương 302.000 đến 385.000 USD kèm cổ phần. Người này sẽ dựng tổ chức bán hàng quy mô lớn cùng hệ sinh thái đối tác qua ba kênh: bán trực tiếp, đại lý bán lại và thuê ngoài quy trình. Nghĩa là sắp có tầng đại lý chính thức, mở đường cho các đại lý nhỏ và đại lý khu vực tiếp cận.',
+          'Người dùng đọc xong bản tóm tắt rồi rời đi mà không bấm vào đường dẫn nào. Một lượt hiển thị không kèm tương tác thì không tạo ra đồng doanh thu nào. Nhưng trên báo cáo, nó vẫn được cộng vào cột lượt hiển thị y như mọi lượt hiển thị khác.',
       },
       {
-        heading: 'Khoảng trống nói lên nhiều điều',
+        heading: 'Méo mó thứ hai: ai cũng thành vị trí một',
         body:
-          'Dù chiến dịch chạy theo nguồn cấp dữ liệu nằm trong nhóm hiệu quả nhất của chương trình, OpenAI chưa có vị trí nào chuyên trách chất lượng dữ liệu nguồn cấp sản phẩm. Đây là chức năng then chốt khi tiêu đề và mô tả quảng cáo được lấy thẳng từ nguồn cấp dữ liệu của nhà bán hàng. Không có ai ở phía nền tảng lo việc này nghĩa là gánh nặng dồn hết sang nhà quảng cáo.',
+          'Mọi đường dẫn nằm trong một khối AI Overviews đều được Search Console ghi là vị trí một, bất kể thực tế nó hiện ở đâu. Một trích dẫn phụ nằm trong menu phải bấm mới mở ra được xếp ngang hàng với đoạn trích nổi bật đầu trang. Đây là méo mó có tính cấu trúc, thổi phồng thứ hạng của tất cả các tên miền cùng lúc.',
       },
       {
-        heading: 'Việc chuẩn bị không tốn thêm chi phí',
+        heading: 'Méo mó thứ ba: vị trí trung bình đánh lừa',
         body:
-          'OpenAI dùng lại chính các tệp dữ liệu có cấu trúc mà nhà bán lẻ đã nộp cho nơi khác. Doanh nghiệp đang có nguồn cấp dữ liệu Google Shopping hoặc danh mục sản phẩm Meta có thể chuyển thẳng quy trình quản trị sang. Việc dọn dẹp dữ liệu sản phẩm vì thế phục vụ cả ba nền tảng cùng lúc, không phải công việc làm riêng cho một kênh chưa chắc chắn.',
+          'Giả sử một đường dẫn xuất hiện trong khối AI ở vị trí một, đồng thời xếp hạng tự nhiên ở vị trí bốn. Search Console báo vị trí trung bình 2,5 — con số đẹp hơn hẳn thực tế. Trong khi đó, thứ thực sự kéo người truy cập về vẫn là vị trí bốn kia. Báo cáo càng đẹp thì khoảng cách với doanh thu càng xa.',
       },
       {
-        heading: 'Phạm vi địa lý và điều chưa rõ',
+        heading: 'Nên đo bằng gì thay thế',
         body:
-          'Quảng cáo ChatGPT đã mở tới Canada, Úc, New Zealand vào cuối tháng 3, rồi Anh, Nhật, Hàn Quốc, Brazil, Mexico trong tháng 5 và 6. Việt Nam chưa có tên trong danh sách. Nhưng nhịp mở rộng cho thấy đây là câu chuyện của quý tới chứ không phải của năm sau.',
+          'Lấy doanh thu tự nhiên và số khách hàng tiềm năng làm chỉ số chính thay cho lượt hiển thị trong Search Console. Chuyển sang công cụ phân tích dữ liệu của chính mình. Bỏ chỉ số vị trí trung bình, dùng vị trí trung vị vì nó không bị một điểm dữ liệu bất thường kéo lệch. Và cuối cùng, đo lượt chuyển đổi của người thật ghé trang, không đo sự hiện diện.',
       },
     ],
     impact:
-      'Trưởng phòng nên coi việc chuẩn hoá nguồn cấp dữ liệu sản phẩm là ưu tiên hạ tầng, vì cùng một bộ dữ liệu sạch sẽ phục vụ Google Shopping, danh mục Meta và kênh ChatGPT khi kênh này mở tới Việt Nam.',
+      'Trưởng phòng phải ngăn đội SEO báo cáo tăng trưởng bằng lượt hiển thị AI trong Search Console. Chỉ số đó có thể tăng đều trong khi doanh thu tự nhiên giảm, và không ai phát hiện ra vì bảng báo cáo tuần nào cũng xanh.',
     ifIgnored:
-      'Khi kênh mở tới Việt Nam, doanh nghiệp có dữ liệu sản phẩm sạch chạy được ngay, còn doanh nghiệp chưa chuẩn hoá sẽ mất vài tháng dọn dẹp và nhường trước lợi thế cho đối thủ.',
+      'Đội ngũ tiếp tục được khen thưởng theo một chỉ số không liên quan tới tiền. Đến khi doanh thu tự nhiên tụt đủ sâu để ban lãnh đạo hỏi, sẽ mất thêm vài tháng nữa để tìm ra rằng báo cáo đã sai hướng ngay từ đầu.',
     actionChecklist: [
-      'Kiểm kê chất lượng nguồn cấp dữ liệu sản phẩm hiện tại: tỷ lệ mã hàng thiếu thuộc tính, sai giá, sai tồn kho',
-      'Chuẩn hoá tiêu đề sản phẩm theo cấu trúc đọc được thành câu, vì tiêu đề quảng cáo lấy thẳng từ đây',
-      'Giao một người chịu trách nhiệm chất lượng nguồn cấp dữ liệu, đừng để rơi giữa đội thương mại điện tử và đội quảng cáo',
-      'Theo dõi thông báo mở rộng thị trường của ChatGPT Ads để không vào sau đối thủ',
+      'Gỡ chỉ số lượt hiển thị AI Overviews khỏi báo cáo hiệu quả hằng tuần, hoặc ghi rõ đó không phải chỉ số kết quả',
+      'Đổi vị trí trung bình sang vị trí trung vị trong mọi báo cáo thứ hạng',
+      'Lấy doanh thu tự nhiên và số khách hàng tiềm năng từ công cụ phân tích của mình làm chỉ số chấm điểm chính',
+      'Đối chiếu lượt truy cập tự nhiên thực tế với lượt hiển thị báo cáo, ghi lại khoảng cách để theo dõi theo tháng',
     ],
   },
   {
-    id: 'real-2026-07-30-ai-scam-farm',
+    id: 'real-2026-07-29-ai-search-chua-co-chu',
     category: 'AI Marketing',
     platformIcon: 'Sparkles',
-    title: 'Chi phí dựng trại lừa đảo bằng AI xuống còn 5.000 USD: rủi ro an toàn thương hiệu tăng nhanh hơn tốc độ nền tảng gỡ bỏ',
-    publishedAt: '30/07/2026',
+    title: 'Nghiên cứu 600.000 trích dẫn: 89% nhu cầu tìm kiếm bằng AI vẫn chưa có thương hiệu nào chiếm lĩnh',
+    publishedAt: '29/07/2026',
     isHot: false,
-    illustration: 'account-security',
+    illustration: 'data-signal',
     image: {
-      url: 'https://ppc.land/content/images/size/w1200/2026/07/AI-Scams.webp',
-      credit: 'Ảnh: PPC Land',
+      url: 'https://cdn.searchenginejournal.com/wp-content/uploads/2026/07/chatgpt-winners-252.png',
+      credit: 'Ảnh: Search Engine Journal',
     },
-    sourceUrl: 'https://ppc.land/ai-cuts-scam-farm-entry-cost-to-5-000-human-security-research-shows/',
-    source: 'PPC Land - Nghiên cứu Satori của HUMAN Security',
-    readTime: '5 phút đọc',
-    tags: ['An toàn thương hiệu', 'Gian lận quảng cáo', 'Xác thực', 'Thu tệp khách'],
+    sourceUrl: 'https://www.searchenginejournal.com/89-of-ai-search-demand-has-no-clear-owner-use-this-before-the-window-closes/583255/',
+    source: 'Search Engine Journal',
+    readTime: '6 phút đọc',
+    tags: ['AI Search', 'ChatGPT', 'Định vị thương hiệu', 'Cơ hội sớm'],
     summary:
-      'Nhóm Satori của HUMAN Security công bố nghiên cứu ngày 28/07/2026 cho thấy dựng một trại điện thoại lừa đảo nay chỉ tốn 5.000 USD ban đầu, hoặc không tốn đồng nào nếu thuê điện thoại ảo trên đám mây. Hệ quả trực tiếp với người làm marketing: xác thực bằng số điện thoại không còn là tín hiệu tin cậy.',
+      'Kevin Indig phân tích dữ liệu Semrush trên 1.094 nhóm ngành tại Mỹ, hơn 50.000 thương hiệu và hơn 600.000 trích dẫn trong nửa đầu 2026. Chỉ 15,2% nhóm ngành có một thương hiệu chiếm lĩnh rõ ràng trong câu trả lời của ChatGPT. Phần còn lại vẫn đang bỏ ngỏ, và đó chính là cửa sổ cho người vào sớm.',
     keyNumbers: [
-      { value: '5.000 USD', label: 'chi phí dựng trại ban đầu' },
-      { value: '27,8 tỷ USD', label: 'thiệt hại mỗi năm do lừa đảo' },
-      { value: '3,5 tỷ', label: 'tài khoản giả Meta khoá năm 2025' },
+      { value: '89,3%', label: 'nhu cầu chưa có chủ rõ ràng' },
+      { value: '15,2%', label: 'nhóm ngành đã có chủ' },
+      { value: '53,7%', label: 'nhóm ngành hoàn toàn bỏ ngỏ' },
     ],
     content: [
       {
-        heading: 'Hai mô hình chi phí',
+        heading: 'Nghiên cứu đo cái gì',
         body:
-          'Mô hình dùng phần cứng: 5.000 USD ban đầu cộng 450 USD mỗi tháng, dựa trên các bo mạch điện thoại mua lại từ thị trường thứ cấp. Mô hình dùng điện thoại ảo trên đám mây: không tốn đồng nào ban đầu, 2.970 USD mỗi tháng. Đối chiếu với con số thiệt hại ước tính 27,8 tỷ USD mỗi năm từ lừa đảo tình cảm và lừa đảo đầu tư, động cơ tài chính quá rõ.',
+          'Dữ liệu Semrush trong sáu tháng đầu năm 2026, trải trên 1.094 nhóm ngành tại Mỹ, mỗi nhóm chạy năm dạng câu hỏi, tổng cộng hơn 50.000 thương hiệu và hơn 600.000 lượt trích dẫn trên ChatGPT. Một nhóm ngành được coi là đã có chủ khi một thương hiệu xuất hiện ở ít nhất 4 trên 5 câu hỏi và dẫn trước thương hiệu thứ hai từ 5 điểm phần trăm trở lên.',
       },
       {
-        heading: 'AI xoá bỏ rào cản kỹ thuật',
+        heading: 'Bức tranh phân bố',
         body:
-          'Nghiên cứu mổ xẻ một bộ công cụ trại điện thoại bán sẵn: phần mềm điều phối Auto.js giả lập thao tác nhấp, vuốt, gõ chữ; AI sinh kịch bản nên người vận hành không cần biết lập trình; dịch vụ điện thoại ảo cho phép giả mạo mã định danh thiết bị; dịch vụ proxy dân cư che giấu nguồn gốc. Một người nay điều khiển được hàng trăm cuộc hội thoại cùng lúc.',
+          'Chỉ 15,2% nhóm ngành có chủ rõ ràng. 31,1% có thương hiệu đang nổi lên nhưng khoảng cách chưa đủ. Và 53,7% hoàn toàn chưa ngã ngũ, không thương hiệu nào dẫn nổi 3 trên 5 câu hỏi. Cộng lại, 89,3% lượng nhu cầu tìm kiếm bằng AI nằm ở những nhóm ngành chưa ai chiếm được. Nói cách khác, những chỗ đáng tiền nhất hiện là những chỗ chưa ngã ngũ nhất.',
       },
       {
-        heading: 'Vì sao đây là việc của phòng Marketing',
+        heading: 'Chiếm được rồi thì giữ được',
         body:
-          'Thứ nhất, xác thực bằng số điện thoại vốn là tín hiệu tin cậy nay mất giá trị khi thiết bị ảo và thiết bị dùng một lần được cấp phát ở quy mô công nghiệp. Biểu mẫu thu tệp khách hàng tiềm năng chỉ xác thực bằng số điện thoại sẽ ngập dữ liệu rác. Thứ hai, tài khoản giả sinh ra nhanh hơn tốc độ nền tảng gỡ bỏ, nên quảng cáo của thương hiệu có thể xuất hiện cạnh nội dung lừa đảo.',
+          'Thương hiệu đã có vị thế chủ giữ được vị trí đầu trong 90,4% các lần so sánh tháng này với tháng kế. Nhưng những thương hiệu dẫn với khoảng cách mỏng, trung vị 1,3 điểm phần trăm, thì dễ bị thay thế. Nhóm giữ được ổn định có khoảng cách trung vị 2,9 điểm. Ngưỡng 3 điểm phần trăm vì thế là ranh giới giữa giữ được và chưa chắc.',
       },
       {
-        heading: 'Quy mô phía Meta',
+        heading: 'Được trích dẫn không đồng nghĩa được nhắc tên',
         body:
-          'Meta đã khoá 3,5 tỷ tài khoản giả trong năm 2025, gỡ 408.000 tài khoản lừa đảo tình cảm trong năm 2024 và loại 134 triệu quảng cáo lừa đảo trong năm 2025. Tài liệu nội bộ do Reuters công bố tháng 11/2025 ước tính 16 tỷ USD doanh thu từ quảng cáo lừa đảo trong năm 2024, với khoảng 15 tỷ lượt hiển thị quảng cáo rủi ro cao mỗi ngày.',
+          'Đây là phát hiện dễ dẫn tới làm sai. Tương quan giữa số lần được trích dẫn và số lần được nhắc tên chỉ là âm 0,229, tức gần như không liên quan. Tên miền được trích dẫn nhiều nhất trùng với thương hiệu được nhắc nhiều nhất chỉ trong 20,8% trường hợp. Đuổi theo việc được trích dẫn không tự động biến thành được nhớ tên. Như bài viết diễn đạt: trích dẫn là cái cửa, không phải căn phòng.',
       },
       {
-        heading: 'Không có công cụ đơn lẻ nào giải quyết được',
+        heading: 'Cách làm được đề xuất',
         body:
-          'Báo cáo kết luận không một công cụ phòng vệ nào xoá bỏ được hệ sinh thái phân tán này, cần nhiều lớp phòng vệ toàn ngành cộng với sự cảnh giác của người dùng. Với doanh nghiệp, nghĩa là phải tự dựng lớp bảo vệ riêng thay vì trông chờ nền tảng làm sạch.',
+          'Chọn 10 đến 20 nhóm ngành ưu tiên, theo dõi bằng năm dạng câu hỏi: định nghĩa, so sánh, danh sách lựa chọn thay thế, tình huống sử dụng, và quyết định mua. Ưu tiên dồn lực vào những nhóm mà khoảng cách dẫn đầu dưới 3 điểm phần trăm, vì đó là nơi ngôi đầu còn đổi chủ được. Và chuyển trọng tâm từ săn trích dẫn sang làm sao được nhắc tên, bằng nội dung, bằng bằng chứng cụ thể, bằng việc được bên thứ ba nói tới, và bằng một định vị rõ ràng.',
       },
     ],
     impact:
-      'Trưởng phòng cần bổ sung lớp xác thực ngoài số điện thoại cho biểu mẫu thu tệp khách, và rà lại danh sách loại trừ vị trí hiển thị để quảng cáo thương hiệu không nằm cạnh nội dung lừa đảo.',
+      'Trưởng phòng đang có cơ hội chiếm vị trí mặc định trong câu trả lời AI cho ngành của mình với chi phí thấp hơn nhiều so với giành thứ hạng tìm kiếm truyền thống, nhưng chỉ trong lúc phần lớn nhóm ngành còn bỏ ngỏ.',
     ifIgnored:
-      'Tệp khách hàng tiềm năng thu về đầy số điện thoại ảo, đội bán hàng đốt thời gian gọi vào số không có thật, chi phí mỗi khách hàng thật tăng gấp nhiều lần so với con số báo cáo. Nặng hơn là quảng cáo thương hiệu hiện cạnh nội dung lừa đảo và bị khách hàng chụp màn hình.',
+      'Khi thị trường ngã ngũ, dữ liệu cho thấy người đã chiếm được giữ ngôi đầu trong hơn 90% các tháng. Vào sau lúc đó nghĩa là phải phá vỡ một vị thế đã ổn định, tốn kém hơn nhiều so với việc chiếm chỗ trống ngay lúc này.',
     actionChecklist: [
-      'Bổ sung xác thực bằng thư điện tử hoặc bước xác nhận thứ hai cho biểu mẫu thu tệp khách hàng tiềm năng',
-      'Rà lại báo cáo vị trí hiển thị, loại trừ các vị trí và nhóm đối tượng có tỷ lệ nội dung rủi ro cao',
-      'Đo tỷ lệ số điện thoại không liên hệ được trong tệp thu về, coi đó là chỉ số chất lượng bắt buộc báo cáo',
-      'Tránh chạy mở rộng phạm vi phân phối tự động mà không kèm danh sách loại trừ vị trí',
+      'Chọn 10-20 nhóm sản phẩm ưu tiên, chạy thử 5 dạng câu hỏi trên ChatGPT và ghi lại thương hiệu nào được nhắc',
+      'Xác định nhóm nào khoảng cách dẫn đầu dưới 3 điểm phần trăm và dồn nội dung vào đúng nhóm đó',
+      'Chuyển mục tiêu từ được trích dẫn sang được nhắc tên: bổ sung bằng chứng cụ thể, số liệu, tình huống dùng thật',
+      'Đặt lịch đo lại hằng tháng, vì ngôi đầu ở nhóm chưa ngã ngũ đổi chủ liên tục',
     ],
   },
 ];
