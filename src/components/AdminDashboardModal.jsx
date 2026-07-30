@@ -20,7 +20,7 @@ import {
   fetchStudentsFromCloudOnly
 } from '../firebase';
 import { markStudentDeleted, filterDeleted, getDeletedStudents } from '../utils/deletedStudents';
-import { updateStudentEmail, deleteStudentsPermanently } from '../utils/adminApi';
+import { updateStudentEmail, deleteStudentsPermanently, sendNotification } from '../utils/adminApi';
 import {
   SURVEY_QUESTIONS,
   SURVEY_TOTAL,
@@ -186,6 +186,14 @@ export default function AdminDashboardModal({
   const [editingEmailFor, setEditingEmailFor] = useState(null);
   const [newEmailValue, setNewEmailValue] = useState('');
   const [isSavingEmail, setIsSavingEmail] = useState(false);
+
+  /* --- Gửi thư thông báo --- */
+  const [isNotifyOpen, setIsNotifyOpen] = useState(false);
+  const [notifyScope, setNotifyScope] = useState('selected'); // 'selected' | 'filtered'
+  const [notifySubject, setNotifySubject] = useState('');
+  const [notifyMessage, setNotifyMessage] = useState('');
+  const [notifySending, setNotifySending] = useState(false);
+  const [notifyProgress, setNotifyProgress] = useState(null);
 
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedIndustry, setSelectedIndustry] = useState('ALL');
@@ -797,6 +805,78 @@ export default function AdminDashboardModal({
   };
 
   /* ============================================================
+     GỬI THƯ THÔNG BÁO
+     ============================================================ */
+
+  /**
+   * Người nhận, tính theo phạm vi đang chọn.
+   *
+   * LOẠI TÀI KHOẢN QUẢN TRỊ ra khỏi danh sách. Thư thông báo viết cho học viên
+   * ("bạn đang là học viên của Học Viện"), gửi cho chính Ban Quản Trị vừa vô
+   * nghĩa vừa làm số liệu "đã gửi" sai lệch.
+   *
+   * Phạm vi 'filtered' bám theo BỘ LỌC ĐANG HIỂN THỊ chứ không phải toàn bộ kho
+   * dữ liệu. Quản trị viên lọc ra "ngành Bất Động Sản, chưa tốt nghiệp" rồi bấm
+   * gửi thì phải gửi đúng nhóm đó — gửi cho tất cả là chuyện hoàn toàn khác, và
+   * không rút lại được.
+   */
+  const notifyRecipients = (
+    notifyScope === 'selected' ? selectedStudents : orderedStudents
+  )
+    .filter((s) => getAccountRole(s, adminRoster) === 'student')
+    .map((s) => normalizeEmail(s.email))
+    .filter(Boolean);
+
+  const openNotifyComposer = () => {
+    setNotifyScope(selectedEmails.length ? 'selected' : 'filtered');
+    setNotifySubject('');
+    setNotifyMessage('');
+    setNotifyProgress(null);
+    setIsNotifyOpen(true);
+  };
+
+  const handleSendNotification = async () => {
+    if (!notifySubject.trim() || !notifyMessage.trim()) {
+      showNotice('⚠️ Cần có cả tiêu đề và nội dung thư.', 4000);
+      return;
+    }
+    if (!notifyRecipients.length) {
+      showNotice('⚠️ Không có người nhận nào trong phạm vi đã chọn.', 4000);
+      return;
+    }
+
+    // Hỏi lại kèm CON SỐ THẬT. Thư gửi đi rồi không thu hồi được, và gửi nhầm
+    // cho cả trăm học viên là chuyện phải xin lỗi bằng một lá thư nữa.
+    if (
+      !window.confirm(
+        `Gửi thư "${notifySubject.trim()}" tới ${notifyRecipients.length} học viên?\n\n` +
+          `Thư đã gửi không thu hồi được.`
+      )
+    ) {
+      return;
+    }
+
+    setNotifySending(true);
+    setNotifyProgress({ done: 0, total: notifyRecipients.length, sent: 0 });
+
+    const result = await sendNotification({
+      subject: notifySubject.trim(),
+      message: notifyMessage.trim(),
+      emails: notifyRecipients,
+      onProgress: setNotifyProgress
+    });
+
+    setNotifySending(false);
+
+    if (result.ok) {
+      setIsNotifyOpen(false);
+      showNotice(`🟢 ${result.message}`, 8000);
+    } else {
+      showNotice(`⚠️ ${result.message}`, 12000);
+    }
+  };
+
+  /* ============================================================
      ĐỔI EMAIL HỌC VIÊN
      ============================================================ */
 
@@ -1308,6 +1388,23 @@ export default function AdminDashboardModal({
           )}
         </div>
 
+        {/* Nút gửi thông báo khi CHƯA chọn ai — gửi cho toàn bộ danh sách đang
+            lọc. Đặt riêng ở đây vì thanh thao tác hàng loạt chỉ hiện khi có
+            dòng được tick, mà gửi thông báo cho cả lớp là việc thường xuyên hơn
+            gửi cho vài người được chọn. */}
+        {selectedEmails.length === 0 && (
+          <div className="flex justify-end">
+            <button
+              onClick={openNotifyComposer}
+              className="px-3.5 py-2 rounded-xl bg-sky-700 hover:brightness-110 text-white text-xs font-black flex items-center gap-2 transition cursor-pointer shadow"
+              title="Soạn và gửi thư thông báo cho học viên"
+            >
+              <Mail className="w-4 h-4" />
+              <span>Gửi Thông Báo Cho Học Viên</span>
+            </button>
+          </div>
+        )}
+
         {/* Thanh thao tác hàng loạt.
             Chỉ hiện khi thật sự có dòng được chọn — luôn hiện thì nó chiếm chỗ
             và nhờn mắt, tới lúc cần thì không ai để ý nữa. */}
@@ -1332,6 +1429,15 @@ export default function AdminDashboardModal({
               >
                 <Download className="w-3.5 h-3.5" />
                 <span>Xuất {selectedEmails.length} học viên đã chọn</span>
+              </button>
+
+              <button
+                onClick={openNotifyComposer}
+                disabled={isBulkWorking}
+                className="px-3 py-1.5 rounded-xl bg-sky-700 hover:brightness-110 text-white text-[11px] font-black flex items-center gap-1.5 transition cursor-pointer disabled:opacity-60"
+              >
+                <Mail className="w-3.5 h-3.5" />
+                <span>Gửi thông báo</span>
               </button>
 
               <button
@@ -1923,6 +2029,135 @@ export default function AdminDashboardModal({
                 );
               })()}
 
+            </div>
+          </div>
+        )}
+
+        {/* Hộp soạn thư thông báo. */}
+        {isNotifyOpen && (
+          <div className="fixed inset-0 z-[70] flex items-center justify-center p-4 bg-slate-950/85 backdrop-blur-md overflow-y-auto">
+            <div className="w-full max-w-xl glass-panel rounded-3xl border border-sky-500/50 p-6 shadow-2xl space-y-4 my-8">
+              <div className="flex items-start justify-between gap-3">
+                <h3 className="text-base font-black text-white flex items-center gap-2">
+                  <Mail className="w-5 h-5 text-sky-400" /> GỬI THƯ THÔNG BÁO
+                </h3>
+                <button
+                  onClick={() => setIsNotifyOpen(false)}
+                  disabled={notifySending}
+                  className="w-7 h-7 rounded-full bg-slate-900 border border-slate-700 text-slate-400 hover:text-white flex items-center justify-center shrink-0 transition cursor-pointer disabled:opacity-50"
+                >
+                  <X className="w-4 h-4" />
+                </button>
+              </div>
+
+              {/* Chọn người nhận. Hiện luôn CON SỐ THẬT bên cạnh mỗi lựa chọn:
+                  "gửi cho tất cả" mà không biết tất cả là bao nhiêu người thì
+                  không ai đánh giá được mức độ nghiêm trọng trước khi bấm. */}
+              <div className="space-y-2">
+                <label className="text-xs font-bold text-slate-300">Gửi cho:</label>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  <button
+                    type="button"
+                    onClick={() => setNotifyScope('selected')}
+                    disabled={!selectedEmails.length || notifySending}
+                    className={`p-2.5 rounded-xl border text-xs font-bold text-left transition cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed ${
+                      notifyScope === 'selected'
+                        ? 'bg-sky-600 text-white border-sky-400'
+                        : 'bg-slate-900/70 text-slate-300 border-slate-700 hover:border-sky-500'
+                    }`}
+                  >
+                    Học viên đã chọn
+                    <span className="block text-[11px] font-semibold opacity-80 mt-0.5">
+                      {selectedEmails.length ? `${selectedEmails.length} người được tick` : 'chưa tick ai'}
+                    </span>
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={() => setNotifyScope('filtered')}
+                    disabled={notifySending}
+                    className={`p-2.5 rounded-xl border text-xs font-bold text-left transition cursor-pointer disabled:opacity-50 ${
+                      notifyScope === 'filtered'
+                        ? 'bg-sky-600 text-white border-sky-400'
+                        : 'bg-slate-900/70 text-slate-300 border-slate-700 hover:border-sky-500'
+                    }`}
+                  >
+                    Toàn bộ danh sách đang lọc
+                    <span className="block text-[11px] font-semibold opacity-80 mt-0.5">
+                      theo bộ lọc hiện tại trên bảng
+                    </span>
+                  </button>
+                </div>
+
+                <div className="p-2.5 rounded-xl bg-emerald-950/60 border border-emerald-700/60 text-emerald-200 text-[11px] leading-relaxed">
+                  Sẽ gửi tới <strong className="text-white">{notifyRecipients.length} học viên</strong>.
+                  Tài khoản quản trị không nhận thư này. Người đã bấm huỷ nhận thư thông báo sẽ được máy chủ
+                  tự bỏ qua ngay trước khi gửi.
+                </div>
+              </div>
+
+              <div className="space-y-1">
+                <label className="text-xs font-bold text-slate-300">Tiêu đề thư:</label>
+                <input
+                  type="text"
+                  maxLength={150}
+                  disabled={notifySending}
+                  placeholder="Ví dụ: Mở chuyên đề mới — Quảng cáo TikTok từ 05/08"
+                  value={notifySubject}
+                  onChange={(e) => setNotifySubject(e.target.value)}
+                  className="w-full bg-slate-900/60 border border-sky-900/60 focus:border-sky-400 rounded-xl px-3 py-2.5 text-xs text-white placeholder-slate-500 focus:outline-none transition disabled:opacity-60"
+                />
+                <p className="text-[10px] text-slate-400">
+                  {notifySubject.length}/150 ký tự — hộp thư sẽ cắt bớt nếu dài hơn.
+                </p>
+              </div>
+
+              <div className="space-y-1">
+                <label className="text-xs font-bold text-slate-300">Nội dung:</label>
+                <textarea
+                  rows={8}
+                  disabled={notifySending}
+                  placeholder={'Chào bạn,\n\nHọc Viện vừa mở thêm chuyên đề...\n\nTrân trọng,\nBan Quản Trị'}
+                  value={notifyMessage}
+                  onChange={(e) => setNotifyMessage(e.target.value)}
+                  className="w-full bg-slate-900/60 border border-sky-900/60 focus:border-sky-400 rounded-xl px-3 py-2.5 text-xs text-white placeholder-slate-500 focus:outline-none transition resize-y disabled:opacity-60"
+                />
+                <p className="text-[10px] text-slate-400 leading-relaxed">
+                  Gõ chữ thường, xuống dòng như bình thường. Hệ thống tự dựng khung thư có logo Học Viện,
+                  nút vào trang khoá học và đường dẫn huỷ nhận thư.
+                </p>
+              </div>
+
+              {notifySending && notifyProgress && (
+                <div className="space-y-1.5">
+                  <div className="h-1.5 w-full rounded-full bg-slate-800 overflow-hidden">
+                    <div
+                      className="h-full bg-sky-500 rounded-full transition-all"
+                      style={{ width: `${Math.round((notifyProgress.done / notifyProgress.total) * 100)}%` }}
+                    />
+                  </div>
+                  <p className="text-[11px] text-sky-300 font-semibold">
+                    Đang gửi {notifyProgress.done}/{notifyProgress.total}... Đừng đóng cửa sổ này.
+                  </p>
+                </div>
+              )}
+
+              <div className="flex gap-2 pt-1">
+                <button
+                  onClick={() => setIsNotifyOpen(false)}
+                  disabled={notifySending}
+                  className="flex-1 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-slate-300 hover:text-white text-xs font-bold transition cursor-pointer disabled:opacity-50"
+                >
+                  Huỷ
+                </button>
+                <button
+                  onClick={handleSendNotification}
+                  disabled={notifySending || !notifyRecipients.length}
+                  className="flex-1 py-2.5 rounded-xl bg-sky-600 hover:brightness-110 text-white text-xs font-black transition cursor-pointer disabled:opacity-60"
+                >
+                  {notifySending ? 'Đang gửi...' : `Gửi cho ${notifyRecipients.length} học viên`}
+                </button>
+              </div>
             </div>
           </div>
         )}
