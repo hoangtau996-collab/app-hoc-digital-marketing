@@ -31,13 +31,33 @@ Nếu buộc phải nâng nhánh 14 sau này, kiểm tra lại `npm ls jose` —
 
 `package.json` khai `"engines": { "node": "22.x" }`. Nhánh `firebase-admin@13` chỉ đòi Node >= 18, nên đây không còn là ràng buộc bắt buộc — nhưng cứ giữ: production đã chạy Node 22 ổn định (xác nhận qua `/api/ping`), và ghim trong kho mã thì thiết lập đi theo dự án thay vì nằm rời trên bảng điều khiển Vercel.
 
-### Hai đường dẫn chẩn đoán
+### Khi hàm máy chủ trả về 500 mà không rõ lý do
 
-`/api/ping` — không import gì, chỉ trả về phiên bản Node. Dùng để tách bạch "hạ tầng hàm hỏng" với "mã của mình hỏng".
+Vercel chỉ trả về `500 FUNCTION_INVOCATION_FAILED`, không kèm nguyên nhân. Nếu lỗi xảy ra lúc **nạp module** thì mọi lệnh gọi đều 500 — kể cả lệnh GET lẽ ra phải trả `405` — và nhìn từ ngoài không phân biệt được với sai khoá hay thiếu biến môi trường.
 
-`/api/diag` — nạp `firebase-admin` trong `try/catch` rồi thử gọi Firebase bằng khoá thật, trả về lỗi nguyên văn. Đây là thứ duy nhất chỉ ra được `ERR_REQUIRE_ESM` ở trên; nếu không có nó thì chỉ thấy `500` trống rỗng.
+Cách gỡ đã dùng ngày 2026-07-30, lấy lại từ lịch sử git khi cần:
 
-Cả hai **chỉ báo có/không và độ dài** biến môi trường, không bao giờ in giá trị — chúng là đường dẫn công khai, ai cũng gọi được.
+```bash
+git show 60d56b1:api/ping.js > api/ping.js   # không import gì -> hạ tầng hàm có chạy không
+git show 60d56b1:api/diag.js > api/diag.js   # nạp firebase-admin trong try/catch -> đọc lỗi nguyên văn
+```
+
+`/api/diag` chính là thứ chỉ ra được `ERR_REQUIRE_ESM` mô tả ở trên; không có nó thì chỉ thấy một con số 500 trống rỗng.
+
+**Xoá lại ngay sau khi sửa xong** (đã xoá cùng ngày). Chúng là đường dẫn công khai không đòi xác thực, và `/api/diag` còn khởi tạo Firebase Admin rồi gọi máy chủ ở mỗi lần được gọi — để lâu là mở sẵn một chỗ cho người ngoài bơm tải. Cả hai chỉ báo có/không và độ dài biến môi trường, **không bao giờ in giá trị**; giữ nguyên tính chất đó nếu phải dựng lại.
+
+### Biến môi trường của hàm máy chủ
+
+Khai trên Vercel, **không có tiền tố `VITE_`** — Vite nhúng mọi biến có tiền tố đó vào JavaScript gửi xuống trình duyệt, đặt sai tên là công khai khoá cho cả thế giới.
+
+| Biến | Bắt buộc | Ghi chú |
+|---|---|---|
+| `RESEND_API_KEY` | có | Khoá gửi thư của Resend |
+| `FIREBASE_SERVICE_ACCOUNT` | có | JSON khoá dịch vụ, dạng thô hoặc base64 |
+| `EMAIL_FROM` | có | `Học Viện P MARCOM <admin@mail.pmarcom.com>` |
+| `SITE_URL` | không | Mặc định `https://academy.pmarcom.com` |
+
+Tên miền gửi thư là `mail.pmarcom.com`, **không phải** `academy.pmarcom.com`: `academy` là một bản ghi CNAME trỏ sang Vercel, mà tên đã có CNAME thì theo chuẩn DNS không được có thêm bản ghi TXT — trong khi SPF bắt buộc phải là TXT đặt đúng tại tên đó.
 
 ### Tên miền đăng nhập (custom auth domain)
 
