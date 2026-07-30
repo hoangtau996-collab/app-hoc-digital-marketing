@@ -1,12 +1,16 @@
 import { initializeApp } from 'firebase/app';
 import { filterDeleted } from './utils/deletedStudents';
-import { 
-  getAuth, 
-  signInWithEmailAndPassword, 
-  createUserWithEmailAndPassword, 
-  signOut, 
+import {
+  getAuth,
+  signInWithEmailAndPassword,
+  createUserWithEmailAndPassword,
+  signOut,
   onAuthStateChanged,
-  updateProfile
+  updateProfile,
+  GoogleAuthProvider,
+  signInWithPopup,
+  signInWithRedirect,
+  getRedirectResult
 } from 'firebase/auth';
 import {
   getFirestore,
@@ -81,6 +85,108 @@ if (!isFirebaseConfigured) {
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 export const db = getFirestore(app);
+
+/* ============================================================
+   ĐĂNG NHẬP BẰNG TÀI KHOẢN GOOGLE (Gmail)
+
+   Chỉ xin đúng hai thông tin cơ bản Google cho sẵn: email và tên hiển thị.
+   KHÔNG thêm scope nào khác — app xin scope nhạy cảm (đọc Gmail, Drive...) sẽ bị
+   Google bắt đi qua quy trình xét duyệt, và trước khi duyệt xong thì số người
+   đăng nhập được bị giới hạn cứng.
+
+   Google KHÔNG trả về SỐ ĐIỆN THOẠI và NGÀNH NGHỀ — hai trường bắt buộc của hồ
+   sơ học viên. Vì vậy sau lần đăng nhập Google đầu tiên, ứng dụng chặn lại ở
+   bước "Hoàn tất hồ sơ" (CompleteProfileModal, mở bởi chốt chặn trong App.jsx).
+   Bỏ bước đó thì Bảng Quản Trị đầy học viên không có số liên lạc.
+   ============================================================ */
+
+/**
+ * Trình duyệt nhúng bên trong ứng dụng khác (Zalo, Facebook, Instagram, TikTok).
+ *
+ * Cần biết vì hai lẽ, và cả hai đều không sửa được bằng mã nguồn:
+ *   1. Cửa sổ popup gần như luôn bị chặn trong webview nhúng.
+ *   2. Bản thân Google TỪ CHỐI đăng nhập từ webview nhúng, báo "This browser or
+ *      app may not be secure" — kể cả khi đã chuyển sang phương án chuyển trang.
+ *
+ * Việc duy nhất chữa được là mở link bằng trình duyệt thật. Giao diện phải nói
+ * thẳng điều đó ra, thay vì để học viên bấm đi bấm lại một nút không bao giờ chạy.
+ */
+export function isInAppBrowser() {
+  const ua = String(typeof navigator !== 'undefined' ? navigator.userAgent : '');
+  return /FBAN|FBAV|FB_IAB|Instagram|Zalo|TikTok|MicroMessenger|Line\//i.test(ua);
+}
+
+function buildGoogleProvider() {
+  const provider = new GoogleAuthProvider();
+  // `select_account` để Google luôn hỏi chọn tài khoản.
+  //
+  // Không có tham số này thì Google tự đăng nhập bằng tài khoản đang mở sẵn trên
+  // trình duyệt. Trên máy dùng chung — đúng bối cảnh của nhiều học viên — người
+  // thứ hai bấm đăng nhập sẽ vào thẳng tài khoản của người thứ nhất mà không hề
+  // thấy màn hình chọn, rồi học và nhận bằng dưới tên người khác.
+  provider.setCustomParameters({ prompt: 'select_account' });
+  return provider;
+}
+
+/**
+ * Đăng nhập bằng tài khoản Google.
+ *
+ * Trả về một trong ba dạng:
+ *   { ok: true, user }      -> xong, đã có phiên đăng nhập
+ *   { ok: false, pending }  -> đang chuyển sang trang Google, trang này sắp bị
+ *                              rời khỏi; nơi gọi KHÔNG được báo lỗi
+ *   { ok: false, code }     -> hỏng thật, có mã lỗi để diễn giải
+ *
+ * Ưu tiên popup, chỉ lùi về chuyển trang khi popup không mở được. Cố ý theo thứ
+ * tự này: `authDomain` (hr-project-b982a.firebaseapp.com) khác tên miền chạy app
+ * (academy.pmarcom.com), nên phương án chuyển trang phải mượn bộ nhớ của bên thứ
+ * ba — thứ mà Safari và Chrome ẩn danh chặn thẳng. Ở những trình duyệt đó,
+ * chuyển trang đi rồi quay về sẽ mất phiên đăng nhập, còn popup thì vẫn chạy.
+ *
+ * `auth/popup-closed-by-user` KHÔNG lùi về chuyển trang: người dùng chủ động đóng
+ * cửa sổ, đá họ sang trang Google là làm ngược ý.
+ */
+export async function signInWithGoogle() {
+  try {
+    const result = await signInWithPopup(auth, buildGoogleProvider());
+    return { ok: true, user: result.user };
+  } catch (e) {
+    const code = String(e?.code || '');
+    const popupUnavailable =
+      code.startsWith('auth/popup-blocked') ||
+      code.startsWith('auth/operation-not-supported-in-this-environment');
+
+    if (popupUnavailable) {
+      try {
+        await signInWithRedirect(auth, buildGoogleProvider());
+        return { ok: false, pending: true };
+      } catch (e2) {
+        console.warn('Không mở được cả popup lẫn trang đăng nhập Google:', e2);
+        return { ok: false, code: String(e2?.code || ''), error: e2 };
+      }
+    }
+
+    return { ok: false, code, error: e };
+  }
+}
+
+/**
+ * Nhận kết quả của lần đăng nhập bằng cách chuyển trang, gọi một lần lúc app khởi động.
+ *
+ * Cần thiết dù `onAuthStateChanged` vốn đã tự chạy khi đăng nhập thành công: đây
+ * là chỗ DUY NHẤT lấy được LỖI của lần chuyển trang đó. Không gọi thì khi Google
+ * từ chối, học viên quay về đúng màn hình cũ, không có phiên đăng nhập và không
+ * một dòng giải thích nào — nhìn y hệt như bấm nhầm nút.
+ */
+export async function consumeGoogleRedirectResult() {
+  try {
+    const result = await getRedirectResult(auth);
+    return { ok: true, user: result?.user || null };
+  } catch (e) {
+    console.warn('Đăng nhập Google (chuyển trang) thất bại:', e);
+    return { ok: false, code: String(e?.code || ''), error: e };
+  }
+}
 
 /**
 // Dynamic Direct Realtime Cloud Database REST Endpoints for 100% Zero-Config Global Sync

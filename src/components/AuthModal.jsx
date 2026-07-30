@@ -2,16 +2,19 @@ import React, { useState } from 'react';
 import PMarcomLogo from './PMarcomLogo';
 import { createCredential, verifyCredential, upgradeRecord } from '../utils/localCredentials';
 import { isRootAdmin } from '../utils/adminRoles';
-import { 
-  auth, 
-  signInWithEmailAndPassword, 
+import { INDUSTRY_OPTIONS } from '../utils/industryOptions';
+import {
+  auth,
+  signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
   updateProfile,
   saveUserProgressToCloud,
   recordStudentAccountToCloud,
   recordRealStudentEnrollment,
   isFirebaseConfigured,
-  missingFirebaseEnv
+  missingFirebaseEnv,
+  signInWithGoogle,
+  isInAppBrowser
 } from '../firebase';
 import { 
   X, 
@@ -104,25 +107,52 @@ const describeAuthError = (err) => {
     : 'Không đăng nhập được. Vui lòng thử lại.';
 };
 
-const INDUSTRY_OPTIONS = [
-  'Bất Động Sản',
-  'Thương Mại Điện Tử & Bán Lẻ (E-Commerce)',
-  'F&B - Nông Sản - Thực Phẩm',
-  'Thời Trang - Mỹ Phẩm & Làm Đẹp',
-  'Dịch Vụ & Spa - Thẩm Mỹ Viện',
-  'Y Tế - Sức Khỏe - Dược Phẩm',
-  'Giáo Dục & Đào Tạo - Du Học',
-  'Công Nghệ - Phần Mềm & SaaS',
-  'Tài Chính - Ngân Hàng - Bảo Hiểm',
-  'Agency & Truyền Thông Marketing',
-  'Ngành nghề Khác'
-];
+/**
+ * Diễn giải lỗi RIÊNG của luồng đăng nhập bằng Google.
+ *
+ * Tách khỏi describeAuthError vì cùng một mã lỗi mang nghĩa khác nhau ở hai
+ * luồng: `auth/operation-not-allowed` ở luồng mật khẩu nghĩa là chưa bật
+ * Email/Password, còn ở đây nghĩa là chưa bật provider Google — chỉ đúng một
+ * câu, và câu sai thì người quản trị đi tìm nhầm chỗ trong Console.
+ */
+const describeGoogleError = (code) => {
+  const is = (...prefixes) => prefixes.some((p) => String(code || '').startsWith(p));
 
-export default function AuthModal({ 
-  isOpen, 
-  onClose, 
+  if (is('auth/popup-closed-by-user', 'auth/user-cancelled')) {
+    return 'Bạn đã đóng cửa sổ Google trước khi chọn xong tài khoản. Bấm lại để thử tiếp.';
+  }
+  if (is('auth/cancelled-popup-request')) {
+    return 'Bạn bấm hai lần liên tiếp nên lần trước bị huỷ. Bấm lại một lần nữa nhé.';
+  }
+  if (is('auth/operation-not-allowed')) {
+    return 'Đăng nhập bằng Google chưa được bật cho ứng dụng: Firebase Console → Authentication → Sign-in method → Google. Đây là lỗi cài đặt, không phải do tài khoản của bạn.';
+  }
+  if (is('auth/unauthorized-domain')) {
+    return 'Tên miền của trang này chưa được khai báo trong Firebase Console → Authentication → Settings → Authorized domains. Đây là lỗi cài đặt, không phải do tài khoản của bạn.';
+  }
+  if (is('auth/account-exists-with-different-credential')) {
+    return 'Email này đã có tài khoản đăng ký bằng mật khẩu. Vui lòng đăng nhập bằng Email + Mật khẩu như trước.';
+  }
+  if (is('auth/network-request-failed')) {
+    return 'Không kết nối được máy chủ Google. Kiểm tra đường truyền rồi thử lại.';
+  }
+  if (is('auth/popup-blocked')) {
+    return 'Trình duyệt đang chặn cửa sổ đăng nhập Google. Cho phép pop-up cho trang này rồi thử lại, hoặc mở trang bằng Chrome/Safari.';
+  }
+  if (is('auth/internal-error')) {
+    return 'Google trả về lỗi nội bộ. Thử lại sau ít phút; nếu vẫn vậy, vui lòng báo Ban Quản Trị.';
+  }
+  return code
+    ? `Không đăng nhập được bằng Google. Mã lỗi: ${code}`
+    : 'Không đăng nhập được bằng Google. Vui lòng thử lại.';
+};
+
+export default function AuthModal({
+  isOpen,
+  onClose,
   onLoginSuccess,
   onReturnHome,
+  googleErrorCode,
   t
 }) {
   const textDict = t || {
@@ -159,6 +189,11 @@ export default function AuthModal({
   React.useEffect(() => {
     if (isOpen) {
       purgeDemoAccountsFromStorage();
+      // Lỗi của lần đăng nhập Google bằng cách chuyển trang: App.jsx nhặt được
+      // lúc khởi động rồi mở lại modal này để báo. Nếu không hiện ra thì học
+      // viên quay về đúng màn hình cũ, không có phiên đăng nhập và không hiểu
+      // vì sao.
+      if (googleErrorCode) setErrorMsg(describeGoogleError(googleErrorCode));
       try {
         const savedEmail = localStorage.getItem('dmm_remembered_email');
         const savedChoice = localStorage.getItem('dmm_remember_me_choice');
@@ -170,7 +205,7 @@ export default function AuthModal({
         }
       } catch (e) {}
     }
-  }, [isOpen]);
+  }, [isOpen, googleErrorCode]);
 
   if (!isOpen) return null;
 
@@ -226,6 +261,63 @@ export default function AuthModal({
         localStorage.setItem('dmm_remember_me_choice', 'false');
       }
     } catch (e) {}
+  };
+
+  /**
+   * Đăng nhập bằng tài khoản Google.
+   *
+   * KHÔNG có nhánh dự phòng localStorage như luồng mật khẩu — và không thể có:
+   * xác thực nằm hoàn toàn ở phía Google, mất mạng là không có cách nào biết
+   * người bấm nút có thật sự sở hữu email đó không. Vì vậy mọi thất bại ở đây
+   * đều dừng lại và báo lý do, thay vì âm thầm cho vào bằng một tài khoản tạm.
+   *
+   * Hồ sơ CHƯA được ghi lên Firestore ở bước này. Google không trả về số điện
+   * thoại và ngành nghề, nên ghi ngay sẽ tạo ra một hồ sơ khuyết trên máy chủ.
+   * Việc ghi để dành cho CompleteProfileModal, sau khi học viên điền nốt.
+   */
+  const handleGoogleSignIn = async () => {
+    setErrorMsg('');
+    setSuccessMsg('');
+    setIsLoading(true);
+
+    const result = await signInWithGoogle();
+
+    // Trình duyệt đang chuyển sang trang đăng nhập của Google. Không tắt trạng
+    // thái chờ và không báo gì cả — trang này sắp bị rời khỏi.
+    if (result.pending) return;
+
+    if (!result.ok) {
+      setErrorMsg(describeGoogleError(result.code));
+      setIsLoading(false);
+      return;
+    }
+
+    const fbUser = result.user;
+    const studentUser = {
+      id: fbUser.uid,
+      email: fbUser.email,
+      name: (fbUser.displayName || fbUser.email.split('@')[0]).toUpperCase(),
+      // Hai trường Google không có. Để nguyên giá trị giữ chỗ ở đây là CỐ Ý:
+      // đó chính là dấu hiệu để chốt chặn trong App.jsx bật màn hình hoàn tất
+      // hồ sơ lên. Bịa một số điện thoại giả vào đây là vô hiệu hoá cả bước đó.
+      phone: 'Chưa cập nhật',
+      industry: '',
+      avatarUrl: fbUser.photoURL || '',
+      createdAt: new Date().toLocaleDateString('vi-VN')
+    };
+
+    try {
+      if (rememberMe && fbUser.email) {
+        localStorage.setItem('dmm_remembered_email', fbUser.email);
+        localStorage.setItem('dmm_remember_me_choice', 'true');
+      }
+    } catch (e) {}
+
+    setSuccessMsg('🟢 Đăng nhập Google thành công!');
+    setTimeout(() => {
+      onLoginSuccess(studentUser);
+      onClose();
+    }, 500);
   };
 
   const handleLogin = async (e) => {
@@ -551,6 +643,47 @@ export default function AuthModal({
             <span>{successMsg}</span>
           </div>
         )}
+
+        {/* Đăng nhập nhanh bằng tài khoản Google.
+            Đặt TRƯỚC form: đây là đường vào nhanh nhất (không phải nghĩ mật
+            khẩu, không quên mật khẩu), nên để dưới cùng là phần lớn học viên
+            không nhìn thấy. */}
+        <div className="space-y-2">
+          <button
+            type="button"
+            onClick={handleGoogleSignIn}
+            disabled={isLoading}
+            className="w-full py-3 rounded-xl bg-white hover:bg-slate-100 text-slate-800 font-extrabold text-xs shadow-lg transition cursor-pointer flex items-center justify-center gap-2.5 disabled:opacity-60"
+          >
+            <svg className="w-4 h-4 shrink-0" viewBox="0 0 48 48" aria-hidden="true">
+              <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+              <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+              <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+              <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+            </svg>
+            <span>{isLoading ? 'Đang Xử Lý...' : 'Đăng nhập bằng Google (Gmail)'}</span>
+          </button>
+
+          {/* Trình duyệt nhúng trong Zalo/Facebook: Google TỪ CHỐI đăng nhập từ
+              đây, không phải lỗi của ứng dụng và không sửa được bằng mã nguồn.
+              Nói trước để học viên khỏi bấm mãi một nút không bao giờ chạy. */}
+          {isInAppBrowser() && (
+            <p className="text-[10px] text-amber-300 leading-relaxed flex items-start gap-1.5 px-0.5">
+              <AlertCircle className="w-3.5 h-3.5 shrink-0 mt-px" />
+              <span>
+                Bạn đang mở trang trong ứng dụng Zalo/Facebook — Google chặn đăng nhập từ đây.
+                Bấm menu <strong>⋮</strong> ở góc màn hình rồi chọn <strong>"Mở bằng trình duyệt"</strong> (Chrome/Safari),
+                hoặc dùng Email + Mật khẩu bên dưới.
+              </span>
+            </p>
+          )}
+
+          <div className="flex items-center gap-3 pt-1">
+            <span className="h-px flex-1 bg-emerald-900/60" />
+            <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">hoặc dùng email</span>
+            <span className="h-px flex-1 bg-emerald-900/60" />
+          </div>
+        </div>
 
         {/* Form Controls */}
         <form onSubmit={mode === 'login' ? handleLogin : handleRegister} className="space-y-3.5">

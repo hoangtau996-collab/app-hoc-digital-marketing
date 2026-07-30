@@ -9,6 +9,7 @@ import CertificateModal from './components/CertificateModal';
 import AIStrategyAdvisor from './components/AIStrategyAdvisor';
 import MobileBottomNav from './components/MobileBottomNav';
 import AuthModal from './components/AuthModal';
+import CompleteProfileModal from './components/CompleteProfileModal';
 import UserProfileModal from './components/UserProfileModal';
 import DigitalGlossary from './components/DigitalGlossary';
 import FeatureMenuBar from './components/FeatureMenuBar';
@@ -43,8 +44,10 @@ import {
   listenToSupportMessages,
   setSupportMessageStatus,
   deleteSupportMessage,
-  saveSurveyToCloud
+  saveSurveyToCloud,
+  consumeGoogleRedirectResult
 } from './firebase';
+import { hasRealPhone } from './utils/industryOptions';
 
 import StudyReminderModal from './components/StudyReminderModal';
 import PipiChat from './components/PipiChat';
@@ -299,6 +302,22 @@ export default function App() {
     }
   });
 
+  /**
+   * Hồ sơ còn khuyết, phải điền nốt mới được vào học.
+   *
+   * Chỉ bật cho tài khoản đăng nhập BẰNG GOOGLE và CHƯA có số điện thoại. Google
+   * không trả về số điện thoại lẫn ngành nghề, nên tài khoản kiểu này chưa từng
+   * đi qua form đăng ký — khác với tài khoản email/mật khẩu vốn đã bắt điền đủ.
+   *
+   * Tính lại sau MỖI lần tải trang, từ dữ liệu máy chủ. Đó là lý do chốt chặn
+   * đặt ở đây chứ không đặt trong AuthModal: đăng nhập bằng cách chuyển trang sẽ
+   * tải lại cả ứng dụng, lúc quay về thì modal đăng nhập đã đóng từ lâu.
+   */
+  const [needsProfileCompletion, setNeedsProfileCompletion] = useState(false);
+
+  // Lỗi của lần đăng nhập Google bằng cách chuyển trang, chuyển vào AuthModal.
+  const [googleAuthError, setGoogleAuthError] = useState('');
+
   // Listen to Firebase Auth state & merge saved profile attributes
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
@@ -311,6 +330,27 @@ export default function App() {
 
         const cloudProfile = await getUserProgressFromCloud(user.uid, user.email);
         const resolvedRole = await resolveAdminRole(user);
+
+        // Tài khoản CHỈ có Google, chưa từng đặt mật khẩu -> chưa từng đi qua
+        // form đăng ký -> chưa có số điện thoại và ngành nghề.
+        //
+        // Tài khoản đã gộp hai phương thức (đăng ký bằng mật khẩu trước, sau đó
+        // đăng nhập bằng Google cùng email) không tính: họ đã điền đủ từ lúc
+        // đăng ký, bắt điền lại là làm phiền vô cớ.
+        const providers = Array.isArray(user.providerData) ? user.providerData : [];
+        const isGoogleOnlyAccount =
+          providers.length > 0 && providers.every((p) => p?.providerId === 'google.com');
+
+        // Bản lưu tại máy CHỈ dùng khi đúng là của người đang đăng nhập. Trên
+        // máy dùng chung, `dmm_active_user` còn là hồ sơ của người trước — lấy
+        // số điện thoại của họ ra dùng thì chốt chặn tưởng hồ sơ đã đủ và cho
+        // qua luôn, học viên mới không bao giờ được hỏi số của mình.
+        const localMatchesUser =
+          normalizeEmail(existingUser?.email) === normalizeEmail(user.email);
+        const knownPhone =
+          (localMatchesUser ? existingUser?.phone : '') || cloudProfile?.phone || '';
+
+        setNeedsProfileCompletion(isGoogleOnlyAccount && !hasRealPhone(knownPhone));
 
         const studentUser = {
           id: user.uid,
@@ -356,9 +396,31 @@ export default function App() {
           mergeCloudSurvey(user.email, cloudProfile.survey);
           setSurveyRevision((n) => n + 1);
         }
+      } else {
+        // Đăng xuất thì hạ chốt chặn xuống, nếu không màn hình hoàn tất hồ sơ
+        // sẽ treo lại trên một phiên không còn tồn tại.
+        setNeedsProfileCompletion(false);
       }
     });
     return () => unsubscribe();
+  }, []);
+
+  /**
+   * Nhặt kết quả của lần đăng nhập Google bằng cách chuyển trang.
+   *
+   * Chạy đúng một lần lúc khởi động. Thành công thì không làm gì — listener
+   * `onAuthStateChanged` ở trên đã lo. Chỉ quan tâm trường hợp THẤT BẠI: đây là
+   * nơi duy nhất lấy được lý do, và không hiện ra thì học viên quay về màn hình
+   * cũ mà không hiểu vì sao mình vẫn chưa đăng nhập được.
+   */
+  useEffect(() => {
+    let cancelled = false;
+    consumeGoogleRedirectResult().then((result) => {
+      if (cancelled || result.ok || !result.code) return;
+      setGoogleAuthError(result.code);
+      setIsAuthOpen(true);
+    });
+    return () => { cancelled = true; };
   }, []);
 
   const [adminCertStudentName, setAdminCertStudentName] = useState("");
@@ -948,6 +1010,29 @@ export default function App() {
     recordStudentAccountToCloud(updatedUser);
   };
 
+  /**
+   * Học viên vừa điền nốt hồ sơ sau khi đăng nhập bằng Google.
+   *
+   * KHÔNG gọi lại recordStudentAccountToCloud ở đây: CompleteProfileModal đã ghi
+   * lên máy chủ và CHỜ kết quả rồi mới báo về. Ghi thêm lần nữa chỉ tốn một vòng
+   * mạng, mà lần này không ai kiểm tra kết quả nên hỏng cũng không biết.
+   *
+   * Vai trò lấy từ state hiện tại chứ không lấy từ đối tượng modal gửi sang.
+   * Quyền quản trị chỉ được cấp ở một chỗ duy nhất là listener
+   * `onAuthStateChanged`, sau khi máy chủ xác nhận — mọi đường khác đều phải coi
+   * là không đáng tin, kể cả đường này.
+   */
+  const handleCompleteProfile = (profile) => {
+    const merged = { ...profile, role: currentUser?.role || 'student' };
+    setCurrentUser(merged);
+    try {
+      localStorage.setItem('dmm_active_user', JSON.stringify(merged));
+      if (merged.name) localStorage.setItem('dmm_student_name', merged.name);
+    } catch (e) {}
+    setNeedsProfileCompletion(false);
+    setIsAuthOpen(false);
+  };
+
   const handleImportBackupData = (importedModules) => {
     if (Array.isArray(importedModules)) {
       setCompletedModules(importedModules);
@@ -1249,13 +1334,25 @@ export default function App() {
       {/* Auth Login / Register Modal */}
       <AuthModal
         isOpen={isAuthOpen}
-        onClose={() => setIsAuthOpen(false)}
+        onClose={() => { setIsAuthOpen(false); setGoogleAuthError(''); }}
         onLoginSuccess={handleLoginSuccess}
         onReturnHome={() => {
           setActiveTab('course');
           setSelectedModuleId(null);
         }}
+        googleErrorCode={googleAuthError}
         t={t}
+      />
+
+      {/* Hoàn tất hồ sơ sau khi đăng nhập bằng Google.
+          Đặt SAU AuthModal và có z-index cao hơn: khi cả hai cùng mở (học viên
+          vừa đăng nhập Google xong, modal đăng nhập chưa kịp đóng), màn hình
+          này phải nằm trên. */}
+      <CompleteProfileModal
+        isOpen={needsProfileCompletion && !!currentUser}
+        user={currentUser}
+        onComplete={handleCompleteProfile}
+        onLogout={handleLogout}
       />
 
       {/* User Profile & Backup Sync Modal */}
