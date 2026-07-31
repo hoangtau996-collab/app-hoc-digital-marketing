@@ -24,7 +24,7 @@ export default function StudyReminderModal({
 
   return (
     <div className="fixed inset-0 z-[80] flex items-center justify-center p-4 bg-slate-950/85 backdrop-blur-md overflow-y-auto">
-      <div className="relative w-full max-w-md glass-panel rounded-3xl border border-amber-500/50 p-6 sm:p-8 shadow-2xl space-y-5 my-8">
+      <div className="relative w-full max-w-md glass-panel rounded-3xl border border-amber-500/50 p-6 sm:p-8 shadow-2xl space-y-5 my-auto">
 
         <button
           onClick={onClose}

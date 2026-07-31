@@ -2036,7 +2036,7 @@ export default function AdminDashboardModal({
         {/* Hộp soạn thư thông báo. */}
         {isNotifyOpen && (
           <div className="fixed inset-0 z-[70] flex items-center justify-center p-4 bg-slate-950/85 backdrop-blur-md overflow-y-auto">
-            <div className="w-full max-w-xl glass-panel rounded-3xl border border-sky-500/50 p-6 shadow-2xl space-y-4 my-8">
+            <div className="w-full max-w-xl glass-panel rounded-3xl border border-sky-500/50 p-6 shadow-2xl space-y-4 my-auto">
               <div className="flex items-start justify-between gap-3">
                 <h3 className="text-base font-black text-white flex items-center gap-2">
                   <Mail className="w-5 h-5 text-sky-400" /> GỬI THƯ THÔNG BÁO

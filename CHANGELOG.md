@@ -10,6 +10,14 @@ TODO — chưa có quy ước đánh phiên bản; cân nhắc gắn thẻ Git k
 
 ## [Chưa phát hành] — 2026-07-31
 
+### Sửa lỗi — Hộp thoại không cuộn lên đầu được
+
+- **Bài tin tức đọc đầy đủ trên laptop không đọc được từ trên xuống.** Mấy đoạn đầu bài bị khuất và không cuộn tới được.
+  - Nguyên nhân là một lỗi kinh điển của flex: hộp ngoài vừa là vùng cuộn (`overflow-y-auto`) vừa canh giữa theo chiều dọc (`items-center`). Khi nội dung cao hơn màn hình, canh giữa đẩy phần tràn ra **đều cả hai đầu** — nhưng thanh cuộn không lùi lên số âm được, nên phần tràn ở trên vĩnh viễn không với tới.
+  - Bản điện thoại né được nhờ `items-start`, còn từ `sm:` trở lên là `sm:items-center` — vì vậy lỗi **chỉ lộ ra trên màn hình rộng**, đúng như báo cáo.
+  - Sửa bằng `my-auto` trên tấm nội dung: lề tự động còn chỗ trống thì canh giữa, hết chỗ thì tự về 0 và nội dung bắt đầu từ trên xuống. Giữ được cả hai hành vi mà không phải dựng lại cấu trúc.
+- **Cùng lỗi đó có ở 9 hộp thoại khác**, đã rà và sửa hết: hồ sơ học viên, chứng nhận, đăng nhập, hoàn tất hồ sơ, nhắc học, khảo sát, hai hộp trong Từ điển số, và hộp xác nhận trong Bảng quản trị. Hai hộp dùng chiều cao cố định (`h-[94vh]`, `h-[92vh]`) tự cuộn bên trong nên không dính lỗi, giữ nguyên.
+
 ### Sửa lỗi — Hồ sơ học viên
 
 - **Nút "Thấu hiểu & Sửa Hồ Sơ" tràn ra ngoài khung hộp thoại.** Khối tên và email bên trái thiếu `min-w-0`, mà một phần tử flex mặc định không co xuống dưới bề rộng nội dung của nó — nên nó giữ nguyên chiều ngang và đẩy nút văng hẳn ra ngoài mép. Có `truncate` bên trong cũng vô ích vì `truncate` chỉ chạy khi phần tử đã bị co lại. Thêm `min-w-0 flex-1`, cho hàng tiêu đề `flex-wrap`, và `pr-12` để chừa chỗ cho nút đóng đang nằm đè ở góc trên bên phải.

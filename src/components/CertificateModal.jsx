@@ -258,7 +258,7 @@ export default function CertificateModal({
 
   return (
     <div className="fixed inset-0 z-[70] flex items-center justify-center p-3 sm:p-4 bg-slate-950/85 backdrop-blur-md overflow-y-auto">
-      <div className="relative w-full max-w-4xl glass-panel rounded-3xl border border-emerald-500/40 p-4 sm:p-8 md:p-10 shadow-2xl space-y-6">
+      <div className="relative w-full max-w-4xl my-auto glass-panel rounded-3xl border border-emerald-500/40 p-4 sm:p-8 md:p-10 shadow-2xl space-y-6">
         
         {/* Top Right Close Button */}
         <button

@@ -477,15 +477,16 @@ export default function LiveNewsFeed({ newsList, onAddNewNews }) {
         </div>
       )}
 
-      {/* CỬA SỔ CHI TIẾT BÀI VIẾT */}
+      {/* CỬA SỔ CHI TIẾT BÀI VIẾT
+
+          `my-auto` trên tấm nội dung là thứ giữ cho bài dài đọc được từ đầu.
+          Hộp ngoài vừa cuộn vừa canh giữa bằng flex; khi bài cao hơn màn hình,
+          canh giữa đẩy phần đầu tràn LÊN TRÊN mép vùng cuộn, mà thanh cuộn thì
+          không lùi lên âm được — kết quả là mấy đoạn đầu bài vĩnh viễn không với
+          tới. Lề tự động thì khác: còn chỗ trống nó canh giữa, hết chỗ nó tự về
+          0 và bài bắt đầu từ trên xuống. Trước đây bản điện thoại né được nhờ
+          `items-start`, nên lỗi chỉ lộ ra trên màn hình rộng. */}
       {openNews && (
-        {/* `my-auto` trên tấm nội dung là thứ giữ cho bài dài đọc được từ đầu.
-            Hộp ngoài vừa cuộn vừa canh giữa bằng flex; khi bài cao hơn màn hình,
-            canh giữa đẩy phần đầu tràn LÊN TRÊN mép vùng cuộn, mà thanh cuộn thì
-            không lùi lên âm được — kết quả là mấy đoạn đầu bài vĩnh viễn không
-            với tới. Lề tự động thì khác: còn chỗ trống nó canh giữa, hết chỗ nó
-            tự về 0 và bài bắt đầu từ trên xuống. Trước đây bản điện thoại né được
-            nhờ `items-start`, nên lỗi chỉ hiện trên màn hình rộng. */}
         <div
           className="fixed inset-0 z-50 flex items-start sm:items-center justify-center p-3 sm:p-4 bg-slate-950/85 backdrop-blur-md overflow-y-auto"
           onClick={() => setOpenNews(null)}

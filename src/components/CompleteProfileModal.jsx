@@ -134,7 +134,7 @@ export default function CompleteProfileModal({ isOpen, user, onComplete, onLogou
 
   return (
     <div className="fixed inset-0 z-[60] flex items-center justify-center p-4 bg-slate-950/90 backdrop-blur-md overflow-y-auto">
-      <div className="relative w-full max-w-md glass-panel rounded-3xl border border-emerald-500/40 p-6 sm:p-8 shadow-2xl space-y-5 my-8">
+      <div className="relative w-full max-w-md glass-panel rounded-3xl border border-emerald-500/40 p-6 sm:p-8 shadow-2xl space-y-5 my-auto">
 
         <div className="text-center space-y-1.5">
           <div className="flex justify-center mb-1">
