@@ -1,19 +1,34 @@
 import React, { useState } from 'react';
-import { 
-  Calculator, 
-  DollarSign, 
-  Users, 
-  BarChart, 
-  PieChart, 
-  TrendingUp, 
-  CheckCircle2, 
-  Sparkles,
-  Download
-} from 'lucide-react';
+import { Calculator, DollarSign, Users, PieChart, TrendingUp } from 'lucide-react';
 import { INDUSTRY_BENCHMARKS, STAFF_ROLES } from '../data/toolsData';
+import {
+  FunnelBudgetTool,
+  MarketSizeTool,
+  VideoAdDiagnosticTool,
+  AttributionReconcileTool,
+  LtvCacTool,
+} from './MarketingFormulaTools';
+
+/**
+ * Danh sách công cụ khai báo tập trung thay vì viết cứng từng nút.
+ *
+ * Ba công cụ đầu tính trên bảng tham chiếu ngành trong toolsData nên nằm ngay
+ * trong file này. Năm công cụ sau chỉ tính trên số liệu người dùng tự nhập nên
+ * đặt ở MarketingFormulaTools, xem ghi chú đầu file đó.
+ */
+const TOOLS = [
+  { id: 'budget', label: 'Phân Bổ Ngân Sách' },
+  { id: 'roas', label: 'Hòa Vốn ROAS' },
+  { id: 'staff', label: 'Định Biên Nhân Sự' },
+  { id: 'funnel', label: 'Ngân Sách Ngược Phễu' },
+  { id: 'market', label: 'TAM / SAM / SOM' },
+  { id: 'video', label: 'Chẩn Đoán Video Ads' },
+  { id: 'attribution', label: 'Đối Chiếu ROAS Đa Kênh' },
+  { id: 'ltv', label: 'LTV / CAC' },
+];
 
 export default function ManagerTools() {
-  const [activeTool, setActiveTool] = useState('budget'); // 'budget', 'staff', 'roas'
+  const [activeTool, setActiveTool] = useState('budget');
 
   // Budget Calculator State
   const [targetRevenue, setTargetRevenue] = useState(1000000000); // 1 Tỷ
@@ -60,37 +75,27 @@ export default function ManagerTools() {
               BỘ CÔNG CỤ QUẢN LÝ DÀNH CHO TRƯỞNG PHÒNG
             </h2>
             <p className="text-xs text-slate-300 mt-1">
-              Tính toán ngân sách, định biên nhân sự và ngưỡng hòa vốn quảng cáo theo dữ liệu thực tế doanh nghiệp.
+              Tám phép tính thực chiến: ngân sách, định biên nhân sự, ngưỡng hòa vốn, quy mô thị trường,
+              chẩn đoán quảng cáo và sức khỏe mô hình kinh doanh.
             </p>
           </div>
+        </div>
 
-          {/* Subtab Toggle */}
-          <div className="flex items-center bg-[#18243d] p-1 rounded-xl border border-emerald-900/40 shrink-0">
+        {/* Thanh chọn công cụ: 8 mục nên phải cho xuống dòng, không ép một hàng */}
+        <div className="flex flex-wrap gap-1.5 bg-[#18243d] p-1.5 rounded-xl border border-emerald-900/40 mt-5">
+          {TOOLS.map((t) => (
             <button
-              onClick={() => setActiveTool('budget')}
-              className={`px-3 py-2 rounded-lg text-xs font-bold transition ${
-                activeTool === 'budget' ? 'bg-emerald-600 text-white shadow' : 'text-slate-400 hover:text-white'
+              key={t.id}
+              onClick={() => setActiveTool(t.id)}
+              className={`px-3 py-2 rounded-lg text-[11px] sm:text-xs font-bold transition ${
+                activeTool === t.id
+                  ? 'bg-emerald-600 text-white shadow'
+                  : 'text-slate-400 hover:text-white hover:bg-slate-800/60'
               }`}
             >
-              Phân Bổ Ngân Sách
+              {t.label}
             </button>
-            <button
-              onClick={() => setActiveTool('roas')}
-              className={`px-3 py-2 rounded-lg text-xs font-bold transition ${
-                activeTool === 'roas' ? 'bg-emerald-600 text-white shadow' : 'text-slate-400 hover:text-white'
-              }`}
-            >
-              Tính Hòa Vốn ROAS
-            </button>
-            <button
-              onClick={() => setActiveTool('staff')}
-              className={`px-3 py-2 rounded-lg text-xs font-bold transition ${
-                activeTool === 'staff' ? 'bg-emerald-600 text-white shadow' : 'text-slate-400 hover:text-white'
-              }`}
-            >
-              Định Biên Nhân Sự
-            </button>
-          </div>
+          ))}
         </div>
       </div>
 
@@ -296,6 +301,13 @@ export default function ManagerTools() {
           </div>
         </div>
       )}
+
+      {/* Công cụ 4 đến 8: chỉ tính trên số liệu người dùng nhập, không dùng bảng ngành */}
+      {activeTool === 'funnel' && <FunnelBudgetTool />}
+      {activeTool === 'market' && <MarketSizeTool />}
+      {activeTool === 'video' && <VideoAdDiagnosticTool />}
+      {activeTool === 'attribution' && <AttributionReconcileTool />}
+      {activeTool === 'ltv' && <LtvCacTool />}
 
     </div>
   );
