@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PMarcomLogo from './PMarcomLogo';
+import { TEXT_SCALES } from '../utils/textScale';
 import {
   Award,
   Search,
@@ -46,6 +47,75 @@ function SupportBell({ onOpen, unread = 0, compact = false }) {
   );
 }
 
+/**
+ * Bảng "Hiển thị": chọn nền Sáng/Tối/Hệ thống và cỡ chữ A- / A / A+.
+ *
+ * VÌ SAO GỘP CHUNG MỘT BẢNG, KHÔNG TÁCH THÀNH NÚT RIÊNG TRÊN HEADER
+ *
+ * Hàng nút bên phải Header đã tràn sẵn trước khi có tính năng cỡ chữ: đo trên
+ * khung 390px thì nội dung hàng rộng 410px, tức nút "Chứng chỉ 0/11" đã bị đẩy
+ * khỏi màn hình (body có `overflow-x: hidden` nên không ai thấy thanh cuộn,
+ * chỉ thấy nút biến mất). Thêm một cụm ba nút A- / A / A+ vào đó đẩy thêm 72px
+ * nữa, mất luôn nút tài khoản.
+ *
+ * Nhét vào bảng đang có thì không tốn thêm một pixel bề ngang nào. Và về mặt
+ * người dùng cũng đúng chỗ hơn: nền tối và cỡ chữ là cùng một câu hỏi — "trang
+ * này hiện ra thế nào cho vừa mắt tôi" — nên nằm cạnh nhau thì người đi tìm
+ * chỉ phải mở một chỗ.
+ */
+function DisplayMenu({ theme, setTheme, textScale, setTextScale, onClose }) {
+  const themeOptions = [
+    { key: 'light', icon: <Sun className="w-3.5 h-3.5 text-amber-400" />, label: 'Sáng (Light)' },
+    { key: 'dark', icon: <Moon className="w-3.5 h-3.5 text-emerald-400" />, label: 'Tối (Dark)' },
+    { key: 'system', icon: <Monitor className="w-3.5 h-3.5 text-teal-400" />, label: 'Hệ thống (Auto)' },
+  ];
+
+  return (
+    <div className="absolute right-0 mt-2 w-52 rounded-xl glass-panel display-menu border border-emerald-500/40 p-1.5 shadow-2xl z-50 space-y-1">
+      {themeOptions.map(opt => (
+        <button
+          key={opt.key}
+          onClick={() => { setTheme(opt.key); onClose(); }}
+          className={`w-full flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-medium transition cursor-pointer ${
+            theme === opt.key ? 'bg-emerald-600 text-white font-bold' : 'text-slate-300 hover:bg-emerald-950'
+          }`}
+        >
+          {opt.icon}
+          <span>{opt.label}</span>
+        </button>
+      ))}
+
+      <div className="pt-1.5 mt-1.5 border-t border-emerald-900/60">
+        <div className="px-3 pb-1.5 text-[10px] font-extrabold uppercase tracking-wider text-slate-500">
+          Cỡ chữ
+        </div>
+        {/* Không đóng bảng sau khi bấm: chọn cỡ chữ là việc phải nhìn kết quả
+            rồi cân nhắc lại, khác với chọn nền. Đóng ngay thì muốn thử nấc kế
+            tiếp lại phải mở bảng từ đầu. */}
+        <div className="flex items-center gap-1 px-1.5">
+          {TEXT_SCALES.map(scale => (
+            <button
+              key={scale.value}
+              onClick={() => setTextScale(scale.value)}
+              title={scale.title}
+              aria-pressed={textScale === scale.value}
+              className={`flex-1 py-1.5 rounded-lg font-extrabold leading-none transition cursor-pointer ${
+                scale.value === 0.92 ? 'text-[10px]' : scale.value === 1 ? 'text-xs' : 'text-sm'
+              } ${
+                textScale === scale.value
+                  ? 'bg-emerald-600 text-white'
+                  : 'text-slate-400 hover:text-white hover:bg-emerald-950'
+              }`}
+            >
+              {scale.label}
+            </button>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function Header({
   // Bỏ `activeTab` và `newsFeed`: sau khi gỡ nhóm nút điều hướng trùng lặp thì
   // Header không còn cần biết đang ở tab nào, và biến tin mới nhất cũng chưa
@@ -66,6 +136,8 @@ export default function Header({
   supportUnreadCount = 0,
   theme = 'system',
   setTheme = () => {},
+  textScale = 1,
+  setTextScale = () => {},
   trafficStats,
   lang = 'vi',
   toggleLanguage,
@@ -73,8 +145,32 @@ export default function Header({
 }) {
   const [showMobileSearch, setShowMobileSearch] = useState(false);
   const [showThemeMenu, setShowThemeMenu] = useState(false);
+
+  /* Bấm ra ngoài thì đóng bảng Hiển thị.
+
+     Trước đây không cần: bảng chỉ có ba lựa chọn nền, chọn xong là tự đóng nên
+     không bao giờ đứng lại trên màn hình. Nay hàng cỡ chữ CỐ Ý không đóng bảng
+     (còn phải thử nấc khác), nên nếu không có chỗ này thì bảng nằm lì cho tới
+     khi người dùng đoán ra là phải bấm lại đúng cái nút đã mở nó.
+
+     `mousedown` chứ không `click`: nút mở bảng nằm ngoài vùng bảng, nên với
+     `click` thì thao tác bấm nút để đóng sẽ chạy hai lần — đóng ở đây rồi mở
+     lại ở onClick của nút, kết quả là bảng không bao giờ đóng được.
+
+     Nhận diện bằng `data-display-menu` thay vì ref: Header dựng bảng này hai
+     lần (một bản desktop, một bản điện thoại), một ref chỉ trỏ được vào một
+     bản nên bản kia sẽ bị coi là "bấm ra ngoài" và đóng ngay khi vừa chạm. */
+  useEffect(() => {
+    if (!showThemeMenu) return;
+    const handler = (e) => {
+      if (!e.target.closest?.('[data-display-menu]')) setShowThemeMenu(false);
+    };
+    document.addEventListener('mousedown', handler);
+    return () => document.removeEventListener('mousedown', handler);
+  }, [showThemeMenu]);
   const textDict = t || {};
   const overallProgress = totalModules > 0 ? Math.round((passedCount / totalModules) * 100) : 0;
+
 
   return (
     <header className="sticky top-0 z-40 bg-[#0e1526]/95 backdrop-blur-md border-b border-emerald-900/40 px-3 sm:px-6 py-2.5">
@@ -141,7 +237,7 @@ export default function Header({
           )}
 
           {/* Theme Customization Toggle Button */}
-          <div className="relative shrink-0">
+          <div className="relative shrink-0" data-display-menu>
             <button
               onClick={() => setShowThemeMenu(!showThemeMenu)}
               title="Tuỳ chỉnh Giao diện: Sáng / Tối / Mặc định hệ thống"
@@ -152,37 +248,12 @@ export default function Header({
               {theme === 'system' && <Monitor className="w-4 h-4 text-teal-400" />}
             </button>
 
-            {/* Dropdown Menu */}
             {showThemeMenu && (
-              <div className="absolute right-0 mt-2 w-44 rounded-xl glass-panel border border-emerald-500/40 p-1.5 shadow-2xl z-50 space-y-1">
-                <button
-                  onClick={() => { setTheme('light'); setShowThemeMenu(false); }}
-                  className={`w-full flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-medium transition cursor-pointer ${
-                    theme === 'light' ? 'bg-emerald-600 text-white font-bold' : 'text-slate-300 hover:bg-emerald-950'
-                  }`}
-                >
-                  <Sun className="w-3.5 h-3.5 text-amber-400" />
-                  <span>Sáng (Light)</span>
-                </button>
-                <button
-                  onClick={() => { setTheme('dark'); setShowThemeMenu(false); }}
-                  className={`w-full flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-medium transition cursor-pointer ${
-                    theme === 'dark' ? 'bg-emerald-600 text-white font-bold' : 'text-slate-300 hover:bg-emerald-950'
-                  }`}
-                >
-                  <Moon className="w-3.5 h-3.5 text-emerald-400" />
-                  <span>Tối (Dark)</span>
-                </button>
-                <button
-                  onClick={() => { setTheme('system'); setShowThemeMenu(false); }}
-                  className={`w-full flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-medium transition cursor-pointer ${
-                    theme === 'system' ? 'bg-emerald-600 text-white font-bold' : 'text-slate-300 hover:bg-emerald-950'
-                  }`}
-                >
-                  <Monitor className="w-3.5 h-3.5 text-teal-400" />
-                  <span>Hệ thống (Auto)</span>
-                </button>
-              </div>
+              <DisplayMenu
+                theme={theme} setTheme={setTheme}
+                textScale={textScale} setTextScale={setTextScale}
+                onClose={() => setShowThemeMenu(false)}
+              />
             )}
           </div>
 
@@ -250,16 +321,32 @@ export default function Header({
             <SupportBell onOpen={onOpenSupportInbox} unread={supportUnreadCount} compact />
           )}
 
-          {/* Quick Theme toggle icon for mobile */}
-          <button
-            onClick={() => setTheme(theme === 'dark' ? 'light' : theme === 'light' ? 'system' : 'dark')}
-            className="w-8 h-8 rounded-lg bg-[#18243d] border border-emerald-900/50 flex items-center justify-center text-slate-300"
-            title="Tuỳ chỉnh giao diện"
-          >
-            {theme === 'light' && <Sun className="w-4 h-4 text-amber-400" />}
-            {theme === 'dark' && <Moon className="w-4 h-4 text-emerald-400" />}
-            {theme === 'system' && <Monitor className="w-4 h-4 text-teal-400" />}
-          </button>
+          {/* Nút Hiển thị cho điện thoại.
+
+              Trước đây nút này đảo vòng Tối -> Sáng -> Hệ thống ngay khi bấm.
+              Nay nó mở đúng bảng mà bản desktop dùng, vì cỡ chữ không thể nhét
+              vào một nút đảo vòng — và vì đảo vòng vốn đã khó dùng: muốn về
+              Sáng từ Hệ thống phải bấm hai lần và đoán xem còn mấy nhịp nữa.
+              Bảng hiện cả ba lựa chọn cùng lúc, bấm một lần là tới nơi. */}
+          <div className="relative shrink-0" data-display-menu>
+            <button
+              onClick={() => setShowThemeMenu(!showThemeMenu)}
+              className="w-8 h-8 rounded-lg bg-[#18243d] border border-emerald-900/50 flex items-center justify-center text-slate-300"
+              title="Hiển thị: nền sáng/tối và cỡ chữ"
+            >
+              {theme === 'light' && <Sun className="w-4 h-4 text-amber-400" />}
+              {theme === 'dark' && <Moon className="w-4 h-4 text-emerald-400" />}
+              {theme === 'system' && <Monitor className="w-4 h-4 text-teal-400" />}
+            </button>
+
+            {showThemeMenu && (
+              <DisplayMenu
+                theme={theme} setTheme={setTheme}
+                textScale={textScale} setTextScale={setTextScale}
+                onClose={() => setShowThemeMenu(false)}
+              />
+            )}
+          </div>
 
           {currentUser ? (
             <button

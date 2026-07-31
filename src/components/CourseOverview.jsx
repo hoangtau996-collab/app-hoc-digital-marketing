@@ -16,8 +16,10 @@ import {
   Eye,
   Tag,
   Gift,
-  Activity
+  Activity,
+  Lock
 } from 'lucide-react';
+import { getBlockingModule } from '../utils/moduleGating';
 
 export default function CourseOverview({ 
   modules, 
@@ -232,29 +234,44 @@ export default function CourseOverview({
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {filteredModules.map((mod) => {
           const isCompleted = completedModules.includes(mod.id);
+          // Tính trên danh sách ĐẦY ĐỦ, không phải filteredModules: khi học viên
+          // đang lọc hoặc tìm kiếm thì chuyên đề liền trước có thể không nằm
+          // trong kết quả, lấy theo danh sách đã lọc sẽ ra thứ tự sai.
+          const blocker = getBlockingModule(modules, mod.id, completedModules);
+          const isLocked = !!blocker;
 
           return (
             <div
               key={mod.id}
               onClick={() => onSelectModule(mod.id)}
-              className="glass-panel glass-panel-hover rounded-2xl p-6 border border-emerald-900/40 cursor-pointer transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
+              className={`glass-panel rounded-2xl p-6 border cursor-pointer transition-all duration-300 flex flex-col justify-between group relative overflow-hidden ${
+                isLocked
+                  ? 'border-slate-700/60 opacity-70 hover:opacity-100'
+                  : 'glass-panel-hover border-emerald-900/40'
+              }`}
             >
               {/* Top Bar */}
               <div>
                 <div className="flex items-center justify-between gap-2 mb-3">
-                  <span className="text-3xl font-black text-emerald-400 tracking-tighter group-hover:scale-110 transition duration-300">
+                  <span className={`text-3xl font-black tracking-tighter transition duration-300 ${
+                    isLocked ? 'text-slate-400' : 'text-emerald-400 group-hover:scale-110'
+                  }`}>
                     {mod.number}.
                   </span>
-                  
+
                   <div className="flex items-center gap-2">
                     <span className="text-[10px] uppercase font-bold px-2 py-0.5 rounded-full bg-emerald-950 text-emerald-400 border border-emerald-800/60">
                       {mod.badge}
                     </span>
-                    {isCompleted && (
+                    {isCompleted ? (
                       <span className="flex items-center gap-1 text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-400/40">
                         <CheckCircle2 className="w-3 h-3 text-emerald-400" /> Đã Đạt
                       </span>
-                    )}
+                    ) : isLocked ? (
+                      <span className="flex items-center gap-1 text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-amber-950 text-amber-300 border border-amber-700/60">
+                        <Lock className="w-3 h-3" /> Chưa mở
+                      </span>
+                    ) : null}
                   </div>
                 </div>
 
@@ -278,9 +295,16 @@ export default function CourseOverview({
                   </span>
                 </div>
 
-                <span className="flex items-center gap-1 text-emerald-400 font-bold group-hover:translate-x-1 transition">
-                  Vào Học <ChevronRight className="w-4 h-4" />
-                </span>
+                {isLocked ? (
+                  <span className="flex items-center gap-1 text-amber-300 font-bold text-[11px] text-right leading-snug">
+                    <Lock className="w-3.5 h-3.5 shrink-0" />
+                    Cần đạt Chuyên đề {blocker.number}
+                  </span>
+                ) : (
+                  <span className="flex items-center gap-1 text-emerald-400 font-bold group-hover:translate-x-1 transition">
+                    Vào Học <ChevronRight className="w-4 h-4" />
+                  </span>
+                )}
               </div>
             </div>
           );

@@ -10,6 +10,7 @@ import {
   GraduationCap,
   Lock
 } from 'lucide-react';
+import { isModuleUnlocked, getBlockingModule } from '../utils/moduleGating';
 
 export default function Sidebar({
   modules,
@@ -48,6 +49,7 @@ export default function Sidebar({
             {modules.map((mod) => {
               const isCompleted = completedModules.includes(mod.id);
               const isSelected = activeTab === 'course' && selectedModuleId === mod.id;
+              const isLocked = !isModuleUnlocked(modules, mod.id, completedModules);
 
               return (
                 <button
@@ -61,9 +63,12 @@ export default function Sidebar({
                       ? 'bg-emerald-500 text-slate-950 shadow-md font-extrabold'
                       : isCompleted
                       ? 'glass-panel text-emerald-400 border border-emerald-500/50'
+                      : isLocked
+                      ? 'glass-panel text-slate-400 border border-slate-700/60'
                       : 'glass-panel text-slate-200 hover:text-emerald-400 border border-emerald-900/40'
                   }`}
                 >
+                  {isLocked && <Lock className="w-3 h-3 text-amber-400 shrink-0" />}
                   <span>{mod.number}.</span>
                   <span className="truncate max-w-[120px]">{mod.title}</span>
                   {isCompleted && <CheckCircle2 className="w-3 h-3 text-emerald-400 shrink-0" />}
@@ -77,6 +82,7 @@ export default function Sidebar({
             {modules.map((mod) => {
               const isCompleted = completedModules.includes(mod.id);
               const isSelected = activeTab === 'course' && selectedModuleId === mod.id;
+              const isLocked = !isModuleUnlocked(modules, mod.id, completedModules);
 
               return (
                 <button
@@ -84,15 +90,20 @@ export default function Sidebar({
                   onClick={() => {
                     setActiveTab('course');
                     onSelectModule(mod.id);
-                    setIsMobileExpanded(false);
+                    // Chuyên đề còn khoá thì giữ danh sách mở, để học viên thấy
+                    // ngay chuyên đề nào đang chặn thay vì bị đóng lại.
+                    if (!isLocked) setIsMobileExpanded(false);
                   }}
                   className={`w-full text-left p-2 rounded-xl transition flex items-center justify-between text-xs ${
                     isSelected
                       ? 'bg-emerald-600 text-slate-950 font-bold'
+                      : isLocked
+                      ? 'bg-slate-900/30 text-slate-400 border border-slate-700/60'
                       : 'bg-emerald-950/20 text-slate-200 border border-emerald-900/40'
                   }`}
                 >
                   <div className="flex items-center gap-2 min-w-0">
+                    {isLocked && <Lock className="w-3.5 h-3.5 text-amber-400 shrink-0" />}
                     <span className="font-bold">{mod.number}.</span>
                     <span className="truncate">{mod.title}</span>
                   </div>
@@ -122,6 +133,8 @@ export default function Sidebar({
           {modules.map((mod) => {
             const isCompleted = completedModules.includes(mod.id);
             const isSelected = activeTab === 'course' && selectedModuleId === mod.id;
+            const blocker = getBlockingModule(modules, mod.id, completedModules);
+            const isLocked = !!blocker;
 
             return (
               <button
@@ -130,9 +143,12 @@ export default function Sidebar({
                   setActiveTab('course');
                   onSelectModule(mod.id);
                 }}
+                title={isLocked ? `Cần đạt bài kiểm tra Chuyên đề ${blocker.number}` : undefined}
                 className={`w-full text-left p-2.5 rounded-xl transition flex items-center justify-between group cursor-pointer ${
                   isSelected
                     ? 'bg-gradient-to-r from-emerald-600 to-teal-700 text-white font-bold shadow-md border border-emerald-400'
+                    : isLocked
+                    ? 'glass-panel text-slate-400 border border-slate-700/60'
                     : 'glass-panel text-slate-200 hover:text-emerald-400 border border-emerald-900/40'
                 }`}
               >
@@ -142,24 +158,38 @@ export default function Sidebar({
                       ? 'bg-emerald-500 text-slate-950 font-black'
                       : isSelected
                       ? 'bg-emerald-400/20 text-emerald-300 border border-emerald-400/40'
+                      : isLocked
+                      ? 'bg-slate-900/50 text-amber-400 border border-slate-700/60'
                       : 'bg-emerald-950/40 text-emerald-400 border border-emerald-800/40'
                   }`}>
-                    {isCompleted ? <CheckCircle2 className="w-4 h-4 stroke-[3]" /> : mod.number}
+                    {isCompleted ? (
+                      <CheckCircle2 className="w-4 h-4 stroke-[3]" />
+                    ) : isLocked ? (
+                      <Lock className="w-3.5 h-3.5" />
+                    ) : (
+                      mod.number
+                    )}
                   </div>
 
                   <div className="min-w-0">
-                    <h4 className="text-xs font-bold truncate group-hover:text-emerald-400 transition">
+                    <h4 className={`text-xs font-bold truncate transition ${
+                      isLocked ? '' : 'group-hover:text-emerald-400'
+                    }`}>
                       {mod.number}. {mod.title}
                     </h4>
                     <p className="text-[11px] text-slate-400 truncate">
-                      {mod.subtitle}
+                      {isLocked ? `Cần đạt Chuyên đề ${blocker.number} trước` : mod.subtitle}
                     </p>
                   </div>
                 </div>
 
-                <ChevronRight className={`w-4 h-4 text-slate-400 transition group-hover:translate-x-0.5 ${
-                  isSelected ? 'text-emerald-300' : ''
-                }`} />
+                {isLocked ? (
+                  <Lock className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+                ) : (
+                  <ChevronRight className={`w-4 h-4 text-slate-400 transition group-hover:translate-x-0.5 ${
+                    isSelected ? 'text-emerald-300' : ''
+                  }`} />
+                )}
               </button>
             );
           })}

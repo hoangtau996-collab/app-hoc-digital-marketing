@@ -10,10 +10,11 @@ import {
   Clock, 
   ArrowLeft, 
   ArrowRight, 
-  CheckCircle2, 
-  Sparkles, 
+  CheckCircle2,
+  Sparkles,
   Zap,
-  ChevronRight
+  ChevronRight,
+  Lock
 } from 'lucide-react';
 import QuizComponent from './QuizComponent';
 import DigitalGlossary from './DigitalGlossary';
@@ -102,13 +103,14 @@ function parseInlineBold(str) {
 // Visual Diagrams & Infographics renderer for each lesson section
 // Sơ đồ minh hoạ nay tra theo sectionId trong src/data/lessonVisuals.js
 
-export default function LessonViewer({ 
-  module, 
-  onBack, 
-  onNextModule, 
-  onPrevModule, 
-  onPassModule, 
-  isCompleted 
+export default function LessonViewer({
+  module,
+  onBack,
+  onNextModule,
+  onPrevModule,
+  onPassModule,
+  isCompleted,
+  isNextLocked = false
 }) {
   const [activeSubTab, setActiveSubTab] = useState('theory'); // 'theory', 'quiz'
 
@@ -269,7 +271,11 @@ export default function LessonViewer({
           <div className="glass-panel p-6 rounded-2xl border border-emerald-900/40 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div>
               <h4 className="text-sm font-bold text-white">Bạn đã nắm vững lý thuyết bài học này?</h4>
-              <p className="text-xs text-slate-400">Hãy thực hành làm bài test gồm {module.quizCount} câu hỏi tình huống thực tế ngay.</p>
+              <p className="text-xs text-slate-400">
+                {isCompleted
+                  ? `Bạn đã đạt chuyên đề này. Có thể làm lại ${module.quizCount} câu bất cứ lúc nào để ôn tập.`
+                  : `Hãy thực hành làm bài test gồm ${module.quizCount} câu hỏi tình huống thực tế ngay. Đạt bài kiểm tra này mới mở được chuyên đề tiếp theo.`}
+              </p>
             </div>
 
             <button
@@ -305,11 +311,28 @@ export default function LessonViewer({
           <ArrowLeft className="w-4 h-4 text-emerald-400" /> Chuyên đề Trước
         </button>
 
+        {/* Vẫn giữ nút bấm được khi bị khoá, cố ý: bấm vào sẽ hiện thông báo
+            nói rõ cần đạt bài kiểm tra nào. Một nút mờ đi và không phản hồi gì
+            khiến học viên tưởng ứng dụng lỗi. */}
         <button
           onClick={onNextModule}
-          className="px-4 py-2 rounded-xl bg-[#152037] border border-emerald-900/50 hover:border-emerald-600 text-xs text-slate-300 font-semibold flex items-center gap-2 transition"
+          aria-disabled={isNextLocked}
+          title={isNextLocked ? 'Cần đạt bài kiểm tra chuyên đề này trước' : undefined}
+          className={`px-4 py-2 rounded-xl border text-xs font-semibold flex items-center gap-2 transition ${
+            isNextLocked
+              ? 'bg-slate-900/60 border-slate-700 text-slate-400'
+              : 'bg-[#152037] border-emerald-900/50 hover:border-emerald-600 text-slate-300'
+          }`}
         >
-          Chuyên đề Tiếp Theo <ArrowRight className="w-4 h-4 text-emerald-400" />
+          {isNextLocked ? (
+            <>
+              <Lock className="w-4 h-4 text-amber-400" /> Làm bài kiểm tra để mở tiếp
+            </>
+          ) : (
+            <>
+              Chuyên đề Tiếp Theo <ArrowRight className="w-4 h-4 text-emerald-400" />
+            </>
+          )}
         </button>
       </div>
 

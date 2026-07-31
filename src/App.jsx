@@ -48,6 +48,7 @@ import {
   consumeGoogleRedirectResult
 } from './firebase';
 import { hasRealPhone } from './utils/industryOptions';
+import { isModuleUnlocked, getGateMessage } from './utils/moduleGating';
 
 import StudyReminderModal from './components/StudyReminderModal';
 import PipiChat from './components/PipiChat';
@@ -72,10 +73,24 @@ import TradeMarketingCourse from './components/TradeMarketingCourse';
 import { INITIAL_NEWS_ITEMS } from './data/newsData';
 import { compareNewsRecency } from './utils/newsDate';
 import { TRANSLATIONS } from './data/translations';
+import { normalizeTextScale } from './utils/textScale';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('course'); // 'course', 'news', 'tools'
   const [selectedModuleId, setSelectedModuleId] = useState(null); // null = overview, string = module view
+
+  /* CHẾ ĐỘ TẬP TRUNG — mở bài là thu gọn mọi thứ quanh nội dung.
+
+     Biến này chỉ trả lời một câu: học viên có đang chủ động bung lại danh
+     sách chuyên đề hay không. Mặc định `false`, và được đặt lại về `false`
+     mỗi lần đổi bài (xem effect ngay dưới) — nếu không, bung ra một lần là
+     những bài sau cũng mở kèm danh sách, tức chế độ tập trung tự tắt sau
+     lần dùng đầu tiên mà không ai chủ ý tắt nó.
+
+     Effect đặt lại biến này nằm xa bên dưới, cạnh chỗ tính `isFocusMode` —
+     phải chờ tới sau khi `selectedTradeModuleId` được khai báo mới đưa nó
+     vào mảng phụ thuộc được. */
+  const [focusSidebarOpen, setFocusSidebarOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [isCertOpen, setIsCertOpen] = useState(false);
   const [isTradeCertOpen, setIsTradeCertOpen] = useState(false);
@@ -152,6 +167,32 @@ export default function App() {
       applyTheme(theme);
     }
   }, [theme]);
+
+  /* CỠ CHỮ DO HỌC VIÊN TỰ CHỌN — nút A- / A / A+ trên Header
+
+     Ba mức được ghi vào biến CSS `--app-text-scale` ở thẻ <html>; index.css
+     nhân hệ số đó với cỡ chữ mặc định của trình duyệt. Không component nào
+     phải biết tới cơ chế này: mọi cỡ chữ, khoảng đệm, bo góc trong ứng dụng
+     đều tính bằng rem nên tự đi theo cỡ gốc.
+
+     TRẦN TRÊN LÀ 1.12, cố ý thấp. Cao hơn nữa thì bảng học viên trong Bảng
+     Quản Trị — chỗ duy nhất còn dựng cột bằng px — bắt đầu tràn. Ai cần to
+     hơn mức này thì dùng Ctrl+ của trình duyệt: hai cơ chế nhân với nhau chứ
+     không giẫm chân nhau, vì cỡ gốc lấy theo `100%` chứ không ghi cứng 16px. */
+  const [textScale, setTextScale] = useState(() => {
+    try {
+      return normalizeTextScale(localStorage.getItem('dmm_text_scale'));
+    } catch (e) {
+      return 1;
+    }
+  });
+
+  useEffect(() => {
+    try {
+      localStorage.setItem('dmm_text_scale', String(textScale));
+    } catch (e) {}
+    document.documentElement.style.setProperty('--app-text-scale', String(textScale));
+  }, [textScale]);
 
   // Real Web Traffic & Student Statistics (100% Real numbers measured strictly from real data)
   // Khởi tạo đúng bằng mốc khởi điểm, không bằng 0: Cloud trả lời sau khoảng
@@ -750,6 +791,23 @@ export default function App() {
 
   const selectedModule = COURSE_MODULES.find(m => m.id === selectedModuleId);
 
+  /* Đang ở trong một bài học — của khoá chính hay khoá Trade đều tính.
+
+     Điều kiện có cả `activeTab`: `selectedModuleId` không tự xoá khi học viên
+     bấm sang Từ Điển hay Tin Tức, nên chỉ hỏi mỗi nó thì các tab khác cũng bị
+     thu gọn theo, mất luôn danh sách chuyên đề ở những nơi chẳng liên quan. */
+  const isFocusMode =
+    (activeTab === 'course' && !!selectedModule) ||
+    (activeTab === 'trade' && isTradeCourseUnlocked && !!selectedTradeModuleId);
+
+  // Sidebar chỉ biến mất khi đang tập trung VÀ học viên chưa chủ động bung lại.
+  const isSidebarHidden = isFocusMode && !focusSidebarOpen;
+
+  // Đổi bài thì thu gọn trở lại. Xem lý do ở chỗ khai báo `focusSidebarOpen`.
+  useEffect(() => {
+    setFocusSidebarOpen(false);
+  }, [selectedModuleId, selectedTradeModuleId]);
+
   const [migrationNotice, setMigrationNotice] = useState('');
 
   /* ================= HỘP THƯ HỖ TRỢ ==================
@@ -1153,6 +1211,15 @@ export default function App() {
       setIsAuthOpen(true);
       return;
     }
+
+    // Khoá tuần tự: chặn ở tầng hành động chứ không chỉ làm mờ nút. Mọi lối vào
+    // chuyên đề đều đi qua hàm này nên chỉ cần một chốt chặn duy nhất ở đây.
+    const gateMessage = getGateMessage(COURSE_MODULES, id, completedModules);
+    if (gateMessage) {
+      setMigrationNotice(gateMessage);
+      return;
+    }
+
     // Mở một chuyên đề được tính là có học -> đặt lại đồng hồ nhắc.
     markStudyActivity();
     setIsReminderOpen(false);
@@ -1166,9 +1233,20 @@ export default function App() {
 
   const handleNextModule = () => {
     const currentIndex = COURSE_MODULES.findIndex(m => m.id === selectedModuleId);
-    if (currentIndex < COURSE_MODULES.length - 1) {
-      setSelectedModuleId(COURSE_MODULES[currentIndex + 1].id);
+    if (currentIndex < 0 || currentIndex >= COURSE_MODULES.length - 1) return;
+
+    const nextId = COURSE_MODULES[currentIndex + 1].id;
+
+    // Nút "Chuyên đề Tiếp Theo" là lối vào duy nhất không đi qua
+    // handleProtectedSelectModule, nên phải tự kiểm tra ở đây.
+    const gateMessage = getGateMessage(COURSE_MODULES, nextId, completedModules);
+    if (gateMessage) {
+      setMigrationNotice(gateMessage);
+      return;
     }
+
+    markStudyActivity();
+    setSelectedModuleId(nextId);
   };
 
   const handlePrevModule = () => {
@@ -1197,6 +1275,8 @@ export default function App() {
         supportUnreadCount={supportUnreadCount}
         theme={theme}
         setTheme={setTheme}
+        textScale={textScale}
+        setTextScale={setTextScale}
         trafficStats={trafficStats}
         lang={lang}
         toggleLanguage={toggleLanguage}
@@ -1278,22 +1358,53 @@ export default function App() {
       <main className="flex-1 max-w-7xl w-full mx-auto px-3 sm:px-6 lg:px-8 py-4 sm:py-8">
         <div className="flex flex-col lg:flex-row gap-4 sm:gap-8">
           
-          {/* Left Sidebar / Mobile Touch Module Selector */}
-          <Sidebar
-            modules={COURSE_MODULES}
-            selectedModuleId={selectedModuleId}
-            onSelectModule={handleProtectedSelectModule}
-            completedModules={completedModules}
-            activeTab={activeTab}
-            setActiveTab={handleProtectedSelectTab}
-            isTradeCourseUnlocked={isTradeCourseUnlocked}
-            tradePassedCount={completedTradeModules.length}
-            tradeTotalModules={TRADE_MODULES.length}
-          />
+          {/*
+            Left Sidebar / Mobile Touch Module Selector
+
+            Tháo hẳn khỏi cây DOM khi đang tập trung, không phải `hidden`. Trên
+            điện thoại Sidebar nằm TRÊN nội dung bài chứ không nằm bên trái, nên
+            để nó ẩn mà vẫn còn trong luồng thì học viên mở bài xong vẫn phải
+            cuộn qua một danh sách 11 mục mới tới chữ đầu tiên của bài — đúng
+            thứ chế độ tập trung sinh ra để dẹp.
+          */}
+          {!isSidebarHidden && (
+            <Sidebar
+              modules={COURSE_MODULES}
+              selectedModuleId={selectedModuleId}
+              onSelectModule={handleProtectedSelectModule}
+              completedModules={completedModules}
+              activeTab={activeTab}
+              setActiveTab={handleProtectedSelectTab}
+              isTradeCourseUnlocked={isTradeCourseUnlocked}
+              tradePassedCount={completedTradeModules.length}
+              tradeTotalModules={TRADE_MODULES.length}
+            />
+          )}
 
           {/* Main View Area */}
           <div className="flex-1 min-w-0">
-            
+
+            {/*
+              Lối ra khỏi chế độ tập trung.
+
+              Nút Bài trước / Bài sau trong LessonViewer chỉ đi được từng bước
+              một; muốn nhảy từ bài 2 sang bài 9 mà không có nút này thì phải
+              thoát hẳn về trang chủ rồi vào lại. Đặt ngay đầu vùng nội dung để
+              nó là thứ đầu tiên đập vào mắt khi học viên tìm đường quay lại.
+            */}
+            {isFocusMode && (
+              <button
+                onClick={() => setFocusSidebarOpen(!focusSidebarOpen)}
+                className="mb-4 inline-flex items-center gap-2 px-3 py-2 rounded-xl bg-[#18243d] border border-emerald-900/50 hover:border-emerald-500 text-slate-300 hover:text-white text-xs font-bold transition cursor-pointer"
+              >
+                {/* Ký tự thay cho icon: App.jsx không nhập lucide-react ở đâu
+                    cả (nút Đóng của băng thông báo cũng dùng ✕), kéo cả thư
+                    viện icon về chỉ vì một nút thì không đáng. */}
+                <span className="text-emerald-400 text-sm leading-none">{focusSidebarOpen ? '✕' : '☰'}</span>
+                <span>{focusSidebarOpen ? 'Thu gọn để tập trung' : 'Danh sách chuyên đề'}</span>
+              </button>
+            )}
+
             {activeTab === 'course' && (
               selectedModule ? (
                 <div className="space-y-6 sm:space-y-8">
@@ -1304,6 +1415,13 @@ export default function App() {
                     onPrevModule={handlePrevModule}
                     onPassModule={handlePassModule}
                     isCompleted={completedModules.includes(selectedModule.id)}
+                    /* Nút "Tiếp Theo" tự biết mình đang bị khoá để đổi nhãn và
+                       nói rõ điều kiện, thay vì bấm xong mới báo lỗi. */
+                    isNextLocked={(() => {
+                      const i = COURSE_MODULES.findIndex((m) => m.id === selectedModule.id);
+                      const next = COURSE_MODULES[i + 1];
+                      return !!next && !isModuleUnlocked(COURSE_MODULES, next.id, completedModules);
+                    })()}
                   />
 
                   {/* Special AI Consulting Advisor for Module 11 */}
@@ -1349,7 +1467,15 @@ export default function App() {
                   onOpenCertificate={() => requestCertificate('trade')}
                   onGoToMainCourse={() => {
                     setActiveTab('course');
-                    setSelectedModuleId(COURSE_MODULES.find((m) => !completedModules.includes(m.id))?.id ?? null);
+                    // Đưa về chuyên đề dở dang gần nhất, nhưng phải là chuyên đề
+                    // đã mở khoá. Với tiến độ tuần tự hai điều kiện này trùng
+                    // nhau; ràng buộc thêm isModuleUnlocked là để dữ liệu cũ
+                    // ngắt quãng không đẩy học viên vào một chuyên đề còn khoá.
+                    const resumeId = COURSE_MODULES.find(
+                      (m) => !completedModules.includes(m.id)
+                        && isModuleUnlocked(COURSE_MODULES, m.id, completedModules)
+                    )?.id ?? null;
+                    setSelectedModuleId(resumeId);
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                   }}
                 />
@@ -1530,12 +1656,18 @@ export default function App() {
         onOpenProfileModal={() => setIsProfileOpen(true)}
       />
 
-      {/* Footer */}
-      <footer className="border-t border-emerald-950 bg-[#0a1020] py-6 px-4 text-center text-xs text-slate-500">
-        <p>
-          © 2026 HỌC VIỆN P MARCOM. Hệ thống Khóa Học Digital Thực Chiến.
-        </p>
-      </footer>
+      {/* Footer — cắt bỏ trong chế độ tập trung.
+
+          Dòng bản quyền là thứ đóng trang lại. Đặt nó ngay dưới nút "Bài sau"
+          là báo cho học viên rằng đã hết, đúng lúc đáng ra phải mời họ đi
+          tiếp. Trang chủ vẫn còn footer, nên thông tin không mất đi đâu. */}
+      {!isFocusMode && (
+        <footer className="border-t border-emerald-950 bg-[#0a1020] py-6 px-4 text-center text-xs text-slate-500">
+          <p>
+            © 2026 HỌC VIỆN P MARCOM. Hệ thống Khóa Học Digital Thực Chiến.
+          </p>
+        </footer>
+      )}
 
     </div>
   );

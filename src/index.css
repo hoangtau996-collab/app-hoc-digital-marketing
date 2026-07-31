@@ -84,31 +84,62 @@
    giờ nghỉ — 12px là quá nhỏ, và người dùng sẽ không phàn nàn mà chỉ lặng lẽ
    đọc lướt rồi thoát.
 
-   Mức tăng khoảng 8–15%, cố ý vừa phải. Tăng mạnh hơn sẽ vỡ những chỗ bố cục
-   tính theo px như bảng học viên trong Bảng Quản Trị.
-
    Chiều cao dòng tăng theo, không để nguyên: giữ chiều cao cũ với chữ to hơn
    thì các dòng dính vào nhau, đọc còn mệt hơn lúc chữ nhỏ.
+   ============================================================
+
+   GỐC QUY CHIẾU: TẤT CẢ ĐỀU LÀ REM, KHÔNG CÒN PX
+
+   Mọi cỡ chữ dưới đây tính bằng `rem`, tức là bội số của cỡ chữ gốc đặt ở
+   thẻ <html>. Đây là điều kiện bắt buộc để hai thứ sau hoạt động:
+
+     1. Cài đặt cỡ chữ của trình duyệt. Người dùng chỉnh "Font size: Large"
+        trong Chrome/Safari thì cỡ gốc đổi, và cả giao diện đi theo. Nếu ghi
+        cứng bằng px thì trình duyệt bị vô hiệu hoá — người cần chữ to nhất
+        lại là người không chỉnh được gì.
+     2. Nút A- / A / A+ trong Header, đặt biến `--app-text-scale`.
+
+   `calc(100% * var(--app-text-scale, 1))` — dùng `100%` chứ không phải `16px`.
+   `100%` là cỡ chữ mặc định do người dùng đặt trong trình duyệt; nhân với hệ
+   số của ứng dụng thì hai lựa chọn cộng hưởng thay vì cái này đè cái kia.
+   Viết `16px` là xoá luôn lựa chọn của người dùng.
+
+   LƯU Ý KHI SỬA: đổi cỡ gốc kéo theo cả khoảng đệm, bo góc, bề rộng cột —
+   vì Tailwind cũng tính các thứ đó bằng rem. Đó là chủ đích: phóng to là
+   phóng to cả giao diện, không phải chỉ chữ nở ra trong khung cũ. Nhưng nó
+   cũng có nghĩa hệ số quá lớn sẽ vỡ những chỗ bố cục ghi cứng bằng px, như
+   bảng học viên trong Bảng Quản Trị. Vì vậy A+ dừng ở 1.12, không cho cao hơn.
    ============================================================ */
 
-@theme {
-  --text-xs: 0.8125rem;              /* 12px -> 13px */
-  --text-xs--line-height: 1.15rem;
-  --text-sm: 0.9375rem;              /* 14px -> 15px */
-  --text-sm--line-height: 1.4rem;
-  --text-base: 1.0625rem;            /* 16px -> 17px */
-  --text-base--line-height: 1.6rem;
-  --text-lg: 1.1875rem;              /* 18px -> 19px */
-  --text-lg--line-height: 1.75rem;
+html {
+  font-size: calc(100% * var(--app-text-scale, 1));
 }
 
-/* Các cỡ ghi thẳng bằng px trong JSX (`text-[10px]`, `text-[11px]` — gần 200
-   chỗ, chủ yếu là huy hiệu và nhãn phụ). Chúng KHÔNG đi qua token ở trên nên
-   phải nâng riêng, nếu không sẽ thành hai hệ cỡ chữ lệch nhau trong cùng một
-   màn hình. Dấu gạch chéo là để thoát ký tự [ ] trong tên lớp. */
-.text-\[10px\] { font-size: 11.5px; line-height: 1.45; }
-.text-\[11px\] { font-size: 12.5px; line-height: 1.5; }
-.text-\[9px\]  { font-size: 10.5px; line-height: 1.4; }
+@theme {
+  --text-xs: 0.9rem;                 /* 12px -> 14.4px */
+  --text-xs--line-height: 1.3rem;
+  --text-sm: 1.03rem;                /* 14px -> 16.5px */
+  --text-sm--line-height: 1.55rem;
+  --text-base: 1.17rem;              /* 16px -> 18.7px */
+  --text-base--line-height: 1.75rem;
+  --text-lg: 1.31rem;                /* 18px -> 21px */
+  --text-lg--line-height: 1.9rem;
+}
+
+/* Các cỡ ghi thẳng bằng px trong JSX (`text-[10px]`, `text-[11px]`… — 264 chỗ
+   ở 30 tệp, chủ yếu là huy hiệu và nhãn phụ). Chúng KHÔNG đi qua token ở trên
+   nên phải nâng riêng, nếu không sẽ thành hai hệ cỡ chữ lệch nhau trong cùng
+   một màn hình. Dấu gạch chéo là để thoát ký tự [ ] trong tên lớp.
+
+   Sáu lớp, không phải ba: ba cỡ lẻ (9.5 / 10.5 / 11.5px) trước đây bị bỏ sót
+   nên vẫn đứng nguyên bằng px giữa một giao diện đã phóng to — nhỏ hơn hẳn
+   phần còn lại. Nay gom đủ cả sáu vào một thang rem liền mạch. */
+.text-\[9px\]    { font-size: 0.72rem;   line-height: 1.45; }  /* 11.5px */
+.text-\[9\.5px\] { font-size: 0.74rem;   line-height: 1.45; }  /* 11.8px */
+.text-\[10px\]   { font-size: 0.79rem;   line-height: 1.5; }   /* 12.6px */
+.text-\[10\.5px\]{ font-size: 0.8125rem; line-height: 1.5; }   /* 13px   */
+.text-\[11px\]   { font-size: 0.86rem;   line-height: 1.55; }  /* 13.8px */
+.text-\[11\.5px\]{ font-size: 0.88rem;   line-height: 1.55; }  /* 14.1px */
 
 @layer base {
   body {
@@ -277,6 +308,25 @@ html.dark .glass-panel {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(100, 149, 237, 0.24);
+}
+
+/* Bảng "Hiển thị" thả xuống từ Header (nền sáng/tối + cỡ chữ).
+
+   Cùng lý do với .pipi-panel ở trên: bảng neo ngay dưới Header, không có lớp
+   phủ tối phía sau, nên nền kính 82% để nguyên nội dung trang lộ xuyên qua.
+   Trước đây bảng chỉ cao ba dòng nên rơi đúng vào vùng nền trơn và không ai
+   để ý; từ khi thêm hàng cỡ chữ nó dài xuống tới ảnh bìa, và chữ "CỠ CHỮ"
+   nằm đè lên nền ảnh sặc sỡ thì gần như không đọc được. Nền phải đục hẳn. */
+.display-menu {
+  background: #fffdf7;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+html.dark .display-menu {
+  background: #141f36;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 
 .glass-panel-hover:hover {
