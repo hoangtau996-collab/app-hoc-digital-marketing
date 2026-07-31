@@ -10,6 +10,16 @@ TODO — chưa có quy ước đánh phiên bản; cân nhắc gắn thẻ Git k
 
 ## [Chưa phát hành] — 2026-07-31
 
+### Sửa lỗi — Hồ sơ học viên
+
+- **Nút "Thấu hiểu & Sửa Hồ Sơ" tràn ra ngoài khung hộp thoại.** Khối tên và email bên trái thiếu `min-w-0`, mà một phần tử flex mặc định không co xuống dưới bề rộng nội dung của nó — nên nó giữ nguyên chiều ngang và đẩy nút văng hẳn ra ngoài mép. Có `truncate` bên trong cũng vô ích vì `truncate` chỉ chạy khi phần tử đã bị co lại. Thêm `min-w-0 flex-1`, cho hàng tiêu đề `flex-wrap`, và `pr-12` để chừa chỗ cho nút đóng đang nằm đè ở góc trên bên phải.
+- **Học viên đổi ảnh đại diện nhưng hệ thống không ghi nhớ.** Ba nguyên nhân độc lập, sửa cả ba:
+  - **Đồng bộ tiến độ học xoá ảnh trên máy chủ.** `buildStudentPayload` không mang theo `avatarUrl`, trong khi `recordStudentAccountToCloud` ghi ĐÈ cả hồ sơ chứ không ghi từng trường. Nên chỉ cần học viên học xong một bài là ảnh vừa đặt bị đặt về rỗng. Không ai lần ra được, vì thao tác làm mất ảnh lại là **học bài**, chẳng liên quan gì tới hồ sơ.
+  - **Lỗi ghi `localStorage` chặn luôn bước đồng bộ lên máy chủ.** `handleUpdateUserProfile` ghi xuống máy trước, không bọc `try/catch`. Ảnh base64 vượt hạn mức lưu trữ làm lệnh ghi ném lỗi ngay tại dòng đó, hàm dừng, `recordStudentAccountToCloud` không bao giờ chạy — ảnh vừa không lưu ở máy vừa không lên máy chủ. Giao diện thì vẫn hiện ảnh vì `setCurrentUser` đã chạy trước, nên học viên tin là đã lưu. Nay gọi máy chủ TRƯỚC, và mỗi lệnh ghi xuống máy tự chịu trách nhiệm riêng.
+  - **Không hề nén ảnh trước khi lưu.** Ảnh được nhúng thẳng dạng base64 vào hồ sơ, mà chuỗi base64 phình thêm ~33%. Trần cũ cho phép tải ảnh 3MB → chuỗi ~4MB, **luôn luôn vượt** trần 1MB mỗi tài liệu của Firestore. Nghĩa là với ảnh chụp từ điện thoại, việc lưu lên máy chủ chắc chắn hỏng. Nay thu nhỏ về 256×256 và nén JPEG trước khi lưu (`src/utils/avatarImage.js`), còn khoảng 40KB — an toàn ở cả `localStorage` lẫn Firestore, vẫn nét vì chỗ hiển thị lớn nhất chỉ là ô 56×56.
+  - Cắt vuông ở giữa chứ không bóp méo, vì ô hiển thị là hình vuông còn ảnh người dùng chọn thường là khổ dọc chụp từ điện thoại. Ảnh PNG trong suốt được lót nền trắng trước khi chuyển sang JPEG, nếu không phần trong suốt sẽ thành đen kịt.
+  - Xoá giá trị ô chọn tệp sau mỗi lần chọn, để học viên sửa ảnh rồi chọn lại đúng tệp đó vẫn kích hoạt được sự kiện.
+
 ### Thay đổi
 
 - **Màn hình chào rút từ 3 giây xuống 1 giây, và chỉ chào một lần mỗi phiên.** Trước đây mỗi lần bấm F5 là chào lại từ đầu — học viên tải lại trang giữa buổi học phải ngồi chờ thêm 3 giây, mỗi lần.

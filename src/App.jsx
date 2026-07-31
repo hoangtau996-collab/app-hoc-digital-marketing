@@ -505,12 +505,20 @@ export default function App() {
    * của effect kia — thứ vừa sinh ra cảnh báo thiếu dependency, vừa có nguy cơ
    * ghi đè bằng giá trị cũ kẹt trong closure.
    */
+  //
+  // PHẢI mang theo `avatarUrl`. Hàm này dựng dữ liệu cho các lượt đồng bộ tiến
+  // độ học, và `recordStudentAccountToCloud` ghi ĐÈ cả hồ sơ chứ không ghi từng
+  // trường. Thiếu `avatarUrl` ở đây thì nó rơi về chuỗi rỗng, nên chỉ cần học
+  // viên học xong một bài là ảnh đại diện vừa đặt bị xoá sạch trên máy chủ.
+  // Học viên không thể lần ra nguyên nhân, vì việc làm mất ảnh lại là thao tác
+  // học bài, chẳng liên quan gì tới hồ sơ.
   const buildStudentPayload = (user, progressFields = {}) => ({
     id: user.id || user.email.replace(/\./g, '_'),
     name: user.name,
     phone: user.phone || 'Chưa cập nhật',
     email: user.email,
     industry: user.industry || 'Kinh doanh',
+    avatarUrl: user.avatarUrl || '',
     updatedAt: new Date().toISOString(),
     ...progressFields
   });
@@ -1059,11 +1067,31 @@ export default function App() {
     setIsProfileOpen(false);
   };
 
+  /**
+   * Học viên vừa lưu hồ sơ.
+   *
+   * THỨ TỰ Ở ĐÂY LÀ CÓ CHỦ ĐÍCH. Bản trước ghi `localStorage` trước rồi mới gọi
+   * lên máy chủ, và không bọc try/catch. Khi hồ sơ mang theo ảnh đại diện dạng
+   * base64 vượt hạn mức lưu trữ, lệnh ghi ném lỗi ngay tại dòng đó — hàm dừng
+   * lại, `recordStudentAccountToCloud` KHÔNG BAO GIỜ chạy. Hậu quả: ảnh không
+   * lưu được ở máy, cũng không lên được máy chủ, mà giao diện thì vẫn hiện ảnh
+   * vì `setCurrentUser` đã chạy xong trước đó. Học viên tin là đã lưu.
+   *
+   * Nay máy chủ được gọi TRƯỚC, và mỗi lệnh ghi xuống máy tự chịu trách nhiệm
+   * riêng: một khoá hỏng không kéo theo khoá còn lại.
+   */
   const handleUpdateUserProfile = (updatedUser) => {
     setCurrentUser(updatedUser);
-    localStorage.setItem('dmm_active_user', JSON.stringify(updatedUser));
-    localStorage.setItem('dmm_student_name', updatedUser.name);
     recordStudentAccountToCloud(updatedUser);
+
+    try {
+      localStorage.setItem('dmm_active_user', JSON.stringify(updatedUser));
+    } catch (e) {
+      console.warn('Không lưu được hồ sơ xuống máy, hồ sơ vẫn được ghi lên máy chủ.', e);
+    }
+    try {
+      localStorage.setItem('dmm_student_name', updatedUser.name);
+    } catch (e) {}
   };
 
   /**

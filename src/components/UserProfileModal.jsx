@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { getSignInMethods, addPasswordToGoogleAccount } from '../firebase';
 import { requestPasswordReset } from '../utils/requestPasswordReset';
+import { resizeAvatarFile } from '../utils/avatarImage';
 import {
   X,
   User,
@@ -61,21 +62,30 @@ export default function UserProfileModal({
   // của người dùng trước trên máy dùng chung.
   const signInMethods = getSignInMethods();
 
-  const handleAvatarFileChange = (e) => {
+  /**
+   * Nhận tệp ảnh rồi thu nhỏ trước khi đưa vào state.
+   *
+   * Bản trước đọc thẳng tệp gốc thành base64 và nhét nguyên vào hồ sơ. Ảnh 3MB
+   * thành chuỗi hơn 4MB, vượt trần `localStorage` lẫn trần 1MB của tài liệu
+   * Firestore, nên hồ sơ không lưu được — mà học viên vẫn thấy ảnh hiện lên nên
+   * tưởng đã xong. Xem `src/utils/avatarImage.js`.
+   */
+  const handleAvatarFileChange = async (e) => {
     const file = e.target.files[0];
+    // Xoá giá trị của ô chọn tệp để chọn lại đúng tệp vừa rồi vẫn kích hoạt
+    // được sự kiện. Không làm thì người dùng sửa ảnh rồi chọn lại sẽ không thấy
+    // gì xảy ra.
+    e.target.value = '';
     if (!file) return;
 
-    if (file.size > 3 * 1024 * 1024) {
-      setSaveStatus('⚠️ Dung lượng ảnh đại diện tối đa 3MB.');
-      return;
+    setSaveStatus('⏳ Đang xử lý ảnh...');
+    try {
+      const dataUrl = await resizeAvatarFile(file);
+      setAvatarUrl(dataUrl);
+      setSaveStatus('🟢 Đã chọn ảnh đại diện. Bấm Lưu Thay Đổi để ghi nhớ.');
+    } catch (err) {
+      setSaveStatus(`⚠️ ${err.message}`);
     }
-
-    const reader = new FileReader();
-    reader.onload = (event) => {
-      setAvatarUrl(event.target.result);
-      setSaveStatus('🟢 Đã chọn ảnh đại diện thành công!');
-    };
-    reader.readAsDataURL(file);
   };
 
   const handleSaveProfile = (e) => {
@@ -155,9 +165,15 @@ export default function UserProfileModal({
           <X className="w-4 h-4" />
         </button>
 
-        {/* User Card Header */}
-        <div className="flex items-center justify-between border-b border-emerald-900/40 pb-5">
-          <div className="flex items-center gap-4">
+        {/* User Card Header
+            `min-w-0` ở khối bên trái là thứ giữ nút Sửa Hồ Sơ nằm trong khung.
+            Mặc định một phần tử flex không co xuống dưới bề rộng nội dung của
+            nó, nên khối tên và email cứ giữ nguyên chiều ngang và đẩy nút văng
+            hẳn ra ngoài mép hộp thoại. Có `truncate` bên trong cũng vô ích vì
+            nó chỉ chạy khi phần tử đã bị co lại.
+            `pr-12` chừa chỗ cho nút đóng đang nằm đè ở góc trên bên phải. */}
+        <div className="flex items-start justify-between gap-3 flex-wrap border-b border-emerald-900/40 pb-5 pr-12">
+          <div className="flex items-center gap-4 min-w-0 flex-1">
             <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-400 to-emerald-500 flex items-center justify-center text-slate-950 font-black text-xl border-2 border-amber-400/60 shadow-lg shrink-0 overflow-hidden">
               {(avatarUrl || currentUser.avatarUrl) ? (
                 <img src={avatarUrl || currentUser.avatarUrl} alt="Avatar" className="w-full h-full object-cover" />
