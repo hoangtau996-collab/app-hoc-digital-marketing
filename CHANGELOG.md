@@ -10,6 +10,13 @@ TODO — chưa có quy ước đánh phiên bản; cân nhắc gắn thẻ Git k
 
 ## [Chưa phát hành] — 2026-07-31
 
+### Gỡ bỏ
+
+- **Dải "Tin nóng từ nguồn quốc tế" kéo RSS.** Chủ dự án đánh giá không cần thiết. Sau khi bỏ đường dẫn ra trang ngoài, dải này chỉ còn là các tiêu đề tiếng Anh chưa biên tập nằm cạnh phần phân tích tiếng Việt — không đủ giá trị để chiếm chỗ đầu trang.
+  - Gỡ component `GlobalNewsStrip` (104 dòng) khỏi `LiveNewsFeed.jsx`, gỡ chỗ gọi và icon `Globe` không còn dùng.
+  - **Xoá luôn `api/news.js`.** Endpoint này sinh ra chỉ để phục vụ dải tin đó, giữ lại là mã chết. File vẫn nằm trong lịch sử git (commit `3edcc29`) nên lấy lại được nếu đổi ý.
+  - Routine hằng tuần đã cập nhật: thêm ràng buộc chỉ được sửa `src/data/newsData.js` và `CHANGELOG.md`, cấm dựng lại dải tin, và `git status` phải liệt kê đúng hai file đó — có file thứ ba là agent đã đi quá phạm vi.
+
 ### Sửa lỗi — Hộp thoại không cuộn lên đầu được
 
 - **Bài tin tức đọc đầy đủ trên laptop không đọc được từ trên xuống.** Mấy đoạn đầu bài bị khuất và không cuộn tới được.

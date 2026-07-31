@@ -14,7 +14,6 @@ import {
   Info,
   BadgeCheck,
   FlaskConical,
-  Globe,
   X
 } from 'lucide-react';
 import { LIVE_NEWS_SIMULATOR_POOL } from '../data/newsData';
@@ -75,110 +74,6 @@ function NewsCover({ news }) {
   }
 
   return null;
-}
-
-/**
- * Dải tin quốc tế kéo thẳng từ RSS qua /api/news.
- *
- * Đây là tiêu đề nguyên văn tiếng Anh, chưa qua biên tập, nên trình bày gọn
- * dạng thẻ ngang và ghi rõ bản chất — cố ý để không lấn phần bản tin phân tích
- * tiếng Việt bên dưới.
- *
- * Chạy `npm run dev` bằng Vite thì không có hàm máy chủ nên lời gọi này hỏng.
- * Đó là chuyện bình thường ở máy lập trình, không phải sự cố: dải tin tự ẩn đi
- * thay vì bắn lỗi ra màn hình.
- */
-function GlobalNewsStrip() {
-  const [state, setState] = useState({ status: 'loading', items: [], fetchedAt: null });
-
-  useEffect(() => {
-    let alive = true;
-    fetch('/api/news')
-      .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
-      .then((data) => {
-        if (!alive) return;
-        setState({
-          status: data.items?.length ? 'ready' : 'empty',
-          items: data.items || [],
-          fetchedAt: data.fetchedAt || null
-        });
-      })
-      .catch(() => alive && setState({ status: 'empty', items: [], fetchedAt: null }));
-    return () => {
-      alive = false;
-    };
-  }, []);
-
-  if (state.status === 'empty') return null;
-
-  const updatedAt = state.fetchedAt
-    ? new Date(state.fetchedAt).toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' })
-    : null;
-
-  return (
-    <section className="space-y-3">
-      <div className="flex items-center justify-between gap-3 flex-wrap">
-        <div className="flex items-center gap-2">
-          <Globe className="w-4 h-4 text-emerald-400" />
-          <h3 className="text-sm font-bold text-white">Tin nóng từ nguồn quốc tế</h3>
-          <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 border border-emerald-800">
-            TỰ CẬP NHẬT
-          </span>
-        </div>
-        <span className="text-[11px] text-slate-400">
-          {state.status === 'loading'
-            ? 'Đang lấy tin...'
-            : `Tiêu đề nguyên văn tiếng Anh${updatedAt ? ` - lấy lúc ${updatedAt}` : ''}`}
-        </span>
-      </div>
-
-      {state.status === 'loading' ? (
-        <div className="flex gap-3 overflow-hidden">
-          {[0, 1, 2].map((i) => (
-            <div
-              key={i}
-              className="w-64 h-36 shrink-0 rounded-2xl bg-[#152037]/70 border border-emerald-900/40 animate-pulse"
-            />
-          ))}
-        </div>
-      ) : (
-        <div className="flex gap-3 overflow-x-auto pb-2 snap-x">
-          {state.items.map((item) => (
-            <article
-              key={item.id}
-              className="w-64 shrink-0 snap-start rounded-2xl overflow-hidden bg-[#152037]/70 border border-emerald-900/40"
-            >
-              {item.image && (
-                <img
-                  src={item.image}
-                  alt=""
-                  className="w-full h-24 object-cover"
-                  loading="lazy"
-                  referrerPolicy="no-referrer"
-                  onError={(e) => {
-                    e.currentTarget.style.display = 'none';
-                  }}
-                />
-              )}
-              <div className="p-3 space-y-1.5">
-                <div className="flex items-center gap-1.5 text-[10px] text-emerald-400 font-bold">
-                  <Newspaper className="w-3 h-3" />
-                  {item.source}
-                  {item.publishedAt && <span className="text-slate-500 font-normal">- {item.publishedAt}</span>}
-                </div>
-                <p className="text-xs text-slate-200 font-semibold leading-snug line-clamp-3">
-                  {item.title}
-                </p>
-                {item.summary && (
-                  <p className="text-[11px] text-slate-400 leading-relaxed line-clamp-3">{item.summary}</p>
-                )}
-              </div>
-            </article>
-          ))}
-        </div>
-      )}
-    </section>
-  );
 }
 
 /* Nhãn phân biệt tin có nguồn kiểm chứng với kịch bản mô phỏng đào tạo */
@@ -324,9 +219,6 @@ export default function LiveNewsFeed({ newsList, onAddNewNews }) {
           của nền tảng trước khi áp dụng vào chiến dịch thật.
         </p>
       </div>
-
-      {/* Dải tin quốc tế tự cập nhật */}
-      <GlobalNewsStrip />
 
       {/* Filter Tabs */}
       <div className="flex items-center gap-2 overflow-x-auto pb-2 border-b border-emerald-900/40">
