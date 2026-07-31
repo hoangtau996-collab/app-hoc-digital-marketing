@@ -180,9 +180,34 @@ html {
 
    Muốn ảnh cao hơn hay thấp hơn thì sửa hai số chặn, đừng đụng 9.5vw — đổi
    hệ số này là đổi luôn tỉ lệ cắt, ảnh bìa đang thiết kế theo tỉ lệ cũ sẽ lệch.
+
+   Quy tắc này chỉ còn áp cho màn DƯỚI 1024px, nơi đang dùng og-cover-v3.jpg
+   (tỉ lệ 16:9). Từ 1024px trở lên có ảnh riêng, xem khối kế tiếp.
    ======================================================== */
 .app-cover {
   height: clamp(125px, 9.5vw + 95px, 225px);
+}
+
+/* TỪ 1024px: KHÓA ĐÚNG TỈ LỆ ẢNH, KHÔNG CẮT GÌ CẢ
+
+   og-cover-v4 được thiết kế riêng cho màn rộng, tỉ lệ 5024x832 = 6,04:1. Nếu
+   để nó chạy tiếp công thức `clamp()` ở trên thì khung ra 5,40:1 và `object-cover`
+   xén mất 10,5% bề ngang — vừa đúng chỗ cụm bốn icon "KẾT NỐI / HỌC HỎI /
+   THỰC HÀNH / BỨT PHÁ" nằm sát mép phải, nên "BỨT PHÁ" bị cắt cụt. Ở 1024px
+   thì mất 17,3%, tức mất hẳn một icon.
+
+   `aspect-ratio` khoá khung theo đúng tỉ lệ file nên ảnh khớp tuyệt đối ở mọi
+   bề ngang: 1216px thì cao 201px, 960px thì cao 159px. Phải kèm `height: auto`
+   để huỷ giá trị `clamp()` phía trên, nếu không chiều cao cố định sẽ thắng và
+   `aspect-ratio` bị bỏ qua.
+
+   ĐỔI ẢNH BÌA MÀN RỘNG THÌ PHẢI SỬA CON SỐ NÀY cho khớp kích thước file mới,
+   nếu không lại quay về đúng cảnh bị xén. */
+@media (min-width: 1024px) {
+  .app-cover {
+    height: auto;
+    aspect-ratio: 5024 / 832;
+  }
 }
 
 /* Custom Scrollbar */

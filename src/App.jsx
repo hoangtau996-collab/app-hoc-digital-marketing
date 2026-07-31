@@ -1323,17 +1323,40 @@ export default function App() {
         `object-cover` + `object-center` cắt bớt trên dưới và giữ phần giữa —
         đúng phần có khối chữ "P MARCOM ACADEMY". Dùng `object-contain` sẽ ra
         một dải ảnh tí hon nằm giữa hai mảng trống, trông như tải ảnh hỏng.
+
+        HAI FILE ẢNH, KHÔNG PHẢI MỘT
+
+        Khung ảnh bìa dẹt hẳn ở màn rộng (6:1) nhưng dày gần gấp đôi trên điện
+        thoại (2,8:1). Một file không phục vụ được cả hai: ảnh 6:1 nhét vào
+        khung điện thoại thì `object-cover` chỉ giữ lại 46% bề ngang — mất logo
+        bên trái, mất cả bốn icon bên phải, tức quá nửa thiết kế không ai thấy.
+
+        `<picture>` cho trình duyệt tự chọn theo bề ngang màn hình, và nó chọn
+        TRƯỚC khi tải, nên máy nhỏ không tốn băng thông tải file của màn rộng.
+
+        `og-cover-v4.jpg` chuyển từ bản PNG 6,4 MB do thiết kế gửi sang JPG
+        chất lượng 82 (428 KB). File PNG gốc vẫn nằm cạnh trong public/, không
+        xoá — cần dựng lại bản khác thì lấy từ đó. Ảnh này gắn fetchPriority
+        cao nên nó chặn đường mọi thứ khác; để nguyên 6,4 MB thì trên 4G học
+        viên nhìn màn hình trắng vài giây.
+
+        Thẻ og:image trong index.html vẫn trỏ v3, KHÔNG đổi sang v4: Facebook
+        và Zalo cắt ảnh share về 1,91:1, mà v4 là 6:1 — đưa nó lên thì thẻ
+        chia sẻ chỉ còn một dải chữ giữa hai mảng trống.
       */}
       {activeTab === 'course' && !selectedModuleId && (
         <div className="max-w-7xl w-full mx-auto px-3 sm:px-6 lg:px-8 pt-4">
-          <img
-            src="/og-cover-v3.jpg"
-            alt="Chào mừng đến với P MARCOM ACADEMY — Kết nối tri thức, nâng tầm tư duy, bứt phá tương lai"
-            width="1672"
-            height="941"
-            fetchPriority="high"
-            className="app-cover w-full object-cover object-center rounded-2xl border border-emerald-900/40 shadow-lg"
-          />
+          <picture>
+            <source media="(min-width: 1024px)" srcSet="/og-cover-v4.jpg" />
+            <img
+              src="/og-cover-v3.jpg"
+              alt="Chào mừng đến với P MARCOM ACADEMY — Kết nối tri thức, nâng tầm tư duy, bứt phá tương lai"
+              width="1672"
+              height="941"
+              fetchPriority="high"
+              className="app-cover w-full object-cover object-center rounded-2xl border border-emerald-900/40 shadow-lg"
+            />
+          </picture>
         </div>
       )}
 
