@@ -12,13 +12,21 @@ import { LESSON_CASES } from '../data/lessonCases';
  *
  * Do đó khối này dùng tông hổ phách, khác hẳn tông ngọc lục bảo của phần lý
  * thuyết, và luôn hiện dòng nguồn ở cuối.
+ *
+ * QUAN TRỌNG về màu nền: chỉ dùng token amber-950 chứ KHÔNG viết mã hex kiểu
+ * bg-[#241d0a]. Lý do nằm ở src/index.css: giao diện mặc định của app là nền
+ * kem, và khối quy tắc ở đó chỉ lật được sang nền sáng những lớp nó nhận ra
+ * (bg-[#0..., bg-[#1... và các token bg-*-950). Một mã hex tự đặt nằm ngoài
+ * danh sách sẽ giữ nguyên nền tối trong khi chữ bên trong bị ép sang màu tối
+ * theo quy tắc .text-slate-100 — kết quả là chữ tối trên nền tối, không đọc
+ * được. Đây chính là lỗi đã xảy ra một lần với bg-[#241d0a].
  */
 export default function LessonCaseStudy({ sectionId }) {
   const c = LESSON_CASES[sectionId];
   if (!c) return null;
 
   return (
-    <section className="my-5 rounded-2xl border-2 border-amber-500/40 bg-[#1a1608] shadow-xl overflow-hidden">
+    <section className="my-5 rounded-2xl border-2 border-amber-500/40 bg-amber-950/30 shadow-xl overflow-hidden">
 
       <header className="px-4 sm:px-5 py-3 bg-amber-500/10 border-b border-amber-500/30 flex items-start gap-3">
         <div className="p-1.5 rounded-lg bg-amber-500/20 border border-amber-500/40 shrink-0">
@@ -33,7 +41,7 @@ export default function LessonCaseStudy({ sectionId }) {
               {c.year}
             </span>
           </div>
-          <h4 className="text-sm font-black text-amber-100 leading-snug mt-0.5">
+          <h4 className="text-sm font-black text-amber-300 leading-snug mt-0.5">
             {c.brand} — {c.title}
           </h4>
         </div>
@@ -44,13 +52,15 @@ export default function LessonCaseStudy({ sectionId }) {
         <div className="space-y-2">
           {c.facts.map((f, i) => (
             <div key={i} className="flex items-start gap-2.5">
-              <CheckCircle2 className="w-3.5 h-3.5 text-amber-400/80 shrink-0 mt-0.5" />
+              {/* amber-500 chứ không phải amber-400/80: lớp có hậu tố độ mờ
+                  không khớp selector .text-amber-400 của quy tắc nền sáng */}
+              <CheckCircle2 className="w-3.5 h-3.5 text-amber-500 shrink-0 mt-0.5" />
               <p className="text-xs sm:text-sm text-slate-200 leading-relaxed flex-1">{f}</p>
             </div>
           ))}
         </div>
 
-        <div className="p-3.5 rounded-xl bg-[#241d0a] border border-amber-600/40 flex items-start gap-3">
+        <div className="p-3.5 rounded-xl bg-amber-950/60 border border-amber-600/40 flex items-start gap-3">
           <Lightbulb className="w-4 h-4 text-amber-300 shrink-0 mt-0.5" />
           <div className="space-y-1">
             <strong className="text-[11px] font-black text-amber-400 uppercase tracking-wide block">

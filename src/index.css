@@ -455,6 +455,34 @@ html.dark .text-gradient-gold {
   border-color: #ffc0d8 !important;
 }
 
+/* Đỏ cảnh báo.
+
+   Thang rose là thang DUY NHẤT chưa từng được chỉnh cho nền kem: nó không nằm
+   trong @theme ở đầu tệp nên vẫn giữ nguyên giá trị gốc của Tailwind, vốn được
+   thiết kế cho nền tối.
+
+   Hệ quả trước khi có khối này: mọi hộp báo lỗi (đăng nhập, hoàn tất hồ sơ,
+   bảng quản trị, huỷ bằng chứng nhận) và thẻ tông đỏ trong sơ đồ bài học
+   (LessonVisual) đều giữ nền đỏ gần đen giữa giao diện sáng.
+
+   Nền và chữ phải sửa cùng lúc: chỉ đổi nền thành sáng mà để chữ rose-200 nhạt
+   thì hộp lỗi từ khó nhìn thành không đọc được. */
+:root:not(.dark) .text-rose-100,
+:root:not(.dark) .text-rose-200,
+:root:not(.dark) .text-rose-300,
+:root:not(.dark) .text-rose-400 {
+  color: #b3123b !important;
+  font-weight: 600;
+}
+
+:root:not(.dark) [class*="bg-rose-950"],
+:root:not(.dark) [class*="bg-rose-900"] {
+  background-color: #fff1f3 !important;
+  background-image: none !important;
+  color: #b3123b !important;
+  border-color: #fbc5cd !important;
+}
+
 /* Khung ứng dụng */
 :root:not(.dark) header {
   background-color: #fffdf7 !important;

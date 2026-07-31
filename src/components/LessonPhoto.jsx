@@ -42,20 +42,12 @@ export default function LessonPhoto({ sectionId }) {
             {photo.caption}
           </p>
         </div>
-        <p className="text-[10px] text-slate-500 pl-5">
-          {photo.source ? (
-            <a
-              href={photo.source}
-              target="_blank"
-              rel="noreferrer noopener"
-              className="hover:text-emerald-400 underline decoration-dotted underline-offset-2"
-            >
-              Ảnh: {photo.credit}
-            </a>
-          ) : (
-            <>Ảnh: {photo.credit}</>
-          )}
-        </p>
+        {/* Ghi công để dạng chữ thường, KHÔNG bọc thẻ liên kết.
+            Giấy phép Creative Commons bắt buộc phải ghi công nên dòng này không
+            được bỏ, nhưng biến nó thành liên kết thì học viên bấm nhầm là rời
+            hẳn khỏi bài học sang Wikimedia. Đường dẫn gốc vẫn lưu ở trường
+            source trong lessonPhotos.js để tra khi cần đối chiếu bản quyền. */}
+        <p className="text-[10px] text-slate-500 pl-5">Ảnh: {photo.credit}</p>
       </figcaption>
     </figure>
   );
