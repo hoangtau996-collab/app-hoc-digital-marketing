@@ -8,6 +8,28 @@ TODO — chưa có quy ước đánh phiên bản; cân nhắc gắn thẻ Git k
 
 ---
 
+## [Chưa phát hành] — 2026-07-31
+
+### Thay đổi
+
+- **Màn hình chào rút từ 3 giây xuống 1 giây, và chỉ chào một lần mỗi phiên.** Trước đây mỗi lần bấm F5 là chào lại từ đầu — học viên tải lại trang giữa buổi học phải ngồi chờ thêm 3 giây, mỗi lần.
+  - Dấu "đã chào" lưu bằng **`sessionStorage`**, không phải `localStorage`. Đây là toàn bộ điểm mấu chốt: `sessionStorage` sống sót qua F5 nhưng mất khi đóng tab. Nhờ vậy F5 không chào lại, còn hôm sau mở lại thì vẫn thấy nhận diện thương hiệu một lần. Dùng `localStorage` thì poster chỉ hiện đúng một lần trong đời trên máy đó rồi thôi.
+  - **Đánh dấu ngay lúc hiện, không đợi chạy hết giờ.** Đợi tới lúc kết thúc mới ghi thì học viên bấm F5 trong đúng một giây đó vẫn bị chào lại — hiếm, nhưng đúng là hành vi vừa được yêu cầu bỏ đi.
+  - Hàm kiểm tra tách sang `src/utils/splashSession.js` thay vì để chung trong `SplashScreen.jsx`: file vừa xuất component vừa xuất hàm sẽ làm hỏng cơ chế nạp nóng lúc lập trình.
+  - Truy cập kho lưu trữ bọc trong `try/catch` — trình duyệt ở chế độ ẩn danh ném lỗi khi đọc `sessionStorage`, và lỗi ở màn hình đầu tiên thì sập cả trang. Trường hợp xấu nhất là chào lại mỗi lần, vẫn chạy được.
+  - Giữ nút Bỏ qua dù ở mức một giây gần như không kịp bấm: bấm bất kỳ đâu hoặc bấm phím bất kỳ cũng tắt được, và giữ đường thoát rẻ hơn việc gỡ đi rồi phải thêm lại.
+
+### Sửa lỗi
+
+- **Mục Tin tức không còn đường dẫn sang trang ngoài.** Học viên bấm vào là rời ứng dụng sang trang tiếng Anh không kiểm soát được. Gỡ nút "Bài gốc" trên thẻ tin, dòng "Mở bài gốc" trong cửa sổ chi tiết, và thẻ liên kết ở dải tin quốc tế; dải tin nay hiện đoạn tóm tắt đọc ngay tại chỗ.
+  - Chặn thêm ở tầng dữ liệu: `api/news.js` **không còn trả đường dẫn bài gốc** về trình duyệt. Quy tắc nằm ở dữ liệu chứ không chỉ là lựa chọn hiển thị, nên sau này có sửa giao diện cũng không có gì để nối lại.
+  - Trường `sourceUrl` giữ trong `newsData.js` làm dữ liệu truy xuất nguồn gốc và cờ phân biệt tin thật, nhưng không bao giờ được vẽ ra dưới dạng thẻ liên kết. Giao diện chỉ hiện **tên** nguồn dạng chữ.
+- **Nguồn tin bị dồn về một báo.** 6 trong 8 tin thật cùng lấy từ PPC Land. Nay còn 2, tổng cộng **6 nguồn khác nhau**: PPC Land 2, Search Engine Journal 2, Marketing Dive 1, TikTok For Business 1, Search Engine Land 1, Digital Applied 1.
+  - Tin TikTok chuyển sang **nguồn công bố chính thức** (`ads.tiktok.com`) thay vì báo viết lại. Vì đổi nguồn nên đã bỏ hai con số vốn là phân tích riêng của PPC Land, không có trên trang chính thức — không thể dẫn nguồn gốc mà lấy số qua trung gian.
+  - Routine hằng tuần đã cập nhật: **tối đa 2 tin mỗi tên miền, tối thiểu 5 nguồn**, và `grep` đếm `target="_blank"` phải bằng 0. Vi phạm là không commit được.
+
+---
+
 ## [Chưa phát hành] — 2026-07-30
 
 ### Sửa lỗi

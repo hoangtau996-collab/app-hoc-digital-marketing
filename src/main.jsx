@@ -4,6 +4,7 @@ import './index.css'
 import App from './App.jsx'
 import ResetPasswordPage from './components/ResetPasswordPage.jsx'
 import SplashScreen from './components/SplashScreen.jsx'
+import { shouldShowSplash } from './utils/splashSession.js'
 
 class ErrorBoundary extends Component {
   constructor(props) {
@@ -75,11 +76,18 @@ class ErrorBoundary extends Component {
 function Root() {
   const isResetRoute = window.location.pathname.replace(/\/+$/, '') === '/doi-mat-khau';
 
-  // Màn hình chào KHÔNG hiện ở trang đặt lại mật khẩu, cố ý: người tới đó là
-  // người vừa bấm đường dẫn trong thư, đang cần làm gấp đúng một việc và có thể
-  // đang lo lắng vì không vào được tài khoản. Bắt họ xem quảng cáo 3 giây trước
-  // đã là chọn sai thời điểm.
-  const [showSplash, setShowSplash] = React.useState(!isResetRoute);
+  // Màn hình chào chỉ hiện khi HAI điều kiện cùng đúng.
+  //
+  // 1. Không phải trang đặt lại mật khẩu. Người tới đó vừa bấm đường dẫn trong
+  //    thư, đang cần làm gấp đúng một việc và có thể đang lo vì không vào được
+  //    tài khoản. Chen màn hình chào vào đó là chọn sai thời điểm.
+  //
+  // 2. Phiên này chưa chào lần nào. Trước đây bấm F5 là chào lại từ đầu, mỗi
+  //    lần tải lại giữa buổi học đều mất thêm thời gian chờ.
+  //
+  // Tính trong hàm khởi tạo state để chỉ đọc kho lưu trữ đúng một lần, thay vì
+  // đọc lại ở mỗi lần dựng lại giao diện.
+  const [showSplash, setShowSplash] = React.useState(() => !isResetRoute && shouldShowSplash());
 
   if (isResetRoute) {
     const oobCode = new URLSearchParams(window.location.search).get('oobCode');
@@ -91,9 +99,9 @@ function Root() {
     );
   }
 
-  // <App /> dựng NGAY, không chờ màn hình chào tắt. Ba giây đó ứng dụng vẫn
-  // đang nạp dữ liệu bên dưới, nên khi màn hình biến mất thì mọi thứ đã sẵn
-  // sàng — thời gian chờ được dùng vào việc thật thay vì cộng thêm vào.
+  // <App /> dựng NGAY, không chờ màn hình chào tắt. Giây đó ứng dụng vẫn đang
+  // nạp dữ liệu bên dưới, nên khi màn hình biến mất thì mọi thứ đã sẵn sàng —
+  // thời gian chờ được dùng vào việc thật thay vì cộng thêm vào.
   return (
     <>
       <App />

@@ -1,23 +1,24 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { markSplashSeen } from '../utils/splashSession';
 
-/** Thời gian hiển thị, tính bằng mili-giây. Chủ dự án chốt 3 giây (2026-07-30). */
-const SPLASH_MS = 3000;
+/** Thời gian hiển thị, tính bằng mili-giây. Chủ dự án chốt 1 giây (2026-07-31, hạ từ 3 giây). */
+const SPLASH_MS = 1000;
 
 /**
  * Màn hình chào khi mở web.
  *
  * ĐIỂM QUAN TRỌNG NHẤT: màn hình này KHÔNG chặn ứng dụng khởi động. Nó nằm đè
  * lên trên, còn `<App />` vẫn được dựng và chạy bên dưới ngay từ giây đầu — nạp
- * hồ sơ học viên, đọc tiến độ từ Firestore, dựng danh sách chuyên đề. Nhờ vậy 3
- * giây này là thời gian tải thật chứ không phải 3 giây chết thêm vào: lúc màn
- * hình biến mất thì bên dưới đã sẵn sàng.
+ * hồ sơ học viên, đọc tiến độ từ Firestore, dựng danh sách chuyên đề. Nhờ vậy
+ * một giây này là thời gian tải thật chứ không phải một giây chết thêm vào.
  *
- * Làm ngược lại — chờ xong mới dựng App — là cộng thẳng 3 giây vào thời gian
- * chờ của mọi học viên, mỗi lần mở.
+ * Làm ngược lại — chờ xong mới dựng App — là cộng thẳng thời gian chờ vào mọi
+ * lần mở của mọi học viên.
  *
- * CÓ NÚT BỎ QUA, và đó không phải chi tiết trang trí. Học viên vào học mỗi ngày
- * sẽ gặp màn hình này mỗi lần; không có đường thoát thì thứ định làm cho sinh
- * động lại thành thứ gây khó chịu nhất.
+ * CÓ NÚT BỎ QUA. Ở mức một giây thì nút này gần như không kịp bấm, nhưng vẫn
+ * giữ: bấm bất kỳ đâu trên màn hình cũng tắt được, và người dùng máy tính hay
+ * bấm Esc theo phản xạ. Giữ đường thoát rẻ hơn nhiều so với gỡ đi rồi phải
+ * thêm lại khi có ai đó muốn kéo dài thời gian hiển thị.
  */
 export default function SplashScreen({ onDone }) {
   const [progress, setProgress] = useState(0);
@@ -36,12 +37,17 @@ export default function SplashScreen({ onDone }) {
   };
 
   useEffect(() => {
+    // Đánh dấu NGAY khi hiện, không đợi chạy hết giờ. Nếu đợi tới lúc kết thúc
+    // mới ghi, học viên bấm F5 trong đúng một giây đó sẽ bị chào lại — hiếm,
+    // nhưng đây chính là hành vi vừa được yêu cầu bỏ đi.
+    markSplashSeen();
+
     const start = performance.now();
     let raf;
 
     // Đo bằng đồng hồ thật (`performance.now`) thay vì cộng dồn từng khung hình:
     // máy yếu hoặc tab chạy nền sẽ rớt khung, cộng dồn thì thanh tiến trình bò
-    // chậm hơn nhiều so với 3 giây và người dùng thấy nó "đứng".
+    // chậm hơn thời gian thật và người dùng thấy nó "đứng".
     const tick = (now) => {
       const ratio = Math.min((now - start) / SPLASH_MS, 1);
       setProgress(ratio);
