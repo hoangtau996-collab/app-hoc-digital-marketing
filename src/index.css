@@ -126,6 +126,34 @@
   }
 }
 
+/* ========================================================
+   ẢNH BÌA TRANG CHỦ - CHIỀU CAO CO GIÃN
+   ========================================================
+   Trước đây chiều cao nhảy theo ba nấc cứng: 120px, rồi 160px từ 640px, rồi
+   200px từ 1024px. Hậu quả là ở ngay hai mốc đó ảnh đổi đột ngột — máy rộng
+   639px thấy một khung dẹt 4,3:1, máy 641px thấy khung 3,7:1, cùng một tấm
+   ảnh mà phần bị cắt khác hẳn nhau. Giữa hai nấc thì không có gì thay đổi:
+   điện thoại 320px và 639px dùng chung đúng một chiều cao 120px, nên máy nhỏ
+   bị ảnh chiếm chỗ nhiều hơn hẳn máy lớn.
+
+   `clamp()` thay ba nấc đó bằng một đường tăng liên tục theo bề ngang màn
+   hình — mỗi thiết bị nhận một chiều cao tính riêng, không còn cú nhảy nào:
+
+     - Chặn dưới 125px : điện thoại nhỏ (320px) vẫn đủ chỗ cho khối chữ giữa ảnh.
+     - 9.5vw + 95px    : phần co giãn, bám theo bề ngang màn hình.
+     - Chặn trên 225px : màn hình rộng không để ảnh bìa ăn hết màn hình đầu tiên.
+
+   Hệ số 9.5vw được chọn để tỉ lệ khung giữ trong quãng 2,4:1 (điện thoại) đến
+   5,6:1 (desktop). Quãng này hẹp hơn quãng cũ (2,8:1 - 6,1:1), nghĩa là vùng
+   ảnh phải chừa an toàn cũng rộng ra theo.
+
+   Muốn ảnh cao hơn hay thấp hơn thì sửa hai số chặn, đừng đụng 9.5vw — đổi
+   hệ số này là đổi luôn tỉ lệ cắt, ảnh bìa đang thiết kế theo tỉ lệ cũ sẽ lệch.
+   ======================================================== */
+.app-cover {
+  height: clamp(125px, 9.5vw + 95px, 225px);
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;

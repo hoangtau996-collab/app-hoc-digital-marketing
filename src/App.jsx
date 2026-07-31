@@ -1203,10 +1203,14 @@ export default function App() {
         làm trình duyệt hoãn tải, đổi lại một khoảng trắng nhấp nháy lúc mở
         trang — chậm hơn về mặt cảm nhận dù tổng thời gian không đổi.
 
-        CHIỀU CAO BỊ CHẶN CỨNG. Ảnh gốc là 1672x941; để `h-auto` thì trên khung
-        1.280px nó cao khoảng 720px — chiếm trọn màn hình đầu tiên, và học viên
-        phải cuộn qua một tấm quảng cáo mới thấy được bài học. Ảnh bìa là thứ
-        trang trí, không phải nội dung; nó không được chiếm chỗ của nội dung.
+        CHIỀU CAO KHÔNG ĐỂ ẢNH TỰ QUYẾT. Để `h-auto` thì ảnh bìa cao vài trăm
+        pixel — chiếm trọn màn hình đầu tiên, và học viên phải cuộn qua một tấm
+        quảng cáo mới thấy được bài học. Ảnh bìa là thứ trang trí, không phải
+        nội dung; nó không được chiếm chỗ của nội dung.
+
+        Chiều cao nằm ở lớp `.app-cover` trong index.css, tính bằng `clamp()`
+        nên co giãn liên tục theo bề ngang màn hình thay vì nhảy theo breakpoint.
+        Lý do và cách chỉnh ghi ngay tại chỗ định nghĩa lớp đó.
 
         `object-cover` + `object-center` cắt bớt trên dưới và giữ phần giữa —
         đúng phần có khối chữ "P MARCOM ACADEMY". Dùng `object-contain` sẽ ra
@@ -1220,7 +1224,7 @@ export default function App() {
             width="1672"
             height="941"
             fetchPriority="high"
-            className="w-full h-[120px] sm:h-[160px] lg:h-[200px] object-cover object-center rounded-2xl border border-emerald-900/40 shadow-lg"
+            className="app-cover w-full object-cover object-center rounded-2xl border border-emerald-900/40 shadow-lg"
           />
         </div>
       )}
