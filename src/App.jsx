@@ -1324,39 +1324,38 @@ export default function App() {
         đúng phần có khối chữ "P MARCOM ACADEMY". Dùng `object-contain` sẽ ra
         một dải ảnh tí hon nằm giữa hai mảng trống, trông như tải ảnh hỏng.
 
-        HAI FILE ẢNH, KHÔNG PHẢI MỘT
+        MỘT FILE ẢNH CHO MỌI THIẾT BỊ
 
-        Khung ảnh bìa dẹt hẳn ở màn rộng (6:1) nhưng dày gần gấp đôi trên điện
-        thoại (2,8:1). Một file không phục vụ được cả hai: ảnh 6:1 nhét vào
-        khung điện thoại thì `object-cover` chỉ giữ lại 46% bề ngang — mất logo
-        bên trái, mất cả bốn icon bên phải, tức quá nửa thiết kế không ai thấy.
+        Đã từng phải dùng `<picture>` với hai file, vì bản màn rộng khi đó là
+        6,04:1 — nhét vào khung điện thoại thì chỉ còn 46% bề ngang, mất logo
+        lẫn cụm icon. Bản og-cover-v4 hiện tại là 2,76:1, trùng gần như tuyệt
+        đối với khung điện thoại, nên một file phục vụ được tất cả và `<picture>`
+        thành thừa.
 
-        `<picture>` cho trình duyệt tự chọn theo bề ngang màn hình, và nó chọn
-        TRƯỚC khi tải, nên máy nhỏ không tốn băng thông tải file của màn rộng.
+        `og-cover-v4.jpg` là bản đã CẮT VIỀN TRẮNG và nén từ file PNG thiết kế
+        gửi (1774x887, có viền trắng 127px trên / 129px dưới / ~16px hai bên).
+        Để nguyên viền thì ảnh bìa hiện ra với hai dải trắng kẹp trên dưới,
+        nhìn như tải hỏng. Vùng nội dung thật là 1742x631 — đúng con số ghi
+        trong `aspect-ratio` ở index.css, ĐỔI ẢNH THÌ PHẢI SỬA THEO.
 
-        `og-cover-v4.jpg` chuyển từ bản PNG 6,4 MB do thiết kế gửi sang JPG
-        chất lượng 82 (428 KB). File PNG gốc vẫn nằm cạnh trong public/, không
-        xoá — cần dựng lại bản khác thì lấy từ đó. Ảnh này gắn fetchPriority
-        cao nên nó chặn đường mọi thứ khác; để nguyên 6,4 MB thì trên 4G học
-        viên nhìn màn hình trắng vài giây.
+        PNG gốc vẫn nằm cạnh trong public/, không xoá — cần dựng lại thì lấy
+        từ đó. Bản JPG chất lượng 85 nặng 192 KB thay vì 1,5 MB: ảnh này gắn
+        `fetchPriority="high"` nên nó chặn đường mọi thứ khác, để nặng thì trên
+        4G học viên nhìn màn hình trắng vài giây.
 
         Thẻ og:image trong index.html vẫn trỏ v3, KHÔNG đổi sang v4: Facebook
-        và Zalo cắt ảnh share về 1,91:1, mà v4 là 6:1 — đưa nó lên thì thẻ
-        chia sẻ chỉ còn một dải chữ giữa hai mảng trống.
+        và Zalo cắt ảnh share về 1,91:1, đưa ảnh 2,76:1 lên thì mất hai đầu.
       */}
       {activeTab === 'course' && !selectedModuleId && (
         <div className="max-w-7xl w-full mx-auto px-3 sm:px-6 lg:px-8 pt-4">
-          <picture>
-            <source media="(min-width: 1024px)" srcSet="/og-cover-v4.jpg" />
-            <img
-              src="/og-cover-v3.jpg"
-              alt="Chào mừng đến với P MARCOM ACADEMY — Kết nối tri thức, nâng tầm tư duy, bứt phá tương lai"
-              width="1672"
-              height="941"
-              fetchPriority="high"
-              className="app-cover w-full object-cover object-center rounded-2xl border border-emerald-900/40 shadow-lg"
-            />
-          </picture>
+          <img
+            src="/og-cover-v4.jpg"
+            alt="Chào mừng đến với P MARCOM ACADEMY — Kết nối tri thức, nâng tầm tư duy, bứt phá tương lai"
+            width="1742"
+            height="631"
+            fetchPriority="high"
+            className="app-cover w-full object-cover object-center rounded-2xl border border-emerald-900/40 shadow-lg"
+          />
         </div>
       )}
 
