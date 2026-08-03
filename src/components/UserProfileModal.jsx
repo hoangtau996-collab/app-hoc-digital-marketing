@@ -155,12 +155,22 @@ export default function UserProfileModal({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-950/85 backdrop-blur-md overflow-y-auto">
-      <div className="relative w-full max-w-lg my-auto glass-panel rounded-3xl border border-emerald-500/40 p-6 sm:p-8 shadow-2xl space-y-6">
-        
-        {/* Close Button */}
+      {/* `min-w-0` trên tấm nền là chốt chặn cuối cùng cho bề ngang.
+          Tấm nền là một flex item, mà flex item mặc định `min-width: auto` —
+          nghĩa là nó KHÔNG chịu hẹp hơn bề ngang tối thiểu của nội dung bên
+          trong. Chỉ cần một khối con cứng đầu (lưới 3 cột, huy hiệu inline-flex)
+          là cả hộp thoại phình to hơn màn hình điện thoại, tràn ra ngoài và bị
+          `overflow-x: hidden` ở body cắt cụt — nút đóng ở góc phải mất một nửa,
+          chữ bên phải cụt đuôi. `min-w-0` cho nó co đúng bằng `w-full`.
+          `p-4` trên màn nhỏ thay cho `p-6`: trả lại gần 20px bề ngang cho nội
+          dung, đáng kể trên máy 360-400px. */}
+      <div className="relative w-full max-w-lg min-w-0 my-auto glass-panel rounded-3xl border border-emerald-500/40 p-4 sm:p-8 shadow-2xl space-y-5 sm:space-y-6">
+
+        {/* Close Button — 36px, đủ rộng để bấm bằng ngón tay trên điện thoại */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 w-8 h-8 rounded-full bg-slate-900 border border-emerald-900 text-slate-400 hover:text-white flex items-center justify-center transition cursor-pointer"
+          aria-label="Đóng hồ sơ"
+          className="absolute top-3 right-3 sm:top-4 sm:right-4 w-9 h-9 rounded-full bg-slate-900 border border-emerald-900 text-slate-400 hover:text-white flex items-center justify-center transition cursor-pointer z-10"
         >
           <X className="w-4 h-4" />
         </button>
