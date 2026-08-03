@@ -42,6 +42,30 @@ export default function CertificateModal({
 
   const [isExporting, setIsExporting] = useState(false);
 
+  // Kích thước thật của khung xem trước trên màn hình. Cần đo bằng px vì toạ độ
+  // trong CERT_LAYOUT là tỉ lệ, còn cỡ chữ thì phải quy ra px mới đặt được —
+  // đo xong thì bản xem trước và file tải về dùng chung một phép tính.
+  //
+  // Khung co theo bề ngang modal (mobile/desktop khác nhau) và chỉ có chiều cao
+  // sau khi ảnh template tải xong, nên phải theo dõi bằng ResizeObserver chứ
+  // không đọc một lần lúc mount được.
+  const [previewBox, setPreviewBox] = useState({ w: 0, h: 0 });
+  const previewObserver = useRef(null);
+
+  const attachPreview = useCallback((el) => {
+    previewObserver.current?.disconnect();
+    previewObserver.current = null;
+    if (!el) return;
+
+    const read = () => setPreviewBox({ w: el.clientWidth, h: el.clientHeight });
+    read();
+    const ro = new ResizeObserver(read);
+    ro.observe(el);
+    previewObserver.current = ro;
+  }, []);
+
+  useEffect(() => () => previewObserver.current?.disconnect(), []);
+
   useEffect(() => {
     if (customStudentName) {
       setStudentName(customStudentName.toUpperCase());
