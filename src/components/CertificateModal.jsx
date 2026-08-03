@@ -399,14 +399,21 @@ export default function CertificateModal({
                 </div>
               )}
 
-              {/* Họ tên học viên — ô nhập trong suốt đặt đúng trên nét kẻ chấm */}
+              {/*
+                Họ tên học viên — ô nhập trong suốt đặt đúng trên nét kẻ chấm.
+
+                Nền phải trong suốt ở MỌI trạng thái, kể cả khi đang gõ: tô nền
+                lúc focus sẽ để lại một mảng trắng chữ nhật đè lên nền giấy kem
+                của template. Đặt backgroundColor ngay trong style nội tuyến để
+                không lớp tiện ích nào ghi đè lại được.
+              */}
               <input
                 type="text"
                 value={studentName}
                 onChange={(e) => setStudentName(e.target.value.toUpperCase())}
                 placeholder="NHẬP HỌ VÀ TÊN"
-                className="bg-transparent focus:outline-none focus:bg-amber-50/40 rounded transition"
-                style={fieldStyle(CERT_LAYOUT.name, studentName || 'NHẬP HỌ VÀ TÊN')}
+                className="focus:outline-none"
+                style={{ ...fieldStyle(CERT_LAYOUT.name, studentName || 'NHẬP HỌ VÀ TÊN'), backgroundColor: 'transparent' }}
                 title="Click để chỉnh sửa họ tên học viên"
               />
 
