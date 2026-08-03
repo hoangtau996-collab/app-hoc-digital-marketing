@@ -543,7 +543,15 @@ export function LtvCacTool() {
   const profitPerCustomer = ltvGross - cac;
   const grossPerOrder = aov * (margin / 100);
   // Tỷ lệ mua lại tối thiểu để lợi nhuận gộp trọn đời bằng chi phí thu hút.
+  //
+  // Giá trị ÂM là hợp lệ và là tin tốt: nó nghĩa là riêng đơn đầu tiên đã đủ bù
+  // chi phí thu hút, doanh nghiệp không cần khách mua lại mới hoà vốn. Tuyệt đối
+  // không kẹp về 0 rồi đem hiển thị, vì "phải đạt tối thiểu 0%" là câu vô nghĩa.
   const breakevenRepeat = safeDiv(cac, grossPerOrder) - 1;
+
+  // Đủ dữ liệu để kết luận hay chưa. Thiếu bất kỳ số nào trong ba số này thì mọi
+  // phép chia phía sau đều trả về 0 và kết luận sẽ sai theo hướng lạc quan.
+  const hasEnoughInput = grossPerOrder > 0 && cac > 0;
   const ltvCacRatio = safeDiv(ltvGross, cac);
   const healthy = profitPerCustomer >= 0;
 
