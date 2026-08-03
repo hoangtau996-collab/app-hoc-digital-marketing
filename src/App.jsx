@@ -1487,6 +1487,7 @@ export default function App() {
                   searchQuery={searchQuery}
                   trafficStats={trafficStats}
                   onRegisterCTA={handleRegisterCTA}
+                  isAdmin={isAdmin}
                 />
               )
             )}

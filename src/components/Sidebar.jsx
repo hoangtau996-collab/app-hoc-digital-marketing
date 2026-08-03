@@ -136,7 +136,7 @@ export default function Sidebar({
           {modules.map((mod) => {
             const isCompleted = completedModules.includes(mod.id);
             const isSelected = activeTab === 'course' && selectedModuleId === mod.id;
-            const blocker = getBlockingModule(modules, mod.id, completedModules);
+            const blocker = getBlockingModule(modules, mod.id, completedModules, isAdmin);
             const isLocked = !!blocker;
 
             return (

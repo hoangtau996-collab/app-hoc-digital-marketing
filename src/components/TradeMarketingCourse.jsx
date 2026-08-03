@@ -12,8 +12,6 @@ import {
   BookOpen,
   HelpCircle,
   Clock,
-  UserPen,
-  CalendarClock,
   Sparkles,
   ShieldCheck
 } from 'lucide-react';
@@ -186,12 +184,6 @@ export default function TradeMarketingCourse({
           </div>
 
           <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-[11px] text-slate-400">
-            <span className="flex items-center gap-1.5">
-              <UserPen className="w-3.5 h-3.5 text-emerald-400" /> Biên soạn: {TRADE_COURSE_META.author}
-            </span>
-            <span className="flex items-center gap-1.5">
-              <CalendarClock className="w-3.5 h-3.5 text-emerald-400" /> Cập nhật: {TRADE_COURSE_META.updatedAt}
-            </span>
             <span className="flex items-center gap-1.5">
               <BookOpen className="w-3.5 h-3.5 text-emerald-400" /> {TRADE_MODULES.length} chuyên đề · {totalLessons} bài · {totalQuiz} câu hỏi
             </span>

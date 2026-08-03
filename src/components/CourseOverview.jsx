@@ -27,6 +27,10 @@ export default function CourseOverview({
   completedModules,
   searchQuery,
   onRegisterCTA = () => {},
+  // Quản trị viên thấy mọi chuyên đề đang mở, giống hệt Sidebar. Thiếu cờ này
+  // thì thẻ ở trang tổng quan hiện ổ khoá trong khi danh sách bên cạnh không —
+  // cùng một tài khoản mà hai chỗ nói hai điều khác nhau.
+  isAdmin = false,
   // Mặc định là 0 hết. App.jsx luôn truyền trafficStats xuống; nếu component
   // được dùng lại ở chỗ khác mà quên truyền thì hiện 0 là trung thực nhất —
   // chưa biết số thì đừng hiện số nào cả.
@@ -237,7 +241,7 @@ export default function CourseOverview({
           // Tính trên danh sách ĐẦY ĐỦ, không phải filteredModules: khi học viên
           // đang lọc hoặc tìm kiếm thì chuyên đề liền trước có thể không nằm
           // trong kết quả, lấy theo danh sách đã lọc sẽ ra thứ tự sai.
-          const blocker = getBlockingModule(modules, mod.id, completedModules);
+          const blocker = getBlockingModule(modules, mod.id, completedModules, isAdmin);
           const isLocked = !!blocker;
 
           return (
