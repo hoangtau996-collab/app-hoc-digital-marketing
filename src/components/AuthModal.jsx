@@ -583,8 +583,13 @@ export default function AuthModal({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/85 backdrop-blur-md overflow-y-auto">
-      <div className="relative w-full max-w-md glass-panel rounded-3xl border border-emerald-500/40 p-6 sm:p-8 shadow-2xl space-y-5 my-auto">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-950/85 backdrop-blur-md overflow-y-auto">
+      {/* `min-w-0`: tấm nền là flex item, mặc định `min-width: auto` nên nó
+          không chịu hẹp hơn bề ngang tối thiểu của nội dung — chỉ cần một khối
+          con không co được là cả hộp thoại tràn khỏi màn hình điện thoại và bị
+          cắt cụt bên phải. `min-w-0` cho nó co đúng bằng `w-full`.
+          `p-4` trên màn nhỏ: trả lại bề ngang cho ô nhập liệu trên máy 360px. */}
+      <div className="relative w-full max-w-md min-w-0 glass-panel rounded-3xl border border-emerald-500/40 p-4 sm:p-8 shadow-2xl space-y-5 my-auto">
         
         {/* Return to Homepage Button (Top-Left Corner) */}
         <button

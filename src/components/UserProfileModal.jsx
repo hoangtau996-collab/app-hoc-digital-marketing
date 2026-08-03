@@ -176,14 +176,25 @@ export default function UserProfileModal({
         </button>
 
         {/* User Card Header
-            `min-w-0` ở khối bên trái là thứ giữ nút Sửa Hồ Sơ nằm trong khung.
-            Mặc định một phần tử flex không co xuống dưới bề rộng nội dung của
-            nó, nên khối tên và email cứ giữ nguyên chiều ngang và đẩy nút văng
-            hẳn ra ngoài mép hộp thoại. Có `truncate` bên trong cũng vô ích vì
-            nó chỉ chạy khi phần tử đã bị co lại.
-            `pr-12` chừa chỗ cho nút đóng đang nằm đè ở góc trên bên phải. */}
-        <div className="flex items-start justify-between gap-3 flex-wrap border-b border-emerald-900/40 pb-5 pr-12">
-          <div className="flex items-center gap-4 min-w-0 flex-1">
+            TRÊN ĐIỆN THOẠI NÚT SỬA HỒ SƠ XUỐNG HẲN MỘT DÒNG RIÊNG.
+
+            Bản trước xếp khối tên và nút trên cùng một hàng. Khối tên có
+            `min-w-0` nên co lại được — nhưng huy hiệu "HỌC VIỆN P MARCOM" nằm
+            trong đó là `inline-flex`, mà inline-flex KHÔNG co xuống dưới bề
+            ngang nội dung. Kết quả: khối tên co, huy hiệu không co, nó tràn ra
+            khỏi khối cha và đè chồng lên nút Sửa Hồ Sơ. Màn hình càng hẹp hoặc
+            người dùng chỉnh cỡ chữ càng lớn thì đè càng nặng.
+
+            Hai lớp chống: `flex-col` trên màn nhỏ để nút không còn tranh chỗ
+            với huy hiệu, và `max-w-full` trên chính huy hiệu để nó xuống dòng
+            trong khung thay vì tràn ra ngoài.
+
+            `pr-12` chừa chỗ cho nút đóng ở góc trên bên phải: trên màn nhỏ chỉ
+            đặt ở hàng trên (nếu đặt cả khối thì nút "toàn chiều ngang" bên dưới
+            sẽ hụt mất 48px bên phải, trông như hỏng), từ `sm` trở lên mới đặt
+            cho cả khối vì lúc đó nút nằm cùng hàng. */}
+        <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 border-b border-emerald-900/40 pb-5 sm:pr-12">
+          <div className="flex items-center gap-3 sm:gap-4 min-w-0 flex-1 pr-12 sm:pr-0">
             <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-400 to-emerald-500 flex items-center justify-center text-slate-950 font-black text-xl border-2 border-amber-400/60 shadow-lg shrink-0 overflow-hidden">
               {(avatarUrl || currentUser.avatarUrl) ? (
                 <img src={avatarUrl || currentUser.avatarUrl} alt="Avatar" className="w-full h-full object-cover" />
@@ -193,8 +204,9 @@ export default function UserProfileModal({
             </div>
 
             <div className="min-w-0 flex-1">
-              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-950 text-emerald-400 border border-emerald-800 text-[10px] font-bold uppercase tracking-wider mb-1">
-                <ShieldCheck className="w-3 h-3" /> HỌC VIỆN P MARCOM
+              <div className="inline-flex max-w-full items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-950 text-emerald-400 border border-emerald-800 text-[10px] font-bold uppercase tracking-wide leading-tight mb-1">
+                <ShieldCheck className="w-3 h-3 shrink-0" />
+                <span className="min-w-0">HỌC VIỆN P MARCOM</span>
               </div>
               <h3 className="text-lg font-black text-white truncate">
                 {currentUser.name}
@@ -207,9 +219,9 @@ export default function UserProfileModal({
 
           <button
             onClick={() => setIsEditing(!isEditing)}
-            className="px-3 py-1.5 rounded-xl bg-amber-500/20 border border-amber-500/40 text-amber-300 text-xs font-bold hover:bg-amber-500/30 transition cursor-pointer shrink-0"
+            className="w-full sm:w-auto shrink-0 px-3 py-2 sm:py-1.5 rounded-xl bg-amber-500/20 border border-amber-500/40 text-amber-300 text-xs font-bold hover:bg-amber-500/30 transition cursor-pointer"
           >
-            {isEditing ? '✕ Hủy' : '✏️ Thấu hiểu & Sửa Hồ Sơ'}
+            {isEditing ? '✕ Hủy Chỉnh Sửa' : '✏️ Thấu hiểu & Sửa Hồ Sơ'}
           </button>
         </div>
 
@@ -338,40 +350,56 @@ export default function UserProfileModal({
             <Palette className="w-4 h-4 text-emerald-400" /> Tùy Chỉnh Giao Diện Trải Nghiệm
           </h4>
 
+          {/* LƯỚI 3 CỘT NÀY TỪNG LÀM TRÀN CẢ HỘP THOẠI RA NGOÀI MÀN HÌNH.
+
+              Ô của lưới cũng mặc định `min-width: auto` như flex item: mỗi cột
+              đòi đủ chỗ cho nội dung ở dạng hẹp nhất của nó. Khi biểu tượng và
+              nhãn nằm CÙNG HÀNG (`flex-row`), bề ngang tối thiểu một cột là
+              biểu tượng + khoảng cách + từ dài nhất. Nhân ba, cộng khoảng đệm
+              của hộp thoại, là vượt quá bề ngang máy 360-400px — nhất là khi
+              học viên để cỡ chữ lớn trong cài đặt máy hoặc bấm A+.
+
+              Sửa bằng hai thứ, cần cả hai:
+                - `flex-col`: biểu tượng nằm TRÊN nhãn, nên bề ngang tối thiểu
+                  của một cột chỉ còn bằng từ dài nhất ("Thống"), không cộng
+                  thêm biểu tượng nữa.
+                - `min-w-0`: gỡ luôn ngưỡng tối thiểu đó, cho cột co tự do.
+
+              Giữ nguyên nhãn đầy đủ và 3 cột — chỉ đổi cách xếp bên trong. */}
           <div className="grid grid-cols-3 gap-2">
             <button
               onClick={() => setTheme('light')}
-              className={`p-2.5 rounded-xl border text-xs font-bold flex items-center justify-center gap-1.5 transition cursor-pointer ${
+              className={`min-w-0 px-1.5 py-2.5 rounded-xl border text-xs font-bold flex flex-col items-center justify-center gap-1 text-center leading-tight transition cursor-pointer ${
                 theme === 'light'
                   ? 'bg-emerald-600 text-white border-emerald-400 shadow-md'
                   : 'bg-[#111a2e] text-slate-300 border-emerald-900/60 hover:border-emerald-500'
               }`}
             >
-              <Sun className="w-4 h-4 text-amber-400" />
+              <Sun className="w-4 h-4 text-amber-400 shrink-0" />
               <span>Giao diện Sáng</span>
             </button>
 
             <button
               onClick={() => setTheme('dark')}
-              className={`p-2.5 rounded-xl border text-xs font-bold flex items-center justify-center gap-1.5 transition cursor-pointer ${
+              className={`min-w-0 px-1.5 py-2.5 rounded-xl border text-xs font-bold flex flex-col items-center justify-center gap-1 text-center leading-tight transition cursor-pointer ${
                 theme === 'dark'
                   ? 'bg-emerald-600 text-white border-emerald-400 shadow-md'
                   : 'bg-[#111a2e] text-slate-300 border-emerald-900/60 hover:border-emerald-500'
               }`}
             >
-              <Moon className="w-4 h-4 text-emerald-400" />
+              <Moon className="w-4 h-4 text-emerald-400 shrink-0" />
               <span>Giao diện Tối</span>
             </button>
 
             <button
               onClick={() => setTheme('system')}
-              className={`p-2.5 rounded-xl border text-xs font-bold flex items-center justify-center gap-1.5 transition cursor-pointer ${
+              className={`min-w-0 px-1.5 py-2.5 rounded-xl border text-xs font-bold flex flex-col items-center justify-center gap-1 text-center leading-tight transition cursor-pointer ${
                 theme === 'system'
                   ? 'bg-emerald-600 text-white border-emerald-400 shadow-md'
                   : 'bg-[#111a2e] text-slate-300 border-emerald-900/60 hover:border-emerald-500'
               }`}
             >
-              <Monitor className="w-4 h-4 text-teal-400" />
+              <Monitor className="w-4 h-4 text-teal-400 shrink-0" />
               <span>Theo Hệ Thống</span>
             </button>
           </div>
@@ -379,9 +407,12 @@ export default function UserProfileModal({
 
         {/* Learning Progress Overview */}
         <div className="p-4 rounded-2xl bg-[#111a2e] border border-emerald-900/60 space-y-3">
-          <div className="flex items-center justify-between text-xs font-bold">
+          {/* `flex-wrap` cho hai hàng số liệu: khi cỡ chữ lớn, hai vế không đủ
+              chỗ đứng cạnh nhau thì vế sau xuống dòng gọn gàng, thay vì mỗi vế
+              tự bẻ chữ lộn xộn giữa chừng ("Tài trợ 100% Học / phí"). */}
+          <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1 text-xs font-bold">
             <span className="text-slate-300 flex items-center gap-1.5">
-              <Award className="w-4 h-4 text-amber-400" /> Tiến Độ Khóa Học:
+              <Award className="w-4 h-4 text-amber-400 shrink-0" /> Tiến Độ Khóa Học:
             </span>
             <span className="text-emerald-400">{passedCount}/{totalModules} Chuyên đề ({progressPercent}%)</span>
           </div>
@@ -394,7 +425,7 @@ export default function UserProfileModal({
           </div>
 
           {/* Value Badge inside profile */}
-          <div className="flex items-center justify-between pt-1 text-[11px] text-slate-400 border-t border-emerald-900/40">
+          <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1 pt-1 text-[11px] text-slate-400 border-t border-emerald-900/40">
             <span>Trị giá khóa học: <strong className="text-amber-400">2.999.999 VNĐ</strong></span>
             <span className="text-emerald-400 font-bold">Tài trợ 100% Học phí</span>
           </div>

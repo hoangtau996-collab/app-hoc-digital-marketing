@@ -29,6 +29,36 @@ const cleanEmail = (v) => String(v || '').trim().toLowerCase();
  * quyền" là xác nhận cho người dò rằng token của họ hợp lệ — thông tin đó không
  * giúp gì người dùng thật, chỉ giúp người đang thăm dò.
  */
+/**
+ * Chỉ cần đang đăng nhập, không cần quyền quản trị.
+ *
+ * Trả về email LẤY TỪ ID TOKEN — đây là điểm mấu chốt. Hàm gọi nó (thư chào
+ * mừng, thư chúc mừng tốt nghiệp) chỉ được phép gửi cho chính người đang đăng
+ * nhập. Nếu đọc email từ thân yêu cầu thì bất kỳ ai cũng bắt máy chủ gửi thư
+ * tới địa chỉ bất kỳ, dưới danh nghĩa Học Viện — biến ứng dụng thành công cụ
+ * phát tán thư rác và kéo cả tên miền xuống hố.
+ */
+export async function requireSignedIn(req) {
+  const header = String(req.headers?.authorization || '');
+  const token = header.startsWith('Bearer ') ? header.slice(7).trim() : '';
+
+  if (!token) {
+    return { ok: false, status: 401, message: 'Thiếu thông tin xác thực.' };
+  }
+
+  try {
+    const decoded = await adminAuth().verifyIdToken(token);
+    const email = cleanEmail(decoded.email);
+    if (!email) {
+      return { ok: false, status: 403, message: 'Tài khoản không có email hợp lệ.' };
+    }
+    return { ok: true, email, uid: decoded.uid, name: decoded.name || '' };
+  } catch (e) {
+    console.warn('ID token không hợp lệ:', e?.code || e?.message);
+    return { ok: false, status: 401, message: 'Phiên đăng nhập đã hết hạn.' };
+  }
+}
+
 export async function requireAdmin(req) {
   const header = String(req.headers?.authorization || '');
   const token = header.startsWith('Bearer ') ? header.slice(7).trim() : '';

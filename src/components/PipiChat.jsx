@@ -326,8 +326,19 @@ export default function PipiChat({
   const trigger =
     variant === 'fab' ? (
       /* Nút nổi góc phải. Trên màn nhỏ phải nâng lên khỏi MobileBottomNav
-         (thanh đó fixed bottom-0 z-40), nếu không sẽ đè lên nhau. */
-      <div className="fixed right-4 lg:right-6 bottom-20 lg:bottom-6 z-[85] flex flex-col items-end gap-2 pointer-events-none">
+         (thanh đó fixed bottom-0 z-40), nếu không sẽ đè lên nhau.
+
+         TẦNG z PHẢI NẰM DƯỚI HỘP THOẠI. Trước đây nút này để z-[85], trong khi
+         mọi hộp thoại của ứng dụng nằm trong khoảng z-50 đến z-[80] — nghĩa là
+         quả bóng Pipi và bóng chào của nó nổi đè lên TẤT CẢ hộp thoại. Trên
+         điện thoại, chỗ nó đậu là góc dưới bên phải, đúng chỗ các hộp thoại đặt
+         nút quan trọng nhất: học viên mở Hồ Sơ thì thấy Pipi che mất nút Đăng
+         Xuất Tài Khoản, bấm vào lại mở ra khung chat.
+
+         z-[45] đặt nó vào đúng khe: trên Header và MobileBottomNav (z-40) nên
+         vẫn nổi ở mọi màn học bình thường, nhưng dưới lớp hộp thoại (từ z-50)
+         nên hộp thoại nào mở lên cũng phủ kín nó. */
+      <div className="fixed right-4 lg:right-6 bottom-20 lg:bottom-6 z-[45] flex flex-col items-end gap-2 pointer-events-none">
         {/* Có phản hồi của Ban Quản Trị thì bóng chào đổi hẳn nội dung. Tin
             được trả lời quan trọng hơn lời mời tra thuật ngữ. */}
         {(showHello || unreadReplies > 0) && (
@@ -399,7 +410,9 @@ export default function PipiChat({
           KHÔNG dùng lớp phủ toàn màn: người dùng vẫn đọc và thao tác được với
           nội dung phía sau trong lúc hỏi Pipi. */}
       {!isOpen ? null : createPortal(
-        <div className="fixed z-[88] right-4 lg:right-6 bottom-[152px] lg:bottom-[104px] w-[calc(100vw-2rem)] sm:w-[380px] max-w-[380px] h-[58vh] sm:h-[520px] max-h-[calc(100vh-190px)]">
+        /* z-[46]: ngay trên nút nổi (z-[45]) và trên Header (z-40), nhưng vẫn
+           dưới lớp hộp thoại (từ z-50) — xem lý do ở phần nút nổi bên trên. */
+        <div className="fixed z-[46] right-4 lg:right-6 bottom-[152px] lg:bottom-[104px] w-[calc(100vw-2rem)] sm:w-[380px] max-w-[380px] h-[58vh] sm:h-[520px] max-h-[calc(100vh-190px)]">
           <div className="pipi-pop w-full h-full pipi-panel rounded-3xl border border-emerald-500/40 shadow-2xl flex flex-col overflow-hidden">
 
             {/* Đầu khung */}
