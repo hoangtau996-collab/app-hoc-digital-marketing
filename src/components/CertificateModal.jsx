@@ -50,6 +50,7 @@ export default function CertificateModal({
   // sau khi ảnh template tải xong, nên phải theo dõi bằng ResizeObserver chứ
   // không đọc một lần lúc mount được.
   const [previewBox, setPreviewBox] = useState({ w: 0, h: 0 });
+  const [templateMissing, setTemplateMissing] = useState(false);
   const previewObserver = useRef(null);
 
   const attachPreview = useCallback((el) => {
@@ -99,15 +100,39 @@ export default function CertificateModal({
   const progressPercent = Math.round((passedCount / totalModules) * 100);
   const currentDate = new Date().toLocaleDateString('vi-VN');
 
-  // Mọi nút xuất file đều dựng lại bằng từ template A4 riêng (src/utils/certificateExport.js)
+  // Mọi nút xuất file đều dựng lại bằng từ ảnh template gốc (src/utils/certificateExport.js)
   // thay vì chụp DOM Tailwind, vì html2canvas không đọc được oklch()/color-mix() của Tailwind v4.
   const buildCanvas = () => renderCertificateCanvas({
     studentName,
-    totalModules,
     issueDate: currentDate,
     verifyCode,
     course,
   });
+
+  /**
+   * Quy một ô trong CERT_LAYOUT ra style CSS cho bản xem trước.
+   * Cỡ chữ lấy từ certFieldMetrics — đúng hàm mà file xuất dùng — nên tên dài
+   * co lại trên màn hình y hệt lúc tải về.
+   */
+  const fieldStyle = (spec, text) => {
+    const boxWidth = previewBox.w * (spec.right - spec.left);
+    const { fontPx, letterSpacingPx } = certFieldMetrics(text, spec, boxWidth, previewBox.h);
+
+    return {
+      position: 'absolute',
+      left: `${spec.left * 100}%`,
+      width: `${(spec.right - spec.left) * 100}%`,
+      bottom: `${(1 - spec.baseline) * 100}%`,
+      textAlign: spec.align || 'center',
+      fontFamily: spec.family,
+      fontWeight: spec.weight,
+      fontSize: `${fontPx}px`,
+      letterSpacing: `${letterSpacingPx}px`,
+      color: spec.color,
+      lineHeight: 1,
+      whiteSpace: 'nowrap',
+    };
+  };
 
   const exportFileName = (ext) => `ChungNhan_${courseInfo.fileTag}_${slugifyName(studentName)}.${ext}`;
 
@@ -212,10 +237,12 @@ export default function CertificateModal({
         undefined, 'FAST'
       );
 
+      // subject bám theo khoá đang cấp — trước đây ghi cứng tên khoá chính nên
+      // file PDF của khoá Trade Marketing vẫn hiện sai tên trong thuộc tính.
       pdf.setProperties({
         title: `Chứng Nhận Hoàn Thành - ${studentName}`,
-        subject: 'Khóa Học Digital Thực Chiến',
-        author: 'HỌC VIỆN P MARCOM'
+        subject: courseInfo.title,
+        author: 'P MARCOM ACADEMY'
       });
 
       if (isIOSorIPad) {
@@ -341,107 +368,64 @@ export default function CertificateModal({
           /* UNLOCKED CERTIFICATE VIEW (Only when student completed ALL 11 modules) */
           <>
             {/*
-              Bản xem trước dùng ĐÚNG bảng màu nền trắng của template xuất file
-              (src/utils/certificateExport.js). Màu đặt inline để không phụ thuộc
-              giao diện sáng/tối của app — nếu để lớp Tailwind, ở chế độ tối học
-              viên sẽ xem bằng nền đen nhưng tải về lại ra bằng nền trắng.
+              Bản xem trước dựng y hệt file xuất: ảnh template gốc làm nền, chữ
+              động phủ lên bằng toạ độ tỉ lệ trong CERT_LAYOUT. Không dựng lại
+              khung/hoạ tiết bằng Tailwind — làm vậy là có hai bản bố cục song
+              song và chúng sẽ trôi khỏi nhau ngay lần chỉnh sửa đầu tiên.
             */}
-            <div id="certificate-print-area" className="p-10 sm:p-12 md:p-14 rounded-2xl relative overflow-hidden text-center space-y-6 shadow-2xl" style={{ backgroundColor: '#ffffff', border: '1px solid #e2e8f0' }}>
-
-              {/* Hoạ tiết công nghệ — dựng từ đúng hàm mà file xuất dùng, nên
-                  xem trước và file tải về không thể lệch nhau. */}
-              <div
-                aria-hidden="true"
-                className="pointer-events-none select-none"
-                style={{ position: 'absolute', inset: 0, margin: 0, zIndex: 0 }}
-                dangerouslySetInnerHTML={{ __html: certificateDecorHtml({ scale: PREVIEW_DECOR_SCALE }) }}
+            <div
+              id="certificate-print-area"
+              ref={attachPreview}
+              className="relative overflow-hidden rounded-2xl shadow-2xl"
+              style={{ backgroundColor: '#ffffff' }}
+            >
+              <img
+                src={CERT_TEMPLATE_SRC}
+                alt="Mẫu bằng chứng nhận P Marcom Academy"
+                className="block w-full h-auto select-none"
+                draggable="false"
+                onError={() => setTemplateMissing(true)}
+                onLoad={() => setTemplateMissing(false)}
               />
 
-              {/* Certificate Header Branding */}
-              <div className="space-y-3 relative z-10">
-                <div className="flex justify-center items-center gap-3 mb-2">
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden shadow-lg" style={{ border: '2px solid #d97706' }}>
-                    <img src="/pmarcom-logo.jpg" alt="Học viện P Marcom Logo" className="w-full h-full object-cover" />
+              {/* Thiếu file template thì phải nói thẳng: nếu không, học viên chỉ
+                  thấy một ô trắng có mấy dòng chữ trôi nổi và không hiểu vì sao. */}
+              {templateMissing && (
+                <div className="absolute inset-0 flex items-center justify-center bg-slate-100 text-center p-6">
+                  <div className="text-xs text-slate-600 leading-relaxed">
+                    <strong className="block text-rose-700 mb-1">Chưa có file mẫu bằng chứng nhận</strong>
+                    Hãy đặt file ảnh template vào <code className="px-1 rounded bg-slate-200">public{CERT_TEMPLATE_SRC}</code> rồi tải lại trang.
                   </div>
                 </div>
+              )}
 
-                <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest" style={{ backgroundColor: '#ecfdf5', border: '1px solid #10b981', color: '#047857' }}>
-                  <Award className="w-4 h-4" style={{ color: '#d97706' }} /> CERTIFICATE OF COMPLETION
-                </div>
-
-                <h2 className="text-sm sm:text-base md:text-lg font-extrabold tracking-widest uppercase whitespace-nowrap" style={{ color: '#b45309' }}>
-                  CHỨNG NHẬN HOÀN THÀNH KHÓA HỌC
-                </h2>
-                <h1 className="text-2xl sm:text-3xl md:text-4xl font-black tracking-wide uppercase mt-1" style={{ color: '#047857' }}>
-                  {courseInfo.title}
-                </h1>
-              </div>
-
-              <div
-                className="relative z-10"
-                dangerouslySetInnerHTML={{ __html: certificateDividerHtml({ scale: PREVIEW_DECOR_SCALE }) }}
+              {/* Họ tên học viên — ô nhập trong suốt đặt đúng trên nét kẻ chấm */}
+              <input
+                type="text"
+                value={studentName}
+                onChange={(e) => setStudentName(e.target.value.toUpperCase())}
+                placeholder="NHẬP HỌ VÀ TÊN"
+                className="bg-transparent focus:outline-none focus:bg-amber-50/40 rounded transition"
+                style={fieldStyle(CERT_LAYOUT.name, studentName || 'NHẬP HỌ VÀ TÊN')}
+                title="Click để chỉnh sửa họ tên học viên"
               />
 
-              {/* Editable Student Name */}
-              <div className="space-y-2 relative z-10">
-                <p className="text-xs italic" style={{ color: '#64748b' }}>Chứng nhận cấp cho Học viên:</p>
-                <div className="relative max-w-lg mx-auto">
-                  <input
-                    type="text"
-                    value={studentName}
-                    onChange={(e) => setStudentName(e.target.value.toUpperCase())}
-                    placeholder="NHẬP HỌ VÀ TÊN HỌC VIÊN"
-                    className="text-2xl sm:text-3xl md:text-4xl font-black bg-transparent text-center focus:outline-none pb-1.5 w-full uppercase tracking-wider transition"
-                    style={{ color: '#0f172a', borderBottom: '2px solid #10b981' }}
-                  />
-                  <span className="text-[10px] block mt-1 print:hidden" style={{ color: '#94a3b8' }}>
-                    (Click vào ô trên để chỉnh sửa họ tên — dòng hướng dẫn này không xuất hiện trong file tải về)
-                  </span>
-                </div>
+              <div style={fieldStyle(CERT_LAYOUT.course, courseInfo.title)}>
+                {courseInfo.title}
               </div>
 
-              {/* Description */}
-              <p className="text-xs sm:text-sm max-w-2xl mx-auto leading-relaxed relative z-10" style={{ color: '#334155' }}>
-                Đã hoàn tất xuất sắc toàn bộ <strong style={{ color: '#047857' }}>{totalModules} Chuyên đề đào tạo thực chiến</strong> và vượt qua <strong style={{ color: '#047857' }}>{courseInfo.quizCount} {courseInfo.quizLabel}</strong> tại <strong style={{ color: '#b45309' }}>HỌC VIỆN P MARCOM</strong>{' '}
-                {/* scope chứa thực thể HTML (&ndash;, &amp;) vì template xuất file
-                    là chuỗi HTML thuần; ở React phải giải mã lại, nếu không sẽ
-                    hiện nguyên chữ "&ndash;" trên màn hình. */}
-                <span style={{ color: '#64748b' }} dangerouslySetInnerHTML={{ __html: `(${courseInfo.scope}).` }} />
-              </p>
-
-              {/* Footer Signatures & Metadata */}
-              <div className="grid grid-cols-2 gap-4 pt-6 max-w-2xl mx-auto text-xs relative z-10 items-end" style={{ borderTop: '1px solid #e2e8f0' }}>
-
-                {/* Verification Metadata */}
-                <div className="text-left space-y-1" style={{ color: '#64748b' }}>
-                  <div className="flex items-center gap-1.5 font-bold text-xs" style={{ color: '#047857' }}>
-                    <ShieldCheck className="w-4 h-4" /> BẢO CHỨNG BỞI P MARCOM
-                  </div>
-                  <div>Mã xác thực: <strong style={{ color: '#0f172a' }}>{verifyCode}</strong></div>
-                  <div>Ngày cấp: <strong style={{ color: '#0f172a' }}>{currentDate}</strong></div>
-                </div>
-
-                {/* Founder & CEO Signature Block */}
-                <div className="text-center sm:text-right space-y-0.5">
-                  <div className="font-extrabold tracking-wide uppercase text-[10px]" style={{ color: '#b45309' }}>
-                    HỘI ĐỒNG THẨM ĐỊNH ACADEMY
-                  </div>
-
-                  {/* Handwritten Signature Artwork (Refined smaller size) */}
-                  <div className="py-0.5 flex justify-center sm:justify-end">
-                    <div className="font-serif italic font-bold text-base sm:text-lg tracking-wide select-none px-2 py-0.5" style={{ color: '#b45309', borderBottom: '1px solid #d97706' }}>
-                      Lê Thành Phong
-                    </div>
-                  </div>
-
-                  <div className="text-[10px] font-semibold mt-1" style={{ color: '#047857' }}>
-                    Founder &amp; CEO
-                  </div>
-                </div>
-
+              <div style={fieldStyle(CERT_LAYOUT.date, currentDate)}>
+                {currentDate}
               </div>
 
+              <div style={fieldStyle(CERT_LAYOUT.code, verifyCode)}>
+                {verifyCode}
+              </div>
             </div>
+
+            <p className="text-[11px] text-center text-slate-400 -mt-2">
+              Click vào dòng họ tên trên tấm bằng để chỉnh sửa. Dòng hướng dẫn này không xuất hiện trong file tải về.
+            </p>
 
             {/* Action Controls & Export Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
