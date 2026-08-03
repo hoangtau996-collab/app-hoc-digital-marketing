@@ -72,8 +72,24 @@ const MAROON = '#6b1b22';   // đỏ mận của ruy băng — dùng cho tên h�
 const INK = '#4a4441';      // xám ấm, cùng tông với các dòng chữ in sẵn
 const MUTED = '#9a9086';    // xám nhạt, dành cho mã xác thực
 
-const SERIF = "Georgia,'Times New Roman','Noto Serif',serif";
+// Cả hai font đều bắt buộc phải có bộ tiếng Việt đầy đủ (khối Latin Extended
+// Additional U+1E00–U+1EFF, nơi chứa Ầ Ề Ộ Ữ...). Georgia/Times của hệ điều
+// hành KHÔNG có khối này: chữ "TRẦN" sẽ hiện thành "TRÂ`N" vì trình duyệt phải
+// tách dấu ra vẽ rời. Playfair Display và Plus Jakarta Sans lấy từ Google Fonts
+// đều có subset "vietnamese" nên an toàn.
+const SERIF = "'Playfair Display',Georgia,'Times New Roman',serif";
 const SANS = "'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif";
+
+/**
+ * Chuẩn hoá họ tên trước khi hiển thị/xuất file.
+ *
+ * Bàn phím tiếng Việt (Unikey kiểu "Unicode tổ hợp") sinh ra chuỗi dạng phân
+ * rã: "Ầ" là "Â" + dấu huyền rời. Font nào cũng có thể vẽ hỏng dạng này. Ép về
+ * NFC để mọi ký tự thành một mã dựng sẵn duy nhất, font vẽ đúng ngay.
+ */
+export function normalizeStudentName(value) {
+  return String(value ?? '').normalize('NFC').toUpperCase();
+}
 
 /*
   Số đo lấy bằng cách quét pixel trên file template 4200×3150, không ước lượng
@@ -283,7 +299,7 @@ function textBlock(text, spec, W, H) {
 }
 
 function buildMarkup({ studentName, courseTitle, issueDate, verifyCode, templateUrl, W, H }) {
-  const name = String(studentName || 'HỌC VIÊN').trim().toUpperCase();
+  const name = normalizeStudentName(studentName).trim() || 'HỌC VIÊN';
 
   return `
     <img src="${templateUrl}" alt="" style="position:absolute;top:0;left:0;width:${W}px;height:${H}px;display:block;" />
@@ -312,8 +328,19 @@ export async function renderCertificateCanvas({
   const H = Math.round(CERT_WIDTH / tpl.ratio);
 
   // Chờ webfont để chữ không bị fallback sang font hệ thống lúc chụp.
-  if (typeof document !== 'undefined' && document.fonts?.ready) {
-    try { await document.fonts.ready; } catch (e) { /* không chặn việc xuất file */ }
+  //
+  // Phải gọi fonts.load() cho từng font cụ thể chứ không chỉ chờ fonts.ready:
+  // trình duyệt chỉ tải webfont khi có phần tử đang hiển thị dùng tới nó, mà
+  // khung dựng thì nằm ngoài màn hình. Thiếu bước này, máy nào chưa mở bản xem
+  // trước sẽ xuất ra file dùng font hệ thống — mất dấu tiếng Việt như cũ.
+  if (typeof document !== 'undefined' && document.fonts) {
+    try {
+      await Promise.all([
+        document.fonts.load("700 100px 'Playfair Display'"),
+        document.fonts.load("700 100px 'Plus Jakarta Sans'"),
+      ]);
+      await document.fonts.ready;
+    } catch (e) { /* không chặn việc xuất file */ }
   }
 
   const node = document.createElement('div');

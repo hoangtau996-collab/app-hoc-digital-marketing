@@ -7,6 +7,7 @@ import {
   slugifyName,
   isIOSorIPad,
   getCertificateCourse,
+  normalizeStudentName,
   CERT_TEMPLATE_SRC,
   CERT_LAYOUT,
 } from '../utils/certificateExport';
@@ -31,10 +32,13 @@ export default function CertificateModal({
   course = 'main'
 }) {
   const courseInfo = getCertificateCourse(course);
+  // Mọi đường vào của họ tên đều đi qua normalizeStudentName: viết hoa và ép về
+  // dạng Unicode dựng sẵn (NFC). Tên lưu trong localStorage từ phiên trước có
+  // thể đang ở dạng phân rã, không chuẩn hoá là dấu tiếng Việt vẫn vỡ.
   const [studentName, setStudentName] = useState(() => {
-    if (customStudentName) return customStudentName.toUpperCase();
+    if (customStudentName) return normalizeStudentName(customStudentName);
     try {
-      return localStorage.getItem('dmm_student_name') || "NGUYỄN VĂN A";
+      return normalizeStudentName(localStorage.getItem('dmm_student_name') || "NGUYỄN VĂN A");
     } catch (e) {
       return "NGUYỄN VĂN A";
     }
@@ -69,7 +73,7 @@ export default function CertificateModal({
 
   useEffect(() => {
     if (customStudentName) {
-      setStudentName(customStudentName.toUpperCase());
+      setStudentName(normalizeStudentName(customStudentName));
     }
   }, [customStudentName]);
 
@@ -402,18 +406,19 @@ export default function CertificateModal({
               {/*
                 Họ tên học viên — ô nhập trong suốt đặt đúng trên nét kẻ chấm.
 
-                Nền phải trong suốt ở MỌI trạng thái, kể cả khi đang gõ: tô nền
-                lúc focus sẽ để lại một mảng trắng chữ nhật đè lên nền giấy kem
-                của template. Đặt backgroundColor ngay trong style nội tuyến để
-                không lớp tiện ích nào ghi đè lại được.
+                Nền trong suốt do lớp .cert-name-input trong index.css lo; ở đây
+                đặt background-color không đủ vì Chrome vẽ đè nền autofill.
+                autoComplete="off" để trình duyệt bớt gợi ý tự điền ngay từ đầu.
               */}
               <input
                 type="text"
                 value={studentName}
-                onChange={(e) => setStudentName(e.target.value.toUpperCase())}
+                onChange={(e) => setStudentName(normalizeStudentName(e.target.value))}
                 placeholder="NHẬP HỌ VÀ TÊN"
-                className="focus:outline-none"
-                style={{ ...fieldStyle(CERT_LAYOUT.name, studentName || 'NHẬP HỌ VÀ TÊN'), backgroundColor: 'transparent' }}
+                className="cert-name-input"
+                autoComplete="off"
+                spellCheck="false"
+                style={fieldStyle(CERT_LAYOUT.name, studentName || 'NHẬP HỌ VÀ TÊN')}
                 title="Click để chỉnh sửa họ tên học viên"
               />
 

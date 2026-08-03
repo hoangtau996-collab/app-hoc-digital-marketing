@@ -605,13 +605,56 @@ export function LtvCacTool() {
             </Verdict>
           )}
 
+          {/* Ngưỡng hoà vốn có thể ra SỐ ÂM, và đó là tin tốt chứ không phải lỗi.
+              Âm nghĩa là lợi nhuận gộp của riêng đơn đầu tiên đã vượt chi phí thu
+              hút, tức doanh nghiệp không cần khách mua lại mới hoà vốn.
+
+              Trước đây chỗ này kẹp số âm về 0 rồi in ra "phải đạt tối thiểu 0%",
+              vừa vô nghĩa vừa sai: ở mức mua lại 0% lợi nhuận gộp đang GẤP NHIỀU
+              LẦN chi phí thu hút chứ không hề BẰNG. Hai tình huống khác hẳn nhau
+              về mặt hành động nên phải tách thành hai câu khác nhau. */}
           <div className="p-4 rounded-2xl bg-[#152037] border border-emerald-900/50 space-y-2">
-            <h4 className="text-xs font-black text-emerald-400 uppercase tracking-wider">Ngưỡng hoà vốn</h4>
-            <p className="text-xs text-slate-300 leading-relaxed">
-              Với giá trị đơn {vnd(aov)} và biên gộp {num(margin)}%, tỷ lệ mua lại phải đạt tối thiểu{' '}
-              <strong className="text-emerald-300 font-black">{pct(Math.max(0, breakevenRepeat))}</strong> thì lợi nhuận gộp
-              trọn đời mới bằng chi phí thu hút {vnd(cac)}.
-            </p>
+            <h4 className="text-xs font-black text-emerald-400 uppercase tracking-wider">
+              {!hasEnoughInput
+                ? 'Chưa đủ dữ liệu để tính'
+                : breakevenRepeat > 0
+                ? 'Ngưỡng hoà vốn'
+                : 'Đã hoà vốn ngay ở đơn đầu tiên'}
+            </h4>
+
+            {!hasEnoughInput ? (
+              /* Ba ô này đều có thể bị xoá trắng và mỗi ô hỏng một kiểu:
+                 giá trị đơn hoặc biên gộp bằng 0 làm lợi nhuận gộp bằng 0, còn
+                 chi phí thu hút bằng 0 làm phép chia trả về 0. Cả ba đều rơi vào
+                 nhánh "đã hoà vốn" và khoe rằng đơn đầu tiên gấp 0 lần chi phí. */
+              <p className="text-xs text-slate-300 leading-relaxed">
+                Cần nhập đủ ba số lớn hơn 0: giá trị đơn hàng, biên lợi nhuận gộp và chi phí thu hút khách.
+              </p>
+            ) : breakevenRepeat > 0 ? (
+              <p className="text-xs text-slate-300 leading-relaxed">
+                Với giá trị đơn {vnd(aov)} và biên gộp {num(margin)}%, tỷ lệ mua lại phải đạt tối thiểu{' '}
+                <strong className="text-emerald-300 font-black">{pct(breakevenRepeat)}</strong> thì lợi nhuận gộp
+                trọn đời mới bằng chi phí thu hút {vnd(cac)}.
+              </p>
+            ) : (
+              <div className="text-xs text-slate-300 leading-relaxed space-y-1.5">
+                <p>
+                  <strong className="text-emerald-300 font-black">Không cần khách mua lại để hoà vốn.</strong> Riêng đơn
+                  đầu tiên đã mang về {vnd(grossPerOrder)} lợi nhuận gộp, gấp{' '}
+                  <strong className="text-emerald-300 font-black">{num(safeDiv(grossPerOrder, cac), 1)} lần</strong> chi
+                  phí thu hút {vnd(cac)}.
+                </p>
+                <p>
+                  Chi phí thu hút còn có thể tăng lên tới {vnd(grossPerOrder)} mới chạm điểm hoà vốn, tức còn dư địa{' '}
+                  {pct(safeDiv(grossPerOrder - cac, cac), 0)} trước khi lỗ.
+                </p>
+                <p>
+                  Ở tình huống này, đòn bẩy đáng làm không phải là giữ chân khách mà là{' '}
+                  <strong className="text-emerald-300 font-black">mở rộng quy mô</strong>: tăng ngân sách để mua thêm
+                  khách trong khi mỗi khách vẫn còn lãi dày. Mua lại chỉ là phần lãi cộng thêm, không phải điều kiện sống còn.
+                </p>
+              </div>
+            )}
           </div>
 
           <Note>

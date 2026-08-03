@@ -617,3 +617,31 @@ html.dark .app-toast-banner div {
 :root:not(.dark) #certificate-print-area[class*="bg-[#"] {
   background-color: #ffffff !important;
 }
+
+/* ========================================================
+   Ô NHẬP HỌ TÊN TRÊN BẰNG CHỨNG NHẬN
+   ========================================================
+   Ô này nằm đè lên ảnh template giấy kem nên nền phải trong suốt tuyệt đối ở
+   mọi trạng thái. Đặt background-color: transparent thôi là KHÔNG đủ: khi
+   Chrome/Edge tự điền (autofill), trình duyệt vẽ nền bằng style nội bộ có
+   !important mà thuộc tính background-color không ghi đè được — kết quả là một
+   mảng trắng chữ nhật đè lên nền giấy.
+
+   Cách duy nhất chặn được là phủ một box-shadow inset trong suốt lên chính ô
+   đó, kèm -webkit-text-fill-color để chữ không bị đổi màu theo. */
+.cert-name-input,
+.cert-name-input:hover,
+.cert-name-input:focus,
+.cert-name-input:focus-visible,
+.cert-name-input:-webkit-autofill,
+.cert-name-input:-webkit-autofill:hover,
+.cert-name-input:-webkit-autofill:focus {
+  background-color: transparent !important;
+  background-image: none !important;
+  border: 0;
+  outline: none;
+  -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+  box-shadow: 0 0 0 1000px transparent inset !important;
+  -webkit-text-fill-color: currentColor !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
