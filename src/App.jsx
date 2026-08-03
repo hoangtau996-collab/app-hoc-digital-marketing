@@ -48,6 +48,7 @@ import {
   consumeGoogleRedirectResult
 } from './firebase';
 import { hasRealPhone } from './utils/industryOptions';
+import { sendGraduationEmail } from './utils/studentEmail';
 import { isModuleUnlocked, getGateMessage } from './utils/moduleGating';
 
 import StudyReminderModal from './components/StudyReminderModal';
@@ -754,6 +755,16 @@ export default function App() {
       // mảng, vì dữ liệu cũ có thể chứa id chuyên đề đã bị xoá.
       if (COURSE_MODULES.every((m) => completedModules.includes(m.id))) {
         recordRealStudentGraduate();
+
+        // Thư chúc mừng tốt nghiệp. Không await và không xử lý lỗi ở đây: máy
+        // chủ tự chốt gửi đúng một lần (cờ trên Firestore), còn thư hỏng thì
+        // tấm bằng vẫn nằm sẵn trong ứng dụng — không đáng để chặn luồng học.
+        //
+        // Bỏ qua tài khoản quản trị: đây là thư dành cho học viên, và Ban Quản
+        // Trị vào hệ thống để quản lý chứ không phải để học.
+        if (!isAdmin) {
+          sendGraduationEmail();
+        }
       }
     } catch (e) {
       console.error("Error saving completed modules", e);

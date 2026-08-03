@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PMarcomLogo from './PMarcomLogo';
 import { INDUSTRY_OPTIONS } from '../utils/industryOptions';
+import { sendWelcomeEmail } from '../utils/studentEmail';
 import {
   auth,
   updateProfile,
@@ -113,6 +114,14 @@ export default function CompleteProfileModal({ isOpen, user, onComplete, onLogou
         recordRealStudentEnrollment();
       }
     } catch (err) { /* localStorage bị chặn thì bỏ qua bộ đếm */ }
+
+    // Thư chào mừng. Gửi ở ĐÂY chứ không phải lúc vừa đăng nhập Google xong:
+    // lúc đó hồ sơ còn khuyết số điện thoại và ngành nghề, tức là người này
+    // chưa thật sự là học viên. Đây mới là thời điểm hồ sơ hoàn tất.
+    //
+    // Không await: thư là việc phụ, không được để nó giữ học viên lại ở màn
+    // hình này. Máy chủ tự chốt gửi đúng một lần.
+    sendWelcomeEmail();
 
     setIsSaving(false);
 

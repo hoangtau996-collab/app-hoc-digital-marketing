@@ -4,6 +4,7 @@ import { createCredential, verifyCredential, upgradeRecord } from '../utils/loca
 import { isRootAdmin } from '../utils/adminRoles';
 import { INDUSTRY_OPTIONS } from '../utils/industryOptions';
 import { requestPasswordReset } from '../utils/requestPasswordReset';
+import { sendWelcomeEmail } from '../utils/studentEmail';
 import {
   auth,
   signInWithEmailAndPassword,
@@ -521,6 +522,13 @@ export default function AuthModal({
       } else {
         // Chỉ cộng bộ đếm ghi danh khi hồ sơ THẬT SỰ đã lên máy chủ.
         recordRealStudentEnrollment();
+
+        // Thư chào mừng. Không await: thư là việc phụ, không được để nó giữ
+        // học viên lại ở màn hình đăng ký. Máy chủ tự chốt gửi đúng một lần
+        // nên gọi ở đây không đụng với luồng đăng nhập Google (nơi thư được
+        // gửi sau bước hoàn tất hồ sơ).
+        sendWelcomeEmail();
+
         setSuccessMsg('🎉 Đăng ký tài khoản học viên P MARCOM thành công! Bạn có thể bắt đầu học ngay.');
       }
 

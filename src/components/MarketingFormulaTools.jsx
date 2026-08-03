@@ -25,22 +25,24 @@ import {
  * Infinity hay NaN. Người dùng xoá trắng một ô là chuyện xảy ra liên tục.
  */
 
-/* ============ Hàm dùng chung ============ */
+/* ============ Hàm dùng chung ============
+   Xuất ra ngoài để ManagerTools dùng lại. Trước đây hai tệp có hai hàm định
+   dạng tiền riêng, nên cùng một màn hình hiện hai kiểu số khác nhau. */
 
-const safeDiv = (a, b) => (!b || !isFinite(a / b) ? 0 : a / b);
+export const safeDiv = (a, b) => (!b || !isFinite(a / b) ? 0 : a / b);
 
-const vnd = (v) =>
+export const vnd = (v) =>
   new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND', maximumFractionDigits: 0 })
     .format(Math.round(v || 0));
 
-const num = (v, d = 0) =>
+export const num = (v, d = 0) =>
   new Intl.NumberFormat('vi-VN', { maximumFractionDigits: d }).format(v || 0);
 
-const pct = (v, d = 1) => `${num((v || 0) * 100, d)}%`;
+export const pct = (v, d = 1) => `${num((v || 0) * 100, d)}%`;
 
 /* ============ Mảnh giao diện dùng chung ============ */
 
-function ToolShell({ icon: Icon, title, moduleRef, intro, children }) {
+export function ToolShell({ icon: Icon, title, moduleRef, intro, children }) {
   return (
     <div className="glass-panel p-6 md:p-8 rounded-2xl border border-emerald-900/40 space-y-6">
       <div className="border-b border-emerald-900/40 pb-3 space-y-2">
@@ -60,7 +62,7 @@ function ToolShell({ icon: Icon, title, moduleRef, intro, children }) {
   );
 }
 
-function Field({ label, value, onChange, step = 1, suffix, hint }) {
+export function Field({ label, value, onChange, step = 1, suffix, hint }) {
   return (
     <div className="space-y-1.5">
       <label className="text-xs font-bold text-slate-300 block">{label}</label>
@@ -84,7 +86,7 @@ function Field({ label, value, onChange, step = 1, suffix, hint }) {
   );
 }
 
-function Stat({ label, value, note, tone = 'emerald' }) {
+export function Stat({ label, value, note, tone = 'emerald' }) {
   // Tailwind quét tên lớp theo chuỗi tĩnh nên không ghép động được.
   const toneText =
     tone === 'rose' ? 'text-rose-400' : tone === 'amber' ? 'text-amber-400' : 'text-emerald-400';
@@ -98,7 +100,7 @@ function Stat({ label, value, note, tone = 'emerald' }) {
 }
 
 /** Khối kết luận: xanh khi đạt, hổ phách khi cần chú ý, đỏ khi hỏng. */
-function Verdict({ level, title, children }) {
+export function Verdict({ level, title, children }) {
   const map = {
     good: { box: 'bg-emerald-950/60 border-emerald-600/50', head: 'text-emerald-300', Icon: CheckCircle2 },
     warn: { box: 'bg-amber-950/50 border-amber-600/50', head: 'text-amber-300', Icon: AlertTriangle },
@@ -116,7 +118,7 @@ function Verdict({ level, title, children }) {
   );
 }
 
-function Note({ children }) {
+export function Note({ children }) {
   return (
     <div className="flex items-start gap-2 text-[10px] text-slate-500 leading-relaxed">
       <Info className="w-3 h-3 shrink-0 mt-0.5" />
