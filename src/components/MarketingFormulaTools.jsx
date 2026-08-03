@@ -9,6 +9,7 @@ import {
   CheckCircle2,
   Info,
 } from 'lucide-react';
+import { safeDiv, vnd, num, pct } from '../utils/toolFormat';
 
 /**
  * Năm công cụ tính bổ sung cho bộ công cụ Trưởng phòng.
@@ -25,22 +26,9 @@ import {
  * Infinity hay NaN. Người dùng xoá trắng một ô là chuyện xảy ra liên tục.
  */
 
-/* ============ Hàm dùng chung ============
-   Xuất ra ngoài để ManagerTools dùng lại. Trước đây hai tệp có hai hàm định
-   dạng tiền riêng, nên cùng một màn hình hiện hai kiểu số khác nhau. */
-
-export const safeDiv = (a, b) => (!b || !isFinite(a / b) ? 0 : a / b);
-
-export const vnd = (v) =>
-  new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND', maximumFractionDigits: 0 })
-    .format(Math.round(v || 0));
-
-export const num = (v, d = 0) =>
-  new Intl.NumberFormat('vi-VN', { maximumFractionDigits: d }).format(v || 0);
-
-export const pct = (v, d = 1) => `${num((v || 0) * 100, d)}%`;
-
-/* ============ Mảnh giao diện dùng chung ============ */
+/* ============ Mảnh giao diện dùng chung ============
+   Hàm định dạng số nằm ở utils/toolFormat để tệp này chỉ xuất ra component,
+   nếu không Fast Refresh của Vite sẽ tải lại cả trang mỗi lần sửa. */
 
 export function ToolShell({ icon: Icon, title, moduleRef, intro, children }) {
   return (

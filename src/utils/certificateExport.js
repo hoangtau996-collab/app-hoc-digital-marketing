@@ -66,36 +66,47 @@ export function slugifyName(name) {
    Nếu chữ bị lệch so với nét kẻ chấm: chỉnh `baseline` (xuống = tăng số),
    chỉnh `left`/`right` để dịch ngang. Không cần đụng vào phần code bên dưới.
 */
-const MAROON = '#7a1b2a';   // đỏ mận của dải ruy băng và chữ "OF COMPLETION"
-const INK = '#3f4451';      // xám đậm của các dòng chữ in sẵn
-const MUTED = '#9aa0ab';    // xám nhạt, dành cho mã xác thực
+// Màu lấy từ chính file template (lấy trung bình vùng phẳng của ruy băng và
+// đường cong đỏ), không phải bảng màu tự chọn.
+const MAROON = '#6b1b22';   // đỏ mận của ruy băng — dùng cho tên học viên
+const INK = '#4a4441';      // xám ấm, cùng tông với các dòng chữ in sẵn
+const MUTED = '#9a9086';    // xám nhạt, dành cho mã xác thực
 
 const SERIF = "Georgia,'Times New Roman','Noto Serif',serif";
 const SANS = "'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif";
 
+/*
+  Số đo lấy bằng cách quét pixel trên file template 4200×3150, không ước lượng
+  bằng mắt. Vị trí thật của các nét kẻ chấm in sẵn:
+    - nét kẻ họ tên   : y=1820,  x=415..2532
+    - nét kẻ tên khoá : y=2175,  x=415..2532
+    - nét kẻ ngày cấp : y=2732,  x=233..843
+  `baseline` đặt cao hơn nét kẻ vài chục px để chữ ngồi trên nét, không đè lên.
+*/
 export const CERT_LAYOUT = {
-  // Nét kẻ chấm thứ nhất — "THIS CERTIFICATE IS PROUDLY PRESENTED TO"
+  // Nét kẻ chấm thứ nhất — dưới "THIS CERTIFICATE IS PROUDLY PRESENTED TO"
   name: {
-    left: 0.088, right: 0.610, baseline: 0.582,
-    size: 0.048, letterSpacing: 0.04,
+    left: 0.0988, right: 0.6029, baseline: 0.5676,
+    size: 0.038, letterSpacing: 0.04,
     family: SERIF, weight: 700, color: MAROON, maxShrink: 0.5,
   },
-  // Nét kẻ chấm thứ hai — "FOR SUCCESSFULLY COMPLETING THE COURSE"
+  // Nét kẻ chấm thứ hai — dưới "FOR SUCCESSFULLY COMPLETING THE COURSE"
   course: {
-    left: 0.088, right: 0.610, baseline: 0.698,
-    size: 0.030, letterSpacing: 0.06,
+    left: 0.0988, right: 0.6029, baseline: 0.6822,
+    size: 0.023, letterSpacing: 0.06,
     family: SANS, weight: 700, color: INK, maxShrink: 0.55,
   },
   // Nét kẻ chấm dưới nhãn "DATE" ở chân bằng
   date: {
-    left: 0.041, right: 0.196, baseline: 0.893,
-    size: 0.020, letterSpacing: 0.02,
+    left: 0.0555, right: 0.2007, baseline: 0.8610,
+    size: 0.0165, letterSpacing: 0.02,
     family: SANS, weight: 600, color: INK, maxShrink: 0.7,
   },
-  // Mã xác thực: in nhỏ, căn trái, ngay dưới nét kẻ ngày cấp
+  // Mã xác thực: in nhỏ, căn trái, ngay dưới nét kẻ ngày cấp.
+  // Vùng này trống tới tận khung viền vàng nên không đè vào chữ ký/con dấu.
   code: {
-    left: 0.041, right: 0.300, baseline: 0.935, align: 'left',
-    size: 0.0135, letterSpacing: 0.05,
+    left: 0.0555, right: 0.3200, baseline: 0.8984, align: 'left',
+    size: 0.0108, letterSpacing: 0.05,
     family: SANS, weight: 600, color: MUTED, maxShrink: 0.8,
   },
 };
@@ -158,12 +169,17 @@ export const getCertificateCourse = (key) => CERTIFICATE_COURSES[key] || CERTIFI
 let templateCache = null;
 
 /**
- * Nạp ảnh template một lần rồi giữ lại cả data URL lẫn kích thước thật.
+ * Nạp ảnh template một lần, giữ lại kích thước thật để suy ra tỉ lệ khung dựng.
  *
- * Phải inline thành data URL: html2canvas hay bỏ qua ảnh chưa nằm sẵn trong
- * cache của iframe clone, chụp ra sẽ mất nền. Kích thước thật dùng để suy ra
- * tỉ lệ khung dựng, nhờ vậy đổi sang file template cắt cúp khác cũng không bị
- * bóp méo.
+ * Cố ý KHÔNG nhúng thành data URL qua canvas như cách thường làm với ảnh trong
+ * html2canvas. File template là 4200×3150, mà Safari trên iOS chặn canvas có
+ * cạnh quá 4096px — đẩy qua canvas là hỏng đúng nhóm iPad/iPhone mà app có hẳn
+ * một nút tải riêng. Chưa kể mỗi lần dựng lại tốn thêm ~50MB bộ nhớ và một lần
+ * nén JPEG chồng lên ảnh đã nén.
+ *
+ * Thay vào đó chỉ cần `decode()` trước: ảnh vào cache trình duyệt, nên bản sao
+ * DOM mà html2canvas tạo ra lấy được ngay, không bị trắng nền. Ảnh cùng origin
+ * (nằm trong public/) nên cũng không vướng CORS.
  */
 async function loadTemplate(src) {
   if (templateCache && templateCache.src === src) return templateCache;
@@ -181,21 +197,13 @@ async function loadTemplate(src) {
     );
   }
 
-  const width = img.naturalWidth || CERT_WIDTH;
-  const height = img.naturalHeight || Math.round(CERT_WIDTH / 1.4143);
-
-  let dataUrl = src;
-  try {
-    const c = document.createElement('canvas');
-    c.width = width;
-    c.height = height;
-    c.getContext('2d').drawImage(img, 0, 0);
-    dataUrl = c.toDataURL('image/jpeg', 0.95);
-  } catch (e) {
-    // Ảnh khác origin / bị chặn CORS: dùng URL gốc, html2canvas vẫn có cơ hội tải được.
+  const width = img.naturalWidth;
+  const height = img.naturalHeight;
+  if (!width || !height) {
+    throw new Error(`File mẫu bằng chứng nhận "${src}" bị lỗi, không đọc được kích thước.`);
   }
 
-  templateCache = { src, dataUrl, width, height, ratio: width / height };
+  templateCache = { src, width, height, ratio: width / height };
   return templateCache;
 }
 
@@ -327,7 +335,7 @@ export async function renderCertificateCanvas({
     courseTitle: getCertificateCourse(course).title,
     issueDate,
     verifyCode,
-    templateUrl: tpl.dataUrl,
+    templateUrl: tpl.src,
     W,
     H,
   });
