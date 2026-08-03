@@ -30,8 +30,19 @@
 const LS_KEY = 'dmm_admin_emails';
 const USERS_DB_KEY = 'dmm_users_db';
 
-/** Email của các tài khoản quản trị cao nhất — bất khả xâm phạm. */
-export const ROOT_ADMIN_EMAILS = ['admin@pmarcom.edu.vn'];
+/**
+ * Email của các tài khoản quản trị cao nhất — bất khả xâm phạm.
+ *
+ * PHẢI KHỚP `rootAdminEmails()` trong firestore.rules. Danh sách ở đây chỉ điều
+ * khiển giao diện; ranh giới thật nằm ở rules trên máy chủ. Sửa một bên mà quên
+ * bên kia sẽ ra đúng kiểu hỏng khó chịu nhất: giao diện quản trị mở ra bình
+ * thường nhưng mọi lệnh đọc bị từ chối, nên bảng hiện lên rỗng trơn và không
+ * chỗ nào nói vì sao.
+ *
+ * Và rules KHÔNG tự lên máy chủ theo lệnh deploy — phải dán tay trong Firebase
+ * Console (xem DEPLOYMENT.md).
+ */
+export const ROOT_ADMIN_EMAILS = ['admin@pmarcom.edu.vn', 'pmarcomvn@gmail.com'];
 
 /**
  * Hồ sơ hiển thị của tài khoản gốc. Cần đến vì bản ghi thật của tài khoản này
@@ -44,6 +55,16 @@ export const ROOT_ADMIN_PROFILES = [
     email: 'admin@pmarcom.edu.vn',
     name: 'QUẢN TRỊ VIÊN ADMIN',
     phone: '0999999999',
+    industry: 'Ban Quản Trị Học Viện',
+    role: 'admin',
+    completedModules: [],
+    createdAt: 'Tài khoản gốc'
+  },
+  {
+    id: 'admin-master-02',
+    email: 'pmarcomvn@gmail.com',
+    name: 'P MARCOM',
+    phone: 'Chưa cập nhật',
     industry: 'Ban Quản Trị Học Viện',
     role: 'admin',
     completedModules: [],

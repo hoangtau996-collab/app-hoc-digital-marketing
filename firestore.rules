@@ -42,8 +42,16 @@ service cloud.firestore {
 
     // Tài khoản Quản Trị Tối Cao. Phải khớp ROOT_ADMIN_EMAILS trong
     // src/utils/adminRoles.js — đổi một bên thì đổi cả hai.
-    function rootAdminEmail() {
-      return 'admin@pmarcom.edu.vn';
+    //
+    // Danh sách chứ không còn một địa chỉ: chỉ có duy nhất một tài khoản gốc là
+    // một điểm hỏng duy nhất — mất quyền vào email đó là không ai còn đường mồi
+    // lại sổ phân quyền, và cách chữa duy nhất là sửa mã nguồn rồi deploy lại.
+    function rootAdminEmails() {
+      return ['admin@pmarcom.edu.vn', 'pmarcomvn@gmail.com'];
+    }
+
+    function isRootAdminEmail(e) {
+      return e in rootAdminEmails();
     }
 
     // Quyền quản trị = có bản ghi trong sổ /admins. Sổ đó chỉ quản trị viên
@@ -162,14 +170,14 @@ service cloud.firestore {
       // An toàn vì điều kiện buộc email trong token phải đúng bằng tài khoản
       // gốc, tức là phải đăng nhập được vào chính tài khoản đó.
       allow create: if isAdmin()
-                    || (adminEmail == rootAdminEmail() && myEmail() == rootAdminEmail());
+                    || (adminEmail == myEmail() && isRootAdminEmail(myEmail()));
 
       // Không ai sửa hay xoá được bản ghi của Quản Trị Tối Cao — kể cả một quản
       // trị viên khác, kể cả chính nó. Đây là chốt chặn "không tài khoản nào
       // được phép gỡ quyền quản trị cao nhất", đặt ở phía máy chủ nên không
       // vòng qua được bằng cách sửa giao diện.
-      allow update: if isAdmin() && adminEmail != rootAdminEmail();
-      allow delete: if isAdmin() && adminEmail != rootAdminEmail();
+      allow update: if isAdmin() && !isRootAdminEmail(adminEmail);
+      allow delete: if isAdmin() && !isRootAdminEmail(adminEmail);
     }
 
     // ---- /students và /registrations : hồ sơ học viên ---------------------
