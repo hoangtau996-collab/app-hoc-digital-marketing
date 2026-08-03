@@ -21,7 +21,10 @@ export default function Sidebar({
   setActiveTab,
   isTradeCourseUnlocked = false,
   tradePassedCount = 0,
-  tradeTotalModules = 0
+  tradeTotalModules = 0,
+  // Quản trị viên thấy mọi chuyên đề đang mở: khoá tuần tự là để học viên học
+  // đúng thứ tự, không phải để giấu nội dung với Ban Quản Trị.
+  isAdmin = false
 }) {
   const [isMobileExpanded, setIsMobileExpanded] = useState(false);
 
@@ -49,7 +52,7 @@ export default function Sidebar({
             {modules.map((mod) => {
               const isCompleted = completedModules.includes(mod.id);
               const isSelected = activeTab === 'course' && selectedModuleId === mod.id;
-              const isLocked = !isModuleUnlocked(modules, mod.id, completedModules);
+              const isLocked = !isModuleUnlocked(modules, mod.id, completedModules, isAdmin);
 
               return (
                 <button
@@ -82,7 +85,7 @@ export default function Sidebar({
             {modules.map((mod) => {
               const isCompleted = completedModules.includes(mod.id);
               const isSelected = activeTab === 'course' && selectedModuleId === mod.id;
-              const isLocked = !isModuleUnlocked(modules, mod.id, completedModules);
+              const isLocked = !isModuleUnlocked(modules, mod.id, completedModules, isAdmin);
 
               return (
                 <button

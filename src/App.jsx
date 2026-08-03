@@ -630,6 +630,20 @@ export default function App() {
       setIsReminderOpen(false);
       return;
     }
+
+    // Quản trị viên KHÔNG bị nhắc học. Lời nhắc này đo số ngày lơ là để kéo học
+    // viên quay lại khoá học — Ban Quản Trị vào hệ thống để quản lý, không phải
+    // để học, nên với họ nó luôn sai và chỉ gây phiền.
+    //
+    // Chờ `roleResolved` chứ không chỉ hỏi `isAdmin`: trước khi máy chủ trả
+    // lời, mọi tài khoản đều mang tạm vai trò 'student'. Đây đúng là cái bẫy đã
+    // làm bảng khảo sát loé lên trên màn hình quản trị viên, và lời nhắc này
+    // cũng hoãn 1,2 giây nên dính y hệt.
+    if (!roleResolved || isAdmin) {
+      setIsReminderOpen(false);
+      return;
+    }
+
     const timer = setTimeout(() => {
       const due = shouldRemind({
         hasUser: true,
@@ -642,9 +656,11 @@ export default function App() {
       }
     }, 1200);
     return () => clearTimeout(timer);
-    // Chỉ chạy khi đổi người dùng, không chạy lại mỗi lần tiến độ thay đổi
-    // để tránh popup bật lên ngay giữa lúc học viên đang làm bài.
-  }, [currentUser]);
+    // Chỉ chạy khi đổi người dùng hoặc khi vai trò vừa được xác nhận; không
+    // chạy lại mỗi lần tiến độ thay đổi để tránh popup bật lên ngay giữa lúc
+    // học viên đang làm bài.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentUser, roleResolved, isAdmin]);
 
   // News list state.
   //
@@ -1214,7 +1230,7 @@ export default function App() {
 
     // Khoá tuần tự: chặn ở tầng hành động chứ không chỉ làm mờ nút. Mọi lối vào
     // chuyên đề đều đi qua hàm này nên chỉ cần một chốt chặn duy nhất ở đây.
-    const gateMessage = getGateMessage(COURSE_MODULES, id, completedModules);
+    const gateMessage = getGateMessage(COURSE_MODULES, id, completedModules, isAdmin);
     if (gateMessage) {
       setMigrationNotice(gateMessage);
       return;
@@ -1239,7 +1255,7 @@ export default function App() {
 
     // Nút "Chuyên đề Tiếp Theo" là lối vào duy nhất không đi qua
     // handleProtectedSelectModule, nên phải tự kiểm tra ở đây.
-    const gateMessage = getGateMessage(COURSE_MODULES, nextId, completedModules);
+    const gateMessage = getGateMessage(COURSE_MODULES, nextId, completedModules, isAdmin);
     if (gateMessage) {
       setMigrationNotice(gateMessage);
       return;
@@ -1400,6 +1416,7 @@ export default function App() {
               isTradeCourseUnlocked={isTradeCourseUnlocked}
               tradePassedCount={completedTradeModules.length}
               tradeTotalModules={TRADE_MODULES.length}
+              isAdmin={isAdmin}
             />
           )}
 
@@ -1442,7 +1459,7 @@ export default function App() {
                     isNextLocked={(() => {
                       const i = COURSE_MODULES.findIndex((m) => m.id === selectedModule.id);
                       const next = COURSE_MODULES[i + 1];
-                      return !!next && !isModuleUnlocked(COURSE_MODULES, next.id, completedModules);
+                      return !!next && !isModuleUnlocked(COURSE_MODULES, next.id, completedModules, isAdmin);
                     })()}
                   />
 
@@ -1495,7 +1512,7 @@ export default function App() {
                     // ngắt quãng không đẩy học viên vào một chuyên đề còn khoá.
                     const resumeId = COURSE_MODULES.find(
                       (m) => !completedModules.includes(m.id)
-                        && isModuleUnlocked(COURSE_MODULES, m.id, completedModules)
+                        && isModuleUnlocked(COURSE_MODULES, m.id, completedModules, isAdmin)
                     )?.id ?? null;
                     setSelectedModuleId(resumeId);
                     window.scrollTo({ top: 0, behavior: 'smooth' });

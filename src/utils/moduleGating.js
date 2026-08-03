@@ -33,7 +33,19 @@ const asArray = (v) => (Array.isArray(v) ? v : []);
  * @param {string[]} completedModules Các chuyên đề đã đạt bài kiểm tra.
  * @returns {boolean}
  */
-export function isModuleUnlocked(modules, moduleId, completedModules) {
+export function isModuleUnlocked(modules, moduleId, completedModules, bypass = false) {
+  // Quản trị viên đi qua mọi khoá tuần tự.
+  //
+  // Khoá này để học viên học đúng thứ tự, không phải để giữ bí mật nội dung.
+  // Ban Quản Trị cần mở bất kỳ chuyên đề nào để soát nội dung, kiểm tra câu hỏi
+  // trắc nghiệm hay xem lại chỗ học viên báo lỗi — bắt họ học lần lượt 11 bài
+  // mới xem được bài cuối là biến công cụ quản trị thành thứ không dùng được.
+  //
+  // Truyền cờ vào từ nơi gọi chứ không tự đọc trạng thái đăng nhập ở đây: tệp
+  // này là hàm thuần, không biết gì về React lẫn Firebase, và giữ được như vậy
+  // thì còn kiểm thử riêng được.
+  if (bypass) return true;
+
   const list = asArray(modules);
   const done = asArray(completedModules);
 
@@ -54,8 +66,8 @@ export function isModuleUnlocked(modules, moduleId, completedModules) {
  *
  * @returns {{id: string, number: string, title: string} | null} null khi đã mở khoá.
  */
-export function getBlockingModule(modules, moduleId, completedModules) {
-  if (isModuleUnlocked(modules, moduleId, completedModules)) return null;
+export function getBlockingModule(modules, moduleId, completedModules, bypass = false) {
+  if (isModuleUnlocked(modules, moduleId, completedModules, bypass)) return null;
 
   const list = asArray(modules);
   const index = list.findIndex((m) => m.id === moduleId);
@@ -67,8 +79,8 @@ export function getBlockingModule(modules, moduleId, completedModules) {
  *
  * @returns {string | null} null khi đã mở khoá.
  */
-export function getGateMessage(modules, moduleId, completedModules) {
-  const blocker = getBlockingModule(modules, moduleId, completedModules);
+export function getGateMessage(modules, moduleId, completedModules, bypass = false) {
+  const blocker = getBlockingModule(modules, moduleId, completedModules, bypass);
   if (!blocker) return null;
 
   return `🔒 Cần đạt bài kiểm tra Chuyên đề ${blocker.number} — ${blocker.title} trước khi học chuyên đề tiếp theo.`;
