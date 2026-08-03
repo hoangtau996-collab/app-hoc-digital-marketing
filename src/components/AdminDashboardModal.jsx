@@ -811,19 +811,36 @@ export default function AdminDashboardModal({
   /**
    * Người nhận, tính theo phạm vi đang chọn.
    *
-   * LOẠI TÀI KHOẢN QUẢN TRỊ ra khỏi danh sách. Thư thông báo viết cho học viên
-   * ("bạn đang là học viên của Học Viện"), gửi cho chính Ban Quản Trị vừa vô
-   * nghĩa vừa làm số liệu "đã gửi" sai lệch.
+   * HAI PHẠM VI XỬ LÝ TÀI KHOẢN QUẢN TRỊ KHÁC NHAU, và đây là chỗ đã từng làm
+   * sai:
+   *
+   *   'selected'  -> gửi ĐÚNG những người được tick, kể cả tài khoản quản trị.
+   *                  Tick là một hành động có chủ đích; lọc bớt thứ người dùng
+   *                  vừa tự tay chọn là làm trái ý họ mà không nói. Đây cũng là
+   *                  đường duy nhất để gửi thư thử trước khi phát cho cả lớp.
+   *
+   *   'filtered'  -> loại tài khoản quản trị. Ở đây người dùng chọn một NHÓM
+   *                  chứ không chọn từng người, mà thư viết cho học viên ("bạn
+   *                  đang là học viên của Học Viện") nên gửi cho Ban Quản Trị
+   *                  vừa vô nghĩa vừa làm lệch số liệu đã gửi.
+   *
+   * Bản đầu lọc bỏ quản trị viên ở CẢ HAI phạm vi. Hậu quả: tick một tài khoản
+   * quản trị thì màn hình báo "Sẽ gửi tới 0 học viên" mà không giải thích gì —
+   * người dùng không có cách nào biết mình sai ở đâu.
    *
    * Phạm vi 'filtered' bám theo BỘ LỌC ĐANG HIỂN THỊ chứ không phải toàn bộ kho
    * dữ liệu. Quản trị viên lọc ra "ngành Bất Động Sản, chưa tốt nghiệp" rồi bấm
    * gửi thì phải gửi đúng nhóm đó — gửi cho tất cả là chuyện hoàn toàn khác, và
    * không rút lại được.
    */
-  const notifyRecipients = (
-    notifyScope === 'selected' ? selectedStudents : orderedStudents
-  )
-    .filter((s) => getAccountRole(s, adminRoster) === 'student')
+  const notifySource = notifyScope === 'selected' ? selectedStudents : orderedStudents;
+  const notifyExcludedAdmins =
+    notifyScope === 'filtered'
+      ? notifySource.filter((s) => getAccountRole(s, adminRoster) !== 'student').length
+      : 0;
+
+  const notifyRecipients = notifySource
+    .filter((s) => notifyScope === 'selected' || getAccountRole(s, adminRoster) === 'student')
     .map((s) => normalizeEmail(s.email))
     .filter(Boolean);
 
@@ -849,7 +866,9 @@ export default function AdminDashboardModal({
     // cho cả trăm học viên là chuyện phải xin lỗi bằng một lá thư nữa.
     if (
       !window.confirm(
-        `Gửi thư "${notifySubject.trim()}" tới ${notifyRecipients.length} học viên?\n\n` +
+        `Gửi thư "${notifySubject.trim()}" tới ${notifyRecipients.length} người?\n\n` +
+          `${notifyRecipients.slice(0, 5).map((e) => `• ${e}`).join('\n')}` +
+          `${notifyRecipients.length > 5 ? `\n… và ${notifyRecipients.length - 5} người nữa` : ''}\n\n` +
           `Thư đã gửi không thu hồi được.`
       )
     ) {
@@ -2089,10 +2108,34 @@ export default function AdminDashboardModal({
                   </button>
                 </div>
 
-                <div className="p-2.5 rounded-xl bg-emerald-950/60 border border-emerald-700/60 text-emerald-200 text-[11px] leading-relaxed">
-                  Sẽ gửi tới <strong className="text-white">{notifyRecipients.length} học viên</strong>.
-                  Tài khoản quản trị không nhận thư này. Người đã bấm huỷ nhận thư thông báo sẽ được máy chủ
-                  tự bỏ qua ngay trước khi gửi.
+                {/* Ô này phải NÓI RA vì sao con số là như vậy.
+                    Bản đầu chỉ hiện "Sẽ gửi tới 0 học viên" rồi im lặng, và
+                    người dùng tick đúng một người vẫn thấy số 0 mà không có
+                    cách nào biết mình sai ở đâu. */}
+                <div
+                  className={`p-2.5 rounded-xl border text-[11px] leading-relaxed ${
+                    notifyRecipients.length
+                      ? 'bg-emerald-950/60 border-emerald-700/60 text-emerald-200'
+                      : 'bg-amber-950/60 border-amber-600/60 text-amber-200'
+                  }`}
+                >
+                  {notifyRecipients.length > 0 ? (
+                    <>
+                      Sẽ gửi tới <strong className="text-white">{notifyRecipients.length} người</strong>.
+                      {notifyExcludedAdmins > 0 && (
+                        <> Đã loại {notifyExcludedAdmins} tài khoản quản trị khỏi danh sách.</>
+                      )}{' '}
+                      Người đã bấm huỷ nhận thư thông báo sẽ được máy chủ tự bỏ qua ngay trước khi gửi.
+                    </>
+                  ) : notifyScope === 'selected' ? (
+                    <>Chưa tick học viên nào ở bảng bên dưới. Đóng cửa sổ này, tick người cần gửi rồi mở lại.</>
+                  ) : (
+                    <>
+                      Bộ lọc hiện tại không còn học viên nào
+                      {notifyExcludedAdmins > 0 && <> (đã loại {notifyExcludedAdmins} tài khoản quản trị)</>}.
+                      Đóng cửa sổ này và nới bộ lọc trên bảng.
+                    </>
+                  )}
                 </div>
               </div>
 
@@ -2155,7 +2198,7 @@ export default function AdminDashboardModal({
                   disabled={notifySending || !notifyRecipients.length}
                   className="flex-1 py-2.5 rounded-xl bg-sky-600 hover:brightness-110 text-white text-xs font-black transition cursor-pointer disabled:opacity-60"
                 >
-                  {notifySending ? 'Đang gửi...' : `Gửi cho ${notifyRecipients.length} học viên`}
+                  {notifySending ? 'Đang gửi...' : `Gửi cho ${notifyRecipients.length} người`}
                 </button>
               </div>
             </div>

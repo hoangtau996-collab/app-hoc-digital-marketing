@@ -1,28 +1,22 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useRef, useCallback } from 'react';
 import { jsPDF } from 'jspdf';
 import {
   renderCertificateCanvas,
-  certificateDecorHtml,
-  certificateDividerHtml,
+  certFieldMetrics,
   makeVerifyCode,
   slugifyName,
   isIOSorIPad,
   getCertificateCourse,
+  CERT_TEMPLATE_SRC,
+  CERT_LAYOUT,
 } from '../utils/certificateExport';
-
-// Bản xem trước hẹp hơn khung xuất file (1400px) nên hoạ tiết phải thu nhỏ theo.
-const PREVIEW_DECOR_SCALE = 0.5;
-import PMarcomLogo from './PMarcomLogo';
-import { 
-  Award, 
-  X, 
-  CheckCircle2, 
-  Printer, 
-  Download, 
+import {
+  X,
+  Printer,
+  Download,
   FileText,
   Lock,
   ArrowRight,
-  ShieldCheck
 } from 'lucide-react';
 
 export default function CertificateModal({ 
