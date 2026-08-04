@@ -38,6 +38,129 @@
  * ------------------------------------------------------------------ */
 const REAL_SOURCED_NEWS = [
   {
+    id: 'real-2026-07-24-facebook-verified',
+    category: 'Meta Ads',
+    platformIcon: 'Facebook',
+    title: 'Meta ra mắt Facebook Verified: dấu xác thực miễn phí bằng video khuôn mặt, nhưng KHÔNG cấp cho Trang doanh nghiệp',
+    publishedAt: '24/07/2026',
+    isHot: true,
+    illustration: 'account-security',
+    image: {
+      url: 'https://about.fb.com/wp-content/uploads/2026/07/Introducing-Facebook-Verified_Header.jpg?w=1200',
+      credit: 'Ảnh: Meta Newsroom',
+    },
+    sourceUrl: 'https://about.fb.com/news/2026/07/introducing-facebook-verified/',
+    source: 'Meta Newsroom (nguồn công bố chính thức)',
+    readTime: '4 phút đọc',
+    tags: ['Xác thực', 'Marketplace', 'Niềm tin', 'Trang doanh nghiệp'],
+    summary:
+      'Meta cấp miễn phí một dấu xác thực mới cho tài khoản cá nhân, xác minh bằng video quay khuôn mặt đối chiếu với ảnh đại diện sẵn có. Dấu này hiện trên Marketplace, Dating, Nhóm và Trang cá nhân. Điểm đáng chú ý nhất với doanh nghiệp nằm ở phần loại trừ: Trang và tài khoản ProMode không được cấp.',
+    keyNumbers: [
+      { value: 'Miễn phí', label: 'không thu phí thuê bao' },
+      { value: '18+', label: 'độ tuổi tối thiểu' },
+      { value: '0', label: 'Trang doanh nghiệp được cấp' },
+    ],
+    content: [
+      {
+        heading: 'Cách lấy dấu xác thực',
+        body:
+          'Người dùng quay một video tự chụp ngắn, Meta đối chiếu với ảnh đại diện đang có trên tài khoản để xác nhận trùng khớp. Quá trình thường chỉ mất vài phút. Xác thực một lần, dấu đi theo tài khoản trên khắp Facebook. Điều kiện: từ 18 tuổi trở lên, tài khoản đang chấp hành tốt Tiêu chuẩn cộng đồng và không có dấu hiệu hành vi giả mạo.',
+      },
+      {
+        heading: 'Vì sao việc loại trừ Trang mới là tin quan trọng',
+        body:
+          'Dấu này không cấp cho Trang và tài khoản ProMode. Nghĩa là tín hiệu tin cậy mới của Facebook gắn vào CON NGƯỜI chứ không gắn vào thương hiệu. Doanh nghiệp bán hàng qua Marketplace hoặc qua Nhóm sẽ thấy tài khoản cá nhân có dấu được tin hơn hẳn Trang không có dấu, dù Trang mới là nơi doanh nghiệp đầu tư bao lâu nay.',
+      },
+      {
+        heading: 'Meta nói rõ dấu này KHÔNG bảo chứng điều gì',
+        body:
+          'Thông báo ghi thẳng: dấu chỉ cho biết tài khoản thuộc về một người thật đã hoàn tất xác thực khuôn mặt, không có nghĩa Facebook chứng thực hay bảo đảm mức độ đáng tin của người đó. Người có dấu vẫn chịu toàn bộ chính sách của Meta. Đây là chi tiết cần nói lại với đội bán hàng, tránh việc lấy dấu xác thực làm căn cứ tin tưởng đối tác.',
+      },
+      {
+        heading: 'Đặt cạnh bối cảnh tài khoản giả',
+        body:
+          'Xác thực bằng khuôn mặt đắt đỏ hơn nhiều so với xác thực bằng số điện thoại, vốn đã mất giá trị khi thiết bị ảo được cấp phát ở quy mô công nghiệp. Đây là hướng đi hợp lý của Meta. Nhưng nó cũng có nghĩa: những kênh chưa có lớp xác thực tương đương sẽ ngày càng bị người mua nghi ngờ hơn.',
+      },
+      {
+        heading: 'Lộ trình',
+        body:
+          'Meta triển khai theo từng đợt, bắt đầu ở một số thị trường được chọn rồi mở rộng toàn cầu. Thông báo không nêu danh sách thị trường cụ thể lẫn ngày bắt đầu, nên chưa rõ Việt Nam nằm ở đợt nào. Dấu sẽ được bổ sung vào bài đăng trên Bảng tin ở giai đoạn sau.',
+      },
+    ],
+    impact:
+      'Trưởng phòng cần tính lại chiến lược hiện diện: nếu bán hàng qua Marketplace hoặc Nhóm, hãy cho nhân sự phụ trách lấy dấu xác thực cá nhân, vì Trang doanh nghiệp không có cửa nhận dấu này.',
+    ifIgnored:
+      'Khi dấu xác thực phổ biến, tài khoản cá nhân không có dấu và Trang doanh nghiệp sẽ cùng nằm ở nhóm kém tin cậy trong mắt người mua. Tỷ lệ phản hồi tin nhắn và chốt đơn qua Marketplace giảm dần mà không có chỉ số nào trong trình quản lý quảng cáo giải thích được.',
+    actionChecklist: [
+      'Xác định ai trong đội đang trực tiếp bán hàng qua Marketplace hoặc Nhóm, cho những người đó lấy dấu xác thực ngay khi mở tại Việt Nam',
+      'Rà lại ảnh đại diện của các tài khoản đó, vì hệ thống đối chiếu video với ảnh sẵn có',
+      'Nhắc đội bán hàng: dấu xác thực chỉ chứng minh người thật, không phải bảo chứng uy tín đối tác',
+      'Xây tín hiệu tin cậy riêng cho Trang doanh nghiệp bằng đánh giá khách hàng và nội dung thật, đừng chờ Meta cấp dấu',
+    ],
+    deadline: 'Triển khai theo đợt, bắt đầu ở một số thị trường được chọn rồi mở rộng toàn cầu',
+  },
+  {
+    id: 'real-2026-02-09-influencer-vn',
+    category: 'TikTok Shop & Ads',
+    platformIcon: 'Video',
+    title: 'Số liệu thị trường Việt Nam: TikTok và Facebook chiếm hơn 90% chiến dịch influencer, người ít theo dõi lại tương tác cao gấp nhiều lần',
+    publishedAt: '09/02/2026',
+    isHot: false,
+    illustration: 'affiliate-commission',
+    image: {
+      url: 'https://blog.vn.revu.net/wp-content/uploads/2026/02/SO-LIEU-INFLUENCER-MARKETING-VIET-NAM-2026-.jpg',
+      credit: 'Ảnh: REVU Vietnam qua Brands Vietnam',
+    },
+    sourceUrl: 'https://www.brandsvietnam.com/congdong/topic/influencer-marketing-viet-nam-2026-thi-truong-79-trieu-nguoi-dung-social-va-cuoc-choi-tiktok-facebook',
+    source: 'Brands Vietnam - bài của REVU Vietnam',
+    readTime: '6 phút đọc',
+    tags: ['Thị trường Việt Nam', 'Influencer', 'Video ngắn', 'Tương tác'],
+    summary:
+      'REVU Vietnam tổng hợp từ báo cáo Digital Vietnam 2026 và State of Influence in APAC 2026 của AnyMind Group. Việt Nam có 79 triệu người dùng mạng xã hội trên 102 triệu dân. TikTok chiếm 62,9% và Facebook 28,6% số chiến dịch influencer. Nhưng con số đáng giá nhất là tỷ lệ tương tác theo quy mô người theo dõi.',
+    keyNumbers: [
+      { value: '62,9%', label: 'chiến dịch influencer trên TikTok' },
+      { value: '16,18%', label: 'tương tác của người 1.000-10.000 theo dõi' },
+      { value: '2-3%', label: 'tương tác của người theo dõi lớn hơn' },
+    ],
+    content: [
+      {
+        heading: 'Quy mô thị trường',
+        body:
+          'Dân số 102 triệu, người dùng Internet 85,6 triệu, người dùng mạng xã hội 79 triệu, số kết nối di động 137 triệu. Mạng xã hội vẫn tăng 7,2% so với năm trước. Gần 8 trên 10 người Việt đang dùng mạng xã hội, và trung bình mỗi người có hơn một thiết bị di động.',
+      },
+      {
+        heading: 'Người Việt tiêu thụ video ở mức rất cao',
+        body:
+          '96,2% người dùng Internet xem video trực tuyến mỗi tuần, 94,9% dùng mạng xã hội, 93,9% xem video ngắn dạng TikTok và Reels, 91% xem video dài. Thời lượng trung bình mỗi tuần: 12 giờ 40 phút cho video trực tuyến, 7 giờ 53 phút cho mạng xã hội, 7 giờ 08 phút riêng cho video ngắn. Tần suất: mạng xã hội 4,83 ngày mỗi tuần, video ngắn 4,70 ngày.',
+      },
+      {
+        heading: 'Phát hiện quan trọng nhất: quy mô nhỏ tương tác cao hơn nhiều',
+        body:
+          'Trên TikTok, người có từ 1.000 đến 10.000 lượt theo dõi đạt tỷ lệ tương tác 16,18%, trong khi người có lượng theo dõi lớn hơn chỉ khoảng 2 đến 3%. Trên Facebook, con số tương ứng là 9,24% so với 1 đến 2%. Chênh lệch năm tới tám lần. Ngân sách dồn vào một gương mặt lớn gần như chắc chắn kém hiệu quả hơn việc chia cho nhiều người có cộng đồng nhỏ mà gắn kết.',
+      },
+      {
+        heading: 'Tiền đang chảy vào đâu',
+        body:
+          'Hơn 90% ngân sách influencer marketing tại Việt Nam tập trung vào ba nhóm ngành: làm đẹp và thời trang, thực phẩm và đồ uống, mẹ và bé. Đều là hàng gắn với đời sống hằng ngày, nơi người mua muốn nghe đánh giá thực tế trước khi quyết định. Ngành ngoài ba nhóm này có lợi thế cạnh tranh thấp hơn về giá hợp tác.',
+      },
+      {
+        heading: 'Vì sao người ảnh hưởng tác động được tới quyết định mua',
+        body:
+          '37,9% người dùng Internet tìm hiểu sản phẩm và thương hiệu trước khi mua, 61,2% dùng Internet để tìm thông tin, 55,7% để xem video. Người Việt không mua chỉ vì quảng cáo mà xem đánh giá và chia sẻ trải nghiệm trước. Người ảnh hưởng vì vậy đóng vai trò như một người quen kể lại trải nghiệm, không phải một kênh phát quảng cáo.',
+      },
+    ],
+    impact:
+      'Trưởng phòng nên chia lại ngân sách influencer theo hướng nhiều người quy mô nhỏ thay vì dồn vào một gương mặt lớn, và đặt trọng tâm sản xuất vào video ngắn vì đó là định dạng người Việt tiêu thụ nhiều nhất.',
+    ifIgnored:
+      'Dồn ngân sách vào một người có lượng theo dõi lớn nghĩa là mua mức tương tác 2-3% với giá cao nhất thị trường, trong khi cùng số tiền chia cho nhiều người nhỏ mua được mức 16,18%. Khoản chênh này không hiện ra trong báo cáo nếu chỉ đo bằng lượt tiếp cận.',
+    actionChecklist: [
+      'Dựng danh sách người ảnh hưởng quy mô 1.000-10.000 lượt theo dõi trong ngành, thay vì chỉ nhắm gương mặt lớn',
+      'Đổi chỉ số nghiệm thu từ lượt tiếp cận sang tỷ lệ tương tác, vì đó mới là chỗ chênh lệch năm tới tám lần',
+      'Ưu tiên sản xuất video ngắn: 93,9% người dùng Internet Việt Nam xem định dạng này hằng tuần',
+      'Nếu ngoài ba nhóm ngành chiếm 90% ngân sách, tận dụng lợi thế giá hợp tác thấp hơn để thử nghiệm sớm',
+    ],
+  },
+  {
     id: 'real-2026-07-30-meta-q2',
     category: 'Meta Ads',
     platformIcon: 'Facebook',
