@@ -1427,6 +1427,15 @@ export default function App() {
               isTradeCourseUnlocked={isTradeCourseUnlocked}
               tradePassedCount={completedTradeModules.length}
               tradeTotalModules={TRADE_MODULES.length}
+              /* Danh sách chuyên đề khoá nâng cao: thanh bên tự đổi sang khoá
+                 Trade khi học viên đang ở tab đó. */
+              tradeModules={TRADE_MODULES}
+              selectedTradeModuleId={selectedTradeModuleId}
+              onSelectTradeModule={(id) => {
+                setSelectedTradeModuleId(id);
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+              completedTradeModules={completedTradeModules}
               isAdmin={isAdmin}
             />
           )}

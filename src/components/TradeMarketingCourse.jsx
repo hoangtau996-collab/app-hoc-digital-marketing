@@ -143,6 +143,17 @@ export default function TradeMarketingCourse({
                     <h3 className="text-sm font-bold text-slate-300">{mod.title}</h3>
                   </div>
                   <p className="text-xs text-slate-400 leading-relaxed line-clamp-2">{mod.subtitle}</p>
+                  {/* Kể tên từng bài ngay cả khi khoá còn đóng: đây là câu trả
+                      lời cho "mở khoá rồi được học gì", giấu đi thì băng xem
+                      trước không còn tác dụng gì. */}
+                  <ul className="space-y-1">
+                    {mod.sections.map((sec, i) => (
+                      <li key={sec.id} className="flex items-start gap-2 text-[11px] text-slate-500 leading-relaxed">
+                        <span className="shrink-0">{i + 1}.</span>
+                        <span className="flex-1">{sec.title}</span>
+                      </li>
+                    ))}
+                  </ul>
                   <div className="flex items-center gap-3 text-[11px] text-slate-500 pt-1 border-t border-emerald-900/40">
                     <span className="flex items-center gap-1"><BookOpen className="w-3.5 h-3.5" />{mod.lessonsCount} bài</span>
                     <span className="flex items-center gap-1"><HelpCircle className="w-3.5 h-3.5" />{mod.quizCount} câu</span>
@@ -277,6 +288,17 @@ export default function TradeMarketingCourse({
                 <p className="text-xs text-slate-300 leading-relaxed line-clamp-3">
                   {mod.description}
                 </p>
+
+                {/* Danh sách bài trong chuyên đề. Tên bài mới là thứ nói được
+                    chuyên đề này dạy gì; mô tả ở trên chỉ là câu chào. */}
+                <ul className="space-y-1 pt-1">
+                  {mod.sections.map((sec, i) => (
+                    <li key={sec.id} className="flex items-start gap-2 text-[11px] text-slate-400 leading-relaxed">
+                      <span className="text-emerald-500 font-bold shrink-0">{i + 1}.</span>
+                      <span className="flex-1">{sec.title}</span>
+                    </li>
+                  ))}
+                </ul>
 
                 <div className="flex items-center gap-3 text-[11px] text-slate-400 pt-1 border-t border-emerald-900/40">
                   <span className="flex items-center gap-1"><BookOpen className="w-3.5 h-3.5" />{mod.lessonsCount} bài</span>

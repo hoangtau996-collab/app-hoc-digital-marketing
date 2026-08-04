@@ -10,7 +10,7 @@ import {
   GraduationCap,
   Lock
 } from 'lucide-react';
-import { isModuleUnlocked, getBlockingModule } from '../utils/moduleGating';
+import { getBlockingModule } from '../utils/moduleGating';
 
 export default function Sidebar({
   modules,
@@ -22,11 +22,38 @@ export default function Sidebar({
   isTradeCourseUnlocked = false,
   tradePassedCount = 0,
   tradeTotalModules = 0,
+  // Danh sách chuyên đề khoá nâng cao. Truyền vào để khi học viên đang ở tab
+  // Trade thì thanh bên đổi sang danh sách của đúng khoá đó — trước đây nó vẫn
+  // liệt kê 11 chuyên đề khoá Digital, bấm vào là văng ngược về khoá chính.
+  tradeModules = [],
+  selectedTradeModuleId = null,
+  onSelectTradeModule = () => {},
+  completedTradeModules = [],
   // Quản trị viên thấy mọi chuyên đề đang mở: khoá tuần tự là để học viên học
   // đúng thứ tự, không phải để giấu nội dung với Ban Quản Trị.
   isAdmin = false
 }) {
   const [isMobileExpanded, setIsMobileExpanded] = useState(false);
+
+  /* Đang xem khoá nào thì thanh bên liệt kê chuyên đề của đúng khoá đó. */
+  const isTradeView = activeTab === 'trade' && isTradeCourseUnlocked && tradeModules.length > 0;
+
+  const listModules = isTradeView ? tradeModules : modules;
+  const listCompleted = isTradeView ? completedTradeModules : completedModules;
+  const listSelectedId = isTradeView ? selectedTradeModuleId : selectedModuleId;
+  const listTab = isTradeView ? 'trade' : 'course';
+
+  const handleSelect = (id) => {
+    setActiveTab(listTab);
+    if (isTradeView) onSelectTradeModule(id);
+    else onSelectModule(id);
+  };
+
+  /* Khoá Trade KHÔNG khoá tuần tự giữa các chuyên đề: vào được khoá này nghĩa
+     là đã tốt nghiệp khoá chính, muốn học chuyên đề nào trước cũng được. Nên
+     hàm dò chuyên đề đang chặn chỉ chạy cho khoá chính. */
+  const blockerOf = (id) =>
+    isTradeView ? null : getBlockingModule(modules, id, completedModules, isAdmin);
 
   return (
     <aside className="w-full lg:w-80 shrink-0 space-y-4 lg:space-y-6">
@@ -35,7 +62,8 @@ export default function Sidebar({
       <div className="block lg:hidden glass-panel rounded-2xl p-3 border border-emerald-900/40">
         <div className="flex items-center justify-between mb-2 px-1">
           <span className="text-xs font-bold text-emerald-400 flex items-center gap-1.5">
-            <BookOpen className="w-3.5 h-3.5" /> CHỌN NHANH CHUYÊN ĐỀ
+            {isTradeView ? <GraduationCap className="w-3.5 h-3.5" /> : <BookOpen className="w-3.5 h-3.5" />}
+            {isTradeView ? 'CHỌN NHANH CHUYÊN ĐỀ TRADE' : 'CHỌN NHANH CHUYÊN ĐỀ'}
           </span>
           <button 
             onClick={() => setIsMobileExpanded(!isMobileExpanded)}
@@ -49,18 +77,15 @@ export default function Sidebar({
         {/* Horizontal Touch Scroll Pills */}
         {!isMobileExpanded ? (
           <div className="flex items-center gap-2 overflow-x-auto no-scrollbar py-1">
-            {modules.map((mod) => {
-              const isCompleted = completedModules.includes(mod.id);
-              const isSelected = activeTab === 'course' && selectedModuleId === mod.id;
-              const isLocked = !isModuleUnlocked(modules, mod.id, completedModules, isAdmin);
+            {listModules.map((mod) => {
+              const isCompleted = listCompleted.includes(mod.id);
+              const isSelected = activeTab === listTab && listSelectedId === mod.id;
+              const isLocked = !!blockerOf(mod.id);
 
               return (
                 <button
                   key={mod.id}
-                  onClick={() => {
-                    setActiveTab('course');
-                    onSelectModule(mod.id);
-                  }}
+                  onClick={() => handleSelect(mod.id)}
                   className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold shrink-0 transition cursor-pointer ${
                     isSelected
                       ? 'bg-emerald-500 text-slate-950 shadow-md font-extrabold'
@@ -82,17 +107,16 @@ export default function Sidebar({
         ) : (
           /* Expanded vertical list on mobile when toggled */
           <div className="space-y-1.5 mt-2 max-h-[300px] overflow-y-auto pr-1">
-            {modules.map((mod) => {
-              const isCompleted = completedModules.includes(mod.id);
-              const isSelected = activeTab === 'course' && selectedModuleId === mod.id;
-              const isLocked = !isModuleUnlocked(modules, mod.id, completedModules, isAdmin);
+            {listModules.map((mod) => {
+              const isCompleted = listCompleted.includes(mod.id);
+              const isSelected = activeTab === listTab && listSelectedId === mod.id;
+              const isLocked = !!blockerOf(mod.id);
 
               return (
                 <button
                   key={mod.id}
                   onClick={() => {
-                    setActiveTab('course');
-                    onSelectModule(mod.id);
+                    handleSelect(mod.id);
                     // Chuyên đề còn khoá thì giữ danh sách mở, để học viên thấy
                     // ngay chuyên đề nào đang chặn thay vì bị đóng lại.
                     if (!isLocked) setIsMobileExpanded(false);
@@ -123,29 +147,28 @@ export default function Sidebar({
         
         <div className="flex items-center justify-between pb-3 border-b border-emerald-900/40 mb-3">
           <div className="flex items-center gap-2 text-emerald-500 font-bold text-sm">
-            <BookOpen className="w-4 h-4" />
-            <span>DANH SÁCH CHUYÊN ĐỀ</span>
+            {isTradeView ? <GraduationCap className="w-4 h-4" /> : <BookOpen className="w-4 h-4" />}
+            <span>{isTradeView ? 'CHUYÊN ĐỀ TRADE MARKETING' : 'DANH SÁCH CHUYÊN ĐỀ'}</span>
           </div>
-          <span className="text-xs text-slate-400 font-medium">
-            11 Chuyên đề
+          {/* Đếm theo dữ liệu thật. Số 11 từng viết cứng ở đây, thêm bớt chuyên
+              đề là lệch ngay mà không ai thấy. */}
+          <span className="text-xs text-slate-400 font-medium shrink-0">
+            {listModules.length} Chuyên đề
           </span>
         </div>
 
         {/* Modules List */}
         <div className="space-y-1.5 max-h-[480px] overflow-y-auto pr-1">
-          {modules.map((mod) => {
-            const isCompleted = completedModules.includes(mod.id);
-            const isSelected = activeTab === 'course' && selectedModuleId === mod.id;
-            const blocker = getBlockingModule(modules, mod.id, completedModules, isAdmin);
+          {listModules.map((mod) => {
+            const isCompleted = listCompleted.includes(mod.id);
+            const isSelected = activeTab === listTab && listSelectedId === mod.id;
+            const blocker = blockerOf(mod.id);
             const isLocked = !!blocker;
 
             return (
               <button
                 key={mod.id}
-                onClick={() => {
-                  setActiveTab('course');
-                  onSelectModule(mod.id);
-                }}
+                onClick={() => handleSelect(mod.id)}
                 title={isLocked ? `Cần đạt bài kiểm tra Chuyên đề ${blocker.number}` : undefined}
                 className={`w-full text-left p-2.5 rounded-xl transition flex items-center justify-between group cursor-pointer ${
                   isSelected
@@ -207,6 +230,29 @@ export default function Sidebar({
         </h4>
 
         <div className="grid grid-cols-1 gap-2">
+          {/* Lối về khoá chính. Bắt buộc phải có từ khi thanh bên đổi sang
+              danh sách chuyên đề Trade: lúc đó không còn mục nào trong danh
+              sách trỏ về khoá Digital nữa, thiếu nút này là học viên kẹt lại
+              trong khoá nâng cao. */}
+          <button
+            onClick={() => setActiveTab('course')}
+            className={`p-3 rounded-xl border text-left transition flex items-center gap-3 ${
+              activeTab === 'course'
+                ? 'bg-emerald-600 border-emerald-500 text-white font-bold'
+                : 'bg-emerald-950/20 border-emerald-900/30 text-slate-200 hover:border-emerald-500/50'
+            }`}
+          >
+            <div className="w-8 h-8 rounded-lg bg-emerald-900/40 border border-emerald-700/40 flex items-center justify-center text-emerald-400">
+              <BookOpen className="w-4 h-4" />
+            </div>
+            <div>
+              <div className="text-xs font-bold">Khoá Digital Marketing</div>
+              <div className="text-[10px] text-slate-400">
+                {completedModules.length}/{modules.length} chuyên đề khoá chính
+              </div>
+            </div>
+          </button>
+
           <button
             onClick={() => setActiveTab('trade')}
             className={`p-3 rounded-xl border text-left transition flex items-center gap-3 ${
