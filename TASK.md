@@ -10,7 +10,7 @@ Cập nhật: **2026-08-06**
 
 | Việc | Trạng thái | Ghi chú |
 |---|---|---|
-| Viết câu chốt `takeaway` cho 16 bài khoá Digital | Chờ duyệt nội dung | `npm run check:content` phát hiện: `m1-s3`, `m2-s2`, `m3-s2`, `m4-s1`, `m4-s2`, `m5-s1`, `m6-s1`, `m6-s2`, `m7-s1`, `m7-s2`, `m8-s1`, `m9-s1`, `m10-s1`, `m10-s2`, `m11-s1`, `m11-s2` thiếu `takeaway` nên không hiện khối "Lưu ý cốt lõi cho Manager". Là nội dung chuyên môn nên không tự viết bù, cần chủ dự án duyệt |
+| Đọc lại nội dung mới viết cho khoá Trade | Chờ chủ dự án duyệt | Đã bổ sung ~17.000 ký tự vào 16 bài sẵn có và 32 thuật ngữ Trade vào Từ Điển. Nội dung do trợ lý soạn dựa trên tài liệu gốc, chưa qua kiểm duyệt chuyên môn — nên đọc lại phần bảng lương, mẫu store check và khung Trade Plan trước khi mở cho học viên |
 | — | — | Ngoài mục trên, không có việc nào đang chạy. Nhiệm vụ tiếp theo áp dụng [Nguyên tắc Context tối thiểu](AI_MEMORY.md#nguyên-tắc-context-tối-thiểu) |
 
 ## Chờ phản hồi từ chủ dự án
@@ -28,6 +28,9 @@ Các mục dưới đây bị chặn vì thiếu thông tin, không phải vì t
 
 Chi tiết đầy đủ ở [CHANGELOG.md](CHANGELOG.md).
 
+- **Thêm 32 thuật ngữ Trade vào Từ Điển** (121 lên 153 mục) — vá lỗ hổng tab "Thuật Ngữ & Công Thức" hiện trong bài khoá Trade mà không có mục nào của khoá đó.
+- **Mở rộng chiều sâu 16 bài khoá Trade** — nội dung từ ~30.000 lên 47.000 ký tự: mẫu biên bản store check, bảng nhận mặt POSM ba nhóm, bài tính ROI bằng số cụ thể, khung Trade Plan bảy phần, bốn câu phỏng vấn hay gặp. Thời lượng chuyên đề cập nhật theo.
+- **Viết 16 câu chốt còn thiếu của khoá Digital** — `npm run check:content` nay báo 0 lỗi, 0 cảnh báo; cả 52 bài của hai khoá đều có "Lưu ý cốt lõi cho Manager".
 - **Khoá Trade Marketing hiện danh sách chuyên đề riêng** — thanh bên đổi theo khoá đang xem thay vì luôn liệt kê 11 chuyên đề khoá Digital; thêm nút quay về khoá chính; thẻ chuyên đề liệt kê tên từng bài.
 - **22 ảnh chụp thật cho 16 bài khoá Trade**, trọng tâm là POSM: chùm 5 ảnh gọi tên standee, kệ trưng bày riêng, dump bin, thẻ giá trên kệ và trưng bày theo mùa. `LessonPhoto` nhận thêm dạng chùm ảnh. Phủ ảnh nay đạt 52/52 bài của cả hai khoá.
 - **Thêm `npm run check:content`** — chốt chặn cho các ràng buộc dữ liệu khoá học. Chạy lần đầu: không có lỗi.
