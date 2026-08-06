@@ -858,6 +858,271 @@ export default function App() {
 
   const [migrationNotice, setMigrationNotice] = useState('');
 
+  /* ================= ĐỊA CHỈ TRÌNH DUYỆT ==================
+
+     Mỗi màn hình một địa chỉ dán được vào tin nhắn: `/chuyen-de/module-01`,
+     `/ban-tin/<id tin>`, `/cong-cu/roas`, `/thuat-ngu/roas`... Quy tắc dịch
+     địa chỉ ⇄ trạng thái nằm gọn trong `utils/appRoutes.js`; ở đây chỉ còn ba
+     việc: nhận địa chỉ lúc mở trang, ghi địa chỉ mới khi học viên bấm chuyển,
+     và nghe nút Lùi của trình duyệt.
+
+     BA CHỖ DỄ VỠ — đừng gỡ khi sửa về sau:
+
+     1. CỔNG KHOÁ PHẢI KIỂM TRA Ở ĐÂY NỮA. Địa chỉ tĩnh là một lối vào chuyên
+        đề hoàn toàn mới: dán thẳng vào thanh địa chỉ là không đi qua
+        `handleProtectedSelectModule`. Thiếu chốt này thì tính năng vừa thêm
+        chính là cửa hậu vượt tiến độ học.
+
+     2. CHƯA NHẬN XONG ĐỊA CHỈ VÀO THÌ CHƯA ĐƯỢC GHI ĐÈ NÓ. Lúc mới dựng,
+        `selectedModuleId` vẫn là null nên địa chỉ dựng lại từ state sẽ ra `/`;
+        ghi ngay là xoá mất `/chuyen-de/module-03` mà học viên vừa mở. Cờ
+        `initialRouteAppliedRef` giữ ngòi bút lại cho tới khi nhận xong.
+
+     3. CHỈ NHẬN ĐỊA CHỈ SAU KHI BIẾT AI ĐANG ĐĂNG NHẬP (`roleResolved`). Effect
+        nạp tiến độ Trade xoá `selectedTradeModuleId` mỗi lần `currentUser` đổi;
+        nhận sớm hơn thì liên kết tới chuyên đề Trade bị chính effect đó dọn đi
+        vài trăm mili giây sau khi mở, và không ai hiểu vì sao.
+
+     Ba effect bên dưới CỐ Ý không khai `applyRoute` và `syncDocumentTitle` vào
+     mảng phụ thuộc, nên trình kiểm lỗi sẽ than phiền. Hai hàm đó dựng lại sau
+     mỗi lần kết xuất; khai vào là effect ghi địa chỉ chạy theo từng lần kết
+     xuất thay vì theo từng lần đổi màn hình. Đừng "sửa" cảnh báo đó. */
+
+  /* Mục đang mở ở ba tab KHÔNG phải khoá học: thuật ngữ, tin, công cụ.
+
+     Ba tab này trước đây tự giữ lựa chọn bên trong component nên App không có
+     gì để ghi ra địa chỉ. Nay lựa chọn nằm ở đây và truyền xuống. Khoá học
+     KHÔNG dùng biến này vì đã có sẵn `selectedModuleId` và
+     `selectedTradeModuleId` — thêm nguồn sự thật thứ hai cho cùng một thứ là
+     tự chuốc lấy cảnh hai bên lệch nhau.
+
+     Lấy luôn từ địa chỉ lúc dựng lần đầu: ba tab này không có cổng khoá nào
+     nên không phải chờ ai, mở `/ban-tin/<id>` là thấy đúng tin ngay.
+
+     LƯU CẢ TAB SỞ HỮU chứ không lưu mỗi định danh. Ba tab dùng chung một biến,
+     mà `setActiveTab` được gọi từ nhiều nơi không đi qua một cửa nào cả (thanh
+     điều hướng dưới đáy trên điện thoại gọi thẳng). Chỉ lưu định danh thì đang
+     mở công cụ 'roas' rồi bấm sang Bản Tin sẽ đẻ ra địa chỉ lai `/ban-tin/roas`
+     — một địa chỉ không mô tả màn hình nào có thật. Kèm tên tab vào thì định
+     danh tự vô hiệu khi rời tab, không cần ai nhớ đi dọn. */
+  const [activeItem, setActiveItem] = useState(() => {
+    const route = parseRoute(window.location.pathname);
+    return route && route.tab !== 'course' && route.tab !== 'trade' && route.itemId
+      ? { tab: route.tab, id: route.itemId }
+      : null;
+  });
+  const activeItemId = activeItem?.tab === activeTab ? activeItem.id : null;
+
+  /** Mở (hoặc đóng, khi `id` là null) một mục thuộc tab đang xem. */
+  const openItem = (tab, id) => setActiveItem(id ? { tab, id } : null);
+
+  // Màn hình hiện tại, diễn đạt đúng dạng mà `appRoutes` hiểu.
+  const routeItemId =
+    activeTab === 'course' ? selectedModuleId
+      : activeTab === 'trade' ? selectedTradeModuleId
+        : activeItemId;
+  const currentRoute = { tab: activeTab, itemId: routeItemId };
+
+  /**
+   * Lọc định danh chuyên đề khoá chính lấy từ địa chỉ.
+   *
+   * @returns {string|null} id được phép mở, hoặc null kèm lời giải thích.
+   */
+  const admitCourseModule = (itemId) => {
+    if (!itemId) return null;
+
+    if (!COURSE_MODULES.some((m) => m.id === itemId)) {
+      setMigrationNotice('Đường dẫn trỏ tới một chuyên đề không còn tồn tại. Đã đưa bạn về trang tổng quan khoá học.');
+      return null;
+    }
+
+    // Giữ đúng thứ tự chốt chặn của `handleProtectedSelectModule`: hỏi đăng
+    // nhập trước, vì người chưa có tài khoản thì nói chuyện tiến độ là vô nghĩa.
+    if (!currentUser) {
+      setMigrationNotice('🔒 Vui lòng Đăng Ký / Đăng Nhập tài khoản học viên để tham gia học & làm bài trắc nghiệm!');
+      setIsAuthOpen(true);
+      return null;
+    }
+
+    const gateMessage = getGateMessage(COURSE_MODULES, itemId, completedModules, isAdmin);
+    if (gateMessage) {
+      setMigrationNotice(gateMessage);
+      return null;
+    }
+
+    markStudyActivity();
+    setIsReminderOpen(false);
+    return itemId;
+  };
+
+  /** Như trên, cho khoá Trade Marketing. */
+  const admitTradeModule = (itemId) => {
+    if (!itemId) return null;
+
+    if (!TRADE_MODULES.some((m) => m.id === itemId)) {
+      setMigrationNotice('Đường dẫn trỏ tới một chuyên đề Trade không còn tồn tại. Đã đưa bạn về trang tổng quan khoá.');
+      return null;
+    }
+
+    // Khoá còn khoá thì im lặng đưa về trang tổng quan của nó: màn hình đó đã
+    // nói rõ điều kiện mở khoá rồi, thêm một băng thông báo nữa là nói hai lần.
+    if (!isTradeCourseUnlocked) return null;
+
+    markStudyActivity();
+    setIsReminderOpen(false);
+    return itemId;
+  };
+
+  /**
+   * Đưa ứng dụng về đúng màn hình mà một địa chỉ mô tả.
+   *
+   * @returns {{tab: string, itemId: string|null}} Màn hình THẬT SỰ mở ra sau
+   *   khi qua cổng khoá — có thể khác địa chỉ được yêu cầu. Nơi gọi dùng giá
+   *   trị này để sửa lại thanh địa chỉ cho khớp, nếu không thì màn hình hiện
+   *   trang tổng quan trong khi địa chỉ vẫn khoe một chuyên đề còn khoá, và
+   *   học viên lưu đúng cái địa chỉ đó vào dấu trang.
+   *
+   * CỐ Ý chỉ đặt định danh của tab đích, không dọn hai tab kia: học viên đang
+   * học dở mà ghé Từ Điển rồi bấm quay lại Khoá Học thì phải về đúng bài đang
+   * đọc. Xoá sạch ở đây là lấy mất thói quen đó.
+   */
+  const applyRoute = (route) => {
+    const tab = TAB_SEGMENTS[route?.tab] ? route.tab : HOME_ROUTE.tab;
+    const requestedId = route?.itemId || null;
+
+    setActiveTab(tab);
+
+    if (tab === 'course') {
+      const admitted = admitCourseModule(requestedId);
+      setSelectedModuleId(admitted);
+      return { tab, itemId: admitted };
+    }
+
+    if (tab === 'trade') {
+      const admitted = admitTradeModule(requestedId);
+      setSelectedTradeModuleId(admitted);
+      return { tab, itemId: admitted };
+    }
+
+    // Ba tab còn lại không có cổng khoá, chỉ cần loại định danh không có thật —
+    // tin mô phỏng do nút Live sinh ra chỉ nằm trong máy của chính người bấm,
+    // nên liên kết loại đó gửi đi là chắc chắn rơi vào nhánh này.
+    const catalogHasItem =
+      tab === 'news' ? newsFeed.some((n) => n.id === requestedId)
+        : tab === 'glossary' ? GLOSSARY_ITEMS.some((g) => g.id === requestedId)
+          : MANAGER_TOOLS.some((t) => t.id === requestedId);
+
+    const admitted = requestedId && catalogHasItem ? requestedId : null;
+    if (requestedId && !admitted && tab === 'news') {
+      setMigrationNotice('Tin trong đường dẫn không có trong bản tin của máy này. Đã mở danh sách tin mới nhất.');
+    }
+    openItem(tab, admitted);
+    return { tab, itemId: admitted };
+  };
+
+  /** Tên mục đang mở, dùng đặt tiêu đề tab trình duyệt và tên dấu trang. */
+  const resolveItemLabel = (route) => {
+    if (!route?.itemId) return '';
+    switch (route.tab) {
+      case 'course': {
+        const m = COURSE_MODULES.find((x) => x.id === route.itemId);
+        return m ? `Chuyên đề ${m.number} — ${m.title}` : '';
+      }
+      case 'trade': {
+        const m = TRADE_MODULES.find((x) => x.id === route.itemId);
+        return m ? `Chuyên đề ${m.number} — ${m.title}` : '';
+      }
+      case 'news':
+        return newsFeed.find((x) => x.id === route.itemId)?.title || '';
+      case 'glossary':
+        return GLOSSARY_ITEMS.find((x) => x.id === route.itemId)?.term || '';
+      case 'tools':
+        return MANAGER_TOOLS.find((x) => x.id === route.itemId)?.label || '';
+      default:
+        return '';
+    }
+  };
+
+  const initialRouteAppliedRef = useRef(false);
+  const lastRouteRef = useRef(null);
+
+  /** Đặt tiêu đề tab trình duyệt theo màn hình đang mở. */
+  const syncDocumentTitle = (route) => {
+    document.title = buildDocumentTitle(route, resolveItemLabel(route));
+  };
+
+  /** Ghi địa chỉ, giữ nguyên phần query và hash mà nơi khác có thể đang dùng. */
+  const writeHistory = (route, mode) => {
+    const url = buildPath(route) + window.location.search + window.location.hash;
+    if (url === window.location.pathname + window.location.search + window.location.hash) return;
+    if (mode === 'replace') window.history.replaceState(null, '', url);
+    else window.history.pushState(null, '', url);
+  };
+
+  // 1. NHẬN ĐỊA CHỈ LÚC MỞ TRANG. Chạy đúng một lần, ngay khi đã biết ai đang
+  //    đăng nhập (xem chỗ dễ vỡ số 3 phía trên).
+  useEffect(() => {
+    if (initialRouteAppliedRef.current || !roleResolved) return;
+    initialRouteAppliedRef.current = true;
+
+    const route = parseRoute(window.location.pathname);
+
+    // Địa chỉ không nhận ra: đưa về trang chủ và DỌN LUÔN thanh địa chỉ. Để
+    // nguyên `/khoahoc` sai chính tả trong khi hiện trang chủ thì người dùng
+    // lưu lại đúng cái địa chỉ hỏng đó, và lần sau vẫn hỏng.
+    const effective = applyRoute(route || HOME_ROUTE);
+    lastRouteRef.current = effective;
+    writeHistory(effective, 'replace');
+
+    // Đặt tiêu đề NGAY tại đây, không đợi effect ghi địa chỉ bên dưới. Mở thẳng
+    // `/ban-tin/<id>` thì trạng thái đã đúng từ lúc dựng nên effect kia không
+    // có gì để chạy — bỏ dòng này là dấu trang lưu lại mang tên trang chủ,
+    // đúng cái tên vô nghĩa mà tính năng này sinh ra để tránh.
+    syncDocumentTitle(effective);
+  }, [roleResolved]);
+
+  // 2. GHI ĐỊA CHỈ MỚI KHI MÀN HÌNH ĐỔI.
+  //
+  //    Đẩy thêm mục lịch sử hay thay tại chỗ, quy tắc là: việc gì học viên coi
+  //    là "đi tới chỗ khác" thì đẩy thêm, để nút Lùi quay về được. Đổi công cụ
+  //    trong cùng bộ công cụ thì không — tám công cụ là tám lăng kính của cùng
+  //    một màn hình, đẩy hết vào lịch sử thì bấm Lùi mười lần mới thoát nổi
+  //    trang, trong khi địa chỉ vẫn dán gửi được như thường.
+  useEffect(() => {
+    if (!initialRouteAppliedRef.current) return;
+
+    const route = { tab: activeTab, itemId: routeItemId };
+    syncDocumentTitle(route);
+
+    if (isSameRoute(lastRouteRef.current, route)) return;
+
+    const stayedInTools = lastRouteRef.current?.tab === 'tools' && route.tab === 'tools';
+    writeHistory(route, stayedInTools ? 'replace' : 'push');
+    lastRouteRef.current = route;
+  }, [activeTab, routeItemId, newsFeed]);
+
+  // 3. NÚT LÙI / TIẾN CỦA TRÌNH DUYỆT.
+  //
+  //    Trước đây bấm Lùi là rời hẳn ứng dụng, kể cả khi chỉ muốn đóng một cửa
+  //    sổ tin. Nay Lùi đi ngược đúng lối vừa đi. Trên điện thoại đây là thay
+  //    đổi đáng giá nhất của cả tính năng: nút Lùi cứng của máy đóng được cửa
+  //    sổ chi tiết, thay vì ném học viên ra khỏi bài đang đọc.
+  useEffect(() => {
+    const handlePopState = () => {
+      const effective = applyRoute(parseRoute(window.location.pathname) || HOME_ROUTE);
+      lastRouteRef.current = effective;
+      // Cổng khoá có thể đổi đích so với địa chỉ vừa lùi về. Sửa tại chỗ chứ
+      // không đẩy thêm mục mới, nếu không bấm Lùi lần nữa lại rơi về đúng địa
+      // chỉ bị chặn — một cái bẫy không có lối ra.
+      writeHistory(effective, 'replace');
+      syncDocumentTitle(effective);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, [currentUser, completedModules, isAdmin, isTradeCourseUnlocked, newsFeed]);
+
   /* ================= HỘP THƯ HỖ TRỢ ==================
      Lời nhắn học viên gửi từ khung chat Pipi. Kênh theo dõi đặt Ở ĐÂY chứ không
      đặt trong SupportInboxModal, vì chuông trên Header cũng cần đúng danh sách
@@ -1564,18 +1829,26 @@ export default function App() {
             )}
 
             {activeTab === 'glossary' && (
-              <DigitalGlossary />
+              <DigitalGlossary
+                openTermId={activeItemId}
+                onOpenTerm={(id) => openItem('glossary', id)}
+              />
             )}
 
             {activeTab === 'news' && (
               <LiveNewsFeed
                 newsList={newsFeed}
                 onAddNewNews={handleAddNewNews}
+                openNewsId={activeItemId}
+                onOpenNews={(id) => openItem('news', id)}
               />
             )}
 
             {activeTab === 'tools' && (
-              <ManagerTools />
+              <ManagerTools
+                openToolId={activeItemId}
+                onOpenTool={(id) => openItem('tools', id)}
+              />
             )}
 
           </div>

@@ -6,7 +6,9 @@
 
 Hạ tầng là **Vercel**: bản ghi DNS của `academy.pmarcom.com` trỏ tới `vercel-dns-017.com`. Việc triển khai chạy tự động theo commit, không qua bước thủ công nào.
 
-Kho mã có `vercel.json` với **đúng một mục đích**: chuyển tiếp đường `/__/auth/*` sang Firebase (xem mục "Tên miền đăng nhập" bên dưới). Mọi thiết lập khác — biến môi trường, tên miền, nhánh deploy — vẫn chỉ tồn tại trên bảng điều khiển Vercel, không được ghi lại trong kho mã.
+Kho mã có `vercel.json` với **hai mục đích**: chuyển tiếp đường `/__/auth/*` sang Firebase (xem mục "Tên miền đăng nhập" bên dưới), và trả `index.html` cho mọi đường dẫn còn lại để địa chỉ tĩnh của từng chuyên đề / tin / công cụ hoạt động (xem "Địa chỉ tĩnh" bên dưới). Mọi thiết lập khác — biến môi trường, tên miền, nhánh deploy — vẫn chỉ tồn tại trên bảng điều khiển Vercel, không được ghi lại trong kho mã.
+
+**THỨ TỰ CÁC LUẬT TRONG `rewrites` LÀ THỨ TỰ XÉT** — Vercel dùng luật khớp đầu tiên. Luật bắt-tất-cả `/(.*)` phải nằm CUỐI mảng; đẩy nó lên trên là nuốt luôn `/__/auth/*` và đăng nhập Google chết ngay. Tệp tĩnh (`/assets/*`, `/pmarcom-logo.jpg`) không bị ảnh hưởng vì Vercel kiểm tra tệp có thật trước khi xét `rewrites`.
 
 TODO — cân nhắc đưa nốt các thiết lập còn lại vào `vercel.json` để chúng bám theo kho mã.
 
@@ -94,9 +96,29 @@ npm run build     # xuất ra thư mục dist/
 npm run preview   # xem thử bản đã đóng gói
 ```
 
-Kết quả là trang tĩnh trong `dist/`, phục vụ được bằng bất kỳ static host nào. Vì là SPA không dùng router, không cần rewrite nào cho việc điều hướng. Rewrite duy nhất trong `vercel.json` phục vụ việc khác hẳn — chuyển tiếp đường đăng nhập, xem mục "Tên miền đăng nhập" ở trên — nên đừng xoá nó khi dọn cấu hình.
+Kết quả là trang tĩnh trong `dist/`, phục vụ được bằng bất kỳ static host nào — **với điều kiện host đó trả `index.html` cho đường dẫn không khớp tệp nào** (xem mục kế tiếp). Đừng xoá rewrite nào trong `vercel.json` khi dọn cấu hình: một luật lo đăng nhập, một luật lo điều hướng.
 
 `dist/` đã nằm trong `.gitignore`.
+
+## Địa chỉ tĩnh của từng chuyên đề, tin, thuật ngữ, công cụ
+
+Mỗi màn hình có một địa chỉ dán gửi được, bảng dịch nằm trong `src/utils/appRoutes.js`:
+
+| Địa chỉ | Mở ra |
+|---|---|
+| `/` | Tổng quan khoá Digital Marketing |
+| `/chuyen-de/module-01` | Chuyên đề khoá chính |
+| `/trade-marketing`, `/trade-marketing/trade-01` | Khoá Trade Marketing |
+| `/thuat-ngu`, `/thuat-ngu/roas` | Từ điển thuật ngữ |
+| `/ban-tin`, `/ban-tin/<id tin>` | Bản tin thuật toán |
+| `/cong-cu`, `/cong-cu/roas` | Bộ công cụ Trưởng phòng |
+| `/doi-mat-khau` | Trang đặt lại mật khẩu (xử lý ở `main.jsx`) |
+
+Ứng dụng chỉ có **một** tệp `index.html`, không sinh trang tĩnh riêng cho từng địa chỉ. Máy chủ phải trả `index.html` cho mọi đường dẫn, rồi JavaScript mới đọc đường dẫn đó ra màn hình tương ứng. Thiếu luật bắt-tất-cả thì gõ thẳng `/chuyen-de/module-01` hoặc bấm F5 giữa bài học là nhận 404 trước khi JavaScript kịp chạy.
+
+Định danh trên địa chỉ dùng thẳng `id` trong dữ liệu, cùng những id đang lưu trong Firestore và localStorage tiến độ học. **Đổi id là vừa làm chết liên kết đã gửi đi, vừa làm mất tiến độ học viên** — hai hậu quả này đi cùng nhau, không tách rời được.
+
+Đây **chưa phải SEO**: nội dung vẫn dựng bằng JavaScript nên trình quét của Facebook/Zalo chỉ đọc được các thẻ `og:` tĩnh dùng chung trong `index.html`. Chia sẻ một chuyên đề hay một tin đều hiện cùng một ảnh và cùng một mô tả. Muốn khác đi thì phải prerender lúc build — việc riêng, chưa làm.
 
 ### Cảnh báo kích thước gói
 

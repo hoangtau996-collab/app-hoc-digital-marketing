@@ -100,12 +100,16 @@ export function parseRoute(pathname) {
  * và trang chủ có hai địa chỉ là tự chia đôi tín hiệu xếp hạng của chính mình.
  */
 export function buildPath(route) {
-  const tab = TAB_SEGMENTS[route?.tab] ? route.tab : HOME_ROUTE.tab;
+  const segment = TAB_SEGMENTS[route?.tab];
+
+  // Tab không nhận ra thì VỨT LUÔN cả `itemId` chứ không chỉ đổi tab về mặc
+  // định: định danh luôn thuộc về đúng một tab, ghép nó vào tab khác chỉ tạo
+  // ra thứ trông như địa chỉ thật mà không mở được gì — ví dụ `/chuyen-de/roas`.
+  if (!segment) return '/';
+
   const itemId = route?.itemId || null;
+  if (route.tab === 'course' && !itemId) return '/';
 
-  if (tab === 'course' && !itemId) return '/';
-
-  const segment = TAB_SEGMENTS[tab];
   return itemId ? `/${segment}/${encodeURIComponent(itemId)}` : `/${segment}`;
 }
 
