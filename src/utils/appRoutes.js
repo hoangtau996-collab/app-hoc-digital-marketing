@@ -40,6 +40,27 @@ const TAB_BY_SEGMENT = Object.fromEntries(
   Object.entries(TAB_SEGMENTS).map(([tab, segment]) => [segment, tab])
 );
 
+/**
+ * Địa chỉ phụ: NHẬN VÀO thì hiểu, nhưng không bao giờ được sinh ra.
+ *
+ * Khoá chính là khu vực duy nhất mà trang tổng quan trùng với trang chủ, nên
+ * nó là khu vực duy nhất không có tên riêng trên địa chỉ — nhìn cạnh
+ * `/trade-marketing` thì thành thiếu sót. `/khoa-hoc` lấp chỗ đó: gõ hay gửi
+ * đều ra đúng trang, rồi thanh địa chỉ tự rút về `/`.
+ *
+ * KHÔNG đảo lại thành `/` rút về `/khoa-hoc`. `/` là trang chủ và index.html đã
+ * tuyên bố nó là địa chỉ chuẩn trong thẻ canonical lẫn og:url; để ứng dụng đổi
+ * địa chỉ trang chủ ngay lúc chạy là làm đúng cái việc mà ghi chú "ĐÃ GỠ" bên
+ * index.html dặn đừng làm, và mọi lượt chia sẻ tên miền trần sẽ trỏ tới một
+ * địa chỉ khác với thứ các thẻ meta đang khai báo.
+ *
+ * Nhờ đi qua `parseRoute` rồi `buildPath`, `/khoa-hoc/module-01` cũng tự rút
+ * về `/chuyen-de/module-01` mà không cần thêm luật nào.
+ */
+const SEGMENT_ALIASES = {
+  'khoa-hoc': 'course',
+};
+
 /** Màn hình mặc định: tổng quan khoá Digital Marketing, tức địa chỉ `/`. */
 export const HOME_ROUTE = { tab: 'course', itemId: null };
 
@@ -87,7 +108,8 @@ export function parseRoute(pathname) {
 
   if (parts.length === 0) return { ...HOME_ROUTE };
 
-  const tab = TAB_BY_SEGMENT[decodeSegment(parts[0])];
+  const segment = decodeSegment(parts[0]);
+  const tab = TAB_BY_SEGMENT[segment] || SEGMENT_ALIASES[segment];
   if (!tab) return null;
 
   return { tab, itemId: parts[1] ? decodeSegment(parts[1]) : null };
