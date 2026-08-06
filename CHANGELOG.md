@@ -8,6 +8,39 @@ TODO — chưa có quy ước đánh phiên bản; cân nhắc gắn thẻ Git k
 
 ---
 
+## [Chưa phát hành] — 2026-08-06
+
+### Thêm mới — Khoá Trade Marketing hiện danh sách chuyên đề
+
+- **Thanh bên đổi theo khoá đang xem.** Trước đây vào tab Trade Marketing thì thanh bên vẫn liệt kê 11 chuyên đề của khoá Digital; bấm vào bất kỳ mục nào là văng ngược về khoá chính. Nghĩa là suốt khoá nâng cao, học viên chỉ có nút "Bài trước / Bài sau" để đi từng bước một, muốn nhảy từ chuyên đề 1 sang chuyên đề 4 phải thoát hẳn ra lưới rồi vào lại.
+  - `Sidebar.jsx` nhận thêm `tradeModules`, `selectedTradeModuleId`, `onSelectTradeModule`, `completedTradeModules`. Khi `activeTab === 'trade'` và khoá đã mở, cả ba khối danh sách (dải chọn nhanh trên điện thoại, danh sách mở rộng, danh sách máy tính) đổi sang dữ liệu khoá Trade.
+  - Khoá Trade **không khoá tuần tự** giữa các chuyên đề — vào được khoá này nghĩa là đã tốt nghiệp khoá chính — nên nhánh Trade không gọi `getBlockingModule`, không hiện ổ khoá.
+  - Thêm nút **"Khoá Digital Marketing"** vào nhóm Tiện Ích Trưởng Phòng. Bắt buộc phải có: từ khi thanh bên đổi sang danh sách Trade, không còn mục nào trỏ về khoá chính nữa, thiếu nút này là học viên kẹt lại trong khoá nâng cao (trước đây lối về duy nhất là bấm một chuyên đề bất kỳ trong danh sách khoá chính).
+  - Số "11 Chuyên đề" viết cứng ở tiêu đề thanh bên nay đếm theo dữ liệu thật. Thêm bớt chuyên đề là số cũ lệch ngay mà không ai thấy.
+- **Thẻ chuyên đề Trade liệt kê tên từng bài học**, ở cả trạng thái đã mở lẫn băng xem trước khi còn khoá. Tên bài mới nói được chuyên đề dạy gì; phần mô tả chỉ là câu chào. Với băng xem trước, đây chính là câu trả lời cho "mở khoá rồi được học gì".
+
+### Thêm mới — Ảnh minh hoạ thực tế cho khoá Trade Marketing
+
+- **22 ảnh chụp thật cho toàn bộ 16 bài của khoá Trade**, trước đó khoá này không có ảnh nào (`LESSON_PHOTOS` chỉ phủ 36 bài khoá Digital). Nay phủ 52/52 bài của cả hai khoá.
+- **`LessonPhoto` nhận thêm dạng chùm ảnh** `{ gallery, note, photos: [{ label, ... }] }` bên cạnh dạng một ảnh cũ. Dùng khi một tấm không đủ để nhận mặt khái niệm, hoặc khi bài cần đặt hai vế cạnh nhau trong cùng một khung thay vì bắt học viên nhớ tấm trước rồi cuộn xuống xem tấm sau. Mỗi ảnh trong chùm tự ẩn riêng khi hỏng, không kéo cả chùm đi theo.
+- **Trọng tâm là POSM** — khái niệm học viên phải gọi đúng tên khi đi store check, mà một tấm ảnh không nói hết. Bài `tm3-s2` (nơi định nghĩa POSM) có chùm 5 ảnh gọi tên năm dạng khác nhau về chi phí, vòng đời và cách đo tuân thủ: standee, kệ trưng bày riêng tại quầy thanh toán, dump bin, thẻ giá trên kệ, trưng bày theo mùa. Bài `tm3-s1` thêm ảnh trưng bày thứ cấp cho khối kiến thức POSM & Visual Merchandising.
+- Ba bài khác dùng chùm ảnh để đặt hai vế cạnh nhau: shopper với consumer (`tm1-s2`), GT với MT (`tm2-s1`, dùng ảnh tạp hoá Đà Lạt và siêu thị Co.opmart), E-commerce với HoReCa (`tm2-s2`, dùng ảnh quán cà phê Tây Hồ).
+- Toàn bộ ảnh lấy từ Wikimedia Commons, giấy phép tự do, ghi công đầy đủ ở trường `credit`, và **mỗi URL đã kiểm tra trả về HTTP 200** trước khi đưa vào.
+
+### Thêm mới — Kiểm soát nội dung khoá học
+
+- **`scripts/kiem-tra-noi-dung.mjs`** — chạy bằng `npm run check:content`, thêm `-- --net` để kiểm tra từng URL ảnh còn sống. Dự án không có kiểm thử tự động (xem [AI_MEMORY.md](AI_MEMORY.md)) nên đây là chốt chặn duy nhất cho các ràng buộc dữ liệu đã từng bị vi phạm thật:
+  - `lessonsCount` / `quizCount` lệch với số phần tử thật (đã từng lệch ở 10/11 chuyên đề khoá chính).
+  - `sectionId` trùng nhau giữa hai khoá. `LESSON_PHOTOS`, `LESSON_VISUALS` và `LESSON_CASES` đều tra theo `sectionId`, nên trùng id là kéo nhầm minh hoạ của khoá kia sang **mà không báo lỗi gì**.
+  - Cú pháp `content` vượt ngoài thứ `LessonViewer` hiểu — bảng markdown và khối mã sẽ hiện ra nguyên ký tự thô trên màn hình học viên. Bắt luôn cả trường hợp số dấu `**` lẻ.
+  - Quiz: đúng 4 lựa chọn, `correct` là số nguyên 0-3, không có hai lựa chọn trùng nội dung, id không lặp.
+  - Ảnh: trỏ tới bài không tồn tại, thiếu `credit`, hoặc `credit` không ghi tên giấy phép (dùng ảnh Creative Commons mà thiếu ghi công là sai điều khoản, không phải lỗi hiển thị).
+  - Phần kiểm tra mạng **lùi lại và thử lại khi gặp HTTP 429**. Wikimedia chặn theo tần suất, gọi liên tục 59 URL là bị trả 429 hàng loạt — một bài kiểm tra báo sai còn tệ hơn không kiểm tra, vì lần sau không ai tin nó nữa.
+- **Kết quả chạy lần đầu: không có lỗi.** 16 chuyên đề, 52 bài, 75 câu hỏi, 59 tấm ảnh đều đạt.
+- **Còn 16 cảnh báo, tất cả đều ở khoá Digital Marketing**: các bài `m1-s3`, `m2-s2`, `m3-s2`, `m4-s1`, `m4-s2`, `m5-s1`, `m6-s1`, `m6-s2`, `m7-s1`, `m7-s2`, `m8-s1`, `m9-s1`, `m10-s1`, `m10-s2`, `m11-s1`, `m11-s2` thiếu câu chốt `takeaway` nên không hiện khối "Lưu ý cốt lõi cho Manager". Khoá Trade không thiếu bài nào. Chưa tự viết bù vì đó là nội dung chuyên môn, cần chủ dự án duyệt — xem [TASK.md](TASK.md).
+
+---
+
 ## [Chưa phát hành] — 2026-07-31
 
 ### Gỡ bỏ

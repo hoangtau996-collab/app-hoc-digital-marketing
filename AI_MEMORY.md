@@ -70,6 +70,8 @@ Trên máy phát triển hiện tại từng có một dự án khác (ứng d�
 
 ## Ràng buộc dữ liệu khoá học
 
+Chạy `npm run check:content` sau khi sửa bất kỳ tệp nào trong `src/data/` — script `scripts/kiem-tra-noi-dung.mjs` kiểm tất cả ràng buộc dưới đây cho cả hai khoá, cộng với phần ảnh minh hoạ. Thêm `-- --net` để kiểm tra từng URL ảnh còn sống (mất khoảng 3 phút).
+
 Trong `data/courseData.js`:
 
 - `lessonsCount` phải bằng `sections.length`, `quizCount` phải bằng `quiz.length`. Hai số này **từng lệch ở 10/11 chuyên đề**.
