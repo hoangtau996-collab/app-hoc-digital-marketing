@@ -8,6 +8,35 @@ TODO — chưa có quy ước đánh phiên bản; cân nhắc gắn thẻ Git k
 
 ---
 
+## [Chưa phát hành] — 2026-08-06 (đợt 2)
+
+### Thêm mới — 32 thuật ngữ Trade Marketing vào Từ Điển
+
+- **Phát hiện lỗ hổng khi rà lại:** tab "Thuật Ngữ & Công Thức" hiện lên trong **mọi** bài học, kể cả bài khoá Trade — nhưng trong 121 mục của từ điển **không có một mục nào là thuật ngữ Trade**. POSM, sell-in, sell-out, OSA, SOS, JBP, SKU, shopper đều bằng 0. Học viên Trade mở tab đó ra chỉ thấy thuật ngữ Digital.
+- Thêm nhóm **"Trade Marketing & Điểm Bán"** với 32 mục, nâng từ điển từ 121 lên 153. Chia theo bốn cụm: đối tượng (shopper, consumer, customer), kênh (GT, MT, HoReCa, EC), chỉ số (sell-in, sell-out, coverage, SOS, OSA, SKU, ROI chương trình, A&P, trade spend), và vận hành tại kệ (POSM, POP, planogram, facing, eye level, trưng bày thứ cấp, đầu kệ, mechanic, sampling, activation, store check, retail audit, nhà phân phối & DSR).
+- **7 mục có công thức tính** kèm ví dụ số theo định dạng Việt Nam. Mục ROI chương trình đưa nguyên phép tính đối chứng: cùng một chương trình, tính đúng ra 0,2 lần còn tính nhầm theo tổng doanh thu ra 4,2 lần — sai gấp hơn hai mươi lần.
+- Ví dụ số trong nhóm này đều là tình huống tính toán tự dựng để minh hoạ công thức, **không phải số liệu thị trường có thật** — đã ghi rõ trong chú thích đầu nhóm.
+
+### Thay đổi — Mở rộng chiều sâu 16 bài khoá Trade Marketing
+
+Nội dung khoá Trade tăng từ khoảng 30.000 lên **47.000 ký tự**, không thêm chuyên đề mới mà làm dày bài sẵn có. Phần thêm vào tập trung vào thứ người mới không tự tra được:
+
+- **Chuyên đề 01:** một ngày làm việc thật của Trade Executive; ba hiểu nhầm về nghề; bảng ba đối tượng ba câu hỏi khác nhau; ngành hàng nào shopper tách xa consumer nhất; bốn điểm Brand và Trade va nhau kèm hướng trả lời câu phỏng vấn về xung đột giá.
+- **Chuyên đề 02:** đường đi hàng hoá ở GT và MT và vì sao chi phí khác nhau; CVS như nhánh riêng; ba chỉ số riêng của kênh sàn; HoReCa như cửa vào ít người nhắm; gợi ý chọn kênh học sâu theo ngành hàng; **mẫu biên bản store check sáu cột** chép lại dùng được ngay, kèm ba lỗi làm hỏng buổi đi đầu tiên.
+- **Chuyên đề 03:** bốn việc cụ thể của quản lý POSM và bốn lỗi POSM tốn tiền nhất; **bảng nhận mặt POSM chia ba nhóm** theo chỗ chúng chiếm (gắn kệ, chiếm sàn, bao phủ không gian) với tên gọi từng loại; công thức tỷ lệ tuân thủ; bảng mặt trái của sáu chỉ số (mỗi chỉ số bị làm đẹp bằng cách nào và kiểm chứng ra sao); **bài tính ROI đầy đủ bằng số cụ thể**; bốn thứ phải chốt trước khi chạy chương trình; phân biệt Nielsen với Kantar; nguồn dữ liệu miễn phí dùng được ngay; cách nói về khoảng trống công cụ khi phỏng vấn.
+- **Chuyên đề 04:** thứ thực sự quyết định lên nấc (phạm vi chịu trách nhiệm, không phải số năm); hai nhánh rẽ sau nấc 4; cách đọc tin tuyển dụng cho đúng; bảng dịch từng yêu cầu tuyển dụng sang bằng chứng cần chuẩn bị; đặc thù nhịp làm việc của từng ngành; ba vị trí đường vòng vào Trade.
+- **Chuyên đề 05:** mẫu bốn bước viết lại một hoạt động đã làm, kèm ví dụ một dòng hồ sơ trước và sau khi thêm số; bốn kỹ năng Excel cần học và không hơn; bảng tự chấm sáu khoảng trống; **khung Trade Plan bảy phần**; ba lỗi thường gặp khi tự viết; bản rút gọn 30 ngày cho người đã có lịch phỏng vấn; **bốn câu hỏi phỏng vấn hay gặp nhất kèm hướng trả lời**; ba câu nên hỏi ngược nhà tuyển dụng; ba thứ mang theo tới buổi phỏng vấn.
+- **Thời lượng chuyên đề cập nhật theo lượng nội dung mới**: 40/45/55/40/50 phút thành 60/65/80/60/70 phút. Con số cũ giữ nguyên là nói sai với học viên về thời gian họ cần bỏ ra.
+
+### Thêm mới — 16 câu chốt còn thiếu của khoá Digital Marketing
+
+- Viết bổ sung `takeaway` cho đúng 16 bài mà `npm run check:content` đã chỉ ra ở đợt trước: `m1-s3`, `m2-s2`, `m3-s2`, `m4-s1`, `m4-s2`, `m5-s1`, `m6-s1`, `m6-s2`, `m7-s1`, `m7-s2`, `m8-s1`, `m9-s1`, `m10-s1`, `m10-s2`, `m11-s1`, `m11-s2`. Các bài này trước đây không hiện khối "Lưu ý cốt lõi cho Manager".
+- Mỗi câu bám đúng nội dung bài và nêu **cái bẫy** của phần kiến thức đó chứ không tóm tắt lại. Ví dụ: bài công cụ nghiên cứu chốt ở chỗ số lưu lượng của Ahrefs là ước lượng dựng từ mô hình nên không được đưa vào báo cáo Ban Giám Đốc như số tuyệt đối; bài mô hình ghi nhận chuyển đổi chốt ở chỗ công cụ đo lường do bên thứ ba sở hữu và đã đổi hai lần.
+- Chèn bằng script bám mốc chuỗi thay vì phân tích cú pháp rồi ghi lại cả tệp — ghi lại sẽ xoá sạch chú thích và định dạng gốc của 131KB dữ liệu khoá học.
+- **Kết quả kiểm soát nội dung sau đợt này: 0 lỗi và 0 cảnh báo.** Cả 52 bài của hai khoá đều có câu chốt.
+
+---
+
 ## [Chưa phát hành] — 2026-08-06
 
 ### Thêm mới — Khoá Trade Marketing hiện danh sách chuyên đề
