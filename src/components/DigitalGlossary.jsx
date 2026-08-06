@@ -240,10 +240,19 @@ const ICON_MAP = {
   Orbit
 };
 
-export default function DigitalGlossary() {
+/**
+ * @param {string|null} openTermId Thuật ngữ đang mở, do App.jsx đọc từ địa chỉ.
+ * @param {(id: string|null) => void} onOpenTerm Mở thẻ thuật ngữ (id) hoặc đóng (null).
+ *
+ * Giữ theo ID thay vì giữ cả đối tượng, cùng lý do như bản tin: chỉ ID mới
+ * viết ra thanh địa chỉ được, để gửi thẳng một thuật ngữ cho đồng nghiệp.
+ */
+export default function DigitalGlossary({ openTermId, onOpenTerm }) {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedTerm, setSelectedTerm] = useState(null);
+
+  const selectedTerm = openTermId ? GLOSSARY_ITEMS.find((i) => i.id === openTermId) || null : null;
+  const setSelectedTerm = (term) => onOpenTerm?.(term ? term.id : null);
   const [showCalcModal, setShowCalcModal] = useState(false);
   const [copiedId, setCopiedId] = useState(null);
 

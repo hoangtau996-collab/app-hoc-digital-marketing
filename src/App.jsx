@@ -4,7 +4,7 @@ import Sidebar from './components/Sidebar';
 import CourseOverview from './components/CourseOverview';
 import LessonViewer from './components/LessonViewer';
 import LiveNewsFeed from './components/LiveNewsFeed';
-import ManagerTools from './components/ManagerTools';
+import ManagerTools, { MANAGER_TOOLS } from './components/ManagerTools';
 import CertificateModal from './components/CertificateModal';
 import AIStrategyAdvisor from './components/AIStrategyAdvisor';
 import MobileBottomNav from './components/MobileBottomNav';
@@ -68,7 +68,17 @@ import {
   revokeAdmin
 } from './utils/adminRoles';
 
+import {
+  parseRoute,
+  buildPath,
+  buildDocumentTitle,
+  isSameRoute,
+  HOME_ROUTE,
+  TAB_SEGMENTS
+} from './utils/appRoutes';
+
 import { COURSE_MODULES } from './data/courseData';
+import { GLOSSARY_ITEMS } from './data/glossaryData';
 import { TRADE_MODULES } from './data/tradeCourseData';
 import TradeMarketingCourse from './components/TradeMarketingCourse';
 import { INITIAL_NEWS_ITEMS } from './data/newsData';
@@ -77,7 +87,18 @@ import { TRANSLATIONS } from './data/translations';
 import { normalizeTextScale } from './utils/textScale';
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState('course'); // 'course', 'news', 'tools'
+  /* Khu vực đang xem, LẤY TỪ ĐỊA CHỈ ngay khi dựng lần đầu chứ không đặt cứng
+     là 'course'. Mở `/ban-tin` mà khởi tạo bằng 'course' thì học viên thấy
+     trang khoá học loé lên rồi mới nhảy sang bản tin — một cú giật không cần
+     thiết ngay giây đầu tiên.
+
+     Chỉ khu vực được lấy sớm như vậy, KHÔNG lấy luôn chuyên đề: chuyên đề có
+     cổng khoá tuần tự, mà muốn kiểm tra cổng khoá thì phải đọc tiến độ học và
+     trạng thái đăng nhập — hai thứ khai báo mãi bên dưới. Chuyên đề trong địa
+     chỉ được nhận sau, ở phần "ĐỊA CHỈ TRÌNH DUYỆT" cuối tệp. */
+  const [activeTab, setActiveTab] = useState(
+    () => parseRoute(window.location.pathname)?.tab || HOME_ROUTE.tab
+  );
   const [selectedModuleId, setSelectedModuleId] = useState(null); // null = overview, string = module view
 
   /* CHẾ ĐỘ TẬP TRUNG — mở bài là thu gọn mọi thứ quanh nội dung.

@@ -112,11 +112,21 @@ function KeyNumbers({ items, compact = false }) {
   );
 }
 
-export default function LiveNewsFeed({ newsList, onAddNewNews }) {
+/**
+ * @param {string|null} openNewsId Tin đang mở, do App.jsx đọc từ địa chỉ.
+ * @param {(id: string|null) => void} onOpenNews Mở tin (id) hoặc đóng (null).
+ *
+ * Tin đang mở giữ theo ID chứ không giữ nguyên cả đối tượng tin: có vậy mới
+ * viết được ra thanh địa chỉ, và cửa sổ chi tiết mới luôn hiện đúng bản mới
+ * nhất trong `newsList` thay vì bản chụp lại lúc bấm vào.
+ */
+export default function LiveNewsFeed({ newsList, onAddNewNews, openNewsId, onOpenNews }) {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [isSimulating, setIsSimulating] = useState(false);
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
-  const [openNews, setOpenNews] = useState(null);
+
+  const openNews = openNewsId ? newsList.find((n) => n.id === openNewsId) || null : null;
+  const setOpenNews = (news) => onOpenNews?.(news ? news.id : null);
 
   const filteredNews = newsList
     .filter((n) => selectedCategory === 'All' || n.category === selectedCategory)

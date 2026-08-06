@@ -29,7 +29,12 @@ import { safeDiv, vnd, num, pct } from '../utils/toolFormat';
  * riêng, nên chuyển tab là kiểu hiển thị số đổi theo dù cùng một màn hình.
  */
 
-const TOOLS = [
+/**
+ * Danh mục công cụ. XUẤT RA NGOÀI vì App.jsx cần nó để đặt tiêu đề tab trình
+ * duyệt cho địa chỉ `/cong-cu/<id>` và để loại bỏ id lạ trên thanh địa chỉ.
+ * `id` ở đây là một phần địa chỉ công khai — đổi là làm chết liên kết đã gửi.
+ */
+export const MANAGER_TOOLS = [
   { id: 'budget', label: 'Phân Bổ Ngân Sách' },
   { id: 'roas', label: 'Hòa Vốn ROAS' },
   { id: 'staff', label: 'Định Biên Nhân Sự' },
@@ -410,8 +415,19 @@ function StaffingTool() {
    Vỏ ngoài
    ================================================================ */
 
-export default function ManagerTools() {
-  const [activeTool, setActiveTool] = useState('budget');
+/**
+ * @param {string|null} openToolId Công cụ đang mở, do App.jsx đọc từ địa chỉ.
+ * @param {(id: string) => void} onOpenTool Báo ngược lên khi người dùng đổi công cụ.
+ *
+ * Lựa chọn công cụ nằm ở App.jsx chứ không còn là state riêng của component:
+ * nó phải xuất hiện trên thanh địa chỉ, mà giữ hai bản sao của cùng một lựa
+ * chọn thì sớm muộn cũng có lúc địa chỉ nói một đằng màn hình hiện một nẻo.
+ */
+export default function ManagerTools({ openToolId, onOpenTool }) {
+  // Địa chỉ là thứ người ngoài gõ được, nên không tin id truyền vào: `/cong-cu`
+  // trống và `/cong-cu/xyz` sai đều rơi về công cụ đầu tiên thay vì màn trắng.
+  const activeTool = MANAGER_TOOLS.some((t) => t.id === openToolId) ? openToolId : 'budget';
+  const setActiveTool = (id) => onOpenTool?.(id);
 
   return (
     <div className="space-y-8">
@@ -434,7 +450,7 @@ export default function ManagerTools() {
 
         {/* Thanh chọn công cụ: 8 mục nên phải cho xuống dòng, không ép một hàng */}
         <div className="flex flex-wrap gap-1.5 bg-[#18243d] p-1.5 rounded-xl border border-emerald-900/40 mt-5">
-          {TOOLS.map((t) => (
+          {MANAGER_TOOLS.map((t) => (
             <button
               key={t.id}
               onClick={() => setActiveTool(t.id)}
