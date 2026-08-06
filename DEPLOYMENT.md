@@ -106,7 +106,8 @@ Mỗi màn hình có một địa chỉ dán gửi được, bảng dịch nằm
 
 | Địa chỉ | Mở ra |
 |---|---|
-| `/` | Tổng quan khoá Digital Marketing |
+| `/` | Tổng quan khoá Digital Marketing — **địa chỉ chuẩn**, trùng trang chủ |
+| `/khoa-hoc` | Lối vào phụ của trang trên, thanh địa chỉ tự rút về `/` |
 | `/chuyen-de/module-01` | Chuyên đề khoá chính |
 | `/trade-marketing`, `/trade-marketing/trade-01` | Khoá Trade Marketing |
 | `/thuat-ngu`, `/thuat-ngu/roas` | Từ điển thuật ngữ |
