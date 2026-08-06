@@ -623,10 +623,19 @@ export default function App() {
   // lượng vẫn đủ trong khi thực tế còn chuyên đề chưa học.
   //
   // Quản trị viên đứng ngoài điều kiện này (xem `isAdmin` ở trên).
-  const mainCompletedCount = COURSE_MODULES.filter((m) =>
-    completedModules.includes(m.id)
-  ).length;
-  const isTradeCourseUnlocked = isAdmin || mainCompletedCount === COURSE_MODULES.length;
+  //
+  // Nhận tiến độ qua THAM SỐ chứ không đọc thẳng biến state: phần bàn giao sau
+  // khi đăng nhập (xem khối "ĐỊA CHỈ TRÌNH DUYỆT") phải hỏi điều kiện này bằng
+  // tiến độ vừa đọc từ localStorage, vì ngay nhịp đó biến state vẫn còn đang
+  // giữ tiến độ của người dùng trước. Viết lại công thức ở chỗ kia là tạo
+  // nguồn sự thật thứ hai cho cùng một quy tắc, nên chỉ có đúng hàm này.
+  const countMainCompleted = (progress) =>
+    COURSE_MODULES.filter((m) => progress.includes(m.id)).length;
+  const isTradeUnlockedFor = (progress) =>
+    isAdmin || countMainCompleted(progress) === COURSE_MODULES.length;
+
+  const mainCompletedCount = countMainCompleted(completedModules);
+  const isTradeCourseUnlocked = isTradeUnlockedFor(completedModules);
 
   // Số chuyên đề Trade đã đạt, dùng làm điều kiện cấp bằng khoá Trade.
   // Đối chiếu theo id vì cùng lý do như trên: đếm độ dài mảng sẽ tính nhầm khi
@@ -916,24 +925,30 @@ export default function App() {
   /** Mở (hoặc đóng, khi `id` là null) một mục thuộc tab đang xem. */
   const openItem = (tab, id) => setActiveItem(id ? { tab, id } : null);
 
-  // Màn hình hiện tại, diễn đạt đúng dạng mà `appRoutes` hiểu.
+  // Mục đang mở của màn hình hiện tại, gộp ba nguồn về một để `appRoutes` hiểu.
   const routeItemId =
     activeTab === 'course' ? selectedModuleId
       : activeTab === 'trade' ? selectedTradeModuleId
         : activeItemId;
-  const currentRoute = { tab: activeTab, itemId: routeItemId };
 
   /**
    * Lọc định danh chuyên đề khoá chính lấy từ địa chỉ.
    *
-   * @returns {string|null} id được phép mở, hoặc null kèm lời giải thích.
+   * @param {string|null} itemId Chuyên đề mà địa chỉ yêu cầu.
+   * @param {string[]} progress Tiến độ dùng để xét cổng khoá. Truyền vào chứ
+   *   không đọc thẳng `completedModules`: ngay nhịp đăng nhập xong, biến state
+   *   đó vẫn đang giữ tiến độ của người trước (xem effect nạp tiến độ, chỗ ghi
+   *   chú "trong lượt chạy này state vẫn đang giữ giá trị của tài khoản trước").
+   * @returns {{id: string|null, awaitingLogin?: boolean}}
+   *   `awaitingLogin` báo cho nơi gọi biết đây là rào CÓ THỂ VƯỢT NGAY, khác
+   *   hẳn rào tiến độ. Nơi gọi dựa vào đó để giữ nguyên thanh địa chỉ.
    */
-  const admitCourseModule = (itemId) => {
-    if (!itemId) return null;
+  const admitCourseModule = (itemId, progress) => {
+    if (!itemId) return { id: null };
 
     if (!COURSE_MODULES.some((m) => m.id === itemId)) {
       setMigrationNotice('Đường dẫn trỏ tới một chuyên đề không còn tồn tại. Đã đưa bạn về trang tổng quan khoá học.');
-      return null;
+      return { id: null };
     }
 
     // Giữ đúng thứ tự chốt chặn của `handleProtectedSelectModule`: hỏi đăng
@@ -941,67 +956,81 @@ export default function App() {
     if (!currentUser) {
       setMigrationNotice('🔒 Vui lòng Đăng Ký / Đăng Nhập tài khoản học viên để tham gia học & làm bài trắc nghiệm!');
       setIsAuthOpen(true);
-      return null;
+      return { id: null, awaitingLogin: true };
     }
 
-    const gateMessage = getGateMessage(COURSE_MODULES, itemId, completedModules, isAdmin);
+    const gateMessage = getGateMessage(COURSE_MODULES, itemId, progress, isAdmin);
     if (gateMessage) {
       setMigrationNotice(gateMessage);
-      return null;
+      return { id: null };
     }
 
     markStudyActivity();
     setIsReminderOpen(false);
-    return itemId;
+    return { id: itemId };
   };
 
   /** Như trên, cho khoá Trade Marketing. */
-  const admitTradeModule = (itemId) => {
-    if (!itemId) return null;
+  const admitTradeModule = (itemId, progress) => {
+    if (!itemId) return { id: null };
 
     if (!TRADE_MODULES.some((m) => m.id === itemId)) {
       setMigrationNotice('Đường dẫn trỏ tới một chuyên đề Trade không còn tồn tại. Đã đưa bạn về trang tổng quan khoá.');
-      return null;
+      return { id: null };
+    }
+
+    // Chưa đăng nhập thì phán quyết "khoá này còn khoá" chưa phải phán quyết
+    // cuối: điều kiện mở khoá tính trên tiến độ của một tài khoản cụ thể, mà
+    // ở đây chưa biết là tài khoản nào.
+    if (!currentUser) {
+      setMigrationNotice('🔒 Vui lòng Đăng Ký / Đăng Nhập tài khoản học viên để vào khoá Trade Marketing!');
+      setIsAuthOpen(true);
+      return { id: null, awaitingLogin: true };
     }
 
     // Khoá còn khoá thì im lặng đưa về trang tổng quan của nó: màn hình đó đã
     // nói rõ điều kiện mở khoá rồi, thêm một băng thông báo nữa là nói hai lần.
-    if (!isTradeCourseUnlocked) return null;
+    if (!isTradeUnlockedFor(progress)) return { id: null };
 
     markStudyActivity();
     setIsReminderOpen(false);
-    return itemId;
+    return { id: itemId };
   };
 
   /**
    * Đưa ứng dụng về đúng màn hình mà một địa chỉ mô tả.
    *
-   * @returns {{tab: string, itemId: string|null}} Màn hình THẬT SỰ mở ra sau
-   *   khi qua cổng khoá — có thể khác địa chỉ được yêu cầu. Nơi gọi dùng giá
-   *   trị này để sửa lại thanh địa chỉ cho khớp, nếu không thì màn hình hiện
-   *   trang tổng quan trong khi địa chỉ vẫn khoe một chuyên đề còn khoá, và
-   *   học viên lưu đúng cái địa chỉ đó vào dấu trang.
+   * @param {{progress?: string[]}} [options] Tiến độ dùng để xét cổng khoá.
+   *   Bỏ trống thì lấy biến state, đúng cho mọi lối gọi trừ lối bàn giao ngay
+   *   sau khi đăng nhập.
+   * @returns {{route: {tab: string, itemId: string|null}, awaitingLogin: boolean}}
+   *   `route` là màn hình THẬT SỰ mở ra sau khi qua cổng khoá — có thể khác
+   *   địa chỉ được yêu cầu. Nơi gọi dùng nó để sửa thanh địa chỉ cho khớp, nếu
+   *   không thì màn hình hiện trang tổng quan trong khi địa chỉ vẫn khoe một
+   *   chuyên đề còn khoá, và học viên lưu đúng địa chỉ đó vào dấu trang.
+   *   `awaitingLogin` thì NGƯỢC LẠI — xem chỗ gọi.
    *
    * CỐ Ý chỉ đặt định danh của tab đích, không dọn hai tab kia: học viên đang
    * học dở mà ghé Từ Điển rồi bấm quay lại Khoá Học thì phải về đúng bài đang
    * đọc. Xoá sạch ở đây là lấy mất thói quen đó.
    */
-  const applyRoute = (route) => {
+  const applyRoute = (route, options = {}) => {
     const tab = TAB_SEGMENTS[route?.tab] ? route.tab : HOME_ROUTE.tab;
     const requestedId = route?.itemId || null;
+    const progress = options.progress || completedModules;
 
     setActiveTab(tab);
 
     if (tab === 'course') {
-      const admitted = admitCourseModule(requestedId);
-      setSelectedModuleId(admitted);
-      return { tab, itemId: admitted };
+      const { id, awaitingLogin } = admitCourseModule(requestedId, progress);
+      setSelectedModuleId(id);
+      return { route: { tab, itemId: id }, awaitingLogin: !!awaitingLogin };
     }
 
     if (tab === 'trade') {
-      const admitted = admitTradeModule(requestedId);
-      setSelectedTradeModuleId(admitted);
-      return { tab, itemId: admitted };
+      const { id, awaitingLogin } = admitTradeModule(requestedId, progress);
+      setSelectedTradeModuleId(id);
+      return { route: { tab, itemId: id }, awaitingLogin: !!awaitingLogin };
     }
 
     // Ba tab còn lại không có cổng khoá, chỉ cần loại định danh không có thật —
@@ -1017,7 +1046,7 @@ export default function App() {
       setMigrationNotice('Tin trong đường dẫn không có trong bản tin của máy này. Đã mở danh sách tin mới nhất.');
     }
     openItem(tab, admitted);
-    return { tab, itemId: admitted };
+    return { route: { tab, itemId: admitted }, awaitingLogin: false };
   };
 
   /** Tên mục đang mở, dùng đặt tiêu đề tab trình duyệt và tên dấu trang. */
@@ -1070,9 +1099,9 @@ export default function App() {
     // Địa chỉ không nhận ra: đưa về trang chủ và DỌN LUÔN thanh địa chỉ. Để
     // nguyên `/khoahoc` sai chính tả trong khi hiện trang chủ thì người dùng
     // lưu lại đúng cái địa chỉ hỏng đó, và lần sau vẫn hỏng.
-    const effective = applyRoute(route || HOME_ROUTE);
+    const { route: effective, awaitingLogin } = applyRoute(route || HOME_ROUTE);
     lastRouteRef.current = effective;
-    writeHistory(effective, 'replace');
+    if (!awaitingLogin) writeHistory(effective, 'replace');
 
     // Đặt tiêu đề NGAY tại đây, không đợi effect ghi địa chỉ bên dưới. Mở thẳng
     // `/ban-tin/<id>` thì trạng thái đã đúng từ lúc dựng nên effect kia không
@@ -1109,12 +1138,14 @@ export default function App() {
   //    sổ chi tiết, thay vì ném học viên ra khỏi bài đang đọc.
   useEffect(() => {
     const handlePopState = () => {
-      const effective = applyRoute(parseRoute(window.location.pathname) || HOME_ROUTE);
+      const { route: effective, awaitingLogin } = applyRoute(
+        parseRoute(window.location.pathname) || HOME_ROUTE
+      );
       lastRouteRef.current = effective;
       // Cổng khoá có thể đổi đích so với địa chỉ vừa lùi về. Sửa tại chỗ chứ
       // không đẩy thêm mục mới, nếu không bấm Lùi lần nữa lại rơi về đúng địa
       // chỉ bị chặn — một cái bẫy không có lối ra.
-      writeHistory(effective, 'replace');
+      if (!awaitingLogin) writeHistory(effective, 'replace');
       syncDocumentTitle(effective);
       window.scrollTo({ top: 0, behavior: 'smooth' });
     };
@@ -1122,6 +1153,50 @@ export default function App() {
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
   }, [currentUser, completedModules, isAdmin, isTradeCourseUnlocked, newsFeed]);
+
+  // 4. BÀN GIAO SAU KHI ĐĂNG NHẬP.
+  //
+  //    Khách bấm liên kết một bài học sẽ được mời đăng ký, và địa chỉ bài đó
+  //    được GIỮ NGUYÊN trên thanh địa chỉ (`awaitingLogin` ở các nhánh trên).
+  //    Đăng nhập xong thì đọc lại chính địa chỉ ấy để vào thẳng bài.
+  //
+  //    Dùng thanh địa chỉ làm chỗ ghi nhớ thay vì một biến riêng, vì đây là
+  //    chỗ duy nhất SỐNG SÓT QUA MỘT LẦN TẢI LẠI TRANG. Đăng nhập bằng Google
+  //    là chuyển hẳn sang trang của Google rồi quay về, cả ứng dụng dựng lại
+  //    từ đầu; mọi biến trong bộ nhớ đều mất, còn địa chỉ thì Firebase trả về
+  //    nguyên vẹn — nhánh đó tự chạy đúng mà không cần thêm dòng nào.
+  //
+  //    Thêm một lợi ích: khách bỏ ý định, tự bấm sang Bản Tin rồi mới đăng
+  //    nhập thì địa chỉ đã đổi theo, không còn đích nào để bàn giao. Không cần
+  //    ai nhớ đi xoá ý định cũ.
+  const hadUserRef = useRef(!!currentUser);
+  useEffect(() => {
+    const hasUser = !!currentUser;
+    const justLoggedIn = hasUser && !hadUserRef.current;
+    hadUserRef.current = hasUser;
+
+    if (!justLoggedIn || !initialRouteAppliedRef.current) return;
+
+    const route = parseRoute(window.location.pathname);
+    if (!route?.itemId) return;
+
+    // Đọc tiến độ THẲNG TỪ localStorage của đúng tài khoản vừa đăng nhập.
+    // Ngay nhịp này biến `completedModules` vẫn đang giữ tiến độ của phiên
+    // trước — chính effect nạp tiến độ cũng phải tự đọc như vậy vì lý do đó,
+    // xem ghi chú của nó. Tin vào biến state ở đây là chặn nhầm học viên cũ
+    // khỏi đúng chuyên đề mà họ đã học xong từ lâu.
+    let progress = [];
+    try {
+      const saved = localStorage.getItem(getProgressStorageKey(currentUser));
+      const parsed = saved ? JSON.parse(saved) : [];
+      progress = Array.isArray(parsed) ? parsed : [];
+    } catch (e) {}
+
+    const { route: effective } = applyRoute(route, { progress });
+    lastRouteRef.current = effective;
+    writeHistory(effective, 'replace');
+    syncDocumentTitle(effective);
+  }, [currentUser]);
 
   /* ================= HỘP THƯ HỖ TRỢ ==================
      Lời nhắn học viên gửi từ khung chat Pipi. Kênh theo dõi đặt Ở ĐÂY chứ không
