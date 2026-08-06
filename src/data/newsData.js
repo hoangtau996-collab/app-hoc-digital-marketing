@@ -38,6 +38,122 @@
  * ------------------------------------------------------------------ */
 const REAL_SOURCED_NEWS = [
   {
+    id: 'real-2026-08-05-ai-referral-landing',
+    category: 'AI Marketing',
+    platformIcon: 'Sparkles',
+    title: 'Người dùng đến từ AI đổ về trang chủ chứ không vào bài được trích: 58,8% lượt giới thiệu từ ChatGPT rơi vào trang chủ',
+    publishedAt: '05/08/2026',
+    isHot: true,
+    illustration: 'zero-click',
+    image: {
+      url: 'https://cdn.searchenginejournal.com/wp-content/uploads/2026/07/ai-referrals-434.png',
+      credit: 'Ảnh: Search Engine Journal',
+    },
+    sourceUrl: 'https://www.searchenginejournal.com/ai-referrals-are-recreating-the-oldest-mistake-in-conversion-optimization/584331/',
+    source: 'Search Engine Journal',
+    readTime: '6 phút đọc',
+    tags: ['AI Search', 'Trang đích', 'Chuyển đổi', 'Tìm kiếm nội bộ'],
+    summary:
+      'Chatbot trích dẫn bài viết chuyên sâu nằm sâu trong website để làm căn cứ, nhưng lại đẩy người đọc về trang chủ. Đây chính là lỗi lệch giữa ý định và trang đích mà ngành quảng cáo tìm kiếm đã mắc từ hai mươi năm trước, nay quay lại dưới một chuỗi nguồn giới thiệu mới.',
+    keyNumbers: [
+      { value: '58,8%', label: 'lượt từ ChatGPT rơi vào trang chủ' },
+      { value: '28,8%', label: 'rơi vào trang kết quả tìm kiếm nội bộ' },
+      { value: '12,1%', label: 'lượt đăng ký đến từ 0,5% truy cập' },
+    ],
+    content: [
+      {
+        heading: 'Lỗi cũ trong lớp áo mới',
+        body:
+          'Ngày trước, quảng cáo tìm kiếm cho một sản phẩm cụ thể lại dẫn người dùng về trang danh mục chung, khiến họ phải tự tìm lại thứ vừa bấm vào. Nay AI làm đúng như vậy: nó trích dẫn một bài viết chi tiết để chứng minh luận điểm, rồi gắn đường dẫn về trang chủ. Người đọc đang có nhu cầu rất cụ thể bị thả xuống một trang nói chung chung.',
+      },
+      {
+        heading: 'Số liệu từ ba nguồn độc lập',
+        body:
+          'Báo cáo Similarweb 2026: 65% đường dẫn được ChatGPT trích dẫn nằm sâu hai tới ba cấp thư mục trong website, nhưng 58,8% lượt truy cập giới thiệu từ ChatGPT lại rơi vào trang chủ, tỷ lệ này tăng khoảng gấp đôi sau đợt cập nhật đường dẫn tháng 5/2026. Phân tích của Previsible trên 6,77 triệu phiên truy cập từ AI qua 166 website: 28,8% lượt giới thiệu từ ChatGPT rơi vào trang kết quả tìm kiếm nội bộ. Số liệu Ahrefs: hơn 80% lượt giới thiệu từ tìm kiếm AI đổ về trang chủ, trang sản phẩm và công cụ miễn phí thay vì bài viết.',
+      },
+      {
+        heading: 'Trang bị bỏ quên nhất lại đang nhận nhiều lượt nhất',
+        body:
+          'Gần ba trên mười người đến từ ChatGPT rơi thẳng vào trang kết quả tìm kiếm nội bộ của website. Đây thường là trang không ai chăm sóc, không có nội dung dẫn dắt, kết quả sắp xếp tuỳ tiện. Khuyến nghị cụ thể của bài: gõ mười truy vấn quan trọng nhất vào ô tìm kiếm trên chính website mình và đọc kết quả bằng con mắt người lần đầu ghé thăm.',
+      },
+      {
+        heading: 'Vì sao đáng bỏ công dù lượng truy cập còn nhỏ',
+        body:
+          'Người được ChatGPT gợi ý một thương hiệu có khả năng ghé website thương hiệu đó trong bảy ngày kế tiếp cao gấp 2,5 lần. Với Ahrefs, khách đến từ tìm kiếm AI chỉ chiếm 0,5% tổng truy cập nhưng đóng góp 12,1% số lượt đăng ký. Đây là nhóm khách đã được thuyết phục từ trước, chất lượng cao hơn hẳn lượt truy cập thông thường.',
+      },
+      {
+        heading: 'Trang chủ cần đổi vai',
+        body:
+          'Người đến từ AI không cần được thuyết phục lại từ đầu, họ đã nghe giới thiệu rồi mới bấm vào. Trang chủ hiện nay phần lớn được thiết kế cho người chưa biết gì về thương hiệu, nên vô tình bắt nhóm khách đã sẵn sàng phải đi lại từ bước một. Cần bố trí lối đi nhanh tới hành động chuyển đổi ngay trên trang chủ.',
+      },
+    ],
+    impact:
+      'Trưởng phòng cần coi trang chủ và trang kết quả tìm kiếm nội bộ là hai trang đích quan trọng của kênh AI, thay vì tối ưu bài viết chuyên sâu rồi tưởng người đọc sẽ vào thẳng bài đó.',
+    ifIgnored:
+      'Đội nội dung tiếp tục dồn công vào các bài chuyên sâu để được AI trích dẫn, nhưng người đọc đổ về trang chủ rồi rời đi vì không thấy thứ họ vừa được giới thiệu. Công sức sản xuất nội dung biến thành lượt truy cập không chuyển đổi, và báo cáo sẽ kết luận sai rằng kênh AI không hiệu quả.',
+    actionChecklist: [
+      'Gõ 10 truy vấn quan trọng nhất vào ô tìm kiếm trên chính website mình, đọc kết quả bằng con mắt khách lần đầu ghé',
+      'Bổ sung nội dung dẫn dắt và sắp xếp lại kết quả cho trang tìm kiếm nội bộ, vì gần 3/10 khách từ AI rơi vào đó',
+      'Đặt lối đi nhanh tới hành động chuyển đổi ngay trên trang chủ cho nhóm khách đã được thuyết phục sẵn',
+      'Tách riêng lượt truy cập từ AI trong báo cáo và đo bằng tỷ lệ chuyển đổi, đừng đo bằng tổng lượt truy cập',
+    ],
+  },
+  {
+    id: 'real-2026-08-04-meta-stablecoin',
+    category: 'Meta Ads',
+    platformIcon: 'Facebook',
+    title: 'Meta mở kênh thanh toán quảng cáo bằng USDC qua ví MetaMask, Coinbase và Binance',
+    publishedAt: '04/08/2026',
+    isHot: false,
+    illustration: 'ai-budget',
+    image: {
+      url: 'https://imgproxy.divecdn.com/G0Ke62R6kkrjvKRuj98i2MbkxSAobKops4y1JvQHLXk/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9mYl9zZWN1cml0eV81LnBuZw==.webp',
+      credit: 'Ảnh: Social Media Today',
+    },
+    sourceUrl: 'https://www.socialmediatoday.com/news/meta-ads-introduces-stablecoin-payment-options/827034/',
+    source: 'Social Media Today',
+    readTime: '4 phút đọc',
+    tags: ['Thanh toán', 'Ngân sách', 'Vận hành', 'Tài khoản quảng cáo'],
+    summary:
+      'Nhà quảng cáo nay nạp tiền tài khoản Meta được bằng đồng ổn định USDC thông qua ví bên thứ ba. Đối tác thanh toán quy đổi USDC sang tiền tệ địa phương rồi thanh toán với Meta, số dư tự động vào tài khoản quảng cáo. Meta ghi rõ họ không phát hành, không giữ hộ và không bán đồng ổn định.',
+    keyNumbers: [
+      { value: 'USDC', label: 'đồng duy nhất được chấp nhận' },
+      { value: '3', label: 'ví được nêu tên: MetaMask, Coinbase, Binance' },
+    ],
+    content: [
+      {
+        heading: 'Luồng tiền chạy thế nào',
+        body:
+          'Nhà quảng cáo trả bằng USDC từ ví của mình. Một đối tác thanh toán bên thứ ba nhận USDC, quy đổi sang tiền tệ địa phương và thanh toán với Meta. Meta cộng số dư đó vào tài khoản quảng cáo. Nghĩa là Meta không trực tiếp chạm vào tiền mã hoá, họ chỉ nhận tiền pháp định từ đối tác trung gian.',
+      },
+      {
+        heading: 'Meta cẩn trọng có lý do',
+        body:
+          'Meta nói rõ họ không phát hành, không bán và không giữ hộ đồng ổn định. Cách diễn đạt này phản ánh bài học từ dự án Libra rồi Diem trước đây bị đổ vỡ dưới sức ép của cơ quan quản lý. Lần này Meta chỉ mở thêm một cửa nhận tiền, không tự làm hạ tầng tiền tệ.',
+      },
+      {
+        heading: 'Ai thật sự được lợi',
+        body:
+          'Nhóm hưởng lợi rõ nhất là nhà quảng cáo ở những nơi thẻ tín dụng quốc tế khó mở, hạn mức thấp, hoặc thanh toán xuyên biên giới hay bị từ chối. Đây là điểm nghẽn quen thuộc với nhiều đơn vị chạy quảng cáo tại Việt Nam, nhất là khi cần nạp gấp giữa chiến dịch mà thẻ bị khoá vì nghi ngờ giao dịch bất thường.',
+      },
+      {
+        heading: 'Điều bản tin không nói và cần tự kiểm chứng',
+        body:
+          'Thông báo không nêu danh sách thị trường được mở, cũng không nêu hạn mức hay mức phí quy đổi. Chưa rõ Việt Nam có nằm trong đợt đầu hay không. Trước khi chuyển quy trình nạp tiền sang kênh này, phải tự kiểm tra trong tài khoản quảng cáo của mình và đối chiếu với quy định quản lý ngoại hối trong nước.',
+      },
+    ],
+    impact:
+      'Trưởng phòng có thể có thêm một đường nạp tiền dự phòng cho trường hợp thẻ bị khoá giữa chiến dịch, nhưng phải kiểm tra tính pháp lý trong nước trước khi đưa vào quy trình chính thức.',
+    ifIgnored:
+      'Không mất gì nếu bỏ qua, vì đây là lựa chọn thêm chứ không thay thế cách cũ. Rủi ro nằm ở chiều ngược lại: vội chuyển sang kênh này mà chưa rà soát quy định ngoại hối và chưa rõ mức phí quy đổi.',
+    actionChecklist: [
+      'Kiểm tra trong phần thiết lập thanh toán của tài khoản quảng cáo xem lựa chọn này đã mở cho Việt Nam chưa',
+      'Hỏi bộ phận kế toán và pháp chế về tính hợp lệ của việc thanh toán bằng đồng ổn định trước khi dùng',
+      'Nếu dùng, so mức phí quy đổi của đối tác trung gian với phí thẻ hiện tại trước khi chuyển hẳn',
+      'Vẫn giữ ít nhất một phương thức thanh toán dự phòng đã được duyệt, đừng phụ thuộc một kênh duy nhất',
+    ],
+  },
+  {
     id: 'real-2026-07-24-facebook-verified',
     category: 'Meta Ads',
     platformIcon: 'Facebook',
