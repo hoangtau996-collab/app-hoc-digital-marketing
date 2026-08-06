@@ -43,7 +43,7 @@ export const TRADE_MODULES = [
       'Nếu Brand Marketing xây hình ảnh trong tâm trí người tiêu dùng, Trade Marketing giành chiến thắng ngay tại quầy kệ — nơi quyết định mua hàng thực sự xảy ra.',
     icon: 'Store',
     badge: 'Nền Tảng Nghề',
-    duration: '40 phút',
+    duration: '60 phút',
     lessonsCount: 3,
     quizCount: 4,
     sections: [
@@ -66,7 +66,26 @@ Trade Marketing là bộ phận chịu trách nhiệm cho quãng đường cuố
 
 - **Cạnh tranh trực tiếp trên con số.** Mọi hoạt động cuối cùng đều phải quy về doanh số tại điểm bán. Không có chỗ cho hoạt động đẹp mà không ra số.
 - **Chu kỳ ngắn.** Tính bằng tháng và quý, không phải bằng năm như Brand. Kết quả đến nhanh, mà hậu quả cũng đến nhanh.
-- **Phải xuống thị trường.** Đây không phải nghề ngồi bàn. Không đi điểm bán thì không có dữ liệu thật để ra quyết định.`,
+- **Phải xuống thị trường.** Đây không phải nghề ngồi bàn. Không đi điểm bán thì không có dữ liệu thật để ra quyết định.
+
+### Một ngày làm việc thật trông như thế nào
+
+Để hình dung cụ thể thay vì đoán, đây là nhịp công việc điển hình của một Trade Marketing Executive:
+
+- **Đầu tuần:** đọc số sell-out tuần trước theo kênh, phát hiện chỗ bất thường, chuẩn bị báo cáo cho cuộc họp thương mại.
+- **Giữa tuần:** đi thị trường nửa ngày, kiểm tra trưng bày và POSM tại các điểm trọng điểm, chụp ảnh đối chiếu với tiêu chuẩn.
+- **Cuối tuần:** làm việc với nhà cung cấp và agency về vật phẩm cho chương trình tháng sau, chốt số lượng và lịch giao.
+- **Xen kẽ liên tục:** trả lời đội Sales về cơ chế chương trình đang chạy, xử lý phát sinh tại điểm bán, cập nhật bảng theo dõi ngân sách.
+
+Tỷ trọng thời gian thay đổi theo mùa: mùa cao điểm lễ Tết thì phần điều phối triển khai chiếm gần hết, còn mùa thấp điểm mới có chỗ cho việc lập kế hoạch.
+
+### Nghề này KHÔNG phải gì
+
+Ba hiểu nhầm hay gặp ở người mới:
+
+- **Không phải nghề thiết kế.** Trade viết brief và duyệt, không tự dựng file. Biết đọc bản in thử và bắt lỗi kích thước, màu, thông tin bắt buộc là đủ.
+- **Không phải nghề bán hàng.** Trade không mang chỉ tiêu doanh số cá nhân theo tuyến như Sales, nhưng chịu trách nhiệm cho công cụ giúp Sales bán được.
+- **Không phải nghề tổ chức sự kiện.** Activation chỉ là một phần nhỏ. Phần lớn thời gian là kế hoạch, số liệu và điều phối.`,
         takeaway:
           'Trade Marketing là cầu nối biến chiến lược thương hiệu thành doanh số thực tế tại điểm bán. Mọi hoạt động đều phải quy được về con số tiêu thụ.'
       },
@@ -98,6 +117,26 @@ Các đối tác trung gian trong kênh phân phối: nhà phân phối, đại 
 ### Trade phục vụ cả hai phía
 
 Trade Marketing cùng lúc phải thuyết phục customer nhập hàng và ưu tiên trưng bày, đồng thời thuyết phục shopper chọn mua. Hai nhóm này có động cơ khác nhau: customer quan tâm biên lợi nhuận và vòng quay hàng, shopper quan tâm giá và sự tiện lợi.
+
+### Ba đối tượng, ba câu hỏi hoàn toàn khác nhau
+
+Cách nhanh nhất để không nhầm là nhớ mỗi bên quan tâm điều gì:
+
+- **Shopper hỏi:** món này có đáng tiền không, có tiện không, có đang giảm giá không.
+- **Consumer hỏi:** dùng có thích không, có hợp với tôi không.
+- **Customer hỏi:** tôi lãi bao nhiêu trên mỗi thùng, bao lâu quay vòng hết hàng, có tồn đọng vốn không.
+
+Cùng một chương trình khuyến mãi phải trả lời được cả ba câu này theo ba cách khác nhau. Một cơ chế hấp dẫn với shopper nhưng bóp biên lợi nhuận của customer sẽ không được nhập hàng, nên không bao giờ tới được tay shopper.
+
+### Ngành hàng nào ba vai càng tách xa nhau
+
+Độ lệch giữa shopper và consumer khác nhau rõ rệt theo ngành:
+
+- **Tách hoàn toàn:** sữa công thức, tã, thức ăn thú cưng, đồ dùng học sinh. Người dùng gần như không bao giờ tự đi mua.
+- **Tách một phần:** dầu gội, bánh kẹo, mì gói. Người mua chính trong nhà mua cho cả gia đình.
+- **Gần như trùng:** bia, cà phê, mỹ phẩm cá nhân. Người dùng tự chọn và tự trả tiền.
+
+Ngành hàng nào hai vai càng tách xa thì vai trò của Trade càng nặng, vì người đứng trước kệ không phải người trải nghiệm sản phẩm — họ chọn bằng thông tin trên bao bì và bằng thứ đang bày trước mắt.
 
 ### Bài tập tự làm
 
@@ -134,7 +173,26 @@ Tự tìm thêm 5 ví dụ shopper khác consumer trong chính đời sống c�
 
 Đây không phải hai lựa chọn để chọn một. Brand tạo ra nhu cầu, Trade thu hoạch nhu cầu đó tại điểm bán. Thiếu Brand thì Trade phải giảm giá liên tục mới bán được. Thiếu Trade thì tiền quảng cáo của Brand chảy sang túi đối thủ có mặt trên kệ.
 
-Người làm Trade giỏi luôn đọc được kế hoạch Brand, và ngược lại.`,
+Người làm Trade giỏi luôn đọc được kế hoạch Brand, và ngược lại.
+
+### Hai bên va nhau ở đâu
+
+Biết trước các điểm va chạm để không bị bất ngờ trong cuộc họp đầu tiên:
+
+- **Ngân sách A&P.** Một túi tiền, hai nhu cầu. Brand muốn dồn cho truyền thông xây dài hạn, Trade muốn dồn cho hoạt động ra số ngay.
+- **Giá bán.** Trade cần cơ chế khuyến mãi để đạt chỉ tiêu quý; Brand lo giảm giá liên tục làm hỏng định vị đã dựng nhiều năm.
+- **Bao bì phiên bản đặc biệt.** Brand muốn đẹp và đúng nhận diện; Trade cần bày được lên kệ, chồng được, và không quá khổ so với ô kệ đã đàm phán.
+- **Lịch.** Brand chạy theo mùa chiến dịch truyền thông; Trade chạy theo mùa mua sắm của kênh. Hai lịch này không phải lúc nào cũng trùng.
+
+Cách xử lý không phải là thắng cuộc tranh luận mà là đưa được số liệu vào bàn: mốc nền, ROI kỳ trước, và hệ quả có thể tính được của từng phương án.
+
+### Câu hỏi phỏng vấn hay gặp
+
+**"Nếu Brand muốn giữ giá còn Sales muốn giảm sâu để chạy chỉ tiêu quý, bạn xử lý thế nào?"**
+
+Câu này kiểm tra xem ứng viên có hiểu mình đứng giữa hay không. Hướng trả lời tốt: nêu hệ quả có thể tính được của việc giảm giá (kéo doanh số quý sau về, tạo tiền lệ khiến kênh chỉ nhập khi có khuyến mãi, có thể buộc đối thủ hạ giá theo), rồi đưa phương án thay thế đạt cùng mục tiêu mà không đụng giá niêm yết — tăng giá trị thay vì giảm giá, hoặc dồn nguồn lực vào trưng bày và độ phủ.
+
+Tinh thần cần thể hiện: **đứng cùng phía với Sales về mục tiêu, khác phía về cách làm.**`,
         takeaway:
           'Brand đo bằng nhận biết và yêu thích với chu kỳ dài; Trade đo bằng sell-out, coverage và ROI với chu kỳ ngắn. Brand tạo nhu cầu, Trade thu hoạch nhu cầu tại điểm bán.'
       }
@@ -205,7 +263,7 @@ Người làm Trade giỏi luôn đọc được kế hoạch Brand, và ngượ
       'Không hiểu kênh thì không đọc nổi một bản mô tả công việc Trade. Đây là bài học đầu tiên, học trước mọi thứ khác.',
     icon: 'Network',
     badge: 'Ngôn Ngữ Nền',
-    duration: '45 phút',
+    duration: '65 phút',
     lessonsCount: 3,
     quizCount: 4,
     sections: [
@@ -236,7 +294,31 @@ Siêu thị, đại siêu thị, cửa hàng tiện lợi (CVS). Ít điểm bá
 
 ### Vì sao phải phân biệt
 
-Cùng một sản phẩm nhưng chương trình ở hai kênh phải khác nhau, vì shopper ở hai kênh có hành vi khác nhau và cơ chế chi phí cũng khác nhau. Áp một chương trình chung cho cả hai là dấu hiệu của người chưa hiểu kênh.`,
+Cùng một sản phẩm nhưng chương trình ở hai kênh phải khác nhau, vì shopper ở hai kênh có hành vi khác nhau và cơ chế chi phí cũng khác nhau. Áp một chương trình chung cho cả hai là dấu hiệu của người chưa hiểu kênh.
+
+### Đường đi của hàng hoá ở hai kênh
+
+Hiểu đường đi thì hiểu vì sao chi phí khác nhau.
+
+**Ở GT:** Công ty → Nhà phân phối → DSR đi tuyến → Tạp hoá → Shopper
+
+Nhà phân phối bỏ vốn ôm hàng và chịu rủi ro tồn kho cho cả khu vực. DSR là người thực sự gặp chủ tiệm mỗi tuần. Mọi chương trình đều phải đi qua tay DSR mới tới được điểm bán.
+
+**Ở MT:** Công ty → Trung tâm phân phối của chuỗi → Từng cửa hàng → Shopper
+
+Chuỗi tự lo khâu phân phối nội bộ, đổi lại họ thu phí ở nhiều điểm: phí vào kệ, phí trưng bày, phí hỗ trợ khuyến mãi. Đàm phán diễn ra ở cấp mua hàng của chuỗi, không phải ở từng cửa hàng.
+
+### Hệ quả với người làm Trade
+
+- **Ở GT, chương trình phải đơn giản.** DSR chỉ có khoảng hai phút đứng ở cửa tiệm để giải thích. Cơ chế có bốn điều kiện lồng nhau nghe rất chặt trên giấy nhưng không ai bán được.
+- **Ở MT, chương trình phải chốt sớm.** Chuỗi lên kế hoạch trước nhiều tuần và có lịch nộp hồ sơ chương trình cố định. Trễ hạn là mất suất, không thương lượng lại được.
+- **Chi phí ở GT nằm ở khâu tiếp cận** (phủ được bao nhiêu điểm), còn **chi phí ở MT nằm ở khâu vị trí** (giành được chỗ nào trên kệ).
+
+### CVS — nhánh riêng cần biết
+
+Cửa hàng tiện lợi thường được xếp vào MT nhưng hành vi shopper lại gần GT hơn: mua lẻ, mua gấp, mua vì đang ở gần. Điểm khác biệt lớn nhất là diện tích kệ rất hẹp, nên số SKU được nhận vào rất ít và cạnh tranh để có mặt gay gắt hơn siêu thị lớn.
+
+Gói nhỏ, sản phẩm ăn liền và đồ uống lạnh là nhóm hợp kênh này nhất.`,
         takeaway:
           'GT phủ rộng bằng số lượng điểm bán và quan hệ cá nhân với chủ tiệm; MT tập trung doanh số vào ít điểm và vận hành bằng hợp đồng, dữ liệu.'
       },
@@ -271,7 +353,32 @@ Khách sạn, nhà hàng, quán café. Sản phẩm được tiêu thụ ngay t�
 
 ### Lưu ý cho người mới
 
-Đừng cố học hết bốn kênh cùng lúc. Chọn một kênh gắn với ngành hàng bạn muốn theo, học sâu kênh đó trước. Người phỏng vấn đánh giá cao ứng viên hiểu sâu một kênh hơn là biết sơ sơ cả bốn.`,
+Đừng cố học hết bốn kênh cùng lúc. Chọn một kênh gắn với ngành hàng bạn muốn theo, học sâu kênh đó trước. Người phỏng vấn đánh giá cao ứng viên hiểu sâu một kênh hơn là biết sơ sơ cả bốn.
+
+### Ba chỉ số riêng của kênh E-commerce
+
+Người từ Trade truyền thống sang sàn cần đổi tên chỉ số chứ không phải học lại từ đầu:
+
+- **Tỷ lệ hiển thị trong tìm kiếm** thay cho share of shelf. Gõ từ khoá ngành hàng, đếm xem trong 20 kết quả đầu có bao nhiêu sản phẩm của mình.
+- **Tình trạng còn hàng** thay cho OSA. Hết hàng trên sàn nặng hơn ngoài kệ: thuật toán hạ thứ hạng, nên khi có hàng trở lại vẫn mất thêm thời gian mới leo về vị trí cũ.
+- **Tỷ lệ chuyển đổi trang sản phẩm** — thứ không có bản tương đương ngoài kệ. Đây là chỗ ảnh, tiêu đề và đánh giá quyết định, tương tự vai trò của bao bì trong cửa hàng.
+
+### HoReCa — cửa vào thường bị bỏ qua
+
+Kênh này ít người mới nhắm tới, nên cạnh tranh ứng tuyển nhẹ hơn. Ba điều cần biết trước:
+
+- **Bán cho quán không giống bán cho cửa hàng.** Quán mua nguyên liệu để chế biến, nên quan tâm định lượng trên mỗi phần, độ ổn định chất lượng và giá vốn trên mỗi ly hoặc mỗi đĩa.
+- **Đổi nhà cung cấp rất tốn kém với quán.** Phải đổi công thức món và đào tạo lại nhân viên. Đó là lý do vào được thì bền, mà cũng là lý do vào rất khó.
+- **POSM ở HoReCa khác hẳn:** menu, standee để bàn, ly có in thương hiệu, ô dù ngoài trời, bảng hiệu. Nhiều thứ trong đó nằm lại lâu dài chứ không tháo theo chương trình.
+
+### Chọn kênh nào để học sâu
+
+Gợi ý theo ngành hàng bạn muốn theo:
+
+1. **Sữa, bánh kẹo, gia vị, hoá mỹ phẩm** — học MT trước, vì đây là nơi phần lớn ngân sách và dữ liệu nằm ở đó.
+2. **Nước giải khát, bia, thuốc lá, mì gói** — học GT trước, vì độ phủ là chiến trường chính.
+3. **Mỹ phẩm, thực phẩm chức năng, đồ gia dụng nhỏ** — học E-commerce trước.
+4. **Nguyên liệu pha chế, bia, nước đóng chai** — học HoReCa trước.`,
         takeaway:
           'E-commerce là Trade Marketing vận hành bằng dữ liệu, mọi khái niệm truyền thống đều có bản tương đương. HoReCa vận hành bằng quan hệ với chủ quán, chu kỳ dài nhưng bền.'
       },
@@ -300,7 +407,32 @@ Câu thứ ba là câu quan trọng nhất. Trả lời được câu đó nghĩ
 
 ### Gợi ý hướng trả lời
 
-Khác nhau vì shopper ở hai kênh có hành vi khác nhau, cơ chế chi phí khác nhau, và quyền đàm phán của nhà bán lẻ cũng khác nhau. Ở MT nhà bán lẻ có quyền lực lớn nên chi phí trưng bày cao; ở GT quyền lực nằm ở chỗ chủ tiệm chịu bày hàng của ai.`,
+Khác nhau vì shopper ở hai kênh có hành vi khác nhau, cơ chế chi phí khác nhau, và quyền đàm phán của nhà bán lẻ cũng khác nhau. Ở MT nhà bán lẻ có quyền lực lớn nên chi phí trưng bày cao; ở GT quyền lực nằm ở chỗ chủ tiệm chịu bày hàng của ai.
+
+### Mẫu biên bản store check để chép lại
+
+Dùng đúng sáu cột này cho mỗi nhãn hàng quan sát, mỗi lần đi một dòng. Sau ba tháng bạn có một bảng dữ liệu thật, thứ mà gần như không ứng viên mới nào mang tới buổi phỏng vấn:
+
+1. **Ngày đi và loại điểm bán** — ghi rõ siêu thị, cửa hàng tiện lợi hay tạp hoá, kèm khu vực.
+2. **Vị trí kệ và số facing** — tầng thứ mấy tính từ dưới lên, chiếm bao nhiêu mặt tiền sản phẩm.
+3. **Giá bán thực tế trên kệ** — giá đang niêm yết tại điểm bán, không phải giá đề xuất của hãng.
+4. **Tình trạng hàng** — đủ, vơi, hay trống. Có hàng cận date không.
+5. **POSM đang có** — loại gì, đặt đúng chỗ không, còn nguyên vẹn không.
+6. **Chương trình khuyến mãi** — của mình và của ba nhãn cạnh tranh gần nhất, ghi rõ cơ chế.
+
+Luôn kèm ảnh chụp cùng một góc qua các lần đi, để so sánh được theo thời gian.
+
+### Ba lỗi làm hỏng buổi store check đầu tiên
+
+- **Chỉ chụp ảnh mà không ghi số.** Ba tháng sau mở ảnh ra không nhớ giá bao nhiêu, có bao nhiêu facing. Ảnh là bằng chứng, con số mới là dữ liệu.
+- **Đi mỗi nơi một ngày khác nhau.** Khuyến mãi thay đổi theo tuần, nên so sánh hai điểm bán ở hai thời điểm khác nhau là so sánh sai. Đi trong cùng một buổi.
+- **Chỉ nhìn nhãn của mình.** Không có số của đối thủ thì không biết 20,0% share of shelf là tốt hay tệ.
+
+### Nâng cấp bài tập lên một bậc
+
+Khi đã đi quen, thêm một việc: **đứng quan sát shopper 15 phút** tại khu vực ngành hàng đó. Ghi lại họ dừng bao lâu, cầm sản phẩm nào lên trước, có đọc bao bì không, cuối cùng bỏ vào giỏ món nào.
+
+Đây là dữ liệu shopper insight thô, và là thứ phân biệt người làm chiến lược với người chỉ ghi chép hiện trạng.`,
         takeaway:
           'So sánh cùng một nhãn hàng ở siêu thị và tạp hoá là bài học đầu tiên về chiến lược kênh. Câu hỏi quan trọng nhất không phải "khác thế nào" mà là "vì sao lại khác".'
       }
@@ -371,7 +503,7 @@ Khác nhau vì shopper ở hai kênh có hành vi khác nhau, cơ chế chi phí
       'Sáu khối kiến thức xếp theo thứ tự nên học, cộng với bộ chỉ số Trade phải học thuộc trước khi đi phỏng vấn.',
     icon: 'Layers',
     badge: 'Kiến Thức Lõi',
-    duration: '55 phút',
+    duration: '80 phút',
     lessonsCount: 4,
     quizCount: 4,
     sections: [
@@ -414,7 +546,25 @@ Standee, wobbler, kệ trưng bày, poster, hangtag. Tiêu chuẩn trưng bày, 
 
 Pivot Table, VLOOKUP/XLOOKUP, dựng bảng theo dõi sell-out theo kênh, tính ROI chương trình, làm báo cáo định kỳ.
 
-**Xuất hiện gần như trong mọi bản mô tả công việc.**`,
+**Xuất hiện gần như trong mọi bản mô tả công việc.**
+
+### Học POSM trước — vì sao đây là cửa vào dễ nhất
+
+Khối 05 là nơi người mới đóng góp được ngay từ tuần đầu, vì phần lớn công việc là quy trình chứ không phải phán đoán. Bốn việc cụ thể:
+
+1. **Viết brief cho agency** — nêu rõ mục tiêu chương trình, thông điệp chính, kích thước theo từng loại điểm bán, số lượng, hạn giao và thông tin bắt buộc phải có trên vật phẩm.
+2. **Đặt sản xuất** — so sánh báo giá, duyệt bản in thử, kiểm tra màu và lỗi chính tả trước khi chạy hàng loạt.
+3. **Điều phối rollout** — chia số lượng theo khu vực, gửi kèm hướng dẫn treo, chốt ngày đồng loạt lên.
+4. **Kiểm tra tuân thủ** — đi mẫu một số điểm bán, đối chiếu ảnh với tiêu chuẩn, tính tỷ lệ tuân thủ.
+
+Việc 1 và 2 học được trong vài tuần. Việc 4 là chỗ tạo ra giá trị thật, vì rất nhiều nơi phát POSM xong không ai kiểm tra.
+
+### Bốn lỗi POSM tốn tiền nhất
+
+- **Sai kích thước so với ô kệ đã đàm phán.** In xong không treo được, bỏ toàn bộ lô.
+- **Giao trễ so với ngày chương trình bắt đầu.** Vật phẩm về sau khi khuyến mãi đã chạy được nửa kỳ thì gần như vô dụng.
+- **Không tính chi phí sản xuất vào ROI chương trình.** Báo cáo đẹp hơn thực tế, và lần sau lặp lại sai lầm với ngân sách lớn hơn.
+- **Phát rồi không kiểm tra.** Đây là lỗi phổ biến nhất: tiền đã chi, hàng đã về điểm bán, nhưng không ai biết có bao nhiêu phần trăm thực sự được treo đúng chỗ.`,
         takeaway:
           'Sáu khối xếp theo thứ tự phụ thuộc: cấu trúc kênh là nền, shopper insight phân biệt chiến lược với thực thi, POSM là cửa vào dễ nhất cho người mới.'
       },
@@ -451,7 +601,39 @@ Toàn bộ vật phẩm quảng cáo tại điểm bán: standee, wobbler, kệ 
 
 #### POP — Point of Purchase
 
-Nơi diễn ra quyết định mua, cũng là nơi mọi hoạt động marketing hội tụ.`,
+Nơi diễn ra quyết định mua, cũng là nơi mọi hoạt động marketing hội tụ.
+
+**Phân biệt nhanh: POP là chỗ, POSM là đồ.** Dùng lẫn hai từ này là dấu hiệu học vẹt định nghĩa mà chưa từng ra điểm bán.
+
+### Nhận mặt POSM — gọi đúng tên từng loại
+
+Dưới một chữ viết tắt là những thứ khác hẳn nhau về chi phí và vòng đời. Chia theo chỗ chúng chiếm:
+
+**Nhóm gắn trên kệ — rẻ, thay nhanh, dễ bị gỡ**
+
+- **Wobbler:** thẻ nhỏ gắn mép kệ, rung rung khi có người đi qua để hút mắt.
+- **Thẻ giá và shelf talker:** dải giấy chạy dọc mép kệ, ghi giá hoặc thông điệp khuyến mãi.
+- **Hangtag:** thẻ treo trực tiếp trên cổ chai hoặc thân sản phẩm, thường dùng khi có quà tặng kèm.
+
+**Nhóm chiếm sàn — đắt hơn nhiều, nhưng giành được chỗ kệ chung không cho**
+
+- **Standee:** bảng đứng tự do đặt lối đi hoặc cửa vào. Dựng nhanh nhưng dễ bị đẩy vào góc khuất.
+- **Dump bin:** thùng đổ đống giữa lối đi, dùng cho hàng khuyến mãi và mua ngẫu hứng.
+- **Kệ trưng bày riêng:** kệ của riêng nhãn hàng, thường đặt tại quầy thanh toán. Tốn kém nhất trong nhóm.
+
+**Nhóm bao phủ không gian**
+
+- **Poster, banner, decal sàn, cổng chào:** định hình không khí cả khu vực, hay dùng cho chương trình theo mùa.
+
+### Đo POSM bằng gì
+
+Đếm số lượng đã phát không nói lên điều gì. Chỉ số thật là **tỷ lệ tuân thủ**:
+
+**Tỷ lệ tuân thủ = Số điểm bán treo đúng và đủ / Tổng số điểm bán đã phát POSM**
+
+Giả sử phát cho 500 điểm bán, đi kiểm tra mẫu 60 điểm thì 42 điểm treo đúng vị trí và còn nguyên vẹn. Tỷ lệ tuân thủ là 42 chia 60, bằng 70,0%. Nghĩa là gần một phần ba chi phí sản xuất không tạo ra tác dụng nào.
+
+Khi kiểm tra, ghi rõ ba mức: **có và đúng chỗ**, **có nhưng sai chỗ hoặc hỏng**, **không có**. Ba mức này dẫn tới ba cách xử lý hoàn toàn khác nhau.`,
         takeaway:
           'Sell-out là con số phản ánh nhu cầu thật, không phải sell-in. OSA quan trọng vì hết hàng đồng nghĩa mất doanh số vĩnh viễn chứ không phải hoãn lại.'
       },
@@ -482,7 +664,41 @@ Kế hoạch kinh doanh chung ký với khách hàng lớn ở kênh MT. Thườ
 
 ### Cách học thuộc hiệu quả
 
-Đừng học vẹt định nghĩa. Với mỗi chỉ số, tự trả lời: **chỉ số này tăng thì điều gì tốt lên, và nó có thể bị làm đẹp bằng cách nào?** Hiểu được mặt trái mới là hiểu thật.`,
+Đừng học vẹt định nghĩa. Với mỗi chỉ số, tự trả lời: **chỉ số này tăng thì điều gì tốt lên, và nó có thể bị làm đẹp bằng cách nào?** Hiểu được mặt trái mới là hiểu thật.
+
+### Mặt trái của từng chỉ số — bảng tự kiểm
+
+Áp dụng đúng câu hỏi trên cho sáu chỉ số quan trọng nhất:
+
+- **Sell-in** — làm đẹp bằng cách đẩy hàng vào kho nhà phân phối cuối kỳ. Kiểm chứng bằng cách so với sell-out cùng kỳ.
+- **Sell-out** — khó làm đẹp nhất, nên đây là con số đáng tin nhất. Chỉ méo khi kỳ có khuyến mãi sâu kéo doanh số của kỳ sau về.
+- **Coverage** — làm đẹp bằng cách tính cả điểm bán chỉ nhập một lần rồi thôi. Kiểm chứng bằng số điểm bán có mua lặp lại.
+- **Share of shelf** — làm đẹp bằng cách đo tại vài điểm bán tốt nhất rồi suy ra cả khu vực. Kiểm chứng bằng mẫu ngẫu nhiên.
+- **OSA** — làm đẹp bằng cách chỉ đi kiểm tra vào ngày vừa châm hàng. Kiểm chứng bằng cách đi vào các thời điểm khác nhau trong tuần.
+- **ROI chương trình** — làm đẹp bằng cách lấy tổng doanh thu thay vì phần tăng thêm, hoặc bỏ quên chi phí sản xuất POSM.
+
+### Cách tính ROI đúng, làm một lần bằng số cụ thể
+
+Giả sử một chương trình trưng bày kéo dài một tháng:
+
+1. **Mốc nền** — doanh số trung bình ba tháng trước khi chạy: 400.000.000 đồng mỗi tháng.
+2. **Doanh số tháng chạy chương trình:** 520.000.000 đồng.
+3. **Phần tăng thêm:** 520.000.000 − 400.000.000 = 120.000.000 đồng.
+4. **Tổng chi phí:** phí trưng bày 70.000.000 đồng, sản xuất POSM 20.000.000 đồng, nhân sự triển khai 10.000.000 đồng — cộng lại 100.000.000 đồng.
+5. **ROI:** (120.000.000 − 100.000.000) chia 100.000.000, bằng **0,2 lần**.
+
+Nếu lấy nhầm tổng doanh thu 520.000.000 đồng làm tử số, ROI hiện lên 4,2 lần — sai gấp hơn hai mươi lần. Đây chính là lỗi mà câu hỏi kiểm tra của chuyên đề này nhắm tới.
+
+**Chưa xong ở bước 5.** Còn phải kiểm tra tác dụng phụ: tháng sau doanh số có tụt xuống dưới mốc nền không (dấu hiệu chương trình chỉ kéo nhu cầu về sớm), tồn kho ở kênh ra sao, và giá bán trên kệ có bị neo ở mức khuyến mãi không.
+
+### Bốn thứ phải chốt TRƯỚC khi chạy bất kỳ chương trình nào
+
+1. **Mốc so sánh** — lấy doanh số kỳ nào làm nền, thống nhất với Sales và Finance ngay từ đầu.
+2. **Mục tiêu cụ thể** — tăng bao nhiêu phần trăm sell-out, tại bao nhiêu điểm bán.
+3. **Cách đo** — số lấy từ đâu, ai lấy, tần suất nào.
+4. **Ngưỡng dừng** — dấu hiệu nào thì cắt chương trình giữa chừng.
+
+Chốt sau khi có kết quả thì con số nào cũng biện minh được.`,
         takeaway:
           'ROI chương trình phải tính trên doanh thu tăng thêm so với mốc nền, không phải tổng doanh thu trong kỳ. Với mỗi chỉ số, luôn hỏi thêm nó có thể bị làm đẹp bằng cách nào.'
       },
@@ -505,7 +721,33 @@ Nhiều tin tuyển dụng kênh MT yêu cầu kinh nghiệm với **Nielsen Ret
 
 ### Điều nhà tuyển dụng thực sự tìm
 
-Yêu cầu Nielsen trong tin tuyển dụng thường là cách viết tắt cho "biết đọc dữ liệu thị trường và ra quyết định từ số". Nếu bạn chứng minh được năng lực đó bằng dữ liệu tự thu thập từ store check, nhiều nhà tuyển dụng sẵn sàng bỏ qua phần công cụ.`,
+Yêu cầu Nielsen trong tin tuyển dụng thường là cách viết tắt cho "biết đọc dữ liệu thị trường và ra quyết định từ số". Nếu bạn chứng minh được năng lực đó bằng dữ liệu tự thu thập từ store check, nhiều nhà tuyển dụng sẵn sàng bỏ qua phần công cụ.
+
+### Hai công cụ này khác nhau ở đâu
+
+Biết để không nói nhầm khi được hỏi:
+
+- **Nielsen Retail Audit** đo phía cửa hàng: hàng bán ra bao nhiêu, giá bao nhiêu, chiếm bao nhiêu diện tích kệ, có hết hàng không. Dữ liệu lấy từ mẫu điểm bán.
+- **Kantar Worldpanel** đo phía hộ gia đình: ai mua, mua bao lâu một lần, mua thêm hay đổi từ nhãn nào sang. Dữ liệu lấy từ nhật ký mua sắm của các hộ tham gia.
+
+Nói gọn: **Nielsen trả lời "bán được bao nhiêu", Kantar trả lời "ai đang mua và vì sao đổi".** Câu hỏi kinh doanh khác nhau thì dùng công cụ khác nhau.
+
+### Nguồn dữ liệu miễn phí dùng được ngay
+
+Trong lúc chưa có license, đây là những thứ tự làm được:
+
+- **Dữ liệu store check của chính bạn.** Quy mô nhỏ nhưng là dữ liệu sơ cấp, và bạn hiểu rõ nó được thu thập thế nào — điều mà nhiều người dùng Nielsen không nói được.
+- **Dữ liệu công khai trên sàn thương mại điện tử.** Thứ hạng tìm kiếm, số lượt đánh giá, giá bán theo thời gian đều xem được không mất phí.
+- **Báo cáo thường niên của doanh nghiệp niêm yết.** Nhiều công ty hàng tiêu dùng công bố cơ cấu doanh thu theo kênh và ngành hàng.
+- **Bài phân tích chiến dịch trên báo ngành.** Đọc để hiểu cách người trong nghề lập luận, không phải để lấy số.
+
+### Cách nói về khoảng trống này khi phỏng vấn
+
+Đừng giấu và cũng đừng ghi đại vào hồ sơ là đã biết dùng. Cách nói thẳng và có lợi hơn:
+
+*"Em chưa được dùng Nielsen vì đó là công cụ có license của doanh nghiệp. Nhưng em đã tự thu thập dữ liệu từ store check ở 8 điểm bán trong 3 tháng, đây là bảng số và đây là ba kết luận em rút ra được. Nếu được tiếp cận Retail Audit, em nghĩ mình đọc được sau vài tuần vì bản chất chỉ số thì giống nhau."*
+
+Câu này chuyển cuộc trò chuyện từ chỗ bạn thiếu sang chỗ bạn đã chủ động làm.`,
         takeaway:
           'Nielsen và Kantar là rào cản quyền truy cập công cụ chứ không phải rào cản năng lực. Chuỗi bán lẻ và F&B nội địa là cửa vào dễ hơn nhiều so với FMCG đa quốc gia.'
       }
@@ -576,7 +818,7 @@ Yêu cầu Nielsen trong tin tuyển dụng thường là cách viết tắt cho
       'Đọc thị trường trước khi chuẩn bị hồ sơ, thay vì chuẩn bị hồ sơ theo tưởng tượng.',
     icon: 'TrendingUp',
     badge: 'Định Hướng',
-    duration: '40 phút',
+    duration: '60 phút',
     lessonsCount: 3,
     quizCount: 4,
     sections: [
@@ -615,7 +857,30 @@ Chịu trách nhiệm chiến lược thương mại toàn hệ thống, phân b
 
 ### Điểm cần biết trước khi chọn nghề
 
-Trade là nghề cạnh tranh trực tiếp trên con số tiêu thụ. Nếu dừng lại không học tiếp, thực tế cạnh tranh sẽ tự đào thải. Đổi lại, đây là một trong những nhánh marketing có **tốc độ thăng tiến nhanh nhất** với người có nền thực chiến tốt.`,
+Trade là nghề cạnh tranh trực tiếp trên con số tiêu thụ. Nếu dừng lại không học tiếp, thực tế cạnh tranh sẽ tự đào thải. Đổi lại, đây là một trong những nhánh marketing có **tốc độ thăng tiến nhanh nhất** với người có nền thực chiến tốt.
+
+### Thứ thực sự quyết định việc lên nấc
+
+Không phải số năm kinh nghiệm mà là **phạm vi chịu trách nhiệm**. Bốn nấc trên khác nhau ở bốn thứ:
+
+- **Nấc 1 → Nấc 2:** từ hỗ trợ người khác sang tự chạy trọn một chương trình, có ngân sách riêng và chịu trách nhiệm về kết quả của nó.
+- **Nấc 2 → Nấc 3:** từ thực thi chương trình sang lập kế hoạch kênh. Bắt đầu quyết định làm gì chứ không chỉ làm thế nào.
+- **Nấc 3 → Nấc 4:** từ một ngành hàng sang toàn hệ thống, và từ tiêu ngân sách sang phân bổ ngân sách giữa các bên.
+
+Dấu hiệu bạn đã sẵn sàng lên nấc tiếp theo: cấp trên bắt đầu hỏi ý kiến bạn trước khi quyết, thay vì giao việc đã quyết xong.
+
+### Hai nhánh rẽ sau nấc 4
+
+- **Nhánh thương mại:** Commercial Director, rồi General Management. Hợp với người thích cân đối lợi ích giữa nhiều bên và làm việc với con số lớn.
+- **Nhánh chuyên sâu:** Category Management hoặc Shopper Marketing chuyên trách. Hợp với người thích đào sâu hành vi mua và dữ liệu ngành hàng.
+
+Trade là một trong ít nhánh marketing mở được cả hai đường, vì người làm Trade quen với cả ngôn ngữ của Sales lẫn ngôn ngữ của Marketing.
+
+### Lưu ý về con số lương ở trên
+
+Các dải lương này là mặt bằng tham khảo, thay đổi theo ngành hàng, quy mô doanh nghiệp và khu vực. Chênh lệch giữa doanh nghiệp nội địa và tập đoàn đa quốc gia ở cùng một nấc có thể rất lớn.
+
+**Dùng để định hướng, không dùng để đàm phán cứng.** Trước khi vào bàn thương lượng, kiểm tra lại tin tuyển dụng đang mở ở đúng ngành hàng và đúng khu vực bạn ứng tuyển.`,
         takeaway:
           'Nấc Intern gần như bắt buộc với người mới vì nghề này ít khoá đào tạo chuyên sâu, phần lớn học qua thực tế. Đổi lại tốc độ thăng tiến thuộc nhóm nhanh nhất trong marketing.'
       },
@@ -648,7 +913,33 @@ Nguồn: phân tích 60 tin tuyển dụng Trade Marketing trên CareerLink quý
 
 ### Cách dùng danh sách này
 
-Đối chiếu từng dòng với hồ sơ hiện tại của bạn. Dòng nào chưa có bằng chứng thì đó chính là việc cần làm trong 90 ngày tới.`,
+Đối chiếu từng dòng với hồ sơ hiện tại của bạn. Dòng nào chưa có bằng chứng thì đó chính là việc cần làm trong 90 ngày tới.
+
+### Cách đọc một tin tuyển dụng Trade cho đúng
+
+Tin tuyển dụng viết theo khuôn, nên phải biết chỗ nào là bắt buộc thật:
+
+- **Phần "Mô tả công việc" mới là thứ đáng đọc kỹ.** Nó cho biết vị trí này thiên về kênh nào, ngành hàng nào, và có phải đi thị trường nhiều không.
+- **Phần "Yêu cầu" thường viết rộng hơn thực tế.** Danh sách 10 gạch đầu dòng hiếm khi bắt buộc đủ cả 10.
+- **Số năm kinh nghiệm là khoảng thương lượng được**, đặc biệt ở doanh nghiệp nội địa. Thiếu một năm mà có sản phẩm thật mang tới thì vẫn vào vòng phỏng vấn.
+- **Tên công cụ cụ thể mới là rào cản thật** — Nielsen, Kantar, hệ thống DMS nội bộ. Đây là thứ không tự học ở nhà được.
+
+### Dịch yêu cầu tuyển dụng sang bằng chứng cần có
+
+Với mỗi yêu cầu, nhà tuyển dụng đang tìm một bằng chứng cụ thể chứ không tìm lời khẳng định:
+
+- "Am hiểu kênh" → nói được đặc thù vận hành của một kênh cụ thể, kèm ví dụ từ store check của chính bạn.
+- "Quản lý POSM" → mô tả được quy trình từ brief tới kiểm tra tuân thủ, và biết bốn lỗi tốn tiền nhất.
+- "Lập kế hoạch" → có một bản Trade Plan tự viết mang theo.
+- "Phân tích số liệu" → dựng được Pivot từ bảng dữ liệu thật và đọc ra được kết luận.
+- "Đi thị trường" → có bảng store check nhiều lần đi, kèm ảnh so sánh.
+- "Phối hợp đa phòng ban" → kể được một tình huống bạn từng đứng giữa hai bên có mục tiêu lệch nhau.
+
+### Về độ mới của các con số trong bài
+
+Số liệu tuyển dụng ở trên lấy từ phân tích tin đăng quý 2/2026. Thị trường tuyển dụng đổi theo quý, nhất là dải lương và mức kinh nghiệm yêu cầu.
+
+**Trước khi dùng để ra quyết định, hãy tự mở lại các trang tuyển dụng và đọc 20-30 tin đang đăng ở đúng ngành hàng bạn nhắm tới.** Việc này mất khoảng một buổi và cho bức tranh cập nhật hơn bất kỳ bài viết nào.`,
         takeaway:
           'Sáu yêu cầu gần như luôn có: am hiểu kênh, quản lý POSM, lập kế hoạch, phân tích số liệu, đi thị trường, phối hợp đa phòng ban. Đối chiếu từng dòng với hồ sơ để biết mình còn thiếu gì.'
       },
@@ -676,7 +967,33 @@ Nguồn: phân tích 60 tin tuyển dụng Trade Marketing trên CareerLink quý
 
 Đổi lại, doanh nghiệp nội địa thường có quy trình chưa chuẩn hoá, ít tài liệu đào tạo, và thương hiệu trên CV không mạnh bằng tập đoàn đa quốc gia.
 
-Chiến lược hợp lý cho phần lớn người mới: **vào nội địa lấy nền thực chiến 1-2 năm, sau đó chuyển sang đa quốc gia với hồ sơ đã có số liệu thật.** Đi đường vòng này thường nhanh hơn là chờ cửa thẳng mãi không mở.`,
+Chiến lược hợp lý cho phần lớn người mới: **vào nội địa lấy nền thực chiến 1-2 năm, sau đó chuyển sang đa quốc gia với hồ sơ đã có số liệu thật.** Đi đường vòng này thường nhanh hơn là chờ cửa thẳng mãi không mở.
+
+### Mỗi ngành đòi hỏi thứ gì khác nhau
+
+Chọn ngành không chỉ theo nhu cầu tuyển mà theo việc bạn hợp với nhịp nào:
+
+- **FMCG** — nhịp nhanh nhất, chu kỳ chương trình tính bằng tháng, số điểm bán rất lớn. Học được nhiều nhất trong thời gian ngắn nhất, đổi lại áp lực cao và phải đi thị trường nhiều.
+- **Đồ uống và bia** — mạnh ở GT và HoReCa, nặng phần quan hệ và hoạt động tại chỗ. Mùa vụ rõ rệt, cao điểm lễ Tết cực kỳ căng.
+- **Mỹ phẩm** — thiên về trải nghiệm tại điểm bán và tư vấn, POSM đầu tư kỹ hơn, kênh MT và chuỗi chuyên doanh là chính.
+- **Dược phẩm** — tập trung nhà thuốc và phòng khám, nhiều ràng buộc pháp lý về nội dung quảng cáo. Nhịp chậm hơn, đòi hỏi cẩn thận hơn.
+- **Chuỗi bán lẻ và F&B** — bạn đứng ở phía nhà bán lẻ chứ không phải phía nhãn hàng. Góc nhìn ngược lại, và rất có giá trị nếu sau này quay về phía nhãn hàng.
+
+### Vị trí gần Trade, dùng làm đường vòng
+
+Nếu chưa vào thẳng được Trade Marketing, ba vị trí sau đi qua rất nhanh vì dùng chung phần lớn năng lực:
+
+- **Sales Admin hoặc Sales Support** — nắm được dữ liệu bán hàng và cách kênh vận hành từ bên trong.
+- **Nhân viên Activation tại agency** — làm đúng phần triển khai tại điểm bán, tiếp xúc trực tiếp với POSM và shopper.
+- **Merchandiser** — đi điểm bán hằng ngày, hiểu kệ hàng ở mức chi tiết nhất mà không vị trí nào khác có được.
+
+Điểm chung: cả ba đều cho bạn dữ liệu thật và câu chuyện thật để kể, thứ mà một ứng viên chỉ có bằng cấp không có.
+
+### Đừng chọn ngành chỉ vì nhu cầu tuyển cao
+
+Nhu cầu tuyển cao thường đi kèm tỷ lệ nghỉ việc cao. Trước khi chọn, tự hỏi hai câu: bạn có thực sự dùng hoặc quan tâm nhóm sản phẩm này không, và bạn có chịu được nhịp làm việc của ngành đó không.
+
+Người làm Trade giỏi thường là người thật sự tò mò về ngành hàng của mình — vì tò mò mới chịu đứng 15 phút quan sát shopper trước một kệ hàng.`,
         takeaway:
           'FMCG tuyển nhiều nhất nhưng khó vào nhất với người mới. Chuỗi bán lẻ và F&B nội địa là cửa vào thực tế hơn: lấy nền 1-2 năm rồi chuyển sang đa quốc gia với hồ sơ đã có số liệu thật.'
       }
@@ -742,7 +1059,7 @@ Chiến lược hợp lý cho phần lớn người mới: **vào nội địa l
       'Sáu khoảng trống phổ biến nhất của sinh viên, cách lấp từng cái mà không cần đợi đi làm, và kế hoạch 90 ngày để có sản phẩm mang đi phỏng vấn.',
     icon: 'Rocket',
     badge: 'Thực Hành',
-    duration: '50 phút',
+    duration: '70 phút',
     lessonsCount: 3,
     quizCount: 4,
     sections: [
@@ -783,7 +1100,41 @@ Biết gõ bảng nhưng không dựng được Pivot, không tính được ROI
 
 Trade là nghề phải di chuyển nhiều, xuống thị trường, xử lý sự cố ngoài giờ. Nhiều bạn vỡ mộng sau tháng đầu.
 
-**Cách lấp:** trước khi quyết định theo nghề, hãy đi thị trường thật vài buổi. Nếu thấy mệt mà vẫn thấy thú vị thì bạn hợp.`,
+**Cách lấp:** trước khi quyết định theo nghề, hãy đi thị trường thật vài buổi. Nếu thấy mệt mà vẫn thấy thú vị thì bạn hợp.
+
+### Mẫu bốn bước để viết lại một hoạt động đã làm
+
+Khoảng trống số 2 và số 3 lấp chung bằng một việc: viết lại mọi thứ đã làm theo đúng khuôn dưới đây.
+
+1. **Mục tiêu** — lúc đó cần đạt điều gì, đo bằng con số nào.
+2. **Cách làm** — đã chọn phương án nào và vì sao chọn phương án đó thay vì phương án khác.
+3. **Kết quả bằng số** — bao nhiêu người, bao nhiêu tiền, tăng bao nhiêu phần trăm, trong bao lâu.
+4. **Điều rút ra** — nếu làm lại thì đổi gì.
+
+**Ví dụ viết lại một dòng hồ sơ:**
+
+Trước: *"Hỗ trợ tổ chức sự kiện cho câu lạc bộ."*
+
+Sau: *"Tổ chức sự kiện tuyển thành viên cho câu lạc bộ 200 người tham dự, ngân sách 8.000.000 đồng, thu về 45 đơn đăng ký — vượt 50% so với mục tiêu 30 đơn. Rút ra: kênh truyền thông trong khoa hiệu quả gấp ba lần đăng bài trên fanpage chung."*
+
+Cùng một việc, nhưng bản sau nói được ba thứ bản trước không nói: quy mô, hiệu quả so với mục tiêu, và khả năng rút kết luận từ số liệu.
+
+### Bốn thứ Excel cần học, không hơn
+
+Khoảng trống số 5 chỉ cần đúng bốn kỹ năng cho 90% công việc ở cấp Executive:
+
+- **Pivot Table** — tổng hợp sell-out theo kênh, theo tháng, theo SKU. Đây là thứ dùng hằng ngày.
+- **XLOOKUP hoặc VLOOKUP** — ghép bảng danh mục sản phẩm với bảng doanh số.
+- **Hàm điều kiện** (IF, SUMIFS, COUNTIFS) — tính riêng cho nhóm điểm bán có chạy chương trình và nhóm không chạy.
+- **Biểu đồ cơ bản** — cột cho so sánh, đường cho xu hướng theo thời gian.
+
+Không cần macro, không cần Power Query ở giai đoạn này. Học sâu bốn thứ trên bằng dữ liệu store check của chính bạn thì vừa học được công cụ vừa có sản phẩm mang đi phỏng vấn.
+
+### Tự chấm điểm sáu khoảng trống
+
+Cho mỗi mục ở trên, tự đánh một trong ba mức: **chưa có gì**, **hiểu nhưng chưa có bằng chứng**, **đã có bằng chứng cụ thể**.
+
+Ô nào ở mức thứ hai là ô dễ lấp nhất — bạn đã hiểu rồi, chỉ còn thiếu một sản phẩm để chứng minh. Bắt đầu từ đó chứ đừng bắt đầu từ ô khó nhất.`,
         takeaway:
           'Năm khoảng trống đầu đều lấp được tại nhà, không cần đợi đi làm. Khoảng trống thứ sáu về sức bền chỉ kiểm chứng được bằng cách đi thị trường thật vài buổi trước khi quyết định.'
       },
@@ -823,7 +1174,38 @@ Không tốn học phí, chỉ tốn kỷ luật.
 
 ### Vì sao phải có sản phẩm cuối
 
-Doanh nghiệp có hệ thống phân phối lớn thường cho ứng viên làm bài test thực tế — ví dụ xây kế hoạch khuyến mãi một tháng cho một dòng sản phẩm. Nếu bạn đã tự làm một bản trước ở nhà, **bài test không còn là thử thách mà thành cơ hội trình diễn.**`,
+Doanh nghiệp có hệ thống phân phối lớn thường cho ứng viên làm bài test thực tế — ví dụ xây kế hoạch khuyến mãi một tháng cho một dòng sản phẩm. Nếu bạn đã tự làm một bản trước ở nhà, **bài test không còn là thử thách mà thành cơ hội trình diễn.**
+
+### Khung một bản Trade Plan giả định
+
+Bảy phần dưới đây là khuôn tối thiểu. Viết được đủ bảy phần cho một nhãn hàng bạn đã theo dõi ba tháng là đã hơn phần lớn ứng viên mới:
+
+1. **Bối cảnh** — ngành hàng, nhãn hàng, kênh nhắm tới, và hiện trạng quan sát được từ store check của bạn.
+2. **Mục tiêu** — một con số cụ thể, có mốc nền. Ví dụ: tăng sell-out 15,0% tại nhóm cửa hàng tiện lợi khu vực nội thành trong một tháng.
+3. **Đối tượng** — shopper nào, tại kênh nào, và insight rút ra từ quan sát thật.
+4. **Cơ chế khuyến mãi** — chọn một mechanic và nói rõ vì sao chọn nó thay vì giảm giá trực tiếp.
+5. **POSM và trưng bày** — loại vật phẩm, đặt ở đâu, số lượng, lịch dựng và tháo.
+6. **Ngân sách** — chia theo khoản: phí trưng bày, sản xuất POSM, hàng khuyến mãi, nhân sự triển khai.
+7. **KPI và cách đo** — đo bằng chỉ số nào, lấy số từ đâu, và ngưỡng nào thì coi là thất bại.
+
+Phần 7 là phần hay bị bỏ nhất và cũng là phần gây ấn tượng nhất, vì nó cho thấy bạn nghĩ tới việc chịu trách nhiệm cho kết quả chứ không chỉ nghĩ tới việc triển khai.
+
+### Ba lỗi thường gặp khi tự viết Trade Plan
+
+- **Mục tiêu không có mốc nền.** "Tăng doanh số" không phải mục tiêu. Tăng bao nhiêu so với tháng nào mới là.
+- **Ngân sách không cộng đủ.** Quên chi phí sản xuất POSM và nhân sự triển khai là lỗi làm ROI đẹp giả.
+- **Chọn mechanic theo cảm tính.** Phải nói được tác dụng phụ của cơ chế đã chọn lên giá bán và tồn kho.
+
+### Nếu chỉ có 30 ngày thay vì 90
+
+Trường hợp bạn đã có lịch phỏng vấn gần, rút gọn theo thứ tự ưu tiên này:
+
+1. **Tuần 1** — học thuộc bộ chỉ số ở chuyên đề 03 và phân biệt được ba đối tượng ở chuyên đề 01.
+2. **Tuần 2** — đi store check 3 buổi cho một nhãn hàng, ghi đủ sáu nhóm thông tin, có ảnh.
+3. **Tuần 3** — dựng bảng Excel từ dữ liệu vừa thu, làm một Pivot, rút ba kết luận.
+4. **Tuần 4** — viết Trade Plan rút gọn theo bảy phần ở trên và sửa lại CV.
+
+Bản rút gọn này yếu hơn bản 90 ngày ở chiều sâu dữ liệu, nhưng vẫn hơn hẳn việc đi phỏng vấn tay không.`,
         takeaway:
           'Ba tháng chia rõ: tháng 1 nền tảng, tháng 2 thực địa, tháng 3 ra sản phẩm. Kết quả cuối là Trade Plan và CV tái định vị — hai thứ biến bài test tuyển dụng thành cơ hội trình diễn.'
       },
@@ -859,7 +1241,43 @@ Store check report, Trade Plan tự viết, số liệu đã tự phân tích. �
 
 Nêu chính xác khoảng trống của bản thân và kế hoạch cụ thể để lấp.
 
-**Một ứng viên biết chính xác khoảng trống của mình đáng tin hơn một ứng viên nói mình biết hết.**`,
+**Một ứng viên biết chính xác khoảng trống của mình đáng tin hơn một ứng viên nói mình biết hết.**
+
+### Bốn câu hỏi phỏng vấn Trade hay gặp nhất
+
+Chuẩn bị trước bốn câu này là chuẩn bị được phần lớn buổi phỏng vấn:
+
+**1. "Phân biệt shopper, consumer và customer."**
+
+Câu lọc đầu tiên. Trả lời bằng ví dụ đời sống thật của chính bạn, đừng đọc lại định nghĩa.
+
+**2. "Sell-in tăng mạnh nhưng sell-out không tăng. Bạn nghĩ gì?"**
+
+Câu kiểm tra tư duy chỉ số. Nêu được hiện tượng (hàng dồn ứ ở kênh), nguyên nhân thường gặp (đẩy hàng chạy chỉ tiêu, chiết khấu quá hấp dẫn), hệ quả (tháng sau ngừng nhập, hàng cận date, có thể phải xả giá), và việc cần làm (dừng đẩy sell-in, chuyển ngân sách sang kích sell-out).
+
+**3. "Có 100 triệu cho một chương trình, làm sao biết nó hiệu quả?"**
+
+Câu kiểm tra tư duy đo lường. Bốn thứ phải chốt trước khi chạy: mốc so sánh, mục tiêu cụ thể, cách đo, ngưỡng dừng. Sau đó tính ROI trên phần doanh thu tăng thêm và kiểm tra tác dụng phụ.
+
+**4. "Vì sao chọn Trade Marketing?"**
+
+Câu tưởng dễ nhất, hay bị trả lời sáo rỗng nhất. Trả lời bằng một quan sát cụ thể của bạn ngoài điểm bán, rồi nói vì sao nó làm bạn tò mò. Đây là chỗ dữ liệu store check của bạn phát huy tác dụng.
+
+### Nên hỏi lại nhà tuyển dụng điều gì
+
+Cuối buổi luôn có phần này, và im lặng là mất điểm. Ba câu vừa cho thấy bạn hiểu nghề vừa giúp bạn quyết định:
+
+- **"Vị trí này phụ trách kênh nào và ngành hàng nào?"** — biết mình sẽ học sâu vào đâu.
+- **"Tỷ lệ thời gian đi thị trường so với ngồi văn phòng khoảng bao nhiêu?"** — kiểm tra nhịp công việc có hợp không.
+- **"Sáu tháng đầu, anh chị kỳ vọng người vào vị trí này làm được gì?"** — biết thước đo mình sẽ bị đánh giá.
+
+### Chuẩn bị mang gì tới buổi phỏng vấn
+
+- **Bảng store check** in ra giấy, kèm vài ảnh so sánh cùng một nhãn ở hai kênh.
+- **Trade Plan tự viết**, bản in gọn trong vài trang.
+- **Một câu chuyện** về lần bạn đứng giữa hai bên có mục tiêu lệch nhau và cách bạn xử lý.
+
+Ba thứ này biến buổi phỏng vấn từ chỗ họ hỏi và bạn trả lời thành chỗ hai bên cùng xem một tài liệu. Khác biệt về thế đứng rất lớn.`,
         takeaway:
           'Store check ghi tối thiểu sáu nhóm: vị trí kệ, giá, tình trạng hàng, POSM, khuyến mãi đối thủ, hành vi shopper. Khi phỏng vấn, trả lời ba tầng: năng lực chuyển giao, bằng chứng đã tự chuẩn bị, và khoảng trống mình tự biết.'
       }

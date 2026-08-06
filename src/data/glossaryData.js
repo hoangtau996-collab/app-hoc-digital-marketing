@@ -6,7 +6,11 @@ export const GLOSSARY_CATEGORIES = [
   { id: 'creative', label: 'Sáng Tạo & Truyền Thông' },
   { id: 'data', label: 'Dữ Liệu & Đo Lường' },
   { id: 'ecommerce', label: 'E-commerce & Sàn TMĐT' },
-  { id: 'ai', label: 'AI & Tự Động Hóa' }
+  { id: 'ai', label: 'AI & Tự Động Hóa' },
+  // Nhóm phục vụ khoá nâng cao Trade Marketing. Tab "Thuật Ngữ & Công Thức"
+  // hiện lên trong MỌI bài học, kể cả bài khoá Trade — trước khi có nhóm này,
+  // học viên Trade mở tab đó ra không thấy một mục nào của khoá mình.
+  { id: 'trade', label: 'Trade Marketing & Điểm Bán' }
 ];
 
 export const GLOSSARY_ITEMS = [
@@ -1411,5 +1415,370 @@ export const GLOSSARY_ITEMS = [
     example: 'Mô hình chấm điểm rời bỏ chỉ ra 800 khách có nguy cơ cao trong 30 ngày tới, đội chăm sóc gọi trước và giữ lại được 35% trong số đó.',
     takeaway: 'Dự báo chỉ có giá trị khi gắn với một hành động cụ thể. Không có kịch bản can thiệp thì mô hình chỉ là báo cáo đẹp.',
     icon: 'Orbit'
+  },
+
+  /* ================= TRADE MARKETING & ĐIỂM BÁN =================
+     Bộ thuật ngữ của khoá nâng cao. Các ví dụ số ở đây đều là tình huống
+     tính toán tự dựng để minh hoạ công thức, KHÔNG phải số liệu thị trường
+     có thật — số thật thay đổi theo ngành hàng và theo quý. */
+
+  {
+    id: 'trade-marketing',
+    term: 'Trade Marketing',
+    category: 'trade',
+    categoryLabel: 'Trade Marketing & Điểm Bán',
+    shortDef: 'Chuỗi hoạt động biến chiến lược thương hiệu thành doanh số thực tế tại điểm bán.',
+    definition: 'Trade Marketing tổ chức chiến lược ngành hàng và thương hiệu trong hệ thống kênh phân phối. Khác Brand Marketing ở ba trục: đối tượng là shopper và kênh phân phối chứ không phải người tiêu dùng, không gian là quầy kệ chứ không phải truyền thông, thước đo là sell-out và ROI chứ không phải nhận biết.',
+    example: 'Một nhãn sữa chi lớn cho quảng cáo nhưng tại siêu thị hàng bị xếp tầng dưới cùng, cạnh đối thủ đang treo biển giảm giá. Toàn bộ ngân sách truyền thông đó không quy được thành đơn hàng.',
+    takeaway: 'Brand Marketing giành lấy trái tim, Trade Marketing giành lấy giỏ hàng. Hai bên không thay thế nhau: thiếu Brand thì Trade phải giảm giá liên tục mới bán được.',
+    icon: 'Store'
+  },
+  {
+    id: 'shopper',
+    term: 'Shopper (Người Mua)',
+    category: 'trade',
+    categoryLabel: 'Trade Marketing & Điểm Bán',
+    shortDef: 'Người trực tiếp đến điểm bán chọn và trả tiền cho sản phẩm.',
+    definition: 'Đây là đối tượng của Trade Marketing. Quyết định của shopper có thể thay đổi ngay tại chỗ vì trưng bày, giảm giá, hàng dùng thử hay quà tặng kèm — nên mọi hoạt động tại điểm bán đều nhắm vào nhóm này.',
+    example: 'Mẹ đi siêu thị mua dầu gội cho con trai: mẹ là shopper, con trai là consumer. Trade nói chuyện với mẹ, Brand nói chuyện với con.',
+    takeaway: 'Nói "khách hàng" chung chung là lỗi bị nhận ra ngay trong ba phút đầu buổi phỏng vấn Trade.',
+    icon: 'ShoppingCart'
+  },
+  {
+    id: 'consumer-user',
+    term: 'Consumer / User (Người Dùng)',
+    category: 'trade',
+    categoryLabel: 'Trade Marketing & Điểm Bán',
+    shortDef: 'Người thực sự sử dụng sản phẩm, không nhất thiết là người bỏ tiền mua.',
+    definition: 'Consumer là đối tượng của Brand Marketing. Với nhiều ngành hàng — sữa trẻ em, thức ăn thú cưng, tã, đồ dùng học sinh — consumer gần như không bao giờ trùng với shopper.',
+    example: 'Thức ăn cho mèo: người dùng là con mèo, người mua là chủ nuôi. Thông điệp trên bao bì phải thuyết phục chủ nuôi, còn công thức sản phẩm phải hợp con mèo.',
+    takeaway: 'Ngành hàng nào shopper càng khác consumer thì vai trò của Trade càng nặng, vì người ra quyết định tại kệ không phải người trải nghiệm sản phẩm.',
+    icon: 'Users'
+  },
+  {
+    id: 'customer-trade',
+    term: 'Customer (Đối Tác Kênh)',
+    category: 'trade',
+    categoryLabel: 'Trade Marketing & Điểm Bán',
+    shortDef: 'Các trung gian trong kênh phân phối: nhà phân phối, đại lý, nhà bán lẻ, chuỗi siêu thị.',
+    definition: 'Đây là điểm dễ nhầm nhất của người mới. Trong Trade Marketing, "customer" KHÔNG phải người tiêu dùng cuối mà là bên đưa hàng đến tay shopper. Customer quan tâm biên lợi nhuận và vòng quay hàng; shopper quan tâm giá và sự tiện lợi.',
+    example: 'Cùng một chương trình, customer hỏi "tôi lãi bao nhiêu trên mỗi thùng và bao lâu quay vòng hết hàng", shopper chỉ hỏi "mua cái này có rẻ hơn không".',
+    takeaway: 'Trade phục vụ cả hai phía cùng lúc: thuyết phục customer nhập hàng và ưu tiên trưng bày, đồng thời thuyết phục shopper chọn mua.',
+    icon: 'Handshake'
+  },
+  {
+    id: 'gt-general-trade',
+    term: 'GT (General Trade — Kênh Truyền Thống)',
+    category: 'trade',
+    categoryLabel: 'Trade Marketing & Điểm Bán',
+    shortDef: 'Tạp hoá, chợ, cửa hàng nhỏ lẻ. Chạy bằng chân, phủ rộng.',
+    definition: 'Số điểm bán rất lớn và phân tán, quan hệ với chủ tiệm mang tính cá nhân. Doanh số mỗi điểm nhỏ nhưng cộng lại rất lớn. Shopper mua lẻ, mua gấp, quyết định nhanh và chịu ảnh hưởng mạnh từ lời chủ tiệm.',
+    example: 'Chương trình hợp kênh GT: quà tặng kèm, gói nhỏ vừa túi tiền, và thưởng trưng bày cho chủ tiệm.',
+    takeaway: 'Ở GT quyền lực nằm ở chỗ chủ tiệm chịu bày hàng của ai. Mất lòng chủ tiệm là mất kệ, không có hợp đồng nào ràng buộc được.',
+    icon: 'Store'
+  },
+  {
+    id: 'mt-modern-trade',
+    term: 'MT (Modern Trade — Kênh Hiện Đại)',
+    category: 'trade',
+    categoryLabel: 'Trade Marketing & Điểm Bán',
+    shortDef: 'Siêu thị, đại siêu thị, cửa hàng tiện lợi. Chạy bằng số, đàm phán bằng hợp đồng.',
+    definition: 'Ít điểm bán hơn nhưng doanh số mỗi điểm lớn. Mọi thứ có hợp đồng: phí trưng bày, vị trí kệ, suất khuyến mãi. Shopper đi mua theo kế hoạch, mua số lượng lớn và có so sánh giá.',
+    example: 'Chương trình hợp kênh MT: combo, mua nhiều giảm giá, trưng bày đầu kệ — kèm kế hoạch năm ký với chuỗi.',
+    takeaway: 'Ở MT nhà bán lẻ có quyền lực lớn nên chi phí trưng bày cao. Vào được kệ đã tốn tiền, giữ được vị trí đẹp còn tốn hơn.',
+    icon: 'Landmark'
+  },
+  {
+    id: 'horeca',
+    term: 'HoReCa (Hotel — Restaurant — Café)',
+    category: 'trade',
+    categoryLabel: 'Trade Marketing & Điểm Bán',
+    shortDef: 'Kênh mà sản phẩm được tiêu thụ ngay tại chỗ. Chạy bằng quan hệ.',
+    definition: 'Trọng tâm là menu, combo và trải nghiệm tại bàn. Người quyết định nhập hàng là chủ quán hoặc bếp trưởng chứ không phải shopper. Ngành đồ uống, bia và nguyên liệu pha chế sống chủ yếu ở kênh này.',
+    example: 'Một hãng syrup pha chế mất vài tháng thuyết phục một chuỗi café đưa sản phẩm vào công thức món mới, nhưng khi đã vào menu thì đơn hàng lặp lại đều đặn hàng tháng.',
+    takeaway: 'Chu kỳ đàm phán dài nhưng một khi vào được thì rất bền, vì đổi nguyên liệu đồng nghĩa đổi công thức món và đào tạo lại nhân viên.',
+    icon: 'Home'
+  },
+  {
+    id: 'ecommerce-trade',
+    term: 'EC (E-commerce — Trade Trên Sàn)',
+    category: 'trade',
+    categoryLabel: 'Trade Marketing & Điểm Bán',
+    shortDef: 'Kênh sàn thương mại điện tử. Mọi khái niệm Trade truyền thống đều có bản tương đương.',
+    definition: 'Kệ hàng trở thành trang sản phẩm, trưng bày trở thành thứ hạng tìm kiếm và banner, share of shelf trở thành tỷ lệ hiển thị trong kết quả tìm kiếm, hết hàng trên kệ trở thành sản phẩm bị ẩn khỏi kết quả.',
+    example: 'Sản phẩm hết hàng trên sàn không chỉ mất đơn trong ngày: thuật toán hạ thứ hạng, nên khi có hàng trở lại vẫn mất thêm thời gian mới leo về vị trí cũ.',
+    takeaway: 'Ưu thế lớn nhất của kênh này là mọi thứ đo được theo thời gian thực, không phải chờ đi store check mới biết chuyện gì đang xảy ra.',
+    icon: 'MonitorSmartphone'
+  },
+  {
+    id: 'sell-in',
+    term: 'Sell-in',
+    category: 'trade',
+    categoryLabel: 'Trade Marketing & Điểm Bán',
+    shortDef: 'Lượng hàng công ty bán được cho nhà phân phối hoặc nhà bán lẻ.',
+    definition: 'Hàng đã rời kho công ty và đã ghi nhận doanh thu, nhưng chưa chắc đã đến tay người mua. Đây là con số đội Sales thường được giao chỉ tiêu.',
+    example: 'Tháng 3 đẩy được 10.000 thùng vào kho nhà phân phối. Đó là sell-in, chưa nói gì về việc shopper có mua hay không.',
+    takeaway: 'Sell-in cao là tin tốt của tháng này và có thể là tin xấu của tháng sau, nếu hàng chỉ nằm chuyển từ kho công ty sang kho nhà phân phối.',
+    icon: 'Truck'
+  },
+  {
+    id: 'sell-out',
+    term: 'Sell-out',
+    category: 'trade',
+    categoryLabel: 'Trade Marketing & Điểm Bán',
+    shortDef: 'Lượng hàng shopper thực sự mua khỏi kệ. Con số phản ánh nhu cầu thật.',
+    definition: 'Sell-out là thước đo cuối cùng của mọi hoạt động Trade. Chênh lệch giữa sell-in và sell-out chính là lượng hàng đang tồn trong kênh.',
+    formula: 'Tồn kênh ước tính = Sell-in luỹ kế − Sell-out luỹ kế',
+    example: 'Sell-in tháng này tăng 30% nhưng sell-out chỉ tăng 5%: hàng đang dồn ứ ở kênh. Tháng sau nhà phân phối sẽ ngừng nhập, hàng có nguy cơ cận date và có thể phải xả giá.',
+    takeaway: 'Khi hai con số này lệch nhau kéo dài, việc cần làm là dừng đẩy sell-in và chuyển ngân sách sang hoạt động kích sell-out.',
+    icon: 'Receipt'
+  },
+  {
+    id: 'coverage-do-phu',
+    term: 'Coverage (Độ Phủ)',
+    category: 'trade',
+    categoryLabel: 'Trade Marketing & Điểm Bán',
+    shortDef: 'Tỷ lệ điểm bán có hàng của mình trên tổng số điểm bán trong khu vực.',
+    definition: 'Độ phủ trả lời câu hỏi nền tảng nhất: shopper muốn mua thì có tìm thấy hàng không. Mọi hoạt động truyền thông đều vô nghĩa ở những khu vực chưa phủ.',
+    formula: 'Coverage = (Số điểm bán có hàng / Tổng số điểm bán trong khu vực) × 100%',
+    example: 'Khu vực có 2.000 điểm bán, nhãn hàng có mặt tại 1.300 điểm. Coverage = 1.300 / 2.000 = 65,0%.',
+    takeaway: 'Tăng độ phủ thường rẻ hơn tăng doanh số trên mỗi điểm. Trước khi chi tiền kích cầu, hãy kiểm tra còn bao nhiêu phần trăm điểm bán chưa có hàng.',
+    icon: 'Radar'
+  },
+  {
+    id: 'sos-share-of-shelf',
+    term: 'SOS (Share of Shelf — Thị Phần Kệ)',
+    category: 'trade',
+    categoryLabel: 'Trade Marketing & Điểm Bán',
+    shortDef: 'Tỷ lệ diện tích kệ nhãn hàng chiếm được so với toàn ngành hàng tại điểm bán.',
+    definition: 'Chỉ số này tương quan khá chặt với thị phần: hàng chiếm nhiều chỗ thì dễ được nhìn thấy, dễ được chọn và ít bị hết hàng hơn. Đây cũng là con số dùng để đàm phán với nhà bán lẻ.',
+    formula: 'SOS = (Diện tích kệ của nhãn / Tổng diện tích kệ ngành hàng) × 100%',
+    example: 'Ngành hàng chiếm 12 mét kệ, nhãn của mình chiếm 2,4 mét. SOS = 2,4 / 12 = 20,0%. Nếu thị phần đang là 28% thì nhãn đang bị thiệt trên kệ so với sức bán.',
+    takeaway: 'So SOS với thị phần để biết mình đang được kệ ưu ái hay đang bị thiệt. Lệch nhiều theo hướng nào cũng đều là dữ liệu để đàm phán.',
+    icon: 'LayoutGrid'
+  },
+  {
+    id: 'osa-on-shelf-availability',
+    term: 'OSA (On Shelf Availability)',
+    category: 'trade',
+    categoryLabel: 'Trade Marketing & Điểm Bán',
+    shortDef: 'Tỷ lệ thời gian sản phẩm thực sự có mặt trên kệ, sẵn sàng để mua.',
+    definition: 'Hết hàng trên kệ khác hoàn toàn với hết hàng trong kho: kho còn hàng mà nhân viên không châm lên kệ thì với shopper vẫn là hết hàng.',
+    formula: 'OSA = (Số lần kiểm tra thấy có hàng / Tổng số lần kiểm tra) × 100%',
+    example: 'Kiểm tra 200 lượt tại các điểm bán trong tháng, 24 lượt thấy kệ trống. OSA = 176 / 200 = 88,0%.',
+    takeaway: 'Hết hàng bằng mất doanh số vĩnh viễn chứ không phải hoãn lại. Shopper đứng trước kệ sẽ mua của đối thủ chứ không quay lại lần sau.',
+    icon: 'Package'
+  },
+  {
+    id: 'posm',
+    term: 'POSM (Point of Sale Materials)',
+    category: 'trade',
+    categoryLabel: 'Trade Marketing & Điểm Bán',
+    shortDef: 'Toàn bộ vật phẩm quảng cáo đặt tại điểm bán: standee, wobbler, kệ trưng bày, poster, hangtag.',
+    definition: 'POSM là tên gọi chung, còn bên dưới là những thứ khác hẳn nhau về chi phí, vòng đời và cách đo tuân thủ. Nhóm treo trên kệ (wobbler, thẻ giá, hangtag) rẻ và thay nhanh. Nhóm chiếm sàn (standee, dump bin, kệ trưng bày riêng) đắt hơn nhiều nhưng giành được chỗ mà kệ chung không cho. Quản lý POSM gồm bốn việc: brief thiết kế cho agency, đặt sản xuất, điều phối rollout, và kiểm tra tuân thủ tại điểm bán.',
+    formula: 'Tỷ lệ tuân thủ POSM = (Số điểm bán treo đúng và đủ / Tổng số điểm bán đã phát POSM) × 100%',
+    example: 'Phát POSM cho 500 điểm bán, đi kiểm tra mẫu 60 điểm thì 42 điểm treo đúng vị trí và còn nguyên vẹn. Tỷ lệ tuân thủ = 42 / 60 = 70,0%.',
+    takeaway: 'Sản xuất POSM là phần dễ, tuân thủ tại điểm bán mới là phần khó. Đếm số lượng đã phát không nói lên điều gì — phải kiểm tra treo đúng chỗ, đúng thời gian và còn nguyên vẹn.',
+    icon: 'Megaphone'
+  },
+  {
+    id: 'pop-point-of-purchase',
+    term: 'POP (Point of Purchase)',
+    category: 'trade',
+    categoryLabel: 'Trade Marketing & Điểm Bán',
+    shortDef: 'Nơi diễn ra quyết định mua — cũng là nơi mọi hoạt động marketing hội tụ.',
+    definition: 'POP là khái niệm về vị trí và thời điểm, còn POSM là vật phẩm đặt tại đó. Hai chữ viết tắt này hay bị dùng lẫn lộn.',
+    example: 'Quầy thanh toán là một POP kinh điển: shopper đứng chờ, không có việc gì làm, và những món giá thấp bày ở đó được mua theo phản xạ.',
+    takeaway: 'POP là chỗ, POSM là đồ. Dùng lẫn hai từ này trong buổi phỏng vấn là dấu hiệu học vẹt định nghĩa mà chưa từng ra điểm bán.',
+    icon: 'Crosshair'
+  },
+  {
+    id: 'sku',
+    term: 'SKU (Stock Keeping Unit)',
+    category: 'trade',
+    categoryLabel: 'Trade Marketing & Điểm Bán',
+    shortDef: 'Mã đơn vị hàng hoá — đơn vị nhỏ nhất để quản lý tồn kho và doanh số.',
+    definition: 'Một nhãn hàng có thể có hàng chục SKU khác nhau theo dung tích, hương vị và quy cách đóng gói. Mỗi SKU chiếm một chỗ trên kệ và một dòng trong báo cáo.',
+    example: 'Một nhãn nước giải khát có 3 hương vị × 3 dung tích × 2 quy cách (lon lẻ và lốc 6) = 18 SKU, dù với shopper thì đó vẫn chỉ là một nhãn hàng.',
+    takeaway: 'Càng nhiều SKU càng khó giữ đủ hàng trên kệ và càng dễ có SKU bán chậm chiếm chỗ của SKU bán chạy. Rà soát danh mục SKU định kỳ là việc bắt buộc.',
+    icon: 'Boxes'
+  },
+  {
+    id: 'roi-trade',
+    term: 'ROI Chương Trình Trade',
+    category: 'trade',
+    categoryLabel: 'Trade Marketing & Điểm Bán',
+    shortDef: 'Doanh thu TĂNG THÊM so với mốc nền chia cho chi phí bỏ ra.',
+    definition: 'Đây là câu hỏi cuối cùng của mọi hoạt động Trade. Chỗ sai phổ biến nhất là lấy tổng doanh thu trong kỳ chạy chương trình thay vì phần tăng thêm — làm vậy thì báo cáo nào cũng đẹp, vì phần lớn doanh thu đó vốn dĩ đã xảy ra kể cả không chạy chương trình.',
+    formula: 'ROI = (Doanh thu tăng thêm so với mốc nền − Chi phí chương trình) / Chi phí chương trình',
+    example: 'Mốc nền 400.000.000 đồng/tháng, tháng chạy chương trình đạt 520.000.000 đồng, chi phí 100.000.000 đồng. Phần tăng thêm là 120.000.000 đồng, ROI = (120.000.000 − 100.000.000) / 100.000.000 = 0,2 lần. Nếu lấy nhầm tổng 520.000.000 đồng thì ROI hiện lên 4,2 lần — sai gấp hơn hai mươi lần.',
+    takeaway: 'Xác định mốc so sánh TRƯỚC khi chạy, không phải sau khi có kết quả. Và luôn kiểm tra tác dụng phụ: chương trình có kéo doanh số tháng sau về không, tồn kho ra sao.',
+    icon: 'Scale'
+  },
+  {
+    id: 'ap-budget',
+    term: 'A&P (Advertising & Promotion)',
+    category: 'trade',
+    categoryLabel: 'Trade Marketing & Điểm Bán',
+    shortDef: 'Ngân sách dành cho quảng cáo và khuyến mãi, thường tính theo phần trăm doanh thu.',
+    definition: 'Đây là khoản mà Brand và Trade thường phải tranh nhau: Brand muốn dồn cho truyền thông xây thương hiệu, Trade muốn dồn cho hoạt động tại điểm bán. Biết bảo vệ phần của mình bằng số liệu là kỹ năng sống còn.',
+    formula: 'Tỷ lệ A&P = (Chi phí quảng cáo + khuyến mãi) / Doanh thu thuần × 100%',
+    example: 'Doanh thu năm 50.000.000.000 đồng, ngân sách A&P 4.000.000.000 đồng. Tỷ lệ A&P = 8,0% doanh thu.',
+    takeaway: 'Tranh ngân sách bằng cảm tính thì luôn thua. Mang ROI của kỳ trước và mốc nền ra bàn họp thì mới có cơ sở để giữ phần.',
+    icon: 'CircleDollarSign'
+  },
+  {
+    id: 'trade-spend',
+    term: 'Trade Spend (Chi Phí Kênh)',
+    category: 'trade',
+    categoryLabel: 'Trade Marketing & Điểm Bán',
+    shortDef: 'Toàn bộ khoản chi trả cho kênh để hàng có mặt và được ưu tiên tại điểm bán.',
+    definition: 'Gồm chiết khấu thương mại, phí trưng bày, phí vào kệ, thưởng doanh số, hỗ trợ khuyến mãi và chi phí POSM. Nhiều khoản trong đó là cam kết cả năm, ký một lần và trả suốt mười hai tháng.',
+    example: 'Một suất trưng bày đầu kệ tại chuỗi siêu thị được báo giá theo tháng và theo số cửa hàng. Ký cho 30 cửa hàng trong 6 tháng là một cam kết cố định, bán được hay không vẫn phải trả.',
+    takeaway: 'Trade spend phần lớn là chi phí cố định đã cam kết, không co giãn theo kết quả. Vì vậy sai lầm khi ký hợp đồng đắt hơn nhiều so với sai lầm khi chạy một chương trình.',
+    icon: 'CreditCard'
+  },
+  {
+    id: 'trade-calendar',
+    term: 'Trade Calendar (Lịch Chương Trình)',
+    category: 'trade',
+    categoryLabel: 'Trade Marketing & Điểm Bán',
+    shortDef: 'Lịch chương trình theo tháng, quý, năm — đồng bộ giữa Marketing, Sales và Supply Chain.',
+    definition: 'Không có lịch này thì kho không kịp chuẩn bị hàng và các phòng ban chạy hai hướng. Trade calendar cũng là công cụ tránh chồng chéo: hai chương trình giảm giá liền nhau sẽ dạy shopper chờ khuyến mãi mới mua.',
+    example: 'Chương trình Tết phải chốt cơ chế trước ít nhất 8-10 tuần, vì còn phải đặt sản xuất POSM, in bao bì phiên bản lễ và báo kho tăng lượng hàng.',
+    takeaway: 'Lịch không phải để đẹp báo cáo mà để mọi phòng ban biết trước mà chuẩn bị. Chương trình hay tới đâu mà kho không có hàng thì vẫn hỏng.',
+    icon: 'Calendar'
+  },
+  {
+    id: 'jbp',
+    term: 'JBP (Joint Business Plan)',
+    category: 'trade',
+    categoryLabel: 'Trade Marketing & Điểm Bán',
+    shortDef: 'Kế hoạch kinh doanh chung ký với khách hàng lớn ở kênh MT, thường theo năm.',
+    definition: 'Thường bao gồm cam kết doanh số, mức đầu tư trưng bày, lịch khuyến mãi và điều khoản thưởng phạt cho cả năm. Đây là văn bản quyết định cả năm làm ăn với một chuỗi.',
+    example: 'JBP với một chuỗi siêu thị cam kết tăng trưởng doanh số 15,0% đổi lại được giữ vị trí kệ hiện tại cộng thêm bốn suất trưng bày đầu kệ mỗi quý.',
+    takeaway: 'JBP là chỗ dễ cam kết quá tay nhất. Ký một con số tăng trưởng không đạt được nghĩa là cả năm chạy theo phạt hợp đồng.',
+    icon: 'FileText'
+  },
+  {
+    id: 'planogram',
+    term: 'Planogram (Sơ Đồ Trưng Bày)',
+    category: 'trade',
+    categoryLabel: 'Trade Marketing & Điểm Bán',
+    shortDef: 'Bản vẽ quy định từng SKU nằm ở tầng nào, chiếm bao nhiêu facing trên kệ.',
+    definition: 'Planogram là tiêu chuẩn để kiểm tra tuân thủ: đi store check là đối chiếu kệ thật với bản vẽ này. Ở kênh MT, planogram thường do nhà bán lẻ quyết định và nhãn hàng phải đàm phán để có vị trí tốt.',
+    example: 'Planogram quy định SKU chủ lực chiếm 4 facing ở tầng ngang tầm mắt. Đi kiểm tra thấy chỉ còn 2 facing và bị đẩy xuống tầng dưới — đó là một lỗi tuân thủ phải báo ngay.',
+    takeaway: 'Không có planogram thì không có căn cứ để nói kệ đang sai. Có bản vẽ mới biến tranh cãi cảm tính thành đối chiếu bằng chứng.',
+    icon: 'Grid2x2'
+  },
+  {
+    id: 'facing',
+    term: 'Facing (Mặt Tiền Sản Phẩm)',
+    category: 'trade',
+    categoryLabel: 'Trade Marketing & Điểm Bán',
+    shortDef: 'Số đơn vị sản phẩm quay mặt ra phía shopper trên một hàng kệ.',
+    definition: 'Facing là đơn vị đo cụ thể của share of shelf. Nhiều facing hơn nghĩa là dễ nhìn thấy hơn, lâu hết hàng hơn giữa hai lần châm hàng, và ít bị đối thủ lấn chỗ hơn.',
+    example: 'Nhãn A có 6 facing, cả ngành hàng có 30 facing trên tầng đó. Share of shelf tính theo facing = 6 / 30 = 20,0%.',
+    takeaway: 'Việc đầu tiên khi vào điểm bán không phải chụp ảnh cho đẹp mà là đếm facing của mình và của ba đối thủ gần nhất.',
+    icon: 'Blocks'
+  },
+  {
+    id: 'eye-level',
+    term: 'Eye Level (Vị Trí Ngang Tầm Mắt)',
+    category: 'trade',
+    categoryLabel: 'Trade Marketing & Điểm Bán',
+    shortDef: 'Tầng kệ ngang tầm mắt shopper — vị trí đắt giá nhất trên kệ.',
+    definition: 'Tầm mắt của shopper thay đổi theo đối tượng: hàng cho trẻ em được đặt thấp hơn có chủ đích, để đúng tầm mắt của trẻ đi cùng cha mẹ. Đây là nơi lý thuyết shopper insight gặp thực tế đàm phán kệ.',
+    example: 'Cùng một SKU chuyển từ tầng dưới cùng lên tầng ngang tầm mắt thường kéo theo mức tăng doanh số thấy rõ — đó là lý do vị trí này luôn phải trả phí cao hơn.',
+    takeaway: 'Câu hỏi phỏng vấn kinh điển: vì sao vị trí ngang tầm mắt đắt giá. Trả lời được bằng hành vi shopper chứ không phải bằng định nghĩa mới là hiểu thật.',
+    icon: 'Eye'
+  },
+  {
+    id: 'secondary-display',
+    term: 'Secondary Display (Trưng Bày Thứ Cấp)',
+    category: 'trade',
+    categoryLabel: 'Trade Marketing & Điểm Bán',
+    shortDef: 'Điểm bày hàng thứ hai đặt ngoài kệ chính, trên đường đi của shopper.',
+    definition: 'Kệ chính là nơi shopper chủ động tìm tới. Trưng bày thứ cấp đón shopper ở nơi họ không định mua món đó — đầu kệ, giữa lối đi, quầy thanh toán — nên nhắm vào quyết định phát sinh tại chỗ.',
+    example: 'Thùng bia đặt ở lối đi chính dịp cận Tết là trưng bày thứ cấp; kệ bia trong gian đồ uống mới là kệ chính. Cùng một SKU xuất hiện hai nơi trong một cửa hàng.',
+    takeaway: 'Trưng bày thứ cấp là cách tăng doanh số mà không cần đàm phán lại toàn bộ planogram, nên thường là hoạt động dễ triển khai nhất với ngân sách vừa.',
+    icon: 'Layers'
+  },
+  {
+    id: 'gondola-end',
+    term: 'Gondola End (Đầu Kệ)',
+    category: 'trade',
+    categoryLabel: 'Trade Marketing & Điểm Bán',
+    shortDef: 'Vị trí hai đầu dãy kệ, nơi mọi shopper đi qua bắt buộc phải nhìn thấy.',
+    definition: 'Đầu kệ là suất trưng bày đắt nhất trong siêu thị vì lưu lượng đi qua cao nhất và tầm nhìn không bị che. Thường được bán theo tuần hoặc theo tháng, ký trong hợp đồng năm.',
+    example: 'Một suất đầu kệ hai tuần dịp lễ thường được đặt trước từ nhiều tháng, vì các nhãn lớn trong ngành hàng đều nhắm cùng khung thời gian đó.',
+    takeaway: 'Giành được đầu kệ mà không chuẩn bị đủ hàng là tự bắn vào chân: vị trí đắt nhất mà để trống kệ giữa kỳ thì vừa mất tiền vừa mất uy tín với nhà bán lẻ.',
+    icon: 'Anchor'
+  },
+  {
+    id: 'promotion-mechanic',
+    term: 'Promotion Mechanic (Cơ Chế Khuyến Mãi)',
+    category: 'trade',
+    categoryLabel: 'Trade Marketing & Điểm Bán',
+    shortDef: 'Cách thức của một chương trình: chiết khấu, combo, tích luỹ, quà tặng kèm hay dùng thử.',
+    definition: 'Mỗi mechanic tác động khác nhau lên giá bán, tồn kho và thói quen mua. Nhóm giảm giá trực tiếp cho kết quả nhanh nhất nhưng cũng phá giá nhanh nhất; nhóm tăng giá trị (quà tặng kèm, combo) giữ được giá niêm yết.',
+    example: 'Thay vì giảm 20,0% giá bán, dùng cơ chế mua 2 tặng 1 gói nhỏ: shopper cảm nhận được lợi ích tương đương mà giá niêm yết trên kệ không đổi.',
+    takeaway: 'Chọn sai mechanic có thể phá giá cả ngành hàng. Giảm giá sâu dạy shopper chờ khuyến mãi mới mua, và tiền lệ đó rất khó gỡ.',
+    icon: 'BadgePercent'
+  },
+  {
+    id: 'sampling',
+    term: 'Sampling (Dùng Thử)',
+    category: 'trade',
+    categoryLabel: 'Trade Marketing & Điểm Bán',
+    shortDef: 'Cho shopper trải nghiệm sản phẩm ngay tại điểm bán trước khi mua.',
+    definition: 'Hiệu quả nhất với sản phẩm mới hoặc sản phẩm có khác biệt cảm nhận được ngay: đồ ăn, đồ uống, mỹ phẩm. Chi phí trên mỗi lượt tiếp cận cao nên phải chọn đúng điểm bán và đúng khung giờ.',
+    example: 'Bàn dùng thử đặt tại siêu thị vào chiều thứ Bảy tiếp cận được lượng shopper lớn hơn nhiều so với sáng thứ Ba, dù chi phí nhân sự cho một ca là như nhau.',
+    takeaway: 'Đo sampling bằng tỷ lệ chuyển đổi thành đơn hàng ngay tại chỗ, không phải bằng số lượt phát. Phát hết hàng mẫu mà kệ không vơi là chương trình thất bại.',
+    icon: 'Gift'
+  },
+  {
+    id: 'activation',
+    term: 'Activation (Kích Hoạt Tại Điểm Bán)',
+    category: 'trade',
+    categoryLabel: 'Trade Marketing & Điểm Bán',
+    shortDef: 'Hoạt động tạo tương tác trực tiếp với shopper tại điểm bán hoặc khu vực lân cận.',
+    definition: 'Bao gồm booth trải nghiệm, trò chơi nhận quà, tư vấn tại chỗ và roadshow. Đây thường là loại kinh nghiệm mà sinh viên đã có từ hoạt động sự kiện, nên là điểm tựa tốt khi ứng tuyển Trade.',
+    example: 'Booth trải nghiệm đặt tại sảnh siêu thị cuối tuần, kết hợp với suất trưng bày bên trong để shopper vừa chơi xong là mua được ngay.',
+    takeaway: 'Activation tách rời khỏi trưng bày là tiền vứt đi. Gây được chú ý mà shopper không tìm thấy hàng ở đâu thì hứng thú tan trong ba mươi giây.',
+    icon: 'Sparkles'
+  },
+  {
+    id: 'store-check',
+    term: 'Store Check (Đi Thị Trường)',
+    category: 'trade',
+    categoryLabel: 'Trade Marketing & Điểm Bán',
+    shortDef: 'Khảo sát trực tiếp tại điểm bán để ghi nhận hiện trạng kệ, giá, POSM và đối thủ.',
+    definition: 'Tối thiểu ghi sáu nhóm: vị trí và diện tích kệ, giá bán thực tế trên kệ, tình trạng hàng, POSM, chương trình khuyến mãi của mình và ba đối thủ gần nhất, và quan sát hành vi shopper. Luôn kèm ảnh để đối chiếu qua các lần đi.',
+    example: 'Đi cùng một nhãn hàng ở một siêu thị và một tạp hoá trong cùng buổi, so sánh trưng bày và khuyến mãi, rồi trả lời câu hỏi quan trọng nhất: vì sao lại khác.',
+    takeaway: 'Đây là nguồn dữ liệu duy nhất người chưa đi làm tự tạo ra được. Ba tháng store check đều đặn cho một bộ dữ liệu thật để nói chuyện khi phỏng vấn.',
+    icon: 'Camera'
+  },
+  {
+    id: 'retail-audit',
+    term: 'Retail Audit (Nielsen / Kantar)',
+    category: 'trade',
+    categoryLabel: 'Trade Marketing & Điểm Bán',
+    shortDef: 'Dịch vụ đo lường thị trường bán lẻ trên mẫu điểm bán lớn, bán theo license cho doanh nghiệp.',
+    definition: 'Đo chính những thứ mà store check đo — thị phần, giá, độ phủ, share of shelf, tình trạng hết hàng — nhưng ở quy mô hàng nghìn điểm bán và có tính đại diện thống kê. Nielsen thiên về dữ liệu bán lẻ, Kantar Worldpanel thiên về hành vi hộ gia đình.',
+    example: 'Nhiều tin tuyển dụng kênh MT yêu cầu kinh nghiệm với công cụ này. Đây là rào cản về quyền truy cập license, không phải rào cản về năng lực.',
+    takeaway: 'Yêu cầu "biết Nielsen" trong tin tuyển dụng thường là cách viết tắt cho "biết đọc dữ liệu thị trường và ra quyết định từ số". Chứng minh được năng lực đó bằng dữ liệu store check tự thu thập thì nhiều nơi sẵn sàng bỏ qua phần công cụ.',
+    icon: 'Database'
+  },
+  {
+    id: 'distributor-dsr',
+    term: 'Nhà Phân Phối & DSR',
+    category: 'trade',
+    categoryLabel: 'Trade Marketing & Điểm Bán',
+    shortDef: 'Nhà phân phối giữ hàng và vốn cho một khu vực; DSR là nhân viên bán hàng đi tuyến.',
+    definition: 'DSR (Direct Sales Representative) là người thực sự gặp chủ tiệm mỗi tuần theo tuyến cố định. Mọi chương trình Trade ở kênh GT đều phải đi qua tay DSR mới tới được điểm bán — thiết kế chương trình mà DSR không hiểu hoặc không muốn bán thì chương trình đó chết tại chỗ.',
+    example: 'Một cơ chế khuyến mãi có bốn điều kiện lồng nhau nghe rất chặt trên giấy, nhưng DSR phải giải thích trong hai phút đứng ở cửa tiệm — quá phức tạp là không ai bán được.',
+    takeaway: 'Thước đo cuối cùng của một cơ chế khuyến mãi là DSR có giải thích trọn vẹn cho chủ tiệm trong hai phút hay không. Không thì viết lại cho đơn giản.',
+    icon: 'Route'
   }
 ];
