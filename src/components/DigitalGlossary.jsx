@@ -348,8 +348,19 @@ export default function DigitalGlossary({ openTermId, onOpenTerm }) {
         </div>
       </div>
 
-      {/* Category Filter Pills */}
-      <div className="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1">
+      {/* Category Filter Pills
+
+          Có 8 nhóm với nhãn tiếng Việt dài, không hàng nào chứa hết. Bản trước
+          để một hàng cuộn ngang kèm `no-scrollbar` — trên điện thoại thì hợp
+          lý (vuốt là bản năng), nhưng trên máy tính thì các nhóm cuối ("Sáng
+          Tạo & Truyền Thông", "E-commerce & Sàn TMĐT", "AI & Tự Động Hóa") bị
+          cắt cụt ở mép phải mà KHÔNG có thanh cuộn nào báo là còn nữa. Người
+          dùng máy tính không có thói quen vuốt ngang một hàng nút, nên với họ
+          những nhóm đó coi như không tồn tại.
+
+          Từ `md` trở lên cho xuống dòng: chiếm thêm một hàng nhưng lộ hết tám
+          nhóm. Dưới `md` giữ nguyên cuộn ngang. */}
+      <div className="flex flex-nowrap md:flex-wrap items-center gap-2 overflow-x-auto md:overflow-x-visible no-scrollbar pb-1">
         {GLOSSARY_CATEGORIES.map(cat => (
           <button
             key={cat.id}
@@ -365,8 +376,26 @@ export default function DigitalGlossary({ openTermId, onOpenTerm }) {
         ))}
       </div>
 
-      {/* Result Counter */}
-      <div className="flex items-center justify-between text-xs text-slate-400 -mb-2">
+      {/* Result Counter
+
+          `mb-4` chứ KHÔNG phải `-mb-2` — đây là chỗ hàng chữ này bị lưới thẻ
+          bên dưới trườn lên đè mất.
+
+          Khối cha dùng `space-y-6`. Ở Tailwind v3, `space-y` đặt `margin-top`
+          cho các thẻ em phía sau, nên `-mb-2` ở đây chỉ kéo bớt: 24px - 8px =
+          còn 16px, vẫn dương. Nhưng Tailwind v4 (dự án này đang dùng, xem khối
+          `@theme` trong index.css) đổi sang đặt `margin-bottom` cho chính thẻ
+          này, và đặt qua `:where()` — tức độ ưu tiên bằng 0. Nghĩa là `-mb-2`
+          không còn cộng trừ với 24px nữa mà THAY THẾ hẳn nó: khoảng cách thành
+          -8px, lưới thẻ trườn ngược lên phủ mất dòng "Hiển thị ... thuật ngữ"
+          và nút "Xóa bộ lọc".
+
+          `mb-4` cho ra đúng 16px như ý đồ ban đầu, và lần này là con số thật
+          chứ không phải kết quả của một phép trừ đã hết hiệu lực.
+
+          `flex-wrap`: hai vế xuống dòng khi màn hẹp hoặc cỡ chữ lớn, thay vì
+          chen nhau rồi bẻ chữ giữa chừng. */}
+      <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-1 text-xs text-slate-400 mb-4">
         <span>
           Hiển thị <strong className="text-emerald-400">{filteredTerms.length}</strong> / {GLOSSARY_ITEMS.length} thuật ngữ
         </span>
