@@ -26,7 +26,11 @@ export default function MobileBottomNav({
           }`}
         >
           <BookOpen className="w-4 h-4" />
-          <span className="text-[10px]">Khóa Học</span>
+          {/* "Digital" chứ không phải "Digital Marketing": thanh này có 7 mục
+              trên màn hình điện thoại, nhãn dài là tràn ngang. Rút gọn theo
+              đúng cách mục kế bên rút "Trade Marketing" thành "Trade" — hai
+              nhãn vẫn phân biệt được đúng hai khoá. */}
+          <span className="text-[10px]">Digital</span>
         </button>
 
         {/* Tab 2: Trade Marketing (khoá nâng cao) */}

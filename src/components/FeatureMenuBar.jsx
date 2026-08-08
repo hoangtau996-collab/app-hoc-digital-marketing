@@ -37,7 +37,7 @@ export default function FeatureMenuBar({
   // Nhãn giữ NGẮN để cả thanh menu nằm gọn trong khung 1.280px không phải cuộn
   // ngang. Phần mô tả dài chuyển xuống phụ đề, hiện khi di chuột qua.
   const textDict = t || {
-    menuCourseTitle: "Khoá Học",
+    menuCourseTitle: "Digital Marketing",
     menuCourseSub: "Khoá chính — 11 chuyên đề thực chiến",
     menuGlossaryTitle: "Từ Điển",
     menuGlossarySub: "121 thuật ngữ Digital Marketing",

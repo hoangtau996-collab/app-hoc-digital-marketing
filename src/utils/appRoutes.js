@@ -29,7 +29,7 @@
  * khai báo ở đây thì tab đó không có địa chỉ riêng và im lặng rơi về `/`.
  */
 export const TAB_SEGMENTS = {
-  course: 'khoa-hoc',
+  course: 'digital-marketing',
   trade: 'trade-marketing',
   glossary: 'thuat-ngu',
   news: 'ban-tin',
@@ -43,12 +43,21 @@ const TAB_BY_SEGMENT = Object.fromEntries(
 /**
  * Địa chỉ phụ: NHẬN VÀO thì hiểu, nhưng không bao giờ được sinh ra.
  *
- * `/chuyen-de/...` là tiền tố cũ của khoá chính, đã từng lên trang thật nên có
- * thể có người đã gửi đi. Giữ lại đây đúng theo nguyên tắc ghi ở đầu tệp: đổi
- * tên đường dẫn công khai thì phải để địa chỉ cũ còn mở được, đừng để chết.
+ * Khoá chính đã đổi tên đường dẫn hai lần và CẢ HAI TÊN CŨ ĐỀU ĐÃ LÊN TRANG
+ * THẬT, nên cả hai đều có thể đang nằm trong tin nhắn ai đó đã gửi đi:
+ *
+ *   `/chuyen-de/...`  tên đầu tiên, đặt theo tên gọi "chuyên đề" trong bài;
+ *   `/khoa-hoc/...`   tên thứ hai, quá chung khi học viện có nhiều khoá —
+ *                     đứng cạnh `/trade-marketing` thì không rõ là khoá nào.
+ *
+ * Tên hiện tại `/digital-marketing` gọi thẳng tên khoá, đối xứng với
+ * `/trade-marketing`. Hai tên cũ giữ sống ở đây đúng theo nguyên tắc ghi ở đầu
+ * tệp — chi phí là ba dòng, còn cái giá của việc bỏ đi là những liên kết đã
+ * gửi lặng lẽ chết mà không ai biết để báo.
  */
 const SEGMENT_ALIASES = {
   'chuyen-de': 'course',
+  'khoa-hoc': 'course',
 };
 
 /** Màn hình mặc định: tổng quan khoá Digital Marketing, tức địa chỉ `/`. */
@@ -117,34 +126,33 @@ export function parseRoute(pathname) {
 /**
  * Dựng đường dẫn từ trạng thái điều hướng. Nghịch đảo của `parseRoute`.
  *
- * Tổng quan khoá chính ra `/khoa-hoc` chứ không ra `/`, dù `/` cũng mở đúng
- * trang đó. Có hai lý do:
+ * Tổng quan khoá chính ra `/digital-marketing` chứ không ra `/`, dù `/` cũng
+ * mở đúng trang đó. Có hai lý do:
  *
- *   1. Khoá chính phải có tên riêng như mọi khu vực khác. Trả về `/` thì học
- *      viên bấm vào tab Khoá Học chỉ thấy tên miền trần, không có gì để sao
- *      chép gửi đi — khu vực lớn nhất của ứng dụng thành khu vực duy nhất
- *      không gọi tên được.
+ *   1. Khoá chính phải gọi được TÊN CỦA CHÍNH NÓ. Trả về `/` thì bấm vào tab
+ *      Digital Marketing chỉ thấy tên miền trần — khoá lớn nhất của học viện
+ *      thành khoá duy nhất không có gì để sao chép gửi đi.
  *   2. Địa chỉ ứng dụng SINH RA là địa chỉ chuẩn. `/` vẫn mở đúng trang và
  *      `writeHistory` bên App.jsx cố ý KHÔNG viết đè nó khi người dùng đang
  *      đứng sẵn ở đó — trang chủ giữ nguyên là trang chủ.
  *
- * Việc `/` và `/khoa-hoc` cùng mở một trang không làm loãng tín hiệu xếp hạng:
- * index.html khai canonical tuyệt đối trỏ về `/`, nên cỗ máy tìm kiếm gom cả
- * hai về một mối. Đó cũng là lý do canonical phải là thẻ TĨNH — xem ghi chú
- * "ĐÃ GỠ" trong index.html.
+ * Việc `/` và `/digital-marketing` cùng mở một trang không làm loãng tín hiệu
+ * xếp hạng: index.html khai canonical tuyệt đối trỏ về `/`, nên cỗ máy tìm
+ * kiếm gom cả hai về một mối. Đó cũng là lý do canonical phải là thẻ TĨNH —
+ * xem ghi chú "ĐÃ GỠ" trong index.html.
  */
 export function buildPath(route) {
   const segment = TAB_SEGMENTS[route?.tab];
 
   // Tab không nhận ra thì VỨT LUÔN cả `itemId` chứ không chỉ đổi tab về mặc
   // định: định danh luôn thuộc về đúng một tab, ghép nó vào tab khác chỉ tạo
-  // ra thứ trông như địa chỉ thật mà không mở được gì — ví dụ `/khoa-hoc/roas`.
+  // ra thứ trông như địa chỉ thật mà không mở được gì — ví dụ `/digital-marketing/roas`.
   if (!segment) return '/';
 
   const itemId = route?.itemId || null;
   if (!itemId) return `/${segment}`;
 
-  // Đoạn thứ ba chỉ được viết ra khi đã có đoạn thứ hai. `/khoa-hoc//m1-s2` là
+  // Đoạn thứ ba chỉ được viết ra khi đã có đoạn thứ hai. `/digital-marketing//m1-s2` là
   // địa chỉ vô nghĩa: không có chuyên đề thì bài học không thuộc về đâu cả.
   const subId = route?.subId || null;
   const base = `/${segment}/${encodeURIComponent(itemId)}`;

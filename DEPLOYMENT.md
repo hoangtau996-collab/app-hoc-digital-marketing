@@ -106,21 +106,21 @@ Mỗi màn hình có một địa chỉ dán gửi được, bảng dịch nằm
 
 | Địa chỉ | Mở ra |
 |---|---|
-| `/khoa-hoc`, `/khoa-hoc/module-01` | Khoá Digital Marketing (khoá chính) |
-| `/khoa-hoc/module-01/m1-s2` | Một bài học cụ thể — mở ra là cuộn thẳng tới bài đó |
+| `/digital-marketing`, `/digital-marketing/module-01` | Khoá Digital Marketing (khoá chính) |
+| `/digital-marketing/module-01/m1-s2` | Một bài học cụ thể — mở ra là cuộn thẳng tới bài đó |
 | `/trade-marketing`, `/trade-marketing/trade-01` | Khoá Trade Marketing |
 | `/thuat-ngu`, `/thuat-ngu/roas` | Từ điển thuật ngữ |
 | `/ban-tin`, `/ban-tin/<id tin>` | Bản tin thuật toán |
 | `/cong-cu`, `/cong-cu/roas` | Bộ công cụ Trưởng phòng |
 | `/` | Trang chủ — mở đúng tổng quan khoá chính |
-| `/chuyen-de/...` | Tên cũ của khoá chính, vẫn mở được |
+| `/khoa-hoc/...`, `/chuyen-de/...` | Hai tên cũ của khoá chính, vẫn mở được |
 | `/doi-mat-khau` | Trang đặt lại mật khẩu (xử lý ở `main.jsx`) |
 
 **Địa chỉ bài học chạy hai chiều.** Cả một chuyên đề nằm trên một trang cuộn, nên bài học là một vị trí trong trang chứ không phải màn hình riêng: mở liên kết thì trang cuộn thẳng tới bài đó, và ngược lại cuộn tới bài nào thì thanh địa chỉ đổi theo bài đó. Chiều thứ hai là thứ khiến 36 địa chỉ này dùng được mà không phải thêm nút nào — không có nó thì địa chỉ tồn tại nhưng chỉ lấy được bằng cách tự gõ tay định danh `m4-s2`. Việc cuộn dùng `replaceState` nên không đẩy thêm mục vào lịch sử: cuộn hết một chuyên đề bốn bài vẫn chỉ cần bấm Lùi một lần để ra.
 
 Khoá Trade dùng chung component hiển thị nhưng không bật phần này, nên địa chỉ khoá Trade dừng ở tầng chuyên đề.
 
-Một màn hình có thể có nhiều lối vào hợp lệ, nhưng **địa chỉ ứng dụng tự sinh ra luôn là dạng chuẩn ở cột trái**. Riêng `/` được giữ nguyên khi người dùng đang đứng sẵn ở đó: trang chủ phải giữ được địa chỉ trang chủ, và index.html khai `canonical` tuyệt đối trỏ về `/` nên cỗ máy tìm kiếm vẫn gom `/` với `/khoa-hoc` về một mối.
+Một màn hình có thể có nhiều lối vào hợp lệ, nhưng **địa chỉ ứng dụng tự sinh ra luôn là dạng chuẩn ở cột trái**. Riêng `/` được giữ nguyên khi người dùng đang đứng sẵn ở đó: trang chủ phải giữ được địa chỉ trang chủ, và index.html khai `canonical` tuyệt đối trỏ về `/` nên cỗ máy tìm kiếm vẫn gom `/` với `/digital-marketing` về một mối.
 
 Ứng dụng chỉ có **một** tệp `index.html`, không sinh trang tĩnh riêng cho từng địa chỉ. Máy chủ phải trả `index.html` cho mọi đường dẫn, rồi JavaScript mới đọc đường dẫn đó ra màn hình tương ứng. Thiếu luật bắt-tất-cả thì gõ thẳng `/chuyen-de/module-01` hoặc bấm F5 giữa bài học là nhận 404 trước khi JavaScript kịp chạy.
 

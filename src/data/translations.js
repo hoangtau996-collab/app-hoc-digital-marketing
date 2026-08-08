@@ -20,7 +20,10 @@ export const TRANSLATIONS = {
     studentProfile: "Học Viên",
     
     // Feature Menu Bar
-    menuCourseTitle: "Khoá Học",
+    // Gọi thẳng tên khoá chứ không gọi chung là "Khoá Học": học viện có nhiều
+    // khoá, mà nhãn này đứng ngay cạnh "Trade Marketing" nên nhãn chung không
+    // nói được đây là khoá nào. Huy hiệu "Main" mới là thứ đánh dấu khoá chính.
+    menuCourseTitle: "Digital Marketing",
     menuCourseSub: "Khoá chính — 11 chuyên đề thực chiến",
     menuGlossaryTitle: "Từ Điển",
     menuGlossarySub: "121 thuật ngữ Digital Marketing",
@@ -100,8 +103,8 @@ export const TRANSLATIONS = {
     studentProfile: "Student Profile",
     
     // Feature Menu Bar
-    menuCourseTitle: "Course",
-    menuCourseSub: "11 Practical Modules",
+    menuCourseTitle: "Digital Marketing",
+    menuCourseSub: "Main course — 11 practical modules",
     menuGlossaryTitle: "Glossary",
     menuGlossarySub: "121 Digital Marketing terms",
     menuNewsTitle: "News",

@@ -869,7 +869,7 @@ export default function App() {
 
   /* ================= ĐỊA CHỈ TRÌNH DUYỆT ==================
 
-     Mỗi màn hình một địa chỉ dán được vào tin nhắn: `/khoa-hoc/module-01`,
+     Mỗi màn hình một địa chỉ dán được vào tin nhắn: `/digital-marketing/module-01`,
      `/ban-tin/<id tin>`, `/cong-cu/roas`, `/thuat-ngu/roas`... Quy tắc dịch
      địa chỉ ⇄ trạng thái nằm gọn trong `utils/appRoutes.js`; ở đây chỉ còn ba
      việc: nhận địa chỉ lúc mở trang, ghi địa chỉ mới khi học viên bấm chuyển,
@@ -884,7 +884,7 @@ export default function App() {
 
      2. CHƯA NHẬN XONG ĐỊA CHỈ VÀO THÌ CHƯA ĐƯỢC GHI ĐÈ NÓ. Lúc mới dựng,
         `selectedModuleId` vẫn là null nên địa chỉ dựng lại từ state sẽ ra `/`;
-        ghi ngay là xoá mất `/khoa-hoc/module-03` mà học viên vừa mở. Cờ
+        ghi ngay là xoá mất `/digital-marketing/module-03` mà học viên vừa mở. Cờ
         `initialRouteAppliedRef` giữ ngòi bút lại cho tới khi nhận xong.
 
      3. CHỈ NHẬN ĐỊA CHỈ SAU KHI BIẾT AI ĐANG ĐĂNG NHẬP (`roleResolved`). Effect
@@ -1119,9 +1119,9 @@ export default function App() {
    *
    * KHÔNG viết đè khi địa chỉ đang hiển thị đã mô tả đúng màn hình này, dù nó
    * viết khác cách. Một màn hình có thể có nhiều lối vào hợp lệ: `/` và
-   * `/khoa-hoc` cùng ra tổng quan khoá chính, `/chuyen-de/module-01` là tên cũ
-   * của `/khoa-hoc/module-01`. Thiếu luật này thì ai mở trang chủ cũng bị đổi
-   * địa chỉ thành `/khoa-hoc` ngay trước mắt — trang chủ mất địa chỉ trang chủ,
+   * `/digital-marketing` cùng ra tổng quan khoá chính, `/chuyen-de/module-01` là tên cũ
+   * của `/digital-marketing/module-01`. Thiếu luật này thì ai mở trang chủ cũng bị đổi
+   * địa chỉ thành `/digital-marketing` ngay trước mắt — trang chủ mất địa chỉ trang chủ,
    * và mọi liên kết cũ vừa mở ra đã bị viết lại thành tên mới.
    *
    * Địa chỉ do ứng dụng SINH RA thì vẫn luôn là dạng chuẩn (`buildPath`). Luật
