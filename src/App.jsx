@@ -1126,11 +1126,19 @@ export default function App() {
    *
    * Địa chỉ do ứng dụng SINH RA thì vẫn luôn là dạng chuẩn (`buildPath`). Luật
    * này chỉ tôn trọng thứ người dùng tự gõ hoặc tự bấm vào.
+   *
+   * `force` phá lệ trên, dành cho thao tác điều hướng có chủ đích mà lại KHÔNG
+   * đổi màn hình — cụ thể là bấm logo trong khi đang đứng sẵn ở trang chủ.
+   * Không có nó thì effect đồng bộ chẳng có gì để chạy (state y nguyên) và
+   * thanh địa chỉ kẹt lại ở tên miền trần, đúng chỗ người dùng muốn thấy tên
+   * khoá. Vẫn không đẻ ra mục lịch sử trùng: địa chỉ giống hệt thì thoát sớm.
    */
-  const writeHistory = (route, mode) => {
-    if (isSameRoute(parseRoute(window.location.pathname), route)) return;
+  const writeHistory = (route, mode, { force = false } = {}) => {
+    if (!force && isSameRoute(parseRoute(window.location.pathname), route)) return;
 
     const url = buildPath(route) + window.location.search + window.location.hash;
+    if (url === window.location.pathname + window.location.search + window.location.hash) return;
+
     if (mode === 'replace') window.history.replaceState(null, '', url);
     else window.history.pushState(null, '', url);
   };
@@ -1678,6 +1686,28 @@ export default function App() {
     setActiveTab(tab);
   };
 
+  /**
+   * Về trang chủ — tổng quan khoá Digital Marketing, không còn chuyên đề mở dở.
+   *
+   * Dùng chung cho logo trên Header và nút "Digital" ở thanh dưới đáy điện
+   * thoại. Cả hai trước đây chỉ gọi `setActiveTab('course')`, và lệnh đó KHÔNG
+   * đưa ai về trang chủ: đang đọc dở một bài thì tab vốn đã là 'course' nên
+   * bấm vào không đổi gì, còn từ tab khác bấm sang thì rơi đúng vào chuyên đề
+   * mở dở lần trước. Phải xoá `selectedModuleId` mới thật sự là về trang chủ.
+   *
+   * Ghi địa chỉ ngay trong hàm chứ không chờ effect đồng bộ: khi người dùng
+   * đang đứng sẵn ở trang chủ thì không state nào đổi, effect không có gì để
+   * chạy, và thanh địa chỉ sẽ kẹt ở tên miền trần thay vì hiện tên khoá.
+   */
+  const handleGoHome = () => {
+    const home = { tab: 'course', itemId: null, subId: null };
+    setActiveTab('course');
+    setSelectedModuleId(null);
+    writeHistory(home, 'push', { force: true });
+    lastRouteRef.current = home;
+    syncDocumentTitle(home);
+  };
+
   const handleNextModule = () => {
     const currentIndex = COURSE_MODULES.findIndex(m => m.id === selectedModuleId);
     if (currentIndex < 0 || currentIndex >= COURSE_MODULES.length - 1) return;
@@ -1709,6 +1739,7 @@ export default function App() {
       {/* Top Header Bar */}
       <Header
         setActiveTab={handleProtectedSelectTab}
+        onGoHome={handleGoHome}
         passedCount={completedModules.length}
         totalModules={COURSE_MODULES.length}
         onOpenCertificate={() => requestCertificate('main')}
@@ -2143,6 +2174,7 @@ export default function App() {
       <MobileBottomNav
         activeTab={activeTab}
         setActiveTab={setActiveTab}
+        onGoHome={handleGoHome}
         isTradeCourseUnlocked={isTradeCourseUnlocked}
         onOpenCertificate={() => requestCertificate('main')}
         currentUser={currentUser}

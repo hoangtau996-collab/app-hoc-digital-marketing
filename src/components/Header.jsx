@@ -121,6 +121,18 @@ export default function Header({
   // Header không còn cần biết đang ở tab nào, và biến tin mới nhất cũng chưa
   // từng được dùng tới.
   setActiveTab,
+  /**
+   * Bấm logo là về trang chủ — tức tổng quan khoá chính, KHÔNG còn chuyên đề
+   * nào mở dở.
+   *
+   * Phải là một hàm riêng chứ không gọi tạm `setActiveTab('course')` như bản
+   * trước: đang đọc dở một bài thì tab vốn đã là 'course' rồi, nên lệnh đó
+   * không đổi gì cả và bấm logo trông như nút hỏng. Còn từ tab khác bấm sang
+   * thì nó thả người dùng vào đúng chuyên đề mở dở lần trước chứ không phải
+   * trang chủ. Chuyện "về trang chủ" cần xoá cả chuyên đề, mà Header không
+   * nắm biến đó nên nơi gọi phải đưa xuống trọn vẹn hành động.
+   */
+  onGoHome,
   passedCount,
   totalModules,
   onOpenCertificate,
@@ -177,7 +189,11 @@ export default function Header({
       <div className="max-w-7xl mx-auto flex items-center justify-between gap-2 sm:gap-4">
         
         {/* Logo & Course Title */}
-        <div className="flex items-center gap-2.5 cursor-pointer shrink-0" onClick={() => setActiveTab('course')}>
+        <div
+          className="flex items-center gap-2.5 cursor-pointer shrink-0"
+          onClick={onGoHome || (() => setActiveTab('course'))}
+          title="Về trang chủ"
+        >
           <PMarcomLogo className="w-9 h-9 sm:w-11 sm:h-11" showText={false} />
           <div>
             <div className="flex items-center gap-1.5 flex-wrap">

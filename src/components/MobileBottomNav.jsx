@@ -4,6 +4,10 @@ import { BookOpen, Flame, Wrench, Award, Sparkles, User, GraduationCap, Lock } f
 export default function MobileBottomNav({
   activeTab,
   setActiveTab,
+  // Cùng lý do như logo trên Header: chạm "Digital" phải về tổng quan khoá
+  // chính, mà `setActiveTab('course')` một mình không xoá chuyên đề đang mở
+  // nên đang đọc dở bài thì chạm vào không đi đâu cả.
+  onGoHome,
   onOpenCertificate,
   currentUser,
   onOpenAuthModal,
@@ -18,7 +22,7 @@ export default function MobileBottomNav({
         
         {/* Tab 1: Course */}
         <button
-          onClick={() => setActiveTab('course')}
+          onClick={onGoHome || (() => setActiveTab('course'))}
           className={`flex flex-col items-center gap-0.5 py-1 px-2 rounded-xl transition ${
             activeTab === 'course'
               ? 'text-emerald-400 font-bold'
