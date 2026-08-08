@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import LessonVisual from './LessonVisual';
 import LessonIllustration from './LessonIllustration';
 import LessonPhoto from './LessonPhoto';
@@ -110,9 +110,109 @@ export default function LessonViewer({
   onPrevModule,
   onPassModule,
   isCompleted,
-  isNextLocked = false
+  isNextLocked = false,
+  activeSectionId = null,
+  onSectionInView
 }) {
   const [activeSubTab, setActiveSubTab] = useState('theory'); // 'theory', 'quiz'
+
+  /* ================= ĐỊA CHỈ TỚI TỪNG BÀI HỌC =================
+
+     Cả chuyên đề nằm trên MỘT trang cuộn, nên "bài học nào" không phải là một
+     màn hình riêng mà là một vị trí trong trang. Hai chiều phải khớp nhau:
+
+       vào  — địa chỉ có tên bài thì cuộn thẳng tới bài đó;
+       ra   — cuộn tới đâu thì thanh địa chỉ đổi tới đó, để lúc nào sao chép
+              cũng ra đúng bài đang đọc.
+
+     Chiều "ra" là thứ làm tính năng này dùng được mà không phải thêm nút nào:
+     không có nó thì địa chỉ bài học tồn tại nhưng không ai lấy được, trừ khi
+     tự gõ tay định danh `m4-s2`.
+
+     Khoá Trade dùng chung component này nhưng KHÔNG truyền `onSectionInView`,
+     nên mọi thứ dưới đây tự tắt — địa chỉ khoá Trade dừng ở tầng chuyên đề. */
+
+  const sectionDomId = (id) => `bai-hoc-${id}`;
+
+  // Bài đã báo lên trên gần nhất. Dùng để phân biệt hai nguồn đổi bài: do
+  // chính người dùng cuộn (đã ở đúng chỗ, đừng cuộn nữa) hay do địa chỉ bên
+  // ngoài chỉ tới (nút Lùi, liên kết vừa mở — phải cuộn). Thiếu phép phân biệt
+  // này thì cuộn tay sẽ tự kéo màn hình về đầu bài, không sao thoát ra được.
+  const lastReportedRef = useRef(null);
+
+  // Giữ hàm gọi ngược trong ref: nơi gọi truyền hàm mũi tên dựng lại sau mỗi
+  // lần kết xuất, đưa thẳng vào mảng phụ thuộc là bộ theo dõi bị tháo ra lắp
+  // lại liên tục.
+  const reportRef = useRef(onSectionInView);
+  reportRef.current = onSectionInView;
+
+  const reportSection = (id) => {
+    if (lastReportedRef.current === id) return;
+    lastReportedRef.current = id;
+    reportRef.current?.(id);
+  };
+
+  // Đổi chuyên đề thì quên bài cũ đi.
+  useEffect(() => {
+    lastReportedRef.current = null;
+  }, [module?.id]);
+
+  // CHIỀU VÀO: địa chỉ chỉ tới bài nào thì cuộn tới bài đó.
+  useEffect(() => {
+    if (!activeSectionId || activeSectionId === lastReportedRef.current) return;
+
+    // Bài học chỉ hiện ở tab Lý Thuyết. Liên kết tới một bài trong khi đang mở
+    // tab Trắc Nghiệm thì chuyển tab trước, lượt chạy sau mới cuộn được.
+    if (activeSubTab !== 'theory') {
+      setActiveSubTab('theory');
+      return;
+    }
+
+    const el = document.getElementById(sectionDomId(activeSectionId));
+    if (!el) return;
+
+    lastReportedRef.current = activeSectionId;
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, [activeSectionId, activeSubTab, module?.id]);
+
+  // CHIỀU RA: cuộn tới bài nào thì báo lên bài đó.
+  useEffect(() => {
+    if (!reportRef.current) return undefined;
+
+    // Rời tab Lý Thuyết là không còn bài nào trên màn hình, phải xoá tên bài
+    // khỏi địa chỉ — nếu không địa chỉ vẫn khoe một bài mà người xem không hề
+    // nhìn thấy.
+    if (activeSubTab !== 'theory') {
+      reportSection(null);
+      return undefined;
+    }
+
+    const ids = (module?.sections || []).map((s) => s.id);
+    const elements = ids.map((id) => document.getElementById(sectionDomId(id))).filter(Boolean);
+    if (elements.length === 0) return undefined;
+
+    // Dải nhận diện nằm ở khoảng 15%–30% chiều cao màn hình tính từ trên
+    // xuống, tức ngay vùng mắt đang đọc. Lấy cả màn hình thì lúc nào cũng có
+    // hai ba bài cùng lọt vào và tên bài trên địa chỉ nhảy loạn.
+    const visible = new Set();
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const id = entry.target.dataset.sectionId;
+          if (entry.isIntersecting) visible.add(id);
+          else visible.delete(id);
+        });
+        // Chọn bài đứng trước nhất trong dải, để cuộn ngược lên cũng ra đúng
+        // kết quả như cuộn xuôi xuống.
+        const current = ids.find((id) => visible.has(id));
+        if (current) reportSection(current);
+      },
+      { rootMargin: '-15% 0px -70% 0px' }
+    );
+
+    elements.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, [module?.id, module?.sections, activeSubTab]);
 
   if (!module) {
     return (
@@ -225,7 +325,19 @@ export default function LessonViewer({
           {/* Sections List */}
           <div className="space-y-6">
             {module.sections.map((sec) => (
-              <div key={sec.id} className="glass-panel rounded-2xl p-6 md:p-8 border border-emerald-900/40 space-y-4">
+              /* `id` và `data-section-id` là điểm neo của địa chỉ tới từng bài
+                 học — vừa để cuộn tới, vừa để bộ theo dõi nhận ra bài nào đang
+                 trong tầm mắt. Đừng đổi cách đặt tên nếu không sửa cả
+                 `sectionDomId` phía trên.
+
+                 `scroll-mt-24` chừa chỗ cho thanh tiêu đề dính trên đỉnh: thiếu
+                 nó thì cuộn tới bài nào cũng bị thanh đó che mất đúng dòng tiêu
+                 đề của bài. */
+              <div
+                key={sec.id}
+                id={sectionDomId(sec.id)}
+                data-section-id={sec.id}
+                className="glass-panel rounded-2xl p-6 md:p-8 border border-emerald-900/40 space-y-4 scroll-mt-24">
                 
                 <h3 className="text-lg font-bold text-emerald-400 flex items-center gap-2 border-b border-emerald-900/40 pb-3">
                   <Zap className="w-5 h-5 text-emerald-500" />

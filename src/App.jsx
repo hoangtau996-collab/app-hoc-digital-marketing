@@ -925,11 +925,26 @@ export default function App() {
   /** Mở (hoặc đóng, khi `id` là null) một mục thuộc tab đang xem. */
   const openItem = (tab, id) => setActiveItem(id ? { tab, id } : null);
 
+  /* Bài học đang đọc trong chuyên đề khoá chính — tầng thứ ba của địa chỉ.
+     Khoá chính có 11 chuyên đề nhưng 36 bài học, và cả 36 bài nằm chung trên
+     một trang cuộn. Không có tầng này thì gửi liên kết chỉ nói được "chuyên đề
+     4", người nhận vẫn phải tự dò xem là bài nào trong bốn bài.
+
+     Lưu KÈM chuyên đề sở hữu, cùng lý do như `activeItem`: định danh bài học
+     chỉ có nghĩa bên trong đúng chuyên đề của nó, nên gắn tên chuyên đề vào là
+     nó tự vô hiệu khi học viên sang bài khác — không nơi nào phải nhớ đi dọn. */
+  const [activeSection, setActiveSection] = useState(null);
+  const activeSectionId =
+    activeSection?.moduleId === selectedModuleId ? activeSection.id : null;
+
   // Mục đang mở của màn hình hiện tại, gộp ba nguồn về một để `appRoutes` hiểu.
   const routeItemId =
     activeTab === 'course' ? selectedModuleId
       : activeTab === 'trade' ? selectedTradeModuleId
         : activeItemId;
+
+  // Tầng thứ ba hiện chỉ khoá chính dùng tới.
+  const routeSubId = activeTab === 'course' ? activeSectionId : null;
 
   /**
    * Lọc định danh chuyên đề khoá chính lấy từ địa chỉ.
@@ -1017,6 +1032,7 @@ export default function App() {
   const applyRoute = (route, options = {}) => {
     const tab = TAB_SEGMENTS[route?.tab] ? route.tab : HOME_ROUTE.tab;
     const requestedId = route?.itemId || null;
+    const requestedSubId = route?.subId || null;
     const progress = options.progress || completedModules;
 
     setActiveTab(tab);
@@ -1024,13 +1040,24 @@ export default function App() {
     if (tab === 'course') {
       const { id, awaitingLogin } = admitCourseModule(requestedId, progress);
       setSelectedModuleId(id);
-      return { route: { tab, itemId: id }, awaitingLogin: !!awaitingLogin };
+
+      // Bài học phải thuộc đúng chuyên đề vừa mở. Ghép bài của chuyên đề khác
+      // vào là cuộn tới một chỗ không tồn tại, người dùng chỉ thấy trang đứng
+      // yên và tưởng liên kết hỏng.
+      const openedModule = id ? COURSE_MODULES.find((m) => m.id === id) : null;
+      const subId =
+        openedModule && requestedSubId && openedModule.sections.some((s) => s.id === requestedSubId)
+          ? requestedSubId
+          : null;
+      setActiveSection(subId ? { moduleId: id, id: subId } : null);
+
+      return { route: { tab, itemId: id, subId }, awaitingLogin: !!awaitingLogin };
     }
 
     if (tab === 'trade') {
       const { id, awaitingLogin } = admitTradeModule(requestedId, progress);
       setSelectedTradeModuleId(id);
-      return { route: { tab, itemId: id }, awaitingLogin: !!awaitingLogin };
+      return { route: { tab, itemId: id, subId: null }, awaitingLogin: !!awaitingLogin };
     }
 
     // Ba tab còn lại không có cổng khoá, chỉ cần loại định danh không có thật —
@@ -1046,7 +1073,7 @@ export default function App() {
       setMigrationNotice('Tin trong đường dẫn không có trong bản tin của máy này. Đã mở danh sách tin mới nhất.');
     }
     openItem(tab, admitted);
-    return { route: { tab, itemId: admitted }, awaitingLogin: false };
+    return { route: { tab, itemId: admitted, subId: null }, awaitingLogin: false };
   };
 
   /** Tên mục đang mở, dùng đặt tiêu đề tab trình duyệt và tên dấu trang. */
@@ -1055,7 +1082,14 @@ export default function App() {
     switch (route.tab) {
       case 'course': {
         const m = COURSE_MODULES.find((x) => x.id === route.itemId);
-        return m ? `Chuyên đề ${m.number} — ${m.title}` : '';
+        if (!m) return '';
+        // Đang đọc một bài cụ thể thì lấy tên bài, vì đó mới là thứ trên màn
+        // hình. Tên bài đã tự đánh số ("2. Khung phân bổ 60/40") nên ghép với
+        // số chuyên đề là đọc ra ngay vị trí.
+        const sec = route.subId ? m.sections.find((s) => s.id === route.subId) : null;
+        return sec
+          ? `${sec.title} — Chuyên đề ${m.number}`
+          : `Chuyên đề ${m.number} — ${m.title}`;
       }
       case 'trade': {
         const m = TRADE_MODULES.find((x) => x.id === route.itemId);
@@ -1133,15 +1167,23 @@ export default function App() {
   useEffect(() => {
     if (!initialRouteAppliedRef.current) return;
 
-    const route = { tab: activeTab, itemId: routeItemId };
+    const route = { tab: activeTab, itemId: routeItemId, subId: routeSubId };
     syncDocumentTitle(route);
 
     if (isSameRoute(lastRouteRef.current, route)) return;
 
-    const stayedInTools = lastRouteRef.current?.tab === 'tools' && route.tab === 'tools';
-    writeHistory(route, stayedInTools ? 'replace' : 'push');
+    const prev = lastRouteRef.current;
+    const stayedInTools = prev?.tab === 'tools' && route.tab === 'tools';
+
+    // Cuộn qua bài kế tiếp trong CÙNG một chuyên đề không phải là "đi tới chỗ
+    // khác" — vẫn đang đọc đúng trang đó. Đẩy vào lịch sử thì cuộn hết một
+    // chuyên đề bốn bài là bấm Lùi bốn lần mới ra khỏi nó.
+    const scrolledWithinModule =
+      prev?.tab === route.tab && prev?.itemId === route.itemId && prev?.subId !== route.subId;
+
+    writeHistory(route, stayedInTools || scrolledWithinModule ? 'replace' : 'push');
     lastRouteRef.current = route;
-  }, [activeTab, routeItemId, newsFeed]);
+  }, [activeTab, routeItemId, routeSubId, newsFeed]);
 
   // 3. NÚT LÙI / TIẾN CỦA TRÌNH DUYỆT.
   //
@@ -1160,7 +1202,11 @@ export default function App() {
       // chỉ bị chặn — một cái bẫy không có lối ra.
       if (!awaitingLogin) writeHistory(effective, 'replace');
       syncDocumentTitle(effective);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      // Địa chỉ có chỉ đích tới một bài học thì ĐỪNG kéo lên đầu trang:
+      // LessonViewer đang cuộn tới đúng bài đó, hai lệnh cuộn cùng lúc chỉ tổ
+      // giằng nhau rồi dừng ở một chỗ không ai chọn.
+      if (!effective.subId) window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
     window.addEventListener('popstate', handlePopState);
@@ -1848,6 +1894,12 @@ export default function App() {
                     onPrevModule={handlePrevModule}
                     onPassModule={handlePassModule}
                     isCompleted={completedModules.includes(selectedModule.id)}
+                    /* Tầng bài học của địa chỉ. Chỉ khoá chính truyền hai prop
+                       này; khoá Trade để trống nên phần theo dõi tự tắt. */
+                    activeSectionId={activeSectionId}
+                    onSectionInView={(id) =>
+                      setActiveSection(id ? { moduleId: selectedModule.id, id } : null)
+                    }
                     /* Nút "Tiếp Theo" tự biết mình đang bị khoá để đổi nhãn và
                        nói rõ điều kiện, thay vì bấm xong mới báo lỗi. */
                     isNextLocked={(() => {

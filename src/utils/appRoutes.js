@@ -85,11 +85,16 @@ const decodeSegment = (raw) => {
  * Đọc đường dẫn thành trạng thái điều hướng.
  *
  * @param {string} pathname Phần đường dẫn, không gồm query và hash.
- * @returns {{tab: string, itemId: string|null} | null}
+ * @returns {{tab: string, itemId: string|null, subId: string|null} | null}
  *   `null` nghĩa là KHÔNG NHẬN RA địa chỉ này. Cố ý phân biệt với trang chủ để
  *   nơi gọi còn dọn thanh địa chỉ: gõ nhầm `/khoahoc` mà lặng lẽ hiện trang chủ
  *   dưới đúng cái địa chỉ sai đó thì người dùng lưu dấu trang lại lần nữa, và
  *   lần sau vẫn sai.
+ *
+ * Đoạn thứ ba (`subId`) đọc cho MỌI khu vực chứ không riêng khoá học, dù hiện
+ * chỉ khoá học dùng tới. Tầng này không biết khu vực nào có mấy tầng con —
+ * việc đó thuộc về nơi nắm dữ liệu. Khu vực không dùng thì trả `subId` về null
+ * ở đó, rồi `buildPath` tự dọn đoạn thừa khỏi thanh địa chỉ.
  */
 export function parseRoute(pathname) {
   const parts = String(pathname || '/')
@@ -102,7 +107,11 @@ export function parseRoute(pathname) {
   const tab = TAB_BY_SEGMENT[segment] || SEGMENT_ALIASES[segment];
   if (!tab) return null;
 
-  return { tab, itemId: parts[1] ? decodeSegment(parts[1]) : null };
+  return {
+    tab,
+    itemId: parts[1] ? decodeSegment(parts[1]) : null,
+    subId: parts[2] ? decodeSegment(parts[2]) : null,
+  };
 }
 
 /**
@@ -133,12 +142,22 @@ export function buildPath(route) {
   if (!segment) return '/';
 
   const itemId = route?.itemId || null;
-  return itemId ? `/${segment}/${encodeURIComponent(itemId)}` : `/${segment}`;
+  if (!itemId) return `/${segment}`;
+
+  // Đoạn thứ ba chỉ được viết ra khi đã có đoạn thứ hai. `/khoa-hoc//m1-s2` là
+  // địa chỉ vô nghĩa: không có chuyên đề thì bài học không thuộc về đâu cả.
+  const subId = route?.subId || null;
+  const base = `/${segment}/${encodeURIComponent(itemId)}`;
+  return subId ? `${base}/${encodeURIComponent(subId)}` : base;
 }
 
 /** Hai trạng thái điều hướng có trỏ về cùng một màn hình không. */
 export function isSameRoute(a, b) {
-  return (a?.tab || null) === (b?.tab || null) && (a?.itemId || null) === (b?.itemId || null);
+  return (
+    (a?.tab || null) === (b?.tab || null) &&
+    (a?.itemId || null) === (b?.itemId || null) &&
+    (a?.subId || null) === (b?.subId || null)
+  );
 }
 
 /**
