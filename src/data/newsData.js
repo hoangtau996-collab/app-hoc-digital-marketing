@@ -337,6 +337,11 @@ const REAL_SOURCED_NEWS = [
     id: 'real-2026-02-09-influencer-vn',
     category: 'TikTok Shop & Ads',
     platformIcon: 'Video',
+    // Số liệu của cả năm 2026, không phải tin thời sự. Cờ này đưa bài ra khu
+    // riêng thay vì xếp theo ngày đăng — xếp theo ngày thì nó chìm xuống đáy
+    // danh sách rồi không ai thấy, dù đang là nguồn số liệu thị trường Việt Nam
+    // duy nhất trong cả bản tin.
+    isReference: true,
     title: 'Số liệu thị trường Việt Nam: TikTok và Facebook chiếm hơn 90% chiến dịch influencer, người ít theo dõi lại tương tác cao gấp nhiều lần',
     publishedAt: '09/02/2026',
     isHot: false,

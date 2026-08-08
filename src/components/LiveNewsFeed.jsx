@@ -14,6 +14,7 @@ import {
   Info,
   BadgeCheck,
   FlaskConical,
+  BarChart3,
   X
 } from 'lucide-react';
 import { LIVE_NEWS_SIMULATOR_POOL } from '../data/newsData';
@@ -128,7 +129,20 @@ export default function LiveNewsFeed({ newsList, onAddNewNews, openNewsId, onOpe
   const openNews = openNewsId ? newsList.find((n) => n.id === openNewsId) || null : null;
   const setOpenNews = (news) => onOpenNews?.(news ? news.id : null);
 
+  // Số liệu tham chiếu tách khỏi dòng tin thời sự, KHÔNG xếp chung theo ngày.
+  //
+  // Hai loại nội dung này già đi khác hẳn nhau. Tin thời sự cũ ngày là mất giá
+  // trị. Còn báo cáo thị trường cả năm thì tháng 8 đọc vẫn đúng như tháng 2 —
+  // xếp chung theo ngày đăng là nó chìm xuống đáy rồi không ai còn thấy, dù đó
+  // đang là nguồn số liệu thị trường Việt Nam duy nhất trong cả bản tin.
+  const referenceNews = newsList
+    .filter((n) => n.isReference)
+    .filter((n) => selectedCategory === 'All' || n.category === selectedCategory)
+    .slice()
+    .sort(compareNewsRecency);
+
   const filteredNews = newsList
+    .filter((n) => !n.isReference)
     .filter((n) => selectedCategory === 'All' || n.category === selectedCategory)
     .slice()
     .sort(compareNewsRecency);
@@ -230,6 +244,57 @@ export default function LiveNewsFeed({ newsList, onAddNewNews, openNewsId, onOpe
         </p>
       </div>
 
+      {/* Số liệu thị trường: khu riêng, không nằm trong dòng tin thời sự.
+          Ghi rõ ngày công bố báo cáo ngay trên thẻ để không ai nhầm là tin nóng. */}
+      {referenceNews.length > 0 && (
+        <section className="space-y-3">
+          <div className="flex items-center gap-2">
+            <BarChart3 className="w-4 h-4 text-amber-400" />
+            <h3 className="text-sm font-bold text-white">Số liệu thị trường</h3>
+            <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-amber-950/60 text-amber-300 border border-amber-800/60">
+              THAM CHIẾU, KHÔNG THEO NGÀY
+            </span>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            {referenceNews.map((news) => (
+              <article
+                key={news.id}
+                className="glass-panel rounded-2xl p-4 border border-amber-900/40 hover:border-amber-500/40 transition space-y-2.5"
+              >
+                <div className="flex items-center justify-between gap-2 flex-wrap">
+                  <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 border border-emerald-800">
+                    {news.category}
+                  </span>
+                  <span className="text-[11px] text-slate-400 font-mono">
+                    Báo cáo công bố {news.publishedAt}
+                  </span>
+                </div>
+
+                <h4 className="text-sm font-bold text-white leading-snug">{news.title}</h4>
+
+                {news.source && (
+                  <p className="text-[11px] text-slate-400 flex items-center gap-1.5">
+                    <Newspaper className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                    {news.source}
+                  </p>
+                )}
+
+                <KeyNumbers items={news.keyNumbers} compact />
+
+                <button
+                  onClick={() => setOpenNews(news)}
+                  className="w-full px-4 py-2 rounded-xl bg-[#1a2742] border border-amber-900/60 hover:border-amber-500 text-amber-200 text-xs font-bold flex items-center justify-center gap-2 transition cursor-pointer"
+                >
+                  <BookOpen className="w-4 h-4" />
+                  <span>Đọc phân tích đầy đủ</span>
+                </button>
+              </article>
+            ))}
+          </div>
+        </section>
+      )}
+
       {/* Filter Tabs */}
       <div className="flex items-center gap-2 overflow-x-auto pb-2 border-b border-emerald-900/40">
         {CATEGORIES.map((cat) => (
@@ -252,6 +317,11 @@ export default function LiveNewsFeed({ newsList, onAddNewNews, openNewsId, onOpe
         <span>
           Hiển thị <strong className="text-emerald-400">{visibleNews.length}</strong> / {filteredNews.length} tin
           {selectedCategory !== 'All' && <> thuộc nhóm <strong className="text-slate-300">{selectedCategory}</strong></>}
+          {/* Số liệu tham chiếu nằm ở khu riêng phía trên, không tính vào đây —
+              không ghi chú thì người dùng thấy số lệch và tưởng mất tin. */}
+          {referenceNews.length > 0 && (
+            <> (chưa tính {referenceNews.length} mục số liệu thị trường ở trên)</>
+          )}
         </span>
         <span className="hidden sm:inline">Mỗi lần tải {PAGE_SIZE} tin</span>
       </div>
