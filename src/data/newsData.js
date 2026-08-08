@@ -38,6 +38,124 @@
  * ------------------------------------------------------------------ */
 const REAL_SOURCED_NEWS = [
   {
+    id: 'real-2026-08-07-chatgpt-advanced-matching',
+    category: 'AI Marketing',
+    platformIcon: 'Sparkles',
+    title: 'Quảng cáo ChatGPT tự bật đối sánh nâng cao từ 17/08: không tắt trước hạn là mặc nhiên đồng ý gửi dữ liệu biểu mẫu',
+    publishedAt: '07/08/2026',
+    isHot: true,
+    illustration: 'data-signal',
+    image: {
+      url: 'https://ppc.land/content/images/size/w1200/2026/08/switch-1.webp',
+      credit: 'Ảnh: PPC Land',
+    },
+    sourceUrl: 'https://ppc.land/chatgpt-advertisers-face-10-days-to-opt-out-of-automatic-advanced-matching/',
+    source: 'PPC Land',
+    readTime: '4 phút đọc',
+    tags: ['ChatGPT Ads', 'Dữ liệu cá nhân', 'Tuân thủ', 'Hạn chót'],
+    summary:
+      'OpenAI bật sẵn tính năng đối sánh nâng cao tự động cho mọi pixel đang chạy, hiệu lực từ 17/08/2026. Tính năng này lấy thông tin khách nhập vào biểu mẫu trên website, băm lại rồi gửi kèm sự kiện chuyển đổi. Không thao tác gì tức là đồng ý.',
+    keyNumbers: [
+      { value: '17/08', label: 'ngày tự động bật' },
+      { value: '10 ngày', label: 'thời gian để tắt kể từ khi công bố' },
+      { value: 'Mặc định BẬT', label: 'không làm gì là đồng ý' },
+    ],
+    content: [
+      {
+        heading: 'Cụ thể tính năng làm gì',
+        body:
+          'Khi khách điền biểu mẫu trên website, hệ thống lấy các thông tin định danh họ vừa nhập, băm ngay tại trình duyệt rồi gửi kèm sự kiện chuyển đổi về nền tảng. Nhờ vậy nền tảng ghép được lượt chuyển đổi với lượt xem quảng cáo chính xác hơn so với chỉ dựa vào cookie.',
+      },
+      {
+        heading: 'Cách tắt',
+        body:
+          'Vào Tools rồi Conversions, chọn Data Source, bấm Edit pixel và tắt tuỳ chọn đó đi. Phải làm trước ngày 17/08/2026. Đây là cơ chế chọn-không-tham-gia có hạn chót, không phải chọn-tham-gia: im lặng được hiểu là đồng ý.',
+      },
+      {
+        heading: 'Điểm pháp lý không được bỏ qua',
+        body:
+          'Bài viết nêu rõ: nhà quảng cáo hoạt động ở nơi có quy định về sự đồng ý vẫn phải tự chịu trách nhiệm chứng minh cơ sở pháp lý cho việc gửi dữ liệu biểu mẫu đã băm sang bên thứ ba, bất kể nút gạt đang ở vị trí nào. Nền tảng bật sẵn không có nghĩa là nền tảng gánh trách nhiệm thay.',
+      },
+      {
+        heading: 'Vì sao đây là thứ dễ lọt lưới nhất',
+        body:
+          'Nó không làm hỏng chiến dịch, không báo lỗi, không hiện cảnh báo nào. Chỉ số chuyển đổi thậm chí còn đẹp lên vì ghép được nhiều lượt hơn. Rủi ro nằm ở chỗ khác hẳn: dữ liệu khách hàng đang được gửi đi mà chưa ai trong công ty ký duyệt. Đến lúc bị hỏi thì không ai nhớ đã đồng ý lúc nào.',
+      },
+      {
+        heading: 'Nên tắt hay để bật',
+        body:
+          'Không có câu trả lời chung. Nếu đã có thông báo quyền riêng tư nói rõ việc chia sẻ dữ liệu với đối tác quảng cáo và có cơ chế thu thập sự đồng ý, để bật sẽ cho số liệu tốt hơn. Nếu chưa có, nên tắt trước hạn rồi rà soát lại, bật sau vẫn kịp. Tắt thì mất một chút độ chính xác đo lường, còn bật sai thì là chuyện tuân thủ.',
+      },
+    ],
+    impact:
+      'Trưởng phòng phải quyết định trước 17/08 và ghi lại quyết định đó, vì đây là việc gửi dữ liệu khách hàng sang bên thứ ba chứ không phải một thiết lập kỹ thuật thông thường.',
+    ifIgnored:
+      'Sau 17/08 dữ liệu biểu mẫu của khách bắt đầu được gửi đi mà không ai trong công ty chủ động đồng ý. Chỉ số báo cáo đẹp lên nên không ai để ý, tới khi bộ phận pháp chế hoặc khách hàng hỏi thì không giải thích được đã đồng ý từ bao giờ và trên cơ sở nào.',
+    actionChecklist: [
+      'Mở Tools > Conversions > Data Source > Edit pixel ngay hôm nay để xem tuỳ chọn đang bật hay tắt',
+      'Hỏi pháp chế xem thông báo quyền riêng tư hiện tại đã bao gồm việc chia sẻ dữ liệu biểu mẫu với đối tác quảng cáo chưa',
+      'Chưa chắc thì tắt trước hạn 17/08, rà soát xong bật lại sau vẫn kịp',
+      'Ghi lại quyết định và người duyệt vào tài liệu vận hành, đừng để thành thoả thuận ngầm',
+    ],
+    deadline: 'Tự động bật cho mọi pixel đang chạy từ 17/08/2026 nếu không chủ động tắt',
+  },
+  {
+    id: 'real-2026-08-07-gbp-gemini-da-diem',
+    category: 'Google Ads & SEO',
+    platformIcon: 'Search',
+    title: 'Google mở Hồ sơ Doanh nghiệp trong Gemini cho tài khoản nhiều chi nhánh, nhưng vẫn chặn tài khoản Workspace',
+    publishedAt: '07/08/2026',
+    isHot: false,
+    illustration: 'crm-automation',
+    image: {
+      url: 'https://ppc.land/content/images/size/w1200/2026/08/maps.webp',
+      credit: 'Ảnh: PPC Land',
+    },
+    sourceUrl: 'https://ppc.land/google-business-profile-in-gemini-now-works-for-multi-location-accounts/',
+    source: 'PPC Land',
+    readTime: '4 phút đọc',
+    tags: ['Hồ sơ Doanh nghiệp', 'Gemini', 'Chuỗi chi nhánh', 'SEO địa phương'],
+    summary:
+      'Từ 10/06/2026 tính năng này chỉ dùng được cho đơn vị quản lý đúng một hồ sơ. Nay đã mở cho tài khoản quản lý nhiều chi nhánh: gọi @Google Business Profile trong Gemini để soạn bản sửa và đề xuất cập nhật cho nhiều hồ sơ cùng lúc. Miễn phí. Nhưng có một rào chắn khiến phần lớn chuỗi lớn vẫn đứng ngoài.',
+    keyNumbers: [
+      { value: 'Miễn phí', label: 'trên mọi tài khoản Gemini' },
+      { value: 'Chỉ @gmail.com', label: 'Workspace chưa dùng được' },
+      { value: '0', label: 'thay đổi tự đăng khi chưa duyệt' },
+    ],
+    content: [
+      {
+        heading: 'Thay đổi cụ thể',
+        body:
+          'Trước đây giới hạn là mỗi tài khoản chỉ được quản một hồ sơ doanh nghiệp. Nay giới hạn đó chỉ còn áp dụng cho việc tạo sổ tay doanh nghiệp. Người quản nhiều chi nhánh gọi @Google Business Profile trong Gemini là soạn được bản sửa và đề xuất cập nhật cho nhiều hồ sơ.',
+      },
+      {
+        heading: 'Không có chuyện máy tự đăng',
+        body:
+          'Mọi thay đổi đi qua đúng giao diện lập trình chính thức của Hồ sơ Doanh nghiệp, chịu cùng quy trình kiểm duyệt như khi sửa tay. Google nói rõ không có gì được đăng nếu chủ hồ sơ chưa xem và ký duyệt. Nghĩa là công cụ này rút ngắn khâu soạn thảo, không rút ngắn khâu chịu trách nhiệm.',
+      },
+      {
+        heading: 'Rào chắn khiến phần lớn chuỗi lớn đứng ngoài',
+        body:
+          'Chỉ tài khoản @gmail.com cá nhân dùng được. Google Workspace chưa hỗ trợ, được mô tả là đang làm nhưng không kèm mốc thời gian. Đây là nút thắt thật sự: đại lý và doanh nghiệp nhiều chi nhánh gần như luôn phân quyền cho nhân sự qua tài khoản Workspace. Ai đang vận hành đúng chuẩn thì lại là người chưa dùng được.',
+      },
+      {
+        heading: 'Ai dùng được ngay',
+        body:
+          'Chuỗi cửa hàng vừa và nhỏ đang quản hồ sơ bằng tài khoản Gmail cá nhân. Nhóm này thường bị coi là làm chưa chuyên nghiệp, nhưng trong trường hợp này lại được tiếp cận công cụ trước. Mở toàn cầu trên cả máy tính và điện thoại, ở những khu vực và ngôn ngữ Gemini đã hỗ trợ.',
+      },
+    ],
+    impact:
+      'Trưởng phòng quản chuỗi nhiều điểm bán nên thử ngay nếu hồ sơ đang gắn tài khoản Gmail cá nhân, vì việc cập nhật giờ mở cửa, khuyến mãi hay thông tin liên hệ cho hàng chục chi nhánh rút ngắn được đáng kể.',
+    ifIgnored:
+      'Không mất gì ngay, nhưng thông tin chi nhánh sai hoặc cũ trên bản đồ là thứ trực tiếp làm mất khách tới tận nơi. Công cụ này hạ chi phí giữ thông tin đúng xuống rất thấp, bỏ qua nghĩa là tiếp tục trả giá cao cho cùng một việc.',
+    actionChecklist: [
+      'Kiểm tra hồ sơ doanh nghiệp của các chi nhánh đang gắn tài khoản Gmail cá nhân hay tài khoản Workspace',
+      'Nếu là Gmail cá nhân, thử gọi @Google Business Profile trong Gemini để soạn bản cập nhật cho vài chi nhánh',
+      'Nếu là Workspace, chưa dùng được, đưa vào danh sách theo dõi thay vì mất công thử',
+      'Dù dùng công cụ nào cũng phải giữ khâu người duyệt trước khi đăng, đừng bỏ qua vì thấy bản nháp đã đủ tốt',
+    ],
+  },
+  {
     id: 'real-2026-08-05-ai-referral-landing',
     category: 'AI Marketing',
     platformIcon: 'Sparkles',
@@ -338,63 +456,6 @@ const REAL_SOURCED_NEWS = [
     ],
   },
   {
-    id: 'real-2026-07-03-meta-location-fee',
-    category: 'Meta Ads',
-    platformIcon: 'Facebook',
-    title: 'Meta thu phụ phí theo vị trí 2-5% tại sáu thị trường, hiệu lực từ 01/07/2026',
-    publishedAt: '03/07/2026',
-    isHot: false,
-    illustration: 'ai-budget',
-    image: {
-      url: 'https://www.digitalapplied.com/blog/meta-europe-location-fees-july-2026-advertiser-guide/article-image',
-      credit: 'Ảnh: Digital Applied',
-    },
-    sourceUrl: 'https://www.digitalapplied.com/blog/meta-europe-location-fees-july-2026-advertiser-guide',
-    source: 'Digital Applied - Hướng dẫn phí theo vị trí của Meta',
-    readTime: '4 phút đọc',
-    tags: ['Chi phí', 'Ngân sách', 'Thuế dịch vụ số', 'Thị trường quốc tế'],
-    summary:
-      'Meta cộng thêm 2-5% vào hoá đơn cho quảng cáo hiển thị tại Áo, Pháp, Ý, Tây Ban Nha, Thổ Nhĩ Kỳ và Anh. Mức phí tính theo nơi quảng cáo thực sự hiển thị, không theo nơi nhắm mục tiêu, nên chọn tệp cẩn thận vẫn có thể bị tính phí ngoài dự kiến.',
-    keyNumbers: [
-      { value: '2-5%', label: 'mức phụ thu theo từng nước' },
-      { value: '6', label: 'thị trường bị áp dụng' },
-      { value: '01/07', label: 'ngày bắt đầu hiệu lực' },
-    ],
-    content: [
-      {
-        heading: 'Mức phí cụ thể từng nước',
-        body:
-          'Anh 2%. Pháp, Ý, Tây Ban Nha 3%. Áo và Thổ Nhĩ Kỳ 5%. Đây là khoản Meta chuyển phần thuế dịch vụ số mà chính phủ các nước này áp lên nền tảng sang cho người mua quảng cáo gánh.',
-      },
-      {
-        heading: 'Điểm dễ tính nhầm ngân sách',
-        body:
-          'Phí tính theo nơi quảng cáo thực sự được hiển thị, không phải nơi nhà quảng cáo chọn nhắm mục tiêu. Với các chiến dịch để hệ thống tự mở rộng phạm vi phân phối, quảng cáo có thể chạy sang các nước này mà người quản lý không chủ động chọn. Khoản phụ thu khi đó xuất hiện trên hoá đơn như một con số lạ.',
-      },
-      {
-        heading: 'Phí này không nằm trong CPM đấu giá',
-        body:
-          'Meta khẳng định giá CPM và CPC do cơ chế đấu giá quyết định, không bị phí vị trí đẩy lên. Phụ phí được cộng riêng vào hoá đơn sau khi quảng cáo đã chạy. Nghĩa là nhìn vào trình quản lý quảng cáo sẽ không thấy khoản này, phải mở hoá đơn thanh toán mới thấy.',
-      },
-      {
-        heading: 'Vì sao người làm thị trường Việt Nam vẫn nên đọc',
-        body:
-          'Google đã chuyển thuế dịch vụ số sang nhà quảng cáo từ tháng 11/2020, Amazon từ tháng 8/2024, và Meta cầm cự tới 2026 mới làm. Hướng đi chung của ngành đã rõ. Mọi thị trường ban hành thuế dịch vụ số đều có khả năng bị áp cơ chế tương tự, nên nên tính trước một khoảng đệm chi phí trong kế hoạch ngân sách năm sau.',
-      },
-    ],
-    impact:
-      'Trưởng phòng có chạy quảng cáo vào sáu thị trường trên phải cộng thêm 2-5% vào dự toán, nếu không mức chi thực tế sẽ vượt kế hoạch mà không tìm ra nguyên nhân trong trình quản lý quảng cáo.',
-    ifIgnored:
-      'Ngân sách quyết toán cuối kỳ vượt kế hoạch vài phần trăm, và vì khoản này không hiện trong trình quản lý quảng cáo nên đội ngũ sẽ mất nhiều ngày dò tìm sai ở đâu.',
-    actionChecklist: [
-      'Đối chiếu hoá đơn thanh toán Meta tháng 7 với báo cáo trong trình quản lý để xác định có bị phụ thu không',
-      'Nếu không chủ đích chạy vào sáu thị trường trên, khoá vùng phân phối lại thay vì để hệ thống tự mở rộng',
-      'Cộng khoảng đệm chi phí vào dự toán cho mọi chiến dịch có phân phối quốc tế',
-      'Đưa mục phí nền tảng thành một dòng riêng trong báo cáo ngân sách hằng tháng',
-    ],
-    deadline: 'Đã có hiệu lực từ 01/07/2026 tại Áo, Pháp, Ý, Tây Ban Nha, Thổ Nhĩ Kỳ và Anh',
-  },
-  {
     id: 'real-2026-07-28-tiktok-q3-preview',
     category: 'TikTok Shop & Ads',
     platformIcon: 'Video',
@@ -455,62 +516,6 @@ const REAL_SOURCED_NEWS = [
       'Chưa nối tác tử AI vào tài khoản thật cho tới khi TikTok công bố rõ tác tử có quyền ghi hay không',
     ],
     deadline: 'Triển khai trong quý 3/2026, phần lớn tính năng yêu cầu đăng ký danh sách cho phép',
-  },
-  {
-    id: 'real-2026-07-12-tiktok-shop-cpsc',
-    category: 'TikTok Shop & Ads',
-    platformIcon: 'Video',
-    title: 'TikTok Shop: hàng thiếu hồ sơ chứng nhận nộp điện tử bị giữ ngay tại cửa khẩu Mỹ',
-    publishedAt: '12/07/2026',
-    isHot: false,
-    illustration: 'shop-health',
-    image: {
-      url: 'https://ppc.land/content/images/size/w1200/2026/07/Retail-Law.webp',
-      credit: 'Ảnh: PPC Land',
-    },
-    sourceUrl: 'https://ppc.land/tiktok-shop-sellers-face-shipment-seizure-risk-under-new-cpsc-filing-rule/',
-    source: 'PPC Land - Quy định nộp hồ sơ CPSC',
-    readTime: '4 phút đọc',
-    tags: ['Tuân thủ', 'Xuất khẩu', 'Sức khoẻ gian hàng', 'Chứng nhận sản phẩm'],
-    summary:
-      'Từ 08/07/2026, sản phẩm cần Giấy chứng nhận sản phẩm trẻ em hoặc Giấy chứng nhận hợp quy chung phải nộp dữ liệu chứng nhận dưới dạng điện tử trước khi hàng thông quan vào Mỹ. Thiếu hồ sơ là lô hàng bị giữ lại, không phải bị nhắc nhở.',
-    keyNumbers: [
-      { value: '08/07', label: 'ngày quy định liên bang hiệu lực' },
-      { value: '100%', label: 'lô hàng phải có hồ sơ trước thông quan' },
-    ],
-    content: [
-      {
-        heading: 'Quy định thay đổi ở chỗ nào',
-        body:
-          'Trước đây giấy chứng nhận là thứ xuất trình khi được yêu cầu. Nay dữ liệu chứng nhận phải được nộp điện tử trước thời điểm hàng thông quan. Không nộp trước thì lô hàng bị giữ tại cửa khẩu. Đây là quy định liên bang của Mỹ, không phải chính sách riêng của TikTok, nên không có cửa xin miễn trừ từ nền tảng.',
-      },
-      {
-        heading: 'Nhóm hàng bị ảnh hưởng',
-        body:
-          'Các mặt hàng cần Giấy chứng nhận sản phẩm trẻ em và các mặt hàng cần Giấy chứng nhận hợp quy chung. Nhóm này rộng hơn nhiều so với suy nghĩ thông thường: không chỉ đồ chơi mà cả quần áo trẻ em, đồ dùng ăn uống, phụ kiện và nhiều mặt hàng gia dụng.',
-      },
-      {
-        heading: 'TikTok siết song song ở phía tài khoản',
-        body:
-          'TikTok Shop đang chuyển từ cơ chế Điểm vi phạm mang tính phạt sang khung Xếp hạng Sức khoẻ Tài khoản linh hoạt, triển khai trong tháng 7/2026. Cùng lúc, chính sách bảo mật và tuân thủ mới cho phép TikTok Shop kéo dài thời gian đối soát hoa hồng đối với tài khoản nhà sáng tạo bị đánh dấu rủi ro cao hoặc đang chờ rà soát.',
-      },
-      {
-        heading: 'Ai ở Việt Nam cần quan tâm',
-        body:
-          'Các nhà bán hàng xuất khẩu qua TikTok Shop sang thị trường Mỹ. Rủi ro không dừng ở một lô hàng bị giữ: hàng không tới kịp làm tăng tỷ lệ giao trễ và huỷ đơn, hai chỉ số kéo thẳng điểm sức khoẻ gian hàng xuống, kéo theo lượng hiển thị tự nhiên bị cắt.',
-      },
-    ],
-    impact:
-      'Trưởng phòng phụ trách kênh xuất khẩu phải rà danh mục hàng cần chứng nhận và hoàn tất hồ sơ điện tử trước mỗi lô, đồng thời chuẩn bị dòng tiền cho khả năng hoa hồng bị giữ lâu hơn.',
-    ifIgnored:
-      'Một lô hàng bị giữ ở cửa khẩu kéo theo chuỗi hệ quả: giao trễ, huỷ đơn, điểm sức khoẻ gian hàng tụt, lượng hiển thị tự nhiên bị cắt. Mất doanh thu lớn hơn nhiều so với giá trị lô hàng đó.',
-    actionChecklist: [
-      'Lập danh sách mã hàng cần Giấy chứng nhận sản phẩm trẻ em hoặc Giấy chứng nhận hợp quy chung',
-      'Xác nhận với đơn vị vận chuyển rằng dữ liệu chứng nhận đã được nộp điện tử trước khi hàng rời kho',
-      'Tra lại chỉ số sức khoẻ gian hàng theo khung xếp hạng mới thay vì theo điểm vi phạm cũ',
-      'Dự phòng dòng tiền cho trường hợp hoa hồng nhà sáng tạo bị kéo dài thời gian đối soát',
-    ],
-    deadline: 'Quy định liên bang Mỹ đã hiệu lực từ 08/07/2026',
   },
   {
     id: 'real-2026-07-29-ai-mode-shopping',
