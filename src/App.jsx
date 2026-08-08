@@ -1687,23 +1687,43 @@ export default function App() {
   };
 
   /**
-   * Về trang chủ — tổng quan khoá Digital Marketing, không còn chuyên đề mở dở.
+   * Về TRANG CHỦ HỌC VIỆN — địa chỉ `/`, không phải `/digital-marketing`.
    *
-   * Dùng chung cho logo trên Header và nút "Digital" ở thanh dưới đáy điện
-   * thoại. Cả hai trước đây chỉ gọi `setActiveTab('course')`, và lệnh đó KHÔNG
-   * đưa ai về trang chủ: đang đọc dở một bài thì tab vốn đã là 'course' nên
-   * bấm vào không đổi gì, còn từ tab khác bấm sang thì rơi đúng vào chuyên đề
-   * mở dở lần trước. Phải xoá `selectedModuleId` mới thật sự là về trang chủ.
+   * Dùng chung cho logo kèm chữ "HỌC VIỆN P MARCOM" trên Header và nút
+   * "Digital" ở thanh dưới đáy điện thoại.
+   *
+   * VÌ SAO ĐÍCH LÀ `/` CHỨ KHÔNG PHẢI TÊN KHOÁ: logo mang tên Học Viện, không
+   * mang tên khoá nào cả. Học viện sắp có thêm khoá; để logo dẫn tới
+   * `/digital-marketing` là ngầm nói Digital Marketing chính là Học Viện, và
+   * mỗi khoá mở thêm lại khiến điều đó sai thêm một lần. `/` là chỗ duy nhất
+   * đứng trên mọi khoá.
+   *
+   * Hôm nay `/` hiện đúng tổng quan khoá Digital Marketing vì đó là khoá duy
+   * nhất đủ lớn để làm mặt tiền. Khi có khoá thứ hai thì thứ hiện ở `/` sẽ
+   * đổi, còn địa chỉ này thì không — đó chính là lý do phải tách hai thứ ra
+   * ngay từ bây giờ, lúc còn rẻ.
    *
    * Ghi địa chỉ ngay trong hàm chứ không chờ effect đồng bộ: khi người dùng
    * đang đứng sẵn ở trang chủ thì không state nào đổi, effect không có gì để
-   * chạy, và thanh địa chỉ sẽ kẹt ở tên miền trần thay vì hiện tên khoá.
+   * chạy, mà lúc đó địa chỉ có thể vẫn đang là `/digital-marketing`.
    */
   const handleGoHome = () => {
     const home = { tab: 'course', itemId: null, subId: null };
+
+    // Bản trước chỉ gọi `setActiveTab('course')` và KHÔNG xoá chuyên đề đang
+    // mở. Lệnh đó không đưa ai về trang chủ cả: đang đọc dở một bài thì tab
+    // vốn đã là 'course' nên bấm vào không đổi gì, còn bấm từ tab khác sang
+    // thì rơi đúng vào chuyên đề mở dở lần trước.
     setActiveTab('course');
     setSelectedModuleId(null);
-    writeHistory(home, 'push', { force: true });
+
+    const url = '/' + window.location.search + window.location.hash;
+    if (url !== window.location.pathname + window.location.search + window.location.hash) {
+      window.history.pushState(null, '', url);
+    }
+
+    // Nói cho effect đồng bộ biết địa chỉ này đã đúng rồi, đừng viết đè bằng
+    // dạng chuẩn `/digital-marketing`.
     lastRouteRef.current = home;
     syncDocumentTitle(home);
   };
