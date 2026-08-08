@@ -106,14 +106,16 @@ Mỗi màn hình có một địa chỉ dán gửi được, bảng dịch nằm
 
 | Địa chỉ | Mở ra |
 |---|---|
-| `/` | Tổng quan khoá Digital Marketing — **địa chỉ chuẩn**, trùng trang chủ |
-| `/khoa-hoc` | Lối vào phụ của trang trên, thanh địa chỉ tự rút về `/` |
-| `/chuyen-de/module-01` | Chuyên đề khoá chính |
+| `/khoa-hoc`, `/khoa-hoc/module-01` | Khoá Digital Marketing (khoá chính) |
 | `/trade-marketing`, `/trade-marketing/trade-01` | Khoá Trade Marketing |
 | `/thuat-ngu`, `/thuat-ngu/roas` | Từ điển thuật ngữ |
 | `/ban-tin`, `/ban-tin/<id tin>` | Bản tin thuật toán |
 | `/cong-cu`, `/cong-cu/roas` | Bộ công cụ Trưởng phòng |
+| `/` | Trang chủ — mở đúng tổng quan khoá chính |
+| `/chuyen-de/...` | Tên cũ của khoá chính, vẫn mở được |
 | `/doi-mat-khau` | Trang đặt lại mật khẩu (xử lý ở `main.jsx`) |
+
+Một màn hình có thể có nhiều lối vào hợp lệ, nhưng **địa chỉ ứng dụng tự sinh ra luôn là dạng chuẩn ở cột trái**. Riêng `/` được giữ nguyên khi người dùng đang đứng sẵn ở đó: trang chủ phải giữ được địa chỉ trang chủ, và index.html khai `canonical` tuyệt đối trỏ về `/` nên cỗ máy tìm kiếm vẫn gom `/` với `/khoa-hoc` về một mối.
 
 Ứng dụng chỉ có **một** tệp `index.html`, không sinh trang tĩnh riêng cho từng địa chỉ. Máy chủ phải trả `index.html` cho mọi đường dẫn, rồi JavaScript mới đọc đường dẫn đó ra màn hình tương ứng. Thiếu luật bắt-tất-cả thì gõ thẳng `/chuyen-de/module-01` hoặc bấm F5 giữa bài học là nhận 404 trước khi JavaScript kịp chạy.
 

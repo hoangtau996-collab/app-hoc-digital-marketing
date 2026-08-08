@@ -29,7 +29,7 @@
  * khai báo ở đây thì tab đó không có địa chỉ riêng và im lặng rơi về `/`.
  */
 export const TAB_SEGMENTS = {
-  course: 'chuyen-de',
+  course: 'khoa-hoc',
   trade: 'trade-marketing',
   glossary: 'thuat-ngu',
   news: 'ban-tin',
@@ -43,22 +43,12 @@ const TAB_BY_SEGMENT = Object.fromEntries(
 /**
  * Địa chỉ phụ: NHẬN VÀO thì hiểu, nhưng không bao giờ được sinh ra.
  *
- * Khoá chính là khu vực duy nhất mà trang tổng quan trùng với trang chủ, nên
- * nó là khu vực duy nhất không có tên riêng trên địa chỉ — nhìn cạnh
- * `/trade-marketing` thì thành thiếu sót. `/khoa-hoc` lấp chỗ đó: gõ hay gửi
- * đều ra đúng trang, rồi thanh địa chỉ tự rút về `/`.
- *
- * KHÔNG đảo lại thành `/` rút về `/khoa-hoc`. `/` là trang chủ và index.html đã
- * tuyên bố nó là địa chỉ chuẩn trong thẻ canonical lẫn og:url; để ứng dụng đổi
- * địa chỉ trang chủ ngay lúc chạy là làm đúng cái việc mà ghi chú "ĐÃ GỠ" bên
- * index.html dặn đừng làm, và mọi lượt chia sẻ tên miền trần sẽ trỏ tới một
- * địa chỉ khác với thứ các thẻ meta đang khai báo.
- *
- * Nhờ đi qua `parseRoute` rồi `buildPath`, `/khoa-hoc/module-01` cũng tự rút
- * về `/chuyen-de/module-01` mà không cần thêm luật nào.
+ * `/chuyen-de/...` là tiền tố cũ của khoá chính, đã từng lên trang thật nên có
+ * thể có người đã gửi đi. Giữ lại đây đúng theo nguyên tắc ghi ở đầu tệp: đổi
+ * tên đường dẫn công khai thì phải để địa chỉ cũ còn mở được, đừng để chết.
  */
 const SEGMENT_ALIASES = {
-  'khoa-hoc': 'course',
+  'chuyen-de': 'course',
 };
 
 /** Màn hình mặc định: tổng quan khoá Digital Marketing, tức địa chỉ `/`. */
@@ -118,20 +108,31 @@ export function parseRoute(pathname) {
 /**
  * Dựng đường dẫn từ trạng thái điều hướng. Nghịch đảo của `parseRoute`.
  *
- * Tổng quan khoá chính là `/` chứ không phải `/chuyen-de`: đó là trang chủ,
- * và trang chủ có hai địa chỉ là tự chia đôi tín hiệu xếp hạng của chính mình.
+ * Tổng quan khoá chính ra `/khoa-hoc` chứ không ra `/`, dù `/` cũng mở đúng
+ * trang đó. Có hai lý do:
+ *
+ *   1. Khoá chính phải có tên riêng như mọi khu vực khác. Trả về `/` thì học
+ *      viên bấm vào tab Khoá Học chỉ thấy tên miền trần, không có gì để sao
+ *      chép gửi đi — khu vực lớn nhất của ứng dụng thành khu vực duy nhất
+ *      không gọi tên được.
+ *   2. Địa chỉ ứng dụng SINH RA là địa chỉ chuẩn. `/` vẫn mở đúng trang và
+ *      `writeHistory` bên App.jsx cố ý KHÔNG viết đè nó khi người dùng đang
+ *      đứng sẵn ở đó — trang chủ giữ nguyên là trang chủ.
+ *
+ * Việc `/` và `/khoa-hoc` cùng mở một trang không làm loãng tín hiệu xếp hạng:
+ * index.html khai canonical tuyệt đối trỏ về `/`, nên cỗ máy tìm kiếm gom cả
+ * hai về một mối. Đó cũng là lý do canonical phải là thẻ TĨNH — xem ghi chú
+ * "ĐÃ GỠ" trong index.html.
  */
 export function buildPath(route) {
   const segment = TAB_SEGMENTS[route?.tab];
 
   // Tab không nhận ra thì VỨT LUÔN cả `itemId` chứ không chỉ đổi tab về mặc
   // định: định danh luôn thuộc về đúng một tab, ghép nó vào tab khác chỉ tạo
-  // ra thứ trông như địa chỉ thật mà không mở được gì — ví dụ `/chuyen-de/roas`.
+  // ra thứ trông như địa chỉ thật mà không mở được gì — ví dụ `/khoa-hoc/roas`.
   if (!segment) return '/';
 
   const itemId = route?.itemId || null;
-  if (route.tab === 'course' && !itemId) return '/';
-
   return itemId ? `/${segment}/${encodeURIComponent(itemId)}` : `/${segment}`;
 }
 
