@@ -275,6 +275,95 @@ html.dark .pipi-panel {
   .pipi-launcher:hover .pipi-head { animation: none; }
 }
 
+/* ========================================================
+   ĐIỆN THOẠI & MÁY TÍNH BẢNG
+   ========================================================
+   Bốn quy tắc dưới đây không sửa được bằng lớp tiện ích của Tailwind, vì cả
+   bốn đều cần `calc()` lồng `env()` hoặc cần nhắm theo loại thiết bị trỏ. */
+
+/* 1. KHUNG ỨNG DỤNG — chừa chỗ cho thanh điều hướng đáy.
+
+   Thay cho `pb-16 lg:pb-0` trước đây. Con số 4rem đủ cho chiều cao thanh đáy,
+   nhưng trên iPhone thanh đó còn phải né thanh gạt Home nên tự cao thêm khoảng
+   34px; không cộng phần đó vào đây thì dòng cuối của trang nằm khuất sau nó —
+   thường rơi đúng vào nút "Chuyên đề tiếp theo" hoặc dòng bản quyền. */
+.app-shell {
+  padding-bottom: calc(4rem + env(safe-area-inset-bottom, 0px));
+}
+
+@media (min-width: 1024px) {
+  /* Từ 1024px trở lên không còn thanh đáy (`lg:hidden`), nên cũng không chừa. */
+  .app-shell {
+    padding-bottom: 0;
+  }
+}
+
+/* 2. NÚT NỔI PIPI & KHUNG CHAT — đậu phía trên thanh đáy.
+
+   Mốc cũ ghi cứng 80px và 152px, tính theo thanh đáy chưa có vùng an toàn.
+   Trên iPhone thanh đáy nay cao hơn thế nên nút nổi tì lên nó. */
+.pipi-fab-pos {
+  bottom: calc(5rem + env(safe-area-inset-bottom, 0px));
+}
+
+.pipi-panel-pos {
+  bottom: calc(9.5rem + env(safe-area-inset-bottom, 0px));
+  /* `dvh` để khung chat co lại theo thanh địa chỉ của trình duyệt điện thoại
+     thay vì tràn xuống dưới màn hình. */
+  max-height: calc(100dvh - 190px);
+}
+
+@media (min-width: 1024px) {
+  .pipi-fab-pos  { bottom: 1.5rem; }
+  .pipi-panel-pos { bottom: 6.5rem; max-height: calc(100dvh - 150px); }
+}
+
+/* 3. CHỐNG iOS TỰ PHÓNG TO KHI CHẠM VÀO Ô NHẬP.
+
+   Safari trên iPhone phóng cả trang lên khi người dùng chạm vào một ô nhập có
+   cỡ chữ dưới 16px — rồi KHÔNG thu lại. Học viên gõ xong email là màn hình kẹt
+   ở trạng thái phóng to, phải tự vuốt về. Ứng dụng này dùng `text-xs` cho hầu
+   hết ô nhập, tức 14,4px, nên dính đúng ngưỡng đó ở mọi form: đăng nhập, đăng
+   ký, tìm kiếm, và cả ô tìm học viên trong Bảng Quản Trị.
+
+   `pointer: coarse` để chỉ áp cho thiết bị cảm ứng: trên máy tính, ô nhập giữ
+   nguyên cỡ chữ theo thiết kế và theo nấc A-/A/A+ người dùng đã chọn.
+
+   16px ghi thẳng bằng px, không quy ra rem: ngưỡng của Safari là 16px THẬT,
+   không đổi theo cỡ chữ gốc. Để rem thì nấc A- (0,92) kéo xuống 14,7px và lỗi
+   quay lại y nguyên. */
+@media (pointer: coarse) {
+  input:not([type='checkbox']):not([type='radio']),
+  select,
+  textarea {
+    font-size: 16px;
+  }
+}
+
+/* 4. CUỘN TRONG KHUNG KHÔNG KÉO THEO CẢ TRANG.
+
+   Trên iOS, cuộn tới cuối một vùng cuộn được rồi vuốt tiếp sẽ chuyển sang cuộn
+   trang nền phía sau — hộp thoại đứng yên còn trang bên dưới trôi đi, và lúc
+   đóng hộp thoại thì học viên rơi vào một chỗ khác hẳn nơi họ rời đi. Áp cho
+   mọi vùng cuộn của hộp thoại (`.glass-panel` là khung chung của tất cả).
+
+   KHÔNG dùng cách khoá cuộn bằng `position: fixed` trên body: cách đó làm mất
+   vị trí cuộn và trên iOS còn nhảy về đầu trang khi đóng.
+
+   VỀ VÙNG CHẠM 44px: cố ý KHÔNG có quy tắc toàn cục nới vùng chạm cho mọi
+   `button`. Đã thử và bỏ — nới bằng pseudo-element thì các nút đứng sát nhau
+   giẫm lên vùng của nhau, nút nào nằm sau trong DOM thì thắng. Ở hàng thao tác
+   của Bảng Quản Trị, nút đứng cạnh nút "Xoá vĩnh viễn" nên đó là đổi một phiền
+   toái nhỏ lấy một cú xoá nhầm. Chỗ nào cần vùng chạm lớn thì đặt kích thước
+   thật ngay tại chỗ đó — như `min-w-[56px]` ở thanh điều hướng đáy. */
+@media (pointer: coarse) {
+  .glass-panel [class*='overflow-y-auto'],
+  .glass-panel [class*='overflow-auto'] {
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
 /* Hide scrollbar for Chrome, Safari and Opera */
 .no-scrollbar::-webkit-scrollbar {
   display: none;

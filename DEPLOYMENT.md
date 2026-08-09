@@ -112,7 +112,7 @@ Mỗi màn hình có một địa chỉ dán gửi được, bảng dịch nằm
 | `/thuat-ngu`, `/thuat-ngu/roas` | Từ điển thuật ngữ |
 | `/ban-tin`, `/ban-tin/<id tin>` | Bản tin thuật toán |
 | `/cong-cu`, `/cong-cu/roas` | Bộ công cụ Trưởng phòng |
-| `/` | Trang chủ — mở đúng tổng quan khoá chính |
+| `/` | Trang chủ Học Viện — logo và chữ "HỌC VIỆN P MARCOM" luôn dẫn về đây |
 | `/khoa-hoc/...`, `/chuyen-de/...` | Hai tên cũ của khoá chính, vẫn mở được |
 | `/doi-mat-khau` | Trang đặt lại mật khẩu (xử lý ở `main.jsx`) |
 
@@ -120,7 +120,18 @@ Mỗi màn hình có một địa chỉ dán gửi được, bảng dịch nằm
 
 Khoá Trade dùng chung component hiển thị nhưng không bật phần này, nên địa chỉ khoá Trade dừng ở tầng chuyên đề.
 
-Một màn hình có thể có nhiều lối vào hợp lệ, nhưng **địa chỉ ứng dụng tự sinh ra luôn là dạng chuẩn ở cột trái**. Riêng `/` được giữ nguyên khi người dùng đang đứng sẵn ở đó: trang chủ phải giữ được địa chỉ trang chủ, và index.html khai `canonical` tuyệt đối trỏ về `/` nên cỗ máy tìm kiếm vẫn gom `/` với `/digital-marketing` về một mối.
+Một màn hình có thể có nhiều lối vào hợp lệ, nhưng **địa chỉ ứng dụng tự sinh ra luôn là dạng chuẩn ở cột trái**. Riêng `/` được giữ nguyên khi người dùng đang đứng sẵn ở đó, và index.html khai `canonical` tuyệt đối trỏ về `/` nên cỗ máy tìm kiếm vẫn gom `/` với `/digital-marketing` về một mối.
+
+### `/` và `/digital-marketing` là hai thứ khác nhau, đừng gộp lại
+
+Hôm nay cả hai hiện cùng một màn hình, nên rất dễ tưởng là trùng lặp thừa thãi. Không phải:
+
+| | Là gì | Ai dẫn tới |
+|---|---|---|
+| `/` | Trang chủ **Học Viện** | Logo, chữ "HỌC VIỆN P MARCOM" |
+| `/digital-marketing` | Một **khoá học** trong Học Viện | Mục "Digital Marketing" trên thanh menu, nút "Digital" ở thanh điện thoại |
+
+Học viện sắp mở thêm khoá. Khi đó thứ hiện ở `/` sẽ đổi — thành trang chọn khoá chẳng hạn — còn `/digital-marketing` thì không đổi. Cho logo dẫn thẳng tới `/digital-marketing` là ngầm tuyên bố Digital Marketing chính là Học Viện, và mỗi khoá mở thêm lại khiến điều đó sai thêm một lần. Tách sẵn từ bây giờ tốn đúng một hàm (`handleGoHome` cạnh `handleOpenCourseHome` trong `App.jsx`); gộp lại rồi tách sau thì phải sửa cả những liên kết đã gửi đi.
 
 Ứng dụng chỉ có **một** tệp `index.html`, không sinh trang tĩnh riêng cho từng địa chỉ. Máy chủ phải trả `index.html` cho mọi đường dẫn, rồi JavaScript mới đọc đường dẫn đó ra màn hình tương ứng. Thiếu luật bắt-tất-cả thì gõ thẳng `/chuyen-de/module-01` hoặc bấm F5 giữa bài học là nhận 404 trước khi JavaScript kịp chạy.
 

@@ -125,7 +125,9 @@ export default function SupportInboxModal({
 
   return (
     <div className="fixed inset-0 z-[60] flex items-center justify-center p-2 sm:p-4 bg-slate-950/90 backdrop-blur-md overflow-y-auto">
-      <div className="relative w-full max-w-3xl h-[92vh] max-h-[900px] glass-panel rounded-3xl border border-emerald-500/40 p-4 sm:p-6 shadow-2xl space-y-3.5 my-auto flex flex-col">
+      {/* `dvh`: trên trình duyệt điện thoại `vh` tính theo màn hình lúc thanh
+          địa chỉ đã thu lại, nên đáy hộp thoại nằm khuất dưới thanh đó. */}
+      <div className="relative w-full max-w-3xl h-[92dvh] max-h-[900px] glass-panel rounded-3xl border border-emerald-500/40 p-3 sm:p-6 shadow-2xl space-y-3.5 my-auto flex flex-col">
 
         {/* Đầu khung */}
         <div className="flex items-center justify-between gap-4 pb-3 border-b border-emerald-900/50 shrink-0">

@@ -12,7 +12,17 @@
     <link rel="preload" as="image" href="/splash.jpg" fetchpriority="high" />
     <link rel="icon" type="image/jpeg" href="/pmarcom-logo.jpg" />
     <link rel="apple-touch-icon" href="/pmarcom-logo.jpg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--
+      `viewport-fit=cover` là điều kiện bắt buộc để `env(safe-area-inset-*)`
+      trả về số khác 0. Thiếu nó thì mọi khoảng chừa cho thanh gạt Home của
+      iPhone trong CSS đều tính ra 0 và thanh điều hướng đáy bị gạt Home đè lên.
+
+      KHÔNG đặt `maximum-scale` hay `user-scalable=no`. Đó là cách quen thuộc để
+      chặn iOS phóng to khi chạm vào ô nhập, nhưng nó chặn luôn cả thao tác tự
+      phóng to của người dùng — với học viên mắt kém thì đúng bằng khoá cửa.
+      Việc chặn phóng to ngoài ý muốn xử lý bằng cỡ chữ ô nhập (xem index.css).
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     
     <!-- Primary Meta Tags -->
     <title>HỌC VIỆN P MARCOM | Khóa Học Digital Thực Chiến</title>

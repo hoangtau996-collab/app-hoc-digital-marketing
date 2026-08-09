@@ -1105,22 +1105,30 @@ export default function AdminDashboardModal({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-slate-950/90 backdrop-blur-md overflow-y-auto">
-      <div className="relative w-full max-w-6xl h-[94vh] max-h-[980px] glass-panel rounded-3xl border border-emerald-500/40 p-4 sm:p-6 shadow-2xl space-y-3.5 my-auto flex flex-col">
+      {/* `dvh` chứ không `vh`: trên trình duyệt điện thoại, `vh` tính theo màn
+          hình lúc thanh địa chỉ đã thu lại, nên `94vh` thực tế cao hơn phần
+          nhìn thấy được — đáy hộp thoại, tức hàng nút thao tác, nằm khuất dưới
+          thanh địa chỉ ngay khi vừa mở. `dvh` bám theo vùng nhìn thấy thật. */}
+      <div className="relative w-full max-w-6xl h-[94dvh] max-h-[980px] glass-panel rounded-3xl border border-emerald-500/40 p-3 sm:p-6 shadow-2xl space-y-3.5 my-auto flex flex-col">
         
         {/* Modal Top Bar Header */}
-        <div className="flex items-center justify-between gap-4 pb-3 border-b border-emerald-900/50 shrink-0">
-          <div className="flex items-center gap-3">
-            <PMarcomLogo className="w-9 h-9" showText={false} />
-            <div>
-              <div className="flex items-center gap-2">
+        <div className="flex items-start sm:items-center justify-between gap-3 pb-3 border-b border-emerald-900/50 shrink-0">
+          <div className="flex items-center gap-3 min-w-0">
+            <PMarcomLogo className="w-9 h-9 shrink-0" showText={false} />
+            <div className="min-w-0">
+              {/* `flex-wrap` + giấu nhãn thứ hai dưới 640px: hai nhãn này cộng
+                  lại rộng khoảng 300px, đứng cùng hàng với logo thì đẩy nút
+                  Đóng ra khỏi màn hình điện thoại. Nhãn còn lại đã nói đủ đây
+                  là khu vực quản trị. */}
+              <div className="flex items-center gap-2 flex-wrap">
                 <span className="px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 text-[10px] font-black border border-emerald-700 uppercase tracking-wider">
                   ADMIN MASTER DASHBOARD
                 </span>
-                <span className="px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 text-[10px] font-bold border border-amber-500/40">
+                <span className="hidden sm:inline px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 text-[10px] font-bold border border-amber-500/40">
                   🔒 QUẢN TRỊ VIÊN P MARCOM
                 </span>
               </div>
-              <h2 className="text-base sm:text-lg font-black text-white tracking-wide mt-0.5">
+              <h2 className="text-sm sm:text-lg font-black text-white tracking-wide mt-0.5">
                 BẢNG QUẢN LÝ TÀI KHOẢN & BÁO CÁO HỌC VIÊN
               </h2>
             </div>
@@ -1440,7 +1448,10 @@ export default function AdminDashboardModal({
               </button>
             </div>
 
-            <div className="flex items-center gap-2">
+            {/* `flex-wrap`: ba nút này cộng lại rộng khoảng 420px, quá khổ với
+                màn hình điện thoại. Không cho xuống dòng thì nút "Xoá vĩnh
+                viễn" — nút nguy hiểm nhất bảng — bị cắt mất một nửa. */}
+            <div className="flex flex-wrap items-center gap-2">
               <button
                 onClick={handleExportCSV}
                 disabled={isBulkWorking}
@@ -1472,8 +1483,20 @@ export default function AdminDashboardModal({
           </div>
         )}
 
-        {/* Student Accounts Table View (Expanded Vertical Space) */}
-        <div className="flex-1 min-h-[460px] overflow-y-auto rounded-2xl border border-emerald-900/50 glass-panel">
+        {/* Student Accounts Table View (Expanded Vertical Space)
+
+            `overflow-auto` chứ không `overflow-y-auto`: bảng bên trong rộng tối
+            thiểu 900px (11 cột, không cột nào bỏ được), nên trên điện thoại nó
+            thừa ra hơn 500px. Chỉ cho cuộn dọc thì phần thừa đó không cuộn tới
+            được — quản trị viên nhìn thấy đúng cột Tên và Số Điện Thoại, còn
+            Phân Quyền, Tiến Độ và cả cột Thao Tác thì nằm ngoài màn hình vĩnh
+            viễn. Không có thanh cuộn nào chỉ ra điều đó, vì body đặt
+            `overflow-x: hidden`.
+
+            `min-h` hạ xuống trên màn nhỏ: 460px là gần trọn chiều cao một màn
+            hình điện thoại. Ép sàn cao như vậy trong khung `h-[94dvh]` thì các
+            hàng phía trên (bốn thẻ số liệu, ô lọc, hàng nút) bị đẩy ra ngoài. */}
+        <div className="flex-1 min-h-[220px] sm:min-h-[460px] overflow-auto overscroll-contain rounded-2xl border border-emerald-900/50 glass-panel">
           <table className="w-full text-left border-collapse min-w-[900px]">
             <thead>
               <tr className="bg-slate-900/90 text-emerald-400 text-[11px] font-extrabold uppercase tracking-wider border-b border-emerald-900/50 sticky top-0 backdrop-blur-md z-10">

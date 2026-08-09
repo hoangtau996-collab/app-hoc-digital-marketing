@@ -117,7 +117,24 @@ export default function FeatureMenuBar({
   ];
 
   return (
-    <div className="w-full bg-[#141f36]/95 backdrop-blur-lg border-b border-emerald-900/50 py-2.5 px-3 sm:px-6 sticky top-[60px] z-30 shadow-xl">
+    /* DÍNH TRÊN MÁY TÍNH, CUỘN THEO TRANG TRÊN ĐIỆN THOẠI.
+
+       Vị trí dính lấy từ biến `--app-header-h` — chiều cao THẬT của Header, do
+       chính Header đo rồi công bố. Trước đây chỗ này ghi cứng `top-[60px]`,
+       thấp hơn Header thật (70px trên điện thoại, 80px trên máy tính) nên thanh
+       menu trượt vào nấp sau Header và bị cắt cụt phần trên. 60px giữ lại làm
+       giá trị dự phòng cho nhịp dựng đầu tiên, trước khi phép đo kịp chạy.
+
+       `lg:sticky` — dưới 1024px thanh này KHÔNG dính nữa. Sáu mục của nó trùng
+       đúng sáu mục đầu của thanh điều hướng đáy, mà thanh đáy thì luôn hiện và
+       nằm trong tầm ngón cái. Giữ cả hai cùng đứng yên là chiếm mất khoảng 44px
+       chiều cao vĩnh viễn để hiện lại thứ đã có sẵn — trên màn hình điện thoại
+       cao chừng 700px, cộng cả Header và thanh đáy thì chỉ còn non 75% cho nội
+       dung bài học. Nay cuộn xuống đọc bài là nó nhường chỗ. */
+    <div
+      className="w-full bg-[#141f36]/95 backdrop-blur-lg border-b border-emerald-900/50 py-2.5 px-3 sm:px-6 lg:sticky z-30 shadow-xl"
+      style={{ top: 'var(--app-header-h, 60px)' }}
+    >
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3">
         
         {/* Swappable Horizontal Feature Menu Row */}

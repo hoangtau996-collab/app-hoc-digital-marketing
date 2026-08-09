@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import PMarcomLogo from './PMarcomLogo';
 import { TEXT_SCALES } from '../utils/textScale';
 import {
@@ -122,15 +122,16 @@ export default function Header({
   // từng được dùng tới.
   setActiveTab,
   /**
-   * Bấm logo là về trang chủ — tức tổng quan khoá chính, KHÔNG còn chuyên đề
-   * nào mở dở.
+   * Bấm logo hoặc chữ "HỌC VIỆN P MARCOM" là về TRANG CHỦ HỌC VIỆN — địa chỉ
+   * `/`, không phải địa chỉ của một khoá nào.
    *
    * Phải là một hàm riêng chứ không gọi tạm `setActiveTab('course')` như bản
    * trước: đang đọc dở một bài thì tab vốn đã là 'course' rồi, nên lệnh đó
    * không đổi gì cả và bấm logo trông như nút hỏng. Còn từ tab khác bấm sang
    * thì nó thả người dùng vào đúng chuyên đề mở dở lần trước chứ không phải
-   * trang chủ. Chuyện "về trang chủ" cần xoá cả chuyên đề, mà Header không
-   * nắm biến đó nên nơi gọi phải đưa xuống trọn vẹn hành động.
+   * trang chủ. Việc "về trang chủ" cần xoá cả chuyên đề đang mở lẫn ghi lại
+   * địa chỉ, mà Header không nắm hai thứ đó nên nơi gọi phải đưa xuống trọn
+   * vẹn hành động.
    */
   onGoHome,
   passedCount,
@@ -157,6 +158,39 @@ export default function Header({
 }) {
   const [showMobileSearch, setShowMobileSearch] = useState(false);
   const [showThemeMenu, setShowThemeMenu] = useState(false);
+
+  /* CHIỀU CAO THẬT CỦA HEADER, công bố ra biến CSS `--app-header-h`.
+
+     FeatureMenuBar dính ngay dưới Header nên phải biết Header cao bao nhiêu.
+     Trước đây con số đó ghi cứng là 60px, và nó sai ở mọi thiết bị: trên máy
+     tính Header cao khoảng 80px, trên điện thoại khoảng 70px. Sai bao nhiêu thì
+     thanh menu chui xuống dưới Header đúng bấy nhiêu — Header có tầng z cao hơn
+     nên phần chui vào bị che mất, mà không ai đoán ra vì nó vẫn trông "gần
+     đúng".
+
+     Không thể ghi cứng cho xong: ba thứ đều đổi chiều cao Header trong lúc
+     chạy. Cỡ chữ A-/A/A+ nhân toàn bộ rem, ô tìm kiếm trên điện thoại bung ra
+     thêm một hàng, và tên khoá học dài có thể xuống dòng. Nên phải đo.
+
+     Ghi lên `documentElement` chứ không phải state: giá trị này chỉ để CSS
+     dùng, đưa vào state là dựng lại toàn bộ cây giao diện mỗi lần Header nhúc
+     nhích một pixel. */
+  const headerRef = useRef(null);
+  useEffect(() => {
+    const el = headerRef.current;
+    if (!el) return;
+
+    const apply = () => {
+      const h = Math.round(el.getBoundingClientRect().height);
+      if (h > 0) document.documentElement.style.setProperty('--app-header-h', `${h}px`);
+    };
+    apply();
+
+    if (typeof ResizeObserver === 'undefined') return;
+    const observer = new ResizeObserver(apply);
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   /* Bấm ra ngoài thì đóng bảng Hiển thị.
 
@@ -185,19 +219,28 @@ export default function Header({
 
 
   return (
-    <header className="sticky top-0 z-40 bg-[#0e1526]/95 backdrop-blur-md border-b border-emerald-900/40 px-3 sm:px-6 py-2.5">
+    <header ref={headerRef} className="sticky top-0 z-40 bg-[#0e1526]/95 backdrop-blur-md border-b border-emerald-900/40 px-3 sm:px-6 py-2.5">
       <div className="max-w-7xl mx-auto flex items-center justify-between gap-2 sm:gap-4">
         
-        {/* Logo & Course Title */}
+        {/* Logo & Course Title
+
+            `min-w-0` thay cho `shrink-0`: khối này PHẢI co lại được.
+
+            Trước đây nó từ chối co, nên trên máy 390px tổng bề ngang của hàng
+            vượt khung và phần bị ép lại là hàng nút bên phải — nơi có nút tài
+            khoản và nút chứng chỉ. Chúng bị bóp méo hoặc đẩy khuất, mà body lại
+            có `overflow-x: hidden` nên không hề có thanh cuộn để lần ra. Nay
+            chỗ thiếu được trừ vào tên khoá học (vốn đã cắt bằng `truncate`),
+            còn hàng nút giữ nguyên kích thước. */}
         <div
-          className="flex items-center gap-2.5 cursor-pointer shrink-0"
+          className="flex items-center gap-2.5 cursor-pointer min-w-0"
           onClick={onGoHome || (() => setActiveTab('course'))}
           title="Về trang chủ"
         >
-          <PMarcomLogo className="w-9 h-9 sm:w-11 sm:h-11" showText={false} />
-          <div>
+          <PMarcomLogo className="w-9 h-9 sm:w-11 sm:h-11 shrink-0" showText={false} />
+          <div className="min-w-0">
             <div className="flex items-center gap-1.5 flex-wrap">
-              <span className="text-[10px] sm:text-xs font-extrabold px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 border border-emerald-700/60 uppercase tracking-wider">
+              <span className="text-[10px] sm:text-xs font-extrabold px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 border border-emerald-700/60 uppercase tracking-wider whitespace-nowrap">
                 HỌC VIỆN P MARCOM
               </span>
               
@@ -329,8 +372,24 @@ export default function Header({
           )}
         </div>
 
-        {/* Mobile Header Right Action Icons */}
-        <div className="flex lg:hidden items-center gap-2">
+        {/* Mobile Header Right Action Icons
+
+            ĐO TRƯỚC KHI THÊM BẤT KỲ NÚT NÀO VÀO ĐÂY.
+
+            Hàng này từng chứa cả năm nút: chuông hộp thư, hiển thị, tài khoản,
+            tìm kiếm, chứng chỉ. Cộng với khối logo bên trái thì bề ngang thật
+            là khoảng 460px — trên máy 390px là thừa ra 70px, và vì body có
+            `overflow-x: hidden` nên phần thừa biến mất không dấu vết thay vì
+            hiện thanh cuộn. Đó là lý do nút Quản Trị chưa bao giờ có chỗ ở đây,
+            và cũng là lý do nó nay nằm ở thanh đáy.
+
+            Hai nút TÀI KHOẢN và CHỨNG CHỈ chỉ hiện từ 640px trở lên. Dưới mức
+            đó chúng lặp y nguyên hai mục "Tài Khoản" và "Bằng Cấp" của thanh
+            đáy — cùng đích đến, mà thanh đáy còn ghi rõ tên học viên và nằm
+            trong tầm ngón cái. Bỏ hai nút trùng lặp trả lại đúng chỗ cho ba nút
+            không có ở nơi nào khác: hộp thư, hiển thị, tìm kiếm. Tiến độ học
+            vẫn đọc được ngay dưới đây, ở vạch tiến độ cuối Header. */}
+        <div className="flex lg:hidden items-center gap-2 shrink-0">
           {/* Chuông Hộp Thư Hỗ Trợ — quản trị viên hay trực bằng điện thoại,
               nên nút này phải có ở cả bản màn nhỏ. */}
           {onOpenSupportInbox && (
@@ -367,14 +426,14 @@ export default function Header({
           {currentUser ? (
             <button
               onClick={onOpenProfileModal}
-              className="w-8 h-8 rounded-lg bg-emerald-950 border border-emerald-600 flex items-center justify-center text-emerald-400 font-bold text-xs"
+              className="hidden sm:flex w-8 h-8 rounded-lg bg-emerald-950 border border-emerald-600 items-center justify-center text-emerald-400 font-bold text-xs shrink-0"
             >
               {currentUser.name ? currentUser.name.charAt(0) : 'U'}
             </button>
           ) : (
             <button
               onClick={onOpenAuthModal}
-              className="px-2.5 py-1 rounded-lg bg-emerald-600 text-white text-xs font-bold flex items-center gap-1"
+              className="hidden sm:flex px-2.5 py-1 rounded-lg bg-emerald-600 text-white text-xs font-bold items-center gap-1 shrink-0"
             >
               <User className="w-3.5 h-3.5" />
               <span>Đăng Nhập</span>
@@ -383,14 +442,15 @@ export default function Header({
 
           <button
             onClick={() => setShowMobileSearch(!showMobileSearch)}
-            className="w-8 h-8 rounded-lg bg-[#18243d] border border-emerald-900/50 flex items-center justify-center text-slate-300"
+            className="w-8 h-8 rounded-lg bg-[#18243d] border border-emerald-900/50 flex items-center justify-center text-slate-300 shrink-0"
+            title="Tìm kiếm bài học"
           >
             {showMobileSearch ? <X className="w-4 h-4" /> : <Search className="w-4 h-4" />}
           </button>
 
           <button
             onClick={onOpenCertificate}
-            className="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-emerald-950 border border-amber-500/40 text-amber-300 text-xs font-bold"
+            className="hidden sm:flex items-center gap-1 px-2.5 py-1 rounded-lg bg-emerald-950 border border-amber-500/40 text-amber-300 text-xs font-bold shrink-0"
           >
             <Award className="w-3.5 h-3.5 text-amber-400" />
             <span>{passedCount}/{totalModules}</span>

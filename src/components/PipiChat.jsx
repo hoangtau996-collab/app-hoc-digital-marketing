@@ -338,7 +338,12 @@ export default function PipiChat({
          z-[45] đặt nó vào đúng khe: trên Header và MobileBottomNav (z-40) nên
          vẫn nổi ở mọi màn học bình thường, nhưng dưới lớp hộp thoại (từ z-50)
          nên hộp thoại nào mở lên cũng phủ kín nó. */
-      <div className="fixed right-4 lg:right-6 bottom-20 lg:bottom-6 z-[45] flex flex-col items-end gap-2 pointer-events-none">
+      /* `pipi-fab-pos` thay cho `bottom-20 lg:bottom-6`: thanh đáy nay cao thêm
+         đúng bằng vùng an toàn của iPhone (thanh gạt Home), nên mốc 80px cố
+         định không còn đủ để nút nổi thoát khỏi nó. Lớp trong index.css cộng
+         `env(safe-area-inset-bottom)` vào, và bằng 0 trên máy không có gạt Home
+         nên không đổi gì ở nơi khác. */
+      <div className="pipi-fab-pos fixed right-4 lg:right-6 z-[45] flex flex-col items-end gap-2 pointer-events-none">
         {/* Có phản hồi của Ban Quản Trị thì bóng chào đổi hẳn nội dung. Tin
             được trả lời quan trọng hơn lời mời tra thuật ngữ. */}
         {(showHello || unreadReplies > 0) && (
@@ -412,7 +417,7 @@ export default function PipiChat({
       {!isOpen ? null : createPortal(
         /* z-[46]: ngay trên nút nổi (z-[45]) và trên Header (z-40), nhưng vẫn
            dưới lớp hộp thoại (từ z-50) — xem lý do ở phần nút nổi bên trên. */
-        <div className="fixed z-[46] right-4 lg:right-6 bottom-[152px] lg:bottom-[104px] w-[calc(100vw-2rem)] sm:w-[380px] max-w-[380px] h-[58vh] sm:h-[520px] max-h-[calc(100vh-190px)]">
+        <div className="pipi-panel-pos fixed z-[46] right-4 lg:right-6 w-[calc(100vw-2rem)] sm:w-[380px] max-w-[380px] h-[58dvh] sm:h-[520px]">
           <div className="pipi-pop w-full h-full pipi-panel rounded-3xl border border-emerald-500/40 shadow-2xl flex flex-col overflow-hidden">
 
             {/* Đầu khung */}

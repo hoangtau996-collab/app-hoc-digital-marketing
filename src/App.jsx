@@ -295,14 +295,43 @@ export default function App() {
    *            hồi quyền lan tới máy của chính người bị thu hồi)
    *   null  -> chưa hỏi được (mất mạng / chưa deploy rules) -> dùng bộ nhớ đệm
    *
-   * Tài khoản gốc là ngoại lệ có chủ đích: danh sách nằm cứng trong mã nguồn
-   * nên người dùng không sửa được, và điều kiện vẫn là phải đăng nhập được vào
-   * đúng tài khoản đó. Giữ ngoại lệ này để không khoá chết hệ thống trong lúc
-   * sổ `admins` trên Firestore chưa được mồi.
+   * Tài khoản gốc KHÔNG đi qua ba nhánh trên — nó thoát ra ngay ở đầu hàm, xem
+   * lý do đầy đủ tại đó. Đây là ngoại lệ có chủ đích: danh sách nằm cứng trong
+   * mã nguồn nên người dùng không sửa được, và điều kiện vẫn là phải đăng nhập
+   * được vào đúng tài khoản đó. Giữ ngoại lệ này để không khoá chết hệ thống
+   * trong lúc sổ `admins` trên Firestore chưa được mồi.
+   *
+   * HÀM NÀY PHẢI NHANH. Lời nhắc học và bảng khảo sát đều hẹn giờ bật sau khi
+   * trang tải xong; chừng nào nó chưa trả lời thì ứng dụng chưa biết người
+   * đang đăng nhập là quản trị viên hay học viên. Trả lời muộn quá một nhịp là
+   * quản trị viên bị hỏi như học viên thường — đúng lỗi đã gặp trên điện thoại.
    */
   const resolveAdminRole = async (authUser) => {
     const email = normalizeEmail(authUser?.email);
     if (!email) return 'student';
+
+    /* TÀI KHOẢN GỐC: TRẢ LỜI NGAY, KHÔNG CHỜ MẠNG.
+     *
+     * Không phải tối ưu vặt — nó xoá hẳn một lớp lỗi. Với tài khoản gốc, cả ba
+     * câu trả lời của máy chủ đều dẫn tới cùng một kết quả 'admin' (xem ba
+     * nhánh bên dưới: true, false và null đều ra 'admin'), nên vòng hỏi
+     * Firestore không đổi được gì — nó chỉ làm chậm.
+     *
+     * Mà chậm ở đây là hỏng thật. `getDoc` không có hạn chờ: mất sóng giữa
+     * chừng thì nó cứ thử lại, không lỗi cũng không xong. Suốt quãng đó vai trò
+     * chưa được kết luận nên nút Quản Trị không hiện ra — đúng cảnh "đăng nhập
+     * bằng điện thoại thì không thấy bảng quản trị". Danh sách tài khoản gốc
+     * nằm cứng trong mã nguồn và người dùng vẫn phải đăng nhập được vào đúng
+     * tài khoản đó, nên trả lời sớm không nới lỏng chốt chặn nào.
+     *
+     * Ranh giới thật vẫn nằm ở Firestore Rules trên máy chủ: giao diện mở ra
+     * sớm không đồng nghĩa với đọc được dữ liệu học viên.
+     */
+    if (isRootAdmin(email)) {
+      grantAdmin(email);
+      seedRootAdminInCloud(email);
+      return 'admin';
+    }
 
     const verdict = await isAdminInCloud(email);
 
@@ -311,29 +340,33 @@ export default function App() {
       return 'admin';
     }
     if (verdict === false) {
-      if (isRootAdmin(email)) {
-        // Tự mồi sổ phân quyền.
-        //
-        // Sổ `admins` rỗng thì không ai là quản trị viên, mà chỉ quản trị viên
-        // mới ghi được vào sổ -> khoá chết, không ai cấp được cho ai. Firestore
-        // Rules mở đúng một ngoại lệ cho tình huống này: tài khoản gốc tự tạo
-        // bản ghi của CHÍNH NÓ. Không có bước này thì sau khi deploy rules,
-        // quản trị viên đăng nhập vào sẽ thấy bảng rỗng vì lệnh liệt kê học
-        // viên bị từ chối.
-        //
-        // Chạy được đúng một lần; những lần sau verdict đã là true.
-        try {
-          await grantAdminInCloud(email, email);
-        } catch (err) {
-          console.warn('Chưa mồi được sổ phân quyền trên Cloud:', err);
-        }
-        grantAdmin(email);
-        return 'admin';
-      }
       revokeAdmin(email);
       return 'student';
     }
-    return isRootAdmin(email) || isAdminEmail(email) ? 'admin' : 'student';
+    return isAdminEmail(email) ? 'admin' : 'student';
+  };
+
+  /**
+   * Mồi sổ phân quyền cho tài khoản gốc — chạy nền, không ai chờ kết quả.
+   *
+   * VÌ SAO PHẢI MỒI: sổ `admins` rỗng thì không ai là quản trị viên, mà chỉ
+   * quản trị viên mới ghi được vào sổ -> khoá chết, không ai cấp được cho ai.
+   * Firestore Rules mở đúng một ngoại lệ cho tình huống này: tài khoản gốc tự
+   * tạo bản ghi của CHÍNH NÓ. Thiếu bước này thì sau khi deploy rules, quản trị
+   * viên đăng nhập vào sẽ thấy bảng rỗng vì lệnh liệt kê học viên bị từ chối.
+   *
+   * VÌ SAO KHÔNG CHỜ: việc này chỉ có tác dụng đúng một lần trong đời hệ thống,
+   * còn cái giá của việc chờ thì phải trả ở mọi lần đăng nhập của mọi tài khoản
+   * gốc, trên mọi chất lượng sóng. Bảng Quản Trị lại chỉ mở khi người dùng bấm
+   * nút — cách lúc này vài giây, quá đủ cho một lệnh ghi chạy xong.
+   */
+  const seedRootAdminInCloud = (email) => {
+    isAdminInCloud(email)
+      .then((verdict) => {
+        if (verdict !== false) return; // đã có trong sổ, hoặc chưa hỏi được
+        return grantAdminInCloud(email, email);
+      })
+      .catch((err) => console.warn('Chưa mồi được sổ phân quyền trên Cloud:', err));
   };
 
   // Active student account with fail-safe sanitization
@@ -392,6 +425,19 @@ export default function App() {
    */
   const [roleResolved, setRoleResolved] = useState(false);
 
+  /**
+   * Máy chủ đã trả lời vai trò cho ĐÚNG email nào.
+   *
+   * `roleResolved` một mình không đủ vì nó không nhớ câu trả lời thuộc về ai.
+   * Đăng xuất rồi đăng nhập bằng tài khoản khác trong cùng một lượt mở trang là
+   * ra ngay lỗ hổng: lần đăng xuất đã đặt cờ thành true, nên tài khoản mới thừa
+   * hưởng "đã biết vai trò" trong khi máy chủ còn chưa được hỏi về họ.
+   *
+   * Là ref chứ không phải state: chỉ dùng để so sánh tại thời điểm gọi, không
+   * có gì trên màn hình phụ thuộc vào nó nên không cần dựng lại giao diện.
+   */
+  const roleResolvedForEmailRef = useRef(null);
+
   // Lỗi của lần đăng nhập Google bằng cách chuyển trang, chuyển vào AuthModal.
   const [googleAuthError, setGoogleAuthError] = useState('');
 
@@ -405,8 +451,20 @@ export default function App() {
           if (saved) existingUser = JSON.parse(saved);
         } catch (e) {}
 
-        const cloudProfile = await getUserProgressFromCloud(user.uid, user.email);
-        const resolvedRole = await resolveAdminRole(user);
+        // Hỏi SONG SONG, không nối đuôi.
+        //
+        // Bản trước chờ xong hồ sơ đám mây rồi mới hỏi sổ phân quyền — hai
+        // vòng mạng nối tiếp. Trên 4G yếu (đúng bối cảnh dùng điện thoại) tổng
+        // thời gian vượt xa 1,2 giây, mà đó là hạn chót: lời nhắc học và bảng
+        // khảo sát đều hẹn giờ bật ở mốc đó. Chậm một nhịp là quản trị viên bị
+        // hỏi như học viên thường. Chạy song song cắt đi đúng một vòng mạng.
+        //
+        // Cả hai hàm đều tự nuốt lỗi và trả về null/'student', nên Promise.all
+        // ở đây không bao giờ bị từ chối — không cần bọc thêm try/catch.
+        const [cloudProfile, resolvedRole] = await Promise.all([
+          getUserProgressFromCloud(user.uid, user.email),
+          resolveAdminRole(user)
+        ]);
 
         // Bản lưu tại máy CHỈ dùng khi đúng là của người đang đăng nhập. Trên
         // máy dùng chung, `dmm_active_user` còn là hồ sơ của người trước — lấy
@@ -445,6 +503,7 @@ export default function App() {
 
         setCurrentUser(studentUser);
         // Từ đây vai trò là câu trả lời của máy chủ, không còn là giá trị tạm.
+        roleResolvedForEmailRef.current = normalizeEmail(studentUser.email);
         setRoleResolved(true);
         try {
           localStorage.setItem('dmm_active_user', JSON.stringify(studentUser));
@@ -487,6 +546,7 @@ export default function App() {
         // Bắt buộc phải đặt cờ ở nhánh này: học viên đăng nhập bằng nhánh dự
         // phòng tại máy không hề có phiên Firebase, bỏ sót thì họ không bao giờ
         // được mời làm khảo sát nữa.
+        roleResolvedForEmailRef.current = null;
         setRoleResolved(true);
       }
     });
@@ -1127,18 +1187,13 @@ export default function App() {
    * Địa chỉ do ứng dụng SINH RA thì vẫn luôn là dạng chuẩn (`buildPath`). Luật
    * này chỉ tôn trọng thứ người dùng tự gõ hoặc tự bấm vào.
    *
-   * `force` phá lệ trên, dành cho thao tác điều hướng có chủ đích mà lại KHÔNG
-   * đổi màn hình — cụ thể là bấm logo trong khi đang đứng sẵn ở trang chủ.
-   * Không có nó thì effect đồng bộ chẳng có gì để chạy (state y nguyên) và
-   * thanh địa chỉ kẹt lại ở tên miền trần, đúng chỗ người dùng muốn thấy tên
-   * khoá. Vẫn không đẻ ra mục lịch sử trùng: địa chỉ giống hệt thì thoát sớm.
+   * `handleGoHome` là nơi duy nhất KHÔNG đi qua hàm này, vì nó cố tình ghi ra
+   * `/` chứ không ghi dạng chuẩn — xem lý do ở đó.
    */
-  const writeHistory = (route, mode, { force = false } = {}) => {
-    if (!force && isSameRoute(parseRoute(window.location.pathname), route)) return;
+  const writeHistory = (route, mode) => {
+    if (isSameRoute(parseRoute(window.location.pathname), route)) return;
 
     const url = buildPath(route) + window.location.search + window.location.hash;
-    if (url === window.location.pathname + window.location.search + window.location.hash) return;
-
     if (mode === 'replace') window.history.replaceState(null, '', url);
     else window.history.pushState(null, '', url);
   };
@@ -1561,15 +1616,58 @@ export default function App() {
     // Nếu tài khoản này thật sự có quyền, listener `onAuthStateChanged` sẽ cấp
     // lại ngay sau khi máy chủ xác nhận.
     const { role: _untrustedRole, ...safeUser } = user || {};
-    setCurrentUser({ ...safeUser, role: 'student' });
 
-    // Nhánh đăng nhập dự phòng tại máy không tạo phiên Firebase, nên
-    // `onAuthStateChanged` sẽ không chạy lại để đặt cờ này. Không đặt ở đây thì
-    // học viên đăng nhập theo nhánh đó không bao giờ được mời làm khảo sát.
+    // GIỮ LẠI vai trò máy chủ đã xác nhận cho CHÍNH email này, nếu có.
     //
-    // Đặt 'student' là đúng chứ không phải tạm bợ: quyền quản trị chỉ cấp sau
-    // khi máy chủ xác nhận một phiên Firebase thật, mà nhánh này không có.
-    setRoleResolved(true);
+    // Bản trước đặt cứng 'student'. Hàm này chạy sau `onLoginSuccess`, tức là
+    // nó có thể chạy SAU khi `onAuthStateChanged` đã hỏi xong máy chủ và cấp
+    // quyền quản trị — và khi đó nó xoá thẳng quyền vừa cấp. Không có gì chạy
+    // lại để sửa, nên quản trị viên mất nút Quản Trị cho tới lần tải trang sau.
+    // Bên đăng nhập chờ 500ms trước khi gọi, đủ để trên máy tính mạng khoẻ
+    // thỉnh thoảng thua cuộc; trên điện thoại thì ngược lại — máy chủ về muộn
+    // hơn nên lỗi này ẩn đi, nhường chỗ cho lỗi ở `setRoleResolved` bên dưới.
+    //
+    // Không mở đường tự phong: `prev.role` chỉ có thể là 'admin' nếu chính
+    // listener đã ghi vào sau khi máy chủ xác nhận. Bản khôi phục từ
+    // localStorage luôn khởi tạo lại là 'student' (xem chỗ dựng `currentUser`).
+    //
+    // Ảnh đại diện đi cùng lý do đó. Hồ sơ mà bên đăng nhập gửi sang chỉ có
+    // những trường gõ trong form, không có `avatarUrl`; đè lên bản listener vừa
+    // kéo từ đám mây về là học viên vừa đăng nhập xong đã thấy mất ảnh.
+    setCurrentUser((prev) => {
+      const sameAccount =
+        prev && normalizeEmail(prev.email) === normalizeEmail(safeUser.email);
+      if (!sameAccount) return { ...safeUser, role: 'student' };
+      return {
+        ...safeUser,
+        role: prev.role,
+        avatarUrl: safeUser.avatarUrl || prev.avatarUrl || ''
+      };
+    });
+
+    // Chỉ nhánh dự phòng TẠI MÁY mới được kết luận vai trò ở đây.
+    //
+    // Nhánh đó không tạo phiên Firebase nên `onAuthStateChanged` sẽ không chạy
+    // lại để đặt cờ; bỏ qua thì học viên đăng nhập theo nhánh đó không bao giờ
+    // được mời làm khảo sát. Đặt 'student' cho họ là đúng chứ không tạm bợ:
+    // quyền quản trị chỉ cấp sau khi máy chủ xác nhận một phiên thật.
+    //
+    // Nhưng khi CÓ phiên Firebase thì đặt cờ ở đây là sai, và đây chính là lý
+    // do quản trị viên đăng nhập bằng điện thoại vẫn bị nhắc học và bị hỏi
+    // khảo sát: cờ này bật lên trong lúc `resolveAdminRole()` còn đang chờ
+    // Firestore, nên suốt quãng đó ứng dụng tin chắc "đã biết rồi, là học
+    // viên". Lời nhắc hẹn 1,2 giây, còn một vòng hỏi Firestore trên mạng di
+    // động thường lâu hơn thế. Trên máy tính mạng khoẻ thì máy chủ kịp trả lời
+    // trước nên không ai thấy lỗi. Nay để listener tự đặt cờ khi biết chắc.
+    const loginEmail = normalizeEmail(safeUser.email);
+    if (!auth.currentUser) {
+      roleResolvedForEmailRef.current = loginEmail;
+      setRoleResolved(true);
+    } else {
+      // So theo email chứ không giữ nguyên cờ cũ: đăng xuất rồi đăng nhập tài
+      // khoản khác thì cờ đang là true nhưng đó là câu trả lời cho NGƯỜI TRƯỚC.
+      setRoleResolved(roleResolvedForEmailRef.current === loginEmail);
+    }
   };
 
   const handleLogout = async () => {
@@ -1689,8 +1787,9 @@ export default function App() {
   /**
    * Về TRANG CHỦ HỌC VIỆN — địa chỉ `/`, không phải `/digital-marketing`.
    *
-   * Dùng chung cho logo kèm chữ "HỌC VIỆN P MARCOM" trên Header và nút
-   * "Digital" ở thanh dưới đáy điện thoại.
+   * CHỈ dành cho logo kèm chữ "HỌC VIỆN P MARCOM" trên Header. Nút "Digital" ở
+   * thanh dưới đáy điện thoại KHÔNG dùng hàm này — nó là nút chọn khoá học nên
+   * phải ra `/digital-marketing`, xem `handleOpenCourseHome` ngay bên dưới.
    *
    * VÌ SAO ĐÍCH LÀ `/` CHỨ KHÔNG PHẢI TÊN KHOÁ: logo mang tên Học Viện, không
    * mang tên khoá nào cả. Học viện sắp có thêm khoá; để logo dẫn tới
@@ -1728,6 +1827,21 @@ export default function App() {
     syncDocumentTitle(home);
   };
 
+  /**
+   * Về tổng quan khoá Digital Marketing — địa chỉ `/digital-marketing`.
+   *
+   * Đây là hành động của NÚT CHỌN KHOÁ, khác hẳn logo: logo về trang chủ Học
+   * Viện, còn nút này chọn một khoá cụ thể trong đó. Dùng cho nút "Digital" ở
+   * thanh dưới đáy điện thoại, làm đúng như mục "Digital Marketing" trên thanh
+   * menu máy tính vẫn làm.
+   *
+   * Không tự ghi địa chỉ: state đổi thì effect đồng bộ ghi ra dạng chuẩn.
+   */
+  const handleOpenCourseHome = () => {
+    setActiveTab('course');
+    setSelectedModuleId(null);
+  };
+
   const handleNextModule = () => {
     const currentIndex = COURSE_MODULES.findIndex(m => m.id === selectedModuleId);
     if (currentIndex < 0 || currentIndex >= COURSE_MODULES.length - 1) return;
@@ -1754,7 +1868,15 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0e1526] text-slate-100 flex flex-col font-sans selection:bg-emerald-500 selection:text-slate-950 pb-16 lg:pb-0">
+    /* `app-shell` thay cho `pb-16 lg:pb-0`: khoảng chừa dưới đáy phải cộng thêm
+       vùng an toàn của iPhone, mà Tailwind không viết được `calc(...env(...))`
+       bằng lớp tiện ích. Định nghĩa ở index.css. */
+    /* `min-h-[100dvh]` chứ không `min-h-screen` (=100vh): trên trình duyệt điện
+       thoại, 100vh tính theo màn hình lúc thanh địa chỉ đã thu lại, tức luôn
+       cao hơn phần thật sự nhìn thấy. Trang ngắn vì thế vẫn cuộn được một đoạn
+       trống vô nghĩa, và cú cuộn đó lại kích hoạt việc ẩn/hiện thanh địa chỉ
+       nên màn hình giật lên giật xuống. `dvh` bám đúng vùng nhìn thấy. */
+    <div className="app-shell min-h-[100dvh] bg-[#0e1526] text-slate-100 flex flex-col font-sans selection:bg-emerald-500 selection:text-slate-950">
       
       {/* Top Header Bar */}
       <Header
@@ -2194,12 +2316,14 @@ export default function App() {
       <MobileBottomNav
         activeTab={activeTab}
         setActiveTab={setActiveTab}
-        onGoHome={handleGoHome}
+        onOpenCourseHome={handleOpenCourseHome}
         isTradeCourseUnlocked={isTradeCourseUnlocked}
         onOpenCertificate={() => requestCertificate('main')}
         currentUser={currentUser}
         onOpenAuthModal={() => setIsAuthOpen(true)}
         onOpenProfileModal={() => setIsProfileOpen(true)}
+        onOpenAdminModal={isAdmin ? openAdminDashboard : null}
+        supportUnreadCount={supportUnreadCount}
       />
 
       {/* Footer — cắt bỏ trong chế độ tập trung.
