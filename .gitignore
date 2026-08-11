@@ -29,3 +29,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# File tạm do quy trình cập nhật tin sinh ra, chỉ dùng trong một lần chạy
+tin-vua-them.txt
