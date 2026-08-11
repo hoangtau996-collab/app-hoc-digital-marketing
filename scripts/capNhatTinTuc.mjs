@@ -557,7 +557,8 @@ async function chay() {
     return;
   }
 
-  const sach = nhan.map(({ url, ...t }) => t);
+  // Bỏ trường `url` chỉ dùng nội bộ lúc xử lý, không đưa vào dữ liệu lưu lại.
+  const sach = nhan.map(({ url: _url, ...t }) => t);
   const moi = ghepDanhSach(danhSach, sach);
 
   if (CHE_DO_THU) {
