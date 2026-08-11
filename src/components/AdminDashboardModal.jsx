@@ -50,7 +50,8 @@ import {
   Search, 
   Filter, 
   CheckCircle2, 
-  Award, 
+  Award,
+  ImagePlus,
   Eye, 
   Trash2, 
   RefreshCw, 
@@ -170,6 +171,18 @@ export default function AdminDashboardModal({
   currentUser,
   trafficStats,
   onIssueCertificateForStudent,
+  /**
+   * Mở hộp thoại Ảnh Bìa Trang Chủ.
+   *
+   * Lối vào CHÍNH của tính năng đó là nút nổi ngay trên ảnh bìa ở trang chủ —
+   * đúng chỗ người ta nghĩ tới nó. Nhưng nút kia chỉ hiện khi đang đứng ở trang
+   * chủ và chưa mở bài nào, nên ai đang làm việc trong Bảng Quản Trị sẽ không
+   * thấy nó ở đâu cả. Đây là lối vào thứ hai, đặt ở nơi quản trị viên vốn đã
+   * quen tìm mọi chức năng quản trị.
+   *
+   * Truyền `null` thì nút không được dựng ra.
+   */
+  onOpenCoverEditor = null,
   t
 }) {
   const [students, setStudents] = useState([]);
@@ -1318,6 +1331,21 @@ export default function AdminDashboardModal({
               <Award className="w-3.5 h-3.5 text-slate-950" />
               <span>Tạo Chứng Nhận</span>
             </button>
+
+            {/* Ảnh bìa trang chủ. Đóng hộp thoại này lại trước khi mở hộp thoại
+                kia: hai bảng chồng lên nhau thì bảng dưới vẫn cuộn được sau
+                lưng bảng trên, và đóng bảng trên xong người dùng rơi lại vào
+                một Bảng Quản Trị đã trôi đi mất chỗ cũ. */}
+            {onOpenCoverEditor && (
+              <button
+                onClick={() => { onClose(); onOpenCoverEditor(); }}
+                className="px-3 py-1.5 rounded-xl bg-slate-900 border border-amber-500/50 text-amber-300 text-xs font-bold hover:bg-slate-800 transition flex items-center gap-1.5 cursor-pointer shrink-0"
+                title="Đổi ảnh bìa trang chủ — tối đa 3 ảnh chạy lần lượt"
+              >
+                <ImagePlus className="w-3.5 h-3.5 text-amber-400" />
+                <span>Ảnh Bìa</span>
+              </button>
+            )}
 
             <button
               onClick={handlePrintReport}

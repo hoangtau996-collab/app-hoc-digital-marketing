@@ -56,7 +56,26 @@ const KHOA_TRANH = [
   'livestream', 'cpm-auction', 'crm-automation', 'ai-label', 'page-speed',
 ];
 
-const UA = 'Mozilla/5.0 (compatible; PMarcomAcademyBot/1.0)';
+/* Một số báo chặn thẳng User-Agent tự nhận là bot — Search Engine Land trả 403.
+   Dùng chuỗi trình duyệt thông thường để đọc được nội dung công khai của họ. */
+const UA =
+  'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36';
+
+/**
+ * Từ khoá loại bài ra ngay, không tốn lượt gọi mô hình.
+ *
+ * Đây chỉ là lưới lọc thô ở vòng ngoài. Vòng trong còn một lưới nữa: chính mô
+ * hình được quyền trả về `boQua` nếu thấy bài không có ích. Hai lưới vì lưới
+ * từ khoá không hiểu ngữ cảnh, còn để mô hình quyết một mình thì tốn lượt gọi
+ * cho những bài mà nhìn tiêu đề đã biết là bỏ.
+ */
+const TU_KHOA_LOAI = [
+  'lawsuit', 'sues', 'sued', 'court', 'settlement', 'fined', 'antitrust',
+  'data center', 'datacenter', 'layoff', 'layoffs', 'steps down', 'appoints',
+  'named ceo', 'hires', 'resigns', 'earnings call', 'q1 results', 'q2 results',
+  'q3 results', 'q4 results', 'stock', 'shares fall', 'shares rise', 'ipo',
+  'acquisition', 'acquires', 'merger', 'buyout',
+];
 
 /* ---------------------------------------------------------------- *
  * Tiện ích chung
@@ -314,7 +333,13 @@ Viết lại bài báo dưới đây thành một mục tin tiếng Việt, tr�
 KHUNG DỮ LIỆU:
 ${JSON.stringify(KHUNG_JSON, null, 2)}
 
-QUY TẮC TUYỆT ĐỐI:
+TRƯỚC HẾT, TỰ HỎI BÀI NÀY CÓ ĐÁNG ĐƯA KHÔNG.
+Người đọc là người trực tiếp điều hành ngân sách quảng cáo tại Việt Nam. Bài đáng đưa là bài nói về: thay đổi thuật toán, chính sách nền tảng, cơ cấu chi phí, công cụ mới, cách đo lường, quy định pháp lý ảnh hưởng tới việc chạy quảng cáo.
+Bài KHÔNG đáng đưa: kiện tụng, phạt tiền, trung tâm dữ liệu, nhân sự cấp cao, báo cáo tài chính doanh nghiệp, thương vụ mua bán, tin chỉ dùng được ở Mỹ mà không suy ra bài học cho Việt Nam, bài hướng dẫn chung chung không có thông tin mới.
+Nếu bài KHÔNG đáng đưa, trả về đúng: {"boQua": true, "lyDo": "<một câu ngắn>"}
+Đừng cố viết cho có. Bỏ qua một bài nhạt tốt hơn là đưa nó vào bản tin.
+
+NẾU BÀI ĐÁNG ĐƯA, ÁP DỤNG CÁC QUY TẮC SAU:
 1. MỌI CON SỐ trong bài viết ra phải có mặt nguyên vẹn trong bài gốc bên dưới. Không ước lượng, không suy ra, không làm tròn. Không chắc con số nào thì bỏ hẳn con số đó khỏi bài.
 2. Viết tiếng Việt tự nhiên, câu ngắn, không emoji. Số liệu định dạng Việt Nam: 12,5% và 1.234.567.
 3. Học viên KHÔNG bấm được sang bài gốc, nên bài phải đủ để đọc độc lập. Không viết kiểu "xem chi tiết tại bài gốc".
@@ -470,6 +495,14 @@ async function chay() {
       continue;
     }
 
+    // Lưới lọc thô: nhìn tiêu đề đã biết là bỏ thì đừng tốn lượt gọi mô hình.
+    const tieuDeThuong = b.tieuDe.toLowerCase();
+    const tuTrung = TU_KHOA_LOAI.find((t) => tieuDeThuong.includes(t));
+    if (tuTrung) {
+      log(`bỏ qua (chứa "${tuTrung}"): ${b.tieuDe.slice(0, 55)}`);
+      continue;
+    }
+
     try {
       log(`đang xử lý: ${b.tieuDe.slice(0, 60)}`);
       const chiTiet = await layChiTietBai(b);
@@ -479,6 +512,12 @@ async function chay() {
       }
 
       const viet = await nhoGeminiViet(chiTiet, khoaApi);
+
+      // Lưới lọc trong: mô hình đọc cả bài rồi tự thấy không đáng đưa.
+      if (viet?.boQua) {
+        log(`  bỏ: mô hình đánh giá không đáng đưa — ${viet.lyDo || 'không nêu lý do'}`);
+        continue;
+      }
 
       const loiKhung = kiemTraKhung(viet);
       if (loiKhung.length) {

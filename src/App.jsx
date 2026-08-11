@@ -2313,6 +2313,7 @@ export default function App() {
         currentUser={currentUser}
         trafficStats={trafficStats}
         onIssueCertificateForStudent={handleAdminIssueCertificate}
+        onOpenCoverEditor={() => setIsCoverEditorOpen(true)}
         t={t}
       />
 

@@ -65,13 +65,7 @@ jobs:
           git add src/data/realNews.json
           # Thông điệp commit là nơi duy nhất lưu lịch sử: chạy hằng ngày mà ghi
           # CHANGELOG thì một năm thêm 365 mục, file thành vô dụng.
-          if [ -f tin-vua-them.txt ]; then
-            git commit -m "content: cap nhat ban tin tu dong" -F - <<EOF
-          content: cap nhat ban tin tu dong
-
-          $(cat tin-vua-them.txt)
-          EOF
-          else
-            git commit -m "content: cap nhat ban tin tu dong"
-          fi
+          THAN=""
+          if [ -f tin-vua-them.txt ]; then THAN=$(cat tin-vua-them.txt); fi
+          git commit -m "content: cap nhat ban tin tu dong" -m "$THAN"
           git push
