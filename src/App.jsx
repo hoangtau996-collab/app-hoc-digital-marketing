@@ -16,6 +16,7 @@ import FeatureMenuBar from './components/FeatureMenuBar';
 import AdminDashboardModal from './components/AdminDashboardModal';
 import SupportInboxModal from './components/SupportInboxModal';
 import SurveyModal from './components/SurveyModal';
+import PartnerAppsBanner from './components/PartnerAppsBanner';
 import { SURVEY_VERSION } from './data/surveyQuestions';
 import {
   hasCompletedSurvey,
@@ -2333,6 +2334,10 @@ export default function App() {
           tiếp. Trang chủ vẫn còn footer, nên thông tin không mất đi đâu. */}
       {!isFocusMode && (
         <footer className="border-t border-emerald-950 bg-[#0a1020] py-6 px-4 text-center text-xs text-slate-500">
+          {/* Giới thiệu chéo các ứng dụng khác. Đặt TRÊN dòng bản quyền: dòng
+              bản quyền là thứ đóng trang lại, có gì muốn mời thêm thì phải nói
+              trước nó. */}
+          <PartnerAppsBanner />
           <p>
             © 2026 HỌC VIỆN P MARCOM. Hệ thống Khóa Học Digital Thực Chiến.
           </p>
