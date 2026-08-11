@@ -1581,6 +1581,176 @@ export function listenToRealStats(callback) {
   }
 }
 
+/* ============================================================
+   ẢNH BÌA TRANG CHỦ — BĂNG ẢNH CHẠY TỰ ĐỘNG
+
+   Quản trị viên tải lên tối đa ba ảnh bìa, chúng lần lượt chạy qua ở đầu trang
+   chủ. Ai cũng ĐỌC được (khách chưa đăng nhập cũng thấy ảnh bìa), chỉ quản trị
+   viên mới GHI được — ranh giới đó do firestore.rules giữ, không phải giao diện.
+
+   MỖI ẢNH MỘT TÀI LIỆU RIÊNG, KHÔNG GỘP.
+
+   Đây là quyết định bắt buộc chứ không phải sở thích: ảnh lưu bằng chuỗi base64
+   nhúng thẳng vào tài liệu, mỗi ảnh khoảng 250-700KB, mà tài liệu Firestore có
+   trần cứng 1MB. Gộp ba ảnh vào một tài liệu là chạm trần ngay ở ảnh thứ hai.
+   Tách ra còn một cái lợi nữa: sửa một ảnh chỉ ghi lại đúng ảnh đó, không phải
+   đẩy lại cả ba lên đường truyền.
+
+   Thời gian đổi slide nằm ở một tài liệu riêng, rất nhẹ, nên đổi nó không kéo
+   theo lượt tải ảnh nào.
+   ============================================================ */
+
+const BANNER_COLLECTION = 'site_banners';
+const SITE_CONFIG_COLLECTION = 'site_config';
+const COVER_SLIDER_CONFIG_ID = 'cover_slider';
+
+/** Số ảnh bìa tối đa. Vượt quá thì băng ảnh thành dài lê thê, không ai xem hết. */
+export const MAX_COVER_BANNERS = 3;
+
+/** Khoảng đổi slide: mặc định và hai đầu chặn, tính bằng mili-giây. */
+export const COVER_INTERVAL_DEFAULT_MS = 5000;
+export const COVER_INTERVAL_MIN_MS = 2000;
+export const COVER_INTERVAL_MAX_MS = 30000;
+
+/**
+ * Ép khoảng đổi slide về vùng cho phép.
+ *
+ * Chốt chặn đặt ở đây, tầng dữ liệu, chứ không chỉ ở ô nhập: giá trị này đọc từ
+ * Firestore và từ localStorage — cả hai đều có thể mang số rác từ một bản cũ
+ * hoặc từ tay người sửa. Một giá trị 0 hay NaN lọt vào sẽ thành `setInterval(0)`,
+ * tức là đổi ảnh mỗi nhịp vẽ: màn hình nhấp nháy tới mức không đọc nổi.
+ */
+export function normalizeCoverInterval(value) {
+  const ms = Number(value);
+  if (!Number.isFinite(ms) || ms <= 0) return COVER_INTERVAL_DEFAULT_MS;
+  return Math.min(COVER_INTERVAL_MAX_MS, Math.max(COVER_INTERVAL_MIN_MS, Math.round(ms)));
+}
+
+/** Dựng lại một bản ghi banner từ dữ liệu thô, bỏ qua bản ghi không có ảnh. */
+function toBanner(id, data) {
+  const imageData = typeof data?.imageData === 'string' ? data.imageData : '';
+  if (!imageData.startsWith('data:image/')) return null;
+  return {
+    id,
+    imageData,
+    alt: typeof data?.alt === 'string' ? data.alt : '',
+    order: Number.isFinite(Number(data?.order)) ? Number(data.order) : 0,
+    updatedAt: typeof data?.updatedAt === 'string' ? data.updatedAt : ''
+  };
+}
+
+/** Sắp theo thứ tự quản trị viên đặt; cùng thứ tự thì theo id cho ổn định. */
+function sortBanners(list) {
+  return list.sort((a, b) => (a.order - b.order) || String(a.id).localeCompare(String(b.id)));
+}
+
+/**
+ * Theo dõi danh sách ảnh bìa theo thời gian thực.
+ *
+ * Dùng `onSnapshot` chứ không đọc một lần: quản trị viên hay sửa ảnh bìa ngay
+ * trên máy đang mở, và họ cần thấy kết quả thật chứ không phải bản xem trước
+ * tại máy. Nó cũng có nghĩa là học viên đang mở trang sẵn sẽ thấy ảnh mới mà
+ * không phải tải lại.
+ *
+ * KHÔNG dùng `orderBy` trong truy vấn, mà sắp xếp tại máy: `orderBy` đòi
+ * Firestore có chỉ mục cho trường đó, và một chỉ mục thiếu sẽ làm cả truy vấn
+ * hỏng — mất luôn ảnh bìa. Danh sách chỉ có tối đa ba phần tử nên sắp tại máy
+ * không tốn gì.
+ *
+ * Trả về hàm huỷ đăng ký. Lỗi thì gọi `callback(null)` để nơi gọi phân biệt
+ * được "chưa đọc được" với "đã đọc, và chưa có ảnh nào".
+ */
+export function listenToCoverBanners(callback) {
+  try {
+    return onSnapshot(
+      collection(db, BANNER_COLLECTION),
+      (snapshot) => {
+        const list = [];
+        snapshot.forEach((d) => {
+          const banner = toBanner(d.id, d.data());
+          if (banner) list.push(banner);
+        });
+        callback(sortBanners(list).slice(0, MAX_COVER_BANNERS));
+      },
+      (err) => {
+        console.warn('Không đọc được ảnh bìa từ Cloud:', err);
+        callback(null);
+      }
+    );
+  } catch (e) {
+    console.warn('listenToCoverBanners error', e);
+    callback(null);
+    return () => {};
+  }
+}
+
+/** Theo dõi cấu hình băng ảnh (hiện chỉ có thời gian đổi slide). */
+export function listenToCoverSliderConfig(callback) {
+  try {
+    return onSnapshot(
+      doc(db, SITE_CONFIG_COLLECTION, COVER_SLIDER_CONFIG_ID),
+      (snapshot) => {
+        const data = snapshot.exists() ? snapshot.data() : null;
+        callback({ intervalMs: normalizeCoverInterval(data?.intervalMs) });
+      },
+      (err) => {
+        console.warn('Không đọc được cấu hình băng ảnh bìa:', err);
+        callback(null);
+      }
+    );
+  } catch (e) {
+    console.warn('listenToCoverSliderConfig error', e);
+    callback(null);
+    return () => {};
+  }
+}
+
+/**
+ * Lưu một ảnh bìa.
+ *
+ * Có await và có ném lỗi ra ngoài — cố ý, giống `grantAdminInCloud`. Đây là
+ * thao tác quản trị viên phải biết chắc kết quả: rules chưa dán lên máy chủ thì
+ * lệnh ghi bị từ chối, và nếu nuốt lỗi thì giao diện báo "đã lưu" trong khi
+ * chẳng có gì lên tới nơi. Người dùng chỉ phát hiện ra sau khi tải lại trang và
+ * thấy ảnh cũ.
+ */
+export async function saveCoverBanner(banner) {
+  const id = String(banner?.id || '').trim();
+  if (!id) throw new Error('Thiếu mã ảnh bìa.');
+  if (!String(banner?.imageData || '').startsWith('data:image/')) {
+    throw new Error('Dữ liệu ảnh không hợp lệ.');
+  }
+  await setDoc(doc(db, BANNER_COLLECTION, id), {
+    imageData: banner.imageData,
+    alt: String(banner.alt || '').slice(0, 300),
+    order: Number(banner.order) || 0,
+    updatedAt: new Date().toISOString()
+  });
+}
+
+/** Đổi thứ tự một ảnh mà KHÔNG gửi lại chuỗi ảnh. */
+export async function saveCoverBannerOrder(id, order) {
+  if (!id) throw new Error('Thiếu mã ảnh bìa.');
+  await updateDoc(doc(db, BANNER_COLLECTION, String(id)), {
+    order: Number(order) || 0,
+    updatedAt: new Date().toISOString()
+  });
+}
+
+export async function deleteCoverBanner(id) {
+  if (!id) throw new Error('Thiếu mã ảnh bìa.');
+  await deleteDoc(doc(db, BANNER_COLLECTION, String(id)));
+}
+
+/** Lưu thời gian đổi slide. Giá trị luôn đi qua `normalizeCoverInterval`. */
+export async function saveCoverSliderConfig(intervalMs) {
+  await setDoc(
+    doc(db, SITE_CONFIG_COLLECTION, COVER_SLIDER_CONFIG_ID),
+    { intervalMs: normalizeCoverInterval(intervalMs), updatedAt: new Date().toISOString() },
+    { merge: true }
+  );
+}
+
 export {
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
