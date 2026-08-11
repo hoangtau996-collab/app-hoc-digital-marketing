@@ -16,7 +16,6 @@ import {
   Eye,
   Tag,
   Gift,
-  Activity,
   Lock
 } from 'lucide-react';
 import { getBlockingModule } from '../utils/moduleGating';
@@ -112,9 +111,6 @@ export default function CourseOverview({
             </div>
             <div className="text-xl sm:text-2xl font-black text-white tracking-tight">
               {(trafficStats?.totalTraffic || 0).toLocaleString('vi-VN')}
-            </div>
-            <div className="text-[10px] text-slate-400 flex items-center gap-1 mt-0.5">
-              <Activity className="w-3 h-3 text-emerald-400 animate-pulse" /> Cộng dồn lượt khách ghé thăm mỗi ngày
             </div>
           </div>
 

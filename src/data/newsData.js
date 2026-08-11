@@ -38,6 +38,122 @@
  * ------------------------------------------------------------------ */
 const REAL_SOURCED_NEWS = [
   {
+    id: 'real-2026-08-09-aimax-exact-match',
+    category: 'Google Ads & SEO',
+    platformIcon: 'Search',
+    title: 'Nghiên cứu 383 triệu lượt hiển thị: đối sánh chính xác đã mất 29% lượt hiển thị vào tay AI Max',
+    publishedAt: '09/08/2026',
+    isHot: true,
+    illustration: 'keyword-exclusion',
+    image: {
+      url: 'https://ppc.land/content/images/size/w1200/2026/08/exact-match.webp',
+      credit: 'Ảnh: PPC Land',
+    },
+    sourceUrl: 'https://ppc.land/exact-match-loses-1-in-4-impressions-to-ai-max-smec-finds/',
+    source: 'PPC Land - nghiên cứu của Smarter Ecommerce',
+    readTime: '5 phút đọc',
+    tags: ['AI Max', 'Đối sánh từ khoá', 'Kiểm soát ngân sách', 'Google Ads'],
+    summary:
+      'Smarter Ecommerce phân tích 383 triệu lượt hiển thị từ các chiến dịch Tìm kiếm thương mại điện tử có bật AI Max, giai đoạn 01/2025 đến 07/2026. Tới tháng 7/2026, chỉ còn 71% lượt hiển thị của đối sánh chính xác là thật sự chính xác. Phần còn lại đã bị AI Max mở rộng ra.',
+    keyNumbers: [
+      { value: '71%', label: 'lượt hiển thị còn thật sự chính xác' },
+      { value: '29%', label: 'đã bị AI Max mở rộng' },
+      { value: '-35%', label: 'lợi nhuận trên chi phí quảng cáo' },
+    ],
+    content: [
+      {
+        heading: 'Đối sánh chính xác đang mất nghĩa dần',
+        body:
+          'Mike Ryan của Smarter Ecommerce theo dõi 383 triệu lượt hiển thị ở khu vực châu Âu, Trung Đông và châu Phi. Tỷ lệ giữ nguyên gần 100% tới giữa năm 2025, xuống khoảng 90% vào tháng 11/2025, rồi rơi nhanh trong năm 2026 còn 71%. Khoảng hai phần ba mức mở rộng diễn ra chỉ trong bốn tháng cuối. Ryan nói thẳng: cơ chế khớp cụm từ tìm kiếm của AI Max về bản chất là đối sánh rộng.',
+      },
+      {
+        heading: 'Vì sao đây là vấn đề với người quản ngân sách',
+        body:
+          'Đối sánh chính xác là công cụ để kiểm soát: đặt từ khoá nào thì trả tiền cho đúng truy vấn đó. Khi gần một phần ba lượt hiển thị đã bị mở rộng ngầm, mức kiểm soát ấy không còn. Ngân sách đang chảy sang những truy vấn không ai chọn, mà báo cáo lại vẫn xếp chúng dưới nhãn đối sánh chính xác.',
+      },
+      {
+        heading: 'Con số hiệu quả đi kèm',
+        body:
+          'Một phân tích trước đó của cùng đơn vị, thực hiện tháng 11/2025 trên hơn 250 chiến dịch bán lẻ, cho thấy AI Max mang lại lợi nhuận trên chi phí quảng cáo thấp hơn 35% so với các kiểu đối sánh truyền thống, kèm chi phí mỗi chuyển đổi cao hơn và giá trị đơn hàng trung bình thấp hơn. Ryan dự đoán phần lưu lượng đến từ AI Max nhiều khả năng không phải phần hiệu quả nhất.',
+      },
+      {
+        heading: 'Cách xử lý được khuyến nghị',
+        body:
+          'Khoanh vùng: dựng chiến dịch AI Max riêng thay vì để nó mở rộng bên trong chiến dịch đối sánh chính xác đang chạy, tránh ngân sách dịch chuyển mà không ai thấy. Làm rõ tín hiệu: tối ưu theo chuyển đổi thật là đơn hàng hoặc khách hàng tiềm năng, đừng tối ưu theo sự kiện tương tác vì khi đó AI Max trở nên không quản được. Và dùng thiết lập ở cấp nhóm quảng cáo ở những chỗ vẫn cần giữ đối sánh chính xác.',
+      },
+      {
+        heading: 'Điều cần công bằng nhìn nhận',
+        body:
+          'Ryan thừa nhận truy vấn tìm kiếm ngày càng dài và phức tạp hơn, nên danh sách từ khoá kiểu cũ đang lỗi thời với những câu hỏi mang tính hội thoại. Vấn đề không phải AI Max vô dụng, mà là nó đang được bật lẫn vào chiến dịch cũ khiến người quản không phân biệt được phần nào ra kết quả gì.',
+      },
+    ],
+    impact:
+      'Trưởng phòng phải tách chiến dịch AI Max ra riêng để đo được nó thật sự mang lại gì, thay vì để nó hoà vào chiến dịch đối sánh chính xác và làm hỏng cả phép so sánh lẫn mức kiểm soát ngân sách.',
+    ifIgnored:
+      'Báo cáo vẫn ghi là đối sánh chính xác trong khi gần một phần ba lượt hiển thị đã là đối sánh rộng. Chi phí mỗi chuyển đổi tăng dần, giá trị đơn hàng giảm dần, và không ai tìm ra nguyên nhân vì nhìn vào bảng thì cấu hình chiến dịch không hề thay đổi.',
+    actionChecklist: [
+      'Tách chiến dịch AI Max thành chiến dịch riêng, không để bật lẫn trong chiến dịch đối sánh chính xác đang chạy',
+      'Xuất báo cáo cụm từ tìm kiếm của các chiến dịch đối sánh chính xác, rà xem có bao nhiêu truy vấn mình không hề chọn',
+      'Đổi mục tiêu tối ưu sang chuyển đổi thật, bỏ các sự kiện tương tác khỏi mục tiêu chính',
+      'Với nhóm sản phẩm biên lợi nhuận mỏng, giữ đối sánh chính xác bằng thiết lập ở cấp nhóm quảng cáo',
+    ],
+  },
+  {
+    id: 'real-2026-08-10-meta-exclusion-audience',
+    category: 'Meta Ads',
+    platformIcon: 'Facebook',
+    title: 'Meta thêm tệp đối tượng chỉ dùng để loại trừ: tránh lãng phí ngân sách và tránh nhắm nhầm nhóm bị cấm',
+    publishedAt: '10/08/2026',
+    isHot: false,
+    illustration: 'keyword-exclusion',
+    image: {
+      url: 'https://imgproxy.divecdn.com/pkSkhPly_pDkHFyL0FCbcuos6XRyiBEUMjDQE-waNOg/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9tZXRhX2FkX2V4Y2x1c2lvbnMucG5n.webp',
+      credit: 'Ảnh: Social Media Today',
+    },
+    sourceUrl: 'https://www.socialmediatoday.com/news/meta-adds-dedicated-ad-exclusion-audiences/827520/',
+    source: 'Social Media Today',
+    readTime: '4 phút đọc',
+    tags: ['Tệp đối tượng', 'Loại trừ', 'Tuân thủ', 'Tối ưu ngân sách'],
+    summary:
+      'Meta bổ sung một loại tệp khách hàng mới chỉ dùng được cho việc loại trừ, không dùng để nhắm mục tiêu. Dành cho hai tình huống: cắt lãng phí với nhóm chắc chắn không mua, và tuân thủ nghĩa vụ pháp lý không được nhắm tới một số người.',
+    keyNumbers: [
+      { value: 'Một chiều', label: 'chỉ loại trừ, không nhắm được' },
+      { value: 'Vĩnh viễn', label: 'tạo rồi không đổi lại được' },
+    ],
+    content: [
+      {
+        heading: 'Loại tệp này khác gì tệp thường',
+        body:
+          'Tệp khách hàng thông thường dùng được cả hai chiều: vừa nhắm tới vừa loại trừ. Tệp mới này chỉ đi một chiều, chỉ loại trừ. Meta mô tả rõ đây là một dạng tệp khách hàng tải lên nhưng chỉ có thể dùng để loại người ra khỏi đối tượng nhận quảng cáo.',
+      },
+      {
+        heading: 'Vì sao Meta phải làm riêng một loại',
+        body:
+          'Vì có những danh sách mà doanh nghiệp buộc phải giữ để loại trừ nhưng tuyệt đối không được dùng để nhắm tới. Ví dụ nhóm khách đã yêu cầu ngừng nhận quảng cáo, hoặc nhóm mà quy định ngành cấm tiếp cận. Nếu dùng tệp thường thì chỉ cần một thao tác nhầm là danh sách đó biến thành đối tượng nhắm mục tiêu, hậu quả pháp lý nặng hơn nhiều so với lãng phí ngân sách.',
+      },
+      {
+        heading: 'Đánh đổi phải biết trước',
+        body:
+          'Đã tạo dạng chỉ-loại-trừ thì không chuyển ngược về tệp thường được nữa. Đây là ràng buộc vĩnh viễn, có chủ đích. Nên cân nhắc trước khi tải lên: danh sách nào chắc chắn chỉ dùng để loại trừ thì tạo dạng này, danh sách nào còn có thể muốn nhắm tới sau này thì giữ dạng thường.',
+      },
+      {
+        heading: 'Ứng dụng ít ai nghĩ tới',
+        body:
+          'Chuyên gia Jon Loomer chỉ ra một trường hợp đơn giản mà hiệu quả: loại trừ chính nhân viên công ty. Nhân viên thấy quảng cáo của công ty mình liên tục nhưng không bao giờ mua, và mỗi lượt hiển thị đó đều tính tiền. Với doanh nghiệp đông người, đây là khoản lãng phí âm thầm không ai để ý.',
+      },
+    ],
+    impact:
+      'Trưởng phòng nên chuyển các danh sách nhạy cảm sang dạng chỉ-loại-trừ để một thao tác nhầm không biến chúng thành tệp nhắm mục tiêu, đồng thời loại nhân viên nội bộ ra khỏi mọi chiến dịch.',
+    ifIgnored:
+      'Danh sách khách đã từ chối nhận quảng cáo nằm chung dạng với tệp nhắm mục tiêu, chỉ cần một lần chọn nhầm trong lúc dựng chiến dịch là gửi quảng cáo tới đúng nhóm đã yêu cầu ngừng. Đây là loại lỗi rất khó giải thích với khách hàng và với bộ phận pháp chế.',
+    actionChecklist: [
+      'Rà danh sách tệp khách hàng hiện có, tách nhóm nào chỉ dùng để loại trừ',
+      'Tạo lại các nhóm đó dưới dạng chỉ-loại-trừ, lưu ý không đổi ngược lại được',
+      'Tải lên danh sách nhân viên công ty và loại khỏi mọi chiến dịch đang chạy',
+      'Ghi vào quy trình dựng chiến dịch: bước kiểm tra tệp loại trừ trước khi bật ngân sách',
+    ],
+  },
+  {
     id: 'real-2026-08-07-chatgpt-advanced-matching',
     category: 'AI Marketing',
     platformIcon: 'Sparkles',
@@ -400,67 +516,6 @@ const REAL_SOURCED_NEWS = [
     ],
   },
   {
-    id: 'real-2026-07-30-meta-q2',
-    category: 'Meta Ads',
-    platformIcon: 'Facebook',
-    title: 'Meta quý 2/2026: doanh thu quảng cáo tăng 27%, nhưng gần hết tiền mặt kiếm được đổ vào hạ tầng AI',
-    publishedAt: '30/07/2026',
-    isHot: true,
-    illustration: 'cpm-auction',
-    image: {
-      url: 'https://imgproxy.divecdn.com/KWwsfohqVsNQrjGytYpu_6DCuUnC3I1cRivni7CK-ec/g:nowe:0:0/c:5300:2994/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0xMTc4MTQxNTg3LmpwZw==.webp',
-      credit: 'Ảnh: Marketing Dive',
-    },
-    sourceUrl: 'https://www.marketingdive.com/news/meta-touts-industry-leading-ad-revenue-growth-but-ai-unease-rises/826583/',
-    source: 'Marketing Dive',
-    readTime: '5 phút đọc',
-    tags: ['Advantage+', 'Ngân sách', 'Cá nhân hoá', 'Xếp hạng quảng cáo'],
-    summary:
-      'Doanh thu quảng cáo Meta đạt 59,4 tỷ USD, tăng 27% so với cùng kỳ, và bộ công cụ tự động Advantage+ đã chạm quy mô 75 tỷ USD tính theo năm. Nhưng Meta đồng thời nâng mức chi đầu tư cả năm lên 130-145 tỷ USD và cảnh báo chính sách châu Âu buộc giảm cá nhân hoá quảng cáo có thể kéo doanh thu quý sau.',
-    keyNumbers: [
-      { value: '+27%', label: 'doanh thu quảng cáo so cùng kỳ' },
-      { value: '75 tỷ USD', label: 'quy mô Advantage+ theo năm' },
-      { value: '130-145 tỷ', label: 'USD chi đầu tư AI cả năm' },
-    ],
-    content: [
-      {
-        heading: 'Cỗ máy quảng cáo vẫn chạy rất mạnh',
-        body:
-          'Doanh thu quảng cáo tăng 27% lên 59,4 tỷ USD, tổng doanh thu tăng 28% lên 60,8 tỷ USD cho kỳ kết thúc ngày 30/6. Mark Zuckerberg nhấn mạnh trong buổi công bố rằng tính theo giá trị tuyệt đối, mảng quảng cáo của Meta đang tăng trưởng nhanh hơn mọi mảng quảng cáo được công bố của bất kỳ công ty nào khác.',
-      },
-      {
-        heading: 'Cách máy xếp hạng quảng cáo vừa đổi về bản chất',
-        body:
-          'Giám đốc tài chính Susan Li mô tả mô hình Meta Generative Recommender mới: thay vì chấm điểm từng quảng cáo riêng lẻ, hệ thống nay dùng mô hình ngôn ngữ lớn để suy luận đồng thời về nội dung quảng cáo và sở thích người dùng. Đây là thay đổi đáng chú ý nhất với người làm nghề: máy bắt đầu đọc hiểu nội dung mẫu quảng cáo, chứ không chỉ đối chiếu tín hiệu hành vi.',
-      },
-      {
-        heading: 'Vì sao điều đó đổi việc của phòng Marketing',
-        body:
-          'Khi máy chấm điểm bằng cách hiểu nội dung, chất lượng và độ rõ ràng của thông điệp trong mẫu quảng cáo trở thành yếu tố xếp hạng chứ không còn là chuyện thẩm mỹ. Mẫu nói mập mờ, không rõ sản phẩm dành cho ai, giải quyết vấn đề gì, sẽ khó được máy ghép đúng người hơn trước. Ngược lại, việc chia tệp thủ công càng mất giá trị.',
-      },
-      {
-        heading: 'Điều Meta tự cảnh báo trong dự báo quý sau',
-        body:
-          'Meta dự báo doanh thu quý 3 ở mức 61-64 tỷ USD, thấp hơn kỳ vọng của giới đầu tư, và nêu lý do có thể đến từ thay đổi chính sách tại châu Âu buộc quảng cáo phải bớt cá nhân hoá. Đây là tín hiệu đáng theo dõi: khi chính nền tảng coi việc bị hạn chế cá nhân hoá là rủi ro doanh thu, thì doanh nghiệp phụ thuộc hoàn toàn vào nhắm mục tiêu chi tiết cũng đang ngồi trên cùng rủi ro đó.',
-      },
-      {
-        heading: 'Mặt trái nhà đầu tư đang lo',
-        body:
-          'Meta nâng sàn chi đầu tư cả năm từ 125 lên 130 tỷ USD, trần giữ ở 145 tỷ USD. Nhà phân tích Mike Proulx nhận xét mảng quảng cáo vẫn là một con quái vật, nhưng mọi thứ khác thì đắt lên, và gần như toàn bộ tiền mặt tạo ra trong quý đã bị chi phí hạ tầng AI ăn hết. Với người mua quảng cáo, điều này hàm ý áp lực tăng hiệu quả kiếm tiền trên nền tảng sẽ còn tiếp diễn.',
-      },
-    ],
-    impact:
-      'Trưởng phòng nên dồn nguồn lực vào chất lượng thông điệp trong mẫu quảng cáo, vì máy nay xếp hạng bằng cách đọc hiểu nội dung. Đồng thời giảm dần mức phụ thuộc vào nhắm mục tiêu chi tiết, thứ đang bị siết ở châu Âu và có thể lan sang nơi khác.',
-    ifIgnored:
-      'Tiếp tục đổ công sức vào chia tệp thủ công trong khi bỏ mặc chất lượng nội dung sẽ khiến hiệu quả tụt dần theo đúng hướng thuật toán đang đi. Và nếu quy định hạn chế cá nhân hoá lan tới thị trường của mình, doanh nghiệp không có tệp dữ liệu sở hữu riêng sẽ mất kênh tiếp cận gần như trong một đêm.',
-    actionChecklist: [
-      'Rà lại mẫu quảng cáo theo tiêu chí máy đọc hiểu được: nói rõ sản phẩm cho ai, giải quyết vấn đề gì, ngay trong 3 giây đầu',
-      'Mở một chiến dịch Advantage+ chạy song song với cấu trúc thủ công, so sánh trong 4 tuần',
-      'Xây tệp dữ liệu khách hàng sở hữu riêng để không lệ thuộc hoàn toàn vào nhắm mục tiêu của nền tảng',
-      'Ghi lại CPM và chi phí mỗi kết quả hiện tại làm mốc, theo dõi biến động các quý sau',
-    ],
-  },
-  {
     id: 'real-2026-07-28-tiktok-q3-preview',
     category: 'TikTok Shop & Ads',
     platformIcon: 'Video',
@@ -582,68 +637,6 @@ const REAL_SOURCED_NEWS = [
       'Ngừng dùng báo cáo thứ hạng làm chỉ số duy nhất, bổ sung chỉ số hiển thị trong chế độ AI',
       'Viết lại mô tả sản phẩm theo hướng trả lời câu hỏi thật của người mua thay vì nhồi từ khoá',
     ],
-  },
-  {
-    id: 'real-2026-07-01-google-ads-tos',
-    category: 'Google Ads & SEO',
-    platformIcon: 'Search',
-    title: 'Điều khoản Google Ads hiệu lực 01/07/2026: hệ thống được tự sinh từ khoá, mẫu quảng cáo và trang đích thay nhà quảng cáo',
-    publishedAt: '01/07/2026',
-    isHot: true,
-    illustration: 'ai-label',
-    image: {
-      url: 'https://searchengineland.com/wp-content/seloads/2026/02/Why-Google-Ads-auctions-now-run-on-intent-not-keywords.jpg',
-      credit: 'Ảnh: Search Engine Land',
-    },
-    sourceUrl: 'https://searchengineland.com/google-ads-updates-terms-of-service-ahead-of-july-2026-rollout-479255',
-    source: 'Search Engine Land - Anu Adegbola',
-    readTime: '5 phút đọc',
-    tags: ['AI Max', 'Điều khoản', 'Tự động hoá', 'Trách nhiệm pháp lý'],
-    summary:
-      'Điều khoản dịch vụ mới của Google Ads có hiệu lực 01/07/2026, cho phép hệ thống tự động định dạng, chọn hoặc tạo ra mục tiêu nhắm, mẫu quảng cáo và trang đích thay mặt nhà quảng cáo. Không có bước xác nhận lại: mọi tài khoản bị ràng buộc ngay khi điều khoản có hiệu lực.',
-    keyNumbers: [
-      { value: '01/07', label: 'ngày điều khoản có hiệu lực' },
-      { value: '0', label: 'bước xác nhận lại được yêu cầu' },
-      { value: '02/2027', label: 'mốc khai tử Dynamic Search Ads' },
-    ],
-    content: [
-      {
-        heading: 'Câu chữ thay đổi và ý nghĩa của nó',
-        body:
-          'Điều khoản mới trao cho Google quyền phân phối quảng cáo, bao gồm việc dùng các tính năng tự động để định dạng, chọn hoặc tạo ra mục tiêu nhắm, mẫu quảng cáo và trang đích thay mặt khách hàng. Chữ tạo ra ở đây là điểm mới: hệ thống không chỉ chọn trong những gì bạn cung cấp mà có thể sinh ra nội dung mới.',
-      },
-      {
-        heading: 'Không có nút đồng ý',
-        body:
-          'Không có lời nhắc khi đăng nhập, không có ô tích, không có bước chọn tham gia. Mọi tài khoản Google Ads tự động bị ràng buộc vào điều khoản sửa đổi ngay thời điểm nó có hiệu lực. Ai chưa đọc thì vẫn đang chạy dưới bộ quy tắc mới.',
-      },
-      {
-        heading: 'Trách nhiệm vẫn thuộc về nhà quảng cáo',
-        body:
-          'Điều khoản ghi rõ nhà quảng cáo vẫn chịu trách nhiệm rà soát, phê duyệt, chỉnh sửa hoặc gỡ bỏ chiến dịch và tài sản quảng cáo, kể cả những thứ do công cụ của Google tự tạo ra. Đây là điểm bất đối xứng cần nắm: máy được quyền tạo, nhưng người phải chịu trách nhiệm nếu nội dung máy tạo sai sự thật hoặc vi phạm quy định ngành.',
-      },
-      {
-        heading: 'Dữ liệu bạn gõ vào công cụ hội thoại',
-        body:
-          'Thông tin nhà quảng cáo nhập vào các công cụ hội thoại và tính năng tương tự trong Google Ads nay có thể được hệ thống của Google dùng để cải thiện hiệu quả chiến dịch trên toàn nền tảng. Điều khoản cũng cho phép Google truy cập và quét các đường dẫn cùng tài khoản mà nhà quảng cáo cấp quyền.',
-      },
-      {
-        heading: 'Lịch trình phải nhớ',
-        body:
-          'AI Max ra khỏi giai đoạn thử nghiệm với bộ điều khiển nhắm mục tiêu và nội dung mạnh hơn. Từ tháng 9/2026, các công cụ cũ như Dynamic Search Ads bắt đầu tự động nâng cấp lên AI Max, và khai tử hoàn toàn vào tháng 2/2027. Ngoài ra từ 13/07/2026 Google yêu cầu gắn nhãn với mẫu quảng cáo hiển thị và video có yếu tố do AI tạo.',
-      },
-    ],
-    impact:
-      'Trưởng phòng phải lập quy trình rà soát định kỳ các tài sản quảng cáo do hệ thống tự sinh, vì trách nhiệm pháp lý với nội dung sai vẫn thuộc về doanh nghiệp chứ không thuộc về Google.',
-    ifIgnored:
-      'Hệ thống tự sinh một mẫu quảng cáo nói sai về sản phẩm hoặc vi phạm quy định ngành, doanh nghiệp là bên chịu trách nhiệm. Với ngành có quy định chặt như dược, tài chính, giáo dục, hậu quả không dừng ở việc bị từ chối quảng cáo.',
-    actionChecklist: [
-      'Lập lịch rà soát hằng tuần toàn bộ tài sản quảng cáo do hệ thống tự sinh trong tài khoản',
-      'Rà lại các chiến dịch Dynamic Search Ads và lên kế hoạch chuyển sang AI Max trước tháng 9/2026',
-      'Gắn nhãn đúng quy định cho mọi mẫu quảng cáo hiển thị và video có yếu tố do AI tạo',
-      'Với ngành có quy định chặt, cân nhắc giới hạn quyền tự sinh nội dung và giữ khâu duyệt thủ công',
-    ],
-    deadline: 'Dynamic Search Ads tự nâng cấp lên AI Max từ tháng 9/2026, khai tử hoàn toàn tháng 2/2027',
   },
   {
     id: 'real-2026-07-30-gsc-ai-bay',
