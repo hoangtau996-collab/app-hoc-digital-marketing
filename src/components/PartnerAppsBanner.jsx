@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sparkles, ScrollText, ListChecks, ArrowUpRight } from 'lucide-react';
+import { Globe, Sparkles, ScrollText, ListChecks, ArrowUpRight } from 'lucide-react';
 
 /**
  * Dải banner giới thiệu các ứng dụng khác, đặt ở chân trang.
@@ -14,15 +14,33 @@ import { Sparkles, ScrollText, ListChecks, ArrowUpRight } from 'lucide-react';
  * lớp học. `rel="noopener noreferrer"` đi kèm bắt buộc: thiếu `noopener`, trang
  * mở ra nắm được `window.opener` và có thể tự ý đổi địa chỉ tab khoá học.
  *
- * ẢNH LÀ BẢN SAO ĐỂ TRONG public/apps/, KHÔNG hotlink thẳng og:image của ba
- * trang kia. Ba ảnh gốc cộng lại 1,4 MB (615 + 148 + 643 KB) — nhét nguyên vào
- * chân trang là bắt học viên dùng 4G tải thêm chừng ấy chỉ để xem quảng cáo.
- * Bản trong repo đã thu về 760px ngang, JPEG q82, còn tổng khoảng 190 KB.
- * Đổi lại: ba trang kia thay ảnh bìa thì bản sao ở đây không tự cập nhật, phải
- * tải lại thủ công.
+ * ẢNH LÀ BẢN SAO ĐỂ TRONG public/apps/, KHÔNG hotlink thẳng og:image của các
+ * trang kia. Riêng ba ảnh của ba ứng dụng con đã là 1,4 MB (615 + 148 + 643
+ * KB) — nhét nguyên vào chân trang là bắt học viên dùng 4G tải thêm chừng ấy
+ * chỉ để xem quảng cáo. Bản trong repo đã thu về 760px ngang, JPEG q82, cả bốn
+ * tệp còn tổng khoảng 260 KB. Đổi lại: các trang kia thay ảnh bìa thì bản sao ở
+ * đây không tự cập nhật, phải tải lại thủ công.
  */
 
 const PARTNER_APPS = [
+  {
+    /* Trang tổng đứng đầu dải, trước ba ứng dụng con.
+
+       ẢNH KHÔNG PHẢI og:image của pmarcom.com, cố ý. Thẻ og của trang đó trỏ
+       vào chính bìa "P MARCOM ACADEMY" — gần trùng ảnh bìa nằm ngay đầu trang
+       chủ khoá học này, nên đặt xuống chân trang thì học viên gặp lại đúng thứ
+       vừa cuộn qua và tưởng bấm vào là quay về chỗ cũ. Thay bằng ảnh sự kiện
+       thật lấy từ chính trang đó, hợp với định vị "giải pháp truyền thông — sự
+       kiện" mà site tự khai trong thẻ SEO. */
+    id: 'pmarcom',
+    name: 'P MARCOM — Website Tổng',
+    desc: 'Giải pháp truyền thông tích hợp, tổ chức sự kiện và đào tạo doanh nghiệp.',
+    domain: 'pmarcom.com',
+    href: 'https://www.pmarcom.com/',
+    img: '/apps/pmarcom.jpg',
+    icon: Globe,
+    tile: 'from-yellow-400 to-amber-600'
+  },
   {
     id: 'healing',
     name: 'P Healing — Tarot Online',
@@ -60,14 +78,14 @@ const PARTNER_APPS = [
 
 export default function PartnerAppsBanner() {
   return (
-    <div className="max-w-5xl mx-auto mb-6 text-left">
+    <div className="max-w-6xl mx-auto mb-6 text-left">
 
       {/* Nhãn phân đoạn: gạch ngang hai bên để tách hẳn khối giới thiệu khỏi
           dòng bản quyền, tránh học viên hiểu nhầm đây là mục của khoá học. */}
       <div className="flex items-center gap-3 mb-3">
         <span className="h-px flex-1 bg-emerald-900/50" />
         <span className="text-[10px] sm:text-[11px] font-black tracking-widest text-emerald-400 uppercase">
-          Ứng dụng khác
+          Website &amp; ứng dụng khác
         </span>
         <span className="h-px flex-1 bg-emerald-900/50" />
       </div>
@@ -75,16 +93,21 @@ export default function PartnerAppsBanner() {
       {/*
         ĐIỆN THOẠI VUỐT NGANG, MÁY TÍNH XẾP BA CỘT.
 
-        Ba ảnh bìa 16:9 xếp dọc trên màn 360px là gần 800px chiều cao — chân
+        Bốn ảnh bìa 16:9 xếp dọc trên màn 360px là hơn 1.000px chiều cao — chân
         trang dài hơn cả phần nội dung nó đứng dưới. Chuyển sang băng cuộn ngang
         có điểm dừng: mỗi thẻ rộng 78% màn hình nên luôn hở một mẩu thẻ kế bên,
         đó là thứ báo cho ngón tay biết còn thứ để vuốt mà không cần chấm tròn
-        hay mũi tên. Từ 640px trở lên đủ chỗ cho ba cột nên tắt cuộn đi.
+        hay mũi tên.
+
+        Từ 640px lên xếp HAI cột chứ không phải bốn: bốn thẻ dàn ngang trên máy
+        tính bảng thì mỗi thẻ chỉ còn khoảng 150px, tên ứng dụng vỡ thành ba
+        dòng còn ảnh bìa co lại tới mức không đọc được chữ trên đó. Đủ bốn cột
+        thì phải từ 1.024px trở lên.
 
         `-mx-3 px-3` để thẻ đầu và thẻ cuối vẫn chạm được mép màn hình khi cuộn,
         thay vì bị lề của chân trang cắt cụt.
       */}
-      <div className="flex sm:grid sm:grid-cols-3 gap-3 overflow-x-auto sm:overflow-visible snap-x snap-mandatory no-scrollbar -mx-3 px-3 sm:mx-0 sm:px-0 pb-1">
+      <div className="flex sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-3 overflow-x-auto sm:overflow-visible snap-x snap-mandatory no-scrollbar -mx-3 px-3 sm:mx-0 sm:px-0 pb-1">
         {PARTNER_APPS.map((app) => {
           const Icon = app.icon;
 
@@ -151,7 +174,7 @@ export default function PartnerAppsBanner() {
       </div>
 
       <p className="sm:hidden text-center text-[10px] text-slate-500 mt-2">
-        Vuốt ngang để xem thêm ứng dụng
+        Vuốt ngang để xem thêm
       </p>
     </div>
   );

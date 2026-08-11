@@ -10,13 +10,14 @@ TODO — chưa có quy ước đánh phiên bản; cân nhắc gắn thẻ Git k
 
 ## [Chưa phát hành] — 2026-08-11
 
-### Thêm mới — Dải giới thiệu 3 ứng dụng khác ở chân trang
+### Thêm mới — Dải giới thiệu website & ứng dụng khác ở chân trang
 
-- Thành phần mới `PartnerAppsBanner` gắn vào footer, ngay trên dòng bản quyền: **P Healing — Tarot Online** (`healing.pmarcom.com`), **Xin Xăm — Luận Quẻ** (`xinxam.pmarcom.com`), **Capy Track — Tracking Công Việc** (`trackingtask.lethanhphong.vn`).
+- Thành phần mới `PartnerAppsBanner` gắn vào footer, ngay trên dòng bản quyền: **P MARCOM — Website Tổng** (`pmarcom.com`) đứng đầu, rồi **P Healing — Tarot Online** (`healing.pmarcom.com`), **Xin Xăm — Luận Quẻ** (`xinxam.pmarcom.com`), **Capy Track — Tracking Công Việc** (`trackingtask.lethanhphong.vn`).
+- **Thẻ trang tổng KHÔNG dùng og:image của pmarcom.com.** Thẻ og của trang đó trỏ vào chính bìa "P MARCOM ACADEMY" — gần trùng ảnh bìa nằm ngay đầu trang chủ khoá học này, đặt xuống chân trang thì học viên gặp lại đúng thứ vừa cuộn qua và tưởng bấm vào là quay về chỗ cũ. Thay bằng ảnh sự kiện thật lấy từ chính trang đó, cắt 16:9, hợp với định vị "giải pháp truyền thông — sự kiện" mà site tự khai trong thẻ SEO.
 - **Mở tab mới, không thay cửa sổ khoá học.** Học viên có thể đang dở một bài mà tiến độ chỉ ghi theo mốc, nên mọi liên kết đều `target="_blank"` kèm `rel="noopener noreferrer"` — thiếu `noopener` thì trang mở ra nắm được `window.opener` và đổi được địa chỉ tab khoá học.
-- **Ảnh bìa SEO lấy từ chính ba trang, nhưng để bản sao trong `public/apps/`** thay vì hotlink: ba ảnh gốc cộng lại 1,4 MB (615 + 148 + 643 KB). Bản trong repo thu về 760px ngang, JPEG q82, tổng còn ~188 KB, kèm `loading="lazy"` nên chỉ tải khi học viên cuộn tới chân trang. Đổi lại: ba trang kia thay ảnh bìa thì phải tải lại thủ công.
-- **Điện thoại vuốt ngang, máy tính ba cột.** Ba ảnh 16:9 xếp dọc trên màn 360px là gần 800px chiều cao — dài hơn cả phần nội dung phía trên. Nay là băng cuộn có điểm dừng, mỗi thẻ rộng 78% màn hình để luôn hở một mẩu thẻ kế bên làm tín hiệu vuốt; từ 640px trở lên chuyển sang lưới ba cột.
-- Ảnh của P Healing là ảnh vuông, hai ảnh còn lại 1200x630 và 1200x669 — ép chung khung 16:9 với `object-center` để ba thẻ thẳng hàng, phần bị xén chỉ là nền.
+- **Ảnh bìa SEO lấy từ chính các trang đó, nhưng để bản sao trong `public/apps/`** thay vì hotlink: riêng ba ảnh của ba ứng dụng con đã là 1,4 MB (615 + 148 + 643 KB). Bản trong repo thu về 760px ngang, JPEG q82, cả bốn tệp còn ~260 KB, kèm `loading="lazy"` nên chỉ tải khi học viên cuộn tới chân trang. Đổi lại: các trang kia thay ảnh bìa thì phải tải lại thủ công.
+- **Điện thoại vuốt ngang, máy tính bảng hai cột, máy tính bốn cột.** Bốn ảnh 16:9 xếp dọc trên màn 360px là hơn 1.000px chiều cao — dài hơn cả phần nội dung phía trên. Nay là băng cuộn có điểm dừng, mỗi thẻ rộng 78% màn hình để luôn hở một mẩu thẻ kế bên làm tín hiệu vuốt. Không dàn bốn cột ngay từ 640px vì mỗi thẻ chỉ còn ~150px, tên vỡ ba dòng và chữ trên ảnh bìa co lại không đọc được; đủ bốn cột thì phải từ 1.024px.
+- Ảnh của P Healing là ảnh vuông, hai ảnh còn lại 1200x630 và 1200x669 — ép chung khung 16:9 với `object-center` để bốn thẻ thẳng hàng, phần bị xén chỉ là nền.
 - Màu ô biểu tượng và chữ trên đó chọn tránh danh sách bị giao diện nền sáng ghi đè bằng `!important` trong `index.css`; hiệu ứng di chuột dùng `ring` thay `border` vì lý do tương tự.
 
 ---
