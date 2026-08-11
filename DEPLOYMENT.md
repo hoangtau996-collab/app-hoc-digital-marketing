@@ -252,6 +252,24 @@ npx firebase-tools deploy --only firestore:rules
 
    Nếu hỏng, hoàn nguyên vế `&& (docId == myDocId() || docId == request.auth.uid)` trong `canCreateProfile()` rồi Publish lại — phần còn lại của rules không phụ thuộc vào nó.
 
+#### Ảnh bìa trang chủ — hai collection mới, PHẢI Publish lại rules
+
+Tính năng băng ảnh bìa (quản trị viên tự đổi ảnh trang chủ) dùng hai collection chưa từng có trong bộ rules cũ:
+
+| Collection | Nội dung | Quyền |
+|---|---|---|
+| `site_banners` | Mỗi ảnh bìa một tài liệu, ảnh lưu base64 trong trường `imageData` | Đọc: tất cả · Ghi: chỉ quản trị viên |
+| `site_config` | Tài liệu `cover_slider` giữ `intervalMs` (thời gian đổi ảnh) | Đọc: tất cả · Ghi: chỉ quản trị viên |
+
+Bộ rules cũ có luật chốt `match /{document=**} { allow read, write: if false; }`, nên **chưa Publish lại thì cả hai collection này bị chặn hoàn toàn** — kể cả đọc. Triệu chứng:
+
+- Trang chủ luôn hiện ảnh bìa mặc định, dù đã tải ảnh lên.
+- Bấm **Thêm ảnh** trong hộp thoại Đổi Ảnh Bìa báo: *"Máy chủ từ chối ghi. Nhiều khả năng bộ Firestore Rules mới chưa được dán lên Firebase Console…"*
+
+Kiểm chứng sau khi Publish: đăng nhập tài khoản quản trị → ở trang chủ bấm nút **Đổi Ảnh Bìa** góc trên bên phải ảnh → tải một ảnh lên. Ảnh phải hiện ra ngay trên trang chủ mà không cần tải lại trang.
+
+Ghi chú về hạn mức: rules chặn `imageData` từ 800.000 ký tự trở lên, còn phía trình duyệt tự nén xuống dưới 700KB trước khi gửi. Trần thật của một tài liệu Firestore là 1MB — hai con số kia là lưới an toàn, không phải hạn mức làm việc. Ảnh khổ dọc hoặc khổ vuông sẽ bị **cắt giữa** về tỉ lệ 1742:631; hộp thoại hiện bản xem trước đúng phần được giữ lại.
+
 ### Mồi tài khoản quản trị đầu tiên
 
 Rules dùng collection `admins` làm sổ phân quyền: id tài liệu là email chữ thường, có bản ghi nghĩa là có quyền. Sổ rỗng thì **không ai** cấp quyền được cho ai — vì chỉ quản trị viên mới ghi được vào sổ quyền. Phải có bản ghi đầu tiên thì vòng lặp đó mới mở ra.

@@ -14,6 +14,8 @@ import UserProfileModal from './components/UserProfileModal';
 import DigitalGlossary from './components/DigitalGlossary';
 import FeatureMenuBar from './components/FeatureMenuBar';
 import AdminDashboardModal from './components/AdminDashboardModal';
+import CoverSlider from './components/CoverSlider';
+import CoverSliderModal from './components/CoverSliderModal';
 import SupportInboxModal from './components/SupportInboxModal';
 import SurveyModal from './components/SurveyModal';
 import PartnerAppsBanner from './components/PartnerAppsBanner';
@@ -46,7 +48,11 @@ import {
   setSupportMessageStatus,
   deleteSupportMessage,
   saveSurveyToCloud,
-  consumeGoogleRedirectResult
+  consumeGoogleRedirectResult,
+  listenToCoverBanners,
+  listenToCoverSliderConfig,
+  normalizeCoverInterval,
+  COVER_INTERVAL_DEFAULT_MS
 } from './firebase';
 import { hasRealPhone } from './utils/industryOptions';
 import { sendGraduationEmail } from './utils/studentEmail';
@@ -120,6 +126,7 @@ export default function App() {
   const [isAuthOpen, setIsAuthOpen] = useState(false);
   const [isProfileOpen, setIsProfileOpen] = useState(false);
   const [isAdminOpen, setIsAdminOpen] = useState(false);
+  const [isCoverEditorOpen, setIsCoverEditorOpen] = useState(false);
   const [isReminderOpen, setIsReminderOpen] = useState(false);
   const [reminderIdleDays, setReminderIdleDays] = useState(0);
 
@@ -552,6 +559,33 @@ export default function App() {
       }
     });
     return () => unsubscribe();
+  }, []);
+
+  /* ẢNH BÌA TRANG CHỦ — băng ảnh do quản trị viên cấu hình.
+   *
+   * Nghe theo thời gian thực cho MỌI người, kể cả khách chưa đăng nhập: ảnh bìa
+   * là nội dung công khai, và nghe liên tục nghĩa là quản trị viên đổi ảnh thì
+   * người đang mở trang thấy ngay, không phải chờ họ tải lại.
+   *
+   * `null` từ listener nghĩa là CHƯA ĐỌC ĐƯỢC (mất mạng, rules chưa dán), khác
+   * hẳn mảng rỗng nghĩa là "đã đọc xong, chưa cấu hình ảnh nào". Với `null` thì
+   * giữ nguyên thứ đang có — ghi đè bằng mảng rỗng sẽ làm ảnh bìa đang hiện
+   * bỗng nhảy về ảnh mặc định mỗi lần sóng chập chờn.
+   */
+  const [coverBanners, setCoverBanners] = useState([]);
+  const [coverIntervalMs, setCoverIntervalMs] = useState(COVER_INTERVAL_DEFAULT_MS);
+
+  useEffect(() => {
+    const stopBanners = listenToCoverBanners((list) => {
+      if (Array.isArray(list)) setCoverBanners(list);
+    });
+    const stopConfig = listenToCoverSliderConfig((cfg) => {
+      if (cfg) setCoverIntervalMs(normalizeCoverInterval(cfg.intervalMs));
+    });
+    return () => {
+      stopBanners?.();
+      stopConfig?.();
+    };
   }, []);
 
   /**
@@ -1968,16 +2002,14 @@ export default function App() {
         và Zalo cắt ảnh share về 1,91:1, đưa ảnh 2,76:1 lên thì mất hai đầu.
       */}
       {activeTab === 'course' && !selectedModuleId && (
-        <div className="max-w-7xl w-full mx-auto px-3 sm:px-6 lg:px-8 pt-4">
-          <img
-            src="/og-cover-v4.jpg"
-            alt="Chào mừng đến với P MARCOM ACADEMY — Kết nối tri thức, nâng tầm tư duy, bứt phá tương lai"
-            width="1742"
-            height="631"
-            fetchPriority="high"
-            className="app-cover w-full object-cover object-center rounded-2xl border border-emerald-900/40 shadow-lg"
-          />
-        </div>
+        <CoverSlider
+          banners={coverBanners}
+          intervalMs={coverIntervalMs}
+          fallbackSrc="/og-cover-v4.jpg"
+          fallbackAlt="Chào mừng đến với P MARCOM ACADEMY — Kết nối tri thức, nâng tầm tư duy, bứt phá tương lai"
+          canEdit={isAdmin}
+          onEdit={() => setIsCoverEditorOpen(true)}
+        />
       )}
 
       {/* Guest Progress / Auth Protection Toast Banner */}
@@ -2283,6 +2315,21 @@ export default function App() {
         onIssueCertificateForStudent={handleAdminIssueCertificate}
         t={t}
       />
+
+      {/* Quản trị ảnh bìa trang chủ.
+          Dựng có điều kiện `isAdmin` chứ không chỉ dựa vào cờ isOpen: ẩn nút mà
+          vẫn để thành phần tồn tại thì chỉ cần gọi được hàm mở là vào được.
+          Ranh giới thật vẫn nằm ở firestore.rules — đây chỉ là lớp giao diện. */}
+      {isAdmin && (
+        <CoverSliderModal
+          isOpen={isCoverEditorOpen}
+          onClose={() => setIsCoverEditorOpen(false)}
+          banners={coverBanners}
+          intervalMs={coverIntervalMs}
+          fallbackSrc="/og-cover-v4.jpg"
+          fallbackAlt="Ảnh bìa mặc định của Học Viện P MARCOM"
+        />
+      )}
 
       {/* Khảo sát nhu cầu học viên.
           Chỉ dựng khi thật sự còn phải hỏi — dựng sẵn rồi ẩn bằng cờ isOpen thì

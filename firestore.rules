@@ -331,6 +331,40 @@ service cloud.firestore {
                     || (visitsOk() && enrolledOk() && graduatesOk());
     }
 
+    // ---- /site_banners : ảnh bìa trang chủ ---------------------------------
+
+    // ĐỌC MỞ CHO TẤT CẢ, kể cả khách chưa đăng nhập. Ảnh bìa là thứ đầu tiên
+    // hiện ra trên trang chủ, mà trang chủ thì ai cũng vào được. Đóng phần đọc
+    // lại là khách nhìn thấy ảnh mặc định còn học viên thấy ảnh thật — hai
+    // trang chủ khác nhau cho cùng một địa chỉ.
+    //
+    // GHI CHỈ QUẢN TRỊ VIÊN. Đây mới là ranh giới thật; nút "Đổi Ảnh Bìa" trên
+    // giao diện chỉ là lớp sơn, ai gọi thẳng SDK cũng bỏ qua được nó.
+    //
+    // Chặn ảnh quá khổ ngay tại đây, không tin vào phần nén ở trình duyệt: một
+    // tài liệu Firestore có trần cứng 1MB, và nếu để lọt một bản ghi sát trần
+    // thì lệnh ghi hỏng ở tầng sâu hơn với thông báo khó hiểu hơn nhiều. 800KB
+    // chừa đủ chỗ cho các trường còn lại. Phía trình duyệt tự ép về 700KB
+    // (MAX_ENCODED_BYTES trong utils/bannerImage.js) nên bình thường không bao
+    // giờ chạm mức này — nó là lưới an toàn, không phải hạn mức làm việc.
+    match /site_banners/{bannerId} {
+      allow read: if true;
+      allow create, update: if isAdmin()
+                            && request.resource.data.imageData is string
+                            && request.resource.data.imageData.size() < 800000;
+      allow delete: if isAdmin();
+    }
+
+    // ---- /site_config : cấu hình hiển thị chung ----------------------------
+
+    // Hiện chỉ chứa `cover_slider` (thời gian đổi ảnh bìa). Đọc mở vì cùng lý
+    // do với ảnh bìa: không có nó thì khách và học viên thấy hai tốc độ khác
+    // nhau. Ghi chỉ quản trị viên.
+    match /site_config/{configId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
     // ---- Mặc định từ chối --------------------------------------------------
 
     // Collection nào chưa khai báo ở trên thì đóng. Thà hỏng rõ ràng còn hơn

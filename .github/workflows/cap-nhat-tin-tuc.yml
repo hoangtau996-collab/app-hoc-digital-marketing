@@ -1,0 +1,77 @@
+# Cập nhật Bản tin thuật toán mỗi sáng.
+#
+# VÌ SAO CHẠY Ở ĐÂY: quy trình này chạy ngay bên trong GitHub nên `GITHUB_TOKEN`
+# đã sẵn quyền ghi vào repo, không phải xin cấp quyền ở đâu cả. Đó đúng là chỗ
+# đã làm hỏng phương án agent chạy nền ở hạ tầng ngoài. Với repo công khai thì
+# GitHub Actions miễn phí không giới hạn số phút.
+
+name: Cập nhật bản tin
+
+on:
+  schedule:
+    # 01:00 UTC = 08:00 giờ Việt Nam. GitHub chỉ nhận giờ UTC.
+    # Lịch của GitHub có thể chạy trễ vài chục phút khi hệ thống bận, đó là
+    # chuyện bình thường, không phải hỏng.
+    - cron: '0 1 * * *'
+  # Cho phép bấm chạy tay từ tab Actions, dùng khi cần cập nhật gấp.
+  workflow_dispatch:
+
+# Quyền tối thiểu đủ dùng: chỉ ghi nội dung repo, không đụng gì khác.
+permissions:
+  contents: write
+
+jobs:
+  cap-nhat:
+    runs-on: ubuntu-latest
+    # Cả job không được vượt 20 phút. Mạng treo thì cắt, đừng để chạy vô hạn.
+    timeout-minutes: 20
+
+    steps:
+      - name: Lấy mã nguồn
+        uses: actions/checkout@v4
+
+      - name: Cài Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Cài thư viện
+        run: npm ci
+
+      - name: Chạy cập nhật tin
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node scripts/capNhatTinTuc.mjs
+
+      - name: Kiểm tra dữ liệu và build
+        # Chỉ chạy khi bước trên thật sự có sửa file. Không có tin mới thì bỏ qua.
+        run: |
+          if [ -z "$(git status --porcelain src/data/realNews.json)" ]; then
+            echo "Không có tin mới, bỏ qua bước kiểm tra."
+            exit 0
+          fi
+          node scripts/kiemTraTinTuc.mjs
+          npm run build
+
+      - name: Đẩy lên nếu có tin mới
+        run: |
+          if [ -z "$(git status --porcelain src/data/realNews.json)" ]; then
+            echo "Không có gì để đẩy."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/realNews.json
+          # Thông điệp commit là nơi duy nhất lưu lịch sử: chạy hằng ngày mà ghi
+          # CHANGELOG thì một năm thêm 365 mục, file thành vô dụng.
+          if [ -f tin-vua-them.txt ]; then
+            git commit -m "content: cap nhat ban tin tu dong" -F - <<EOF
+          content: cap nhat ban tin tu dong
+
+          $(cat tin-vua-them.txt)
+          EOF
+          else
+            git commit -m "content: cap nhat ban tin tu dong"
+          fi
+          git push
