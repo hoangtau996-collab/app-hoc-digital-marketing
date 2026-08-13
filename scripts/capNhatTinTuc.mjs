@@ -355,8 +355,55 @@ NỘI DUNG BÀI GỐC:
 ${bai.thanBai.slice(0, 9000)}`;
 }
 
+/**
+ * Tự dò model khả dụng thay vì đóng cứng tên.
+ *
+ * Bản đầu đóng cứng 'gemini-2.5-flash' và lãnh đủ: Google đổi tên model, mọi
+ * lượt gọi trả 404, cả quy trình chạy không ra tin nào suốt một buổi sáng. Tên
+ * model là thứ nhà cung cấp đổi mà không báo, nên với việc chạy không người
+ * trực thì phải hỏi API xem hiện có gì rồi mới chọn.
+ *
+ * Ưu tiên dòng Flash vì đó là dòng nằm trong bậc miễn phí. Trong các bản Flash
+ * thì chọn số hiệu lớn nhất, và tránh bản 'preview' cho việc chạy hằng ngày.
+ */
+let modelDaChon = null;
+
+async function timModel(khoaApi) {
+  if (modelDaChon) return modelDaChon;
+
+  if (process.env.GEMINI_MODEL) {
+    modelDaChon = process.env.GEMINI_MODEL;
+    log(`dùng model chỉ định sẵn: ${modelDaChon}`);
+    return modelDaChon;
+  }
+
+  const res = await tai(`https://generativelanguage.googleapis.com/v1beta/models?key=${khoaApi}&pageSize=200`);
+  if (!res.ok) throw new Error(`không lấy được danh sách model: HTTP ${res.status}`);
+  const data = await res.json();
+
+  const dungDuoc = (data.models || [])
+    .filter((m) => (m.supportedGenerationMethods || []).includes('generateContent'))
+    .map((m) => m.name.replace(/^models\//, ''))
+    .filter((ten) => ten.includes('flash'))
+    .filter((ten) => !ten.includes('preview') && !ten.includes('exp') && !ten.includes('tts') && !ten.includes('image'));
+
+  if (dungDuoc.length === 0) throw new Error('API không trả về model Flash nào dùng được');
+
+  // Xếp theo số hiệu giảm dần: gemini-3.6-flash đứng trước gemini-2.5-flash.
+  // Bản đầy đủ ưu tiên hơn bản '-lite' vì bài viết cần chất lượng hơn tốc độ.
+  const diem = (ten) => {
+    const so = parseFloat((ten.match(/(\d+\.?\d*)/) || [0])[1]) || 0;
+    return so * 10 - (ten.includes('lite') ? 1 : 0);
+  };
+  dungDuoc.sort((a, b) => diem(b) - diem(a));
+
+  modelDaChon = dungDuoc[0];
+  log(`model tự chọn: ${modelDaChon} (trong ${dungDuoc.length} lựa chọn)`);
+  return modelDaChon;
+}
+
 async function nhoGeminiViet(bai, khoaApi) {
-  const model = process.env.GEMINI_MODEL || 'gemini-2.5-flash';
+  const model = await timModel(khoaApi);
   const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${khoaApi}`;
 
   const res = await tai(url, {
@@ -485,6 +532,11 @@ async function chay() {
   log(`${chuaCo.length} bài chưa từng đăng`);
 
   const nhan = [];
+  // Đếm để phân biệt "ngành ít tin" với "hỏng hệ thống" ở cuối hàm.
+  let daThu = 0;
+  let loiApi = 0;
+  let loiApiCuoi = '';
+
   for (const b of chuaCo) {
     if (nhan.length >= THEM_TOI_DA) break;
 
@@ -511,6 +563,7 @@ async function chay() {
         continue;
       }
 
+      daThu += 1;
       const viet = await nhoGeminiViet(chiTiet, khoaApi);
 
       // Lưới lọc trong: mô hình đọc cả bài rồi tự thấy không đáng đưa.
@@ -548,11 +601,28 @@ async function chay() {
       });
       log('  ĐẠT');
     } catch (e) {
+      // Lỗi phía mô hình khác hẳn lỗi phía bài báo. Bài lỗi thì bỏ bài đó là
+      // xong; mô hình lỗi thì cả quy trình vô dụng và phải báo đỏ.
+      if (/Gemini|model/i.test(e.message)) {
+        loiApi += 1;
+        loiApiCuoi = e.message.slice(0, 160);
+      }
       log(`  bỏ: ${e.message}`);
     }
   }
 
+  // PHÂN BIỆT HAI TÌNH HUỐNG KHÁC HẲN NHAU.
+  //
+  // "Không có tin nào đạt chuẩn" là kết quả bình thường của một ngày ngành ít
+  // tin. Nhưng "mọi lượt gọi đều lỗi API" là hỏng hệ thống. Bản đầu gộp cả hai
+  // vào một nhánh rồi thoát êm, nên workflow báo XANH trong khi thực tế tên
+  // model đã sai và không viết được bài nào suốt cả buổi sáng. Hỏng mà báo
+  // thành công là kiểu hỏng tệ nhất: không ai biết để đi sửa.
   if (nhan.length === 0) {
+    if (loiApi > 0 && loiApi >= daThu) {
+      console.error(`[tin] HỎNG: cả ${daThu} lượt gọi mô hình đều lỗi. Lỗi gần nhất: ${loiApiCuoi}`);
+      process.exit(1);
+    }
     log('không có tin nào đạt chuẩn hôm nay — không đổi gì.');
     return;
   }
