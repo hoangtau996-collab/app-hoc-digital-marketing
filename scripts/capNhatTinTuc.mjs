@@ -248,6 +248,41 @@ export function rutSo(chu) {
   return ra;
 }
 
+/**
+ * Bung các con số viết kèm đơn vị bậc thành đủ chữ số.
+ *
+ * VÌ SAO CẦN: bài gốc tiếng Anh ghi "1B monthly users" hay "150 million", còn
+ * bài tiếng Việt viết ra "1.000.000.000" và "150.000.000". Cùng một con số,
+ * khác cách viết. Không bung ra thì bộ đối chiếu báo động giả và loại oan bài
+ * hoàn toàn chính xác — đúng lỗi đã xảy ra ngay lần chạy thật đầu tiên.
+ *
+ * Chỉ bung ở phía BÀI GỐC, không bung ở phía bài viết ra. Làm vậy để nới lỏng
+ * theo đúng một chiều: chấp nhận thêm cách viết hợp lệ, chứ không nới chỗ nào
+ * cho số bịa lọt qua.
+ */
+function bungDonViBac(chu) {
+  const ra = new Set();
+  const bac = {
+    k: 1e3, thousand: 1e3, nghin: 1e3, nghìn: 1e3,
+    m: 1e6, mn: 1e6, million: 1e6, trieu: 1e6, triệu: 1e6,
+    b: 1e9, bn: 1e9, billion: 1e9, ty: 1e9, tỷ: 1e9,
+    t: 1e12, trillion: 1e12,
+  };
+  const mau = /(\d[\d.,]*)\s*(k|thousand|nghin|nghìn|mn|million|trieu|triệu|bn|billion|ty|tỷ|trillion|[mbt])\b/gi;
+  let m;
+  while ((m = mau.exec(chu)) !== null) {
+    const heSo = bac[m[2].toLowerCase()];
+    if (!heSo) continue;
+    // '1.6 billion' -> 1.6; '1,6 tỷ' -> 1.6. Dấu phẩy thập phân quy về dấu chấm.
+    const soTho = m[1].replace(/,(\d{1,2})$/, '.$1').replace(/[.,](?=\d{3}\b)/g, '');
+    const gia = parseFloat(soTho);
+    if (!Number.isFinite(gia)) continue;
+    const day = Math.round(gia * heSo);
+    if (day > 0 && String(day).length <= 15) ra.add(String(day));
+  }
+  return ra;
+}
+
 /** Rút riêng các con số đi kèm dấu phần trăm, giữ nguyên cả số một chữ số. */
 function rutPhanTram(chu) {
   const ra = new Set();
@@ -275,7 +310,7 @@ function rutPhanTram(chu) {
  *     chữ số, mà phần trăm lại đúng là loại số liệu hay bị bịa nhất.
  */
 export function kiemTraSoLieu(tinMoi, thanBaiGoc) {
-  const soGoc = rutSo(thanBaiGoc);
+  const soGoc = new Set([...rutSo(thanBaiGoc), ...bungDonViBac(thanBaiGoc)]);
   const phanTramGoc = rutPhanTram(thanBaiGoc);
   const chuTrongTin = [
     tinMoi.title,
@@ -540,10 +575,16 @@ async function chay() {
   for (const b of chuaCo) {
     if (nhan.length >= THEM_TOI_DA) break;
 
+    // Nguồn đã đủ trần KHÔNG bị loại ở đây. `ghepDanhSach` sẽ bỏ tin cũ nhất
+    // của chính nguồn đó để nhường chỗ, nên trần vẫn được giữ ở kết quả cuối.
+    // Chặn ngay tại đây là lặp lại đúng cái bẫy đã làm tắc quy trình trước:
+    // ngày nào tin hay cũng đến từ một hai báo quen, chặn cứng là không thêm
+    // được gì cả. Chỉ giới hạn số tin MỚI lấy từ cùng một nguồn trong một lượt,
+    // để một báo không chiếm trọn cả đợt cập nhật.
     const mien = tenMien(b.url);
-    const demHienTai = (demNguon[mien] || 0) + nhan.filter((x) => tenMien(x.url) === mien).length;
-    if (demHienTai >= TRAN_MOI_NGUON) {
-      log(`bỏ qua (${mien} đã đủ trần): ${b.tieuDe.slice(0, 55)}`);
+    const moiTuNguonNay = nhan.filter((x) => tenMien(x.url) === mien).length;
+    if (moiTuNguonNay >= 2) {
+      log(`bỏ qua (đã lấy 2 tin mới từ ${mien} lượt này): ${b.tieuDe.slice(0, 50)}`);
       continue;
     }
 
