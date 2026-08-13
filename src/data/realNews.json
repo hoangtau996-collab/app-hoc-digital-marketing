@@ -1,5 +1,127 @@
 [
   {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Cách tối ưu nội dung YMYL và y tế để xuất hiện trên công cụ tìm kiếm AI",
+    "isHot": false,
+    "illustration": "zero-click",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "SEO YMYL",
+      "AI Search",
+      "Tối ưu E-E-A-T",
+      "Google AI Overviews"
+    ],
+    "summary": "Nội dung y tế và YMYL đang đối mặt với sự thay đổi lớn khi người dùng dần chuyển sang đọc câu trả lời trực tiếp từ AI Overviews và ChatGPT thay vì nhấp vào đường dẫn truyền thống. Bài viết cung cấp giải pháp chuẩn hóa độ tin cậy E-E-A-T và cấu trúc trình bày giúp thương hiệu được các công cụ tìm kiếm AI ưu tiên trích dẫn.",
+    "keyNumbers": [
+      {
+        "value": "89%",
+        "label": "Tỷ lệ truy vấn y tế xuất hiện AI Overviews"
+      },
+      {
+        "value": "Hơn 40 triệu",
+        "label": "Số người hỏi câu hỏi sức khỏe trên ChatGPT mỗi ngày"
+      },
+      {
+        "value": "55%",
+        "label": "Tỷ lệ người dùng AI để tra cứu triệu chứng"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Chuyển dịch hành vi tìm kiếm y tế sang công cụ AI",
+        "body": "Hành vi tìm kiếm thông tin sức khỏe của người dùng đang có sự thay đổi căn bản khi không còn dừng lại ở việc nhấp vào các liên kết truyền thống. Báo cáo đầu năm 2026 của OpenAI chỉ ra rằng hơn 40 triệu người hỏi các câu hỏi về sức khỏe trên nền tảng này mỗi ngày. Nghiên cứu từ BrightEdge cũng ghi nhận AI Overviews xuất hiện trong khoảng 89% các truy vấn thuộc lĩnh vực y tế trên Google. Ngoài ra, 3 trong số 5 người trưởng thành tại Mỹ từng sử dụng công cụ AI cho các thắc mắc y tế, trong đó khoảng 7 trên 10 cuộc trò chuyện diễn ra ngoài giờ hành chính. Người dùng chủ yếu dùng AI để tra cứu triệu chứng với tỷ lệ 55%, tìm hiểu phương pháp điều trị đạt 44% và giải thích thuật ngữ y khoa đạt 48%."
+      },
+      {
+        "heading": "Tiêu chuẩn đánh giá nghiêm ngặt đối với nội dung YMYL",
+        "body": "YMYL là khái niệm của Google dành cho các nội dung có thể ảnh hưởng trực tiếp đến sức khỏe, tài chính hoặc sự an toàn của con người. Những nội dung thuộc nhóm này luôn chịu sự kiểm duyệt khắt khe hơn từ đội ngũ đánh giá chất lượng người thật của Google. Mặc dù điểm số của người đánh giá không trực tiếp thay đổi thứ hạng, chúng được dùng để huấn luyện các thuật toán xếp hạng tìm kiếm. Google đã mở rộng định nghĩa YMYL và bổ sung tiêu chí đánh giá AI Overviews, đồng thời xếp các nội dung do AI tạo ra không qua kiểm duyệt của con người vào nhóm chất lượng thấp nhất. Nếu xuất bản nội dung y tế hời hợt hoặc thiếu thẩm định, website không chỉ mất lượng truy cập mà còn đối mặt với rủi ro bị phạt nghiêm trọng."
+      },
+      {
+        "heading": "Tối ưu chỉ số E-E-A-T và xây dựng độ tin cậy",
+        "body": "E-E-A-T là nền tảng cốt lõi giúp nội dung y tế nổi bật trên cả công cụ tìm kiếm truyền thống lẫn AI Search. Doanh nghiệp cần minh bạch hóa uy tín bằng cách gán tên tác giả cụ thể kèm học vị thực tế thay vì dùng tên nhóm chung chung. Việc bổ sung dòng xác nhận Medically reviewed by kèm tên bác sĩ và dẫn đường link tới trang tiểu sử chuyên gia là yêu cầu quan trọng. Bên cạnh đó, bài viết cần trích dẫn các nguồn tài liệu sơ cấp từ nghiên cứu được đồng thẩm định hoặc tổ chức y tế chính thống. Việc xuất bản các trường hợp thực tế cũng giúp chứng minh trải nghiệm người dùng thực sự với sản phẩm và dịch vụ."
+      },
+      {
+        "heading": "Áp dụng cấu trúc Answer-First và tối ưu kỹ thuật",
+        "body": "Để tối ưu cho các công cụ AI Search trích dẫn, các trang nội dung nên mở đầu bằng câu trả lời trực tiếp dài 2 đến 4 câu cho thắc mắc cốt lõi. Cách viết cần sử dụng ngôn ngữ bình dân, dễ hiểu, chia nhỏ đoạn văn và đặt tiêu đề dưới dạng câu hỏi để phù hợp với văn phong tự nhiên của người dùng. Sự nhất quán về mặt thông tin, tên tổ chức và chủ đề trên toàn bộ website sẽ giúp hệ thống AI xác minh thực thể doanh nghiệp dễ dàng hơn. Cuối cùng, website phải đảm bảo trình thu thập dữ liệu có thể truy cập thuận lợi với tốc độ tải nhanh, thiết kế ưu tiên di động và không bị rào cản bởi mã JavaScript."
+      }
+    ],
+    "impact": "Giúp các thương hiệu thuộc lĩnh vực y tế, chăm sóc sức khỏe và tài chính duy trì nhận diện thương hiệu, thu hút truy cập hữu cơ chất lượng cao và được các hệ thống AI Search như Google AI Overviews hay ChatGPT lựa chọn làm nguồn trích dẫn uy tín.",
+    "ifIgnored": "Doanh nghiệp sẽ đối mặt với rủi ro sụt giảm lưu lượng truy cập nghiêm trọng khi 89% truy vấn ngành y tế bị bao phủ bởi AI Overviews, làm biến mất cơ hội tiếp cận khách hàng trên kênh tìm kiếm tự nhiên nếu nội dung không đáp ứng chuẩn E-E-A-T.",
+    "actionChecklist": [
+      "Thêm dòng xác nhận kiểm duyệt y khoa Medically reviewed by cùng liên kết tới trang tiểu sử của chuyên gia y tế.",
+      "Mở đầu các bài viết bằng câu trả lời trực tiếp dài 2 đến 4 câu trước khi trình bày chi tiết nội dung.",
+      "Trích dẫn nguồn dẫn trực tiếp từ các nghiên cứu được đồng thẩm định hoặc dữ liệu từ cơ quan y tế chính thống.",
+      "Kiểm tra mã nguồn HTML và đảm bảo trình thu thập thông tin của AI có thể đọc nội dung mà không bị chặn bởi JavaScript."
+    ],
+    "id": "real-2026-08-12-cach-toi-uu-noi",
+    "publishedAt": "12/08/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/how-to-create-health-ymyl-content-that-performs-in-ai-search/584431/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/07/ymyl-content-178.png",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
+    "category": "AI Marketing",
+    "platformIcon": "Sparkles",
+    "title": "LinkedIn ra mắt cẩm nang The Credibility Stack tối ưu nội dung cho AI Chatbot",
+    "isHot": false,
+    "illustration": "zero-click",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "AI Marketing",
+      "LinkedIn",
+      "GEO",
+      "Tối ưu nội dung"
+    ],
+    "summary": "LinkedIn vừa phát hành cẩm nang hướng dẫn doanh nghiệp tối ưu hóa nội dung nhằm gia tăng tần suất xuất hiện trong các câu trả lời của AI chatbot. Nền tảng này giới thiệu khung chiến lược The Credibility Stack cùng các quy chuẩn về dạng nội dung và độ mới của bài viết. Đây là tài liệu quan trọng giúp các thương hiệu chuẩn bị cho xu hướng người dùng chuyển sang tìm kiếm bằng trí tuệ nhân tạo.",
+    "keyNumbers": [
+      {
+        "value": "3 phút",
+        "label": "Thời lượng bản âm thanh bài viết"
+      },
+      {
+        "value": "11/08/2026",
+        "label": "Thời điểm LinkedIn công bố cẩm nang"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Mô hình The Credibility Stack của LinkedIn",
+        "body": "LinkedIn vừa phát hành cẩm nang mới hướng dẫn cách tối ưu hóa nội dung để được các công cụ AI chatbot trích dẫn. Khung tối ưu hóa này được gọi là The Credibility Stack, tập trung vào việc gia tăng uy tín thương hiệu trên nền tảng. Nghiên cứu từ bên thứ ba chỉ ra rằng LinkedIn là một trong những nguồn tham khảo được các AI chatbot trích dẫn nhiều nhất. Việc áp dụng mô hình này giúp doanh nghiệp tiếp cận đối tượng người dùng đang chuyển sang tìm kiếm thông tin bằng trí tuệ nhân tạo."
+      },
+      {
+        "heading": "Bài viết dạng dài có lợi thế hơn bài đăng thông thường",
+        "body": "Trong cẩm nang, LinkedIn làm rõ các loại nội dung có khả năng thu hút trích dẫn từ các mô hình AI cao hơn. Cụ thể, các bài viết dạng dài trên LinkedIn mang lại hiệu quả tốt hơn so với các bài đăng bảng tin ngắn. Yếu tố độ mới của nội dung cũng đóng vai trò quan trọng trong việc thu hút sự chú ý của các mô hình AI. LinkedIn cung cấp hướng dẫn chi tiết nhằm giúp doanh nghiệp cấu trúc lại bài viết để tối ưu hóa sự hiện diện trong kết quả tìm kiếm AI."
+      },
+      {
+        "heading": "Mở rộng uy tín qua hồ sơ nhân sự và nhà sáng tạo",
+        "body": "Cẩm nang cung cấp danh sách các bước cần thiết để xây dựng sự hiện diện nền tảng vững chắc trên LinkedIn. Doanh nghiệp được khuyên nên tận dụng hồ sơ cá nhân của nhân viên và hợp tác với các nhà sáng tạo phù hợp để lan tỏa thông điệp. Việc tận dụng uy tín sẵn có và tín hiệu thuật toán của LinkedIn giúp gia tăng độ tin cậy toàn diện cho thương hiệu. Điều này hỗ trợ mở rộng quy mô thông điệp tới cả người dùng trực tiếp lẫn các hệ thống quét dữ liệu của AI."
+      },
+      {
+        "heading": "Chiến lược xây dựng độ uy tín trên kênh sở hữu riêng",
+        "body": "Mặc dù LinkedIn là kênh dẫn truyền hiệu quả, việc phụ thuộc hoàn toàn vào một nền tảng bên ngoài luôn tiềm ẩn rủi ro khi thuật toán thay đổi. Bài viết khuyến nghị doanh nghiệp nên áp dụng các nguyên tắc tối ưu hóa này cho các kênh sở hữu riêng như website chính thức. Doanh nghiệp có thể sử dụng LinkedIn như một công cụ giới thiệu nhằm củng cố uy tín cho website doanh nghiệp. Phương pháp kết hợp này giúp giảm thiểu rủi ro biến động nền tảng trong khi vẫn tận dụng được lượng truy cập từ AI."
+      }
+    ],
+    "impact": "Định hình lại chiến lược làm nội dung B2B và thương hiệu tuyển dụng trên LinkedIn để không chỉ tiếp cận người dùng trực tiếp mà còn xuất hiện trong câu trả lời của các công cụ AI như ChatGPT hay Perplexity.",
+    "ifIgnored": "Thương hiệu sẽ bỏ lỡ luồng lưu lượng truy cập từ nhóm người dùng chuyển sang tìm kiếm bằng AI, đồng thời mất lợi thế hiển thị chuyên môn vào tay các đối thủ chủ động tối ưu nội dung.",
+    "actionChecklist": [
+      "Chuyển hướng sản xuất nội dung chuyên sâu trên LinkedIn từ bài đăng ngắn sang bài viết dạng dài.",
+      "Cập nhật định kỳ nội dung các bài viết cũ trên LinkedIn để duy trì độ mới của dữ liệu.",
+      "Khuyến khích nhân sự chủ chốt tối ưu hồ sơ cá nhân và tích cực chia sẻ kiến thức chuyên ngành.",
+      "Áp dụng nguyên tắc cấu trúc độ uy tín của LinkedIn sang nội dung trên website chính thức của doanh nghiệp."
+    ],
+    "id": "real-2026-08-11-linkedin-ra-mat-cam",
+    "publishedAt": "11/08/2026",
+    "sourceUrl": "https://www.socialmediatoday.com/news/linkedin-playbook-offers-guide-to-optimizing-for-ai/827635/",
+    "source": "Social Media Today",
+    "image": {
+      "url": "https://imgproxy.divecdn.com/sONCGz_CKm2tTN9hN3nDgWz_f6cclFSiwegvfL_84xU/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9saW5rZWRpbl9haV9zZWFyY2hfcnV6T0c1ci5wbmc=.webp",
+      "credit": "Ảnh: Social Media Today"
+    }
+  },
+  {
     "id": "real-2026-08-09-aimax-exact-match",
     "category": "Google Ads & SEO",
     "platformIcon": "Search",
@@ -383,74 +505,6 @@
     ]
   },
   {
-    "id": "real-2026-07-24-facebook-verified",
-    "category": "Meta Ads",
-    "platformIcon": "Facebook",
-    "title": "Meta ra mắt Facebook Verified: dấu xác thực miễn phí bằng video khuôn mặt, nhưng KHÔNG cấp cho Trang doanh nghiệp",
-    "publishedAt": "24/07/2026",
-    "isHot": true,
-    "illustration": "account-security",
-    "image": {
-      "url": "https://about.fb.com/wp-content/uploads/2026/07/Introducing-Facebook-Verified_Header.jpg?w=1200",
-      "credit": "Ảnh: Meta Newsroom"
-    },
-    "sourceUrl": "https://about.fb.com/news/2026/07/introducing-facebook-verified/",
-    "source": "Meta Newsroom (nguồn công bố chính thức)",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Xác thực",
-      "Marketplace",
-      "Niềm tin",
-      "Trang doanh nghiệp"
-    ],
-    "summary": "Meta cấp miễn phí một dấu xác thực mới cho tài khoản cá nhân, xác minh bằng video quay khuôn mặt đối chiếu với ảnh đại diện sẵn có. Dấu này hiện trên Marketplace, Dating, Nhóm và Trang cá nhân. Điểm đáng chú ý nhất với doanh nghiệp nằm ở phần loại trừ: Trang và tài khoản ProMode không được cấp.",
-    "keyNumbers": [
-      {
-        "value": "Miễn phí",
-        "label": "không thu phí thuê bao"
-      },
-      {
-        "value": "18+",
-        "label": "độ tuổi tối thiểu"
-      },
-      {
-        "value": "0",
-        "label": "Trang doanh nghiệp được cấp"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Cách lấy dấu xác thực",
-        "body": "Người dùng quay một video tự chụp ngắn, Meta đối chiếu với ảnh đại diện đang có trên tài khoản để xác nhận trùng khớp. Quá trình thường chỉ mất vài phút. Xác thực một lần, dấu đi theo tài khoản trên khắp Facebook. Điều kiện: từ 18 tuổi trở lên, tài khoản đang chấp hành tốt Tiêu chuẩn cộng đồng và không có dấu hiệu hành vi giả mạo."
-      },
-      {
-        "heading": "Vì sao việc loại trừ Trang mới là tin quan trọng",
-        "body": "Dấu này không cấp cho Trang và tài khoản ProMode. Nghĩa là tín hiệu tin cậy mới của Facebook gắn vào CON NGƯỜI chứ không gắn vào thương hiệu. Doanh nghiệp bán hàng qua Marketplace hoặc qua Nhóm sẽ thấy tài khoản cá nhân có dấu được tin hơn hẳn Trang không có dấu, dù Trang mới là nơi doanh nghiệp đầu tư bao lâu nay."
-      },
-      {
-        "heading": "Meta nói rõ dấu này KHÔNG bảo chứng điều gì",
-        "body": "Thông báo ghi thẳng: dấu chỉ cho biết tài khoản thuộc về một người thật đã hoàn tất xác thực khuôn mặt, không có nghĩa Facebook chứng thực hay bảo đảm mức độ đáng tin của người đó. Người có dấu vẫn chịu toàn bộ chính sách của Meta. Đây là chi tiết cần nói lại với đội bán hàng, tránh việc lấy dấu xác thực làm căn cứ tin tưởng đối tác."
-      },
-      {
-        "heading": "Đặt cạnh bối cảnh tài khoản giả",
-        "body": "Xác thực bằng khuôn mặt đắt đỏ hơn nhiều so với xác thực bằng số điện thoại, vốn đã mất giá trị khi thiết bị ảo được cấp phát ở quy mô công nghiệp. Đây là hướng đi hợp lý của Meta. Nhưng nó cũng có nghĩa: những kênh chưa có lớp xác thực tương đương sẽ ngày càng bị người mua nghi ngờ hơn."
-      },
-      {
-        "heading": "Lộ trình",
-        "body": "Meta triển khai theo từng đợt, bắt đầu ở một số thị trường được chọn rồi mở rộng toàn cầu. Thông báo không nêu danh sách thị trường cụ thể lẫn ngày bắt đầu, nên chưa rõ Việt Nam nằm ở đợt nào. Dấu sẽ được bổ sung vào bài đăng trên Bảng tin ở giai đoạn sau."
-      }
-    ],
-    "impact": "Trưởng phòng cần tính lại chiến lược hiện diện: nếu bán hàng qua Marketplace hoặc Nhóm, hãy cho nhân sự phụ trách lấy dấu xác thực cá nhân, vì Trang doanh nghiệp không có cửa nhận dấu này.",
-    "ifIgnored": "Khi dấu xác thực phổ biến, tài khoản cá nhân không có dấu và Trang doanh nghiệp sẽ cùng nằm ở nhóm kém tin cậy trong mắt người mua. Tỷ lệ phản hồi tin nhắn và chốt đơn qua Marketplace giảm dần mà không có chỉ số nào trong trình quản lý quảng cáo giải thích được.",
-    "actionChecklist": [
-      "Xác định ai trong đội đang trực tiếp bán hàng qua Marketplace hoặc Nhóm, cho những người đó lấy dấu xác thực ngay khi mở tại Việt Nam",
-      "Rà lại ảnh đại diện của các tài khoản đó, vì hệ thống đối chiếu video với ảnh sẵn có",
-      "Nhắc đội bán hàng: dấu xác thực chỉ chứng minh người thật, không phải bảo chứng uy tín đối tác",
-      "Xây tín hiệu tin cậy riêng cho Trang doanh nghiệp bằng đánh giá khách hàng và nội dung thật, đừng chờ Meta cấp dấu"
-    ],
-    "deadline": "Triển khai theo đợt, bắt đầu ở một số thị trường được chọn rồi mở rộng toàn cầu"
-  },
-  {
     "id": "real-2026-02-09-influencer-vn",
     "category": "TikTok Shop & Ads",
     "platformIcon": "Video",
@@ -517,74 +571,6 @@
       "Ưu tiên sản xuất video ngắn: 93,9% người dùng Internet Việt Nam xem định dạng này hằng tuần",
       "Nếu ngoài ba nhóm ngành chiếm 90% ngân sách, tận dụng lợi thế giá hợp tác thấp hơn để thử nghiệm sớm"
     ]
-  },
-  {
-    "id": "real-2026-07-28-tiktok-q3-preview",
-    "category": "TikTok Shop & Ads",
-    "platformIcon": "Video",
-    "title": "TikTok công bố bộ tính năng quý 3/2026: loại trừ tối đa 40% vùng trong TopView, GMV Max Pro tính cả hoa hồng và mã giảm giá",
-    "publishedAt": "28/07/2026",
-    "isHot": true,
-    "illustration": "keyword-exclusion",
-    "image": {
-      "url": "https://lf-tt4b.tiktokcdn.com/obj/i18nblog/tt4b_cms/en-US/tipdilz7wysq-2lvhf0jkj4jJgUU292hXZc.png",
-      "credit": "Ảnh: TikTok For Business"
-    },
-    "sourceUrl": "https://ads.tiktok.com/business/en/blog/tiktok-product-preview",
-    "source": "TikTok For Business - Bản xem trước sản phẩm quý 3/2026 (nguồn chính thức)",
-    "readTime": "6 phút đọc",
-    "tags": [
-      "TopView",
-      "GMV Max",
-      "Tự động hoá",
-      "Biên lợi nhuận"
-    ],
-    "summary": "TikTok mở loạt điều khiển mới cho quý 3: chặn tối đa 40% số vùng trong chiến dịch TopView toàn quốc, tự quét ảnh và video sản phẩm từ trang đích của nhà quảng cáo, và quan trọng nhất là GMV Max Pro chuyển từ tối ưu theo doanh thu sang tối ưu có trừ hoa hồng, mã giảm giá và chi phí tiếp thị liên kết.",
-    "keyNumbers": [
-      {
-        "value": "40%",
-        "label": "tỷ lệ vùng được loại trừ tối đa"
-      },
-      {
-        "value": "60%",
-        "label": "tỷ lệ vùng bắt buộc phải giữ"
-      },
-      {
-        "value": "7 ngày",
-        "label": "chu kỳ ngân sách Seller Scale Up"
-      }
-    ],
-    "content": [
-      {
-        "heading": "GMV Max Pro là thay đổi đáng giá nhất",
-        "body": "Trước đây GMV Max chỉ tối ưu theo tổng giá trị hàng bán. Máy đẩy mạnh những đơn dễ ra nhất mà không quan tâm đơn đó còn lại bao nhiêu sau khi trừ mã giảm giá và hoa hồng cho nhà sáng tạo nội dung. GMV Max Pro nay tính cả ba khoản đó cùng với chi phí quảng cáo. Đây là lần đầu thuật toán của TikTok nhìn gần với chỉ số mà kế toán nhìn. Lưu ý: chưa mở tại Canada."
-      },
-      {
-        "heading": "TopView chặn vùng, có trần cứng",
-        "body": "Tính năng TopView Geo Exclusion cho phép loại tối đa 40% số tỉnh, thành hoặc khu vực khỏi chiến dịch toàn quốc, dùng khi hàng chưa phủ hết, khi có ràng buộc cấm quảng cáo theo vùng, hoặc khi chạy khuyến mãi địa phương. Trần cứng: chiến dịch không được rớt xuống dưới 60% số vùng của một nước. Mở toàn cầu nhưng phải xin vào danh sách cho phép."
-      },
-      {
-        "heading": "Máy tự lấy nội dung từ trang đích của bạn",
-        "body": "Catalog Image & Video Auto-Crawl tự động quét trang đích công khai của nhà quảng cáo để lấy ảnh và video sản phẩm, có bộ lọc chọn ra tài sản liên quan, không cần tải lên thủ công. Mặt trái: những ảnh cũ, ảnh sai giá hay ảnh chưa duyệt còn sót trên trang đều có thể bị máy nhặt đem chạy quảng cáo."
-      },
-      {
-        "heading": "Một chi tiết đáng ngờ trong thông báo",
-        "body": "Bản công bố lần này mô tả tính năng nhưng không kèm bất kỳ số liệu hiệu quả nào để chứng minh. Khi nền tảng ra tính năng mà không đưa ra con số, nên coi đó là bản thử nghiệm và tự đo bằng ngân sách nhỏ trước khi chuyển ngân sách chính sang. Phần lớn tính năng trong đợt này cũng yêu cầu đăng ký danh sách cho phép hoặc giới hạn theo khu vực, riêng GMV Max không mở tại Canada."
-      },
-      {
-        "heading": "Cửa cho tác tử AI vào trình quản lý",
-        "body": "TikTok Agentic Hub mở giao diện theo chuẩn Model Context Protocol để dựng tác tử AI làm việc trong Ads Manager, kèm sẵn các kỹ năng báo cáo, tìm tệp đối tượng, tối ưu ngân sách. Bản công bố không nói rõ tác tử được quyền ghi hay chỉ được đọc. Chưa rõ quyền thì chưa nên nối vào tài khoản đang tiêu tiền thật."
-      }
-    ],
-    "impact": "Trưởng phòng nên chuyển chỉ số đánh giá gian hàng từ doanh thu sang lợi nhuận sau hoa hồng và mã giảm giá, đồng thời rà lại toàn bộ ảnh trên trang đích trước khi bật tính năng tự quét.",
-    "ifIgnored": "Tiếp tục chấm hiệu quả bằng tổng doanh thu sẽ khen nhầm những mã hàng bán chạy nhưng lỗ sau khi trừ hoa hồng. Bật tự quét mà không dọn trang đích thì ảnh sai giá hoặc ảnh khuyến mãi đã hết hạn sẽ lên quảng cáo.",
-    "actionChecklist": [
-      "Đăng ký vào danh sách cho phép của GMV Max Pro và chạy thử trên nhóm hàng có biên lợi nhuận mỏng nhất trước",
-      "Rà soát toàn bộ ảnh và video trên trang đích, gỡ ảnh cũ và ảnh sai giá trước khi bật Auto-Crawl",
-      "Dựng báo cáo lợi nhuận sau hoa hồng cho từng mã hàng, thay cho báo cáo chỉ có doanh thu",
-      "Chưa nối tác tử AI vào tài khoản thật cho tới khi TikTok công bố rõ tác tử có quyền ghi hay không"
-    ],
-    "deadline": "Triển khai trong quý 3/2026, phần lớn tính năng yêu cầu đăng ký danh sách cho phép"
   },
   {
     "id": "real-2026-07-29-ai-mode-shopping",
