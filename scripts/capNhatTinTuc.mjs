@@ -483,6 +483,31 @@ export function kiemTraKhung(t) {
   if (Array.isArray(t.content) && t.content.some((c) => !c.heading || !c.body || c.body.length < 80)) {
     loi.push('có mục thân bài quá ngắn');
   }
+
+  // CHẤT LƯỢNG SỐ LIỆU CHÍNH.
+  //
+  // Bài gốc không có số liệu nào thì mô hình vẫn cố nhồi cho đủ ô: đã gặp thật
+  // một tin lấy "3 phút - thời lượng bản âm thanh bài viết" và "11/08/2026 -
+  // thời điểm công bố" làm số liệu chính. Cái đầu là chi tiết trang trí của
+  // trang web, cái sau là ngày tháng. Dải số liệu là thứ học viên nhìn đầu
+  // tiên, đặt rác vào đó còn tệ hơn để trống.
+  //
+  // Bài không có số liệu thật thì bỏ hẳn bài, đừng nhận rồi hiển thị ô rỗng.
+  if (Array.isArray(t.keyNumbers)) {
+    const rac = t.keyNumbers.filter((k) => {
+      const gia = String(k?.value ?? '');
+      const nhan = String(k?.label ?? '').toLowerCase();
+      if (!/\d/.test(gia)) return true;
+      // Ngày tháng không phải số liệu.
+      if (/^\d{1,2}\/\d{1,2}\/\d{4}$/.test(gia.trim())) return true;
+      // Nhãn trỏ vào chính trang web chứ không vào nội dung tin.
+      return /âm thanh|thời lượng|bản ghi|phút đọc|thời điểm công bố|ngày đăng|ngày công bố/.test(nhan);
+    });
+    if (t.keyNumbers.length - rac.length < 2) {
+      loi.push('không đủ 2 số liệu thật, phần còn lại là ngày tháng hoặc chi tiết trang web');
+    }
+  }
+
   return loi;
 }
 
