@@ -2,6 +2,128 @@
   {
     "category": "Google Ads & SEO",
     "platformIcon": "Search",
+    "title": "Google tích hợp Gemini 3.7 Flash vào AI Mode trong tìm kiếm",
+    "isHot": false,
+    "illustration": "zero-click",
+    "readTime": "3 phút đọc",
+    "tags": [
+      "AI Search",
+      "Google Search",
+      "Gemini",
+      "SEO"
+    ],
+    "summary": "Google vừa bổ sung mô hình Gemini 3.7 Flash vào danh sách tùy chọn trong AI Mode của Google Search cho người dùng gói trả phí toàn cầu. Bản cập nhật này nâng cao khả năng hiểu ý định tìm kiếm và thực hiện chỉ dẫn phức tạp của người dùng. Đây là công cụ hữu ích giúp đội ngũ marketing kiểm tra và đối chiếu sự biến động của nguồn trích dẫn thương hiệu trên công cụ tìm kiếm AI.",
+    "keyNumbers": [
+      {
+        "value": "3.7 Flash",
+        "label": "Mô hình Gemini mới nhất vừa được đưa vào AI Mode"
+      },
+      {
+        "value": "3",
+        "label": "Tùy chọn mô hình người dùng có thể đối chiếu gồm 3.7 Flash, Auto và Pro"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Cập nhật mô hình mới trên AI Mode",
+        "body": "Google chính thức cho phép người dùng lựa chọn mô hình Gemini 3.7 Flash trực tiếp trong giao diện AI Mode của thanh tìm kiếm. Tính năng này hiện áp dụng trên toàn cầu bằng tiếng Anh cho các tài khoản đăng ký gói Google AI Pro và Ultra. Theo đại diện sản phẩm Google Search, mô hình mới giúp bám sát câu lệnh và thấu hiểu ý định tìm kiếm tốt hơn. Người dùng có thể tìm thấy tùy chọn này tại thanh nhập liệu dưới mục danh sách mô hình."
+      },
+      {
+        "heading": "Lộ trình triển khai các dòng mô hình Flash của Google",
+        "body": "Mô hình Gemini 3.7 Flash được giới thiệu chuyên sâu cho các tác vụ lập trình và xử lý tác tử tự động. Google duy trì mô hình triển khai nhất quán khi đưa phiên bản Pro vào trước, sau đó chuyển sang dùng bản Flash làm chuẩn mặc định. Các phiên bản Flash thường được Google ưu tiên vận hành trên môi trường thực tế của Search nhờ tốc độ phản hồi nhanh và tối ưu chi phí hạ tầng. Tuy nhiên, hãng chưa công bố thời điểm bản 3.7 Flash sẽ thay thế hoàn toàn mô hình mặc định hiện tại."
+      },
+      {
+        "heading": "Tác động đến việc kiểm toán trích dẫn nguồn trên AI",
+        "body": "Trước đây, sự thay đổi liên tục của các trích dẫn nguồn trong AI Mode khiến đội ngũ tối ưu hóa tìm kiếm gặp khó khăn khi phân tích nguyên nhân. Với cập nhật mới, các chuyên viên có thể chạy cùng một truy vấn thương hiệu trên cả 3.7 Flash, Auto và Pro để so sánh trực tiếp. Việc này giúp xác định sự sụt giảm thứ hạng trích dẫn xuất phát từ thuật toán của mô hình hay do chất lượng dữ liệu trang web. Đây là bước đệm quan trọng để đo lường khả năng hiển thị thương hiệu trong kỷ nguyên tìm kiếm không nhấp chuột."
+      },
+      {
+        "heading": "Phạm vi tiếp cận và hạn chế hiện tại",
+        "body": "Ở thời điểm hiện tại, Gemini 3.7 Flash chỉ giới hạn cho người dùng trả phí thay vì phổ cập tới toàn bộ người dùng miễn phí. Tài liệu hướng dẫn chính thức của Google vẫn chưa cập nhật đầy đủ thông tin về các phân tầng mô hình mới này. Dù vậy, các nhà tiếp thị cần chuẩn bị trước kịch bản vì các nâng cấp từ bản trả phí thường sẽ sớm được áp dụng rộng rãi cho công cụ tìm kiếm chung. Việc chủ động thử nghiệm từ sớm sẽ tạo lợi thế cạnh tranh về mặt hiển thị nội dung."
+      }
+    ],
+    "impact": "Giúp Trưởng phòng Marketing có công cụ kỹ thuật để đo lường chính xác mức độ hiển thị và trích dẫn của thương hiệu trên Google AI Search qua từng mô hình khác nhau.",
+    "ifIgnored": "Doanh nghiệp sẽ mất dấu nguyên nhân khiến lưu lượng truy cập tự nhiên sụt giảm khi Google ngầm cập nhật mô hình AI Search mặc định trên diện rộng.",
+    "actionChecklist": [
+      "Dùng tài khoản Google AI Pro hoặc Ultra chạy thử nghiệm các bộ từ khóa cốt lõi của ngành trên AI Mode.",
+      "So sánh kết quả trích dẫn tên thương hiệu giữa 3 tùy chọn: Gemini 3.7 Flash, Auto và Pro.",
+      "Kiểm tra xem nội dung trang đích có đang tối ưu đúng ý định tìm kiếm chi tiết theo chuẩn mô hình mới hay không.",
+      "Cập nhật quy trình đo lường AI SEO để sẵn sàng khi Google nâng cấp mô hình này thành mặc định."
+    ],
+    "id": "real-2026-08-14-google-tich-hop-gemini",
+    "publishedAt": "14/08/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/google-brings-gemini-3-7-flash-to-ai-mode-in-search/585923/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/08/google-gemini-3-7-flash-featured.jpg",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Google nâng cấp API Campaign Manager 360 và bắt buộc phân loại chuyển đổi Floodlight",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Campaign Manager 360",
+      "Floodlight",
+      "Báo cáo quảng cáo",
+      "Đo lường chuyển đổi"
+    ],
+    "summary": "Google ra mắt điểm cuối reportData.query cho phép trích xuất dữ liệu Campaign Manager 360 tức thì trong tối đa 60 giây. Đồng thời, nền tảng bắt buộc chọn danh mục chuẩn hóa cho mọi hoạt động Floodlight bật tính năng phân bổ.",
+    "keyNumbers": [
+      {
+        "value": "60 giây",
+        "label": "Thời gian tối đa để truy vấn báo cáo trực tiếp"
+      },
+      {
+        "value": "1",
+        "label": "Yêu cầu HTTP thay thế quy trình 4 bước cũ"
+      },
+      {
+        "value": "14",
+        "label": "Danh mục Floodlight bắt buộc chia làm 3 nhóm"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Rút gọn quy trình xuất báo cáo API còn một bước",
+        "body": "Trước đây, việc lấy báo cáo hiệu suất từ Campaign Manager 360 qua API đòi hỏi quy trình 4 giai đoạn phức tạp gồm tạo cấu hình, kích hoạt chạy, thăm dò trạng thái và tải tệp. Điểm cuối reportData.query mới gộp toàn bộ các thao tác này vào đúng 1 yêu cầu HTTP duy nhất. Dữ liệu được trả về trực tiếp dưới dạng JSON có cấu trúc mà không cần tạo tệp trung gian hay lưu trữ tạm thời."
+      },
+      {
+        "heading": "Giới hạn thời gian 60 giây phục vụ báo cáo tức thì",
+        "body": "Cơ chế truy vấn đồng bộ mới hoạt động với giới hạn thời gian phản hồi tối đa là 60 giây. Thiết lập này được thiết kế chuyên biệt cho các bảng điều khiển thời gian thực và quy trình kiểm tra chất lượng dữ liệu tự động. Với các tập dữ liệu lịch sử lớn hoặc tác vụ xuất báo cáo định kỳ dạng CSV hay Excel, Google vẫn duy trì dịch vụ Reports truyền thống."
+      },
+      {
+        "heading": "Bắt buộc gắn danh mục cho sự kiện chuyển đổi Floodlight",
+        "body": "Bên cạnh thay đổi API, Google áp dụng quy định bắt buộc phân loại danh mục cho mọi hoạt động Floodlight đang bật tính năng phân bổ. Hệ thống chuẩn hóa gồm 14 danh mục thuộc 3 nhóm chính: Doanh số (4 loại), Khách hàng tiềm năng (7 loại) và Các danh mục khác (3 loại). Việc bỏ qua giá trị mặc định giúp hệ thống thu thập dữ liệu chính xác để phục vụ các mô hình phân bổ và đo lường nâng cao trong tương lai."
+      },
+      {
+        "heading": "Rủi ro đồng bộ dữ liệu không đối xứng giữa các nền tảng",
+        "body": "Danh mục Floodlight chỉ tự động đồng bộ một lần duy nhất giữa Search Ads 360, Campaign Manager 360 và Display & Video 360 tại thời điểm tạo mới. Mọi chỉnh sửa danh mục sau đó trong một nền tảng sẽ không tự động cập nhật ngược lại sang các công cụ còn lại. Nếu chỉnh sửa danh mục Floodlight trong Search Ads 360, thay đổi đó chỉ áp dụng riêng cho một nhà quảng cáo cụ thể mà không lan tỏa sang các tài khoản dùng chung cấu hình."
+      }
+    ],
+    "impact": "Tối ưu hóa tốc độ cập nhật dữ liệu vào dashboard nội bộ từ hàng giờ xuống dưới 1 phút cho các tác vụ kiểm tra nhanh. Đồng thời, cấu trúc Floodlight mới chuẩn hóa luồng dữ liệu chuyển đổi giữa các nền tảng quảng cáo lớn của Google, cải thiện độ chính xác của các mô hình học máy.",
+    "ifIgnored": "Các báo cáo tự động nội bộ tiếp tục chịu độ trễ cao và dễ phát sinh lỗi đường truyền từ quy trình 4 bước cũ. Việc gắn sai hoặc không quản lý danh mục Floodlight đồng bộ sẽ làm sai lệch dữ liệu phân bổ chuyển đổi giữa Search Ads 360 và DV360.",
+    "actionChecklist": [
+      "Yêu cầu đội ngũ kỹ thuật chuyển các truy vấn bảng điều khiển dung lượng nhỏ sang điểm cuối reportData.query mới",
+      "Rà soát toàn bộ các thẻ Floodlight đang bật phân bổ để chuẩn hóa về 14 danh mục mới",
+      "Thiết lập quy trình kiểm tra tính đồng nhất của danh mục Floodlight khi tạo mới trên Campaign Manager 360 và Search Ads 360",
+      "Giữ nguyên dịch vụ Reports cũ cho các tác vụ trích xuất dữ liệu lịch sử lớn vượt quá 60 giây"
+    ],
+    "id": "real-2026-08-14-google-nang-cap-api",
+    "publishedAt": "14/08/2026",
+    "sourceUrl": "https://ppc.land/campaign-manager-360-api-adds-60-second-synchronous-report-queries/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/size/w1200/2026/08/GA4.webp",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
     "title": "Cách tối ưu nội dung YMYL và y tế để xuất hiện trên công cụ tìm kiếm AI",
     "isHot": false,
     "illustration": "zero-click",
@@ -573,73 +695,6 @@
     ]
   },
   {
-    "id": "real-2026-07-29-ai-mode-shopping",
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Nghiên cứu 100.000 truy vấn: chế độ AI của Google hiển thị ít hơn 95% số sản phẩm so với tìm kiếm thường",
-    "publishedAt": "29/07/2026",
-    "isHot": true,
-    "illustration": "zero-click",
-    "image": {
-      "url": "https://ppc.land/content/images/size/w1200/2026/07/shelves.webp",
-      "credit": "Ảnh: PPC Land"
-    },
-    "sourceUrl": "https://ppc.land/ai-mode-cuts-google-shopping-listings-95-productrise-finds/",
-    "source": "PPC Land - Nghiên cứu của Productrise",
-    "readTime": "6 phút đọc",
-    "tags": [
-      "AI Mode",
-      "Google Shopping",
-      "Dữ liệu sản phẩm",
-      "Hiển thị tự nhiên"
-    ],
-    "summary": "Productrise theo dõi hơn 100.000 truy vấn mua sắm giống hệt nhau trong 21 ngày tại Mỹ và Anh. Kết quả: chế độ AI chỉ trả về sản phẩm cho 23% truy vấn, so với 88% ở tìm kiếm thường. Đáng lo hơn con số 95%: chỉ 0,8% sản phẩm hiện ở tìm kiếm thường cũng xuất hiện trong chế độ AI.",
-    "keyNumbers": [
-      {
-        "value": "95%",
-        "label": "số sản phẩm biến mất ở chế độ AI"
-      },
-      {
-        "value": "0,8%",
-        "label": "tỷ lệ trùng lặp giữa hai kết quả"
-      },
-      {
-        "value": "4,3",
-        "label": "sản phẩm mỗi trang, so với 22,5"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Cách nghiên cứu được thực hiện",
-        "body": "Productrise chạy hơn 100.000 truy vấn mua sắm giống hệt nhau trong 21 ngày của tháng 7/2026, tại thị trường Mỹ và Anh, theo dõi hơn 2 triệu tin đăng sản phẩm mỗi ngày. Truy vấn dùng từ khoá thông thường chứ không phải câu hỏi hội thoại, tức phản ánh đúng cách người dùng thật gõ tìm kiếm."
-      },
-      {
-        "heading": "Hai tầng suy giảm cộng dồn",
-        "body": "Tầng thứ nhất: tìm kiếm thường trả về sản phẩm cho khoảng 88% truy vấn, chế độ AI chỉ 23%. Tầng thứ hai: khi có trả về sản phẩm, tìm kiếm thường hiện trung bình 22,5 tin đăng mỗi trang, chế độ AI chỉ 4,3. Hai tầng nhân vào nhau ra con số khoảng 95% số tin đăng sản phẩm biến mất."
-      },
-      {
-        "heading": "Con số 0,8% mới là điều đáng sợ",
-        "body": "Chỉ 0,8% sản phẩm hiện trong tìm kiếm thường cũng xuất hiện ở chế độ AI cho cùng truy vấn, trong cùng một ngày. Nghĩa là chế độ AI không đơn thuần cắt bớt danh sách cũ mà dùng một logic xếp hạng khác hẳn. Gian hàng đang đứng đầu băng chuyền sản phẩm truyền thống không có gì bảo đảm sẽ xuất hiện trong chế độ AI."
-      },
-      {
-        "heading": "Lời giải thích từ phía nghiên cứu",
-        "body": "Hugo Huijer của Productrise nêu logic đằng sau: nếu Google đã kỳ vọng người dùng sẽ hỏi thêm một câu nữa, thì không cần bày ra hai mươi sản phẩm ngay từ đầu. Chế độ AI được thiết kế cho hành trình hội thoại nhiều lượt, không phải cho một lần gõ rồi chọn."
-      },
-      {
-        "heading": "Việc phải làm đổi từ thứ hạng sang dữ liệu sản phẩm",
-        "body": "Khi chỉ còn 4,3 chỗ mỗi trang và logic xếp hạng khác hẳn, thủ thuật tối ưu thứ hạng cũ mất tác dụng. Thứ quyết định là chất lượng dữ liệu sản phẩm: tên gọi đúng, thuộc tính đầy đủ, mô tả trả lời được câu hỏi thật của người mua. Jason Berkowitz của Break The Web nhận định thương hiệu chủ động chuẩn hoá dữ liệu sản phẩm sẽ đi trước ba bước."
-      }
-    ],
-    "impact": "Trưởng phòng cần chuyển ngân sách và nhân lực từ tối ưu thứ hạng tìm kiếm sang chuẩn hoá dữ liệu sản phẩm trong nguồn cấp dữ liệu, đồng thời ngừng coi vị trí tốt ở tìm kiếm thường là bảo chứng cho lượng truy cập tương lai.",
-    "ifIgnored": "Lượng truy cập tự nhiên từ tìm kiếm mua sắm sẽ giảm dần mà báo cáo thứ hạng vẫn đẹp, vì thứ hạng đo ở giao diện cũ trong khi người dùng đã chuyển sang giao diện mới. Phát hiện ra thì đã mất vài quý.",
-    "actionChecklist": [
-      "Kiểm tra nguồn cấp dữ liệu sản phẩm: tên, thuộc tính, phân loại, mô tả phải đầy đủ và đúng, không viết tắt",
-      "Tự chạy thử 30 truy vấn quan trọng nhất ở cả tìm kiếm thường và chế độ AI, ghi lại sản phẩm nào xuất hiện",
-      "Ngừng dùng báo cáo thứ hạng làm chỉ số duy nhất, bổ sung chỉ số hiển thị trong chế độ AI",
-      "Viết lại mô tả sản phẩm theo hướng trả lời câu hỏi thật của người mua thay vì nhồi từ khoá"
-    ]
-  },
-  {
     "id": "real-2026-07-30-gsc-ai-bay",
     "category": "AI Marketing",
     "platformIcon": "Sparkles",
@@ -704,73 +759,6 @@
       "Đổi vị trí trung bình sang vị trí trung vị trong mọi báo cáo thứ hạng",
       "Lấy doanh thu tự nhiên và số khách hàng tiềm năng từ công cụ phân tích của mình làm chỉ số chấm điểm chính",
       "Đối chiếu lượt truy cập tự nhiên thực tế với lượt hiển thị báo cáo, ghi lại khoảng cách để theo dõi theo tháng"
-    ]
-  },
-  {
-    "id": "real-2026-07-29-ai-search-chua-co-chu",
-    "category": "AI Marketing",
-    "platformIcon": "Sparkles",
-    "title": "Nghiên cứu 600.000 trích dẫn: 89% nhu cầu tìm kiếm bằng AI vẫn chưa có thương hiệu nào chiếm lĩnh",
-    "publishedAt": "29/07/2026",
-    "isHot": false,
-    "illustration": "data-signal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/07/chatgpt-winners-252.png",
-      "credit": "Ảnh: Search Engine Journal"
-    },
-    "sourceUrl": "https://www.searchenginejournal.com/89-of-ai-search-demand-has-no-clear-owner-use-this-before-the-window-closes/583255/",
-    "source": "Search Engine Journal",
-    "readTime": "6 phút đọc",
-    "tags": [
-      "AI Search",
-      "ChatGPT",
-      "Định vị thương hiệu",
-      "Cơ hội sớm"
-    ],
-    "summary": "Kevin Indig phân tích dữ liệu Semrush trên 1.094 nhóm ngành tại Mỹ, hơn 50.000 thương hiệu và hơn 600.000 trích dẫn trong nửa đầu 2026. Chỉ 15,2% nhóm ngành có một thương hiệu chiếm lĩnh rõ ràng trong câu trả lời của ChatGPT. Phần còn lại vẫn đang bỏ ngỏ, và đó chính là cửa sổ cho người vào sớm.",
-    "keyNumbers": [
-      {
-        "value": "89,3%",
-        "label": "nhu cầu chưa có chủ rõ ràng"
-      },
-      {
-        "value": "15,2%",
-        "label": "nhóm ngành đã có chủ"
-      },
-      {
-        "value": "53,7%",
-        "label": "nhóm ngành hoàn toàn bỏ ngỏ"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Nghiên cứu đo cái gì",
-        "body": "Dữ liệu Semrush trong sáu tháng đầu năm 2026, trải trên 1.094 nhóm ngành tại Mỹ, mỗi nhóm chạy năm dạng câu hỏi, tổng cộng hơn 50.000 thương hiệu và hơn 600.000 lượt trích dẫn trên ChatGPT. Một nhóm ngành được coi là đã có chủ khi một thương hiệu xuất hiện ở ít nhất 4 trên 5 câu hỏi và dẫn trước thương hiệu thứ hai từ 5 điểm phần trăm trở lên."
-      },
-      {
-        "heading": "Bức tranh phân bố",
-        "body": "Chỉ 15,2% nhóm ngành có chủ rõ ràng. 31,1% có thương hiệu đang nổi lên nhưng khoảng cách chưa đủ. Và 53,7% hoàn toàn chưa ngã ngũ, không thương hiệu nào dẫn nổi 3 trên 5 câu hỏi. Cộng lại, 89,3% lượng nhu cầu tìm kiếm bằng AI nằm ở những nhóm ngành chưa ai chiếm được. Nói cách khác, những chỗ đáng tiền nhất hiện là những chỗ chưa ngã ngũ nhất."
-      },
-      {
-        "heading": "Chiếm được rồi thì giữ được",
-        "body": "Thương hiệu đã có vị thế chủ giữ được vị trí đầu trong 90,4% các lần so sánh tháng này với tháng kế. Nhưng những thương hiệu dẫn với khoảng cách mỏng, trung vị 1,3 điểm phần trăm, thì dễ bị thay thế. Nhóm giữ được ổn định có khoảng cách trung vị 2,9 điểm. Ngưỡng 3 điểm phần trăm vì thế là ranh giới giữa giữ được và chưa chắc."
-      },
-      {
-        "heading": "Được trích dẫn không đồng nghĩa được nhắc tên",
-        "body": "Đây là phát hiện dễ dẫn tới làm sai. Tương quan giữa số lần được trích dẫn và số lần được nhắc tên chỉ là âm 0,229, tức gần như không liên quan. Tên miền được trích dẫn nhiều nhất trùng với thương hiệu được nhắc nhiều nhất chỉ trong 20,8% trường hợp. Đuổi theo việc được trích dẫn không tự động biến thành được nhớ tên. Như bài viết diễn đạt: trích dẫn là cái cửa, không phải căn phòng."
-      },
-      {
-        "heading": "Cách làm được đề xuất",
-        "body": "Chọn 10 đến 20 nhóm ngành ưu tiên, theo dõi bằng năm dạng câu hỏi: định nghĩa, so sánh, danh sách lựa chọn thay thế, tình huống sử dụng, và quyết định mua. Ưu tiên dồn lực vào những nhóm mà khoảng cách dẫn đầu dưới 3 điểm phần trăm, vì đó là nơi ngôi đầu còn đổi chủ được. Và chuyển trọng tâm từ săn trích dẫn sang làm sao được nhắc tên, bằng nội dung, bằng bằng chứng cụ thể, bằng việc được bên thứ ba nói tới, và bằng một định vị rõ ràng."
-      }
-    ],
-    "impact": "Trưởng phòng đang có cơ hội chiếm vị trí mặc định trong câu trả lời AI cho ngành của mình với chi phí thấp hơn nhiều so với giành thứ hạng tìm kiếm truyền thống, nhưng chỉ trong lúc phần lớn nhóm ngành còn bỏ ngỏ.",
-    "ifIgnored": "Khi thị trường ngã ngũ, dữ liệu cho thấy người đã chiếm được giữ ngôi đầu trong hơn 90% các tháng. Vào sau lúc đó nghĩa là phải phá vỡ một vị thế đã ổn định, tốn kém hơn nhiều so với việc chiếm chỗ trống ngay lúc này.",
-    "actionChecklist": [
-      "Chọn 10-20 nhóm sản phẩm ưu tiên, chạy thử 5 dạng câu hỏi trên ChatGPT và ghi lại thương hiệu nào được nhắc",
-      "Xác định nhóm nào khoảng cách dẫn đầu dưới 3 điểm phần trăm và dồn nội dung vào đúng nhóm đó",
-      "Chuyển mục tiêu từ được trích dẫn sang được nhắc tên: bổ sung bằng chứng cụ thể, số liệu, tình huống dùng thật",
-      "Đặt lịch đo lại hằng tháng, vì ngôi đầu ở nhóm chưa ngã ngũ đổi chủ liên tục"
     ]
   }
 ]
