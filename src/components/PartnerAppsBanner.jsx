@@ -1,5 +1,5 @@
 import React from 'react';
-import { Globe, Sparkles, ScrollText, ListChecks, ArrowUpRight } from 'lucide-react';
+import { Globe, Compass, Sparkles, ScrollText, ListChecks, ArrowUpRight } from 'lucide-react';
 
 /**
  * Dải banner giới thiệu các ứng dụng khác, đặt ở chân trang.
@@ -17,14 +17,14 @@ import { Globe, Sparkles, ScrollText, ListChecks, ArrowUpRight } from 'lucide-re
  * ẢNH LÀ BẢN SAO ĐỂ TRONG public/apps/, KHÔNG hotlink thẳng og:image của các
  * trang kia. Riêng ba ảnh của ba ứng dụng con đã là 1,4 MB (615 + 148 + 643
  * KB) — nhét nguyên vào chân trang là bắt học viên dùng 4G tải thêm chừng ấy
- * chỉ để xem quảng cáo. Bản trong repo đã thu về 760px ngang, JPEG q82, cả bốn
- * tệp còn tổng khoảng 260 KB. Đổi lại: các trang kia thay ảnh bìa thì bản sao ở
+ * chỉ để xem quảng cáo. Bản trong repo đã thu về 760px ngang, JPEG q82, cả năm
+ * tệp còn tổng khoảng 295 KB. Đổi lại: các trang kia thay ảnh bìa thì bản sao ở
  * đây không tự cập nhật, phải tải lại thủ công.
  */
 
 const PARTNER_APPS = [
   {
-    /* Trang tổng đứng đầu dải, trước ba ứng dụng con.
+    /* Trang tổng đứng đầu dải, trước bốn ứng dụng con.
 
        ẢNH KHÔNG PHẢI og:image của pmarcom.com, cố ý. Thẻ og của trang đó trỏ
        vào chính bìa "P MARCOM ACADEMY" — gần trùng ảnh bìa nằm ngay đầu trang
@@ -73,12 +73,22 @@ const PARTNER_APPS = [
     img: '/apps/capytrack.jpg',
     icon: ListChecks,
     tile: 'from-sky-500 to-indigo-600'
+  },
+  {
+    id: 'career',
+    name: 'Định Hướng Nghề Nghiệp',
+    desc: 'Trắc nghiệm DISC và Holland Code để đọc ra năng lực và sở thích nghề.',
+    domain: 'career.pmarcom.com',
+    href: 'https://career.pmarcom.com/',
+    img: '/apps/career.jpg',
+    icon: Compass,
+    tile: 'from-violet-500 to-indigo-700'
   }
 ];
 
 export default function PartnerAppsBanner() {
   return (
-    <div className="max-w-6xl mx-auto mb-6 text-left">
+    <div className="max-w-7xl mx-auto mb-6 text-left">
 
       {/* Nhãn phân đoạn: gạch ngang hai bên để tách hẳn khối giới thiệu khỏi
           dòng bản quyền, tránh học viên hiểu nhầm đây là mục của khoá học. */}
@@ -91,23 +101,24 @@ export default function PartnerAppsBanner() {
       </div>
 
       {/*
-        ĐIỆN THOẠI VUỐT NGANG, MÁY TÍNH XẾP BA CỘT.
+        ĐIỆN THOẠI VUỐT NGANG, MÀN RỘNG XẾP NĂM CỘT.
 
-        Bốn ảnh bìa 16:9 xếp dọc trên màn 360px là hơn 1.000px chiều cao — chân
+        Năm ảnh bìa 16:9 xếp dọc trên màn 360px là hơn 1.200px chiều cao — chân
         trang dài hơn cả phần nội dung nó đứng dưới. Chuyển sang băng cuộn ngang
         có điểm dừng: mỗi thẻ rộng 78% màn hình nên luôn hở một mẩu thẻ kế bên,
         đó là thứ báo cho ngón tay biết còn thứ để vuốt mà không cần chấm tròn
         hay mũi tên.
 
-        Từ 640px lên xếp HAI cột chứ không phải bốn: bốn thẻ dàn ngang trên máy
-        tính bảng thì mỗi thẻ chỉ còn khoảng 150px, tên ứng dụng vỡ thành ba
-        dòng còn ảnh bìa co lại tới mức không đọc được chữ trên đó. Đủ bốn cột
-        thì phải từ 1.024px trở lên.
+        Bậc nở dần chứ không nhảy thẳng từ một lên năm cột: 640px hai cột,
+        1.024px ba cột (năm thẻ thành 3 + 2), từ 1.280px mới đủ chỗ cho cả năm
+        đứng một hàng. Dàn năm cột sớm hơn thì mỗi thẻ chỉ còn khoảng 150px, tên
+        ứng dụng vỡ thành ba dòng còn chữ trên ảnh bìa co lại tới mức không đọc
+        được.
 
         `-mx-3 px-3` để thẻ đầu và thẻ cuối vẫn chạm được mép màn hình khi cuộn,
         thay vì bị lề của chân trang cắt cụt.
       */}
-      <div className="flex sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-3 overflow-x-auto sm:overflow-visible snap-x snap-mandatory no-scrollbar -mx-3 px-3 sm:mx-0 sm:px-0 pb-1">
+      <div className="flex sm:grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-3 overflow-x-auto sm:overflow-visible snap-x snap-mandatory no-scrollbar -mx-3 px-3 sm:mx-0 sm:px-0 pb-1">
         {PARTNER_APPS.map((app) => {
           const Icon = app.icon;
 
@@ -125,8 +136,8 @@ export default function PartnerAppsBanner() {
             >
               {/* Ảnh bìa SEO của chính trang đó.
 
-                  Khung ép 16:9 cho cả ba: ảnh của P Healing là ảnh vuông, hai
-                  ảnh còn lại là 1200x630 và 1200x669. Cùng một tỉ lệ thì ba thẻ
+                  Khung ép 16:9 cho cả năm: ảnh của P Healing là ảnh vuông, các
+                  ảnh còn lại trải từ 1200x630 tới 1024x546. Cùng một tỉ lệ thì các thẻ
                   mới thẳng hàng; `object-center` giữ phần chữ ở giữa ảnh, chỗ bị
                   xén chỉ là nền.
 
