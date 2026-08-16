@@ -42,6 +42,16 @@ const PARTNER_APPS = [
     tile: 'from-yellow-400 to-amber-600'
   },
   {
+    id: 'career',
+    name: 'Định Hướng Nghề Nghiệp',
+    desc: 'Trắc nghiệm DISC và Holland Code để đọc ra năng lực và sở thích nghề.',
+    domain: 'career.pmarcom.com',
+    href: 'https://career.pmarcom.com/',
+    img: '/apps/career.jpg',
+    icon: Compass,
+    tile: 'from-violet-500 to-indigo-700'
+  },
+  {
     id: 'healing',
     name: 'P Healing — Tarot Online',
     desc: 'Xem Tarot online, nhận thông điệp chữa lành cho 5 khía cạnh cuộc sống.',
@@ -73,16 +83,6 @@ const PARTNER_APPS = [
     img: '/apps/capytrack.jpg',
     icon: ListChecks,
     tile: 'from-sky-500 to-indigo-600'
-  },
-  {
-    id: 'career',
-    name: 'Định Hướng Nghề Nghiệp',
-    desc: 'Trắc nghiệm DISC và Holland Code để đọc ra năng lực và sở thích nghề.',
-    domain: 'career.pmarcom.com',
-    href: 'https://career.pmarcom.com/',
-    img: '/apps/career.jpg',
-    icon: Compass,
-    tile: 'from-violet-500 to-indigo-700'
   }
 ];
 

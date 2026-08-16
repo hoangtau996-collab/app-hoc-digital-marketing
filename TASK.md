@@ -28,7 +28,7 @@ Các mục dưới đây bị chặn vì thiếu thông tin, không phải vì t
 
 Chi tiết đầy đủ ở [CHANGELOG.md](CHANGELOG.md).
 
-- **Dải giới thiệu website & ứng dụng khác ở chân trang** — P MARCOM (trang tổng), P Healing (Tarot), Xin Xăm — Luận Quẻ, Capy Track (tracking công việc), Định Hướng Nghề Nghiệp (DISC & Holland Code). Mở tab mới nên không đá học viên ra khỏi bài đang học; ảnh bìa để bản sao trong `public/apps/` (~295 KB cho cả năm) và tải trễ; điện thoại vuốt ngang, màn rộng năm cột. Thẻ P MARCOM dùng ảnh sự kiện thay og:image vì og:image của site trùng bìa Academy ở đầu trang chủ.
+- **Dải giới thiệu website & ứng dụng khác ở chân trang** — P MARCOM (trang tổng), Định Hướng Nghề Nghiệp (DISC & Holland Code), P Healing (Tarot), Xin Xăm — Luận Quẻ, Capy Track (tracking công việc). Mở tab mới nên không đá học viên ra khỏi bài đang học; ảnh bìa để bản sao trong `public/apps/` (~295 KB cho cả năm) và tải trễ; điện thoại vuốt ngang, màn rộng năm cột. Thẻ P MARCOM dùng ảnh sự kiện thay og:image vì og:image của site trùng bìa Academy ở đầu trang chủ.
 - **Thêm 32 thuật ngữ Trade vào Từ Điển** (121 lên 153 mục) — vá lỗ hổng tab "Thuật Ngữ & Công Thức" hiện trong bài khoá Trade mà không có mục nào của khoá đó.
 - **Mở rộng chiều sâu 16 bài khoá Trade** — nội dung từ ~30.000 lên 47.000 ký tự: mẫu biên bản store check, bảng nhận mặt POSM ba nhóm, bài tính ROI bằng số cụ thể, khung Trade Plan bảy phần, bốn câu phỏng vấn hay gặp. Thời lượng chuyên đề cập nhật theo.
 - **Viết 16 câu chốt còn thiếu của khoá Digital** — `npm run check:content` nay báo 0 lỗi, 0 cảnh báo; cả 52 bài của hai khoá đều có "Lưu ý cốt lõi cho Manager".
