@@ -1,5 +1,68 @@
 [
   {
+    "category": "TikTok Shop & Ads",
+    "platformIcon": "Video",
+    "title": "DoubleVerify tích hợp đo lường an toàn thương hiệu trên TikTok Pangle tại 48 thị trường",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "TikTok Ads",
+      "Pangle",
+      "Đo lường quảng cáo",
+      "An toàn thương hiệu"
+    ],
+    "summary": "DoubleVerify chính thức mở rộng công cụ đo lường độc lập cho mạng lưới quảng cáo TikTok Pangle trên 48 thị trường, bao gồm Việt Nam. Công cụ này cung cấp thông tin về độ phù hợp thương hiệu và tỷ lệ hiển thị cho định dạng video. Dù vậy, tích hợp này vẫn tồn tại nhiều hạn chế kỹ thuật mà nhà quản lý ngân sách quảng cáo cần lưu ý.",
+    "keyNumbers": [
+      {
+        "value": "48",
+        "label": "Thị trường được phủ sóng đo lường"
+      },
+      {
+        "value": "400.000",
+        "label": "Ứng dụng toàn cầu trong mạng lưới Pangle"
+      },
+      {
+        "value": "77%",
+        "label": "Tỷ lệ hiển thị video trên ứng dụng di động Q1 2026"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Bổ sung khả năng đo lường độc lập trên TikTok Pangle",
+        "body": "Mạng lưới quảng cáo TikTok Pangle kết nối các nhà quảng cáo với hơn 400.000 ứng dụng toàn cầu thông qua TikTok Ads Manager. Bắt đầu từ ngày 13/08/2026, DoubleVerify chính thức cung cấp báo cáo đo lường chất lượng truyền thông độc lập trên mạng lưới này tại 48 thị trường. Việt Nam nằm trong danh sách 15 thị trường được chỉ tên cụ thể cùng với Mỹ, Nhật Bản, Hàn Quốc, Thái Lan và Singapore. Dữ liệu báo cáo sẽ được tổng hợp tập trung qua nền tảng phân tích DV Pinnacle của DoubleVerify."
+      },
+      {
+        "heading": "Những giới hạn quan trọng mà nhà quảng cáo cần lưu ý",
+        "body": "Mặc dù tính năng mới mang lại khả năng minh bạch hơn, công cụ này chỉ đo lường báo cáo sau khi chiến dịch đã chạy thay vì chặn trước chiến dịch. Thông cáo không đề cập đến khả năng phát hiện gian lận và lưu lượng truy cập không hợp lệ cho mạng lưới Pangle. Báo cáo về tỷ lệ hiển thị hiện chỉ áp dụng cho định dạng video quảng cáo mà bỏ qua các định dạng khác như banner hay quảng cáo thưởng. Ngoài ra, cách thức phân loại độ phù hợp thương hiệu trong môi trường ứng dụng vẫn chưa được làm rõ về việc có đạt chứng nhận MRC hay không."
+      },
+      {
+        "heading": "Đặc thù đo lường chất lượng trong môi trường ứng dụng di động",
+        "body": "Môi trường ứng dụng di động vốn là khu vực phức tạp nhất trong đo lường chất lượng truyền thông. Theo dữ liệu điểm chuẩn quý 1 năm 2026 của DoubleVerify, quảng cáo hiển thị trên ứng dụng di động đạt tỷ lệ xem được cao nhất là 82%. Ngược lại, quảng cáo video trên môi trường này đạt tỷ lệ xem được thấp nhất ở mức 77%. Vi phạm gian lận toàn cầu và lưu lượng truy cập không hợp lệ tinh vi ở mức 0,5%, trong khi phân phối ngoài khu vực địa lý tăng lên 1,2%."
+      },
+      {
+        "heading": "Bối cảnh doanh nghiệp và tác động tới hợp đồng đo lường",
+        "body": "Đợt ra mắt này diễn ra ngay sau khi Nielsen đồng ý thâu tóm DoubleVerify với giá trị doanh nghiệp khoảng $2,15 tỷ vào ngày 06/08/2026. Doanh thu quý 2 năm 2026 của DoubleVerify đạt $193,8 triệu, tăng 3% so với cùng kỳ năm trước. Tốc độ tăng trưởng này giảm đáng kể so với mức tăng 10% trong quý 1 năm 2026 khi doanh thu đạt $180,8 triệu. Sự thay đổi chủ sở hữu sắp tới đồng nghĩa với việc định hướng sản phẩm và cam kết dịch vụ của đơn vị đo lường này có thể thay đổi."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing có cái nhìn minh bạch hơn về vị trí xuất hiện quảng cáo video trên mạng Pangle tại Việt Nam, nhưng không nên phụ thuộc hoàn toàn vào công cụ này để ngăn ngừa lãng phí ngân sách do thiếu cơ chế chặn trước vi phạm.",
+    "ifIgnored": "Doanh nghiệp có nguy cơ đổ ngân sách vào các ứng dụng hiển thị kém chất lượng hoặc không phù hợp với thương hiệu trên Pangle mà chỉ phát hiện được sau khi chiến dịch đã kết thúc và ngân sách đã chi tiêu xong.",
+    "actionChecklist": [
+      "Rà soát lại danh sách ứng dụng xuất hiện quảng cáo Pangle trong báo cáo sau chiến dịch trên DV Pinnacle",
+      "Đặt hạn chế thủ công danh mục ứng dụng không phù hợp trên TikTok Ads Manager do công cụ chưa hỗ trợ chặn tự động pre-bid",
+      "Ưu tiên phân bổ ngân sách cho định dạng video trên Pangle vì đây là định dạng duy nhất được đo lường viewability",
+      "Đánh giá lại điều khoản hợp đồng đo lường với DoubleVerify trong bối cảnh đơn vị này sắp đổi chủ sở hữu"
+    ],
+    "id": "real-2026-08-16-doubleverify-tich-hop-do",
+    "publishedAt": "16/08/2026",
+    "sourceUrl": "https://ppc.land/doubleverify-gains-brand-suitability-data-on-tiktok-pangle-in-48-markets/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/size/w1200/2026/08/inapp-measurement.webp",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
     "category": "Google Ads & SEO",
     "platformIcon": "Search",
     "title": "Robots.txt vô hiệu với 15% bot AI: Phân tách quyền thu thập dữ liệu để không mất traffic tìm kiếm",
@@ -490,69 +553,6 @@
       "Tạo lại các nhóm đó dưới dạng chỉ-loại-trừ, lưu ý không đổi ngược lại được",
       "Tải lên danh sách nhân viên công ty và loại khỏi mọi chiến dịch đang chạy",
       "Ghi vào quy trình dựng chiến dịch: bước kiểm tra tệp loại trừ trước khi bật ngân sách"
-    ]
-  },
-  {
-    "id": "real-2026-08-07-gbp-gemini-da-diem",
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Google mở Hồ sơ Doanh nghiệp trong Gemini cho tài khoản nhiều chi nhánh, nhưng vẫn chặn tài khoản Workspace",
-    "publishedAt": "07/08/2026",
-    "isHot": false,
-    "illustration": "crm-automation",
-    "image": {
-      "url": "https://ppc.land/content/images/size/w1200/2026/08/maps.webp",
-      "credit": "Ảnh: PPC Land"
-    },
-    "sourceUrl": "https://ppc.land/google-business-profile-in-gemini-now-works-for-multi-location-accounts/",
-    "source": "PPC Land",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Hồ sơ Doanh nghiệp",
-      "Gemini",
-      "Chuỗi chi nhánh",
-      "SEO địa phương"
-    ],
-    "summary": "Từ 10/06/2026 tính năng này chỉ dùng được cho đơn vị quản lý đúng một hồ sơ. Nay đã mở cho tài khoản quản lý nhiều chi nhánh: gọi @Google Business Profile trong Gemini để soạn bản sửa và đề xuất cập nhật cho nhiều hồ sơ cùng lúc. Miễn phí. Nhưng có một rào chắn khiến phần lớn chuỗi lớn vẫn đứng ngoài.",
-    "keyNumbers": [
-      {
-        "value": "Miễn phí",
-        "label": "trên mọi tài khoản Gemini"
-      },
-      {
-        "value": "Chỉ @gmail.com",
-        "label": "Workspace chưa dùng được"
-      },
-      {
-        "value": "0",
-        "label": "thay đổi tự đăng khi chưa duyệt"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Thay đổi cụ thể",
-        "body": "Trước đây giới hạn là mỗi tài khoản chỉ được quản một hồ sơ doanh nghiệp. Nay giới hạn đó chỉ còn áp dụng cho việc tạo sổ tay doanh nghiệp. Người quản nhiều chi nhánh gọi @Google Business Profile trong Gemini là soạn được bản sửa và đề xuất cập nhật cho nhiều hồ sơ."
-      },
-      {
-        "heading": "Không có chuyện máy tự đăng",
-        "body": "Mọi thay đổi đi qua đúng giao diện lập trình chính thức của Hồ sơ Doanh nghiệp, chịu cùng quy trình kiểm duyệt như khi sửa tay. Google nói rõ không có gì được đăng nếu chủ hồ sơ chưa xem và ký duyệt. Nghĩa là công cụ này rút ngắn khâu soạn thảo, không rút ngắn khâu chịu trách nhiệm."
-      },
-      {
-        "heading": "Rào chắn khiến phần lớn chuỗi lớn đứng ngoài",
-        "body": "Chỉ tài khoản @gmail.com cá nhân dùng được. Google Workspace chưa hỗ trợ, được mô tả là đang làm nhưng không kèm mốc thời gian. Đây là nút thắt thật sự: đại lý và doanh nghiệp nhiều chi nhánh gần như luôn phân quyền cho nhân sự qua tài khoản Workspace. Ai đang vận hành đúng chuẩn thì lại là người chưa dùng được."
-      },
-      {
-        "heading": "Ai dùng được ngay",
-        "body": "Chuỗi cửa hàng vừa và nhỏ đang quản hồ sơ bằng tài khoản Gmail cá nhân. Nhóm này thường bị coi là làm chưa chuyên nghiệp, nhưng trong trường hợp này lại được tiếp cận công cụ trước. Mở toàn cầu trên cả máy tính và điện thoại, ở những khu vực và ngôn ngữ Gemini đã hỗ trợ."
-      }
-    ],
-    "impact": "Trưởng phòng quản chuỗi nhiều điểm bán nên thử ngay nếu hồ sơ đang gắn tài khoản Gmail cá nhân, vì việc cập nhật giờ mở cửa, khuyến mãi hay thông tin liên hệ cho hàng chục chi nhánh rút ngắn được đáng kể.",
-    "ifIgnored": "Không mất gì ngay, nhưng thông tin chi nhánh sai hoặc cũ trên bản đồ là thứ trực tiếp làm mất khách tới tận nơi. Công cụ này hạ chi phí giữ thông tin đúng xuống rất thấp, bỏ qua nghĩa là tiếp tục trả giá cao cho cùng một việc.",
-    "actionChecklist": [
-      "Kiểm tra hồ sơ doanh nghiệp của các chi nhánh đang gắn tài khoản Gmail cá nhân hay tài khoản Workspace",
-      "Nếu là Gmail cá nhân, thử gọi @Google Business Profile trong Gemini để soạn bản cập nhật cho vài chi nhánh",
-      "Nếu là Workspace, chưa dùng được, đưa vào danh sách theo dõi thay vì mất công thử",
-      "Dù dùng công cụ nào cũng phải giữ khâu người duyệt trước khi đăng, đừng bỏ qua vì thấy bản nháp đã đủ tốt"
     ]
   },
   {
