@@ -409,7 +409,9 @@ ${bai.thanBai.slice(0, 9000)}`;
  * may chứ không phải đúng: bản thử nghiệm nay còn mai mất.
  */
 let hangDoiModel = null;
-const modelDaNghi = new Set();
+const soLanNghi = new Map();
+const LOI_TAM_THOI = [429, 500, 502, 503, 504];
+const TOI_DA_NGHI = 2;
 
 function nghi(ms) {
   return new Promise((xong) => setTimeout(xong, ms));
@@ -486,20 +488,24 @@ async function nhoGeminiViet(bai, khoaApi) {
       const chiTiet = await res.text().catch(() => '');
       loiCuoi = new Error(`Gemini (${model}) trả về ${res.status}: ${chiTiet.slice(0, 300)}`);
 
-      // Hạn mức theo phút thì nghỉ một nhịp là qua, hạn mức theo ngày thì nghỉ
-      // bao lâu cũng vô ích. Cho mỗi model đúng một lần nghỉ trong cả lượt chạy
-      // để phân biệt hai loại mà không đốt thời gian ở mỗi bài.
-      if (res.status === 429 && !modelDaNghi.has(model)) {
-        modelDaNghi.add(model);
-        const cho = doiBaoLau(chiTiet);
-        log(`model ${model} báo quá hạn mức, nghỉ ${Math.round(cho / 1000)}s rồi thử lại`);
-        await nghi(cho);
-        continue;
+      // Lỗi tạm: 429 quá hạn mức, 5xx máy chủ quá tải. Nghỉ một nhịp rồi thử
+      // lại chính model đó, vì loại này thường tự qua. Đếm số lần nghỉ theo cả
+      // lượt chạy chứ không theo từng bài, nếu không thì mỗi bài lại nghỉ một
+      // lần và cả lượt chạy chỉ ngồi đợi.
+      if (LOI_TAM_THOI.includes(res.status)) {
+        const daNghi = soLanNghi.get(model) || 0;
+        if (daNghi < TOI_DA_NGHI) {
+          soLanNghi.set(model, daNghi + 1);
+          const cho = doiBaoLau(chiTiet) * (daNghi + 1);
+          log(`model ${model} trả ${res.status}, nghỉ ${Math.round(cho / 1000)}s rồi thử lại (lần ${daNghi + 1}/${TOI_DA_NGHI})`);
+          await nghi(cho);
+          continue;
+        }
       }
 
-      // 429 lần hai, 404 tên đã đổi, 403 không có quyền: lỗi nằm ở model chứ
-      // không phải ở bài viết. Bỏ model, tụt xuống bản kế tiếp.
-      if ([429, 404, 403].includes(res.status) && hangDoi.length > 1) {
+      // Nghỉ mãi không đỡ, hoặc 404 tên đã đổi, hoặc 403 không có quyền: lỗi
+      // nằm ở model chứ không phải ở bài viết. Bỏ model, tụt xuống bản kế tiếp.
+      if ([...LOI_TAM_THOI, 404, 403].includes(res.status) && hangDoi.length > 1) {
         hangDoi.shift();
         log(`bỏ model ${model} (HTTP ${res.status}), chuyển sang ${hangDoi[0]}`);
         continue;
@@ -740,8 +746,12 @@ async function chay() {
   // model đã sai và không viết được bài nào suốt cả buổi sáng. Hỏng mà báo
   // thành công là kiểu hỏng tệ nhất: không ai biết để đi sửa.
   if (nhan.length === 0) {
-    if (loiApi > 0 && loiApi >= daThu) {
-      console.error(`[tin] HỎNG: cả ${daThu} lượt gọi mô hình đều lỗi. Lỗi gần nhất: ${loiApiCuoi}`);
+    // Ngưỡng "toàn bộ lượt gọi đều lỗi" vẫn còn lỏng. Hôm 17/08 mười bảy lượt
+    // gọi trả 503, vài bài khác bị mô hình chê nên tỉ lệ lỗi chưa chạm 100%, và
+    // workflow báo XANH trong khi không có lấy một tin mới. Không ra tin nào mà
+    // lại có lỗi API thì đó là hỏng, không phải ngày ít tin.
+    if (loiApi > 0) {
+      console.error(`[tin] HỎNG: ${loiApi}/${daThu} lượt gọi mô hình lỗi và không viết được tin nào. Lỗi gần nhất: ${loiApiCuoi}`);
       process.exit(1);
     }
     log('không có tin nào đạt chuẩn hôm nay — không đổi gì.');
