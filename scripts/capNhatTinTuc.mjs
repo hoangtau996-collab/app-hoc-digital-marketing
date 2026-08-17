@@ -391,78 +391,133 @@ ${bai.thanBai.slice(0, 9000)}`;
 }
 
 /**
- * Tự dò model khả dụng thay vì đóng cứng tên.
+ * Tự dò model khả dụng thay vì đóng cứng tên, và tự chuyển model khi bị chặn.
  *
  * Bản đầu đóng cứng 'gemini-2.5-flash' và lãnh đủ: Google đổi tên model, mọi
  * lượt gọi trả 404, cả quy trình chạy không ra tin nào suốt một buổi sáng. Tên
  * model là thứ nhà cung cấp đổi mà không báo, nên với việc chạy không người
  * trực thì phải hỏi API xem hiện có gì rồi mới chọn.
  *
- * Ưu tiên dòng Flash vì đó là dòng nằm trong bậc miễn phí. Trong các bản Flash
- * thì chọn số hiệu lớn nhất, và tránh bản 'preview' cho việc chạy hằng ngày.
+ * Bản thứ hai chọn đúng một model rồi bám chặt vào đó, và lãnh đủ lần nữa:
+ * 'gemini-3.7-flash' vừa ra, xếp hạng cao nhất, nhưng bậc miễn phí chưa mở cho
+ * nó nên cả 21 lượt gọi đều trả 429 và cả buổi sáng không có tin. Model mới
+ * nhất không đồng nghĩa với model dùng được. Vì vậy giờ giữ nguyên cả hàng đợi:
+ * model nào bị chặn thì bỏ, tụt xuống model kế tiếp, chạy tiếp.
+ *
+ * Lọc chặt theo đúng khuôn 'gemini-<số>-flash' hoặc '-lite'. Biến thể kiểu
+ * '-video-understanding-eap' từng lọt vào và chạy trót lọt một hôm, nhưng đó là
+ * may chứ không phải đúng: bản thử nghiệm nay còn mai mất.
  */
-let modelDaChon = null;
+let hangDoiModel = null;
+const modelDaNghi = new Set();
 
-async function timModel(khoaApi) {
-  if (modelDaChon) return modelDaChon;
+function nghi(ms) {
+  return new Promise((xong) => setTimeout(xong, ms));
+}
+
+/** Google trả kèm "retryDelay": "23s" khi chặn theo phút. Nghe theo nếu có. */
+function doiBaoLau(chiTiet) {
+  const khop = chiTiet.match(/"retryDelay"\s*:\s*"(\d+(?:\.\d+)?)s"/);
+  const giay = khop ? parseFloat(khop[1]) : 12;
+  return Math.min(Math.max(giay, 5), 30) * 1000;
+}
+
+async function layHangDoiModel(khoaApi) {
+  if (hangDoiModel) return hangDoiModel;
 
   if (process.env.GEMINI_MODEL) {
-    modelDaChon = process.env.GEMINI_MODEL;
-    log(`dùng model chỉ định sẵn: ${modelDaChon}`);
-    return modelDaChon;
+    hangDoiModel = [process.env.GEMINI_MODEL];
+    log(`dùng model chỉ định sẵn: ${hangDoiModel[0]}`);
+    return hangDoiModel;
   }
 
   const res = await tai(`https://generativelanguage.googleapis.com/v1beta/models?key=${khoaApi}&pageSize=200`);
   if (!res.ok) throw new Error(`không lấy được danh sách model: HTTP ${res.status}`);
   const data = await res.json();
 
-  const dungDuoc = (data.models || [])
+  const ten = (data.models || [])
     .filter((m) => (m.supportedGenerationMethods || []).includes('generateContent'))
-    .map((m) => m.name.replace(/^models\//, ''))
-    .filter((ten) => ten.includes('flash'))
-    .filter((ten) => !ten.includes('preview') && !ten.includes('exp') && !ten.includes('tts') && !ten.includes('image'));
+    .map((m) => m.name.replace(/^models\//, ''));
+
+  const KHUON = /^gemini-\d+(?:\.\d+)?-flash(?:-lite)?$/;
+  let dungDuoc = ten.filter((t) => KHUON.test(t));
+
+  // Nếu Google đổi hẳn lối đặt tên thì khuôn chặt sẽ không khớp gì. Khi đó nới
+  // ra chứ không chịu thua: chọn hơi rộng vẫn hơn là không có model nào.
+  if (dungDuoc.length === 0) {
+    const CAM = /preview|exp|eap|tts|image|video|audio|thinking|learnlm|embedding/;
+    dungDuoc = ten.filter((t) => t.includes('flash') && !CAM.test(t));
+  }
 
   if (dungDuoc.length === 0) throw new Error('API không trả về model Flash nào dùng được');
 
   // Xếp theo số hiệu giảm dần: gemini-3.6-flash đứng trước gemini-2.5-flash.
   // Bản đầy đủ ưu tiên hơn bản '-lite' vì bài viết cần chất lượng hơn tốc độ.
-  const diem = (ten) => {
-    const so = parseFloat((ten.match(/(\d+\.?\d*)/) || [0])[1]) || 0;
-    return so * 10 - (ten.includes('lite') ? 1 : 0);
+  const diem = (t) => {
+    const so = parseFloat((t.match(/(\d+\.?\d*)/) || [0])[1]) || 0;
+    return so * 10 - (t.includes('lite') ? 1 : 0);
   };
   dungDuoc.sort((a, b) => diem(b) - diem(a));
 
-  modelDaChon = dungDuoc[0];
-  log(`model tự chọn: ${modelDaChon} (trong ${dungDuoc.length} lựa chọn)`);
-  return modelDaChon;
+  hangDoiModel = dungDuoc;
+  log(`thứ tự model sẽ dùng: ${dungDuoc.join(' → ')}`);
+  return hangDoiModel;
 }
 
 async function nhoGeminiViet(bai, khoaApi) {
-  const model = await timModel(khoaApi);
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${khoaApi}`;
+  const hangDoi = await layHangDoiModel(khoaApi);
+  let loiCuoi = null;
 
-  const res = await tai(url, {
-    method: 'POST',
-    timeout: 90000,
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      contents: [{ parts: [{ text: dungLoiNhac(bai) }] }],
-      generationConfig: { temperature: 0.4, responseMimeType: 'application/json' },
-    }),
-  });
+  while (hangDoi.length > 0) {
+    const model = hangDoi[0];
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${khoaApi}`;
 
-  if (!res.ok) {
-    const chiTiet = await res.text().catch(() => '');
-    throw new Error(`Gemini trả về ${res.status}: ${chiTiet.slice(0, 200)}`);
+    const res = await tai(url, {
+      method: 'POST',
+      timeout: 90000,
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        contents: [{ parts: [{ text: dungLoiNhac(bai) }] }],
+        generationConfig: { temperature: 0.4, responseMimeType: 'application/json' },
+      }),
+    });
+
+    if (!res.ok) {
+      const chiTiet = await res.text().catch(() => '');
+      loiCuoi = new Error(`Gemini (${model}) trả về ${res.status}: ${chiTiet.slice(0, 300)}`);
+
+      // Hạn mức theo phút thì nghỉ một nhịp là qua, hạn mức theo ngày thì nghỉ
+      // bao lâu cũng vô ích. Cho mỗi model đúng một lần nghỉ trong cả lượt chạy
+      // để phân biệt hai loại mà không đốt thời gian ở mỗi bài.
+      if (res.status === 429 && !modelDaNghi.has(model)) {
+        modelDaNghi.add(model);
+        const cho = doiBaoLau(chiTiet);
+        log(`model ${model} báo quá hạn mức, nghỉ ${Math.round(cho / 1000)}s rồi thử lại`);
+        await nghi(cho);
+        continue;
+      }
+
+      // 429 lần hai, 404 tên đã đổi, 403 không có quyền: lỗi nằm ở model chứ
+      // không phải ở bài viết. Bỏ model, tụt xuống bản kế tiếp.
+      if ([429, 404, 403].includes(res.status) && hangDoi.length > 1) {
+        hangDoi.shift();
+        log(`bỏ model ${model} (HTTP ${res.status}), chuyển sang ${hangDoi[0]}`);
+        continue;
+      }
+
+      throw loiCuoi;
+    }
+
+    const data = await res.json();
+    const chu = data?.candidates?.[0]?.content?.parts?.[0]?.text;
+    if (!chu) throw new Error('Gemini trả lời rỗng');
+
+    // Phòng trường hợp model vẫn bọc trong dấu mã dù đã yêu cầu JSON thuần.
+    const sach = chu.replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/, '').trim();
+    return JSON.parse(sach);
   }
 
-  const data = await res.json();
-  const chu = data?.candidates?.[0]?.content?.parts?.[0]?.text;
-  if (!chu) throw new Error('Gemini trả lời rỗng');
-
-  // Phòng trường hợp model vẫn bọc trong dấu mã dù đã yêu cầu JSON thuần.
-  const sach = chu.replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/, '').trim();
-  return JSON.parse(sach);
+  throw loiCuoi || new Error('không còn model nào để thử');
 }
 
 /* ---------------------------------------------------------------- *
