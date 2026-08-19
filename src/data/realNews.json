@@ -1,5 +1,194 @@
 [
   {
+    "category": "AI Marketing",
+    "platformIcon": "Sparkles",
+    "title": "ChatGPT tự chèn tên thương hiệu vào truy vấn tìm kiếm: Tỷ lệ xuất hiện chênh lệch 33 lần",
+    "isHot": false,
+    "illustration": "zero-click",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "AI Marketing",
+      "ChatGPT",
+      "SEO AI",
+      "GEO"
+    ],
+    "summary": "Phân tích gói dữ liệu mạng của ChatGPT cho thấy công cụ này tự động chèn tên các thương hiệu hàng đầu vào chuỗi tìm kiếm ban đầu trước khi truy cập bất kỳ trang web nào. Những thương hiệu có mặt ngay trong truy vấn đầu tiên đạt tỷ lệ xuất hiện ở câu trả lời cuối cùng là 68,9%, so với chỉ 2,1% ở các thương hiệu được thu thập sau đó. Phát hiện này thay đổi hoàn toàn cách nhìn về tối ưu hóa công cụ tìm kiếm AI.",
+    "keyNumbers": [
+      {
+        "value": "68,9%",
+        "label": "Tỷ lệ xuất hiện nếu được chèn vào truy vấn đầu"
+      },
+      {
+        "value": "2,1%",
+        "label": "Tỷ lệ xuất hiện nếu chỉ được thu thập sau đó"
+      },
+      {
+        "value": "33 lần",
+        "label": "Mức chênh lệch cơ hội xuất hiện trong câu trả lời"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Cơ chế chèn thương hiệu trước khi quét trang web",
+        "body": "Nghiên cứu của Suganthan Mohanadasan dựa trên việc phân tích dữ liệu HTTP trong gói phản hồi của ChatGPT trên 60 cuộc trò chuyện. Khi người dùng nhập câu hỏi, ChatGPT tự viết lại thành các chuỗi tìm kiếm nằm trong khóa search_queries trước khi gửi đi. Kết quả cho thấy trong 21 trên 27 cuộc trò chuyện thử nghiệm, truy vấn đầu tiên đã chứa sẵn tên các thương hiệu mà người dùng không hề đề cập. ChatGPT tạo ra danh sách rút gọn các thương hiệu hàng đầu trước, sau đó mới thực hiện các truy vấn xác nhận cho từng tên đó."
+      },
+      {
+        "heading": "Khoảng cách 33 lần giữa thương hiệu có sẵn và thu thập sau",
+        "body": "Thống kê trên 119 thương hiệu được ChatGPT tự chèn vào truy vấn cho thấy 68,9% trong số đó được đưa vào câu trả lời cuối cùng cho người dùng. Ngược lại, trong số 515 thương hiệu chỉ được thu thập dữ liệu sau khi tìm kiếm nhưng không nằm trong truy vấn gốc, tỷ lệ xuất hiện chỉ đạt 2,1%. Sự chênh lệch lên tới 33 lần này chứng minh rằng việc có mặt trong tập dữ liệu huấn luyện ban đầu của mô hình đóng vai trò quyết định. Nếu thương hiệu không nằm trong nhận thức ban đầu của AI, cơ hội được đề xuất là rất thấp."
+      },
+      {
+        "heading": "Sự biến động dữ liệu và hành vi theo từng ngành hàng",
+        "body": "Nghiên cứu ghi nhận sự thay đổi tùy thuộc vào từng ngành hàng và cách đặt câu hỏi của người dùng. Với các ngành có thủ lĩnh thị trường rõ ràng như ứng dụng học ngôn ngữ hay phần mềm kế toán, danh sách tên thương hiệu được chèn vào truy vấn rất ổn định. Tuy nhiên, trích dẫn của ChatGPT cũng có tính biến động cao khi nghiên cứu từ SISTRIX chỉ ra công cụ này xoay vòng 74% trích dẫn mỗi tuần. Nghiên cứu của Semrush cũng cho thấy mức thay đổi trích dẫn hàng tháng khoảng 50% với tỷ lệ trùng lặp giữa các nền tảng chỉ đạt 11%."
+      },
+      {
+        "heading": "Giới hạn của các chiến lược GEO truyền thống",
+        "body": "Đa số các giải pháp tối ưu hóa động cơ tạo nội dung hiện nay tập trung vào giai đoạn thu thập thông tin web, vốn chỉ mang lại tỷ lệ xuất hiện 2,1%. Việc đưa thương hiệu vào danh sách truy vấn ban đầu diễn ra trước khi các thao tác quét web được thực hiện. Điều này đòi hỏi doanh nghiệp phải xây dựng độ nhận diện thực thể mạnh mẽ trên không gian mạng để mô hình AI ghi nhớ từ trước. Chỉ tối ưu hóa nội dung trên website chuẩn SEO là chưa đủ để lọt vào chuỗi tìm kiếm tự động của ChatGPT."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing cần thay đổi tư duy làm SEO/GEO trên AI. Việc chỉ tập trung tối ưu từ khóa và bài viết trên website sẽ chỉ mang lại tỷ lệ xuất hiện 2,1% nếu ChatGPT không ghi nhớ thương hiệu của bạn từ trước. Chiến lược thương hiệu cần ưu tiên phủ rộng nhận diện trên các nền tảng uy tín, trang đánh giá độc lập và báo chí để được AI coi là một thực thể mặc định trong ngành.",
+    "ifIgnored": "Doanh nghiệp sẽ tiếp tục lãng phí ngân sách vào các kỹ thuật SEO web truyền thống mà không thể xuất hiện trong các câu trả lời của AI. Khi khách hàng chuyển sang tìm kiếm bằng AI, thương hiệu sẽ hoàn toàn bị loại khỏi danh sách đề xuất ban đầu và nhường toàn bộ thị phần cho đối thủ.",
+    "actionChecklist": [
+      "Dùng F12 DevTools kiểm tra luồng Network tab trên ChatGPT để xem thương hiệu có nằm trong chuỗi search_queries của ngành hay không",
+      "Tăng cường sự hiện diện của thương hiệu trên các trang đánh giá độc lập và báo chí chuyên ngành để củng cố độ nhận diện thực thể",
+      "Tối ưu hóa các trang báo giá và nội dung so sánh sản phẩm chính thức để sẵn sàng cho các truy vấn xác nhận từ AI",
+      "Theo dõi định kỳ danh sách đối thủ cạnh tranh được ChatGPT tự động chèn vào chuỗi tìm kiếm trong cùng phân khúc"
+    ],
+    "id": "real-2026-08-18-chatgpt-tu-chen-ten-a25a99",
+    "publishedAt": "18/08/2026",
+    "sourceUrl": "https://ppc.land/brands-named-in-chatgpts-own-query-win-mentions-33x-more-often/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/size/w1200/2026/08/mentions.webp",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Google chính thức triển khai đợt cập nhật thuật toán chống spam tháng 8/2026",
+    "isHot": true,
+    "illustration": "data-signal",
+    "readTime": "3 phút đọc",
+    "tags": [
+      "Google SEO",
+      "Spam Update",
+      "Thuật toán Google",
+      "Search Console"
+    ],
+    "summary": "Google vừa chính thức kích hoạt đợt cập nhật chống spam tháng 8/2026 trên phạm vi toàn cầu cho mọi ngôn ngữ từ ngày 18/8. Đây là đợt cập nhật spam thứ 3 trong năm 2026 nhưng không đi kèm chính sách mới nào, đỏi hỏi các doanh nghiệp phải tự rà soát việc tuân thủ quy định hiện hành.",
+    "keyNumbers": [
+      {
+        "value": "3",
+        "label": "Đợt cập nhật spam trong năm 2026"
+      },
+      {
+        "value": "19 giờ 30 phút",
+        "label": "Thời gian hoàn tất đợt cập nhật tháng 3"
+      },
+      {
+        "value": "2 ngày 1 giờ",
+        "label": "Thời gian hoàn tất đợt cập nhật tháng 6"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Google chính thức khởi chạy đợt cập nhật chống rác tháng 8/2026",
+        "body": "Google đã bắt đầu triển khai bản cập nhật spam tháng 8/2026 trên phạm vi toàn cầu và cho tất cả các ngôn ngữ. Theo thông báo từ bảng điều khiển Search Status Dashboard, hệ thống ghi nhận sự cố ảnh hưởng đến thứ hạng tìm kiếm bắt đầu từ 9:27 sáng ngày 18/8 theo giờ PDT. Đợt cập nhật này dự kiến sẽ mất vài ngày để hoàn tất việc áp dụng trên toàn bộ hệ thống. Đáng chú ý, Google không đưa ra bất kỳ chính sách chống spam mới nào trong lần ra mắt này. Do đó, các quy định hiện hành vẫn là tiêu chuẩn gốc để doanh nghiệp kiểm tra tính tuân thủ."
+      },
+      {
+        "heading": "Chuỗi cập nhật dày đặc trong năm 2026",
+        "body": "Đây là đợt cập nhật thuật toán spam thứ 3 của Google tính từ đầu năm 2026, sau hai đợt vào tháng 3 và tháng 6. Trong đợt cập nhật tháng 3, hệ thống ghi nhận thời gian hoàn tất kỷ lục là 19 giờ 30 phút. Đợt cập nhật tháng 6 kéo dài trong 2 ngày 1 giờ, diễn ra ngay sau thông báo làm rõ ngày 15/5 của Google về việc áp dụng chính sách spam cho các hành vi thao túng AI Overviews và AI Mode. Google chưa xác nhận liệu bản cập nhật tháng 8 này có tập trung riêng vào hành vi thao túng phản hồi AI hay không. Việc liên tục cập nhật cho thấy nỗ lực làm sạch kết quả tìm kiếm của Google đang tăng cường đáng kể."
+      },
+      {
+        "heading": "Biến động lưu lượng và thời gian phục hồi",
+        "body": "Khi đợt cập nhật đang diễn ra, việc thứ hạng từ khóa biến động trong thời gian ngắn là điều khó tránh khỏi. Doanh nghiệp không nên vội vã đưa ra kết luận chỉ dựa trên dữ liệu biến động của một ngày duy nhất. Theo tài liệu chính thức từ Google, nếu website bị ảnh hưởng tiêu cực, quá trình phục hồi có thể kéo dài nhiều tháng. Hệ thống tự động của Google cần thời gian để xác nhận website đã thực sự tuân thủ các quy định chống spam. Do đó, việc theo dõi sát dữ liệu trong Google Search Console từ ngày 18/8 là rất cần thiết."
+      },
+      {
+        "heading": "Kiểm tra tính tuân thủ quy định hiện hành",
+        "body": "Vì Google không ban hành chính sách mới, các website chỉ cần tập trung rà soát các tiêu chuẩn chống spam sẵn có. Các nội dung tự động tạo ra bằng công cụ AI hoặc nội dung kém chất lượng phục vụ thao túng SEO là đối tượng rủi ro nhất. Doanh nghiệp cần chủ động kiểm tra toàn bộ cấu trúc nội dung và các liên kết trên trang web. Nếu phát hiện sụt giảm lưu lượng truy cập bất thường, việc đối chiếu lại các hướng dẫn kỹ thuật của Google là bước xử lý ưu tiên. Khi đợt cập nhật hoàn tất, Google sẽ thông báo chính thức trên Search Status Dashboard."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing có thể giải thích ngay nguyên nhân nếu lưu lượng truy cập tự nhiên (Organic Traffic) có sự biến động bất thường từ ngày 18/8, đồng thời ngăn đội ngũ kỹ thuật can thiệp vội vã làm nhiễu dữ liệu khi thuật toán đang quét.",
+    "ifIgnored": "Nếu vô tình vi phạm các quy định chống spam hiện hành mà không rà soát kịp thời, website có thể bị phạt tụt thứ hạng hàng loạt và phải mất nhiều tháng mới có thể khôi phục lại lượng truy cập.",
+    "actionChecklist": [
+      "Theo dõi biến động thứ hạng và truy cập trong Google Search Console từ mốc ngày 18/8.",
+      "Rà soát lại toàn bộ nội dung sản xuất tự động bằng AI xem có vi phạm tiêu chuẩn chất lượng hay không.",
+      "Kiểm tra hệ thống liên kết nội bộ và liên kết trỏ ra ngoài để đảm bảo tính tự nhiên.",
+      "Tạm dừng các đợt tối ưu hóa SEO quy mô lớn cho đến khi Google thông báo hoàn tất cập nhật."
+    ],
+    "id": "real-2026-08-18-google-chinh-thuc-trien-afca59",
+    "publishedAt": "18/08/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/google-begins-rolling-out-the-august-2026-spam-update/586301/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/08/google-august-2026-spam-update.jpg",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
+    "category": "AI Marketing",
+    "platformIcon": "Sparkles",
+    "title": "Phân biệt 4 bot thu thập dữ liệu của OpenAI để bảo vệ traffic và dữ liệu đo lường",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "OpenAI",
+      "GPTBot",
+      "SEO AI",
+      "Robots.txt"
+    ],
+    "summary": "OpenAI vận hành 4 bot thu thập dữ liệu độc lập với mục đích riêng biệt từ huấn luyện mô hình đến phục vụ tìm kiếm. Việc chặn sai bot có thể khiến website đánh mất lượng lớn truy cập tự nhiên hoặc làm sai lệch báo cáo hiệu quả quảng cáo.",
+    "keyNumbers": [
+      {
+        "value": "35,7%",
+        "label": "Top 1.000 website hàng đầu chặn GPTBot"
+      },
+      {
+        "value": "1.091",
+        "label": "Lượt quét của GPTBot trên mỗi 1 người dùng chuyển hướng"
+      },
+      {
+        "value": "23,1%",
+        "label": "Mức sụt giảm lượt truy cập hàng tháng khi chặn bot AI"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Chức năng riêng biệt của 4 bot thu thập dữ liệu từ OpenAI",
+        "body": "OpenAI hiện vận hành 4 agent thu thập dữ liệu độc lập và việc nhầm lẫn giữa chúng là lỗi phổ biến nhất trong cấu hình crawler. GPTBot chuyên thu thập nội dung để huấn luyện các mô hình AI nền tảng. Trong khi đó, OAI-SearchBot xây dựng chỉ mục cho tính năng tìm kiếm của ChatGPT, nếu ngăn chặn bot này thì website sẽ không hiển thị trong câu trả lời tìm kiếm. ChatGPT-User được kích hoạt khi người dùng hoặc Custom GPT yêu cầu truy cập trang, còn OAI-AdsBot chỉ ghé thăm các trang đích quảng cáo và không dùng dữ liệu để huấn luyện mô hình."
+      },
+      {
+        "heading": "Lượng quét tự động tăng vọt làm sai lệch dữ liệu đo lường",
+        "body": "Dữ liệu từ Cloudflare công bố ngày 29/08/2025 cho thấy tỷ lệ quét của GPTBot trong tổng lưu lượng AI crawler đã tăng từ 4,7% lên 11,7% từ tháng 7/2024 đến tháng 7/2025. Cứ mỗi 1 người dùng được giới thiệu quay lại website, OpenAI ghi nhận tới 1.091 lượt quét tự động. Phân tích từ Botify và Nectiv trên hơn 7 tỷ nhật ký máy chủ cho thấy hoạt động quét tự động của OpenAI đã tăng gấp 3 lần sau khi ra mắt GPT-5 vào tháng 8/2025. Các truy vấn tự động này làm gia tăng chi phí máy chủ, làm sai lệch số lượng phiên truy cập và ảnh hưởng trực tiếp đến tỷ lệ chuyển đổi của các chiến dịch quảng cáo."
+      },
+      {
+        "heading": "Rủi ro sụt giảm lưu lượng truy cập khi chặn bot AI",
+        "body": "Tính đến ngày 03/08/2024, có 35,7% trong số 1.000 website hàng đầu thế giới từ chối GPTBot, tăng gấp 7 lần so với mức khoảng 5% ở thời điểm ra mắt vào ngày 07/08/2023. Tuy nhiên, việc ngăn chặn bot thu thập dữ liệu có thể mang lại tác động tiêu cực ngoài dự tính đến lưu lượng truy cập. Nghiên cứu từ Trường Kinh doanh Rutgers và Trường Wharton cho thấy các nhà xuất bản chặn bot AI bị mất 23,1% lượt truy cập hàng tháng trong báo cáo tháng 12/2025 và gần 7% lượng truy cập hàng tuần trong bản cập nhật tháng 04/2026. Sự sụt giảm này xuất phát từ việc website giảm sự xuất hiện trong các câu trả lời do AI tạo ra."
+      },
+      {
+        "heading": "Cách thức nhận dạng kỹ thuật và quản lý bot chính xác",
+        "body": "GPTBot được xác định qua chuỗi mã trong tệp robots.txt, tệp khai báo User-Agent và danh sách dải IP công khai. Tính đến tháng 8/2026, tệp cấu hình IP công khai tại openai.com/gptbot.json liệt kê 21 dải IPv4, chủ yếu thuộc hạ tầng Microsoft Azure. Do chuỗi User-Agent có thể bị giả mạo, việc xác thực chính xác đòi hỏi đối chiếu tiêu đề truy cập với danh sách dải IP được công bố. Việc chặn GPTBot trong tệp robots.txt chỉ có tác dụng từ chối cấp quyền huấn luyện AI trong tương lai chứ không thể xóa dữ liệu đã được thu thập trước đó."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing dễ mắc sai lầm khi cho lệnh chặn toàn bộ bot OpenAI, dẫn đến việc website bị gạch tên khỏi kết quả tìm kiếm trên ChatGPT, đồng thời làm báo cáo hiệu suất chiến dịch bị nhiễu do lượng quét ảo làm tăng số phiên và hạ thấp tỷ lệ chuyển đổi thực tế.",
+    "ifIgnored": "Doanh nghiệp đối mặt nguy cơ sụt giảm tới 23,1% lưu lượng truy cập tự nhiên do không xuất hiện trong các câu trả lời AI, hoặc phải gánh chịu chi phí vận hành máy chủ tăng cao cùng số liệu đo lường ROI quảng cáo bị bóp méo.",
+    "actionChecklist": [
+      "Tách biệt quy tắc cấu hình robots.txt giữa GPTBot (huấn luyện AI) và OAI-SearchBot (hiển thị tìm kiếm ChatGPT).",
+      "Cấu hình kỹ thuật tường lửa để xác minh tiêu đề User-Agent với 21 dải IP công khai từ OpenAI nhằm loại bỏ crawler giả mạo.",
+      "Lọc bỏ truy cập từ các bot AI khỏi hệ thống báo cáo GA4 và CRM để đảm bảo độ chính xác của tỷ lệ chuyển đổi.",
+      "Cân nhắc kỹ đánh đổi giữa việc bảo hộ bản quyền nội dung và nguy cơ sụt giảm lưu lượng truy cập từ kết quả tìm kiếm AI."
+    ],
+    "id": "real-2026-08-18-phan-biet-4-bot-1c3a0f",
+    "publishedAt": "18/08/2026",
+    "sourceUrl": "https://ppc.land/gptbot/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/size/w1200/2026/08/GPTBot.webp",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
     "category": "Google Ads & SEO",
     "platformIcon": "Search",
     "title": "Google phát động đợt cập nhật spam tháng 8 năm 2026 trên toàn cầu",
@@ -194,70 +383,6 @@
   },
   {
     "category": "Google Ads & SEO",
-    "platformIcon": "Video",
-    "title": "YouTube tăng gấp đôi điều kiện kiếm tiền và áp dụng chu kỳ đánh giá Shorts 90 ngày từ năm 2027",
-    "isHot": false,
-    "illustration": "affiliate-commission",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "YouTube YPP",
-      "Kiếm tiền Shorts",
-      "Chính sách YouTube",
-      "Creator Marketing"
-    ],
-    "summary": "YouTube chính thức công bố nâng gấp đôi ngưỡng điều kiện tham gia Chương trình Đối tác YouTube (YPP) và thay đổi cơ chế chi trả cho Shorts từ tháng 02/2027. Thay vì duy trì quyền kiếm tiền vĩnh viễn, các nhà sáng tạo nội dung Shorts sẽ phải trải qua đợt đánh giá hiệu suất định kỳ theo chu kỳ 90 ngày. Thay đổi này tập trung phân bổ lại nguồn tiền cho các nhà sáng tạo quy mô lớn, ảnh hưởng trực tiếp tới chiến lược hợp tác KOL/KOC của thương hiệu.",
-    "keyNumbers": [
-      {
-        "value": "8.000 giờ",
-        "label": "Thời lượng xem video dài tối thiểu trong 365 ngày để bật kiếm tiền"
-      },
-      {
-        "value": "20 triệu",
-        "label": "Lượt xem Shorts tối thiểu trong 90 ngày để tham gia YPP"
-      },
-      {
-        "value": "45%",
-        "label": "Tỷ lệ chia sẻ doanh thu từ bể chung Shorts cho nhà sáng tạo"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Siết chặt điều kiện gia nhập Chương trình Đối tác YouTube",
-        "body": "YouTube công bố chuỗi điều chỉnh quan trọng đối với Chương trình Đối tác (YPP) chính thức áp dụng từ ngày 01/02/2027. Ngưỡng thời lượng xem đối với nội dung video dài tăng từ 4.000 giờ lên 8.000 giờ hợp lệ trong 365 ngày. Kênh phát triển theo hướng YouTube Shorts phải đạt 20 triệu lượt xem hợp lệ trong 90 ngày, thay vì 10 triệu lượt xem như trước. Điều kiện về số lượng 1.000 người đăng ký vẫn được giữ nguyên. Hai nhánh điều kiện này tiếp tục hoạt động độc lập và không được cộng dồn tích lũy cho nhau."
-      },
-      {
-        "heading": "Doanh thu Shorts chuyển sang mô hình đánh giá lại định kỳ 90 ngày",
-        "body": "Thay vì cấp quyền kiếm tiền cố định sau khi đạt mốc 10 triệu lượt xem Shorts một lần, nền tảng chuyển sang cơ chế thử thách lăn 90 ngày. Các kênh bắt buộc phải duy trì tối nhất 10 triệu lượt xem Shorts trong 90 ngày gần nhất để tiếp tục nhận tiền từ bể chia sẻ hàng tháng. Khi lượt xem sụt giảm xuống dưới ngưỡng này, phần chi trả từ bể Shorts sẽ bị tạm ngưng ngay lập tức. Tuy nhiên, việc tạm dừng này không tước bỏ trạng thái thành viên YPP hay ảnh hưởng đến quảng cáo video dài, YouTube Shopping và các khoản tài trợ trực tiếp từ người hâm mộ."
-      },
-      {
-        "heading": "Quy định hoạt động tối thiểu và chính sách miễn trừ kênh cũ",
-        "body": "Những nhà sáng tạo đã gia nhập YPP trước thời hạn điều chỉnh sẽ được giữ nguyên trạng thái kiếm tiền mà không bị áp dụng quy định ngưỡng mới. Để duy trì tài khoản hoạt động từ ngày 01/02/2027, kênh chỉ cần đạt một trong các tiêu chí: 1.000 giờ xem trong 365 ngày, 1 triệu lượt xem Shorts trong 90 ngày, hoặc đăng 2 video dài hay 5 video Shorts mỗi 90 ngày. Các điều kiện dành cho tính năng tài trợ người hâm mộ và Shopping vẫn giữ nguyên ở mức 500 người đăng ký. Tất cả nhà sáng tạo phải hoàn tất chấp nhận các điều khoản cập nhật trong YouTube Studio trước ngày 31/01/2027."
-      },
-      {
-        "heading": "Cơ cấu lại dòng tiền quảng cáo và tác động tới hệ sinh thái",
-        "body": "Doanh thu Shorts hàng tháng sau khi trừ chi phí bản quyền âm nhạc sẽ được đưa vào bể chung và phân bổ 45% cho nhà sáng tạo dựa trên lượt xem tương tác. Nền tảng cũng bổ sung cơ chế chi trả trực tiếp 45% doanh thu quảng cáo đối với các chiến dịch nhắm mục tiêu từ 5 kênh trở xuống. Đại diện YouTube khẳng định việc cắt giảm các khoản thanh toán nhỏ lẻ vài cent giúp tối ưu chi phí vận hành hệ thống. Tổng ngân sách chi trả cho nhà sáng tạo năm 2027 dự kiến không giảm mà sẽ tập trung dồn vào các kênh duy trì được phong độ ổn định."
-      }
-    ],
-    "impact": "Chính sách mới sẽ làm thu hẹp số lượng Creator nhỏ mới gia nhập thị trường, đồng thời buộc các KOL/KOC hiện tại phải liên tục ra video để duy trì lượng xem Shorts. Thị trường Influencer Marketing trên YouTube sẽ phân hóa mạnh mẽ, đòi hỏi Trưởng phòng Marketing phải tái thẩm định năng lực duy trì phong độ của đối tác và điều chỉnh khung giá Booking cho phù hợp.",
-    "ifIgnored": "Nếu không nắm rõ chính sách này, doanh nghiệp dễ đặt niềm tin và ngân sách Booking vào các kênh Shorts nhỏ đang trên đà sụt giảm phong độ, dẫn đến rủi ro chiến dịch bị gián đoạn hoặc đắt đỏ bất thường do Creator phải chịu thêm chi phí duy trì kênh.",
-    "actionChecklist": [
-      "Rà soát hiệu suất 90 ngày gần nhất của các kênh KOL/KOC YouTube Shorts nằm trong danh sách Booking dài hạn.",
-      "Cập nhật các điều khoản đảm bảo chỉ số cam kết (KPIs) lượt xem trong hợp đồng hợp tác với Creator từ năm 2027.",
-      "Yêu cầu các đối tác Creator hoàn thành xác nhận điều khoản mới trên YouTube Studio trước hạn chót 31/01/2027.",
-      "Ưu tiên phân bổ ngân sách sang các kênh lớn đã vượt xa ngưỡng 10 triệu lượt xem Shorts để đảm bảo an toàn cho chiến dịch."
-    ],
-    "deadline": "31/01/2027",
-    "id": "real-2026-08-17-youtube-tang-gap-doi",
-    "publishedAt": "17/08/2026",
-    "sourceUrl": "https://ppc.land/youtube-doubles-monetization-thresholds-and-adds-a-rolling-shorts-test/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/size/w1200/2026/08/YouTube-Machine-1.webp",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
     "platformIcon": "Search",
     "title": "Ahrefs ra mắt Letaido: Không gian làm việc AI giúp rút ngắn 40 giờ kiểm duyệt SEO xuống 60 phút",
     "isHot": false,
@@ -320,69 +445,6 @@
     }
   },
   {
-    "category": "TikTok Shop & Ads",
-    "platformIcon": "Video",
-    "title": "DoubleVerify tích hợp đo lường an toàn thương hiệu trên TikTok Pangle tại 48 thị trường",
-    "isHot": false,
-    "illustration": "data-signal",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "TikTok Ads",
-      "Pangle",
-      "Đo lường quảng cáo",
-      "An toàn thương hiệu"
-    ],
-    "summary": "DoubleVerify chính thức mở rộng công cụ đo lường độc lập cho mạng lưới quảng cáo TikTok Pangle trên 48 thị trường, bao gồm Việt Nam. Công cụ này cung cấp thông tin về độ phù hợp thương hiệu và tỷ lệ hiển thị cho định dạng video. Dù vậy, tích hợp này vẫn tồn tại nhiều hạn chế kỹ thuật mà nhà quản lý ngân sách quảng cáo cần lưu ý.",
-    "keyNumbers": [
-      {
-        "value": "48",
-        "label": "Thị trường được phủ sóng đo lường"
-      },
-      {
-        "value": "400.000",
-        "label": "Ứng dụng toàn cầu trong mạng lưới Pangle"
-      },
-      {
-        "value": "77%",
-        "label": "Tỷ lệ hiển thị video trên ứng dụng di động Q1 2026"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Bổ sung khả năng đo lường độc lập trên TikTok Pangle",
-        "body": "Mạng lưới quảng cáo TikTok Pangle kết nối các nhà quảng cáo với hơn 400.000 ứng dụng toàn cầu thông qua TikTok Ads Manager. Bắt đầu từ ngày 13/08/2026, DoubleVerify chính thức cung cấp báo cáo đo lường chất lượng truyền thông độc lập trên mạng lưới này tại 48 thị trường. Việt Nam nằm trong danh sách 15 thị trường được chỉ tên cụ thể cùng với Mỹ, Nhật Bản, Hàn Quốc, Thái Lan và Singapore. Dữ liệu báo cáo sẽ được tổng hợp tập trung qua nền tảng phân tích DV Pinnacle của DoubleVerify."
-      },
-      {
-        "heading": "Những giới hạn quan trọng mà nhà quảng cáo cần lưu ý",
-        "body": "Mặc dù tính năng mới mang lại khả năng minh bạch hơn, công cụ này chỉ đo lường báo cáo sau khi chiến dịch đã chạy thay vì chặn trước chiến dịch. Thông cáo không đề cập đến khả năng phát hiện gian lận và lưu lượng truy cập không hợp lệ cho mạng lưới Pangle. Báo cáo về tỷ lệ hiển thị hiện chỉ áp dụng cho định dạng video quảng cáo mà bỏ qua các định dạng khác như banner hay quảng cáo thưởng. Ngoài ra, cách thức phân loại độ phù hợp thương hiệu trong môi trường ứng dụng vẫn chưa được làm rõ về việc có đạt chứng nhận MRC hay không."
-      },
-      {
-        "heading": "Đặc thù đo lường chất lượng trong môi trường ứng dụng di động",
-        "body": "Môi trường ứng dụng di động vốn là khu vực phức tạp nhất trong đo lường chất lượng truyền thông. Theo dữ liệu điểm chuẩn quý 1 năm 2026 của DoubleVerify, quảng cáo hiển thị trên ứng dụng di động đạt tỷ lệ xem được cao nhất là 82%. Ngược lại, quảng cáo video trên môi trường này đạt tỷ lệ xem được thấp nhất ở mức 77%. Vi phạm gian lận toàn cầu và lưu lượng truy cập không hợp lệ tinh vi ở mức 0,5%, trong khi phân phối ngoài khu vực địa lý tăng lên 1,2%."
-      },
-      {
-        "heading": "Bối cảnh doanh nghiệp và tác động tới hợp đồng đo lường",
-        "body": "Đợt ra mắt này diễn ra ngay sau khi Nielsen đồng ý thâu tóm DoubleVerify với giá trị doanh nghiệp khoảng $2,15 tỷ vào ngày 06/08/2026. Doanh thu quý 2 năm 2026 của DoubleVerify đạt $193,8 triệu, tăng 3% so với cùng kỳ năm trước. Tốc độ tăng trưởng này giảm đáng kể so với mức tăng 10% trong quý 1 năm 2026 khi doanh thu đạt $180,8 triệu. Sự thay đổi chủ sở hữu sắp tới đồng nghĩa với việc định hướng sản phẩm và cam kết dịch vụ của đơn vị đo lường này có thể thay đổi."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing có cái nhìn minh bạch hơn về vị trí xuất hiện quảng cáo video trên mạng Pangle tại Việt Nam, nhưng không nên phụ thuộc hoàn toàn vào công cụ này để ngăn ngừa lãng phí ngân sách do thiếu cơ chế chặn trước vi phạm.",
-    "ifIgnored": "Doanh nghiệp có nguy cơ đổ ngân sách vào các ứng dụng hiển thị kém chất lượng hoặc không phù hợp với thương hiệu trên Pangle mà chỉ phát hiện được sau khi chiến dịch đã kết thúc và ngân sách đã chi tiêu xong.",
-    "actionChecklist": [
-      "Rà soát lại danh sách ứng dụng xuất hiện quảng cáo Pangle trong báo cáo sau chiến dịch trên DV Pinnacle",
-      "Đặt hạn chế thủ công danh mục ứng dụng không phù hợp trên TikTok Ads Manager do công cụ chưa hỗ trợ chặn tự động pre-bid",
-      "Ưu tiên phân bổ ngân sách cho định dạng video trên Pangle vì đây là định dạng duy nhất được đo lường viewability",
-      "Đánh giá lại điều khoản hợp đồng đo lường với DoubleVerify trong bối cảnh đơn vị này sắp đổi chủ sở hữu"
-    ],
-    "id": "real-2026-08-16-doubleverify-tich-hop-do",
-    "publishedAt": "16/08/2026",
-    "sourceUrl": "https://ppc.land/doubleverify-gains-brand-suitability-data-on-tiktok-pangle-in-48-markets/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/size/w1200/2026/08/inapp-measurement.webp",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
     "category": "AI Marketing",
     "platformIcon": "Sparkles",
     "title": "Anthropic công bố cơ chế đóng dấu chìm văn bản trên Claude và cách nhận diện",
@@ -438,65 +500,6 @@
     "source": "Search Engine Journal",
     "image": {
       "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/08/anthropic-watermark-151.jpg",
-      "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Google tích hợp Gemini 3.7 Flash vào AI Mode trong tìm kiếm",
-    "isHot": false,
-    "illustration": "zero-click",
-    "readTime": "3 phút đọc",
-    "tags": [
-      "AI Search",
-      "Google Search",
-      "Gemini",
-      "SEO"
-    ],
-    "summary": "Google vừa bổ sung mô hình Gemini 3.7 Flash vào danh sách tùy chọn trong AI Mode của Google Search cho người dùng gói trả phí toàn cầu. Bản cập nhật này nâng cao khả năng hiểu ý định tìm kiếm và thực hiện chỉ dẫn phức tạp của người dùng. Đây là công cụ hữu ích giúp đội ngũ marketing kiểm tra và đối chiếu sự biến động của nguồn trích dẫn thương hiệu trên công cụ tìm kiếm AI.",
-    "keyNumbers": [
-      {
-        "value": "3.7 Flash",
-        "label": "Mô hình Gemini mới nhất vừa được đưa vào AI Mode"
-      },
-      {
-        "value": "3",
-        "label": "Tùy chọn mô hình người dùng có thể đối chiếu gồm 3.7 Flash, Auto và Pro"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Cập nhật mô hình mới trên AI Mode",
-        "body": "Google chính thức cho phép người dùng lựa chọn mô hình Gemini 3.7 Flash trực tiếp trong giao diện AI Mode của thanh tìm kiếm. Tính năng này hiện áp dụng trên toàn cầu bằng tiếng Anh cho các tài khoản đăng ký gói Google AI Pro và Ultra. Theo đại diện sản phẩm Google Search, mô hình mới giúp bám sát câu lệnh và thấu hiểu ý định tìm kiếm tốt hơn. Người dùng có thể tìm thấy tùy chọn này tại thanh nhập liệu dưới mục danh sách mô hình."
-      },
-      {
-        "heading": "Lộ trình triển khai các dòng mô hình Flash của Google",
-        "body": "Mô hình Gemini 3.7 Flash được giới thiệu chuyên sâu cho các tác vụ lập trình và xử lý tác tử tự động. Google duy trì mô hình triển khai nhất quán khi đưa phiên bản Pro vào trước, sau đó chuyển sang dùng bản Flash làm chuẩn mặc định. Các phiên bản Flash thường được Google ưu tiên vận hành trên môi trường thực tế của Search nhờ tốc độ phản hồi nhanh và tối ưu chi phí hạ tầng. Tuy nhiên, hãng chưa công bố thời điểm bản 3.7 Flash sẽ thay thế hoàn toàn mô hình mặc định hiện tại."
-      },
-      {
-        "heading": "Tác động đến việc kiểm toán trích dẫn nguồn trên AI",
-        "body": "Trước đây, sự thay đổi liên tục của các trích dẫn nguồn trong AI Mode khiến đội ngũ tối ưu hóa tìm kiếm gặp khó khăn khi phân tích nguyên nhân. Với cập nhật mới, các chuyên viên có thể chạy cùng một truy vấn thương hiệu trên cả 3.7 Flash, Auto và Pro để so sánh trực tiếp. Việc này giúp xác định sự sụt giảm thứ hạng trích dẫn xuất phát từ thuật toán của mô hình hay do chất lượng dữ liệu trang web. Đây là bước đệm quan trọng để đo lường khả năng hiển thị thương hiệu trong kỷ nguyên tìm kiếm không nhấp chuột."
-      },
-      {
-        "heading": "Phạm vi tiếp cận và hạn chế hiện tại",
-        "body": "Ở thời điểm hiện tại, Gemini 3.7 Flash chỉ giới hạn cho người dùng trả phí thay vì phổ cập tới toàn bộ người dùng miễn phí. Tài liệu hướng dẫn chính thức của Google vẫn chưa cập nhật đầy đủ thông tin về các phân tầng mô hình mới này. Dù vậy, các nhà tiếp thị cần chuẩn bị trước kịch bản vì các nâng cấp từ bản trả phí thường sẽ sớm được áp dụng rộng rãi cho công cụ tìm kiếm chung. Việc chủ động thử nghiệm từ sớm sẽ tạo lợi thế cạnh tranh về mặt hiển thị nội dung."
-      }
-    ],
-    "impact": "Giúp Trưởng phòng Marketing có công cụ kỹ thuật để đo lường chính xác mức độ hiển thị và trích dẫn của thương hiệu trên Google AI Search qua từng mô hình khác nhau.",
-    "ifIgnored": "Doanh nghiệp sẽ mất dấu nguyên nhân khiến lưu lượng truy cập tự nhiên sụt giảm khi Google ngầm cập nhật mô hình AI Search mặc định trên diện rộng.",
-    "actionChecklist": [
-      "Dùng tài khoản Google AI Pro hoặc Ultra chạy thử nghiệm các bộ từ khóa cốt lõi của ngành trên AI Mode.",
-      "So sánh kết quả trích dẫn tên thương hiệu giữa 3 tùy chọn: Gemini 3.7 Flash, Auto và Pro.",
-      "Kiểm tra xem nội dung trang đích có đang tối ưu đúng ý định tìm kiếm chi tiết theo chuẩn mô hình mới hay không.",
-      "Cập nhật quy trình đo lường AI SEO để sẵn sàng khi Google nâng cấp mô hình này thành mặc định."
-    ],
-    "id": "real-2026-08-14-google-tich-hop-gemini",
-    "publishedAt": "14/08/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/google-brings-gemini-3-7-flash-to-ai-mode-in-search/585923/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/08/google-gemini-3-7-flash-featured.jpg",
       "credit": "Ảnh: Search Engine Journal"
     }
   },
