@@ -23,6 +23,7 @@
 import { readFileSync, writeFileSync, realpathSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
+import { createHash } from 'node:crypto';
 
 const GOC = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DUONG_DAN_TIN = join(GOC, 'src/data/realNews.json');
@@ -35,6 +36,7 @@ const TONG_TIN = 12;
 const THEM_TOI_DA = 3;
 /* Trần tin cho mỗi tên miền, tránh bản tin bị một báo chiếm sóng. */
 const TRAN_MOI_NGUON = 4;
+const TRAN_MOI_NHOM = 6;
 /* Chỉ lấy bài đăng trong khoảng này. */
 const GIO_TOI_DA = 48;
 
@@ -597,17 +599,27 @@ export function ghepDanhSach(dangCo, tinMoi) {
     const boDuoc = ketQua.filter((t) => !t.isReference && !tinMoi.includes(t));
     if (boDuoc.length === 0) break;
 
-    const dem = {};
+
+    const demNguon = {};
+    const demNhom = {};
     ketQua.forEach((t) => {
       const h = tenMien(t.sourceUrl);
-      dem[h] = (dem[h] || 0) + 1;
+      demNguon[h] = (demNguon[h] || 0) + 1;
+      demNhom[t.category] = (demNhom[t.category] || 0) + 1;
     });
 
-    const quaTran = Object.entries(dem).filter(([, c]) => c > TRAN_MOI_NGUON).map(([h]) => h);
+    const nguonQuaTran = Object.entries(demNguon).filter(([, c]) => c > TRAN_MOI_NGUON).map(([h]) => h);
+    const nhomQuaTran = Object.entries(demNhom).filter(([, c]) => c > TRAN_MOI_NHOM).map(([k]) => k);
 
-    const ungVien = quaTran.length > 0
-      ? boDuoc.filter((t) => quaTran.includes(tenMien(t.sourceUrl)))
-      : boDuoc;
+    // Trần theo NHÓM xét trước trần theo nguồn. Bản trước chỉ cân theo nguồn,
+    // nên nhóm 'Google Ads & SEO' cứ phình dần mà không có gì kéo lại; đến khi
+    // vượt 6 thì bộ kiểm tra chặn và cả lượt chạy hỏng, không thêm được tin nào
+    // dù bài viết đã xong. Cân ngay ở đây rẻ hơn nhiều so với báo đỏ rồi sửa tay.
+    let ungVien = [];
+    if (nhomQuaTran.length > 0) ungVien = boDuoc.filter((t) => nhomQuaTran.includes(t.category));
+    if (ungVien.length === 0 && nguonQuaTran.length > 0) {
+      ungVien = boDuoc.filter((t) => nguonQuaTran.includes(tenMien(t.sourceUrl)));
+    }
 
     const danhSachXet = ungVien.length > 0 ? ungVien : boDuoc;
     const cuNhat = danhSachXet.reduce((a, b) => (mocNgay(a) <= mocNgay(b) ? a : b));
@@ -711,15 +723,33 @@ async function chay() {
         continue;
       }
 
+      // Nhóm chỉ biết được sau khi mô hình viết xong, nên phải chặn ở đây chứ
+      // không lọc sớm từ tiêu đề được. Giữ tối đa 2 tin mới cùng nhóm mỗi lượt,
+      // giống quy tắc 2 tin mới cùng nguồn: đủ để `ghepDanhSach` bỏ tin cũ cùng
+      // nhóm mà không đẩy nhóm nào vượt trần 6.
+      const moiCungNhom = nhan.filter((x) => x.category === viet.category).length;
+      if (moiCungNhom >= 2) {
+        log(`  bỏ: đã lấy 2 tin mới nhóm ${viet.category} lượt này`);
+        continue;
+      }
+
       const ngay = b.ngayDang.split('/').reverse().join('-');
       const tuKhoa = viet.title.toLowerCase()
         .normalize('NFD').replace(/[̀-ͯ]/g, '')
         .replace(/đ/g, 'd').replace(/[^a-z0-9]+/g, '-')
         .split('-').filter(Boolean).slice(0, 4).join('-');
 
+      // Bốn từ đầu tiêu đề không đủ làm khoá riêng: hôm 18/08 hai bài YouTube
+      // cùng ngày cùng mở đầu 'YouTube thay đổi cách' nên trùng id, bộ kiểm tra
+      // chặn lại và cả lượt chạy hỏng. Ghép thêm vân tay của địa chỉ bài gốc:
+      // mỗi bài một địa chỉ nên chắc chắn không trùng, mà vẫn cố định qua các
+      // lượt chạy để bài cũ không bị đổi id.
+      const vanTay = createHash('sha1').update(b.url).digest('hex').slice(0, 6);
+
+
       nhan.push({
         ...viet,
-        id: `real-${ngay}-${tuKhoa}`,
+        id: `real-${ngay}-${tuKhoa}-${vanTay}`,
         publishedAt: b.ngayDang,
         sourceUrl: b.url,
         source: b.tenNguon,
