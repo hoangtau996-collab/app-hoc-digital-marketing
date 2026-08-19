@@ -1,6 +1,199 @@
 [
   {
     "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Google phát động đợt cập nhật spam tháng 8 năm 2026 trên toàn cầu",
+    "isHot": true,
+    "illustration": "data-signal",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Google Search",
+      "Spam Update",
+      "Thuật toán Google",
+      "SEO Website"
+    ],
+    "summary": "Google chính thức triển khai đợt cập nhật spam tháng 8 năm 2026 trên quy mô toàn cầu cho tất cả ngôn ngữ và vùng địa lý. Đây là đợt quét spam thứ ba trong năm 2026 nhằm siết chặt việc thực thi các quy định hiện hành thông qua hệ thống SpamBrain. Các website vi phạm có thể bị hạ thứ hạng hoặc biến mất khỏi kết quả tìm kiếm và mất nhiều tháng để khôi phục.",
+    "keyNumbers": [
+      {
+        "value": "3",
+        "label": "đợt cập nhật spam toàn cầu năm 2026"
+      },
+      {
+        "value": "19,5",
+        "label": "giờ triển khai của đợt quét tháng 3 năm 2026"
+      },
+      {
+        "value": "173",
+        "label": "đợt cập nhật được ghi nhận từ 2000 đến 2026"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Thông báo chính thức và quy mô tác động toàn cầu",
+        "body": "Google đã công bố đợt cập nhật spam tháng 8 năm 2026 trên Google Search Status Dashboard vào lúc 09:28 PDT ngày 18 tháng 8 năm 2026. Sự cố này được ghi nhận bắt đầu từ 09:27 PDT cùng ngày, tương ứng với 16:28 UTC. Đây là đợt cập nhật spam thông thường, áp dụng trên quy mô toàn cầu cho tất cả các ngôn ngữ và khu vực địa lý. Đợt triển khai này dự kiến sẽ hoàn tất trong vài ngày tới và được xếp vào nhóm sự cố ảnh hưởng đến thứ hạng tìm kiếm."
+      },
+      {
+        "heading": "Cơ chế vận hành của SpamBrain và thời gian phục hồi",
+        "body": "Hệ thống phát hiện spam dựa trên AI của Google mang tên SpamBrain liên tục chạy ngầm để phát hiện hành vi vi phạm. Trong tài liệu cập nhật ngày 10 tháng 12 năm 2025, Google làm rõ rằng các website vi phạm chính sách spam có thể bị hạ thứ hạng hoặc không xuất hiện trên kết quả tìm kiếm. Quá trình phục hồi sau khi bị phạt diễn ra rất chậm và phụ thuộc vào hệ thống tự động của Google. Website có thể mất nhiều tháng để khôi phục nếu hệ thống xác nhận trang web đã tuân thủ lại các quy định."
+      },
+      {
+        "heading": "Chu kỳ cập nhật năm 2026 và biến động thứ hạng trước đó",
+        "body": "Đây là đợt cập nhật spam thứ ba được Google xác nhận trong năm 2026, sau đợt tháng 3 diễn ra trong 19,5 giờ và đợt tháng 6 kéo dài khoảng 2 ngày. Trước khi công bố này ra đời, cộng đồng làm SEO đã ghi nhận các đợt biến động thứ hạng mạnh từ ngày 1 đến ngày 3 tháng 8 và tiếp đó là ngày 12 và ngày 13 tháng 8. Google không khẳng định liệu đợt biến động giữa tháng 8 có phải là sự triển khai sớm của đợt cập nhật này hay không. Dữ liệu lịch sử ghi nhận 26 đợt cập nhật spam và 52 đợt cập nhật cốt lõi trong tổng số 173 đợt cập nhật từ năm 2000 đến năm 2026."
+      },
+      {
+        "heading": "Phạm vi chính sách bị truy quét và bề mặt AI",
+        "body": "Đợt cập nhật tháng 8 năm 2026 không đưa ra chính sách mới mà tập trung thực thi quy định hiện hành. Các hành vi bị xử lý bao gồm lạm dụng tên miền hết hạn, lạm dụng nội dung quy mô lớn và lạm dụng uy tín website vốn được áp dụng từ năm 2024. Đáng chú ý, ngày 15 tháng 5 năm 2026, Google đã mở rộng toàn bộ quy định spam sang giao diện AI Overviews và AI Mode. Ngoài ra, vi phạm về chiếm đoạt nút quay lại cũng đã bắt đầu bị xử lý từ ngày 15 tháng 6 năm 2026."
+      }
+    ],
+    "impact": "Đợt quét toàn cầu này có thể làm sụt giảm lưu lượng truy cập tự nhiên (organic traffic) của doanh nghiệp ngay lập tức nếu website vi phạm quy định về nội dung tạo bằng AI hàng loạt hoặc lạm dụng uy tín tên miền. Nếu bị phạt hạ thứ hạng, doanh nghiệp phải tốn nhiều tháng để khôi phục, buộc Trưởng phòng Marketing phải tăng ngân sách quảng cáo trả phí Google Ads để bù đắp traffic thiếu hụt.",
+    "ifIgnored": "Bỏ qua đợt cập nhật này khiến doanh nghiệp đối mặt với rủi ro biến mất hoàn toàn trên kết quả tìm kiếm Google mà không rõ nguyên nhân. Khi traffic organic sụt giảm đột ngột, ngân sách Marketing sẽ bị thâm hụt nghiêm trọng do phải chuyển sang chạy quảng cáo trả phí thụ động.",
+    "actionChecklist": [
+      "Yêu cầu đội ngũ SEO và Agency kiểm tra ngay lưu lượng truy cập tự nhiên của website từ ngày 18 tháng 8 năm 2026.",
+      "Rà soát toàn bộ bài viết tạo tự động bằng AI hoặc nội dung xuất bản hàng loạt để phòng ngừa án phạt lạm dụng nội dung.",
+      "Kiểm tra các trang cộng tác và bài viết tài trợ trên website để loại bỏ nguy cơ vi phạm lỗi lạm dụng uy tín tên miền.",
+      "Tạm dừng các hoạt động mua bán liên kết không tự nhiên do thuật toán SpamBrain không thể khôi phục thứ hạng khi liên kết rác bị vô hiệu hóa."
+    ],
+    "id": "real-2026-08-18-google-phat-dong-dot-a59c19",
+    "publishedAt": "18/08/2026",
+    "sourceUrl": "https://ppc.land/googles-third-spam-update-of-2026-hits-every-language-and-region/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/size/w1200/2026/08/spam-update.webp",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "AI Marketing",
+    "platformIcon": "Sparkles",
+    "title": "Google AI Overviews trích dẫn mạng xã hội: Số lượng người theo dõi không còn quyết định thứ hạng",
+    "isHot": false,
+    "illustration": "zero-click",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Google AI Overviews",
+      "AI Search",
+      "Mạng xã hội",
+      "Chiến lược nội dung"
+    ],
+    "summary": "Phân tích từ 300 triệu lượt tìm kiếm tại Mỹ cho thấy Google AI Overviews trích dẫn nội dung từ Facebook, Instagram và TikTok dựa trên độ chính xác của câu trả lời thay vì quy mô tài khoản. Xây dựng nội dung chứa dữ liệu cụ thể và công khai bằng văn bản là chìa khóa để thương hiệu xuất hiện trong các câu trả lời AI.",
+    "keyNumbers": [
+      {
+        "value": "19,5 triệu",
+        "label": "lần Facebook được Google AIO trích dẫn làm nguồn"
+      },
+      {
+        "value": "1/15",
+        "label": "lượt tìm kiếm tại Mỹ chứa nội dung từ Facebook hoặc Instagram"
+      },
+      {
+        "value": "85%",
+        "label": "tỷ lệ AI chỉ tên nhà bán lẻ lớn khi trả lời câu hỏi mua sắm"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Thuật toán Google AI ưu tiên nội dung trả lời đúng trọng tâm hơn quy mô tài khoản",
+        "body": "Phân tích hơn 300 triệu lượt tìm kiếm hàng tháng tại Mỹ cho thấy Google AI Overviews đã trích dẫn Facebook 19,5 triệu lần, Instagram khoảng 877.000 lần và TikTok khoảng 78.000 lần. Khoảng 1/15 lượt tìm kiếm hiện đưa nội dung từ Facebook hoặc Instagram vào câu trả lời AI. Tuy nhiên, các công cụ AI không trích dẫn nguồn chỉ vì tài khoản đó có lượng người theo dõi lớn. Ví dụ, một tài khoản có 5.000 người theo dõi chứa số liệu thực tế vẫn có thể đánh bại thương hiệu có 500.000 người theo dõi đăng bài chung chung."
+      },
+      {
+        "heading": "Phân loại vai trò của từng nền tảng mạng xã hội trong câu trả lời AI",
+        "body": "Google AI Overviews trích dẫn các nền tảng mạng xã hội cho những nhóm câu hỏi hoàn toàn khác nhau. Facebook thường được AI chọn cho các thắc mắc mang tính thời sự, địa phương và cộng đồng. Instagram chủ yếu xuất hiện ở nhóm câu hỏi về văn hóa và mua sắm. Trong khi đó, TikTok được trích dẫn cho các nội dung về xu hướng và hướng dẫn thao tác, còn Reddit phục vụ trải nghiệm thực tế."
+      },
+      {
+        "heading": "Sự phân chia vai trò của Facebook và Instagram trong hành vi mua sắm",
+        "body": "Ở giai đoạn quyết định mua sắm, Instagram và Facebook đảm nhận hai vai trò hoàn toàn riêng biệt. Khoảng 90% lần Google AI trích dẫn Instagram ở phễu dưới liên quan trực tiếp đến việc mua hàng như nơi mua hay giá cả. Ngược lại, Facebook xuất hiện trong khoảng 23% các trích dẫn ở phễu dưới cho các chủ đề sau bán hàng như xử lý sự cố và hướng dẫn sử dụng. Ngoài ra, khi AI trích dẫn câu hỏi mua sắm, khoảng 85% trường hợp gọi tên các nhà bán lẻ lớn và chỉ 3% đến 4% nhắc tới thương hiệu sản xuất."
+      },
+      {
+        "heading": "Phương pháp tối ưu nội dung để công cụ AI chủ động trích dẫn",
+        "body": "AI sẽ ưu tiên trích dẫn những nội dung mà nó có thể trích xuất thành một thực tế hoặc con số rõ ràng. Một câu nói chi tiết như khảo sát 400 người mua B2B cho thấy 72% thích bản dùng thử tự phục vụ sẽ dễ được AI trích dẫn hơn một câu chuyện cá nhân chung chung. Thương hiệu cần đưa con số quan trọng lên ngay dòng đầu tiên của bài viết thay vì giấu ở phía dưới. Nội dung phải được trình bày dưới dạng văn bản công khai, bởi AI không thể tiếp cận thông tin nằm trong video hoặc nhóm riêng tư."
+      },
+      {
+        "heading": "Sự khác biệt trong cách tiếp cận tìm kiếm mua sắm giữa Google AI và ChatGPT",
+        "body": "Google AI tập trung nhiều vào các tín hiệu vị trí và tình trạng còn hàng, chiếm khoảng 11% đến 14% các câu hỏi mua sắm gần nhất. Trái lại, ChatGPT ít chạm đến yếu tố địa phương mà tập trung vào khuyến mãi và giá cả, chiếm khoảng 20% đến 24% các trích dẫn mua sắm. ChatGPT hiện thực hiện nhiều nghiên cứu hơn nhưng lại thu hẹp danh sách thương hiệu đề xuất. Điều này khiến việc trở thành nguồn tin cậy được AI trích dẫn trở nên quan trọng hơn bao giờ hết."
+      }
+    ],
+    "impact": "Thay đổi hoàn toàn tư duy làm Social SEO: Ngân sách xây dựng kênh mạng xã hội lớn không tự động mang lại lưu lượng truy cập từ AI Search nếu nội dung thiếu dữ liệu thực tế và câu trả lời cụ thể.",
+    "ifIgnored": "Doanh nghiệp tiếp tục tốn ngân sách tạo nội dung thương hiệu chung chung trên Fanpage nhưng bị đối thủ hoặc các tài khoản nhỏ cướp mất hiển thị trên Google AI Overviews, dẫn đến sụt giảm lượng khách hàng tiềm năng ở phễu mua sắm.",
+    "actionChecklist": [
+      "Đặt các con số và dữ liệu kết quả ngay dòng đầu tiên của bài viết trên mạng xã hội",
+      "Chuyển đổi các bài đăng kể chuyện thành bài nghiên cứu hoặc case study có phương pháp và số liệu rõ ràng",
+      "Chuyển các nội dung quan trọng từ dạng video hoặc nhóm kín sang dạng văn bản công khai",
+      "Thử nghiệm tra cứu các câu hỏi của khách hàng trên Google AI Overviews và ChatGPT để kiểm tra nguồn đang được trích dẫn"
+    ],
+    "id": "real-2026-08-18-google-ai-overviews-trich-fbff57",
+    "publishedAt": "18/08/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/how-google-aios-use-facebook-instagram-tiktok-from-300-million-us-searches/585244/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/08/ai-and-social-56.png",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Meta âm thầm trở thành bên thu thập dữ liệu web lớn nhất cho AI",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "SEO",
+      "Meta AI",
+      "Thu thập dữ liệu",
+      "Kênh sở hữu"
+    ],
+    "summary": "Trong khi giới xuất bản tập trung đàm phán hoặc ngăn chặn Google và GPTBot, các trình thu thập dữ liệu AI của Meta đã âm thầm chiếm đa số lưu lượng AI agent trên toàn mạng internet. Nền tảng này quét lượng lớn dữ liệu nhưng gần như không chuyển trả lại bất kỳ lưu lượng truy cập nào cho website. Bối cảnh này buộc các nhà quản lý marketing phải đánh giá lại tệp log máy chủ và tập trung xây dựng các kênh tương tác trực tiếp.",
+    "keyNumbers": [
+      {
+        "value": "17,7 tỷ",
+        "label": "lượt yêu cầu AI agent trong Q2/2026"
+      },
+      {
+        "value": "163%",
+        "label": "mức tăng của Meta-WebIndexer theo quý"
+      },
+      {
+        "value": "50 triệu USD",
+        "label": "giá trị hợp đồng năm giữa Meta và News Corp"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Sự gia tăng đột biến của các bot AI từ Meta",
+        "body": "Báo cáo từ đơn vị bảo vệ bot DataDome cho biết trong quý 2 năm 2026 có 17,7 tỷ yêu cầu từ các AI agent, tăng 45% so với quý trước. Sự tăng trưởng này không đến từ Google hay OpenAI mà chủ yếu do hai crawler của Meta điều phối. Cụ thể, Meta-ExternalAgent tăng 74% và Meta-WebIndexer tăng đến 163% so với quý trước. Cả hai agent này hiện chiếm đa số lưu lượng AI agent trên mạng lưới DataDome nhưng hầu như không mang lại truy cập giới thiệu nào cho website."
+      },
+      {
+        "heading": "Sai lệch trong chiến lược phòng thủ dữ liệu",
+        "body": "Dữ liệu tệp robots.txt cho thấy GPTBot của OpenAI vẫn là crawler AI bị chặn nhiều nhất trên mạng internet. Các website tập trung dựng hàng rào phòng thủ chống lại bot của OpenAI và đàm phán với Google vì thói quen lâu đời. Google từng mang lại lưu lượng truy cập đổi lấy nội dung, trong khi Meta từ trước đến nay luôn giữ người dùng ở lại trong hệ sinh thái của mình. Do đó, việc Meta thu thập dữ liệu quy mô lớn không tạo ra cảm giác bị mất mát trực tiếp cho các nhà quản trị web."
+      },
+      {
+        "heading": "Thỏa thuận thương mại chỉ dành cho các ông lớn",
+        "body": "Khi nền tảng giữ chân người dùng, giá trị đàm phán duy nhất còn lại là bán nội dung để huấn luyện AI. Tuy nhiên, Meta chỉ thực hiện trả phí cho những tập đoàn truyền thông hàng đầu. Vào tháng 3 năm 2026, Meta đã ký hợp đồng cấp phép với News Corp trị giá lên tới 50 triệu USD một năm để phục vụ Meta AI và huấn luyện mô hình. Những thỏa thuận tương tự cũng được ký với CNN, Fox News hay USA Today, trong khi các website thương mại và doanh nghiệp thông thường bị thu thập dữ liệu hoàn toàn miễn phí."
+      },
+      {
+        "heading": "Giải pháp xây dựng kênh truy cập trực tiếp",
+        "body": "Các doanh nghiệp nhỏ và vừa không thể ngồi vào bàn đàm phán bản quyền nội dung như các tập đoàn truyền thông lớn. Lối thoát duy nhất là tạo ra kết nối trực tiếp và mạnh mẽ hơn với tệp khán giả mục tiêu. Doanh nghiệp cần phát triển các kênh sở hữu riêng mà nền tảng không thể làm suy yếu hoặc can thiệp. Việc chủ động kiểm tra tệp nhật ký máy chủ sẽ giúp nhận diện chính xác ai đang thực sự đọc nội dung của bạn."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing cần nhận ra rằng chiến lược kéo traffic tự nhiên từ SEO truyền thống đang bị bào mòn bởi các nền tảng AI như Meta. Việc đầu tư vào nội dung chất lượng cao nhưng phụ thuộc hoàn toàn vào tìm kiếm tự nhiên sẽ khiến doanh nghiệp mất dần lợi thế khi AI tự đọc và giữ chân người dùng.",
+    "ifIgnored": "Doanh nghiệp sẽ tiếp tục lãng phí tài nguyên máy chủ và chi phí sản xuất nội dung cho các AI bot thu thập miễn phí mà không thu lại lưu lượng truy cập hay chuyển đổi, dẫn đến sự sụt giảm nguồn khách hàng tiềm năng dài hạn.",
+    "actionChecklist": [
+      "Kiểm tra tệp log của máy chủ để phân tích chính xác lưu lượng truy cập từ các AI bot như Meta-WebIndexer và Meta-ExternalAgent",
+      "Đánh giá lại danh sách các bot AI trong tệp robots.txt để quyết định chặn hay cho phép truy cập",
+      "Tăng cường đầu tư vào các kênh sở hữu riêng như Email Marketing, CRM và ứng dụng di động",
+      "Xây dựng chiến lược phân phối nội dung gắn liền với tương tác trực tiếp thay vì phụ thuộc hoàn toàn vào tìm kiếm tự nhiên"
+    ],
+    "id": "real-2026-08-18-meta-am-tham-tro-d5de67",
+    "publishedAt": "18/08/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/everyone-is-negotiating-with-google-while-meta-reads-the-web-for-free/584465/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/08/meta-bot-592.png",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
     "platformIcon": "Video",
     "title": "YouTube tăng gấp đôi điều kiện kiếm tiền và áp dụng chu kỳ đánh giá Shorts 90 ngày từ năm 2027",
     "isHot": false,
@@ -190,70 +383,6 @@
     }
   },
   {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Robots.txt vô hiệu với 15% bot AI: Phân tách quyền thu thập dữ liệu để không mất traffic tìm kiếm",
-    "isHot": true,
-    "illustration": "zero-click",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "AI Search",
-      "Robots.txt",
-      "SEO",
-      "Bảo mật website"
-    ],
-    "summary": "Báo cáo của TollBit phát hiện khoảng 15% bot tải trang AI vẫn truy cập các đường dẫn bị cấm trong tệp robots.txt tại châu Âu. Các nhà vận hành như OpenAI và Google xem các lượt tải trang do người dùng kích hoạt là trường hợp ngoại lệ, khiến việc cấu hình chặn nhầm có thể làm mất 7% lượng truy cập website.",
-    "keyNumbers": [
-      {
-        "value": "15%",
-        "label": "Bot tải trang AI truy cập URL bị cấm"
-      },
-      {
-        "value": "7%",
-        "label": "Lượng truy cập tuần bị giảm khi chặn bot AI"
-      },
-      {
-        "value": "24 giờ",
-        "label": "Thời gian hệ thống tìm kiếm AI cập nhật sau thay đổi"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Lỗ hổng kiểm soát bot từ tệp robots.txt truyền thống",
-        "body": "Theo báo cáo State of the Bots của TollBit trong nửa đầu năm 2026, khoảng 15% bot tải trang AI tại châu Âu đã truy cập các URL được đánh dấu là không cho phép. Các bot như ChatGPT-User, Bytespider và Youbot đã truy cập trang bị cấm trên gần một nửa số website có chặn chúng trong robots.txt. ChatGPT-User vừa là bot bị nhiều website đưa vào danh sách chặn nhất, vừa là bot bị ghi nhận vi phạm nhiều nhất. Nguyên nhân bắt nguồn từ việc chỉ thị robots.txt thuần túy không có cơ chế cưỡng chế kỹ thuật bắt buộc."
-      },
-      {
-        "heading": "Sự phân nhánh giữa bot tìm kiếm và bot tải trang theo yêu cầu",
-        "body": "Tài liệu kỹ thuật của OpenAI nêu rõ ChatGPT-User truy cập trang theo yêu cầu trực tiếp từ người dùng, do đó các quy tắc robots.txt có thể không áp dụng. Google cũng chính thức bổ sung Google-Agent vào danh mục bot kích hoạt bởi người dùng và nhìn chung bỏ qua robots.txt. Ngược lại, Anthropic tuyên bố cả ba bot của họ gồm ClaudeBot, Claude-User và Claude-SearchBot đều tôn trọng tệp cấu hình này. Sự bất đồng giữa các hãng công nghệ lớn khiến tệp robots.txt không còn là công cụ kiểm soát đáng tin cậy cho các tác vụ tương tác thời gian thực."
-      },
-      {
-        "heading": "Hệ lụy mất hiển thị và lưu lượng truy cập khi chặn nhầm",
-        "body": "OpenAI phân tách rõ ràng nhiệm vụ của từng loại bot, trong đó OAI-SearchBot chịu trách nhiệm hiển thị website trong kết quả tìm kiếm của ChatGPT. Việc chặn toàn bộ các bot có gắn nhãn AI sẽ khiến website biến mất hoàn toàn khỏi câu trả lời tìm kiếm của AI dù vẫn không ngăn chặn được bot tải trang. Nghiên cứu từ Trường Kinh doanh Rutgers và Trường Wharton chỉ ra rằng các đơn vị xuất bản chặn bot AI qua robots.txt đã mất khoảng 7% lượng truy cập website hàng tuần trong vòng 6 tuần. Hành động chặn cực đoan vừa làm mất nguồn khách hàng tiềm năng vừa không loại bỏ được dữ liệu website khỏi các tập trích dẫn AI."
-      },
-      {
-        "heading": "Chuyển dịch cơ chế chặn sang tầng mạng với Cloudflare",
-        "body": "Kiểm soát truy cập bot đang chuyển dần từ tệp robots.txt sang tầng hạ tầng mạng. Cloudflare đã cập nhật chính sách phân loại bot AI theo ba nhóm hành vi: Search (tìm kiếm/lập chỉ mục), Agent (tác nhân thời gian thực) và Training (thu thập dữ liệu đào tạo mô hình). Doanh nghiệp có thể cấp quyền riêng cho bot tìm kiếm để giữ lượt hiển thị, đồng thời giới hạn bot lấy dữ liệu đào tạo. Kể từ ngày 15/09/2026, Cloudflare áp dụng cài đặt mặc định mới cho tất cả các tên miền mới tham gia nền tảng."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing đối mặt với nguy cơ mất lưu lượng truy cập tự nhiên từ các công cụ AI Search nếu đội ngũ kỹ thuật chặn nhầm bot tìm kiếm (OAI-SearchBot), trong khi các trang nội dung nội bộ nhạy cảm vẫn có thể bị bot AI đọc được nếu chỉ dựa vào robots.txt.",
-    "ifIgnored": "Doanh nghiệp có thể bị sụt giảm ngay 7% lượng truy cập hàng tuần, đánh mất toàn bộ sự hiện diện thương hiệu trên các câu trả lời tìm kiếm của ChatGPT, đồng thời thất bại trong việc bảo vệ dữ liệu độc quyền trước các trình thu thập thông tin tự động.",
-    "actionChecklist": [
-      "Rà soát lại tệp robots.txt để mở quyền cho OAI-SearchBot nhằm giữ thứ hạng và hiển thị trên AI Search",
-      "Tách biệt cấu hình chặn giữa bot đào tạo mô hình (GPTBot) và bot tìm kiếm thời gian thực",
-      "Chuyển đổi cơ chế chặn nội dung bảo mật sang tường lửa hoặc tầng mạng (như Cloudflare) thay vì chỉ dùng robots.txt",
-      "Theo dõi lưu lượng truy cập từ các nguồn AI ít nhất 24 giờ sau mỗi lần thay đổi cấu hình tệp robots.txt"
-    ],
-    "deadline": "15/09/2026",
-    "id": "real-2026-08-15-robots-txt-vo-hieu",
-    "publishedAt": "15/08/2026",
-    "sourceUrl": "https://ppc.land/15-of-ai-page-fetchers-in-europe-reached-disallowed-urls-tollbit-finds/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/size/w1200/2026/08/block.webp",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
     "category": "AI Marketing",
     "platformIcon": "Sparkles",
     "title": "Anthropic công bố cơ chế đóng dấu chìm văn bản trên Claude và cách nhận diện",
@@ -368,69 +497,6 @@
     "source": "Search Engine Journal",
     "image": {
       "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/08/google-gemini-3-7-flash-featured.jpg",
-      "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Cách tối ưu nội dung YMYL và y tế để xuất hiện trên công cụ tìm kiếm AI",
-    "isHot": false,
-    "illustration": "zero-click",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "SEO YMYL",
-      "AI Search",
-      "Tối ưu E-E-A-T",
-      "Google AI Overviews"
-    ],
-    "summary": "Nội dung y tế và YMYL đang đối mặt với sự thay đổi lớn khi người dùng dần chuyển sang đọc câu trả lời trực tiếp từ AI Overviews và ChatGPT thay vì nhấp vào đường dẫn truyền thống. Bài viết cung cấp giải pháp chuẩn hóa độ tin cậy E-E-A-T và cấu trúc trình bày giúp thương hiệu được các công cụ tìm kiếm AI ưu tiên trích dẫn.",
-    "keyNumbers": [
-      {
-        "value": "89%",
-        "label": "Tỷ lệ truy vấn y tế xuất hiện AI Overviews"
-      },
-      {
-        "value": "Hơn 40 triệu",
-        "label": "Số người hỏi câu hỏi sức khỏe trên ChatGPT mỗi ngày"
-      },
-      {
-        "value": "55%",
-        "label": "Tỷ lệ người dùng AI để tra cứu triệu chứng"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Chuyển dịch hành vi tìm kiếm y tế sang công cụ AI",
-        "body": "Hành vi tìm kiếm thông tin sức khỏe của người dùng đang có sự thay đổi căn bản khi không còn dừng lại ở việc nhấp vào các liên kết truyền thống. Báo cáo đầu năm 2026 của OpenAI chỉ ra rằng hơn 40 triệu người hỏi các câu hỏi về sức khỏe trên nền tảng này mỗi ngày. Nghiên cứu từ BrightEdge cũng ghi nhận AI Overviews xuất hiện trong khoảng 89% các truy vấn thuộc lĩnh vực y tế trên Google. Ngoài ra, 3 trong số 5 người trưởng thành tại Mỹ từng sử dụng công cụ AI cho các thắc mắc y tế, trong đó khoảng 7 trên 10 cuộc trò chuyện diễn ra ngoài giờ hành chính. Người dùng chủ yếu dùng AI để tra cứu triệu chứng với tỷ lệ 55%, tìm hiểu phương pháp điều trị đạt 44% và giải thích thuật ngữ y khoa đạt 48%."
-      },
-      {
-        "heading": "Tiêu chuẩn đánh giá nghiêm ngặt đối với nội dung YMYL",
-        "body": "YMYL là khái niệm của Google dành cho các nội dung có thể ảnh hưởng trực tiếp đến sức khỏe, tài chính hoặc sự an toàn của con người. Những nội dung thuộc nhóm này luôn chịu sự kiểm duyệt khắt khe hơn từ đội ngũ đánh giá chất lượng người thật của Google. Mặc dù điểm số của người đánh giá không trực tiếp thay đổi thứ hạng, chúng được dùng để huấn luyện các thuật toán xếp hạng tìm kiếm. Google đã mở rộng định nghĩa YMYL và bổ sung tiêu chí đánh giá AI Overviews, đồng thời xếp các nội dung do AI tạo ra không qua kiểm duyệt của con người vào nhóm chất lượng thấp nhất. Nếu xuất bản nội dung y tế hời hợt hoặc thiếu thẩm định, website không chỉ mất lượng truy cập mà còn đối mặt với rủi ro bị phạt nghiêm trọng."
-      },
-      {
-        "heading": "Tối ưu chỉ số E-E-A-T và xây dựng độ tin cậy",
-        "body": "E-E-A-T là nền tảng cốt lõi giúp nội dung y tế nổi bật trên cả công cụ tìm kiếm truyền thống lẫn AI Search. Doanh nghiệp cần minh bạch hóa uy tín bằng cách gán tên tác giả cụ thể kèm học vị thực tế thay vì dùng tên nhóm chung chung. Việc bổ sung dòng xác nhận Medically reviewed by kèm tên bác sĩ và dẫn đường link tới trang tiểu sử chuyên gia là yêu cầu quan trọng. Bên cạnh đó, bài viết cần trích dẫn các nguồn tài liệu sơ cấp từ nghiên cứu được đồng thẩm định hoặc tổ chức y tế chính thống. Việc xuất bản các trường hợp thực tế cũng giúp chứng minh trải nghiệm người dùng thực sự với sản phẩm và dịch vụ."
-      },
-      {
-        "heading": "Áp dụng cấu trúc Answer-First và tối ưu kỹ thuật",
-        "body": "Để tối ưu cho các công cụ AI Search trích dẫn, các trang nội dung nên mở đầu bằng câu trả lời trực tiếp dài 2 đến 4 câu cho thắc mắc cốt lõi. Cách viết cần sử dụng ngôn ngữ bình dân, dễ hiểu, chia nhỏ đoạn văn và đặt tiêu đề dưới dạng câu hỏi để phù hợp với văn phong tự nhiên của người dùng. Sự nhất quán về mặt thông tin, tên tổ chức và chủ đề trên toàn bộ website sẽ giúp hệ thống AI xác minh thực thể doanh nghiệp dễ dàng hơn. Cuối cùng, website phải đảm bảo trình thu thập dữ liệu có thể truy cập thuận lợi với tốc độ tải nhanh, thiết kế ưu tiên di động và không bị rào cản bởi mã JavaScript."
-      }
-    ],
-    "impact": "Giúp các thương hiệu thuộc lĩnh vực y tế, chăm sóc sức khỏe và tài chính duy trì nhận diện thương hiệu, thu hút truy cập hữu cơ chất lượng cao và được các hệ thống AI Search như Google AI Overviews hay ChatGPT lựa chọn làm nguồn trích dẫn uy tín.",
-    "ifIgnored": "Doanh nghiệp sẽ đối mặt với rủi ro sụt giảm lưu lượng truy cập nghiêm trọng khi 89% truy vấn ngành y tế bị bao phủ bởi AI Overviews, làm biến mất cơ hội tiếp cận khách hàng trên kênh tìm kiếm tự nhiên nếu nội dung không đáp ứng chuẩn E-E-A-T.",
-    "actionChecklist": [
-      "Thêm dòng xác nhận kiểm duyệt y khoa Medically reviewed by cùng liên kết tới trang tiểu sử của chuyên gia y tế.",
-      "Mở đầu các bài viết bằng câu trả lời trực tiếp dài 2 đến 4 câu trước khi trình bày chi tiết nội dung.",
-      "Trích dẫn nguồn dẫn trực tiếp từ các nghiên cứu được đồng thẩm định hoặc dữ liệu từ cơ quan y tế chính thống.",
-      "Kiểm tra mã nguồn HTML và đảm bảo trình thu thập thông tin của AI có thể đọc nội dung mà không bị chặn bởi JavaScript."
-    ],
-    "id": "real-2026-08-12-cach-toi-uu-noi",
-    "publishedAt": "12/08/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/how-to-create-health-ymyl-content-that-performs-in-ai-search/584431/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/07/ymyl-content-178.png",
       "credit": "Ảnh: Search Engine Journal"
     }
   },
@@ -550,73 +616,6 @@
       "Tạo lại các nhóm đó dưới dạng chỉ-loại-trừ, lưu ý không đổi ngược lại được",
       "Tải lên danh sách nhân viên công ty và loại khỏi mọi chiến dịch đang chạy",
       "Ghi vào quy trình dựng chiến dịch: bước kiểm tra tệp loại trừ trước khi bật ngân sách"
-    ]
-  },
-  {
-    "id": "real-2026-08-05-ai-referral-landing",
-    "category": "AI Marketing",
-    "platformIcon": "Sparkles",
-    "title": "Người dùng đến từ AI đổ về trang chủ chứ không vào bài được trích: 58,8% lượt giới thiệu từ ChatGPT rơi vào trang chủ",
-    "publishedAt": "05/08/2026",
-    "isHot": true,
-    "illustration": "zero-click",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/07/ai-referrals-434.png",
-      "credit": "Ảnh: Search Engine Journal"
-    },
-    "sourceUrl": "https://www.searchenginejournal.com/ai-referrals-are-recreating-the-oldest-mistake-in-conversion-optimization/584331/",
-    "source": "Search Engine Journal",
-    "readTime": "6 phút đọc",
-    "tags": [
-      "AI Search",
-      "Trang đích",
-      "Chuyển đổi",
-      "Tìm kiếm nội bộ"
-    ],
-    "summary": "Chatbot trích dẫn bài viết chuyên sâu nằm sâu trong website để làm căn cứ, nhưng lại đẩy người đọc về trang chủ. Đây chính là lỗi lệch giữa ý định và trang đích mà ngành quảng cáo tìm kiếm đã mắc từ hai mươi năm trước, nay quay lại dưới một chuỗi nguồn giới thiệu mới.",
-    "keyNumbers": [
-      {
-        "value": "58,8%",
-        "label": "lượt từ ChatGPT rơi vào trang chủ"
-      },
-      {
-        "value": "28,8%",
-        "label": "rơi vào trang kết quả tìm kiếm nội bộ"
-      },
-      {
-        "value": "12,1%",
-        "label": "lượt đăng ký đến từ 0,5% truy cập"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Lỗi cũ trong lớp áo mới",
-        "body": "Ngày trước, quảng cáo tìm kiếm cho một sản phẩm cụ thể lại dẫn người dùng về trang danh mục chung, khiến họ phải tự tìm lại thứ vừa bấm vào. Nay AI làm đúng như vậy: nó trích dẫn một bài viết chi tiết để chứng minh luận điểm, rồi gắn đường dẫn về trang chủ. Người đọc đang có nhu cầu rất cụ thể bị thả xuống một trang nói chung chung."
-      },
-      {
-        "heading": "Số liệu từ ba nguồn độc lập",
-        "body": "Báo cáo Similarweb 2026: 65% đường dẫn được ChatGPT trích dẫn nằm sâu hai tới ba cấp thư mục trong website, nhưng 58,8% lượt truy cập giới thiệu từ ChatGPT lại rơi vào trang chủ, tỷ lệ này tăng khoảng gấp đôi sau đợt cập nhật đường dẫn tháng 5/2026. Phân tích của Previsible trên 6,77 triệu phiên truy cập từ AI qua 166 website: 28,8% lượt giới thiệu từ ChatGPT rơi vào trang kết quả tìm kiếm nội bộ. Số liệu Ahrefs: hơn 80% lượt giới thiệu từ tìm kiếm AI đổ về trang chủ, trang sản phẩm và công cụ miễn phí thay vì bài viết."
-      },
-      {
-        "heading": "Trang bị bỏ quên nhất lại đang nhận nhiều lượt nhất",
-        "body": "Gần ba trên mười người đến từ ChatGPT rơi thẳng vào trang kết quả tìm kiếm nội bộ của website. Đây thường là trang không ai chăm sóc, không có nội dung dẫn dắt, kết quả sắp xếp tuỳ tiện. Khuyến nghị cụ thể của bài: gõ mười truy vấn quan trọng nhất vào ô tìm kiếm trên chính website mình và đọc kết quả bằng con mắt người lần đầu ghé thăm."
-      },
-      {
-        "heading": "Vì sao đáng bỏ công dù lượng truy cập còn nhỏ",
-        "body": "Người được ChatGPT gợi ý một thương hiệu có khả năng ghé website thương hiệu đó trong bảy ngày kế tiếp cao gấp 2,5 lần. Với Ahrefs, khách đến từ tìm kiếm AI chỉ chiếm 0,5% tổng truy cập nhưng đóng góp 12,1% số lượt đăng ký. Đây là nhóm khách đã được thuyết phục từ trước, chất lượng cao hơn hẳn lượt truy cập thông thường."
-      },
-      {
-        "heading": "Trang chủ cần đổi vai",
-        "body": "Người đến từ AI không cần được thuyết phục lại từ đầu, họ đã nghe giới thiệu rồi mới bấm vào. Trang chủ hiện nay phần lớn được thiết kế cho người chưa biết gì về thương hiệu, nên vô tình bắt nhóm khách đã sẵn sàng phải đi lại từ bước một. Cần bố trí lối đi nhanh tới hành động chuyển đổi ngay trên trang chủ."
-      }
-    ],
-    "impact": "Trưởng phòng cần coi trang chủ và trang kết quả tìm kiếm nội bộ là hai trang đích quan trọng của kênh AI, thay vì tối ưu bài viết chuyên sâu rồi tưởng người đọc sẽ vào thẳng bài đó.",
-    "ifIgnored": "Đội nội dung tiếp tục dồn công vào các bài chuyên sâu để được AI trích dẫn, nhưng người đọc đổ về trang chủ rồi rời đi vì không thấy thứ họ vừa được giới thiệu. Công sức sản xuất nội dung biến thành lượt truy cập không chuyển đổi, và báo cáo sẽ kết luận sai rằng kênh AI không hiệu quả.",
-    "actionChecklist": [
-      "Gõ 10 truy vấn quan trọng nhất vào ô tìm kiếm trên chính website mình, đọc kết quả bằng con mắt khách lần đầu ghé",
-      "Bổ sung nội dung dẫn dắt và sắp xếp lại kết quả cho trang tìm kiếm nội bộ, vì gần 3/10 khách từ AI rơi vào đó",
-      "Đặt lối đi nhanh tới hành động chuyển đổi ngay trên trang chủ cho nhóm khách đã được thuyết phục sẵn",
-      "Tách riêng lượt truy cập từ AI trong báo cáo và đo bằng tỷ lệ chuyển đổi, đừng đo bằng tổng lượt truy cập"
     ]
   },
   {
