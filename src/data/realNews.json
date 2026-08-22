@@ -2,6 +2,191 @@
   {
     "category": "Google Ads & SEO",
     "platformIcon": "Search",
+    "title": "Google ra mắt nút nhúng Nguồn ưu tiên giúp tăng gấp đôi lượng nhấp từ tìm kiếm và AI",
+    "isHot": false,
+    "illustration": "zero-click",
+    "readTime": "3 phút đọc",
+    "tags": [
+      "Google SEO",
+      "AI Overviews",
+      "Preferred Sources",
+      "Lưu lượng tìm kiếm"
+    ],
+    "summary": "Google vừa phát hành nút nhúng Preferred Sources cho phép độc giả lưu website thành nguồn ưu tiên trực tiếp trên trang mà không bị chuyển hướng. Tính năng này giúp nội dung của doanh nghiệp hiển thị nổi bật kèm huy hiệu riêng trên Top Stories và AI Overviews.",
+    "keyNumbers": [
+      {
+        "value": "600.000+",
+        "label": "nguồn độc nhất được người dùng chọn làm nguồn ưu tiên"
+      },
+      {
+        "value": "2 lần",
+        "label": "lượng nhấp trung bình của độc giả vào các nguồn họ đã chọn ưu tiên"
+      },
+      {
+        "value": "255.000",
+        "label": "nguồn mới được thêm vào kể từ cuối tháng 05/2026"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Cơ chế nút nhúng mới giúp giảm ma sát điều hướng",
+        "body": "Trước đây, độc giả muốn đặt một trang web làm nguồn ưu tiên phải chuyển sang trang cài đặt của Google và tìm kiếm thủ công. Nút nhúng mới cho phép người đọc nhấn chọn ngay trên website của doanh nghiệp và giữ nguyên vị trí đọc mà không bị gián đoạn. Giải pháp này giúp các thương hiệu dễ dàng kêu gọi độc giả theo dõi trực tiếp từ các bài viết chất lượng cao."
+      },
+      {
+        "heading": "Vị trí hiển thị ưu tiên trên Google Search và AI Overviews",
+        "body": "Khi được người dùng chọn làm nguồn ưu tiên, nội dung của website sẽ xuất hiện thường xuyên hơn và gắn huy hiệu Preferred trong mục Top Stories. Trên các bề mặt tìm kiếm AI như AI Overviews và AI Mode, các liên kết trích dẫn từ nguồn này cũng sẽ hiển thị huy hiệu xác nhận đối với người dùng đó. Google xác nhận tính năng này đã hỗ trợ toàn cầu trên Top Stories và áp dụng tại các khu vực có AI Overviews."
+      },
+      {
+        "heading": "Quy tắc áp dụng ở cấp độ tên miền",
+        "body": "Google chỉ áp dụng quyền nguồn ưu tiên ở cấp độ tên miền chính hoặc tên miền phụ (subdomain). Các thư mục con như đường dẫn dạng /blog sẽ không thể được đăng ký riêng lẻ. Doanh nghiệp cần lưu ý cấu trúc website vì người dùng chỉ có thể chọn ưu tiên toàn bộ trang hoặc toàn bộ subdomain chứ không thể chọn từng chuyên mục cụ thể."
+      },
+      {
+        "heading": "Các phương thức kỹ thuật để tích hợp nút bấm",
+        "body": "Nhà phát triển có thể tích hợp mã JavaScript tiêu chuẩn gồm hai dòng để tải thư viện từ Google và tự động hiển thị nút bấm. Với các hệ thống quản trị nội dung không hỗ trợ script, doanh nghiệp có thể sử dụng giải pháp liên kết sâu (deeplink) để chèn vào bản tin email hoặc mạng xã hội. Google nhấn mạnh việc cài đặt nút bấm là công cụ phát triển tệp độc giả chứ không phải là điều kiện bắt buộc để được xếp hạng."
+      }
+    ],
+    "impact": "Giúp doanh nghiệp chủ động xây dựng tệp độc giả trung thành trên Google Search và AI Overviews để nhận lượng click cao gấp đôi từ nhóm người dùng này, giảm thiểu rủi ro mất lưu lượng tự nhiên do tính năng trả lời tự động của AI.",
+    "ifIgnored": "Bỏ lỡ cơ hội biến độc giả vãng lai thành độc giả trung thành trên hệ sinh thái tìm kiếm mới của Google, khiến lưu lượng truy cập từ Top Stories và AI Overviews rơi vào tay các đối thủ đã chủ động tích hợp huy hiệu ưu tiên.",
+    "actionChecklist": [
+      "Yêu cầu đội ngũ kỹ thuật nhúng đoạn mã JavaScript của Preferred Sources vào chân trang hoặc cuối các bài viết blog chuyên sâu.",
+      "Kiểm tra cấu trúc website để đảm bảo các mảng nội dung chiến lược đang chạy đúng định dạng tên miền chính hoặc subdomain.",
+      "Bổ sung liên kết sâu Preferred Sources vào bản tin email định kỳ và các kênh mạng xã hội để kêu gọi khách hàng thân thiết đánh dấu ưu tiên.",
+      "Đo lường sự thay đổi của lưu lượng truy cập tự nhiên và tỷ lệ nhấp từ Top Stories sau khi triển khai nút bấm."
+    ],
+    "id": "real-2026-08-21-google-ra-mat-nut-aa5f26",
+    "publishedAt": "21/08/2026",
+    "sourceUrl": "https://ppc.land/google-preferred-sources-gains-255-000-selections-since-late-may/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/size/w1200/2026/08/google-preferred.webp",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "AI Marketing",
+    "platformIcon": "Video",
+    "title": "YouTube hợp nhất menu Claims và bổ sung 4 danh mục kháng nghị cho khiếu nại hình ảnh AI",
+    "isHot": false,
+    "illustration": "ai-video",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "YouTube Studio",
+      "Kháng nghị AI",
+      "Bản quyền hình ảnh",
+      "Video AI"
+    ],
+    "summary": "YouTube chuẩn bị đổi tên menu Copyright trong trang chi tiết video thành Claims, đồng thời gom chung các vi phạm bản quyền và khiếu nại quyền riêng tư liên quan đến khuôn mặt hoặc giọng nói tạo bằng AI. Nền tảng cũng ra mắt 4 danh mục kháng nghị chuyên biệt dành cho nhà sáng tạo khi bị gỡ video do khiếu nại hình ảnh AI.",
+    "keyNumbers": [
+      {
+        "value": "4",
+        "label": "danh mục kháng nghị mới cho khiếu nại hình ảnh AI"
+      },
+      {
+        "value": "3%",
+        "label": "mức phạt doanh thu toàn cầu tối đa theo Đạo luật AI của EU"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Gom chung khiếu nại bản quyền và hình ảnh AI vào menu Claims",
+        "body": "YouTube sẽ hợp nhất các hạn chế nội dung do hệ thống Content ID tự động quét và các khiếu nại quyền riêng tư về khuôn mặt hoặc giọng nói giả lập vào cùng một mục Claims trong YouTube Studio. Sự thay đổi này mang tính giao diện nhằm giúp nhà sáng tạo dễ quản lý các vi phạm hơn thay vì thay đổi quy định pháp lý cơ bản. Theo thông báo công bố ngày 19/08/2026 trên diễn đàn YouTube Help Center, các chính sách cộng đồng hiện hành vẫn được giữ nguyên. Khi video nhận khiếu nại về hình ảnh, trang tổng quan sẽ hiển thị rõ bên gửi khiếu nại và người bị phát hiện hình ảnh. Hai đối tượng này không nhất thiết phải là một vì người đại diện hợp pháp có quyền gửi đơn thay cho cá nhân xuất hiện trong video."
+      },
+      {
+        "heading": "Bốn danh mục kháng nghị chuyên biệt dành cho nội dung AI",
+        "body": "YouTube bổ sung 4 lý do kháng nghị cụ thể khi nhà sáng tạo tin rằng khiếu nại hình ảnh AI bị nhầm lẫn. Danh mục thứ nhất là Explicit Consent, áp dụng khi có sự đồng ý bằng văn bản đã xác minh từ cá nhân被mô phỏng. Danh mục thứ hai là Parody, Satire, or Public Interest, áp dụng cho nội dung cải biên hài hước, phê bình hoặc tin tức công cộng. Danh mục thứ ba là Content Not Altered or Made with AI, dành cho video quay thực tế không qua chỉnh sửa tổng hợp. Danh mục cuối cùng là Claimed Content Doesn't Appear, giải quyết các trường hợp hệ thống nhận diện nhầm khuôn mặt hoặc giọng nói."
+      },
+      {
+        "heading": "Khiếu nại hình ảnh AI không có cơ chế chia sẻ doanh thu",
+        "body": "Không giống như khiếu nại bản quyền Content ID vốn cho phép nhà sáng tạo chia sẻ doanh thu quảng cáo để tiếp tục bật kiếm tiền, khiếu nại hình ảnh AI chỉ có hai lựa chọn là chấp nhận gỡ video hoặc kháng nghị. Nếu khiếu nại có hiệu lực, video có thể bị chặn hiển thị hoàn toàn với công chúng. Dù vậy, YouTube khẳng định các khiếu nại hình ảnh AI tương tự như khiếu nại quyền riêng tư sẽ không tạo ra gậy bản quyền hoặc gậy nguyên tắc cộng đồng. Do đó, kênh của bạn sẽ không bị ảnh hưởng tiêu cực đến tính năng hay trạng thái tài khoản chung."
+      },
+      {
+        "heading": "Dán nhãn AI và đặt video riêng tư không giúp tránh khiếu nại",
+        "body": "YouTube nêu rõ trong tài liệu hướng dẫn rằng việc chủ động dán nhãn nội dung do AI tạo ra không thay thế cho sự cho phép từ chủ sở hữu hình ảnh. Quy định dán nhãn bắt buộc từ tháng 5/2025 và tăng cường phát hiện qua SynthID từ tháng 5/2026 chỉ là nghĩa vụ minh bạch, không giúp bạn miễn trừ vi phạm quyền riêng tư. Điều này tương đồng với Đạo luật AI của EU áp dụng từ ngày 02/08/2026 với mức phạt tới 3% doanh thu toàn cầu. Bên cạnh đó, việc cài đặt video ở chế độ riêng tư hoặc không liệt kê cũng không ngăn được hệ thống quét và áp dụng khiếu nại."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing cần rà soát lại toàn bộ quy trình sản xuất video quảng cáo có sử dụng KOL ảo, voice AI hoặc gương mặt tạo bằng công nghệ deepfake. Việc sử dụng hình ảnh AI mà không có hợp đồng miễn trừ trách nhiệm (release form) rõ ràng sẽ dẫn đến rủi ro video quảng cáo chiến dịch bị chặn hiển thị ngay lập tức mà không có cơ hội chia sẻ doanh thu hay thương lượng.",
+    "ifIgnored": "Doanh nghiệp có thể gánh chịu thiệt hại lớn khi chiến dịch truyền thông bị gián đoạn đột ngột do video bị chặn toàn bộ trên YouTube. Ngoài ra, việc lưu trữ các video nội bộ hoặc bản duyệt khách hàng ở chế độ Unlisted vẫn có nguy cơ bị dính khiếu nại, gây ảnh hưởng đến tiến độ dự án và uy tín thương hiệu.",
+    "actionChecklist": [
+      "Rà soát toàn bộ tài sản video AI đang lưu trữ trên YouTube kể cả video ở chế độ Unlisted hoặc Private",
+      "Cập nhật hợp đồng làm việc với KOL/Creator để bổ sung điều khoản Explicit Consent cho phép tạo phiên bản AI của gương mặt và giọng nói",
+      "Chuẩn bị sẵn hồ sơ bằng chứng theo 4 danh mục kháng nghị mới của YouTube trước khi xuất bản chiến dịch có yếu tố AI",
+      "Đào tạo đội ngũ Creative về sự khác biệt giữa nghĩa vụ dán nhãn AI và quyền cấp phép sử dụng hình ảnh cá nhân"
+    ],
+    "id": "real-2026-08-21-youtube-hop-nhat-menu-c15f9c",
+    "publishedAt": "21/08/2026",
+    "sourceUrl": "https://ppc.land/youtube-adds-4-dispute-categories-for-ai-likeness-claims-that-block-videos/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/size/w1200/2026/08/YouTube-AI.webp",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Nội dung cho AI Search: Tại sao câu trả lời phải nằm ngay câu đầu tiên",
+    "isHot": false,
+    "illustration": "zero-click",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Google AI Mode",
+      "SEO Content",
+      "AI Overviews",
+      "AEO Strategy"
+    ],
+    "summary": "Dữ liệu từ Google AI Mode cho thấy hành vi tìm kiếm đã chuyển đổi từ việc nhập từ khóa ngắn sang đặt các câu hỏi dài và phức tạp. Việc giữ cấu trúc bài viết dông dài truyền thống khiến website mất cơ hội xuất hiện trong các bản tóm tắt AI Overviews. Doanh nghiệp cần tái cấu trúc nội dung theo mô hình tháp ngược để cung cấp câu trả lời ngay lập tức cho thuật toán.",
+    "keyNumbers": [
+      {
+        "value": "Gấp 3 lần",
+        "label": "Độ dài truy vấn AI Mode tại Mỹ so với tìm kiếm truyền thống"
+      },
+      {
+        "value": "80%",
+        "label": "Mức tăng trưởng của nhóm truy vấn Do trong 6 tháng qua"
+      },
+      {
+        "value": "> 40%",
+        "label": "Mức tăng trưởng hàng tháng của truy vấn hình ảnh và câu hỏi nối tiếp"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Sự thay đổi bản chất của truy vấn tìm kiếm AI",
+        "body": "Dữ liệu một năm từ AI Mode cho thấy người dùng không còn gõ các từ khóa rời rạc mà chuyển sang đặt câu hỏi hoàn chỉnh. Truy vấn AI Mode trung bình tại Mỹ hiện dài gấp 3 lần so với tìm kiếm truyền thống. Hơn 1 trong 6 lượt tìm kiếm AI Mode hiện bao gồm các yếu tố ngoài văn bản như hình ảnh, giọng nói hoặc hội thoại tương tác. Các từ bắt đầu phổ biến nhất hiện nay là What, how, I, is và can chứ không phải các danh từ ngắn. Người dùng đang tìm kiếm theo cách giao tiếp tự nhiên tương tự như trò chuyện với người khác."
+      },
+      {
+        "heading": "Sự trỗi dậy của 5 nhóm hành vi dựa trên động từ",
+        "body": "Báo cáo của Google phân loại hành vi tìm kiếm AI thành 5 nhóm động từ chính gồm Explore, Decide, Learn, Create và Do. Nhóm truy vấn Explore tăng trưởng nhanh hơn 30% so với tổng lưu lượng AI Mode, trong khi nhóm Decide dựa trên các từ so sánh tăng nhanh hơn 40%. Nhóm truy vấn Do liên quan đến lập kế hoạch tăng trưởng nhanh hơn 80% trong 6 tháng qua. Các truy vấn tạo hình ảnh cũng đã tăng hơn gấp 3 lần kể từ đầu năm. Những hành vi này không khớp với một từ khóa đơn lẻ mà gắn liền với một tác vụ cụ thể của người dùng."
+      },
+      {
+        "heading": "Cấu trúc nội dung Lead-First thay thế lối dẫn dắt truyền thống",
+        "body": "Việc giấu câu trả lời chính trong các đoạn văn dài để kéo dài thời gian trên trang đang khiến website mất lợi thế trước các hệ thống tổng hợp tự động. Tương tự như ngành điện báo giai đoạn 1880-1890 buộc phải đưa tin quan trọng lên đầu do giới hạn chi phí, các cỗ máy tìm kiếm tạo sinh hiện nay cũng hoạt động dưới các giới hạn tính toán khắt khe. Trưởng phòng Marketing cần yêu cầu đội ngũ dừng việc ẩn giấu thông tin cốt lõi đằng sau những đoạn mở bài lan man. Trình bày kết luận ngay ở câu đầu tiên sẽ giúp hệ thống AI dễ dàng trích xuất dữ liệu chính xác và tránh bị ảo giác."
+      },
+      {
+        "heading": "Các bước tái cấu trúc nội dung cho mô hình AI Search",
+        "body": "Quy trình sản xuất nội dung cần chuyển dịch từ tối ưu từ khóa sang tối ưu cho chuỗi câu hỏi nối tiếp và nội dung đa phương thức. Do các câu hỏi nối tiếp và truy vấn bằng hình ảnh đều tăng trưởng hơn 40% mỗi tháng, một bài viết phải giải quyết được cả câu hỏi thứ hai và thứ ba của người đọc. Mỗi đoạn văn nên có độ dài trung bình từ 2 đến 3 câu và kết hợp các bảng biểu hoặc danh sách có cấu trúc. Việc xác định rõ bài viết thuộc nhóm động từ nào trong 5 nhóm hành vi sẽ giúp định hình cấu trúc chính xác. Đồng thời, hình ảnh và nội dung đa phương thức phải được xem là một tín hiệu xếp hạng trực tiếp."
+      }
+    ],
+    "impact": "Giúp Trưởng phòng Marketing tái định hướng chiến lược SEO và sản xuất nội dung, chuyển từ việc tối ưu danh sách từ khóa đơn lẻ sang cấu trúc dữ liệu đáp ứng trực tiếp các truy vấn phức tạp của AI Overviews, bảo vệ lưu lượng truy cập hữu cơ của doanh nghiệp.",
+    "ifIgnored": "Doanh nghiệp tiếp tục tốn ngân sách cho bài viết dông dài nhưng sẽ bị các công cụ AI bỏ qua, không trích xuất nguồn, dẫn đến sụt giảm nghiêm trọng lưu lượng organic traffic và giảm độ nhận diện thương hiệu trên các nền tảng tìm kiếm thế hệ mới.",
+    "actionChecklist": [
+      "Đặt câu trả lời cốt lõi, số liệu hoặc kết luận chính ngay câu đầu tiên của mỗi đoạn nội dung.",
+      "Rút ngắn các đoạn văn xuống trung bình 2 đến 3 câu, bổ sung bảng biểu và danh sách có cấu trúc.",
+      "Cấu trúc nội dung để giải đáp các câu hỏi nối tiếp (follow-up) thay vì chỉ trả lời câu hỏi đầu tiên.",
+      "Thay đổi brief nội dung theo 5 động từ hành vi (Explore, Decide, Learn, Create, Do) thay vì tập trung vào head keywords."
+    ],
+    "id": "real-2026-08-21-noi-dung-cho-ai-3871bc",
+    "publishedAt": "21/08/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/ai-mode-queries-are-3x-longer-the-case-for-leading-with-the-answer/585990/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/08/ai-overviews-425.png",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
     "title": "AI Search thu hẹp không gian từ khóa: Thương hiệu cần tập trung vào tập đề xuất thay vì thứ hạng",
     "isHot": false,
     "illustration": "zero-click",
@@ -311,199 +496,6 @@
     "source": "Search Engine Journal",
     "image": {
       "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/08/reddit-chatgpt-citation-drop.jpg",
-      "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
-    "category": "AI Marketing",
-    "platformIcon": "Sparkles",
-    "title": "ChatGPT Ads bổ sung chỉ số chuyển đổi qua lượt xem VTA với khung thời gian cố định 1 ngày",
-    "isHot": false,
-    "illustration": "data-signal",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "ChatGPT Ads",
-      "Chuyển đổi VTA",
-      "Đo lường AI",
-      "Báo cáo quảng cáo"
-    ],
-    "summary": "OpenAI vừa lặng lẽ bổ sung tính năng báo cáo chuyển đổi qua lượt xem VTA với khung thời gian cố định 1 ngày cho ChatGPT Ads. Chỉ số này hoàn toàn độc lập với số lượng chuyển đổi từ lượt nhấp và không can thiệp vào thuật toán đấu giá, tính phí hay CPA. Nhà quảng cáo không cần thay đổi mã Pixel hay CAPI hiện tại để nhận dữ liệu bổ sung này.",
-    "keyNumbers": [
-      {
-        "value": "1 ngày",
-        "label": "Khung thời gian VTA cố định"
-      },
-      {
-        "value": "24 đến 48 giờ",
-        "label": "Thời gian trễ ghi nhận dữ liệu"
-      },
-      {
-        "value": "Từ 1 đến 64 ký tự",
-        "label": "Độ dài tên sự kiện tùy chỉnh"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Cập nhật lặng lẽ trong tài liệu kỹ thuật",
-        "body": "OpenAI đã kích hoạt tính năng báo cáo chuyển đổi qua lượt xem VTA cho ChatGPT Ads thông qua việc cập nhật tài liệu kỹ thuật vào ngày 18/08/2026 và 19/08/2026 mà không đưa ra thông cáo báo chí. Tính năng này ghi nhận các chuyển đổi phát sinh trong vòng 1 ngày sau khi người dùng nhìn thấy quảng cáo. Chỉ số mới xuất hiện dưới nhãn VTA (1d) trong giao diện Trình quản lý quảng cáo. Khi một chuyển đổi thỏa mãn cả điều kiện nhấp chuột và lượt xem, hệ thống ưu tiên ghi nhận cho nhấp chuột."
-      },
-      {
-        "heading": "Không ảnh hưởng đến chi phí và thuật toán tối ưu",
-        "body": "Mặc dù tính năng VTA cung cấp góc nhìn đầy đủ hơn về hiệu quả hiển thị, OpenAI tách biệt hoàn toàn chỉ số này khỏi hệ thống tối ưu. Số lượng chuyển đổi VTA không được cộng vào cột Chuyển đổi chính và không ảnh hưởng đến chỉ số CPA hay tỷ lệ chuyển đổi sau nhấp chuột. Thuật toán đấu giá, tính phí và tối ưu hóa chiến dịch chuyển đổi ra mắt từ ngày 05/06/2026 vẫn chỉ học dựa trên dữ liệu nhấp chuột. Điều này giúp nhà quảng cáo quan sát được tác động hiển thị nhưng thuật toán đấu giá sẽ không tự động điều chỉnh theo số liệu này."
-      },
-      {
-        "heading": "Tự động tích hợp không cần can thiệp mã nguồn",
-        "body": "Các tài khoản đủ điều kiện đang gửi sự kiện order_created hoặc lead_created sẽ tự động nhận được báo cáo VTA mà không cần bổ sung đoạn mã hay trường dữ liệu mới. Cơ sở hạ tầng đo lường dựa trên Pixel ra mắt từ ngày 05/05/2026 vẫn giữ nguyên cơ chế hoạt động. Hệ thống lưu mã định danh oppref trong cookie bên thứ nhất __oppref và sử dụng thuật toán SHA-256 để mã hóa thông tin khách hàng trước khi gửi đi. Dữ liệu báo cáo chuyển đổi sẽ xuất hiện trong giao diện sau thời gian trễ từ 24 đến 48 giờ."
-      },
-      {
-        "heading": "Yêu cầu kỹ thuật và đồng bộ dữ liệu CAPI",
-        "body": "Đối với các website áp dụng chính sách Content Security Policy (CSP), hệ thống yêu cầu cấu hình thêm 4 nguồn tài nguyên bao gồm bzrcdn.openai.com và bzr.openai.com. Luồng dữ liệu qua Conversions API phía máy chủ cũng hỗ trợ VTA theo đúng cơ chế 1 ngày cố định như trên trình duyệt. Việc chống trùng lặp giữa hai luồng trình duyệt và máy chủ dựa trên trường event_id kết hợp với Pixel ID. Tên sự kiện tùy chỉnh phải viết bằng chữ cái, chữ số, dấu gạch dưới hoặc gạch ngang và có độ dài từ 1 đến 64 ký tự."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing có thêm dữ liệu VTA 1 ngày để đánh giá hiệu quả hiển thị thực tế của kênh ChatGPT Ads, hỗ trợ ra quyết định phân bổ ngân sách mà không lo làm sai lệch mô hình giá thầu CPA hiện tại.",
-    "ifIgnored": "Nếu không hiểu rõ cơ chế tách biệt này, bạn có thể cộng gộp nhầm chỉ số VTA vào tổng chuyển đổi, dẫn đến báo cáo ROI bị bóp méo hoặc hiểu sai cách thức thuật toán tối ưu hóa chi phí.",
-    "actionChecklist": [
-      "Thêm cột VTA (1d) trong Trình quản lý quảng cáo ChatGPT Ads để kiểm tra tính năng đã được mở cho tài khoản chưa",
-      "Tách riêng dữ liệu nhấp chuột và VTA khi xuất báo cáo CSV để tránh tính trùng chuyển đổi khi báo cáo ban giám đốc",
-      "Rà soát cài đặt Content Security Policy trên website để bổ sung đầy đủ 4 nguồn tên miền từ OpenAI",
-      "Kiểm tra lại cấu hình CAPI đảm bảo trường event_id đồng bộ chính xác với Pixel và tên sự kiện từ 1 đến 64 ký tự"
-    ],
-    "id": "real-2026-08-19-chatgpt-ads-bo-sung-75d5dd",
-    "publishedAt": "19/08/2026",
-    "sourceUrl": "https://ppc.land/chatgpt-ads-gains-view-through-conversions-with-a-fixed-1-day-window/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/size/w1200/2026/08/openai.webp",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Google phát động đợt cập nhật spam tháng 8 năm 2026 trên toàn cầu",
-    "isHot": true,
-    "illustration": "data-signal",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Google Search",
-      "Spam Update",
-      "Thuật toán Google",
-      "SEO Website"
-    ],
-    "summary": "Google chính thức triển khai đợt cập nhật spam tháng 8 năm 2026 trên quy mô toàn cầu cho tất cả ngôn ngữ và vùng địa lý. Đây là đợt quét spam thứ ba trong năm 2026 nhằm siết chặt việc thực thi các quy định hiện hành thông qua hệ thống SpamBrain. Các website vi phạm có thể bị hạ thứ hạng hoặc biến mất khỏi kết quả tìm kiếm và mất nhiều tháng để khôi phục.",
-    "keyNumbers": [
-      {
-        "value": "3",
-        "label": "đợt cập nhật spam toàn cầu năm 2026"
-      },
-      {
-        "value": "19,5",
-        "label": "giờ triển khai của đợt quét tháng 3 năm 2026"
-      },
-      {
-        "value": "173",
-        "label": "đợt cập nhật được ghi nhận từ 2000 đến 2026"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Thông báo chính thức và quy mô tác động toàn cầu",
-        "body": "Google đã công bố đợt cập nhật spam tháng 8 năm 2026 trên Google Search Status Dashboard vào lúc 09:28 PDT ngày 18 tháng 8 năm 2026. Sự cố này được ghi nhận bắt đầu từ 09:27 PDT cùng ngày, tương ứng với 16:28 UTC. Đây là đợt cập nhật spam thông thường, áp dụng trên quy mô toàn cầu cho tất cả các ngôn ngữ và khu vực địa lý. Đợt triển khai này dự kiến sẽ hoàn tất trong vài ngày tới và được xếp vào nhóm sự cố ảnh hưởng đến thứ hạng tìm kiếm."
-      },
-      {
-        "heading": "Cơ chế vận hành của SpamBrain và thời gian phục hồi",
-        "body": "Hệ thống phát hiện spam dựa trên AI của Google mang tên SpamBrain liên tục chạy ngầm để phát hiện hành vi vi phạm. Trong tài liệu cập nhật ngày 10 tháng 12 năm 2025, Google làm rõ rằng các website vi phạm chính sách spam có thể bị hạ thứ hạng hoặc không xuất hiện trên kết quả tìm kiếm. Quá trình phục hồi sau khi bị phạt diễn ra rất chậm và phụ thuộc vào hệ thống tự động của Google. Website có thể mất nhiều tháng để khôi phục nếu hệ thống xác nhận trang web đã tuân thủ lại các quy định."
-      },
-      {
-        "heading": "Chu kỳ cập nhật năm 2026 và biến động thứ hạng trước đó",
-        "body": "Đây là đợt cập nhật spam thứ ba được Google xác nhận trong năm 2026, sau đợt tháng 3 diễn ra trong 19,5 giờ và đợt tháng 6 kéo dài khoảng 2 ngày. Trước khi công bố này ra đời, cộng đồng làm SEO đã ghi nhận các đợt biến động thứ hạng mạnh từ ngày 1 đến ngày 3 tháng 8 và tiếp đó là ngày 12 và ngày 13 tháng 8. Google không khẳng định liệu đợt biến động giữa tháng 8 có phải là sự triển khai sớm của đợt cập nhật này hay không. Dữ liệu lịch sử ghi nhận 26 đợt cập nhật spam và 52 đợt cập nhật cốt lõi trong tổng số 173 đợt cập nhật từ năm 2000 đến năm 2026."
-      },
-      {
-        "heading": "Phạm vi chính sách bị truy quét và bề mặt AI",
-        "body": "Đợt cập nhật tháng 8 năm 2026 không đưa ra chính sách mới mà tập trung thực thi quy định hiện hành. Các hành vi bị xử lý bao gồm lạm dụng tên miền hết hạn, lạm dụng nội dung quy mô lớn và lạm dụng uy tín website vốn được áp dụng từ năm 2024. Đáng chú ý, ngày 15 tháng 5 năm 2026, Google đã mở rộng toàn bộ quy định spam sang giao diện AI Overviews và AI Mode. Ngoài ra, vi phạm về chiếm đoạt nút quay lại cũng đã bắt đầu bị xử lý từ ngày 15 tháng 6 năm 2026."
-      }
-    ],
-    "impact": "Đợt quét toàn cầu này có thể làm sụt giảm lưu lượng truy cập tự nhiên (organic traffic) của doanh nghiệp ngay lập tức nếu website vi phạm quy định về nội dung tạo bằng AI hàng loạt hoặc lạm dụng uy tín tên miền. Nếu bị phạt hạ thứ hạng, doanh nghiệp phải tốn nhiều tháng để khôi phục, buộc Trưởng phòng Marketing phải tăng ngân sách quảng cáo trả phí Google Ads để bù đắp traffic thiếu hụt.",
-    "ifIgnored": "Bỏ qua đợt cập nhật này khiến doanh nghiệp đối mặt với rủi ro biến mất hoàn toàn trên kết quả tìm kiếm Google mà không rõ nguyên nhân. Khi traffic organic sụt giảm đột ngột, ngân sách Marketing sẽ bị thâm hụt nghiêm trọng do phải chuyển sang chạy quảng cáo trả phí thụ động.",
-    "actionChecklist": [
-      "Yêu cầu đội ngũ SEO và Agency kiểm tra ngay lưu lượng truy cập tự nhiên của website từ ngày 18 tháng 8 năm 2026.",
-      "Rà soát toàn bộ bài viết tạo tự động bằng AI hoặc nội dung xuất bản hàng loạt để phòng ngừa án phạt lạm dụng nội dung.",
-      "Kiểm tra các trang cộng tác và bài viết tài trợ trên website để loại bỏ nguy cơ vi phạm lỗi lạm dụng uy tín tên miền.",
-      "Tạm dừng các hoạt động mua bán liên kết không tự nhiên do thuật toán SpamBrain không thể khôi phục thứ hạng khi liên kết rác bị vô hiệu hóa."
-    ],
-    "id": "real-2026-08-18-google-phat-dong-dot-a59c19",
-    "publishedAt": "18/08/2026",
-    "sourceUrl": "https://ppc.land/googles-third-spam-update-of-2026-hits-every-language-and-region/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/size/w1200/2026/08/spam-update.webp",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
-    "category": "AI Marketing",
-    "platformIcon": "Sparkles",
-    "title": "Google AI Overviews trích dẫn mạng xã hội: Số lượng người theo dõi không còn quyết định thứ hạng",
-    "isHot": false,
-    "illustration": "zero-click",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Google AI Overviews",
-      "AI Search",
-      "Mạng xã hội",
-      "Chiến lược nội dung"
-    ],
-    "summary": "Phân tích từ 300 triệu lượt tìm kiếm tại Mỹ cho thấy Google AI Overviews trích dẫn nội dung từ Facebook, Instagram và TikTok dựa trên độ chính xác của câu trả lời thay vì quy mô tài khoản. Xây dựng nội dung chứa dữ liệu cụ thể và công khai bằng văn bản là chìa khóa để thương hiệu xuất hiện trong các câu trả lời AI.",
-    "keyNumbers": [
-      {
-        "value": "19,5 triệu",
-        "label": "lần Facebook được Google AIO trích dẫn làm nguồn"
-      },
-      {
-        "value": "1/15",
-        "label": "lượt tìm kiếm tại Mỹ chứa nội dung từ Facebook hoặc Instagram"
-      },
-      {
-        "value": "85%",
-        "label": "tỷ lệ AI chỉ tên nhà bán lẻ lớn khi trả lời câu hỏi mua sắm"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Thuật toán Google AI ưu tiên nội dung trả lời đúng trọng tâm hơn quy mô tài khoản",
-        "body": "Phân tích hơn 300 triệu lượt tìm kiếm hàng tháng tại Mỹ cho thấy Google AI Overviews đã trích dẫn Facebook 19,5 triệu lần, Instagram khoảng 877.000 lần và TikTok khoảng 78.000 lần. Khoảng 1/15 lượt tìm kiếm hiện đưa nội dung từ Facebook hoặc Instagram vào câu trả lời AI. Tuy nhiên, các công cụ AI không trích dẫn nguồn chỉ vì tài khoản đó có lượng người theo dõi lớn. Ví dụ, một tài khoản có 5.000 người theo dõi chứa số liệu thực tế vẫn có thể đánh bại thương hiệu có 500.000 người theo dõi đăng bài chung chung."
-      },
-      {
-        "heading": "Phân loại vai trò của từng nền tảng mạng xã hội trong câu trả lời AI",
-        "body": "Google AI Overviews trích dẫn các nền tảng mạng xã hội cho những nhóm câu hỏi hoàn toàn khác nhau. Facebook thường được AI chọn cho các thắc mắc mang tính thời sự, địa phương và cộng đồng. Instagram chủ yếu xuất hiện ở nhóm câu hỏi về văn hóa và mua sắm. Trong khi đó, TikTok được trích dẫn cho các nội dung về xu hướng và hướng dẫn thao tác, còn Reddit phục vụ trải nghiệm thực tế."
-      },
-      {
-        "heading": "Sự phân chia vai trò của Facebook và Instagram trong hành vi mua sắm",
-        "body": "Ở giai đoạn quyết định mua sắm, Instagram và Facebook đảm nhận hai vai trò hoàn toàn riêng biệt. Khoảng 90% lần Google AI trích dẫn Instagram ở phễu dưới liên quan trực tiếp đến việc mua hàng như nơi mua hay giá cả. Ngược lại, Facebook xuất hiện trong khoảng 23% các trích dẫn ở phễu dưới cho các chủ đề sau bán hàng như xử lý sự cố và hướng dẫn sử dụng. Ngoài ra, khi AI trích dẫn câu hỏi mua sắm, khoảng 85% trường hợp gọi tên các nhà bán lẻ lớn và chỉ 3% đến 4% nhắc tới thương hiệu sản xuất."
-      },
-      {
-        "heading": "Phương pháp tối ưu nội dung để công cụ AI chủ động trích dẫn",
-        "body": "AI sẽ ưu tiên trích dẫn những nội dung mà nó có thể trích xuất thành một thực tế hoặc con số rõ ràng. Một câu nói chi tiết như khảo sát 400 người mua B2B cho thấy 72% thích bản dùng thử tự phục vụ sẽ dễ được AI trích dẫn hơn một câu chuyện cá nhân chung chung. Thương hiệu cần đưa con số quan trọng lên ngay dòng đầu tiên của bài viết thay vì giấu ở phía dưới. Nội dung phải được trình bày dưới dạng văn bản công khai, bởi AI không thể tiếp cận thông tin nằm trong video hoặc nhóm riêng tư."
-      },
-      {
-        "heading": "Sự khác biệt trong cách tiếp cận tìm kiếm mua sắm giữa Google AI và ChatGPT",
-        "body": "Google AI tập trung nhiều vào các tín hiệu vị trí và tình trạng còn hàng, chiếm khoảng 11% đến 14% các câu hỏi mua sắm gần nhất. Trái lại, ChatGPT ít chạm đến yếu tố địa phương mà tập trung vào khuyến mãi và giá cả, chiếm khoảng 20% đến 24% các trích dẫn mua sắm. ChatGPT hiện thực hiện nhiều nghiên cứu hơn nhưng lại thu hẹp danh sách thương hiệu đề xuất. Điều này khiến việc trở thành nguồn tin cậy được AI trích dẫn trở nên quan trọng hơn bao giờ hết."
-      }
-    ],
-    "impact": "Thay đổi hoàn toàn tư duy làm Social SEO: Ngân sách xây dựng kênh mạng xã hội lớn không tự động mang lại lưu lượng truy cập từ AI Search nếu nội dung thiếu dữ liệu thực tế và câu trả lời cụ thể.",
-    "ifIgnored": "Doanh nghiệp tiếp tục tốn ngân sách tạo nội dung thương hiệu chung chung trên Fanpage nhưng bị đối thủ hoặc các tài khoản nhỏ cướp mất hiển thị trên Google AI Overviews, dẫn đến sụt giảm lượng khách hàng tiềm năng ở phễu mua sắm.",
-    "actionChecklist": [
-      "Đặt các con số và dữ liệu kết quả ngay dòng đầu tiên của bài viết trên mạng xã hội",
-      "Chuyển đổi các bài đăng kể chuyện thành bài nghiên cứu hoặc case study có phương pháp và số liệu rõ ràng",
-      "Chuyển các nội dung quan trọng từ dạng video hoặc nhóm kín sang dạng văn bản công khai",
-      "Thử nghiệm tra cứu các câu hỏi của khách hàng trên Google AI Overviews và ChatGPT để kiểm tra nguồn đang được trích dẫn"
-    ],
-    "id": "real-2026-08-18-google-ai-overviews-trich-fbff57",
-    "publishedAt": "18/08/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/how-google-aios-use-facebook-instagram-tiktok-from-300-million-us-searches/585244/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/08/ai-and-social-56.png",
       "credit": "Ảnh: Search Engine Journal"
     }
   },
