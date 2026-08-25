@@ -1,5 +1,191 @@
 [
   {
+    "category": "AI Marketing",
+    "platformIcon": "Sparkles",
+    "title": "Báo cáo Pew ghi nhận 10% trang web chứa dấu vết nội dung do AI tạo ra",
+    "isHot": false,
+    "illustration": "ai-label",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "AI Content",
+      "Nghiên cứu Pew",
+      "Chất lượng website",
+      "Tối ưu SEO"
+    ],
+    "summary": "Nghiên cứu mới từ Trung tâm Nghiên cứu Pew cho thấy 10% số trang web được khảo sát có dấu hiệu do AI viết hoặc chỉnh sửa. Tỷ lệ này tăng vọt lên 35% đối với các nội dung xuất bản sau khi ChatGPT ra mắt, đặc biệt tập trung cao ở nhóm tên miền thương mại .com.",
+    "keyNumbers": [
+      {
+        "value": "10%",
+        "label": "Trang web chứa dấu vết AI"
+      },
+      {
+        "value": "35%",
+        "label": "Trang đăng sau ChatGPT có dấu vết AI"
+      },
+      {
+        "value": "9,35%",
+        "label": "Tỷ lệ dấu vết AI trên tên miền .com"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Tỷ lệ nội dung AI bùng nổ trên các tên miền thương mại",
+        "body": "Nghiên cứu từ Trung tâm Nghiên cứu Pew trên gần nửa triệu trang web vào tháng 7/2026 cho thấy dấu vết AI xuất hiện ở 10% tổng số trang. Đối với các trang đăng tải sau khi ChatGPT ra mắt, tỷ lệ này lên tới 35%. Đáng chú ý, các trang web có tên miền .com ghi nhận tỷ lệ dấu vết AI trung bình trong 6 tháng là 9,35%. Con số này cao hơn nhiều so với tên miền .org ở mức 4,59%, .edu đạt 1,03% và .gov dừng ở mức 0,76%. Trước khi ChatGPT xuất hiện, cả 4 loại tên miền này đều giữ tỷ lệ ở mức hoặc dưới 1%."
+      },
+      {
+        "heading": "Các dấu hiệu ngôn ngữ đặc trưng của AI gia tăng mạnh",
+        "body": "Pew đã phân tích các dấu hiệu nhận biết cụ thể trên các trang web xuất bản sau khi ChatGPT phát hành. Tần suất sử dụng dấu gạch ngang dài em dash đã tăng từ 5,79 lần trên 10.000 từ vào đầu năm 2023 lên 11,19 lần vào đầu năm 2026. Dấu phẩy Oxford ghi nhận mức tăng 63% trong cùng khoảng thời gian. Các từ ngữ phổ biến trong văn bản AI như delve, interplay và testament cũng gia tăng hơn gấp đôi. Ngoài ra, cấu trúc đối lập phủ định tăng từ 0,87 lên 2,36 lần trên 10.000 trang."
+      },
+      {
+        "heading": "Sự khác biệt về số liệu giữa các báo cáo độc lập",
+        "body": "Báo cáo từ Pew không phải là nghiên cứu duy nhất công bố con số về nội dung AI trên mạng. Công ty SEO Graphite ước tính rằng 49,9% các bài báo tiếng Anh mới xuất bản trong quý 1 năm 2026 chủ yếu do AI tạo ra. Trong khi đó, nghiên cứu sơ bộ từ Imperial College London, Internet Archive và Stanford chỉ ra rằng đến giữa năm 2025 có 35% trang web mới được phát hiện là tạo bằng AI hoặc có sự hỗ trợ của AI. Tất cả các ước tính này đều dựa trên công cụ Pangram ở một dạng nào đó, riêng Graphite sử dụng thêm Copyleaks và GPTZero."
+      },
+      {
+        "heading": "Ranh giới mờ nhạt giữa hỗ trợ chỉnh sửa và tạo tự động",
+        "body": "Công cụ chỉnh sửa AI hiện đã trở thành tính năng tích hợp sẵn trong Google Docs và Microsoft Word. Tiêu chuẩn đánh giá của Pew gộp chung cả văn bản do con người viết nhưng được tối ưu bằng công cụ AI vào cùng nhóm với nội dung do AI tạo ra từ đầu đến cuối. Các nghiên cứu hiện tại chưa thể phân tách rõ ràng giữa hai hình thức này. Việc một trang web có chính xác, hữu ích và đáng xuất bản hay không vẫn phụ thuộc vào quá trình kiểm duyệt thực tế."
+      }
+    ],
+    "impact": "Sự gia tăng mạnh của dấu vết văn bản AI trên tên miền thương mại .com làm tăng rủi ro các bài viết marketing bị thuật toán tìm kiếm đánh giá là nội dung rác hoặc thiếu giá trị độc bản. Trưởng phòng Marketing cần kiểm soát chặt chẽ quy trình biên tập để duy trì uy tín thương hiệu và tính chính xác của thông tin.",
+    "ifIgnored": "Nếu thả nổi cho đội ngũ sản xuất nội dung lạm dụng AI tạo bài hàng loạt mà không biên tập lại kỹ lưỡng, doanh nghiệp đối mặt với rủi ro giảm thứ hạng SEO, làm mất niềm tin của khách hàng và lãng phí ngân sách vào những bài viết mang giọng văn máy móc.",
+    "actionChecklist": [
+      "Xây dựng quy trình kiểm duyệt thủ công đối với mọi bài viết SEO và content marketing trước khi xuất bản.",
+      "Rà soát loại bỏ các từ ngữ và cấu trúc câu đặc trưng của AI như delve, interplay hoặc dạng đối lập phủ định.",
+      "Đào tạo đội ngũ content sử dụng AI như công cụ hỗ trợ gợi ý ý tưởng thay vì tạo bài viết hoàn chỉnh.",
+      "Đánh giá lại chất lượng các trang web thuộc tên miền .com của doanh nghiệp để đảm bảo tính hữu ích và độ chính xác."
+    ],
+    "id": "real-2026-08-24-bao-cao-pew-ghi-7b31e2",
+    "publishedAt": "24/08/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/1-in-10-webpages-shows-signs-of-ai-authorship-pew-reports/586883/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/08/pew-ai-authorship-featured-1600x840-1.jpg",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
+    "category": "AI Marketing",
+    "platformIcon": "Sparkles",
+    "title": "Báo cáo ChatGPT Ads: Ngành bán lẻ chiếm 39% quảng cáo và cơ chế hiển thị đơn vị duy nhất",
+    "isHot": false,
+    "illustration": "ai-budget",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "ChatGPT Ads",
+      "Quảng cáo AI Search",
+      "Xu hướng Digital",
+      "Đấu giá vị trí"
+    ],
+    "summary": "Phân tích từ Adthena dựa trên gần 850.000 truy vấn tìm kiếm AI cho thấy ngành Bán lẻ và Thời trang đang chiếm lĩnh 39% vị trí quảng cáo trên ChatGPT dù chỉ chiếm 24% lưu lượng truy vấn tại Mỹ. Khác với mô hình danh sách nhiều quảng cáo của Google, ChatGPT áp dụng định dạng vị trí đơn lẻ với trung bình 1,06 mẫu quảng cáo mỗi câu trả lời có hiển thị quảng cáo.",
+    "keyNumbers": [
+      {
+        "value": "39%",
+        "label": "tỷ lệ quảng cáo ngành bán lẻ chiếm trên ChatGPT tại Mỹ"
+      },
+      {
+        "value": "1,06",
+        "label": "số vị trí quảng cáo trung bình mỗi phản hồi hiển thị quảng cáo"
+      },
+      {
+        "value": "3,53",
+        "label": "số mẫu quảng cáo trung bình mỗi câu trả lời trên Google AI"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Sự tập trung vị trí hiển thị ở nhóm nhà quảng cáo danh mục rộng",
+        "body": "Dữ liệu từ Adthena chỉ ra rằng ngành Bán lẻ và Thời trang chiếm 24% tổng lượng truy vấn tại Mỹ nhưng giành tới 39% tổng số vị trí quảng cáo ghi nhận được. Tần suất hiển thị quảng cáo của nhóm này đạt 6,55%, cao hơn mức trung bình toàn thị trường Mỹ là khoảng 4,5%. Khi lực lượng nhà quảng cáo còn mỏng, các thương hiệu sở hữu danh mục sản phẩm rộng và đáp ứng được nhiều nhu cầu so sánh sẽ chiếm thị phần vị trí vượt trội. Một số ngành ghi nhận tần suất xuất hiện cao gồm Logistics với 12,41%, Nhà cửa & Sân vườn với 11,99% và Làm đẹp với 10,03%."
+      },
+      {
+        "heading": "Cơ chế một vị trí duy nhất tác động lớn đến giá đấu thầu",
+        "body": "Trong giai đoạn đo lường từ tháng 3 đến tháng 5, ChatGPT phục vụ quảng cáo trên 4,47% tổng số truy vấn tại Mỹ với trung bình 1,06 đơn vị quảng cáo trên mỗi phản hồi có quảng cáo. Nền tảng này không hiển thị hàng ngang ba sản phẩm hay vòng lặp mua sắm mà chỉ đặt một đơn vị tài trợ duy nhất bên dưới câu trả lời. Ngược lại, các bề mặt AI của Google đạt trung bình 3,53 đơn vị quảng cáo cho mỗi câu trả lời có quảng cáo. Việc chỉ có một vị trí duy nhất đồng nghĩa với việc mỗi truy vấn chỉ có một thương hiệu chiến thắng, khiến mức độ cạnh tranh giá thầu sẽ tăng mạnh khi số lượng nhà quảng cáo tham gia mở rộng."
+      },
+      {
+        "heading": "Quy mô mở rộng toàn cầu và giới hạn phân phối ban đầu",
+        "body": "OpenAI đã xác nhận mở rộng ChatGPT Ads sang 31 thị trường Châu Âu sau khi kích hoạt tại Brazil và Mexico. Tuy nhiên, quảng cáo hiện chỉ áp dụng cho tài khoản người dùng gói Free và Go, hoàn toàn không xuất hiện trên các gói trả phí Plus, Pro và Enterprise. Tại thị trường Châu Âu, tính năng cá nhân hóa quảng cáo chưa được bật ở giai đoạn đầu. Việc lựa chọn quảng cáo hiển thị hoàn toàn dựa trên chủ đề trò chuyện hiện tại, vị trí địa lý chung và loại thiết bị người dùng."
+      },
+      {
+        "heading": "Các tính năng quản trị chiến dịch và đo lường đang hoàn thiện",
+        "body": "Trình quản lý ChatGPT Ads Manager đã tích hợp trường từ khóa phủ định nhằm hỗ trợ loại trừ hiển thị theo phong cách tìm kiếm truyền thống. Hệ thống báo cáo chuyển đổi qua lượt xem đã xuất hiện trong tài liệu hướng dẫn của nền tảng. Ngoài ra, tính năng tự động đặt giá thầu được mặc định chọn sẵn khi tạo nhóm quảng cáo mới. Quyền truy cập ban đầu vẫn được kiểm soát thông qua đội ngũ quảng cáo của OpenAI, các agency đối tác và đối tác công nghệ trước khi mở trình tự phục vụ self-service."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing cần nhận diện sự dịch chuyển từ tìm kiếm danh sách sang câu trả lời độc bản trên các trợ lý AI. Với cơ chế chỉ một vị trí hiển thị duy nhất, chi phí CPM và CPC trên các nền tảng như ChatGPT Ads sẽ tăng rất nhanh khi số lượng nhà thầu tăng lên. Do đó, việc chuẩn bị nguồn lực, cấu trúc dữ liệu sản phẩm và kế hoạch thử nghiệm sớm là chìa khóa để giữ lợi thế chi phí trước khi thị trường bước vào giai đoạn bão hòa.",
+    "ifIgnored": "Doanh nghiệp sẽ mất hoàn toàn cơ hội chiếm lĩnh vị trí hiển thị độc quyền trên giao diện AI Search khi nền tảng mở rộng hoàn toàn. Khi số lượng nhà quảng cáo tăng vọt, giá thầu cho vị trí duy nhất sẽ đẩy ngân sách thử nghiệm lên rất cao, khiến việc thâm nhập kênh mới trở nên đắt đỏ và khó đạt ROI.",
+    "actionChecklist": [
+      "Rà soát và chuẩn bị bộ dữ liệu danh mục sản phẩm rộng để sẵn sàng kết nối với các nền tảng AI Search Ads.",
+      "Lập danh sách từ khóa phủ định và ngữ cảnh không phù hợp để kiểm soát hiển thị quảng cáo trong giao diện hội thoại.",
+      "Đánh giá phân bổ ngân sách thử nghiệm cho các kênh quảng cáo AI mới bên cạnh Google Ads và Meta Ads.",
+      "Theo dõi tiến trình mở cửa trình quản lý quảng cáo tự phục vụ của ChatGPT để đăng ký tài khoản trải nghiệm sớm."
+    ],
+    "id": "real-2026-08-24-bao-cao-chatgpt-ads-9af0f6",
+    "publishedAt": "24/08/2026",
+    "sourceUrl": "https://ppc.land/retail-took-39-of-chatgpt-ads-on-24-of-us-queries-adthena-finds/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/size/w1200/2026/08/openai-shop.webp",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Google Ads ra mắt các công cụ thử nghiệm mới cho chiến dịch Tìm kiếm và AI Max",
+    "isHot": false,
+    "illustration": "ai-budget",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Google Ads",
+      "AI Max",
+      "Thử nghiệm AB",
+      "Performance Planner"
+    ],
+    "summary": "Google Ads vừa bổ sung các tính năng thử nghiệm và lập kế hoạch mới cho chiến dịch Tìm kiếm và AI Max nhằm hỗ trợ nhà quảng cáo kiểm tra hiệu quả trước khi áp dụng quy mô lớn. Cập nhật mới cho phép thử nghiệm ngân sách và mục tiêu ROI trên nhiều chiến dịch cùng lúc, đồng thời giữ nguyên các thiết lập thương hiệu và vị trí địa lý. Ngoài ra, công cụ Performance Planner cũng được tích hợp khả năng áp dụng thay đổi đề xuất chỉ với một cú nhấp.",
+    "keyNumbers": [
+      {
+        "value": "Tháng 9",
+        "label": "Thời điểm bắt đầu triển khai thử nghiệm đa chiến dịch Tìm kiếm"
+      },
+      {
+        "value": "1-click",
+        "label": "Thao tác áp dụng đề xuất thay đổi từ Performance Planner"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Thử nghiệm đa chiến dịch Tìm kiếm bắt đầu triển khai từ tháng 9",
+        "body": "Từ tháng 9, các nhà quảng cáo có thể thử nghiệm những thay đổi về ngân sách và mục tiêu ROI trên nhiều chiến dịch Tìm kiếm trong cùng một thử nghiệm A/B. Tính năng này mở rộng từ các thử nghiệm một cú nhấp mà Google đã giới thiệu trước đó cho AI Max, thay vì chỉ giới hạn ở từng chiến dịch riêng lẻ. Khi cân nhắc tăng ngân sách lớn, người quản lý có thể kiểm tra trên một nhóm chiến dịch Tìm kiếm để đo lường tác động đến lợi nhuận thực tế trước khi nhân rộng. Việc đánh giá theo nhóm thay vì độc lập giúp duy trì một nhóm đối chứng để so sánh chiến lược một cách chính xác hơn."
+      },
+      {
+        "heading": "Giữ nguyên kiểm soát thương hiệu và vị trí địa lý khi thử nghiệm AI Max",
+        "body": "Google đang mở rộng các tùy chọn cài đặt có thể duy trì khi thử nghiệm AI Max cho chiến dịch Tìm kiếm. Nhà quảng cáo hiện có thể chạy thử nghiệm AI Max mà vẫn giữ nguyên các cài đặt về thương hiệu và giới hạn vị trí địa lý. Trước đây, những rào cản cài đặt này thường hạn chế khả năng thử nghiệm AI Max nếu chúng thuộc thiết lập bắt buộc của chiến dịch. Thay đổi này giúp kết quả thử nghiệm phản ánh chính xác điều kiện vận hành thực tế sau khi triển khai chính thức."
+      },
+      {
+        "heading": "Tích hợp tính năng áp dụng đề xuất trực tiếp trong Performance Planner",
+        "body": "Công cụ Performance Planner hiện đã có khả năng hiển thị tác động của việc thay đổi giá thầu hoặc mục tiêu ngân sách tới hiệu suất chiến dịch hiện tại. Nhà quảng cáo có thể áp dụng trực tiếp các đề xuất này vào chiến dịch chỉ với một cú nhấp chuột. Trước khi thực thi, người dùng được quyền xem lại các thay đổi ở cấp chiến dịch và bỏ chọn những chiến dịch không muốn cập nhật. Mọi thay đổi đã áp dụng đều có thể theo dõi và hoàn tác trong mục Bulk Actions nếu cần thiết."
+      },
+      {
+        "heading": "Tăng cường kiểm soát trong bối cảnh tự động hóa ngày càng mở rộng",
+        "body": "Khi Google Ads tự động hóa ngày càng nhiều quyết định chiến dịch từ giá thầu, ngân sách cho tới cách AI Max tìm kiếm cơ hội mới, nhà quảng cáo cần các công cụ xác minh đáng tin cậy. Các công cụ thử nghiệm mới cung cấp thêm lựa chọn để đánh giá đề xuất dựa trên dữ liệu hiệu suất thực tế của tài khoản. Điều này giúp rút ngắn khoảng cách từ bước dự báo đến triển khai thực tế. Tuy nhiên, việc áp dụng nhanh đề xuất đòi hỏi nhà quảng cáo phải kiểm tra kỹ các dự báo trước khi thực thi."
+      }
+    ],
+    "impact": "Giúp Trưởng phòng Marketing kiểm chứng chính xác tác động của việc tăng ngân sách hoặc điều chỉnh mục tiêu ROI trên toàn bộ nhóm tài khoản Google Ads mà không lo bị phá vỡ cài đặt thương hiệu hay định vị địa lý.",
+    "ifIgnored": "Nếu bỏ qua, bạn sẽ phải thay đổi ngân sách thủ công từng chiến dịch hoặc áp dụng tính năng tự động hóa AI Max thiếu chuẩn xác, dẫn đến nguy cơ lãng phí ngân sách và lệch tệp khách hàng mục tiêu.",
+    "actionChecklist": [
+      "Rà soát lại danh sách các chiến dịch Tìm kiếm để chuẩn bị cho đợt thử nghiệm ngân sách nhóm vào tháng 9",
+      "Cấu hình thử nghiệm AI Max ngay trên các chiến dịch Tìm kiếm đang áp dụng cài đặt thương hiệu và vị trí địa lý",
+      "Truy cập Performance Planner để xem dự báo thay đổi giá thầu và ngân sách trước khi bấm áp dụng trực tiếp",
+      "Kiểm tra mục Bulk Actions trong Google Ads để sẵn sàng thao tác hoàn tác nếu hiệu suất sau áp dụng không như kỳ vọng"
+    ],
+    "deadline": "Tháng 9/2026",
+    "id": "real-2026-08-24-google-ads-ra-mat-04075a",
+    "publishedAt": "24/08/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/google-ads-launches-new-search-and-ai-max-experimentation-tools/586549/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/08/google_ads_experimentation_1600x840-994.png",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
     "category": "Meta Ads",
     "platformIcon": "Facebook",
     "title": "Instagram công bố hướng dẫn tối ưu chú thích nhằm cải thiện khả năng tìm kiếm và tương tác",
@@ -177,70 +363,6 @@
     "source": "PPC Land",
     "image": {
       "url": "https://ppc.land/content/images/size/w1200/2026/08/business-locations.webp",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Google Ads cập nhật Performance Planner cho phép áp dụng ngân sách trực tiếp và thử nghiệm AI Max đa chiến dịch",
-    "isHot": true,
-    "illustration": "ai-budget",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Google Ads",
-      "Performance Planner",
-      "AI Max",
-      "Ngân sách quảng cáo"
-    ],
-    "summary": "Google công bố ba thay đổi lớn với các công cụ lập kế hoạch và thử nghiệm chiến dịch Search từ ngày 20/08/2026. Đáng chú ý nhất, công cụ Performance Planner đã tích hợp nút áp dụng đề xuất ngân sách trực tiếp vào tài khoản mà không cần xuất tệp dữ liệu. Đồng thời, nền tảng cho phép chạy thử nghiệm A/B ngân sách và mục tiêu ROI trên nhiều chiến dịch cùng lúc từ tháng 9/2026.",
-    "keyNumbers": [
-      {
-        "value": "10.000",
-        "label": "Chiến dịch tối đa trong một kế hoạch Performance Planner"
-      },
-      {
-        "value": "24 giờ",
-        "label": "Tần suất cập nhật dữ liệu dự báo của công cụ"
-      },
-      {
-        "value": "7 đến 10 ngày",
-        "label": "Khoảng thời gian đấu giá được giả lập để đưa ra dự báo"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Tính năng áp dụng một cú nhấp chuột trong Performance Planner",
-        "body": "Trước đây, Performance Planner chỉ đưa ra dự báo và gợi ý phân bổ ngân sách hoặc giá thầu, yêu cầu nhà quảng cáo xuất dữ liệu ra tệp riêng trước khi tải lên tài khoản. Với cập nhật mới, người dùng có thể xem xét và nhấn nút áp dụng trực tiếp các thay đổi vào các chiến dịch đang chạy ngay trong giao diện công cụ. Các điều chỉnh đề xuất được hiển thị theo từng chiến dịch, cho phép bỏ chọn chiến dịch không muốn thay đổi trước khi xác nhận. Mọi thay đổi áp dụng trực tiếp này đều có thể xem lại và hoàn tác dễ dàng thông qua giao diện Thao tác hàng loạt."
-      },
-      {
-        "heading": "Thử nghiệm A/B ngân sách và ROI đa chiến dịch từ tháng 9",
-        "body": "Google bổ sung hình thức thử nghiệm A/B đa chiến dịch, cho phép nhà quảng cáo kiểm tra các mức ngân sách và mục tiêu ROI khác nhau trên nhiều chiến dịch Search cùng lúc. Tính năng này sẽ bắt đầu được triển khai trong tháng 9/2026 nhằm đo lường tác động tổng thể khi mở rộng quy mô tài khoản. Ngoài ra, các thử nghiệm AI Max hiện đã hỗ trợ giữ nguyên thiết lập về thương hiệu và vị trí địa lý. Nhờ đó, các tài khoản đang tách biệt cấu hình thương hiệu và phi thương hiệu không còn phải gỡ bỏ các bộ lọc bảo vệ này khi tiến hành thử nghiệm."
-      },
-      {
-        "heading": "Cơ chế vận hành và lợi thế của thử nghiệm AI Max",
-        "body": "Khác với thử nghiệm tùy chỉnh truyền thống phải tạo bản sao chiến dịch, thử nghiệm AI Max phân tách lưu lượng truy cập và ngân sách trực tiếp ngay trong chiến dịch hiện tại. Một phần lưu lượng chạy với tính năng AI Max tắt đóng vai trò nhóm đối chứng, phần còn lại bật AI Max làm nhóm thử nghiệm. Cấu trúc này giúp kết quả thử nghiệm xuất hiện nhanh hơn, giảm lỗi thiết lập và rút ngắn thời gian học của thuật toán. Nhà quảng cáo có thể chọn tự động áp dụng thay đổi nếu kết quả tích cực hoặc chủ động thao tác thủ công sau khi thử nghiệm kết thúc."
-      },
-      {
-        "heading": "Các giới hạn kỹ thuật và mốc thời gian chuyển đổi tự động",
-        "body": "Google quy định 6 điều kiện khiến chiến dịch không thể tạo thử nghiệm AI Max theo luồng mới, bao gồm việc đang bật tùy chỉnh văn bản, nhắm mục tiêu Mạng hiển thị, dùng chiến lược thầu danh mục, sử dụng ngân sách chung, đang tìm kiếm giá thầu hoặc đã có thử nghiệm đang chạy. Đáng chú ý, các chiến dịch đang bật tính năng tự động tạo tài sản sẽ bị hạ cấp tính năng và dự kiến tự động chuyển đổi sang AI Max vào ngày 01/09/2026. Ngoài ra, các chiến dịch Search có ngân sách chung hoặc cấu hình thương hiệu cũ cũng có thể gặp rào cản kỹ thuật khi tham gia thử nghiệm."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing có thể rút ngắn đáng kể thời gian phê duyệt và thực thi điều chuyển ngân sách giữa hàng loạt chiến dịch Search, đồng thời dễ dàng thử nghiệm AI Max mà không lo bị vi phạm quy chuẩn thương hiệu hoặc gián đoạn luồng dữ liệu.",
-    "ifIgnored": "Nếu không kiểm tra kỹ các chiến dịch đang bật tính năng tự động tạo tài sản trước mốc 01/09/2026, hệ thống sẽ tự động chuyển đổi sang AI Max dẫn đến nguy cơ lệch ngân sách và mất kiểm soát giá thầu ngoài dự kiến.",
-    "actionChecklist": [
-      "Rà soát toàn bộ các chiến dịch Search đang bật tính năng tự động tạo tài sản trước thời hạn ngày 01/09/2026",
-      "Kiểm tra danh sách chiến dịch đang dùng ngân sách chung hoặc chiến lược giá thầu danh mục để điều chỉnh trước khi tạo thử nghiệm",
-      "Bật tính năng áp dụng trực tiếp trong Performance Planner để tối ưu hóa quy trình phân bổ ngân sách hàng tháng",
-      "Lên kế hoạch thử nghiệm A/B đa chiến dịch cho ngân sách và mục tiêu ROI trong đợt cập nhật tháng 9/2026"
-    ],
-    "deadline": "01/09/2026",
-    "id": "real-2026-08-22-google-ads-cap-nhat-fc8f46",
-    "publishedAt": "22/08/2026",
-    "sourceUrl": "https://ppc.land/performance-planner-gains-one-click-apply-to-live-google-ads-campaigns/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/size/w1200/2026/08/Google-Ads.webp",
       "credit": "Ảnh: PPC Land"
     }
   },
@@ -551,128 +673,6 @@
       "url": "https://imgproxy.divecdn.com/Y4ZmvMFIMSqp4fqK6QP6VSNEJdYXSyfKg8o4E5lDU40/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS90aWt0b2tfbG9nby5wbmc=.webp",
       "credit": "Ảnh: Social Media Today"
     }
-  },
-  {
-    "category": "AI Marketing",
-    "platformIcon": "Sparkles",
-    "title": "ChatGPT thay đổi cơ chế truy vấn ngầm khiến trích dẫn nguồn sụt giảm",
-    "isHot": false,
-    "illustration": "data-signal",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "ChatGPT Search",
-      "Tối ưu hóa AI",
-      "GEO",
-      "Truy vấn ngầm"
-    ],
-    "summary": "Dữ liệu theo dõi từ Promptwatch cho thấy tỷ lệ trích dẫn Reddit trên ChatGPT Search giảm mạnh 86,4% trong giữa tháng 8 năm 2026. Thay đổi này diễn ra cùng thời điểm ChatGPT tăng cường các truy vấn tìm kiếm ngầm giới hạn theo tên miền. Tuy nhiên, các phân tích chỉ ra biến động dữ liệu có thể phức tạp hơn và chưa đủ để doanh nghiệp thay đổi chiến lược nội dung.",
-    "keyNumbers": [
-      {
-        "value": "86,4%",
-        "label": "Mức sụt giảm tương đối về tỷ lệ trích dẫn Reddit trên ChatGPT Search"
-      },
-      {
-        "value": "16,8%",
-        "label": "Tỷ lệ truy vấn ngầm dùng toán tử site: sau khi tăng khoảng 46 lần"
-      },
-      {
-        "value": "1,83",
-        "label": "Số lượng truy vấn ngầm trung bình cho mỗi phản hồi của ChatGPT"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Sự sụt giảm đột ngột trích dẫn nguồn trên ChatGPT Search",
-        "body": "Theo đơn vị phân tích Promptwatch, tỷ lệ trích dẫn tên miền reddit.com trên ChatGPT Search đã giảm rất mạnh trong giữa tháng 8 năm 2026. Trong giai đoạn từ ngày 18 tháng 7 đến ngày 7 tháng 8, Reddit duy trì tỷ lệ trích dẫn trung bình là 3,83%. Tuy nhiên, chỉ số này đã rơi xuống mức trung bình 0,52% trong khoảng thời gian từ ngày 14 tháng 8 đến ngày 17 tháng 8. Mức sụt giảm tương đối 86,4% này ngay lập tức thu hút sự chú ý của cộng đồng công nghệ và tiếp thị."
-      },
-      {
-        "heading": "Thay đổi trong thuật toán truy vấn ngầm của ChatGPT",
-        "body": "Promptwatch phát hiện sự thay đổi này trùng hợp với điều chỉnh trong các truy vấn ngầm (fanout queries), vốn là các thao tác tìm kiếm phía sau hệ thống mà ChatGPT thực hiện để tổng hợp câu trả lời. Vào ngày 8 tháng 8, tỷ lệ truy vấn ngầm sử dụng toán tử site: để giới hạn phạm vi tìm kiếm trong một tên miền đã tăng từ 0,37% lên 16,8%, tương đương mức tăng khoảng 46 lần. Đồng thời, số truy vấn ngầm trung bình cho mỗi phản hồi tăng từ 1,08 lên 1,83. Điều này phản ánh việc ChatGPT chủ động truy cập sâu vào các website cụ thể thay vì chỉ quét mạng internet mở."
-      },
-      {
-        "heading": "Lệch mốc thời gian và những nghi vấn về mặt dữ liệu",
-        "body": "Mặc dù ChatGPT thay đổi hành vi tìm kiếm từ ngày 8 tháng 8 và duy trì mức 16% đến 17% sau đó, trích dẫn của Reddit lại có hai đợt giảm riêng biệt. Đợt giảm đầu tiên diễn ra ngày 8 tháng 8, nhưng đợt sụt giảm mạnh nhất khiến tỷ lệ rơi xuống dưới 1% lại xảy ra vào ngày 14 tháng 8. Khoảng chênh lệch 6 ngày này cho thấy việc thay đổi toán tử site: không thể giải thích hoàn toàn đợt sụt giảm thứ hai. Bản thân Promptwatch cũng tuyên bố chưa thể loại trừ khả năng đây chỉ là sai sót trong quá trình thu thập dữ liệu của chính họ."
-      },
-      {
-        "heading": "Tiền lệ biến động và bài học cho chiến lược tối ưu AI",
-        "body": "Một hiện tượng tương tự từng xảy ra vào tháng 9 năm 2025 khi trích dẫn Reddit trên ChatGPT đột ngột lao dốc. Nguyên nhân khi đó được chuyên gia phân tích cho là do Google xóa bỏ tham số num=100 vào khoảng ngày 10 tháng 9 năm 2025, gây khó khăn cho các bên cung cấp dữ liệu tìm kiếm sâu. Do đó, việc sụt giảm trích dẫn trên các công cụ đo lường của bên thứ ba chưa chắc phản ánh đúng hiển thị thực tế của thương hiệu. Doanh nghiệp cần dựa vào dữ liệu thực tế của chính mình trước khi điều chỉnh chiến lược xuất hiện trên các nền tảng."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing hiểu rõ nguyên lý hoạt động của truy vấn ngầm (fanout queries) trên ChatGPT, giúp tránh đưa ra các quyết định cắt giảm ngân sách seeding hoặc thay đổi chiến lược kênh dựa trên biến động dữ liệu chưa xác thực từ bên thứ ba.",
-    "ifIgnored": "Doanh nghiệp có thể phản ứng thái quá bằng cách từ bỏ việc xây dựng sự hiện diện trên các nền tảng cộng đồng, dẫn đến mất vị thế trích dẫn khi thuật toán AI hoặc công cụ đo lường ổn định trở lại.",
-    "actionChecklist": [
-      "Kiểm tra chỉ số lưu lượng và tỷ lệ trích dẫn thực tế của chính tên miền doanh nghiệp thay vì chỉ nhìn vào số liệu trung bình của ngành.",
-      "Rà soát cấu trúc nội dung website để chuẩn bị cho xu hướng AI gia tăng các truy vấn ngầm sử dụng toán tử site:.",
-      "Duy trì chiến lược phủ nội dung chất lượng trên các kênh cộng đồng uy tín để tối ưu hóa Generative Engine Optimization (GEO).",
-      "Yêu cầu đội ngũ kỹ thuật theo dõi các thay đổi trong cách bot AI truy cập và cào dữ liệu từ hệ thống website."
-    ],
-    "id": "real-2026-08-19-chatgpt-thay-doi-co-6cb9bb",
-    "publishedAt": "19/08/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/why-reddits-chatgpt-citation-drop-isnt-fully-explained/586479/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/08/reddit-chatgpt-citation-drop.jpg",
-      "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
-    "id": "real-2026-08-10-meta-exclusion-audience",
-    "category": "Meta Ads",
-    "platformIcon": "Facebook",
-    "title": "Meta thêm tệp đối tượng chỉ dùng để loại trừ: tránh lãng phí ngân sách và tránh nhắm nhầm nhóm bị cấm",
-    "publishedAt": "10/08/2026",
-    "isHot": false,
-    "illustration": "keyword-exclusion",
-    "image": {
-      "url": "https://imgproxy.divecdn.com/pkSkhPly_pDkHFyL0FCbcuos6XRyiBEUMjDQE-waNOg/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9tZXRhX2FkX2V4Y2x1c2lvbnMucG5n.webp",
-      "credit": "Ảnh: Social Media Today"
-    },
-    "sourceUrl": "https://www.socialmediatoday.com/news/meta-adds-dedicated-ad-exclusion-audiences/827520/",
-    "source": "Social Media Today",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Tệp đối tượng",
-      "Loại trừ",
-      "Tuân thủ",
-      "Tối ưu ngân sách"
-    ],
-    "summary": "Meta bổ sung một loại tệp khách hàng mới chỉ dùng được cho việc loại trừ, không dùng để nhắm mục tiêu. Dành cho hai tình huống: cắt lãng phí với nhóm chắc chắn không mua, và tuân thủ nghĩa vụ pháp lý không được nhắm tới một số người.",
-    "keyNumbers": [
-      {
-        "value": "Một chiều",
-        "label": "chỉ loại trừ, không nhắm được"
-      },
-      {
-        "value": "Vĩnh viễn",
-        "label": "tạo rồi không đổi lại được"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Loại tệp này khác gì tệp thường",
-        "body": "Tệp khách hàng thông thường dùng được cả hai chiều: vừa nhắm tới vừa loại trừ. Tệp mới này chỉ đi một chiều, chỉ loại trừ. Meta mô tả rõ đây là một dạng tệp khách hàng tải lên nhưng chỉ có thể dùng để loại người ra khỏi đối tượng nhận quảng cáo."
-      },
-      {
-        "heading": "Vì sao Meta phải làm riêng một loại",
-        "body": "Vì có những danh sách mà doanh nghiệp buộc phải giữ để loại trừ nhưng tuyệt đối không được dùng để nhắm tới. Ví dụ nhóm khách đã yêu cầu ngừng nhận quảng cáo, hoặc nhóm mà quy định ngành cấm tiếp cận. Nếu dùng tệp thường thì chỉ cần một thao tác nhầm là danh sách đó biến thành đối tượng nhắm mục tiêu, hậu quả pháp lý nặng hơn nhiều so với lãng phí ngân sách."
-      },
-      {
-        "heading": "Đánh đổi phải biết trước",
-        "body": "Đã tạo dạng chỉ-loại-trừ thì không chuyển ngược về tệp thường được nữa. Đây là ràng buộc vĩnh viễn, có chủ đích. Nên cân nhắc trước khi tải lên: danh sách nào chắc chắn chỉ dùng để loại trừ thì tạo dạng này, danh sách nào còn có thể muốn nhắm tới sau này thì giữ dạng thường."
-      },
-      {
-        "heading": "Ứng dụng ít ai nghĩ tới",
-        "body": "Chuyên gia Jon Loomer chỉ ra một trường hợp đơn giản mà hiệu quả: loại trừ chính nhân viên công ty. Nhân viên thấy quảng cáo của công ty mình liên tục nhưng không bao giờ mua, và mỗi lượt hiển thị đó đều tính tiền. Với doanh nghiệp đông người, đây là khoản lãng phí âm thầm không ai để ý."
-      }
-    ],
-    "impact": "Trưởng phòng nên chuyển các danh sách nhạy cảm sang dạng chỉ-loại-trừ để một thao tác nhầm không biến chúng thành tệp nhắm mục tiêu, đồng thời loại nhân viên nội bộ ra khỏi mọi chiến dịch.",
-    "ifIgnored": "Danh sách khách đã từ chối nhận quảng cáo nằm chung dạng với tệp nhắm mục tiêu, chỉ cần một lần chọn nhầm trong lúc dựng chiến dịch là gửi quảng cáo tới đúng nhóm đã yêu cầu ngừng. Đây là loại lỗi rất khó giải thích với khách hàng và với bộ phận pháp chế.",
-    "actionChecklist": [
-      "Rà danh sách tệp khách hàng hiện có, tách nhóm nào chỉ dùng để loại trừ",
-      "Tạo lại các nhóm đó dưới dạng chỉ-loại-trừ, lưu ý không đổi ngược lại được",
-      "Tải lên danh sách nhân viên công ty và loại khỏi mọi chiến dịch đang chạy",
-      "Ghi vào quy trình dựng chiến dịch: bước kiểm tra tệp loại trừ trước khi bật ngân sách"
-    ]
   },
   {
     "id": "real-2026-02-09-influencer-vn",
