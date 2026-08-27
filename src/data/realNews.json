@@ -1,5 +1,194 @@
 [
   {
+    "category": "AI Marketing",
+    "platformIcon": "Sparkles",
+    "title": "Công cụ AI đề xuất thương hiệu nhưng trích dẫn nguồn từ website bên thứ ba",
+    "isHot": false,
+    "illustration": "zero-click",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "AI Search",
+      "GEO",
+      "SEO Thương mại điện tử",
+      "Nguồn trích dẫn"
+    ],
+    "summary": "Nghiên cứu mới cho thấy các công cụ tìm kiếm AI thường xuyên đề xuất tên thương hiệu cho người dùng nhưng lại dẫn liên kết về các trang đánh giá của bên thứ ba thay vì website chính chủ. Điều này đặt ra thách thức lớn cho các Trưởng phòng Marketing trong việc tối ưu hóa sự hiện diện và lưu lượng truy cập từ AI.",
+    "keyNumbers": [
+      {
+        "value": "2,8%",
+        "label": "Trang chính chủ trong tổng số trích dẫn AI"
+      },
+      {
+        "value": "59%",
+        "label": "Trích dẫn trỏ về trang đánh giá bên thứ ba"
+      },
+      {
+        "value": "31%",
+        "label": "Trang chính chủ được dẫn link khi AI gọi tên"
+      }
+    ],
+    "content": [
+      {
+        "heading": "AI ưu tiên dẫn nguồn từ các trang đánh giá độc lập",
+        "body": "Phân tích từ Shero Commerce trên 1.851 nguồn trích dẫn qua Google AI Mode, ChatGPT và Perplexity cho thấy chỉ 2,8% nguồn trỏ về trang web chính chủ của thương hiệu. Trong khi đó, nhóm website bên thứ ba như các trang đánh giá hay báo chí chiếm tới 59% tổng số trích dẫn. Các mô hình AI dường như ưu tiên trích dẫn thông tin từ các nguồn tổng hợp khách quan hơn là nội dung tự quảng cáo trên website bán hàng."
+      },
+      {
+        "heading": "Được đề xuất tên nhưng vẫn mất lượt nhấp vào tay bên thứ ba",
+        "body": "Ngay cả khi công cụ AI chủ động khuyến nghị một thương hiệu cụ thể, khả năng người dùng nhận được liên kết trỏ thẳng về website chính chủ vẫn rất thấp. Báo cáo ghi nhận trong 159 lần thương hiệu được AI gọi tên trực tiếp, trang chính chủ chỉ xuất hiện trong trích dẫn ở 31% trường hợp. Ví dụ, với truy vấn tìm kiếm sản phẩm quần tập, ChatGPT và Perplexity gợi ý các thương hiệu như Gymshark hay Alo nhưng lại trích dẫn đường dẫn từ các trang trung gian."
+      },
+      {
+        "heading": "Tỷ lệ xuất hiện thực tế trên Google AI Mode còn hạn chế",
+        "body": "Trong các đợt kiểm tra cửa hàng thuộc 60 ngành hàng sản phẩm, các thương hiệu mẫu chỉ được trích dẫn hoặc đề xuất trong 9,5% trường hợp trên Google AI Mode. Đáng chú ý, khoảng một phần ba số ngành hàng được khảo sát hoàn toàn không có sự xuất hiện của bất kỳ thương hiệu mẫu nào. Số liệu này phản ánh việc hiển thị tự nhiên trên giao diện tìm kiếm AI của Google hiện vẫn là một rào cản lớn với các doanh nghiệp thương mại điện tử."
+      },
+      {
+        "heading": "Nội dung trùng lặp và thiếu chiều sâu làm giảm khả năng trích dẫn",
+        "body": "Nghiên cứu trên dữ liệu sản phẩm từ các cửa hàng Shopify chỉ ra rằng 20% mô tả sản phẩm bị trùng lặp hoặc rất tương đồng với các website khác do dùng chung nguồn phân phối. Bên cạnh đó, khi phân tích mã HTML của 173 cửa hàng, có tới 27 cửa hàng sở hữu đoạn mô tả sản phẩm ngắn dưới 50 từ. Việc thiếu nội dung độc quyền và thông tin quá sơ sài khiến thuật toán AI khó xác định website chính chủ là nguồn thông tin gốc đáng tin cậy."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing sẽ nhận thấy traffic trực tiếp từ tìm kiếm AI không tự động đổ về website dù sản phẩm được AI đánh giá cao. Chiến lược SEO chỉ tập trung vào trang bán hàng chính chủ sẽ bị giảm hiệu quả khi AI chuyển hướng người dùng sang các trang đánh giá và đối tác affiliate.",
+    "ifIgnored": "Doanh nghiệp nguy cơ mất đi lượng khách hàng có intent mua sắm cao vào tay các đối thủ xuất hiện trên các trang review bên thứ ba, đồng thời lãng phí ngân sách SEO truyền thống mà không thu lại được lượt truy cập từ làn sóng AI Search.",
+    "actionChecklist": [
+      "Đẩy mạnh xuất hiện trên các trang review, báo chí và nội dung Affiliate của bên thứ ba để đón dòng trích dẫn từ AI.",
+      "Rà soát và viết lại toàn bộ mô tả sản phẩm trùng lặp trên website chính chủ để tạo nội dung độc quyền.",
+      "Bổ sung độ sâu nội dung mô tả sản phẩm vượt mốc 50 từ, cung cấp thêm thông số kỹ thuật và hướng dẫn chi tiết.",
+      "Theo dõi định kỳ sự xuất hiện của thương hiệu trên ChatGPT, Perplexity và Google AI Mode cho các truy vấn mua sắm cốt lõi."
+    ],
+    "id": "real-2026-08-26-cong-cu-ai-de-6735b3",
+    "publishedAt": "26/08/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/ai-tools-recommend-brands-but-cite-other-sites-data-shows/587160/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/08/ai-tools-brand-citations-1600x840-1.jpg",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Google AI Mode: Cơ chế vận hành, điều kiện quảng cáo với PMax và cảnh báo sụt giảm ROAS",
+    "isHot": false,
+    "illustration": "zero-click",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Google Ads",
+      "AI Mode",
+      "Performance Max",
+      "SEO"
+    ],
+    "summary": "Google AI Mode sử dụng cơ chế tách một truy vấn thành hàng trăm tìm kiếm phụ để tổng hợp thành một câu trả lời duy nhất. Nhà quảng cáo không thể chọn riêng vị trí hiển thị này mà bắt buộc phải chạy AI Max hoặc Performance Max tùy chỉnh văn bản. Mặc dù Google đẩy mạnh các định dạng mới, dữ liệu đo lường thực tế lại cho thấy hiệu quả ROAS của chiến dịch AI Max thấp hơn đáng kể so với tìm kiếm truyền thống.",
+    "keyNumbers": [
+      {
+        "value": "35%",
+        "label": "Mức sụt giảm ROAS của AI Max so với khớp từ khóa truyền thống"
+      },
+      {
+        "value": "75 triệu",
+        "label": "Lượng người dùng hoạt động hàng ngày của AI Mode khi ra mắt quảng cáo mua sắm"
+      },
+      {
+        "value": "60 tỷ",
+        "label": "Số lượng sản phẩm lưu trữ trong Shopping Graph phục vụ hiển thị AI Mode"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Cơ chế Query Fan-Out và các quy định hiển thị SEO",
+        "body": "Google AI Mode tách một câu hỏi phức tạp thành hàng chục, hàng trăm hoặc hàng nghìn truy vấn phụ diễn ra đồng thời để thu thập thông tin. Hệ thống kết hợp giữa mô hình sinh RAG và việc trích xuất dữ liệu trực tiếp từ chỉ mục tìm kiếm cốt lõi. Tài liệu hướng dẫn của Google nêu rõ các tệp llms.txt hay việc viết lại nội dung cho trí tuệ nhân tạo đều không có tác dụng tăng độ hiển thị do hệ thống hoàn toàn bỏ qua chúng. Trang web chỉ cần được lập chỉ mục chuẩn và đủ điều kiện hiển thị đoạn trích trên Google Search thông thường."
+      },
+      {
+        "heading": "Điều kiện bắt buộc và các định dạng quảng cáo mới",
+        "body": "AI Mode không phải là một vị trí hiển thị có thể chủ động chọn hoặc loại trừ theo cách cài đặt thông thường. Để xuất hiện quảng cáo tại đây, doanh nghiệp bắt buộc phải vận hành chiến dịch AI Max for Search hoặc Performance Max có bật tính năng tùy chỉnh văn bản. Google đã giới thiệu các định dạng bao gồm Conversational Discovery ads, Highlighted Answers, Direct Offers và Business Agent for Leads. Trong đó, định dạng Business Agent cho phép AI tự động trò chuyện và thu thập thông tin khách hàng tiềm năng dựa trên dữ liệu từ website của nhà quảng cáo."
+      },
+      {
+        "heading": "Cảnh báo hiệu quả ROAS và biến động lượng truy cập",
+        "body": "Dữ liệu thử nghiệm độc lập cho thấy nhà quảng cáo cần thận trọng khi triển khai các định dạng tự động mới. Phân tích từ Smarter Ecommerce trên hơn 250 chiến dịch bán lẻ cho thấy AI Max mang lại tỷ lệ hoàn vốn trên chi phí quảng cáo thấp hơn 35% so với các dạng khớp từ khóa truyền thống. Bên cạnh đó, đo lường từ Ahrefs chỉ ra tỷ lệ nhấp chuột của các trang đứng top đầu đã giảm 58% khi có sự xuất hiện của AI Overviews, tạo áp lực lớn lên lưu lượng truy cập tự nhiên."
+      },
+      {
+        "heading": "Cập nhật công cụ báo cáo và quyền kiểm soát dữ liệu",
+        "body": "Google đã bổ sung báo cáo hiệu suất Generative AI trong Search Console từ ngày 3 tháng 6 năm 2026, giúp theo dõi lượt hiển thị, số trang và thiết bị nhưng chưa chia tách riêng lượt nhấp. Đối với thương mại điện tử, Merchant Center cũng cập nhật tính năng AI performance insights từ ngày 27 tháng 5 năm 2026 tại 5 thị trường. Nhằm tuân thủ quy định pháp lý tại Anh, Google đã cung cấp công tắc tùy chọn trong Search Console từ tháng 7 năm 2026, cho phép các chủ website chủ động rút toàn bộ tên miền khỏi hiển thị trên AI Mode và AI Overviews."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing bị tước bỏ khả năng cài đặt vị trí thủ công cho AI Mode, buộc phải dùng AI Max hoặc Performance Max nếu muốn tiếp cận tệp người dùng này. Tuy nhiên, việc phụ thuộc hoàn toàn vào cơ chế tự động của AI Max có rủi ro làm giảm 35% hiệu quả ROAS so với cách thiết lập từ khóa truyền thống.",
+    "ifIgnored": "Doanh nghiệp có nguy cơ lãng phí ngân sách vào các chiến dịch AI Max kém hiệu quả mà không phân tích được nguyên nhân, đồng thời bỏ lỡ các công cụ đo lường hiển thị AI mới trong Search Console và Merchant Center.",
+    "actionChecklist": [
+      "So sánh ngay hiệu quả ROAS giữa chiến dịch AI Max, Performance Max và các chiến dịch khớp từ khóa truyền thống",
+      "Kích hoạt báo cáo Generative AI trong Google Search Console và AI performance insights trong Merchant Center để theo dõi thị phần hiển thị",
+      "Bổ sung 8 thuộc tính nguồn cung cấp sản phẩm trong Merchant Center để tối ưu hóa dữ liệu xuất hiện trên Shopping Graph",
+      "Ngừng phân bổ nguồn lực cho việc tạo tệp llms.txt hoặc tối ưu lại văn bản riêng cho AI do Google hoàn toàn bỏ qua các yếu tố này"
+    ],
+    "id": "real-2026-08-26-google-ai-mode-co-4996ed",
+    "publishedAt": "26/08/2026",
+    "sourceUrl": "https://ppc.land/ai-mode/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/size/w1200/2026/08/google-ai-mode.webp",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Video",
+    "title": "Lý do chạy quảng cáo YouTube theo tư duy Google Search khiến doanh nghiệp đốt sạch ngân sách",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "YouTube Ads",
+      "Google Ads",
+      "Đo lường Attribution",
+      "Tối ưu Quảng cáo"
+    ],
+    "summary": "Áp dụng tư duy quảng cáo tìm kiếm hoặc mạng xã hội lên YouTube Ads là nguyên nhân chính khiến doanh nghiệp lãng phí ngân sách mà không thu lại kết quả. Bài viết chỉ ra bốn lỗ hổng vận hành lớn khiến chiến dịch video thất bại và cập nhật các công cụ đo lường mới từ Google để đánh giá đúng giá trị kênh.",
+    "keyNumbers": [
+      {
+        "value": "29/06/2026",
+        "label": "Google ra mắt toàn cầu chỉ số Attributed Branded Searches"
+      },
+      {
+        "value": "14 - 30 ngày",
+        "label": "Cửa sổ gia tăng truy cập trực tiếp và tìm kiếm thương hiệu"
+      },
+      {
+        "value": "Tháng 4/2026",
+        "label": "Ra mắt tính năng tối ưu chuyển đổi view-through cho Demand Gen"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Sai lầm khi đo lường YouTube bằng mô hình Last-Click",
+        "body": "Search bắt trúng nhu cầu trực tiếp, Meta khai thác hành vi lướt bảng tin, còn YouTube can thiệp vào phiên xem video mà người dùng chủ động lựa chọn. Người xem bị hấp dẫn bởi quảng cáo YouTube ít khi dừng video để mua hàng ngay trên màn hình. Hiệu quả của YouTube thường xuất hiện ở giai đoạn sau thông qua việc gia tăng lượt truy cập trực tiếp và lưu lượng tìm kiếm thương hiệu trong 14 đến 30 ngày. Nếu bảng báo cáo chỉ dựa vào mô hình chuyển đổi nhấp chuột cuối cùng (last-click), chiến dịch YouTube sẽ bị đánh giá thất bại dù thực tế đang đóng góp doanh số cho các kênh khác."
+      },
+      {
+        "heading": "Cập nhật các chỉ số đo lường gián tiếp mới từ Google Ads",
+        "body": "Google đã phát hành toàn cầu chỉ số báo cáo Attributed Branded Searches vào ngày 29/06/2026 sau thời gian thử nghiệm beta. Công cụ này theo dõi số lượng người dùng sau khi xem quảng cáo đã thực hiện tìm kiếm từ khóa thương hiệu trong khung thời gian từ 1 đến 30 ngày. Dữ liệu từ Google chứng minh mỗi lượt tìm kiếm thương hiệu gia tăng đều gắn liền với việc gia tăng doanh số bán hàng. Trước đó vào tháng 4/2026, chiến dịch Demand Gen đã bổ sung tính năng tối ưu hóa chuyển đổi qua lượt xem (view-through), giúp hệ thống ưu tiên đấu giá theo lượt xem thay vì bắt buộc người dùng nhấp vào quảng cáo."
+      },
+      {
+        "heading": "Lãng phí chi phí do bê nguyên video từ TikTok và Reels sang YouTube",
+        "body": "Tái sử dụng video từ TikTok, Instagram Reels hoặc quảng cáo Meta lên YouTube là nguyên nhân phổ biến gây lãng phí ngân sách. Môi trường bảng tin mạng xã hội hoạt động dựa trên hành vi lướt thụ động và tắt âm thanh, trong khi người xem YouTube chủ động bật tiếng và chờ mốc 5 giây để bấm bỏ qua. Khung sáng tạo chuẩn cho YouTube đòi hỏi bộ lọc 3 giây đầu tiên để nêu rõ vấn đề, giúp giữ chân khách hàng mục tiêu và để khách hàng không phù hợp bấm bỏ qua nhằm tiết kiệm chi phí. Ngoài ra, lời kêu gọi hành động phải được phát ra bằng giọng nói ngay trong video thay vì chờ đến màn hình kết thúc."
+      },
+      {
+        "heading": "Ngân sách thử nghiệm quá nhỏ và thông điệp quá phức tạp",
+        "body": "Thuật toán đấu giá của Google đòi hỏi mật độ dữ liệu tương tác đủ lớn để xác định chính xác tập khách hàng phản hồi với thông điệp. Việc thử nghiệm với ngân sách quá nhỏ khiến hệ thống không thể thoát khỏi giai đoạn học (calibration), gây ra biến động chi phí trên mỗi hành động và đưa ra kết luận sai về kênh. Bên cạnh đó, nội dung quảng cáo không được gây gánh nặng tâm lý cho người xem với thông điệp phức tạp hay quá nhiều lợi ích chồng chéo. Thương hiệu cần chỉ ra điểm đau trong dưới 2 giây, hứa hẹn một kết quả duy nhất và chuẩn bị trang đích mượt mà để tiếp nhận lưu lượng truy cập."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing cần thay đổi cách đánh giá và phân bổ ngân sách cho YouTube Ads, chuyển từ tư duy săn tìm nhấp chuột ngắn hạn sang xây dựng nhu cầu dài hạn và đo lường thông qua các chỉ số tìm kiếm thương hiệu và chuyển đổi hiển thị.",
+    "ifIgnored": "Doanh nghiệp sẽ tiếp tục đốt ngân sách cho các đợt thử nghiệm YouTube quy mô nhỏ không thu được tín hiệu dữ liệu, vội vã cắt bỏ một kênh video tiềm năng hoặc đánh giá sai hiệu quả đóng góp của YouTube vào tổng doanh thu toàn hệ thống.",
+    "actionChecklist": [
+      "Kích hoạt và theo dõi chỉ số Attributed Branded Searches trên Google Ads để ghi nhận lượt tìm kiếm thương hiệu phát sinh từ YouTube.",
+      "Bật tính năng View-through Conversion Optimization cho các chiến dịch Demand Gen để tối ưu hóa giá thầu theo hiển thị.",
+      "Thiết kế lại nội dung video dành riêng cho YouTube với bộ lọc 3 giây đầu và lời kêu gọi hành động bằng âm thanh trực tiếp trong video.",
+      "Cấp đủ quy mô ngân sách thử nghiệm giúp thuật toán Google có đủ mật độ dữ liệu vượt qua giai đoạn học ban đầu."
+    ],
+    "id": "real-2026-08-26-ly-do-chay-quang-a06863",
+    "publishedAt": "26/08/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/why-running-youtube-ads-like-search-will-burn-your-budget/584794/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/08/youtube-ads-219.png",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
     "category": "Google Ads & SEO",
     "platformIcon": "Search",
     "title": "Tên miền .org và .store đạt hiệu quả doanh thu thương mại điện tử vượt trội so với .com",
@@ -191,69 +380,6 @@
   {
     "category": "AI Marketing",
     "platformIcon": "Sparkles",
-    "title": "Báo cáo Pew ghi nhận 10% trang web chứa dấu vết nội dung do AI tạo ra",
-    "isHot": false,
-    "illustration": "ai-label",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "AI Content",
-      "Nghiên cứu Pew",
-      "Chất lượng website",
-      "Tối ưu SEO"
-    ],
-    "summary": "Nghiên cứu mới từ Trung tâm Nghiên cứu Pew cho thấy 10% số trang web được khảo sát có dấu hiệu do AI viết hoặc chỉnh sửa. Tỷ lệ này tăng vọt lên 35% đối với các nội dung xuất bản sau khi ChatGPT ra mắt, đặc biệt tập trung cao ở nhóm tên miền thương mại .com.",
-    "keyNumbers": [
-      {
-        "value": "10%",
-        "label": "Trang web chứa dấu vết AI"
-      },
-      {
-        "value": "35%",
-        "label": "Trang đăng sau ChatGPT có dấu vết AI"
-      },
-      {
-        "value": "9,35%",
-        "label": "Tỷ lệ dấu vết AI trên tên miền .com"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Tỷ lệ nội dung AI bùng nổ trên các tên miền thương mại",
-        "body": "Nghiên cứu từ Trung tâm Nghiên cứu Pew trên gần nửa triệu trang web vào tháng 7/2026 cho thấy dấu vết AI xuất hiện ở 10% tổng số trang. Đối với các trang đăng tải sau khi ChatGPT ra mắt, tỷ lệ này lên tới 35%. Đáng chú ý, các trang web có tên miền .com ghi nhận tỷ lệ dấu vết AI trung bình trong 6 tháng là 9,35%. Con số này cao hơn nhiều so với tên miền .org ở mức 4,59%, .edu đạt 1,03% và .gov dừng ở mức 0,76%. Trước khi ChatGPT xuất hiện, cả 4 loại tên miền này đều giữ tỷ lệ ở mức hoặc dưới 1%."
-      },
-      {
-        "heading": "Các dấu hiệu ngôn ngữ đặc trưng của AI gia tăng mạnh",
-        "body": "Pew đã phân tích các dấu hiệu nhận biết cụ thể trên các trang web xuất bản sau khi ChatGPT phát hành. Tần suất sử dụng dấu gạch ngang dài em dash đã tăng từ 5,79 lần trên 10.000 từ vào đầu năm 2023 lên 11,19 lần vào đầu năm 2026. Dấu phẩy Oxford ghi nhận mức tăng 63% trong cùng khoảng thời gian. Các từ ngữ phổ biến trong văn bản AI như delve, interplay và testament cũng gia tăng hơn gấp đôi. Ngoài ra, cấu trúc đối lập phủ định tăng từ 0,87 lên 2,36 lần trên 10.000 trang."
-      },
-      {
-        "heading": "Sự khác biệt về số liệu giữa các báo cáo độc lập",
-        "body": "Báo cáo từ Pew không phải là nghiên cứu duy nhất công bố con số về nội dung AI trên mạng. Công ty SEO Graphite ước tính rằng 49,9% các bài báo tiếng Anh mới xuất bản trong quý 1 năm 2026 chủ yếu do AI tạo ra. Trong khi đó, nghiên cứu sơ bộ từ Imperial College London, Internet Archive và Stanford chỉ ra rằng đến giữa năm 2025 có 35% trang web mới được phát hiện là tạo bằng AI hoặc có sự hỗ trợ của AI. Tất cả các ước tính này đều dựa trên công cụ Pangram ở một dạng nào đó, riêng Graphite sử dụng thêm Copyleaks và GPTZero."
-      },
-      {
-        "heading": "Ranh giới mờ nhạt giữa hỗ trợ chỉnh sửa và tạo tự động",
-        "body": "Công cụ chỉnh sửa AI hiện đã trở thành tính năng tích hợp sẵn trong Google Docs và Microsoft Word. Tiêu chuẩn đánh giá của Pew gộp chung cả văn bản do con người viết nhưng được tối ưu bằng công cụ AI vào cùng nhóm với nội dung do AI tạo ra từ đầu đến cuối. Các nghiên cứu hiện tại chưa thể phân tách rõ ràng giữa hai hình thức này. Việc một trang web có chính xác, hữu ích và đáng xuất bản hay không vẫn phụ thuộc vào quá trình kiểm duyệt thực tế."
-      }
-    ],
-    "impact": "Sự gia tăng mạnh của dấu vết văn bản AI trên tên miền thương mại .com làm tăng rủi ro các bài viết marketing bị thuật toán tìm kiếm đánh giá là nội dung rác hoặc thiếu giá trị độc bản. Trưởng phòng Marketing cần kiểm soát chặt chẽ quy trình biên tập để duy trì uy tín thương hiệu và tính chính xác của thông tin.",
-    "ifIgnored": "Nếu thả nổi cho đội ngũ sản xuất nội dung lạm dụng AI tạo bài hàng loạt mà không biên tập lại kỹ lưỡng, doanh nghiệp đối mặt với rủi ro giảm thứ hạng SEO, làm mất niềm tin của khách hàng và lãng phí ngân sách vào những bài viết mang giọng văn máy móc.",
-    "actionChecklist": [
-      "Xây dựng quy trình kiểm duyệt thủ công đối với mọi bài viết SEO và content marketing trước khi xuất bản.",
-      "Rà soát loại bỏ các từ ngữ và cấu trúc câu đặc trưng của AI như delve, interplay hoặc dạng đối lập phủ định.",
-      "Đào tạo đội ngũ content sử dụng AI như công cụ hỗ trợ gợi ý ý tưởng thay vì tạo bài viết hoàn chỉnh.",
-      "Đánh giá lại chất lượng các trang web thuộc tên miền .com của doanh nghiệp để đảm bảo tính hữu ích và độ chính xác."
-    ],
-    "id": "real-2026-08-24-bao-cao-pew-ghi-7b31e2",
-    "publishedAt": "24/08/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/1-in-10-webpages-shows-signs-of-ai-authorship-pew-reports/586883/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/08/pew-ai-authorship-featured-1600x840-1.jpg",
-      "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
-    "category": "AI Marketing",
-    "platformIcon": "Sparkles",
     "title": "Báo cáo ChatGPT Ads: Ngành bán lẻ chiếm 39% quảng cáo và cơ chế hiển thị đơn vị duy nhất",
     "isHot": false,
     "illustration": "ai-budget",
@@ -436,69 +562,6 @@
   {
     "category": "AI Marketing",
     "platformIcon": "Sparkles",
-    "title": "Nghiên cứu cho thấy 85,6% địa điểm kinh doanh hoàn toàn vô hình trước ChatGPT và Gemini",
-    "isHot": false,
-    "illustration": "data-signal",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "AI Search",
-      "GEO",
-      "Local SEO",
-      "Tối ưu thương hiệu"
-    ],
-    "summary": "Một kiểm toán diện rộng trên 4.776 địa điểm kinh doanh dịch vụ ăn uống tại Bali tiết lộ 85,6% cơ sở chưa từng được bất kỳ hệ thống AI nào đề xuất qua 2.208 lượt truy vấn. Nghiên cứu chỉ ra việc sở hữu website riêng giúp tăng 1,92x khả năng được AI đề xuất, trong khi điểm số đánh giá sao không có tác dụng ở bước lọc ban đầu.",
-    "keyNumbers": [
-      {
-        "value": "85,6%",
-        "label": "Địa điểm hoàn toàn bị AI bỏ qua"
-      },
-      {
-        "value": "1,92x",
-        "label": "Tỷ lệ cơ hội tăng lên khi có website"
-      },
-      {
-        "value": "72,6%",
-        "label": "Tỷ lệ vô hình ở nhóm có trên 50 đánh giá"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Hiện trạng vô hình của doanh nghiệp trên công cụ tìm kiếm AI",
-        "body": "Nghiên cứu khảo sát toàn bộ 4.776 địa điểm kinh doanh dịch vụ ăn uống để đo lường khả năng hiển thị trên bốn hệ thống AI gồm ChatGPT, Gemini, Claude và Perplexity. Kết quả cho thấy 85,6% địa điểm không bao giờ được xuất hiện trong bất kỳ câu trả lời nào qua 2.208 lần truy vấn. Ngay cả đối với nhóm 2.173 doanh nghiệp lâu năm có ít nhất 50 lượt đánh giá trên Google, tỷ lệ bị AI bỏ qua vẫn ở mức cao là 72,6%. Sự xuất hiện trên AI không tuân theo quy tắc người thắng ăn tất mà mở rộng cho các đơn vị vượt qua bộ lọc ban đầu."
-      },
-      {
-        "heading": "Website riêng là tín hiệu quan trọng nhất để vượt qua bộ lọc đầu vào",
-        "body": "Nghiên cứu xác định hai tầng hoạt động riêng biệt của AI là khả năng được chọn và thứ hạng hiển thị. Ở tầng lọc đầu vào, việc sở hữu một website riêng làm tăng tỷ lệ cơ hội được đưa vào câu trả lời lên 1,92x. Bên cạnh đó, số lượng đánh giá làm tăng cơ hội thêm 1,64 lần trên mỗi độ lệch chuẩn, thông tin giá niêm yết tăng 1,54 lần và số lượt nhắc đến trên web tăng 1,44 lần. Ngược lại, điểm số đánh giá sao trung bình không cho thấy mối liên hệ nào với việc hệ thống có hiển thị địa điểm đó hay không."
-      },
-      {
-        "heading": "Điểm xếp hạng sao chỉ có tác dụng khi cạnh tranh vị trí top đầu",
-        "body": "Khi phân tích 1.855 lượt truy vấn đề xuất từ hai địa điểm trở lên, quy luật hiển thị đã thay đổi hoàn toàn. Trong tập lựa chọn này, điểm số đánh giá sao bắt đầu phát huy tác dụng dự đoán vị trí xếp đầu tiên với mức tăng 1,17 lần trên mỗi độ lệch chuẩn. Khối lượng bài viết đánh giá từ các tên miền báo chí và blog cũng trở thành yếu tố tích cực với mức tăng 1,23 lần cho vị trí số một. Điều này chứng minh rằng dữ liệu cấu trúc và website giúp doanh nghiệp đi qua cửa kiểm duyệt, trong khi điểm số sao mới quyết định thứ hạng."
-      },
-      {
-        "heading": "Rủi ro từ dữ liệu sai lệch và thông tin địa điểm đã đóng cửa",
-        "body": "Các hệ thống AI vẫn gặp tình trạng đưa ra thông tin không chính xác hoặc lỗi thời trong quá trình tổng hợp dữ liệu. Trong 2.208 lượt chạy thử nghiệm, bốn công cụ AI đã xướng tên 14 doanh nghiệp đã đóng cửa tổng cộng 93 lần. Điều này cho thấy AI dựa vào thông tin trích xuất từ web nhưng chưa thể xác minh chính xác trạng thái hoạt động thực tế theo thời gian thực. Do đó, các thương hiệu cần đảm bảo tính đồng bộ dữ liệu trên mọi nền tảng để tránh bị loại bỏ hoặc cung cấp thông tin sai."
-      }
-    ],
-    "impact": "Thay đổi tư duy làm SEO và hiển thị thương hiệu: chỉ tập trung vào điểm đánh giá sao trên Google Maps là không đủ để xuất hiện trong các câu trả lời của ChatGPT hay Gemini. Doanh nghiệp bắt buộc phải sở hữu website riêng và tăng độ phủ thông tin trên các trang tin tức, blog để AI có thể quét và trích xuất dữ liệu.",
-    "ifIgnored": "Doanh nghiệp có nguy cơ bị cắt đứt hoàn toàn khỏi luồng khách hàng tìm kiếm qua trợ lý AI, biến mất khỏi 85,6% kết quả tư vấn tự động dù điểm đánh giá sao trên mạng xã hội hay bản đồ có cao đến đâu.",
-    "actionChecklist": [
-      "Xây dựng và tối ưu website riêng để cung cấp dữ liệu cấu trúc cho các bot tìm kiếm AI",
-      "Cập nhật đầy đủ thông tin giá cả và chi tiết dịch vụ trên website cùng các nền tảng niêm yết",
-      "Gia tăng lượng nhắc đến thương hiệu trên các trang báo, blog và diễn đàn chuyên ngành",
-      "Khai thác chiến lược gia tăng số lượng lượt đánh giá thay vì chỉ tập trung duy trì điểm số sao"
-    ],
-    "id": "real-2026-08-23-nghien-cuu-cho-thay-1df219",
-    "publishedAt": "23/08/2026",
-    "sourceUrl": "https://ppc.land/chatgpt-and-gemini-miss-85-6-of-balis-4-776-audited-food-venues/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/size/w1200/2026/08/business-locations.webp",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
-    "category": "AI Marketing",
-    "platformIcon": "Sparkles",
     "title": "Ann Taylor hồi sinh thương hiệu bằng Substack và chiến dịch đa kênh sau gần một thập kỷ",
     "isHot": false,
     "illustration": "crm-automation",
@@ -554,69 +617,6 @@
     "image": {
       "url": "https://imgproxy.divecdn.com/bX6Qk3XmIucndTNdFDFbpJEl5QomXRl-J-K9HlEqpU4/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9UaGlzLUlzLUFubi1GYWxsLTIwMjYtQ29sbGVjdGlvbi5qcGc=.webp",
       "credit": "Ảnh: Marketing Dive"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Nội dung cho AI Search: Tại sao câu trả lời phải nằm ngay câu đầu tiên",
-    "isHot": false,
-    "illustration": "zero-click",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Google AI Mode",
-      "SEO Content",
-      "AI Overviews",
-      "AEO Strategy"
-    ],
-    "summary": "Dữ liệu từ Google AI Mode cho thấy hành vi tìm kiếm đã chuyển đổi từ việc nhập từ khóa ngắn sang đặt các câu hỏi dài và phức tạp. Việc giữ cấu trúc bài viết dông dài truyền thống khiến website mất cơ hội xuất hiện trong các bản tóm tắt AI Overviews. Doanh nghiệp cần tái cấu trúc nội dung theo mô hình tháp ngược để cung cấp câu trả lời ngay lập tức cho thuật toán.",
-    "keyNumbers": [
-      {
-        "value": "Gấp 3 lần",
-        "label": "Độ dài truy vấn AI Mode tại Mỹ so với tìm kiếm truyền thống"
-      },
-      {
-        "value": "80%",
-        "label": "Mức tăng trưởng của nhóm truy vấn Do trong 6 tháng qua"
-      },
-      {
-        "value": "> 40%",
-        "label": "Mức tăng trưởng hàng tháng của truy vấn hình ảnh và câu hỏi nối tiếp"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Sự thay đổi bản chất của truy vấn tìm kiếm AI",
-        "body": "Dữ liệu một năm từ AI Mode cho thấy người dùng không còn gõ các từ khóa rời rạc mà chuyển sang đặt câu hỏi hoàn chỉnh. Truy vấn AI Mode trung bình tại Mỹ hiện dài gấp 3 lần so với tìm kiếm truyền thống. Hơn 1 trong 6 lượt tìm kiếm AI Mode hiện bao gồm các yếu tố ngoài văn bản như hình ảnh, giọng nói hoặc hội thoại tương tác. Các từ bắt đầu phổ biến nhất hiện nay là What, how, I, is và can chứ không phải các danh từ ngắn. Người dùng đang tìm kiếm theo cách giao tiếp tự nhiên tương tự như trò chuyện với người khác."
-      },
-      {
-        "heading": "Sự trỗi dậy của 5 nhóm hành vi dựa trên động từ",
-        "body": "Báo cáo của Google phân loại hành vi tìm kiếm AI thành 5 nhóm động từ chính gồm Explore, Decide, Learn, Create và Do. Nhóm truy vấn Explore tăng trưởng nhanh hơn 30% so với tổng lưu lượng AI Mode, trong khi nhóm Decide dựa trên các từ so sánh tăng nhanh hơn 40%. Nhóm truy vấn Do liên quan đến lập kế hoạch tăng trưởng nhanh hơn 80% trong 6 tháng qua. Các truy vấn tạo hình ảnh cũng đã tăng hơn gấp 3 lần kể từ đầu năm. Những hành vi này không khớp với một từ khóa đơn lẻ mà gắn liền với một tác vụ cụ thể của người dùng."
-      },
-      {
-        "heading": "Cấu trúc nội dung Lead-First thay thế lối dẫn dắt truyền thống",
-        "body": "Việc giấu câu trả lời chính trong các đoạn văn dài để kéo dài thời gian trên trang đang khiến website mất lợi thế trước các hệ thống tổng hợp tự động. Tương tự như ngành điện báo giai đoạn 1880-1890 buộc phải đưa tin quan trọng lên đầu do giới hạn chi phí, các cỗ máy tìm kiếm tạo sinh hiện nay cũng hoạt động dưới các giới hạn tính toán khắt khe. Trưởng phòng Marketing cần yêu cầu đội ngũ dừng việc ẩn giấu thông tin cốt lõi đằng sau những đoạn mở bài lan man. Trình bày kết luận ngay ở câu đầu tiên sẽ giúp hệ thống AI dễ dàng trích xuất dữ liệu chính xác và tránh bị ảo giác."
-      },
-      {
-        "heading": "Các bước tái cấu trúc nội dung cho mô hình AI Search",
-        "body": "Quy trình sản xuất nội dung cần chuyển dịch từ tối ưu từ khóa sang tối ưu cho chuỗi câu hỏi nối tiếp và nội dung đa phương thức. Do các câu hỏi nối tiếp và truy vấn bằng hình ảnh đều tăng trưởng hơn 40% mỗi tháng, một bài viết phải giải quyết được cả câu hỏi thứ hai và thứ ba của người đọc. Mỗi đoạn văn nên có độ dài trung bình từ 2 đến 3 câu và kết hợp các bảng biểu hoặc danh sách có cấu trúc. Việc xác định rõ bài viết thuộc nhóm động từ nào trong 5 nhóm hành vi sẽ giúp định hình cấu trúc chính xác. Đồng thời, hình ảnh và nội dung đa phương thức phải được xem là một tín hiệu xếp hạng trực tiếp."
-      }
-    ],
-    "impact": "Giúp Trưởng phòng Marketing tái định hướng chiến lược SEO và sản xuất nội dung, chuyển từ việc tối ưu danh sách từ khóa đơn lẻ sang cấu trúc dữ liệu đáp ứng trực tiếp các truy vấn phức tạp của AI Overviews, bảo vệ lưu lượng truy cập hữu cơ của doanh nghiệp.",
-    "ifIgnored": "Doanh nghiệp tiếp tục tốn ngân sách cho bài viết dông dài nhưng sẽ bị các công cụ AI bỏ qua, không trích xuất nguồn, dẫn đến sụt giảm nghiêm trọng lưu lượng organic traffic và giảm độ nhận diện thương hiệu trên các nền tảng tìm kiếm thế hệ mới.",
-    "actionChecklist": [
-      "Đặt câu trả lời cốt lõi, số liệu hoặc kết luận chính ngay câu đầu tiên của mỗi đoạn nội dung.",
-      "Rút ngắn các đoạn văn xuống trung bình 2 đến 3 câu, bổ sung bảng biểu và danh sách có cấu trúc.",
-      "Cấu trúc nội dung để giải đáp các câu hỏi nối tiếp (follow-up) thay vì chỉ trả lời câu hỏi đầu tiên.",
-      "Thay đổi brief nội dung theo 5 động từ hành vi (Explore, Decide, Learn, Create, Do) thay vì tập trung vào head keywords."
-    ],
-    "id": "real-2026-08-21-noi-dung-cho-ai-3871bc",
-    "publishedAt": "21/08/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/ai-mode-queries-are-3x-longer-the-case-for-leading-with-the-answer/585990/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/08/ai-overviews-425.png",
-      "credit": "Ảnh: Search Engine Journal"
     }
   },
   {
