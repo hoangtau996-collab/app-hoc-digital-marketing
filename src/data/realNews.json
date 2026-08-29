@@ -2,6 +2,200 @@
   {
     "category": "Google Ads & SEO",
     "platformIcon": "Search",
+    "title": "Google cập nhật giao dịch trực tiếp trên AI Mode và mở rộng theo dõi giá tại 180 quốc gia",
+    "isHot": false,
+    "illustration": "zero-click",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Google AI Mode",
+      "Zero Click",
+      "Google Ads",
+      "Agentic Commerce"
+    ],
+    "summary": "Google vừa chính thức tích hợp ba tính năng giao dịch mới vào AI Mode trong Search, bao gồm theo dõi giá vé máy bay tại hơn 180 quốc gia và hoàn tất đặt phòng khách sạn trực tiếp qua Google Pay với 10 đối tác tại Mỹ. Bước đi này đánh dấu sự chuyển dịch mạnh mẽ từ việc trả lời truy vấn sang trực tiếp xử lý giao dịch ngay trên giao diện tìm kiếm. Sự thay đổi này tác động trực tiếp tới hành vi tìm kiếm, tỷ lệ nhấp chuột và mô hình chuyển đổi quảng cáo.",
+    "keyNumbers": [
+      {
+        "value": "180+",
+        "label": "quốc gia hỗ trợ theo dõi giá"
+      },
+      {
+        "value": "10",
+        "label": "đối tác tích hợp đặt phòng tại Mỹ"
+      },
+      {
+        "value": "63,3 tỷ USD",
+        "label": "doanh thu quảng cáo Q2/2026"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Tích hợp tính năng giao dịch trực tiếp vào AI Mode",
+        "body": "Ngày 27/08/2026, Google bổ sung ba tính năng giao dịch mới vào giao diện AI Mode trong Tìm kiếm. Người dùng hiện có thể thiết lập cảnh báo và theo dõi giá vé máy bay tại hơn 180 quốc gia và vùng lãnh thổ dựa trên dữ liệu từ hơn 300 đối tác. Bên cạnh đó, tính năng hiển thị chi phí quy đổi bằng điểm thưởng được triển khai toàn cầu cho 5 chương trình khách hàng thân thiết. Đáng chú ý nhất là quy trình thanh toán đặt phòng khách sạn trực tiếp qua Google Pay đã bắt đầu ra mắt thử nghiệm tại Mỹ."
+      },
+      {
+        "heading": "Cơ chế hoạt động của tính năng đặt phòng khách sạn",
+        "body": "Khi truy vấn về khách sạn, AI Mode sẽ trả về danh sách tùy chọn trực quan kèm đánh giá của khách hàng và các yếu tố so sánh. Tùy chọn Tiếp tục trên Google sẽ xuất hiện bên cạnh các đối tác tích hợp như Booking.com, Expedia hay Marriott International. Người dùng chọn loại phòng, xem chính sách hủy và thực hiện thanh toán bằng Google Pay ngay trên hệ sinh thái của Google. Trong mô hình này, các khách sạn hoặc sàn đặt phòng đóng vai trò người bán ghi nhận giao dịch và chịu trách nhiệm chăm sóc khách hàng."
+      },
+      {
+        "heading": "Nền tảng kỹ thuật đẩy mạnh Agentic Commerce",
+        "body": "Quy trình thanh toán mới dựa trên nền tảng Agentic Checkout được Google giới thiệu từ ngày 13/11/2025. Nền tảng này ứng dụng Giao thức Thương mại Toàn cầu được phát triển từ ngày 11/01/2026 hợp tác cùng Shopify, Etsy, Target và Walmart. Giao thức hỗ trợ các đại lý AI phát hiện sản phẩm và tự động hoàn tất giao dịch cho người dùng. Google đã vạch sẵn lộ trình mở rộng giao thức này sang mảng du lịch và dịch vụ từ sự kiện Google Marketing Live ngày 20/05/2026."
+      },
+      {
+        "heading": "Sự áp đảo của tìm kiếm không nhấp chuột và rào cản pháp lý",
+        "body": "Việc triển khai đặt phòng trực tiếp diễn ra trong bối cảnh Ủy ban Châu Âu phạt Google 460 triệu euro vào ngày 23/07/2026 vì hành vi tự ưu tiên dịch vụ. Quyết định này kèm thời hạn 60 ngày tuân thủ cùng mức phạt định kỳ tới 5% doanh thu toàn cầu. Nghiên cứu cho thấy các khách sạn tại vùng DMA chịu mức giảm 30% lượt nhấp và 36% lượt đặt phòng trực tiếp so với các khu vực khác. Điều này cho thấy xu hướng người dùng hoàn tất hành vi ngay trên kết quả tìm kiếm thay vì truy cập website doanh nghiệp."
+      },
+      {
+        "heading": "Tác động tới bức tranh chi tiêu quảng cáo tìm kiếm",
+        "body": "Du lịch và thương mại là những ngành chiếm tỷ trọng ngân sách lớn nhất trong mảng quảng cáo tìm kiếm trả phí. Báo cáo của Alphabet ghi nhận doanh thu quảng cáo Tìm kiếm đạt 63,3 tỷ USD trong quý 2 năm 2026, tăng 17% so với cùng kỳ. Việc Quảng cáo Mua sắm xuất hiện trong AI Mode từ ngày 11/02/2026 kết hợp với các tính năng thanh toán trực tiếp cho thấy Google đang chuyển mình thành một nền tảng bán hàng trực diện."
+      }
+    ],
+    "impact": "Xu hướng Zero-click và Agentic Checkout của Google sẽ làm giảm lượng truy cập tự nhiên lẫn lượt nhấp từ quảng cáo về website. Trưởng phòng Marketing cần chuyển dịch trọng tâm sang việc tối ưu hóa dữ liệu nguồn cấp (feed) để xuất hiện trực tiếp trong luồng giao dịch AI thay vì chỉ tối ưu landing page truyền thống.",
+    "ifIgnored": "Doanh nghiệp sẽ mất dần hiển thị ở điểm chạm cuối của hành trình mua hàng khi AI Mode trực tiếp xử lý giao dịch, dẫn đến suy giảm tỷ lệ chuyển đổi và lãng phí chi phí quảng cáo thu hút truy cập.",
+    "actionChecklist": [
+      "Đánh giá lại cấu trúc chiến dịch Google Ads để đo lường biến động của tỷ lệ nhấp chuột (CTR) và chi phí trên mỗi chuyển đổi.",
+      "Chuẩn hóa và cập nhật liên tục dữ liệu sản phẩm, dịch vụ và nguồn cấp dữ liệu để sẵn sàng kết nối với hệ sinh thái AI.",
+      "Tối ưu hóa quy trình thanh toán trên website bằng các phương thức thanh toán nhanh như Google Pay.",
+      "Xây dựng chiến lược thương hiệu trực tiếp nhằm duy trì luồng khách hàng trung thành không phụ thuộc vào công cụ tìm kiếm."
+    ],
+    "id": "real-2026-08-28-google-cap-nhat-giao-9133ce",
+    "publishedAt": "28/08/2026",
+    "sourceUrl": "https://ppc.land/google-ai-mode-completes-hotel-bookings-with-10-partners-in-us-rollout/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/size/w1200/2026/08/google-hotel.webp",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "Meta Ads",
+    "platformIcon": "Facebook",
+    "title": "Meta cập nhật Facebook Login với tính năng một chạm và tự động chuyển ứng dụng",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Facebook Login",
+      "Meta Ads",
+      "First-Party Data",
+      "SDK Update"
+    ],
+    "summary": "Meta vừa đưa bộ cập nhật đăng nhập Facebook Login vào phiên bản thử nghiệm thử nghiệm mở (open beta) từ ngày 27/08/2026. Thay đổi này tập trung giảm ma sát đăng nhập trên Android, Web và iOS, trực tiếp ảnh hưởng đến tỷ lệ thu thập dữ liệu định danh người dùng cho các chiến dịch quảng cáo.",
+    "keyNumbers": [
+      {
+        "value": "18.3.0",
+        "label": "Phiên bản Android SDK tối thiểu hỗ trợ tính năng SSO một chạm"
+      },
+      {
+        "value": "18.0.3",
+        "label": "Phiên bản iOS SDK bắt đầu mặc định bật chuyển ứng dụng Fast App Switch"
+      },
+      {
+        "value": "10 tỷ US dollars",
+        "label": "Mức thiệt hại Meta từng ước tính vào Q4 2021 do chính sách Apple ATT"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Đăng nhập một chạm SSO trên Android và Web",
+        "body": "Meta giới thiệu tính năng Single Sign On cho phép người dùng đã đăng nhập Facebook xác nhận truy cập ứng dụng hoặc website chỉ bằng một lần chạm. Trên Android, nhà phát triển cần cập nhật SDK lên phiên bản 18.3.0 hoặc mới hơn, gọi API SSO và khai báo trong tệp AndroidManifest.xml. Trên nền tảng web, tính năng này chạy qua API FedCM nhằm quản lý đăng nhập không phụ thuộc vào cookie bên thứ ba. Trình duyệt sẽ tự hiển thị giao diện chọn tài khoản và chỉ kết nối với Meta khi người dùng đồng ý."
+      },
+      {
+        "heading": "Tự động làm mới dữ liệu Limited Login trên iOS",
+        "body": "Chế độ Limited Login ra đời từ tháng 1/2021 dựa trên chuẩn OpenID Connect nhằm tuân thủ chính sách riêng tư iOS 14.5 của Apple. Do không sử dụng token truy cập dài hạn, thông tin hồ sơ và mã xác thực của người dùng thường bị cũ theo thời gian. Tính năng Limited Login Data Refresh mới giúp tự động làm mới phiên làm việc ngay khi ứng dụng quay lại màn hình chính. Giải pháp này giúp cập nhật dữ liệu người dùng đồng bộ mà không cần bắt họ phải thao tác đăng nhập lại từ đầu."
+      },
+      {
+        "heading": "Tự động chuyển ứng dụng Fast App Switch trên iOS",
+        "body": "Tính năng Fast App Switch trên iOS cho phép chuyển người dùng sang ứng dụng Facebook gốc để hoàn tất đăng nhập thay vì mở trình duyệt trong ứng dụng. Tùy chọn này hoạt động mặc định từ phiên bản SDK 18.0.3 trở đi đối với các tài khoản không thuộc nhóm giới hạn Limited Login. Để triển khai, kỹ thuật viên cần cập nhật iOS SDK lên bản 18.1.0 hoặc cao hơn và bổ sung fbauth2 vào cấu hình Info.plist. Nếu muốn giữ lại luồng trình duyệt cũ, các đội ngũ phát triển buộc phải tắt thuộc tính appSwitch trong cấu hình."
+      },
+      {
+        "heading": "Tầm quan trọng của lớp đăng nhập đối với dữ liệu Marketing",
+        "body": "Tỷ lệ đăng nhập thành công ảnh hưởng trực tiếp đến số lượng người dùng định danh trong hệ thống dữ liệu ứng dụng. Đây là cơ sở cốt lõi để xây dựng tập khách hàng First-party data và cải thiện tỷ lệ khớp dữ liệu cho các chiến dịch quảng cáo. Việc giảm ma sát khi đăng nhập giúp duy trì khả năng định danh và đo lường chuyển đổi chính xác hơn. Ngược lại, những phiên đăng nhập bị bỏ dở qua trình duyệt sẽ làm mất dấu vết chuyển đổi của chiến dịch Meta Ads."
+      }
+    ],
+    "impact": "Tăng tỷ lệ đăng nhập thành công trên app và web, giúp mở rộng tệp dữ liệu người dùng định danh (First-party data). Việc này trực tiếp nâng cao tỷ lệ khớp dữ liệu (match rate) và tối ưu hóa hiệu quả phân bổ ngân sách cho các chiến dịch Meta Ads.",
+    "ifIgnored": "Nếu không thúc đẩy cập nhật SDK, ứng dụng sẽ bỏ lỡ cơ hội giảm ma sát cho khách hàng, khiến tỷ lệ chuyển đổi đăng nhập sụt giảm và làm gián đoạn nguồn tín hiệu dữ liệu đo lường quảng cáo do token đăng nhập bị hết hạn.",
+    "actionChecklist": [
+      "Yêu cầu đội ngũ kỹ thuật nâng cấp SDK Facebook lên bản 18.3.0 trên Android và 18.1.0 trên iOS",
+      "Khai báo bổ sung chuỗi fbauth2 trong tệp Info.plist của ứng dụng iOS",
+      "Đánh giá lại tỷ lệ chuyển đổi đăng nhập và tỷ lệ khớp tệp khách hàng First-party data hiện tại",
+      "Thống nhất quy trình giữ luồng trình duyệt hay chuyển sang app Facebook gốc cho người dùng iOS"
+    ],
+    "id": "real-2026-08-28-meta-cap-nhat-facebook-1082f1",
+    "publishedAt": "28/08/2026",
+    "sourceUrl": "https://ppc.land/facebook-login-gains-one-tap-sign-on-on-android-and-web-in-open-beta/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/size/w1200/2026/08/facebook.webp",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Google cập nhật chính sách xử lý SEO ký sinh và lạm dụng uy tín trang web",
+    "isHot": true,
+    "illustration": "data-signal",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Google SEO",
+      "Spam Policy",
+      "Parasite SEO",
+      "Search Console"
+    ],
+    "summary": "Google vừa điều chỉnh chính sách chống lạm dụng uy tín trang web và thay đổi hình thức xử lý tác vụ thủ công theo từng khu vực địa lý. Đối với người dùng ngoài khu vực EEA như Việt Nam, tác vụ thủ công vẫn tác động trực tiếp làm giảm thứ hạng tìm kiếm của các phần nội dung vi phạm. Nền tảng này cũng công bố các yếu tố cụ thể để xác định hành vi vi phạm khi đánh giá thủ công.",
+    "keyNumbers": [
+      {
+        "value": "4",
+        "label": "yếu tố đánh giá lạm dụng uy tín"
+      },
+      {
+        "value": "30/8",
+        "label": "thời điểm bắt đầu áp dụng cơ chế mới"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Thay đổi cơ chế xử lý tác vụ thủ công theo khu vực",
+        "body": "Google chính thức thay đổi cách thực thi tác vụ thủ công đối với chính sách lạm dụng uy tín trang web sau các thảo luận với Ủy ban Châu Âu. Bắt đầu từ ngày 30/8, các phạt tác vụ thủ công đối với hành vi lạm dụng uy tín sẽ ảnh hưởng trực tiếp đến kết quả tìm kiếm hiển thị cho người dùng ngoài khu vực EEA. Đối với người dùng trong EEA, tác vụ thủ công sẽ không làm giảm thứ hạng trực tiếp như trước. Hệ thống sẽ tách biệt phần trang web vi phạm để xếp hạng độc lập dựa trên giá trị tự thân của nội dung đó."
+      },
+      {
+        "heading": "Nguyên tắc đánh giá chất lượng đồng nhất trên tên miền",
+        "body": "Google đưa ra giả định rằng các trang mới được thêm vào sẽ có chất lượng chung tương đồng với toàn bộ các trang khác trên cùng tên miền. Khi phát hiện một phần trang web có dấu hiệu không tuân thủ chính sách, hệ thống sẽ đưa trang đó vào quy trình đánh giá thủ công. Tùy thuộc vào vị trí địa lý của người dùng, hậu quả đối với thứ hạng hiển thị trên trang tìm kiếm sẽ khác nhau. Với người dùng ngoài EEA, các trang bị xác định vi phạm sẽ chịu phạt tác vụ thủ công làm rớt thứ hạng hoặc biến mất khỏi kết quả tìm kiếm."
+      },
+      {
+        "heading": "Các yếu tố xác định hành vi lạm dụng uy tín trang web",
+        "body": "Mục đích của việc kiểm tra thủ công là xác định xem nội dung trên phần trang web đó có nhận được đủ sự đóng góp và kiểm duyệt biên tập từ trang chủ quản hay không. Quy trình này áp dụng trên toàn cầu và dựa trên các yếu tố khách quan như cách trình bày thiết kế, định dạng, font chữ và trải nghiệm UX có nhất quán với tên miền chính không. Google cũng xem xét chất lượng nội dung có sụt giảm bất thường so với tiêu chuẩn chung của tên miền hay không. Bên cạnh đó, mức độ rõ ràng về quyền tác giả và trách nhiệm đối với nội dung xuất bản cũng là căn cứ quan trọng."
+      },
+      {
+        "heading": "Quy trình thông báo và xử lý khi khiếu nại tác vụ thủ công",
+        "body": "Search Console vẫn sẽ gửi thông báo cho chủ sở hữu trang web khi có tác vụ thủ công được áp dụng. Doanh nghiệp có thể gửi yêu cầu xem xét lại nếu cho rằng án phạt bị áp dụng do nhầm lẫn. Các trang web đủ điều kiện trong khu vực EEA có thêm quyền đưa tranh chấp ra cơ quan hòa giải sau khi gửi yêu cầu xem xét lại. Cơ chế này giúp các nội dung kinh doanh đặc thù như casino được xếp hạng công bằng với các nội dung cùng ngành khác."
+      },
+      {
+        "heading": "Tác động đối với các chiến dịch nội dung tại Việt Nam",
+        "body": "Do Việt Nam nằm ngoài khu vực EEA, mọi tác vụ thủ công từ Google sẽ ảnh hưởng trực tiếp và ngay lập tức tới thứ hạng tìm kiếm của người dùng trong nước. Các mô hình hợp tác xuất bản, cho thuê sub-folder hoặc sub-domain để đối tác đăng bài SEO không qua kiểm duyệt sẽ chịu rủi ro rất cao. Google nhấn mạnh rằng các đợt đánh giá thủ công trực tiếp tuy hiếm nhưng khi diễn ra sẽ xem xét rất kỹ quyền kiểm soát nội dung của trang chủ quản."
+      }
+    ],
+    "impact": "Các chiến dịch SEO hợp tác hoặc đăng tải nội dung từ bên thứ ba trên tên miền của doanh nghiệp tại Việt Nam sẽ bị trừng phạt trực tiếp bằng tác vụ thủ công nếu Google phát hiện thiếu sự kiểm duyệt biên tập, gây sụt giảm lượng truy cập tự nhiên nghiêm trọng.",
+    "ifIgnored": "Trang web doanh nghiệp có nguy cơ bị gắn tác vụ thủ công trên Search Console, làm biến mất các mục nội dung vi phạm khỏi kết quả tìm kiếm của người dùng Việt Nam mà không được hưởng cơ chế tách biệt xếp hạng độc lập như các trang web tại Châu Âu.",
+    "actionChecklist": [
+      "Rà soát toàn bộ các thư mục con và tên miền phụ đang hợp tác xuất bản nội dung với bên thứ ba.",
+      "Đảm bảo chuẩn hóa giao diện UX, font chữ và định dạng nội dung đối tác đồng nhất với tên miền chính.",
+      "Bổ sung quy trình kiểm duyệt biên tập và ghi rõ quyền tác giả của trang chủ quản trên từng bài viết.",
+      "Kiểm tra mục Tác vụ thủ công trong Google Search Console định kỳ để kịp thời xử lý cảnh báo."
+    ],
+    "deadline": "30/08",
+    "id": "real-2026-08-28-google-cap-nhat-chinh-064a06",
+    "publishedAt": "28/08/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/google-updates-site-reputation-abuse-policy-removes-penalties-in-eea/587423/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/08/google-eea-seo-99.jpg",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
     "title": "Cảnh báo gia tăng tấn công website bằng AI: Nguy cơ làm sập thứ hạng SEO và lưu lượng truy cập",
     "isHot": false,
     "illustration": "account-security",
@@ -253,69 +447,6 @@
   },
   {
     "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Google AI Mode: Cơ chế vận hành, điều kiện quảng cáo với PMax và cảnh báo sụt giảm ROAS",
-    "isHot": false,
-    "illustration": "zero-click",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Google Ads",
-      "AI Mode",
-      "Performance Max",
-      "SEO"
-    ],
-    "summary": "Google AI Mode sử dụng cơ chế tách một truy vấn thành hàng trăm tìm kiếm phụ để tổng hợp thành một câu trả lời duy nhất. Nhà quảng cáo không thể chọn riêng vị trí hiển thị này mà bắt buộc phải chạy AI Max hoặc Performance Max tùy chỉnh văn bản. Mặc dù Google đẩy mạnh các định dạng mới, dữ liệu đo lường thực tế lại cho thấy hiệu quả ROAS của chiến dịch AI Max thấp hơn đáng kể so với tìm kiếm truyền thống.",
-    "keyNumbers": [
-      {
-        "value": "35%",
-        "label": "Mức sụt giảm ROAS của AI Max so với khớp từ khóa truyền thống"
-      },
-      {
-        "value": "75 triệu",
-        "label": "Lượng người dùng hoạt động hàng ngày của AI Mode khi ra mắt quảng cáo mua sắm"
-      },
-      {
-        "value": "60 tỷ",
-        "label": "Số lượng sản phẩm lưu trữ trong Shopping Graph phục vụ hiển thị AI Mode"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Cơ chế Query Fan-Out và các quy định hiển thị SEO",
-        "body": "Google AI Mode tách một câu hỏi phức tạp thành hàng chục, hàng trăm hoặc hàng nghìn truy vấn phụ diễn ra đồng thời để thu thập thông tin. Hệ thống kết hợp giữa mô hình sinh RAG và việc trích xuất dữ liệu trực tiếp từ chỉ mục tìm kiếm cốt lõi. Tài liệu hướng dẫn của Google nêu rõ các tệp llms.txt hay việc viết lại nội dung cho trí tuệ nhân tạo đều không có tác dụng tăng độ hiển thị do hệ thống hoàn toàn bỏ qua chúng. Trang web chỉ cần được lập chỉ mục chuẩn và đủ điều kiện hiển thị đoạn trích trên Google Search thông thường."
-      },
-      {
-        "heading": "Điều kiện bắt buộc và các định dạng quảng cáo mới",
-        "body": "AI Mode không phải là một vị trí hiển thị có thể chủ động chọn hoặc loại trừ theo cách cài đặt thông thường. Để xuất hiện quảng cáo tại đây, doanh nghiệp bắt buộc phải vận hành chiến dịch AI Max for Search hoặc Performance Max có bật tính năng tùy chỉnh văn bản. Google đã giới thiệu các định dạng bao gồm Conversational Discovery ads, Highlighted Answers, Direct Offers và Business Agent for Leads. Trong đó, định dạng Business Agent cho phép AI tự động trò chuyện và thu thập thông tin khách hàng tiềm năng dựa trên dữ liệu từ website của nhà quảng cáo."
-      },
-      {
-        "heading": "Cảnh báo hiệu quả ROAS và biến động lượng truy cập",
-        "body": "Dữ liệu thử nghiệm độc lập cho thấy nhà quảng cáo cần thận trọng khi triển khai các định dạng tự động mới. Phân tích từ Smarter Ecommerce trên hơn 250 chiến dịch bán lẻ cho thấy AI Max mang lại tỷ lệ hoàn vốn trên chi phí quảng cáo thấp hơn 35% so với các dạng khớp từ khóa truyền thống. Bên cạnh đó, đo lường từ Ahrefs chỉ ra tỷ lệ nhấp chuột của các trang đứng top đầu đã giảm 58% khi có sự xuất hiện của AI Overviews, tạo áp lực lớn lên lưu lượng truy cập tự nhiên."
-      },
-      {
-        "heading": "Cập nhật công cụ báo cáo và quyền kiểm soát dữ liệu",
-        "body": "Google đã bổ sung báo cáo hiệu suất Generative AI trong Search Console từ ngày 3 tháng 6 năm 2026, giúp theo dõi lượt hiển thị, số trang và thiết bị nhưng chưa chia tách riêng lượt nhấp. Đối với thương mại điện tử, Merchant Center cũng cập nhật tính năng AI performance insights từ ngày 27 tháng 5 năm 2026 tại 5 thị trường. Nhằm tuân thủ quy định pháp lý tại Anh, Google đã cung cấp công tắc tùy chọn trong Search Console từ tháng 7 năm 2026, cho phép các chủ website chủ động rút toàn bộ tên miền khỏi hiển thị trên AI Mode và AI Overviews."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing bị tước bỏ khả năng cài đặt vị trí thủ công cho AI Mode, buộc phải dùng AI Max hoặc Performance Max nếu muốn tiếp cận tệp người dùng này. Tuy nhiên, việc phụ thuộc hoàn toàn vào cơ chế tự động của AI Max có rủi ro làm giảm 35% hiệu quả ROAS so với cách thiết lập từ khóa truyền thống.",
-    "ifIgnored": "Doanh nghiệp có nguy cơ lãng phí ngân sách vào các chiến dịch AI Max kém hiệu quả mà không phân tích được nguyên nhân, đồng thời bỏ lỡ các công cụ đo lường hiển thị AI mới trong Search Console và Merchant Center.",
-    "actionChecklist": [
-      "So sánh ngay hiệu quả ROAS giữa chiến dịch AI Max, Performance Max và các chiến dịch khớp từ khóa truyền thống",
-      "Kích hoạt báo cáo Generative AI trong Google Search Console và AI performance insights trong Merchant Center để theo dõi thị phần hiển thị",
-      "Bổ sung 8 thuộc tính nguồn cung cấp sản phẩm trong Merchant Center để tối ưu hóa dữ liệu xuất hiện trên Shopping Graph",
-      "Ngừng phân bổ nguồn lực cho việc tạo tệp llms.txt hoặc tối ưu lại văn bản riêng cho AI do Google hoàn toàn bỏ qua các yếu tố này"
-    ],
-    "id": "real-2026-08-26-google-ai-mode-co-4996ed",
-    "publishedAt": "26/08/2026",
-    "sourceUrl": "https://ppc.land/ai-mode/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/size/w1200/2026/08/google-ai-mode.webp",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
     "platformIcon": "Video",
     "title": "Lý do chạy quảng cáo YouTube theo tư duy Google Search khiến doanh nghiệp đốt sạch ngân sách",
     "isHot": false,
@@ -375,132 +506,6 @@
     "image": {
       "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/08/youtube-ads-219.png",
       "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Tên miền .org và .store đạt hiệu quả doanh thu thương mại điện tử vượt trội so với .com",
-    "isHot": false,
-    "illustration": "data-signal",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "SEO Website",
-      "Tên miền Thương mại điện tử",
-      "Tỷ lệ chuyển đổi",
-      "Chiến lược tên miền"
-    ],
-    "summary": "Nghiên cứu mới từ Wix cho thấy các đuôi tên miền thay thế như .org và .store đang bứt phá mạnh mẽ về cả lượng truy cập lẫn doanh thu thương mại điện tử so với đuôi .com truyền thống. Đồng thời, sự bùng nổ của các tên miền công nghệ như .ai và .io đang mở ra xu hướng mới trong việc bảo vệ thương hiệu và tối ưu hóa chuyển đổi.",
-    "keyNumbers": [
-      {
-        "value": "34%",
-        "label": "Tỷ lệ sinh doanh thu thương mại điện tử của .org cao hơn .com"
-      },
-      {
-        "value": "10%",
-        "label": "Mức doanh thu cao hơn của tên miền .store so với .com"
-      },
-      {
-        "value": "32 lần",
-        "label": "Mức tăng trưởng đăng ký tên miền .io trong tháng 5/2026"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Tên miền .org và .store bứt phá về doanh thu thương mại điện tử",
-        "body": "Báo cáo từ Wix dựa trên dữ liệu từ năm 2025 đến năm 2026 cho thấy các trang web sử dụng tên miền .org có khả năng tạo ra doanh thu thương mại điện tử cao hơn 34% so với các trang .com. Bên cạnh đó, các website .org cũng nhận được lượng truy cập cao hơn 3% so với .com. Trong lĩnh vực bán lẻ, các trang web sử dụng tên miền .store tạo ra doanh thu cao hơn 10% so với .com. Ngoài ra, các website .store cũng mang lại doanh thu cao gấp 2 lần so me tên miền .shop hoặc .net."
-      },
-      {
-        "heading": "Sự thống trị của .com và xu hướng dịch chuyển tên miền quốc gia",
-        "body": "Tên miền .com hiện vẫn giữ vị thế áp đảo khi chiếm 82% tổng số website Wix tại Mỹ. Người tiêu dùng Mỹ có khả năng chọn đăng ký tên miền .com cao gấp 13 lần so với bất kỳ đuôi mở rộng nào khác. Tuy nhiên, tại các thị trường như Đức, Hà Lan và Thụy Sĩ, tên miền địa phương đã vượt qua .com về số lượng đăng ký. Tại Úc, Canada, Pháp và Anh, tỷ lệ đăng ký giữa tên miền quốc gia và .com đang ở mức ngang ngửa."
-      },
-      {
-        "heading": "Tên miền công nghệ .ai và .io tăng trưởng phi mã",
-        "body": "Sự gia tăng của các mô hình kinh doanh công nghệ và trí tuệ nhân tạo đã thúc đẩy nhu cầu về các đuôi tên miền chuyên biệt. Từ tháng 1 đến tháng 5/2026, lượng đăng ký tên miền .ai đã tăng 20%, trở thành đuôi tên miền phổ biến thứ 10 trong dữ liệu của Wix. Đáng chú ý hơn, lượng đăng ký tên miền .io đã tăng vọt 32 lần riêng trong tháng 5/2026. Đuôi tên miền .io ngày càng được gắn liền với các công ty công nghệ thay vì chỉ mang ý nghĩa kỹ thuật ban đầu."
-      },
-      {
-        "heading": "Chiến lược bảo vệ thương hiệu và mở rộng đuôi tên miền",
-        "body": "Số lượng đăng ký các đuôi tên miền như .store, .online và .shop đã tăng gấp đôi chỉ trong 5 tháng đầu năm 2026. Xu hướng này cho thấy người tiêu dùng ngày càng sẵn sàng trải nghiệm và thanh toán trên các trang web không dùng đuôi .com truyền thống. Doanh nghiệp cần cân nhắc mua phòng thủ các tên miền không chứa tên thương hiệu nhưng tập trung vào các từ khóa quan trọng. Chiến lược này giúp ngăn chặn nguy cơ đối thủ cạnh tranh thâu tóm các tên miền chiến lược trong cùng ngành."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing cần thay đổi tư duy phụ thuộc tuyệt đối vào đuôi .com, tận dụng các đuôi tên miền như .org, .store hay .ai để tối ưu hóa tỷ lệ chuyển đổi thương mại điện tử và gia tăng uy tín khi xây dựng hạ tầng SEO.",
-    "ifIgnored": "Doanh nghiệp đối mặt nguy cơ bị đối thủ chiếm mất các tên miền chứa từ khóa ngành tiềm năng, bỏ lỡ cơ hội gia tăng tỷ lệ chuyển đổi và tốn chi phí đắt đỏ hơn để mua lại thương hiệu trên các đuôi tên miền mới sau này.",
-    "actionChecklist": [
-      "Rà soát lại danh mục tên miền hiện có và đánh giá hiệu quả chuyển đổi của từng đuôi tên miền.",
-      "Mua bổ sung phòng thủ các tên miền chứa từ khóa quan trọng với các đuôi .store, .org hoặc .ai.",
-      "Thử nghiệm triển khai landing page bán hàng trên các tên miền chuyên biệt như .store để đo lường doanh thu.",
-      "Tận dụng độ uy tín của tên miền .org cho các dự án xây dựng nội dung nhằm thu hút liên kết backlink dễ dàng hơn."
-    ],
-    "id": "real-2026-08-25-ten-mien-org-va-ca68c8",
-    "publishedAt": "25/08/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/org-sites-are-34-likelier-to-generate-ecommerce-revenue-than-com/587082/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/08/domain-name-seo-682.jpg",
-      "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
-    "category": "AI Marketing",
-    "platformIcon": "Sparkles",
-    "title": "X ra mắt 23 công cụ Ads MCP cho phép Grok và Claude Code tự động chạy chiến dịch quảng cáo",
-    "isHot": false,
-    "illustration": "ai-budget",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "AI Marketing",
-      "X Ads MCP",
-      "Tự động hóa",
-      "Grok Claude"
-    ],
-    "summary": "Nền tảng X vừa phát hành X Ads MCP trên cổng kết nối API, cung cấp 23 công cụ cho phép các mô hình ngôn ngữ lớn như Grok và Claude Code quản lý chiến dịch quảng cáo trực tiếp. Nhờ giao thức MCP, nhà quảng cáo có thể điều khiển toàn bộ quy trình bằng câu lệnh tự nhiên mà không cần viết mã tích hợp tùy chỉnh.",
-    "keyNumbers": [
-      {
-        "value": "23",
-        "label": "công cụ quảng cáo exposed qua giao thức MCP"
-      },
-      {
-        "value": "10",
-        "label": "công cụ có quyền ghi và thay đổi tài khoản live"
-      },
-      {
-        "value": "2 giờ",
-        "label": "thời gian hết hạn của access token nếu thiếu làm mới"
-      }
-    ],
-    "content": [
-      {
-        "heading": "X tích hợp Model Context Protocol vào hệ thống quảng cáo",
-        "body": "X đã chính thức phát hành X Ads MCP trên cổng kết nối API vào ngày 24/08/2026. Giao thức này cho phép các công cụ AI như Grok hay Claude Code kết nối trực tiếp với tài khoản quảng cáo mà không cần viết mã tùy chỉnh. Người dùng chỉ cần ra lệnh bằng ngôn ngữ tự nhiên trong giao diện trò chuyện AI để tạo chiến dịch, kiểm tra hiệu suất hay điều chỉnh ngân sách. Hệ thống tự động phát hiện các công cụ có sẵn và xử lý quy trình kết nối kỹ thuật bên dưới."
-      },
-      {
-        "heading": "Cơ cấu 23 công cụ quảng cáo và quyền hạn của AI",
-        "body": "Máy chủ X Ads MCP phân chia 23 công cụ thành bốn nhóm chức năng rõ ràng. Nhóm xem tài khoản gồm 9 công cụ giúp thống kê dữ liệu hiện có như danh sách chiến dịch, bài viết và tiêu chí nhắm mục tiêu. Hai công cụ phân tích hỗ trợ rút số liệu hiệu suất và ước tính phạm vi tiếp cận, cùng 2 công cụ tìm kiếm vị trí và sở thích. Đáng chú ý có 10 công cụ có quyền ghi, cho phép AI khởi tạo chiến dịch, sửa đổi ngân sách và tạo bài viết quảng cáo trực tiếp."
-      },
-      {
-        "heading": "Cơ chế an toàn: Mặc định ở trạng thái tạm dừng",
-        "body": "Dù giao quyền ghi cho AI, X áp dụng quy định bắt buộc là mọi chiến dịch và nhóm quảng cáo mới khởi tạo đều ở trạng thái tạm dừng. AI không thể tự động tiêu tiền cho đến khi có thao tác kích hoạt trực tiếp từ con người. Khi người dùng ra một câu lệnh đơn giản, AI sẽ tự động chuỗi 4 lệnh API liên tiếp từ tìm nguồn tiền đến tạo chiến dịch. Cơ chế này giúp giữ lại điểm kiểm duyệt an toàn của con người ở cuối quy trình thay vì phải thao tác thủ công từng bước."
-      },
-      {
-        "heading": "Mô hình phân quyền và giới hạn kỹ thuật vận hành",
-        "body": "Kết nối vận hành dựa trên mã xác thực OAuth2 của chính tài khoản người dùng với 3 phạm vi truy cập gồm ads.read, ads.write và offline.access. Nếu bỏ qua phạm vi offline.access, mã truy cập sẽ hết hạn sau khoảng 2 giờ và không thể tự làm mới. Ngoài ra, X chỉ duy trì 1 cấp phép OAuth hoạt động trên mỗi cặp ứng dụng và người dùng tại một thời điểm. Việc đăng nhập từ client thứ hai sẽ lập tức thu hồi mã của client thứ nhất, do đó mỗi trợ lý AI cần một ứng dụng riêng."
-      }
-    ],
-    "impact": "Giúp Trưởng phòng Marketing bắt kịp xu hướng quản hành quảng cáo bằng trợ lý AI (Agentic Ad Ops), cắt giảm thời gian thao tác kỹ thuật và chuẩn bị cho mô hình vận hành tự động hóa đa nền tảng.",
-    "ifIgnored": "Doanh nghiệp sẽ tiếp tục tốn nhân lực thao tác thủ công trên giao diện quảng cáo, mất lợi thế về tốc độ thử nghiệm chiến dịch và dễ gặp lỗi ngắt kết nối hệ thống do cấu hình sai hạ tầng xác thực AI.",
-    "actionChecklist": [
-      "Nghiên cứu chuẩn kết nối Model Context Protocol để chuẩn bị cho xu hướng điều khiển quảng cáo bằng AI agent",
-      "Thiết lập quy trình kiểm duyệt thủ công bắt buộc đối với các chiến dịch do AI khởi tạo trước khi bật kích hoạt chi tiền",
-      "Cấu hình đủ 3 scope ads.read, ads.write và offline.access để duy trì kết nối token liên tục không bị gián đoạn sau 2 giờ",
-      "Tạo các ứng dụng riêng biệt trên Developer Console cho từng trợ lý AI để tránh việc token bị thu hồi chéo"
-    ],
-    "id": "real-2026-08-25-x-ra-mat-23-91c610",
-    "publishedAt": "25/08/2026",
-    "sourceUrl": "https://ppc.land/x-ads-mcp-gives-grok-and-claude-code-23-tools-to-run-ad-campaigns/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/size/w1200/2026/08/x-mcp.webp",
-      "credit": "Ảnh: PPC Land"
     }
   },
   {
