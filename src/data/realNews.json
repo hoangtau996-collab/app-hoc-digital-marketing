@@ -1,69 +1,188 @@
 [
   {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Google cập nhật giao dịch trực tiếp trên AI Mode và mở rộng theo dõi giá tại 180 quốc gia",
+    "category": "Meta Ads",
+    "platformIcon": "Facebook",
+    "title": "SKAdNetwork chỉ chiếm 11% lượt gán dữ liệu iOS và bức tranh đo lường thực tế",
     "isHot": false,
-    "illustration": "zero-click",
+    "illustration": "data-signal",
     "readTime": "4 phút đọc",
     "tags": [
-      "Google AI Mode",
-      "Zero Click",
-      "Google Ads",
-      "Agentic Commerce"
+      "SKAdNetwork",
+      "Đo lường iOS",
+      "Quyền riêng tư",
+      "Attribution"
     ],
-    "summary": "Google vừa chính thức tích hợp ba tính năng giao dịch mới vào AI Mode trong Search, bao gồm theo dõi giá vé máy bay tại hơn 180 quốc gia và hoàn tất đặt phòng khách sạn trực tiếp qua Google Pay với 10 đối tác tại Mỹ. Bước đi này đánh dấu sự chuyển dịch mạnh mẽ từ việc trả lời truy vấn sang trực tiếp xử lý giao dịch ngay trên giao diện tìm kiếm. Sự thay đổi này tác động trực tiếp tới hành vi tìm kiếm, tỷ lệ nhấp chuột và mô hình chuyển đổi quảng cáo.",
+    "summary": "SKAdNetwork của Apple vẫn gặp nhiều trở ngại trong việc trở thành chuẩn mực đo lường mặc định cho quảng cáo iOS do độ trễ dữ liệu và ngưỡng ẩn danh khắt khe. Dữ liệu khảo sát mới nhất cho thấy nhiều nhà quảng cáo phải tìm kiếm các giải pháp đo lường thay thế để bù đắp khoảng trống báo cáo.",
     "keyNumbers": [
       {
-        "value": "180+",
-        "label": "quốc gia hỗ trợ theo dõi giá"
+        "value": "11%",
+        "label": "tỷ lệ gán ứng dụng iOS qua SKAdNetwork giữa năm 2026"
       },
       {
-        "value": "10",
-        "label": "đối tác tích hợp đặt phòng tại Mỹ"
+        "value": "67%",
+        "label": "nhà quảng cáo iOS gặp lỗ hổng báo cáo do ngưỡng riêng tư"
       },
       {
-        "value": "63,3 tỷ USD",
-        "label": "doanh thu quảng cáo Q2/2026"
+        "value": "33%",
+        "label": "nhà quảng cáo iOS chưa từng triển khai SKAdNetwork"
       }
     ],
     "content": [
       {
-        "heading": "Tích hợp tính năng giao dịch trực tiếp vào AI Mode",
-        "body": "Ngày 27/08/2026, Google bổ sung ba tính năng giao dịch mới vào giao diện AI Mode trong Tìm kiếm. Người dùng hiện có thể thiết lập cảnh báo và theo dõi giá vé máy bay tại hơn 180 quốc gia và vùng lãnh thổ dựa trên dữ liệu từ hơn 300 đối tác. Bên cạnh đó, tính năng hiển thị chi phí quy đổi bằng điểm thưởng được triển khai toàn cầu cho 5 chương trình khách hàng thân thiết. Đáng chú ý nhất là quy trình thanh toán đặt phòng khách sạn trực tiếp qua Google Pay đã bắt đầu ra mắt thử nghiệm tại Mỹ."
+        "heading": "Cơ chế gán dữ liệu và giới hạn 6-bit của SKAdNetwork",
+        "body": "SKAdNetwork là API đo lường bảo mật của Apple dành cho ứng dụng iOS, ra đời nhằm thay thế cơ chế đối soát qua mã IDFA. Hệ thống mã hóa hành vi người dùng thành giá trị chuyển đổi 6-bit, tương đương với các số nguyên từ 0 đến 63 do nhà quảng cáo tự quy định. Quy trình phân bổ ghi nhận lượt nhấp trong vòng 30 ngày và lượt xem trong 24 giờ. Apple chỉ cân nhắc tối đa 6 lượt hiển thị cho mỗi chuyển đổi để xác định mạng quảng cáo chiến thắng."
       },
       {
-        "heading": "Cơ chế hoạt động của tính năng đặt phòng khách sạn",
-        "body": "Khi truy vấn về khách sạn, AI Mode sẽ trả về danh sách tùy chọn trực quan kèm đánh giá của khách hàng và các yếu tố so sánh. Tùy chọn Tiếp tục trên Google sẽ xuất hiện bên cạnh các đối tác tích hợp như Booking.com, Expedia hay Marriott International. Người dùng chọn loại phòng, xem chính sách hủy và thực hiện thanh toán bằng Google Pay ngay trên hệ sinh thái của Google. Trong mô hình này, các khách sạn hoặc sàn đặt phòng đóng vai trò người bán ghi nhận giao dịch và chịu trách nhiệm chăm sóc khách hàng."
+        "heading": "Độ trễ postback và lỗ hổng từ ngưỡng ẩn danh đám đông",
+        "body": "Apple áp dụng 4 tầng ẩn danh đám đông từ Tier 0 đến Tier 3 để quyết định chi tiết dữ liệu trả về. Tại Tier 0, hệ thống chỉ trả về 2 chữ số mã nguồn và không kèm giá trị chuyển đổi nào, gây thiệt hại cho các chiến dịch quy mô nhỏ. Ngoài ra, dữ liệu postback bị hoãn ngẫu nhiên từ 24 đến 48 giờ đối với cửa sổ đầu tiên và từ 24 đến 144 giờ cho các cửa sổ tiếp theo. Khảo sát của Kochava Foundry vào tháng 6/2026 cho thấy 67% nhà quảng cáo iOS đã gặp phải lỗ hổng báo cáo do các ngưỡng riêng tư này."
       },
       {
-        "heading": "Nền tảng kỹ thuật đẩy mạnh Agentic Commerce",
-        "body": "Quy trình thanh toán mới dựa trên nền tảng Agentic Checkout được Google giới thiệu từ ngày 13/11/2025. Nền tảng này ứng dụng Giao thức Thương mại Toàn cầu được phát triển từ ngày 11/01/2026 hợp tác cùng Shopify, Etsy, Target và Walmart. Giao thức hỗ trợ các đại lý AI phát hiện sản phẩm và tự động hoàn tất giao dịch cho người dùng. Google đã vạch sẵn lộ trình mở rộng giao thức này sang mảng du lịch và dịch vụ từ sự kiện Google Marketing Live ngày 20/05/2026."
+        "heading": "Thực trạng áp dụng thấp trong cộng đồng nhà quảng cáo",
+        "body": "Dữ liệu cho thấy khung đo lường này chưa đạt được mức độ phổ biến như kỳ vọng ban đầu. Có 33% nhà quảng cáo iOS được khảo sát chưa hề triển khai SKAdNetwork và chỉ 11% tự nhận đã hoàn tất triển khai để tối ưu hóa. Dữ liệu nền tảng của Kochava giữa năm 2026 chỉ ra SKAdNetwork chỉ chiếm 11% số lượt gán ứng dụng iOS, thấp hơn nhiều so với mức 36% của Apple Ads. Tỷ lệ các mạng quảng cáo hỗ trợ SKAN 4.0 cũng mới đạt 43% vào tháng 2/2024."
       },
       {
-        "heading": "Sự áp đảo của tìm kiếm không nhấp chuột và rào cản pháp lý",
-        "body": "Việc triển khai đặt phòng trực tiếp diễn ra trong bối cảnh Ủy ban Châu Âu phạt Google 460 triệu euro vào ngày 23/07/2026 vì hành vi tự ưu tiên dịch vụ. Quyết định này kèm thời hạn 60 ngày tuân thủ cùng mức phạt định kỳ tới 5% doanh thu toàn cầu. Nghiên cứu cho thấy các khách sạn tại vùng DMA chịu mức giảm 30% lượt nhấp và 36% lượt đặt phòng trực tiếp so với các khu vực khác. Điều này cho thấy xu hướng người dùng hoàn tất hành vi ngay trên kết quả tìm kiếm thay vì truy cập website doanh nghiệp."
-      },
-      {
-        "heading": "Tác động tới bức tranh chi tiêu quảng cáo tìm kiếm",
-        "body": "Du lịch và thương mại là những ngành chiếm tỷ trọng ngân sách lớn nhất trong mảng quảng cáo tìm kiếm trả phí. Báo cáo của Alphabet ghi nhận doanh thu quảng cáo Tìm kiếm đạt 63,3 tỷ USD trong quý 2 năm 2026, tăng 17% so với cùng kỳ. Việc Quảng cáo Mua sắm xuất hiện trong AI Mode từ ngày 11/02/2026 kết hợp với các tính năng thanh toán trực tiếp cho thấy Google đang chuyển mình thành một nền tảng bán hàng trực diện."
+        "heading": "Các giải pháp ứng phó từ Meta, TikTok và Reddit",
+        "body": "Để khắc phục sự chậm trễ của dữ liệu postback, các nền tảng quảng cáo lớn buộc phải xây dựng cơ chế đo lường riêng. TikTok nâng hạn ngạch lên 15 chiến dịch cùng 5 nhóm quảng cáo từ tháng 3/2024 và tích hợp báo cáo chuyển đổi thời gian thực qua Kochava vào ngày 21/10/2025. Reddit ra mắt tính năng Dual Attribution vào tháng 5/2026 nhằm hiển thị song song dữ liệu postback và dữ liệu đối tác. Trong khi đó, Meta từng đạt 52% áp dụng SKAN 4.0 vào tháng 7/2023 nhưng sau đó phải chuyển sang kích hoạt thủ công theo từng tài khoản."
       }
     ],
-    "impact": "Xu hướng Zero-click và Agentic Checkout của Google sẽ làm giảm lượng truy cập tự nhiên lẫn lượt nhấp từ quảng cáo về website. Trưởng phòng Marketing cần chuyển dịch trọng tâm sang việc tối ưu hóa dữ liệu nguồn cấp (feed) để xuất hiện trực tiếp trong luồng giao dịch AI thay vì chỉ tối ưu landing page truyền thống.",
-    "ifIgnored": "Doanh nghiệp sẽ mất dần hiển thị ở điểm chạm cuối của hành trình mua hàng khi AI Mode trực tiếp xử lý giao dịch, dẫn đến suy giảm tỷ lệ chuyển đổi và lãng phí chi phí quảng cáo thu hút truy cập.",
+    "impact": "Trưởng phòng Marketing sẽ nắm rõ nguyên nhân khiến báo cáo chuyển đổi iOS bị trễ từ 24 đến 144 giờ và bị đứt gãy dữ liệu, từ đó không đánh giá sai hiệu quả chiến dịch dựa trên báo cáo SKAdNetwork đơn thuần.",
+    "ifIgnored": "Nếu dựa hoàn toàn vào dữ liệu SKAdNetwork để tối ưu hóa hàng ngày, doanh nghiệp dễ đưa ra quyết định tắt sai chiến dịch hiệu quả hoặc phân bổ ngân sách lệch lạc do thiếu hụt dữ liệu ở các tầng ẩn danh thấp.",
     "actionChecklist": [
-      "Đánh giá lại cấu trúc chiến dịch Google Ads để đo lường biến động của tỷ lệ nhấp chuột (CTR) và chi phí trên mỗi chuyển đổi.",
-      "Chuẩn hóa và cập nhật liên tục dữ liệu sản phẩm, dịch vụ và nguồn cấp dữ liệu để sẵn sàng kết nối với hệ sinh thái AI.",
-      "Tối ưu hóa quy trình thanh toán trên website bằng các phương thức thanh toán nhanh như Google Pay.",
-      "Xây dựng chiến lược thương hiệu trực tiếp nhằm duy trì luồng khách hàng trung thành không phụ thuộc vào công cụ tìm kiếm."
+      "Đánh giá lại tỷ lệ gán dữ liệu iOS giữa SKAdNetwork và các công cụ đo lường đối tác hiện có.",
+      "Rà soát việc phân bổ 64 trạng thái chuyển đổi từ 0 đến 63 để ưu tiên các hành vi tạo ra doanh thu cao nhất.",
+      "Kiểm tra tính năng bật thủ công SKAN 4.0 trong Trình quản lý sự kiện Meta Ads cho các tài khoản chạy iOS.",
+      "Kết hợp sử dụng các báo cáo thời gian thực hoặc báo cáo kép Dual Attribution trên TikTok và Reddit để bù đắp độ trễ postback."
     ],
-    "id": "real-2026-08-28-google-cap-nhat-giao-9133ce",
-    "publishedAt": "28/08/2026",
-    "sourceUrl": "https://ppc.land/google-ai-mode-completes-hotel-bookings-with-10-partners-in-us-rollout/",
+    "id": "real-2026-08-31-skadnetwork-chi-chiem-11-e7b265",
+    "publishedAt": "31/08/2026",
+    "sourceUrl": "https://ppc.land/skadnetwork/",
     "source": "PPC Land",
     "image": {
-      "url": "https://ppc.land/content/images/size/w1200/2026/08/google-hotel.webp",
+      "url": "https://ppc.land/content/images/size/w1200/2026/08/SKAdNetwork.jpg",
       "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Hiểu về Shill Bidding: Chiêu trò thổi giá quảng cáo programmatic và cách phòng vệ",
+    "isHot": false,
+    "illustration": "cpm-auction",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Đấu thầu quảng cáo",
+      "Programmatic Ads",
+      "Tối ưu ngân sách",
+      "Minh bạch chi phí"
+    ],
+    "summary": "Shill bidding - hành vi tự đấu giá để thổi giá sàn - đang biến tướng tinh vi trong môi trường quảng cáo programmatic thông qua việc thao túng giá sàn và can thiệp thuật toán. Hiểu rõ cơ chế này giúp các thương hiệu tối ưu hóa mô hình bid shading và bảo vệ ngân sách trước các hành vi gian lận từ trung gian.",
+    "keyNumbers": [
+      {
+        "value": "80%",
+        "label": "Tỷ lệ giảm hoạt động shill bidding trên Whatnot trong 6 tháng"
+      },
+      {
+        "value": "45%",
+        "label": "Tỷ lệ giảm báo cáo vi phạm từ người dùng trên Whatnot"
+      },
+      {
+        "value": "5 lần",
+        "label": "Mức tăng của các tín hiệu phát hiện gian lận trên Whatnot"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Bản chất của Shill Bidding trong kỷ nguyên số",
+        "body": "Shill bidding truyền thống là việc người bán tự đặt giá trong phiên đấu giá của chính mình để đẩy giá mua thực tế lên cao. Trong quảng cáo kỹ thuật số, hành vi này không cần tài khoản giả mạo mà được thay thế bằng việc các nền tảng tự động nâng giá sàn (floor price). Theo Tiêu chuẩn Minh bạch Đấu giá Quảng cáo Kỹ thuật số của Hội đồng Xếp hạng Truyền thông (MRC) công bố tháng 1/2026, giá sàn phải được công khai và áp dụng đồng nhất cho mọi người mua. Bất kỳ sự điều chỉnh giá riêng biệt nào nhắm vào một nhà quảng cáo cụ thể đều bị coi là hành vi tự đấu giá chống lại họ."
+      },
+      {
+        "heading": "Từ đấu giá vị trí thứ hai đến đấu giá vị trí thứ nhất",
+        "body": "Trước đây, quảng cáo programmatic chạy trên cơ chế đấu giá vị trí thứ hai (second-price auction), nơi người thắng trả bằng mức giá của người thứ hai cộng thêm một khoản nhỏ. Cơ chế này cực kỳ dễ bị thao túng bằng cách chèn một mức giá giả ngay dưới giá người thắng để nâng chi phí thực tế. Khi thị trường chuyển dịch sang cơ chế đấu giá vị trí thứ nhất (first-price auction) từ năm 2017 đến 2019, người thắng trả đúng mức giá họ đặt. Lúc này, các nền tảng chuyển sang thao túng giá sàn, buộc nhà quảng cáo phải tự vệ bằng kỹ thuật \"bid shading\" (ước lượng giá thắng thấp nhất dựa trên dữ liệu lịch sử)."
+      },
+      {
+        "heading": "Các vụ kiện cáo buộc thao túng đấu giá quảng cáo",
+        "body": "Các cáo buộc thao túng đấu giá không còn là lý thuyết mà đã được đưa ra tòa án. Hồ sơ pháp lý từ Teads cáo buộc dự án \"Project Bernanke\" của Google (ra mắt năm 2013) đã dìm giá thầu cao thứ hai và thổi phồng giá thầu cao nhất trước khi đưa vào sàn đấu giá AdX. Một vụ kiện khác từ OpenX cáo buộc tính năng \"Last Look\" cho phép sàn AdX xem trước giá thầu thắng của header bidding trước khi đưa ra giá thầu của riêng mình. Tòa án Virginia (Mỹ) đã phán quyết có hành vi vi phạm vào ngày 17/4/2025, dù các biện pháp khắc phục vẫn chưa được giải quyết tính đến cuối tháng 7/2026."
+      },
+      {
+        "heading": "Tiêu chuẩn kỹ thuật mới nhằm ngăn chặn gian lận",
+        "body": "Để đối phó với tình trạng này, IAB Tech Lab đã phát hành bản cập nhật AAMP 2.3 vào ngày 30/7/2026. Bản cập nhật này bổ sung trường thông tin nguồn gốc định giá (pricing provenance field) nhằm ngăn chặn các đại lý mua tự ý tạo ra các con số CPM giả mạo khi không có dữ liệu thị trường thực tế. Đồng thời, hệ thống cũng bổ sung tính năng xác thực phía máy chủ (server-side verification) trên các luồng di chuyển giá. Nguyên tắc cốt lõi là một phiên đấu giá mở phải tạo ra giá từ những người đấu thầu khác, một con số tự xuất hiện mà không có đối thủ cạnh tranh thì không được coi là giá hợp lệ."
+      }
+    ],
+    "impact": "Giúp Trưởng phòng Marketing nhận diện được lý do tại sao chi phí CPM programmatic tăng bất thường dù hiệu quả chuyển đổi không đổi, từ đó có cơ sở yêu cầu các đối tác adtech minh bạch hóa dữ liệu đấu thầu và áp dụng các mô hình bid shading hiệu quả hơn.",
+    "ifIgnored": "Doanh nghiệp sẽ tiếp tục trả mức giá CPM bị thổi phồng một cách vô lý do các thuật toán tự động nâng giá sàn của bên trung gian, khiến ngân sách quảng cáo bị lãng phí vào các phiên đấu giá thiếu minh bạch mà không hề hay biết.",
+    "actionChecklist": [
+      "Yêu cầu các đối tác DSP (Demand-Side Platform) cung cấp báo cáo minh bạch về cơ chế áp dụng giá sàn (floor price) cho từng chiến dịch.",
+      "Cấu hình và tối ưu hóa các thuật toán bid shading để tránh việc tự động đặt giá quá cao dựa trên dữ liệu lịch sử bị thao túng.",
+      "Cập nhật và áp dụng tiêu chuẩn kỹ thuật AAMP 2.3 của IAB Tech Lab cho các hệ thống mua quảng cáo tự động của doanh nghiệp.",
+      "Đánh giá lại hiệu quả chi phí CPM trên các sàn programmatic trung gian và cân nhắc chuyển ngân sách sang các kênh có cơ chế đấu giá minh bạch hơn."
+    ],
+    "id": "real-2026-08-31-hieu-ve-shill-bidding-881b74",
+    "publishedAt": "31/08/2026",
+    "sourceUrl": "https://ppc.land/shill-bidding/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/size/w1200/2026/08/shill-bidding.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Google Search Console cập nhật báo cáo AI toàn cầu cho mọi website",
+    "isHot": true,
+    "illustration": "data-signal",
+    "readTime": "3 phút đọc",
+    "tags": [
+      "Google Search Console",
+      "SEO AI",
+      "AI Overviews",
+      "Báo cáo hiệu suất"
+    ],
+    "summary": "Google chính thức hoàn tất việc triển khai báo cáo hiệu suất AI tạo sinh trên Google Search Console cho tất cả website toàn cầu. Công cụ này giúp các nhà tiếp thị theo dõi lượt hiển thị từ AI Overviews và AI Mode, đi kèm tính năng cho phép chủ động bật hoặc tắt hiển thị trên các kết quả tìm kiếm AI.",
+    "keyNumbers": [
+      {
+        "value": "3",
+        "label": "bề mặt hiển thị AI được báo cáo gồm AI Overviews, AI Mode và Discover"
+      },
+      {
+        "value": "0",
+        "label": "dữ liệu lượt nhấp chuột được cung cấp ở thời điểm hiện tại"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Toàn cầu hóa báo cáo AI trên Search Console",
+        "body": "Google đã chính thức hoàn tất việc triển khai báo cáo hiệu suất AI tạo sinh cho mọi website trên toàn thế giới từ ngày 31/08/2026. Báo cáo này giúp doanh nghiệp theo dõi chi tiết số lượt hiển thị từ các tính năng AI như AI Overviews và AI Mode. Tuy nhiên, một số tài khoản chưa có đủ lượng hiển thị AI tối thiểu có thể sẽ chưa thấy báo cáo này xuất hiện ngay lập tức."
+      },
+      {
+        "heading": "Chi tiết dữ liệu được cung cấp và hạn chế hiện tại",
+        "body": "Báo cáo mới phân tích số lượt hiển thị theo trang, quốc gia, ngày tháng và thiết bị đối với các tính năng AI. Điểm hạn chế lớn nhất hiện nay là Google chưa cung cấp dữ liệu về lượt nhấp chuột từ các kết quả AI này. Do đó, doanh nghiệp chỉ có thể biết thương hiệu của mình xuất hiện bao nhiêu lần chứ chưa đo lường được lượng truy cập thực tế chuyển đổi từ AI."
+      },
+      {
+        "heading": "Quyền kiểm soát ẩn hoặc hiển thị nội dung trên AI",
+        "body": "Song song với báo cáo, tính năng kiểm soát chọn từ chối cũng đã được áp dụng trên toàn cầu ở cấp độ thuộc tính. Khi kích hoạt tính năng này trong phần Cài đặt của Search Console, website của bạn sẽ không xuất hiện trên AI Overviews, AI Mode và Discover AI. Google khẳng định việc từ chối này không ảnh hưởng đến xếp hạng trên tìm kiếm thông thường và không liên quan đến việc huấn luyện AI."
+      },
+      {
+        "heading": "Lộ trình cập nhật trong tương lai",
+        "body": "Theo yêu cầu từ Cơ quan Quản lý Cạnh tranh và Thị trường Vương quốc Anh, Google phải thực hiện các cải tiến sâu hơn. Cụ thể, hạn chót đến tháng 03/2027, Google phải ra mắt tính năng kiểm soát ở cấp độ trang thay vì chỉ ở cấp độ toàn bộ website như hiện tại. Đồng thời, cơ quan quản lý cũng kỳ vọng Google sẽ sớm tích hợp dữ liệu tỷ lệ nhấp chuột vào báo cáo."
+      }
+    ],
+    "impact": "Giúp Trưởng phòng Marketing lần đầu tiên có số liệu chính thức để đánh giá mức độ phủ sóng của thương hiệu trong các câu trả lời AI của Google, từ đó điều chỉnh chiến lược SEO phù hợp với kỷ nguyên tìm kiếm mới.",
+    "ifIgnored": "Doanh nghiệp sẽ bị mù mờ về hiệu suất hiển thị trên AI Overviews, không biết nội dung của mình có đang bị AI khai thác miễn phí mà không đem lại giá trị hay không, dẫn đến việc đưa ra các quyết định SEO sai lầm.",
+    "actionChecklist": [
+      "Truy cập Google Search Console để kiểm tra xem tài khoản đã được cập nhật tính năng báo cáo AI hay chưa",
+      "Đánh giá số lượng hiển thị từ AI Overviews để đo lường mức độ tiếp cận của website trên các kết quả tìm kiếm AI",
+      "Cân nhắc kỹ lưỡng việc bật hoặc tắt tính năng opt-out nếu doanh nghiệp không muốn nội dung bị hiển thị trên các câu trả lời AI mà không có lượt nhấp",
+      "Lên kế hoạch tối ưu hóa nội dung theo dạng câu trả lời trực tiếp để đón đầu xu hướng hiển thị trên AI Overviews"
+    ],
+    "deadline": "Tháng 03/2027",
+    "id": "real-2026-08-31-google-search-console-cap-b26009",
+    "publishedAt": "31/08/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/google-search-console-ai-reports-rolled-out-worldwide/587836/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/08/google-search-console-ai-reports-worldwide.jpg",
+      "credit": "Ảnh: Search Engine Journal"
     }
   },
   {
@@ -320,69 +439,6 @@
     }
   },
   {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Video",
-    "title": "Cấu trúc hợp đồng Brand Deal và phương pháp tối ưu ngân sách quảng cáo qua Creator",
-    "isHot": false,
-    "illustration": "affiliate-commission",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Brand Deal",
-      "Creator Marketing",
-      "Spark Ads",
-      "Partnership Ads"
-    ],
-    "summary": "Brand deal giúp nhãn hàng tiếp cận tệp khán giả của creator mà không đi qua phiên đấu giá quảng cáo trực tiếp của nền tảng. Để tối ưu chi phí và tăng tỷ lệ chuyển đổi, Trưởng phòng Marketing cần nắm rõ cấu trúc định giá 4 phần và xu hướng kết hợp chạy paid amplification trực tiếp từ tài khoản creator.",
-    "keyNumbers": [
-      {
-        "value": "20%",
-        "label": "Mức tăng chuyển đổi trung bình trên chiến dịch Demand Gen khi kết hợp với creator"
-      },
-      {
-        "value": "86%",
-        "label": "Tỷ suất ROAS dài hạn cao hơn của YouTube so với paid social"
-      },
-      {
-        "value": "40%",
-        "label": "Lượt xem YouTube tích lũy xuất hiện sau 30 ngày đăng bài"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Bản chất và cấu trúc tài chính của Brand Deal",
-        "body": "Brand deal là thỏa thuận trả phí, trong đó creator sản xuất và đăng tải nội dung quảng bá cho nhãn hàng tới tệp khán giả của họ. Dòng tiền chuyển trực tiếp từ nhãn hàng sang creator hoặc thông qua agency mà không đi qua phiên đấu giá quảng cáo của nền tảng. Khác với mô hình chạy quảng cáo hiển thị dựa trên giá thầu tính theo lượt hiển thị, creator bán thời gian, sự chú ý và uy tín cá nhân với một mức phí cố định. Nền tảng không thu phần chia doanh thu từ khoản phí thỏa thuận này, dù nội dung xuất bản vẫn chịu sự quản lý của quy định pháp lý về minh bạch tài trợ."
-      },
-      {
-        "heading": "4 thành tố định giá bắt buộc trong hợp đồng",
-        "body": "Một hợp đồng brand deal tiêu chuẩn phân tách rõ 4 yếu tố giá trị để tránh xảy ra tranh chấp. Yếu tố đầu tiên là sản phẩm bàn giao, ví dụ như phân đoạn tích hợp từ 60 đến 90 giây hoặc một video riêng biệt. Yếu tố thứ hai là quyền sử dụng nội dung, phân biệt rõ giữa quyền đăng hữu cơ trên kênh nhãn hàng và quyền chạy quảng cáo trả phí. Yếu tố thứ ba là bản quyền phát sóng paid amplification, cho phép nhãn hàng dùng chính tài khoản của creator để chạy quảng cáo. Cuối cùng là điều khoản độc quyền ngành hàng, thường kéo dài từ 30 đến 180 ngày để ngăn creator hợp tác với các đối thủ cạnh tranh."
-      },
-      {
-        "heading": "Xu hướng đẩy mạnh Paid Amplification trên các nền tảng",
-        "body": "Thay vì chỉ đăng lại video trên kênh thương hiệu, ngân sách quảng cáo đang dịch chuyển mạnh sang việc tài trợ và đẩy quảng cáo trực tiếp từ tài khoản của creator. Các công cụ như Partnership Ads trên Meta, Spark Ads trên TikTok hay liên kết kênh creator trong chiến dịch Demand Gen của Google đang trở thành trọng tâm. YouTube cũng đã tích hợp các công cụ kết nối nhãn hàng và creator để hỗ trợ chia sẻ dữ liệu chi tiết giữa hai bên. Theo dữ liệu từ Google công bố, các chiến dịch Demand Gen kết hợp với creator giúp tăng chuyển đổi trung bình thêm 20%."
-      },
-      {
-        "heading": "Hiệu quả đo lường và tính bền vững của nội dung Creator",
-        "body": "Nghiên cứu phân tích 10 thương hiệu hàng tiêu dùng trong 104 tuần cho thấy YouTube mang lại tỷ suất hoàn vốn trên chi phí quảng cáo dài hạn cao hơn 86% so với quảng cáo mạng xã hội trả phí thông thường. Phân tích trên 10.000 video tích hợp trên YouTube ghi nhận 40% lượt xem và 30% lượt nhấp xuất hiện sau 30 ngày kể từ khi xuất bản. Khác với quảng cáo đấu giá ngừng mang lại truy cập ngay khi hết ngân sách, nội dung brand deal tiếp tục tạo ra giá trị tích lũy theo thời gian. Tuy nhiên, khảo sát cho thấy chỉ 57% quảng cáo của creator tuân thủ đúng quy định gắn nhãn tài trợ, đặt ra rủi ro pháp lý nếu nhãn hàng không kiểm soát chặt chẽ."
-      }
-    ],
-    "impact": "Giúp Trưởng phòng Marketing tái cơ cấu ngân sách Influencer Marketing theo hướng mua quyền chạy quảng cáo trả phí (Spark Ads/Partnership Ads) từ chính tài khoản Creator thay vì chỉ trả phí đăng bài hữu cơ đơn thuần, từ đó tối ưu hóa hiệu quả chuyển đổi kéo dài và kiểm soát rủi ro pháp lý về nhãn tài trợ.",
-    "ifIgnored": "Doanh nghiệp dễ gặp tranh chấp hợp đồng do không bóc tách quyền sử dụng nội dung, lãng phí ngân sách vào các bài đăng hữu cơ có tương tác giảm nhanh, đồng thời đối mặt với rủi ro bị nền tảng hoặc cơ quan quản lý xử phạt vi phạm minh bạch quảng cáo.",
-    "actionChecklist": [
-      "Bóc tách 4 khoản phí rõ ràng trong hợp đồng creator: nội dung bàn giao, quyền sử dụng, quyền chạy paid ads và phí độc quyền.",
-      "Chuyển dịch ngân sách từ hợp tác hữu cơ sang mua quyền chạy Spark Ads hoặc Meta Partnership Ads trực tiếp từ tài khoản creator.",
-      "Thiết lập quy trình kiểm duyệt bắt buộc creator bật công cụ tự khai báo nhãn tài trợ của nền tảng trước khi phát sóng.",
-      "Đo lường hiệu quả chuyển đổi tích lũy kéo dài sau 30 ngày thay vì chỉ đánh giá các chỉ số tương tác ban đầu."
-    ],
-    "id": "real-2026-08-27-cau-truc-hop-dong-96d8ce",
-    "publishedAt": "27/08/2026",
-    "sourceUrl": "https://ppc.land/brand-deal/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/size/w1200/2026/08/brand-deal.webp",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
     "category": "AI Marketing",
     "platformIcon": "Sparkles",
     "title": "Công cụ AI đề xuất thương hiệu nhưng trích dẫn nguồn từ website bên thứ ba",
@@ -442,69 +498,6 @@
     "source": "Search Engine Journal",
     "image": {
       "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/08/ai-tools-brand-citations-1600x840-1.jpg",
-      "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Video",
-    "title": "Lý do chạy quảng cáo YouTube theo tư duy Google Search khiến doanh nghiệp đốt sạch ngân sách",
-    "isHot": false,
-    "illustration": "data-signal",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "YouTube Ads",
-      "Google Ads",
-      "Đo lường Attribution",
-      "Tối ưu Quảng cáo"
-    ],
-    "summary": "Áp dụng tư duy quảng cáo tìm kiếm hoặc mạng xã hội lên YouTube Ads là nguyên nhân chính khiến doanh nghiệp lãng phí ngân sách mà không thu lại kết quả. Bài viết chỉ ra bốn lỗ hổng vận hành lớn khiến chiến dịch video thất bại và cập nhật các công cụ đo lường mới từ Google để đánh giá đúng giá trị kênh.",
-    "keyNumbers": [
-      {
-        "value": "29/06/2026",
-        "label": "Google ra mắt toàn cầu chỉ số Attributed Branded Searches"
-      },
-      {
-        "value": "14 - 30 ngày",
-        "label": "Cửa sổ gia tăng truy cập trực tiếp và tìm kiếm thương hiệu"
-      },
-      {
-        "value": "Tháng 4/2026",
-        "label": "Ra mắt tính năng tối ưu chuyển đổi view-through cho Demand Gen"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Sai lầm khi đo lường YouTube bằng mô hình Last-Click",
-        "body": "Search bắt trúng nhu cầu trực tiếp, Meta khai thác hành vi lướt bảng tin, còn YouTube can thiệp vào phiên xem video mà người dùng chủ động lựa chọn. Người xem bị hấp dẫn bởi quảng cáo YouTube ít khi dừng video để mua hàng ngay trên màn hình. Hiệu quả của YouTube thường xuất hiện ở giai đoạn sau thông qua việc gia tăng lượt truy cập trực tiếp và lưu lượng tìm kiếm thương hiệu trong 14 đến 30 ngày. Nếu bảng báo cáo chỉ dựa vào mô hình chuyển đổi nhấp chuột cuối cùng (last-click), chiến dịch YouTube sẽ bị đánh giá thất bại dù thực tế đang đóng góp doanh số cho các kênh khác."
-      },
-      {
-        "heading": "Cập nhật các chỉ số đo lường gián tiếp mới từ Google Ads",
-        "body": "Google đã phát hành toàn cầu chỉ số báo cáo Attributed Branded Searches vào ngày 29/06/2026 sau thời gian thử nghiệm beta. Công cụ này theo dõi số lượng người dùng sau khi xem quảng cáo đã thực hiện tìm kiếm từ khóa thương hiệu trong khung thời gian từ 1 đến 30 ngày. Dữ liệu từ Google chứng minh mỗi lượt tìm kiếm thương hiệu gia tăng đều gắn liền với việc gia tăng doanh số bán hàng. Trước đó vào tháng 4/2026, chiến dịch Demand Gen đã bổ sung tính năng tối ưu hóa chuyển đổi qua lượt xem (view-through), giúp hệ thống ưu tiên đấu giá theo lượt xem thay vì bắt buộc người dùng nhấp vào quảng cáo."
-      },
-      {
-        "heading": "Lãng phí chi phí do bê nguyên video từ TikTok và Reels sang YouTube",
-        "body": "Tái sử dụng video từ TikTok, Instagram Reels hoặc quảng cáo Meta lên YouTube là nguyên nhân phổ biến gây lãng phí ngân sách. Môi trường bảng tin mạng xã hội hoạt động dựa trên hành vi lướt thụ động và tắt âm thanh, trong khi người xem YouTube chủ động bật tiếng và chờ mốc 5 giây để bấm bỏ qua. Khung sáng tạo chuẩn cho YouTube đòi hỏi bộ lọc 3 giây đầu tiên để nêu rõ vấn đề, giúp giữ chân khách hàng mục tiêu và để khách hàng không phù hợp bấm bỏ qua nhằm tiết kiệm chi phí. Ngoài ra, lời kêu gọi hành động phải được phát ra bằng giọng nói ngay trong video thay vì chờ đến màn hình kết thúc."
-      },
-      {
-        "heading": "Ngân sách thử nghiệm quá nhỏ và thông điệp quá phức tạp",
-        "body": "Thuật toán đấu giá của Google đòi hỏi mật độ dữ liệu tương tác đủ lớn để xác định chính xác tập khách hàng phản hồi với thông điệp. Việc thử nghiệm với ngân sách quá nhỏ khiến hệ thống không thể thoát khỏi giai đoạn học (calibration), gây ra biến động chi phí trên mỗi hành động và đưa ra kết luận sai về kênh. Bên cạnh đó, nội dung quảng cáo không được gây gánh nặng tâm lý cho người xem với thông điệp phức tạp hay quá nhiều lợi ích chồng chéo. Thương hiệu cần chỉ ra điểm đau trong dưới 2 giây, hứa hẹn một kết quả duy nhất và chuẩn bị trang đích mượt mà để tiếp nhận lưu lượng truy cập."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing cần thay đổi cách đánh giá và phân bổ ngân sách cho YouTube Ads, chuyển từ tư duy săn tìm nhấp chuột ngắn hạn sang xây dựng nhu cầu dài hạn và đo lường thông qua các chỉ số tìm kiếm thương hiệu và chuyển đổi hiển thị.",
-    "ifIgnored": "Doanh nghiệp sẽ tiếp tục đốt ngân sách cho các đợt thử nghiệm YouTube quy mô nhỏ không thu được tín hiệu dữ liệu, vội vã cắt bỏ một kênh video tiềm năng hoặc đánh giá sai hiệu quả đóng góp của YouTube vào tổng doanh thu toàn hệ thống.",
-    "actionChecklist": [
-      "Kích hoạt và theo dõi chỉ số Attributed Branded Searches trên Google Ads để ghi nhận lượt tìm kiếm thương hiệu phát sinh từ YouTube.",
-      "Bật tính năng View-through Conversion Optimization cho các chiến dịch Demand Gen để tối ưu hóa giá thầu theo hiển thị.",
-      "Thiết kế lại nội dung video dành riêng cho YouTube với bộ lọc 3 giây đầu và lời kêu gọi hành động bằng âm thanh trực tiếp trong video.",
-      "Cấp đủ quy mô ngân sách thử nghiệm giúp thuật toán Google có đủ mật độ dữ liệu vượt qua giai đoạn học ban đầu."
-    ],
-    "id": "real-2026-08-26-ly-do-chay-quang-a06863",
-    "publishedAt": "26/08/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/why-running-youtube-ads-like-search-will-burn-your-budget/584794/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/08/youtube-ads-219.png",
       "credit": "Ảnh: Search Engine Journal"
     }
   },
