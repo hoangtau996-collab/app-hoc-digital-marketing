@@ -1,5 +1,135 @@
 [
   {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Nghiên cứu 50 website lớn: Đa số doanh nghiệp chưa tối ưu tín hiệu kỹ thuật cho AI Search",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "AI Search",
+      "Tối ưu SEO",
+      "Tín hiệu kỹ thuật",
+      "Trải nghiệm AI"
+    ],
+    "summary": "Một cuộc kiểm toán trên 50 website lớn cho thấy hầu hết thương hiệu mới dừng lại ở việc giúp bot AI tìm thấy nội dung chứ chưa giúp AI hiểu đúng ý nghĩa dữ liệu. Điều này khiến doanh nghiệp đối mặt với nguy cơ bị AI trích dẫn sai thông tin sản phẩm hoặc bỏ lỡ cơ hội bán hàng qua các trợ lý AI.",
+    "keyNumbers": [
+      {
+        "value": "79,2%",
+        "label": "Điểm cao nhất thuộc về Airbnb.com"
+      },
+      {
+        "value": "56,6%",
+        "label": "Tỷ lệ triển khai giao thức chuẩn trung bình"
+      },
+      {
+        "value": "74,4%",
+        "label": "Mức độ đáp ứng ở tầng truy xuất dữ liệu"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Ba tầng mức độ sẵn sàng cho tìm kiếm bằng AI",
+        "body": "Khái niệm hiển thị trên AI không chỉ dừng lại ở việc thương hiệu xuất hiện trong câu trả lời hay trích dẫn nguồn. Khung đánh giá năng lực AI chia thành ba tầng rõ rệt gồm Retrievability (khả năng thu thập nội dung), Attribution & Meaning (xác định quyền sở hữu và ý nghĩa nội dung), cùng Agent Transaction & Discovery (khả năng tương tác và giao dịch của agent). Nhiều đội ngũ SEO chỉ đang tập trung vào tầng đầu tiên mà bỏ qua hai tầng quan trọng phía sau."
+      },
+      {
+        "heading": "Khoảng cách lớn giữa việc đọc nội dung và hiểu ý nghĩa",
+        "body": "Kết quả khảo sát 50 website lớn cho thấy mức độ đáp ứng các giao thức chuẩn đạt trung bình 56,6%. Tầng đầu tiên Retrievability đạt tỷ lệ triển khai trung bình 74,4% nhờ các doanh nghiệp đã chủ động làm sạch mã nguồn và tối ưu sơ đồ trang web. Tuy nhiên, việc thiếu hụt cấu trúc dữ liệu ở các tầng sau khiến công cụ AI dễ nhầm lẫn thông tin giá cả, ưu đãi dành riêng cho hội viên hoặc thông tin thương hiệu."
+      },
+      {
+        "heading": "Nguy cơ trích dẫn sai thông tin sản phẩm",
+        "body": "Khi AI không xác định chính xác ngữ cảnh và quyền sở hữu thông tin, độ tin cậy của câu trả lời sẽ giảm sút nghiêm trọng. Doanh nghiệp có nguy cơ bị công cụ AI hiển thị sai giá bán, nhầm lẫn thương hiệu hoặc mô tả sai công năng sản phẩm tới khách hàng tiềm năng. Việc cung cấp dữ liệu cấu trúc rõ ràng giúp tăng xác suất được trích dẫn chuẩn xác trong các câu trả lời do AI tạo ra."
+      },
+      {
+        "heading": "Chuẩn bị cho kỷ nguyên giao dịch tự động qua AI Agent",
+        "body": "Tầng phát triển cao nhất là khả năng cho phép các AI agent truy cập tính năng của website để thay mặt người dùng thực hiện giao dịch. Hiện tại có 10 website đạt điểm tổng thể dưới 50% trong nghiên cứu, phản ánh sự thụ động của phần lớn doanh nghiệp trước làn sóng mua sắm tự động. Việc xây dựng kiến trúc mã nguồn thân thiện với máy tính sẽ là lợi thế cạnh tranh cốt lõi trong thời gian tới."
+      }
+    ],
+    "impact": "Tác động trực tiếp tới khả năng xuất hiện và độ chính xác của thương hiệu trên các nền tảng tìm kiếm AI như ChatGPT, Gemini hay Google AI Overviews. Nếu không nâng cấp hạ tầng kỹ thuật, chi phí thu hút khách hàng tự nhiên sẽ tăng cao do mất lượng truy cập vào tay các đối thủ được AI ưu tiên trích dẫn.",
+    "ifIgnored": "Doanh nghiệp đối mặt với rủi ro bị AI hiểu sai thông tin giá cả, giao thông tin sai lệch cho khách hàng và hoàn toàn bị đứng ngoài luồng giao dịch khi người dùng chuyển sang mua sắm qua các trợ lý AI.",
+    "actionChecklist": [
+      "Rà soát lại khai báo tập tin robots.txt và quy định quyền truy cập cho các AI User-Agent.",
+      "Bổ sung nhãn ARIA và tối ưu hóa cây truy cập Accessibility Tree trên toàn bộ website.",
+      "Triển khai sơ đồ dữ liệu cấu trúc JSON-LD và bản đồ thực thể Entity Map để xác minh quyền sở hữu nội dung.",
+      "Chuẩn hóa cấu trúc HTML từ phía máy chủ Server-Rendered để tối ưu chi phí xử lý dữ liệu cho bot AI."
+    ],
+    "id": "real-2026-09-01-nghien-cuu-50-website-a3a58b",
+    "publishedAt": "01/09/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/the-technical-signals-ai-search-uses-that-most-seos-still-arent-optimizing/586381/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/08/tech-signals-ai-663.png",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Tối ưu Schema markup giúp doanh nghiệp trở thành nguồn trích dẫn uy tín trên công cụ tìm kiếm AI",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Schema Markup",
+      "SEO Kỹ thuật",
+      "AI Overview",
+      "Tối ưu AI Search"
+    ],
+    "summary": "Mã dữ liệu có cấu trúc Schema không giúp thương hiệu xuất hiện ngay trên AI nhưng là công cụ bắt buộc để xác minh độ tin cậy. Việc giữ đồng bộ thông tin giữa website, các hồ sơ gốc và mã Schema sẽ quyết định khả năng thương hiệu được ChatGPT hay Google AI Overviews lựa chọn làm nguồn trích dẫn.",
+    "keyNumbers": [
+      {
+        "value": "4",
+        "label": "bề mặt dữ liệu bắt buộc phải đồng bộ"
+      },
+      {
+        "value": "9",
+        "label": "trụ cột cấu thành mô hình local schema"
+      },
+      {
+        "value": "1.300",
+        "label": "lượt nhấp có được nhờ tối ưu dữ liệu thực thể"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Vai trò thực sự của Schema đối với các hệ thống AI",
+        "body": "Schema markup không giúp các hệ thống AI trích dẫn nội dung của bạn một cách tự động nhưng giúp máy móc xác minh các tuyên bố về thương hiệu. Các công cụ như Google, Bing hay ChatGPT sử dụng cấu trúc này để hiểu thực thể và đánh giá mức độ uy tín của nguồn thông tin. Microsoft xác nhận Schema hỗ trợ các mô hình ngôn ngữ lớn hiểu nội dung, còn OpenAI nhấn mạnh dữ liệu sản phẩm có cấu trúc giúp định hình những gì ChatGPT hiển thị cho người mua sắm. Việc chỉ gắn mã Schema mà không đảm bảo thông tin khớp với thực tế sẽ khiến hệ thống AI đánh giá thấp doanh nghiệp."
+      },
+      {
+        "heading": "Bốn bề mặt thông tin bắt buộc phải thống nhất",
+        "body": "Bất kỳ mô hình kinh doanh nào cũng cần duy trì tính thống nhất dữ liệu trên 4 nguồn thông tin chính. Bốn nguồn này bao gồm trang web công khai, mã Schema máy đọc được, nền tảng hồ sơ gốc như Google Business Profile hay Merchant Center, và các nguồn xác minh từ bên thứ ba. Nhượng bộ những sai lệch nhỏ như viết tắt địa chỉ không đồng nhất cũng có thể làm suy giảm điểm tin cậy của trang. Khi cả bốn nguồn dữ liệu khớp nhau hoàn toàn, các công cụ AI mới có đủ cơ sở để đưa ra đề xuất chính xác."
+      },
+      {
+        "heading": "Tối ưu hóa Local Schema và dữ liệu dịch vụ",
+        "body": "Đối với doanh nghiệp địa phương, Schema phụ thuộc hoàn toàn vào việc định danh thực thể rõ ràng. Mô hình này được vận hành dựa trên 9 trụ cột cốt lõi bắt nguồn từ ID thực thể, tên địa chỉ số điện thoại, tọa độ địa lý đến các dịch vụ cung cấp. Sự confusion thường xảy ra khi doanh nghiệp nhầm lẫn giữa khu vực giao hàng trên Google Business Profile và thuộc tính areaServed trong Schema. Trường hợp thực tế cho thấy ChatGPT đã đề xuất đúng phòng tập thể chất nhờ dữ liệu đồng nhất giữa Schema và Google Business Profile dù thông tin trên trang đích chưa cập nhật đầy đủ."
+      },
+      {
+        "heading": "Cấu trúc Schema dành cho thương mại điện tử",
+        "body": "Các website thương mại điện tử cần sử dụng Google Merchant Center làm nguồn dữ liệu chuẩn mực nhất để đối chiếu. Các thuộc tính quan trọng như tên sản phẩm, mã SKU, GTIN, giá cả, phí vận chuyển và chính sách đổi trả phải hoàn toàn trùng khớp giữa các hệ thống. Việc xử lý trạng thái hết hàng tạm thời bằng các giá trị chuẩn trên Schema.org sẽ giúp bảo vệ thứ hạng SEO đã xây dựng khi kho hàng chạm mức 0. Ngoài ra, việc khai báo chi tiết về chất liệu, kích thước hay tốc độ giao hàng giúp sản phẩm khớp với các câu hỏi tìm kiếm AI mang tính cụ thể cao từ người dùng."
+      },
+      {
+        "heading": "Xây dựng thực thể tác giả để củng cố thẩm quyền",
+        "body": "Khai báo thực thể tác giả bằng Schema không tự động biến một người thành chuyên gia nếu không có thẩm quyền thực tế ngoài đời. Mã cấu trúc chỉ đóng vai trò giúp máy móc xác minh nguồn uy tín đã tồn tại sẵn thông qua bằng cấp, chứng chỉ hay các bài báo đã xuất bản. Trong một đợt bùng phát sự cố an toàn thực phẩm, bài viết được tối ưu mã tác giả rõ ràng đã giúp website đạt 1.300 lượt nhấp và đứng thứ hai trên kết quả tìm kiếm tự nhiên ngay dưới cơ quan quản lý FDA. Việc duy trì dấu chân kỹ thuật số vững chắc cho tác giả là chìa khóa để giữ vị trí dẫn đầu trong các câu trả lời AI."
+      }
+    ],
+    "impact": "Giúp Trưởng phòng Marketing tái cấu trúc hạ tầng dữ liệu website và các kênh bán hàng, đảm bảo thương hiệu được các công cụ tìm kiếm AI như ChatGPT và Google AI Overviews nhận diện, tin tưởng và trích dẫn làm nguồn đề xuất uy tín.",
+    "ifIgnored": "Doanh nghiệp đối mặt với nguy cơ mất dần lưu lượng truy cập tự nhiên khi AI Search phát triển, do dữ liệu không đồng nhất khiến hệ thống AI nghi ngờ độ tin cậy và bỏ qua thương hiệu trong các câu trả lời.",
+    "actionChecklist": [
+      "Kiểm tra và khắc phục ngay sự lệch chuẩn thông tin giữa website, mã Schema, Google Business Profile và Merchant Center.",
+      "Bổ sung đầy đủ các trường dữ liệu chi tiết cho sản phẩm như SKU, GTIN, chất liệu, kích thước và thời gian giao hàng.",
+      "Cấu hình đúng mã trạng thái hết hàng tạm thời theo chuẩn Schema.org để không làm rớt thứ hạng SEO của sản phẩm.",
+      "Cập nhật Schema tác giả và liên kết sameAs tới các bài báo, chứng chỉ chuyên môn để xác minh uy tín thực thể."
+    ],
+    "id": "real-2026-09-01-toi-uu-schema-markup-7d9f2f",
+    "publishedAt": "01/09/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/schema-ai-citations-trusted-source/586785/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/08/schema-for-ai-418.png",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
     "category": "Meta Ads",
     "platformIcon": "Facebook",
     "title": "SKAdNetwork chỉ chiếm 11% lượt gán dữ liệu iOS và bức tranh đo lường thực tế",
@@ -251,70 +381,6 @@
   {
     "category": "Google Ads & SEO",
     "platformIcon": "Search",
-    "title": "Google cập nhật chính sách xử lý SEO ký sinh và lạm dụng uy tín trang web",
-    "isHot": true,
-    "illustration": "data-signal",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Google SEO",
-      "Spam Policy",
-      "Parasite SEO",
-      "Search Console"
-    ],
-    "summary": "Google vừa điều chỉnh chính sách chống lạm dụng uy tín trang web và thay đổi hình thức xử lý tác vụ thủ công theo từng khu vực địa lý. Đối với người dùng ngoài khu vực EEA như Việt Nam, tác vụ thủ công vẫn tác động trực tiếp làm giảm thứ hạng tìm kiếm của các phần nội dung vi phạm. Nền tảng này cũng công bố các yếu tố cụ thể để xác định hành vi vi phạm khi đánh giá thủ công.",
-    "keyNumbers": [
-      {
-        "value": "4",
-        "label": "yếu tố đánh giá lạm dụng uy tín"
-      },
-      {
-        "value": "30/8",
-        "label": "thời điểm bắt đầu áp dụng cơ chế mới"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Thay đổi cơ chế xử lý tác vụ thủ công theo khu vực",
-        "body": "Google chính thức thay đổi cách thực thi tác vụ thủ công đối với chính sách lạm dụng uy tín trang web sau các thảo luận với Ủy ban Châu Âu. Bắt đầu từ ngày 30/8, các phạt tác vụ thủ công đối với hành vi lạm dụng uy tín sẽ ảnh hưởng trực tiếp đến kết quả tìm kiếm hiển thị cho người dùng ngoài khu vực EEA. Đối với người dùng trong EEA, tác vụ thủ công sẽ không làm giảm thứ hạng trực tiếp như trước. Hệ thống sẽ tách biệt phần trang web vi phạm để xếp hạng độc lập dựa trên giá trị tự thân của nội dung đó."
-      },
-      {
-        "heading": "Nguyên tắc đánh giá chất lượng đồng nhất trên tên miền",
-        "body": "Google đưa ra giả định rằng các trang mới được thêm vào sẽ có chất lượng chung tương đồng với toàn bộ các trang khác trên cùng tên miền. Khi phát hiện một phần trang web có dấu hiệu không tuân thủ chính sách, hệ thống sẽ đưa trang đó vào quy trình đánh giá thủ công. Tùy thuộc vào vị trí địa lý của người dùng, hậu quả đối với thứ hạng hiển thị trên trang tìm kiếm sẽ khác nhau. Với người dùng ngoài EEA, các trang bị xác định vi phạm sẽ chịu phạt tác vụ thủ công làm rớt thứ hạng hoặc biến mất khỏi kết quả tìm kiếm."
-      },
-      {
-        "heading": "Các yếu tố xác định hành vi lạm dụng uy tín trang web",
-        "body": "Mục đích của việc kiểm tra thủ công là xác định xem nội dung trên phần trang web đó có nhận được đủ sự đóng góp và kiểm duyệt biên tập từ trang chủ quản hay không. Quy trình này áp dụng trên toàn cầu và dựa trên các yếu tố khách quan như cách trình bày thiết kế, định dạng, font chữ và trải nghiệm UX có nhất quán với tên miền chính không. Google cũng xem xét chất lượng nội dung có sụt giảm bất thường so với tiêu chuẩn chung của tên miền hay không. Bên cạnh đó, mức độ rõ ràng về quyền tác giả và trách nhiệm đối với nội dung xuất bản cũng là căn cứ quan trọng."
-      },
-      {
-        "heading": "Quy trình thông báo và xử lý khi khiếu nại tác vụ thủ công",
-        "body": "Search Console vẫn sẽ gửi thông báo cho chủ sở hữu trang web khi có tác vụ thủ công được áp dụng. Doanh nghiệp có thể gửi yêu cầu xem xét lại nếu cho rằng án phạt bị áp dụng do nhầm lẫn. Các trang web đủ điều kiện trong khu vực EEA có thêm quyền đưa tranh chấp ra cơ quan hòa giải sau khi gửi yêu cầu xem xét lại. Cơ chế này giúp các nội dung kinh doanh đặc thù như casino được xếp hạng công bằng với các nội dung cùng ngành khác."
-      },
-      {
-        "heading": "Tác động đối với các chiến dịch nội dung tại Việt Nam",
-        "body": "Do Việt Nam nằm ngoài khu vực EEA, mọi tác vụ thủ công từ Google sẽ ảnh hưởng trực tiếp và ngay lập tức tới thứ hạng tìm kiếm của người dùng trong nước. Các mô hình hợp tác xuất bản, cho thuê sub-folder hoặc sub-domain để đối tác đăng bài SEO không qua kiểm duyệt sẽ chịu rủi ro rất cao. Google nhấn mạnh rằng các đợt đánh giá thủ công trực tiếp tuy hiếm nhưng khi diễn ra sẽ xem xét rất kỹ quyền kiểm soát nội dung của trang chủ quản."
-      }
-    ],
-    "impact": "Các chiến dịch SEO hợp tác hoặc đăng tải nội dung từ bên thứ ba trên tên miền của doanh nghiệp tại Việt Nam sẽ bị trừng phạt trực tiếp bằng tác vụ thủ công nếu Google phát hiện thiếu sự kiểm duyệt biên tập, gây sụt giảm lượng truy cập tự nhiên nghiêm trọng.",
-    "ifIgnored": "Trang web doanh nghiệp có nguy cơ bị gắn tác vụ thủ công trên Search Console, làm biến mất các mục nội dung vi phạm khỏi kết quả tìm kiếm của người dùng Việt Nam mà không được hưởng cơ chế tách biệt xếp hạng độc lập như các trang web tại Châu Âu.",
-    "actionChecklist": [
-      "Rà soát toàn bộ các thư mục con và tên miền phụ đang hợp tác xuất bản nội dung với bên thứ ba.",
-      "Đảm bảo chuẩn hóa giao diện UX, font chữ và định dạng nội dung đối tác đồng nhất với tên miền chính.",
-      "Bổ sung quy trình kiểm duyệt biên tập và ghi rõ quyền tác giả của trang chủ quản trên từng bài viết.",
-      "Kiểm tra mục Tác vụ thủ công trong Google Search Console định kỳ để kịp thời xử lý cảnh báo."
-    ],
-    "deadline": "30/08",
-    "id": "real-2026-08-28-google-cap-nhat-chinh-064a06",
-    "publishedAt": "28/08/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/google-updates-site-reputation-abuse-policy-removes-penalties-in-eea/587423/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/08/google-eea-seo-99.jpg",
-      "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
     "title": "Cảnh báo gia tăng tấn công website bằng AI: Nguy cơ làm sập thứ hạng SEO và lưu lượng truy cập",
     "isHot": false,
     "illustration": "account-security",
@@ -436,69 +502,6 @@
     "image": {
       "url": "https://ppc.land/content/images/size/w1200/2026/08/MCP-Ad-Platforms.webp",
       "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
-    "category": "AI Marketing",
-    "platformIcon": "Sparkles",
-    "title": "Công cụ AI đề xuất thương hiệu nhưng trích dẫn nguồn từ website bên thứ ba",
-    "isHot": false,
-    "illustration": "zero-click",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "AI Search",
-      "GEO",
-      "SEO Thương mại điện tử",
-      "Nguồn trích dẫn"
-    ],
-    "summary": "Nghiên cứu mới cho thấy các công cụ tìm kiếm AI thường xuyên đề xuất tên thương hiệu cho người dùng nhưng lại dẫn liên kết về các trang đánh giá của bên thứ ba thay vì website chính chủ. Điều này đặt ra thách thức lớn cho các Trưởng phòng Marketing trong việc tối ưu hóa sự hiện diện và lưu lượng truy cập từ AI.",
-    "keyNumbers": [
-      {
-        "value": "2,8%",
-        "label": "Trang chính chủ trong tổng số trích dẫn AI"
-      },
-      {
-        "value": "59%",
-        "label": "Trích dẫn trỏ về trang đánh giá bên thứ ba"
-      },
-      {
-        "value": "31%",
-        "label": "Trang chính chủ được dẫn link khi AI gọi tên"
-      }
-    ],
-    "content": [
-      {
-        "heading": "AI ưu tiên dẫn nguồn từ các trang đánh giá độc lập",
-        "body": "Phân tích từ Shero Commerce trên 1.851 nguồn trích dẫn qua Google AI Mode, ChatGPT và Perplexity cho thấy chỉ 2,8% nguồn trỏ về trang web chính chủ của thương hiệu. Trong khi đó, nhóm website bên thứ ba như các trang đánh giá hay báo chí chiếm tới 59% tổng số trích dẫn. Các mô hình AI dường như ưu tiên trích dẫn thông tin từ các nguồn tổng hợp khách quan hơn là nội dung tự quảng cáo trên website bán hàng."
-      },
-      {
-        "heading": "Được đề xuất tên nhưng vẫn mất lượt nhấp vào tay bên thứ ba",
-        "body": "Ngay cả khi công cụ AI chủ động khuyến nghị một thương hiệu cụ thể, khả năng người dùng nhận được liên kết trỏ thẳng về website chính chủ vẫn rất thấp. Báo cáo ghi nhận trong 159 lần thương hiệu được AI gọi tên trực tiếp, trang chính chủ chỉ xuất hiện trong trích dẫn ở 31% trường hợp. Ví dụ, với truy vấn tìm kiếm sản phẩm quần tập, ChatGPT và Perplexity gợi ý các thương hiệu như Gymshark hay Alo nhưng lại trích dẫn đường dẫn từ các trang trung gian."
-      },
-      {
-        "heading": "Tỷ lệ xuất hiện thực tế trên Google AI Mode còn hạn chế",
-        "body": "Trong các đợt kiểm tra cửa hàng thuộc 60 ngành hàng sản phẩm, các thương hiệu mẫu chỉ được trích dẫn hoặc đề xuất trong 9,5% trường hợp trên Google AI Mode. Đáng chú ý, khoảng một phần ba số ngành hàng được khảo sát hoàn toàn không có sự xuất hiện của bất kỳ thương hiệu mẫu nào. Số liệu này phản ánh việc hiển thị tự nhiên trên giao diện tìm kiếm AI của Google hiện vẫn là một rào cản lớn với các doanh nghiệp thương mại điện tử."
-      },
-      {
-        "heading": "Nội dung trùng lặp và thiếu chiều sâu làm giảm khả năng trích dẫn",
-        "body": "Nghiên cứu trên dữ liệu sản phẩm từ các cửa hàng Shopify chỉ ra rằng 20% mô tả sản phẩm bị trùng lặp hoặc rất tương đồng với các website khác do dùng chung nguồn phân phối. Bên cạnh đó, khi phân tích mã HTML của 173 cửa hàng, có tới 27 cửa hàng sở hữu đoạn mô tả sản phẩm ngắn dưới 50 từ. Việc thiếu nội dung độc quyền và thông tin quá sơ sài khiến thuật toán AI khó xác định website chính chủ là nguồn thông tin gốc đáng tin cậy."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing sẽ nhận thấy traffic trực tiếp từ tìm kiếm AI không tự động đổ về website dù sản phẩm được AI đánh giá cao. Chiến lược SEO chỉ tập trung vào trang bán hàng chính chủ sẽ bị giảm hiệu quả khi AI chuyển hướng người dùng sang các trang đánh giá và đối tác affiliate.",
-    "ifIgnored": "Doanh nghiệp nguy cơ mất đi lượng khách hàng có intent mua sắm cao vào tay các đối thủ xuất hiện trên các trang review bên thứ ba, đồng thời lãng phí ngân sách SEO truyền thống mà không thu lại được lượt truy cập từ làn sóng AI Search.",
-    "actionChecklist": [
-      "Đẩy mạnh xuất hiện trên các trang review, báo chí và nội dung Affiliate của bên thứ ba để đón dòng trích dẫn từ AI.",
-      "Rà soát và viết lại toàn bộ mô tả sản phẩm trùng lặp trên website chính chủ để tạo nội dung độc quyền.",
-      "Bổ sung độ sâu nội dung mô tả sản phẩm vượt mốc 50 từ, cung cấp thêm thông số kỹ thuật và hướng dẫn chi tiết.",
-      "Theo dõi định kỳ sự xuất hiện của thương hiệu trên ChatGPT, Perplexity và Google AI Mode cho các truy vấn mua sắm cốt lõi."
-    ],
-    "id": "real-2026-08-26-cong-cu-ai-de-6735b3",
-    "publishedAt": "26/08/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/ai-tools-recommend-brands-but-cite-other-sites-data-shows/587160/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/08/ai-tools-brand-citations-1600x840-1.jpg",
-      "credit": "Ảnh: Search Engine Journal"
     }
   },
   {
