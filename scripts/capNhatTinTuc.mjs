@@ -32,6 +32,8 @@ const CHE_DO_THU = process.argv.includes('--thu');
 
 /* Tổng số tin thật giữ trong bản tin. Thêm bao nhiêu thì bỏ bấy nhiêu tin cũ. */
 const TONG_TIN = 12;
+/* Sàn tối thiểu, khớp với bộ kiểm tra. Dập trần đến đây là dừng. */
+const TON_TOI_THIEU = 8;
 /* Số tin thêm tối đa mỗi ngày. Ít mà chắc hơn nhiều mà nhạt. */
 const THEM_TOI_DA = 3;
 /* Trần tin cho mỗi tên miền, tránh bản tin bị một báo chiếm sóng. */
@@ -595,11 +597,14 @@ export function tenMien(url) {
 export function ghepDanhSach(dangCo, tinMoi) {
   const ketQua = [...tinMoi, ...dangCo];
 
-  while (ketQua.length > TONG_TIN) {
-    const boDuoc = ketQua.filter((t) => !t.isReference && !tinMoi.includes(t));
-    if (boDuoc.length === 0) break;
+  const cuNhat = (danh) => danh.reduce((a, b) => (mocNgay(a) <= mocNgay(b) ? a : b));
+  const bo = (t, vi) => {
+    ketQua.splice(ketQua.indexOf(t), 1);
+    log(`bỏ tin ${vi}: [${tenMien(t.sourceUrl)}] ${t.publishedAt} ${t.title.slice(0, 50)}`);
+  };
 
-
+  /** Liệt kê mọi chỗ đang vượt trần, cả theo nguồn lẫn theo nhóm. */
+  const viPham = () => {
     const demNguon = {};
     const demNhom = {};
     ketQua.forEach((t) => {
@@ -607,24 +612,44 @@ export function ghepDanhSach(dangCo, tinMoi) {
       demNguon[h] = (demNguon[h] || 0) + 1;
       demNhom[t.category] = (demNhom[t.category] || 0) + 1;
     });
+    const ra = [];
+    Object.entries(demNguon)
+      .filter(([, c]) => c > TRAN_MOI_NGUON)
+      .forEach(([h]) => ra.push({ ten: `nguồn ${h}`, thuoc: (t) => tenMien(t.sourceUrl) === h }));
+    Object.entries(demNhom)
+      .filter(([, c]) => c > TRAN_MOI_NHOM)
+      .forEach(([k]) => ra.push({ ten: `nhóm ${k}`, thuoc: (t) => t.category === k }));
+    return ra;
+  };
 
-    const nguonQuaTran = Object.entries(demNguon).filter(([, c]) => c > TRAN_MOI_NGUON).map(([h]) => h);
-    const nhomQuaTran = Object.entries(demNhom).filter(([, c]) => c > TRAN_MOI_NHOM).map(([k]) => k);
+  // BƯỚC 1: DẬP MỌI CHỖ VƯỢT TRẦN, kể cả khi tổng đã về đúng 12.
+  //
+  // Bản trước gộp việc này vào vòng cắt cho đủ tổng, nên số lượt bỏ bị giới hạn
+  // bằng số tin mới thêm vào. Hôm 31/08 vừa vượt trần nhóm vừa vượt trần nguồn:
+  // hai lượt bỏ chỉ đủ dập một bên, ppc.land đọng lại 5 tin, bộ kiểm tra chặn và
+  // cả lượt chạy hỏng dù bài đã viết xong. Nay dập cho hết vi phạm rồi mới tính
+  // tổng. Danh sách tụt xuống dưới 12 không sao, bộ kiểm tra chấp nhận từ 8 tin.
+  for (let vong = 0; vong < 50; vong += 1) {
+    // Dập trần nhưng không được phá nát danh sách: xuống dưới sàn thì bộ kiểm
+    // tra cũng chặn, bỏ thêm chỉ tổ mất tin mà vẫn hỏng.
+    if (ketQua.length <= TON_TOI_THIEU) break;
+    const cho = viPham();
+    if (cho.length === 0) break;
+    const { ten, thuoc } = cho[0];
 
-    // Trần theo NHÓM xét trước trần theo nguồn. Bản trước chỉ cân theo nguồn,
-    // nên nhóm 'Google Ads & SEO' cứ phình dần mà không có gì kéo lại; đến khi
-    // vượt 6 thì bộ kiểm tra chặn và cả lượt chạy hỏng, không thêm được tin nào
-    // dù bài viết đã xong. Cân ngay ở đây rẻ hơn nhiều so với báo đỏ rồi sửa tay.
-    let ungVien = [];
-    if (nhomQuaTran.length > 0) ungVien = boDuoc.filter((t) => nhomQuaTran.includes(t.category));
-    if (ungVien.length === 0 && nguonQuaTran.length > 0) {
-      ungVien = boDuoc.filter((t) => nguonQuaTran.includes(tenMien(t.sourceUrl)));
-    }
+    // Ưu tiên bỏ tin cũ. Hết tin cũ mới đụng tới tin vừa viết: thà bớt một tin
+    // mới còn hơn hỏng cả lượt chạy rồi không đăng được gì.
+    const cu = ketQua.filter((t) => thuoc(t) && !t.isReference && !tinMoi.includes(t));
+    const nan = cu.length > 0 ? cu : ketQua.filter((t) => thuoc(t) && tinMoi.includes(t));
+    if (nan.length === 0) break;
+    bo(cuNhat(nan), `quá trần ${ten}`);
+  }
 
-    const danhSachXet = ungVien.length > 0 ? ungVien : boDuoc;
-    const cuNhat = danhSachXet.reduce((a, b) => (mocNgay(a) <= mocNgay(b) ? a : b));
-    ketQua.splice(ketQua.indexOf(cuNhat), 1);
-    log(`bỏ tin cũ: [${tenMien(cuNhat.sourceUrl)}] ${cuNhat.publishedAt} ${cuNhat.title.slice(0, 50)}`);
+  // BƯỚC 2: còn thừa so với tổng 12 thì bỏ tin cũ nhất.
+  while (ketQua.length > TONG_TIN) {
+    const boDuoc = ketQua.filter((t) => !t.isReference && !tinMoi.includes(t));
+    if (boDuoc.length === 0) break;
+    bo(cuNhat(boDuoc), 'cũ');
   }
 
   return ketQua;
@@ -691,6 +716,15 @@ async function chay() {
     const tuTrung = TU_KHOA_LOAI.find((t) => tieuDeThuong.includes(t));
     if (tuTrung) {
       log(`bỏ qua (chứa "${tuTrung}"): ${b.tieuDe.slice(0, 55)}`);
+      continue;
+    }
+
+    // PPC Land đăng đều đặn hàng chục trang từ điển tiêu đề 'Explaining <thuật
+    // ngữ>'. Đó là mục tra cứu chứ không phải tin. Hôm 30/08 chúng chiếm gần
+    // trọn lượt chạy — mỗi trang một lượt tải và một lượt gọi mô hình — nên hết
+    // 20 phút mà chưa xử lý tới tin thật, cả lượt chạy bị cắt giữa chừng.
+    if (/^explaining\s/i.test(b.tieuDe.trim())) {
+      log(`bỏ qua (trang từ điển): ${b.tieuDe.slice(0, 55)}`);
       continue;
     }
 

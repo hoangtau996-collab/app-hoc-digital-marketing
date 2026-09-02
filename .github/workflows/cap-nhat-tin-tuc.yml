@@ -9,10 +9,15 @@ name: Cập nhật bản tin
 
 on:
   schedule:
-    # 01:00 UTC = 08:00 giờ Việt Nam. GitHub chỉ nhận giờ UTC.
-    # Lịch của GitHub có thể chạy trễ vài chục phút khi hệ thống bận, đó là
-    # chuyện bình thường, không phải hỏng.
-    - cron: '0 1 * * *'
+    # 01:23 UTC = 08:23 giờ Việt Nam. GitHub chỉ nhận giờ UTC.
+    #
+    # Vì sao là phút 23 chứ không phải đúng giờ: lịch của GitHub chạy chung một
+    # hàng đợi cho mọi kho mã, và ai cũng hẹn vào phút 0 nên phút đó tắc nhất.
+    # Cuối tháng 8 các lượt hẹn 01:00 bị đẩy lùi tới 05:47, có hôm 12:19 mới
+    # chạy — bản tin 'buổi sáng' đến vào đầu giờ chiều. Hẹn vào một phút lẻ thì
+    # đỡ phải xếp hàng. Trễ vài chục phút vẫn là chuyện bình thường, không phải
+    # hỏng; muốn có tin ngay thì bấm chạy tay ở tab Actions.
+    - cron: '23 1 * * *'
   # Cho phép bấm chạy tay từ tab Actions, dùng khi cần cập nhật gấp.
   workflow_dispatch:
 
@@ -24,7 +29,7 @@ jobs:
   cap-nhat:
     runs-on: ubuntu-latest
     # Cả job không được vượt 20 phút. Mạng treo thì cắt, đừng để chạy vô hạn.
-    timeout-minutes: 20
+    timeout-minutes: 30
 
     steps:
       - name: Lấy mã nguồn
