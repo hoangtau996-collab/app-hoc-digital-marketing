@@ -1,5 +1,193 @@
 [
   {
+    "category": "AI Marketing",
+    "platformIcon": "Sparkles",
+    "title": "AI Agent bắt đầu tự mua quảng cáo: Các agency thiết lập hạn mức token để kiểm soát chi phí",
+    "isHot": false,
+    "illustration": "ai-budget",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "AI Agent",
+      "Tự động hóa quảng cáo",
+      "Quản trị ngân sách AI"
+    ],
+    "summary": "Các agency quảng cáo đang gấp rút xây dựng cơ chế giám sát và đặt hạn mức tiêu thụ token hàng ngày khi AI agent chính thức tham gia vào quy trình lập kế hoạch và mua truyền thông thực tế. Dù công nghệ này mang lại hiệu quả chuyển đổi ấn tượng trong các thử nghiệm ban đầu, chi phí vận hành mô hình và nguy cơ chệch hướng quyết định đang buộc các nhà tiếp thị phải lập tức dựng rào chắn kiểm soát.",
+    "keyNumbers": [
+      {
+        "value": "1.500.000",
+        "label": "Token bị tiêu thụ bởi 1 nhân sự trong 1 ngày tại agency Dept"
+      },
+      {
+        "value": "125.000 USD",
+        "label": "Doanh thu Rouge Care thu về từ 25.000 USD ngân sách do AI tự chạy"
+      },
+      {
+        "value": "60%",
+        "label": "Tổ chức dùng AI dự kiến bị thâm hụt chi phí do thiếu giám sát (Gartner)"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Sự trỗi dậy của AI Agent trong việc trực tiếp giải ngân quảng cáo",
+        "body": "Thế hệ AI mới không chỉ dừng lại ở việc tạo nội dung mà đã bắt đầu trực tiếp mua quảng cáo trên môi trường thực tế. Điển hình là thương hiệu Rouge Care khi để hai AI agent tự lập kế hoạch và mua chiến dịch truyền hình kết nối CTV qua nền tảng AgenticOS của PubMatic. Kết quả thực tế đạt mức doanh thu hơn 125.000 USD trên tổng chi tiêu 25.000 USD, tương đương tỷ suất hoàn vốn 500% và gấp đôi mục tiêu ban đầu. Nền tảng này giúp giảm 87% thời gian thiết lập chiến dịch, cải thiện 70% tốc độ giải quyết sự cố và ra quyết định nhanh hơn 5 lần."
+      },
+      {
+        "heading": "Bẫy chi phí phát sinh từ việc tiêu hao token khi AI suy luận",
+        "body": "Khi AI agent hoạt động theo vòng lặp suy luận liên tục, lượng token tiêu thụ tăng vọt và trực tiếp chuyển thành chi phí vận hành đắt đỏ. Điển hình tại agency Dept, hệ thống ghi nhận một nhân sự làm tiêu tốn tới 1.500.000 token chỉ trong một ngày làm việc đơn lẻ. Khảo sát vào tháng 04/2026 của Gartner với 1.300 lãnh đạo marketing cho thấy 56% doanh nghiệp đang ứng dụng AI mà không có chính sách sử dụng rõ ràng. Gartner dự báo 60% tổ chức sẽ đối mặt với tình trạng vượt ngân sách do thiếu các công cụ theo dõi mức tiêu hao tài nguyên."
+      },
+      {
+        "heading": "Agency triển khai các biện pháp kỹ thuật để đặt trần ngân sách AI",
+        "body": "Trước áp lực hóa đơn tính toán, các agency lớn phải tự xây dựng cổng phân luồng và hạn mức token theo ngày thay vì chờ đợi nhà cung cấp. Dept tạo ra cổng định tuyến nội bộ để điều phối từng tác vụ tới mô hình phù hợp với yêu cầu thương mại và pháp lý, ngăn nhân viên tùy tiện dùng các mô hình đắt tiền. PMG triển khai công cụ Alli For You đặt hạn mức token hàng ngày cho từng người dùng kèm quy trình phê duyệt khi chạm trần. Brainlabs áp dụng cơ chế cấp quota token theo từng cấp bậc nhân sự để kiểm soát chặt chẽ ngân sách vận hành."
+      },
+      {
+        "heading": "Xây dựng rào chắn ngăn AI chệch hướng khỏi mục tiêu ban đầu",
+        "body": "Bên cạnh bài toán chi phí token, rủi ro AI agent chệch hướng khỏi các thông số kinh doanh ban đầu đòi hỏi phải có cơ chế ghi nhật ký kiểm toán nghiêm ngặt. PubMatic đã đưa ra khung an toàn gồm 5 bước bao gồm giới hạn nền tảng, quy tắc tiền chiến dịch, duyệt trước vị trí hiển thị và luồng phê duyệt xác thực. Khi AI đưa ra quyết định vượt thẩm quyền, hệ thống sẽ dừng lại và yêu cầu con người xác nhận qua mã mật khẩu một lần OTP. Cơ chế này tạo ra bằng chứng xác thực có giá trị pháp lý để giải quyết các tranh chấp phát sinh trong tương lai."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing đối mặt với hai dòng ngân sách song song: ngân sách hiển thị quảng cáo truyền thống và chi phí điện toán suy luận của AI. Nếu ứng dụng các công cụ tự động hóa mua media mà không có rào chắn kỹ thuật, doanh nghiệp dễ rơi vào tình trạng doanh thu quảng cáo tăng nhưng lợi nhuận ròng bị bào mòn bởi hóa đơn token API.",
+    "ifIgnored": "Doanh nghiệp có thể gánh chịu tổn thất tài chính kép do AI tự ý đấu thầu sai lệch ngoài kế hoạch mà không có nhật ký truy vết, đồng thời đối mặt với tình trạng vượt trần ngân sách công nghệ thông tin vì nhân viên lạm dụng các mô hình ngôn ngữ lớn đắt tiền mà không bị kiểm soát.",
+    "actionChecklist": [
+      "Thiết lập hạn mức tiêu thụ token hoặc ngân sách API tối đa theo ngày cho từng nhân sự và từng dự án nội bộ",
+      "Yêu cầu các đối tác agency hoặc nhà cung cấp adtech cung cấp nhật ký kiểm toán có mốc thời gian rõ ràng khi dùng AI mua quảng cáo",
+      "Áp dụng quy tắc phê duyệt có xác thực con người với các quyết định điều chỉnh ngân sách hoặc đấu thầu vượt ngưỡng định trước",
+      "Phân loại tác vụ quảng cáo để phân luồng sử dụng mô hình AI tinh gọn thay vì dùng mô hình đắt đỏ cho mọi công việc"
+    ],
+    "id": "real-2026-09-04-ai-agent-bat-dau-ebe22c",
+    "publishedAt": "04/09/2026",
+    "sourceUrl": "https://ppc.land/ai-agents-now-buy-media-so-agencies-are-metering-them-by-the-token/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/09/AI-agents-now-buy-media.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "AI Marketing",
+    "platformIcon": "Sparkles",
+    "title": "ChatGPT Ads bỏ ngưỡng 25.000 người cho tệp loại trừ và ra mắt plugin quản lý chiến dịch",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "ChatGPT Ads",
+      "Tệp đối tượng",
+      "Conversions API",
+      "Dữ liệu khách hàng"
+    ],
+    "summary": "OpenAI vừa nới lỏng quy định đối tượng tùy chỉnh trên ChatGPT Ads Manager, cho phép dùng tệp dưới 25.000 người để loại trừ quảng cáo. Nền tảng cũng ra mắt plugin điều khiển chiến dịch bằng câu lệnh tự nhiên và mở rộng các trường dữ liệu định danh cho Conversions API.",
+    "keyNumbers": [
+      {
+        "value": "25.000",
+        "label": "Ngưỡng người dùng tối thiểu được gỡ bỏ cho tệp loại trừ"
+      },
+      {
+        "value": "5.000.000",
+        "label": "Mức thành viên mà tệp đối tượng tùy chỉnh hiện có thể vượt qua"
+      },
+      {
+        "value": "40",
+        "label": "Số quốc gia đã mở cổng tự mua quảng cáo Ads Manager"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Gỡ bỏ rào cản 25.000 người cho danh sách loại trừ",
+        "body": "Trước đây, tài liệu hỗ trợ tháng 7/2026 của OpenAI quy định tệp đối tượng tùy chỉnh phải đạt tối thiểu 25.000 người dùng khớp mới được kích hoạt trong chiến dịch. Quy tắc mới cho phép các tệp dưới 25.000 người được áp dụng riêng cho mục đích loại trừ hiển thị. Thay đổi này giúp doanh nghiệp dễ dàng loại bỏ tệp khách hàng vừa mua, tài khoản hủy dịch vụ hoặc các trường hợp hoàn tiền mà không lo thiếu quy mô. Ngoài ra, dung lượng tệp tải lên vẫn giữ giới hạn 500.000.000 bytes nhưng quy mô danh sách hiện đã có thể vượt mốc 5.000.000 thành viên."
+      },
+      {
+        "heading": "Cập nhật danh sách linh hoạt và bổ sung Google Advertising ID",
+        "body": "Hệ thống đối tượng tùy chỉnh của ChatGPT Ads hiện cho phép thêm, xóa hoặc thay thế thành viên trực tiếp mà không cần tạo lại tệp từ đầu. Nhà quảng cáo cũng có thể kết hợp nhiều loại định danh trong cùng một yêu cầu tải lên thay vì phải tách riêng. Đáng chú ý, mã nhận diện thiết bị Android là Google Advertising ID đã chính thức được hỗ trợ cùng với email và số điện thoại băm chuẩn SHA-256. Sự bổ sung này hỗ trợ đắc lực cho các chiến dịch cài đặt ứng dụng di động thông qua tích hợp đo lường với AppsFlyer và Adjust."
+      },
+      {
+        "heading": "Điều khiển tài khoản quảng cáo bằng plugin ChatGPT",
+        "body": "OpenAI giới thiệu plugin ChatGPT Ads Manager cho phép tạo, quản lý và phân tích chiến dịch trực tiếp từ giao diện ChatGPT hoặc Codex. Công cụ có khả năng chuyển đổi bản tóm tắt nội dung hoặc đường dẫn website thành mẫu quảng cáo hoàn chỉnh bằng câu lệnh ngôn ngữ tự nhiên. Để đảm bảo an toàn, hệ thống thiết lập cơ chế yêu cầu người dùng xác nhận trước khi thực thi mọi thay đổi điều chỉnh tài khoản. Thiết lập này vận hành trực tiếp bên trong hệ sinh thái OpenAI thông qua kết nối tài khoản từ danh mục Plugins."
+      },
+      {
+        "heading": "Mở rộng trường dữ liệu Conversions API và báo cáo thẻ Carousel",
+        "body": "Giao thức Conversions API hiện hỗ trợ gửi danh sách nhiều giá trị cho email, số điện thoại, tên, quốc gia, mã bưu điện và mã GAID. Việc gửi nhiều địa chỉ email hoặc số điện thoại trên cùng một bản ghi giúp tăng tỷ lệ so khớp dữ liệu từ hệ thống CRM. Đo lường Pixel trên website cũng bổ sung thu thập dữ liệu băm mở rộng gồm họ tên và khu vực địa lý. Bên cạnh đó, định dạng quảng cáo nhiều sản phẩm Carousel đã có báo cáo lượt xem và nhấp chuột theo từng thẻ sản phẩm nhưng không tính vào tổng số lượt hiển thị bị tính phí."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing có thể triển khai chiến dịch giữ chân và tìm kiếm khách hàng mới hiệu quả hơn trên ChatGPT nhờ khả năng loại trừ tệp khách hàng cũ quy mô nhỏ. Đồng thời, tỷ lệ khớp dữ liệu chuyển đổi từ CRM sẽ tăng lên đáng kể nhờ các trường định danh mở rộng.",
+    "ifIgnored": "Doanh nghiệp sẽ lãng phí ngân sách hiển thị vào nhóm khách hàng đã mua hoặc người dùng không mong muốn do không tận dụng tệp loại trừ nhỏ, đồng thời bỏ lỡ cơ hội tối ưu hóa tỷ lệ so khớp chuyển đổi qua API mới.",
+    "actionChecklist": [
+      "Trích xuất danh sách khách hàng đã mua hoặc tệp hủy dịch vụ gần đây từ CRM để tạo tệp loại trừ trong ChatGPT Ads Manager",
+      "Cập nhật cấu hình Conversions API để truyền đồng thời nhiều email và số điện thoại trên mỗi bản ghi khách hàng",
+      "Bổ sung trường Google Advertising ID vào các tệp dữ liệu khách hàng ứng dụng di động",
+      "Cài đặt plugin ChatGPT Ads Manager để thử nghiệm quản lý chiến dịch và xem xét các đề xuất tối ưu hóa"
+    ],
+    "id": "real-2026-09-03-chatgpt-ads-bo-nguong-d31934",
+    "publishedAt": "03/09/2026",
+    "sourceUrl": "https://ppc.land/openai-drops-25-000-user-floor-for-chatgpt-ad-exclusion-audiences/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/09/OpenAI-drops-25-000-user-floor-for-ChatGPT-ad-exclusion-audiences.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Giá và nhà bán trên Google AI Mode chênh lệch lớn so với vòng quay sản phẩm thông thường",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Google AI Mode",
+      "Google Shopping",
+      "SEO Ecommerce",
+      "Merchant Center"
+    ],
+    "summary": "Nghiên cứu mới từ Productrise cho thấy các sản phẩm xuất hiện trong giao diện AI Mode của Google hiếm khi trùng khớp với vòng quay sản phẩm trên kết quả tìm kiếm thông thường. Ngay cả khi hiển thị cùng một mặt hàng, AI Mode thường ưu tiên nhà bán hàng khác với mức giá niêm yết cao hơn. Điều này đặt ra bài toán mới cho các thương hiệu e-commerce trong việc tối ưu hóa nguồn cấp dữ liệu trên Google Merchant Center.",
+    "keyNumbers": [
+      {
+        "value": "1,28%",
+        "label": "Tỷ lệ trùng lặp sản phẩm giữa vòng quay thường và AI Mode"
+      },
+      {
+        "value": "49,6%",
+        "label": "Tỷ lệ đổi người bán đứng đầu khi cùng hiển thị một sản phẩm"
+      },
+      {
+        "value": "68,4%",
+        "label": "Tỷ lệ AI Mode hiển thị giá cao hơn khi có chênh lệch"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Mức độ trùng lặp sản phẩm cực thấp giữa hai giao diện",
+        "body": "Theo dữ liệu theo dõi hơn 2 triệu danh mục sản phẩm từ hơn 100.000 kết quả tìm kiếm từ ngày 9 đến ngày 31 tháng 8 năm 2026, tỷ lệ xuất hiện đồng thời của một sản phẩm trên cả hai giao diện chỉ đạt 1,28% mỗi ngày. Trong khi vòng quay sản phẩm phổ biến hiển thị trung bình 27,8 sản phẩm cho mỗi truy vấn, AI Mode chỉ đưa ra khoảng 3,9 sản phẩm. Sự chênh lệch số lượng này khiến khả năng hiển thị của doanh nghiệp trên AI Mode bị thu hẹp đáng kể. Việc xếp hạng tốt ở vòng quay tìm kiếm truyền thống không còn đảm bảo vị trí xuất hiện trong câu trả lời AI."
+      },
+      {
+        "heading": "AI Mode thường chọn người bán khác và mức giá cao hơn",
+        "body": "Đối với các sản phẩm cùng xuất hiện ở cả hai nơi, người bán đứng đầu tiên bị thay đổi ở 49,6% số trường hợp. Đồng thời, mức giá hiển thị giữa hai giao diện có sự khác biệt ở 38,1% sản phẩm đối soát. Trong các trường hợp giá lệch nhau, AI Mode đưa ra mức giá cao hơn tới 68,4% thời gian. Xét trên toàn bộ sản phẩm đối soát, giá trên AI Mode cao hơn trung bình 21,6% so với vòng quay truyền thống. Khoảng chênh lệch trung vị khi AI Mode cao hơn là 22,2% và trung bình lên tới 88,5% do ảnh hưởng từ các sản phẩm cũ hoặc tân trang."
+      },
+      {
+        "heading": "Phản hồi từ Google và cơ chế Shopping Graph",
+        "body": "Google đại diện phát biểu rằng họ chưa xác minh báo cáo từ Productrise nhưng khẳng định mọi kết quả mua sắm đều dùng chung nguồn dữ liệu Shopping Graph. Nền tảng này giải thích người mua có thể dễ dàng bấm vào danh sách để so sánh giá giữa các nhà bán lẻ khác nhau. Nhà sáng lập Productrise cho rằng yếu tố giá rẻ nhất dường như ít ảnh hưởng hơn trong thuật toán lựa chọn của AI Mode. Điều này mở ra cơ hội cho các thương hiệu không cạnh tranh bằng giá rẻ nhưng có dữ liệu sản phẩm chi tiết hơn. Việc cung cấp dữ liệu nguồn đầy đủ đóng vai trò then chốt để thuật toán AI ưu tiên chọn lựa."
+      },
+      {
+        "heading": "Hạn chế của báo cáo hiệu suất AI trong Merchant Center",
+        "body": "Tính năng báo cáo hiệu suất AI trong Google Merchant Center chỉ cung cấp tổng quan về thị phần hiển thị của thương hiệu dưới dạng phần trăm lượt ấn tượng. Báo cáo này hoàn toàn không chi tiết hóa thông tin người bán nào hoặc mức giá nào đang được AI Mode đưa lên đầu. Doanh nghiệp không thể chỉ dựa vào báo cáo nội bộ của Google để biết liệu đối thủ có đang chiếm vị trí ưu tiên của mình hay không. Các Trưởng phòng Marketing cần tự thực hiện kiểm tra thủ công hoặc sử dụng công cụ bên thứ ba để theo dõi chính xác. Việc chủ động kiểm soát hiển thị giúp thương hiệu tránh mất khách hàng tiềm năng vào tay đối thủ trên giao diện AI."
+      }
+    ],
+    "impact": "Chiến lược Google Shopping không thể chỉ tập trung cạnh tranh về giá hoặc tối ưu SEO truyền thống. Các thương hiệu có dữ liệu nguồn cấp (feed data) chi tiết và chuẩn hóa cao trên Merchant Center sẽ có lợi thế xuất hiện ở vị trí đầu tiên trên AI Mode, ngay cả khi giá bán cao hơn đối thủ.",
+    "ifIgnored": "Doanh nghiệp có nguy cơ bị đối thủ hoặc bên bán lẻ thứ ba cướp mất vị trí hiển thị ưu tiên trên AI Mode mà không hay biết do báo cáo Merchant Center không thể hiện chi tiết người bán và giá hiển thị thực tế.",
+    "actionChecklist": [
+      "Thực hiện kiểm tra thủ công các sản phẩm chủ lực trên cả giao diện thường và Google AI Mode",
+      "Bổ sung thuộc tính chi tiết cho nguồn cấp dữ liệu sản phẩm trên Google Merchant Center",
+      "Theo dõi chỉ số thị phần hiển thị AI trong báo cáo hiệu suất của Google Merchant Center",
+      "Rà soát lại sự chênh lệch giá niêm yết giữa website chính thức và các đại lý phân phối trên Google"
+    ],
+    "id": "real-2026-09-03-gia-va-nha-ban-e877fc",
+    "publishedAt": "03/09/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/google-ai-mode-prices-differ-from-product-carousel-for-same-items/588227/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/09/google-ai-mode-product-prices.jpg",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
     "category": "Google Ads & SEO",
     "platformIcon": "Search",
     "title": "Google tích hợp Gemini 3.8 Flash vào AI Mode trên Tìm kiếm",
@@ -311,192 +499,6 @@
     "source": "Search Engine Journal",
     "image": {
       "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/08/schema-for-ai-418.png",
-      "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
-    "category": "Meta Ads",
-    "platformIcon": "Facebook",
-    "title": "SKAdNetwork chỉ chiếm 11% lượt gán dữ liệu iOS và bức tranh đo lường thực tế",
-    "isHot": false,
-    "illustration": "data-signal",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "SKAdNetwork",
-      "Đo lường iOS",
-      "Quyền riêng tư",
-      "Attribution"
-    ],
-    "summary": "SKAdNetwork của Apple vẫn gặp nhiều trở ngại trong việc trở thành chuẩn mực đo lường mặc định cho quảng cáo iOS do độ trễ dữ liệu và ngưỡng ẩn danh khắt khe. Dữ liệu khảo sát mới nhất cho thấy nhiều nhà quảng cáo phải tìm kiếm các giải pháp đo lường thay thế để bù đắp khoảng trống báo cáo.",
-    "keyNumbers": [
-      {
-        "value": "11%",
-        "label": "tỷ lệ gán ứng dụng iOS qua SKAdNetwork giữa năm 2026"
-      },
-      {
-        "value": "67%",
-        "label": "nhà quảng cáo iOS gặp lỗ hổng báo cáo do ngưỡng riêng tư"
-      },
-      {
-        "value": "33%",
-        "label": "nhà quảng cáo iOS chưa từng triển khai SKAdNetwork"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Cơ chế gán dữ liệu và giới hạn 6-bit của SKAdNetwork",
-        "body": "SKAdNetwork là API đo lường bảo mật của Apple dành cho ứng dụng iOS, ra đời nhằm thay thế cơ chế đối soát qua mã IDFA. Hệ thống mã hóa hành vi người dùng thành giá trị chuyển đổi 6-bit, tương đương với các số nguyên từ 0 đến 63 do nhà quảng cáo tự quy định. Quy trình phân bổ ghi nhận lượt nhấp trong vòng 30 ngày và lượt xem trong 24 giờ. Apple chỉ cân nhắc tối đa 6 lượt hiển thị cho mỗi chuyển đổi để xác định mạng quảng cáo chiến thắng."
-      },
-      {
-        "heading": "Độ trễ postback và lỗ hổng từ ngưỡng ẩn danh đám đông",
-        "body": "Apple áp dụng 4 tầng ẩn danh đám đông từ Tier 0 đến Tier 3 để quyết định chi tiết dữ liệu trả về. Tại Tier 0, hệ thống chỉ trả về 2 chữ số mã nguồn và không kèm giá trị chuyển đổi nào, gây thiệt hại cho các chiến dịch quy mô nhỏ. Ngoài ra, dữ liệu postback bị hoãn ngẫu nhiên từ 24 đến 48 giờ đối với cửa sổ đầu tiên và từ 24 đến 144 giờ cho các cửa sổ tiếp theo. Khảo sát của Kochava Foundry vào tháng 6/2026 cho thấy 67% nhà quảng cáo iOS đã gặp phải lỗ hổng báo cáo do các ngưỡng riêng tư này."
-      },
-      {
-        "heading": "Thực trạng áp dụng thấp trong cộng đồng nhà quảng cáo",
-        "body": "Dữ liệu cho thấy khung đo lường này chưa đạt được mức độ phổ biến như kỳ vọng ban đầu. Có 33% nhà quảng cáo iOS được khảo sát chưa hề triển khai SKAdNetwork và chỉ 11% tự nhận đã hoàn tất triển khai để tối ưu hóa. Dữ liệu nền tảng của Kochava giữa năm 2026 chỉ ra SKAdNetwork chỉ chiếm 11% số lượt gán ứng dụng iOS, thấp hơn nhiều so với mức 36% của Apple Ads. Tỷ lệ các mạng quảng cáo hỗ trợ SKAN 4.0 cũng mới đạt 43% vào tháng 2/2024."
-      },
-      {
-        "heading": "Các giải pháp ứng phó từ Meta, TikTok và Reddit",
-        "body": "Để khắc phục sự chậm trễ của dữ liệu postback, các nền tảng quảng cáo lớn buộc phải xây dựng cơ chế đo lường riêng. TikTok nâng hạn ngạch lên 15 chiến dịch cùng 5 nhóm quảng cáo từ tháng 3/2024 và tích hợp báo cáo chuyển đổi thời gian thực qua Kochava vào ngày 21/10/2025. Reddit ra mắt tính năng Dual Attribution vào tháng 5/2026 nhằm hiển thị song song dữ liệu postback và dữ liệu đối tác. Trong khi đó, Meta từng đạt 52% áp dụng SKAN 4.0 vào tháng 7/2023 nhưng sau đó phải chuyển sang kích hoạt thủ công theo từng tài khoản."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing sẽ nắm rõ nguyên nhân khiến báo cáo chuyển đổi iOS bị trễ từ 24 đến 144 giờ và bị đứt gãy dữ liệu, từ đó không đánh giá sai hiệu quả chiến dịch dựa trên báo cáo SKAdNetwork đơn thuần.",
-    "ifIgnored": "Nếu dựa hoàn toàn vào dữ liệu SKAdNetwork để tối ưu hóa hàng ngày, doanh nghiệp dễ đưa ra quyết định tắt sai chiến dịch hiệu quả hoặc phân bổ ngân sách lệch lạc do thiếu hụt dữ liệu ở các tầng ẩn danh thấp.",
-    "actionChecklist": [
-      "Đánh giá lại tỷ lệ gán dữ liệu iOS giữa SKAdNetwork và các công cụ đo lường đối tác hiện có.",
-      "Rà soát việc phân bổ 64 trạng thái chuyển đổi từ 0 đến 63 để ưu tiên các hành vi tạo ra doanh thu cao nhất.",
-      "Kiểm tra tính năng bật thủ công SKAN 4.0 trong Trình quản lý sự kiện Meta Ads cho các tài khoản chạy iOS.",
-      "Kết hợp sử dụng các báo cáo thời gian thực hoặc báo cáo kép Dual Attribution trên TikTok và Reddit để bù đắp độ trễ postback."
-    ],
-    "id": "real-2026-08-31-skadnetwork-chi-chiem-11-e7b265",
-    "publishedAt": "31/08/2026",
-    "sourceUrl": "https://ppc.land/skadnetwork/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/size/w1200/2026/08/SKAdNetwork.jpg",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Hiểu về Shill Bidding: Chiêu trò thổi giá quảng cáo programmatic và cách phòng vệ",
-    "isHot": false,
-    "illustration": "cpm-auction",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Đấu thầu quảng cáo",
-      "Programmatic Ads",
-      "Tối ưu ngân sách",
-      "Minh bạch chi phí"
-    ],
-    "summary": "Shill bidding - hành vi tự đấu giá để thổi giá sàn - đang biến tướng tinh vi trong môi trường quảng cáo programmatic thông qua việc thao túng giá sàn và can thiệp thuật toán. Hiểu rõ cơ chế này giúp các thương hiệu tối ưu hóa mô hình bid shading và bảo vệ ngân sách trước các hành vi gian lận từ trung gian.",
-    "keyNumbers": [
-      {
-        "value": "80%",
-        "label": "Tỷ lệ giảm hoạt động shill bidding trên Whatnot trong 6 tháng"
-      },
-      {
-        "value": "45%",
-        "label": "Tỷ lệ giảm báo cáo vi phạm từ người dùng trên Whatnot"
-      },
-      {
-        "value": "5 lần",
-        "label": "Mức tăng của các tín hiệu phát hiện gian lận trên Whatnot"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Bản chất của Shill Bidding trong kỷ nguyên số",
-        "body": "Shill bidding truyền thống là việc người bán tự đặt giá trong phiên đấu giá của chính mình để đẩy giá mua thực tế lên cao. Trong quảng cáo kỹ thuật số, hành vi này không cần tài khoản giả mạo mà được thay thế bằng việc các nền tảng tự động nâng giá sàn (floor price). Theo Tiêu chuẩn Minh bạch Đấu giá Quảng cáo Kỹ thuật số của Hội đồng Xếp hạng Truyền thông (MRC) công bố tháng 1/2026, giá sàn phải được công khai và áp dụng đồng nhất cho mọi người mua. Bất kỳ sự điều chỉnh giá riêng biệt nào nhắm vào một nhà quảng cáo cụ thể đều bị coi là hành vi tự đấu giá chống lại họ."
-      },
-      {
-        "heading": "Từ đấu giá vị trí thứ hai đến đấu giá vị trí thứ nhất",
-        "body": "Trước đây, quảng cáo programmatic chạy trên cơ chế đấu giá vị trí thứ hai (second-price auction), nơi người thắng trả bằng mức giá của người thứ hai cộng thêm một khoản nhỏ. Cơ chế này cực kỳ dễ bị thao túng bằng cách chèn một mức giá giả ngay dưới giá người thắng để nâng chi phí thực tế. Khi thị trường chuyển dịch sang cơ chế đấu giá vị trí thứ nhất (first-price auction) từ năm 2017 đến 2019, người thắng trả đúng mức giá họ đặt. Lúc này, các nền tảng chuyển sang thao túng giá sàn, buộc nhà quảng cáo phải tự vệ bằng kỹ thuật \"bid shading\" (ước lượng giá thắng thấp nhất dựa trên dữ liệu lịch sử)."
-      },
-      {
-        "heading": "Các vụ kiện cáo buộc thao túng đấu giá quảng cáo",
-        "body": "Các cáo buộc thao túng đấu giá không còn là lý thuyết mà đã được đưa ra tòa án. Hồ sơ pháp lý từ Teads cáo buộc dự án \"Project Bernanke\" của Google (ra mắt năm 2013) đã dìm giá thầu cao thứ hai và thổi phồng giá thầu cao nhất trước khi đưa vào sàn đấu giá AdX. Một vụ kiện khác từ OpenX cáo buộc tính năng \"Last Look\" cho phép sàn AdX xem trước giá thầu thắng của header bidding trước khi đưa ra giá thầu của riêng mình. Tòa án Virginia (Mỹ) đã phán quyết có hành vi vi phạm vào ngày 17/4/2025, dù các biện pháp khắc phục vẫn chưa được giải quyết tính đến cuối tháng 7/2026."
-      },
-      {
-        "heading": "Tiêu chuẩn kỹ thuật mới nhằm ngăn chặn gian lận",
-        "body": "Để đối phó với tình trạng này, IAB Tech Lab đã phát hành bản cập nhật AAMP 2.3 vào ngày 30/7/2026. Bản cập nhật này bổ sung trường thông tin nguồn gốc định giá (pricing provenance field) nhằm ngăn chặn các đại lý mua tự ý tạo ra các con số CPM giả mạo khi không có dữ liệu thị trường thực tế. Đồng thời, hệ thống cũng bổ sung tính năng xác thực phía máy chủ (server-side verification) trên các luồng di chuyển giá. Nguyên tắc cốt lõi là một phiên đấu giá mở phải tạo ra giá từ những người đấu thầu khác, một con số tự xuất hiện mà không có đối thủ cạnh tranh thì không được coi là giá hợp lệ."
-      }
-    ],
-    "impact": "Giúp Trưởng phòng Marketing nhận diện được lý do tại sao chi phí CPM programmatic tăng bất thường dù hiệu quả chuyển đổi không đổi, từ đó có cơ sở yêu cầu các đối tác adtech minh bạch hóa dữ liệu đấu thầu và áp dụng các mô hình bid shading hiệu quả hơn.",
-    "ifIgnored": "Doanh nghiệp sẽ tiếp tục trả mức giá CPM bị thổi phồng một cách vô lý do các thuật toán tự động nâng giá sàn của bên trung gian, khiến ngân sách quảng cáo bị lãng phí vào các phiên đấu giá thiếu minh bạch mà không hề hay biết.",
-    "actionChecklist": [
-      "Yêu cầu các đối tác DSP (Demand-Side Platform) cung cấp báo cáo minh bạch về cơ chế áp dụng giá sàn (floor price) cho từng chiến dịch.",
-      "Cấu hình và tối ưu hóa các thuật toán bid shading để tránh việc tự động đặt giá quá cao dựa trên dữ liệu lịch sử bị thao túng.",
-      "Cập nhật và áp dụng tiêu chuẩn kỹ thuật AAMP 2.3 của IAB Tech Lab cho các hệ thống mua quảng cáo tự động của doanh nghiệp.",
-      "Đánh giá lại hiệu quả chi phí CPM trên các sàn programmatic trung gian và cân nhắc chuyển ngân sách sang các kênh có cơ chế đấu giá minh bạch hơn."
-    ],
-    "id": "real-2026-08-31-hieu-ve-shill-bidding-881b74",
-    "publishedAt": "31/08/2026",
-    "sourceUrl": "https://ppc.land/shill-bidding/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/size/w1200/2026/08/shill-bidding.jpg",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Google Search Console cập nhật báo cáo AI toàn cầu cho mọi website",
-    "isHot": true,
-    "illustration": "data-signal",
-    "readTime": "3 phút đọc",
-    "tags": [
-      "Google Search Console",
-      "SEO AI",
-      "AI Overviews",
-      "Báo cáo hiệu suất"
-    ],
-    "summary": "Google chính thức hoàn tất việc triển khai báo cáo hiệu suất AI tạo sinh trên Google Search Console cho tất cả website toàn cầu. Công cụ này giúp các nhà tiếp thị theo dõi lượt hiển thị từ AI Overviews và AI Mode, đi kèm tính năng cho phép chủ động bật hoặc tắt hiển thị trên các kết quả tìm kiếm AI.",
-    "keyNumbers": [
-      {
-        "value": "3",
-        "label": "bề mặt hiển thị AI được báo cáo gồm AI Overviews, AI Mode và Discover"
-      },
-      {
-        "value": "0",
-        "label": "dữ liệu lượt nhấp chuột được cung cấp ở thời điểm hiện tại"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Toàn cầu hóa báo cáo AI trên Search Console",
-        "body": "Google đã chính thức hoàn tất việc triển khai báo cáo hiệu suất AI tạo sinh cho mọi website trên toàn thế giới từ ngày 31/08/2026. Báo cáo này giúp doanh nghiệp theo dõi chi tiết số lượt hiển thị từ các tính năng AI như AI Overviews và AI Mode. Tuy nhiên, một số tài khoản chưa có đủ lượng hiển thị AI tối thiểu có thể sẽ chưa thấy báo cáo này xuất hiện ngay lập tức."
-      },
-      {
-        "heading": "Chi tiết dữ liệu được cung cấp và hạn chế hiện tại",
-        "body": "Báo cáo mới phân tích số lượt hiển thị theo trang, quốc gia, ngày tháng và thiết bị đối với các tính năng AI. Điểm hạn chế lớn nhất hiện nay là Google chưa cung cấp dữ liệu về lượt nhấp chuột từ các kết quả AI này. Do đó, doanh nghiệp chỉ có thể biết thương hiệu của mình xuất hiện bao nhiêu lần chứ chưa đo lường được lượng truy cập thực tế chuyển đổi từ AI."
-      },
-      {
-        "heading": "Quyền kiểm soát ẩn hoặc hiển thị nội dung trên AI",
-        "body": "Song song với báo cáo, tính năng kiểm soát chọn từ chối cũng đã được áp dụng trên toàn cầu ở cấp độ thuộc tính. Khi kích hoạt tính năng này trong phần Cài đặt của Search Console, website của bạn sẽ không xuất hiện trên AI Overviews, AI Mode và Discover AI. Google khẳng định việc từ chối này không ảnh hưởng đến xếp hạng trên tìm kiếm thông thường và không liên quan đến việc huấn luyện AI."
-      },
-      {
-        "heading": "Lộ trình cập nhật trong tương lai",
-        "body": "Theo yêu cầu từ Cơ quan Quản lý Cạnh tranh và Thị trường Vương quốc Anh, Google phải thực hiện các cải tiến sâu hơn. Cụ thể, hạn chót đến tháng 03/2027, Google phải ra mắt tính năng kiểm soát ở cấp độ trang thay vì chỉ ở cấp độ toàn bộ website như hiện tại. Đồng thời, cơ quan quản lý cũng kỳ vọng Google sẽ sớm tích hợp dữ liệu tỷ lệ nhấp chuột vào báo cáo."
-      }
-    ],
-    "impact": "Giúp Trưởng phòng Marketing lần đầu tiên có số liệu chính thức để đánh giá mức độ phủ sóng của thương hiệu trong các câu trả lời AI của Google, từ đó điều chỉnh chiến lược SEO phù hợp với kỷ nguyên tìm kiếm mới.",
-    "ifIgnored": "Doanh nghiệp sẽ bị mù mờ về hiệu suất hiển thị trên AI Overviews, không biết nội dung của mình có đang bị AI khai thác miễn phí mà không đem lại giá trị hay không, dẫn đến việc đưa ra các quyết định SEO sai lầm.",
-    "actionChecklist": [
-      "Truy cập Google Search Console để kiểm tra xem tài khoản đã được cập nhật tính năng báo cáo AI hay chưa",
-      "Đánh giá số lượng hiển thị từ AI Overviews để đo lường mức độ tiếp cận của website trên các kết quả tìm kiếm AI",
-      "Cân nhắc kỹ lưỡng việc bật hoặc tắt tính năng opt-out nếu doanh nghiệp không muốn nội dung bị hiển thị trên các câu trả lời AI mà không có lượt nhấp",
-      "Lên kế hoạch tối ưu hóa nội dung theo dạng câu trả lời trực tiếp để đón đầu xu hướng hiển thị trên AI Overviews"
-    ],
-    "deadline": "Tháng 03/2027",
-    "id": "real-2026-08-31-google-search-console-cap-b26009",
-    "publishedAt": "31/08/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/google-search-console-ai-reports-rolled-out-worldwide/587836/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/08/google-search-console-ai-reports-worldwide.jpg",
       "credit": "Ảnh: Search Engine Journal"
     }
   },
