@@ -1,5 +1,128 @@
 [
   {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Google ra mắt Qualified Future Conversions: Đo lường chuyển đổi tới 180 ngày",
+    "isHot": "false",
+    "illustration": "data-signal",
+    "readTime": "5 phút đọc",
+    "tags": [
+      "Google Ads",
+      "Đo lường",
+      "Chuyển đổi",
+      "Thuật toán"
+    ],
+    "summary": "Google vừa giới thiệu chỉ số Qualified Future Conversions cho phép tính nhận diện chuyển đổi kéo dài đến 180 ngày sau khi click quảng cáo, dựa trên tín hiệu tương tác trong 7 ngày đầu. Thay đổi này nhằm giải quyết các chu kỳ mua hàng kéo dài vốn bị giới hạn bởi khung thời gian đo lường cũ.",
+    "keyNumbers": [
+      {
+        "value": "7 ngày",
+        "label": "Tín hiệu định tính ban đầu"
+      },
+      {
+        "value": "180 ngày",
+        "label": "Khung thời gian tối đa ghi nhận"
+      },
+      {
+        "value": "29 phút",
+        "label": "Thời lượng video thảo luận"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Cơ chế hoạt động của chỉ số mới",
+        "body": "Chỉ số Qualified Future Conversions hoạt động theo mô hình hai giai đoạn. Trong vòng 7 ngày kể từ khi click quảng cáo, người dùng phải thực hiện một hành động thể hiện ảnh hưởng của quảng cáo như tìm kiếm thương hiệu, truy cập trang web hoặc thêm sản phẩm vào giỏ hàng. Khi có tín hiệu xác thực này, hệ thống sẽ mở rộng thời gian ghi nhận doanh số kéo dài lên đến 30 ngày, 90 ngày hoặc tối đa 180 ngày."
+      },
+      {
+        "heading": "Giải quyết bài toán chu kỳ mua hàng dài",
+        "body": "John Chen, giám đốc quản lý sản phẩm cấp cao về đo lường quảng cáo tại Google, đánh giá khung nhìn cũ là mang tính áp đặt nhân tạo. Thay vì cắt đứt dữ liệu ở ngày 30, cơ chế mới cho phép các ngành hàng có chu kỳ cân nhắc mua sắm kéo dài ghi nhận chính xác hơn đóng góp của quảng cáo. Điều này giúp thay đổi thứ hạng hiệu quả giữa các kênh trong báo cáo chiến dịch."
+      },
+      {
+        "heading": "Đồng bộ hóa các công cụ đo lường",
+        "body": "Google thừa nhận sự mâu thuẫn thường trực giữa ba hệ thống gồm phân bổ thời gian thực, thử nghiệm tính gia tăng và mô hình hỗn hợp tiếp thị. Google ví von chúng như ba bảng đồng hồ trên máy bay không cho ra cùng một con số duy nhất nhưng đều bổ trợ cho việc ra quyết định. Phân bổ dùng cho chiến thuật hàng ngày, trong khi thử nghiệm và mô hình hỗn hợp phục vụ tầm nhìn dài hạn."
+      },
+      {
+        "heading": "Đưa mô hình Meridian đến gần nhà quảng cáo",
+        "body": "Google đang hạ thấp rào cản kỹ thuật của việc mô hình hóa hỗn hợp tiếp thị thông qua mã nguồn mở Meridian và tích hợp Meridian Studio trên Google Cloud Platform. Phiên bản tích hợp trong Google Analytics 360 và công cụ Scenario Planner giúp các nhà tiếp thị tự đọc kết quả mà không cần phụ thuộc hoàn toàn vào đội ngũ khoa học dữ liệu."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing chạy các chiến dịch có chu kỳ mua hàng dài sẽ thấy sự thay đổi rõ rệt trong báo cáo phân bổ, khi các chuyển đổi trễ đến nửa năm được ghi nhận công trạng cho đúng điểm chạm ban đầu.",
+    "ifIgnored": "Nếu bỏ qua, chiến dịch của bạn có thể bị tối ưu sai hướng do các công cụ chỉ nhìn nhận dữ liệu trong ngắn hạn, dẫn đến việc cắt giảm ngân sách nhầm vào các kênh đóng vai trò nuôi dưỡng phễu ở giai đoạn đầu.",
+    "actionChecklist": [
+      "Kiểm tra xem hệ thống tracking đã ghi nhận đủ các tín hiệu ở giai đoạn đầu phễu như thêm vào giỏ hàng hoặc tìm kiếm thương hiệu trong vòng 7 ngày chưa.",
+      "Đánh giá lại các chiến dịch có chu kỳ mua hàng dài để chuẩn bị đón nhận sự thay đổi về số liệu báo cáo chuyển đổi.",
+      "Rà soát việc tích hợp dữ liệu đa kênh bao gồm web, ứng dụng và dữ liệu ngoại tuyến để đảm bảo không bị sót điểm chạm.",
+      "Khám phá các tính năng của mô hình Meridian trên Google Analytics 360 để tối ưu hóa việc đọc dữ liệu mà không cần đội ngũ kỹ thuật phức tạp."
+    ],
+    "deadline": "05/09/2026",
+    "id": "real-2026-09-05-google-ra-mat-qualified-a628cc",
+    "publishedAt": "05/09/2026",
+    "sourceUrl": "https://ppc.land/googles-new-metric-counts-conversions-up-to-180-days-after-an-ad-click/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/09/Google-s-new-metric-counts-conversions-up-to-180-days-after-an-ad-click.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Google mở rộng báo cáo AI trên Search Console toàn cầu và cập nhật quan trọng từ John Mueller",
+    "isHot": false,
+    "illustration": "zero-click",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Google Search Console",
+      "SEO AI",
+      "John Mueller",
+      "Technical SEO"
+    ],
+    "summary": "Google chính thức đưa báo cáo AI của Search Console và tính năng từ chối AI ra toàn cầu. Cùng lúc đó, John Mueller đưa ra các cảnh báo về thời gian phục hồi thứ hạng, việc dùng markdown cho AI crawler và thủ thuật sitemap.",
+    "keyNumbers": [
+      {
+        "value": "31/08",
+        "label": "Mốc triển khai báo cáo AI"
+      },
+      {
+        "value": "800",
+        "label": "Số lượng domain độc hại được nhắc tới"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Báo cáo AI trên Search Console triển khai toàn cầu",
+        "body": "Google công bố các báo cáo AI của Search Console và quyền kiểm soát từ chối AI đã phủ sóng toàn bộ các website trên toàn cầu vào ngày 31 tháng 8. Các báo cáo này cung cấp dữ liệu hiển thị từ AI Overviews, AI Mode và tính năng tạo sinh trên Discover, được chi tiết hóa theo trang, quốc gia và ngày tháng. Tuy nhiên, không phải mọi property đều có quyền truy cập và những trang có ít lượt hiển thị AI có thể không xuất hiện trong báo cáo. Việc bật tính năng từ chối hoàn toàn không làm ảnh hưởng đến thứ hạng của website trong các phần tìm kiếm thông thường khác."
+      },
+      {
+        "heading": "Thời gian phục hồi thứ hạng sau cập nhật lớn",
+        "body": "Trả lời thắc mắc trên mạng xã hội, John Mueller cho biết các biện pháp khắc phục liên quan đến một bản cập nhật cốt lõi lớn có thể mất khá nhiều thời gian, đôi khi là nhiều tháng để thấy rõ hiệu quả. Trường hợp được nhắc đến liên quan đến một website đã nhận hơn 800 domain giới thiệu bị coi là độc hại và nộp file disavow nhưng lại tụt hạng từ vị trí thứ 3 sau khoảng hai tuần. Mueller giải thích rằng công cụ disavow có tác dụng nhưng việc từ chối một số lượng ít liên kết không làm trang rớt hạng đột ngột như vậy, và nguyên nhân có thể đến từ một bản cập nhật spam diện rộng diễn ra cùng thời điểm."
+      },
+      {
+        "heading": "Thực tế về định dạng Markdown cho AI bot",
+        "body": "Liên quan đến việc chuyển đổi sang định dạng markdown để giảm tải cho máy chủ trước các bot AI, John Mueller chia sẻ rằng trên các trang thử nghiệm của ông, những crawler duy nhất yêu cầu định dạng markdown lại chính là các công cụ SEO. Ông khuyến nghị các quản trị viên trước khi xây dựng tầng markdown nên tiến hành kiểm tra log của header Accept để xem có thực sự nhận được yêu cầu text/markdown hay không. Dữ liệu từ các trang thử nghiệm cho thấy cấu hình máy chủ của ông không tự động ghi nhận header này theo mặc định."
+      },
+      {
+        "heading": "Cảnh báo về thủ thuật cache-busting trên Sitemap",
+        "body": "John Mueller đã gọi việc thêm tham số thời gian kiểu daily ?v=timestamp vào các URL sitemap là một ý tưởng tồi. Thủ thuật này nhằm ép các công cụ tìm kiếm cào dữ liệu mới mỗi ngày bằng cách liên tục làm thay đổi URL canonical. Theo Mueller, cách làm này gây hại cho các công cụ tìm kiếm lẫn việc theo dõi dữ liệu, trong khi giao thức sitemap đã có sẵn phần tử lastmod để thông báo thời điểm tệp thay đổi."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing cần nắm bắt dữ liệu từ báo cáo AI Search Console mới để đánh giá mức độ hiện diện của thương hiệu trong các kết quả tìm kiếm tạo sinh, đồng thời tránh lãng phí nguồn lực vào các thủ thuật kỹ thuật lỗi thời như thêm tham số thời gian vào sitemap.",
+    "ifIgnored": "Nếu bỏ qua, đội ngũ có thể tiếp tục kỳ vọng sai lệch về tốc độ phục hồi thứ hạng sau các bản cập nhật cốt lõi, hoặc lãng phí thời gian triển khai các định dạng markdown không cần thiết cho AI crawler.",
+    "actionChecklist": [
+      "Kiểm tra ngay quyền truy cập báo cáo AI Search Console trên các tài sản web của công ty",
+      "Loại bỏ ngay lập tức các tham số thay đổi thời gian trên URL trong hệ thống sitemap",
+      "Kiểm tra header log của máy chủ trước khi quyết định tối ưu định dạng markdown cho AI",
+      "Đánh giá lại tiến độ phục hồi thứ hạng dựa trên lịch sử cập nhật thuật toán thay vì chỉ nhìn vào các thay đổi liên kết ngắn hạn"
+    ],
+    "id": "real-2026-09-05-google-mo-rong-bao-f57dc6",
+    "publishedAt": "05/09/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/seo-pulse-search-console-ai-reports-go-global-mueller-recovery/588443/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/09/search-console-ai-reports-seo-pulse-top-right-1600x840-1.jpg",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
     "category": "AI Marketing",
     "platformIcon": "Sparkles",
     "title": "Đưa sản phẩm lên ChatGPT rất dễ, chốt đơn qua AI Agent mới là điểm nghẽn",
@@ -370,128 +493,6 @@
     "image": {
       "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/09/google-ai-mode-product-prices.jpg",
       "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Google tích hợp Gemini 3.8 Flash vào AI Mode trên Tìm kiếm",
-    "isHot": false,
-    "illustration": "zero-click",
-    "readTime": "3 phút đọc",
-    "tags": [
-      "Google Search",
-      "AI Mode",
-      "Gemini Flash",
-      "AEO"
-    ],
-    "summary": "Google vừa cập nhật mô hình Gemini 3.8 Flash vào danh mục lựa chọn của tính năng AI Mode trên công cụ tìm kiếm cho các tài khoản trả phí. Đây là bản cập nhật Flash thứ 3 chỉ trong vòng 6 tuần, cho thấy chu kỳ thay đổi mô hình trả kết quả AI đang diễn ra nhanh chưa từng thấy. Sự biến động liên tục này đặt ra thách thức lớn cho việc đo lường và theo dõi nguồn trích dẫn thương hiệu trong tìm kiếm AI.",
-    "keyNumbers": [
-      {
-        "value": "3",
-        "label": "bản phát hành Flash trong 6 tuần"
-      },
-      {
-        "value": "3,8",
-        "label": "phiên bản Flash mới nhất trên AI Mode"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Cập nhật trực tiếp mô hình mới vào AI Mode",
-        "body": "Google đã bổ sung tùy chọn Gemini 3.8 Flash vào menu mô hình của AI Mode ngay trong ngày phát hành. Người dùng đăng ký các gói Google AI Pro và Ultra trên toàn cầu có thể chọn mô hình này từ biểu tượng dấu cộng trên thanh tìm kiếm. Khác với lần ra mắt 3.7 Flash trước đó, Google đã đưa Tìm kiếm vào ngay lộ trình phát hành sản phẩm tiêu dùng cùng lúc với ứng dụng Gemini và Google Sheets."
-      },
-      {
-        "heading": "Tốc độ thay đổi mô hình nền tảng tăng tốc",
-        "body": "Gemini 3.8 Flash là bản phát hành Flash thứ 3 của Google trong 6 tuần, xuất hiện chỉ 3 tuần sau bản 3.7 Flash. Lịch sử cập nhật cho thấy Gemini 3 Pro ra mắt vào tháng 11, Gemini 3 Flash thành mặc định vào tháng 12, và Gemini 3.5 Flash thay thế làm mặc định toàn cầu vào tháng 5. Việc sử dụng dòng mô hình Flash giúp Google giảm độ trễ và chi phí vận hành ở quy mô tìm kiếm lớn."
-      },
-      {
-        "heading": "Tác động đến dữ liệu kiểm thử trích dẫn",
-        "body": "Những thử nghiệm về nguồn trích dẫn AI được thực hiện trên bản 3.7 Flash trong 3 tuần qua đã không còn áp dụng được trên mô hình hiện tại do menu đã thay đổi. Khi các mô hình thay đổi liên tục trong cùng một chu kỳ báo cáo, sự chênh lệch kết quả hiển thị giữa các thời điểm đến từ chính mô hình AI chứ không phải do nội dung website. Đối với người dùng AI Mode miễn phí, Google vẫn giữ mô hình mặc định mà không cung cấp danh sách lựa chọn."
-      },
-      {
-        "heading": "Khả năng đưa mô hình mới thành mặc định",
-        "body": "Xu hướng tiếp theo cần theo dõi là liệu Gemini 3.8 Flash có được chuyển từ dạng tùy chọn sang mô hình mặc định cho toàn bộ người dùng hay không. Nếu trở thành mặc định, thay đổi này sẽ tác động trực tiếp đến toàn bộ lưu lượng tìm kiếm miễn phí của người dùng phổ thông. Hiện trang hỗ trợ của Google vẫn chỉ hiển thị hai tùy chọn Fast và Pro kể từ ngày 14 tháng 8."
-      }
-    ],
-    "impact": "Biến động mô hình AI liên tục làm sai lệch các báo cáo tối ưu tìm kiếm AI (GEO/AEO) của đội ngũ marketing nếu không ghi nhận chính xác phiên bản mô hình khi kiểm thử.",
-    "ifIgnored": "Doanh nghiệp sẽ đưa ra quyết định sai lầm về tối ưu nội dung khi nhầm tưởng việc mất trích dẫn AI là do website, trong khi nguyên nhân thực sự đến từ việc Google thay đổi mô hình trả kết quả ngầm bên dưới.",
-    "actionChecklist": [
-      "Yêu cầu đội ngũ SEO ghi chú tên phiên bản mô hình AI cụ thể vào mọi bảng theo dõi trích dẫn tìm kiếm",
-      "Tách biệt dữ liệu kiểm thử giữa tài khoản AI trả phí có chọn mô hình và tài khoản miễn phí mặc định",
-      "Theo dõi thông báo cập nhật mô hình mặc định trên trang hỗ trợ của Google Search",
-      "Điều chỉnh tần suất đo lường thứ hạng AEO theo chu kỳ cập nhật mô hình thay vì chu kỳ tháng truyền thống"
-    ],
-    "id": "real-2026-09-02-google-tich-hop-gemini-c84e9c",
-    "publishedAt": "02/09/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/google-gemini-3-8-flash-ai-mode/588194/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/09/google-gemini-3-8-flash-ai-mode.jpg",
-      "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "The Trade Desk tích hợp đo lường Brand Lift từ 1 triệu lượt hiển thị qua LoopMe",
-    "isHot": false,
-    "illustration": "data-signal",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Brand Lift",
-      "The Trade Desk",
-      "LoopMe",
-      "Đo lường quảng cáo"
-    ],
-    "summary": "The Trade Desk vừa tích hợp giải pháp khảo sát Brand Lift của LoopMe trực tiếp vào nền tảng qua kết nối API. Ngưỡng triển khai được hạ xuống mức 1.000.000 lượt hiển thị, giúp các chiến dịch quy mô vừa có thể đo lường mức độ tăng trưởng thương hiệu mà không cần ký hợp đồng riêng.",
-    "keyNumbers": [
-      {
-        "value": "1.000.000",
-        "label": "Lượt hiển thị tối thiểu để chạy khảo sát"
-      },
-      {
-        "value": "3 - 4 triệu",
-        "label": "Lượt hiển thị tối thiểu ở các đơn vị khác"
-      },
-      {
-        "value": "24 giờ",
-        "label": "Tần suất cập nhật dữ liệu báo cáo"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Hạ rào cản quy mô khảo sát thương hiệu",
-        "body": "LoopMe đã chính thức đưa giải pháp Brand Lift vào Measurement Marketplace của The Trade Desk qua kết nối API trực tiếp. Thay vì yêu cầu từ 3 đến 4 triệu lượt hiển thị như phần lớn đối thủ, giải pháp mới chỉ yêu cầu mức sàn 1.000.000 lượt hiển thị. Điều này mở ra cơ hội đo lường độ nhận diện và ý định mua hàng cho các chiến dịch quy mô tầm trung thay vì chỉ dựa vào chỉ số nhấp chuột hay lượt xem."
-      },
-      {
-        "heading": "Quy trình thiết lập không qua trung gian",
-        "body": "Nhà quảng cáo trên The Trade Desk hiện có thể kích hoạt khảo sát đo lường thương hiệu ngay trong quy trình cài đặt chiến dịch chuẩn. Người dùng không cần tạo tài khoản riêng, không phải đàm phán hợp đồng với bên thứ ba hay sử dụng nền tảng đo lường độc lập. Mọi thông số nghiên cứu được chuyển tự động qua API và kết quả đo lường trả thẳng về giao diện điều khiển."
-      },
-      {
-        "heading": "Cập nhật dữ liệu nhanh và phân rã chi tiết",
-        "body": "Báo cáo khảo sát bắt đầu ghi nhận dữ liệu sớm nhất sau 10 ngày kể từ khi phát động chiến dịch và tự động làm mới sau mỗi 24 giờ. Dữ liệu được phân tách chi tiết theo độ tuổi, giới tính, thiết bị, mẫu quảng cáo, nhóm quảng cáo và ID chiến dịch. Việc bóc tách theo mẫu sáng tạo và nhóm quảng cáo cho phép đội ngũ tối ưu ngân sách và thông điệp ngay trong lúc chiến dịch đang vận hành."
-      },
-      {
-        "heading": "Phương pháp lấy mẫu thực tế không qua bảng khảo sát cố định",
-        "body": "Thay vì khảo sát nhóm người dùng trả phí cố định vốn dễ bị sai lệch, LoopMe thu thập phản hồi từ người dùng thực tế qua các điểm dừng quảng cáo di động tự nguyện. Nhóm đối chứng được khớp nối bằng thuật toán RISA với hơn 100 biến số để tách biệt tác động của quảng cáo. Giải pháp hiện hỗ trợ chuẩn hóa đo lường trên hơn 35 thị trường và 17 ngôn ngữ."
-      }
-    ],
-    "impact": "Giúp các chiến dịch programmatic quy mô vừa tại doanh nghiệp tiếp cận được công cụ đo lường mức độ tăng trưởng thương hiệu in-flight với chi phí và rào cản kỹ thuật thấp hơn đáng kể.",
-    "ifIgnored": "Doanh nghiệp tiếp tục phụ thuộc vào các chỉ số bề nổi như CTR hay VTR để đánh giá hiệu quả nhận diện thương hiệu, dẫn đến việc phân bổ sai ngân sách cho các kênh hiển thị.",
-    "actionChecklist": [
-      "Kiểm tra lại kế hoạch programmatic display và video sắp tới xem có đạt mốc 1.000.000 lượt hiển thị để đăng ký đo lường.",
-      "Đối chiếu chi phí triển khai giải pháp tích hợp sẵn này với các bên đo lường nghiên cứu thị trường truyền thống.",
-      "Thiết lập phân nhóm mẫu quảng cáo rõ ràng trước khi chạy để tận dụng báo cáo phân rã creative lift trong 24 giờ.",
-      "Đánh giá mức độ phù hợp của tập mẫu di động in-app đối với đối tượng mục tiêu của ngành hàng."
-    ],
-    "id": "real-2026-09-02-the-trade-desk-tich-dc5dda",
-    "publishedAt": "02/09/2026",
-    "sourceUrl": "https://ppc.land/trade-desk-buyers-gain-loopme-brand-lift-studies-at-1-million-impressions/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/size/w1200/2026/09/Trade-Desk-buyers-gain-LoopMe-brand-lift-studies.jpg",
-      "credit": "Ảnh: PPC Land"
     }
   },
   {
