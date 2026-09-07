@@ -1,6 +1,132 @@
 [
   {
     "category": "Google Ads & SEO",
+    "platformIcon": "Video",
+    "title": "YouTube ra mắt chỉ số xem chung trên TV nhưng chỉ hiển thị riêng cho nhà sáng tạo",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "YouTube Ads",
+      "Influencer Marketing",
+      "Đo lường quảng cáo",
+      "Connected TV"
+    ],
+    "summary": "YouTube chính thức triển khai chỉ số ước tính số người cùng xem video trên màn hình TV (co-viewing), nhưng dữ liệu này chỉ xuất hiện trong trang phân tích riêng của nhà sáng tạo. Các thương hiệu tài trợ trực tiếp không thể đối soát độc lập, dẫn đến nguy cơ báo giá tài trợ bị thổi phồng dựa trên mô hình ước tính chưa được kiểm chứng.",
+    "keyNumbers": [
+      {
+        "value": "48 giờ",
+        "label": "Độ trễ tối đa để YouTube xử lý dữ liệu xem chung"
+      },
+      {
+        "value": "26%",
+        "label": "Tỷ lệ người lớn cùng xem YouTube trên TV theo khảo sát của Nielsen"
+      },
+      {
+        "value": "7 trường dữ liệu",
+        "label": "Chỉ số cấp chiến dịch trên Google Ads đã chuyển sang chuẩn Total Co-view"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Cơ chế ước tính người xem chung dựa trên mô hình hóa",
+        "body": "Chỉ số mới của YouTube dự đoán tổng số người cùng ngồi xem trên một chiếc TV thay vì tính mỗi thiết bị là một lượt xem đơn lẻ. Hệ thống sử dụng mô hình thống kê dựa trên nhân khẩu học, thể loại video và khung giờ phát sóng chứ không dùng cảm biến phần cứng để đếm người thật. YouTube không công bố chi tiết thuật toán, các tham số đầu vào ngoài 3 yếu tố trên, cũng như khoảng tin cậy của mô hình."
+      },
+      {
+        "heading": "Dữ liệu chỉ hiển thị nội bộ và không ảnh hưởng doanh thu nền tảng",
+        "body": "Chỉ số lượt xem chung cần tới 48 giờ để xử lý hoàn tất, khiến các khung báo cáo thời gian thực hoặc mặc định 28 ngày qua luôn thiếu hụt số liệu ở những ngày gần nhất. Đáng chú ý, chỉ số này hoàn toàn không tác động đến chia sẻ doanh thu AdSense hay tiêu chuẩn tham gia YouTube Partner Program. Lượt xem chung tăng không giúp nhà sáng tạo nhận thêm tiền từ nền tảng và cũng không mở rộng lượt tiếp cận của các vị trí quảng cáo tự động."
+      },
+      {
+        "heading": "Lỗ hổng đối soát trong các hợp đồng tài trợ trực tiếp",
+        "body": "Khác với quảng cáo mua qua Google Ads hay Display and Video 360 vốn có số liệu tiếp cận được kiểm toán trên hệ thống, chỉ số mới chỉ nằm trong YouTube Analytics của nhà sáng tạo. Khi đàm phán hợp đồng tài trợ nội dung (sponsorship), nhà sáng tạo có thể đưa ra con số người xem cao gấp 3 lần lượt xem công khai mà nhãn hàng không có cách nào kiểm tra ngoài việc nhìn ảnh chụp màn hình. Điều này tạo ra khoảng cách lớn về tính minh bạch giữa mua quảng cáo programmatic và đàm phán tài trợ trực tiếp."
+      },
+      {
+        "heading": "Chuẩn hóa đo lường trên Google Ads và động thái siết kiểm duyệt",
+        "body": "Trước đó vào ngày 02/06/2026, Google Ads đã chuyển đổi 7 trường dữ liệu cấp chiến dịch sang chuẩn Total Co-view, bao gồm số người dùng duy nhất và tần suất hiển thị trung bình trên TV kết nối Internet. Cùng với bản cập nhật chỉ số co-viewing, YouTube cũng mở rộng tính năng gắn thẻ sản phẩm Amazon và nâng cấp công cụ tự động phát hiện nội dung tài trợ chưa khai báo. Động thái này vừa thúc đẩy thương mại hóa, vừa gia tăng trách nhiệm công khai tài trợ của người sáng tạo."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing khi làm việc với các YouTuber/KOLs trên nội dung Connected TV sẽ đối mặt với các bản chào giá tài trợ dựa trên lượng tiếp cận ước tính cao hơn thực tế mà không thể xác minh qua công cụ bên thứ ba.",
+    "ifIgnored": "Doanh nghiệp có nguy cơ trả chi phí tài trợ (sponsorship CPM) bị đội giá vô căn cứ, đồng thời đánh giá sai hiệu quả thực tế giữa ngân sách tài trợ trực tiếp và ngân sách chạy quảng cáo Connected TV qua Google Ads.",
+    "actionChecklist": [
+      "Yêu cầu nhà sáng tạo bóc tách rõ ràng giữa lượt xem thực tế công khai (public views) và lượt xem ước tính chung (co-viewed views) trong báo giá tài trợ.",
+      "Không chấp nhận ảnh chụp màn hình YouTube Analytics làm căn cứ duy nhất để tính đơn giá CPM cho các hợp đồng tài trợ độc quyền trên TV.",
+      "So sánh hiệu quả chi phí giữa tài trợ trực tiếp với việc tự mua vị trí quảng cáo Connected TV qua Google Ads hoặc DV360.",
+      "Thiết lập điều khoản nghiệm thu hợp đồng dựa trên các chỉ số chuyển đổi, lưu lượng truy cập thực tế qua liên kết hoặc mã ưu đãi thay vì chỉ dựa vào lượt xem ước tính."
+    ],
+    "id": "real-2026-09-07-youtube-ra-mat-chi-7cb2d1",
+    "publishedAt": "07/09/2026",
+    "sourceUrl": "https://ppc.land/youtube-counts-co-viewers-in-a-metric-only-creators-can-see/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/size/w1200/2026/09/YouTube-counts-co-viewers-in-a-metric-only-creators-can-see.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "TikTok Shop & Ads",
+    "platformIcon": "Video",
+    "title": "TikTok Shop ban hành 10 quy định đóng gói mới, cấm gửi kèm tờ rơi quảng cáo và thẻ xin đánh giá",
+    "isHot": false,
+    "illustration": "shop-health",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "TikTok Shop",
+      "Chính sách bán hàng",
+      "Quy định đóng gói",
+      "Đánh giá sản phẩm"
+    ],
+    "summary": "TikTok Shop công bố trang Yêu cầu Đóng gói Đơn hàng vào ngày 03/09/2026 với 10 quy định nghiêm cấm và bộ tiêu chuẩn đóng gói chi tiết cho 9 nhóm sản phẩm. Nền tảng cấm hoàn toàn việc chèn thẻ yêu cầu đánh giá hoặc tờ rơi quảng cáo vào kiện hàng. Quy định mới chuyển dịch việc đóng gói từ đánh giá cảm quan của nhà bán hàng thành tiêu chuẩn vận hành bắt buộc để kiểm tra và xử phạt.",
+    "keyNumbers": [
+      {
+        "value": "10",
+        "label": "Hành vi đóng gói bị nghiêm cấm"
+      },
+      {
+        "value": "9",
+        "label": "Nhóm danh mục sản phẩm áp chuẩn"
+      },
+      {
+        "value": "10 kg",
+        "label": "Mốc trọng lượng phân loại kiểm soát"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Cấm triệt để việc chèn tài liệu tiếp thị và thẻ xin đánh giá",
+        "body": "TikTok Shop chính thức cấm việc bỏ các tờ rơi khuyến mãi hoặc thẻ yêu cầu đánh giá vào trong hộp hàng. Hai quy định riêng biệt được áp dụng nhằm ngăn chặn việc thao túng đánh giá từ người mua. Quy định thứ nhất cấm gửi tin nhắn xin đánh giá hoặc treo thưởng cho đánh giá tích cực. Quy định thứ hai cấm các sản phẩm, tài liệu hoặc nội dung đi kèm nhằm thu hút đánh giá tích cực, bao gồm cả phiếu giảm giá đính kèm lời mời 5 sao. Ngoài ra, các vật phẩm tiếp thị chưa được cấp phép như tờ rơi, thẻ giá hay sticker không liên quan cũng bị cấm hoàn toàn."
+      },
+      {
+        "heading": "Thắt chặt hình thức dropship và quà tặng không có trong đơn",
+        "body": "Chính sách mới ngăn chặn hình thức dropship bằng cách cấm nhà bán hàng mua sản phẩm từ nhà bán lẻ trực tuyến khác rồi giao trực tiếp cho khách trên TikTok Shop. Nhà bán hàng không được phép gửi kèm bất kỳ sản phẩm nào mà khách hàng không đặt mua. Điều này đồng nghĩa với việc các mẫu thử miễn phí hoặc quà tặng bất ngờ trong kiện hàng cũng bị loại bỏ. Các quy định khác cấm việc bó nhiều thùng hàng bằng băng dính hay dây siết nếu gây rủi ro quét mã hoặc ảnh hưởng tính vẹn toàn của bưu kiện."
+      },
+      {
+        "heading": "Bộ tiêu chuẩn đóng gói phân loại theo 9 nhóm sản phẩm",
+        "body": "Nền tảng chia sản phẩm thành các nhóm Hàng tiêu chuẩn và Hàng cồng kềnh hoặc bất thường, đo lường dựa trên các tiêu chí kiểm soát đóng gói. Nhóm Hàng dễ tràn như chất lỏng hoặc bột dưới 10 kg đòi hỏi đủ 7 tiêu chuẩn kiểm soát, bao gồm bảo vệ bổ sung cho nắp chai và tem cảnh báo fragile. Nhóm Hàng có giá trị cao như điện thoại hay trang sức yêu cầu lớp đệm, vách ngăn và thùng carton dán băng dính hình chữ H. Ngược lại, nhóm Hàng quần áo và dệt may chỉ yêu cầu túi gói hàng chống nước."
+      },
+      {
+        "heading": "Tiêu chuẩn riêng cho kiện hàng cồng kềnh trên 10 kg",
+        "body": "Đối với Hàng cồng kềnh hoặc bất thường, tiêu chuẩn bổ sung việc sử dụng thùng lồng thùng và khung gỗ. Các mặt hàng dễ vỡ có trọng lượng trên 10 kg hoặc kích thước vượt 100 cm như tivi hay máy móc phải áp dụng đầy đủ 6 biện pháp bảo vệ. Các sản phẩm không dễ vỡ nhưng có hình dạng bất thường như bàn ghế hay dụng cụ thể thao bắt buộc phải dùng khung gỗ. Nhóm hàng chất lỏng trên 10 kg giữ nguyên bao bì nhà sản xuất được phép miễn đóng khung gỗ nhưng cần dán tem hướng thẳng đứng."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing không thể tiếp tục sử dụng trải nghiệm mở hộp (unboxing) làm kênh tiếp thị để kích thích khách hàng quay lại hoặc tăng tỷ lệ đánh giá 5 sao bằng thiệp cảm ơn và voucher. Mọi chiến dịch quà tặng đính kèm hay tài liệu quảng cáo trong kiện hàng xuất kho qua TikTok Shop phải bị bãi bỏ ngay lập tức.",
+    "ifIgnored": "Doanh nghiệp đối mặt với rủi ro bị tính lỗi vi phạm vận hành, bị đánh xấu chỉ số sức khỏe tài khoản gian hàng hoặc bị giới hạn quyền bán hàng trên TikTok Shop do không tuân thủ tiêu chuẩn đóng gói công khai.",
+    "actionChecklist": [
+      "Rà soát quy trình đóng gói và loại bỏ ngay lập tức các thẻ xin đánh giá, voucher và quà tặng kèm không có trong đơn hàng.",
+      "Cập nhật tài liệu hướng dẫn đóng gói cho bộ phận kho theo đúng tiêu chuẩn kiểm soát của từng danh mục sản phẩm.",
+      "Ngừng các chương trình tiếp thị chèn tài liệu quảng cáo hoặc mẫu thử vào kiện hàng TikTok Shop.",
+      "Kiểm tra trọng lượng và kích thước các sản phẩm trên 10 kg hoặc 100 cm để trang bị thùng gỗ hoặc thùng lồng đúng chuẩn."
+    ],
+    "id": "real-2026-09-06-tiktok-shop-ban-hanh-48c01a",
+    "publishedAt": "06/09/2026",
+    "sourceUrl": "https://ppc.land/tiktok-shop-bans-review-bait-inserts-in-10-packing-rules/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/09/TikTok-Shop-bans-review-bait-inserts-in-10-packing-rules.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
     "platformIcon": "Search",
     "title": "Google ra mắt Qualified Future Conversions: Đo lường chuyển đổi tới 180 ngày",
     "isHot": "false",
@@ -370,69 +496,6 @@
     }
   },
   {
-    "category": "AI Marketing",
-    "platformIcon": "Sparkles",
-    "title": "ChatGPT Ads bỏ ngưỡng 25.000 người cho tệp loại trừ và ra mắt plugin quản lý chiến dịch",
-    "isHot": false,
-    "illustration": "data-signal",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "ChatGPT Ads",
-      "Tệp đối tượng",
-      "Conversions API",
-      "Dữ liệu khách hàng"
-    ],
-    "summary": "OpenAI vừa nới lỏng quy định đối tượng tùy chỉnh trên ChatGPT Ads Manager, cho phép dùng tệp dưới 25.000 người để loại trừ quảng cáo. Nền tảng cũng ra mắt plugin điều khiển chiến dịch bằng câu lệnh tự nhiên và mở rộng các trường dữ liệu định danh cho Conversions API.",
-    "keyNumbers": [
-      {
-        "value": "25.000",
-        "label": "Ngưỡng người dùng tối thiểu được gỡ bỏ cho tệp loại trừ"
-      },
-      {
-        "value": "5.000.000",
-        "label": "Mức thành viên mà tệp đối tượng tùy chỉnh hiện có thể vượt qua"
-      },
-      {
-        "value": "40",
-        "label": "Số quốc gia đã mở cổng tự mua quảng cáo Ads Manager"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Gỡ bỏ rào cản 25.000 người cho danh sách loại trừ",
-        "body": "Trước đây, tài liệu hỗ trợ tháng 7/2026 của OpenAI quy định tệp đối tượng tùy chỉnh phải đạt tối thiểu 25.000 người dùng khớp mới được kích hoạt trong chiến dịch. Quy tắc mới cho phép các tệp dưới 25.000 người được áp dụng riêng cho mục đích loại trừ hiển thị. Thay đổi này giúp doanh nghiệp dễ dàng loại bỏ tệp khách hàng vừa mua, tài khoản hủy dịch vụ hoặc các trường hợp hoàn tiền mà không lo thiếu quy mô. Ngoài ra, dung lượng tệp tải lên vẫn giữ giới hạn 500.000.000 bytes nhưng quy mô danh sách hiện đã có thể vượt mốc 5.000.000 thành viên."
-      },
-      {
-        "heading": "Cập nhật danh sách linh hoạt và bổ sung Google Advertising ID",
-        "body": "Hệ thống đối tượng tùy chỉnh của ChatGPT Ads hiện cho phép thêm, xóa hoặc thay thế thành viên trực tiếp mà không cần tạo lại tệp từ đầu. Nhà quảng cáo cũng có thể kết hợp nhiều loại định danh trong cùng một yêu cầu tải lên thay vì phải tách riêng. Đáng chú ý, mã nhận diện thiết bị Android là Google Advertising ID đã chính thức được hỗ trợ cùng với email và số điện thoại băm chuẩn SHA-256. Sự bổ sung này hỗ trợ đắc lực cho các chiến dịch cài đặt ứng dụng di động thông qua tích hợp đo lường với AppsFlyer và Adjust."
-      },
-      {
-        "heading": "Điều khiển tài khoản quảng cáo bằng plugin ChatGPT",
-        "body": "OpenAI giới thiệu plugin ChatGPT Ads Manager cho phép tạo, quản lý và phân tích chiến dịch trực tiếp từ giao diện ChatGPT hoặc Codex. Công cụ có khả năng chuyển đổi bản tóm tắt nội dung hoặc đường dẫn website thành mẫu quảng cáo hoàn chỉnh bằng câu lệnh ngôn ngữ tự nhiên. Để đảm bảo an toàn, hệ thống thiết lập cơ chế yêu cầu người dùng xác nhận trước khi thực thi mọi thay đổi điều chỉnh tài khoản. Thiết lập này vận hành trực tiếp bên trong hệ sinh thái OpenAI thông qua kết nối tài khoản từ danh mục Plugins."
-      },
-      {
-        "heading": "Mở rộng trường dữ liệu Conversions API và báo cáo thẻ Carousel",
-        "body": "Giao thức Conversions API hiện hỗ trợ gửi danh sách nhiều giá trị cho email, số điện thoại, tên, quốc gia, mã bưu điện và mã GAID. Việc gửi nhiều địa chỉ email hoặc số điện thoại trên cùng một bản ghi giúp tăng tỷ lệ so khớp dữ liệu từ hệ thống CRM. Đo lường Pixel trên website cũng bổ sung thu thập dữ liệu băm mở rộng gồm họ tên và khu vực địa lý. Bên cạnh đó, định dạng quảng cáo nhiều sản phẩm Carousel đã có báo cáo lượt xem và nhấp chuột theo từng thẻ sản phẩm nhưng không tính vào tổng số lượt hiển thị bị tính phí."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing có thể triển khai chiến dịch giữ chân và tìm kiếm khách hàng mới hiệu quả hơn trên ChatGPT nhờ khả năng loại trừ tệp khách hàng cũ quy mô nhỏ. Đồng thời, tỷ lệ khớp dữ liệu chuyển đổi từ CRM sẽ tăng lên đáng kể nhờ các trường định danh mở rộng.",
-    "ifIgnored": "Doanh nghiệp sẽ lãng phí ngân sách hiển thị vào nhóm khách hàng đã mua hoặc người dùng không mong muốn do không tận dụng tệp loại trừ nhỏ, đồng thời bỏ lỡ cơ hội tối ưu hóa tỷ lệ so khớp chuyển đổi qua API mới.",
-    "actionChecklist": [
-      "Trích xuất danh sách khách hàng đã mua hoặc tệp hủy dịch vụ gần đây từ CRM để tạo tệp loại trừ trong ChatGPT Ads Manager",
-      "Cập nhật cấu hình Conversions API để truyền đồng thời nhiều email và số điện thoại trên mỗi bản ghi khách hàng",
-      "Bổ sung trường Google Advertising ID vào các tệp dữ liệu khách hàng ứng dụng di động",
-      "Cài đặt plugin ChatGPT Ads Manager để thử nghiệm quản lý chiến dịch và xem xét các đề xuất tối ưu hóa"
-    ],
-    "id": "real-2026-09-03-chatgpt-ads-bo-nguong-d31934",
-    "publishedAt": "03/09/2026",
-    "sourceUrl": "https://ppc.land/openai-drops-25-000-user-floor-for-chatgpt-ad-exclusion-audiences/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/09/OpenAI-drops-25-000-user-floor-for-ChatGPT-ad-exclusion-audiences.jpg",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
     "category": "Google Ads & SEO",
     "platformIcon": "Search",
     "title": "Giá và nhà bán trên Google AI Mode chênh lệch lớn so với vòng quay sản phẩm thông thường",
@@ -493,69 +556,6 @@
     "image": {
       "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/09/google-ai-mode-product-prices.jpg",
       "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
-    "category": "Meta Ads",
-    "platformIcon": "Video",
-    "title": "Bẫy số liệu phân bổ ngân sách: Video chiếm 51% thời gian rảnh nhưng ẩn chứa sai lệch đo lường lớn",
-    "isHot": false,
-    "illustration": "data-signal",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Đo lường quảng cáo",
-      "Kế hoạch truyền thông",
-      "Quảng cáo Video",
-      "Hành vi người dùng"
-    ],
-    "summary": "Báo cáo mới từ VAB chỉ ra video tiếp tục thống trị với 51% thời gian rảnh rỗi của người dùng, nhưng phương pháp đo lường đơn nhất đang làm giảm đáng kể số liệu thực tế so với các báo cáo thiết bị. Sự trỗi dậy của gaming với 24 phút mỗi ngày vượt qua cả thể thao và giải trí khác mở ra kênh tiếp cận mới đầy tiềm năng. Đối với các Trưởng phòng Marketing, việc hiểu rõ bản chất của từng nguồn số liệu là chìa khóa để tránh phân bổ ngân sách sai lệch trên đa nền tảng.",
-    "keyNumbers": [
-      {
-        "value": "51%",
-        "label": "Thời gian rảnh rỗi dành cho việc xem video"
-      },
-      {
-        "value": "2 giờ 37 phút",
-        "label": "Thời gian xem video trung bình mỗi ngày"
-      },
-      {
-        "value": "24 phút",
-        "label": "Thời gian chơi game hàng ngày của người dùng"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Xung đột phương pháp đo lường giữa các báo cáo",
-        "body": "Báo cáo của VAB dựa trên khảo sát ATUS chỉ ghi nhận hoạt động chính duy nhất tại một thời điểm, khiến tổng thời gian tiếp xúc truyền thông thấp hơn thực tế. Ngược lại, các đơn vị như EMARKETER đo lường theo thiết bị và cho phép tính trùng lặp khi người dùng vừa lướt điện thoại vừa bật TV, dẫn đến con số lên tới 9 giờ 4 phút mỗi ngày. Sự khác biệt này khiến các nhà quảng cáo dễ bị bối rối khi so sánh các tệp dữ liệu từ các nguồn khác nhau. Việc hiểu rõ phương pháp luận của từng báo cáo là bắt buộc để không đánh giá sai quy mô thị trường."
-      },
-      {
-        "heading": "Sự trỗi dậy mạnh mẽ của kênh quảng cáo trong game",
-        "body": "Với 24 phút mỗi ngày, thời gian chơi game hiện đã vượt qua các hoạt động thể thao, thư giãn và đọc sách. Đây là một tín hiệu mạnh mẽ cho thấy gaming không còn là kênh ngách mà đã trở thành kênh tiếp cận đại chúng. Các ông lớn như Electronic Arts đã mở toàn bộ danh mục game trên console, di động và PC cho các thương hiệu quảng cáo từ tháng 6 năm 2026. Nghiên cứu từ Kantar cũng chỉ ra 71% game thủ di động thực hiện mua hàng ngay trong ngày sau khi xem quảng cáo game."
-      },
-      {
-        "heading": "Lỗ hổng dữ liệu 42 ngày cần lưu ý",
-        "body": "Báo cáo năm nay của VAB có một điểm khuyết lớn khi toàn bộ hoạt động thu thập dữ liệu bị đình chỉ trong 42 ngày do chính phủ Mỹ đóng cửa. Khoảng thời gian 6 tuần này trùng khớp với mùa phát sóng mùa thu và các giải đấu thể thao lớn, vốn là thời điểm tiêu thụ video cao nhất trong năm. Việc thiếu hụt dữ liệu này có thể làm giảm nhẹ con số trung bình cả năm của danh mục video. Các nhà hoạch định chiến dịch cần thận trọng khi so sánh số liệu này với các năm trước đó để tránh đưa ra kết luận sai lệch về xu hướng."
-      },
-      {
-        "heading": "Cảnh giác với sự trùng lặp tên gọi chỉ số",
-        "body": "Có một sự trùng hợp ngẫu nhiên khi con số 2 giờ 37 phút xuất hiện ở hai báo cáo hoàn toàn khác nhau của VAB. Một bên là tổng thời gian xem video tự báo cáo trên mọi màn hình, bên còn lại là dự báo thời gian xem Connected TV của người lớn vào năm 2026. Nếu đặt cạnh nhau mà không có định nghĩa rõ ràng, người đọc dễ lầm tưởng Connected TV đã chiếm trọn vẹn thời gian xem video của người dùng. Đây là bài học đắt giá về việc kiểm tra kỹ định nghĩa chỉ số trước khi đưa vào slide trình bày kế hoạch."
-      }
-    ],
-    "impact": "Giúp Trưởng phòng Marketing nhận diện được bẫy số liệu khi lập kế hoạch media mix đa kênh. Tránh việc phân bổ quá tay vào một kênh duy nhất dựa trên các con số bị trùng lặp hoặc định nghĩa sai, đồng thời mở ra cơ hội tối ưu chi phí bằng cách thử nghiệm kênh Gaming đang tăng trưởng mạnh.",
-    "ifIgnored": "Doanh nghiệp sẽ tiếp tục lãng phí ngân sách vào các kênh được báo cáo thổi phồng số liệu do tính trùng trên nhiều thiết bị, hoặc bỏ lỡ các điểm chạm thực tế của khách hàng vì tin vào các khảo sát hành vi đơn nhất lỗi thời.",
-    "actionChecklist": [
-      "Yêu cầu các agency cung cấp rõ phương pháp đo lường khi trình bày số liệu reach và frequency.",
-      "Thử nghiệm phân bổ 5-10% ngân sách vào kênh quảng cáo trong game thông qua các mạng lưới lớn.",
-      "Rà soát lại định nghĩa các chỉ số Video trong kế hoạch truyền thông quý tới để tránh trùng lặp ngân sách.",
-      "Xây dựng mô hình đo lường hỗn hợp thay vì phụ thuộc hoàn toàn vào báo cáo phân bổ của một nền tảng đơn lẻ."
-    ],
-    "id": "real-2026-09-02-bay-so-lieu-phan-44e360",
-    "publishedAt": "02/09/2026",
-    "sourceUrl": "https://ppc.land/vab-finds-video-holds-51-of-us-leisure-time-for-a-fourth-straight-year/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/09/VAB-finds-video-holds-51--of-US-leisure-time.jpg",
-      "credit": "Ảnh: PPC Land"
     }
   },
   {
