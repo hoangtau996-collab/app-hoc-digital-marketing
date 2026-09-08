@@ -1,5 +1,68 @@
 [
   {
+    "category": "AI Marketing",
+    "platformIcon": "Sparkles",
+    "title": "Lượt truy cập robot chiếm 50% lưu lượng web khiến CPM quảng cáo bám đuổi tăng 20%",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Lưu lượng Bot",
+      "Chi phí CPM",
+      "AI Marketing",
+      "Tệp bám đuổi"
+    ],
+    "summary": "Lưu lượng bot và các tác vụ AI tự động hiện chiếm hơn 50% tổng số yêu cầu trên trang web, làm suy giảm nghiêm trọng chất lượng dữ liệu đối tượng bám đuổi. Việc phải xử lý tệp dữ liệu bị nhiễu khiến chi phí CPM của các agency tăng trung bình 20%. Tuy nhiên, lưu lượng đến từ các trợ lý tìm kiếm AI lại ghi nhận tỷ lệ chuyển đổi cao vượt trội.",
+    "keyNumbers": [
+      {
+        "value": "50%",
+        "label": "lưu lượng web đến từ bot và AI"
+      },
+      {
+        "value": "20%",
+        "label": "mức tăng CPM quảng cáo bám đuổi"
+      },
+      {
+        "value": "75,6%",
+        "label": "nhà tiếp thị lãng phí ngân sách do bot"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Lưu lượng bot làm biến dạng tệp đối tượng bám đuổi",
+        "body": "Dữ liệu từ Cloudflare cho thấy bot và các tác vụ tự động hiện chiếm hơn 50% tổng số yêu cầu truy cập trang web. Công ty GoFish ghi nhận lượng truy cập bot của khách hàng tăng 80% so với cùng kỳ năm ngoái. Khi một lượng lớn lượt truy cập không phải con người, danh sách retargeting không còn phản ánh nhóm người mua tiềm năng mà phản ánh lưu lượng máy móc. Điều này buộc các đơn vị quảng cáo phải chi thêm ngân sách để lọc tệp, đẩy CPM tăng trung bình 20%."
+      },
+      {
+        "heading": "Chênh lệch giữa tác động của bot và công cụ loại trừ",
+        "body": "Nghiên cứu từ Lunio chỉ ra rằng 75,6% nhà tiếp thị thừa nhận họ bị tổn thất ngân sách quảng cáo do truy cập không hợp lệ từ bot. Tuy nhiên, chỉ có 5,3% nhà tiếp thị đang chủ động sử dụng các công cụ ngăn chặn lưu lượng không hợp lệ. Đáng chú ý, các chiến dịch tìm kiếm bán lẻ chạy trên AI Max ghi nhận lượng truy cập không hợp lệ cao hơn 72%. Sự đứt gãy giữa việc nhận diện vấn đề và áp dụng công cụ giải quyết đang khiến nhiều doanh nghiệp lãng phí ngân sách."
+      },
+      {
+        "heading": "Cơ hội mới từ các trợ lý tìm kiếm trí tuệ nhân tạo",
+        "body": "Mặc dù bot tự động gây nhiễu dữ liệu, lưu lượng đến từ các trợ lý AI lại mang đến tín hiệu tích cực về hiệu suất kinh doanh. Thương hiệu Mellow Sleep cho biết truy cập từ trợ lý AI có tỷ lệ chuyển đổi cao gấp nhiều lần so với mức trung bình của trang web. Tương tự, nhà bán lẻ John Lewis ghi nhận tỷ lệ tìm kiếm qua AI tăng từ 0,3% lên 2,5% trong vòng một năm. Khách hàng sử dụng trợ lý AI thường đã hoàn thành bước so sánh và lọc sản phẩm trước khi nhấp vào liên kết."
+      },
+      {
+        "heading": "Xu hướng dịch chuyển ngân sách sang nền tảng khép kín",
+        "body": "Để tránh rủi ro dữ liệu kém chất lượng trên các trang web mở, nhiều doanh nghiệp đang chuyển dịch ngân sách sang mạng xã hội và mạng truyền thông bán lẻ. Đây là các môi trường khép kín nơi danh tính người dùng được xác thực bằng tài khoản đăng nhập thay vì suy đoán qua lượt truy cập. Dữ liệu từ Smarter Ecommerce trên 175 tỷ lượt hiển thị Google Shopping cho thấy số lượt hiển thị trung vị giảm từ 1,85 triệu xuống 1,4 triệu. Trong khi đó, tỷ lệ nhấp CTR lại tăng từ 1,20% lên gần 1,55% nhờ lượng truy cập chất lượng hơn."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing sẽ đối mặt với tình trạng tệp retargeting bị pha loãng do 50% lượt truy cập web là bot, làm tăng chi phí CPM thêm 20% mà không mang lại doanh thu tương ứng. Nếu sử dụng các công cụ tự động hóa như AI Max, nguy cơ ngân sách bị lãng phí do lưu lượng không hợp lệ sẽ càng tăng cao.",
+    "ifIgnored": "Doanh nghiệp sẽ tiếp tục chi trả chi phí quảng cáo tăng cao cho các tệp đối tượng ảo, dẫn đến hiệu quả chi phí trên mỗi đơn hàng (CPA) suy giảm nghiêm trọng mà không rõ nguyên nhân.",
+    "actionChecklist": [
+      "Rà soát lại tỷ lệ chuyển đổi và kiểm tra chất lượng lưu lượng của các tệp bám đuổi hiện tại.",
+      "Cân nhắc cài đặt thêm các giải pháp kiểm tra và ngăn chặn lưu lượng không hợp lệ (IVT).",
+      "Thử nghiệm phân bổ một phần ngân sách sang các kênh quảng cáo khép kín có xác thực đăng nhập.",
+      "Chuẩn bị cấu trúc dữ liệu website chuẩn chỉnh để tối ưu hiển thị cho các trợ lý tìm kiếm AI."
+    ],
+    "id": "real-2026-09-08-luot-truy-cap-robot-6571e8",
+    "publishedAt": "08/09/2026",
+    "sourceUrl": "https://ppc.land/half-of-web-requests-are-bots-as-agency-cpms-climb-20/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/09/Half-of-web-requests-are-bots-as-agency-CPMs-climb-20-.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
     "category": "Google Ads & SEO",
     "platformIcon": "Video",
     "title": "YouTube ra mắt chỉ số xem chung trên TV nhưng chỉ hiển thị riêng cho nhà sáng tạo",
@@ -431,68 +494,6 @@
     "image": {
       "url": "https://imgproxy.divecdn.com/x-UGM27Xdv5gesyzsclJ8IKXby8LlpAU7ID71bTcWt8/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9yZWRkaXRfbWF4X2NhbXBhaWduczIucG5n.webp",
       "credit": "Ảnh: Social Media Today"
-    }
-  },
-  {
-    "category": "AI Marketing",
-    "platformIcon": "Sparkles",
-    "title": "AI Agent bắt đầu tự mua quảng cáo: Các agency thiết lập hạn mức token để kiểm soát chi phí",
-    "isHot": false,
-    "illustration": "ai-budget",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "AI Agent",
-      "Tự động hóa quảng cáo",
-      "Quản trị ngân sách AI"
-    ],
-    "summary": "Các agency quảng cáo đang gấp rút xây dựng cơ chế giám sát và đặt hạn mức tiêu thụ token hàng ngày khi AI agent chính thức tham gia vào quy trình lập kế hoạch và mua truyền thông thực tế. Dù công nghệ này mang lại hiệu quả chuyển đổi ấn tượng trong các thử nghiệm ban đầu, chi phí vận hành mô hình và nguy cơ chệch hướng quyết định đang buộc các nhà tiếp thị phải lập tức dựng rào chắn kiểm soát.",
-    "keyNumbers": [
-      {
-        "value": "1.500.000",
-        "label": "Token bị tiêu thụ bởi 1 nhân sự trong 1 ngày tại agency Dept"
-      },
-      {
-        "value": "125.000 USD",
-        "label": "Doanh thu Rouge Care thu về từ 25.000 USD ngân sách do AI tự chạy"
-      },
-      {
-        "value": "60%",
-        "label": "Tổ chức dùng AI dự kiến bị thâm hụt chi phí do thiếu giám sát (Gartner)"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Sự trỗi dậy của AI Agent trong việc trực tiếp giải ngân quảng cáo",
-        "body": "Thế hệ AI mới không chỉ dừng lại ở việc tạo nội dung mà đã bắt đầu trực tiếp mua quảng cáo trên môi trường thực tế. Điển hình là thương hiệu Rouge Care khi để hai AI agent tự lập kế hoạch và mua chiến dịch truyền hình kết nối CTV qua nền tảng AgenticOS của PubMatic. Kết quả thực tế đạt mức doanh thu hơn 125.000 USD trên tổng chi tiêu 25.000 USD, tương đương tỷ suất hoàn vốn 500% và gấp đôi mục tiêu ban đầu. Nền tảng này giúp giảm 87% thời gian thiết lập chiến dịch, cải thiện 70% tốc độ giải quyết sự cố và ra quyết định nhanh hơn 5 lần."
-      },
-      {
-        "heading": "Bẫy chi phí phát sinh từ việc tiêu hao token khi AI suy luận",
-        "body": "Khi AI agent hoạt động theo vòng lặp suy luận liên tục, lượng token tiêu thụ tăng vọt và trực tiếp chuyển thành chi phí vận hành đắt đỏ. Điển hình tại agency Dept, hệ thống ghi nhận một nhân sự làm tiêu tốn tới 1.500.000 token chỉ trong một ngày làm việc đơn lẻ. Khảo sát vào tháng 04/2026 của Gartner với 1.300 lãnh đạo marketing cho thấy 56% doanh nghiệp đang ứng dụng AI mà không có chính sách sử dụng rõ ràng. Gartner dự báo 60% tổ chức sẽ đối mặt với tình trạng vượt ngân sách do thiếu các công cụ theo dõi mức tiêu hao tài nguyên."
-      },
-      {
-        "heading": "Agency triển khai các biện pháp kỹ thuật để đặt trần ngân sách AI",
-        "body": "Trước áp lực hóa đơn tính toán, các agency lớn phải tự xây dựng cổng phân luồng và hạn mức token theo ngày thay vì chờ đợi nhà cung cấp. Dept tạo ra cổng định tuyến nội bộ để điều phối từng tác vụ tới mô hình phù hợp với yêu cầu thương mại và pháp lý, ngăn nhân viên tùy tiện dùng các mô hình đắt tiền. PMG triển khai công cụ Alli For You đặt hạn mức token hàng ngày cho từng người dùng kèm quy trình phê duyệt khi chạm trần. Brainlabs áp dụng cơ chế cấp quota token theo từng cấp bậc nhân sự để kiểm soát chặt chẽ ngân sách vận hành."
-      },
-      {
-        "heading": "Xây dựng rào chắn ngăn AI chệch hướng khỏi mục tiêu ban đầu",
-        "body": "Bên cạnh bài toán chi phí token, rủi ro AI agent chệch hướng khỏi các thông số kinh doanh ban đầu đòi hỏi phải có cơ chế ghi nhật ký kiểm toán nghiêm ngặt. PubMatic đã đưa ra khung an toàn gồm 5 bước bao gồm giới hạn nền tảng, quy tắc tiền chiến dịch, duyệt trước vị trí hiển thị và luồng phê duyệt xác thực. Khi AI đưa ra quyết định vượt thẩm quyền, hệ thống sẽ dừng lại và yêu cầu con người xác nhận qua mã mật khẩu một lần OTP. Cơ chế này tạo ra bằng chứng xác thực có giá trị pháp lý để giải quyết các tranh chấp phát sinh trong tương lai."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing đối mặt với hai dòng ngân sách song song: ngân sách hiển thị quảng cáo truyền thống và chi phí điện toán suy luận của AI. Nếu ứng dụng các công cụ tự động hóa mua media mà không có rào chắn kỹ thuật, doanh nghiệp dễ rơi vào tình trạng doanh thu quảng cáo tăng nhưng lợi nhuận ròng bị bào mòn bởi hóa đơn token API.",
-    "ifIgnored": "Doanh nghiệp có thể gánh chịu tổn thất tài chính kép do AI tự ý đấu thầu sai lệch ngoài kế hoạch mà không có nhật ký truy vết, đồng thời đối mặt với tình trạng vượt trần ngân sách công nghệ thông tin vì nhân viên lạm dụng các mô hình ngôn ngữ lớn đắt tiền mà không bị kiểm soát.",
-    "actionChecklist": [
-      "Thiết lập hạn mức tiêu thụ token hoặc ngân sách API tối đa theo ngày cho từng nhân sự và từng dự án nội bộ",
-      "Yêu cầu các đối tác agency hoặc nhà cung cấp adtech cung cấp nhật ký kiểm toán có mốc thời gian rõ ràng khi dùng AI mua quảng cáo",
-      "Áp dụng quy tắc phê duyệt có xác thực con người với các quyết định điều chỉnh ngân sách hoặc đấu thầu vượt ngưỡng định trước",
-      "Phân loại tác vụ quảng cáo để phân luồng sử dụng mô hình AI tinh gọn thay vì dùng mô hình đắt đỏ cho mọi công việc"
-    ],
-    "id": "real-2026-09-04-ai-agent-bat-dau-ebe22c",
-    "publishedAt": "04/09/2026",
-    "sourceUrl": "https://ppc.land/ai-agents-now-buy-media-so-agencies-are-metering-them-by-the-token/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/09/AI-agents-now-buy-media.jpg",
-      "credit": "Ảnh: PPC Land"
     }
   },
   {
