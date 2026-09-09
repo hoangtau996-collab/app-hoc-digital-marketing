@@ -1,5 +1,191 @@
 [
   {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Google Ads ra mắt Local Customer Optimization và tích hợp Store Sales vào Data Manager",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "3 phút đọc",
+    "tags": [
+      "Google Ads",
+      "Performance Max",
+      "Chuyển đổi offline",
+      "Bán lẻ"
+    ],
+    "summary": "Google Ads bổ sung tùy chọn Local Customer Optimization cho chiến dịch Performance Max nhằm ưu tiên tiếp cận người dùng sẵn sàng ghé thăm cửa hàng vật lý. Đồng thời, nền tảng tích hợp công cụ Store Sales vào Data Manager giúp doanh nghiệp dễ dàng đưa dữ liệu doanh thu tại quầy vào thuật toán Smart Bidding.",
+    "keyNumbers": [
+      {
+        "value": "30 ngày",
+        "label": "khung thời gian giao dịch bắt buộc để báo cáo giá trị chuyển đổi động"
+      },
+      {
+        "value": "14 ngày",
+        "label": "khung thời gian dữ liệu giao dịch được khuyến nghị cập nhật"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Tối ưu hóa khách hàng địa phương trên Performance Max",
+        "body": "Google bổ sung cài đặt Local Customer Optimization ở cấp chiến dịch dành riêng cho mục tiêu cửa hàng trên Performance Max. Tính năng này tập trung tiếp cận những khách hàng ở gần hoặc quan tâm đến địa điểm kinh doanh và có xu hướng thực hiện hành động ngay lập tức như tìm đường, gọi điện hay ghé thăm. Hệ thống sử dụng tín hiệu thời gian thực từ người dùng đang điều hướng hoặc tìm kiếm địa điểm trên Google Maps, Waze và Google Search."
+      },
+      {
+        "heading": "Điều kiện và giới hạn kỹ thuật của chiến dịch",
+        "body": "Cài đặt Local Customer Optimization chỉ tương thích với các chiến dịch nhắm mục tiêu ngoại tuyến hoàn toàn và không hỗ trợ mục tiêu trực tuyến. Doanh nghiệp cũng không thể bật tính năng này trên các chiến dịch Performance Max đang liên kết với tài khoản Merchant Center. Điều này đồng nghĩa nhà quảng cáo bán lẻ phải thiết lập một chiến dịch Performance Max riêng biệt dành riêng cho mục tiêu cửa hàng vật lý."
+      },
+      {
+        "heading": "Đơn giản hóa việc nhập dữ liệu Store Sales qua Data Manager",
+        "body": "Tính năng Store Sales mới trong Google Ads Data Manager cho phép doanh nghiệp kết nối trực tiếp dữ liệu bán hàng từ CRM hoặc Google Sheets vào tài khoản quảng cáo. Dữ liệu mua hàng tại quầy sẽ được đối soát với các lượt tương tác quảng cáo trước đó để phục vụ báo cáo và huấn luyện Smart Bidding. Google yêu cầu thông tin khách hàng như email hoặc số điện thoại phải được mã hóa SHA-256 trước hoặc trong quá trình tải lên hệ thống."
+      },
+      {
+        "heading": "Tần suất cập nhật dữ liệu và thời điểm áp dụng",
+        "body": "Google khuyến nghị doanh nghiệp nên tải dữ liệu giao dịch ngoại tuyến định kỳ hàng ngày hoặc hàng tuần để đảm bảo tính cập nhật cho báo cáo. Báo cáo giá trị chuyển đổi động yêu cầu dữ liệu giao dịch phát sinh trong vòng 30 ngày gần nhất và tối ưu nhất là 14 ngày. Tính năng Store Sales trong Data Manager dự kiến bắt đầu triển khai vào cuối tháng 9 cho các tài khoản đủ điều kiện."
+      }
+    ],
+    "impact": "Giúp các doanh nghiệp bán lẻ đa kênh đo lường chính xác hiệu quả kéo khách tới điểm bán vật lý, đồng thời nạp dữ liệu doanh thu tại quầy vào Smart Bidding để thuật toán tối ưu hóa chi phí quảng cáo theo doanh thu thực tế thay vì chỉ dừng ở lượt nhấp chuột.",
+    "ifIgnored": "Nếu tiếp tục gộp chung mục tiêu online và offline trong cùng chiến dịch, doanh nghiệp sẽ lãng phí ngân sách vào những tệp người dùng không có hành vi ghé cửa hàng, đồng thời bỏ lỡ tín hiệu doanh thu thực tế để rèn luyện máy học Google Ads.",
+    "actionChecklist": [
+      "Tạo chiến dịch Performance Max riêng biệt nhắm mục tiêu cửa hàng vật lý thay vì dùng chung với chiến dịch gắn Merchant Center.",
+      "Chuẩn hóa và thiết lập quy trình mã hóa SHA-256 cho dữ liệu khách hàng từ phần mềm bán hàng POS hoặc CRM.",
+      "Lên kế hoạch đồng bộ dữ liệu giao dịch cửa hàng định kỳ hàng ngày hoặc hàng tuần qua Google Ads Data Manager từ cuối tháng 9.",
+      "Kiểm tra điều kiện tài khoản để đăng ký danh sách xét duyệt sử dụng tính năng Store Sales và kích hoạt Local Customer Optimization."
+    ],
+    "id": "real-2026-09-09-google-ads-ra-mat-fdb7e5",
+    "publishedAt": "09/09/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/google-ads-introduces-local-customer-optimization/588886/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/09/shutterstock_2179049515_1600x840-12.png",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Rủi ro mất 98% lượng hiển thị Google News khi đổi tên miền website",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "SEO Migration",
+      "Google News",
+      "Tên miền",
+      "Chuyển đổi Website"
+    ],
+    "summary": "Một nhà xuất bản tin tức tại Anh đã ghi nhận mức sụt giảm 98% điểm hiển thị tin tức trên Google chỉ trong hai tuần sau khi chuyển từ tên miền .co.uk sang .com. Sự cố này cảnh báo rủi ro lớn khi thay đổi tên miền và chỉ ra kẽ hở nghiêm trọng trong cách các công cụ SEO truyền thống đo lường lưu lượng truy cập.",
+    "keyNumbers": [
+      {
+        "value": "98%",
+        "label": "Mức sụt giảm hiển thị tin tức xu hướng sau 2 tuần đổi tên miền"
+      },
+      {
+        "value": "60-70%",
+        "label": "Mức sụt giảm dự báo bởi các công cụ SEO đo từ khóa cố định"
+      },
+      {
+        "value": "4 tháng",
+        "label": "Thời gian tên miền mới chưa cho thấy dấu hiệu phục hồi"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Sự cố sụt giảm 98% hiển thị sau khi đổi tên miền overnight",
+        "body": "Một trang tin tức tại Anh đã chuyển toàn bộ website từ tên miền .co.uk sang .com trong một đêm để phục vụ mục tiêu toàn cầu hóa và tránh bị các hệ thống quảng cáo phân loại là trang nội địa. Theo dữ liệu từ NewzDash, điểm hiển thị các truy vấn tin tức xu hướng của trang này trên Top Stories và kết quả tìm kiếm tự nhiên đã giảm từ mức 1% đến 2% xuống còn 0,02% chỉ sau hai tuần, tương đương mức giảm 98%. Tên miền .com mới gần như không tiếp quản được lượng hiển thị mà tên miền cũ đã mất. Sau 4 tháng, hệ thống ghi nhận tên miền mới chỉ xuất hiện rải rác vài lần và chưa có dấu hiệu phục hồi."
+      },
+      {
+        "heading": "Khoảng hẫng 30 điểm giữa các công cụ đo lường SEO",
+        "body": "Các công cụ SEO thông thường chỉ ước tính mức sụt giảm khoảng 60-70% vì chúng theo dõi dựa trên danh sách từ khóa cố định, chủ yếu là từ khóa evergreen. Trong khi đó, NewzDash đo lường dựa trên các truy vấn tin tức biến động liên tục theo xu hướng thời gian thực. Sự chênh lệch khoảng 30 điểm giữa hai phương pháp đo lường cho thấy các báo cáo chuyển đổi website chỉ dựa vào từ khóa cố định sẽ đánh giá thấp tổn thất thực tế trên các truy vấn tin tức thay đổi nhanh."
+      },
+      {
+        "heading": "Khái niệm Google Reset và cơ chế truyền tín hiệu tên miền",
+        "body": "Chuyên gia John Shehata chỉ ra rằng các thay đổi lớn như đổi CMS, đổi giao diện hay đổi tên miền có thể kích hoạt cơ chế re-evaluate toàn bộ trang web từ Google. Mặc dù lệnh chuyển hướng 301 truyền sức mạnh liên kết (link equity), các tín hiệu uy tín lịch sử và độ tin cậy biên tập gắn liền với tên miền máy chủ (hostname) có thể không được chuyển tiếp trọn vẹn. Ngay cả khi làm đúng kỹ thuật, Google cũng cho biết việc xử lý từng URL chuyển đổi có thể mất nhiều tuần hoặc lâu hơn đối với các trang web quy mô vừa và lớn."
+      },
+      {
+        "heading": "Khuyến nghị kỹ thuật từ Google khi chuyển đổi trang web",
+        "body": "Hướng dẫn chính thức từ Google khuyên doanh nghiệp không nên kết hợp việc đổi tên miền cùng lúc với thay đổi CMS hoặc thiết kế lại giao diện. Các trang web lớn được khuyên nên thử nghiệm chuyển đổi trước một phần ít cập nhật thay vì dịch chuyển toàn bộ cùng lúc. Ngoài ra, việc cập nhật sơ đồ trang web (News sitemap), khai báo Change of Address trong Search Console và tránh tạo ra các chuỗi chuyển hướng dài (redirect chains) là những yêu cầu bắt buộc để giúp crawler cập nhật dữ liệu thuận lợi."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing sẽ gặp rủi ro làm sụt giảm nghiêm trọng lưu lượng tự nhiên (organic traffic) khi thực hiện tái cấu trúc thương hiệu hoặc đổi tên miền (như chuyển từ .vn sang .com). Ngoài ra, việc chỉ tin vào báo cáo SEO dùng từ khóa cố định sẽ khiến cấp quản lý đánh giá sai thiệt hại thực tế đối với các mảng nội dung bắt xu hướng.",
+    "ifIgnored": "Doanh nghiệp có thể đối mặt với kịch bản website mất trắng lưu lượng tìm kiếm kéo dài nhiều tháng mà không rõ nguyên nhân, buộc phải tốn thêm ngân sách quảng cáo đền bù cho lượng truy cập bị thiếu hụt.",
+    "actionChecklist": [
+      "Không thực hiện việc đổi tên miền đồng thời với việc thay đổi hệ quản trị nội dung (CMS) hoặc tái thiết kế giao diện.",
+      "Tách nhỏ quy trình dịch chuyển tên miền và triển khai thử nghiệm trước trên một thư mục hoặc phân vùng ít cập nhật.",
+      "Thiết lập hệ thống đo lường lưu lượng tìm kiếm dựa trên cả từ khóa cố định lẫn các truy vấn xu hướng trước khi chuyển đổi.",
+      "Khai báo Change of Address trên Google Search Console và rà soát kỹ hệ thống 301 redirect để tránh tạo ra chuỗi chuyển hướng dài."
+    ],
+    "id": "real-2026-09-08-rui-ro-mat-98-50dbc2",
+    "publishedAt": "08/09/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/uk-publisher-news-search-visibility-com-move/588840/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/09/uk-publisher-news-search-visibility-1600x840-1.jpg",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
+    "category": "TikTok Shop & Ads",
+    "platformIcon": "Video",
+    "title": "Siết chặt quyền riêng tư trẻ em: ByteDance và Disney bị phạt hàng trăm triệu USD, cảnh báo cho nhà quảng cáo nhắm mục tiêu gia đình",
+    "isHot": true,
+    "illustration": "account-security",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Quyền riêng tư trẻ em",
+      "Luật COPPA",
+      "Quảng cáo gia đình",
+      "Chính sách nền tảng"
+    ],
+    "summary": "Các án phạt khổng lồ nhắm vào ByteDance và Disney cùng với việc thắt chặt luật COPPA của FTC đang định hình lại toàn bộ bối cảnh quảng cáo hướng đến trẻ em và gia đình trên toàn cầu. Các nhà quảng cáo tại Việt Nam cần đặc biệt lưu ý khi sử dụng SDK bên thứ ba và thu thập dữ liệu của nhóm đối tượng nhạy cảm này. Sự xuất hiện của các ứng dụng sạch hoàn toàn không quảng cáo như Kids Podcasts cho thấy xu hướng phụ huynh chủ động cô lập con trẻ khỏi môi trường tiếp thị số.",
+    "keyNumbers": [
+      {
+        "value": "400 triệu USD",
+        "label": "Mức phạt ByteDance đồng ý chi trả liên quan đến quyền riêng tư trẻ em"
+      },
+      {
+        "value": "10 triệu USD",
+        "label": "Khoản phạt của Disney liên quan đến dán nhãn video trẻ em trên YouTube"
+      },
+      {
+        "value": "200",
+        "label": "Số lượng chương trình được kiểm duyệt thủ công trên ứng dụng Kids Podcasts"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Làn sóng phạt nặng từ FTC nhắm vào các ông lớn công nghệ",
+        "body": "ByteDance đã đồng ý chi trả khoản tiền phạt lên tới 400 triệu USD, bao gồm 300 triệu USD thanh toán ngay lập tức để giải quyết các cáo buộc vi phạm quyền riêng tư trẻ em. Trong khi đó, Disney cũng phải chấp nhận mức phạt 10 triệu USD công bố vào ngày 02/09/2025 liên quan đến việc dán nhãn sai các video hướng đến trẻ em trên YouTube. Các động thái này cho thấy cơ quan quản lý không còn nương tay với các hành vi thu thập dữ liệu trái phép từ người dùng nhỏ tuổi."
+      },
+      {
+        "heading": "Luật COPPA sửa đổi chính thức siết chặt việc thu thập dữ liệu",
+        "body": "Quy định sửa đổi về Bảo vệ Quyền riêng tư Trực tuyến của Trẻ em (COPPA) của Ủy ban Thương mại Liên bang Mỹ (FTC) đã có hiệu lực từ ngày 23/06/2025, với hạn chót tuân thủ nghiêm ngặt là ngày 22/04/2026. Luật mới bổ sung các yêu cầu đồng ý riêng biệt đối với việc tiết lộ thông tin của trẻ em cho bên thứ ba, bao gồm cả các nhà quảng cáo. Điều này trực tiếp triệt tiêu khả năng nhắm mục tiêu quảng cáo dựa trên hành vi đối với tài khoản trẻ em trên các nền tảng toàn cầu."
+      },
+      {
+        "heading": "Sự trỗi dậy của các nền tảng không quảng cáo và kiểm duyệt thủ công",
+        "body": "Ứng dụng Kids Podcasts vừa ra mắt trên App Store là một ví dụ điển hình cho xu hướng nói không với quảng cáo để bảo vệ trẻ em. Ứng dụng này giới hạn thư viện ở mức hơn 200 chương trình được kiểm duyệt thủ công bằng con người, hoàn toàn không tích hợp SDK theo dõi của bên thứ ba và tự động xóa dữ liệu. Mô hình này tạo ra một bức tường lửa ngăn chặn hoàn toàn mọi nỗ lực tiếp cận của các nhà quảng cáo muốn khai thác tệp khách hàng gia đình tại đây."
+      },
+      {
+        "heading": "Rủi ro từ việc tích hợp SDK bên thứ ba trong ứng dụng",
+        "body": "FTC hiện đang nhắm mục tiêu điều tra và khởi kiện các nhà sản xuất đồ chơi kết nối ứng dụng có nhúng công nghệ quảng cáo và phân tích của bên thứ ba. Việc tự động thu thập dữ liệu thông qua các bộ công cụ phát triển phần mềm (SDK) này mà không có sự đồng ý rõ ràng của phụ huynh là nguyên nhân chính dẫn đến các rắc rối pháp lý. Các doanh nghiệp sở hữu ứng dụng di động dành cho gia đình cần rà soát lại toàn bộ mã nguồn để tránh các khoản phạt liên đới."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing đối mặt với rủi ro bị khóa tài khoản quảng cáo doanh nghiệp, bị gỡ ứng dụng khỏi App Store/Google Play hoặc chịu phạt nặng nếu chiến dịch nhắm vào trẻ em/gia đình vi phạm chính sách dữ liệu mới của TikTok, YouTube và Meta. Chi phí tiếp cận (CPM) nhóm khách hàng gia đình sẽ tăng cao do dữ liệu nhắm mục tiêu bị hạn chế nghiêm ngặt.",
+    "ifIgnored": "Tiếp tục chạy quảng cáo nhắm mục tiêu hành vi đến trẻ em hoặc sử dụng các SDK theo dõi không tuân thủ COPPA sẽ dẫn đến việc tài khoản quảng cáo doanh nghiệp bị gắn cờ vi phạm chính sách nghiêm trọng, ứng dụng của doanh nghiệp bị xóa khỏi các kho ứng dụng toàn cầu, gây thiệt hại nặng nề về cả ngân sách lẫn uy tín thương hiệu.",
+    "actionChecklist": [
+      "Rà soát lại toàn bộ các chiến dịch quảng cáo trên TikTok, YouTube và Meta đang nhắm mục tiêu đến đối tượng dưới 13 tuổi hoặc gia đình có trẻ nhỏ.",
+      "Yêu cầu bộ phận kỹ thuật kiểm tra và gỡ bỏ các SDK theo dõi của bên thứ ba trong các ứng dụng di động của doanh nghiệp nếu ứng dụng đó có đối tượng sử dụng là trẻ em.",
+      "Cập nhật chính sách bảo mật thông tin trên website và ứng dụng, bổ sung quy trình xác nhận đồng ý của phụ huynh trước khi thu thập bất kỳ dữ liệu nào.",
+      "Chuyển dịch một phần ngân sách quảng cáo hướng gia đình sang các kênh tài trợ nội dung (sponsorship) hoặc hợp tác trực tiếp với các nhà sáng tạo nội dung gia đình thay vì phụ thuộc vào quảng cáo lập trình (programmatic ads)."
+    ],
+    "deadline": "22/04/2026",
+    "id": "real-2026-09-07-siet-chat-quyen-rieng-42af94",
+    "publishedAt": "07/09/2026",
+    "sourceUrl": "https://ppc.land/kids-podcasts-locks-a-childs-200-show-library-behind-a-parent-pin/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/09/Kids-Podcasts-locks-a-child-s-200-show-library-behind-a-parent-PIN.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
     "category": "AI Marketing",
     "platformIcon": "Sparkles",
     "title": "Lượt truy cập robot chiếm 50% lưu lượng web khiến CPM quảng cáo bám đuổi tăng 20%",
@@ -191,70 +377,6 @@
   {
     "category": "Google Ads & SEO",
     "platformIcon": "Search",
-    "title": "Google ra mắt Qualified Future Conversions: Đo lường chuyển đổi tới 180 ngày",
-    "isHot": "false",
-    "illustration": "data-signal",
-    "readTime": "5 phút đọc",
-    "tags": [
-      "Google Ads",
-      "Đo lường",
-      "Chuyển đổi",
-      "Thuật toán"
-    ],
-    "summary": "Google vừa giới thiệu chỉ số Qualified Future Conversions cho phép tính nhận diện chuyển đổi kéo dài đến 180 ngày sau khi click quảng cáo, dựa trên tín hiệu tương tác trong 7 ngày đầu. Thay đổi này nhằm giải quyết các chu kỳ mua hàng kéo dài vốn bị giới hạn bởi khung thời gian đo lường cũ.",
-    "keyNumbers": [
-      {
-        "value": "7 ngày",
-        "label": "Tín hiệu định tính ban đầu"
-      },
-      {
-        "value": "180 ngày",
-        "label": "Khung thời gian tối đa ghi nhận"
-      },
-      {
-        "value": "29 phút",
-        "label": "Thời lượng video thảo luận"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Cơ chế hoạt động của chỉ số mới",
-        "body": "Chỉ số Qualified Future Conversions hoạt động theo mô hình hai giai đoạn. Trong vòng 7 ngày kể từ khi click quảng cáo, người dùng phải thực hiện một hành động thể hiện ảnh hưởng của quảng cáo như tìm kiếm thương hiệu, truy cập trang web hoặc thêm sản phẩm vào giỏ hàng. Khi có tín hiệu xác thực này, hệ thống sẽ mở rộng thời gian ghi nhận doanh số kéo dài lên đến 30 ngày, 90 ngày hoặc tối đa 180 ngày."
-      },
-      {
-        "heading": "Giải quyết bài toán chu kỳ mua hàng dài",
-        "body": "John Chen, giám đốc quản lý sản phẩm cấp cao về đo lường quảng cáo tại Google, đánh giá khung nhìn cũ là mang tính áp đặt nhân tạo. Thay vì cắt đứt dữ liệu ở ngày 30, cơ chế mới cho phép các ngành hàng có chu kỳ cân nhắc mua sắm kéo dài ghi nhận chính xác hơn đóng góp của quảng cáo. Điều này giúp thay đổi thứ hạng hiệu quả giữa các kênh trong báo cáo chiến dịch."
-      },
-      {
-        "heading": "Đồng bộ hóa các công cụ đo lường",
-        "body": "Google thừa nhận sự mâu thuẫn thường trực giữa ba hệ thống gồm phân bổ thời gian thực, thử nghiệm tính gia tăng và mô hình hỗn hợp tiếp thị. Google ví von chúng như ba bảng đồng hồ trên máy bay không cho ra cùng một con số duy nhất nhưng đều bổ trợ cho việc ra quyết định. Phân bổ dùng cho chiến thuật hàng ngày, trong khi thử nghiệm và mô hình hỗn hợp phục vụ tầm nhìn dài hạn."
-      },
-      {
-        "heading": "Đưa mô hình Meridian đến gần nhà quảng cáo",
-        "body": "Google đang hạ thấp rào cản kỹ thuật của việc mô hình hóa hỗn hợp tiếp thị thông qua mã nguồn mở Meridian và tích hợp Meridian Studio trên Google Cloud Platform. Phiên bản tích hợp trong Google Analytics 360 và công cụ Scenario Planner giúp các nhà tiếp thị tự đọc kết quả mà không cần phụ thuộc hoàn toàn vào đội ngũ khoa học dữ liệu."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing chạy các chiến dịch có chu kỳ mua hàng dài sẽ thấy sự thay đổi rõ rệt trong báo cáo phân bổ, khi các chuyển đổi trễ đến nửa năm được ghi nhận công trạng cho đúng điểm chạm ban đầu.",
-    "ifIgnored": "Nếu bỏ qua, chiến dịch của bạn có thể bị tối ưu sai hướng do các công cụ chỉ nhìn nhận dữ liệu trong ngắn hạn, dẫn đến việc cắt giảm ngân sách nhầm vào các kênh đóng vai trò nuôi dưỡng phễu ở giai đoạn đầu.",
-    "actionChecklist": [
-      "Kiểm tra xem hệ thống tracking đã ghi nhận đủ các tín hiệu ở giai đoạn đầu phễu như thêm vào giỏ hàng hoặc tìm kiếm thương hiệu trong vòng 7 ngày chưa.",
-      "Đánh giá lại các chiến dịch có chu kỳ mua hàng dài để chuẩn bị đón nhận sự thay đổi về số liệu báo cáo chuyển đổi.",
-      "Rà soát việc tích hợp dữ liệu đa kênh bao gồm web, ứng dụng và dữ liệu ngoại tuyến để đảm bảo không bị sót điểm chạm.",
-      "Khám phá các tính năng của mô hình Meridian trên Google Analytics 360 để tối ưu hóa việc đọc dữ liệu mà không cần đội ngũ kỹ thuật phức tạp."
-    ],
-    "deadline": "05/09/2026",
-    "id": "real-2026-09-05-google-ra-mat-qualified-a628cc",
-    "publishedAt": "05/09/2026",
-    "sourceUrl": "https://ppc.land/googles-new-metric-counts-conversions-up-to-180-days-after-an-ad-click/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/09/Google-s-new-metric-counts-conversions-up-to-180-days-after-an-ad-click.jpg",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
     "title": "Google mở rộng báo cáo AI trên Search Console toàn cầu và cập nhật quan trọng từ John Mueller",
     "isHot": false,
     "illustration": "zero-click",
@@ -308,69 +430,6 @@
     "source": "Search Engine Journal",
     "image": {
       "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/09/search-console-ai-reports-seo-pulse-top-right-1600x840-1.jpg",
-      "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
-    "category": "AI Marketing",
-    "platformIcon": "Sparkles",
-    "title": "Đưa sản phẩm lên ChatGPT rất dễ, chốt đơn qua AI Agent mới là điểm nghẽn",
-    "isHot": false,
-    "illustration": "data-signal",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "AI Shopping",
-      "Agentic Commerce",
-      "Hạ tầng thanh toán",
-      "Tối ưu chuyển đổi"
-    ],
-    "summary": "Lượng đơn hàng qua tìm kiếm AI trên Shopify đã tăng 15 lần, nhưng phần lớn hệ thống thanh toán của doanh nghiệp chưa sẵn sàng cho các AI Agent tự động mua hàng. Tốc độ gọi API thần tốc và sự sai lệch dữ liệu giữa các luồng kỹ thuật đang khiến giao dịch bị tắc nghẽn ở bước thanh toán.",
-    "keyNumbers": [
-      {
-        "value": "15 lần",
-        "label": "tăng trưởng đơn hàng qua tìm kiếm AI trên Shopify từ tháng 1/2025"
-      },
-      {
-        "value": "300+",
-        "label": "dự án thương mại và phần mềm đã được QAwerk kiểm thử"
-      },
-      {
-        "value": "3",
-        "label": "giao thức thương mại AI đang vận hành gồm UCP, ACP và Agentforce"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Sự bùng nổ của giao dịch thương mại qua AI Agent",
-        "body": "Đơn hàng thông qua các công cụ tìm kiếm tích hợp AI đã tăng trưởng 15 lần kể từ tháng 1/2025. Các giao dịch này hiện đang được định tuyến qua ba tiêu chuẩn giao thức chính: Universal Commerce Protocol của Google, Agentic Commerce Protocol của OpenAI và Agentforce Commerce của Salesforce. Sau các nền tảng như Etsy, hàng loạt thương hiệu lớn trên Shopify như Glossier, Spanx và Vuori đã đưa sản phẩm xuất hiện trực tiếp trong môi trường AI."
-      },
-      {
-        "heading": "Hành vi mua sắm của AI Agent làm sập hệ thống thông thường",
-        "body": "Người dùng thật thường xem hàng chậm rãi, ngắt quãng và có thể quay lại giỏ hàng sau nhiều giờ. Ngược lại, AI Agent bắn các luồng API có cấu trúc với tốc độ tính bằng mili-giây và hoàn tất quyết định chỉ trong chớp mắt. Tốc độ này thường kích hoạt nhầm các lớp bảo vệ chống bot hoặc cơ chế giới hạn tần suất yêu cầu (rate limiting) của website. Logic phiên đăng nhập vốn thiết kế cho một người dùng liên tục sẽ lập tức bị lỗi khi Agent truy vấn dữ liệu rồi ngắt kết nối trước khi thanh toán."
-      },
-      {
-        "heading": "Lỗi dữ liệu ngầm khiến giao dịch máy tự động đổ vỡ",
-        "body": "Người mua hàng là người thật có thể tự nhận biết lỗi hiển thị hoặc chủ động tải lại trang khi gặp trục trặc nhỏ. Tuy nhiên, phần mềm AI không có trực giác thị giác để tự xử lý khi nguồn dữ liệu giá hoặc tồn kho ở giỏ hàng lệch với trang sản phẩm. Một sai lệch nhỏ giữa nguồn cấp dữ liệu sản phẩm và API cổng thanh toán sẽ làm treo giao dịch hoàn toàn. Các vấn đề như cơ chế gọi lại API khi quá hạn (idempotency) hoặc hoàn tiền không đồng bộ trạng thái đơn hàng đều khiến AI Agent dừng thao tác."
-      },
-      {
-        "heading": "Ba bài kiểm tra hạ tầng doanh nghiệp cần thực hiện",
-        "body": "Doanh nghiệp cần kiểm thử tải cổng thanh toán theo đúng kịch bản API song song với tốc độ cao thay vì chỉ test luồng người dùng chậm. Dữ liệu sản phẩm phải được rà soát từ góc độ máy đọc API thay vì chỉ nhìn giao diện hiển thị trên trình duyệt. Quy trình hoàn tiền và đổi trả tự động cũng cần được xác thực xử lý chính xác ngay từ lần gọi đầu tiên. Việc tập trung tối ưu SEO để AI hiển thị sản phẩm sẽ hoàn toàn vô nghĩa nếu hạ tầng kỹ thuật bên dưới không thể chốt đơn thành công."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing sẽ lãng phí toàn bộ ngân sách kéo traffic và tối ưu hiển thị trên các nền tảng AI (GEO/AEO) nếu tỷ lệ rớt đơn ở bước checkout của AI Agent chạm mức tối đa do hạ tầng kỹ thuật chặn nhầm bot.",
-    "ifIgnored": "Doanh nghiệp sẽ mất hoàn toàn tệp khách hàng mua sắm tự động qua trợ lý ảo vào tay đối thủ có hệ thống API chuẩn hóa, đồng thời đối mặt với tình trạng sai lệch tồn kho và thất thoát doanh thu ngầm.",
-    "actionChecklist": [
-      "Rà soát lại hệ thống tường lửa và cơ chế chặn bot để không khóa nhầm các API request hợp lệ từ shopping agent",
-      "Kiểm tra tính đồng nhất của nguồn cấp dữ liệu sản phẩm giữa hệ thống quản trị tồn kho và API thanh toán",
-      "Yêu cầu đội ngũ kỹ thuật chạy kiểm thử tải (load-test) cổng checkout với kịch bản nhiều lệnh gọi API song song",
-      "Thiết lập cơ chế kiểm tra tính lũy biến (idempotency) cho các yêu cầu thanh toán và hoàn tiền tự động"
-    ],
-    "id": "real-2026-09-04-dua-san-pham-len-934a93",
-    "publishedAt": "04/09/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/getting-your-product-into-chatgpt-isnt-the-hard-part-getting-it-through-checkout-is/587470/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/08/ai-shop-and-checkout-307.png",
       "credit": "Ảnh: Search Engine Journal"
     }
   },
@@ -494,69 +553,6 @@
     "image": {
       "url": "https://imgproxy.divecdn.com/x-UGM27Xdv5gesyzsclJ8IKXby8LlpAU7ID71bTcWt8/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9yZWRkaXRfbWF4X2NhbXBhaWduczIucG5n.webp",
       "credit": "Ảnh: Social Media Today"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Giá và nhà bán trên Google AI Mode chênh lệch lớn so với vòng quay sản phẩm thông thường",
-    "isHot": false,
-    "illustration": "data-signal",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Google AI Mode",
-      "Google Shopping",
-      "SEO Ecommerce",
-      "Merchant Center"
-    ],
-    "summary": "Nghiên cứu mới từ Productrise cho thấy các sản phẩm xuất hiện trong giao diện AI Mode của Google hiếm khi trùng khớp với vòng quay sản phẩm trên kết quả tìm kiếm thông thường. Ngay cả khi hiển thị cùng một mặt hàng, AI Mode thường ưu tiên nhà bán hàng khác với mức giá niêm yết cao hơn. Điều này đặt ra bài toán mới cho các thương hiệu e-commerce trong việc tối ưu hóa nguồn cấp dữ liệu trên Google Merchant Center.",
-    "keyNumbers": [
-      {
-        "value": "1,28%",
-        "label": "Tỷ lệ trùng lặp sản phẩm giữa vòng quay thường và AI Mode"
-      },
-      {
-        "value": "49,6%",
-        "label": "Tỷ lệ đổi người bán đứng đầu khi cùng hiển thị một sản phẩm"
-      },
-      {
-        "value": "68,4%",
-        "label": "Tỷ lệ AI Mode hiển thị giá cao hơn khi có chênh lệch"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Mức độ trùng lặp sản phẩm cực thấp giữa hai giao diện",
-        "body": "Theo dữ liệu theo dõi hơn 2 triệu danh mục sản phẩm từ hơn 100.000 kết quả tìm kiếm từ ngày 9 đến ngày 31 tháng 8 năm 2026, tỷ lệ xuất hiện đồng thời của một sản phẩm trên cả hai giao diện chỉ đạt 1,28% mỗi ngày. Trong khi vòng quay sản phẩm phổ biến hiển thị trung bình 27,8 sản phẩm cho mỗi truy vấn, AI Mode chỉ đưa ra khoảng 3,9 sản phẩm. Sự chênh lệch số lượng này khiến khả năng hiển thị của doanh nghiệp trên AI Mode bị thu hẹp đáng kể. Việc xếp hạng tốt ở vòng quay tìm kiếm truyền thống không còn đảm bảo vị trí xuất hiện trong câu trả lời AI."
-      },
-      {
-        "heading": "AI Mode thường chọn người bán khác và mức giá cao hơn",
-        "body": "Đối với các sản phẩm cùng xuất hiện ở cả hai nơi, người bán đứng đầu tiên bị thay đổi ở 49,6% số trường hợp. Đồng thời, mức giá hiển thị giữa hai giao diện có sự khác biệt ở 38,1% sản phẩm đối soát. Trong các trường hợp giá lệch nhau, AI Mode đưa ra mức giá cao hơn tới 68,4% thời gian. Xét trên toàn bộ sản phẩm đối soát, giá trên AI Mode cao hơn trung bình 21,6% so với vòng quay truyền thống. Khoảng chênh lệch trung vị khi AI Mode cao hơn là 22,2% và trung bình lên tới 88,5% do ảnh hưởng từ các sản phẩm cũ hoặc tân trang."
-      },
-      {
-        "heading": "Phản hồi từ Google và cơ chế Shopping Graph",
-        "body": "Google đại diện phát biểu rằng họ chưa xác minh báo cáo từ Productrise nhưng khẳng định mọi kết quả mua sắm đều dùng chung nguồn dữ liệu Shopping Graph. Nền tảng này giải thích người mua có thể dễ dàng bấm vào danh sách để so sánh giá giữa các nhà bán lẻ khác nhau. Nhà sáng lập Productrise cho rằng yếu tố giá rẻ nhất dường như ít ảnh hưởng hơn trong thuật toán lựa chọn của AI Mode. Điều này mở ra cơ hội cho các thương hiệu không cạnh tranh bằng giá rẻ nhưng có dữ liệu sản phẩm chi tiết hơn. Việc cung cấp dữ liệu nguồn đầy đủ đóng vai trò then chốt để thuật toán AI ưu tiên chọn lựa."
-      },
-      {
-        "heading": "Hạn chế của báo cáo hiệu suất AI trong Merchant Center",
-        "body": "Tính năng báo cáo hiệu suất AI trong Google Merchant Center chỉ cung cấp tổng quan về thị phần hiển thị của thương hiệu dưới dạng phần trăm lượt ấn tượng. Báo cáo này hoàn toàn không chi tiết hóa thông tin người bán nào hoặc mức giá nào đang được AI Mode đưa lên đầu. Doanh nghiệp không thể chỉ dựa vào báo cáo nội bộ của Google để biết liệu đối thủ có đang chiếm vị trí ưu tiên của mình hay không. Các Trưởng phòng Marketing cần tự thực hiện kiểm tra thủ công hoặc sử dụng công cụ bên thứ ba để theo dõi chính xác. Việc chủ động kiểm soát hiển thị giúp thương hiệu tránh mất khách hàng tiềm năng vào tay đối thủ trên giao diện AI."
-      }
-    ],
-    "impact": "Chiến lược Google Shopping không thể chỉ tập trung cạnh tranh về giá hoặc tối ưu SEO truyền thống. Các thương hiệu có dữ liệu nguồn cấp (feed data) chi tiết và chuẩn hóa cao trên Merchant Center sẽ có lợi thế xuất hiện ở vị trí đầu tiên trên AI Mode, ngay cả khi giá bán cao hơn đối thủ.",
-    "ifIgnored": "Doanh nghiệp có nguy cơ bị đối thủ hoặc bên bán lẻ thứ ba cướp mất vị trí hiển thị ưu tiên trên AI Mode mà không hay biết do báo cáo Merchant Center không thể hiện chi tiết người bán và giá hiển thị thực tế.",
-    "actionChecklist": [
-      "Thực hiện kiểm tra thủ công các sản phẩm chủ lực trên cả giao diện thường và Google AI Mode",
-      "Bổ sung thuộc tính chi tiết cho nguồn cấp dữ liệu sản phẩm trên Google Merchant Center",
-      "Theo dõi chỉ số thị phần hiển thị AI trong báo cáo hiệu suất của Google Merchant Center",
-      "Rà soát lại sự chênh lệch giá niêm yết giữa website chính thức và các đại lý phân phối trên Google"
-    ],
-    "id": "real-2026-09-03-gia-va-nha-ban-e877fc",
-    "publishedAt": "03/09/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/google-ai-mode-prices-differ-from-product-carousel-for-same-items/588227/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/09/google-ai-mode-product-prices.jpg",
-      "credit": "Ảnh: Search Engine Journal"
     }
   },
   {
