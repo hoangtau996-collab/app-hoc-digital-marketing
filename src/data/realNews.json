@@ -1,5 +1,194 @@
 [
   {
+    "category": "AI Marketing",
+    "platformIcon": "Sparkles",
+    "title": "Nghiên cứu 120.000 lượt nhắc từ AI: Tín hiệu giúp chuỗi cửa hàng xuất hiện trên ChatGPT và Gemini",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "5 phút đọc",
+    "tags": [
+      "AI Search",
+      "Local SEO",
+      "GEO",
+      "ChatGPT"
+    ],
+    "summary": "Phân tích từ Uberall trên 120.000 lượt nhắc của AI tại 3.793 địa điểm cho thấy cơ chế đề xuất thương hiệu địa phương của các công cụ AI khác biệt rõ rệt so với Google. Số lượng bài đánh giá và độ chi tiết của dữ liệu doanh nghiệp có tác động mạnh hơn điểm số sao trung bình hay quy mô thương hiệu. Doanh nghiệp sở hữu chuỗi chi nhánh cần nắm rõ mô hình tín hiệu BARS để tối ưu hiển thị trên các công cụ tìm kiếm trí tuệ nhân tạo.",
+    "keyNumbers": [
+      {
+        "value": "120.000+",
+        "label": "Lượt nhắc AI được phân tích"
+      },
+      {
+        "value": "3.793",
+        "label": "Địa điểm doanh nghiệp trong nghiên cứu"
+      },
+      {
+        "value": "94,3%",
+        "label": "Tỷ lệ đề xuất thương hiệu có số lượng đánh giá cao"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Đặc tính đề xuất riêng biệt của 5 công cụ AI",
+        "body": "Mỗi mô hình AI sở hữu phản hồi khác nhau khi đề xuất địa điểm cho người dùng. Claude thận trọng nhất khi ưu tiên doanh nghiệp địa phương nhưng hạn chế nhắc tên cụ thể các cơ sở y tế. Gemini đưa ra kết quả đa dạng nhất nhờ đối chiếu trực tiếp dữ liệu Google Maps theo thời gian thực. ChatGPT tạo danh sách ngắn dựa trên sự đồng thuận chung nhưng lại có tỷ lệ thông tin sai lệch cao nhất. Grok tập trung trích dẫn nội dung Instagram cùng trình độ đầu bếp, trong khi Perplexity tìm kiếm web trực tiếp và đưa ra nhiều nguồn trích dẫn nhất."
+      },
+      {
+        "heading": "Dữ liệu hồ sơ doanh nghiệp là điều kiện tiên quyết",
+        "body": "Độ hoàn thiện của hồ sơ Google Business Profile (GBP) quyết định khả năng thương hiệu xuất hiện trong phản hồi của AI. Điền đầy đủ phần mô tả giúp tăng tần suất xuất hiện lên 3 lần cho các cửa hàng tạp hóa. Việc gia tăng thuộc tính từ mức 6-10 lên 31-50 thuộc tính nâng xác suất đề xuất khách sạn từ 22% lên 94%. Số lượng hình ảnh cũng là yếu tố dự báo mạnh nhất về tần suất xuất hiện của nhà hàng và phòng khám nha khoa."
+      },
+      {
+        "heading": "Uy tín truyền thông quan trọng hơn quy mô điểm bán",
+        "body": "Quy mô thương hiệu như số lượng chi nhánh hay thị phần không dự báo chính xác tần suất AI đề xuất địa điểm. Ngược lại, sự xuất hiện trên các trang tin tức và danh sách đánh giá từ biên tập viên tạo ra tác động vượt trội. Ngân hàng có trên 30 lượt nhắc đến trên báo chí ghi nhận tần suất xuất hiện tăng 15 lần trong câu trả lời AI. Việc hiện diện trên Wikipedia cũng là tín hiệu tích cực cho khách sạn, cửa hàng tạp hóa và ngân hàng."
+      },
+      {
+        "heading": "Số lượng đánh giá quan trọng hơn điểm số sao",
+        "body": "Số lượng bài đánh giá là yếu tố dự báo chính xác tần suất xuất hiện trên AI, trong khi điểm số sao trung bình mang lại tác động yếu hơn. Tại ngành tạp hóa, các thương hiệu sở hữu lượng đánh giá cao nhưng điểm sao thấp vẫn được xuất hiện 94,3% thời gian, so với 60,6% của nhóm điểm sao cao nhưng ít bài đánh giá. Ở ngành ngân hàng, điểm đánh giá tổng hợp cao trên Yelp và TrustPilot thậm chí còn tỷ lệ nghịch với tần suất được AI nhắc tới."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing cần thay đổi trọng tâm từ SEO địa phương truyền thống sang Tối ưu hóa cho cỗ máy tạo nội dung (GEO). Việc tập trung cải thiện điểm số sao không còn hiệu quả bằng việc mở rộng quy mô lượt đánh giá và chuẩn hóa thuộc tính hồ sơ chi nhánh đồng bộ.",
+    "ifIgnored": "Doanh nghiệp có nguy cơ đánh mất dòng khách hàng đang dần chuyển sang tìm kiếm địa điểm trên ChatGPT hay Gemini. Các chuỗi chi nhánh lớn vẫn có thể bị đối thủ nhỏ hơn chiếm ưu thế hiển thị nếu thiếu dữ liệu truyền thông và lượt đánh giá thực tế.",
+    "actionChecklist": [
+      "Bổ sung từ 31 đến 50 thuộc tính chi tiết và mô tả đầy đủ cho từng hồ sơ Google Business Profile.",
+      "Thực hiện chiến dịch gia tăng tổng số lượng bài đánh giá từ khách hàng thay vì chỉ tập trung nâng điểm sao.",
+      "Tải lên liên tục các hình ảnh thực tế chất lượng cao tại từng địa điểm kinh doanh.",
+      "Tăng cường sự hiện diện của thương hiệu trên các trang báo chí và danh sách đánh giá uy tín."
+    ],
+    "id": "real-2026-09-10-nghien-cuu-120-000-5bffae",
+    "publishedAt": "10/09/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/ai-signals-multi-location-uberall-spa/587988/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/09/featured-copy-537.png",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
+    "category": "AI Marketing",
+    "platformIcon": "Sparkles",
+    "title": "ChatGPT Shopping ưu tiên đề xuất sản phẩm qua Product Feed thay vì tìm kiếm web",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "ChatGPT Shopping",
+      "Product Feed",
+      "Shopify",
+      "AI SEO"
+    ],
+    "summary": "Nghiên cứu mới từ Profound cho thấy tỷ lệ khuyến nghị sản phẩm trên ChatGPT Shopping dựa vào luồng dữ liệu Product Feed đã tăng mạnh từ 8,26% lên 61,54%. Sự thay đổi này khiến hơn 20% số lượng nhà bán hàng bị sụt giảm độ hiển thị nếu không cập nhật phương thức cung cấp dữ liệu sản phẩm chuẩn hóa.",
+    "keyNumbers": [
+      {
+        "value": "61,54%",
+        "label": "Tỷ lệ đề xuất qua Product Feed trong tháng 7"
+      },
+      {
+        "value": "20%",
+        "label": "Mức giảm số lượng nhà bán hàng duy nhất được hiển thị"
+      },
+      {
+        "value": "35%",
+        "label": "Tỷ lệ truy xuất dữ liệu feed đến từ Shopify"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Sự bùng nổ của Product Feed trong đề xuất mua sắm",
+        "body": "Dữ liệu phân tích từ 1.757.723 lượt chạy prompt trong tháng 7 ghi nhận tỷ lệ khuyến nghị sản phẩm qua dữ liệu feed tích hợp tăng đột biến từ 8,26% lên 61,54% vào ngày 10/7. Tính đến ngày 3/9, phương thức truy xuất qua feed đã chiếm khoảng 65% số lượng đề xuất sản phẩm được theo dõi. Xu hướng này đẩy tìm kiếm web truyền thống xuống hàng thứ yếu khi ChatGPT Shopping đưa ra gợi ý mua sắm. Việc thay đổi cơ chế truy xuất khiến thứ hạng hiển thị của các gian hàng trực tuyến biến động sâu sắc."
+      },
+      {
+        "heading": "Biến động hiển thị và sự tập trung vào các nhà bán hàng lớn",
+        "body": "Trong mẫu khảo sát 687 khách hàng, có 450 gian hàng bị giảm ít nhất 33% độ hiển thị trên Shopping sau mốc 10/7, trong khi chỉ có 67 bên ghi nhận mức tăng tương đương. Sự thay đổi cơ chế truy xuất cũng thu hẹp đáng kể tập hợp các gian hàng được đề xuất. Tỷ lệ đề xuất tập trung vào top 10 thương hiệu hàng đầu đã tăng từ 22,5% lên 41,8%. Đồng thời, tổng số lượng nhà bán hàng duy nhất được tham chiếu giảm từ 13.524 xuống còn 10.607, tương ứng mức giảm hơn 20%."
+      },
+      {
+        "heading": "Vai trò của các nền tảng tích hợp sẵn như Shopify",
+        "body": "Báo cáo ước tính khoảng 35% toàn bộ hoạt động truy xuất feed trong tháng 7 có liên quan đến hệ sinh thái Shopify. Các gian hàng trên Shopify và Etsy hiện đã được kết nối dữ liệu sản phẩm tự động qua Shopify Catalog mà không cần các bước thiết lập bổ sung. Ngược lại, các nhà bán hàng ở nền tảng khác muốn kết nối trực tiếp phải đăng ký qua danh sách chờ của OpenAI. Ngoài ra, việc chia sẻ dữ liệu này vận hành theo Agentic Commerce Protocol, một tiêu chuẩn được mở rộng cho việc khám phá sản phẩm từ ngày 24/3."
+      },
+      {
+        "heading": "Tác động từ đợt cập nhật mô hình GPT-5.6 và GPT-6 Astra",
+        "body": "Mặc dù OpenAI chưa chính thức xác nhận các cập nhật mua sắm trong nhật ký thay đổi, nghiên cứu liên kết biến động độ hiển thị với việc ra mắt mô hình GPT-5.6 vào ngày 9/7. Mô hình thống kê cho thấy sự dịch chuyển giữa truy xuất web và truy xuất feed giải thích tới 83% sự biến động hiển thị của các gian hàng. Bên cạnh đó, việc OpenAI thử nghiệm GPT-6 Astra giới hạn cho một số tổ chức từ ngày 3/9 có thể tiếp tục làm thay đổi cách thức AI lựa chọn sản phẩm trong tương lai."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing sẽ mất đi lượng truy cập tự nhiên lớn từ người dùng tìm kiếm sản phẩm trên AI nếu gian hàng thương mại điện tử chỉ tối ưu SEO web truyền thống mà không có luồng Product Feed chuẩn hóa kết nối với ChatGPT.",
+    "ifIgnored": "Doanh nghiệp bị đứng ngoài cuộc chơi mua sắm trên AI (Agentic Commerce), nhường toàn bộ thị phần hiển thị gợi ý sản phẩm cho các đối thủ cạnh tranh đã tích hợp Shopify hoặc các nhà cung cấp dữ liệu feed tương thích.",
+    "actionChecklist": [
+      "Rà soát và chuẩn hóa dữ liệu sản phẩm bao gồm giá, mô tả và thuộc tính chi tiết trên hệ thống website.",
+      "Kích hoạt và kiểm tra tính năng đồng bộ Shopify Catalog với ChatGPT nếu doanh nghiệp đang sử dụng nền tảng Shopify.",
+      "Gửi yêu cầu đăng ký danh sách chờ cấp quyền truy cập feed trực tiếp trên trang dành cho nhà bán hàng của OpenAI nếu sử dụng hệ thống riêng.",
+      "Chuẩn bị hạ tầng dữ liệu để kết nối với nền tảng tự phục vụ (Self-serve) dự kiến ra mắt vào cuối năm."
+    ],
+    "id": "real-2026-09-09-chatgpt-shopping-uu-tien-67151a",
+    "publishedAt": "09/09/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/chatgpt-shopping-results-lean-hard-on-product-feeds/589000/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/09/chatgpt-shopping-product-feeds-featured.jpg",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Google phát hành Meridian GeoX mã nguồn mở giúp đo lường quảng cáo địa lý tiết kiệm 31% ngân sách",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Google Ads",
+      "Meridian GeoX",
+      "Đo lường Marketing",
+      "MMM"
+    ],
+    "summary": "Google vừa chính thức chuyển công cụ thử nghiệm địa lý Meridian GeoX từ bản thử nghiệm sang phát hành rộng rãi. Công cụ mã nguồn mở này giúp doanh nghiệp đo lường tác động thực tế của quảng cáo theo vùng địa lý với chi phí thấp hơn và chính xác hơn. Dữ liệu thử nghiệm có thể tích hợp trực tiếp vào mô hình phân bổ ngân sách Meridian phiên bản 2.0.0.",
+    "keyNumbers": [
+      {
+        "value": "31%",
+        "label": "Tiết kiệm ngân sách thử nghiệm địa lý"
+      },
+      {
+        "value": "94%",
+        "label": "Rút ngắn thời gian khởi tạo thiết kế thử nghiệm"
+      },
+      {
+        "value": "2.0.0",
+        "label": "Phiên bản thư viện Meridian cốt lõi"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Chính thức phát hành Meridian GeoX mã nguồn mở",
+        "body": "Google đã công bố mức độ sẵn sàng chung của công cụ thử nghiệm địa lý Meridian GeoX trong buổi phát trực tiếp trên kênh Google Analytics. Đây là công cụ mã nguồn mở miễn phí giúp đo lường hiệu quả quảng cáo bằng cách so sánh giữa khu vực địa lý có hiển thị quảng cáo và khu vực không hiển thị. Kết quả thử nghiệm từ GeoX được kết nối trực tiếp vào mô hình phân bổ ngân sách Marketing Mix Modeling của Google. Điều này giúp thay thế việc phụ thuộc hoàn toàn vào dữ liệu thống kê lịch sử bằng dữ liệu từ thử nghiệm thực tế."
+      },
+      {
+        "heading": "Tiết kiệm 31% ngân sách và tăng 94% tốc độ thiết kế",
+        "body": "Cấu trúc thử nghiệm đa nhóm xử lý so với một nhóm đối chứng chung giúp giảm đáng kể chi phí thử nghiệm. Mức tiết kiệm ngân sách được báo cáo đạt hơn 31% đối với các nhà quảng cáo lớn so với các giải pháp mã nguồn mở tương đương. Bên cạnh đó, việc chuyển đổi sang nền tảng JAX giúp cắt giảm thời gian khởi tạo thiết kế thử nghiệm hơn 94%. Công cụ cũng hỗ trợ nhiều kịch bản như ngừng chạy quảng cáo hoàn toàn hoặc tăng cường ngân sách tại khu vực mục tiêu."
+      },
+      {
+        "heading": "Cải tiến phương pháp lấy mẫu phân tầng nhằm giảm nhiễu",
+        "body": "Meridian GeoX sử dụng phương pháp lấy mẫu phân tầng thay vì ghép cặp thị trường truyền thống để phân chia các khu vực địa lý. Phương pháp cũ thường sử dụng cùng một dữ liệu lịch sử để khớp mô hình và ước tính độ biến động, dễ dẫn đến đánh giá thấp độ nhiễu thực tế. Ngược lại, GeoX đánh giá độ ổn định của thiết kế trên các khoảng thời gian kiểm định độc lập chưa từng dùng để huấn luyện mô hình. Phương pháp này giúp tạo ra bộ đệm tốt hơn trước biến động thực tế và mang lại kết quả thử nghiệm rõ ràng hơn."
+      },
+      {
+        "heading": "Cập nhật Meridian 2.0.0 với khả năng tự động hiệu chỉnh",
+        "body": "Cùng với GeoX, Google ra mắt Meridian phiên bản 2.0.0 vào ngày September 2, 2026 với module tự động hiệu chỉnh thử nghiệm. Module này thực hiện 4 điều chỉnh kỹ thuật để giải quyết chênh lệch giữa thời gian thử nghiệm ngắn hạn và dữ liệu mô hình kéo dài 2 đến 3 năm. Sự kết hợp này giảm bớt rào cản vận hành giữa đội ngũ làm thử nghiệm và đội ngũ phân tích mô hình. Nhà quảng cáo cũng có thể đưa kết quả từ các công cụ thử nghiệm bên ngoài vào thư viện Meridian một cách dễ dàng hơn."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing có thêm công cụ miễn phí chuẩn mực để đo lường mức độ tăng trưởng thực tế của ngân sách quảng cáo đa kênh theo địa lý. Điều này giúp tối ưu hóa việc phân bổ ngân sách giữa Google và các kênh khác dựa trên bằng chứng thử nghiệm thực tế thay vì chỉ dựa vào báo cáo phân bổ lượt chuyển đổi thông thường.",
+    "ifIgnored": "Doanh nghiệp tiếp tục phụ thuộc vào các báo cáo phân bổ dễ bị sai lệch hoặc tốn nhiều chi phí cho các thử nghiệm địa lý thủ công. Việc không hiệu chỉnh mô hình đo lường sẽ dẫn đến nguy cơ phân bổ sai ngân sách lớn vào các kênh không thực sự tạo ra doanh thu tăng thêm.",
+    "actionChecklist": [
+      "Yêu cầu đội ngũ Data hoặc Performance Ads nghiên cứu thư viện mã nguồn mở Meridian v2.0.0.",
+      "Đánh giá tính khả thi của việc thử nghiệm địa lý theo phương pháp lấy mẫu phân tầng GeoX tại Việt Nam.",
+      "Lên kế hoạch kết hợp dữ liệu thử nghiệm thực tế làm đầu vào hiệu chỉnh cho mô hình MMM hiện tại.",
+      "Chuẩn bị hạ tầng kỹ thuật để cập nhật các pipeline dữ liệu tương thích với backend JAX mới."
+    ],
+    "id": "real-2026-09-09-google-phat-hanh-meridian-fb9eae",
+    "publishedAt": "09/09/2026",
+    "sourceUrl": "https://ppc.land/googles-meridian-geox-exits-beta-claiming-31-cheaper-geo-experiments/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/09/Google-s-Meridian-GeoX-exits-beta-claiming-31--cheaper-geo-experiments.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
     "category": "Google Ads & SEO",
     "platformIcon": "Search",
     "title": "Google Ads ra mắt Local Customer Optimization và tích hợp Store Sales vào Data Manager",
@@ -309,191 +498,6 @@
     "image": {
       "url": "https://ppc.land/content/images/size/w1200/2026/09/YouTube-counts-co-viewers-in-a-metric-only-creators-can-see.jpg",
       "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
-    "category": "TikTok Shop & Ads",
-    "platformIcon": "Video",
-    "title": "TikTok Shop ban hành 10 quy định đóng gói mới, cấm gửi kèm tờ rơi quảng cáo và thẻ xin đánh giá",
-    "isHot": false,
-    "illustration": "shop-health",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "TikTok Shop",
-      "Chính sách bán hàng",
-      "Quy định đóng gói",
-      "Đánh giá sản phẩm"
-    ],
-    "summary": "TikTok Shop công bố trang Yêu cầu Đóng gói Đơn hàng vào ngày 03/09/2026 với 10 quy định nghiêm cấm và bộ tiêu chuẩn đóng gói chi tiết cho 9 nhóm sản phẩm. Nền tảng cấm hoàn toàn việc chèn thẻ yêu cầu đánh giá hoặc tờ rơi quảng cáo vào kiện hàng. Quy định mới chuyển dịch việc đóng gói từ đánh giá cảm quan của nhà bán hàng thành tiêu chuẩn vận hành bắt buộc để kiểm tra và xử phạt.",
-    "keyNumbers": [
-      {
-        "value": "10",
-        "label": "Hành vi đóng gói bị nghiêm cấm"
-      },
-      {
-        "value": "9",
-        "label": "Nhóm danh mục sản phẩm áp chuẩn"
-      },
-      {
-        "value": "10 kg",
-        "label": "Mốc trọng lượng phân loại kiểm soát"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Cấm triệt để việc chèn tài liệu tiếp thị và thẻ xin đánh giá",
-        "body": "TikTok Shop chính thức cấm việc bỏ các tờ rơi khuyến mãi hoặc thẻ yêu cầu đánh giá vào trong hộp hàng. Hai quy định riêng biệt được áp dụng nhằm ngăn chặn việc thao túng đánh giá từ người mua. Quy định thứ nhất cấm gửi tin nhắn xin đánh giá hoặc treo thưởng cho đánh giá tích cực. Quy định thứ hai cấm các sản phẩm, tài liệu hoặc nội dung đi kèm nhằm thu hút đánh giá tích cực, bao gồm cả phiếu giảm giá đính kèm lời mời 5 sao. Ngoài ra, các vật phẩm tiếp thị chưa được cấp phép như tờ rơi, thẻ giá hay sticker không liên quan cũng bị cấm hoàn toàn."
-      },
-      {
-        "heading": "Thắt chặt hình thức dropship và quà tặng không có trong đơn",
-        "body": "Chính sách mới ngăn chặn hình thức dropship bằng cách cấm nhà bán hàng mua sản phẩm từ nhà bán lẻ trực tuyến khác rồi giao trực tiếp cho khách trên TikTok Shop. Nhà bán hàng không được phép gửi kèm bất kỳ sản phẩm nào mà khách hàng không đặt mua. Điều này đồng nghĩa với việc các mẫu thử miễn phí hoặc quà tặng bất ngờ trong kiện hàng cũng bị loại bỏ. Các quy định khác cấm việc bó nhiều thùng hàng bằng băng dính hay dây siết nếu gây rủi ro quét mã hoặc ảnh hưởng tính vẹn toàn của bưu kiện."
-      },
-      {
-        "heading": "Bộ tiêu chuẩn đóng gói phân loại theo 9 nhóm sản phẩm",
-        "body": "Nền tảng chia sản phẩm thành các nhóm Hàng tiêu chuẩn và Hàng cồng kềnh hoặc bất thường, đo lường dựa trên các tiêu chí kiểm soát đóng gói. Nhóm Hàng dễ tràn như chất lỏng hoặc bột dưới 10 kg đòi hỏi đủ 7 tiêu chuẩn kiểm soát, bao gồm bảo vệ bổ sung cho nắp chai và tem cảnh báo fragile. Nhóm Hàng có giá trị cao như điện thoại hay trang sức yêu cầu lớp đệm, vách ngăn và thùng carton dán băng dính hình chữ H. Ngược lại, nhóm Hàng quần áo và dệt may chỉ yêu cầu túi gói hàng chống nước."
-      },
-      {
-        "heading": "Tiêu chuẩn riêng cho kiện hàng cồng kềnh trên 10 kg",
-        "body": "Đối với Hàng cồng kềnh hoặc bất thường, tiêu chuẩn bổ sung việc sử dụng thùng lồng thùng và khung gỗ. Các mặt hàng dễ vỡ có trọng lượng trên 10 kg hoặc kích thước vượt 100 cm như tivi hay máy móc phải áp dụng đầy đủ 6 biện pháp bảo vệ. Các sản phẩm không dễ vỡ nhưng có hình dạng bất thường như bàn ghế hay dụng cụ thể thao bắt buộc phải dùng khung gỗ. Nhóm hàng chất lỏng trên 10 kg giữ nguyên bao bì nhà sản xuất được phép miễn đóng khung gỗ nhưng cần dán tem hướng thẳng đứng."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing không thể tiếp tục sử dụng trải nghiệm mở hộp (unboxing) làm kênh tiếp thị để kích thích khách hàng quay lại hoặc tăng tỷ lệ đánh giá 5 sao bằng thiệp cảm ơn và voucher. Mọi chiến dịch quà tặng đính kèm hay tài liệu quảng cáo trong kiện hàng xuất kho qua TikTok Shop phải bị bãi bỏ ngay lập tức.",
-    "ifIgnored": "Doanh nghiệp đối mặt với rủi ro bị tính lỗi vi phạm vận hành, bị đánh xấu chỉ số sức khỏe tài khoản gian hàng hoặc bị giới hạn quyền bán hàng trên TikTok Shop do không tuân thủ tiêu chuẩn đóng gói công khai.",
-    "actionChecklist": [
-      "Rà soát quy trình đóng gói và loại bỏ ngay lập tức các thẻ xin đánh giá, voucher và quà tặng kèm không có trong đơn hàng.",
-      "Cập nhật tài liệu hướng dẫn đóng gói cho bộ phận kho theo đúng tiêu chuẩn kiểm soát của từng danh mục sản phẩm.",
-      "Ngừng các chương trình tiếp thị chèn tài liệu quảng cáo hoặc mẫu thử vào kiện hàng TikTok Shop.",
-      "Kiểm tra trọng lượng và kích thước các sản phẩm trên 10 kg hoặc 100 cm để trang bị thùng gỗ hoặc thùng lồng đúng chuẩn."
-    ],
-    "id": "real-2026-09-06-tiktok-shop-ban-hanh-48c01a",
-    "publishedAt": "06/09/2026",
-    "sourceUrl": "https://ppc.land/tiktok-shop-bans-review-bait-inserts-in-10-packing-rules/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/09/TikTok-Shop-bans-review-bait-inserts-in-10-packing-rules.jpg",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Google mở rộng báo cáo AI trên Search Console toàn cầu và cập nhật quan trọng từ John Mueller",
-    "isHot": false,
-    "illustration": "zero-click",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Google Search Console",
-      "SEO AI",
-      "John Mueller",
-      "Technical SEO"
-    ],
-    "summary": "Google chính thức đưa báo cáo AI của Search Console và tính năng từ chối AI ra toàn cầu. Cùng lúc đó, John Mueller đưa ra các cảnh báo về thời gian phục hồi thứ hạng, việc dùng markdown cho AI crawler và thủ thuật sitemap.",
-    "keyNumbers": [
-      {
-        "value": "31/08",
-        "label": "Mốc triển khai báo cáo AI"
-      },
-      {
-        "value": "800",
-        "label": "Số lượng domain độc hại được nhắc tới"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Báo cáo AI trên Search Console triển khai toàn cầu",
-        "body": "Google công bố các báo cáo AI của Search Console và quyền kiểm soát từ chối AI đã phủ sóng toàn bộ các website trên toàn cầu vào ngày 31 tháng 8. Các báo cáo này cung cấp dữ liệu hiển thị từ AI Overviews, AI Mode và tính năng tạo sinh trên Discover, được chi tiết hóa theo trang, quốc gia và ngày tháng. Tuy nhiên, không phải mọi property đều có quyền truy cập và những trang có ít lượt hiển thị AI có thể không xuất hiện trong báo cáo. Việc bật tính năng từ chối hoàn toàn không làm ảnh hưởng đến thứ hạng của website trong các phần tìm kiếm thông thường khác."
-      },
-      {
-        "heading": "Thời gian phục hồi thứ hạng sau cập nhật lớn",
-        "body": "Trả lời thắc mắc trên mạng xã hội, John Mueller cho biết các biện pháp khắc phục liên quan đến một bản cập nhật cốt lõi lớn có thể mất khá nhiều thời gian, đôi khi là nhiều tháng để thấy rõ hiệu quả. Trường hợp được nhắc đến liên quan đến một website đã nhận hơn 800 domain giới thiệu bị coi là độc hại và nộp file disavow nhưng lại tụt hạng từ vị trí thứ 3 sau khoảng hai tuần. Mueller giải thích rằng công cụ disavow có tác dụng nhưng việc từ chối một số lượng ít liên kết không làm trang rớt hạng đột ngột như vậy, và nguyên nhân có thể đến từ một bản cập nhật spam diện rộng diễn ra cùng thời điểm."
-      },
-      {
-        "heading": "Thực tế về định dạng Markdown cho AI bot",
-        "body": "Liên quan đến việc chuyển đổi sang định dạng markdown để giảm tải cho máy chủ trước các bot AI, John Mueller chia sẻ rằng trên các trang thử nghiệm của ông, những crawler duy nhất yêu cầu định dạng markdown lại chính là các công cụ SEO. Ông khuyến nghị các quản trị viên trước khi xây dựng tầng markdown nên tiến hành kiểm tra log của header Accept để xem có thực sự nhận được yêu cầu text/markdown hay không. Dữ liệu từ các trang thử nghiệm cho thấy cấu hình máy chủ của ông không tự động ghi nhận header này theo mặc định."
-      },
-      {
-        "heading": "Cảnh báo về thủ thuật cache-busting trên Sitemap",
-        "body": "John Mueller đã gọi việc thêm tham số thời gian kiểu daily ?v=timestamp vào các URL sitemap là một ý tưởng tồi. Thủ thuật này nhằm ép các công cụ tìm kiếm cào dữ liệu mới mỗi ngày bằng cách liên tục làm thay đổi URL canonical. Theo Mueller, cách làm này gây hại cho các công cụ tìm kiếm lẫn việc theo dõi dữ liệu, trong khi giao thức sitemap đã có sẵn phần tử lastmod để thông báo thời điểm tệp thay đổi."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing cần nắm bắt dữ liệu từ báo cáo AI Search Console mới để đánh giá mức độ hiện diện của thương hiệu trong các kết quả tìm kiếm tạo sinh, đồng thời tránh lãng phí nguồn lực vào các thủ thuật kỹ thuật lỗi thời như thêm tham số thời gian vào sitemap.",
-    "ifIgnored": "Nếu bỏ qua, đội ngũ có thể tiếp tục kỳ vọng sai lệch về tốc độ phục hồi thứ hạng sau các bản cập nhật cốt lõi, hoặc lãng phí thời gian triển khai các định dạng markdown không cần thiết cho AI crawler.",
-    "actionChecklist": [
-      "Kiểm tra ngay quyền truy cập báo cáo AI Search Console trên các tài sản web của công ty",
-      "Loại bỏ ngay lập tức các tham số thay đổi thời gian trên URL trong hệ thống sitemap",
-      "Kiểm tra header log của máy chủ trước khi quyết định tối ưu định dạng markdown cho AI",
-      "Đánh giá lại tiến độ phục hồi thứ hạng dựa trên lịch sử cập nhật thuật toán thay vì chỉ nhìn vào các thay đổi liên kết ngắn hạn"
-    ],
-    "id": "real-2026-09-05-google-mo-rong-bao-f57dc6",
-    "publishedAt": "05/09/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/seo-pulse-search-console-ai-reports-go-global-mueller-recovery/588443/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/09/search-console-ai-reports-seo-pulse-top-right-1600x840-1.jpg",
-      "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Quy trình đo lường và tối ưu độ hiển thị thương hiệu trên công cụ tìm kiếm AI",
-    "isHot": false,
-    "illustration": "zero-click",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "AEO",
-      "AI Search",
-      "ChatGPT",
-      "SEO"
-    ],
-    "summary": "Nhiều website đứng top 1 Google nhưng hoàn toàn vắng mặt trong câu trả lời của ChatGPT, Claude hay Perplexity. Cơ chế xếp hạng truyền thống và mô hình đề xuất bằng AI vận hành theo hai hệ thống khác nhau. Doanh nghiệp cần triển khai quy trình đo lường Answer Engine Optimization để kiểm soát tỷ lệ nhắc tên và đề xuất thương hiệu.",
-    "keyNumbers": [
-      {
-        "value": "Top 10",
-        "label": "Vị trí Search Console cần lọc để chuyển đổi thành prompt"
-      },
-      {
-        "value": "3 tháng",
-        "label": "Khoảng thời gian xuất dữ liệu từ khóa thương mại"
-      },
-      {
-        "value": "6 trường",
-        "label": "Dữ liệu cần ghi nhận cho mỗi câu trả lời AI"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Sự khác biệt giữa SEO truyền thống và AEO",
-        "body": "Xếp hạng SERP truyền thống dựa vào kỹ thuật on-page, hệ thống backlink, cấu trúc schema và tín hiệu tương tác trên trang thuộc sở hữu của bạn. Ngược lại, các mô hình ngôn ngữ lớn như ChatGPT, Gemini và Perplexity tạo câu trả lời mới bằng cách tổng hợp dữ liệu từ những nguồn bên ngoài mà mô hình đánh giá là uy tín. Hiện tượng giảm traffic nhưng tăng chuyển đổi xuất hiện khi người dùng nhận đủ thông tin tổng hợp trực tiếp từ câu trả lời AI mà không cần nhấp vào liên kết."
-      },
-      {
-        "heading": "Phân biệt tỷ lệ nhắc tên và tỷ lệ được đề xuất",
-        "body": "Thương hiệu được nhắc tên nghĩa là xuất hiện trong văn bản trả lời nhưng không được định vị như một lựa chọn mua sắm. Ngược lại, được đề xuất nghĩa là thương hiệu nằm trong danh sách các phương án người mua thực sự nên cân nhắc. Tỷ lệ đề xuất là chỉ số tác động trực tiếp đến doanh số và hiệu quả chuyển đổi."
-      },
-      {
-        "heading": "Chuyển đổi từ khóa thương mại thành câu lệnh AI",
-        "body": "Mở báo cáo hiệu suất Google Search Console trong 3 tháng gần nhất, lọc các từ khóa có vị trí trung bình từ 10 trở lên chứa ý định mua hàng như bảng giá, so sánh, giải pháp hoặc tên ngành hàng. Sau đó, viết lại từng từ khóa thành câu hỏi tự nhiên kèm các điều kiện ràng buộc thực tế của người mua như quy mô công ty, ngành nghề hoặc ngân sách cụ thể."
-      },
-      {
-        "heading": "Quy trình thu thập và tính điểm hiển thị AI",
-        "body": "Thực hiện truy vấn trên chế độ ẩn danh hoặc phiên tạm thời trên từng công cụ AI từ 2 đến 3 lần để tránh bị ảnh hưởng bởi lịch sử tài khoản. Ghi nhận 6 trường thông tin: công cụ tìm kiếm, danh sách thương hiệu xuất hiện, thứ tự xuất hiện, thương hiệu của bạn có xuất hiện không, có nằm trong top 3 đề xuất đầu tiên không và các tên miền được trích dẫn nguồn. Từ đó, tính toán tỷ lệ nhắc tên, tỷ lệ đề xuất và thị phần thảo luận cho từng nền tảng."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing sẽ nắm được chính xác thị phần thương hiệu trong các câu trả lời AI thay vì chỉ nhìn vào thứ hạng từ khóa Google, từ đó phân bổ lại ngân sách nội dung sang các trang đánh giá bên ngoài đang được mô hình AI dùng làm nguồn tham chiếu.",
-    "ifIgnored": "Doanh nghiệp sẽ mất dần khách hàng tiềm năng có ý định mua cao vào tay đối thủ được AI đề xuất trực tiếp, dù báo cáo SEO truyền thống vẫn hiển thị vị trí top 1.",
-    "actionChecklist": [
-      "Xuất danh sách từ khóa thương mại có vị trí top 10 trong 3 tháng qua từ Search Console",
-      "Chuyển đổi các từ khóa thành câu hỏi thực tế kèm ràng buộc ngữ cảnh của người mua",
-      "Chạy kiểm thử trên ChatGPT, Gemini và Perplexity ở chế độ ẩn danh rồi ghi nhận 6 trường dữ liệu",
-      "Xác định danh sách các tên miền nguồn thường xuyên được AI trích dẫn để lên kế hoạch phủ nội dung"
-    ],
-    "id": "real-2026-09-04-quy-trinh-do-luong-90397e",
-    "publishedAt": "04/09/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/measure-brand-ai-visibility-hubspot-spa/588040/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/09/featured-copy-1-198.png",
-      "credit": "Ảnh: Search Engine Journal"
     }
   },
   {
