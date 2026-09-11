@@ -2,6 +2,195 @@
   {
     "category": "AI Marketing",
     "platformIcon": "Sparkles",
+    "title": "Yelp và Hatch tích hợp mô hình GPT-Live-1 của OpenAI nâng cấp toàn diện Voice AI chăm sóc khách hàng",
+    "isHot": false,
+    "illustration": "crm-automation",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Voice AI",
+      "GPT-Live-1",
+      "Chuyển đổi cuộc gọi",
+      "Tự động hóa CSKH"
+    ],
+    "summary": "Yelp và Hatch đã tích hợp mô hình giọng nói GPT-Live-1 của OpenAI vào hệ thống trả lời tự động Yelp Host và nền tảng giao tiếp Hatch. Công nghệ đàm thoại hai chiều mới này cho phép khách hàng ngắt lời, đổi chủ đề hoặc đổi ngôn ngữ linh hoạt mà hệ thống không bị gián đoạn. Đây là bước tiến lớn giúp tối ưu tỷ lệ chuyển đổi từ kênh cuộc gọi cho các doanh nghiệp dịch vụ và bán lẻ.",
+    "keyNumbers": [
+      {
+        "value": "1.000.000+",
+        "label": "Cuộc gọi Yelp Host đã xử lý từ tháng 10/2025"
+      },
+      {
+        "value": "38%",
+        "label": "Tăng trưởng lượng cuộc gọi trung bình hàng tháng của Yelp Host"
+      },
+      {
+        "value": "249 USD",
+        "label": "Giá khởi điểm mỗi tháng của dịch vụ Yelp Host sau tối đa 30 ngày dùng thử"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Bước nhảy vọt về công nghệ đàm thoại hai chiều",
+        "body": "Yelp đã thay thế lớp xử lý giọng nói phía trước của Yelp Host và Hatch bằng mô hình GPT-Live-1 của OpenAI thay vì xây dựng lại toàn bộ sản phẩm. Công nghệ này sử dụng kiến trúc full-duplex cho phép hệ thống vừa nói vừa nghe cùng lúc giống như cuộc trò chuyện giữa hai con người. Khách hàng có thể thoải mái ngắt lời, thay đổi chủ đề giữa câu hoặc nói chuyện với người khác trong phòng mà AI không bị mất dấu ngữ cảnh. Hệ thống sẽ tự động thích ứng nhanh chóng để duy trì mạch hội thoại tự nhiên nhất."
+      },
+      {
+        "heading": "Khả năng nhận diện cảm xúc và đa ngôn ngữ vượt trội",
+        "body": "Bên cạnh việc cải thiện luồng hội thoại, mô hình mới còn có khả năng phát hiện tông giọng của người gọi như hào hứng, thất vọng hay thiếu kiên nhẫn để đưa ra phản hồi phù hợp. Bằng cách kết hợp các cải tiến ngôn ngữ riêng của Yelp lên trên GPT-Live-1, các trợ lý ảo này giờ đây có thể tự động nhận diện và phản hồi bằng hầu hết mọi ngôn ngữ. Tính năng này kế thừa từ đợt cập nhật ngày 28/07/2026 khi Yelp Host bổ sung thêm 16 ngôn ngữ mới, giúp doanh nghiệp không bỏ lỡ bất kỳ khách hàng nào do rào cản ngôn ngữ."
+      },
+      {
+        "heading": "Kết quả thực tế từ giai đoạn thử nghiệm quy mô lớn",
+        "body": "Trong các đợt thử nghiệm sản xuất ở quy mô lớn, Yelp ghi nhận những cải thiện rõ rệt về hiệu suất xử lý cuộc gọi và giảm tỷ lệ chuyển tiếp cuộc gọi đến nhân viên thực tế. Người dùng có xu hướng nói các câu đầy đủ và tự nhiên hơn thay vì chỉ đưa ra các câu lệnh thoại ngắn, khô cứng như trước. Ngoài ra, GPT-Live-1 cũng mang lại độ chính xác cao hơn trong việc chuyển biên cuộc gọi sau khi kết thúc, giúp các chủ doanh nghiệp lưu trữ dữ liệu khách hàng sạch và chuẩn xác hơn."
+      },
+      {
+        "heading": "Cơ hội mở ra cho toàn bộ thị trường qua cổng API",
+        "body": "Đại diện OpenAI xác nhận họ đang đưa GPT-Live-1 lên cổng API để mọi nhà phát triển đều có thể tiếp cận và xây dựng các trải nghiệm giọng nói tự nhiên của riêng mình. Điều này đồng nghĩa với việc chất lượng giọng nói tiên tiến này không độc quyền cho Yelp hay Hatch. Lợi thế cạnh tranh cốt lõi của các doanh nghiệp giờ đây sẽ nằm ở phần logic vận hành bên dưới, khả năng kết nối dữ liệu kinh doanh thực tế như lịch làm việc, khu vực phục vụ và quy trình điều phối cuộc gọi."
+      }
+    ],
+    "impact": "Giúp Trưởng phòng Marketing khai phá và tối ưu hóa kênh chuyển đổi qua cuộc gọi điện thoại (vốn có tỷ lệ chuyển đổi rất cao) bằng công nghệ Voice AI thế hệ mới. Giảm tải chi phí vận hành tổng đài CSKH trong khi vẫn duy trì trải nghiệm cá nhân hóa, đa ngôn ngữ và hoạt động liên tục 24/7.",
+    "ifIgnored": "Doanh nghiệp sẽ tiếp tục lãng phí ngân sách marketing khi các lead chất lượng cao từ kênh cuộc gọi bị bỏ lỡ hoặc trải nghiệm tệ do hệ thống trả lời tự động kiểu cũ gây ức chế cho khách hàng. Đối thủ cạnh tranh ứng dụng Voice AI thế hệ mới sẽ giành lấy khách hàng nhờ tốc độ phản hồi ngay lập tức và quy trình đặt dịch vụ mượt mà hơn.",
+    "actionChecklist": [
+      "Đánh giá lại tỷ lệ chuyển đổi và chi phí vận hành của kênh hotline/tổng đài hiện tại trong doanh nghiệp.",
+      "Nghiên cứu tài liệu API GPT-Live-1 của OpenAI để đánh giá khả năng tích hợp vào hệ thống tổng đài hoặc CRM hiện có.",
+      "Thử nghiệm các kịch bản hội thoại tự nhiên (cho phép ngắt lời, đổi hướng câu hỏi) để chuẩn bị cho việc huấn luyện AI.",
+      "Xây dựng hệ thống dữ liệu kinh doanh chuẩn hóa (lịch trống, bảng giá, khu vực phục vụ) để sẵn sàng kết nối với lớp Voice AI mới."
+    ],
+    "id": "real-2026-09-11-yelp-va-hatch-tich-aac1c5",
+    "publishedAt": "11/09/2026",
+    "sourceUrl": "https://ppc.land/yelp-and-hatch-put-openais-gpt-live-1-into-voice-ai-after-1-million-calls/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/09/Yelp-and-Hatch-put-OpenAI-s-GPT-Live-1-into-voice-AI-after-1-million-calls.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Google ra mắt chỉ số đo lường dữ liệu bên thứ nhất và mở rộng công cụ thử nghiệm địa lý GeoX",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Google Ads",
+      "Dữ liệu bên thứ nhất",
+      "Đo lường chuyển đổi",
+      "Thử nghiệm địa lý"
+    ],
+    "summary": "Google vừa công bố loạt cập nhật quan trọng về đo lường quảng cáo, nổi bật là chỉ số Data Strength Uplift giúp định lượng chính xác hiệu quả của dữ liệu bên thứ nhất. Đồng thời, công cụ quản lý dữ liệu Data Manager được tích hợp sâu vào Google Analytics và DV360, cùng việc phát hành toàn cầu công cụ thử nghiệm địa lý Meridian GeoX.",
+    "keyNumbers": [
+      {
+        "value": "11%",
+        "label": "Tăng trưởng trung bình chuyển đổi Tìm kiếm nhờ Enhanced Conversions"
+      },
+      {
+        "value": "26%",
+        "label": "Tăng trưởng ROAS gia tăng khi kết nối dữ liệu ngoại tuyến và ứng dụng"
+      },
+      {
+        "value": "14%",
+        "label": "Tăng trưởng chuyển đổi trung bình nhờ Google tag gateway"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Định lượng giá trị dữ liệu với Data Strength Uplift",
+        "body": "Google giới thiệu chỉ số Data Strength Uplift Metric trực tiếp trong giao diện Google Ads. Chỉ số này tính toán cụ thể số lượng chuyển đổi bổ sung mà nhà quảng cáo phục hồi được nhờ thiết lập dữ liệu bên thứ nhất. Thay vì chỉ là một khái niệm lợi ích mơ hồ, giờ đây hiệu quả của việc tích hợp dữ liệu đã được số hóa thành một con số trực quan. Điều này giúp các nhà tiếp thị dễ dàng đánh giá và chứng minh hiệu quả đầu tư vào hạ tầng dữ liệu."
+      },
+      {
+        "heading": "Hợp nhất quản lý dữ liệu qua Data Manager",
+        "body": "Công cụ Data Manager hiện đã được tích hợp trực tiếp vào Google Analytics và Display & Video 360 thay vì chỉ nằm trong Google Ads như trước. API Data Manager toàn cầu được xây dựng trên tiêu chuẩn ECAPI của IAB Tech Lab, giúp hợp nhất việc nạp dữ liệu khách hàng trên cả ba nền tảng. Google cũng bổ sung các tính năng chẩn đoán tích hợp mới để phát hiện và xử lý lỗi dữ liệu trước khi chúng ảnh hưởng đến hiệu suất chiến dịch quảng cáo."
+      },
+      {
+        "heading": "Tối ưu hóa chuyển đổi nâng cao và dữ liệu ngoại tuyến",
+        "body": "Việc triển khai Enhanced Conversions (chuyển đổi nâng cao) trên Analytics và DV360 giúp khớp nối dữ liệu khách hàng an toàn để tăng mức độ liên quan của quảng cáo. Theo báo cáo của Google, các nhà quảng cáo sử dụng tính năng này đạt mức tăng trung bình 11% trong chuyển đổi Tìm kiếm. Ngoài ra, việc kết nối dữ liệu ngoại tuyến và ứng dụng thông qua Data Manager giúp tăng trung bình 26% tỷ suất hoàn vốn quảng cáo gia tăng."
+      },
+      {
+        "heading": "Đo lường tác động thực tế với Meridian GeoX",
+        "body": "Công cụ thử nghiệm địa lý Meridian GeoX hiện đã được phát hành rộng rãi trên toàn cầu. Công cụ này thực hiện các thử nghiệm địa lý có kiểm soát bằng cách giữ lại một số khu vực không tiếp xúc với quảng cáo để so sánh hiệu quả với các khu vực khác. Phương pháp này cung cấp bằng chứng thực tế về việc liệu một kênh quảng cáo có thực sự tạo ra doanh số hay chỉ là sự trùng hợp ngẫu nhiên. Meridian cũng được nâng cấp khả năng AI để kiểm tra chất lượng dữ liệu và tích hợp các tín hiệu thương hiệu như lượng tìm kiếm thương hiệu."
+      }
+    ],
+    "impact": "Giúp Trưởng phòng Marketing chứng minh được hiệu quả thực tế của ngân sách quảng cáo bằng số liệu cụ thể thay vì các báo cáo tương quan mơ hồ. Việc định lượng được giá trị của dữ liệu thứ nhất giúp dễ dàng thuyết phục ban giám đốc phê duyệt ngân sách đầu tư cho các giải pháp công nghệ dữ liệu và CRM.",
+    "ifIgnored": "Doanh nghiệp sẽ tiếp tục tối ưu hóa chiến dịch dựa trên các số liệu thiếu chính xác do cookie bên thứ ba bị hạn chế. Việc bỏ qua các công cụ đo lường mới này có thể khiến chiến dịch bị thất thoát từ 11% đến 14% lượng chuyển đổi mà không hề hay biết, dẫn đến phân bổ sai lệch ngân sách quảng cáo.",
+    "actionChecklist": [
+      "Kiểm tra và kích hoạt chỉ số Data Strength Uplift Metric trong tài khoản Google Ads để đánh giá chất lượng dữ liệu hiện tại.",
+      "Tích hợp công cụ Data Manager vào Google Analytics và DV360 để đồng bộ hóa dữ liệu khách hàng trực tuyến và ngoại tuyến.",
+      "Cài đặt tính năng Enhanced Conversions nhằm khôi phục các chuyển đổi bị thất thoát trên chiến dịch Tìm kiếm và Demand Gen.",
+      "Thử nghiệm công cụ Meridian GeoX để chạy các chiến dịch thử nghiệm địa lý, xác định chính xác mức độ đóng góp doanh thu của từng kênh."
+    ],
+    "id": "real-2026-09-11-google-ra-mat-chi-b9fee9",
+    "publishedAt": "11/09/2026",
+    "sourceUrl": "https://ppc.land/googles-data-strength-uplift-metric-quantifies-first-party-data-in-google-ads/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/09/Google-s-Data-Strength-Uplift-Metric-quantifies-first-party-data-in-Google-Ads.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "Meta Ads",
+    "platformIcon": "Facebook",
+    "title": "Meta mở rộng tính năng kiểm duyệt cộng đồng Community Notes sang Mỹ Latinh",
+    "isHot": false,
+    "illustration": "account-security",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Meta Ads",
+      "Kiểm duyệt nội dung",
+      "Community Notes",
+      "An toàn thương hiệu"
+    ],
+    "summary": "Meta đang mở rộng thử nghiệm tính năng kiểm duyệt dựa vào cộng đồng Community Notes tại 16 quốc gia Mỹ Latinh, từng bước thay thế chương trình xác thực thông tin bên thứ ba. Bước đi này đánh dấu sự chuyển dịch lớn trong cách Meta quản lý nội dung, tương tự như mô hình của mạng xã hội X.",
+    "keyNumbers": [
+      {
+        "value": "16",
+        "label": "quốc gia Mỹ Latinh tham gia thử nghiệm"
+      },
+      {
+        "value": "50%",
+        "label": "tỷ lệ sai sót trong thực thi giảm theo báo cáo của Meta"
+      },
+      {
+        "value": "01/2025",
+        "label": "thời điểm ra mắt Community Notes tại Mỹ"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Mở rộng mô hình kiểm duyệt cộng đồng",
+        "body": "Meta đã chính thức xác nhận việc mở rộng thử nghiệm chương trình xác thực thông tin dựa vào cộng đồng (Community Notes) tại 16 quốc gia Mỹ Latinh, bao gồm Mexico, Argentina, Colombia và Venezuela. Người dùng tại các quốc gia này hiện đã có thể đăng ký làm cộng tác viên viết ghi chú. Khi hệ thống hoạt động ổn định, Meta dự kiến sẽ triển khai toàn diện và dần thay thế chương trình xác thực thông tin thông qua bên thứ ba truyền thống."
+      },
+      {
+        "heading": "Sự thay đổi trong triết lý quản trị nội dung",
+        "body": "Mô hình Community Notes được Meta ra mắt lần đầu tại Mỹ vào tháng 1 năm 2025. Quyết định này thể hiện sự thay đổi lớn khi Meta đi theo hướng tiếp cận của mạng xã hội X, giảm bớt vai trò can thiệp trực tiếp của nền tảng vào việc kiểm duyệt. Bằng cách trao quyền cho người dùng tự quyết định nội dung nào là phù hợp, Meta muốn giảm tải áp lực cho chính mình và hạn chế tầm ảnh hưởng của các tổ chức kiểm duyệt bên ngoài."
+      },
+      {
+        "heading": "Tranh cãi về tính hiệu quả thực tế",
+        "body": "Meta tuyên bố mô hình mới hoạt động hiệu quả khi báo cáo vào tháng 5 năm 2025 cho thấy sai sót trong thực thi đã giảm 50%. Tuy nhiên, các nhà nghiên cứu lo ngại con số này chỉ phản ánh việc giảm tần suất kiểm duyệt nói chung. Để một ghi chú được hiển thị công khai, nó cần đạt được sự đồng thuận từ các cộng tác viên có quan điểm chính trị đối lập, điều rất khó xảy ra đối với các chủ đề nhạy cảm. Do đó, phần lớn các ghi chú cộng đồng thực tế không bao giờ được hiển thị tới người dùng."
+      },
+      {
+        "heading": "Cảnh báo rủi ro từ Ban Giám sát",
+        "body": "Ban Giám sát của Meta (Oversight Board) đã lên tiếng cảnh báo về những rủi ro tiềm ẩn khi mở rộng tính năng này. Tại các quốc gia có tình hình chính trị phức tạp, xung đột hoặc mạng lưới tin giả quy mô lớn, Community Notes có thể gây ra những tổn hại thực tế. Ban Giám sát đã yêu cầu Meta cung cấp báo cáo đánh giá rủi ro cụ thể cho từng quốc gia trước khi mở rộng, nhưng có vẻ Meta vẫn quyết định tiến hành thử nghiệm mà chưa hoàn thành yêu cầu này."
+      }
+    ],
+    "impact": "Thay đổi cách thức hiển thị và xử lý các cáo buộc vi phạm nội dung trên Facebook và Instagram. Thương hiệu có nguy cơ bị người dùng gắn cờ hoặc viết ghi chú tiêu cực mà không có sự can thiệp kịp thời từ đội ngũ kiểm duyệt chuyên nghiệp của Meta, ảnh hưởng trực tiếp đến uy tín chiến dịch quảng cáo.",
+    "ifIgnored": "Doanh nghiệp sẽ bị động khi các nội dung quảng cáo hoặc bài đăng tự nhiên bị cộng đồng gắn nhãn cảnh báo sai lệch mà không biết cơ chế khiếu nại, dẫn đến khủng hoảng truyền thông và sụt giảm hiệu suất quảng cáo nghiêm trọng do thuật toán hạn chế phân phối.",
+    "actionChecklist": [
+      "Theo dõi sát sao các cập nhật về chính sách kiểm duyệt nội dung của Meta tại khu vực Đông Nam Á và Việt Nam.",
+      "Xây dựng quy trình phản ứng nhanh để xử lý các trường hợp bài đăng của thương hiệu bị người dùng gắn nhãn hoặc báo cáo tiêu cực.",
+      "Đảm bảo mọi thông tin, số liệu trong nội dung quảng cáo đều có nguồn đối chứng rõ ràng để tránh bị cộng đồng bắt lỗi.",
+      "Đa dạng hóa kênh truyền thông để giảm bớt sự phụ thuộc hoàn toàn vào cơ chế phân phối tự nhiên của Meta trong bối cảnh kiểm duyệt thay đổi."
+    ],
+    "id": "real-2026-09-10-meta-mo-rong-tinh-d22f63",
+    "publishedAt": "10/09/2026",
+    "sourceUrl": "https://www.socialmediatoday.com/news/meta-expands-community-notes-to-latin-america/830128/",
+    "source": "Social Media Today",
+    "image": {
+      "url": "https://imgproxy.divecdn.com/fEdCsTNytcBe4E8IHiM92zuBWPx-rP9kdKvzGCosT9Q/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9tZXRhX2xvZ28ucG5n.webp",
+      "credit": "Ảnh: Social Media Today"
+    }
+  },
+  {
+    "category": "AI Marketing",
+    "platformIcon": "Sparkles",
     "title": "Nghiên cứu 120.000 lượt nhắc từ AI: Tín hiệu giúp chuỗi cửa hàng xuất hiện trên ChatGPT và Gemini",
     "isHot": false,
     "illustration": "data-signal",
@@ -311,70 +500,6 @@
     }
   },
   {
-    "category": "TikTok Shop & Ads",
-    "platformIcon": "Video",
-    "title": "Siết chặt quyền riêng tư trẻ em: ByteDance và Disney bị phạt hàng trăm triệu USD, cảnh báo cho nhà quảng cáo nhắm mục tiêu gia đình",
-    "isHot": true,
-    "illustration": "account-security",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Quyền riêng tư trẻ em",
-      "Luật COPPA",
-      "Quảng cáo gia đình",
-      "Chính sách nền tảng"
-    ],
-    "summary": "Các án phạt khổng lồ nhắm vào ByteDance và Disney cùng với việc thắt chặt luật COPPA của FTC đang định hình lại toàn bộ bối cảnh quảng cáo hướng đến trẻ em và gia đình trên toàn cầu. Các nhà quảng cáo tại Việt Nam cần đặc biệt lưu ý khi sử dụng SDK bên thứ ba và thu thập dữ liệu của nhóm đối tượng nhạy cảm này. Sự xuất hiện của các ứng dụng sạch hoàn toàn không quảng cáo như Kids Podcasts cho thấy xu hướng phụ huynh chủ động cô lập con trẻ khỏi môi trường tiếp thị số.",
-    "keyNumbers": [
-      {
-        "value": "400 triệu USD",
-        "label": "Mức phạt ByteDance đồng ý chi trả liên quan đến quyền riêng tư trẻ em"
-      },
-      {
-        "value": "10 triệu USD",
-        "label": "Khoản phạt của Disney liên quan đến dán nhãn video trẻ em trên YouTube"
-      },
-      {
-        "value": "200",
-        "label": "Số lượng chương trình được kiểm duyệt thủ công trên ứng dụng Kids Podcasts"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Làn sóng phạt nặng từ FTC nhắm vào các ông lớn công nghệ",
-        "body": "ByteDance đã đồng ý chi trả khoản tiền phạt lên tới 400 triệu USD, bao gồm 300 triệu USD thanh toán ngay lập tức để giải quyết các cáo buộc vi phạm quyền riêng tư trẻ em. Trong khi đó, Disney cũng phải chấp nhận mức phạt 10 triệu USD công bố vào ngày 02/09/2025 liên quan đến việc dán nhãn sai các video hướng đến trẻ em trên YouTube. Các động thái này cho thấy cơ quan quản lý không còn nương tay với các hành vi thu thập dữ liệu trái phép từ người dùng nhỏ tuổi."
-      },
-      {
-        "heading": "Luật COPPA sửa đổi chính thức siết chặt việc thu thập dữ liệu",
-        "body": "Quy định sửa đổi về Bảo vệ Quyền riêng tư Trực tuyến của Trẻ em (COPPA) của Ủy ban Thương mại Liên bang Mỹ (FTC) đã có hiệu lực từ ngày 23/06/2025, với hạn chót tuân thủ nghiêm ngặt là ngày 22/04/2026. Luật mới bổ sung các yêu cầu đồng ý riêng biệt đối với việc tiết lộ thông tin của trẻ em cho bên thứ ba, bao gồm cả các nhà quảng cáo. Điều này trực tiếp triệt tiêu khả năng nhắm mục tiêu quảng cáo dựa trên hành vi đối với tài khoản trẻ em trên các nền tảng toàn cầu."
-      },
-      {
-        "heading": "Sự trỗi dậy của các nền tảng không quảng cáo và kiểm duyệt thủ công",
-        "body": "Ứng dụng Kids Podcasts vừa ra mắt trên App Store là một ví dụ điển hình cho xu hướng nói không với quảng cáo để bảo vệ trẻ em. Ứng dụng này giới hạn thư viện ở mức hơn 200 chương trình được kiểm duyệt thủ công bằng con người, hoàn toàn không tích hợp SDK theo dõi của bên thứ ba và tự động xóa dữ liệu. Mô hình này tạo ra một bức tường lửa ngăn chặn hoàn toàn mọi nỗ lực tiếp cận của các nhà quảng cáo muốn khai thác tệp khách hàng gia đình tại đây."
-      },
-      {
-        "heading": "Rủi ro từ việc tích hợp SDK bên thứ ba trong ứng dụng",
-        "body": "FTC hiện đang nhắm mục tiêu điều tra và khởi kiện các nhà sản xuất đồ chơi kết nối ứng dụng có nhúng công nghệ quảng cáo và phân tích của bên thứ ba. Việc tự động thu thập dữ liệu thông qua các bộ công cụ phát triển phần mềm (SDK) này mà không có sự đồng ý rõ ràng của phụ huynh là nguyên nhân chính dẫn đến các rắc rối pháp lý. Các doanh nghiệp sở hữu ứng dụng di động dành cho gia đình cần rà soát lại toàn bộ mã nguồn để tránh các khoản phạt liên đới."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing đối mặt với rủi ro bị khóa tài khoản quảng cáo doanh nghiệp, bị gỡ ứng dụng khỏi App Store/Google Play hoặc chịu phạt nặng nếu chiến dịch nhắm vào trẻ em/gia đình vi phạm chính sách dữ liệu mới của TikTok, YouTube và Meta. Chi phí tiếp cận (CPM) nhóm khách hàng gia đình sẽ tăng cao do dữ liệu nhắm mục tiêu bị hạn chế nghiêm ngặt.",
-    "ifIgnored": "Tiếp tục chạy quảng cáo nhắm mục tiêu hành vi đến trẻ em hoặc sử dụng các SDK theo dõi không tuân thủ COPPA sẽ dẫn đến việc tài khoản quảng cáo doanh nghiệp bị gắn cờ vi phạm chính sách nghiêm trọng, ứng dụng của doanh nghiệp bị xóa khỏi các kho ứng dụng toàn cầu, gây thiệt hại nặng nề về cả ngân sách lẫn uy tín thương hiệu.",
-    "actionChecklist": [
-      "Rà soát lại toàn bộ các chiến dịch quảng cáo trên TikTok, YouTube và Meta đang nhắm mục tiêu đến đối tượng dưới 13 tuổi hoặc gia đình có trẻ nhỏ.",
-      "Yêu cầu bộ phận kỹ thuật kiểm tra và gỡ bỏ các SDK theo dõi của bên thứ ba trong các ứng dụng di động của doanh nghiệp nếu ứng dụng đó có đối tượng sử dụng là trẻ em.",
-      "Cập nhật chính sách bảo mật thông tin trên website và ứng dụng, bổ sung quy trình xác nhận đồng ý của phụ huynh trước khi thu thập bất kỳ dữ liệu nào.",
-      "Chuyển dịch một phần ngân sách quảng cáo hướng gia đình sang các kênh tài trợ nội dung (sponsorship) hoặc hợp tác trực tiếp với các nhà sáng tạo nội dung gia đình thay vì phụ thuộc vào quảng cáo lập trình (programmatic ads)."
-    ],
-    "deadline": "22/04/2026",
-    "id": "real-2026-09-07-siet-chat-quyen-rieng-42af94",
-    "publishedAt": "07/09/2026",
-    "sourceUrl": "https://ppc.land/kids-podcasts-locks-a-childs-200-show-library-behind-a-parent-pin/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/09/Kids-Podcasts-locks-a-child-s-200-show-library-behind-a-parent-PIN.jpg",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
     "category": "AI Marketing",
     "platformIcon": "Sparkles",
     "title": "Lượt truy cập robot chiếm 50% lưu lượng web khiến CPM quảng cáo bám đuổi tăng 20%",
@@ -434,69 +559,6 @@
     "source": "PPC Land",
     "image": {
       "url": "https://ppc.land/content/images/2026/09/Half-of-web-requests-are-bots-as-agency-CPMs-climb-20-.jpg",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Video",
-    "title": "YouTube ra mắt chỉ số xem chung trên TV nhưng chỉ hiển thị riêng cho nhà sáng tạo",
-    "isHot": false,
-    "illustration": "data-signal",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "YouTube Ads",
-      "Influencer Marketing",
-      "Đo lường quảng cáo",
-      "Connected TV"
-    ],
-    "summary": "YouTube chính thức triển khai chỉ số ước tính số người cùng xem video trên màn hình TV (co-viewing), nhưng dữ liệu này chỉ xuất hiện trong trang phân tích riêng của nhà sáng tạo. Các thương hiệu tài trợ trực tiếp không thể đối soát độc lập, dẫn đến nguy cơ báo giá tài trợ bị thổi phồng dựa trên mô hình ước tính chưa được kiểm chứng.",
-    "keyNumbers": [
-      {
-        "value": "48 giờ",
-        "label": "Độ trễ tối đa để YouTube xử lý dữ liệu xem chung"
-      },
-      {
-        "value": "26%",
-        "label": "Tỷ lệ người lớn cùng xem YouTube trên TV theo khảo sát của Nielsen"
-      },
-      {
-        "value": "7 trường dữ liệu",
-        "label": "Chỉ số cấp chiến dịch trên Google Ads đã chuyển sang chuẩn Total Co-view"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Cơ chế ước tính người xem chung dựa trên mô hình hóa",
-        "body": "Chỉ số mới của YouTube dự đoán tổng số người cùng ngồi xem trên một chiếc TV thay vì tính mỗi thiết bị là một lượt xem đơn lẻ. Hệ thống sử dụng mô hình thống kê dựa trên nhân khẩu học, thể loại video và khung giờ phát sóng chứ không dùng cảm biến phần cứng để đếm người thật. YouTube không công bố chi tiết thuật toán, các tham số đầu vào ngoài 3 yếu tố trên, cũng như khoảng tin cậy của mô hình."
-      },
-      {
-        "heading": "Dữ liệu chỉ hiển thị nội bộ và không ảnh hưởng doanh thu nền tảng",
-        "body": "Chỉ số lượt xem chung cần tới 48 giờ để xử lý hoàn tất, khiến các khung báo cáo thời gian thực hoặc mặc định 28 ngày qua luôn thiếu hụt số liệu ở những ngày gần nhất. Đáng chú ý, chỉ số này hoàn toàn không tác động đến chia sẻ doanh thu AdSense hay tiêu chuẩn tham gia YouTube Partner Program. Lượt xem chung tăng không giúp nhà sáng tạo nhận thêm tiền từ nền tảng và cũng không mở rộng lượt tiếp cận của các vị trí quảng cáo tự động."
-      },
-      {
-        "heading": "Lỗ hổng đối soát trong các hợp đồng tài trợ trực tiếp",
-        "body": "Khác với quảng cáo mua qua Google Ads hay Display and Video 360 vốn có số liệu tiếp cận được kiểm toán trên hệ thống, chỉ số mới chỉ nằm trong YouTube Analytics của nhà sáng tạo. Khi đàm phán hợp đồng tài trợ nội dung (sponsorship), nhà sáng tạo có thể đưa ra con số người xem cao gấp 3 lần lượt xem công khai mà nhãn hàng không có cách nào kiểm tra ngoài việc nhìn ảnh chụp màn hình. Điều này tạo ra khoảng cách lớn về tính minh bạch giữa mua quảng cáo programmatic và đàm phán tài trợ trực tiếp."
-      },
-      {
-        "heading": "Chuẩn hóa đo lường trên Google Ads và động thái siết kiểm duyệt",
-        "body": "Trước đó vào ngày 02/06/2026, Google Ads đã chuyển đổi 7 trường dữ liệu cấp chiến dịch sang chuẩn Total Co-view, bao gồm số người dùng duy nhất và tần suất hiển thị trung bình trên TV kết nối Internet. Cùng với bản cập nhật chỉ số co-viewing, YouTube cũng mở rộng tính năng gắn thẻ sản phẩm Amazon và nâng cấp công cụ tự động phát hiện nội dung tài trợ chưa khai báo. Động thái này vừa thúc đẩy thương mại hóa, vừa gia tăng trách nhiệm công khai tài trợ của người sáng tạo."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing khi làm việc với các YouTuber/KOLs trên nội dung Connected TV sẽ đối mặt với các bản chào giá tài trợ dựa trên lượng tiếp cận ước tính cao hơn thực tế mà không thể xác minh qua công cụ bên thứ ba.",
-    "ifIgnored": "Doanh nghiệp có nguy cơ trả chi phí tài trợ (sponsorship CPM) bị đội giá vô căn cứ, đồng thời đánh giá sai hiệu quả thực tế giữa ngân sách tài trợ trực tiếp và ngân sách chạy quảng cáo Connected TV qua Google Ads.",
-    "actionChecklist": [
-      "Yêu cầu nhà sáng tạo bóc tách rõ ràng giữa lượt xem thực tế công khai (public views) và lượt xem ước tính chung (co-viewed views) trong báo giá tài trợ.",
-      "Không chấp nhận ảnh chụp màn hình YouTube Analytics làm căn cứ duy nhất để tính đơn giá CPM cho các hợp đồng tài trợ độc quyền trên TV.",
-      "So sánh hiệu quả chi phí giữa tài trợ trực tiếp với việc tự mua vị trí quảng cáo Connected TV qua Google Ads hoặc DV360.",
-      "Thiết lập điều khoản nghiệm thu hợp đồng dựa trên các chỉ số chuyển đổi, lưu lượng truy cập thực tế qua liên kết hoặc mã ưu đãi thay vì chỉ dựa vào lượt xem ước tính."
-    ],
-    "id": "real-2026-09-07-youtube-ra-mat-chi-7cb2d1",
-    "publishedAt": "07/09/2026",
-    "sourceUrl": "https://ppc.land/youtube-counts-co-viewers-in-a-metric-only-creators-can-see/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/size/w1200/2026/09/YouTube-counts-co-viewers-in-a-metric-only-creators-can-see.jpg",
       "credit": "Ảnh: PPC Land"
     }
   },
@@ -616,66 +678,6 @@
     "image": {
       "url": "https://imgproxy.divecdn.com/H_XtTsVUseUSiyzAxxpILjiANgQFNFRFxGWdD5-uWAs/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9pZ19jYXB0aW9uc190aGF0X2Nvbm5lY3QucG5n.webp",
       "credit": "Ảnh: Social Media Today"
-    }
-  },
-  {
-    "category": "AI Marketing",
-    "platformIcon": "Sparkles",
-    "title": "Ann Taylor hồi sinh thương hiệu bằng Substack và chiến dịch đa kênh sau gần một thập kỷ",
-    "isHot": false,
-    "illustration": "crm-automation",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Owned Media",
-      "Bản tin Substack",
-      "Chiến dịch đa kênh",
-      "Tránh phụ thuộc MXH"
-    ],
-    "summary": "Thương hiệu thời trang công sở Ann Taylor vừa kích hoạt chiến dịch tích hợp lớn nhất kể từ năm 2017 mang tên 'This Is Ann'. Điểm nhấn đáng chú ý là việc nhãn hàng dịch chuyển trọng tâm sang kênh sở hữu (Owned Media) thông qua bản tin Substack để xây dựng cộng đồng bền vững. Đây là bước đi chiến lược nhằm giảm sự phụ thuộc vào các thuật toán mạng xã hội đang ngày càng bão hòa.",
-    "keyNumbers": [
-      {
-        "value": "2017",
-        "label": "Năm cuối cùng Ann Taylor chạy chiến dịch quy mô tương đương trước đó"
-      },
-      {
-        "value": "1954",
-        "label": "Năm thành lập của thương hiệu thời trang di sản này"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Tái định vị hình ảnh phụ nữ công sở hiện đại",
-        "body": "Chiến dịch 'This Is Ann' tập trung khắc họa hình ảnh người phụ nữ bận rộn nhưng tự tin, đa tài, cân bằng giữa công việc và cuộc sống gia đình. Các nội dung quảng cáo được thực hiện tại New York, ghi lại khoảnh khắc chân thực của người mẫu trong trang phục công sở lẫn thường ngày. Đây là nỗ lực tái định vị thương hiệu của Ann Taylor sau giai đoạn sụt giảm doanh số nghiêm trọng vào đầu thập kỷ 2020. Nhãn hàng muốn kết nối lại với tệp khách hàng cũ đồng thời mở rộng sang nhóm nhân sự trẻ tuổi, có tư duy thăng tiến."
-      },
-      {
-        "heading": "Dịch chuyển sang Substack để tối ưu hóa AI Search",
-        "body": "Bên cạnh các kênh truyền thống, Ann Taylor đã ra mắt bản tin Substack mang tên 'The Desk' từ tháng 2 năm nay để chia sẻ lời khuyên sự nghiệp và phong cách. Việc sử dụng bản tin email giúp thương hiệu tiếp cận trực tiếp khách hàng mà không bị bóp tương tác bởi thuật toán mạng xã hội. Đặc biệt, nội dung chất lượng cao trên Substack giúp thương hiệu dễ dàng xuất hiện nổi bật trên các chatbot trí tuệ nhân tạo (AI) vốn thường xuyên quét dữ liệu từ các diễn đàn và trang biên tập để trả lời người dùng. Đây là cách tiếp cận SEO thế hệ mới mà các thương hiệu cần lưu tâm."
-      },
-      {
-        "heading": "Kết hợp trải nghiệm thực tế và chuỗi video kỹ thuật số",
-        "body": "Chiến dịch mùa thu này còn được tiếp sức bằng một cửa hàng trải nghiệm (pop-up) tại SoHo nhân dịp Tuần lễ Thời trang New York vào ngày 8 tháng 9. Tại đây, khách tham quan sẽ được tiếp cận các ấn phẩm báo chí in riêng, bưu thiếp và các số tạp chí Daily Front Row được thiết kế đặc biệt. Song song đó, thương hiệu tiếp tục mở rộng chuỗi video kỹ thuật số 'Style 101' trên các nền tảng trực tuyến. Sự kết hợp giữa trải nghiệm vật lý (OOH) và nội dung số giúp tối đa hóa điểm chạm với khách hàng mục tiêu."
-      },
-      {
-        "heading": "Xây dựng mạng lưới đại sứ thương hiệu thực tế",
-        "body": "Để duy trì sức nóng sau chiến dịch mùa thu, Ann Taylor dự kiến ra mắt chương trình đại sứ thương hiệu vào đầu năm 2027. Thay vì tập trung vào các KOLs xa xỉ, chương trình sẽ hướng tới những tiếng nói chân thực từ chính khách hàng trung thành của thương hiệu. Các đại sứ này sẽ chia sẻ trải nghiệm thực tế trên mạng xã hội để tạo dựng lòng tin tự nhiên. Đây là chiến lược tương tự cách Coach đã áp dụng thành công để chinh phục thế hệ Gen Z trong những năm gần đây."
-      }
-    ],
-    "impact": "Giúp Trưởng phòng Marketing nhận ra tầm quan trọng của việc xây dựng kênh truyền thông sở hữu (Owned Media) như Substack/Newsletter để tự chủ tệp dữ liệu khách hàng, giảm chi phí quảng cáo trả phí (Paid Ads) ngày càng đắt đỏ trên Facebook/TikTok, đồng thời chuẩn bị cho kỷ nguyên tìm kiếm bằng AI.",
-    "ifIgnored": "Tiếp tục đốt ngân sách vào các cuộc đua đấu thầu quảng cáo mạng xã hội ngày càng bão hòa, mất dần khả năng tiếp cận khách hàng tự nhiên khi thuật toán thay đổi, và bị tụt lại phía sau khi không tối ưu hóa nội dung cho các công cụ tìm kiếm bằng AI.",
-    "actionChecklist": [
-      "Đánh giá lại hiệu quả của các kênh mạng xã hội hiện tại và lập kế hoạch xây dựng một kênh sở hữu (như Email Newsletter hoặc Substack) cho thương hiệu.",
-      "Xây dựng chiến lược nội dung chuyên sâu, mang tính tư vấn (career/style advice) thay vì chỉ tập trung vào bài viết bán hàng thuần túy.",
-      "Lên kế hoạch tối ưu hóa nội dung website và bản tin để sẵn sàng cho việc các AI chatbot (như ChatGPT, Gemini) quét dữ liệu tham chiếu.",
-      "Thiết kế chương trình khách hàng thân thiết hoặc đại sứ thương hiệu mini dựa trên chính những khách hàng thực tế thay vì phụ thuộc hoàn toàn vào KOLs lớn."
-    ],
-    "deadline": "08/09/2026",
-    "id": "real-2026-08-21-ann-taylor-hoi-sinh-ffbff9",
-    "publishedAt": "21/08/2026",
-    "sourceUrl": "https://www.marketingdive.com/news/ann-taylor-stages-a-brand-comeback-with-substack-fall-fashion-blitz/828397/",
-    "source": "Marketing Dive",
-    "image": {
-      "url": "https://imgproxy.divecdn.com/bX6Qk3XmIucndTNdFDFbpJEl5QomXRl-J-K9HlEqpU4/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9UaGlzLUlzLUFubi1GYWxsLTIwMjYtQ29sbGVjdGlvbi5qcGc=.webp",
-      "credit": "Ảnh: Marketing Dive"
     }
   },
   {
