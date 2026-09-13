@@ -1,5 +1,198 @@
 [
   {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Kỹ thuật lồng cụm từ Matryoshka giúp đón đầu truy vấn AI và 15% từ khóa mới trên Google",
+    "isHot": false,
+    "illustration": "zero-click",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "SEO",
+      "AI Search",
+      "Google SEO",
+      "Tối ưu từ khóa"
+    ],
+    "summary": "Các hệ thống tìm kiếm AI như ChatGPT không chỉ trả lời trực tiếp mà còn tự động tạo ra hàng loạt truy vấn con để xác minh thông tin. Áp dụng cấu trúc búp bê Nga lồng cụm từ ngắn vào cụm từ dài sẽ giúp thương hiệu xuất hiện ở cả tìm kiếm truyền thống lẫn các truy vấn AI phức tạp.",
+    "keyNumbers": [
+      {
+        "value": "15%",
+        "label": "Tỷ lệ truy vấn Google chưa từng gặp trước đó mỗi ngày"
+      },
+      {
+        "value": "1.797",
+        "label": "Truy vấn con phát sinh từ 189 prompt thương hiệu trên ChatGPT"
+      },
+      {
+        "value": "25 lần",
+        "label": "Tỷ lệ tăng sử dụng cụm từ trích dẫn chính xác của AI"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Cơ chế Query Fan-Out của hệ thống AI Search",
+        "body": "Nghiên cứu từ 189 prompt thương hiệu gửi tới ChatGPT cho thấy công cụ này đã tự động tạo ra 1.797 truy vấn con mà người dùng không hề nhập. Quá trình này được gọi là query fan-out khi AI chia nhỏ một câu hỏi ban đầu thành nhiều câu hỏi chi tiết. Các truy vấn con do AI tạo ra có độ dài trung bình là 7 từ. Dữ liệu tháng 5/2026 tại Mỹ cũng xác nhận độ dài trung bình của một truy vấn AI Mode đã gấp 3 lần so với tìm kiếm truyền thống."
+      },
+      {
+        "heading": "Tính ổn định của 15% truy vấn mới mỗi ngày",
+        "body": "Google từng công bố vào năm 2019 rằng 15% số lượng truy vấn nhận được mỗi ngày là những từ khóa chưa từng xuất hiện trước đó. Tại sự kiện Search Central Live NYC tháng 3/2025, John Mueller xác nhận con số 15% này vẫn duy trì ổn định dù các mô hình ngôn ngữ lớn phát triển mạnh. Hàng trăm triệu truy vấn mới mỗi ngày phát sinh từ tin tức thời sự, tên sản phẩm mới hoặc thay đổi chính sách. Những nội dung được hoàn thiện và xuất bản ngay trong ngày có lợi thế lớn nhất để chiếm lĩnh lượng truy vấn mới này."
+      },
+      {
+        "heading": "Áp dụng tư duy búp bê Nga Matryoshka vào nội dung",
+        "body": "Chiến lược búp bê Nga dựa trên việc đặt cụm từ ngắn nằm trọn bên trong một cụm từ dài hơn để bao phủ nhiều dạng tìm kiếm. Thay vì chỉ tối ưu cụm 3 từ như vé máy bay đi Philadelphia, người viết sẽ xây dựng bài quanh cụm 4 từ như vé máy bay giá rẻ đi Philadelphia. Khi đó bài viết có thể hiển thị cho cả người tìm cụm từ ngắn lẫn người nhập cụm từ dài. Nếu chỉ dùng cụm từ ngắn, trang web sẽ bị ẩn hoàn toàn trước những người tìm kiếm bằng các câu từ dài hơn."
+      },
+      {
+        "heading": "Cách AI thu hẹp phạm vi để trích dẫn dữ liệu",
+        "body": "Trong khi người viết bài mở rộng cụm từ ra ngoài, các hệ thống AI lại thu hẹp tìm kiếm theo chiều ngược lại. AI bắt đầu bằng câu hỏi tự nhiên, sau đó dùng toán tử site: và cuối cùng tìm chính xác cụm từ nằm trong dấu ngoặc kép để kiểm chứng thông tin. Tần suất AI sử dụng cụm từ trích dẫn chính xác tăng 25 lần từ lượt tìm kiếm đầu tiên đến lượt cuối cùng. Nội dung vì vậy cần chứa các câu trả lời độc lập hoàn chỉnh để AI dễ dàng trích dẫn nguyên văn."
+      }
+    ],
+    "impact": "Tái định hình chiến lược SEO và Content Marketing để bắt trọn lượng traffic từ AI Search, đồng thời chiếm lĩnh 15% truy vấn mới phát sinh mỗi ngày trước khi đối thủ kịp tối ưu.",
+    "ifIgnored": "Doanh nghiệp sẽ bỏ lỡ lượng lớn truy vấn dài do AI tự động tạo ra và bị loại khỏi danh sách nguồn trích dẫn đáng tin cậy của các công cụ tìm kiếm AI.",
+    "actionChecklist": [
+      "Viết đoạn mở đầu hoặc thẻ H2 chứa cụm từ 4-5 từ có lồng cụm từ gốc 3 từ",
+      "Lọc Google Search Console tìm các truy vấn dài có lượt hiển thị cao nhưng tỷ lệ nhấp thấp",
+      "Thiết lập kênh xuất bản nội dung nhanh trong ngày khi có sự kiện hoặc tin tức mới",
+      "Viết lại các câu trả lời cốt lõi thành từng câu độc lập có thể trích dẫn trọn vẹn"
+    ],
+    "id": "real-2026-09-11-ky-thuat-long-cum-e63b60",
+    "publishedAt": "11/09/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/the-2003-framework-that-was-already-doing-query-fan-out/588595/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/09/query-fan-out-918.png",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
+    "category": "TikTok Shop & Ads",
+    "platformIcon": "Video",
+    "title": "Old Navy đặt cược vào Creator: Thương vụ với MrBeast giúp tăng hơn 22% lượt truy cập",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Creator Marketing",
+      "Influencer Strategy",
+      "Tăng trưởng Traffic",
+      "Chiến dịch Mua sắm"
+    ],
+    "summary": "Thương hiệu thời trang Old Navy thuộc tập đoàn Gap Inc. vừa ghi nhận mức tăng trưởng truy cập trực tuyến vượt trội nhờ chiến dịch hợp tác dài hạn với YouTuber MrBeast. Bước đi này đánh dấu sự chuyển dịch chiến lược từ các quảng cáo truyền thống được sản xuất cầu kỳ sang nội dung chân thực do Creator dẫn dắt nhằm chinh phục Gen Z và Gen Alpha.",
+    "keyNumbers": [
+      {
+        "value": ">22%",
+        "label": "Tăng trưởng truy cập danh mục trẻ em"
+      },
+      {
+        "value": "1,4 tỷ",
+        "label": "Lượt hiển thị trên YouTube"
+      },
+      {
+        "value": "91%",
+        "label": "Phụ huynh chịu ảnh hưởng mua sắm từ con cái"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Đột phá lưu lượng truy cập từ hợp tác với MrBeast",
+        "body": "Chiến dịch tựu trường năm 2026 của Old Navy hợp tác cùng MrBeast đã tạo ra hơn 100 triệu lượt xem toàn cầu và 1,4 tỷ lượt hiển thị trên YouTube. Ngay sau khi ra mắt, lượng truy cập trực tuyến vào danh mục thời trang trẻ em của thương hiệu đã tăng hơn 22%. Sự kiện này cũng giúp gia tăng lượng người xem và mức độ tương tác của Old Navy trên các nền tảng khác như TikTok. Đây là thành quả đầu tiên trong thỏa thuận hợp tác kéo dài nhiều năm giữa thương hiệu và YouTuber sở hữu hơn 515 triệu người đăng ký."
+      },
+      {
+        "heading": "Thay đổi tư duy quảng cáo từ bóng bẩy sang chân thực",
+        "body": "Khác với các chiến dịch tựu trường trước đây vốn phụ thuộc vào ý tưởng quảng cáo truyền thống được sản xuất chỉn chu, Old Navy chuyển sang khai thác góc nhìn chân thực từ cộng đồng. Thương hiệu lồng ghép các yếu tố giải trí hài hước, chương trình bốc thăm may mắn và các hoạt động từ thiện thực tế. Ví dụ, chiến dịch đã tài trợ bữa trưa miễn phí một năm cho học sinh một trường trung học tại Kansas, đồng thời tặng tiền mặt và thẻ quà tặng cho học sinh trả lời đúng các câu hỏi trivia. Cách tiếp cận này giúp thương hiệu tạo dựng kết nối cảm xúc mạnh mẽ thay vì chỉ trình diễn sản phẩm."
+      },
+      {
+        "heading": "Bối cảnh kinh doanh sụt giảm thúc đẩy tái cấu trúc marketing",
+        "body": "Động thái thay đổi chiến lược diễn ra trong bối cảnh Old Navy ghi nhận mức giảm 4% doanh số cùng cửa hàng trong quý 2, kéo dài đà sụt giảm của thương hiệu lớn nhất trong tập đoàn Gap Inc. Các sáng kiến marketing mùa hè trước đó không mang lại lượng truy cập như kỳ vọng, ảnh hưởng trực tiếp đến kết quả chung. Nhằm xoay chuyển tình thế, Old Navy đã bổ nhiệm Michael Francis làm CEO mới thay thế Haio Barbeito. Tập đoàn khẳng định đang tái cấu trúc hoạt động marketing và ghi nhận tín hiệu khởi sắc trong tháng 8 nhờ cải thiện khâu vận hành."
+      },
+      {
+        "heading": "Quyền lực mua sắm mới từ thế hệ Gen Z và Gen Alpha",
+        "body": "Chiến lược dựa vào Creator của Old Navy phản ánh xu hướng chung của các nhà bán lẻ nhằm kết nối với thế hệ trẻ. Theo khảo sát từ HarrisX và Allison Worldwide, 91% phụ huynh được hỏi xác nhận con cái ở độ tuổi thiếu niên ảnh hưởng đến ưu tiên chọn thương hiệu của họ. Trẻ em ngày nay chủ động chỉ ra những thương hiệu mà chúng muốn gắn bó và sở hữu hơn so với các thế hệ trước. Đã qua rồi thời kỳ thương hiệu áp đặt thông điệp một chiều từ trên xuống."
+      },
+      {
+        "heading": "Tăng tốc ngân sách cho Creator trong mùa mua sắm cuối năm",
+        "body": "Dựa trên thành công bước đầu với MrBeast, Old Navy đang củng cố niềm tin vào việc đưa Creator trở thành trọng tâm trong chiến lược đưa sản phẩm ra thị trường. Khách hàng sẽ thấy khối lượng nội dung Creator từ Old Navy tăng mạnh trong giai đoạn mua sắm cao điểm cuối năm. Việc hợp tác không dừng lại ở các bài đăng đơn lẻ mà được xây dựng thành hệ sinh thái nội dung dài hạn. Thương hiệu kỳ vọng sự chuyển dịch này sẽ mang lại kết quả kinh doanh bền vững hơn."
+      }
+    ],
+    "impact": "Giúp Trưởng phòng Marketing nhận ra quảng cáo truyền thống chi phí cao đang giảm hiệu quả rõ rệt đối với nhóm khách hàng trẻ. Cần chuyển dịch một phần ngân sách từ sản xuất hình ảnh bóng bẩy sang tài trợ nội dung nguyên bản do Creator làm chủ đạo.",
+    "ifIgnored": "Doanh nghiệp nguy cơ tiếp tục lãng phí ngân sách vào các chiến dịch quảng cáo chỉn chu nhưng thiếu tương tác, dần mất kết nối với tệp khách hàng Gen Z và Gen Alpha vốn quyết định hành vi mua sắm của hộ gia đình.",
+    "actionChecklist": [
+      "Đánh giá lại tỷ trọng ngân sách sản xuất quảng cáo truyền thống so với ngân sách hợp tác với Creator.",
+      "Rà soát tệp KOC và Creator hiện tại để chuyển từ hợp tác theo bài đăng sang thỏa thuận dài hạn.",
+      "Thiết kế các hoạt động tương tác có giá trị thực tế như quà tặng hoặc từ thiện thay vì chỉ hiển thị hình ảnh sản phẩm.",
+      "Thiết lập bộ chỉ số đo lường hiệu quả Creator dựa trên traffic chuyển đổi thực tế thay vì chỉ dừng ở lượt hiển thị."
+    ],
+    "id": "real-2026-09-11-old-navy-dat-cuoc-642b87",
+    "publishedAt": "11/09/2026",
+    "sourceUrl": "https://www.marketingdive.com/news/old-navys-mrbeast-deal-boosts-engagement-amid-bigger-bet-on-creators/830100/",
+    "source": "Marketing Dive",
+    "image": {
+      "url": "https://imgproxy.divecdn.com/jflp0ks25iI-5LkRAk9dFzFnLiBjTWxn5w87KZNxzT8/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9CZWFzdENoZWNrLmpwZw==.webp",
+      "credit": "Ảnh: Marketing Dive"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Google AI Overviews làm giảm 5% lượt chuyển hướng tìm kiếm đến Wikipedia",
+    "isHot": false,
+    "illustration": "zero-click",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Google AI Overviews",
+      "SEO",
+      "Lưu lượng truy cập",
+      "Zero-Click Search"
+    ],
+    "summary": "Nghiên cứu mới từ Đại học Washington cho thấy tính năng AI Overviews của Google khiến lượt giới thiệu tìm kiếm đến Wikipedia tiếng Anh sụt giảm khoảng 5%. Sự thay đổi này ảnh hưởng trực tiếp đến chiến lược lưu lượng truy cập tự nhiên của mọi website phụ thuộc vào Google Search.",
+    "keyNumbers": [
+      {
+        "value": "100,27 triệu",
+        "label": "Lượt giới thiệu tìm kiếm giảm mỗi tháng"
+      },
+      {
+        "value": "1,20 tỷ",
+        "label": "Lượt truy cập bị mất ước tính hàng năm"
+      },
+      {
+        "value": "90%",
+        "label": "Tỷ lệ khách Wikipedia đến từ Google"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Tác động thực tế của AI Overviews lên lưu lượng truy cập từ Google Search",
+        "body": "Nghiên cứu từ Đại học Washington ước tính tính năng AI Overviews của Google làm giảm khoảng 5% lượt giới thiệu tìm kiếm hàng tháng đến Wikipedia tiếng Anh sau khi triển khai mặc định tại Mỹ vào năm 2024. Cụ thể, số lượt giới thiệu tìm kiếm giảm 5,45% so với phiên bản tiếng Đức và 4,82% so với tiếng Pháp. Đối với toàn bộ phiên bản tiếng Anh, con số này tương đương khoảng 100,27 triệu lượt giới thiệu tìm kiếm bị sụt giảm mỗi tháng, tổng cộng khoảng 1,20 tỷ lượt mỗi năm. Mặc dù Google tranh cãi về phương pháp đo lường, dữ liệu cho thấy trải nghiệm AI trực tiếp trên trang kết quả đang làm giảm hành vi nhấp chuột của người dùng."
+      },
+      {
+        "heading": "Thiệt hại doanh thu giả định cho các trang web phụ thuộc vào tìm kiếm",
+        "body": "Theo kế hoạch của Wikimedia Foundation, gần 90% lượng khách truy cập Wikipedia từ trước đến nay đều đến từ Google Search. Các tác giả nghiên cứu tính toán rằng một trang web thương mại sống bằng quảng cáo với quy mô tương tự có thể mất từ 10,82 triệu đến 37,08 triệu USD doanh thu mỗi năm do sụt giảm truy cập. Dù Wikipedia không chạy quảng cáo, số liệu này mô phỏng áp lực tài chính khổng lồ lên các doanh nghiệp phụ thuộc vào SEO. Phía Wikimedia cũng nhận định sự suy giảm truy cập từ Google là xu hướng kéo dài chứ không phải hiện tượng ngắn hạn."
+      },
+      {
+        "heading": "Lượt xem từ người dùng thật giảm nhưng lưu lượng bot AI tăng mạnh",
+        "body": "Wikimedia Foundation ghi nhận tổng số lượt xem trang từ người dùng thực trên tất cả ngôn ngữ giảm khoảng 8% vào tháng 10 năm 2025 so với cùng kỳ năm trước. Trong khi lượng người đọc thực giảm, băng thông tải tệp truyền thông lại tăng 50% kể từ tháng 1 năm 2024 do các bot cào dữ liệu huấn luyện AI. Bot tự động chiếm ít nhất 65% lưu lượng truy cập đắt đỏ nhất gửi đến trung tâm dữ liệu gốc và khoảng 35% tổng số lượt xem trang. Wikimedia đã phải chặn hoặc hạn chế khoảng 30% các yêu cầu tự động vi phạm chính sách của họ."
+      },
+      {
+        "heading": "Thách thức mới đối với chiến lược nội dung và tối ưu hóa SEO",
+        "body": "Khi Google AI Overviews cung cấp câu trả lời ngay trên trang tìm kiếm, người dùng không còn nhu cầu nhấp vào liên kết nguồn cho các truy vấn thông tin cơ bản. Doanh nghiệp không thể chỉ dựa vào chiến lược SEO truyền thống để kéo lưu lượng truy cập về website. Việc tối ưu hóa sự xuất hiện và trích dẫn thương hiệu ngay trong câu trả lời của AI trở thành ưu tiên mới. Đồng thời, nội dung cần dịch chuyển sang các chủ đề chuyên sâu, đòi hỏi góc nhìn chuyên gia hoặc trải nghiệm thực tế mà AI chưa thể tự tổng hợp."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing sẽ thấy tỷ lệ nhấp (CTR) từ Google Search sụt giảm ở các từ khóa dạng thông tin, khiến chi phí thu hút một truy cập tự nhiên tăng lên. Doanh nghiệp buộc phải điều chỉnh mục tiêu SEO từ việc kéo traffic sang việc xuất hiện trong câu trả lời của AI và tăng cường ngân sách cho quảng cáo trả tiền.",
+    "ifIgnored": "Nếu tiếp tục đánh giá hiệu quả SEO dựa trên lượng truy cập truyền thống, doanh nghiệp sẽ lãng phí ngân sách vào các từ khóa đã bị AI chiếm lĩnh, chịu sụt giảm chuyển đổi âm thầm và mất vị thế cạnh tranh khi đối thủ đã tối ưu sự hiện diện trong câu trả lời AI.",
+    "actionChecklist": [
+      "Phân loại lại danh mục từ khóa SEO để xác định những nhóm từ khóa bị ảnh hưởng bởi AI Overviews.",
+      "Bổ sung chỉ số đo lường độ hiển thị thương hiệu trên nền tảng AI bên cạnh lưu lượng truy cập truyền thống.",
+      "Cấu trúc lại nội dung website theo hướng chuyên sâu và cung cấp dữ liệu độc quyền để AI dễ trích dẫn.",
+      "Đánh giá lại phân bổ ngân sách giữa SEO và Google Ads để bù đắp lượng truy cập tự nhiên sụt giảm."
+    ],
+    "id": "real-2026-09-11-google-ai-overviews-lam-9dab20",
+    "publishedAt": "11/09/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/what-wikipedia-reveals-about-ai-overviews-and-web-traffic/589042/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/09/wikipedia-ai-overviews-featured.jpg",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
     "category": "AI Marketing",
     "platformIcon": "Sparkles",
     "title": "Amazon bán quảng cáo ChatGPT qua DSP và 12% ngân sách quảng cáo do AI tự điều phối",
@@ -437,69 +630,6 @@
     }
   },
   {
-    "category": "AI Marketing",
-    "platformIcon": "Sparkles",
-    "title": "ChatGPT Shopping ưu tiên đề xuất sản phẩm qua Product Feed thay vì tìm kiếm web",
-    "isHot": false,
-    "illustration": "data-signal",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "ChatGPT Shopping",
-      "Product Feed",
-      "Shopify",
-      "AI SEO"
-    ],
-    "summary": "Nghiên cứu mới từ Profound cho thấy tỷ lệ khuyến nghị sản phẩm trên ChatGPT Shopping dựa vào luồng dữ liệu Product Feed đã tăng mạnh từ 8,26% lên 61,54%. Sự thay đổi này khiến hơn 20% số lượng nhà bán hàng bị sụt giảm độ hiển thị nếu không cập nhật phương thức cung cấp dữ liệu sản phẩm chuẩn hóa.",
-    "keyNumbers": [
-      {
-        "value": "61,54%",
-        "label": "Tỷ lệ đề xuất qua Product Feed trong tháng 7"
-      },
-      {
-        "value": "20%",
-        "label": "Mức giảm số lượng nhà bán hàng duy nhất được hiển thị"
-      },
-      {
-        "value": "35%",
-        "label": "Tỷ lệ truy xuất dữ liệu feed đến từ Shopify"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Sự bùng nổ của Product Feed trong đề xuất mua sắm",
-        "body": "Dữ liệu phân tích từ 1.757.723 lượt chạy prompt trong tháng 7 ghi nhận tỷ lệ khuyến nghị sản phẩm qua dữ liệu feed tích hợp tăng đột biến từ 8,26% lên 61,54% vào ngày 10/7. Tính đến ngày 3/9, phương thức truy xuất qua feed đã chiếm khoảng 65% số lượng đề xuất sản phẩm được theo dõi. Xu hướng này đẩy tìm kiếm web truyền thống xuống hàng thứ yếu khi ChatGPT Shopping đưa ra gợi ý mua sắm. Việc thay đổi cơ chế truy xuất khiến thứ hạng hiển thị của các gian hàng trực tuyến biến động sâu sắc."
-      },
-      {
-        "heading": "Biến động hiển thị và sự tập trung vào các nhà bán hàng lớn",
-        "body": "Trong mẫu khảo sát 687 khách hàng, có 450 gian hàng bị giảm ít nhất 33% độ hiển thị trên Shopping sau mốc 10/7, trong khi chỉ có 67 bên ghi nhận mức tăng tương đương. Sự thay đổi cơ chế truy xuất cũng thu hẹp đáng kể tập hợp các gian hàng được đề xuất. Tỷ lệ đề xuất tập trung vào top 10 thương hiệu hàng đầu đã tăng từ 22,5% lên 41,8%. Đồng thời, tổng số lượng nhà bán hàng duy nhất được tham chiếu giảm từ 13.524 xuống còn 10.607, tương ứng mức giảm hơn 20%."
-      },
-      {
-        "heading": "Vai trò của các nền tảng tích hợp sẵn như Shopify",
-        "body": "Báo cáo ước tính khoảng 35% toàn bộ hoạt động truy xuất feed trong tháng 7 có liên quan đến hệ sinh thái Shopify. Các gian hàng trên Shopify và Etsy hiện đã được kết nối dữ liệu sản phẩm tự động qua Shopify Catalog mà không cần các bước thiết lập bổ sung. Ngược lại, các nhà bán hàng ở nền tảng khác muốn kết nối trực tiếp phải đăng ký qua danh sách chờ của OpenAI. Ngoài ra, việc chia sẻ dữ liệu này vận hành theo Agentic Commerce Protocol, một tiêu chuẩn được mở rộng cho việc khám phá sản phẩm từ ngày 24/3."
-      },
-      {
-        "heading": "Tác động từ đợt cập nhật mô hình GPT-5.6 và GPT-6 Astra",
-        "body": "Mặc dù OpenAI chưa chính thức xác nhận các cập nhật mua sắm trong nhật ký thay đổi, nghiên cứu liên kết biến động độ hiển thị với việc ra mắt mô hình GPT-5.6 vào ngày 9/7. Mô hình thống kê cho thấy sự dịch chuyển giữa truy xuất web và truy xuất feed giải thích tới 83% sự biến động hiển thị của các gian hàng. Bên cạnh đó, việc OpenAI thử nghiệm GPT-6 Astra giới hạn cho một số tổ chức từ ngày 3/9 có thể tiếp tục làm thay đổi cách thức AI lựa chọn sản phẩm trong tương lai."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing sẽ mất đi lượng truy cập tự nhiên lớn từ người dùng tìm kiếm sản phẩm trên AI nếu gian hàng thương mại điện tử chỉ tối ưu SEO web truyền thống mà không có luồng Product Feed chuẩn hóa kết nối với ChatGPT.",
-    "ifIgnored": "Doanh nghiệp bị đứng ngoài cuộc chơi mua sắm trên AI (Agentic Commerce), nhường toàn bộ thị phần hiển thị gợi ý sản phẩm cho các đối thủ cạnh tranh đã tích hợp Shopify hoặc các nhà cung cấp dữ liệu feed tương thích.",
-    "actionChecklist": [
-      "Rà soát và chuẩn hóa dữ liệu sản phẩm bao gồm giá, mô tả và thuộc tính chi tiết trên hệ thống website.",
-      "Kích hoạt và kiểm tra tính năng đồng bộ Shopify Catalog với ChatGPT nếu doanh nghiệp đang sử dụng nền tảng Shopify.",
-      "Gửi yêu cầu đăng ký danh sách chờ cấp quyền truy cập feed trực tiếp trên trang dành cho nhà bán hàng của OpenAI nếu sử dụng hệ thống riêng.",
-      "Chuẩn bị hạ tầng dữ liệu để kết nối với nền tảng tự phục vụ (Self-serve) dự kiến ra mắt vào cuối năm."
-    ],
-    "id": "real-2026-09-09-chatgpt-shopping-uu-tien-67151a",
-    "publishedAt": "09/09/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/chatgpt-shopping-results-lean-hard-on-product-feeds/589000/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/09/chatgpt-shopping-product-feeds-featured.jpg",
-      "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
     "category": "Google Ads & SEO",
     "platformIcon": "Search",
     "title": "Google phát hành Meridian GeoX mã nguồn mở giúp đo lường quảng cáo địa lý tiết kiệm 31% ngân sách",
@@ -560,124 +690,6 @@
     "image": {
       "url": "https://ppc.land/content/images/2026/09/Google-s-Meridian-GeoX-exits-beta-claiming-31--cheaper-geo-experiments.jpg",
       "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Google Ads ra mắt Local Customer Optimization và tích hợp Store Sales vào Data Manager",
-    "isHot": false,
-    "illustration": "data-signal",
-    "readTime": "3 phút đọc",
-    "tags": [
-      "Google Ads",
-      "Performance Max",
-      "Chuyển đổi offline",
-      "Bán lẻ"
-    ],
-    "summary": "Google Ads bổ sung tùy chọn Local Customer Optimization cho chiến dịch Performance Max nhằm ưu tiên tiếp cận người dùng sẵn sàng ghé thăm cửa hàng vật lý. Đồng thời, nền tảng tích hợp công cụ Store Sales vào Data Manager giúp doanh nghiệp dễ dàng đưa dữ liệu doanh thu tại quầy vào thuật toán Smart Bidding.",
-    "keyNumbers": [
-      {
-        "value": "30 ngày",
-        "label": "khung thời gian giao dịch bắt buộc để báo cáo giá trị chuyển đổi động"
-      },
-      {
-        "value": "14 ngày",
-        "label": "khung thời gian dữ liệu giao dịch được khuyến nghị cập nhật"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Tối ưu hóa khách hàng địa phương trên Performance Max",
-        "body": "Google bổ sung cài đặt Local Customer Optimization ở cấp chiến dịch dành riêng cho mục tiêu cửa hàng trên Performance Max. Tính năng này tập trung tiếp cận những khách hàng ở gần hoặc quan tâm đến địa điểm kinh doanh và có xu hướng thực hiện hành động ngay lập tức như tìm đường, gọi điện hay ghé thăm. Hệ thống sử dụng tín hiệu thời gian thực từ người dùng đang điều hướng hoặc tìm kiếm địa điểm trên Google Maps, Waze và Google Search."
-      },
-      {
-        "heading": "Điều kiện và giới hạn kỹ thuật của chiến dịch",
-        "body": "Cài đặt Local Customer Optimization chỉ tương thích với các chiến dịch nhắm mục tiêu ngoại tuyến hoàn toàn và không hỗ trợ mục tiêu trực tuyến. Doanh nghiệp cũng không thể bật tính năng này trên các chiến dịch Performance Max đang liên kết với tài khoản Merchant Center. Điều này đồng nghĩa nhà quảng cáo bán lẻ phải thiết lập một chiến dịch Performance Max riêng biệt dành riêng cho mục tiêu cửa hàng vật lý."
-      },
-      {
-        "heading": "Đơn giản hóa việc nhập dữ liệu Store Sales qua Data Manager",
-        "body": "Tính năng Store Sales mới trong Google Ads Data Manager cho phép doanh nghiệp kết nối trực tiếp dữ liệu bán hàng từ CRM hoặc Google Sheets vào tài khoản quảng cáo. Dữ liệu mua hàng tại quầy sẽ được đối soát với các lượt tương tác quảng cáo trước đó để phục vụ báo cáo và huấn luyện Smart Bidding. Google yêu cầu thông tin khách hàng như email hoặc số điện thoại phải được mã hóa SHA-256 trước hoặc trong quá trình tải lên hệ thống."
-      },
-      {
-        "heading": "Tần suất cập nhật dữ liệu và thời điểm áp dụng",
-        "body": "Google khuyến nghị doanh nghiệp nên tải dữ liệu giao dịch ngoại tuyến định kỳ hàng ngày hoặc hàng tuần để đảm bảo tính cập nhật cho báo cáo. Báo cáo giá trị chuyển đổi động yêu cầu dữ liệu giao dịch phát sinh trong vòng 30 ngày gần nhất và tối ưu nhất là 14 ngày. Tính năng Store Sales trong Data Manager dự kiến bắt đầu triển khai vào cuối tháng 9 cho các tài khoản đủ điều kiện."
-      }
-    ],
-    "impact": "Giúp các doanh nghiệp bán lẻ đa kênh đo lường chính xác hiệu quả kéo khách tới điểm bán vật lý, đồng thời nạp dữ liệu doanh thu tại quầy vào Smart Bidding để thuật toán tối ưu hóa chi phí quảng cáo theo doanh thu thực tế thay vì chỉ dừng ở lượt nhấp chuột.",
-    "ifIgnored": "Nếu tiếp tục gộp chung mục tiêu online và offline trong cùng chiến dịch, doanh nghiệp sẽ lãng phí ngân sách vào những tệp người dùng không có hành vi ghé cửa hàng, đồng thời bỏ lỡ tín hiệu doanh thu thực tế để rèn luyện máy học Google Ads.",
-    "actionChecklist": [
-      "Tạo chiến dịch Performance Max riêng biệt nhắm mục tiêu cửa hàng vật lý thay vì dùng chung với chiến dịch gắn Merchant Center.",
-      "Chuẩn hóa và thiết lập quy trình mã hóa SHA-256 cho dữ liệu khách hàng từ phần mềm bán hàng POS hoặc CRM.",
-      "Lên kế hoạch đồng bộ dữ liệu giao dịch cửa hàng định kỳ hàng ngày hoặc hàng tuần qua Google Ads Data Manager từ cuối tháng 9.",
-      "Kiểm tra điều kiện tài khoản để đăng ký danh sách xét duyệt sử dụng tính năng Store Sales và kích hoạt Local Customer Optimization."
-    ],
-    "id": "real-2026-09-09-google-ads-ra-mat-fdb7e5",
-    "publishedAt": "09/09/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/google-ads-introduces-local-customer-optimization/588886/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/09/shutterstock_2179049515_1600x840-12.png",
-      "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
-    "category": "AI Marketing",
-    "platformIcon": "Sparkles",
-    "title": "Reddit mở rộng chiến dịch Max chạy bằng AI cho tất cả nhà quảng cáo",
-    "isHot": false,
-    "illustration": "ai-budget",
-    "readTime": "3 phút đọc",
-    "tags": [
-      "AI Marketing",
-      "Reddit Ads",
-      "Tự động hóa quảng cáo",
-      "Tối ưu chi phí"
-    ],
-    "summary": "Reddit chính thức mở rộng tính năng chiến dịch Max chạy bằng trí tuệ nhân tạo cho toàn bộ nhà quảng cáo trên nền tảng. Công cụ này tự động hóa quy trình dựng quảng cáo, nhắm mục tiêu và phân bổ ngân sách dựa trên dữ liệu người dùng. Thử nghiệm ghi nhận kết quả tích cực với chi phí CPA giảm và lượng chuyển đổi tăng rõ rệt.",
-    "keyNumbers": [
-      {
-        "value": "17%",
-        "label": "chi phí CPA trung bình thấp hơn"
-      },
-      {
-        "value": "27%",
-        "label": "mức tăng chuyển đổi bổ sung trung bình"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Tự động hóa toàn diện quy trình quảng cáo",
-        "body": "Reddit đã cung cấp chiến dịch Max chạy bằng trí tuệ nhân tạo cho tất cả nhà quảng cáo sau thời gian thử nghiệm giới hạn từ tháng 1. Công cụ này hỗ trợ tự động hóa mọi công đoạn trong quy trình thiết lập quảng cáo. Hệ thống tự động đảm nhận từ việc nhắm mục tiêu, lựa chọn mẫu quảng cáo, vị trí hiển thị cho đến phân bổ ngân sách. Điều này giúp các thương hiệu tiết kiệm thời gian vận hành đáng kể."
-      },
-      {
-        "heading": "Cập nhật ba tính năng mới hỗ trợ quản lý",
-        "body": "Cùng với việc mở rộng tính năng, Reddit ra mắt 3 nâng cấp quan trọng cho chiến dịch Max. Nền tảng mở rộng hỗ trợ API giúp các nhà quảng cáo tạo và quản lý chiến dịch thông qua bên thứ ba. Đồng thời, Reddit tích hợp trực tiếp với Smartly nhằm hỗ trợ người dùng công cụ này thiết lập chiến dịch Max dễ dàng. Các cải tiến này đem lại sự linh hoạt tối đa cho đội ngũ tiếp thị."
-      },
-      {
-        "heading": "Tổ chức nhóm tài sản theo dòng sản phẩm",
-        "body": "Reddit bổ sung tính năng nhóm tài sản cho phép quản lý nhiều tập hợp nội dung sáng tạo trong cùng một chiến dịch Max. Mỗi nhóm tài sản đại diện cho một dòng sản phẩm hoặc trường hợp sử dụng riêng biệt. Người dùng có thể thiết lập tiêu đề, tệp đa phương tiện và đường dẫn đích riêng cho từng nhóm. Ngoài ra, tính năng báo cáo tách biệt giúp đánh giá chính xác hiệu quả của từng dòng sản phẩm."
-      },
-      {
-        "heading": "Tối ưu chi phí nhờ dữ liệu hành vi cộng đồng",
-        "body": "Điểm mạnh cốt lõi của chiến dịch Max nằm ở việc khai thác dữ liệu hiểu biết chuyên sâu về đối tượng người dùng Reddit. Hệ thống phân tích sở thích và hành vi tương tác thực tế của người dùng để nhắm mục tiêu chính xác hơn. Trong thử nghiệm beta, các nhà quảng cáo ghi nhận chi phí CPA thấp hơn 17% trên mức trung bình. Đồng thời, số lượng chuyển đổi bổ sung đạt mức tăng hơn 27%."
-      }
-    ],
-    "impact": "Tối ưu hóa hiệu suất chạy quảng cáo thị trường quốc tế thông qua tự động hóa AI, giảm chi phí CPA và tiết kiệm nhân lực vận hành thủ công.",
-    "ifIgnored": "Bỏ lỡ cơ hội tiếp cận cộng đồng người dùng chất lượng cao với chi phí chuyển đổi tối ưu hơn và tiếp tục tiêu tốn nguồn lực vận hành thủ công.",
-    "actionChecklist": [
-      "Thử nghiệm chiến dịch Max nếu đang triển khai quảng cáo trên Reddit",
-      "Phân chia nhóm tài sản theo từng dòng sản phẩm và tệp khách hàng",
-      "Kết nối chiến dịch Max qua API hoặc công cụ quản lý Smartly",
-      "So sánh chỉ số CPA của chiến dịch AI với chiến dịch thiết lập thủ công"
-    ],
-    "id": "real-2026-09-03-reddit-mo-rong-chien-5fa5f2",
-    "publishedAt": "03/09/2026",
-    "sourceUrl": "https://www.socialmediatoday.com/news/reddit-expands-ai-powered-max-campaigns/829636/",
-    "source": "Social Media Today",
-    "image": {
-      "url": "https://imgproxy.divecdn.com/x-UGM27Xdv5gesyzsclJ8IKXby8LlpAU7ID71bTcWt8/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9yZWRkaXRfbWF4X2NhbXBhaWduczIucG5n.webp",
-      "credit": "Ảnh: Social Media Today"
     }
   },
   {
