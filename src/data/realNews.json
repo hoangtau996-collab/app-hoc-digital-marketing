@@ -2,6 +2,69 @@
   {
     "category": "Google Ads & SEO",
     "platformIcon": "Search",
+    "title": "ChatGPT Shopping tăng phụ thuộc vào Product Feed, Google Business Profile khôi phục lượt xem bài đăng",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Google Search",
+      "ChatGPT Shopping",
+      "Product Feed",
+      "SEO"
+    ],
+    "summary": "Google vừa khôi phục số lượt xem bài đăng trên Google Business Profile sau hơn 3,5 năm tạm dừng. Trong khi đó, nghiên cứu mới cho thấy ChatGPT Shopping đang chuyển hướng mạnh mẽ sang lấy dữ liệu từ Product Feed của nhà bán hàng với tỷ lệ đề xuất vọt lên 61,54%. Ngoài ra, Google cũng phát đi cảnh báo về rủi ro tụt thứ hạng kéo dài khi di chuyển tên miền hoặc duy trì nội dung kém chất lượng.",
+    "keyNumbers": [
+      {
+        "value": "61,54%",
+        "label": "Tỷ lệ đề xuất sản phẩm trên ChatGPT đến từ nguồn tích hợp feed"
+      },
+      {
+        "value": "1.757.723",
+        "label": "Số lượt chạy prompt được theo dõi trong tháng 7 để phân tích ChatGPT Shopping"
+      },
+      {
+        "value": "98%",
+        "label": "Mức sụt giảm hiển thị tin tức của một website tại Anh chỉ sau 2 tuần đổi tên miền"
+      }
+    ],
+    "content": [
+      {
+        "heading": "ChatGPT Shopping dịch chuyển mạnh sang dữ liệu Product Feed",
+        "body": "Theo dữ liệu từ Profound trên 1.757.723 lượt chạy prompt trong tháng 7, các đề xuất sản phẩm được tích hợp nguồn feed đã tăng vọt từ 8,26% lên 61,54% vào ngày 10/07. Điều này cho thấy thuật toán khuyến nghị mua sắm của ChatGPT đang phụ thuộc rất lớn vào dữ liệu bảng nguồn sản phẩm trực tiếp từ nhà bán hàng. Doanh nghiệp không kết nối feed chuẩn hóa có nguy cơ mất hoàn toàn sự xuất hiện trên trợ lý AI này. Đây là kênh tiếp cận mới hoàn toàn độc lập với các phương pháp SEO xếp hạng truyền thống."
+      },
+      {
+        "heading": "Google Business Profile hiển thị lại chỉ số lượt xem bài đăng",
+        "body": "Google đã chính thức triển khai lại tính năng hiển thị số lượt xem cho các bài đăng trên Google Business Profile trên phạm vi toàn cầu. Chỉ số này từng bị khai tử vào ngày 20/02/2023 mà không có công cụ thay thế suốt hơn 3,5 năm qua. Bảng điều khiển hiện sẽ tổng hợp lượt xem từ cả Google Search và Google Maps trong thời gian 18 tháng gần nhất. Tuy nhiên, dữ liệu này hiện mới chỉ hiển thị trên giao diện quản trị và chưa được tích hợp vào API."
+      },
+      {
+        "heading": "Trang web cũ chất lượng thấp kìm hãm sự phục hồi SEO",
+        "body": "Chuyên gia John Mueller của Google cảnh báo rằng các trang web tự động tạo ra nội dung kém chất lượng trong quá khứ vẫn có thể kéo tụt điểm uy tín của toàn bộ website. Ngay cả khi doanh nghiệp đã cập nhật hoặc dọn dẹp các trang này, hệ thống của Google vẫn mất nhiều thời gian để khôi phục niềm tin. Việc xóa bỏ trang rác và việc chứng minh giá trị nội dung mới là hai quá trình hoàn toàn độc lập. Do đó, nỗ lực phục hồi thứ hạng sau khi dọn dẹp nội dung mỏng đòi hỏi sự kiên nhẫn và chiến lược tối ưu bài bản."
+      },
+      {
+        "heading": "Mất 98% hiển thị tìm kiếm do chuyển đổi tên miền không đúng cách",
+        "body": "Báo cáo từ NewzDash ghi nhận một trang tin tức tại Anh đã sụt giảm tới 98% lượt hiển thị trên Google News chỉ sau 2 tuần đổi tên miền từ .co.uk sang .com. Mặc dù trước đó trang web giữ mức hiển thị ổn định từ 1% đến 2% trong suốt 14 tháng, chỉ số này đã rơi xuống 0,02% và không thể phục hồi sau 4 tháng. Nguyên nhân được cho là sự kết hợp giữa việc đổi tên miền, các đợt cập nhật thuật toán lõi và lỗi kỹ thuật chưa xử lý. Bài học đặt ra cho các nhà quản lý là mọi kế hoạch di chuyển tên miền phải chuẩn bị ngân sách cho khoảng thời gian phục hồi kéo dài nhiều tháng."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing cần tái cơ cấu ưu tiên kỹ thuật: chuyển trọng tâm sang chuẩn hóa Product Feed để chiếm lĩnh kênh AI Commerce (ChatGPT) bên cạnh Google Shopping. Đồng thời, việc đánh giá hiệu quả bài đăng địa phương trên Google Business Profile đã có số liệu đo lường cụ thể, và các dự án di chuyển tên miền website cần được siết chặt kiểm soát rủi ro.",
+    "ifIgnored": "Nếu bỏ qua việc chuẩn hóa Product Feed, thương hiệu sẽ bị loại khỏi danh sách khuyến nghị của ChatGPT khi người dùng tìm kiếm sản phẩm. Nếu tùy tiện đổi tên miền hoặc duy trì các trang rác tự động, website có thể đối mặt với nguy cơ mất 98% traffic tự nhiên mà mất nhiều tháng cùng chi phí lớn vẫn chưa thể khôi phục.",
+    "actionChecklist": [
+      "Tối ưu và chuẩn hóa dữ liệu Product Feed (như Google Merchant Feed) để sẵn sàng cung cấp cho các trợ lý mua sắm AI.",
+      "Truy cập bảng điều khiển Google Business Profile để đánh giá lại hiệu quả hiển thị của các bài đăng trong 18 tháng qua.",
+      "Rà soát loại bỏ các trang tự động tạo nội dung mỏng, kém chất lượng cũ để tránh bị Google đánh tụt điểm uy tín toàn trang.",
+      "Tạm dừng các kế hoạch thay đổi tên miền nếu chưa chuẩn bị sẵn kịch bản xử lý rủi ro sụt giảm traffic kéo dài từ 3-6 tháng."
+    ],
+    "id": "real-2026-09-12-chatgpt-shopping-tang-phu-e87293",
+    "publishedAt": "12/09/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/google-search-redesign-business-profile-post-views-seo-pulse/589151/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/09/seo-pulse-google-search-redesign-featured-1600x840-1.jpg",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
     "title": "Kỹ thuật lồng cụm từ Matryoshka giúp đón đầu truy vấn AI và 15% từ khóa mới trên Google",
     "isHot": false,
     "illustration": "zero-click",
@@ -253,69 +316,6 @@
     "image": {
       "url": "https://ppc.land/content/images/2026/09/Amazon-starts-selling-ads-inside-ChatGPT-to-its-own-advertisers.jpg",
       "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Google bổ sung lại chỉ số lượt xem bài viết trên Google Business Profile",
-    "isHot": false,
-    "illustration": "data-signal",
-    "readTime": "3 phút đọc",
-    "tags": [
-      "Google Business Profile",
-      "Local SEO",
-      "Google Maps",
-      "Đo lường hiệu quả"
-    ],
-    "summary": "Google bắt đầu triển khai tính năng hiển thị lượt xem cho từng bài viết trên giao diện quản trị Google Business Profile trên toàn cầu. Dữ liệu này hợp nhất lượng hiển thị từ cả Google Search lẫn Google Maps cho các bài đăng trong vòng 18 tháng qua. Đây là sự quay trở lại của chỉ số đo lường trực tiếp sau hơn 3,5 năm bị loại bỏ khỏi nền tảng.",
-    "keyNumbers": [
-      {
-        "value": "18 tháng",
-        "label": "Phạm vi dữ liệu bài đăng được ghi nhận"
-      },
-      {
-        "value": "20/02/2023",
-        "label": "Thời điểm Google từng khai tử chỉ số lượt xem cũ"
-      },
-      {
-        "value": "3,5 năm",
-        "label": "Khoảng thời gian tính năng bị gián đoạn trước khi quay lại"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Cập nhật lượt xem trực tiếp trên bảng điều khiển",
-        "body": "Google đã thông báo chính thức việc triển khai tính năng báo cáo lượt xem bài viết trên Google Business Profile trên phạm vi toàn cầu. Số lượt xem sẽ được hiển thị ngay trên từng thẻ bài viết trong phần quản trị nội dung. Chỉ số này tổng hợp toàn bộ lượt hiển thị của khách hàng nội địa đến từ cả hai nguồn Google Search và Google Maps. Hiện tại, tính năng áp dụng cho tất cả các định dạng bài viết bao gồm bản cập nhật, ưu đãi và sự kiện."
-      },
-      {
-        "heading": "Giới hạn kỹ thuật và khả năng truy cập qua API",
-        "body": "Dù đã xuất hiện trên giao diện quản trị người dùng, Google xác nhận dữ liệu lượt xem này hiện chưa được mở qua cổng API. Điều này đồng nghĩa với việc các công cụ quản lý của bên thứ ba chưa thể tự động tổng hợp chỉ số này. Hệ thống báo cáo hiện ghi nhận dữ liệu theo dạng cuốn chiếu cho các bài viết được xuất bản trong 18 tháng gần nhất. Người quản lý tài khoản phải kiểm tra thủ công trực tiếp trên dashboard của Google."
-      },
-      {
-        "heading": "Lịch sử thay đổi chỉ số đo lường local",
-        "body": "Trước đó, Google từng cung cấp chỉ số lượt xem và lượt nhấp cho từng bài đăng trên trang doanh nghiệp. Tuy nhiên, hãng đã ngưng hỗ trợ hai chỉ số này cùng với lượt xem ảnh kể từ ngày 20/02/2023 trong quá trình chuyển đổi sang Business Profile Performance API. Sự quay trở lại lần này đánh dấu khoảng thời gian 3,5 năm tính năng bị loại bỏ không có công cụ thay thế chính thức. Cập nhật mới giúp doanh nghiệp khôi phục khả năng đánh giá mức độ quan tâm của khách hàng địa phương."
-      },
-      {
-        "heading": "Những điểm cần tiếp tục theo dõi trong định nghĩa chỉ số",
-        "body": "Bản tin của Google hiện mới đề cập đến lượt xem bài viết mà chưa có số liệu về lượt nhấp vào bài đăng. Ngoài ra, tài liệu hướng dẫn chưa định rõ lượt xem là lượt người dùng duy nhất hay tổng số lần xuất hiện trên màn hình. Trong khi đó, báo cáo hiệu suất chung của hồ sơ doanh nghiệp hiện đếm mỗi người dùng một lần trong ngày. Việc kết nối Google Business Profile với ứng dụng Gemini trong tương lai cũng mở ra khả năng khai thác dữ liệu này bằng công cụ AI."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing có thể đánh giá chính xác loại nội dung địa phương nào thu hút khách hàng trên Google Search và Maps mà không cần đầu tư công cụ bên thứ ba. Điều này giúp tối ưu hóa chiến lược nội dung Local SEO và phân bổ nguồn lực sản xuất nội dung hiệu quả hơn.",
-    "ifIgnored": "Doanh nghiệp sẽ tiếp tục làm nội dung Local SEO theo cảm tính, lãng phí nguồn lực vào các bài đăng không tạo ra lượt hiển thị thực tế trên Google Maps và Search.",
-    "actionChecklist": [
-      "Truy cập bảng điều khiển Google Business Profile để kiểm tra tính năng hiển thị lượt xem bài viết.",
-      "Thống kê lượt xem của các bài đăng trong 18 tháng qua để nhận diện định dạng nội dung thu hút nhất.",
-      "Tăng cường tần suất xuất bản các dạng bài ưu đãi và sự kiện có lượt hiển thị cao trên Google Maps.",
-      "Theo dõi các cập nhật tiếp theo từ Google về việc tích hợp chỉ số này vào API và ứng dụng AI."
-    ],
-    "id": "real-2026-09-10-google-bo-sung-lai-296281",
-    "publishedAt": "10/09/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/google-business-profile-post-view-counts/589128/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/09/google-business-profile-post-view-counts-featured.jpg",
-      "credit": "Ảnh: Search Engine Journal"
     }
   },
   {
