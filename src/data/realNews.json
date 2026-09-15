@@ -1,5 +1,186 @@
 [
   {
+    "category": "AI Marketing",
+    "platformIcon": "Sparkles",
+    "title": "X đối mặt khủng hoảng an toàn thương hiệu khi chatbot Grok bị cáo buộc tạo nội dung độc hại",
+    "isHot": false,
+    "illustration": "account-security",
+    "readTime": "3 phút đọc",
+    "tags": [
+      "An toàn thương hiệu",
+      "Quảng cáo trên X",
+      "Trí tuệ nhân tạo",
+      "Rủi ro pháp lý"
+    ],
+    "summary": "Báo cáo mới từ Trung tâm Bảo vệ Trẻ em Canada (CCCP) cho thấy chatbot Grok của X vẫn tiếp tục tạo ra các nội dung bị cấm. Bất chấp những cam kết của Elon Musk về việc làm sạch nền tảng, các thử nghiệm thực tế cho thấy X vẫn chưa thể kiểm soát triệt để các nội dung độc hại, gây lo ngại lớn về an toàn thương hiệu cho các nhà quảng cáo.",
+    "keyNumbers": [
+      {
+        "value": "1",
+        "label": "Mức độ ưu tiên được Elon Musk tuyên bố để loại bỏ nội dung độc hại"
+      },
+      {
+        "value": "2022",
+        "label": "Năm Elon Musk mua lại Twitter và cam kết cải tổ nền tảng"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Chatbot Grok tiếp tục tạo nội dung bị cấm",
+        "body": "Báo cáo từ Trung tâm Bảo vệ Trẻ em Canada (CCCP) chỉ ra chatbot Grok của X vẫn cho phép người dùng tạo ra các nội dung độc hại bị cấm. Thử nghiệm từ tờ New York Times cũng xác nhận người dùng X liên tục chia sẻ các nội dung vi phạm pháp luật lên ứng dụng. Đáng chú ý, nhiều nội dung trong số này đã từng bị các cơ quan chức năng gắn cờ cảnh báo trước đó nhưng vẫn xuất hiện trở lại."
+      },
+      {
+        "heading": "Xung đột giữa tự do ngôn luận và kiểm duyệt",
+        "body": "Sau khi mua lại Twitter vào năm 2022, Elon Musk từng tuyên bố việc loại bỏ nội dung lạm dụng là ưu tiên số một. Tuy nhiên, các phân tích từ bên thứ ba cho thấy vấn đề này vẫn chưa được giải quyết triệt để dưới thời ban quản lý mới. Triết lý đề cao tự do ngôn luận của X được cho là đang xung đột trực tiếp với các nỗ lực lọc bỏ nội dung độc hại trên nền tảng."
+      },
+      {
+        "heading": "Trào lưu deepfake và rủi ro từ AI",
+        "body": "Trào lưu tạo ảnh khỏa thân giả mạo bằng chatbot Grok vào năm 2026 đã khiến dư luận phẫn nộ, đặc biệt khi có cả hình ảnh của trẻ vị thành niên. Dù X tuyên bố đã thực hiện các thay đổi để hạn chế việc lạm dụng Grok, các báo cáo thực tế cho thấy công cụ này vẫn có thể bị lợi dụng để tạo ra các hình ảnh nhạy cảm. X thậm chí đang phải đối mặt với vụ kiện từ các nạn nhân với cáo buộc Grok được huấn luyện trên các dữ liệu vi phạm có sẵn."
+      },
+      {
+        "heading": "Phản ứng pháp lý từ phía X",
+        "body": "Thay vì hợp tác toàn diện, X đã cố gắng ngăn chặn việc thực thi một đạo luật cấm công nghệ tạo ảnh khỏa thân giả mạo. Nền tảng này lập luận rằng các luật đề xuất đã vượt quá phạm vi của hiến pháp Mỹ. Động thái này càng làm tăng thêm lo ngại từ các cơ quan quản lý và các đối tác quảng cáo về trách nhiệm xã hội của nền tảng."
+      }
+    ],
+    "impact": "Các thương hiệu chạy quảng cáo trên X đối mặt với rủi ro cực kỳ lớn về an toàn thương hiệu (brand safety) khi quảng cáo có thể xuất hiện cạnh các nội dung độc hại hoặc hình ảnh do AI tạo ra trái phép. Điều này có thể dẫn đến làn sóng tẩy chay từ người tiêu dùng và ảnh hưởng nghiêm trọng đến uy tín doanh nghiệp.",
+    "ifIgnored": "Nếu tiếp tục đổ ngân sách vào X mà không có biện pháp kiểm soát chặt chẽ, doanh nghiệp có nguy cơ bị cáo buộc gián tiếp tài trợ cho nền tảng dung túng nội dung độc hại, dẫn đến khủng hoảng truyền thông nghiêm trọng và thiệt hại tài chính không thể cứu vãn.",
+    "actionChecklist": [
+      "Rà soát và tạm dừng các chiến dịch quảng cáo tự động trên X nếu không thể đảm bảo vị trí hiển thị an toàn.",
+      "Thiết lập danh sách loại trừ từ khóa và bộ lọc an toàn thương hiệu nghiêm ngặt nhất trong trình quản lý quảng cáo của X.",
+      "Chuyển dịch một phần ngân sách sang các nền tảng có cơ chế kiểm duyệt nội dung bằng AI và con người chặt chẽ hơn.",
+      "Xây dựng kịch bản ứng phó khủng hoảng truyền thông phòng trường hợp hình ảnh thương hiệu bị hiển thị cạnh nội dung nhạy cảm."
+    ],
+    "id": "real-2026-09-14-x-doi-mat-khung-9e4822",
+    "publishedAt": "14/09/2026",
+    "sourceUrl": "https://www.socialmediatoday.com/news/x-continues-to-host-csam-content/830362/",
+    "source": "Social Media Today",
+    "image": {
+      "url": "https://imgproxy.divecdn.com/W_TCtBYhu4MQro5UOQE0aE1kuTQkkDulhVjLmSqRFdk/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS94X2xvZ28ucG5n.webp",
+      "credit": "Ảnh: Social Media Today"
+    }
+  },
+  {
+    "category": "Meta Ads",
+    "platformIcon": "Facebook",
+    "title": "LinkedIn chia sẻ bí quyết tối ưu Thought Leader Ads giúp tăng gấp 1,6 lần tương tác",
+    "isHot": false,
+    "illustration": "creative-fatigue",
+    "readTime": "3 phút đọc",
+    "tags": [
+      "LinkedIn Ads",
+      "Thought Leader Ads",
+      "B2B Marketing",
+      "Quảng cáo UGC"
+    ],
+    "summary": "LinkedIn vừa chia sẻ các bí quyết tối ưu định dạng quảng cáo Thought Leader Ads nhằm tăng cường thông điệp thương hiệu và thúc đẩy tương tác tốt hơn. Định dạng này cho phép doanh nghiệp tài trợ bài viết của bất kỳ người dùng nào để tận dụng tiếng nói cá nhân uy tín.",
+    "keyNumbers": [
+      {
+        "value": "1,6 lần",
+        "label": "Tương tác cao hơn so với quảng cáo hình ảnh đơn lẻ"
+      },
+      {
+        "value": "71%",
+        "label": "Nhà quyết định thấy thought leadership hiệu quả hơn quảng cáo truyền thống"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Sức mạnh từ tiếng nói của bên thứ ba",
+        "body": "LinkedIn đã mở rộng tính năng Thought Leader Ads cho phép doanh nghiệp tài trợ bài viết từ bất kỳ người dùng nào thay vì chỉ giới hạn ở nhân viên công ty từ tháng 3 năm 2025. Đến tháng 8 tiếp theo, nền tảng tiếp tục bổ sung định dạng này cho các sự kiện. Việc tận dụng đánh giá và chia sẻ từ khách hàng hoặc chuyên gia độc lập giúp tăng mức độ tin cậy của thương hiệu đối với nhóm khách hàng mục tiêu."
+      },
+      {
+        "heading": "Hiệu quả vượt trội so với quảng cáo truyền thống",
+        "body": "Số liệu từ LinkedIn cho thấy 71% nhà quyết định đánh giá nội dung dẫn dắt tư duy mang lại hiệu quả cao hơn các phương thức tiếp cận quảng cáo truyền thống. Đặc biệt, các nhà tiếp thị B2B ghi nhận tỷ lệ tương tác cao hơn gấp 1,6 lần khi sử dụng Thought Leader Ads so với định dạng quảng cáo một hình ảnh thông thường. Đây là cơ hội lớn để tối ưu chi phí quảng cáo trên nền tảng chuyên nghiệp này."
+      },
+      {
+        "heading": "Cách thức hoạt động và ứng dụng thực tế",
+        "body": "Định dạng này cho phép các thương hiệu trực tiếp thúc đẩy các nội dung do người dùng tự tạo có phản hồi tích cực về sản phẩm hoặc dịch vụ của mình. Bằng cách biến các bài đăng tự nhiên của khách hàng thành quảng cáo, doanh nghiệp có thể tiếp cận tệp đối tượng rộng hơn dưới danh nghĩa một lời khuyên hoặc đánh giá khách quan. Điều này giúp giảm thiểu tâm lý đề phòng của người xem đối với các nội dung quảng cáo thông thường."
+      },
+      {
+        "heading": "Chiến lược tối ưu hóa định dạng mới",
+        "body": "Để khai thác tối đa hiệu quả, doanh nghiệp cần chủ động tìm kiếm và lựa chọn các bài viết chất lượng từ các chuyên gia trong ngành hoặc khách hàng thực tế. Việc kết hợp Thought Leader Ads với các chiến dịch quảng bá sự kiện cũng là một hướng đi tiềm năng giúp tăng tỷ lệ đăng ký và tham gia. Doanh nghiệp nên duy trì sự chân thực của nội dung gốc thay vì cố gắng can thiệp quá sâu vào văn phong của người viết."
+      }
+    ],
+    "impact": "Giúp Trưởng phòng Marketing B2B dịch chuyển ngân sách từ quảng cáo banner truyền thống sang quảng cáo dựa trên uy tín cá nhân, tối ưu hóa chi phí cơ hội và gia tăng tỷ lệ chuyển đổi từ nhóm khách hàng doanh nghiệp khó tính.",
+    "ifIgnored": "Tiếp tục lãng phí ngân sách vào các định dạng quảng cáo hình ảnh đơn lẻ vốn đang bị bão hòa nội dung, bỏ lỡ cơ hội tiếp cận các nhà quyết định thông qua những tiếng nói có sức ảnh hưởng trong ngành.",
+    "actionChecklist": [
+      "Rà soát lại các bài đăng tự nhiên của chuyên gia hoặc khách hàng nói tốt về thương hiệu trên LinkedIn.",
+      "Thử nghiệm phân bổ một phần ngân sách LinkedIn Ads sang định dạng Thought Leader Ads.",
+      "Thiết lập quy trình liên hệ và xin phép người dùng trước khi sử dụng bài viết của họ để chạy quảng cáo.",
+      "Đo lường tỷ lệ tương tác và chi phí trên mỗi lượt chuyển đổi so với quảng cáo hình ảnh truyền thống."
+    ],
+    "id": "real-2026-09-14-linkedin-chia-se-bi-1b9f77",
+    "publishedAt": "14/09/2026",
+    "sourceUrl": "https://www.socialmediatoday.com/news/linkedin-shares-tips-on-thought-leader-ads/830359/",
+    "source": "Social Media Today",
+    "image": {
+      "url": "https://imgproxy.divecdn.com/kBsQZUnMJGNu5-mfeiC8q7KRs8bZKzbo_73rxeVMOiA/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9saW5rZWRpbl90aG91Z2h0X2xlYWRlcl9hZHNfb3ZlcnZpZXdzLnBuZw==.webp",
+      "credit": "Ảnh: Social Media Today"
+    }
+  },
+  {
+    "category": "AI Marketing",
+    "platformIcon": "Sparkles",
+    "title": "Apple cập nhật Apple Intelligence: Safari tự động báo giảm giá và siết thời gian dùng mạng xã hội",
+    "isHot": false,
+    "illustration": "zero-click",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Apple Intelligence",
+      "Trình duyệt Safari",
+      "Quảng cáo mạng xã hội",
+      "Sáng tạo nội dung AI"
+    ],
+    "summary": "Apple chính thức ra mắt loạt cập nhật hệ điều hành mới tích hợp Apple Intelligence với những thay đổi lớn trên trình duyệt Safari và tính năng kiểm soát của phụ huynh. Các cập nhật này trực tiếp đe dọa đến dữ liệu tự nguyện của khách hàng trên các trang bán lẻ và làm giảm lượng truy cập quảng cáo từ tệp người dùng trẻ tuổi. Ngoài ra, việc tích hợp tiêu chuẩn đóng dấu ảnh AI của Google cũng sẽ siết chặt quy trình kiểm duyệt nội dung sáng tạo.",
+    "keyNumbers": [
+      {
+        "value": "16",
+        "label": "Ngôn ngữ được Apple Intelligence hỗ trợ, bao gồm tiếng Việt"
+      },
+      {
+        "value": "13+",
+        "label": "Độ tuổi tối thiểu bắt buộc cho các ứng dụng có tính năng mạng xã hội"
+      },
+      {
+        "value": "6",
+        "label": "Ngôn ngữ Siri AI sẽ hỗ trợ tính đến cuối tháng 10"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Safari tự động báo giá: Cú đòn vào dữ liệu của nhà bán lẻ",
+        "body": "Trình duyệt Safari giờ đây được tích hợp AI để tự động theo dõi các trang sản phẩm, thông báo cho người dùng khi có đợt giảm giá hoặc bổ sung hàng hóa. Trước đây, đây là tính năng độc quyền của các nhà bán lẻ nhằm thu thập địa chỉ email và kích hoạt các chiến dịch tiếp thị lại. Việc Safari tự xử lý quy trình này ngay trên trình duyệt khiến người dùng nhận thông báo mà không cần đăng ký, làm mất đi lượng dữ liệu tự nguyện và các điểm chạm đo lường của thương hiệu."
+      },
+      {
+        "heading": "Siết chặt thời gian sử dụng mạng xã hội của giới trẻ",
+        "body": "Tính năng Screen Time mới cho phép phụ huynh đặt giới hạn thời gian sử dụng hàng ngày theo từng danh mục cụ thể như Mạng xã hội, Trò chơi và Giải trí. Các ứng dụng khai báo có tính năng mạng xã hội trong bảng câu hỏi của App Store từ ngày 09/07/2026 sẽ bị xếp vào nhóm Mạng xã hội và bị áp giới hạn độ tuổi từ 13 trở lên. Thay đổi này chuyển dịch quyền kiểm soát từ tổng thời gian sử dụng thiết bị sang ngân sách thời gian của từng danh mục, ảnh hưởng trực tiếp đến lượng hiển thị quảng cáo hướng đến tệp khách hàng trẻ tuổi."
+      },
+      {
+        "heading": "Watermark SynthID của Google xuất hiện trên ảnh AI của Apple",
+        "body": "Công cụ tạo ảnh Image Playground của Apple sẽ hỗ trợ tiêu chuẩn đóng dấu bản quyền SynthID của Google DeepMind trong bản cập nhật cuối năm nay. Việc Apple áp dụng công nghệ này đồng nghĩa với việc các hình ảnh được tạo hoặc chỉnh sửa bằng AI của Apple sẽ mang siêu dữ liệu ẩn mà các bộ giải mã của Google có thể nhận diện được. Đối với các đội ngũ sáng tạo nội dung quảng cáo, điều này giúp chuẩn hóa quy trình xác thực nguồn gốc ảnh trên cả hai hệ sinh thái quảng cáo lớn nhất thế giới."
+      },
+      {
+        "heading": "Phân mảnh địa lý và lộ trình hỗ trợ ngôn ngữ",
+        "body": "Apple Intelligence hiện hỗ trợ 16 ngôn ngữ, bao gồm cả tiếng Việt, nhưng trợ lý Siri AI mới chỉ ra mắt bản thử nghiệm bằng tiếng Anh. Siri AI sẽ bổ sung thêm 5 ngôn ngữ khác vào tháng 10 bao gồm tiếng Pháp, Nhật, Hàn, Bồ Đào Nha và Tây Ban Nha. Đáng chú ý, do các rào cản pháp lý từ Đạo luật Thị trường Số, Siri AI sẽ bị chặn trên iPhone và iPad tại thị trường EU nhưng vẫn khả dụng trên dòng máy Mac, đồng thời bị vô hiệu hóa hoàn toàn tại thị trường Trung Quốc."
+      }
+    ],
+    "impact": "Làm suy giảm nghiêm trọng hiệu quả của các chiến dịch email marketing và tiếp thị lại dựa trên hành vi theo dõi giá của khách hàng trên website. Đồng thời, lượng tiếp cận quảng cáo đến tệp người dùng dưới 18 tuổi trên các nền tảng mạng xã hội sẽ bị sụt giảm do tính năng giới hạn thời gian nghiêm ngặt của hệ điều hành.",
+    "ifIgnored": "Doanh nghiệp sẽ tiếp tục đổ ngân sách vào các chiến dịch email bám đuổi vô hiệu, mất dấu hành vi khách hàng trên Safari, và không tối ưu hóa kịp thời tệp đối tượng quảng cáo khi lượng truy cập từ giới trẻ bị bóp nghẹt bởi hệ điều hành.",
+    "actionChecklist": [
+      "Rà soát lại hệ thống email tự động báo giảm giá hoặc hàng về để chuẩn bị cho việc sụt giảm tỷ lệ đăng ký mới từ người dùng Safari.",
+      "Kiểm tra lại phân loại ứng dụng trên App Store Connect nếu doanh nghiệp sở hữu ứng dụng có tính năng cộng đồng hoặc mạng xã hội để tránh bị khóa duyệt từ tháng này.",
+      "Yêu cầu đội ngũ sáng tạo gắn nhãn và kiểm tra siêu dữ liệu hình ảnh AI trước khi phân phối trên các nền tảng quảng cáo của Google.",
+      "Điều chỉnh lại kỳ vọng về tần suất hiển thị và lượt tiếp cận khi nhắm mục tiêu vào đối tượng thanh thiếu niên trên mạng xã hội."
+    ],
+    "id": "real-2026-09-14-apple-cap-nhat-apple-2552c8",
+    "publishedAt": "14/09/2026",
+    "sourceUrl": "https://ppc.land/apple-ships-siri-ai-to-eu-macs-but-not-to-eu-iphones/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/09/Apple-ships-Siri-AI-to-EU-Macs-but-not-to-EU-iPhones.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
     "category": "Google Ads & SEO",
     "platformIcon": "Search",
     "title": "ChatGPT Shopping tăng phụ thuộc vào Product Feed, Google Business Profile khôi phục lượt xem bài đăng",
@@ -319,65 +500,6 @@
     }
   },
   {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Video",
-    "title": "YouTube mở rộng tính năng livestream bình luận Watch With cho nhiều nhà sáng tạo",
-    "isHot": false,
-    "illustration": "livestream",
-    "readTime": "3 phút đọc",
-    "tags": [
-      "YouTube Ads",
-      "Livestream Marketing",
-      "Creator Economy",
-      "Video Content"
-    ],
-    "summary": "YouTube đang mở rộng thử nghiệm tính năng Watch With, cho phép các nhà sáng tạo phát sóng phản ứng và bình luận theo thời gian thực ngay bên cạnh các luồng livestream gốc. Cập nhật này mang đến cơ hội lớn cho các thương hiệu trong việc hợp tác với KOL để gia tăng tương tác và chia sẻ dữ liệu người xem trực tiếp.",
-    "keyNumbers": [
-      {
-        "value": "> 30%",
-        "label": "người dùng đăng nhập hàng ngày xem livestream (tháng 9/2025)"
-      },
-      {
-        "value": "2024",
-        "label": "năm YouTube bắt đầu thử nghiệm tính năng Watch With"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Mở rộng tính năng bình luận trực tiếp Watch With",
-        "body": "YouTube đang mở rộng phạm vi thử nghiệm tính năng Watch With cho nhiều nhà sáng tạo nội dung hơn trên nền tảng. Được công bố lần đầu vào năm 2024 để hỗ trợ trải nghiệm xem giải bóng đá NFL, Watch With cho phép creator đưa ra bình luận và phản ứng theo thời gian thực ngay trong lúc theo dõi các sự kiện trực tiếp. Việc mở rộng này nằm trong chiến lược của YouTube nhằm thúc đẩy mức độ gắn kết của người dùng đối với các nội dung dạng phát sóng trực tiếp."
-      },
-      {
-        "heading": "Cơ chế vận hành tính năng React live trên thiết bị di động",
-        "body": "Nhà sáng tạo thuộc nhóm thử nghiệm sẽ thấy nút React live xuất hiện trong bảng Chia sẻ khi xem các luồng trực tiếp đủ điều kiện trên di động. Khi kích hoạt, creator có thể phát sóng phản ứng cá nhân song song với nội dung gốc. Camera điện thoại sẽ tự động khóa ở hướng xoay ngang và không thể tắt trong suốt quá trình ghi hình phản ứng. Người xem từ bất kỳ thiết bị nào cũng sẽ thấy màn hình kết hợp giữa camera của creator và video gốc dưới dạng luồng phát ngang hoặc dọc."
-      },
-      {
-        "heading": "Chính sách doanh thu và chia sẻ dữ liệu đo lường",
-        "body": "Các nhà sáng tạo sử dụng tính năng Watch With vẫn được hưởng doanh thu bình thường từ các phản ứng phát trong luồng livestream của họ. Bên cạnh đó, tính năng này cho phép chia sẻ trực tiếp các chỉ số lượt xem với đơn vị phát sóng nội dung gốc ngay trên ứng dụng. Sự minh bạch về dữ liệu đo lường giúp các bên dễ dàng đánh giá chính xác hiệu quả tương tác thực tế từ tệp khán giả của từng nhà sáng tạo."
-      },
-      {
-        "heading": "Hệ sinh thái hỗ trợ tương tác livestream toàn diện",
-        "body": "Nỗ lực mở rộng Watch With đi cùng hàng loạt thử nghiệm khác của YouTube như bảng xếp hạng livestream để game hóa trải nghiệm người xem và tính năng trạm livestream phát nội dung 24/7. Nền tảng cũng tiếp tục mở rộng tính năng tặng quà trực tiếp để tăng khả năng thương mại hóa cho kênh. Theo báo cáo vào tháng 9/2025, trung bình có hơn 30% người dùng YouTube đăng nhập hàng ngày theo dõi các nội dung phát trực tiếp trên ứng dụng."
-      }
-    ],
-    "impact": "Tạo cơ hội cho Trưởng phòng Marketing triển khai hình thức đồng phát sóng (co-streaming) với KOLs trong các sự kiện ra mắt sản phẩm hoặc livestream bán hàng, giúp nhân bản phạm vi tiếp cận và đo lường được lượng người xem hợp nhất giữa các kênh.",
-    "ifIgnored": "Doanh nghiệp sẽ bỏ lỡ xu hướng tương tác thời gian thực đang tăng trưởng mạnh trên YouTube và mất lợi thế cạnh tranh khi hợp tác với các nhà sáng tạo nội dung so với các đối thủ nhanh nhạy hơn.",
-    "actionChecklist": [
-      "Rà soát danh sách Creator đang hợp tác để kiểm tra quyền truy cập tính năng Watch With trên YouTube.",
-      "Lên kịch bản đồng phát sóng (co-streaming) cho các sự kiện trực tiếp hoặc chiến dịch ra mắt sản phẩm sắp tới.",
-      "Thiết lập quy trình theo dõi chỉ số lượt xem chia sẻ giữa kênh thương hiệu và kênh của đối tác KOL.",
-      "Tối ưu hóa khung hình hiển thị dạng luồng dọc để đảm bảo trải nghiệm hình ảnh tốt nhất trên thiết bị di động."
-    ],
-    "id": "real-2026-09-10-youtube-mo-rong-tinh-eedffd",
-    "publishedAt": "10/09/2026",
-    "sourceUrl": "https://www.marketingdive.com/news/sociable-youtube-expands-watch-with-to-more-creators/830037/",
-    "source": "Marketing Dive",
-    "image": {
-      "url": "https://imgproxy.divecdn.com/UT2LRaVhut016L08QRREUJfgiJWURt-J1dcH-c6624Y/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS95b3V0dWJlX0NUVl91cGRhdGVfMS5wbmc=.webp",
-      "credit": "Ảnh: Marketing Dive"
-    }
-  },
-  {
     "category": "AI Marketing",
     "platformIcon": "Sparkles",
     "title": "Yelp và Hatch tích hợp mô hình GPT-Live-1 của OpenAI nâng cấp toàn diện Voice AI chăm sóc khách hàng",
@@ -504,69 +626,6 @@
     }
   },
   {
-    "category": "Meta Ads",
-    "platformIcon": "Facebook",
-    "title": "Meta mở rộng tính năng kiểm duyệt cộng đồng Community Notes sang Mỹ Latinh",
-    "isHot": false,
-    "illustration": "account-security",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Meta Ads",
-      "Kiểm duyệt nội dung",
-      "Community Notes",
-      "An toàn thương hiệu"
-    ],
-    "summary": "Meta đang mở rộng thử nghiệm tính năng kiểm duyệt dựa vào cộng đồng Community Notes tại 16 quốc gia Mỹ Latinh, từng bước thay thế chương trình xác thực thông tin bên thứ ba. Bước đi này đánh dấu sự chuyển dịch lớn trong cách Meta quản lý nội dung, tương tự như mô hình của mạng xã hội X.",
-    "keyNumbers": [
-      {
-        "value": "16",
-        "label": "quốc gia Mỹ Latinh tham gia thử nghiệm"
-      },
-      {
-        "value": "50%",
-        "label": "tỷ lệ sai sót trong thực thi giảm theo báo cáo của Meta"
-      },
-      {
-        "value": "01/2025",
-        "label": "thời điểm ra mắt Community Notes tại Mỹ"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Mở rộng mô hình kiểm duyệt cộng đồng",
-        "body": "Meta đã chính thức xác nhận việc mở rộng thử nghiệm chương trình xác thực thông tin dựa vào cộng đồng (Community Notes) tại 16 quốc gia Mỹ Latinh, bao gồm Mexico, Argentina, Colombia và Venezuela. Người dùng tại các quốc gia này hiện đã có thể đăng ký làm cộng tác viên viết ghi chú. Khi hệ thống hoạt động ổn định, Meta dự kiến sẽ triển khai toàn diện và dần thay thế chương trình xác thực thông tin thông qua bên thứ ba truyền thống."
-      },
-      {
-        "heading": "Sự thay đổi trong triết lý quản trị nội dung",
-        "body": "Mô hình Community Notes được Meta ra mắt lần đầu tại Mỹ vào tháng 1 năm 2025. Quyết định này thể hiện sự thay đổi lớn khi Meta đi theo hướng tiếp cận của mạng xã hội X, giảm bớt vai trò can thiệp trực tiếp của nền tảng vào việc kiểm duyệt. Bằng cách trao quyền cho người dùng tự quyết định nội dung nào là phù hợp, Meta muốn giảm tải áp lực cho chính mình và hạn chế tầm ảnh hưởng của các tổ chức kiểm duyệt bên ngoài."
-      },
-      {
-        "heading": "Tranh cãi về tính hiệu quả thực tế",
-        "body": "Meta tuyên bố mô hình mới hoạt động hiệu quả khi báo cáo vào tháng 5 năm 2025 cho thấy sai sót trong thực thi đã giảm 50%. Tuy nhiên, các nhà nghiên cứu lo ngại con số này chỉ phản ánh việc giảm tần suất kiểm duyệt nói chung. Để một ghi chú được hiển thị công khai, nó cần đạt được sự đồng thuận từ các cộng tác viên có quan điểm chính trị đối lập, điều rất khó xảy ra đối với các chủ đề nhạy cảm. Do đó, phần lớn các ghi chú cộng đồng thực tế không bao giờ được hiển thị tới người dùng."
-      },
-      {
-        "heading": "Cảnh báo rủi ro từ Ban Giám sát",
-        "body": "Ban Giám sát của Meta (Oversight Board) đã lên tiếng cảnh báo về những rủi ro tiềm ẩn khi mở rộng tính năng này. Tại các quốc gia có tình hình chính trị phức tạp, xung đột hoặc mạng lưới tin giả quy mô lớn, Community Notes có thể gây ra những tổn hại thực tế. Ban Giám sát đã yêu cầu Meta cung cấp báo cáo đánh giá rủi ro cụ thể cho từng quốc gia trước khi mở rộng, nhưng có vẻ Meta vẫn quyết định tiến hành thử nghiệm mà chưa hoàn thành yêu cầu này."
-      }
-    ],
-    "impact": "Thay đổi cách thức hiển thị và xử lý các cáo buộc vi phạm nội dung trên Facebook và Instagram. Thương hiệu có nguy cơ bị người dùng gắn cờ hoặc viết ghi chú tiêu cực mà không có sự can thiệp kịp thời từ đội ngũ kiểm duyệt chuyên nghiệp của Meta, ảnh hưởng trực tiếp đến uy tín chiến dịch quảng cáo.",
-    "ifIgnored": "Doanh nghiệp sẽ bị động khi các nội dung quảng cáo hoặc bài đăng tự nhiên bị cộng đồng gắn nhãn cảnh báo sai lệch mà không biết cơ chế khiếu nại, dẫn đến khủng hoảng truyền thông và sụt giảm hiệu suất quảng cáo nghiêm trọng do thuật toán hạn chế phân phối.",
-    "actionChecklist": [
-      "Theo dõi sát sao các cập nhật về chính sách kiểm duyệt nội dung của Meta tại khu vực Đông Nam Á và Việt Nam.",
-      "Xây dựng quy trình phản ứng nhanh để xử lý các trường hợp bài đăng của thương hiệu bị người dùng gắn nhãn hoặc báo cáo tiêu cực.",
-      "Đảm bảo mọi thông tin, số liệu trong nội dung quảng cáo đều có nguồn đối chứng rõ ràng để tránh bị cộng đồng bắt lỗi.",
-      "Đa dạng hóa kênh truyền thông để giảm bớt sự phụ thuộc hoàn toàn vào cơ chế phân phối tự nhiên của Meta trong bối cảnh kiểm duyệt thay đổi."
-    ],
-    "id": "real-2026-09-10-meta-mo-rong-tinh-d22f63",
-    "publishedAt": "10/09/2026",
-    "sourceUrl": "https://www.socialmediatoday.com/news/meta-expands-community-notes-to-latin-america/830128/",
-    "source": "Social Media Today",
-    "image": {
-      "url": "https://imgproxy.divecdn.com/fEdCsTNytcBe4E8IHiM92zuBWPx-rP9kdKvzGCosT9Q/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9tZXRhX2xvZ28ucG5n.webp",
-      "credit": "Ảnh: Social Media Today"
-    }
-  },
-  {
     "category": "AI Marketing",
     "platformIcon": "Sparkles",
     "title": "Nghiên cứu 120.000 lượt nhắc từ AI: Tín hiệu giúp chuỗi cửa hàng xuất hiện trên ChatGPT và Gemini",
@@ -627,69 +686,6 @@
     "image": {
       "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/09/featured-copy-537.png",
       "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Google phát hành Meridian GeoX mã nguồn mở giúp đo lường quảng cáo địa lý tiết kiệm 31% ngân sách",
-    "isHot": false,
-    "illustration": "data-signal",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Google Ads",
-      "Meridian GeoX",
-      "Đo lường Marketing",
-      "MMM"
-    ],
-    "summary": "Google vừa chính thức chuyển công cụ thử nghiệm địa lý Meridian GeoX từ bản thử nghiệm sang phát hành rộng rãi. Công cụ mã nguồn mở này giúp doanh nghiệp đo lường tác động thực tế của quảng cáo theo vùng địa lý với chi phí thấp hơn và chính xác hơn. Dữ liệu thử nghiệm có thể tích hợp trực tiếp vào mô hình phân bổ ngân sách Meridian phiên bản 2.0.0.",
-    "keyNumbers": [
-      {
-        "value": "31%",
-        "label": "Tiết kiệm ngân sách thử nghiệm địa lý"
-      },
-      {
-        "value": "94%",
-        "label": "Rút ngắn thời gian khởi tạo thiết kế thử nghiệm"
-      },
-      {
-        "value": "2.0.0",
-        "label": "Phiên bản thư viện Meridian cốt lõi"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Chính thức phát hành Meridian GeoX mã nguồn mở",
-        "body": "Google đã công bố mức độ sẵn sàng chung của công cụ thử nghiệm địa lý Meridian GeoX trong buổi phát trực tiếp trên kênh Google Analytics. Đây là công cụ mã nguồn mở miễn phí giúp đo lường hiệu quả quảng cáo bằng cách so sánh giữa khu vực địa lý có hiển thị quảng cáo và khu vực không hiển thị. Kết quả thử nghiệm từ GeoX được kết nối trực tiếp vào mô hình phân bổ ngân sách Marketing Mix Modeling của Google. Điều này giúp thay thế việc phụ thuộc hoàn toàn vào dữ liệu thống kê lịch sử bằng dữ liệu từ thử nghiệm thực tế."
-      },
-      {
-        "heading": "Tiết kiệm 31% ngân sách và tăng 94% tốc độ thiết kế",
-        "body": "Cấu trúc thử nghiệm đa nhóm xử lý so với một nhóm đối chứng chung giúp giảm đáng kể chi phí thử nghiệm. Mức tiết kiệm ngân sách được báo cáo đạt hơn 31% đối với các nhà quảng cáo lớn so với các giải pháp mã nguồn mở tương đương. Bên cạnh đó, việc chuyển đổi sang nền tảng JAX giúp cắt giảm thời gian khởi tạo thiết kế thử nghiệm hơn 94%. Công cụ cũng hỗ trợ nhiều kịch bản như ngừng chạy quảng cáo hoàn toàn hoặc tăng cường ngân sách tại khu vực mục tiêu."
-      },
-      {
-        "heading": "Cải tiến phương pháp lấy mẫu phân tầng nhằm giảm nhiễu",
-        "body": "Meridian GeoX sử dụng phương pháp lấy mẫu phân tầng thay vì ghép cặp thị trường truyền thống để phân chia các khu vực địa lý. Phương pháp cũ thường sử dụng cùng một dữ liệu lịch sử để khớp mô hình và ước tính độ biến động, dễ dẫn đến đánh giá thấp độ nhiễu thực tế. Ngược lại, GeoX đánh giá độ ổn định của thiết kế trên các khoảng thời gian kiểm định độc lập chưa từng dùng để huấn luyện mô hình. Phương pháp này giúp tạo ra bộ đệm tốt hơn trước biến động thực tế và mang lại kết quả thử nghiệm rõ ràng hơn."
-      },
-      {
-        "heading": "Cập nhật Meridian 2.0.0 với khả năng tự động hiệu chỉnh",
-        "body": "Cùng với GeoX, Google ra mắt Meridian phiên bản 2.0.0 vào ngày September 2, 2026 với module tự động hiệu chỉnh thử nghiệm. Module này thực hiện 4 điều chỉnh kỹ thuật để giải quyết chênh lệch giữa thời gian thử nghiệm ngắn hạn và dữ liệu mô hình kéo dài 2 đến 3 năm. Sự kết hợp này giảm bớt rào cản vận hành giữa đội ngũ làm thử nghiệm và đội ngũ phân tích mô hình. Nhà quảng cáo cũng có thể đưa kết quả từ các công cụ thử nghiệm bên ngoài vào thư viện Meridian một cách dễ dàng hơn."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing có thêm công cụ miễn phí chuẩn mực để đo lường mức độ tăng trưởng thực tế của ngân sách quảng cáo đa kênh theo địa lý. Điều này giúp tối ưu hóa việc phân bổ ngân sách giữa Google và các kênh khác dựa trên bằng chứng thử nghiệm thực tế thay vì chỉ dựa vào báo cáo phân bổ lượt chuyển đổi thông thường.",
-    "ifIgnored": "Doanh nghiệp tiếp tục phụ thuộc vào các báo cáo phân bổ dễ bị sai lệch hoặc tốn nhiều chi phí cho các thử nghiệm địa lý thủ công. Việc không hiệu chỉnh mô hình đo lường sẽ dẫn đến nguy cơ phân bổ sai ngân sách lớn vào các kênh không thực sự tạo ra doanh thu tăng thêm.",
-    "actionChecklist": [
-      "Yêu cầu đội ngũ Data hoặc Performance Ads nghiên cứu thư viện mã nguồn mở Meridian v2.0.0.",
-      "Đánh giá tính khả thi của việc thử nghiệm địa lý theo phương pháp lấy mẫu phân tầng GeoX tại Việt Nam.",
-      "Lên kế hoạch kết hợp dữ liệu thử nghiệm thực tế làm đầu vào hiệu chỉnh cho mô hình MMM hiện tại.",
-      "Chuẩn bị hạ tầng kỹ thuật để cập nhật các pipeline dữ liệu tương thích với backend JAX mới."
-    ],
-    "id": "real-2026-09-09-google-phat-hanh-meridian-fb9eae",
-    "publishedAt": "09/09/2026",
-    "sourceUrl": "https://ppc.land/googles-meridian-geox-exits-beta-claiming-31-cheaper-geo-experiments/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/09/Google-s-Meridian-GeoX-exits-beta-claiming-31--cheaper-geo-experiments.jpg",
-      "credit": "Ảnh: PPC Land"
     }
   },
   {
