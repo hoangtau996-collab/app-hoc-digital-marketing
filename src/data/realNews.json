@@ -1,5 +1,190 @@
 [
   {
+    "category": "AI Marketing",
+    "platformIcon": "Sparkles",
+    "title": "Ẩn danh dữ liệu khách hàng làm giảm đến 60% hiệu suất truy xuất thông tin của GPT-4o mini",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Bảo mật dữ liệu",
+      "AI Marketing",
+      "GPT-4o mini",
+      "Hệ thống RAG"
+    ],
+    "summary": "Một nghiên cứu mới công bố chỉ ra rằng việc ẩn danh thông tin cá nhân trong câu lệnh trước khi gửi tới các mô hình ngôn ngữ lớn làm giảm mạnh độ chính xác của AI. Đặc biệt, với tác vụ truy xuất thông tin từ tài liệu, điểm số của GPT-4o mini đã sụt giảm nghiêm trọng từ 0,80 xuống còn 0,32.",
+    "keyNumbers": [
+      {
+        "value": "60%",
+        "label": "mức giảm điểm truy xuất thông tin của GPT-4o mini sau khi ẩn danh"
+      },
+      {
+        "value": "6,9",
+        "label": "điểm phần trăm sụt giảm trung bình của mô hình mạnh nhất Qwen2.5-72B"
+      },
+      {
+        "value": "0,32",
+        "label": "điểm số truy xuất của GPT-4o mini sau khi bị thay thế thông tin cá nhân"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Tác động tiêu cực của việc ẩn danh dữ liệu lên AI",
+        "body": "Nghiên cứu từ Đại học Bonn, Fraunhofer IAIS, Viện Lamarr và Microsoft Đức cho thấy việc thay thế các chi tiết cá nhân bằng các nhãn tạm thời trước khi gửi đến AI làm giảm mạnh hiệu suất của mô hình. Khi thử nghiệm trên năm mô hình ngôn ngữ lớn khác nhau, việc ẩn danh hầu như không ảnh hưởng đến các câu hỏi suy luận đơn giản. Tuy nhiên, phương pháp này lại phá hỏng nghiêm trọng các tác vụ yêu cầu AI phải tra cứu thông tin trong tài liệu. Các mô hình càng mạnh mẽ thì mức độ sụt giảm hiệu suất lại càng lớn sau khi bị ẩn danh dữ liệu."
+      },
+      {
+        "heading": "Sự sụp đổ của hệ thống truy xuất thông tin RAG",
+        "body": "Trong thử nghiệm với benchmark RGB, vốn đánh giá khả năng tích hợp thông tin từ nhiều tài liệu và lọc nhiễu của AI, tất cả các mô hình đều ghi nhận sự sụt giảm thê thảm. Điểm số của GPT-4o mini giảm từ 0,80 xuống còn 0,32, tương đương mức giảm 60%. Mô hình Qwen2.5-72B cũng rơi từ 0,82 xuống 0,38, trong khi Llama-3.1-8B giảm từ 0,69 xuống 0,34. Các nhà nghiên cứu gọi đây là sự suy giảm thảm khốc. Việc thay thế các thực thể cụ thể bằng các nhãn trừu tượng như LOC-1 đã phá vỡ khả năng liên kết các sự thật giữa nhiều nguồn tài liệu của AI."
+      },
+      {
+        "heading": "Nguyên nhân đằng sau sự suy giảm hiệu suất",
+        "body": "Mức độ thiệt hại của mô hình phụ thuộc vào việc tác vụ đó phụ thuộc bao nhiêu vào ý nghĩa của các thực thể cụ thể, chứ không phải số lượng thực thể xuất hiện trong văn bản. Phân tích tương quan cho thấy không có mối quan hệ có ý nghĩa thống kê giữa mức giảm hiệu suất với tổng số thực thể, số thực thể độc nhất hay độ dài đầu vào. Ví dụ, trong benchmark MUSR, dù đầu vào dài trung bình 1.317 token và chứa 67,47 lượt nhắc đến thực thể, điểm số của GPT-4o mini vẫn giữ nguyên ở mức 0,70. Ngược lại, RGB có số lượng thực thể khác biệt cao gấp bốn lần trên mỗi đầu vào, khiến AI dễ bị nhầm lẫn khi bị ẩn danh."
+      },
+      {
+        "heading": "Nghịch lý của các mô hình AI mạnh mẽ nhất",
+        "body": "Các mô hình có điểm nền tảng cao nhất như Qwen2.5-72B và GPT-4o mini lại là những mô hình chịu tổn thất lớn nhất khi bị ẩn danh dữ liệu. Điểm trung bình của Qwen2.5-72B giảm tới 6,9 điểm phần trăm trên 11 benchmark, so với mức giảm chỉ 2,3 điểm của Teuken-7B, mô hình yếu nhất trong nhóm thử nghiệm. Các nhà nghiên cứu nhận định rằng các mô hình thông minh hơn thường dựa dẫm nhiều hơn vào kiến thức thực thể cụ thể để đưa ra câu trả lời chính xác. Do đó, khi các thông tin này bị che đi, lợi thế về mặt trí tuệ của các mô hình lớn bị triệt tiêu đáng kể."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing đang đối mặt với thế tiến thoái lưỡng nan: bảo vệ quyền riêng tư của khách hàng bằng cách ẩn danh dữ liệu trong CRM hoặc chat log sẽ trực tiếp làm tê liệt các hệ thống chatbot chăm sóc khách hàng hoặc AI phân tích dữ liệu tự động. Việc này khiến AI trả lời sai lệch, không tìm đúng thông tin mua hàng hoặc lịch sử dịch vụ của khách, dẫn đến trải nghiệm khách hàng tệ đi rõ rệt dù đang dùng các mô hình hàng đầu như GPT-4o mini.",
+    "ifIgnored": "Nếu tiếp tục nhắm mắt ẩn danh dữ liệu theo cách thủ công hoặc dùng công cụ thay thế nhãn thông thường mà không tối ưu lại hệ thống AI, doanh nghiệp sẽ lãng phí ngân sách vận hành các mô hình AI đắt đỏ nhưng chỉ nhận lại kết quả sai lệch. Ngược lại, nếu không ẩn danh để giữ độ chính xác cho AI, doanh nghiệp sẽ đối mặt với nguy cơ rò rỉ dữ liệu khách hàng nghiêm trọng và vi phạm các quy định pháp lý về bảo mật thông tin.",
+    "actionChecklist": [
+      "Đánh giá lại toàn bộ các chatbot chăm sóc khách hàng và hệ thống AI phân tích dữ liệu đang áp dụng giải pháp ẩn danh dữ liệu.",
+      "Phân loại các tác vụ AI: giữ nguyên việc ẩn danh cho các tác vụ suy luận đơn giản, nhưng cần thiết kế lại quy trình cho các tác vụ tra cứu tài liệu.",
+      "Thử nghiệm giải pháp mã hóa hai chiều bảo toàn ngữ nghĩa thay vì chỉ thay thế bằng các nhãn trừu tượng để AI không bị mất liên kết thông tin.",
+      "Thiết lập quy trình đo lường độ chính xác nội bộ trước và sau khi áp dụng bất kỳ giải pháp che giấu dữ liệu nào trên các mô hình AI đang dùng."
+    ],
+    "id": "real-2026-09-19-an-danh-du-lieu-6d742d",
+    "publishedAt": "19/09/2026",
+    "sourceUrl": "https://ppc.land/anonymizing-prompts-cuts-openais-gpt-4o-mini-retrieval-score-by-60/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/09/Anonymizing-prompts-cuts-OpenAI-s-GPT-4o-mini-retrieval-score-by-60-.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Tại sao CFO luôn ưu tiên cắt giảm ngân sách Marketing và cách bảo vệ ngân sách bằng tư duy quản trị rủi ro",
+    "isHot": false,
+    "illustration": "ai-budget",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Ngân sách Marketing",
+      "Định giá thương hiệu",
+      "Báo cáo tài chính",
+      "Quản trị rủi ro"
+    ],
+    "summary": "Dù 79% nhà đầu tư đánh giá thương hiệu là tài sản quan trọng nhất của doanh nghiệp, có tới 52% vẫn ủng hộ việc cắt giảm ngân sách tiếp thị khi gặp khó khăn tài chính. Nguyên nhân cốt lõi nằm ở tiêu chuẩn kế toán quốc tế IAS 38 buộc marketing phải ghi nhận là chi phí thay vì tài sản, khiến việc cắt giảm trở thành cách nhanh nhất để làm đẹp báo cáo tài chính ngắn hạn. Để bảo vệ ngân sách, các Trưởng phòng Marketing cần thay đổi ngôn ngữ giao tiếp với ban giám đốc, chuyển từ chứng minh hiệu quả sinh lời sang phân tích rủi ro nếu không đầu tư.",
+    "keyNumbers": [
+      {
+        "value": "79%",
+        "label": "Nhà đầu tư coi thương hiệu là yếu tố hàng đầu đánh giá doanh nghiệp"
+      },
+      {
+        "value": "52%",
+        "label": "Nhà đầu tư ủng hộ việc cắt giảm ngân sách tiếp thị"
+      },
+      {
+        "value": "89%",
+        "label": "Nhà đầu tư muốn vốn hóa chi phí marketing thay vì hạch toán chi phí"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Nghịch lý giữa giá trị thương hiệu và hành động thực tế",
+        "body": "Khảo sát từ IPA đối với khoảng 200 nhà phân tích và nhà đầu tư tại Mỹ và Anh cho thấy một nghịch lý lớn trong quản trị. Có đến 79% người tham gia khảo sát xếp thương hiệu ở vị trí cao nhất khi đánh giá vị thế của một doanh nghiệp, vượt qua cả lợi nhuận báo cáo và năng lực quản lý. Tuy nhiên, 52% trong số họ lại đồng ý rằng cắt giảm chi phí marketing là một biện pháp tích cực trong ngắn hạn. Chỉ có 36% tin rằng việc giảm chi phí này sẽ gây ra những tổn hại lâu dài cho doanh nghiệp."
+      },
+      {
+        "heading": "Rào cản cơ học từ tiêu chuẩn kế toán IAS 38",
+        "body": "Nguyên nhân sâu xa của nghịch lý này nằm ở tiêu chuẩn kế toán quốc tế IAS 38 về tài sản vô hình. Theo quy định này, các thương hiệu tự thân phát triển không được ghi nhận là tài sản trên bảng cân đối kế toán mà phải hạch toán trực tiếp vào chi phí vận hành. Do đó, khi doanh nghiệp cần đạt các chỉ số lợi nhuận quý để làm hài lòng thị trường, marketing trở thành khoản mục dễ bị cắt giảm nhất. Việc cắt giảm này mang lại hiệu quả tức thì cho dòng lợi nhuận hiện tại, trong khi những thiệt hại về thương hiệu chỉ xuất hiện sau đó nhiều năm."
+      },
+      {
+        "heading": "Chuyển dịch ngôn ngữ từ hiệu quả sang quản trị rủi ro",
+        "body": "Các Trưởng phòng Marketing thường cố gắng bảo vệ ngân sách bằng cách đưa ra hàng loạt dữ liệu về hiệu suất, lượt tiếp cận hoặc mô hình phân bổ. Tuy nhiên, ban giám đốc và CFO không quyết định dựa trên việc marketing có hiệu quả hay không, mà họ đang cân nhắc phân bổ vốn trong một môi trường bất định. Thay vì hứa hẹn về tỷ suất sinh lời vốn mang nhiều yếu tố không chắc chắn, marketer nên học cách trình bày ngân sách dưới góc độ giảm thiểu rủi ro. Hãy mô tả rõ ràng những tổn thất nghiêm trọng mà doanh nghiệp phải gánh chịu nếu không tiếp tục đầu tư vào thương hiệu."
+      },
+      {
+        "heading": "Động cơ cá nhân đằng sau các quyết định cắt giảm ngân sách",
+        "body": "Tâm lý học hành vi chỉ ra rằng con người có xu hướng sợ mất mát hơn là mong muốn đạt được một khoản lợi nhuận tương đương. Việc cắt giảm ngân sách marketing cực kỳ hấp dẫn đối với các giám đốc tài chính vì nó không mang lại rủi ro cá nhân tức thì. Khi những tác hại của việc suy giảm thương hiệu bắt đầu lộ diện rõ ràng sau vài năm, người đưa ra quyết định cắt giảm thường đã được thăng tiến hoặc chuyển sang một công ty khác. Hiểu được tâm lý này giúp marketer xây dựng các kịch bản phòng thủ ngân sách chặt chẽ hơn, gắn liền trách nhiệm dài hạn với các quyết định ngắn hạn."
+      }
+    ],
+    "impact": "Giúp Trưởng phòng Marketing tại Việt Nam hiểu rõ bản chất cơ học của việc cắt giảm ngân sách từ góc độ tài chính. Từ đó, thay đổi hoàn toàn cách chuẩn bị slide và thuyết trình ngân sách trước CFO và CEO, không còn tập trung vào các chỉ số kỹ thuật mà tập trung vào quản trị rủi ro và bảo vệ thị phần.",
+    "ifIgnored": "Tiếp tục bị động trong các cuộc họp ngân sách, liên tục bị cắt giảm chi phí quảng cáo mỗi khi thị trường biến động, dẫn đến mất thị phần vào tay đối thủ và không thể xây dựng được tài sản thương hiệu dài hạn.",
+    "actionChecklist": [
+      "Ngừng sử dụng các thuật ngữ kỹ thuật như reach, CTR hay CPM khi trình bày kế hoạch ngân sách trước CFO và CEO.",
+      "Xây dựng kịch bản Chi phí của việc không hành động (Cost of Inaction), nêu rõ thiệt hại về thị phần và chi phí chuyển đổi khách hàng nếu cắt giảm ngân sách.",
+      "Phân loại ngân sách marketing thành hai phần rõ rệt: chi phí vận hành ngắn hạn và đầu tư tài sản dài hạn.",
+      "Chủ động làm việc với bộ phận kế toán nội bộ để hiểu cách doanh nghiệp đang hạch toán chi phí tiếp thị theo chuẩn mực hiện hành."
+    ],
+    "id": "real-2026-09-19-tai-sao-cfo-luon-cefdd6",
+    "publishedAt": "19/09/2026",
+    "sourceUrl": "https://ppc.land/investors-rank-brand-first-but-52-back-marketing-cuts-whittaker-says/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/09/Investors-rank-brand-first-but-52--back-marketing-cuts--Whittaker-says.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Google thử nghiệm trả phí cho nội dung AI và hạ ngưỡng Search Profiles xuống 10.000 người theo dõi",
+    "isHot": false,
+    "illustration": "zero-click",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Google SEO",
+      "AI Overviews",
+      "Bảo mật dữ liệu",
+      "Search Profiles"
+    ],
+    "summary": "Google đang tiến hành thử nghiệm trả phí cho các website có nội dung đóng góp vào câu trả lời của Gemini và AI Overviews. Đồng thời, nền tảng này cũng hạ mạnh điều kiện sở hữu Search Profiles xuống mức 10.000 người theo dõi và Cloudflare ra mắt giải pháp chặn AI thu thập dữ liệu huấn luyện mà không ảnh hưởng đến SEO.",
+    "keyNumbers": [
+      {
+        "value": "10.000",
+        "label": "lượt theo dõi tối thiểu để sở hữu Search Profiles"
+      },
+      {
+        "value": "15",
+        "label": "tuần chứng kiến Google thay đổi ngưỡng follower đến 3 lần"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Google thử nghiệm trả tiền cho nội dung hiển thị trên AI",
+        "body": "Google đang triển khai một chương trình thử nghiệm sơ khởi nhằm trả phí cho các trang web có nội dung đóng góp đáng kể vào câu trả lời của Gemini và AI Overviews. Các nhà xuất bản tham gia sẽ nhận được một bảng điều khiển trong Search Console hiển thị thu nhập hàng tháng. Tuy nhiên, cơ chế tính toán số tiền này vẫn là một hộp đen không rõ ràng. Một số chuyên gia lo ngại việc nhận khoản thanh toán này có thể làm yếu đi vị thế thương lượng của doanh nghiệp với Google về lâu dài."
+      },
+      {
+        "heading": "Báo cáo vị trí AI trên Search Console vẫn chưa hoàn thiện",
+        "body": "Đại diện Google, John Mueller, thừa nhận việc báo cáo vị trí chính xác của liên kết trong các câu trả lời AI là một thách thức lớn và chưa thực sự hữu ích cho người dùng. Hiện tại, báo cáo hiệu suất AI chỉ ghi nhận lượt hiển thị khi tính năng này xuất hiện trên trang, chứ không cung cấp vị trí xếp hạng cụ thể cho từng liên kết bên trong khối AI Overviews. Liên kết chỉ kế thừa vị trí của chính khối AI đó trên trang kết quả tìm kiếm."
+      },
+      {
+        "heading": "Cloudflare tách biệt việc chặn AI Training và Crawl tìm kiếm",
+        "body": "Cloudflare đã bổ sung tùy chọn 'Disallow AI Training' mới trong tệp robots.txt của người dùng. Tính năng này cho phép các doanh nghiệp ngăn chặn các bot AI thu thập dữ liệu để huấn luyện mô hình như Google-Extended hay Applebot-Extended, nhưng vẫn cho phép các bot tìm kiếm thông thường quét dữ liệu để xếp hạng SEO. Microsoft hiện chưa hỗ trợ chuẩn robots.txt không huấn luyện này nhưng dự kiến sẽ áp dụng vào đầu năm 2027."
+      },
+      {
+        "heading": "Hạ ngưỡng Search Profiles xuống 10.000 người theo dõi",
+        "body": "Google đã giảm mạnh yêu cầu để sở hữu Search Profiles từ mức 100.000 người theo dõi vào tháng 6 xuống còn 10.000 người theo dõi ở thời điểm hiện tại trên các nền tảng YouTube, Instagram, X hoặc TikTok. Tính năng này giúp thương hiệu xuất hiện nổi bật hơn trong bảng tin Discover của người dùng tại Mỹ. Mặc dù không trực tiếp cải thiện thứ hạng SEO, đây là cơ hội lớn để tăng lưu lượng truy cập tự nhiên từ Discover."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing cần thay đổi tư duy đo lường SEO khi các công cụ truyền thống không còn phản ánh đúng vị trí hiển thị trong kỷ nguyên AI. Đồng thời, doanh nghiệp có thêm công cụ để chủ động bảo vệ tài sản trí tuệ trước các mô hình AI mà không sợ bị mất lưu lượng truy cập từ tìm kiếm truyền thống.",
+    "ifIgnored": "Doanh nghiệp sẽ tiếp tục sử dụng các chỉ số SEO lỗi thời để báo cáo hiệu quả, dẫn đến việc đánh giá sai lệch ngân sách. Ngoài ra, việc không cấu hình lại Cloudflare có thể khiến dữ liệu độc quyền của thương hiệu bị các đối thủ AI khai thác miễn phí để huấn luyện mô hình của họ.",
+    "actionChecklist": [
+      "Kiểm tra và cập nhật cấu hình Cloudflare sang tùy chọn Disallow AI Training để bảo vệ dữ liệu",
+      "Yêu cầu đội ngũ SEO điều chỉnh cách báo cáo hiệu suất, tập trung vào lượt hiển thị thay vì cố gắng đo lường vị trí xếp hạng trong AI Overviews",
+      "Liên kết và xác minh tài khoản mạng xã hội có trên 10.000 followers để chuẩn bị sẵn sàng cho tính năng Search Profiles khi Google mở rộng ngoài nước Mỹ",
+      "Theo dõi sát sao các thông báo trong Google Search Console để kiểm tra xem tài khoản có nằm trong danh sách thử nghiệm nhận tiền từ AI của Google hay không"
+    ],
+    "id": "real-2026-09-19-google-thu-nghiem-tra-c371db",
+    "publishedAt": "19/09/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/seo-pulse-google-ai-payment-pilot-search-profiles-at-10000/589849/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/09/seo-pulse-google-ai-payments-featured-1600x840-1.jpg",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
     "category": "Google Ads & SEO",
     "platformIcon": "Search",
     "title": "Cloudflare tự động hóa robots.txt: Con dao hai lưỡi cho SEO và bảo vệ dữ liệu trước AI",
@@ -369,69 +554,6 @@
   {
     "category": "TikTok Shop & Ads",
     "platformIcon": "Video",
-    "title": "Báo cáo IAB: 85% người tiêu dùng dưới 40 tuổi khám phá thương hiệu qua nhà sáng tạo nội dung",
-    "isHot": false,
-    "illustration": "affiliate-commission",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Creator Marketing",
-      "Hành vi mua sắm",
-      "KOL KOC",
-      "Quảng cáo trả phí"
-    ],
-    "summary": "Báo cáo Creator Connect mới nhất từ IAB Australia chỉ ra vai trò ngày càng lớn của nhà sáng tạo nội dung trong hành trình mua sắm của người trẻ dưới 40 tuổi. Tuy nhiên, việc gắn nhãn quảng cáo trả phí đang tạo ra những rào cản tâm lý nhất định đối với người tiêu dùng. Đồng thời, các công cụ tìm kiếm bằng AI cũng bắt đầu tích hợp các đánh giá từ nhà sáng tạo để đưa ra câu trả lời cho người mua hàng.",
-    "keyNumbers": [
-      {
-        "value": "85%",
-        "label": "Người mua sắm từ 30 đến 39 tuổi khám phá thương hiệu qua nhà sáng tạo"
-      },
-      {
-        "value": "44%",
-        "label": "Người tiêu dùng ít muốn mua hàng hơn khi biết bài viết được trả tiền"
-      },
-      {
-        "value": "74%",
-        "label": "Tỷ lệ người coi tính giải trí của nội dung là yếu tố quan trọng để hành động"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Vai trò của nhà sáng tạo trong hành trình mua sắm",
-        "body": "Nghiên cứu từ IAB Australia cho thấy 61% người mua sắm trực tuyến nói chung thường xuyên hoặc thỉnh thoảng khám phá thương hiệu thông qua các nhà sáng tạo nội dung. Tỷ lệ này tăng vọt lên 84% đối với nhóm tuổi từ 18 đến 29 và đạt 85% ở nhóm từ 30 đến 39 tuổi. Khi xét toàn bộ hành trình mua sắm từ khám phá, nghiên cứu đến so sánh, có 48% người tiêu dùng sử dụng nội dung của nhà sáng tạo. Đối với nhóm người trẻ từ 18 đến 39 tuổi, tỷ lệ tham gia này lên tới 72%."
-      },
-      {
-        "heading": "Rào cản từ việc công khai quảng cáo trả phí",
-        "body": "Việc minh bạch thông tin tài trợ mang lại những thách thức không nhỏ cho các nhãn hàng. Có đến 44% người mua sắm trực tuyến tại Úc và 42% tại New Zealand cho biết họ ít có khả năng hành động hơn khi biết một bài viết là quảng cáo được trả tiền. Tác động này đặc biệt nghiêm trọng ở nhóm khách hàng lớn tuổi từ 50 đến 70 tuổi với tỷ lệ lên tới 54%. Dù vậy, báo cáo đánh giá tác động tổng thể của việc công khai này vẫn ở mức vừa phải chứ không mang tính triệt tiêu cơ hội bán hàng."
-      },
-      {
-        "heading": "Uy tín thương hiệu vượt trội hơn tính giải trí",
-        "body": "Khi quyết định có mua hàng theo đề xuất của nhà sáng tạo hay không, người tiêu dùng ưu tiên các yếu tố thực tế hơn là sự vui nhộn. Cụ thể, 86% người mua sắm đánh giá uy tín của thương hiệu được quảng bá là yếu tố quan trọng hàng đầu. Sự chân thực và đáng tin cậy của nhà sáng tạo đạt tỷ lệ 84%, ngang bằng với mức độ hiểu biết chuyên môn của họ. Trong khi đó, tính giải trí hoặc mức độ hấp dẫn của nội dung xếp cuối cùng với chỉ 74% người lựa chọn."
-      },
-      {
-        "heading": "Sự trỗi dậy của AI và xu hướng tự nhận là nhà sáng tạo",
-        "body": "Một điểm mới đáng chú ý là các công cụ mua sắm bằng AI đang bắt đầu khai thác các bài đánh giá trực tuyến từ nhà sáng tạo để cung cấp câu trả lời cho người dùng. Điều này giúp nội dung của nhà sáng tạo tiếp cận người mua thông qua cả chatbot lẫn bảng tin mạng xã hội. Ngoài ra, có tới 21% người mua sắm trực tuyến tại Úc tự nhận mình là nhà sáng tạo nội dung hoặc người ảnh hưởng, chủ yếu tập trung ở nhóm dưới 40 tuổi với tỷ lệ 30%. Tuy nhiên, phần lớn trong số này chỉ là các tài khoản sở thích cá nhân chứ không phải đối tác chuyên nghiệp có thể tạo ra thu nhập lớn."
-      }
-    ],
-    "impact": "Giúp Trưởng phòng Marketing nhận ra rằng việc booking KOL/KOC không chỉ cần tập trung vào tính giải trí hay lượt xem khủng, mà cốt lõi vẫn nằm ở uy tín thương hiệu và sự chân thực của nhà sáng tạo. Đồng thời, việc gắn nhãn quảng cáo (paid partnership) sẽ làm giảm tỷ lệ chuyển đổi trực tiếp, đòi hỏi phải có chiến lược phân phối nội dung tự nhiên hơn hoặc tối ưu hóa nội dung để lọt vào kết quả tìm kiếm của AI.",
-    "ifIgnored": "Nếu tiếp tục booking KOC theo hướng thuần giải trí, giật gân mà bỏ qua độ uy tín thương hiệu và tính chuyên môn, doanh nghiệp sẽ lãng phí ngân sách mà không thu được chuyển đổi thực tế. Đồng thời, việc không chuẩn bị cho làn sóng tìm kiếm bằng AI tích hợp đánh giá của nhà sáng tạo sẽ khiến thương hiệu mất đi một kênh tiếp cận khách hàng tiềm năng cực kỳ lớn trong tương lai gần.",
-    "actionChecklist": [
-      "Thắt chặt tiêu chí lựa chọn KOL KOC bằng cách ưu tiên tính chuyên môn và độ chân thực hơn là chỉ số tương tác giải trí thuần túy",
-      "Xây dựng quy trình kiểm duyệt chất lượng sản phẩm nghiêm ngặt trước khi booking để bảo vệ uy tín thương hiệu vốn là yếu tố quyết định 86% hành vi mua",
-      "Thử nghiệm các định dạng nội dung lồng ghép sản phẩm tự nhiên để giảm thiểu tác động tiêu cực từ việc gắn nhãn quảng cáo trả phí",
-      "Tối ưu hóa các bài đánh giá chi tiết của nhà sáng tạo trên các nền tảng để đón đầu xu hướng tìm kiếm bằng công cụ AI"
-    ],
-    "id": "real-2026-09-17-bao-cao-iab-85-74d7dd",
-    "publishedAt": "17/09/2026",
-    "sourceUrl": "https://ppc.land/iab-australia-85-of-under-40s-find-brands-through-creators/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/09/IAB-Australia-85--of-under-40s-find-brands-through-creators.jpg",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
-    "category": "TikTok Shop & Ads",
-    "platformIcon": "Video",
     "title": "Thương hiệu thời trang Coach kết hợp Spotify và chuỗi sự kiện xe buýt cho chiến dịch mùa thu",
     "isHot": "false",
     "illustration": "ai-video",
@@ -553,133 +675,6 @@
     "image": {
       "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/09/ai-warning-560.png",
       "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
-    "category": "AI Marketing",
-    "platformIcon": "Sparkles",
-    "title": "Fairing thử nghiệm khảo sát 2 bước giúp tăng 50% dữ liệu đối soát chuyển đổi",
-    "isHot": false,
-    "illustration": "data-signal",
-    "readTime": "3 phút đọc",
-    "tags": [
-      "Đối soát chuyển đổi",
-      "Khảo sát sau mua",
-      "Dữ liệu tự nguyện",
-      "Đo lường chiến dịch"
-    ],
-    "summary": "Fairing vừa thử nghiệm tính năng Advanced Attribution, bổ sung câu hỏi phụ tự động sau câu hỏi 'Bạn biết chúng tôi từ đâu?' để làm rõ nguồn chuyển đổi từ YouTube, Podcast hoặc ChatGPT. Thử nghiệm ban đầu cho thấy công cụ này giúp doanh nghiệp thu thập thêm tới 50% dữ liệu đối soát chuẩn xác trên cùng một lượng đơn hàng.",
-    "keyNumbers": [
-      {
-        "value": "50%",
-        "label": "Tăng tối đa dữ liệu đối soát sử dụng được"
-      },
-      {
-        "value": "75%",
-        "label": "Nhà tiếp thị cho rằng các mô hình đối soát hiện tại chưa hiệu quả"
-      },
-      {
-        "value": "48%",
-        "label": "Người dùng MMM nhận định kênh Creator bị đánh giá thấp"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Giải quyết điểm mù của tracking bằng pixel",
-        "body": "Các hệ thống đo lường dựa trên pixel hoặc cookie thường ghi nhận lượt chuyển đổi cuối cùng cho các kênh tìm kiếm như Google hoặc quảng cáo trực tiếp. Tuy nhiên, hành trình thực tế của khách hàng thường bắt đầu từ việc nghe podcast, xem video của creator hoặc tra cứu trên ChatGPT rồi mới tìm kiếm thương hiệu để mua hàng sau đó vài ngày. Điều này khiến các kênh xây dựng nhu cầu bị bỏ qua hoặc đánh giá thấp hiệu quả thực tế. Phương pháp khảo sát sau mua hàng giúp khắc phục nhược điểm này bằng cách thu thập dữ liệu tự nguyện trực tiếp từ người tiêu dùng."
-      },
-      {
-        "heading": "Cơ chế hoạt động của khảo sát hai bước",
-        "body": "Tính năng Advanced Attribution của Fairing sẽ tự động kích hoạt một câu hỏi phụ tùy thuộc vào câu trả lời đầu tiên của khách hàng tại trang xác nhận đơn hàng. Ví dụ, nếu người mua chọn nguồn từ YouTube, hệ thống sẽ hỏi cụ thể họ xem từ nhà sáng tạo nội dung nào. Nếu họ chọn ChatGPT, câu hỏi tiếp theo sẽ yêu cầu mô tả câu lệnh họ đã dùng để tìm kiếm sản phẩm. Cách tiếp cận này giúp chuyển đổi các câu trả lời chung chung ở cấp độ kênh thành các nguồn dữ liệu có tên gọi cụ thể và có thể đo lường được."
-      },
-      {
-        "heading": "Chuẩn hóa dữ liệu tự do bằng danh sách gợi ý tự động",
-        "body": "Một trong những thách thức lớn nhất của việc khảo sát bằng ô nhập văn bản tự do là dữ liệu bị phân mảnh và sai lệch do lỗi chính tả hoặc viết tắt của người dùng. Advanced Attribution giải quyết vấn đề này bằng cách tích hợp danh sách gợi ý tự động được cập nhật liên tục. Khi khách hàng bắt đầu gõ vào ô nhập liệu, các lựa chọn chuẩn hóa sẽ xuất hiện trong thời gian thực để họ chọn lựa. Nhờ đó, đội ngũ phân tích không còn phải tốn thời gian xử lý thủ công hàng trăm biến thể khác nhau của cùng một tên gọi."
-      },
-      {
-        "heading": "Hiệu quả thực tế và lộ trình triển khai",
-        "body": "Theo số liệu từ Fairing, các thương hiệu tham gia thử nghiệm beta từ ngày 10/09/2026 đã ghi nhận lượng dữ liệu đối soát hữu ích tăng tới 50% trên cùng một lượng đơn hàng mà không làm thay đổi tỷ lệ hoàn thành khảo sát. Tính năng này đặc biệt quan trọng trong bối cảnh ngân sách chi cho các kênh khó đo lường trực tiếp như podcast và influencer đang tăng mạnh. Fairing dự kiến sẽ chính thức phát hành rộng rãi tính năng này cho tất cả người dùng vào tháng 01/2027."
-      }
-    ],
-    "impact": "Giúp Trưởng phòng Marketing chứng minh được hiệu quả thực tế (ROI) của các kênh branding, influencer, và tài trợ nội dung vốn trước đây thường bị quy kết sai lệch cho Google Search hoặc Direct do cơ chế last-click của các nền tảng quảng cáo.",
-    "ifIgnored": "Tiếp tục lãng phí ngân sách vào các kênh quảng cáo chuyển đổi trực tiếp đắt đỏ, đồng thời cắt giảm nhầm các kênh creator hoặc tài trợ nội dung thực sự mang lại khách hàng chỉ vì pixel không ghi nhận được lượt click.",
-    "actionChecklist": [
-      "Rà soát lại tỷ lệ chuyển đổi từ nguồn Direct và Brand Search để đánh giá mức độ ảnh hưởng của các kênh truyền thông gián tiếp.",
-      "Thử nghiệm bổ sung câu hỏi phụ (khảo sát 2 bước) trên trang cảm ơn sau khi mua hàng đối với các đơn hàng phát sinh từ chiến dịch influencer hoặc YouTube.",
-      "Xây dựng danh sách chuẩn hóa tên các creator, podcast show đang hợp tác để sẵn sàng tích hợp vào hệ thống gợi ý tự động khi khảo sát.",
-      "Lên kế hoạch thử nghiệm đo lường dựa trên dữ liệu tự nguyện (zero-party data) để chuẩn bị cho lộ trình thắt chặt quyền riêng tư của các trình duyệt."
-    ],
-    "deadline": "01/2027",
-    "id": "real-2026-09-15-fairing-thu-nghiem-khao-016fb2",
-    "publishedAt": "15/09/2026",
-    "sourceUrl": "https://ppc.land/fairing-beta-users-gain-up-to-50-more-attribution-data-from-same-orders/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/09/Fairing-beta-users-gain-up-to-50--more-attribution-data-from-same-orders.jpg",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
-    "category": "Meta Ads",
-    "platformIcon": "Facebook",
-    "title": "Meta ra mắt các gói đăng ký Meta One cho doanh nghiệp hỗ trợ chèn link vào bài viết Instagram và phân tích đối thủ",
-    "isHot": false,
-    "illustration": "data-signal",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Meta One",
-      "Quảng cáo Instagram",
-      "Phân tích đối thủ",
-      "Chatbot AI"
-    ],
-    "summary": "Meta vừa chính thức ra mắt các gói đăng ký trả phí Meta One dành cho doanh nghiệp, cung cấp loạt công cụ AI và phân tích dữ liệu chuyên sâu. Điểm nhấn của dịch vụ này là tính năng chèn link trực tiếp vào bài viết và Reels trên Instagram, cùng khả năng theo dõi đối thủ cạnh tranh và tích hợp chatbot tự động trên WhatsApp.",
-    "keyNumbers": [
-      {
-        "value": "14,99 USD - 499 USD",
-        "label": "chi phí mỗi tháng cho các gói đăng ký Meta One"
-      },
-      {
-        "value": "10",
-        "label": "thương hiệu đối thủ tối đa có thể so sánh hiệu suất trên Instagram"
-      },
-      {
-        "value": "4 - 12",
-        "label": "số lượng link được phép chèn vào bài viết và Reels trên Instagram mỗi tháng"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Tổng quan về dịch vụ Meta One cho doanh nghiệp",
-        "body": "Meta One là dịch vụ đăng ký trả phí mới tích hợp các công cụ AI, tính năng hỗ trợ kinh doanh nâng cao và báo cáo chuyên sâu về đối tượng mục tiêu. Dịch vụ này được thiết kế để hoạt động trực tiếp trên các nền tảng của Meta nơi khách hàng thường xuyên tương tác. Mức giá của các gói dịch vụ dao động từ 14,99 USD cho gói cơ bản đến 499 USD mỗi tháng cho gói cao cấp nhất. Đây là nỗ lực của Meta nhằm đa dạng hóa nguồn thu từ mảng dịch vụ đăng ký trả phí đang tăng trưởng ổn định."
-      },
-      {
-        "heading": "Tính năng phân tích đối thủ và dữ liệu đối tượng chuyên sâu",
-        "body": "Gói đăng ký cung cấp công cụ so sánh nâng cao để đo lường hiệu suất của tối đa 10 thương hiệu đối thủ trên Instagram. Doanh nghiệp cũng có thể tải xuống dữ liệu lịch sử đối tượng vượt quá giới hạn 90 ngày thông thường của Instagram Insights. Ngoài ra, công cụ mới trên Facebook cho phép truy cập thông tin chi tiết về những người xem và tương tác với nội dung nhưng chưa bấm theo dõi trang. Những dữ liệu này giúp doanh nghiệp tối ưu hóa chiến lược nội dung và tiếp cận khách hàng tiềm năng hiệu quả hơn."
-      },
-      {
-        "heading": "Giải quyết bài toán chèn link trực tiếp trên Instagram",
-        "body": "Một trong những tính năng được mong đợi nhất là khả năng chèn link trực tiếp vào các bài viết và Reels trên Instagram. Tuy nhiên, Meta giới hạn số lượng link này dựa theo từng cấp độ gói đăng ký trả phí của doanh nghiệp. Cụ thể, gói Advanced giá 49,99 USD mỗi tháng cho phép chèn 4 link vào bài viết và 4 link vào Reels mỗi tháng. Con số này tăng lên 8 link ở gói Expert giá 149 USD mỗi tháng, và tối đa 12 link ở gói Max giá 499 USD mỗi tháng."
-      },
-      {
-        "heading": "Tự động hóa chăm sóc khách hàng bằng trợ lý AI",
-        "body": "Meta One tích hợp một trợ lý AI tùy chỉnh hoạt động như một chatbot thông minh cho doanh nghiệp trên WhatsApp Business. Chatbot này có khả năng tự động trả lời tin nhắn của khách hàng 24/7 để duy trì phản hồi nhanh chóng ngay cả khi doanh nghiệp không trực tuyến. Người dùng hoàn toàn có thể kiểm soát, tiếp quản cuộc trò chuyện bất kỳ lúc nào và huấn luyện chatbot dựa trên thông tin chi tiết của doanh nghiệp. Công cụ này cũng hỗ trợ đưa ra hướng dẫn về chiến lược tương tác và tiếp cận khách hàng tiềm năng."
-      }
-    ],
-    "impact": "Giúp các Trưởng phòng Marketing giải quyết được điểm nghẽn lớn nhất trên Instagram là không thể chèn link trực tiếp vào bài viết thường và Reels để điều hướng chuyển đổi. Đồng thời, việc có thêm dữ liệu đối thủ cạnh tranh và tệp khách hàng tương tác nhưng chưa follow giúp tối ưu hóa chiến dịch quảng cáo và nội dung organic chính xác hơn mà không cần phụ thuộc hoàn toàn vào các công cụ bên thứ ba đắt đỏ.",
-    "ifIgnored": "Doanh nghiệp sẽ tiếp tục mất đi lượng truy cập tự nhiên khổng lồ từ Instagram do quy trình điều hướng rườm rà bắt khách hàng click vào link bio. Đồng thời, việc thiếu hụt dữ liệu đối thủ và dữ liệu lịch sử đối tượng trên 90 ngày sẽ khiến các quyết định phân bổ ngân sách quảng cáo và lập kế hoạch nội dung trở nên cảm tính, kém hiệu quả hơn so với đối thủ đã xuống tiền mua gói.",
-    "actionChecklist": [
-      "Đánh giá hiệu quả chuyển đổi từ kênh Instagram hiện tại để cân nhắc ngân sách đăng ký gói Meta One Advanced nhằm thử nghiệm tính năng chèn link trực tiếp.",
-      "Lập danh sách 10 đối thủ cạnh tranh trực tiếp trên Instagram để chuẩn bị đưa vào công cụ so sánh hiệu suất ngay khi kích hoạt gói.",
-      "Thiết lập quy trình huấn luyện cho trợ lý AI trên WhatsApp Business bằng cách chuẩn bị bộ câu hỏi thường gặp và thông tin sản phẩm cốt lõi.",
-      "Khai thác dữ liệu lịch sử đối tượng trên 90 ngày của Instagram để phân tích hành vi dài hạn của khách hàng, phục vụ cho chiến dịch quảng cáo tiếp theo."
-    ],
-    "id": "real-2026-09-15-meta-ra-mat-cac-8066a6",
-    "publishedAt": "15/09/2026",
-    "sourceUrl": "https://www.socialmediatoday.com/news/meta-launches-meta-one-for-business-add-on-packages/830469/",
-    "source": "Social Media Today",
-    "image": {
-      "url": "https://imgproxy.divecdn.com/xbweq6D4ecTOtFirYcSWaiKVEYPp5_H0BV-qnbTG_-w/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9tZXRhX29uZV9hZHZhbmNlZC5wbmc=.webp",
-      "credit": "Ảnh: Social Media Today"
     }
   },
   {
