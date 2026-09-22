@@ -2,6 +2,195 @@
   {
     "category": "Google Ads & SEO",
     "platformIcon": "Search",
+    "title": "Google Analytics bổ sung bộ lọc Include cho Hostname giúp chặn sạch dữ liệu rác",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Google Analytics",
+      "Báo cáo dữ liệu",
+      "Chống spam GA4",
+      "Đo lường Marketing"
+    ],
+    "summary": "Google Analytics chính thức ra mắt chế độ bộ lọc Include cho tên miền máy chủ (hostname) từ ngày 21/09/2026. Cập nhật này cho phép doanh nghiệp thiết lập danh sách tên miền được duyệt để tự động loại bỏ mọi dữ liệu rác đến từ các nguồn lạ. Mọi sự kiện bị chặn bởi bộ lọc sẽ bị xóa vĩnh viễn và không thể phục hồi.",
+    "keyNumbers": [
+      {
+        "value": "102 ngày",
+        "label": "Thời gian Google phát triển từ bộ lọc Exclude sang Include"
+      },
+      {
+        "value": "10",
+        "label": "Số bộ lọc dữ liệu tối đa trên một property Analytics"
+      },
+      {
+        "value": "3",
+        "label": "Trạng thái vận hành bộ lọc gồm Testing, Active và Inactive"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Chuyển từ cơ chế loại trừ sang danh sách tên miền được duyệt",
+        "body": "Ngày 21/09/2026, Google Analytics cập nhật chế độ Include cho bộ lọc hostname, ra mắt 102 ngày sau phiên bản Exclude đầu tiên ngày 11/06/2026. Thay vì phải cập nhật thủ công từng tên miền spam mới xuất hiện, nhà quản trị hiện chỉ cần khai báo một lần danh sách tên miền chính thức. Tất cả sự kiện gửi từ các hostname nằm ngoài danh sách này sẽ bị hệ thống loại bỏ hoàn toàn. Cập nhật này giúp đơn giản hóa việc cấu hình và giữ báo cáo sạch sành sanh với ít công sức bảo trì."
+      },
+      {
+        "heading": "Hai quy định ngoại lệ quan trọng trong bản cập nhật",
+        "body": "Bản phát hành ghi nhận hai trường hợp xử lý riêng biệt đối với bộ lọc Include. Đầu tiên, các sự kiện gửi qua Measurement Protocol từ máy chủ hoặc hệ thống điểm bán hàng sẽ không bị chặn để đảm bảo luồng dữ liệu kỹ thuật không bị ngắt quãng. Thứ hai, hệ thống sẽ tự động chặn các sự kiện không có hostname như một số luồng gtag.js. Google giải thích rằng sự thiếu hụt thông tin hostname thường là dấu hiệu của lưu lượng rác hoặc bất thường."
+      },
+      {
+        "heading": "Rủi ro mất dữ liệu vĩnh viễn khi áp dụng bộ lọc",
+        "body": "Do mã đo lường hiển thị công khai trên trang web, kẻ phát tán spam thường sao chép mã này để gửi sự kiện giả mạo trực tiếp vào Analytics. Việc áp dụng bộ lọc Include giúp chặn đứng các nguồn giả mạo nhưng đi kèm rủi ro vận hành cao. Dữ liệu bị loại bỏ bởi một bộ lọc đang hoạt động sẽ không bao giờ được xử lý hay khôi phục, kể cả trong báo cáo Analytics lẫn dữ liệu xuất ra BigQuery. Bộ lọc chỉ bắt đầu có hiệu lực từ thời điểm kích hoạt và không làm sạch dữ liệu lịch sử."
+      },
+      {
+        "heading": "Quy trình kiểm thử an toàn với các trạng thái bộ lọc",
+        "body": "Mỗi bộ lọc dữ liệu trong Analytics hoạt động theo ba trạng thái gồm Testing, Active và Inactive. Ở chế độ Testing, hệ thống sẽ gắn nhãn các sự kiện khớp điều kiện nhưng chưa loại bỏ chúng khỏi báo cáo, giúp nhà quản trị kiểm tra tính chính xác. Do tác động vĩnh viễn của bộ lọc, người thiết lập bắt buộc phải có quyền Editor ở cấp độ property. Mỗi tài sản Analytics được cho phép lưu trữ tối đa 10 bộ lọc dữ liệu."
+      },
+      {
+        "heading": "Giải pháp nâng cấp bảo mật qua Server-side Tag Manager",
+        "body": "Một số chuyên gia lưu ý rằng dữ liệu rác gửi qua Measurement Protocol vẫn có thể lọt qua bộ lọc Include do ngoại lệ của Google. Để bảo vệ dữ liệu triệt để hơn, doanh nghiệp có thể chuyển sang định tuyến thu thập qua container Server-side Tag Manager. Phương pháp này giúp ẩn mã đo lường khỏi trang web công khai và xác thực tên miền trước khi dữ liệu chạm tới Analytics. Tuy nhiên, hướng đi này đòi hỏi kỹ thuật cài đặt phức tạp hơn và phát sinh chi phí máy chủ đám mây hàng tháng."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing có thể làm sạch hoàn toàn dữ liệu đo lường chuyển đổi và hiệu quả chiến dịch Google Ads mà không mất thời gian dọn rác báo cáo hàng tuần. Tuy nhiên, nếu quên khai báo một tên miền phụ chiến dịch, toàn bộ dữ liệu chuyển đổi thực từ trang đó sẽ bị xóa vĩnh viễn.",
+    "ifIgnored": "Nếu tiếp tục dùng bộ lọc Exclude hoặc không cấu hình allowlist, báo cáo hiệu quả marketing sẽ tiếp tục bị làm sai lệch bởi spam traffic, dẫn đến việc phân bổ ngân sách quảng cáo dựa trên dữ liệu ảo.",
+    "actionChecklist": [
+      "Tổng hợp lại toàn bộ danh sách tên miền và tên miền phụ đang chạy chiến dịch marketing.",
+      "Kiểm tra quyền tài khoản Analytics để đảm bảo có quyền Editor cấp property.",
+      "Tạo bộ lọc Include cho hostname và bật ở chế độ Testing để theo dõi dữ liệu thử nghiệm.",
+      "Rà soát các luồng gửi dữ liệu qua Measurement Protocol để đánh giá rủi ro spam còn tồn đọng."
+    ],
+    "id": "real-2026-09-21-google-analytics-bo-sung-75cce3",
+    "publishedAt": "21/09/2026",
+    "sourceUrl": "https://ppc.land/google-analytics-filter-blocks-data-from-domains-not-on-an-approved-list/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/size/w1200/2026/09/Google-Analytics-filter-blocks-data-from-domains-not-on-an-approved-list.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "AI Marketing",
+    "platformIcon": "Sparkles",
+    "title": "BCN và PubMatic ra mắt công cụ Signals Agent tự động hóa giao dịch quảng cáo bằng AI",
+    "isHot": false,
+    "illustration": "ai-budget",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "AI Agent",
+      "PubMatic",
+      "Programmatic",
+      "Dữ liệu bên thứ nhất"
+    ],
+    "summary": "Liên minh bán quảng cáo BCN tại Đức vừa giới thiệu công cụ Signals Agent, cho phép nhà quảng cáo mô tả nhóm đối tượng mục tiêu bằng ngôn ngữ tự nhiên để AI tự động khớp với hơn 1.500 tín hiệu. Công cụ này kết nối trực tiếp với hệ thống AI của PubMatic để tự động tạo và kích hoạt các gói giao dịch trên sàn giao dịch tư nhân chỉ trong vài phút. Giải pháp này đánh dấu bước chuyển dịch từ thao tác thủ công sang giao tiếp phần mềm giữa các bên trong ngành quảng cáo.",
+    "keyNumbers": [
+      {
+        "value": "900",
+        "label": "phân khúc đối tượng"
+      },
+      {
+        "value": "1.500",
+        "label": "tín hiệu tổng cộng"
+      },
+      {
+        "value": "80.000.000",
+        "label": "hồ sơ đồng thuận"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Cơ chế hoạt động của Signals Agent",
+        "body": "Công cụ này cho phép nhà quảng cáo nhập yêu cầu bằng văn bản mô tả đối tượng muốn tiếp cận thay vì thao tác qua nhiều hệ thống khác nhau. AI sẽ phân tích nghĩa của yêu cầu để tìm các phân khúc phù hợp, xếp hạng độ liên quan và trả về ước tính phạm vi tiếp cận cùng mức giá. Quy trình này dựa trên hơn 1.500 tín hiệu gồm hơn 900 phân khúc người dùng và hơn 600 danh mục ngữ cảnh nội dung từ mạng lưới của BCN."
+      },
+      {
+        "heading": "Tích hợp tự động hóa với PubMatic",
+        "body": "Sau khi xác định phân khúc phù hợp, Signals Agent sẽ tự động tạo một giao dịch thị trường riêng tư được nhắm mục tiêu sẵn trên nền tảng phía cung của PubMatic. Hai công ty cho biết quy trình này diễn ra trong vài phút thay vì phải thiết lập và đàm phán thủ công như trước đây. Sự phối hợp này loại bỏ bước chuyển dữ liệu thủ công giữa các hệ thống nhờ vào việc sử dụng các giao thức giao tiếp AI."
+      },
+      {
+        "heading": "Nền tảng kỹ thuật và tiêu chuẩn giao thức",
+        "body": "Hệ thống sử dụng Model Context Protocol do Anthropic công bố vào tháng 11 năm 2024 và lớp giao thức Ad Context Protocol dành riêng cho quảng cáo ra mắt vào ngày 15 tháng 10 năm 2025. PubMatic là một trong sáu thành viên sáng lập của tiêu chuẩn này. Tuy nhiên, thông cáo báo chí không nêu rõ mô hình ngôn ngữ nào nằm bên dưới hoặc giá sàn được tính toán như thế nào."
+      },
+      {
+        "heading": "Những khoảng trống thông tin cần lưu ý",
+        "body": "Dù ghi nhận tốc độ thiết lập nhanh chóng, thông cáo không đề cập đến việc mã định danh giao dịch đến nền tảng mua hàng của nhà quảng cáo như thế nào hoặc DSP nào được hỗ trợ. Hơn nữa, khái niệm 80 triệu hồ sơ đồng thuận từ hơn 50 tên miền chủ yếu đếm số lượng định danh hoặc trình duyệt thay vì số cá nhân độc lập. Giá trị thực tế của các gói giao dịch này đối với nhà mua vẫn phụ thuộc vào cách các nền tảng phía cầu phản hồi."
+      }
+    ],
+    "impact": "Trưởng phòng điều hành ngân sách cần nắm xu hướng tự động hóa quy trình thiết lập deal quảng cáo qua AI agent, giúp tiết kiệm thời gian vận hành nhưng cũng đặt ra bài toán kiểm soát chi phí và nền tảng mua hàng tương thích.",
+    "ifIgnored": "Bỏ lỡ xu hướng ứng dụng AI agent trong việc thiết lập giao dịch programmatic, khiến đội ngũ vận hành chậm chân trong việc tối ưu hóa thời gian thiết lập chiến dịch so với các đối thủ.",
+    "actionChecklist": [
+      "Theo dõi sát các công cụ AI agent tích hợp sẵn trên các SSP lớn mà team đang sử dụng",
+      "Đánh giá lại thời gian đội ngũ đang tiêu tốn cho việc setup deal thủ công trên các private marketplace",
+      "Chuẩn bị sẵn dữ liệu và tiêu chí nhắm mục tiêu rõ ràng để sẵn sàng thử nghiệm khi công cụ agent phổ biến hơn",
+      "Yêu cầu agency hoặc team ad ops cập nhật thông tin về khả năng tương thích của DSP hiện tại với các giao thức agent-to-agent mới"
+    ],
+    "id": "real-2026-09-21-bcn-va-pubmatic-ra-516a79",
+    "publishedAt": "21/09/2026",
+    "sourceUrl": "https://ppc.land/advertisers-gain-900-bcn-audience-segments-bookable-by-ai-prompt/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/09/Advertisers-gain-900-BCN-audience-segments-bookable-by-AI-prompt.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Xây dựng trang địa phương cho hệ thống AI: Khắc phục lỗi chặn bot và dữ liệu cũ",
+    "isHot": "false",
+    "illustration": "account-security",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "AI Search",
+      "Local SEO",
+      "Technical SEO",
+      "Schema"
+    ],
+    "summary": "Các hệ thống AI và công cụ tìm kiếm không thể hiển thị trang web địa phương của bạn nếu bot không thể truy cập, kết xuất HTML hoặc nếu trang chứa dữ liệu cũ. Darren Shaw và Russ Jeffery từ SEJ Live chia sẻ cách khắc phục các điểm mù kỹ thuật này để tối ưu hóa hiển thị trên AI.",
+    "keyNumbers": [
+      {
+        "value": "2017",
+        "label": "Năm xây dựng web cũ dễ sót schema"
+      },
+      {
+        "value": "2025",
+        "label": "Năm kiểm tra lại cấu hình schema"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Kiểm tra quyền truy cập của bot AI",
+        "body": "Nền tảng Cloudflare thường cài đặt mặc định chặn các bot AI mà đội ngũ marketing không hề hay biết. Các yếu tố cơ bản như tệp robots.txt, thẻ noindex, cài đặt bảo mật và cách kết xuất nội dung cần được kiểm tra kỹ lưỡng. Việc chặn nhầm này khiến các công cụ như ChatGPT, Claude hay Perplexity không thể thu thập dữ liệu trang web của doanh nghiệp."
+      },
+      {
+        "heading": "Tầm quan trọng của kết xuất phía máy chủ",
+        "body": "Khác với Google, các hệ thống AI hiện đại không tự lập chỉ mục và lưu trữ toàn bộ trang web trong cơ sở hạ tầng của họ. Do đó, việc phân phối nội dung quan trọng trong phản hồi HTML thông qua kết xuất phía máy chủ là vô cùng cần thiết. Các trang web xây dựng vội bằng mã nguồn động client-side JavaScript có thể khiến các trình thu thập thông tin không đọc được nội dung."
+      },
+      {
+        "heading": "Nguy cơ từ các trang web cũ và URL trùng lặp",
+        "body": "Các URL mồ côi hoặc bị trùng lặp mang hậu tố như old, new, home hoặc v2 thường bị bỏ lại sau các đợt thiết kế lại trang web. Khách hàng hiếm khi truy cập các trang này, nhưng các trình thu thập thông tin AI lại tìm thấy chúng và lấy thông tin lỗi thời như số điện thoại hoặc địa chỉ cũ. Một cuộc kiểm tra kỹ thuật định kỳ là bắt buộc để phát hiện và ngăn chặn các phiên bản cũ này."
+      },
+      {
+        "heading": "Quản trị dữ liệu Schema để tránh mâu thuẫn",
+        "body": "Schema hoạt động như một lớp xác thực và giảiambiguation dữ liệu giúp bot dễ dàng phân tích hơn là dựa vào bố cục trang. Tuy nhiên, rủi ro lớn nhất là việc duy trì schema khi thông tin doanh nghiệp thay đổi. Việc cập nhật số điện thoại trên giao diện web nhưng quên đồng bộ với schema hoặc Google Business Profile sẽ tạo ra dữ liệu mâu thuẫn gây hại cho độ tin cậy."
+      }
+    ],
+    "impact": "Giúp Trưởng phòng Marketing nhận ra các điểm mù kỹ thuật khiến website doanh nghiệp biến mất khỏi câu trả lời của AI, từ việc cài đặt Cloudflare mặc định đến việc rà soát các URL cũ sót lại.",
+    "ifIgnored": "Doanh nghiệp sẽ tiếp tục mất traffic từ các nền tảng tìm kiếm AI do bot bị chặn truy cập, nội dung không được render kịp thời hoặc AI lấy phải thông tin liên hệ cũ từ các trang web rác.",
+    "actionChecklist": [
+      "Kiểm tra ngay cài đặt Cloudflare trên hệ thống để đảm bảo không chặn nhầm các bot AI",
+      "Rà soát tệp robots.txt, thẻ noindex và các cài đặt bảo mật có thể cản trở trình thu thập thông tin",
+      "Thực hiện kiểm tra trang web toàn diện để tìm và loại bỏ các URL cũ mang hậu tố rác chứa thông tin lỗi thời",
+      "Đồng bộ hóa dữ liệu doanh nghiệp giữa website, schema markup và Google Business Profile"
+    ],
+    "id": "real-2026-09-21-xay-dung-trang-dia-925d4c",
+    "publishedAt": "21/09/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/how-to-build-local-pages-ai-systems-can-find-and-trust/588097/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/09/ai-visibility-546.png",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
     "title": "Google xác nhận bộ lọc quảng cáo không tự ngăn được lead rác, yêu cầu nhà quảng cáo tự bảo vệ biểu mẫu",
     "isHot": false,
     "illustration": "data-signal",
@@ -55,69 +244,6 @@
     "source": "PPC Land",
     "image": {
       "url": "https://ppc.land/content/images/2026/09/Google-Ads-filters-miss-fake-leads--so-advertisers-must-add-3-form-checks.jpg",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
-    "category": "AI Marketing",
-    "platformIcon": "Sparkles",
-    "title": "Ẩn danh dữ liệu khách hàng làm giảm đến 60% hiệu suất truy xuất thông tin của GPT-4o mini",
-    "isHot": false,
-    "illustration": "data-signal",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Bảo mật dữ liệu",
-      "AI Marketing",
-      "GPT-4o mini",
-      "Hệ thống RAG"
-    ],
-    "summary": "Một nghiên cứu mới công bố chỉ ra rằng việc ẩn danh thông tin cá nhân trong câu lệnh trước khi gửi tới các mô hình ngôn ngữ lớn làm giảm mạnh độ chính xác của AI. Đặc biệt, với tác vụ truy xuất thông tin từ tài liệu, điểm số của GPT-4o mini đã sụt giảm nghiêm trọng từ 0,80 xuống còn 0,32.",
-    "keyNumbers": [
-      {
-        "value": "60%",
-        "label": "mức giảm điểm truy xuất thông tin của GPT-4o mini sau khi ẩn danh"
-      },
-      {
-        "value": "6,9",
-        "label": "điểm phần trăm sụt giảm trung bình của mô hình mạnh nhất Qwen2.5-72B"
-      },
-      {
-        "value": "0,32",
-        "label": "điểm số truy xuất của GPT-4o mini sau khi bị thay thế thông tin cá nhân"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Tác động tiêu cực của việc ẩn danh dữ liệu lên AI",
-        "body": "Nghiên cứu từ Đại học Bonn, Fraunhofer IAIS, Viện Lamarr và Microsoft Đức cho thấy việc thay thế các chi tiết cá nhân bằng các nhãn tạm thời trước khi gửi đến AI làm giảm mạnh hiệu suất của mô hình. Khi thử nghiệm trên năm mô hình ngôn ngữ lớn khác nhau, việc ẩn danh hầu như không ảnh hưởng đến các câu hỏi suy luận đơn giản. Tuy nhiên, phương pháp này lại phá hỏng nghiêm trọng các tác vụ yêu cầu AI phải tra cứu thông tin trong tài liệu. Các mô hình càng mạnh mẽ thì mức độ sụt giảm hiệu suất lại càng lớn sau khi bị ẩn danh dữ liệu."
-      },
-      {
-        "heading": "Sự sụp đổ của hệ thống truy xuất thông tin RAG",
-        "body": "Trong thử nghiệm với benchmark RGB, vốn đánh giá khả năng tích hợp thông tin từ nhiều tài liệu và lọc nhiễu của AI, tất cả các mô hình đều ghi nhận sự sụt giảm thê thảm. Điểm số của GPT-4o mini giảm từ 0,80 xuống còn 0,32, tương đương mức giảm 60%. Mô hình Qwen2.5-72B cũng rơi từ 0,82 xuống 0,38, trong khi Llama-3.1-8B giảm từ 0,69 xuống 0,34. Các nhà nghiên cứu gọi đây là sự suy giảm thảm khốc. Việc thay thế các thực thể cụ thể bằng các nhãn trừu tượng như LOC-1 đã phá vỡ khả năng liên kết các sự thật giữa nhiều nguồn tài liệu của AI."
-      },
-      {
-        "heading": "Nguyên nhân đằng sau sự suy giảm hiệu suất",
-        "body": "Mức độ thiệt hại của mô hình phụ thuộc vào việc tác vụ đó phụ thuộc bao nhiêu vào ý nghĩa của các thực thể cụ thể, chứ không phải số lượng thực thể xuất hiện trong văn bản. Phân tích tương quan cho thấy không có mối quan hệ có ý nghĩa thống kê giữa mức giảm hiệu suất với tổng số thực thể, số thực thể độc nhất hay độ dài đầu vào. Ví dụ, trong benchmark MUSR, dù đầu vào dài trung bình 1.317 token và chứa 67,47 lượt nhắc đến thực thể, điểm số của GPT-4o mini vẫn giữ nguyên ở mức 0,70. Ngược lại, RGB có số lượng thực thể khác biệt cao gấp bốn lần trên mỗi đầu vào, khiến AI dễ bị nhầm lẫn khi bị ẩn danh."
-      },
-      {
-        "heading": "Nghịch lý của các mô hình AI mạnh mẽ nhất",
-        "body": "Các mô hình có điểm nền tảng cao nhất như Qwen2.5-72B và GPT-4o mini lại là những mô hình chịu tổn thất lớn nhất khi bị ẩn danh dữ liệu. Điểm trung bình của Qwen2.5-72B giảm tới 6,9 điểm phần trăm trên 11 benchmark, so với mức giảm chỉ 2,3 điểm của Teuken-7B, mô hình yếu nhất trong nhóm thử nghiệm. Các nhà nghiên cứu nhận định rằng các mô hình thông minh hơn thường dựa dẫm nhiều hơn vào kiến thức thực thể cụ thể để đưa ra câu trả lời chính xác. Do đó, khi các thông tin này bị che đi, lợi thế về mặt trí tuệ của các mô hình lớn bị triệt tiêu đáng kể."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing đang đối mặt với thế tiến thoái lưỡng nan: bảo vệ quyền riêng tư của khách hàng bằng cách ẩn danh dữ liệu trong CRM hoặc chat log sẽ trực tiếp làm tê liệt các hệ thống chatbot chăm sóc khách hàng hoặc AI phân tích dữ liệu tự động. Việc này khiến AI trả lời sai lệch, không tìm đúng thông tin mua hàng hoặc lịch sử dịch vụ của khách, dẫn đến trải nghiệm khách hàng tệ đi rõ rệt dù đang dùng các mô hình hàng đầu như GPT-4o mini.",
-    "ifIgnored": "Nếu tiếp tục nhắm mắt ẩn danh dữ liệu theo cách thủ công hoặc dùng công cụ thay thế nhãn thông thường mà không tối ưu lại hệ thống AI, doanh nghiệp sẽ lãng phí ngân sách vận hành các mô hình AI đắt đỏ nhưng chỉ nhận lại kết quả sai lệch. Ngược lại, nếu không ẩn danh để giữ độ chính xác cho AI, doanh nghiệp sẽ đối mặt với nguy cơ rò rỉ dữ liệu khách hàng nghiêm trọng và vi phạm các quy định pháp lý về bảo mật thông tin.",
-    "actionChecklist": [
-      "Đánh giá lại toàn bộ các chatbot chăm sóc khách hàng và hệ thống AI phân tích dữ liệu đang áp dụng giải pháp ẩn danh dữ liệu.",
-      "Phân loại các tác vụ AI: giữ nguyên việc ẩn danh cho các tác vụ suy luận đơn giản, nhưng cần thiết kế lại quy trình cho các tác vụ tra cứu tài liệu.",
-      "Thử nghiệm giải pháp mã hóa hai chiều bảo toàn ngữ nghĩa thay vì chỉ thay thế bằng các nhãn trừu tượng để AI không bị mất liên kết thông tin.",
-      "Thiết lập quy trình đo lường độ chính xác nội bộ trước và sau khi áp dụng bất kỳ giải pháp che giấu dữ liệu nào trên các mô hình AI đang dùng."
-    ],
-    "id": "real-2026-09-19-an-danh-du-lieu-6d742d",
-    "publishedAt": "19/09/2026",
-    "sourceUrl": "https://ppc.land/anonymizing-prompts-cuts-openais-gpt-4o-mini-retrieval-score-by-60/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/09/Anonymizing-prompts-cuts-OpenAI-s-GPT-4o-mini-retrieval-score-by-60-.jpg",
       "credit": "Ảnh: PPC Land"
     }
   },
@@ -246,65 +372,6 @@
   {
     "category": "Google Ads & SEO",
     "platformIcon": "Search",
-    "title": "Cloudflare tự động hóa robots.txt: Con dao hai lưỡi cho SEO và bảo vệ dữ liệu trước AI",
-    "isHot": false,
-    "illustration": "zero-click",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "SEO kỹ thuật",
-      "Bảo mật dữ liệu",
-      "Cloudflare",
-      "AI Crawler"
-    ],
-    "summary": "Cloudflare ra mắt tính năng Bot Preference Sync tự động đồng bộ file robots.txt dựa trên cấu hình chặn bot tại Edge. Tuy nhiên, việc gộp chung các bot AI vào các nhóm lớn thay vì cấu hình riêng lẻ đang tạo ra những thách thức mới cho doanh nghiệp trong việc cân bằng giữa bảo vệ bản quyền nội dung và duy trì lưu lượng truy cập từ các công cụ tìm kiếm AI.",
-    "keyNumbers": [
-      {
-        "value": "3",
-        "label": "Cài đặt cốt lõi gồm Search, Agent và Training để Cloudflare tự động tạo robots.txt"
-      },
-      {
-        "value": "4",
-        "label": "Điều kiện Cloudflare yêu cầu các bot AI đáp ứng để không bị chặn hoàn toàn"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Cơ chế tự động đồng bộ robots.txt của Cloudflare",
-        "body": "Tính năng Bot Preference Sync tự động chuyển đổi các thiết lập chặn bot trên dashboard của Cloudflare thành các dòng lệnh trong file robots.txt. Các lệnh này được chèn vào giữa hai mốc đánh dấu của Cloudflare, trong khi các thiết lập thủ công cũ của doanh nghiệp vẫn được giữ lại bên dưới. Cloudflare áp dụng tính năng này từ gói miễn phí trở lên và tự động bật theo mặc định cho các khách hàng mới. Mục tiêu của tính năng này là giải quyết sự mâu thuẫn giữa tệp robots.txt tĩnh và các quy tắc chặn thực tế tại Edge."
-      },
-      {
-        "heading": "Rủi ro từ việc gộp chung các loại bot AI",
-        "body": "Cloudflare chỉ cung cấp ba lựa chọn phân loại gồm Search, Agent và Training với các hành động chặn tất cả, chặn trang có quảng cáo hoặc cho phép. Doanh nghiệp không thể tùy chỉnh cấu hình cho từng bot riêng lẻ thông qua tính năng đồng bộ tự động này. Điều này gây khó khăn cho các website muốn chặn các bot thu thập dữ liệu không đem lại giá trị như Bytespider của ByteDance, nhưng vẫn muốn mở cửa cho các bot mang lại lưu lượng truy cập như GPTBot của OpenAI hay PerplexityBot. Để giải quyết, doanh nghiệp buộc phải tắt tính năng đồng bộ tự động và tự viết file robots.txt thủ công."
-      },
-      {
-        "heading": "Bốn điều kiện khắt khe đối với các bot AI",
-        "body": "Nếu doanh nghiệp thiết lập chặn mục Training, Cloudflare sẽ tự động chặn toàn bộ các bot AI bị coi là thiếu minh bạch. Để tránh bị chặn, các bot phải đáp ứng bốn điều kiện do Cloudflare đưa ra, bao gồm việc tôn trọng lệnh cấm đào tạo và cung cấp báo cáo chi tiết về cách sử dụng dữ liệu. Hiện tại, các ông lớn như Google hay Microsoft vẫn chưa đáp ứng hoàn toàn các tiêu chí này một cách độc lập. Ví dụ, Google chưa có tùy chọn tách biệt giữa việc rút dữ liệu cho AI Overview và việc lập chỉ mục tìm kiếm thông thường."
-      },
-      {
-        "heading": "Sự bất nhất giữa robots.txt và cấu hình Edge",
-        "body": "Cloudflare cảnh báo rằng khi tệp robots.txt và các quy tắc chặn thực tế tại Edge không thống nhất, một số crawler sẽ lấy đó làm lý do để bỏ qua tùy chọn của website. Sự lệch pha này rất dễ xảy ra vì robots.txt thường ít khi được cập nhật, trong khi các quy tắc bảo mật trên dashboard lại thay đổi liên tục. Việc đồng bộ hóa giúp loại bỏ kẽ hở pháp lý và kỹ thuật này. Tuy nhiên, việc giao quyền quyết định hoàn toàn cho một bên thứ ba như Cloudflare cần được cân nhắc kỹ lưỡng."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing đối mặt với nguy cơ mất lưu lượng truy cập từ các công cụ tìm kiếm AI thế hệ mới nếu để Cloudflare tự động chặn bot theo nhóm, hoặc ngược lại, bị đánh cắp dữ liệu để huấn luyện AI nếu cấu hình quá lỏng lẻo.",
-    "ifIgnored": "Nếu bỏ qua, website của bạn có thể vô tình chặn các bot AI mang lại nguồn traffic chất lượng cao, hoặc để lộ toàn bộ tài nguyên nội dung cho các đối thủ huấn luyện mô hình AI mà không nhận lại bất kỳ quyền lợi nào.",
-    "actionChecklist": [
-      "Kiểm tra ngay dashboard Cloudflare để xem tính năng Bot Preference Sync đã bị tự động bật hay chưa",
-      "Đánh giá danh sách các bot AI đang truy cập website để phân loại nhóm mang lại traffic và nhóm chỉ thu thập dữ liệu",
-      "Tắt tính năng tự động đồng bộ của Cloudflare nếu doanh nghiệp cần chính sách chặn chi tiết cho từng bot cụ thể",
-      "Cập nhật thủ công file robots.txt để đảm bảo tính nhất quán với các quy tắc chặn IP tại tường lửa của website"
-    ],
-    "id": "real-2026-09-18-cloudflare-tu-dong-hoa-e4cf13",
-    "publishedAt": "18/09/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/cloudflare-will-write-your-robots-txt-and-it-has-a-point/589262/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/09/cloudflare-robotstxt-275.png",
-      "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
     "title": "Google, Microsoft và Cloudflare thử nghiệm trả phí cho nội dung dùng trong AI Search",
     "isHot": false,
     "illustration": "zero-click",
@@ -423,65 +490,6 @@
     "image": {
       "url": "https://imgproxy.divecdn.com/yhGony2fK6kaZSeZmc2Vc3A-JAGtondv_JFQviQR1Ko/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMTk2NjI2OTc3LmpwZw==.webp",
       "credit": "Ảnh: Marketing Dive"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Azerion ra mắt cổng game white-label tại Brazil: Xu hướng tối ưu dwell-time và chỉ số mật độ quảng cáo mới từ Chrome",
-    "isHot": false,
-    "illustration": "page-speed",
-    "readTime": "3 phút đọc",
-    "tags": [
-      "Quảng cáo hiển thị",
-      "Game hóa",
-      "Chrome CrUX",
-      "Dwell-time"
-    ],
-    "summary": "Azerion hợp tác với trang tin Correio tại Brazil ra mắt cổng game phổ thông dạng white-label nhằm tăng thời gian lưu trú của người dùng và khai thác không gian quảng cáo di động. Đáng chú ý, mô hình này xuất hiện ngay khi Google Chrome bắt đầu công bố các chỉ số đo lường mật độ quảng cáo công khai từ ngày 16/09/2026. Đây là tín hiệu cho thấy xu hướng tối ưu hóa chất lượng vị trí hiển thị trên thiết bị di động đang thay đổi mạnh mẽ.",
-    "keyNumbers": [
-      {
-        "value": "95%",
-        "label": "Lượng truy cập từ thiết bị di động của trang tin Correio"
-      },
-      {
-        "value": "15,7 triệu",
-        "label": "Lượt truy cập hàng tháng của trang tin Correio"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Xu hướng game hóa để kéo dài thời gian lưu trú",
-        "body": "Azerion đã tích hợp một phân mục trò chơi phổ thông bằng tiếng Bồ Đào Nha trực tiếp vào trang tin Correio. Mục tiêu thương mại của sự hợp tác này là giữ chân người đọc lâu hơn và khuyến khích họ quay lại thường xuyên hơn. Trong khi người dùng chơi các trò chơi giải đố hoặc bài tây, Azerion sẽ phân phối các quảng cáo xen kẽ giữa các lượt chơi. Đây là giải pháp giúp các nhà xuất bản nội dung số gia tăng doanh thu quảng cáo bên cạnh các bài viết truyền thống."
-      },
-      {
-        "heading": "Thách thức tối ưu hóa không gian quảng cáo di động",
-        "body": "Với việc 95% lượng truy cập của Correio đến từ thiết bị di động, không gian hiển thị quảng cáo bị hạn chế nghiêm trọng so với máy tính để bàn. Để giải quyết vấn đề này, Azerion đã xếp chồng các biểu ngữ quảng cáo theo chiều dọc giữa các danh mục trò chơi và ghim một biểu ngữ cố định ở dưới cùng màn hình. Thiết kế này giúp tối đa hóa số lượng vị trí hiển thị mà không làm gián đoạn hoàn toàn trải nghiệm chơi game của người dùng. Ví dụ thực tế cho thấy các vị trí này hiển thị quảng cáo giảm giá 50% của Adobe Creative Cloud Pro dựa trên vị trí của thiết bị truy cập."
-      },
-      {
-        "heading": "Chrome siết chặt quản lý mật độ quảng cáo",
-        "body": "Sự kiện ra mắt này diễn ra ngay sau khi Google Chrome bắt đầu công bố các chỉ số về số lượng, mật độ và tải lượng quảng cáo thông qua bộ dữ liệu CrUX từ ngày 16/09/2026. Các trang trò chơi phổ thông, nơi người chơi dừng lại trên một địa chỉ URL trong nhiều phút trong khi các biểu ngữ quảng cáo liên tục tải lại, sẽ là đối tượng bị giám sát chặt chẽ bởi các phép đo mới này. Điều này buộc các nhà quảng cáo và nhà xuất bản phải cân bằng giữa doanh thu hiển thị và hiệu suất kỹ thuật của trang web."
-      },
-      {
-        "heading": "Mô hình đóng gói sẵn dễ dàng nhân rộng",
-        "body": "Giải pháp white-label của Azerion được thiết kế theo một khuôn mẫu cố định gồm ba danh mục trò chơi chính và hệ thống quảng cáo bao quanh được tùy chỉnh theo ngôn ngữ địa phương. Nhà xuất bản không cần tự phát triển trò chơi, không cần mua bản quyền hay vận hành hệ thống quảng cáo nội bộ phức tạp. Azerion sở hữu thư viện hơn 19.000 tựa game để lựa chọn và tùy biến cho từng đối tác. Đội ngũ vận hành mảng này của Azerion khá tinh gọn với quy mô từ 11 đến 50 nhân viên, nhưng được hỗ trợ bởi tập đoàn quảng cáo lớn hơn với 56.558 người theo dõi trên LinkedIn."
-      }
-    ],
-    "impact": "Giúp Trưởng phòng Marketing nhận diện xu hướng mua vị trí quảng cáo chất lượng cao thông qua các cổng game tích hợp trên báo chí, đồng thời phải lưu ý đến tiêu chuẩn trải nghiệm người dùng mới của Chrome khi chạy quảng cáo hiển thị.",
-    "ifIgnored": "Doanh nghiệp có nguy cơ tiếp tục đổ tiền vào các vị trí quảng cáo banner truyền thống có tỷ lệ bỏ qua cao, hoặc vô tình mua phải các vị trí quảng cáo bị Chrome đánh giá xấu về mật độ hiển thị, gây ảnh hưởng tiêu cực đến uy tín thương hiệu và hiệu suất kỹ thuật của chiến dịch.",
-    "actionChecklist": [
-      "Đánh giá lại các kênh quảng cáo hiển thị đang chạy trên các trang tin tức để xem có tích hợp định dạng game tương tác hay không",
-      "Cập nhật các chỉ số CrUX mới của Chrome từ ngày 16/09/2026 để kiểm tra xem các đối tác đặt banner quảng cáo có bị vi phạm mật độ quảng cáo hay không",
-      "Thử nghiệm phân bổ một phần ngân sách vào các định dạng quảng cáo trong game để tận dụng thời gian lưu trú cao của người dùng di động",
-      "Yêu cầu các đối tác mạng lưới quảng cáo cung cấp báo cáo về chỉ số hiển thị và thời gian tương tác thực tế trên các trang đối tác"
-    ],
-    "id": "real-2026-09-18-azerion-ra-mat-cong-14abef",
-    "publishedAt": "18/09/2026",
-    "sourceUrl": "https://ppc.land/azerions-first-brazil-games-portal-goes-live-on-15-7m-visit-correio/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/09/Azerion-s-first-Brazil-games-portal-goes-live-on-15.7m-visit-Correio.jpg",
-      "credit": "Ảnh: PPC Land"
     }
   },
   {
@@ -608,69 +616,6 @@
     "image": {
       "url": "https://imgproxy.divecdn.com/KBKyHF78iCeMExAJFVuECZVmU6Cier5aNS22nndFYGs/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9Db2FjaC1GYWxsLTIwMjYtQ2FtcGFpZ24tRWxsZS1GYW5uaW5nLmpwZw==.webp",
       "credit": "Ảnh: Marketing Dive"
-    }
-  },
-  {
-    "category": "AI Marketing",
-    "platformIcon": "Sparkles",
-    "title": "Ba cảnh báo lớn về AI từ MIT, Anthropic và OpenAI: Hệ lụy và chiến lược cho Trưởng phòng Marketing",
-    "isHot": false,
-    "illustration": "ai-budget",
-    "readTime": "5 phút đọc",
-    "tags": [
-      "AI Marketing",
-      "Chiến lược AI",
-      "Nghiên cứu AI",
-      "Tự động hóa"
-    ],
-    "summary": "Trong vòng năm ngày, ba cảnh báo lớn về trí tuệ nhân tạo từ MIT, Anthropic và OpenAI đã được công bố, vẽ nên bức tranh thực tế về sự gián đoạn thị trường lao động và năng lực tư duy. Dù công nghệ phát triển nhanh, tốc độ ứng dụng thực tế vào từng ngành hàng sẽ diễn ra chậm và phân hóa rõ rệt.",
-    "keyNumbers": [
-      {
-        "value": "32%",
-        "label": "giảm nỗ lực tư duy chủ động khi dùng AI"
-      },
-      {
-        "value": "14%",
-        "label": "người lao động có nguy cơ mất việc vì AI"
-      },
-      {
-        "value": "3.800",
-        "label": "từ trong bài luận gọi giảm tốc độ phát triển AI"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Ba cảnh báo lớn về AI xuất hiện dồn dập",
-        "body": "Nghiên cứu của MIT Media Lab sử dụng mũ EEG cho thấy nhóm dùng ChatGPT giảm 32% nỗ lực tư duy chủ động khi viết luận. Tiếp đó, mô hình kinh tế của Anthropic cảnh báo kịch bản 14% người lao động mất việc vì AI và chưa đầy một nửa tìm lại được việc làm mới. Cuối cùng, CEO Anthropic Dario Amodei công bố bài luận dài 3.800 từ kêu gọi toàn ngành giảm tốc độ phát triển mô hình AI, với sự đồng thuận từ OpenAI, xAI và Google DeepMind."
-      },
-      {
-        "heading": "Tốc độ ứng dụng AI thực tế sẽ chậm và phân hóa",
-        "body": "Các cảnh báo này cho thấy chi phí áp dụng, sự gián đoạn lao động và mức độ bất định của ngành đang ở mức cao. Tuy nhiên, việc công nghệ cải tiến nhanh không đồng nghĩa với việc nó sẽ phủ sóng đều khắp mọi thị trường cùng một lúc. Quá trình này sẽ diễn ra tương tự như lịch sử điện khí hóa thế kỷ trước, tức là đi vào từng ngóc ngách của nền kinh tế theo các mốc thời gian khác nhau."
-      },
-      {
-        "heading": "Kiểm toán lại quy trình sản xuất nội dung",
-        "body": "Trưởng phòng Marketing cần coi quy trình sản xuất nội dung của đội ngũ là điểm cốt lõi để rà soát các dấu hiệu phụ thuộc vào AI. Hãy kiểm tra lại các tài liệu sản xuất với sự hỗ trợ lớn từ AI trong quý trước để phát hiện các biểu hiện như thiếu nguồn dẫn, nhịp văn đơn điệu và thiếu chuyên gia đứng tên. Nếu nội dung gặp vấn đề này, thứ hạng tìm kiếm và tỷ lệ trích dẫn AI của thương hiệu sẽ sớm suy giảm."
-      },
-      {
-        "heading": "Đo lường độ dốc riêng thay vì nhìn số liệu chung",
-        "body": "Thay vì lập kế hoạch dựa trên các con số áp dụng AI toàn ngành, người quản lý cần tự theo dõi lưu lượng truy cập từ AI và thị phần trích dẫn hàng tháng của riêng mình. Việc xây dựng ngân sách dựa trên độ dốc đo lường thực tế của doanh nghiệp sẽ chính xác hơn nhiều so với việc dựa vào mô hình kinh tế vĩ mô hay thông cáo báo chí của đối thủ."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing đối mặt với rủi ro nội dung sản xuất bằng AI kém chất lượng làm suy giảm thứ hạng tìm kiếm, đồng thời phải điều chỉnh chiến lược dựa trên dữ liệu thực tế của doanh nghiệp thay vì số liệu chung của thị trường.",
-    "ifIgnored": "Bỏ qua các cảnh báo này sẽ khiến doanh nghiệp tiếp tục sản xuất nội dung rập khuôn thiếu kiểm chứng, dẫn đến việc mất dần độ tin cậy với các nền tảng AI và cơ quan quản lý khi các quy định mới được áp dụng.",
-    "actionChecklist": [
-      "Kiểm tra lại toàn bộ nội dung sản xuất bằng AI trong quý qua để tìm các dấu hiệu thiếu nguồn dẫn và văn phong đồng nhất.",
-      "Theo dõi và đo lường lưu lượng truy cập giới thiệu từ AI cùng thị phần trích dẫn của thương hiệu hàng tháng.",
-      "Xây dựng ngân sách quảng cáo và nội dung dựa trên tốc độ tiếp nhận thực tế của phân khúc thị trường riêng.",
-      "Chuẩn bị sẵn sàng hệ thống nguồn lực, chuyên gia xác thực và dữ liệu minh bạch để đáp ứng các tiêu chuẩn kiểm toán tiềm năng."
-    ],
-    "id": "real-2026-09-16-ba-canh-bao-lon-d74fdb",
-    "publishedAt": "16/09/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/mit-anthropic-openai-sent-the-same-warning-get-your-evidence-house-in-order-now/589249/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/09/ai-warning-560.png",
-      "credit": "Ảnh: Search Engine Journal"
     }
   },
   {
