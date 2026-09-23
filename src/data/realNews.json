@@ -1,5 +1,186 @@
 [
   {
+    "category": "AI Marketing",
+    "platformIcon": "Sparkles",
+    "title": "Trợ lý AI Meta Muse vẫn cần nhân sự thực tế hỗ trợ thực hiện cuộc gọi",
+    "isHot": false,
+    "illustration": "crm-automation",
+    "readTime": "3 phút đọc",
+    "tags": [
+      "Meta Muse",
+      "Trí tuệ nhân tạo",
+      "Bảo mật dữ liệu",
+      "Tự động hóa"
+    ],
+    "summary": "Meta đang thử nghiệm tích hợp nhân sự thực tế để hỗ trợ trợ lý AI Muse thực hiện các cuộc gọi ngoại mạng cho doanh nghiệp. Quy trình lai này giúp giảm thiểu lỗi trong giai đoạn đầu thử nghiệm nhưng lại lặp lại kịch bản của dự án trợ lý M từng thất bại trước đây.",
+    "keyNumbers": [
+      {
+        "value": "2015",
+        "label": "Năm Meta ra mắt trợ lý lai M nhưng thất bại"
+      },
+      {
+        "value": "2018",
+        "label": "Năm dự án M chính thức bị khai tử"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Cơ chế vận hành lai của Meta Muse",
+        "body": "Trợ lý AI Muse của Meta được thiết kế để thay mặt người dùng thực hiện các cuộc gọi đến doanh nghiệp nhằm hỏi giá hoặc đặt chỗ. Tuy nhiên, các báo cáo nội bộ tiết lộ rằng không phải tất cả cuộc gọi đều hoàn toàn do AI thực hiện. Meta đang âm thầm chuyển giao một số cuộc gọi phức tạp hoặc bị lỗi cho các nhân viên thực tế đã qua đào tạo xử lý."
+      },
+      {
+        "heading": "Lặp lại lịch sử thất bại của dự án M",
+        "body": "Mô hình lai giữa AI và con người này thực chất không mới đối với Meta. Vào năm 2015, hãng từng ra mắt trợ lý M trên Messenger với cơ chế hoạt động tương tự để hỗ trợ người dùng đặt bàn nhà hàng. Dự án này sau đó đã phải đóng cửa vào năm 2018 do chi phí vận hành quá cao và không thể mở rộng quy mô."
+      },
+      {
+        "heading": "Mối lo ngại về bảo mật dữ liệu khách hàng",
+        "body": "Việc sử dụng nhân sự thực tế để can thiệp vào các cuộc hội thoại của AI dấy lên nhiều lo ngại lớn về quyền riêng tư. Reuters cho biết Meta từng thử nghiệm mô hình lễ tân con người để bổ sung cho Meta AI nhưng phải tạm dừng vì lo ngại rò rỉ dữ liệu cá nhân cho bên thứ ba. Các doanh nghiệp cần thận trọng khi chia sẻ thông tin nhạy cảm qua các kênh thử nghiệm này."
+      },
+      {
+        "heading": "Thách thức về khả năng mở rộng quy mô",
+        "body": "Mặc dù việc sử dụng con người giúp trải nghiệm cuộc gọi mượt mà hơn trong giai đoạn đầu, nó lại tạo ra rào cản lớn về mặt chi phí. Một hệ thống phụ thuộc vào nhân sự thủ công sẽ rất khó để tối ưu hóa chi phí khi lượng người dùng tăng lên. Mark Zuckerberg từng thừa nhận mô hình lai trước đây có tỷ lệ sử dụng thực tế rất thấp từ phía người dùng."
+      }
+    ],
+    "impact": "Giúp Trưởng phòng Marketing nhận diện rõ giới hạn hiện tại của các công cụ AI từ Meta, từ đó không quá phụ thuộc vào các cam kết tự động hóa hoàn toàn. Đồng thời, cảnh báo về rủi ro bảo mật thông tin khách hàng khi sử dụng các tính năng thử nghiệm có sự can thiệp của con người.",
+    "ifIgnored": "Doanh nghiệp có thể vô tình để lộ dữ liệu khách hàng hoặc thông tin kinh doanh nhạy cảm cho các nhà thầu phụ của Meta. Ngoài ra, việc xây dựng quy trình CSKH phụ thuộc vào một công cụ chưa thể mở rộng quy mô sẽ gây lãng phí tài nguyên khi công cụ này bị thay đổi hoặc khai tử.",
+    "actionChecklist": [
+      "Kiểm tra và giới hạn các thông tin nhạy cảm chia sẻ qua các trợ lý AI đang trong giai đoạn thử nghiệm của Meta.",
+      "Đánh giá lại hiệu quả của các kịch bản cuộc gọi tự động và chuẩn bị phương án dự phòng bằng nhân sự nội bộ.",
+      "Cập nhật chính sách bảo mật thông tin khách hàng để đảm bảo tuân thủ khi tương tác với các công cụ AI bên thứ ba.",
+      "Theo dõi sát sao các cập nhật tiếp theo của Meta Muse trước khi quyết định tích hợp sâu vào quy trình vận hành."
+    ],
+    "id": "real-2026-09-22-tro-ly-ai-meta-5ac5d0",
+    "publishedAt": "22/09/2026",
+    "sourceUrl": "https://www.socialmediatoday.com/news/meta-muse-uses-human-staff-for-some-functions/831097/",
+    "source": "Social Media Today",
+    "image": {
+      "url": "https://imgproxy.divecdn.com/qnyvdp1-Cm1MScu8ZktgIHPMxg2dWxyHU9PPXsTBEdQ/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9tdXNlX2xvZ28ucG5n.webp",
+      "credit": "Ảnh: Social Media Today"
+    }
+  },
+  {
+    "category": "Meta Ads",
+    "platformIcon": "Facebook",
+    "title": "Meta tách biệt quyền quản trị Threads khỏi Instagram trong Trình quản lý doanh nghiệp",
+    "isHot": false,
+    "illustration": "account-security",
+    "readTime": "3 phút đọc",
+    "tags": [
+      "Quản lý tài khoản",
+      "Meta Business",
+      "Quảng cáo Threads"
+    ],
+    "summary": "Meta chính thức cho phép các doanh nghiệp phân quyền quản trị tài khoản Threads độc lập với Instagram trong Trình quản lý doanh nghiệp. Thay đổi này giúp các đội ngũ marketing tối ưu hóa quy trình vận hành và bảo mật khi Threads dần trở thành một nền tảng quảng cáo độc lập.",
+    "keyNumbers": [
+      {
+        "value": "500.000.000",
+        "label": "Người dùng hoạt động hàng tháng trên Threads"
+      },
+      {
+        "value": "09/2026",
+        "label": "Thời điểm bắt đầu triển khai tính năng phân quyền mới"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Tách biệt quyền quản trị Threads và Instagram",
+        "body": "Bắt đầu từ tháng 9 năm 2026, Meta triển khai tính năng phân quyền theo nhiệm vụ chuyên biệt cho các trang cá nhân Threads trực tiếp trong danh mục kinh doanh. Trước đây, quyền truy cập Threads bị ràng buộc chặt chẽ với tài khoản Instagram liên kết. Thay đổi mới cho phép doanh nghiệp tùy chỉnh mức độ tiếp cận của từng nhân sự đối với riêng Threads mà không ảnh hưởng đến Instagram."
+      },
+      {
+        "heading": "Kế thừa và chuyển đổi hệ thống phân quyền",
+        "body": "Đối với các tài khoản Threads hiện có trong danh mục kinh doanh, hệ thống sẽ tạm thời giữ nguyên cài đặt phân quyền được thừa hưởng từ tài khoản Instagram liên kết trước đó. Tuy nhiên, các nhà quảng cáo có thể chủ động tùy chỉnh và thiết lập lại các mức độ truy cập riêng biệt cho Threads ngay từ bây giờ. Việc này giúp giảm thiểu rủi ro bảo mật khi nhân sự chỉ cần quản lý một nền tảng cụ thể."
+      },
+      {
+        "heading": "Threads từng bước trở thành nền tảng độc lập",
+        "body": "Động thái này là một phần trong chiến lược lớn hơn của Meta nhằm tách biệt Threads khỏi Instagram để biến nó thành một kênh tiếp thị độc lập. Trước đó, Meta cũng thông báo nhà quảng cáo không còn bắt buộc phải có tài khoản Instagram để chạy quảng cáo trên Threads. Sự độc lập này giúp các thương hiệu xây dựng chiến lược nội dung và tiếp cận khách hàng chuyên biệt hơn."
+      },
+      {
+        "heading": "Sự tăng trưởng mạnh mẽ của Threads",
+        "body": "Quyết định nâng cấp công cụ quản trị diễn ra trong bối cảnh Threads đã đạt mốc 500 triệu người dùng hoạt động hàng tháng. CEO Mark Zuckerberg gần đây cũng lưu ý rằng ứng dụng này có khả năng đã vượt qua X về tổng lượng sử dụng. Với vị thế ngày càng vững chắc, Threads đòi hỏi các công cụ quản lý chuyên nghiệp và độc lập để phục vụ các chiến dịch quy mô lớn."
+      }
+    ],
+    "impact": "Giúp Trưởng phòng Marketing dễ dàng phân chia công việc cho nhân sự hoặc agency phụ trách riêng Threads mà không lo ngại rủi ro bảo mật hay lộ thông tin nhạy cảm từ tài khoản Instagram của thương hiệu.",
+    "ifIgnored": "Doanh nghiệp dễ gặp rủi ro bảo mật khi phải cấp quyền Instagram (vốn chứa nhiều dữ liệu nhạy cảm và ngân sách lớn) chỉ để cho phép nhân sự hoặc agency đăng bài và tối ưu hóa trên Threads.",
+    "actionChecklist": [
+      "Truy cập Meta Business Suite để kiểm tra danh mục kinh doanh và các tài khoản Threads đã liên kết.",
+      "Rà soát lại danh sách nhân sự và agency đang có quyền truy cập vào Instagram để chuẩn bị tách riêng quyền Threads.",
+      "Thiết lập phân quyền theo nhiệm vụ cụ thể cho nhân sự phụ trách Threads ngay khi tính năng này được cập nhật tại khu vực.",
+      "Đánh giá lại kế hoạch phân bổ ngân sách quảng cáo riêng cho Threads mà không cần phụ thuộc vào tài khoản Instagram."
+    ],
+    "deadline": "09/2026",
+    "id": "real-2026-09-22-meta-tach-biet-quyen-3c9e34",
+    "publishedAt": "22/09/2026",
+    "sourceUrl": "https://www.socialmediatoday.com/news/meta-adds-threads-specific-permissions-for-businesses/831087/",
+    "source": "Social Media Today",
+    "image": {
+      "url": "https://imgproxy.divecdn.com/WtVwuvPQucR0rUzMtUQpYml2_BnBh7RJ_Yvc4iKkzcw/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS90aHJlYWRzX25ld19sb2dvLnBuZw==.webp",
+      "credit": "Ảnh: Social Media Today"
+    }
+  },
+  {
+    "category": "AI Marketing",
+    "platformIcon": "Sparkles",
+    "title": "Bản đồ nguồn dữ liệu của AI Search: Thương hiệu cần xuất hiện ở đâu để được AI trích dẫn?",
+    "isHot": false,
+    "illustration": "zero-click",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "AI Search",
+      "AEO",
+      "Tối ưu hóa tìm kiếm",
+      "Nguồn dữ liệu AI"
+    ],
+    "summary": "Khi các công cụ tìm kiếm AI như Gemini, ChatGPT và Copilot ngày càng phổ biến, việc hiểu rõ nguồn dữ liệu mà chúng sử dụng để phản hồi người dùng là vô cùng quan trọng. Bài viết phân loại các nguồn dữ liệu từ Tier 1 (xác thực và trực tiếp) đến Tier 4 (khả năng cao) giúp doanh nghiệp định hình chiến lược tối ưu hóa hiển thị trên AI (AEO). Đây là chìa khóa để thương hiệu của bạn được AI trích dẫn và đề xuất trực tiếp cho khách hàng.",
+    "keyNumbers": [
+      {
+        "value": "60%",
+        "label": "Tỷ lệ dữ liệu Common Crawl trong hỗn hợp lấy mẫu của GPT-3"
+      },
+      {
+        "value": "15 phút",
+        "label": "Tần suất tối đa OpenAI chấp nhận cập nhật dữ liệu sản phẩm từ doanh nghiệp"
+      },
+      {
+        "value": "60.000.000 USD",
+        "label": "Giá trị hợp đồng ước tính mỗi năm giữa Google và Reddit để khai thác dữ liệu"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Nhóm dữ liệu Tier 1: Nguồn cấp thời gian thực quyết định câu trả lời của AI",
+        "body": "Đây là nhóm dữ liệu được xác nhận đang sử dụng cho quá trình RAG (Retrieval-Augmented Generation) và liên kết trực tiếp để đưa ra câu trả lời thời gian thực. Các nguồn chính bao gồm Google Search, Bing Search, Google Maps và Google Business Profile. Đối với thương hiệu, việc duy trì thông tin chính xác trên các nền tảng này là bắt buộc để AI có thể định vị và trích dẫn chính xác địa điểm hoặc thông tin doanh nghiệp. Ngoài ra, Wikipedia và Yelp cũng thuộc nhóm này, trong đó Yelp cho phép người dùng ChatGPT thực hiện các hành động trực tiếp như đặt bàn hoặc yêu cầu báo giá."
+      },
+      {
+        "heading": "Thương mại điện tử và dữ liệu sản phẩm: Sức mạnh của Merchant Center",
+        "body": "Google Merchant Center là nguồn dữ liệu cốt lõi thúc đẩy hiển thị mua sắm trên các bề mặt tìm kiếm của Google. Đối với OpenAI, nền tảng này chấp nhận các tệp dữ liệu sản phẩm định dạng CSV hoặc JSON được cập nhật liên tục mỗi 15 phút để đảm bảo thông tin về giá, lượng tồn kho và mô tả sản phẩm luôn chính xác. Việc tích hợp danh mục sản phẩm từ các nền tảng như Shopify vào ChatGPT đã được xác nhận. Marketer cần đảm bảo các nguồn cấp dữ liệu sản phẩm (product feeds) luôn sạch và được cập nhật liên tục để không bỏ lỡ cơ hội được AI đề xuất mua sắm."
+      },
+      {
+        "heading": "Dữ liệu cộng đồng và báo chí: Những thương vụ triệu đô",
+        "body": "Các nền tảng AI đang tích cực mua bản quyền dữ liệu từ các bên thứ ba để huấn luyện và truy xuất thông tin. Điển hình là thương vụ trị giá khoảng 60.000.000 USD mỗi năm giữa Google và Reddit để khai thác API dữ liệu thời gian thực, mặc dù khả năng gia hạn hợp đồng này vẫn chưa chắc chắn. OpenAI cũng đã ký kết nhiều thỏa thuận cấp phép với các nhà xuất bản lớn như Financial Times, Axel Springer, AP và News Corp. Điều này đồng nghĩa với việc nội dung chất lượng cao, có bản quyền và các thảo luận thực tế từ người dùng trên diễn đàn sẽ có trọng số rất cao trong câu trả lời của AI."
+      },
+      {
+        "heading": "Chiến lược tối ưu hóa công cụ tìm kiếm AI (AEO) cho doanh nghiệp",
+        "body": "Để thương hiệu xuất hiện trong các câu trả lời của AI, marketer không thể chỉ dựa vào SEO truyền thống. Bạn cần chủ động đưa dữ liệu của mình vào các 'phễu' mà AI quét qua hàng ngày. Hãy tối ưu hóa sự hiện diện trên các nền tảng cộng đồng như Reddit, xây dựng nội dung FAQ chất lượng cao và cấu trúc dữ liệu sản phẩm chuẩn chỉnh. Việc hiểu rõ AI lấy thông tin từ đâu giúp doanh nghiệp phân bổ ngân sách sản xuất nội dung và tối ưu hóa kỹ thuật một cách chính xác, thay vì tối ưu mù quáng."
+      }
+    ],
+    "impact": "Giúp Trưởng phòng Marketing chuyển dịch ngân sách và nguồn lực từ SEO truyền thống sang AEO (Answer Engine Optimization) một cách có cơ sở khoa học. Bạn sẽ biết chính xác cần tối ưu hóa những kênh vệ tinh nào (Google Merchant Center, Reddit, Google Business Profile) để thương hiệu xuất hiện trong câu trả lời của ChatGPT, Gemini hay Copilot.",
+    "ifIgnored": "Doanh nghiệp sẽ tiếp tục đổ tiền vào SEO truyền thống nhưng lượng truy cập vẫn sụt giảm do xu hướng tìm kiếm không nhấp chuột (zero-click) tăng cao. Thương hiệu của bạn sẽ hoàn toàn biến mất khỏi các câu trả lời đề xuất của AI Chatbot, nhường sân chơi cho các đối thủ biết cách tối ưu hóa nguồn dữ liệu đầu vào của AI.",
+    "actionChecklist": [
+      "Cập nhật và đồng bộ hóa toàn bộ thông tin doanh nghiệp trên Google Business Profile và Google Maps để tối ưu hóa tìm kiếm địa điểm bằng AI.",
+      "Thiết lập và tối ưu hóa nguồn cấp dữ liệu sản phẩm (product feed) trên Google Merchant Center và chuẩn bị sẵn sàng cấu trúc dữ liệu sản phẩm cho OpenAI.",
+      "Xây dựng chiến lược nội dung trên các nền tảng cộng đồng như Reddit và các trang báo chí uy tín để tăng khả năng được AI quét và trích dẫn.",
+      "Cấu trúc lại nội dung website theo dạng câu hỏi - câu trả lời (FAQ) rõ ràng để các mô hình ngôn ngữ lớn dễ dàng trích xuất thông tin (RAG)."
+    ],
+    "id": "real-2026-09-22-ban-do-nguon-du-792186",
+    "publishedAt": "22/09/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/which-data-sources-should-you-care-about-for-ai-search/590086/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/09/data-sources-837.png",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
     "category": "Google Ads & SEO",
     "platformIcon": "Search",
     "title": "Google Analytics bổ sung bộ lọc Include cho Hostname giúp chặn sạch dữ liệu rác",
@@ -431,70 +612,6 @@
   {
     "category": "Meta Ads",
     "platformIcon": "Facebook",
-    "title": "Meta ra mắt Creator Marketing Hub và tích hợp AI hỗ trợ kết nối nhãn hàng",
-    "isHot": "false",
-    "illustration": "ai-video",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Meta Ads",
-      "Influencer Marketing",
-      "AI Business Assistant",
-      "Partnership Ads"
-    ],
-    "summary": "Meta công bố ra mắt Creator Marketing Hub toàn cầu với các tính năng mới bao gồm mở rộng API, tích hợp trợ lý AI và công cụ chỉnh sửa nội dung. Nền tảng hướng tới việc đơn giản hóa quy trình tìm kiếm và hợp tác giữa nhà quảng cáo với nhà sáng tạo nội dung.",
-    "keyNumbers": [
-      {
-        "value": "37 tỷ USD",
-        "label": "chi tiêu cho nhà sáng tạo năm 2025"
-      },
-      {
-        "value": "45%",
-        "label": "đơn hàng bị ảnh hưởng bởi nhà sáng tạo"
-      },
-      {
-        "value": "60,8 tỷ USD",
-        "label": "doanh thu quý 2 của Meta"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Ra mắt Creator Marketing Hub toàn cầu",
-        "body": "Meta chính thức công bố Creator Marketing Hub tại sự kiện Global Creator Week của IAB. Nền tảng này tích hợp nhiều tính năng mới như bộ lọc tìm kiếm nâng cao, gợi ý nội dung tối ưu và công cụ nhắn tin trực tiếp trong trung tâm. Các cập nhật sẽ được triển khai dần trong suốt thời gian còn lại của năm 2026."
-      },
-      {
-        "heading": "Mở rộng API và tích hợp Facebook vào Marketplace",
-        "body": "Dưới thay đổi mới, nhà sáng tạo trên Facebook sẽ gia nhập cùng Instagram trong Creator Marketplace API, giúp nhà quảng cáo tìm kiếm qua một điểm tích hợp duy nhất. Content Discovery API cũng được mở rộng để cung cấp các đề xuất về nội dung hữu cơ hiệu quả cao từ nhà sáng tạo."
-      },
-      {
-        "heading": "Tích hợp trợ lý AI và quảng cáo livestream",
-        "body": "Trợ lý AI kinh doanh của Meta được tích hợp trực tiếp vào Creator Marketing Hub để hỗ trợ tìm kiếm và đưa ra đề xuất nhà sáng tạo qua khung chat. Ngoài ra, quảng cáo video trực tiếp trên Instagram sẽ chính thức khả dụng từ ngày 29 tháng 9, cho phép nhà quảng cáo khuếch đại nội dung live của nhà sáng tạo dưới dạng Partnership Ads."
-      },
-      {
-        "heading": "Kết nối qua Meta Ads MCP connector",
-        "body": "Partnership Ads sẽ được hỗ trợ thông qua đầu nối Meta Ads MCP. Điều này cho phép các nhà quảng cáo và agency có thể tự do tạo và quản lý Partnership Ads trực tiếp từ tác nhân AI mà họ lựa chọn."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing có thêm công cụ tự động hóa qua AI để tìm kiếm và quản lý nhà sáng tạo trên cả Facebook và Instagram thông qua một nền tảng tập trung duy nhất.",
-    "ifIgnored": "Bỏ lỡ cơ hội tối ưu hóa quy trình làm việc với Influencer và không tận dụng được các tính năng quảng cáo livestream mới trên Instagram để mở rộng tệp khán giả.",
-    "actionChecklist": [
-      "Khám phá Creator Marketing Hub mới của Meta để tìm kiếm nhà sáng tạo trên cả Facebook và Instagram.",
-      "Trải nghiệm tính năng trợ lý AI trong hub để nhận các đề xuất nhà sáng tạo phù hợp.",
-      "Chuẩn bị ngân sách và chiến lược cho quảng cáo video trực tiếp trên Instagram áp dụng từ ngày 29 tháng 9.",
-      "Kiểm tra khả năng tích hợp Partnership Ads thông qua Meta Ads MCP connector."
-    ],
-    "deadline": "29/09/2026",
-    "id": "real-2026-09-17-meta-ra-mat-creator-93365f",
-    "publishedAt": "17/09/2026",
-    "sourceUrl": "https://www.marketingdive.com/news/meta-streamlines-creator-brand-tie-ups-with-new-marketing-hub/830593/",
-    "source": "Marketing Dive",
-    "image": {
-      "url": "https://imgproxy.divecdn.com/yhGony2fK6kaZSeZmc2Vc3A-JAGtondv_JFQviQR1Ko/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMTk2NjI2OTc3LmpwZw==.webp",
-      "credit": "Ảnh: Marketing Dive"
-    }
-  },
-  {
-    "category": "Meta Ads",
-    "platformIcon": "Facebook",
     "title": "Meta giới hạn trang Facebook chỉ được đăng 2 bài viết chứa liên kết mỗi tháng",
     "isHot": true,
     "illustration": "zero-click",
@@ -553,69 +670,6 @@
     "image": {
       "url": "https://imgproxy.divecdn.com/evOasWnSa1B_asPVRdK3mKi_Gac1Vn1J-hhg68rB7Ko/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9mYl9saW5rc190ZXN0My5wbmc=.webp",
       "credit": "Ảnh: Social Media Today"
-    }
-  },
-  {
-    "category": "TikTok Shop & Ads",
-    "platformIcon": "Video",
-    "title": "Thương hiệu thời trang Coach kết hợp Spotify và chuỗi sự kiện xe buýt cho chiến dịch mùa thu",
-    "isHot": "false",
-    "illustration": "ai-video",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Coach",
-      "Spotify",
-      "Chiến dịch mùa thu",
-      "Gen Z"
-    ],
-    "summary": "Thương hiệu thời trang Coach đang triển khai chiến dịch mùa thu mang âm nhạc làm trọng tâm thông qua sự hợp tác toàn cầu với Spotify. Chiến dịch này bao gồm một trung tâm nội dung trực tuyến, chuỗi video quảng cáo và các trải nghiệm thực tế trên xe buýt tại nhiều quốc gia.",
-    "keyNumbers": [
-      {
-        "value": "15%",
-        "label": "Tăng trưởng doanh thu Coach"
-      },
-      {
-        "value": "9%",
-        "label": "Tăng trưởng doanh thu Tapestry"
-      },
-      {
-        "value": "24%",
-        "label": "Tăng trưởng doanh thu cả năm của Coach"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Hợp tác chiến lược cùng Spotify",
-        "body": "Coach đã thiết lập quan hệ đối tác toàn cầu với Spotify để đưa âm nhạc vào chiến dịch mùa thu của hãng. Nền tảng phát trực tuyến này ra mắt trung tâm Live Your Story cho phép người dùng khám phá danh sách phát và chia sẻ cá tính nghe nhạc. Sự kết hợp này nhằm thu hút nhóm khách hàng trẻ tuổi thông qua sở thích âm nhạc."
-      },
-      {
-        "heading": "Chuỗi quảng cáo và trải nghiệm thực tế",
-        "body": "Chiến dịch giới thiệu các video quảng cáo có sự tham gia của đại sứ thương hiệu Elle Fanning và nhiều nghệ sĩ trẻ triển vọng. Các đoạn phim mô tả hành trình trên xe buýt nhằm thúc đẩy kết nối trực tiếp thay vì chỉ nhìn màn hình. Điểm nhấn sản phẩm là dòng túi xách Tabby gắn huy hiệu vé hòa nhạc."
-      },
-      {
-        "heading": "Mở rộng quy mô hoạt động toàn cầu",
-        "body": "Bên cạnh Spotify, Coach còn hợp tác với QQ Music tại Trung Quốc và mở rộng hoạt động trên nền tảng Bilibili. Chuyến xe buýt mang tên Tabby Tour khởi hành từ New York để đến các trường đại học và địa điểm khác tại Mỹ, Anh, Nhật Bản và Hàn Quốc. Du khách tham gia có thể tùy chỉnh sản phẩm và tham gia các buổi biểu diễn trực tiếp."
-      },
-      {
-        "heading": "Đầu tư mạnh mẽ vào hoạt động marketing",
-        "body": "Lãnh đạo công ty mẹ Tapestry cho biết chi phí marketing đã tăng khoảng 20% so với năm trước. Định hướng tập trung vào việc xây dựng thương hiệu ở tầng phễu trên nhằm hỗ trợ thu hút khách hàng dài hạn. Các chiến dịch hướng đến thế hệ Z tiếp tục mang lại hiệu quả rõ rệt về nhận thức thương hiệu."
-      }
-    ],
-    "impact": "Chiến dịch của Coach minh họa cách kết hợp nền tảng phát nhạc trực tuyến và trải nghiệm ngoại tuyến để tiếp cận giới trẻ, tạo gợi ý cho các Trưởng phòng Marketing khi làm thương hiệu đa kênh.",
-    "ifIgnored": "Bỏ qua xu hướng kết hợp giải trí và trải nghiệm thực tế có thể khiến thương hiệu khó tạo dấu ấn sâu sắc với đối tượng khách hàng trẻ.",
-    "actionChecklist": [
-      "Khảo sát hành vi nghe nhạc và giải trí của nhóm khách hàng mục tiêu trên các nền tảng trực tuyến.",
-      "Thử nghiệm tích hợp các yếu tố âm nhạc hoặc nội dung giải trí vào chiến dịch sản phẩm sắp tới.",
-      "Lên kế hoạch kết hợp giữa hoạt động trực tuyến trên mạng xã hội và sự kiện trải nghiệm thực tế.",
-      "Đánh giá lại tỷ lệ ngân sách phân bổ cho các hoạt động xây dựng thương hiệu ở tầng phễu trên."
-    ],
-    "id": "real-2026-09-16-thuong-hieu-thoi-trang-37ad03",
-    "publishedAt": "16/09/2026",
-    "sourceUrl": "https://www.marketingdive.com/news/coach-channels-music-into-fall-campaign-with-spotify-integration-bus-tour/830501/",
-    "source": "Marketing Dive",
-    "image": {
-      "url": "https://imgproxy.divecdn.com/KBKyHF78iCeMExAJFVuECZVmU6Cier5aNS22nndFYGs/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9Db2FjaC1GYWxsLTIwMjYtQ2FtcGFpZ24tRWxsZS1GYW5uaW5nLmpwZw==.webp",
-      "credit": "Ảnh: Marketing Dive"
     }
   },
   {
