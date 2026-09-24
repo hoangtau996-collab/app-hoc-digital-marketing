@@ -1,6 +1,191 @@
 [
   {
     "category": "AI Marketing",
+    "platformIcon": "Video",
+    "title": "YouTube ra mắt loạt tính năng AI và tiếp thị liên kết mới tại sự kiện Made on 2026",
+    "isHot": false,
+    "illustration": "ai-video",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "YouTube Ads",
+      "Sáng tạo video AI",
+      "Tiếp thị liên kết",
+      "A/B Testing"
+    ],
+    "summary": "YouTube vừa công bố hàng loạt cập nhật quan trọng tại sự kiện Made on 2026, tập trung vào công cụ sáng tạo AI Gemini Omni và mở rộng chương trình tiếp thị liên kết. Đáng chú ý, các nhà quảng cáo và nhà sáng tạo nội dung sẽ có thêm công cụ thử nghiệm A/B video và tối ưu hóa hiển thị hình thu nhỏ cá nhân hóa. Đây là những bước đi chiến lược giúp tối ưu hóa hiệu suất chiến dịch video ngắn và tiếp cận người mua hàng trực tiếp trên nền tảng.",
+    "keyNumbers": [
+      {
+        "value": "3",
+        "label": "Số lượng hình thu nhỏ tối đa có thể tải lên cho mỗi video để hệ thống tự động tối ưu hóa hiển thị"
+      },
+      {
+        "value": "35",
+        "label": "Số lượng thị trường mục tiêu mà chương trình tiếp thị liên kết YouTube Shopping muốn tiếp cận vào cuối năm"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Tích hợp AI Gemini Omni hỗ trợ biên tập video ngắn",
+        "body": "YouTube tích hợp mô hình AI Gemini Omni của Google vào trợ lý chỉnh sửa hội thoại mới cho Shorts và ứng dụng YouTube Create. Người dùng chỉ cần chọn ảnh hoặc video, sau đó nhập câu lệnh để AI tự động tạo ra bản thảo đầu tiên. Công cụ này cũng đưa ra các gợi ý cá nhân hóa trong khung chat như cắt bỏ các đoạn dừng lặng, sắp xếp lại các clip để có nhịp độ tốt hơn và thêm văn bản trên màn hình. Đây là cải tiến mạnh mẽ giúp các thương hiệu tăng tốc độ sản xuất nội dung video ngắn mà không cần đội ngũ hậu kỳ phức tạp."
+      },
+      {
+        "heading": "Thử nghiệm A/B Testing video và tối ưu hóa hình thu nhỏ",
+        "body": "YouTube Studio bổ sung tính năng thử nghiệm A/B video để người dùng thử các bản dựng và biến thể khác nhau trực tiếp trên nền tảng. Đặc biệt, nhà sáng tạo và thương hiệu sẽ sớm có thể tải lên tối đa 3 hình thu nhỏ cho mỗi video. Hệ thống của YouTube sau đó sẽ tự động hiển thị biến thể phù hợp nhất với từng nhóm đối tượng khán giả khác nhau dựa trên dữ liệu hành vi. Cập nhật này giải quyết triệt để bài toán tối ưu tỷ lệ nhấp chuột vốn phụ thuộc nhiều vào cảm tính trước đây."
+      },
+      {
+        "heading": "Mở rộng chiến dịch tiếp thị liên kết YouTube Affiliate",
+        "body": "Chương trình tiếp thị liên kết YouTube Shopping đặt mục tiêu mở rộng quy mô lên 35 thị trường vào cuối năm nay. Tính năng mới YouTube Affiliate Campaigns cho phép các thương hiệu dễ dàng tìm kiếm nhà sáng tạo nội dung phù hợp và gửi lời mời hợp tác trực tiếp. Doanh nghiệp có thể đề xuất mức phí cố định kết hợp với tỷ lệ hoa hồng độc quyền ngay trên hệ thống. Ngoài ra, YouTube cũng tự động bản địa hóa các thẻ sản phẩm đối với người xem quốc tế để tối ưu tỷ lệ chuyển đổi."
+      },
+      {
+        "heading": "Định dạng Shorts Series và tính năng dịch trực tiếp bằng AI",
+        "body": "Nhằm đón đầu xu hướng phim truyền hình siêu ngắn, YouTube ra mắt tính năng Shorts series cho phép gộp các video ngắn thành các phần và tập phim. Đối với các nhà quảng cáo livestream, YouTube đang thử nghiệm tính năng tự động lồng tiếng theo thời gian thực bằng AI, dự kiến thí điểm bằng tiếng Anh và tiếng Tây Ban Nha vào đầu năm tới. Nền tảng cũng mở rộng trải nghiệm xem chung livestream Watch With cho tất cả các video đủ điều kiện. Những cập nhật này mở ra không gian tương tác sâu hơn giữa thương hiệu và người tiêu dùng."
+      }
+    ],
+    "impact": "Giúp Trưởng phòng Marketing cắt giảm đáng kể chi phí sản xuất video ngắn nhờ trợ lý AI, đồng thời tối ưu hóa ngân sách quảng cáo thông qua việc tự động hóa thử nghiệm A/B hình thu nhỏ và tiếp cận mạng lưới KOC toàn cầu dễ dàng hơn qua hệ thống Affiliate tập trung.",
+    "ifIgnored": "Doanh nghiệp sẽ bị tụt hậu về tốc độ sản xuất nội dung Shorts so với đối thủ sử dụng AI, lãng phí ngân sách quảng cáo do không tối ưu hóa được tỷ lệ nhấp của hình thu nhỏ, và bỏ lỡ kênh tiếp thị liên kết tự động hóa đang phát triển mạnh mẽ của YouTube.",
+    "actionChecklist": [
+      "Chuẩn bị sẵn tối thiểu 3 phương án thiết kế hình thu nhỏ cho các video chiến dịch sắp tới để sẵn sàng thử nghiệm tính năng phân phối cá nhân hóa của YouTube.",
+      "Thử nghiệm công cụ chỉnh sửa video bằng AI Gemini Omni trên ứng dụng YouTube Create để đánh giá khả năng rút ngắn quy trình sản xuất nội dung Shorts.",
+      "Nghiên cứu cơ chế vận hành của YouTube Affiliate Campaigns để chuẩn bị ngân sách cho mô hình kết hợp phí cố định và hoa hồng với KOC.",
+      "Lên kế hoạch cấu trúc lại các nội dung video ngắn hiện có theo định dạng Shorts series chia theo mùa và tập để tăng tỷ lệ giữ chân người xem."
+    ],
+    "id": "real-2026-09-23-youtube-ra-mat-loat-c6f19b",
+    "publishedAt": "23/09/2026",
+    "sourceUrl": "https://www.socialmediatoday.com/news/youtube-presents-new-ai-and-engagement-features-at-made-on-2026/831216/",
+    "source": "Social Media Today",
+    "image": {
+      "url": "https://imgproxy.divecdn.com/xIVmJsLbJnZ67pYP_lIpfDubWseoGSovfRb02xOPFpg/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9tYWRlX29uX1lvdVR1YmVfMjAyNi5wbmc=.webp",
+      "credit": "Ảnh: Social Media Today"
+    }
+  },
+  {
+    "category": "AI Marketing",
+    "platformIcon": "Sparkles",
+    "title": "LinkedIn mở rộng tính năng xác minh danh tính: Tăng mạnh tương tác và trao quyền kiểm soát nhân sự cho doanh nghiệp",
+    "isHot": false,
+    "illustration": "account-security",
+    "readTime": "3 phút đọc",
+    "tags": [
+      "LinkedIn Marketing",
+      "Xác minh doanh nghiệp",
+      "Thương hiệu nhà tuyển dụng",
+      "Bảo mật tài khoản"
+    ],
+    "summary": "LinkedIn đang mở rộng mạnh mẽ các giải pháp xác minh danh tính người dùng và doanh nghiệp nhằm đối phó với làn sóng thông tin giả mạo trong kỷ nguyên AI. Đáng chú ý, nền tảng này bổ sung tính năng xác minh chéo lịch sử làm việc từ đồng nghiệp và cho phép các trang doanh nghiệp chính thức xóa bỏ những tài khoản mạo danh nhân viên.",
+    "keyNumbers": [
+      {
+        "value": "115.000.000",
+        "label": "Thành viên đã xác minh danh tính hoặc nơi làm việc miễn phí"
+      },
+      {
+        "value": "50%",
+        "label": "Tăng trưởng tương tác bài viết đối với tài khoản đã xác minh"
+      },
+      {
+        "value": "90%",
+        "label": "Tăng trưởng lượt xem hồ sơ đối với tài khoản đã xác minh"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Xác minh lịch sử làm việc thông qua đồng nghiệp cũ",
+        "body": "LinkedIn đang thử nghiệm một tính năng mới cho phép các đồng nghiệp cũ xác nhận lịch sử làm việc của một người dùng ngay trên hồ sơ của họ. Khi một thành viên nhận đủ số lượng xác nhận cần thiết từ mạng lưới, hệ thống sẽ tự động hiển thị huy hiệu xác minh trên trang cá nhân. Tuy nhiên, người dùng vẫn có quyền chủ động lựa chọn ẩn huy hiệu này nếu muốn. Sự xác nhận từ những người làm việc chung thực tế giúp tăng đáng kể độ tin cậy cho hồ sơ cá nhân trong bối cảnh hồ sơ ảo ngày càng tràn lan."
+      },
+      {
+        "heading": "Doanh nghiệp được quyền xóa bỏ nhân viên giả mạo",
+        "body": "Nhằm bảo vệ uy tín thương hiệu, LinkedIn hiện cho phép các trang doanh nghiệp đã xác minh trực tiếp gỡ bỏ những tài khoản tự ý khai báo là nhân viên của công ty. Tính năng này giải quyết triệt để tình trạng các tài khoản ảo mạo danh nhân sự cấp cao để đi lừa đảo hoặc spam khách hàng trên nền tảng. Hiện tại, quyền lợi này chỉ giới hạn cho các trang doanh nghiệp đã hoàn thành quy trình xác minh chính thức của LinkedIn. Việc này giúp doanh nghiệp làm sạch dữ liệu nhân sự hiển thị công khai và bảo vệ danh tiếng thương hiệu."
+      },
+      {
+        "heading": "Điều kiện để doanh nghiệp kích hoạt tính năng xác minh",
+        "body": "Để đạt được trạng thái xác minh trang doanh nghiệp, các thương hiệu cần đáp ứng một số tiêu chí tương tác nhất định với nền tảng. Các yếu tố này bao gồm việc đăng bài thường xuyên, phản hồi tích cực các thành viên khác, hoặc có mối quan hệ thương mại thiết lập sẵn với LinkedIn. Mối quan hệ thương mại này bao gồm việc mua quảng cáo LinkedIn Ads hoặc đăng ký gói Premium Company Page. Điều này đồng nghĩa với việc doanh nghiệp có thể phải chi trả chi phí để sở hữu quyền kiểm soát nhân sự này."
+      },
+      {
+        "heading": "Mở rộng hợp tác bên thứ ba và tăng trưởng số liệu",
+        "body": "LinkedIn cũng đang bắt tay với Truecaller và PeerSpot để mở rộng hiển thị xác minh sang các nền tảng bên thứ ba, bên cạnh các đối tác hiện tại như Adobe, TrustRadius và UserTesting. Tính đến nay, hơn 115 triệu thành viên đã hoàn thành xác minh danh tính hoặc nơi làm việc miễn phí, tăng từ mốc 100 triệu vào tháng 12 năm 2025. Nền tảng nhấn mạnh rằng lòng tin là tài sản quý giá nhất khi AI đang tái định hình môi trường làm việc chuyên nghiệp. Việc sở hữu tài khoản xác minh giúp tăng 50% tương tác bài viết và gần 90% lượt xem hồ sơ."
+      }
+    ],
+    "impact": "Giúp các Trưởng phòng Marketing tối ưu hóa chiến dịch Social Selling và Account-Based Marketing (ABM) trên LinkedIn nhờ tài khoản cá nhân có độ tin cậy cao hơn. Đồng thời, doanh nghiệp có công cụ bảo vệ thương hiệu nhà tuyển dụng (Employer Branding), tránh bị các tài khoản giả mạo làm ảnh hưởng đến uy tín khi tiếp cận đối tác hoặc ứng viên tại thị trường Việt Nam.",
+    "ifIgnored": "Doanh nghiệp dễ bị tổn hại uy tín khi các tài khoản giả mạo danh nghĩa nhân viên công ty đi lừa đảo hoặc phát ngôn sai lệch trên LinkedIn mà không thể can thiệp. Đồng thời, đội ngũ sales và tuyển dụng của công ty sẽ chịu thiệt thòi lớn về hiệu suất tiếp cận (mất đi cơ hội tăng 50% tương tác và 90% lượt xem hồ sơ) so với các đối thủ đã tối ưu hóa xác minh.",
+    "actionChecklist": [
+      "Kiểm tra trạng thái xác minh của Trang doanh nghiệp (Company Page) và đăng ký gói Premium hoặc duy trì quảng cáo nếu cần thiết để kích hoạt quyền quản lý nhân viên.",
+      "Rà soát danh sách nhân viên đang liên kết với Trang doanh nghiệp trên LinkedIn để phát hiện và gỡ bỏ ngay các tài khoản giả mạo.",
+      "Khuyến khích đội ngũ nhân sự nòng cốt, đặc biệt là bộ phận Sales, Marketing và Tuyển dụng thực hiện xác minh danh tính cá nhân miễn phí.",
+      "Hướng dẫn nhân viên tận dụng tính năng xác minh chéo từ đồng nghiệp để gia tăng uy tín cho hồ sơ cá nhân, chuẩn bị cho các chiến dịch Social Selling."
+    ],
+    "id": "real-2026-09-23-linkedin-mo-rong-tinh-5eb638",
+    "publishedAt": "23/09/2026",
+    "sourceUrl": "https://www.socialmediatoday.com/news/linkedin-expands-verifications/831212/",
+    "source": "Social Media Today",
+    "image": {
+      "url": "https://imgproxy.divecdn.com/iuCd7X2Lrt-hI-meObi2fspqnoyUaISBG_46-1Zgaao/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9saW5rZWRpbl92ZXJpZmljYXRpb25fdXBkYXRlXzIucG5n.webp",
+      "credit": "Ảnh: Social Media Today"
+    }
+  },
+  {
+    "category": "Meta Ads",
+    "platformIcon": "Facebook",
+    "title": "Meta thử nghiệm gỡ bỏ giới hạn số lượng quảng cáo trên mỗi trang tại một số tài khoản",
+    "isHot": false,
+    "illustration": "account-security",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Meta Ads",
+      "Quản lý tài khoản",
+      "Giới hạn quảng cáo",
+      "Tối ưu chiến dịch"
+    ],
+    "summary": "Một số tài khoản quảng cáo Meta đang ghi nhận giao diện hiển thị thông báo gỡ bỏ giới hạn số lượng quảng cáo tối đa trên mỗi trang. Dù giao diện vẫn báo vượt ngưỡng, hệ thống vẫn cho phép các quảng cáo mới tiếp tục phân phối bình thường.",
+    "keyNumbers": [
+      {
+        "value": "250",
+        "label": "Giới hạn cũ mức dưới 100.000 đô la Mỹ"
+      },
+      {
+        "value": "286",
+        "label": "Số quảng cáo đang chạy thực tế"
+      },
+      {
+        "value": "36",
+        "label": "Số quảng cáo vượt hạn mức"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Dấu hiệu thay đổi từ giao diện quản lý",
+        "body": "Một số nhà quảng cáo Meta bắt đầu nhìn thấy thông báo mới trong Trình quản lý quảng cáo về việc không còn giới hạn số lượng quảng cáo mà một Trang có thể tạo ra. Trường hợp được ghi nhận cụ thể cho thấy tài khoản đang có 286 quảng cáo hoạt động dù trần giới hạn trước đó là 250. Giao diện vẫn hiển thị cảnh báo vượt mức nhưng các quảng cáo mới vẫn được phân phối bình thường."
+      },
+      {
+        "heading": "Hệ thống phân cấp hạn mức cũ",
+        "body": "Trước đây Meta áp dụng bốn bậc chi tiêu từ năm 2021 để giới hạn số lượng quảng cáo tối đa trên mỗi Trang. Cụ thể mức dưới 100.000 đô la Mỹ áp dụng trần 250 quảng cáo, mức dưới 1.000.000 đô la Mỹ là 1.000 quảng cáo, mức dưới 10.000.000 đô la Mỹ là 5.000 quảng cáo và trên 10.000.000 đô la Mỹ là 20.000 quảng cáo. Tài khoản trong bài viết có mức chi tiêu dưới 100.000 đô la Mỹ mỗi tháng nên chịu trần 250 quảng cáo."
+      },
+      {
+        "heading": "Sự mâu thuẫn giữa thông báo và thực thi",
+        "body": "Quy định cũ quy định rõ tài khoản vượt ngưỡng sẽ không thể chạy thêm quảng cáo hoặc chỉnh sửa cho đến khi giảm xuống dưới ngưỡng cho phép. Điểm thay đổi hiện tại nằm ở việc hệ thống vẫn đếm số lượng vượt mức nhưng không còn chặn việc phân phối quảng cáo mới. Meta hiện chưa đưa ra bất kỳ thông báo chính thức nào về việc triển khai thay đổi này trên diện rộng."
+      },
+      {
+        "heading": "Áp lực từ công cụ sáng tạo tự động",
+        "body": "Việc giữ giới hạn cứng trước đây nhằm tránh tình trạng phân tán ngân sách khiến quảng cáo không thoát khỏi giai đoạn học tập. Tuy nhiên sự bùng nổ của các công cụ AI tạo sinh và hệ thống phân phối mới đòi hỏi khối lượng tài sản sáng tạo lớn hơn. Các nhà quảng cáo hiện nay thường xuyên thử nghiệm nhiều biến thể sáng tạo khiến họ nhanh chóng chạm trần giới hạn cũ."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing có thể không còn bị bó buộc bởi giới hạn số lượng quảng cáo trên mỗi trang, giúp việc thử nghiệm biến thể sáng tạo và công cụ tự động diễn ra thoải mái hơn nếu thay đổi này được áp dụng rộng rãi.",
+    "ifIgnored": "Bỏ qua thông tin này có thể khiến đội ngũ tiếp tục duy trì quy trình tắt bớt quảng cáo cũ một cách thủ công không cần thiết, làm chậm tốc độ thử nghiệm chiến dịch.",
+    "actionChecklist": [
+      "Kiểm tra giao diện Trình quản lý quảng cáo của các Trang có lượng chi tiêu dưới 100.000 đô la Mỹ mỗi tháng",
+      "Theo dõi xem tài khoản của doanh nghiệp có xuất hiện thông báo gỡ bỏ giới hạn hay không",
+      "Lên kế hoạch chuẩn bị thêm các biến thể sáng tạo nếu tính năng được mở rộng",
+      "Đánh giá lại hiệu quả thực tế của các quảng cáo đang vượt mức giới hạn cũ"
+    ],
+    "id": "real-2026-09-23-meta-thu-nghiem-go-b0f8df",
+    "publishedAt": "23/09/2026",
+    "sourceUrl": "https://ppc.land/meta-drops-250-ad-page-cap-in-some-accounts-as-286-ads-keep-running/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/09/Meta-drops-250-ad-Page-cap-in-some-accounts-as-286-ads-keep-running.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "AI Marketing",
     "platformIcon": "Sparkles",
     "title": "Trợ lý AI Meta Muse vẫn cần nhân sự thực tế hỗ trợ thực hiện cuộc gọi",
     "isHot": false,
@@ -431,69 +616,6 @@
   {
     "category": "Google Ads & SEO",
     "platformIcon": "Search",
-    "title": "Tại sao CFO luôn ưu tiên cắt giảm ngân sách Marketing và cách bảo vệ ngân sách bằng tư duy quản trị rủi ro",
-    "isHot": false,
-    "illustration": "ai-budget",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Ngân sách Marketing",
-      "Định giá thương hiệu",
-      "Báo cáo tài chính",
-      "Quản trị rủi ro"
-    ],
-    "summary": "Dù 79% nhà đầu tư đánh giá thương hiệu là tài sản quan trọng nhất của doanh nghiệp, có tới 52% vẫn ủng hộ việc cắt giảm ngân sách tiếp thị khi gặp khó khăn tài chính. Nguyên nhân cốt lõi nằm ở tiêu chuẩn kế toán quốc tế IAS 38 buộc marketing phải ghi nhận là chi phí thay vì tài sản, khiến việc cắt giảm trở thành cách nhanh nhất để làm đẹp báo cáo tài chính ngắn hạn. Để bảo vệ ngân sách, các Trưởng phòng Marketing cần thay đổi ngôn ngữ giao tiếp với ban giám đốc, chuyển từ chứng minh hiệu quả sinh lời sang phân tích rủi ro nếu không đầu tư.",
-    "keyNumbers": [
-      {
-        "value": "79%",
-        "label": "Nhà đầu tư coi thương hiệu là yếu tố hàng đầu đánh giá doanh nghiệp"
-      },
-      {
-        "value": "52%",
-        "label": "Nhà đầu tư ủng hộ việc cắt giảm ngân sách tiếp thị"
-      },
-      {
-        "value": "89%",
-        "label": "Nhà đầu tư muốn vốn hóa chi phí marketing thay vì hạch toán chi phí"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Nghịch lý giữa giá trị thương hiệu và hành động thực tế",
-        "body": "Khảo sát từ IPA đối với khoảng 200 nhà phân tích và nhà đầu tư tại Mỹ và Anh cho thấy một nghịch lý lớn trong quản trị. Có đến 79% người tham gia khảo sát xếp thương hiệu ở vị trí cao nhất khi đánh giá vị thế của một doanh nghiệp, vượt qua cả lợi nhuận báo cáo và năng lực quản lý. Tuy nhiên, 52% trong số họ lại đồng ý rằng cắt giảm chi phí marketing là một biện pháp tích cực trong ngắn hạn. Chỉ có 36% tin rằng việc giảm chi phí này sẽ gây ra những tổn hại lâu dài cho doanh nghiệp."
-      },
-      {
-        "heading": "Rào cản cơ học từ tiêu chuẩn kế toán IAS 38",
-        "body": "Nguyên nhân sâu xa của nghịch lý này nằm ở tiêu chuẩn kế toán quốc tế IAS 38 về tài sản vô hình. Theo quy định này, các thương hiệu tự thân phát triển không được ghi nhận là tài sản trên bảng cân đối kế toán mà phải hạch toán trực tiếp vào chi phí vận hành. Do đó, khi doanh nghiệp cần đạt các chỉ số lợi nhuận quý để làm hài lòng thị trường, marketing trở thành khoản mục dễ bị cắt giảm nhất. Việc cắt giảm này mang lại hiệu quả tức thì cho dòng lợi nhuận hiện tại, trong khi những thiệt hại về thương hiệu chỉ xuất hiện sau đó nhiều năm."
-      },
-      {
-        "heading": "Chuyển dịch ngôn ngữ từ hiệu quả sang quản trị rủi ro",
-        "body": "Các Trưởng phòng Marketing thường cố gắng bảo vệ ngân sách bằng cách đưa ra hàng loạt dữ liệu về hiệu suất, lượt tiếp cận hoặc mô hình phân bổ. Tuy nhiên, ban giám đốc và CFO không quyết định dựa trên việc marketing có hiệu quả hay không, mà họ đang cân nhắc phân bổ vốn trong một môi trường bất định. Thay vì hứa hẹn về tỷ suất sinh lời vốn mang nhiều yếu tố không chắc chắn, marketer nên học cách trình bày ngân sách dưới góc độ giảm thiểu rủi ro. Hãy mô tả rõ ràng những tổn thất nghiêm trọng mà doanh nghiệp phải gánh chịu nếu không tiếp tục đầu tư vào thương hiệu."
-      },
-      {
-        "heading": "Động cơ cá nhân đằng sau các quyết định cắt giảm ngân sách",
-        "body": "Tâm lý học hành vi chỉ ra rằng con người có xu hướng sợ mất mát hơn là mong muốn đạt được một khoản lợi nhuận tương đương. Việc cắt giảm ngân sách marketing cực kỳ hấp dẫn đối với các giám đốc tài chính vì nó không mang lại rủi ro cá nhân tức thì. Khi những tác hại của việc suy giảm thương hiệu bắt đầu lộ diện rõ ràng sau vài năm, người đưa ra quyết định cắt giảm thường đã được thăng tiến hoặc chuyển sang một công ty khác. Hiểu được tâm lý này giúp marketer xây dựng các kịch bản phòng thủ ngân sách chặt chẽ hơn, gắn liền trách nhiệm dài hạn với các quyết định ngắn hạn."
-      }
-    ],
-    "impact": "Giúp Trưởng phòng Marketing tại Việt Nam hiểu rõ bản chất cơ học của việc cắt giảm ngân sách từ góc độ tài chính. Từ đó, thay đổi hoàn toàn cách chuẩn bị slide và thuyết trình ngân sách trước CFO và CEO, không còn tập trung vào các chỉ số kỹ thuật mà tập trung vào quản trị rủi ro và bảo vệ thị phần.",
-    "ifIgnored": "Tiếp tục bị động trong các cuộc họp ngân sách, liên tục bị cắt giảm chi phí quảng cáo mỗi khi thị trường biến động, dẫn đến mất thị phần vào tay đối thủ và không thể xây dựng được tài sản thương hiệu dài hạn.",
-    "actionChecklist": [
-      "Ngừng sử dụng các thuật ngữ kỹ thuật như reach, CTR hay CPM khi trình bày kế hoạch ngân sách trước CFO và CEO.",
-      "Xây dựng kịch bản Chi phí của việc không hành động (Cost of Inaction), nêu rõ thiệt hại về thị phần và chi phí chuyển đổi khách hàng nếu cắt giảm ngân sách.",
-      "Phân loại ngân sách marketing thành hai phần rõ rệt: chi phí vận hành ngắn hạn và đầu tư tài sản dài hạn.",
-      "Chủ động làm việc với bộ phận kế toán nội bộ để hiểu cách doanh nghiệp đang hạch toán chi phí tiếp thị theo chuẩn mực hiện hành."
-    ],
-    "id": "real-2026-09-19-tai-sao-cfo-luon-cefdd6",
-    "publishedAt": "19/09/2026",
-    "sourceUrl": "https://ppc.land/investors-rank-brand-first-but-52-back-marketing-cuts-whittaker-says/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/09/Investors-rank-brand-first-but-52--back-marketing-cuts--Whittaker-says.jpg",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
     "title": "Google thử nghiệm trả phí cho nội dung AI và hạ ngưỡng Search Profiles xuống 10.000 người theo dõi",
     "isHot": false,
     "illustration": "zero-click",
@@ -548,128 +670,6 @@
     "image": {
       "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/09/seo-pulse-google-ai-payments-featured-1600x840-1.jpg",
       "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Google, Microsoft và Cloudflare thử nghiệm trả phí cho nội dung dùng trong AI Search",
-    "isHot": false,
-    "illustration": "zero-click",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "AI Search",
-      "SEO",
-      "Bản quyền nội dung",
-      "Google Gemini"
-    ],
-    "summary": "Các ông lớn công nghệ đang thử nghiệm các mô hình bồi thường tài chính khác nhau cho các chủ sở hữu website khi nội dung của họ được sử dụng trong kết quả tìm kiếm AI. Sự khác biệt lớn giữa các mô hình của Google, Cloudflare và Microsoft sẽ định hình lại cách các nhà tiếp thị tối ưu hóa và định giá nội dung số trong kỷ nguyên AI.",
-    "keyNumbers": [
-      {
-        "value": "0,001 USD",
-        "label": "Mức phí tối thiểu cho mỗi lượt quét dữ liệu thành công của Cloudflare"
-      },
-      {
-        "value": "200+",
-        "label": "Tòa soạn tham gia thử nghiệm AI của Google"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Mô hình đóng góp AI của Google",
-        "body": "Google đang thử nghiệm trả phí khi nội dung của website đóng góp đáng kể vào câu trả lời của Gemini, AI Overviews hoặc AI Mode. Việc xác nhận hoặc liên kết sau khi câu trả lời được tạo sẽ không được tính tiền. Chương trình này hiện hoạt động dưới dạng thử nghiệm kín và chỉ dành cho các đối tác được mời. Tuy nhiên, cơ chế đánh giá mức độ đóng góp thế nào vẫn bị coi là một hộp đen khi Google tự quyết định giá trị nội dung mà không công bố tiêu chí cụ thể."
-      },
-      {
-        "heading": "Giải pháp trả phí theo lượt quét của Cloudflare",
-        "body": "Cloudflare tiếp cận vấn đề theo hướng kỹ thuật hơn với tính năng Pay Per Crawl đang thử nghiệm beta. Chủ sở hữu website có thể tự đặt giá cho mỗi lần bot AI quét dữ liệu với mức tối thiểu là 0,001 USD cho mỗi phản hồi HTTP 200 thành công. Ngoài ra, Cloudflare cũng đang thử nghiệm mô hình Pay Per Use, cho phép các đối tác AI tự đưa ra mô hình thanh toán dựa trên lượt truy vấn hoặc lượt hiển thị thực tế thay vì chỉ tính theo lượt quét thô."
-      },
-      {
-        "heading": "Chợ nội dung của Microsoft",
-        "body": "Microsoft đã công bố Publisher Content Marketplace nhằm cấp phép sử dụng nội dung cao cấp cho Copilot. Khác với Google, Microsoft cho phép các nhà xuất bản tự định nghĩa các điều khoản cấp phép và sử dụng dữ liệu của họ. Đổi lại, các nhà xuất bản sẽ nhận được báo cáo chi tiết dựa trên mức độ sử dụng thực tế của AI. Copilot là đối tác đầu tiên tham gia nền tảng này, tiếp theo là Yahoo đang trong quá trình tích hợp."
-      },
-      {
-        "heading": "Sự khác biệt về quyền kiểm soát của chủ website",
-        "body": "Trong khi mô hình của Google hoàn toàn do hãng kiểm soát và người dùng chỉ có quyền tham gia hoặc rút lui, Cloudflare trao toàn quyền quyết định giá cả và chặn hoặc cho phép bot cho chủ website. Microsoft chọn giải pháp trung hòa khi cho phép nhà xuất bản cùng thiết kế giá cả và điều khoản cấp phép. Điều này tạo ra ba trường phái định giá nội dung số hoàn toàn khác biệt mà các nhà quản lý nội dung cần phải làm quen trong tương lai gần."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing cần chuẩn bị cho việc chuyển dịch từ đo lường traffic truyền thống sang đo lường giá trị đóng góp nội dung cho AI. Các website sở hữu nội dung chuyên sâu, độc quyền sẽ có cơ hội tạo ra dòng doanh thu mới trực tiếp từ các bộ máy tìm kiếm AI thay vì chỉ phụ thuộc vào quảng cáo hiển thị.",
-    "ifIgnored": "Nếu bỏ qua xu hướng này, doanh nghiệp sẽ tiếp tục bị mất lưu lượng truy cập tự nhiên vào tay các câu trả lời AI mà không có bất kỳ cơ chế bù đắp tài chính nào, đồng thời vô tình để các bot AI khai thác miễn phí tài nguyên nội dung chất lượng cao của mình.",
-    "actionChecklist": [
-      "Đánh giá lại chất lượng và tính độc quyền của kho nội dung hiện tại để chuẩn bị cho các mô hình cấp phép AI.",
-      "Cập nhật tệp robots.txt và cấu hình Cloudflare để kiểm soát chặt chẽ các bot AI đang quét dữ liệu website.",
-      "Theo dõi các cập nhật trong Google Search Console để kiểm tra xem website có nhận được lời mời tham gia chương trình thử nghiệm của Google hay không.",
-      "Xây dựng phương án đo lường hiệu quả nội dung dựa trên tỷ lệ xuất hiện trong AI Overviews và Copilot thay vì chỉ dựa vào lượt click truyền thống."
-    ],
-    "id": "real-2026-09-18-google-microsoft-va-cloudflare-3b0b85",
-    "publishedAt": "18/09/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/googles-ai-payment-pilot-vs-cloudflare-and-microsoft-models/589636/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/09/google-cloudflare-microsoft-ai-payment-models.jpg",
-      "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
-    "category": "Meta Ads",
-    "platformIcon": "Facebook",
-    "title": "Meta giới hạn trang Facebook chỉ được đăng 2 bài viết chứa liên kết mỗi tháng",
-    "isHot": true,
-    "illustration": "zero-click",
-    "readTime": "3 phút đọc",
-    "tags": [
-      "Facebook Page",
-      "Meta One",
-      "Liên kết ngoài",
-      "Thuật toán Facebook"
-    ],
-    "summary": "Meta đang mở rộng thử nghiệm giới hạn các trang Facebook không trả phí chỉ được đăng tối đa 2 bài viết chứa liên kết ngoài mỗi tháng. Để vượt qua rào cản này, các doanh nghiệp buộc phải đăng ký gói thuê bao trả phí Meta One for Business. Thay đổi này buộc các thương hiệu phải đánh giá lại toàn bộ chiến lược kéo lưu lượng truy cập tự nhiên từ mạng xã hội về website.",
-    "keyNumbers": [
-      {
-        "value": "2",
-        "label": "bài viết chứa liên kết tối đa mỗi tháng cho tài khoản miễn phí"
-      },
-      {
-        "value": "1,3%",
-        "label": "tỷ lệ lượt xem bài viết chứa liên kết ngoài trên Facebook trong Q1 2026"
-      },
-      {
-        "value": "98,7%",
-        "label": "lượt xem bài viết tại Mỹ không chứa liên kết ngoài trong Q1 2026"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Chính sách giới hạn liên kết mới của Meta",
-        "body": "Meta đang mở rộng phạm vi áp dụng thử nghiệm giới hạn số lượng liên kết ngoài đối với các trang Facebook chuyên nghiệp không trả phí. Theo thông báo hiển thị trên tài khoản của nhiều quản trị viên, các trang này hiện chỉ được phép đăng tối đa 2 bài viết chứa liên kết mỗi tháng. Để gỡ bỏ giới hạn này, người dùng được yêu cầu phải đăng ký gói dịch vụ trả phí Meta One for Business vừa ra mắt. Động thái này đánh dấu bước đi tiếp theo trong việc thương mại hóa các tính năng cơ bản của nền tảng."
-      },
-      {
-        "heading": "Lộ trình thử nghiệm và đối tượng áp dụng",
-        "body": "Thực tế, Meta đã bắt đầu thử nghiệm giới hạn 2 liên kết mỗi tháng đối với một số trang từ tháng 12 năm 2025. Với sự xuất hiện của gói Meta One for Business, hãng đã chính thức mở rộng quy mô hạn chế này sang nhiều trang doanh nghiệp hơn. Tuy nhiên, Meta cho biết các trang của các nhà xuất bản tin tức sẽ được miễn trừ khỏi thử nghiệm này để duy trì dòng chảy nội dung trên ứng dụng. Đối với các trang doanh nghiệp thông thường, đây sẽ là một thay đổi lớn buộc họ phải điều chỉnh cách thức hoạt động."
-      },
-      {
-        "heading": "Xu hướng sụt giảm nghiêm trọng của bài viết chứa liên kết",
-        "body": "Mặc dù quy định mới gây ra nhiều tranh cãi, số liệu thực tế cho thấy hiệu quả của các bài viết chứa liên kết đã giảm mạnh từ lâu. Theo báo cáo nội dung được xem nhiều nhất quý 1 năm 2026 của Meta, có đến 98,7% lượt xem bài viết tại Mỹ không chứa liên kết dẫn ra ngoài Facebook. Tỷ lệ tiếp cận của các bài viết có gắn link đã giảm liên tục từ mức 9,8% vào năm 2022 xuống chỉ còn 1,3% vào quý 1 năm 2026. Điều này cho thấy thuật toán của Facebook vốn đã bóp nghẹt các bài viết kéo người dùng rời khỏi nền tảng."
-      },
-      {
-        "heading": "Chiến lược kiếm tiền ba giai đoạn của Meta",
-        "body": "Việc thu phí đăng liên kết hoàn toàn nhất quán với chiến lược thương mại hóa dài hạn mà CEO Mark Zuckerberg từng vạch ra từ năm 2016. Chiến lược này gồm ba bước: xây dựng sản phẩm được yêu thích, tạo điều kiện cho doanh nghiệp hoạt động tự nhiên miễn phí, và cuối cùng là thu phí khi doanh nghiệp muốn mở rộng phạm vi tiếp cận. Sau nhiều năm cho phép khai thác lượng truy cập miễn phí, Meta hiện đang chuyển sang giai đoạn thu phí trực tiếp từ các tính năng cơ bản nhất. Doanh nghiệp cần chấp nhận thực tế rằng kỷ nguyên tiếp thị không đồng trên Facebook đang dần khép lại."
-      }
-    ],
-    "impact": "Buộc Trưởng phòng Marketing phải phân bổ lại ngân sách cho gói Meta One nếu website là nguồn chuyển đổi chính, hoặc phải thay đổi hoàn toàn chiến lược sáng tạo nội dung trên Fanpage sang định dạng không link (zero-click content) để giữ tương tác mà không tốn chi phí cố định hàng tháng.",
-    "ifIgnored": "Doanh nghiệp sẽ bị tê liệt kênh dẫn traffic từ Facebook về website bán hàng hoặc landing page do cạn kiệt lượt đăng link ngay từ đầu tháng. Việc cố tình lách luật bằng cách spam link dưới bình luận hoặc ảnh có thể khiến Fanpage bị bóp tương tác nặng nề hơn do vi phạm chính sách phân phối của thuật toán.",
-    "actionChecklist": [
-      "Kiểm tra ngay Fanpage của doanh nghiệp xem đã bị áp dụng thông báo giới hạn 2 liên kết mỗi tháng hay chưa.",
-      "Thống kê tỷ lệ traffic và chuyển đổi thực tế từ các bài đăng organic link trên Facebook trong 3 tháng gần nhất để đánh giá mức độ ảnh hưởng.",
-      "Xây dựng quy trình chuyển đổi nội dung sang dạng Zero-click, đưa thông tin quan trọng lên hình ảnh hoặc video và điều hướng người dùng nhắn tin qua Messenger thay vì click link.",
-      "Đánh giá chi phí và quyền lợi của gói Meta One for Business để quyết định có nên mua gói thuê bao nhằm duy trì quyền đăng link hay không."
-    ],
-    "id": "real-2026-09-17-meta-gioi-han-trang-48642a",
-    "publishedAt": "17/09/2026",
-    "sourceUrl": "https://www.socialmediatoday.com/news/facebook-pages-get-charged-for-link-posts/830743/",
-    "source": "Social Media Today",
-    "image": {
-      "url": "https://imgproxy.divecdn.com/evOasWnSa1B_asPVRdK3mKi_Gac1Vn1J-hhg68rB7Ko/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9mYl9saW5rc190ZXN0My5wbmc=.webp",
-      "credit": "Ảnh: Social Media Today"
     }
   },
   {
