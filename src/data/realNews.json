@@ -1,5 +1,184 @@
 [
   {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Google Search Console bổ sung dữ liệu Lens và Circle to Search nhưng không hiển thị từ khóa",
+    "isHot": "false",
+    "illustration": "data-signal",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Google Search Console",
+      "SEO",
+      "Google Lens",
+      "Multimodal"
+    ],
+    "summary": "Google chính thức bổ sung loại tìm kiếm đa phương thức vào báo cáo Hiệu suất của Search Console, tách kết quả từ hình ảnh, ảnh chụp màn hình hoặc camera thành mục riêng. Tuy nhiên, tính năng này không cung cấp từ khóa đi kèm do các tìm kiếm chủ yếu dựa trên hình ảnh.",
+    "keyNumbers": [
+      {
+        "value": "2",
+        "label": "phân loại Web mới gồm Văn bản và Đa phương thức"
+      },
+      {
+        "value": "4",
+        "label": "con đường dẫn nguồn dữ liệu đa phương thức"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Phân chia mới trong báo cáo Hiệu suất",
+        "body": "Bộ lọc loại tìm kiếm trong báo cáo Hiệu suất cho kết quả Tìm kiếm trên Web nay được chia thành hai lựa chọn lồng nhau gồm Dựa trên văn bản và Đa phương thức. Các tùy chọn Hình ảnh, Video và Tin tức vẫn giữ nguyên là các mục độc lập trong cùng hộp thoại. Google định nghĩa tìm kiếm đa phương thức theo dõi các kết quả kích hoạt bởi truy vấn sử dụng hình ảnh, ảnh chụp màn hình hoặc ảnh chụp từ camera."
+      },
+      {
+        "heading": "Bốn nguồn cấp dữ liệu đa phương thức",
+        "body": "Bài đăng từ Google xác nhận bốn tuyến đường chính cung cấp dữ liệu cho danh mục mới này bao gồm Google Lens, tính năng Circle to Search trên Android, các hình ảnh tải lên Google Search, và tùy chọn nhấp chuột phải Tìm kiếm hình ảnh này trong Chrome. Danh sách này hiện chưa bao gồm Search Live ra mắt ở hơn 200 quốc gia vào tháng 03 năm 2026 hay các lời nhắc hình ảnh bên trong Chế độ AI có từ tháng 04 năm 2025."
+      },
+      {
+        "heading": "Thiếu vắng hoàn toàn chiều dữ liệu từ khóa",
+        "body": "Do các tìm kiếm đa phương thức chủ yếu sử dụng hình ảnh thay vì văn bản, dữ liệu truy vấn văn bản cụ thể không khả dụng cho luồng lưu lượng truy cập này. Kích thước truy vấn không hiển thị khi chọn loại tìm kiếm này, đồng thời bức ảnh thực tế cũng được giữ ẩn. Người quản trị trang web chỉ có thể quan sát trang nào đã xuất hiện và mức độ thường xuyên thay vì biết người dùng đang tìm kiếm chính xác điều gì."
+      },
+      {
+        "heading": "Tác động đến dữ liệu tổng hợp và lịch sử",
+        "body": "Google khẳng định các số liệu trong góc nhìn mới này trước đó chưa từng được tính toán ở bất kỳ đâu trong báo cáo. Thay đổi này cũng áp dụng cho cả báo cáo về các tính năng Tạo sinh AI. Việc bổ sung loại tìm kiếm này có thể tạo ra sự ngắt quãng trong việc so sánh dữ liệu theo năm đối với các trang web có lượng hiển thị lớn từ camera."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing quản lý website cần lưu ý rằng lưu lượng truy cập từ hình ảnh, Google Lens và Circle to Search nay đã có thể đo lường được số lần hiển thị và lượt nhấp trên trang. Tuy nhiên, việc thiếu vắng hoàn toàn từ khóa truy vấn đòi hỏi đội ngũ SEO phải thay đổi cách đánh giá hiệu quả nội dung trực quan, chuyển từ tối ưu hóa từ khóa sang tối ưu hóa hình ảnh sản phẩm.",
+    "ifIgnored": "Nếu bỏ qua thay đổi này, doanh nghiệp sẽ đánh giá thấp hoặc bỏ sót hoàn toàn lượng khách hàng tiềm năng đến từ các tìm kiếm bằng hình ảnh thực tế qua smartphone, đồng thời bối rối trước những biến động bất thường trong dữ liệu tổng thể của Search Console.",
+    "actionChecklist": [
+      "Kiểm tra bộ lọc Đa phương thức mới trong báo cáo Hiệu suất của Search Console để đánh giá lưu lượng truy cập từ hình ảnh hiện tại.",
+      "Rà soát lại chất lượng hình ảnh sản phẩm và tối ưu hóa alt text để tăng khả năng hiển thị trên Google Lens và Circle to Search.",
+      "Lưu ý đội ngũ phân tích dữ liệu về việc thiếu hụt chiều dữ liệu từ khóa trong phân khúc đa phương thức để tránh sai lệch trong báo cáo SEO.",
+      "Cập nhật các mốc thời gian thay đổi giao diện dữ liệu của Search Console vào bảng theo dõi hiệu suất định kỳ."
+    ],
+    "id": "real-2026-09-24-google-search-console-bo-a696e7",
+    "publishedAt": "24/09/2026",
+    "sourceUrl": "https://ppc.land/google-search-console-gains-lens-and-circle-to-search-data-without-queries/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/09/Curtained-stages-rise-in-a-blue-tower--one-open-and-empty-image-search-visibility-with-no-keywords.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Google triển khai bản cập nhật thuật toán spam tháng 9 năm 2026",
+    "isHot": true,
+    "illustration": "account-security",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Google SEO",
+      "Spam Update",
+      "Thuật toán",
+      "Quản trị website"
+    ],
+    "summary": "Google vừa chính thức phát hành bản cập nhật spam tháng 9 năm 2026 áp dụng toàn cầu cho mọi ngôn ngữ và khu vực. Điểm đáng chú ý là thời gian triển khai có thể kéo dài tới 14 ngày, dài hơn nhiều so với các chu kỳ trước đây trong năm.",
+    "keyNumbers": [
+      {
+        "value": "14 ngày",
+        "label": "Thời gian triển khai tối đa"
+      },
+      {
+        "value": "09:15",
+        "label": "Giờ bắt đầu theo múi giờ PDT"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Chi tiết về bản cập nhật spam",
+        "body": "Google đã bắt đầu đợt quét tự động các kết quả tìm kiếm nhằm vào các trang web vi phạm chính sách chống spam. Bản cập nhật này áp dụng trên phạm vi toàn cầu và cho tất cả các ngôn ngữ. Các trang web vi phạm có thể bị giảm thứ hạng hoặc biến mất hoàn toàn khỏi kết quả tìm kiếm, trong khi các trang tuân thủ chính sách sẽ không bị ảnh hưởng."
+      },
+      {
+        "heading": "Thay đổi về thời gian triển khai",
+        "body": "Điểm khác biệt lớn nhất của đợt này là lịch trình thực hiện kéo dài tới 14 ngày, có thể hoàn thành vào khoảng ngày 8 tháng 10. Trong khi đó, ba chu kỳ spam trước đó trong năm 2026 chỉ diễn ra trong vòng từ khoảng 19,5 giờ đến 3 ngày. Khung thời gian kéo dài này tương tự như các bản cập nhật cốt lõi diện rộng trước đây."
+      },
+      {
+        "heading": "Hệ thống phát hiện SpamBrain",
+        "body": "Hệ thống phát hiện spam tự động của Google hoạt động liên tục và nhãn cập nhật spam được dùng cho các cải tiến đáng chú ý đối với cách thức hoạt động của các hệ thống này. Google sử dụng SpamBrain, hệ thống phòng chống spam dựa trên trí tuệ nhân tạo được tinh chỉnh định kỳ. Các hình phạt baoon gồm việc giáng cấp hoặc xóa khỏi kết quả tìm kiếm với thời gian phục hồi tính bằng nhiều tháng."
+      },
+      {
+        "heading": "Bối cảnh cập nhật trong năm",
+        "body": "Tính đến nay trong năm 2026, Google đã xác nhận tổng cộng bảy bản cập nhật xếp hạng. Các chu kỳ spam trước diễn ra vào tháng 3 hoàn thành trong khoảng 19,5 giờ, tháng 4, và tháng 18 tháng 8. Khoảng cách thời gian giữa các đợt cập nhật spam ngày càng rút ngắn so với năm 2025."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing quản lý website cần lưu ý rằng thời gian biến động thứ hạng có thể kéo dài tới hai tuần thay vì vài ngày như trước, gây khó khăn cho việc theo dõi hiệu suất SEO ngắn hạn.",
+    "ifIgnored": "Nếu bỏ qua, đội ngũ có thể hiểu nhầm biến động lưu lượng truy cập tự nhiên là lỗi kỹ thuật thông thường và không kịp thời xử lý các nội dung vi phạm chính sách spam của Google.",
+    "actionChecklist": [
+      "Kiểm tra lưu lượng truy cập tự nhiên và thứ hạng từ khóa hàng ngày trong suốt thời gian cập nhật.",
+      "Rà soát lại toàn bộ nội dung website để đảm bảo tuân thủ nghiêm ngặt các chính sách chống spam mới nhất.",
+      "Theo dõi thông báo chính thức từ Google Search Status Dashboard để nắm bắt thời điểm kết thúc cập nhật.",
+      "Chuẩn bị báo cáo giải trình cho ban quản trị về những biến động lưu lượng truy cập có thể xảy ra trong giai đoạn này."
+    ],
+    "deadline": "08/10/2026",
+    "id": "real-2026-09-24-google-trien-khai-ban-18d300",
+    "publishedAt": "24/09/2026",
+    "sourceUrl": "https://ppc.land/sites-breaking-google-spam-rules-face-lower-rankings-in-two-week-window/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/09/Sites-breaking-Google-spam-rules-face-lower-rankings-in-two-week-window.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "AI Marketing",
+    "platformIcon": "Sparkles",
+    "title": "Meta cập nhật hệ sinh thái AI Muse, kính thông minh và thiết bị VR tại sự kiện Connect 2026",
+    "isHot": false,
+    "illustration": "ai-video",
+    "readTime": "5 phút đọc",
+    "tags": [
+      "Meta Connect 2026",
+      "AI Muse",
+      "Kính thông minh",
+      "Thiết bị VR"
+    ],
+    "summary": "Tại sự kiện Connect 2026, Meta công bố định hướng dịch chuyển trọng tâm sang trí tuệ nhân tạo thông qua trợ lý ảo Muse và các dòng thiết bị đeo tích hợp AI mới. Sự kiện cũng giới thiệu các tính năng bảo mật dữ liệu nâng cao, các bản cập nhật kính thông minh và thiết bị thực tế ảo thế hệ mới.",
+    "keyNumbers": [
+      {
+        "value": "249 USD",
+        "label": "Giá kính Adventurer"
+      },
+      {
+        "value": "1.299 USD",
+        "label": "Giá kính VR thế hệ mới"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Trợ lý ảo Muse là trọng tâm chiến lược mới",
+        "body": "Meta xác định trợ lý ảo cá nhân Muse là tâm điểm trong chiến lược chuyển dịch từ metaverse sang trí tuệ nhân tạo. CEO Mark Zuckerberg cho biết sự tiến bộ của AI đòi hỏi nền tảng phải thay đổi cách tiếp cận để đưa các tính năng thông minh lên hàng đầu. Muse được trang bị công nghệ bảo mật dữ liệu nâng cao qua Meta Secure VM, đảm bảo ngay cả Meta cũng không thể truy cập dữ liệu người dùng. Meta cũng công bố các đối tác tích hợp bao gồm Walmart, BestBuy, Gap, Sephora, Expedia, Instacart và Wayfair."
+      },
+      {
+        "heading": "Mở rộng tính năng và thiết bị đồng hành cùng Muse",
+        "body": "Trợ lý ảo Muse hiện đã có mặt tại Canada bên cạnh Hoa Kỳ, với tính năng cho phép người dùng tùy chỉnh giọng nói của trợ lý. Meta đang phát triển địa chỉ email dành riêng cho các tác nhân Muse để nâng cao năng lực xử lý chức năng. Bên cạnh đó, hãng giới thiệu thiết bị Muse Charm có dạng Tamagotchi giúp người dùng truy cập liên tục vào Muse mà không cần dùng kính AI. Muse cũng sẽ được tích hợp trực tiếp vào dòng kính VR thế hệ tiếp theo của hãng."
+      },
+      {
+        "heading": "Cập nhật các dòng kính thông minh và bảo mật",
+        "body": "Các dòng kính thông minh của Meta được nâng cấp mạnh về tính năng riêng tư với quy trình xử lý dữ liệu riêng tư, ngăn chặn việc nhân viên Meta tiếp cận thông tin. Meta ra mắt dòng kính Ray Ban Meta Gen 3 có thiết kế khung viền mỏng hơn, thời lượng pin dài hơn và hỗ trợ ghi âm không gian Dolby Atmos. Ngoài ra, dòng kính Adventurer cập nhật sẽ có mức giá 249 USD, cùng các mẫu Aviator, Zena và phiên bản hợp tác đặc biệt với nghệ sĩ K-Pop Lisa."
+      },
+      {
+        "heading": "Thiết bị kính thực tế ảo VR thế hệ mới",
+        "body": "Meta và Reality Labs giới thiệu mẫu kính VR thế hệ mới có trọng lượng nhẹ hơn gấp năm lần so với thiết bị Meta Quest 3 hiện tại nhờ chuyển sang mô hình kết nối cáp quang. Thiết bị này tách rời phần máy tính và pin sang một bộ phận nhỏ gọn có thể kẹp vào túi áo hoặc túi xách, trong khi kính chỉ xử lý cảm biến và hiển thị. Thiết bị VR mới này có giá 1.299 USD và dự kiến bắt đầu giao hàng vào mùa xuân."
+      }
+    ],
+    "impact": "Giúp Trưởng phòng Marketing nắm bắt định hướng phát triển phần cứng và hệ sinh thái trợ lý ảo tích hợp AI của Meta, từ đó chuẩn bị phương án tiếp cận người tiêu dùng qua các nền tảng thương mại đối tác của Muse.",
+    "ifIgnored": "Bỏ lỡ xu hướng dịch chuyển công nghệ lớn của Meta sang trí tuệ nhân tạo và các điểm chạm tiêu dùng mới qua thiết bị đeo, làm chậm trễ khả năng thích ứng với các kênh phân phối và quảng cáo thế hệ mới.",
+    "actionChecklist": [
+      "Theo dõi sát các đối tác thương mại điện tử tích hợp Muse để tìm cơ hội hiện diện.",
+      "Nghiên cứu các định dạng tương tác mới trên dòng thiết bị đeo và kính thông minh của Meta.",
+      "Cập nhật chiến lược nội dung tương thích với các tiêu chuẩn âm thanh và hình ảnh mới trên thiết bị.",
+      "Đánh giá tác động của các chính sách bảo mật dữ liệu người dùng mới đối với dữ liệu chiến dịch."
+    ],
+    "deadline": "Giao hàng kính VR vào mùa xuân",
+    "id": "real-2026-09-24-meta-cap-nhat-he-645fd5",
+    "publishedAt": "24/09/2026",
+    "sourceUrl": "https://www.socialmediatoday.com/news/meta-outlines-muse-ai-glasses-and-vr-device-updates-at-connect-2026/831223/",
+    "source": "Social Media Today",
+    "image": {
+      "url": "https://imgproxy.divecdn.com/hAC47OAMp0n0bELaz0fFDnHD5zw7vL648tBkWsO4LJ4/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9tZXRhX2Nvbm5lY3RfMjAyNl8zLnBuZw==.webp",
+      "credit": "Ảnh: Social Media Today"
+    }
+  },
+  {
     "category": "AI Marketing",
     "platformIcon": "Video",
     "title": "YouTube ra mắt loạt tính năng AI và tiếp thị liên kết mới tại sự kiện Made on 2026",
@@ -185,65 +364,6 @@
     }
   },
   {
-    "category": "AI Marketing",
-    "platformIcon": "Sparkles",
-    "title": "Trợ lý AI Meta Muse vẫn cần nhân sự thực tế hỗ trợ thực hiện cuộc gọi",
-    "isHot": false,
-    "illustration": "crm-automation",
-    "readTime": "3 phút đọc",
-    "tags": [
-      "Meta Muse",
-      "Trí tuệ nhân tạo",
-      "Bảo mật dữ liệu",
-      "Tự động hóa"
-    ],
-    "summary": "Meta đang thử nghiệm tích hợp nhân sự thực tế để hỗ trợ trợ lý AI Muse thực hiện các cuộc gọi ngoại mạng cho doanh nghiệp. Quy trình lai này giúp giảm thiểu lỗi trong giai đoạn đầu thử nghiệm nhưng lại lặp lại kịch bản của dự án trợ lý M từng thất bại trước đây.",
-    "keyNumbers": [
-      {
-        "value": "2015",
-        "label": "Năm Meta ra mắt trợ lý lai M nhưng thất bại"
-      },
-      {
-        "value": "2018",
-        "label": "Năm dự án M chính thức bị khai tử"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Cơ chế vận hành lai của Meta Muse",
-        "body": "Trợ lý AI Muse của Meta được thiết kế để thay mặt người dùng thực hiện các cuộc gọi đến doanh nghiệp nhằm hỏi giá hoặc đặt chỗ. Tuy nhiên, các báo cáo nội bộ tiết lộ rằng không phải tất cả cuộc gọi đều hoàn toàn do AI thực hiện. Meta đang âm thầm chuyển giao một số cuộc gọi phức tạp hoặc bị lỗi cho các nhân viên thực tế đã qua đào tạo xử lý."
-      },
-      {
-        "heading": "Lặp lại lịch sử thất bại của dự án M",
-        "body": "Mô hình lai giữa AI và con người này thực chất không mới đối với Meta. Vào năm 2015, hãng từng ra mắt trợ lý M trên Messenger với cơ chế hoạt động tương tự để hỗ trợ người dùng đặt bàn nhà hàng. Dự án này sau đó đã phải đóng cửa vào năm 2018 do chi phí vận hành quá cao và không thể mở rộng quy mô."
-      },
-      {
-        "heading": "Mối lo ngại về bảo mật dữ liệu khách hàng",
-        "body": "Việc sử dụng nhân sự thực tế để can thiệp vào các cuộc hội thoại của AI dấy lên nhiều lo ngại lớn về quyền riêng tư. Reuters cho biết Meta từng thử nghiệm mô hình lễ tân con người để bổ sung cho Meta AI nhưng phải tạm dừng vì lo ngại rò rỉ dữ liệu cá nhân cho bên thứ ba. Các doanh nghiệp cần thận trọng khi chia sẻ thông tin nhạy cảm qua các kênh thử nghiệm này."
-      },
-      {
-        "heading": "Thách thức về khả năng mở rộng quy mô",
-        "body": "Mặc dù việc sử dụng con người giúp trải nghiệm cuộc gọi mượt mà hơn trong giai đoạn đầu, nó lại tạo ra rào cản lớn về mặt chi phí. Một hệ thống phụ thuộc vào nhân sự thủ công sẽ rất khó để tối ưu hóa chi phí khi lượng người dùng tăng lên. Mark Zuckerberg từng thừa nhận mô hình lai trước đây có tỷ lệ sử dụng thực tế rất thấp từ phía người dùng."
-      }
-    ],
-    "impact": "Giúp Trưởng phòng Marketing nhận diện rõ giới hạn hiện tại của các công cụ AI từ Meta, từ đó không quá phụ thuộc vào các cam kết tự động hóa hoàn toàn. Đồng thời, cảnh báo về rủi ro bảo mật thông tin khách hàng khi sử dụng các tính năng thử nghiệm có sự can thiệp của con người.",
-    "ifIgnored": "Doanh nghiệp có thể vô tình để lộ dữ liệu khách hàng hoặc thông tin kinh doanh nhạy cảm cho các nhà thầu phụ của Meta. Ngoài ra, việc xây dựng quy trình CSKH phụ thuộc vào một công cụ chưa thể mở rộng quy mô sẽ gây lãng phí tài nguyên khi công cụ này bị thay đổi hoặc khai tử.",
-    "actionChecklist": [
-      "Kiểm tra và giới hạn các thông tin nhạy cảm chia sẻ qua các trợ lý AI đang trong giai đoạn thử nghiệm của Meta.",
-      "Đánh giá lại hiệu quả của các kịch bản cuộc gọi tự động và chuẩn bị phương án dự phòng bằng nhân sự nội bộ.",
-      "Cập nhật chính sách bảo mật thông tin khách hàng để đảm bảo tuân thủ khi tương tác với các công cụ AI bên thứ ba.",
-      "Theo dõi sát sao các cập nhật tiếp theo của Meta Muse trước khi quyết định tích hợp sâu vào quy trình vận hành."
-    ],
-    "id": "real-2026-09-22-tro-ly-ai-meta-5ac5d0",
-    "publishedAt": "22/09/2026",
-    "sourceUrl": "https://www.socialmediatoday.com/news/meta-muse-uses-human-staff-for-some-functions/831097/",
-    "source": "Social Media Today",
-    "image": {
-      "url": "https://imgproxy.divecdn.com/qnyvdp1-Cm1MScu8ZktgIHPMxg2dWxyHU9PPXsTBEdQ/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9tdXNlX2xvZ28ucG5n.webp",
-      "credit": "Ảnh: Social Media Today"
-    }
-  },
-  {
     "category": "Meta Ads",
     "platformIcon": "Facebook",
     "title": "Meta tách biệt quyền quản trị Threads khỏi Instagram trong Trình quản lý doanh nghiệp",
@@ -366,73 +486,6 @@
     }
   },
   {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Google Analytics bổ sung bộ lọc Include cho Hostname giúp chặn sạch dữ liệu rác",
-    "isHot": false,
-    "illustration": "data-signal",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Google Analytics",
-      "Báo cáo dữ liệu",
-      "Chống spam GA4",
-      "Đo lường Marketing"
-    ],
-    "summary": "Google Analytics chính thức ra mắt chế độ bộ lọc Include cho tên miền máy chủ (hostname) từ ngày 21/09/2026. Cập nhật này cho phép doanh nghiệp thiết lập danh sách tên miền được duyệt để tự động loại bỏ mọi dữ liệu rác đến từ các nguồn lạ. Mọi sự kiện bị chặn bởi bộ lọc sẽ bị xóa vĩnh viễn và không thể phục hồi.",
-    "keyNumbers": [
-      {
-        "value": "102 ngày",
-        "label": "Thời gian Google phát triển từ bộ lọc Exclude sang Include"
-      },
-      {
-        "value": "10",
-        "label": "Số bộ lọc dữ liệu tối đa trên một property Analytics"
-      },
-      {
-        "value": "3",
-        "label": "Trạng thái vận hành bộ lọc gồm Testing, Active và Inactive"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Chuyển từ cơ chế loại trừ sang danh sách tên miền được duyệt",
-        "body": "Ngày 21/09/2026, Google Analytics cập nhật chế độ Include cho bộ lọc hostname, ra mắt 102 ngày sau phiên bản Exclude đầu tiên ngày 11/06/2026. Thay vì phải cập nhật thủ công từng tên miền spam mới xuất hiện, nhà quản trị hiện chỉ cần khai báo một lần danh sách tên miền chính thức. Tất cả sự kiện gửi từ các hostname nằm ngoài danh sách này sẽ bị hệ thống loại bỏ hoàn toàn. Cập nhật này giúp đơn giản hóa việc cấu hình và giữ báo cáo sạch sành sanh với ít công sức bảo trì."
-      },
-      {
-        "heading": "Hai quy định ngoại lệ quan trọng trong bản cập nhật",
-        "body": "Bản phát hành ghi nhận hai trường hợp xử lý riêng biệt đối với bộ lọc Include. Đầu tiên, các sự kiện gửi qua Measurement Protocol từ máy chủ hoặc hệ thống điểm bán hàng sẽ không bị chặn để đảm bảo luồng dữ liệu kỹ thuật không bị ngắt quãng. Thứ hai, hệ thống sẽ tự động chặn các sự kiện không có hostname như một số luồng gtag.js. Google giải thích rằng sự thiếu hụt thông tin hostname thường là dấu hiệu của lưu lượng rác hoặc bất thường."
-      },
-      {
-        "heading": "Rủi ro mất dữ liệu vĩnh viễn khi áp dụng bộ lọc",
-        "body": "Do mã đo lường hiển thị công khai trên trang web, kẻ phát tán spam thường sao chép mã này để gửi sự kiện giả mạo trực tiếp vào Analytics. Việc áp dụng bộ lọc Include giúp chặn đứng các nguồn giả mạo nhưng đi kèm rủi ro vận hành cao. Dữ liệu bị loại bỏ bởi một bộ lọc đang hoạt động sẽ không bao giờ được xử lý hay khôi phục, kể cả trong báo cáo Analytics lẫn dữ liệu xuất ra BigQuery. Bộ lọc chỉ bắt đầu có hiệu lực từ thời điểm kích hoạt và không làm sạch dữ liệu lịch sử."
-      },
-      {
-        "heading": "Quy trình kiểm thử an toàn với các trạng thái bộ lọc",
-        "body": "Mỗi bộ lọc dữ liệu trong Analytics hoạt động theo ba trạng thái gồm Testing, Active và Inactive. Ở chế độ Testing, hệ thống sẽ gắn nhãn các sự kiện khớp điều kiện nhưng chưa loại bỏ chúng khỏi báo cáo, giúp nhà quản trị kiểm tra tính chính xác. Do tác động vĩnh viễn của bộ lọc, người thiết lập bắt buộc phải có quyền Editor ở cấp độ property. Mỗi tài sản Analytics được cho phép lưu trữ tối đa 10 bộ lọc dữ liệu."
-      },
-      {
-        "heading": "Giải pháp nâng cấp bảo mật qua Server-side Tag Manager",
-        "body": "Một số chuyên gia lưu ý rằng dữ liệu rác gửi qua Measurement Protocol vẫn có thể lọt qua bộ lọc Include do ngoại lệ của Google. Để bảo vệ dữ liệu triệt để hơn, doanh nghiệp có thể chuyển sang định tuyến thu thập qua container Server-side Tag Manager. Phương pháp này giúp ẩn mã đo lường khỏi trang web công khai và xác thực tên miền trước khi dữ liệu chạm tới Analytics. Tuy nhiên, hướng đi này đòi hỏi kỹ thuật cài đặt phức tạp hơn và phát sinh chi phí máy chủ đám mây hàng tháng."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing có thể làm sạch hoàn toàn dữ liệu đo lường chuyển đổi và hiệu quả chiến dịch Google Ads mà không mất thời gian dọn rác báo cáo hàng tuần. Tuy nhiên, nếu quên khai báo một tên miền phụ chiến dịch, toàn bộ dữ liệu chuyển đổi thực từ trang đó sẽ bị xóa vĩnh viễn.",
-    "ifIgnored": "Nếu tiếp tục dùng bộ lọc Exclude hoặc không cấu hình allowlist, báo cáo hiệu quả marketing sẽ tiếp tục bị làm sai lệch bởi spam traffic, dẫn đến việc phân bổ ngân sách quảng cáo dựa trên dữ liệu ảo.",
-    "actionChecklist": [
-      "Tổng hợp lại toàn bộ danh sách tên miền và tên miền phụ đang chạy chiến dịch marketing.",
-      "Kiểm tra quyền tài khoản Analytics để đảm bảo có quyền Editor cấp property.",
-      "Tạo bộ lọc Include cho hostname và bật ở chế độ Testing để theo dõi dữ liệu thử nghiệm.",
-      "Rà soát các luồng gửi dữ liệu qua Measurement Protocol để đánh giá rủi ro spam còn tồn đọng."
-    ],
-    "id": "real-2026-09-21-google-analytics-bo-sung-75cce3",
-    "publishedAt": "21/09/2026",
-    "sourceUrl": "https://ppc.land/google-analytics-filter-blocks-data-from-domains-not-on-an-approved-list/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/size/w1200/2026/09/Google-Analytics-filter-blocks-data-from-domains-not-on-an-approved-list.jpg",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
     "category": "AI Marketing",
     "platformIcon": "Sparkles",
     "title": "BCN và PubMatic ra mắt công cụ Signals Agent tự động hóa giao dịch quảng cáo bằng AI",
@@ -552,65 +605,6 @@
     "image": {
       "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/09/ai-visibility-546.png",
       "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Google xác nhận bộ lọc quảng cáo không tự ngăn được lead rác, yêu cầu nhà quảng cáo tự bảo vệ biểu mẫu",
-    "isHot": false,
-    "illustration": "data-signal",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Google Ads",
-      "Chất lượng Lead",
-      "Smart Bidding",
-      "Xác thực biểu mẫu"
-    ],
-    "summary": "Google Ads thừa nhận các bộ lọc lưu lượng không hợp lệ hoạt động sau khi quảng cáo hiển thị, do đó không thể tự ngăn chặn bot hoặc người dùng điền thông tin giả vào biểu mẫu. Trách nhiệm đảm bảo chất lượng lead giờ đây được chia sẻ cho nhà quảng cáo thông qua ba biện pháp kỹ thuật bắt buộc tại biểu mẫu. Việc bỏ qua các bộ lọc này không chỉ làm ô nhiễm dữ liệu CRM mà còn khiến hệ thống Smart Bidding học sai mục tiêu.",
-    "keyNumbers": [
-      {
-        "value": "60",
-        "label": "ngày là thời hạn tối đa để nhà quảng cáo yêu cầu Google điều tra lưu lượng nghi ngờ không hợp lệ"
-      },
-      {
-        "value": "15",
-        "label": "lượt chuyển đổi tối thiểu trong 30 ngày ở cấp tài khoản để kích hoạt tối ưu hóa chất lượng lead"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Giới hạn của bộ lọc Google Ads",
-        "body": "Google chính thức làm rõ trong tài liệu hướng dẫn rằng các bộ lọc lưu lượng không hợp lệ của họ không thể tự động ngăn chặn lead rác gửi về biểu mẫu. Nguyên nhân là do hầu hết các hoạt động kiểm tra lưu lượng diễn ra sau khi quảng cáo đã hiển thị, cho phép bot hoặc người dùng truy cập trang đích. Hệ thống của Google được thiết kế để xác định lượt nhấp chuột có tính phí hay không, chứ không phải để đánh giá tính xác thực của thông tin biểu mẫu. Do đó, các biểu mẫu liên hệ vẫn có thể bị tấn công bởi các đoạn mã tự động hoặc người dùng cố tình nhập thông tin giả mạo."
-      },
-      {
-        "heading": "Ba chốt chặn kỹ thuật tại biểu mẫu",
-        "body": "Để giải quyết lỗ hổng này, Google khuyến nghị nhà quảng cáo triển khai ba biện pháp bảo vệ trực tiếp trên biểu mẫu thu thập thông tin. Đầu tiên là tích hợp reCAPTCHA để ngăn chặn các hành vi gửi biểu mẫu tự động từ bot. Thứ hai là áp dụng cơ chế xác thực hai bước (double opt-in), gửi email xác nhận chứa liên kết duy nhất để đảm bảo địa chỉ email là có thật và đang hoạt động. Cuối cùng, nhà quảng cáo cần lập trình xác thực phía máy chủ (server-side validation) để kiểm tra định dạng email và số điện thoại trước khi đẩy dữ liệu vào CRM, ngăn chặn bot tinh vi bỏ qua kiểm tra trình duyệt."
-      },
-      {
-        "heading": "Hệ lụy đối với hệ thống Smart Bidding",
-        "body": "Việc để lead rác lọt vào hệ thống không chỉ gây lãng phí tài nguyên của đội ngũ bán hàng mà còn gây hại cho thuật toán tối ưu hóa. Khi một lead rác được ghi nhận là chuyển đổi thành công, hệ thống Smart Bidding của Google sẽ học theo dữ liệu sai lệch này và tiếp tục tìm kiếm các đối tượng tương tự. Google cũng đã cập nhật chính sách hoàn tiền, theo đó các lưu lượng không hợp lệ phát hiện trước kỳ thanh toán cuối tháng sẽ được loại trừ trực tiếp, còn phát hiện sau đó sẽ được hoàn trả dưới dạng số dư bù trừ cho hóa đơn tương lai. Tuy nhiên, khoản bù trừ này không thể tự động xóa dữ liệu rác đã lưu trong CRM của doanh nghiệp."
-      },
-      {
-        "heading": "Thiết lập chiến dịch để kích hoạt bảo vệ tự động",
-        "body": "Tài liệu của Google chỉ ra rằng việc lựa chọn đúng mục tiêu chuyển đổi sẽ giúp kích hoạt các tính năng bảo vệ tích hợp sẵn cho chiến dịch tìm kiếm khách hàng tiềm năng. Các mục tiêu cụ thể như \"Khách hàng tiềm năng đủ điều kiện\" (Qualified lead), \"Khách hàng tiềm năng đã chuyển đổi\" (Converted lead), \"Đặt lịch hẹn\" (Book appointment) hoặc \"Yêu cầu báo giá\" (Request quote) sẽ tự động kích hoạt các lớp bảo vệ lưu lượng không hợp lệ. Để các mục tiêu này hoạt động hiệu quả, tài khoản cần đạt tối thiểu 15 lượt chuyển đổi trong vòng 30 ngày gần nhất và dữ liệu chuyển đổi phải được cập nhật thường xuyên, lý tưởng nhất là hàng ngày."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing phải đối mặt với tình trạng ngân sách quảng cáo bị lãng phí vào các lượt nhấp chuột tạo ra lead ảo, đồng thời dữ liệu CRM bị ô nhiễm làm giảm hiệu suất của đội ngũ sales. Quan trọng hơn, thuật toán Smart Bidding của Google sẽ bị huấn luyện sai lệch, dẫn đến việc phân phối quảng cáo ngày càng kém hiệu quả nếu không chủ động chặn lead rác từ phía máy chủ.",
-    "ifIgnored": "Doanh nghiệp tiếp tục trả tiền cho các lượt chuyển đổi ảo, đội ngũ bán hàng mất thời gian xử lý dữ liệu rác, và chiến dịch quảng cáo tự động của Google ngày càng tối ưu lệch hướng do học từ các tín hiệu chuyển đổi giả mạo mà không có cách nào khôi phục lại dữ liệu sạch.",
-    "actionChecklist": [
-      "Yêu cầu đội ngũ kỹ thuật tích hợp ngay reCAPTCHA vào toàn bộ các biểu mẫu đăng ký trên trang đích quảng cáo.",
-      "Thiết lập quy trình xác thực hai bước (double opt-in) qua email trước khi ghi nhận một lead là chuyển đổi thành công.",
-      "Lập trình bộ lọc xác thực phía máy chủ (server-side validation) để kiểm tra tính hợp lệ của tên miền email và định dạng số điện thoại trước khi đồng bộ vào CRM.",
-      "Cấu hình lại mục tiêu chuyển đổi trong Google Ads sang các hành động chuyên sâu như Qualified lead hoặc Converted lead để kích hoạt lớp bảo vệ tự động của hệ thống."
-    ],
-    "id": "real-2026-09-20-google-xac-nhan-bo-223bf8",
-    "publishedAt": "20/09/2026",
-    "sourceUrl": "https://ppc.land/google-ads-filters-miss-fake-leads-so-advertisers-must-add-3-form-checks/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/09/Google-Ads-filters-miss-fake-leads--so-advertisers-must-add-3-form-checks.jpg",
-      "credit": "Ảnh: PPC Land"
     }
   },
   {
