@@ -1,5 +1,195 @@
 [
   {
+    "category": "Meta Ads",
+    "platformIcon": "Facebook",
+    "title": "Nghiên cứu từ Facebook: Đo lường quảng cáo thông thường có thể sai lệch tới 3 lần",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Đo lường quảng cáo",
+      "Meta Ads",
+      "Thử nghiệm tăng trưởng",
+      "Mô hình chuyển đổi"
+    ],
+    "summary": "Các phương pháp đo lường quảng cáo thông thường dựa trên mô hình hóa có thể thổi phồng hiệu quả thực tế lên gấp nhiều lần. Nghiên cứu quy mô lớn trên chính dữ liệu của Facebook chỉ ra sự khác biệt nghiêm trọng giữa số liệu báo cáo kỹ thuật và hiệu quả thực tế thu được từ các thử nghiệm ngẫu nhiên.",
+    "keyNumbers": [
+      {
+        "value": "3 lần",
+        "label": "mức sai lệch phổ biến của các phương pháp đo lường quan sát so với thực tế thực nghiệm"
+      },
+      {
+        "value": "83%",
+        "label": "mức tăng trưởng phễu trên trung vị do học máy dự báo so với 29% thực tế"
+      },
+      {
+        "value": "663",
+        "label": "thử nghiệm thực địa quy mô lớn được phân tích trong nghiên cứu"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Bản chất của sự sai lệch số liệu báo cáo",
+        "body": "Karan Dhir, chuyên gia đo lường tiếp thị, chỉ ra rằng các nền tảng quảng cáo đang trộn lẫn hai loại số liệu khác nhau trên cùng một giao diện báo cáo. Loại thứ nhất là bằng chứng nhân quả thu được từ các thử nghiệm thực tế có nhóm đối chứng. Loại thứ hai là số liệu đo lường kỹ thuật dựa trên mô hình hóa và thuật toán ước tính. Nghiên cứu thực nghiệm trên chính hạ tầng của Facebook cho thấy các phương pháp ước tính thường cho kết quả cao hơn thực tế rất nhiều."
+      },
+      {
+        "heading": "Khoảng cách lớn giữa mô hình toán học và thực tế",
+        "body": "Một nghiên cứu công bố trên tạp chí Marketing Science dựa trên 663 thử nghiệm quy mô lớn của Facebook đã so sánh các phương pháp học máy với kết quả thực nghiệm ngẫu nhiên. Ở phễu trên, mô hình học máy dự báo mức tăng trưởng trung vị là 83%, trong khi thực tế chạy thử nghiệm ngẫu nhiên chỉ đạt 29%. Ở phễu dưới, mô hình dự báo đạt 24% nhưng thực tế chỉ đạt 5%. Sự chênh lệch này cho thấy các mô hình toán học thường tối ưu hóa số liệu theo hướng quá lạc quan."
+      },
+      {
+        "heading": "Tại sao dữ liệu lớn vẫn thất bại trong đo lường?",
+        "body": "Nguyên nhân cốt lõi nằm ở hiện tượng nội sinh trong phân phối quảng cáo của các nền tảng. Hệ thống phân phối luôn chủ động nhắm mục tiêu vào những người vốn đã có khả năng chuyển đổi cao, dù họ có thấy quảng cáo hay không. Do đó, các phương pháp đo lường quan sát thông thường không thể bóc tách được lượng chuyển đổi tự nhiên này. Điều này dẫn đến việc tính công sai lệch cho quảng cáo và làm phình to hiệu quả thực tế."
+      },
+      {
+        "heading": "Sự mập mờ ngày càng tăng do rào cản quyền riêng tư",
+        "body": "Kể từ khi các thay đổi về quyền riêng tư làm giảm lượng dữ liệu chuyển đổi thực tế ghi nhận được, các nền tảng đã tăng cường sử dụng chuyển đổi mô hình hóa để lấp đầy khoảng trống. Điều này vô tình khiến ranh giới giữa hiệu quả thực tế và số liệu ước tính trên trình quản lý quảng cáo trở nên mờ nhạt hơn bao giờ hết. Người mua quảng cáo hiện nay đang phải tối ưu ngân sách dựa trên những giả định toán học thay vì kết quả thực tế từ người dùng."
+      }
+    ],
+    "impact": "Giúp Trưởng phòng Marketing nhận ra ngân sách Meta Ads có thể đang bị lãng phí vào những tệp khách hàng tự nhiên vốn sẽ mua hàng mà không cần quảng cáo. Việc tin tưởng tuyệt đối vào số liệu báo cáo mặc định của Ads Manager dẫn đến phân bổ sai lệch dòng tiền và đánh giá quá cao ROI của kênh.",
+    "ifIgnored": "Doanh nghiệp sẽ tiếp tục đổ tiền vào các chiến dịch có số liệu đẹp trên giấy tờ nhưng không thực sự tạo ra tăng trưởng doanh thu thuần, dẫn đến lãng phí ngân sách nghiêm trọng và mất lợi thế cạnh tranh.",
+    "actionChecklist": [
+      "Phân biệt rõ số liệu báo cáo mặc định và số liệu thử nghiệm thực tế khi đánh giá hiệu quả chiến dịch.",
+      "Triển khai các thử nghiệm tăng trưởng ngẫu nhiên định kỳ để đo lường hiệu quả thực tế.",
+      "Sử dụng phương pháp quảng cáo ma để tối ưu chi phí thử nghiệm nhóm đối chứng mà không làm gián đoạn chiến dịch.",
+      "Kết hợp mô hình MMM và thử nghiệm thực tế thay vì phụ thuộc hoàn toàn vào cửa sổ phân bổ của trình quản lý quảng cáo."
+    ],
+    "id": "real-2026-09-26-nghien-cuu-tu-facebook-75f65b",
+    "publishedAt": "26/09/2026",
+    "sourceUrl": "https://ppc.land/facebooks-own-tests-show-standard-ad-measurement-often-off-by-3x-dhir-says/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/09/modeled-ad-lift-vs-randomized-experiments-height-gauge.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "AI Marketing",
+    "platformIcon": "Sparkles",
+    "title": "McDonald's thử nghiệm bán quảng cáo trên màn hình drive-thru: Bước đi mới của Retail Media Network",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Retail Media Network",
+      "Quảng cáo tại điểm bán",
+      "Dữ liệu khách hàng",
+      "Xu hướng AdTech"
+    ],
+    "summary": "McDonald's vừa bắt đầu thử nghiệm hiển thị quảng cáo của bên thứ ba trên các màn hình gọi món kỹ thuật số tại 450 cửa hàng tự vận hành ở Mỹ. Đây là bước đi nhằm gia nhập thị trường Commerce Media đầy tiềm năng, tận dụng dữ liệu từ gần 220 triệu thành viên thân thiết để tạo ra nguồn doanh thu mới có biên lợi nhuận cao.",
+    "keyNumbers": [
+      {
+        "value": "100 tỷ USD",
+        "label": "Dự báo quy mô thị trường Commerce Media tại Mỹ vào năm 2028"
+      },
+      {
+        "value": "220 triệu",
+        "label": "Thành viên hoạt động trong 90 ngày của chương trình khách hàng thân thiết McDonald's"
+      },
+      {
+        "value": "3,2%",
+        "label": "Tỷ lệ cửa hàng tại Mỹ tham gia thử nghiệm đợt đầu"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Mô hình quảng cáo mới tại điểm bán vật lý",
+        "body": "McDonald's đã bắt đầu hiển thị quảng cáo của các thương hiệu khác trên màn hình đặt món kỹ thuật số tại lối vào mua hàng trên xe (drive-thru). Thử nghiệm này được triển khai tại 450 cửa hàng do hãng tự vận hành tại Mỹ từ tháng 8 năm 2026. Quảng cáo chỉ xuất hiện sau khi khách hàng đã hoàn tất việc đặt món để tránh gây gián đoạn trải nghiệm mua sắm. Ví dụ thực tế cho thấy hãng bảo hiểm Geico đã xuất hiện trên một nửa màn hình menu drive-thru sau khi khách đặt hàng xong."
+      },
+      {
+        "heading": "Tham vọng tỷ đô từ dữ liệu khách hàng thân thiết",
+        "body": "Giám đốc Marketing toàn cầu của McDonald's cho biết hãng đặt mục tiêu xây dựng mạng lưới quảng cáo này thành một doanh nghiệp trị giá 1 tỷ USD trong tương lai. Xu hướng Commerce Media đang bùng nổ mạnh mẽ và dự kiến đạt quy mô hơn 100 tỷ USD chỉ riêng tại Mỹ vào năm 2028. McDonald's đang sở hữu lợi thế khổng lồ với chương trình khách hàng thân thiết có gần 220 triệu thành viên hoạt động thường xuyên. Nhóm khách hàng này có tần suất ghé cửa hàng cao gấp 2,5 lần so với khách hàng thông thường và đóng góp tới 30% tổng doanh thu."
+      },
+      {
+        "heading": "Thách thức vận hành và sự đồng thuận của đối tác nhượng quyền",
+        "body": "Hiện tại, thử nghiệm mới chỉ bao phủ khoảng 3,2% trong tổng số gần 14.000 cửa hàng của McDonald's tại Mỹ. Do 95% số cửa hàng trên toàn cầu được vận hành bởi các đối tác nhượng quyền độc lập, việc mở rộng mạng lưới quảng cáo sẽ phụ thuộc lớn vào sự đồng thuận của họ. McDonald's dự kiến tăng tỷ lệ nhượng quyền lên 98% vào cuối năm 2028, đồng nghĩa với việc hãng phải chia sẻ doanh thu quảng cáo một cách hợp lý để thuyết phục các đối tác tham gia. Ngoài ra, các vấn đề về công nghệ đo lường hiệu quả quảng cáo và cách thức mua vị trí vẫn chưa được công bố chi tiết."
+      },
+      {
+        "heading": "Sự trỗi dậy của mạng lưới quảng cáo bán lẻ",
+        "body": "Bước đi của McDonald's chính thức đưa chuỗi thức ăn nhanh này gia nhập cuộc đua Retail Media Network cùng các ông lớn như Amazon, Walmart và Uber. Các doanh nghiệp sở hữu lượng dữ liệu khách hàng trực tiếp (First-party data) lớn đang dần biến các điểm chạm vật lý và kỹ thuật số của mình thành không gian quảng cáo hái ra tiền. Đối với các nhà quảng cáo, đây là cơ hội tiếp cận người tiêu dùng ngay tại thời điểm họ chuẩn bị rút ví thanh toán. Xu hướng này hứa hẹn sẽ thay đổi cách phân bổ ngân sách marketing của các thương hiệu tiêu dùng trong tương lai gần."
+      }
+    ],
+    "impact": "Xu hướng Retail Media Network (RMN) đang dịch chuyển mạnh mẽ từ trực tuyến (e-commerce) sang các điểm chạm vật lý (in-store screens). Trưởng phòng Marketing cần nhận diện các chuỗi bán lẻ và F&B lớn tại Việt Nam như những kênh quảng cáo tiềm năng mới, nơi có dữ liệu khách hàng cực kỳ chất lượng và khả năng tiếp cận sát thời điểm mua hàng hơn các ad network truyền thống.",
+    "ifIgnored": "Doanh nghiệp sẽ tiếp tục phụ thuộc vào các kênh quảng cáo trực tuyến truyền thống đang ngày càng đắt đỏ và kém hiệu quả do thắt chặt quyền riêng tư dữ liệu, đồng thời bỏ lỡ cơ hội tiếp cận khách hàng mục tiêu ngay tại điểm bán vật lý với tỷ lệ chuyển đổi cao.",
+    "actionChecklist": [
+      "Nghiên cứu và lập danh sách các chuỗi bán lẻ hoặc F&B lớn tại Việt Nam có sở hữu ứng dụng thành viên và hệ thống màn hình tại cửa hàng để đánh giá tiềm năng hợp tác quảng cáo.",
+      "Thiết kế sẵn các định dạng thông điệp ngắn gọn, phù hợp hiển thị nhanh tại các màn hình thanh toán hoặc màn hình chờ của bên thứ ba.",
+      "Tối ưu hóa hệ thống dữ liệu khách hàng nội bộ (CRM) để sẵn sàng kết nối và đối chiếu tệp khách hàng khi chạy thử nghiệm trên các mạng lưới quảng cáo bán lẻ.",
+      "Phân bổ một phần ngân sách thử nghiệm (khoảng 5-10%) cho các kênh quảng cáo tại điểm bán kỹ thuật số (DOOH) có đo lường bằng dữ liệu thực tế."
+    ],
+    "id": "real-2026-09-26-mcdonald-s-thu-nghiem-700fb7",
+    "publishedAt": "26/09/2026",
+    "sourceUrl": "https://ppc.land/mcdonalds-runs-third-party-ads-on-drive-thru-boards-at-450-us-restaurants/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/09/mcdonalds-media-network-fry-carton-billboards.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Google cập nhật thuật toán chống spam tháng 9/2026 và bổ sung bộ lọc tìm kiếm bằng hình ảnh trên Search Console",
+    "isHot": true,
+    "illustration": "zero-click",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Google SEO",
+      "Thuật toán Google",
+      "Search Console",
+      "Tìm kiếm hình ảnh"
+    ],
+    "summary": "Google đã chính thức khởi chạy bản cập nhật chống spam diện rộng với thời gian hoàn thành kéo dài tới hai tuần. Đồng thời, Search Console bổ sung bộ lọc tìm kiếm đa phương thức giúp doanh nghiệp đo lường lưu lượng truy cập từ Google Lens và Circle to Search.",
+    "keyNumbers": [
+      {
+        "value": "40,2%",
+        "label": "Mức sụt giảm traffic từ Google Search của các nhà xuất bản"
+      },
+      {
+        "value": "18,8%",
+        "label": "Điểm phần trăm sụt giảm CTR khi người dùng chuyển sang AI Mode"
+      },
+      {
+        "value": "2 tuần",
+        "label": "Thời gian triển khai tối đa của Google Spam Update tháng 9/2026"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Cập nhật thuật toán chống spam diện rộng",
+        "body": "Google bắt đầu triển khai bản cập nhật chống spam tháng 9/2026 từ ngày 24/09 trên phạm vi toàn cầu và áp dụng cho mọi ngôn ngữ. Đây là đợt cập nhật spam thứ tư trong năm 2026, nhưng có thời gian triển khai dự kiến kéo dài tới hai tuần, lâu hơn nhiều so với các đợt trước vốn chỉ mất chưa đầy ba ngày. Google hiện chưa công bố mục tiêu cụ thể của đợt quét này. Các doanh nghiệp cần theo dõi sát sao biến động thứ hạng và đối chiếu trực tiếp với mốc thời gian triển khai."
+      },
+      {
+        "heading": "Bổ sung bộ lọc tìm kiếm bằng hình ảnh trên Search Console",
+        "body": "Google Search Console đang triển khai bộ lọc đa phương thức mới trong báo cáo hiệu suất. Bộ lọc này ghi nhận dữ liệu từ các tính năng tìm kiếm bằng hình ảnh như Google Lens, Circle to Search trên Android, tải ảnh trực tiếp lên Google Search và tính năng tìm kiếm hình ảnh trên Chrome. Do tìm kiếm bằng hình ảnh không sử dụng văn bản, báo cáo sẽ không hiển thị dữ liệu truy vấn từ khóa cụ thể. Tính năng này cũng đang được cập nhật cho các báo cáo hiệu suất AI tạo sinh."
+      },
+      {
+        "heading": "Lưu lượng truy cập từ tìm kiếm tự nhiên sụt giảm mạnh",
+        "body": "Báo cáo Publisher Playbook 2026 của Chartbeat cho thấy lưu lượng truy cập từ Google Search của các nhà xuất bản đã giảm mạnh 40,2% so với cùng kỳ năm ngoái từ tháng 7/2025 đến tháng 7/2026. Lưu lượng từ Google Discover cũng ghi nhận mức giảm nghiêm trọng lên tới 34,3%. Ngược lại, các nguồn truy cập trực tiếp, nội bộ và mạng xã hội kín lại có xu hướng tăng trưởng tỷ trọng. Điều này buộc các thương hiệu phải đa dạng hóa kênh tiếp cận thay vì phụ thuộc hoàn toàn vào tìm kiếm tự nhiên."
+      },
+      {
+        "heading": "Tác động tiêu cực của chế độ tìm kiếm AI đến tỷ lệ nhấp",
+        "body": "Một nghiên cứu thực địa từ Đại học Pennsylvania và Đại học Northeastern chỉ ra rằng việc ép buộc người dùng sử dụng chế độ AI Mode trên Google làm giảm đáng kể tỷ lệ nhấp chuột chuyển hướng về website. Cụ thể, nhóm người dùng sử dụng AI Mode có tỷ lệ nhấp chuột vào các liên kết ngoài thấp hơn 18,8 điểm phần trăm so với nhóm tìm kiếm thông thường. Nghiên cứu cũng ghi nhận mức độ hài lòng và lòng tin của người dùng đối với thông tin do AI cung cấp thấp hơn so với kết quả tìm kiếm truyền thống."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing sẽ đối mặt với sự sụt giảm lưu lượng truy cập tự nhiên do thuật toán quét spam kéo dài và xu hướng tìm kiếm AI không click. Tuy nhiên, bạn có cơ hội tối ưu hóa doanh thu từ tìm kiếm hình ảnh nhờ dữ liệu đo lường chi tiết lần đầu tiên xuất hiện trên Search Console.",
+    "ifIgnored": "Nếu bỏ qua, doanh nghiệp sẽ không thể lý giải được nguyên nhân sụt giảm traffic đột ngột trong tháng 9/2026, bỏ lỡ cơ hội tối ưu hóa hình ảnh sản phẩm cho tệp khách hàng mua sắm qua Google Lens, và tiếp tục lãng phí ngân sách vào các chiến lược SEO truyền thống kém hiệu quả trong kỷ nguyên AI.",
+    "actionChecklist": [
+      "Đối chiếu dữ liệu traffic và thứ hạng trên Google Search Console từ ngày 24/09/2026 để phát hiện ảnh hưởng từ thuật toán Spam Update.",
+      "Truy cập báo cáo hiệu suất Search Console, kích hoạt bộ lọc đa phương thức mới để phân tích các trang sản phẩm nhận nhiều lượt click từ Google Lens.",
+      "Tối ưu hóa SEO hình ảnh bằng cách cập nhật thẻ alt, tên file ảnh chứa từ khóa và nâng cao chất lượng ảnh sản phẩm để đón đầu xu hướng Circle to Search.",
+      "Thiết lập lịch kiểm tra tự động cho các trang đích quan trọng để tránh lỗi lập chỉ mục sai lệch hoặc bị Googlebot nhận diện nhầm thành trang lỗi."
+    ],
+    "deadline": "08/10/2026",
+    "id": "real-2026-09-26-google-cap-nhat-thuat-7ab1a1",
+    "publishedAt": "26/09/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/seo-pulse-google-spam-update-image-search-data/590882/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/09/seo-pulse-september-24-2026.jpg",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
     "category": "TikTok Shop & Ads",
     "platformIcon": "Video",
     "title": "TikTok đạt thỏa thuận pháp lý tại Alabama, giới hạn thời gian dùng ứng dụng cho thanh thiếu niên",
@@ -182,125 +372,6 @@
     "image": {
       "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/09/ai-agent-data-466.png",
       "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Google Search Console bổ sung dữ liệu Lens và Circle to Search nhưng không hiển thị từ khóa",
-    "isHot": "false",
-    "illustration": "data-signal",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Google Search Console",
-      "SEO",
-      "Google Lens",
-      "Multimodal"
-    ],
-    "summary": "Google chính thức bổ sung loại tìm kiếm đa phương thức vào báo cáo Hiệu suất của Search Console, tách kết quả từ hình ảnh, ảnh chụp màn hình hoặc camera thành mục riêng. Tuy nhiên, tính năng này không cung cấp từ khóa đi kèm do các tìm kiếm chủ yếu dựa trên hình ảnh.",
-    "keyNumbers": [
-      {
-        "value": "2",
-        "label": "phân loại Web mới gồm Văn bản và Đa phương thức"
-      },
-      {
-        "value": "4",
-        "label": "con đường dẫn nguồn dữ liệu đa phương thức"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Phân chia mới trong báo cáo Hiệu suất",
-        "body": "Bộ lọc loại tìm kiếm trong báo cáo Hiệu suất cho kết quả Tìm kiếm trên Web nay được chia thành hai lựa chọn lồng nhau gồm Dựa trên văn bản và Đa phương thức. Các tùy chọn Hình ảnh, Video và Tin tức vẫn giữ nguyên là các mục độc lập trong cùng hộp thoại. Google định nghĩa tìm kiếm đa phương thức theo dõi các kết quả kích hoạt bởi truy vấn sử dụng hình ảnh, ảnh chụp màn hình hoặc ảnh chụp từ camera."
-      },
-      {
-        "heading": "Bốn nguồn cấp dữ liệu đa phương thức",
-        "body": "Bài đăng từ Google xác nhận bốn tuyến đường chính cung cấp dữ liệu cho danh mục mới này bao gồm Google Lens, tính năng Circle to Search trên Android, các hình ảnh tải lên Google Search, và tùy chọn nhấp chuột phải Tìm kiếm hình ảnh này trong Chrome. Danh sách này hiện chưa bao gồm Search Live ra mắt ở hơn 200 quốc gia vào tháng 03 năm 2026 hay các lời nhắc hình ảnh bên trong Chế độ AI có từ tháng 04 năm 2025."
-      },
-      {
-        "heading": "Thiếu vắng hoàn toàn chiều dữ liệu từ khóa",
-        "body": "Do các tìm kiếm đa phương thức chủ yếu sử dụng hình ảnh thay vì văn bản, dữ liệu truy vấn văn bản cụ thể không khả dụng cho luồng lưu lượng truy cập này. Kích thước truy vấn không hiển thị khi chọn loại tìm kiếm này, đồng thời bức ảnh thực tế cũng được giữ ẩn. Người quản trị trang web chỉ có thể quan sát trang nào đã xuất hiện và mức độ thường xuyên thay vì biết người dùng đang tìm kiếm chính xác điều gì."
-      },
-      {
-        "heading": "Tác động đến dữ liệu tổng hợp và lịch sử",
-        "body": "Google khẳng định các số liệu trong góc nhìn mới này trước đó chưa từng được tính toán ở bất kỳ đâu trong báo cáo. Thay đổi này cũng áp dụng cho cả báo cáo về các tính năng Tạo sinh AI. Việc bổ sung loại tìm kiếm này có thể tạo ra sự ngắt quãng trong việc so sánh dữ liệu theo năm đối với các trang web có lượng hiển thị lớn từ camera."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing quản lý website cần lưu ý rằng lưu lượng truy cập từ hình ảnh, Google Lens và Circle to Search nay đã có thể đo lường được số lần hiển thị và lượt nhấp trên trang. Tuy nhiên, việc thiếu vắng hoàn toàn từ khóa truy vấn đòi hỏi đội ngũ SEO phải thay đổi cách đánh giá hiệu quả nội dung trực quan, chuyển từ tối ưu hóa từ khóa sang tối ưu hóa hình ảnh sản phẩm.",
-    "ifIgnored": "Nếu bỏ qua thay đổi này, doanh nghiệp sẽ đánh giá thấp hoặc bỏ sót hoàn toàn lượng khách hàng tiềm năng đến từ các tìm kiếm bằng hình ảnh thực tế qua smartphone, đồng thời bối rối trước những biến động bất thường trong dữ liệu tổng thể của Search Console.",
-    "actionChecklist": [
-      "Kiểm tra bộ lọc Đa phương thức mới trong báo cáo Hiệu suất của Search Console để đánh giá lưu lượng truy cập từ hình ảnh hiện tại.",
-      "Rà soát lại chất lượng hình ảnh sản phẩm và tối ưu hóa alt text để tăng khả năng hiển thị trên Google Lens và Circle to Search.",
-      "Lưu ý đội ngũ phân tích dữ liệu về việc thiếu hụt chiều dữ liệu từ khóa trong phân khúc đa phương thức để tránh sai lệch trong báo cáo SEO.",
-      "Cập nhật các mốc thời gian thay đổi giao diện dữ liệu của Search Console vào bảng theo dõi hiệu suất định kỳ."
-    ],
-    "id": "real-2026-09-24-google-search-console-bo-a696e7",
-    "publishedAt": "24/09/2026",
-    "sourceUrl": "https://ppc.land/google-search-console-gains-lens-and-circle-to-search-data-without-queries/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/09/Curtained-stages-rise-in-a-blue-tower--one-open-and-empty-image-search-visibility-with-no-keywords.jpg",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Google triển khai bản cập nhật thuật toán spam tháng 9 năm 2026",
-    "isHot": true,
-    "illustration": "account-security",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Google SEO",
-      "Spam Update",
-      "Thuật toán",
-      "Quản trị website"
-    ],
-    "summary": "Google vừa chính thức phát hành bản cập nhật spam tháng 9 năm 2026 áp dụng toàn cầu cho mọi ngôn ngữ và khu vực. Điểm đáng chú ý là thời gian triển khai có thể kéo dài tới 14 ngày, dài hơn nhiều so với các chu kỳ trước đây trong năm.",
-    "keyNumbers": [
-      {
-        "value": "14 ngày",
-        "label": "Thời gian triển khai tối đa"
-      },
-      {
-        "value": "09:15",
-        "label": "Giờ bắt đầu theo múi giờ PDT"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Chi tiết về bản cập nhật spam",
-        "body": "Google đã bắt đầu đợt quét tự động các kết quả tìm kiếm nhằm vào các trang web vi phạm chính sách chống spam. Bản cập nhật này áp dụng trên phạm vi toàn cầu và cho tất cả các ngôn ngữ. Các trang web vi phạm có thể bị giảm thứ hạng hoặc biến mất hoàn toàn khỏi kết quả tìm kiếm, trong khi các trang tuân thủ chính sách sẽ không bị ảnh hưởng."
-      },
-      {
-        "heading": "Thay đổi về thời gian triển khai",
-        "body": "Điểm khác biệt lớn nhất của đợt này là lịch trình thực hiện kéo dài tới 14 ngày, có thể hoàn thành vào khoảng ngày 8 tháng 10. Trong khi đó, ba chu kỳ spam trước đó trong năm 2026 chỉ diễn ra trong vòng từ khoảng 19,5 giờ đến 3 ngày. Khung thời gian kéo dài này tương tự như các bản cập nhật cốt lõi diện rộng trước đây."
-      },
-      {
-        "heading": "Hệ thống phát hiện SpamBrain",
-        "body": "Hệ thống phát hiện spam tự động của Google hoạt động liên tục và nhãn cập nhật spam được dùng cho các cải tiến đáng chú ý đối với cách thức hoạt động của các hệ thống này. Google sử dụng SpamBrain, hệ thống phòng chống spam dựa trên trí tuệ nhân tạo được tinh chỉnh định kỳ. Các hình phạt baoon gồm việc giáng cấp hoặc xóa khỏi kết quả tìm kiếm với thời gian phục hồi tính bằng nhiều tháng."
-      },
-      {
-        "heading": "Bối cảnh cập nhật trong năm",
-        "body": "Tính đến nay trong năm 2026, Google đã xác nhận tổng cộng bảy bản cập nhật xếp hạng. Các chu kỳ spam trước diễn ra vào tháng 3 hoàn thành trong khoảng 19,5 giờ, tháng 4, và tháng 18 tháng 8. Khoảng cách thời gian giữa các đợt cập nhật spam ngày càng rút ngắn so với năm 2025."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing quản lý website cần lưu ý rằng thời gian biến động thứ hạng có thể kéo dài tới hai tuần thay vì vài ngày như trước, gây khó khăn cho việc theo dõi hiệu suất SEO ngắn hạn.",
-    "ifIgnored": "Nếu bỏ qua, đội ngũ có thể hiểu nhầm biến động lưu lượng truy cập tự nhiên là lỗi kỹ thuật thông thường và không kịp thời xử lý các nội dung vi phạm chính sách spam của Google.",
-    "actionChecklist": [
-      "Kiểm tra lưu lượng truy cập tự nhiên và thứ hạng từ khóa hàng ngày trong suốt thời gian cập nhật.",
-      "Rà soát lại toàn bộ nội dung website để đảm bảo tuân thủ nghiêm ngặt các chính sách chống spam mới nhất.",
-      "Theo dõi thông báo chính thức từ Google Search Status Dashboard để nắm bắt thời điểm kết thúc cập nhật.",
-      "Chuẩn bị báo cáo giải trình cho ban quản trị về những biến động lưu lượng truy cập có thể xảy ra trong giai đoạn này."
-    ],
-    "deadline": "08/10/2026",
-    "id": "real-2026-09-24-google-trien-khai-ban-18d300",
-    "publishedAt": "24/09/2026",
-    "sourceUrl": "https://ppc.land/sites-breaking-google-spam-rules-face-lower-rankings-in-two-week-window/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/09/Sites-breaking-Google-spam-rules-face-lower-rankings-in-two-week-window.jpg",
-      "credit": "Ảnh: PPC Land"
     }
   },
   {
@@ -542,69 +613,6 @@
     "image": {
       "url": "https://imgproxy.divecdn.com/WtVwuvPQucR0rUzMtUQpYml2_BnBh7RJ_Yvc4iKkzcw/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS90aHJlYWRzX25ld19sb2dvLnBuZw==.webp",
       "credit": "Ảnh: Social Media Today"
-    }
-  },
-  {
-    "category": "AI Marketing",
-    "platformIcon": "Sparkles",
-    "title": "Bản đồ nguồn dữ liệu của AI Search: Thương hiệu cần xuất hiện ở đâu để được AI trích dẫn?",
-    "isHot": false,
-    "illustration": "zero-click",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "AI Search",
-      "AEO",
-      "Tối ưu hóa tìm kiếm",
-      "Nguồn dữ liệu AI"
-    ],
-    "summary": "Khi các công cụ tìm kiếm AI như Gemini, ChatGPT và Copilot ngày càng phổ biến, việc hiểu rõ nguồn dữ liệu mà chúng sử dụng để phản hồi người dùng là vô cùng quan trọng. Bài viết phân loại các nguồn dữ liệu từ Tier 1 (xác thực và trực tiếp) đến Tier 4 (khả năng cao) giúp doanh nghiệp định hình chiến lược tối ưu hóa hiển thị trên AI (AEO). Đây là chìa khóa để thương hiệu của bạn được AI trích dẫn và đề xuất trực tiếp cho khách hàng.",
-    "keyNumbers": [
-      {
-        "value": "60%",
-        "label": "Tỷ lệ dữ liệu Common Crawl trong hỗn hợp lấy mẫu của GPT-3"
-      },
-      {
-        "value": "15 phút",
-        "label": "Tần suất tối đa OpenAI chấp nhận cập nhật dữ liệu sản phẩm từ doanh nghiệp"
-      },
-      {
-        "value": "60.000.000 USD",
-        "label": "Giá trị hợp đồng ước tính mỗi năm giữa Google và Reddit để khai thác dữ liệu"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Nhóm dữ liệu Tier 1: Nguồn cấp thời gian thực quyết định câu trả lời của AI",
-        "body": "Đây là nhóm dữ liệu được xác nhận đang sử dụng cho quá trình RAG (Retrieval-Augmented Generation) và liên kết trực tiếp để đưa ra câu trả lời thời gian thực. Các nguồn chính bao gồm Google Search, Bing Search, Google Maps và Google Business Profile. Đối với thương hiệu, việc duy trì thông tin chính xác trên các nền tảng này là bắt buộc để AI có thể định vị và trích dẫn chính xác địa điểm hoặc thông tin doanh nghiệp. Ngoài ra, Wikipedia và Yelp cũng thuộc nhóm này, trong đó Yelp cho phép người dùng ChatGPT thực hiện các hành động trực tiếp như đặt bàn hoặc yêu cầu báo giá."
-      },
-      {
-        "heading": "Thương mại điện tử và dữ liệu sản phẩm: Sức mạnh của Merchant Center",
-        "body": "Google Merchant Center là nguồn dữ liệu cốt lõi thúc đẩy hiển thị mua sắm trên các bề mặt tìm kiếm của Google. Đối với OpenAI, nền tảng này chấp nhận các tệp dữ liệu sản phẩm định dạng CSV hoặc JSON được cập nhật liên tục mỗi 15 phút để đảm bảo thông tin về giá, lượng tồn kho và mô tả sản phẩm luôn chính xác. Việc tích hợp danh mục sản phẩm từ các nền tảng như Shopify vào ChatGPT đã được xác nhận. Marketer cần đảm bảo các nguồn cấp dữ liệu sản phẩm (product feeds) luôn sạch và được cập nhật liên tục để không bỏ lỡ cơ hội được AI đề xuất mua sắm."
-      },
-      {
-        "heading": "Dữ liệu cộng đồng và báo chí: Những thương vụ triệu đô",
-        "body": "Các nền tảng AI đang tích cực mua bản quyền dữ liệu từ các bên thứ ba để huấn luyện và truy xuất thông tin. Điển hình là thương vụ trị giá khoảng 60.000.000 USD mỗi năm giữa Google và Reddit để khai thác API dữ liệu thời gian thực, mặc dù khả năng gia hạn hợp đồng này vẫn chưa chắc chắn. OpenAI cũng đã ký kết nhiều thỏa thuận cấp phép với các nhà xuất bản lớn như Financial Times, Axel Springer, AP và News Corp. Điều này đồng nghĩa với việc nội dung chất lượng cao, có bản quyền và các thảo luận thực tế từ người dùng trên diễn đàn sẽ có trọng số rất cao trong câu trả lời của AI."
-      },
-      {
-        "heading": "Chiến lược tối ưu hóa công cụ tìm kiếm AI (AEO) cho doanh nghiệp",
-        "body": "Để thương hiệu xuất hiện trong các câu trả lời của AI, marketer không thể chỉ dựa vào SEO truyền thống. Bạn cần chủ động đưa dữ liệu của mình vào các 'phễu' mà AI quét qua hàng ngày. Hãy tối ưu hóa sự hiện diện trên các nền tảng cộng đồng như Reddit, xây dựng nội dung FAQ chất lượng cao và cấu trúc dữ liệu sản phẩm chuẩn chỉnh. Việc hiểu rõ AI lấy thông tin từ đâu giúp doanh nghiệp phân bổ ngân sách sản xuất nội dung và tối ưu hóa kỹ thuật một cách chính xác, thay vì tối ưu mù quáng."
-      }
-    ],
-    "impact": "Giúp Trưởng phòng Marketing chuyển dịch ngân sách và nguồn lực từ SEO truyền thống sang AEO (Answer Engine Optimization) một cách có cơ sở khoa học. Bạn sẽ biết chính xác cần tối ưu hóa những kênh vệ tinh nào (Google Merchant Center, Reddit, Google Business Profile) để thương hiệu xuất hiện trong câu trả lời của ChatGPT, Gemini hay Copilot.",
-    "ifIgnored": "Doanh nghiệp sẽ tiếp tục đổ tiền vào SEO truyền thống nhưng lượng truy cập vẫn sụt giảm do xu hướng tìm kiếm không nhấp chuột (zero-click) tăng cao. Thương hiệu của bạn sẽ hoàn toàn biến mất khỏi các câu trả lời đề xuất của AI Chatbot, nhường sân chơi cho các đối thủ biết cách tối ưu hóa nguồn dữ liệu đầu vào của AI.",
-    "actionChecklist": [
-      "Cập nhật và đồng bộ hóa toàn bộ thông tin doanh nghiệp trên Google Business Profile và Google Maps để tối ưu hóa tìm kiếm địa điểm bằng AI.",
-      "Thiết lập và tối ưu hóa nguồn cấp dữ liệu sản phẩm (product feed) trên Google Merchant Center và chuẩn bị sẵn sàng cấu trúc dữ liệu sản phẩm cho OpenAI.",
-      "Xây dựng chiến lược nội dung trên các nền tảng cộng đồng như Reddit và các trang báo chí uy tín để tăng khả năng được AI quét và trích dẫn.",
-      "Cấu trúc lại nội dung website theo dạng câu hỏi - câu trả lời (FAQ) rõ ràng để các mô hình ngôn ngữ lớn dễ dàng trích xuất thông tin (RAG)."
-    ],
-    "id": "real-2026-09-22-ban-do-nguon-du-792186",
-    "publishedAt": "22/09/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/which-data-sources-should-you-care-about-for-ai-search/590086/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/09/data-sources-837.png",
-      "credit": "Ảnh: Search Engine Journal"
     }
   },
   {
