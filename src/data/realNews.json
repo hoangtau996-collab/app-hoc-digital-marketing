@@ -1,127 +1,124 @@
 [
   {
-    "category": "Meta Ads",
-    "platformIcon": "Facebook",
-    "title": "Nghiên cứu từ Facebook: Đo lường quảng cáo thông thường có thể sai lệch tới 3 lần",
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "YouTube cập nhật tính năng Ask YouTube và tab trang chủ cá nhân hóa hỗ trợ mua sắm trực tiếp",
     "isHot": false,
-    "illustration": "data-signal",
+    "illustration": "ai-video",
     "readTime": "4 phút đọc",
     "tags": [
-      "Đo lường quảng cáo",
-      "Meta Ads",
-      "Thử nghiệm tăng trưởng",
-      "Mô hình chuyển đổi"
+      "YouTube AI",
+      "Ask YouTube",
+      "Google Search",
+      "Marketing Video"
     ],
-    "summary": "Các phương pháp đo lường quảng cáo thông thường dựa trên mô hình hóa có thể thổi phồng hiệu quả thực tế lên gấp nhiều lần. Nghiên cứu quy mô lớn trên chính dữ liệu của Facebook chỉ ra sự khác biệt nghiêm trọng giữa số liệu báo cáo kỹ thuật và hiệu quả thực tế thu được từ các thử nghiệm ngẫu nhiên.",
+    "summary": "YouTube giới thiệu tab trang chủ tùy chỉnh bằng câu lệnh và trợ lý Ask YouTube tích hợp khả năng tổng hợp video review, bình luận và dữ liệu hình ảnh. Các tính năng này cho phép người dùng nghiên cứu sản phẩm và chuyển thẳng tới trang web của người bán kèm sản phẩm trong giỏ hàng. Cải tiến này làm thay đổi cách người tiêu dùng tìm kiếm và ra quyết định mua sắm trực tiếp trên nền tảng.",
     "keyNumbers": [
       {
-        "value": "3 lần",
-        "label": "mức sai lệch phổ biến của các phương pháp đo lường quan sát so với thực tế thực nghiệm"
+        "value": "919.000",
+        "label": "lượt đăng ký kênh Creator Insider"
       },
       {
-        "value": "83%",
-        "label": "mức tăng trưởng phễu trên trung vị do học máy dự báo so với 29% thực tế"
+        "value": "6.451",
+        "label": "lượt xem video demo ngày 27/09"
       },
       {
-        "value": "663",
-        "label": "thử nghiệm thực địa quy mô lớn được phân tích trong nghiên cứu"
+        "value": "40",
+        "label": "bình luận trên video demo"
       }
     ],
     "content": [
       {
-        "heading": "Bản chất của sự sai lệch số liệu báo cáo",
-        "body": "Karan Dhir, chuyên gia đo lường tiếp thị, chỉ ra rằng các nền tảng quảng cáo đang trộn lẫn hai loại số liệu khác nhau trên cùng một giao diện báo cáo. Loại thứ nhất là bằng chứng nhân quả thu được từ các thử nghiệm thực tế có nhóm đối chứng. Loại thứ hai là số liệu đo lường kỹ thuật dựa trên mô hình hóa và thuật toán ước tính. Nghiên cứu thực nghiệm trên chính hạ tầng của Facebook cho thấy các phương pháp ước tính thường cho kết quả cao hơn thực tế rất nhiều."
+        "heading": "Tab trang chủ tùy chỉnh bằng câu lệnh",
+        "body": "Tính năng Custom Feeds cho phép người xem tạo các tab chuyên biệt trên trang chủ bằng cách nhập yêu cầu bằng văn bản. Hệ thống liên tục cập nhật nội dung dựa trên sở thích cá nhân và lịch sử của người dùng thay vì áp dụng bộ lọc chủ đề chung. Khác với các bản thử nghiệm giới hạn một tab trước đó, YouTube nay cho phép tạo và lưu nhiều tab cùng lúc. Hướng dẫn này hiện được triển khai cho người dùng tại Mỹ trên web, di động và TV."
       },
       {
-        "heading": "Khoảng cách lớn giữa mô hình toán học và thực tế",
-        "body": "Một nghiên cứu công bố trên tạp chí Marketing Science dựa trên 663 thử nghiệm quy mô lớn của Facebook đã so sánh các phương pháp học máy với kết quả thực nghiệm ngẫu nhiên. Ở phễu trên, mô hình học máy dự báo mức tăng trưởng trung vị là 83%, trong khi thực tế chạy thử nghiệm ngẫu nhiên chỉ đạt 29%. Ở phễu dưới, mô hình dự báo đạt 24% nhưng thực tế chỉ đạt 5%. Sự chênh lệch này cho thấy các mô hình toán học thường tối ưu hóa số liệu theo hướng quá lạc quan."
+        "heading": "Nâng cấp trợ lý Ask YouTube",
+        "body": "Trợ lý tìm kiếm hội thoại Ask YouTube được bổ sung khả năng xử lý phức tạp hơn bao gồm tóm tắt video đánh giá, bảng so sánh thông số và tìm kiếm khung hình bên trong video. Công cụ này cũng phân tích phần bình luận của người xem để đưa ra câu trả lời tổng hợp. Trải nghiệm tìm kiếm kết thúc bằng các thẻ sản phẩm dẫn trực tiếp người mua sắm đến trang web của nhà bán lẻ. Hiện tại, tính năng này áp dụng cho người dùng tại Mỹ."
       },
       {
-        "heading": "Tại sao dữ liệu lớn vẫn thất bại trong đo lường?",
-        "body": "Nguyên nhân cốt lõi nằm ở hiện tượng nội sinh trong phân phối quảng cáo của các nền tảng. Hệ thống phân phối luôn chủ động nhắm mục tiêu vào những người vốn đã có khả năng chuyển đổi cao, dù họ có thấy quảng cáo hay không. Do đó, các phương pháp đo lường quan sát thông thường không thể bóc tách được lượng chuyển đổi tự nhiên này. Điều này dẫn đến việc tính công sai lệch cho quảng cáo và làm phình to hiệu quả thực tế."
+        "heading": "Tác động tới hành trình mua sắm",
+        "body": "Các đánh giá từ nhà sáng tạo, bình luận của người xem và hình ảnh trong video trở thành dữ liệu thô cho câu trả lời do AI tạo ra. Hành trình từ sự tò mò đến quyết định mua hàng dần dịch chuyển vào bên trong các bản tóm tắt của YouTube thay vì trang kết quả tìm kiếm truyền thống. Điều này giúp rút ngắn khoảng cách giữa việc xem review sản phẩm và thao tác thêm vào giỏ hàng. Các thương hiệu cần chuẩn bị dữ liệu sản phẩm để tối ưu hóa khả năng hiển thị trong các câu trả lời này."
       },
       {
-        "heading": "Sự mập mờ ngày càng tăng do rào cản quyền riêng tư",
-        "body": "Kể từ khi các thay đổi về quyền riêng tư làm giảm lượng dữ liệu chuyển đổi thực tế ghi nhận được, các nền tảng đã tăng cường sử dụng chuyển đổi mô hình hóa để lấp đầy khoảng trống. Điều này vô tình khiến ranh giới giữa hiệu quả thực tế và số liệu ước tính trên trình quản lý quảng cáo trở nên mờ nhạt hơn bao giờ hết. Người mua quảng cáo hiện nay đang phải tối ưu ngân sách dựa trên những giả định toán học thay vì kết quả thực tế từ người dùng."
+        "heading": "Những khoảng trống về dữ liệu và phân bổ",
+        "body": "Hiện tại YouTube chưa công bố cách thuật toán phân bổ video vào các tab tùy chỉnh cụ thể dựa trên hashtag hay mô tả. Dữ liệu từ YouTube Analytics chưa xác định rõ việc các tab tùy chỉnh có được báo cáo như một nguồn lưu lượng truy cập riêng biệt hay không. Các nhà quảng cáo cũng chưa có thông tin chính thức về việc liệu các vị trí quảng cáo có xuất hiện bên trong các tab tùy chỉnh hay không. Những câu hỏi này để ngỏ khả năng đo lường hiệu quả cho các nhà quản lý chiến dịch."
       }
     ],
-    "impact": "Giúp Trưởng phòng Marketing nhận ra ngân sách Meta Ads có thể đang bị lãng phí vào những tệp khách hàng tự nhiên vốn sẽ mua hàng mà không cần quảng cáo. Việc tin tưởng tuyệt đối vào số liệu báo cáo mặc định của Ads Manager dẫn đến phân bổ sai lệch dòng tiền và đánh giá quá cao ROI của kênh.",
-    "ifIgnored": "Doanh nghiệp sẽ tiếp tục đổ tiền vào các chiến dịch có số liệu đẹp trên giấy tờ nhưng không thực sự tạo ra tăng trưởng doanh thu thuần, dẫn đến lãng phí ngân sách nghiêm trọng và mất lợi thế cạnh tranh.",
+    "impact": "Trưởng phòng Marketing cần lưu ý rằng hành trình tìm kiếm và nghiên cứu sản phẩm của khách hàng trên YouTube đang chuyển dịch sang AI và các câu trả lời tổng hợp. Điều này đòi hỏi chiến lược nội dung video và tối ưu hóa phải thích ứng để sản phẩm xuất hiện trong các thẻ mua sắm trực tiếp.",
+    "ifIgnored": "Nếu bỏ qua, doanh nghiệp có thể mất đi nguồn lưu lượng truy cập và khách hàng tiềm năng khi người dùng hoàn tất việc mua sắm ngay trong giao diện tóm tắt của YouTube mà không chuyển qua trang web truyền thống.",
     "actionChecklist": [
-      "Phân biệt rõ số liệu báo cáo mặc định và số liệu thử nghiệm thực tế khi đánh giá hiệu quả chiến dịch.",
-      "Triển khai các thử nghiệm tăng trưởng ngẫu nhiên định kỳ để đo lường hiệu quả thực tế.",
-      "Sử dụng phương pháp quảng cáo ma để tối ưu chi phí thử nghiệm nhóm đối chứng mà không làm gián đoạn chiến dịch.",
-      "Kết hợp mô hình MMM và thử nghiệm thực tế thay vì phụ thuộc hoàn toàn vào cửa sổ phân bổ của trình quản lý quảng cáo."
+      "Đánh giá lại nội dung video review và thông tin sản phẩm để tối ưu cho khả năng phân tích của AI.",
+      "Theo dõi sát sao các cập nhật về đo lường lưu lượng truy cập từ Ask YouTube và các tab tùy chỉnh.",
+      "Chuẩn bị sẵn sàng nguồn lực để tích hợp sản phẩm vào các trải nghiệm mua sắm tích hợp sẵn trên nền tảng video.",
+      "Cập nhật thông tin về các vị trí đặt quảng cáo tiềm năng khi YouTube mở rộng tính năng thương mại này."
     ],
-    "id": "real-2026-09-26-nghien-cuu-tu-facebook-75f65b",
-    "publishedAt": "26/09/2026",
-    "sourceUrl": "https://ppc.land/facebooks-own-tests-show-standard-ad-measurement-often-off-by-3x-dhir-says/",
+    "deadline": "2026-09-27",
+    "id": "real-2026-09-27-youtube-cap-nhat-tinh-f79abc",
+    "publishedAt": "27/09/2026",
+    "sourceUrl": "https://ppc.land/youtubes-ai-search-to-gain-product-cards-that-send-shoppers-to-retailers/",
     "source": "PPC Land",
     "image": {
-      "url": "https://ppc.land/content/images/2026/09/modeled-ad-lift-vs-randomized-experiments-height-gauge.jpg",
+      "url": "https://ppc.land/content/images/2026/09/ask-youtube-review-comments-retro-camera-shopping-cart.jpg",
       "credit": "Ảnh: PPC Land"
     }
   },
   {
     "category": "AI Marketing",
     "platformIcon": "Sparkles",
-    "title": "McDonald's thử nghiệm bán quảng cáo trên màn hình drive-thru: Bước đi mới của Retail Media Network",
-    "isHot": false,
-    "illustration": "data-signal",
+    "title": "Công cụ Ask YouTube tích hợp AI đạt 140 triệu người dùng, định hình lại cách khán giả xem video",
+    "isHot": "false",
+    "illustration": "ai-video",
     "readTime": "4 phút đọc",
     "tags": [
-      "Retail Media Network",
-      "Quảng cáo tại điểm bán",
-      "Dữ liệu khách hàng",
-      "Xu hướng AdTech"
+      "YouTube AI",
+      "Gemini",
+      "Video Marketing",
+      "Hành vi người dùng"
     ],
-    "summary": "McDonald's vừa bắt đầu thử nghiệm hiển thị quảng cáo của bên thứ ba trên các màn hình gọi món kỹ thuật số tại 450 cửa hàng tự vận hành ở Mỹ. Đây là bước đi nhằm gia nhập thị trường Commerce Media đầy tiềm năng, tận dụng dữ liệu từ gần 220 triệu thành viên thân thiết để tạo ra nguồn doanh thu mới có biên lợi nhuận cao.",
+    "summary": "Công cụ hỏi đáp tích hợp trí tuệ nhân tạo Ask YouTube đã ghi nhận lượng người dùng đạt mốc hơn 140 triệu vào tháng 6, tăng trưởng hơn 500% so với tháng 12. Công nghệ này sử dụng mô hình Gemini tùy chỉnh để đưa người xem trực tiếp đến đúng giây giải đáp thắc mắc trong video mà không cần xem từ đầu.",
     "keyNumbers": [
       {
-        "value": "100 tỷ USD",
-        "label": "Dự báo quy mô thị trường Commerce Media tại Mỹ vào năm 2028"
+        "value": "140.000.000+",
+        "label": "người dùng Ask YouTube trong tháng 6"
       },
       {
-        "value": "220 triệu",
-        "label": "Thành viên hoạt động trong 90 ngày của chương trình khách hàng thân thiết McDonald's"
-      },
-      {
-        "value": "3,2%",
-        "label": "Tỷ lệ cửa hàng tại Mỹ tham gia thử nghiệm đợt đầu"
+        "value": "500%+",
+        "label": "mức tăng trưởng từ tháng 12"
       }
     ],
     "content": [
       {
-        "heading": "Mô hình quảng cáo mới tại điểm bán vật lý",
-        "body": "McDonald's đã bắt đầu hiển thị quảng cáo của các thương hiệu khác trên màn hình đặt món kỹ thuật số tại lối vào mua hàng trên xe (drive-thru). Thử nghiệm này được triển khai tại 450 cửa hàng do hãng tự vận hành tại Mỹ từ tháng 8 năm 2026. Quảng cáo chỉ xuất hiện sau khi khách hàng đã hoàn tất việc đặt món để tránh gây gián đoạn trải nghiệm mua sắm. Ví dụ thực tế cho thấy hãng bảo hiểm Geico đã xuất hiện trên một nửa màn hình menu drive-thru sau khi khách đặt hàng xong."
+        "heading": "Sự bùng nổ của công cụ Ask YouTube",
+        "body": "Số liệu công bố tại sự kiện Made on YouTube cho thấy lượng người dùng tính năng Ask YouTube đã tăng hơn 500% từ tháng 12 đến tháng 6. Công cụ này cho phép người xem đặt câu hỏi trực tiếp về nội dung đang phát ngay trên trang xem video mà không cần rời đi."
       },
       {
-        "heading": "Tham vọng tỷ đô từ dữ liệu khách hàng thân thiết",
-        "body": "Giám đốc Marketing toàn cầu của McDonald's cho biết hãng đặt mục tiêu xây dựng mạng lưới quảng cáo này thành một doanh nghiệp trị giá 1 tỷ USD trong tương lai. Xu hướng Commerce Media đang bùng nổ mạnh mẽ và dự kiến đạt quy mô hơn 100 tỷ USD chỉ riêng tại Mỹ vào năm 2028. McDonald's đang sở hữu lợi thế khổng lồ với chương trình khách hàng thân thiết có gần 220 triệu thành viên hoạt động thường xuyên. Nhóm khách hàng này có tần suất ghé cửa hàng cao gấp 2,5 lần so với khách hàng thông thường và đóng góp tới 30% tổng doanh thu."
+        "heading": "Cơ chế điều hướng đến đúng giây của video",
+        "body": "Được vận hành bởi một mô hình Gemini tùy chỉnh, hệ thống có khả năng khớp các câu hỏi phức tạp của người xem với chính xác giây thứ mấy trong video chứa câu trả lời. Điều này giúp tối ưu hóa trải nghiệm tìm kiếm thông tin chi tiết ngay bên trong nền tảng."
       },
       {
-        "heading": "Thách thức vận hành và sự đồng thuận của đối tác nhượng quyền",
-        "body": "Hiện tại, thử nghiệm mới chỉ bao phủ khoảng 3,2% trong tổng số gần 14.000 cửa hàng của McDonald's tại Mỹ. Do 95% số cửa hàng trên toàn cầu được vận hành bởi các đối tác nhượng quyền độc lập, việc mở rộng mạng lưới quảng cáo sẽ phụ thuộc lớn vào sự đồng thuận của họ. McDonald's dự kiến tăng tỷ lệ nhượng quyền lên 98% vào cuối năm 2028, đồng nghĩa với việc hãng phải chia sẻ doanh thu quảng cáo một cách hợp lý để thuyết phục các đối tác tham gia. Ngoài ra, các vấn đề về công nghệ đo lường hiệu quả quảng cáo và cách thức mua vị trí vẫn chưa được công bố chi tiết."
+        "heading": "Thách thức về cấu trúc hiển thị và quảng cáo",
+        "body": "Việc người dùng được đưa thẳng đến giữa video đồng nghĩa với việc họ có thể bỏ qua toàn bộ phần đầu, bao gồm cả các phân đoạn tài trợ truyền thống. Hiện tại, nền tảng chưa làm rõ cách thức phân phối quảng cáo pre-roll hoặc cách đo lường các phiên xem bắt đầu từ giữa chừng."
       },
       {
-        "heading": "Sự trỗi dậy của mạng lưới quảng cáo bán lẻ",
-        "body": "Bước đi của McDonald's chính thức đưa chuỗi thức ăn nhanh này gia nhập cuộc đua Retail Media Network cùng các ông lớn như Amazon, Walmart và Uber. Các doanh nghiệp sở hữu lượng dữ liệu khách hàng trực tiếp (First-party data) lớn đang dần biến các điểm chạm vật lý và kỹ thuật số của mình thành không gian quảng cáo hái ra tiền. Đối với các nhà quảng cáo, đây là cơ hội tiếp cận người tiêu dùng ngay tại thời điểm họ chuẩn bị rút ví thanh toán. Xu hướng này hứa hẹn sẽ thay đổi cách phân bổ ngân sách marketing của các thương hiệu tiêu dùng trong tương lai gần."
+        "heading": "Tính năng mua sắm và xu hướng màn hình lớn",
+        "body": "Trong giai đoạn tiếp theo, Ask YouTube sẽ tích hợp các tính năng mua sắm như bảng so sánh thuộc tính sản phẩm dựa trên sở thích của người xem. Bên cạnh đó, nội dung dạng ngắn Shorts cũng đang chứng kiến mức tiêu thụ lớn trên các thiết bị tivi thông minh."
       }
     ],
-    "impact": "Xu hướng Retail Media Network (RMN) đang dịch chuyển mạnh mẽ từ trực tuyến (e-commerce) sang các điểm chạm vật lý (in-store screens). Trưởng phòng Marketing cần nhận diện các chuỗi bán lẻ và F&B lớn tại Việt Nam như những kênh quảng cáo tiềm năng mới, nơi có dữ liệu khách hàng cực kỳ chất lượng và khả năng tiếp cận sát thời điểm mua hàng hơn các ad network truyền thống.",
-    "ifIgnored": "Doanh nghiệp sẽ tiếp tục phụ thuộc vào các kênh quảng cáo trực tuyến truyền thống đang ngày càng đắt đỏ và kém hiệu quả do thắt chặt quyền riêng tư dữ liệu, đồng thời bỏ lỡ cơ hội tiếp cận khách hàng mục tiêu ngay tại điểm bán vật lý với tỷ lệ chuyển đổi cao.",
+    "impact": "Trưởng phòng Marketing cần thay đổi cách xây dựng kịch bản video, vì tính năng nhảy cóc đến đúng giây trả lời của AI có thể làm giảm lượng view ở phần mở đầu và các đoạn chèn thông điệp tài trợ.",
+    "ifIgnored": "Nếu tiếp tục sản xuất video theo cấu trúc truyền thống mà bỏ qua việc tối ưu hóa chương và tiêu đề rõ ràng, các nội dung thương hiệu có thể bị bỏ lỡ hoàn toàn khi người dùng sử dụng tính năng hỏi đáp tự động.",
     "actionChecklist": [
-      "Nghiên cứu và lập danh sách các chuỗi bán lẻ hoặc F&B lớn tại Việt Nam có sở hữu ứng dụng thành viên và hệ thống màn hình tại cửa hàng để đánh giá tiềm năng hợp tác quảng cáo.",
-      "Thiết kế sẵn các định dạng thông điệp ngắn gọn, phù hợp hiển thị nhanh tại các màn hình thanh toán hoặc màn hình chờ của bên thứ ba.",
-      "Tối ưu hóa hệ thống dữ liệu khách hàng nội bộ (CRM) để sẵn sàng kết nối và đối chiếu tệp khách hàng khi chạy thử nghiệm trên các mạng lưới quảng cáo bán lẻ.",
-      "Phân bổ một phần ngân sách thử nghiệm (khoảng 5-10%) cho các kênh quảng cáo tại điểm bán kỹ thuật số (DOOH) có đo lường bằng dữ liệu thực tế."
+      "Bổ sung hệ thống chương và tiêu đề cực kỳ mô tả vào mọi video để mô hình AI dễ dàng nhận diện",
+      "Xem xét lại vị trí đặt thông điệp thương hiệu và tài trợ thay vì chỉ tập trung dồn vào phần đầu video",
+      "Theo dõi sát sao các cập nhật về tính năng mua sắm và so sánh sản phẩm sắp tích hợp trên nền tảng",
+      "Tối ưu hóa các nội dung dạng ngắn Shorts phục vụ xu hướng xem trên màn hình lớn và tivi"
     ],
-    "id": "real-2026-09-26-mcdonald-s-thu-nghiem-700fb7",
-    "publishedAt": "26/09/2026",
-    "sourceUrl": "https://ppc.land/mcdonalds-runs-third-party-ads-on-drive-thru-boards-at-450-us-restaurants/",
+    "id": "real-2026-09-27-cong-cu-ask-youtube-bb3fd1",
+    "publishedAt": "27/09/2026",
+    "sourceUrl": "https://ppc.land/youtubes-ai-answer-tool-rises-over-500-since-december-reaching-140m-users/",
     "source": "PPC Land",
     "image": {
-      "url": "https://ppc.land/content/images/2026/09/mcdonalds-media-network-fry-carton-billboards.jpg",
+      "url": "https://ppc.land/content/images/size/w1200/2026/09/ask-youtube-film-strip-tower-elevator.jpg",
       "credit": "Ảnh: PPC Land"
     }
   },
