@@ -2,6 +2,192 @@
   {
     "category": "Google Ads & SEO",
     "platformIcon": "Search",
+    "title": "Google thay đổi cách tính phí hiển thị quảng cáo từ tháng 02/2027",
+    "isHot": true,
+    "illustration": "data-signal",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Google Ads",
+      "DV360",
+      "CM360",
+      "Media Rating Council"
+    ],
+    "summary": "Google sẽ thay đổi quy tắc tính phí hiển thị quảng cáo trên Display & Video 360 và Campaign Manager 360 vào tháng 02/2027. Tiêu chí tính phí chuyển từ bắt đầu tải mã sang hoàn tất tải tài sản sáng tạo, giúp tuân thủ tiêu chuẩn của Media Rating Council.",
+    "keyNumbers": [
+      {
+        "value": "02/2027",
+        "label": "Thời điểm áp dụng"
+      },
+      {
+        "value": "2017",
+        "label": "Năm ban hành hướng dẫn"
+      },
+      {
+        "value": "1963",
+        "label": "Năm thành lập Media Rating Council"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Thay đổi tiêu chí tính phí hiển thị",
+        "body": "Google sẽ thay đổi quy tắc quyết định số hiển thị quảng cáo hiển thị mà nhà quảng cáo phải trả phí trong Campaign Manager 360 và Display & Video 360 vào tháng 02/2027. Nền tảng này thay thế kích hoạt tính tiền dựa trên tải mã bằng kích hoạt hoàn tất tải. Sự thay đổi này nhằm tuân thủ các tiêu chuẩn của Media Rating Council."
+      },
+      {
+        "heading": "Sự khác biệt về kỹ thuật đo lường",
+        "body": "Phương pháp cũ tính số hiển thị khi mã quảng cáo bắt đầu chạy trong trình duyệt hoặc ứng dụng. Phương pháp mới chỉ ghi nhận số hiển thị khi tài sản sáng tạo của quảng cáo đã tải xong vào trình duyệt. Điều này loại bỏ các trường hợp người dùng đóng tab hoặc chuyển trang trước khi tệp sáng tạo hoàn tất tải về."
+      },
+      {
+        "heading": "Tác động đến khối lượng hóa đơn",
+        "body": "Do phương pháp mới nghiêm ngặt hơn, nhà quảng cáo có thể kỳ vọng tổng khối lượng số hiển thị được lập hóa đơn giảm nhẹ. Google cho biết các số hiển thị được tính theo phương pháp mới có nhiều khả năng mang lại cơ hội thực tế để người dùng nhìn thấy hơn. Nhà quảng cáo không cần phải thay đổi bất kỳ cài đặt nào trên hệ thống."
+      },
+      {
+        "heading": "Tiêu chuẩn và đối thủ cạnh tranh",
+        "body": "Yêu cầu cơ bản xuất phát từ hướng dẫn được Media Rating Council, IAB Technology Laboratory và Mobile Marketing Association hoàn thiện vào tháng 10/2017. Trong khi đó, một số đối thủ như Amazon DSP đã bắt đầu báo cáo theo cơ sở mới từ tháng 05/2024 sau khi nhận được kiểm toán và chứng nhận."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing quản lý ngân sách qua DV360 và CM360 sẽ thấy tổng số hiển thị bị tính phí giảm xuống, dẫn đến thay đổi cơ cấu chi phí trên mỗi nghìn hiển thị từ tháng 02/2027.",
+    "ifIgnored": "Nếu bỏ qua, đội ngũ vận hành sẽ hiểu sai về biến động chi phí quảng cáo hiển thị và gặp khó khăn trong việc đối chiếu dữ liệu hóa đơn với các kỳ báo cáo trước đó.",
+    "actionChecklist": [
+      "Kiểm tra lại danh mục công cụ đang sử dụng trên DV360 và CM360.",
+      "Lưu ý mốc thời gian tháng 02/2027 khi lập kế hoạch ngân sách hiển thị.",
+      "Theo dõi sát các báo cáo hóa đơn từ Google để nắm bắt mức giảm số hiển thị.",
+      "Đánh giá lại hiệu suất chiến dịch dựa trên tiêu chuẩn đo lường mới."
+    ],
+    "deadline": "Tháng 02/2027",
+    "id": "real-2026-09-29-google-thay-doi-cach-f9a7ca",
+    "publishedAt": "29/09/2026",
+    "sourceUrl": "https://ppc.land/google-drops-unrendered-ads-from-dv360-and-cm360-billing-in-february-2027/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/09/dv360-cm360-begin-to-render-impression-counting-2027.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Google ra mắt tính năng gom mua quảng cáo video dọc trên Display & Video 360",
+    "isHot": false,
+    "illustration": "ai-video",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Google DV360",
+      "Video dọc",
+      "Quần thể đối tượng",
+      "Tần suất hiển thị"
+    ],
+    "summary": "Google vừa tích hợp quảng cáo video dọc từ nhiều nhà phát hành vào một quy trình mua sắm lập trình duy nhất trên Display & Video 360. Thử nghiệm ban đầu với Unilever ghi nhận mức độ tiếp cận người dùng tăng và chi phí quy đổi giảm, dù chi tiết kỹ thuật vẫn còn hạn chế.",
+    "keyNumbers": [
+      {
+        "value": "24%",
+        "label": "Tăng độ tiếp cận độc nhất"
+      },
+      {
+        "value": "25%",
+        "label": "Giảm chi phí trên mỗi người dùng"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Cơ chế gom mua video dọc mới",
+        "body": "Google chính thức đưa video dọc từ nhiều nhà phát hành và kênh khác nhau vào chung một luồng mua sắm lập trình trên Display & Video 360 dưới tên gọi Vertical Video Unification. Giải pháp này tập trung hóa việc mua quảng cáo video dọc nhằm giải quyết tình trạng lãng phí ngân sách do mua lẻ từng kênh. Hệ thống ứng dụng các mô hình AI Gemini để hỗ trợ quá trình mua, thực thi và đo lường toàn phễu theo công bố từ nền tảng."
+      },
+      {
+        "heading": "Kết quả từ chiến dịch thử nghiệm",
+        "body": "Trong thử nghiệm ban đầu được công bố, thương hiệu sốt mayonnaise Hellmann của Unilever phối hợp cùng WPP Media đã đạt độ tiếp cận người dùng độc nhất tăng 24%. Đồng thời, chi phí trên mỗi người dùng cá nhân giảm 25% nhờ tối ưu hóa tần suất xuất hiện. Tuy nhiên, thông cáo không nêu rõ phương pháp đo lường, đối tượng so sánh, thị trường thử nghiệm hay mức ngân sách cụ thể của chiến dịch này."
+      },
+      {
+        "heading": "Bài toán chống trùng lặp tần suất",
+        "body": "Việc gom mua nhiều nguồn cung vào một nền tảng giúp hệ thống kiểm soát tần suất hiển thị trên một cá nhân thay vì đếm rời rạc từng chiến dịch. Điều này hạn chế việc một người xem bị lặp quảng cáo quá nhiều lần trong khi những người khác không tiếp cận được. Dù vậy, cách thức nền tảng thực hiện gom nhóm dữ liệu định danh trên các ứng dụng bên thứ ba chưa được mô tả chi tiết ngoài các tín hiệu đăng nhập sẵn có."
+      },
+      {
+        "heading": "Khoảng trống thông tin cho nhà quảng cáo",
+        "body": "Google chưa công bố mốc thời gian triển khai rộng rãi, danh sách thị trường áp dụng, mức chi tiêu tối thiểu hoặc cách hiển thị sản phẩm này trong giao diện. Do thiếu vắng các tài liệu hướng dẫn kỹ thuật và khả năng kiểm tra tỷ lệ phân bổ ngân sách giữa các nhà phát hành, nhà quản lý quảng cáo cần thận trọng khi đánh giá hiệu quả thực tế."
+      }
+    ],
+    "impact": "Trưởng phòng điều hành ngân sách quảng cáo cần lưu ý cách tiếp cận mới của Google trong việc gom mua video dọc để tối ưu tần suất, nhưng cần chờ thêm tài liệu kỹ thuật chi tiết trước khi áp dụng diện rộng.",
+    "ifIgnored": "Bỏ qua xu hướng gom mua video dọc có thể khiến chiến dịch tiếp tục chịu lãng phí ngân sách do trùng lặp tần suất hiển thị giữa các kênh.",
+    "actionChecklist": [
+      "Kiểm tra lại cấu hình tần suất hiển thị video dọc trên các chiến dịch lập trình hiện tại",
+      "Theo dõi sát các cập nhật tiếp theo về tính năng Vertical Video Unification trên Display & Video 360",
+      "Đánh giá mức độ chồng lấp đối tượng giữa các nguồn cung video dọc đang chạy độc lập",
+      "Thảo luận với đội ngũ vận hành agency về khả năng tiếp cận các gói thử nghiệm tương tự"
+    ],
+    "id": "real-2026-09-29-google-ra-mat-tinh-a2b3d1",
+    "publishedAt": "29/09/2026",
+    "sourceUrl": "https://ppc.land/hellmanns-gains-24-unique-reach-in-google-dv360-vertical-video-test/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/09/hellmanns-dv360-vertical-video-reach-mayo-bread.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "AI Marketing",
+    "platformIcon": "Sparkles",
+    "title": "Nghiên cứu: AI kết hợp hậu chỉnh vượt trội bản dịch con người ở nhiều định dạng nội dung",
+    "isHot": false,
+    "illustration": "ai-video",
+    "readTime": "5 phút đọc",
+    "tags": [
+      "AI Marketing",
+      "Local hóa",
+      "Nghiên cứu chuẩn",
+      "Qwen"
+    ],
+    "summary": "Một nghiên cứu chuẩn hóa từ Anh sang Trung Quốc trên 774 đầu ra cho thấy các quy trình AI kết hợp hậu chỉnh đã vượt qua người dịch chuyên nghiệp ở 4 trên 6 loại nội dung. Bản dịch con người chỉ giữ vị trí dẫn đầu ở nội dung thông tin và SEO với khoảng cách rất sít sao.",
+    "keyNumbers": [
+      {
+        "value": "774",
+        "label": "đầu ra được đo lường"
+      },
+      {
+        "value": "22,2",
+        "label": "điểm AI vượt con người ở mục marketing"
+      },
+      {
+        "value": "2,8",
+        "label": "điểm con người hơn AI ở mục SEO"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Kết quả tổng quan qua 6 loại nội dung",
+        "body": "Nghiên cứu đánh giá 774 đầu ra bản địa hóa thông qua 7 mô hình và 3 loại tác vụ. Người dịch chuyên nghiệp chỉ giành vị trí thứ nhất ở 2 loại nội dung gồm thông tin và SEO. Trong khi đó, ở 4 loại nội dung còn lại, họ đứng ngoài top 5 ở các vị trí thứ 7, 7, 9 và 10 trong tổng số 15 quy trình được kiểm tra."
+      },
+      {
+        "heading": "Hiệu suất ở mảng marketing và kỹ thuật",
+        "body": "Ở nội dung marketing, người dịch con người đứng thứ 10 trên 15, thấp hơn 22,2 điểm so với mô hình AI tốt nhất là PE-Qwen. Tương tự, ở nội dung giao diện sản phẩm và nội dung do người dùng tạo, các mô hình kết hợp hậu chỉnh cũng đạt điểm số cao hơn. Người dịch chuyên nghiệp có xu hướng chỉnh lý ngôn ngữ quá mức, làm mất đi văn phong hiện đại."
+      },
+      {
+        "heading": "Lợi thế sít sao tại mảng nội dung SEO",
+        "body": "Đối với nội dung SEO, người dịch chuyên nghiệp đạt 74,1 điểm, đứng thứ nhất nhưng chỉ hơn mô hình AI tốt nhất là PE-Qwen và PE-Doubao với khoảng cách 2,8 điểm. Điểm số trung bình của các mô hình thô chưa qua hậu chỉnh thấp hơn đáng kể so với bản dịch con người. Việc thêm một lớp hậu chỉnh vào máy dịch thô mang lại hiệu quả cao hơn việc chuyển sang dùng một mô hình LLM thô."
+      },
+      {
+        "heading": "Khoảng cách giữa các mô hình AI khác nhau",
+        "body": "Nghiên cứu chỉ ra việc sử dụng điểm trung bình gộp của cả nhóm mô hình AI là không chính xác do độ lệch lớn. Đơn cử như trên nội dung SEO, các LLM Trung Quốc có độ chênh lệch điểm số là 9,2 điểm giữa các mô hình khác nhau. Do đó, doanh nghiệp cần đánh giá từng mô hình cụ thể thay vì nhìn vào mức trung bình chung của ngành."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing cần xem xét lại chi phí thuê dịch thuật con người cho các tài liệu marketing, UI và mạng xã hội vì AI kết hợp hậu chỉnh đang mang lại kết quả ngôn ngữ phù hợp với xu hướng trực tuyến hơn với chi phí tối ưu.",
+    "ifIgnored": "Tiếp tục duy trì ngân sách cao cho dịch thuật truyền thống ở các định dạng nội dung mà AI đã vượt trội sẽ làm giảm hiệu quả chi phí và tốc độ triển khai chiến dịch.",
+    "actionChecklist": [
+      "Đánh giá lại hiệu quả chi phí dịch thuật giữa con người và AI cho từng loại nội dung cụ thể.",
+      "Thử nghiệm quy trình kết hợp AI và bước hậu chỉnh chuyên nghiệp cho nội dung quảng cáo và mạng xã hội.",
+      "Kiểm tra lại hiệu suất thực tế của từng mô hình LLM riêng lẻ thay vì dựa vào điểm trung bình chung.",
+      "Đo lường mức độ tương thích văn phong của bản dịch AI trước khi áp dụng đại trà cho các thị trường mục tiêu."
+    ],
+    "id": "real-2026-09-28-nghien-cuu-ai-ket-4a38bd",
+    "publishedAt": "28/09/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/humans-lost-4-of-6-content-types-in-our-localization-benchmark/589294/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/09/chinese-llm-156.png",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
     "title": "YouTube cập nhật tính năng Ask YouTube và tab trang chủ cá nhân hóa hỗ trợ mua sắm trực tiếp",
     "isHot": false,
     "illustration": "ai-video",
@@ -184,132 +370,6 @@
     "image": {
       "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/09/seo-pulse-september-24-2026.jpg",
       "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
-    "category": "TikTok Shop & Ads",
-    "platformIcon": "Video",
-    "title": "TikTok đạt thỏa thuận pháp lý tại Alabama, giới hạn thời gian dùng ứng dụng cho thanh thiếu niên",
-    "isHot": "false",
-    "illustration": "account-security",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "TikTok",
-      "Chính sách",
-      "Thanh thiếu niên",
-      "Quảng cáo"
-    ],
-    "summary": "TikTok vừa đạt được thỏa thuận pháp lý tại bang Alabama với khoản tiền giải quyết 116.200.000,00 USD. Thỏa thuận này áp dụng giới hạn thời gian sử dụng 120 phút mỗi ngày và cấm truy cập từ nửa đêm đến 6 giờ sáng đối với người dùng từ 13 đến 17 tuổi, trong khi các tính năng tìm kiếm và video dài vẫn được duy trì.",
-    "keyNumbers": [
-      {
-        "value": "116.200.000,00 USD",
-        "label": "Khoản tiền cố định ban đầu"
-      },
-      {
-        "value": "120 phút",
-        "label": "Giới hạn thời gian mỗi ngày"
-      },
-      {
-        "value": "183.800.000,00 USD",
-        "label": "Quỹ điều kiện bổ sung"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Chi tiết thỏa thuận tại Alabama",
-        "body": "Một thẩm phán tại Montgomery, Alabama đã phê chuẩn lệnh đồng thuận yêu cầu TikTok giới hạn người dùng từ 13 đến 17 tuổi sử dụng phần lớn ứng dụng tối đa 120 phút mỗi ngày theo mặc định. Lệnh này cũng cấm nhóm tuổi này truy cập từ nửa đêm đến 6 giờ sáng. Thỏa thuận được ký kết vào ngày 25 tháng 09 năm 2026 ngay trước khi phiên tòa diễn ra. Khoản thanh toán cố định đầu tiên trị giá 116.200.000,00 USD bao gồm chi phí pháp lý và tiền bồi thường."
-      },
-      {
-        "heading": "Phạm vi tác động đến nội dung và tính năng",
-        "body": "Quy định hạn chế chỉ áp dụng cho hoạt động của TikTok tại bang Alabama và tập trung vào dịch vụ video ngắn. Các tính năng tìm kiếm, tin nhắn và video có độ dài từ 10 phút trở lên vẫn tiếp tục hoạt động bình thường đối với thanh thiếu niên. Điều này có nghĩa là nguồn cấp dữ liệu video ngắn sẽ thu hẹp đối với nhóm tuổi này, nhưng các định dạng dài hơn và công cụ tìm kiếm vẫn giữ nguyên lượng tiếp cận."
-      },
-      {
-        "heading": "Cơ cấu tài chính và các khoản bổ sung",
-        "body": "Khoản tiền cố định 116.200.000,00 USD chia thành chi phí pháp lý và tiền bồi thường theo quy định. Ngoài ra, một quỹ điều kiện trị giá 183.800.000,00 USD được chia thành bốn tầng dựa trên số lượng tổng chưởng lý các bang khác ký kết thỏa thuận tương tự trong thời hạn quy định. Thỏa thuận cũng thiết lập cơ chế bổ sung nếu các bang khác giải quyết khiếu kiện với mức thu hồi vượt ngưỡng quốc gia định sẵn."
-      },
-      {
-        "heading": "Bối cảnh pháp lý và các bên tham gia",
-        "body": "Vụ kiện được bang Alabama khởi kiện từ tháng 04 năm 2025 với cáo buộc thuật toán gây nghiện và vi phạm quyền riêng tư của trẻ em. Phía TikTok không thừa nhận hành vi sai trái trong thỏa thuận này. Quá trình tái cấu trúc pháp lý của nền tảng cũng ghi nhận sự hiện diện của liên doanh TikTok USDS Joint Venture LLC được thành lập vào tháng 01 năm 2026 với cổ phần của ByteDance."
-      }
-    ],
-    "impact": "Trưởng phòng điều hành ngân sách quảng cáo cần lưu ý rằng lượng tiếp cận từ nhóm người dùng 13-17 tuổi tại các thị trường áp dụng giới hạn thời gian sẽ giảm đáng kể đối với định dạng video ngắn, buộc nhà quảng cáo phải dịch chuyển ngân sách sang video dài hơn hoặc tối ưu hóa qua kênh tìm kiếm.",
-    "ifIgnored": "Nếu bỏ qua thay đổi này, nhà quảng cáo sẽ lãng phí ngân sách vào các chiến dịch video ngắn nhắm tới thanh thiếu niên tại các khung giờ bị cấm hoặc khi hạn mức 120 phút đã hết.",
-    "actionChecklist": [
-      "Rà soát lại tỷ trọng phân bổ ngân sách cho nhóm tuổi 13-17 trên TikTok.",
-      "Đánh giá hiệu quả của các chiến dịch video dài từ 10 phút trở lên.",
-      "Tối ưu hóa từ khóa và nội dung tìm kiếm để tận dụng các vùng tính năng không bị hạn chế.",
-      "Theo dõi sát sao động thái tham gia của các tổng chưởng lý bang khác để dự báo xu hướng mở rộng chính sách."
-    ],
-    "id": "real-2026-09-26-tiktok-dat-thoa-thuan-62b9d6",
-    "publishedAt": "26/09/2026",
-    "sourceUrl": "https://ppc.land/tiktok-must-block-alabama-teens-after-two-hours-a-day-in-116-2m-deal/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/size/w1200/2026/09/tiktok-alabama-teen-time-limit-consent-decree.jpg",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
-    "category": "AI Marketing",
-    "platformIcon": "Sparkles",
-    "title": "Thị phần câu lệnh AI phân hóa mạnh: ChatGPT giảm còn 50%, Gemini và Claude tăng trưởng",
-    "isHot": false,
-    "illustration": "ai-budget",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "AI Search",
-      "ChatGPT",
-      "Gemini",
-      "Claude"
-    ],
-    "summary": "Báo cáo mới từ Comscore chỉ ra sự dịch chuyển đáng kể trong hành vi người dùng khi thị phần câu lệnh của ChatGPT giảm xuống mức năm mươi phần trăm vào tháng sáu, trong khi Google Gemini và Anthropic Claude lần lượt tăng lên ba mươi phần trăm và mười một phần trăm. Lưu lượng truy cập và tương tác AI hiện không còn tập trung tại một điểm duy nhất, đòi hỏi các thương hiệu phải điều chỉnh chiến lược hiện diện trên nhiều nền tảng.",
-    "keyNumbers": [
-      {
-        "value": "50%",
-        "label": "Thị phần ChatGPT"
-      },
-      {
-        "value": "30%",
-        "label": "Thị phần Gemini"
-      },
-      {
-        "value": "11%",
-        "label": "Thị phần Claude"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Sự suy giảm thị phần câu lệnh của nền tảng dẫn đầu",
-        "body": "Theo báo cáo Quý hai năm hai mươi linh sáu của Comscore, ChatGPT nắm giữ năm mươi phần trăm tổng khối lượng câu lệnh vào tháng sáu, giảm mạnh từ mức bảy mươi phần trăm ghi nhận vào tháng một. Sự sụt giảm này phản ánh việc người dùng bắt đầu phân bổ các truy vấn của mình sang nhiều trợ lý ảo khác nhau thay vì chỉ sử dụng một nền tảng duy nhất."
-      },
-      {
-        "heading": "Sự bứt phá của Gemini và Claude",
-        "body": "Trong cùng khoảng thời gian năm tháng, Google Gemini đã tăng thị phần từ mười bảy phần trăm lên ba mươi phần trăm. Anthropic Claude cũng chứng kiến mức tăng trưởng ấn tượng từ hai phần trăm lên mười một phần trăm. Cả hai nền tảng này đã hấp thụ phần lớn lượng thị phần bị mất đi từ phía ChatGPT."
-      },
-      {
-        "heading": "Độ sâu tương tác và số lượng câu lệnh",
-        "body": "Dữ liệu đo lường cho thấy sự khác biệt rõ rệt về mức độ tương tác trên từng công cụ. Số lượng câu lệnh trung bình trên mỗi cuộc hội thoại vào tháng sáu là năm phẩy bốn cho ChatGPT, sáu phẩy hai cho Gemini, sáu phẩy chín cho Copilot và chín phẩy một cho Claude. Claude dù có số lượng cuộc hội thoại trên máy tính để bàn thấp hơn nhưng lại đạt tỷ lệ câu lệnh trên mỗi phiên cao hơn đáng kể."
-      },
-      {
-        "heading": "Sự tăng trưởng của lượng người dùng trên thiết bị di động",
-        "body": "Tỷ lệ thâm nhập của trợ lý ảo tiếp tục mở rộng trên cả hai nền tảng thiết bị. Vào tháng sáu năm hai mươi linh sáu, ba mươi lăm phần trăm người dùng máy tính để bàn và hai mươi chín phần trăm người dùng di động tại Mỹ đã truy cập vào các trợ lý AI. Số lượng khách truy cập đa nền tảng cũng ghi nhận sự gia tăng ở tất cả các trợ lý lớn so với cùng kỳ năm trước."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing không thể tiếp tục tập trung toàn bộ nỗ lực tối ưu hóa hiện diện thương hiệu vào một trợ lý AI duy nhất như trước đây.",
-    "ifIgnored": "Thương hiệu sẽ bỏ lỡ lượng lớn khách hàng tiềm năng đang dịch chuyển sang các nền tảng tìm kiếm và trợ lý AI mới như Gemini và Claude.",
-    "actionChecklist": [
-      "Đánh giá lại sự hiện diện của thương hiệu trên các nền tảng AI khác ngoài ChatGPT",
-      "Theo dõi sát sao tỷ lệ trích dẫn nguồn của thương hiệu trên Gemini và Claude",
-      "Điều chỉnh chiến lược nội dung để tối ưu hóa cho các truy vấn dài trên Claude",
-      "Cập nhật các số liệu đo lường lưu lượng truy cập từ các công cụ tìm kiếm tích hợp AI"
-    ],
-    "id": "real-2026-09-26-thi-phan-cau-lenh-06012d",
-    "publishedAt": "26/09/2026",
-    "sourceUrl": "https://ppc.land/chatgpt-loses-20-points-of-us-ai-prompt-share-to-gemini-and-claude/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/09/comscore-ai-query-volume-chatgpt-gemini-claude-dam.jpg",
-      "credit": "Ảnh: PPC Land"
     }
   },
   {
@@ -610,65 +670,6 @@
     "image": {
       "url": "https://imgproxy.divecdn.com/WtVwuvPQucR0rUzMtUQpYml2_BnBh7RJ_Yvc4iKkzcw/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS90aHJlYWRzX25ld19sb2dvLnBuZw==.webp",
       "credit": "Ảnh: Social Media Today"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Xây dựng trang địa phương cho hệ thống AI: Khắc phục lỗi chặn bot và dữ liệu cũ",
-    "isHot": "false",
-    "illustration": "account-security",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "AI Search",
-      "Local SEO",
-      "Technical SEO",
-      "Schema"
-    ],
-    "summary": "Các hệ thống AI và công cụ tìm kiếm không thể hiển thị trang web địa phương của bạn nếu bot không thể truy cập, kết xuất HTML hoặc nếu trang chứa dữ liệu cũ. Darren Shaw và Russ Jeffery từ SEJ Live chia sẻ cách khắc phục các điểm mù kỹ thuật này để tối ưu hóa hiển thị trên AI.",
-    "keyNumbers": [
-      {
-        "value": "2017",
-        "label": "Năm xây dựng web cũ dễ sót schema"
-      },
-      {
-        "value": "2025",
-        "label": "Năm kiểm tra lại cấu hình schema"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Kiểm tra quyền truy cập của bot AI",
-        "body": "Nền tảng Cloudflare thường cài đặt mặc định chặn các bot AI mà đội ngũ marketing không hề hay biết. Các yếu tố cơ bản như tệp robots.txt, thẻ noindex, cài đặt bảo mật và cách kết xuất nội dung cần được kiểm tra kỹ lưỡng. Việc chặn nhầm này khiến các công cụ như ChatGPT, Claude hay Perplexity không thể thu thập dữ liệu trang web của doanh nghiệp."
-      },
-      {
-        "heading": "Tầm quan trọng của kết xuất phía máy chủ",
-        "body": "Khác với Google, các hệ thống AI hiện đại không tự lập chỉ mục và lưu trữ toàn bộ trang web trong cơ sở hạ tầng của họ. Do đó, việc phân phối nội dung quan trọng trong phản hồi HTML thông qua kết xuất phía máy chủ là vô cùng cần thiết. Các trang web xây dựng vội bằng mã nguồn động client-side JavaScript có thể khiến các trình thu thập thông tin không đọc được nội dung."
-      },
-      {
-        "heading": "Nguy cơ từ các trang web cũ và URL trùng lặp",
-        "body": "Các URL mồ côi hoặc bị trùng lặp mang hậu tố như old, new, home hoặc v2 thường bị bỏ lại sau các đợt thiết kế lại trang web. Khách hàng hiếm khi truy cập các trang này, nhưng các trình thu thập thông tin AI lại tìm thấy chúng và lấy thông tin lỗi thời như số điện thoại hoặc địa chỉ cũ. Một cuộc kiểm tra kỹ thuật định kỳ là bắt buộc để phát hiện và ngăn chặn các phiên bản cũ này."
-      },
-      {
-        "heading": "Quản trị dữ liệu Schema để tránh mâu thuẫn",
-        "body": "Schema hoạt động như một lớp xác thực và giảiambiguation dữ liệu giúp bot dễ dàng phân tích hơn là dựa vào bố cục trang. Tuy nhiên, rủi ro lớn nhất là việc duy trì schema khi thông tin doanh nghiệp thay đổi. Việc cập nhật số điện thoại trên giao diện web nhưng quên đồng bộ với schema hoặc Google Business Profile sẽ tạo ra dữ liệu mâu thuẫn gây hại cho độ tin cậy."
-      }
-    ],
-    "impact": "Giúp Trưởng phòng Marketing nhận ra các điểm mù kỹ thuật khiến website doanh nghiệp biến mất khỏi câu trả lời của AI, từ việc cài đặt Cloudflare mặc định đến việc rà soát các URL cũ sót lại.",
-    "ifIgnored": "Doanh nghiệp sẽ tiếp tục mất traffic từ các nền tảng tìm kiếm AI do bot bị chặn truy cập, nội dung không được render kịp thời hoặc AI lấy phải thông tin liên hệ cũ từ các trang web rác.",
-    "actionChecklist": [
-      "Kiểm tra ngay cài đặt Cloudflare trên hệ thống để đảm bảo không chặn nhầm các bot AI",
-      "Rà soát tệp robots.txt, thẻ noindex và các cài đặt bảo mật có thể cản trở trình thu thập thông tin",
-      "Thực hiện kiểm tra trang web toàn diện để tìm và loại bỏ các URL cũ mang hậu tố rác chứa thông tin lỗi thời",
-      "Đồng bộ hóa dữ liệu doanh nghiệp giữa website, schema markup và Google Business Profile"
-    ],
-    "id": "real-2026-09-21-xay-dung-trang-dia-925d4c",
-    "publishedAt": "21/09/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/how-to-build-local-pages-ai-systems-can-find-and-trust/588097/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/09/ai-visibility-546.png",
-      "credit": "Ảnh: Search Engine Journal"
     }
   },
   {
