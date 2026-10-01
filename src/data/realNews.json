@@ -1,5 +1,194 @@
 [
   {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Chương trình thử nghiệm chia sẻ doanh thu AI của Google chỉ trả dưới 0,1% doanh thu quảng cáo cho nhiều website",
+    "isHot": false,
+    "illustration": "zero-click",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Google SEO",
+      "AI Search",
+      "AI Overviews",
+      "Doanh thu AI"
+    ],
+    "summary": "Google đang thử nghiệm chi trả cho khoảng 100 nhà xuất bản nội dung khi dữ liệu của họ xuất hiện trong các phản hồi AI như Gemini và AI Overviews. Tuy nhiên, mức thù lao có sự chênh lệch rất lớn và nhiều website quy mô vừa và nhỏ chỉ nhận được khoản tiền tương đương dưới 0,1% doanh thu quảng cáo. Bên cạnh đó, công thức tính toán mức đóng góp nội dung của Google vẫn chưa được công khai rõ ràng.",
+    "keyNumbers": [
+      {
+        "value": "< 0,1%",
+        "label": "Tỷ lệ thù lao AI so với doanh thu quảng cáo của các site vừa và nhỏ"
+      },
+      {
+        "value": "100",
+        "label": "Số lượng nhà xuất bản kỹ thuật số tham gia đợt thử nghiệm"
+      },
+      {
+        "value": "> 1 triệu USD",
+        "label": "Mức chi trả hằng năm cao nhất cho một đơn vị tham gia sớm"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Chênh lệch thu nhập cực lớn giữa các website tham gia",
+        "body": "Báo cáo mới nhất cho biết Google đang trả tiền cho khoảng 100 nhà xuất bản kỹ thuật số trong chương trình thử nghiệm đóng góp nội dung cho AI. Mức thù lao giữa các đơn vị chênh lệch rất xa khi một số trang web nhỏ kiếm được chưa đến 1.000 USD sau nhiều tháng. Ngược lại, một đơn vị tham gia sớm có thể thu về hơn 1 triệu USD mỗi năm. Đối với các website quy mô vừa và nhỏ, khoản thanh toán này chỉ chiếm chưa đầy 0,1% tổng doanh thu quảng cáo của họ."
+      },
+      {
+        "heading": "Công thức tính toán tiền thù lao của Google chưa rõ ràng",
+        "body": "Nhiều nhà xuất bản tham gia thử nghiệm phản ánh rằng họ không thể biết chính xác Google căn cứ vào đâu để tính toán số tiền chi trả. Khoản thu nhập hiển thị trong Search Console có thể thay đổi liên tục qua từng tháng mà không đi kèm giải thích cụ thể. Google nêu trong tài liệu hướng dẫn rằng nội dung chỉ được tính tiền khi đóng góp đáng kể vào câu trả lời AI trên Gemini, AI Overviews hoặc AI Mode. Tuy nhiên, tiêu chuẩn thế nào là đóng góp đáng kể vẫn chưa được định nghĩa chi tiết."
+      },
+      {
+        "heading": "Chủ đề ngách có cơ hội nhận tiền bồi thường cao hơn",
+        "body": "Một số nhà xuất bản cho biết các nội dung thuộc chủ đề thu hút lượng tương tác cao nhưng ít người bao phủ có xu hướng nhận được mức thù lao tốt hơn. Những lĩnh vực như game hoặc phim hoạt hình anime là ví dụ điển hình cho xu hướng này. Một đơn vị mới tham gia chương trình vài tháng trước đã thu về khoảng 50.000 USD đến 60.000 USD. Mặc dù vậy, đại diện đơn vị này nhận định con số trên vẫn chưa đóng góp đáng kể vào tổng quy mô kinh doanh của doanh nghiệp."
+      },
+      {
+        "heading": "Các nhà xuất bản lớn vẫn ngần ngại chưa gia nhập",
+        "body": "Mức chi trả khiêm tốn khiến nhiều đơn vị xuất bản lớn quyết định đứng ngoài chương trình thử nghiệm. Họ tiếp tục đàm phán nhằm tạo áp lực buộc Google và các công ty công nghệ phải trả chi phí cao hơn cho dữ liệu đào tạo AI. Trước đó, đại diện một số doanh nghiệp truyền thông nhận xét mức thù lao Google đưa ra là quá thấp để họ chấp nhận tham gia. Hiện tại Google xác định chương trình vẫn ở giai đoạn đầu và chưa công bố lộ trình mở rộng cụ thể."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing không thể trông chờ vào nguồn tiền đền bù từ Google để bù đắp cho lượng truy cập tự nhiên sụt giảm do tính năng tìm kiếm AI. Doanh nghiệp cần lập tức định hình lại chiến lược SEO, chuyển trọng tâm từ việc kéo lượt nhấp chuột đơn thuần sang tối ưu hóa sự hiện diện thương hiệu ngay trong câu trả lời tổng hợp của các mô hình AI.",
+    "ifIgnored": "Doanh nghiệp sẽ tiếp tục tiêu tốn ngân sách cho chiến lược SEO truyền thống trong khi lượng truy cập tự nhiên ngày càng suy giảm. Việc phụ thuộc vào nguồn thu quảng cáo cũ hoặc ảo tưởng về khoản tiền bồi thường từ nền tảng sẽ làm giảm năng lực cạnh tranh và ảnh hưởng trực tiếp đến dòng tiền tiếp thị.",
+    "actionChecklist": [
+      "Rà soát danh mục nội dung SEO và ưu tiên sản xuất các chủ đề ngách chuyên sâu để tăng khả năng xuất hiện trong câu trả lời AI.",
+      "Theo dõi thường xuyên các chỉ số về hiển thị thương hiệu và lưu lượng truy cập từ các nền tảng AI trong công cụ quản trị.",
+      "Điều chỉnh mô hình dự báo doanh thu từ kênh SEO nhằm chuẩn bị sẵn kịch bản cho việc tỷ lệ nhấp chuột giảm.",
+      "Xây dựng các kênh kéo lưu lượng truy cập trực tiếp như bản tin email hay cộng đồng để giảm phụ thuộc vào thuật toán tìm kiếm."
+    ],
+    "id": "real-2026-10-01-chuong-trinh-thu-nghiem-4e93fc",
+    "publishedAt": "01/10/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/google-ai-pilot-pays-some-sites-under-0-1-of-ad-revenue/591717/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/09/google-ai-pilot-featured-1600x840-1.jpg",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Chương trình trả phí nội dung cho AI của Google: Mức chi trả và bài học đo lường",
+    "isHot": false,
+    "illustration": "zero-click",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Google AI Overviews",
+      "SEO",
+      "Traffic",
+      "Nền tảng tìm kiếm"
+    ],
+    "summary": "Google đang thử nghiệm trả phí cho khoảng 100 nhà sáng bản quyền nội dung khi trang của họ cung cấp dữ liệu cho câu trả lời của AI. Tuy nhiên, mức chi trả rất chênh lệch, dao động từ dưới 1.000 đô la Mỹ trong vài tháng đối với các trang nhỏ cho đến hơn 1 triệu đô la Mỹ một năm cho một số ít đối tác tham gia sớm.",
+    "keyNumbers": [
+      {
+        "value": "100",
+        "label": "nhà xuất bản tham gia"
+      },
+      {
+        "value": "1.000.000 đô la Mỹ",
+        "label": "mức thu nhập tối đa hàng năm"
+      },
+      {
+        "value": "4%",
+        "label": "mức giảm doanh thu mảng Google Network"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Cơ chế chi trả của chương trình thử nghiệm AI contribution pilot",
+        "body": "Chương trình này chi trả cho các trang web tham gia khi nội dung của họ đóng góp trực tiếp vào các phản hồi của AI Overviews, AI Mode và ứng dụng Gemini. Khoản thu nhập chỉ tích luỹ khi nội dung tham gia đáng kể trong giai đoạn tạo văn bản, trong khi các trang chỉ xác nhận sự thật hoặc được liên kết sau khi tạo sẽ không đủ điều kiện. Số lượng nhà xuất bản tham gia hiện tại là khoảng 100 trang web từ nhiều lĩnh vực khác nhau."
+      },
+      {
+        "heading": "Sự chênh lệch lớn về mức độ đãi ngộ giữa các bên",
+        "body": "Biên độ chi trả của chương trình này rất rộng và không theo một công thức công khai nào về lượt hiển thị hay số lượng nội dung. Một nhà xuất bản tham gia từ sớm có thể thu về hơn 1 triệu đô la Mỹ một năm, trong khi một số trang nhỏ hơn chỉ nhận được dưới 1.000 đô la Mỹ sau vài tháng. Đối với một vài trang quy mô vừa và nhỏ, khoản tiền này đôi khi chỉ chiếm dưới 0,1% doanh thu quảng cáo của họ."
+      },
+      {
+        "heading": "Bài toán đo lường hiệu suất và lượt nhấp chuột",
+        "body": "Báo cáo hiệu suất AI tạo sinh trong Search Console cho phép hiển thị các số liệu về lượt hiển thị, trang, quốc gia, thiết bị và ngày tháng nhưng hoàn toàn không cung cấp dữ liệu về lượt nhấp chuột hay truy vấn cụ thể. Điều này khiến các nhà quản trị website khó có thể cân đối chính xác giữa số tiền nhận được từ chương trình và lượng traffic bị sụt giảm. Nghiên cứu của Ahrefs cho thấy AI Overviews có liên quan đến việc giảm 58% tỷ lệ nhấp chuột đối với các trang đứng top đầu."
+      },
+      {
+        "heading": "Biến động tài chính và quyền lựa chọn của chủ sở hữu trang",
+        "body": "Trong quý đầu tiên của năm 2026, doanh thu mảng Search của Alphabet tăng 19% trong khi phân khúc Google Network giảm 4% xuống còn 6.970.000.000 đô la Mỹ. Các nhà quản trị trang web hiện có thể quyết định ở lại nhận khoản chi trả từ vài nghìn đến 50.000 đô la Mỹ hoặc sử dụng tính năng bật tắt trong Search Console để từ chối hiển thị trên các bề mặt AI nếu lượng traffic bị ảnh hưởng quá lớn."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing cần nhận thức rằng các tính năng AI của Google tiếp tục làm thay đổi cấu trúc traffic tự nhiên, đồng thời việc kiếm tiền từ nội dung thông qua các chương trình thử nghiệm chưa mang lại sự minh bạch về công thức tính toán và dữ liệu lượt nhấp.",
+    "ifIgnored": "Nếu bỏ qua, doanh nghiệp có thể tiếp tục mất đi lượng lớn traffic tự nhiên vào tay AI Overviews mà không đánh giá đúng mức độ bù đắp tài chính thực tế từ các chương trình bản quyền của Google.",
+    "actionChecklist": [
+      "Kiểm tra ngay dữ liệu Search Console để theo dõi hiệu suất trên các bề mặt AI tạo sinh",
+      "Đánh giá lại tỷ lệ chuyển đổi và sụt giảm traffic tự nhiên từ các từ khóa chủ lực",
+      "Theo dõi sát các khoản doanh thu hoặc thông báo từ Google nếu website nằm trong diện thử nghiệm",
+      "Cân nhắc rủi ro giữa việc duy trì hiển thị trên AI và việc bảo vệ traffic gốc của trang"
+    ],
+    "id": "real-2026-09-30-chuong-trinh-tra-phi-e8c52c",
+    "publishedAt": "30/09/2026",
+    "sourceUrl": "https://ppc.land/google-pays-about-100-publishers-for-ai-answers-some-under-1-000/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/09/google-ai-contribution-pilot-payouts-steelyard.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "AI Marketing",
+    "platformIcon": "Sparkles",
+    "title": "Nghiên cứu mới về hành vi người dùng: 40% người Mỹ sẵn sàng để AI đại diện thực hiện tác vụ mua sắm",
+    "isHot": false,
+    "illustration": "ai-budget",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "AI Agent",
+      "Hành vi người tiêu dùng",
+      "AI Marketing",
+      "Nghiên cứu thị trường"
+    ],
+    "summary": "Báo cáo mới từ Channel V Media khảo sát 7.675 người trưởng thành tại Mỹ cho thấy 40% sẵn sàng để trợ lý AI thực hiện ít nhất một tác vụ hàng ngày. Tuy nhiên, tỷ lệ thực tế đang sử dụng công nghệ này mới dừng lại ở mức 8% và chỉ 18% coi đây là một ý tưởng tốt.",
+    "keyNumbers": [
+      {
+        "value": "7.675",
+        "label": "người tham gia khảo sát"
+      },
+      {
+        "value": "40%",
+        "label": "sẵn sàng giao việc cho AI"
+      },
+      {
+        "value": "8%",
+        "label": "đang sử dụng agentic AI"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Khoảng cách lớn giữa ý định và thực tế sử dụng",
+        "body": "Báo cáo ghi nhận 40% người tham gia khảo sát đồng ý để trợ lý AI làm thay các công việc thường nhật. Dù vậy, số người đang thực tế sử dụng loại công nghệ này chỉ chiếm 8%, và 18% đánh giá đây là ý tưởng tốt. Khoảng cách này cho thấy tâm lý cởi mở ban đầu chưa được chuyển hóa hoàn toàn thành hành vi tiêu dùng thường xuyên."
+      },
+      {
+        "heading": "Các tác vụ người dùng sẵn sàng giao cho AI",
+        "body": "Hành vi ủy quyền cho AI có xu hướng giảm dần khi mức độ rủi ro hoặc giá trị tài chính tăng lên. Đặt bàn nhà hàng dẫn đầu với 12% số người sẵn sàng giao phó, theo sau là mua sắm tạp hóa với 11% và quản lý nhà thông minh với 10%. Trong khi đó, chỉ có 6% đồng ý để AI dạy con cái và 5% tin tưởng giao việc mua ô tô."
+      },
+      {
+        "heading": "Sự khác biệt về mức độ áp dụng theo thế hệ",
+        "body": "Thế hệ Millennials hiện đang dẫn đầu trên mọi chỉ số về mức độ tiếp nhận công nghệ, đạt 47% đối với generative AI và 13% đối với agentic AI. Ngược lại, thế hệ Gen Z tỏ ra thận trọng và nhiều mâu thuẫn hơn với 22% cảm thấy lo lắng về AI. Đối với thế hệ Boomers, dù tỷ lệ đánh giá AI là ý tưởng tốt chỉ đạt 5%, có tới 19% cho biết sẵn sàng sử dụng."
+      },
+      {
+        "heading": "Mức độ sử dụng cao hơn tại nơi làm việc",
+        "body": "Khảo sát cũng chỉ ra sự chênh lệch về mức độ ứng dụng giữa các cấp nhân sự trong doanh nghiệp. Chủ doanh nghiệp và các cấp điều hành sử dụng generative AI với tỷ lệ 53%, cao hơn mức 38% của nhân viên thông thường. Riêng với agentic AI, tỷ lệ này lần lượt là 18% ở nhóm lãnh đạo và 7% ở nhóm nhân viên."
+      }
+    ],
+    "impact": "Sự dịch chuyển từ tìm kiếm thông tin truyền thống sang việc để AI tự động ra quyết định mua sắm sẽ làm thay đổi cách thương hiệu tiếp cận khách hàng. Khi phần mềm tự động chọn nhà hàng hay sản phẩm, người tiêu dùng có thể chỉ nhìn thấy một lựa chọn duy nhất do AI đưa ra thay vì một trang đầy các quảng cáo và thương hiệu.",
+    "ifIgnored": "Nếu tiếp tục tối ưu hóa theo mô hình trang kết quả tìm kiếm truyền thống mà bỏ qua khả năng hiển thị trên các công cụ trả lời tự động của AI, thương hiệu có nguy cơ biến mất hoàn toàn khi người tiêu dùng bắt đầu ủy quyền quyết định mua sắm cho trợ lý ảo.",
+    "actionChecklist": [
+      "Đánh giá lại mức độ hiện diện của thương hiệu trong các câu trả lời do AI tạo ra",
+      "Theo dõi sát sao các nền tảng tích hợp tính năng đặt chỗ và mua hàng tự động như Google và ChatGPT",
+      "Nghiên cứu hành vi tiêu dùng của nhóm thế hệ Millennials đối với các kênh mua sắm tự động hóa",
+      "Chuẩn bị chiến lược nội dung thân thiện với các thuật toán tóm tắt và đề xuất của trợ lý AI"
+    ],
+    "id": "real-2026-09-30-nghien-cuu-moi-ve-1b8422",
+    "publishedAt": "30/09/2026",
+    "sourceUrl": "https://ppc.land/40-of-americans-would-let-ai-agents-act-for-them-channel-v-media-finds/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/09/ai-agent-crane-picks-red-cloche-consumer-choice.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
     "category": "AI Marketing",
     "platformIcon": "Sparkles",
     "title": "Apple iOS 27 chặn tên miền phân phối của The Trade Desk trên Safari và Amazon tự động hóa DSP",
@@ -191,70 +380,6 @@
   {
     "category": "Google Ads & SEO",
     "platformIcon": "Search",
-    "title": "Google thay đổi cách tính phí hiển thị quảng cáo từ tháng 02/2027",
-    "isHot": true,
-    "illustration": "data-signal",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Google Ads",
-      "DV360",
-      "CM360",
-      "Media Rating Council"
-    ],
-    "summary": "Google sẽ thay đổi quy tắc tính phí hiển thị quảng cáo trên Display & Video 360 và Campaign Manager 360 vào tháng 02/2027. Tiêu chí tính phí chuyển từ bắt đầu tải mã sang hoàn tất tải tài sản sáng tạo, giúp tuân thủ tiêu chuẩn của Media Rating Council.",
-    "keyNumbers": [
-      {
-        "value": "02/2027",
-        "label": "Thời điểm áp dụng"
-      },
-      {
-        "value": "2017",
-        "label": "Năm ban hành hướng dẫn"
-      },
-      {
-        "value": "1963",
-        "label": "Năm thành lập Media Rating Council"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Thay đổi tiêu chí tính phí hiển thị",
-        "body": "Google sẽ thay đổi quy tắc quyết định số hiển thị quảng cáo hiển thị mà nhà quảng cáo phải trả phí trong Campaign Manager 360 và Display & Video 360 vào tháng 02/2027. Nền tảng này thay thế kích hoạt tính tiền dựa trên tải mã bằng kích hoạt hoàn tất tải. Sự thay đổi này nhằm tuân thủ các tiêu chuẩn của Media Rating Council."
-      },
-      {
-        "heading": "Sự khác biệt về kỹ thuật đo lường",
-        "body": "Phương pháp cũ tính số hiển thị khi mã quảng cáo bắt đầu chạy trong trình duyệt hoặc ứng dụng. Phương pháp mới chỉ ghi nhận số hiển thị khi tài sản sáng tạo của quảng cáo đã tải xong vào trình duyệt. Điều này loại bỏ các trường hợp người dùng đóng tab hoặc chuyển trang trước khi tệp sáng tạo hoàn tất tải về."
-      },
-      {
-        "heading": "Tác động đến khối lượng hóa đơn",
-        "body": "Do phương pháp mới nghiêm ngặt hơn, nhà quảng cáo có thể kỳ vọng tổng khối lượng số hiển thị được lập hóa đơn giảm nhẹ. Google cho biết các số hiển thị được tính theo phương pháp mới có nhiều khả năng mang lại cơ hội thực tế để người dùng nhìn thấy hơn. Nhà quảng cáo không cần phải thay đổi bất kỳ cài đặt nào trên hệ thống."
-      },
-      {
-        "heading": "Tiêu chuẩn và đối thủ cạnh tranh",
-        "body": "Yêu cầu cơ bản xuất phát từ hướng dẫn được Media Rating Council, IAB Technology Laboratory và Mobile Marketing Association hoàn thiện vào tháng 10/2017. Trong khi đó, một số đối thủ như Amazon DSP đã bắt đầu báo cáo theo cơ sở mới từ tháng 05/2024 sau khi nhận được kiểm toán và chứng nhận."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing quản lý ngân sách qua DV360 và CM360 sẽ thấy tổng số hiển thị bị tính phí giảm xuống, dẫn đến thay đổi cơ cấu chi phí trên mỗi nghìn hiển thị từ tháng 02/2027.",
-    "ifIgnored": "Nếu bỏ qua, đội ngũ vận hành sẽ hiểu sai về biến động chi phí quảng cáo hiển thị và gặp khó khăn trong việc đối chiếu dữ liệu hóa đơn với các kỳ báo cáo trước đó.",
-    "actionChecklist": [
-      "Kiểm tra lại danh mục công cụ đang sử dụng trên DV360 và CM360.",
-      "Lưu ý mốc thời gian tháng 02/2027 khi lập kế hoạch ngân sách hiển thị.",
-      "Theo dõi sát các báo cáo hóa đơn từ Google để nắm bắt mức giảm số hiển thị.",
-      "Đánh giá lại hiệu suất chiến dịch dựa trên tiêu chuẩn đo lường mới."
-    ],
-    "deadline": "Tháng 02/2027",
-    "id": "real-2026-09-29-google-thay-doi-cach-f9a7ca",
-    "publishedAt": "29/09/2026",
-    "sourceUrl": "https://ppc.land/google-drops-unrendered-ads-from-dv360-and-cm360-billing-in-february-2027/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/09/dv360-cm360-begin-to-render-impression-counting-2027.jpg",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
     "title": "Google ra mắt tính năng gom mua quảng cáo video dọc trên Display & Video 360",
     "isHot": false,
     "illustration": "ai-video",
@@ -375,65 +500,6 @@
     }
   },
   {
-    "category": "AI Marketing",
-    "platformIcon": "Sparkles",
-    "title": "Công cụ Ask YouTube tích hợp AI đạt 140 triệu người dùng, định hình lại cách khán giả xem video",
-    "isHot": "false",
-    "illustration": "ai-video",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "YouTube AI",
-      "Gemini",
-      "Video Marketing",
-      "Hành vi người dùng"
-    ],
-    "summary": "Công cụ hỏi đáp tích hợp trí tuệ nhân tạo Ask YouTube đã ghi nhận lượng người dùng đạt mốc hơn 140 triệu vào tháng 6, tăng trưởng hơn 500% so với tháng 12. Công nghệ này sử dụng mô hình Gemini tùy chỉnh để đưa người xem trực tiếp đến đúng giây giải đáp thắc mắc trong video mà không cần xem từ đầu.",
-    "keyNumbers": [
-      {
-        "value": "140.000.000+",
-        "label": "người dùng Ask YouTube trong tháng 6"
-      },
-      {
-        "value": "500%+",
-        "label": "mức tăng trưởng từ tháng 12"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Sự bùng nổ của công cụ Ask YouTube",
-        "body": "Số liệu công bố tại sự kiện Made on YouTube cho thấy lượng người dùng tính năng Ask YouTube đã tăng hơn 500% từ tháng 12 đến tháng 6. Công cụ này cho phép người xem đặt câu hỏi trực tiếp về nội dung đang phát ngay trên trang xem video mà không cần rời đi."
-      },
-      {
-        "heading": "Cơ chế điều hướng đến đúng giây của video",
-        "body": "Được vận hành bởi một mô hình Gemini tùy chỉnh, hệ thống có khả năng khớp các câu hỏi phức tạp của người xem với chính xác giây thứ mấy trong video chứa câu trả lời. Điều này giúp tối ưu hóa trải nghiệm tìm kiếm thông tin chi tiết ngay bên trong nền tảng."
-      },
-      {
-        "heading": "Thách thức về cấu trúc hiển thị và quảng cáo",
-        "body": "Việc người dùng được đưa thẳng đến giữa video đồng nghĩa với việc họ có thể bỏ qua toàn bộ phần đầu, bao gồm cả các phân đoạn tài trợ truyền thống. Hiện tại, nền tảng chưa làm rõ cách thức phân phối quảng cáo pre-roll hoặc cách đo lường các phiên xem bắt đầu từ giữa chừng."
-      },
-      {
-        "heading": "Tính năng mua sắm và xu hướng màn hình lớn",
-        "body": "Trong giai đoạn tiếp theo, Ask YouTube sẽ tích hợp các tính năng mua sắm như bảng so sánh thuộc tính sản phẩm dựa trên sở thích của người xem. Bên cạnh đó, nội dung dạng ngắn Shorts cũng đang chứng kiến mức tiêu thụ lớn trên các thiết bị tivi thông minh."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing cần thay đổi cách xây dựng kịch bản video, vì tính năng nhảy cóc đến đúng giây trả lời của AI có thể làm giảm lượng view ở phần mở đầu và các đoạn chèn thông điệp tài trợ.",
-    "ifIgnored": "Nếu tiếp tục sản xuất video theo cấu trúc truyền thống mà bỏ qua việc tối ưu hóa chương và tiêu đề rõ ràng, các nội dung thương hiệu có thể bị bỏ lỡ hoàn toàn khi người dùng sử dụng tính năng hỏi đáp tự động.",
-    "actionChecklist": [
-      "Bổ sung hệ thống chương và tiêu đề cực kỳ mô tả vào mọi video để mô hình AI dễ dàng nhận diện",
-      "Xem xét lại vị trí đặt thông điệp thương hiệu và tài trợ thay vì chỉ tập trung dồn vào phần đầu video",
-      "Theo dõi sát sao các cập nhật về tính năng mua sắm và so sánh sản phẩm sắp tích hợp trên nền tảng",
-      "Tối ưu hóa các nội dung dạng ngắn Shorts phục vụ xu hướng xem trên màn hình lớn và tivi"
-    ],
-    "id": "real-2026-09-27-cong-cu-ask-youtube-bb3fd1",
-    "publishedAt": "27/09/2026",
-    "sourceUrl": "https://ppc.land/youtubes-ai-answer-tool-rises-over-500-since-december-reaching-140m-users/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/size/w1200/2026/09/ask-youtube-film-strip-tower-elevator.jpg",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
     "category": "Google Ads & SEO",
     "platformIcon": "Search",
     "title": "Google cập nhật thuật toán chống spam tháng 9/2026 và bổ sung bộ lọc tìm kiếm bằng hình ảnh trên Search Console",
@@ -494,65 +560,6 @@
     "source": "Search Engine Journal",
     "image": {
       "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/09/seo-pulse-september-24-2026.jpg",
-      "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
-    "category": "AI Marketing",
-    "platformIcon": "Sparkles",
-    "title": "Tác hại của dữ liệu tồi khi ứng dụng AI agents trong chiến lược tiếp thị",
-    "isHot": false,
-    "illustration": "ai-budget",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "AI Marketing",
-      "Dữ liệu khách hàng",
-      "Chiến lược AI",
-      "Tối ưu chuyển đổi"
-    ],
-    "summary": "AI agents vận hành dựa trên dữ liệu khách hàng ở tốc độ và quy mô lớn, khiến các sai sót về dữ liệu bị khuếch đại nhanh chóng. Nhiều nhà quản lý đang nhầm lẫn giữa việc xuất hiện trong kết quả của AI và việc đạt được chuyển đổi thực tế.",
-    "keyNumbers": [
-      {
-        "value": "1,4 nghìn tỷ",
-        "label": "điểm dữ liệu"
-      },
-      {
-        "value": "320 triệu",
-        "label": "khách hàng"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Bản chất hoạt động của AI agents",
-        "body": "Các công cụ AI agents không thay thế nhu cầu về dữ liệu khách hàng chất lượng mà phụ thuộc hoàn toàn vào nó. Chúng hoạt động dựa trên hàng nghìn tín hiệu về hành vi, mua sắm và ý định diễn ra đồng thời. Nếu dữ liệu đầu vào không chính xác, hệ thống sẽ khuếch đại sai sót đó với tốc độ mà con người không thể kiểm soát kịp."
-      },
-      {
-        "heading": "Cạm bẫy của việc đo lường lượt nhắc đến",
-        "body": "Nhiều nhà tiếp thị đang sai lầm khi coi việc được ChatGPT hay Gemini trích dẫn là đích đến cuối cùng của chiến lược GEO. Sự gia tăng tần suất xuất hiện không đồng nghĩa với việc lưu lượng truy cập chất lượng hay tỷ lệ chuyển đổi tăng theo. Do nghiệp vụ này, thương hiệu có thể tự động hóa chính những điểm mù của mình nếu không kiểm tra lại."
-      },
-      {
-        "heading": "Dấu hiệu cảnh báo chiến lược đang đi chệch hướng",
-        "body": "Khối lượng nội dung và chiến dịch do AI tạo ra liên tục tăng lên trong khi mức độ tương tác hoặc chuyển đổi lại chững lại hoặc sụt giảm. Khối lượng công việc lớn dễ bị nhầm lẫn với sự tiến bộ vì nó dễ đo lường bằng tự động hóa. Đội ngũ nhân sự thường quên mất câu hỏi cốt lõi là lý do vì sao một nhóm đối tượng cụ thể lại được nhắm mục tiêu."
-      },
-      {
-        "heading": "Bài học từ quá khứ và giải pháp khắc phục",
-        "body": "Sự việc này tương tự thời kỳ bùng nổ nền tảng quản lý dữ liệu khi quy mô lớn chỉ làm sai sót trầm trọng hơn do dữ liệu bên thứ ba kém chất lượng. Do đó, doanh nghiệp cần phân tách rõ ràng giữa dữ liệu khách hàng tự khai báo, hành vi quan sát được và suy luận từ mô hình AI. Cần duy trì quy trình kiểm tra thủ công trước khi mở rộng quy mô tự động hóa."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing cần đánh giá lại chất lượng dữ liệu đầu vào cho các công cụ AI thay vì chỉ chạy theo số lượng trích dẫn và nội dung sinh ra tự động.",
-    "ifIgnored": "Tiếp tục lãng phí ngân sách cho các chiến dịch tối ưu AI mang lại hiển thị cao nhưng không tạo ra chuyển đổi thực tế do sai sót dữ liệu nền tảng.",
-    "actionChecklist": [
-      "Kiểm toán lại nguồn tín hiệu khán giả đang nuôi dưỡng các công cụ GEO và AI visibility.",
-      "Phân tách rõ dữ liệu khách hàng tự khai báo, hành vi quan sát và suy luận của mô hình.",
-      "Ngừng theo dõi số lượng trích dẫn đơn thuần, chuyển sang đo lường tỷ lệ chuyển đổi thực tế.",
-      "Thiết lập quy chế yêu cầu nhân sự giải thích rõ lý do chọn đối tượng trước khi giao cho AI."
-    ],
-    "id": "real-2026-09-25-tac-hai-cua-du-f678a0",
-    "publishedAt": "25/09/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/ai-agents-wont-fix-bad-audience-data-theyll-amplify-it/589792/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/09/ai-agent-data-466.png",
       "credit": "Ảnh: Search Engine Journal"
     }
   },
