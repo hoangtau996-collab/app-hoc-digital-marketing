@@ -2,6 +2,199 @@
   {
     "category": "Google Ads & SEO",
     "platformIcon": "Search",
+    "title": "Nghiên cứu từ Lintlab: 62% website hàng đầu thế giới gặp lỗi sơ đồ trang web",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "3 phút đọc",
+    "tags": [
+      "SEO kỹ thuật",
+      "Sơ đồ trang web",
+      "Tối ưu tìm kiếm",
+      "AI Marketing"
+    ],
+    "summary": "Một nghiên cứu mới từ Lintlab trên 1.000 website phổ biến nhất thế giới cho thấy phần lớn sitemap hiện nay đều chứa lỗi nghiêm trọng về URL và ngày tháng. Đáng chú ý, chỉ có 6,6% số trang web chuẩn bị sẵn tệp llms.txt để tối ưu hóa cho các công cụ AI. Điều này cảnh báo các doanh nghiệp cần rà soát lại hạ tầng kỹ thuật SEO để tránh lãng phí ngân sách thu thập dữ liệu từ Google.",
+    "keyNumbers": [
+      {
+        "value": "62%",
+        "label": "Website có sitemap gặp ít nhất một lỗi kỹ thuật"
+      },
+      {
+        "value": "43,7%",
+        "label": "Tỷ lệ website phản hồi có sitemap được tìm thấy"
+      },
+      {
+        "value": "6,6%",
+        "label": "Tỷ lệ website cung cấp tệp llms.txt cho hệ thống AI"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Thực trạng sitemap của các website lớn",
+        "body": "Nghiên cứu của Lintlab đã quét 1.000 website có lượt truy cập cao nhất từ dữ liệu Chrome UX Report nhằm đánh giá chất lượng sơ đồ trang web. Kết quả cho thấy chỉ có 916 tên miền phản hồi như một website hoạt động bình thường. Trong số đó, crawler chỉ tìm thấy sitemap trên 400 trang web, tương đương tỷ lệ 43,7%. Đáng ngại hơn, trong số 400 website có sitemap này, có tới 62% gặp ít nhất một lỗi kỹ thuật có thể đo lường được."
+      },
+      {
+        "heading": "Lỗi kỹ thuật chủ yếu nằm ở URL và ngày tháng",
+        "body": "Báo cáo nhấn mạnh rằng bản thân định dạng XML rất hiếm khi gặp lỗi khi chỉ xuất hiện trên 4 trang web trong toàn bộ mẫu thử. Thay vào đó, các vấn đề nghiêm trọng nhất nằm ở nội dung bên trong như URL và định dạng ngày tháng. Nhiều website lớn xây dựng sitemap theo nhiều lớp phức tạp, dẫn đến việc kiểm soát chất lượng liên kết bị lỏng lẻo. Lỗi phổ biến nhất là việc đưa các URL bị chuyển hướng hoặc URL không hoạt động vào sitemap, gây lãng phí tài nguyên thu thập dữ liệu của công cụ tìm kiếm."
+      },
+      {
+        "heading": "Sự thờ ơ với kỷ nguyên tìm kiếm bằng AI",
+        "body": "Bên cạnh sitemap truyền thống, nghiên cứu cũng khảo sát việc triển khai tệp llms.txt, một định dạng tóm tắt văn bản thuần túy được đề xuất cho các hệ thống AI. Kết quả cho thấy chỉ có 66 trong số 1.000 website cung cấp tệp này, tương đương tỷ lệ cực thấp là 6,6%. Điều này phản ánh sự chuẩn bị chậm chạp của các doanh nghiệp lớn trước làn sóng tìm kiếm bằng AI và các chatbot thông minh. Việc thiếu tệp này có thể khiến các mô hình AI không thể quét và hiểu đúng nội dung của website một cách hiệu quả."
+      },
+      {
+        "heading": "Rào cản từ các hệ thống bảo mật",
+        "body": "Nghiên cứu cũng chỉ ra rằng các hệ thống phòng thủ bảo mật đang vô tình ngăn chặn các công cụ quét sitemap hợp lệ. Có tới 165 website bị phân loại là chặn truy cập do trả về mã lỗi hoặc sử dụng các giải pháp bảo vệ như Cloudflare. Xu hướng các website lớn thắt chặt bảo mật để chống lại các bot đào tạo AI đang vô tình gây khó khăn cho việc đánh giá và tối ưu hóa SEO từ bên thứ ba. Điều này đòi hỏi các nhà quản lý phải cân bằng giữa bảo mật dữ liệu và khả năng hiển thị trên công cụ tìm kiếm."
+      }
+    ],
+    "impact": "Giúp Trưởng phòng Marketing nhận ra rằng ngay cả các website hàng đầu thế giới cũng gặp lỗi sitemap nghiêm trọng. Lỗi sitemap trực tiếp làm giảm hiệu quả quét của Googlebot, khiến các trang sản phẩm hoặc dịch vụ mới chậm được lập chỉ mục, từ đó làm giảm hiệu suất của các chiến dịch SEO và lãng phí ngân sách tối ưu hóa.",
+    "ifIgnored": "Nếu bỏ qua, doanh nghiệp sẽ tiếp tục lãng phí ngân sách thu thập dữ liệu của Google vào các liên kết hỏng hoặc chuyển hướng. Trang web sẽ mất dần lợi thế cạnh tranh trên các công cụ tìm kiếm truyền thống và hoàn toàn bị bỏ lại phía sau trong các kết quả tìm kiếm bằng AI do thiếu chuẩn bị hạ tầng dữ liệu.",
+    "actionChecklist": [
+      "Yêu cầu đội ngũ kỹ thuật chạy công cụ kiểm tra sitemap để phát hiện và loại bỏ ngay các URL lỗi hoặc URL chuyển hướng.",
+      "Cập nhật chính xác thuộc tính ngày sửa đổi cuối cùng trong sitemap để Googlebot ưu tiên quét các nội dung mới.",
+      "Nghiên cứu và triển khai tệp llms.txt trên thư mục gốc của website để chuẩn bị cho việc tối ưu hóa tìm kiếm bằng AI.",
+      "Kiểm tra cấu hình tường lửa để đảm bảo không chặn nhầm các bot tìm kiếm hợp lệ của Google hoặc các đối tác đo lường SEO."
+    ],
+    "id": "real-2026-10-02-nghien-cuu-tu-lintlab-6ea9dc",
+    "publishedAt": "02/10/2026",
+    "sourceUrl": "https://ppc.land/62-of-top-1-000-sites-with-a-sitemap-fail-at-least-one-check-lintlab-finds/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/10/xml-sitemap-errors-most-visited-sites-lintlab.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "AI Marketing",
+    "platformIcon": "Sparkles",
+    "title": "82% nhân sự xóa email cold outreach: AI cá nhân hóa phản tác dụng nếu thiếu thực chất",
+    "isHot": false,
+    "illustration": "ai-video",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Cold Outreach",
+      "AI Marketing",
+      "B2B Marketing",
+      "Cá nhân hóa"
+    ],
+    "summary": "Khảo sát từ Firmable trên 1.009 nhân sự cho thấy 82% người nhận sẽ xóa hoặc bỏ qua các thông điệp tiếp cận lạnh (cold outreach) ngay lập tức. Đáng chú ý, việc lạm dụng AI để viết hàng loạt hoặc tạo video cá nhân hóa giả tạo đang phản tác dụng, với 61% người nhận cảm thấy thiếu tin cậy.",
+    "keyNumbers": [
+      {
+        "value": "82%",
+        "label": "Nhân sự xóa hoặc chỉ lướt qua rồi xóa cold outreach"
+      },
+      {
+        "value": "61%",
+        "label": "Người nhận không tin tưởng các tin nhắn do AI viết"
+      },
+      {
+        "value": "63%",
+        "label": "Từ chối phản hồi vì tin nhắn trông như gửi hàng loạt"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Thực trạng phũ phàng của chiến dịch tiếp cận lạnh",
+        "body": "Khảo sát diện rộng của Firmable cho thấy tỷ lệ phản hồi thực tế của cold outreach cực kỳ thấp, chỉ có 1% người nhận cho biết họ hầu như luôn trả lời. Trong khi đó, có đến 52% người nhận xóa tin nhắn mà không đọc một chữ, và 30% khác chỉ lướt qua rồi bỏ vào thùng rác. Áp lực hòm thư cũng rất lớn khi 44% nhân sự nhận từ 6 tin nhắn rác trở lên mỗi tuần. Thậm chí, 38% từng phản hồi người lạ chỉ để họ dừng gửi tin nhắn, một con số dễ gây hiểu lầm là tương tác tốt trên các báo cáo chiến dịch."
+      },
+      {
+        "heading": "Bẫy cá nhân hóa bằng AI và video giả tạo",
+        "body": "Nhiều marketer đang lạm dụng AI để tăng quy mô gửi thư, nhưng hiệu quả mang lại hoàn toàn ngược lại. Khoảng 61% người nhận khẳng định các video cá nhân hóa do AI tạo ra mang lại cảm giác giả tạo và làm giảm khả năng tương tác của họ, chỉ có 7% cảm thấy ấn tượng. Tỷ lệ hoài nghi này thậm chí còn cao hơn ở thế hệ trẻ, với 70% nhân sự Gen Z coi các video AI này là giả tạo. Ngoài ra, 67% người tham gia khảo sát tự tin rằng họ có thể nhận biết và sẽ bỏ qua ngay lập tức các nội dung do AI viết."
+      },
+      {
+        "heading": "Những lỗi sơ đẳng khiến chiến dịch bị khai tử",
+        "body": "Người nhận có xu hướng trừng phạt cảm giác bị gửi thư hàng loạt nặng nề hơn là các lỗi kỹ thuật đơn lẻ. Có đến 63% nhân sự lập tức bỏ qua tin nhắn nếu nó trông như được gửi hàng loạt, và 37% dị ứng với lời chào chung chung kiểu Hi FirstName. Việc viết sai tên, sai chức danh hoặc tên công ty chiếm 36% lý do bị từ chối, trong khi những lời khen giả tạo chiếm 27%. Các cụm từ sáo rỗng như just following up (chỉ để theo dõi) hoặc tin nhắn quá dài cũng là rào cản lớn cho 20% người nhận."
+      },
+      {
+        "heading": "Công thức để nhận được phản hồi thực tế",
+        "body": "Thay vì tập trung vào việc chứng minh thư do người thật viết (chỉ chiếm 13% lý do phản hồi), marketer cần tập trung vào giá trị thực tế. Khoảng 58% người nhận ưu tiên sự liên quan và giá trị thực sự mà thông điệp mang lại. Việc cung cấp một thứ thực sự hữu ích như dữ liệu, cơ hội kết nối hoặc tài nguyên chiếm vị trí đầu bảng với 26% tỷ lệ phản hồi. Các yếu tố tiếp theo bao gồm việc thể hiện rõ bạn đã nghiên cứu kỹ về người nhận (10%), thông điệp cực kỳ ngắn gọn (9%) và chỉ ra đúng vấn đề hoặc cơ hội của họ (9%)."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing cần nhận ra việc dùng AI để spam cá nhân hóa giả tạo (như tự động chèn tên, tạo video AI hàng loạt) đang hủy hoại uy tín thương hiệu B2B và lãng phí ngân sách công cụ. Hiệu quả tiếp cận lạnh giờ đây phụ thuộc vào chất lượng nghiên cứu sâu và giá trị thực tế trao đi, chứ không phải quy mô gửi đi nhờ AI.",
+    "ifIgnored": "Tiếp tục đổ ngân sách vào các công cụ AI gửi thư tự động hàng loạt sẽ khiến tên miền gửi thư bị đánh dấu spam, tỷ lệ chặn hoặc báo cáo tăng cao (75% người dùng đã từng chặn người gửi), và đánh mất cơ hội tiếp cận các khách hàng doanh nghiệp lớn do bị đưa vào danh sách đen.",
+    "actionChecklist": [
+      "Dừng ngay việc sử dụng các công cụ AI tạo video cá nhân hóa hàng loạt cho tệp khách hàng lạnh chất lượng cao.",
+      "Rà soát lại các mẫu email, loại bỏ hoàn toàn các cụm từ sáo rỗng như just following up và các trường merge-tag bị lỗi.",
+      "Thiết lập quy trình nghiên cứu bắt buộc: chỉ gửi cold outreach khi có ít nhất 1 thông tin cá nhân hóa chuyên sâu về vấn đề doanh nghiệp đang gặp phải hoặc hoạt động gần đây.",
+      "Đo lường hiệu quả chiến dịch dựa trên tỷ lệ chuyển đổi thực tế (demo hoặc cuộc hẹn), loại bỏ chỉ số tỷ lệ phản hồi nếu đó là phản hồi yêu cầu dừng gửi thư."
+    ],
+    "id": "real-2026-10-02-82-nhan-su-xoa-efc87b",
+    "publishedAt": "02/10/2026",
+    "sourceUrl": "https://ppc.land/52-of-professionals-delete-cold-outreach-unread-firmable-finds/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/10/cold-outreach-envelope-press-shredder-red-letter.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "AI Marketing",
+    "platformIcon": "Sparkles",
+    "title": "Shopify tự động đưa sản phẩm lên các kênh mua sắm AI: Thách thức đo lường mới cho nhà quảng cáo",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Shopify",
+      "AI Shopping",
+      "Đo lường Pixel",
+      "Thương mại điện tử"
+    ],
+    "summary": "Shopify đã kích hoạt mặc định tính năng tự động đồng bộ sản phẩm lên các kênh mua sắm AI như Meta Muse, Google Gemini và Microsoft Copilot. Đáng chú ý, tính năng thanh toán trực tiếp ngay trong ứng dụng chat của các nền tảng này sẽ khiến các pixel theo dõi bên thứ ba không thể hoạt động, gây ra lỗ hổng lớn về dữ liệu đo lường chiến dịch.",
+    "keyNumbers": [
+      {
+        "value": "08/09/2026",
+        "label": "Ngày Meta ra mắt trợ lý AI Muse và Shopify tự động chia sẻ sản phẩm sang nền tảng này"
+      },
+      {
+        "value": "7 ngày",
+        "label": "Thời gian tối đa để Shopify dừng chia sẻ dữ liệu sản phẩm qua Shopify Catalog sau khi tắt quyền"
+      },
+      {
+        "value": "0 đồng",
+        "label": "Phí dịch vụ hiện tại từ các kênh AI như ChatGPT, Google, Copilot và Meta cho các giao dịch"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Tự động đồng bộ danh mục sản phẩm lên các kênh AI",
+        "body": "Shopify mặc định bật tính năng cho phép hệ thống tự động quản lý các kênh bán hàng dạng đại lý AI (Agentic Sales Channels). Cài đặt này tự động chia sẻ danh mục sản phẩm của cửa hàng lên các nền tảng AI mới nhất như Meta Muse, Microsoft Copilot và các kênh thử nghiệm khác. Ví dụ, ngay khi Meta ra mắt trợ lý AI Muse vào ngày 8/9/2026, sản phẩm của các cửa hàng đủ điều kiện đã lập tức được đồng bộ sang nền tảng này mà không cần thiết lập thủ công."
+      },
+      {
+        "heading": "Thanh toán trực tiếp bỏ qua website của doanh nghiệp",
+        "body": "Khách hàng có thể mua sắm và thanh toán trực tiếp ngay trong giao diện chat của Meta, Google AI Mode hoặc Copilot mà không cần truy cập website của bạn. Shopify gọi đây là tính năng thanh toán trực tiếp (direct checkout), được bật mặc định cho các thị trường đủ điều kiện như Mỹ, Canada hay Mexico. Điều này giúp rút ngắn hành trình mua hàng của người dùng nhưng lại thay đổi hoàn toàn cách thức tương tác thương mại điện tử truyền thống."
+      },
+      {
+        "heading": "Lỗ hổng đo lường do pixel không hoạt động",
+        "body": "Khi khách hàng thanh toán trực tiếp trong ứng dụng chat, các mã theo dõi như Google Analytics và pixel bên thứ ba sẽ không được kích hoạt. Shopify xác nhận chỉ có hệ thống theo dõi phía máy chủ (server-side tracking) hoạt động trong các phiên thanh toán này. Nếu chỉ dựa vào Google Analytics hoặc dashboard quảng cáo thông thường, nhà tiếp thị sẽ bỏ lỡ các số liệu chuyển đổi quan trọng này, dẫn đến việc đánh giá sai hiệu quả chiến dịch."
+      },
+      {
+        "heading": "Chi phí bằng không nhưng Meta dự kiến sẽ sớm thu phí",
+        "body": "Hiện tại, các nền tảng như ChatGPT, Google, Copilot và Meta chưa thu thêm bất kỳ khoản phí nào ngoài phí xử lý cổng thanh toán tiêu chuẩn của Shopify. Tuy nhiên, CEO Mark Zuckerberg của Meta đã tiết lộ kế hoạch dài hạn sẽ thu một tỷ lệ phần trăm nhỏ trên mỗi giao dịch thành công từ trợ lý AI Muse. Do đó, các thương hiệu cần chuẩn bị ngân sách cho mô hình chia sẻ doanh thu mới này khi các kênh mua sắm AI trở nên phổ biến hơn."
+      },
+      {
+        "heading": "Cách kiểm soát và tắt tính năng tự động đăng ký",
+        "body": "Nhà bán hàng hoàn toàn có thể chủ động tắt tính năng tự động đăng ký bằng cách tắt tùy chọn quản lý tự động trong quản trị Shopify. Khi đó, bạn có thể quản lý riêng lẻ quyền truy cập danh mục sản phẩm hoặc tính năng thanh toán trực tiếp cho từng kênh cụ thể. Lưu ý rằng việc rút sản phẩm khỏi Shopify Catalog có thể mất tới 7 ngày để hoàn tất xử lý trên hệ thống của các đối tác AI."
+      }
+    ],
+    "impact": "Việc pixel không kích hoạt khi thanh toán trực tiếp qua AI chat sẽ làm sai lệch nghiêm trọng dữ liệu tối ưu hóa chiến dịch quảng cáo (ROAS, CPA). Trưởng phòng Marketing sẽ không thể đánh giá chính xác hiệu quả của các nhóm quảng cáo nếu chỉ nhìn vào các công cụ đo lường client-side truyền thống.",
+    "ifIgnored": "Doanh nghiệp sẽ bị mất dấu dữ liệu chuyển đổi thực tế, dẫn đến việc tối ưu hóa sai tệp khách hàng trên Meta Ads và Google Ads. Đồng thời, bạn có thể vô tình chia sẻ toàn bộ danh mục sản phẩm độc quyền cho các mô hình AI đối thủ hoặc các kênh thử nghiệm chưa được kiểm chứng an toàn thông tin.",
+    "actionChecklist": [
+      "Truy cập mục Sales channels > Agentic trong quản trị Shopify để kiểm tra trạng thái các kênh AI đang hoạt động.",
+      "Chuyển cấu hình đo lường sang Server-Side Tracking (CAPI) để đảm bảo ghi nhận đơn hàng từ direct checkout của Google, Meta và Copilot.",
+      "Đối chiếu số liệu đơn hàng trực tiếp trên hệ thống admin Shopify với Google Analytics để phát hiện và bù đắp lượng chuyển đổi bị thiếu hụt.",
+      "Cân nhắc tắt tính năng tự động đăng ký kênh mới (Auto enroll new storefronts) để chủ động kiểm duyệt các nền tảng AI sẽ liên kết với sản phẩm của bạn."
+    ],
+    "id": "real-2026-10-02-shopify-tu-dong-dua-d0ef73",
+    "publishedAt": "02/10/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/shopify-now-enrolls-your-store-in-every-new-ai-shopping-channel/591049/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/09/shopify-ai-shopping-259.png",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
     "title": "Google cập nhật tài liệu SEO: Bắt buộc kiểm tra thủ công nội dung và metadata do AI tạo",
     "isHot": false,
     "illustration": "ai-label",
@@ -120,69 +313,6 @@
   {
     "category": "Google Ads & SEO",
     "platformIcon": "Search",
-    "title": "Sự gia tăng các đơn vị trung gian trong tệp ads.txt của các nhà xuất bản lớn",
-    "isHot": false,
-    "illustration": "data-signal",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Programmatic",
-      "Ads.txt",
-      "AdTech",
-      "Minh bạch quảng cáo"
-    ],
-    "summary": "Báo cáo mới nhất từ DataBeat cho thấy các nhà xuất bản lớn tại Mỹ đang gia tăng đáng kể số lượng đơn vị trung gian (resellers) trong tệp ads.txt. Điều này làm đảo ngược xu hướng tinh gọn chuỗi cung ứng quảng cáo đã ghi nhận vào tháng trước.",
-    "keyNumbers": [
-      {
-        "value": "44.608",
-        "label": "Số dòng reseller tăng thêm"
-      },
-      {
-        "value": "10.334",
-        "label": "Số dòng direct tăng thêm"
-      },
-      {
-        "value": "81%",
-        "label": "Tỷ trọng tăng trưởng từ reseller"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Sự đảo chiều trong quản lý tệp ads.txt",
-        "body": "Dữ liệu từ 50.000 nhà xuất bản hàng đầu tại Mỹ cho thấy sự gia tăng đột biến của các đơn vị trung gian. Trong khi số lượng kết nối trực tiếp (direct) chỉ tăng 10.334 dòng, thì số lượng kết nối qua trung gian (reseller) đã tăng tới 44.608 dòng. Sự thay đổi này đánh dấu bước lùi trong nỗ lực tinh gọn chuỗi cung ứng quảng cáo đã được thực hiện vào tháng trước."
-      },
-      {
-        "heading": "Tác động đến hiệu quả chi phí quảng cáo",
-        "body": "Việc gia tăng các đơn vị trung gian đồng nghĩa với việc có thêm nhiều con đường dẫn đến cùng một vị trí hiển thị quảng cáo. Đối với nhà quảng cáo, điều này làm tăng nguy cơ phát sinh thêm phí trung gian hoặc tình trạng tự đấu thầu với chính mình. Sự phức tạp này làm giảm tính minh bạch và hiệu quả của ngân sách programmatic."
-      },
-      {
-        "heading": "Biến động theo phân khúc nhà xuất bản",
-        "body": "Tất cả các nhóm nhà xuất bản từ lưu lượng truy cập thấp đến cao đều ghi nhận sự gia tăng dòng ads.txt. Nhóm nhà xuất bản lưu lượng thấp đóng góp 34.738 dòng trong tổng tăng trưởng ròng. Nativo là đơn vị dẫn đầu về số lượng kết nối mới với 9.814 dòng, theo sau là Risecodes với 6.856 dòng."
-      },
-      {
-        "heading": "Cảnh báo về tính kỷ luật của chuỗi cung ứng",
-        "body": "Báo cáo nhấn mạnh rằng việc cắt giảm trung gian không phải là một quá trình vĩnh viễn. Dù các nhà xuất bản lớn vẫn ưu tiên hạ tầng trao đổi uy tín, nhưng áp lực về việc tìm kiếm thêm phạm vi tiếp cận (reach) đang khiến họ nới lỏng các quy định. Các nhà quảng cáo cần thận trọng hơn khi thiết lập danh sách loại trừ hoặc chọn lọc đối tác."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing đối mặt với rủi ro lãng phí ngân sách do phí ẩn từ các đơn vị trung gian không cần thiết và khả năng chồng chéo trong đấu thầu (bid duplication).",
-    "ifIgnored": "Nếu bỏ qua, bạn có thể đang trả phí cao hơn mức cần thiết cho cùng một vị trí hiển thị và mất kiểm soát đối với nơi quảng cáo thực sự xuất hiện trong hệ thống programmatic.",
-    "actionChecklist": [
-      "Kiểm tra lại danh sách đối tác trong báo cáo Supply Path Optimization (SPO).",
-      "Thiết lập danh sách loại trừ các đơn vị trung gian không mang lại giá trị chuyển đổi.",
-      "Yêu cầu bên vận hành programmatic giải trình về tỷ lệ phí trung gian (tech fee) hiện tại.",
-      "Ưu tiên các kết nối trực tiếp (Direct) hoặc thông qua các sàn giao dịch (SSP) đã được xác thực."
-    ],
-    "id": "real-2026-09-30-su-gia-tang-cac-35511c",
-    "publishedAt": "30/09/2026",
-    "sourceUrl": "https://ppc.land/resellers-gain-44-600-ads-txt-lines-to-directs-10-300-databeat-finds/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/size/w1200/2026/09/ads-txt-intermediaries-81-percent-net-growth-pipes.jpg",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
     "title": "Chương trình thử nghiệm chia sẻ doanh thu AI của Google chỉ trả dưới 0,1% doanh thu quảng cáo cho nhiều website",
     "isHot": false,
     "illustration": "zero-click",
@@ -241,69 +371,6 @@
     "image": {
       "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/09/google-ai-pilot-featured-1600x840-1.jpg",
       "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Chương trình trả phí nội dung cho AI của Google: Mức chi trả và bài học đo lường",
-    "isHot": false,
-    "illustration": "zero-click",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Google AI Overviews",
-      "SEO",
-      "Traffic",
-      "Nền tảng tìm kiếm"
-    ],
-    "summary": "Google đang thử nghiệm trả phí cho khoảng 100 nhà sáng bản quyền nội dung khi trang của họ cung cấp dữ liệu cho câu trả lời của AI. Tuy nhiên, mức chi trả rất chênh lệch, dao động từ dưới 1.000 đô la Mỹ trong vài tháng đối với các trang nhỏ cho đến hơn 1 triệu đô la Mỹ một năm cho một số ít đối tác tham gia sớm.",
-    "keyNumbers": [
-      {
-        "value": "100",
-        "label": "nhà xuất bản tham gia"
-      },
-      {
-        "value": "1.000.000 đô la Mỹ",
-        "label": "mức thu nhập tối đa hàng năm"
-      },
-      {
-        "value": "4%",
-        "label": "mức giảm doanh thu mảng Google Network"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Cơ chế chi trả của chương trình thử nghiệm AI contribution pilot",
-        "body": "Chương trình này chi trả cho các trang web tham gia khi nội dung của họ đóng góp trực tiếp vào các phản hồi của AI Overviews, AI Mode và ứng dụng Gemini. Khoản thu nhập chỉ tích luỹ khi nội dung tham gia đáng kể trong giai đoạn tạo văn bản, trong khi các trang chỉ xác nhận sự thật hoặc được liên kết sau khi tạo sẽ không đủ điều kiện. Số lượng nhà xuất bản tham gia hiện tại là khoảng 100 trang web từ nhiều lĩnh vực khác nhau."
-      },
-      {
-        "heading": "Sự chênh lệch lớn về mức độ đãi ngộ giữa các bên",
-        "body": "Biên độ chi trả của chương trình này rất rộng và không theo một công thức công khai nào về lượt hiển thị hay số lượng nội dung. Một nhà xuất bản tham gia từ sớm có thể thu về hơn 1 triệu đô la Mỹ một năm, trong khi một số trang nhỏ hơn chỉ nhận được dưới 1.000 đô la Mỹ sau vài tháng. Đối với một vài trang quy mô vừa và nhỏ, khoản tiền này đôi khi chỉ chiếm dưới 0,1% doanh thu quảng cáo của họ."
-      },
-      {
-        "heading": "Bài toán đo lường hiệu suất và lượt nhấp chuột",
-        "body": "Báo cáo hiệu suất AI tạo sinh trong Search Console cho phép hiển thị các số liệu về lượt hiển thị, trang, quốc gia, thiết bị và ngày tháng nhưng hoàn toàn không cung cấp dữ liệu về lượt nhấp chuột hay truy vấn cụ thể. Điều này khiến các nhà quản trị website khó có thể cân đối chính xác giữa số tiền nhận được từ chương trình và lượng traffic bị sụt giảm. Nghiên cứu của Ahrefs cho thấy AI Overviews có liên quan đến việc giảm 58% tỷ lệ nhấp chuột đối với các trang đứng top đầu."
-      },
-      {
-        "heading": "Biến động tài chính và quyền lựa chọn của chủ sở hữu trang",
-        "body": "Trong quý đầu tiên của năm 2026, doanh thu mảng Search của Alphabet tăng 19% trong khi phân khúc Google Network giảm 4% xuống còn 6.970.000.000 đô la Mỹ. Các nhà quản trị trang web hiện có thể quyết định ở lại nhận khoản chi trả từ vài nghìn đến 50.000 đô la Mỹ hoặc sử dụng tính năng bật tắt trong Search Console để từ chối hiển thị trên các bề mặt AI nếu lượng traffic bị ảnh hưởng quá lớn."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing cần nhận thức rằng các tính năng AI của Google tiếp tục làm thay đổi cấu trúc traffic tự nhiên, đồng thời việc kiếm tiền từ nội dung thông qua các chương trình thử nghiệm chưa mang lại sự minh bạch về công thức tính toán và dữ liệu lượt nhấp.",
-    "ifIgnored": "Nếu bỏ qua, doanh nghiệp có thể tiếp tục mất đi lượng lớn traffic tự nhiên vào tay AI Overviews mà không đánh giá đúng mức độ bù đắp tài chính thực tế từ các chương trình bản quyền của Google.",
-    "actionChecklist": [
-      "Kiểm tra ngay dữ liệu Search Console để theo dõi hiệu suất trên các bề mặt AI tạo sinh",
-      "Đánh giá lại tỷ lệ chuyển đổi và sụt giảm traffic tự nhiên từ các từ khóa chủ lực",
-      "Theo dõi sát các khoản doanh thu hoặc thông báo từ Google nếu website nằm trong diện thử nghiệm",
-      "Cân nhắc rủi ro giữa việc duy trì hiển thị trên AI và việc bảo vệ traffic gốc của trang"
-    ],
-    "id": "real-2026-09-30-chuong-trinh-tra-phi-e8c52c",
-    "publishedAt": "30/09/2026",
-    "sourceUrl": "https://ppc.land/google-pays-about-100-publishers-for-ai-answers-some-under-1-000/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/09/google-ai-contribution-pilot-payouts-steelyard.jpg",
-      "credit": "Ảnh: PPC Land"
     }
   },
   {
@@ -493,69 +560,6 @@
     "image": {
       "url": "https://imgproxy.divecdn.com/Z5PHA3Fts_5ZFHe_zTBZT_Jgyxoj-CZ9fuWeQ75WHdY/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS90aWt0b2tfcGFydG5lcl9iYWRnZXMucG5n.webp",
       "credit": "Ảnh: Social Media Today"
-    }
-  },
-  {
-    "category": "AI Marketing",
-    "platformIcon": "Sparkles",
-    "title": "Cách tối ưu hóa ngữ cảnh thương hiệu để ngăn AI chỉ hiển thị đánh giá tiêu cực",
-    "isHot": false,
-    "illustration": "data-signal",
-    "readTime": "5 phút đọc",
-    "tags": [
-      "AI Search",
-      "Quản trị danh tiếng",
-      "LLM Optimization",
-      "SEO"
-    ],
-    "summary": "Các mô hình AI lớn thường có xu hướng phóng đại các đánh giá tiêu cực khi thiếu dữ liệu toàn diện về quy mô doanh nghiệp. Việc cung cấp bối cảnh đầy đủ thông qua tệp dữ liệu chuyên dụng giúp cải thiện đáng kể tỷ lệ được AI đề xuất cho khách hàng.",
-    "keyNumbers": [
-      {
-        "value": "27/42",
-        "label": "cảnh báo tiêu cực trước khi bổ sung bối cảnh"
-      },
-      {
-        "value": "0/40",
-        "label": "cảnh báo tiêu cực sau 14 ngày tối ưu"
-      },
-      {
-        "value": "40/40",
-        "label": "lần AI đưa ra đề xuất thương hiệu"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Nguyên nhân AI hiểu sai về đánh giá khách hàng",
-        "body": "Các mô hình AI tiên tiến hiện nay được lập trình để tránh rủi ro trong việc đưa ra khuyến nghị, đặc biệt trong các lĩnh vực nhạy cảm. Khi thiếu thông tin về tổng số lượng khách hàng, số năm hoạt động hay cách xử lý khủng hoảng, AI chỉ nhìn thấy phần nổi của tảng băng chìm. Do đó, bất kỳ khiếu nại nhỏ nào cũng có thể khiến hệ thống gắn cờ cảnh báo rủi ro cho thương hiệu."
-      },
-      {
-        "heading": "Kết quả thử nghiệm thực tế với dữ liệu ngữ cảnh",
-        "body": "Trong một thử nghiệm trên hệ thống AI, các chuyên gia đã bổ sung câu chuyện toàn diện của doanh nghiệp, bao gồm quy mô khách hàng và lịch sử hoạt động. Trước khi tối ưu, AI đưa ra cảnh báo ở 27 trên 42 câu trả lời và chỉ giới thiệu thương hiệu ở 10 trường hợp. Sau khi cung cấp ngữ cảnh đầy đủ trong vòng 14 ngày, số lượng cảnh báo giảm xuống 0 và tỷ lệ được đề xuất tăng lên 40 trên 40."
-      },
-      {
-        "heading": "Cách cung cấp dữ liệu chính xác cho các trình thu thập thông tin",
-        "body": "Doanh nghiệp không nên che giấu thông tin mà cần trình bày toàn bộ câu chuyện thương hiệu và trực tiếp giải quyết các thông tin tiêu cực đã có sẵn. Dữ liệu cần bao gồm tổng số khách hàng, số năm kinh nghiệm, phản hồi xử lý thực tế và các đánh giá kèm liên kết bên thứ ba. Việc này giúp AI có đủ mẫu số để cân nhắc tính xác thực của các phàn nàn."
-      },
-      {
-        "heading": "Sử dụng tệp dữ liệu chuyên dụng và công nghệ biên mạng",
-        "body": "Các thử nghiệm cho thấy việc xuất bản tệp thông tin thương hiệu và đưa nội dung lên các worker tại biên mạng giúp tăng khả năng tiếp cận của các trình thu thập thông tin AI. Trong giai đoạn thử nghiệm, các tệp dữ liệu được thu thập hàng trăm nghìn lần, giúp củng cố mức độ hiển thị và nhận diện ngữ cảnh của máy chủ tìm kiếm."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing cần chủ động quản lý cách các mô hình AI đọc và đánh giá thương hiệu để tránh việc mất khách hàng tiềm năng vào tay đối thủ chỉ vì các khiếu nại nhỏ lẻ bị thổi phồng.",
-    "ifIgnored": "Nếu bỏ qua, các hệ thống tìm kiếm tích hợp AI sẽ tiếp tục gắn cờ cảnh báo thương hiệu dựa trên những đánh giá tiêu cực đơn lẻ mà không hiểu đúng về quy mô và uy tín thực tế của doanh nghiệp.",
-    "actionChecklist": [
-      "Thống kê toàn diện quy mô khách hàng, số năm hoạt động và tỷ lệ xử lý khiếu nại thực tế",
-      "Xây dựng tệp dữ liệu thông tin thương hiệu chi tiết cho các trình thu thập thông tin AI",
-      "Triển khai nội dung ngữ cảnh lên các hệ thống biên mạng để tăng tần suất tiếp cận",
-      "Kiểm tra định kỳ các câu trả lời của AI về mức độ hiển thị và khuyến nghị đối với thương hiệu"
-    ],
-    "id": "real-2026-09-29-cach-toi-uu-hoa-b9eca9",
-    "publishedAt": "29/09/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/ai-crawlers-machine-layer-answershare-spa/590837/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/09/answershare-ai-visibility-homepage-hero-machine-layer-translation-hi-res-497.png",
-      "credit": "Ảnh: Search Engine Journal"
     }
   },
   {
