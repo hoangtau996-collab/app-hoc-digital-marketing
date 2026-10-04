@@ -2,6 +2,132 @@
   {
     "category": "Google Ads & SEO",
     "platformIcon": "Search",
+    "title": "Google công bố dữ liệu thời gian thực tế cho thu thập dữ liệu, lập chỉ mục và phục hồi SEO",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Google SEO",
+      "Lập chỉ mục",
+      "Cập nhật thuật toán",
+      "Thời gian Index"
+    ],
+    "summary": "Tại sự kiện Search Central Live ở Barcelona, đại diện Google đã lần đầu công bố dữ liệu thời gian thực tế cho các quy trình thu thập dữ liệu, lập chỉ mục và hiển thị tìm kiếm. Theo đó, một địa chỉ URL mới thường mất khoảng 20 giờ để được phát hiện, nhưng việc phục hồi sau các đợt cập nhật cốt lõi có thể mất từ 3 đến 6 tháng. Đây là cơ sở chính thức giúp các Trưởng phòng Marketing lập kế hoạch SEO và chuyển đổi website chính xác hơn.",
+    "keyNumbers": [
+      {
+        "value": "~20 giờ",
+        "label": "thời gian phát hiện URL mới thông thường"
+      },
+      {
+        "value": "~1,5 giờ",
+        "label": "thời gian lập chỉ mục hoàn chỉnh thông thường"
+      },
+      {
+        "value": "3-6 tháng",
+        "label": "thời gian phục hồi sau đợt Core Update"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Thời gian thu thập dữ liệu và xử lý URL mới",
+        "body": "Theo dữ liệu nội bộ từ Google, việc phát hiện một địa chỉ URL mới thông thường mất khoảng 20 giờ, nhưng những trường hợp chậm nhất có thể kéo dài nhiều tuần hoặc không bao giờ diễn ra. Đối với các URL đã biết, thời gian cập nhật làm mới trung bình là khoảng 30 ngày. Quá trình xử lý sơ đồ trang web (sitemap) diễn ra trong khoảng 24 giờ và có thể kéo dài tối đa 14 ngày. Việc cập nhật tệp robots.txt có thời gian xử lý nhanh nhất, diễn ra trong khoảng 24 giờ đến 25 giờ."
+      },
+      {
+        "heading": "Tốc độ lập chỉ mục và tác động từ chuyển đổi trang web",
+        "body": "Thời gian lập chỉ mục hoàn chỉnh từ đầu đến cuối đối với một trang đạt chuẩn thường diễn ra trong khoảng 1,5 giờ. Tuy nhiên, việc thay đổi thẻ chuẩn (canonicalisation) hay yêu cầu gỡ bỏ trang lại mất từ 1 đến 3 tuần trong điều kiện bình thường. Tác vụ chuyển đổi toàn bộ website (site move) thuộc nhóm tốn thời gian nhất, đòi hỏi từ 1 đến 3 tháng thông thường và có thể kéo dài từ 6 tháng đến hơn 1 năm ở các trường hợp chậm. Việc cập nhật dữ liệu có cấu trúc mất từ vài giờ đến 1-2 tuần, trong khi hình ảnh và video cần từ vài giờ đến vài ngày."
+      },
+      {
+        "heading": "Thời gian hiển thị kết quả và phục hồi thứ hạng",
+        "body": "Ở giai đoạn hiển thị kết quả, việc gỡ bỏ án phạt thủ công (manual action) thường mất từ 1 đến 2 tuần, nhưng có thể kéo dài 4 đến 6 tuần đối với các trang ít hoạt động. Đáng chú ý nhất là quá trình phục hồi thứ hạng sau các đợt cập nhật thuật toán cốt lõi (Core Update), kéo dài từ 3 đến 6 tháng thông thường. Trong những trường hợp chậm nhất, doanh nghiệp phải chờ từ 6 tháng đến 1 năm để chờ đợt Core Update tiếp theo. Với các cập nhật về spam, thời gian thay đổi thứ hạng diễn ra liên tục trong 1 đến 2 tuần hoặc kéo dài nhiều tháng."
+      },
+      {
+        "heading": "Sự tích lũy độ trễ và yếu tố chất lượng nội dung",
+        "body": "Đại diện Google nhấn mạnh rằng các quy trình trên hệ thống tìm kiếm có tính liên kết chặt chẽ và độ trễ sẽ bị tích lũy dồn dập. Một trang web không thể được lập chỉ mục nếu chưa trải qua bước thu thập dữ liệu, do đó sự cố ở bước trước sẽ làm chậm toàn bộ các bước sau. Việc một trang không bao giờ được index thường liên quan trực tiếp đến đánh giá chất lượng nội dung của hệ thống. Các sửa chữa kỹ thuật nhanh chóng sẽ không mang lại hiệu quả nếu Google nhận định trang web đó không đủ giá trị để đầu tư tài nguyên thu thập."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing có cơ sở dữ liệu chính thức từ Google để thiết lập lộ trình KPI SEO thực tế, tránh đặt kỳ vọng sai lệch về thời gian lên top hoặc phục hồi thứ hạng. Đồng thời, dữ liệu này giúp đánh giá chính xác rủi ro sụt giảm lưu lượng truy cập khi quyết định tái cấu trúc hoặc chuyển đổi tên miền website.",
+    "ifIgnored": "Doanh nghiệp dễ đưa ra các quyết định SEO vội vàng, liên tục thay đổi tối ưu khi Google chưa kịp hoàn tất thu thập dữ liệu, dẫn đến rối loạn tín hiệu xếp hạng. Việc không lường trước thời gian phục hồi sau Core Update (3-6 tháng) có thể làm phá sản các kế hoạch doanh thu ngắn hạn.",
+    "actionChecklist": [
+      "Rà soát lại kế hoạch SEO và điều chỉnh mốc thời gian báo cáo cho cấp quản lý dựa trên các mốc thực tế của Google.",
+      "Thiết lập quy trình giám sát chặt chẽ trong 1-3 tháng khi thực hiện các dự án chuyển đổi website hoặc thay đổi cấu trúc URL.",
+      "Tập trung cải thiện chất lượng nội dung cốt lõi thay vì chỉ can thiệp kỹ thuật khi trang web không được lập chỉ mục.",
+      "Duy trì ngân sách và kế hoạch kinh doanh dự phòng cho tối thiểu 3-6 tháng nếu website chịu ảnh hưởng từ đợt Core Update."
+    ],
+    "id": "real-2026-10-03-google-cong-bo-du-a111c9",
+    "publishedAt": "03/10/2026",
+    "sourceUrl": "https://ppc.land/google-says-new-pages-take-about-20-hours-to-be-found-some-never-are/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/10/google-url-discovery-20-hours-canal-lock-paper-boats.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Google Site Kit tự động theo dõi chuyển đổi từ các plugin bán hàng và biểu mẫu trên WordPress",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "3 phút đọc",
+    "tags": [
+      "Google Site Kit",
+      "Google Ads",
+      "Đo lường chuyển đổi",
+      "WordPress"
+    ],
+    "summary": "Google cập nhật tính năng Site Goals trên plugin Site Kit cho WordPress, cho phép tự động ghi nhận đơn hàng và lượt điền biểu mẫu từ các plugin phổ biến như WooCommerce hay Contact Form 7. Dữ liệu chuyển đổi được truyền trực tiếp về Google Analytics và Google Ads mà không cần thao tác gắn mã thủ công.",
+    "keyNumbers": [
+      {
+        "value": "5.000.000+",
+        "label": "Lượt cài đặt Site Kit đang hoạt động"
+      },
+      {
+        "value": "1.187.0",
+        "label": "Phiên bản bắt đầu có tính năng Site Goals"
+      },
+      {
+        "value": "33",
+        "label": "Ngôn ngữ được plugin hỗ trợ"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Tự động đo lường chuyển đổi không cần gắn mã thủ công",
+        "body": "Google chính thức triển khai tính năng Site Goals trên plugin Site Kit phiên bản 1.187.0 dành cho WordPress. Công cụ này tự động phát hiện các hành vi như thêm vào giỏ hàng, hoàn tất đơn hàng và gửi biểu mẫu từ các plugin bên thứ ba như WooCommerce, WPForms hay Contact Form 7. Dữ liệu chuyển đổi được tự động đẩy về Google Analytics và Google Ads mà nhà quản trị không cần thao tác gắn thẻ hay viết mã thủ công. Báo cáo phân tích hiển thị trực tiếp ngay trên bảng điều khiển quản trị của website WordPress."
+      },
+      {
+        "heading": "Cơ chế hoạt động và đồng bộ dữ liệu chiến dịch",
+        "body": "Tính năng dựa trên cơ chế theo dõi chuyển đổi từ plugin để chèn đoạn mã JavaScript vào giao diện người dùng. Khi kích hoạt, dữ liệu hành vi sẽ đồng thời truyền tới cả Google Analytics và tài khoản Google Ads đã kết nối. Cài đặt này nằm tại mục Site Kit > Settings > Connected Services > Ads / Analytics > Edit > Plugin conversion tracking. Việc bật hoặc tắt nút điều khiển trong mô-đun Ads sẽ tự động áp dụng tương tự cho mô-đun Analytics."
+      },
+      {
+        "heading": "Điều kiện hiển thị báo cáo và sự kiện chuẩn hóa",
+        "body": "Báo cáo Site Goals chỉ xuất hiện khi website đáp ứng đủ ba điều kiện kỹ thuật. Website cần kết nối Google Analytics, cài đặt ít nhất một plugin được hỗ trợ và bật tính năng theo dõi chuyển đổi plugin. Hệ thống ghi nhận các sự kiện chuẩn hóa như add_to_cart, purchase, submit_lead_form, contact và generate_lead. Ở phiên bản 1.188.0 phát hành ngày 21/09/2026, Google bổ sung 8 thẻ chỉ số quan trọng cho các website bán hàng khi phát hiện sự kiện mua hàng."
+      },
+      {
+        "heading": "Phạm vi tác động trên hệ sinh thái WordPress",
+        "body": "Site Kit hiện có hơn 5.000.000 lượt cài đặt hoạt động, tương thích với WordPress 5.2 trở lên và yêu cầu phiên bản PHP tối thiểu 7.4. Công cụ hỗ trợ 33 ngôn ngữ và được kiểm thử tới phiên bản WordPress 7.1.2. Cập nhật này giúp các website thương mại điện tử nhỏ và trang thu thập thông tin khách hàng có hệ thống đo lường chính xác. Nhà quảng cáo có thể tối ưu hóa chiến dịch Google Ads dựa trên dữ liệu chuyển đổi thực tế mà không tốn chi phí thuê kỹ thuật viên thiết lập."
+      }
+    ],
+    "impact": "Giúp Trưởng phòng Marketing cắt giảm chi phí kỹ thuật triển khai tracking và đảm bảo tài khoản Google Ads nhận đầy đủ tín hiệu chuyển đổi. Thuật toán máy học của Google Ads sẽ có dữ liệu chuẩn xác từ WooCommerce hay form đăng ký để tối ưu hóa chiến dịch Smart Bidding, gia tăng tỷ lệ chuyển đổi thực tế.",
+    "ifIgnored": "Chiến dịch Google Ads đối mặt nguy cơ chạy thiếu dữ liệu chuyển đổi hoặc ghi nhận sai lệch nếu việc gắn mã thủ công bị lỗi. Điều này khiến thuật toán tối ưu giá thầu hoạt động kém hiệu quả, lãng phí ngân sách quảng cáo vào các tệp người dùng không tạo ra doanh thu.",
+    "actionChecklist": [
+      "Cập nhật plugin Google Site Kit trên hệ thống WordPress lên phiên bản 1.187.0 hoặc mới hơn",
+      "Kiểm tra trạng thái kết nối giữa Google Site Kit với Google Analytics và Google Ads",
+      "Truy cập mục Settings > Connected Services trong Site Kit để bật tùy chọn Plugin conversion tracking",
+      "Đối chiếu danh sách sự kiện ghi nhận trên Google Ads với lượng đơn hàng và lead thực tế từ plugin"
+    ],
+    "id": "real-2026-10-03-google-site-kit-tu-2750f8",
+    "publishedAt": "03/10/2026",
+    "sourceUrl": "https://ppc.land/google-site-kit-auto-tracks-checkouts-and-form-leads-from-8-wordpress-plugins/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/10/google-site-kit-site-goals-wordpress-conversion-tracking.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
     "title": "Nghiên cứu từ Lintlab: 62% website hàng đầu thế giới gặp lỗi sơ đồ trang web",
     "isHot": false,
     "illustration": "data-signal",
@@ -371,136 +497,6 @@
     "image": {
       "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/09/google-ai-pilot-featured-1600x840-1.jpg",
       "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
-    "category": "AI Marketing",
-    "platformIcon": "Sparkles",
-    "title": "Nghiên cứu mới về hành vi người dùng: 40% người Mỹ sẵn sàng để AI đại diện thực hiện tác vụ mua sắm",
-    "isHot": false,
-    "illustration": "ai-budget",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "AI Agent",
-      "Hành vi người tiêu dùng",
-      "AI Marketing",
-      "Nghiên cứu thị trường"
-    ],
-    "summary": "Báo cáo mới từ Channel V Media khảo sát 7.675 người trưởng thành tại Mỹ cho thấy 40% sẵn sàng để trợ lý AI thực hiện ít nhất một tác vụ hàng ngày. Tuy nhiên, tỷ lệ thực tế đang sử dụng công nghệ này mới dừng lại ở mức 8% và chỉ 18% coi đây là một ý tưởng tốt.",
-    "keyNumbers": [
-      {
-        "value": "7.675",
-        "label": "người tham gia khảo sát"
-      },
-      {
-        "value": "40%",
-        "label": "sẵn sàng giao việc cho AI"
-      },
-      {
-        "value": "8%",
-        "label": "đang sử dụng agentic AI"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Khoảng cách lớn giữa ý định và thực tế sử dụng",
-        "body": "Báo cáo ghi nhận 40% người tham gia khảo sát đồng ý để trợ lý AI làm thay các công việc thường nhật. Dù vậy, số người đang thực tế sử dụng loại công nghệ này chỉ chiếm 8%, và 18% đánh giá đây là ý tưởng tốt. Khoảng cách này cho thấy tâm lý cởi mở ban đầu chưa được chuyển hóa hoàn toàn thành hành vi tiêu dùng thường xuyên."
-      },
-      {
-        "heading": "Các tác vụ người dùng sẵn sàng giao cho AI",
-        "body": "Hành vi ủy quyền cho AI có xu hướng giảm dần khi mức độ rủi ro hoặc giá trị tài chính tăng lên. Đặt bàn nhà hàng dẫn đầu với 12% số người sẵn sàng giao phó, theo sau là mua sắm tạp hóa với 11% và quản lý nhà thông minh với 10%. Trong khi đó, chỉ có 6% đồng ý để AI dạy con cái và 5% tin tưởng giao việc mua ô tô."
-      },
-      {
-        "heading": "Sự khác biệt về mức độ áp dụng theo thế hệ",
-        "body": "Thế hệ Millennials hiện đang dẫn đầu trên mọi chỉ số về mức độ tiếp nhận công nghệ, đạt 47% đối với generative AI và 13% đối với agentic AI. Ngược lại, thế hệ Gen Z tỏ ra thận trọng và nhiều mâu thuẫn hơn với 22% cảm thấy lo lắng về AI. Đối với thế hệ Boomers, dù tỷ lệ đánh giá AI là ý tưởng tốt chỉ đạt 5%, có tới 19% cho biết sẵn sàng sử dụng."
-      },
-      {
-        "heading": "Mức độ sử dụng cao hơn tại nơi làm việc",
-        "body": "Khảo sát cũng chỉ ra sự chênh lệch về mức độ ứng dụng giữa các cấp nhân sự trong doanh nghiệp. Chủ doanh nghiệp và các cấp điều hành sử dụng generative AI với tỷ lệ 53%, cao hơn mức 38% của nhân viên thông thường. Riêng với agentic AI, tỷ lệ này lần lượt là 18% ở nhóm lãnh đạo và 7% ở nhóm nhân viên."
-      }
-    ],
-    "impact": "Sự dịch chuyển từ tìm kiếm thông tin truyền thống sang việc để AI tự động ra quyết định mua sắm sẽ làm thay đổi cách thương hiệu tiếp cận khách hàng. Khi phần mềm tự động chọn nhà hàng hay sản phẩm, người tiêu dùng có thể chỉ nhìn thấy một lựa chọn duy nhất do AI đưa ra thay vì một trang đầy các quảng cáo và thương hiệu.",
-    "ifIgnored": "Nếu tiếp tục tối ưu hóa theo mô hình trang kết quả tìm kiếm truyền thống mà bỏ qua khả năng hiển thị trên các công cụ trả lời tự động của AI, thương hiệu có nguy cơ biến mất hoàn toàn khi người tiêu dùng bắt đầu ủy quyền quyết định mua sắm cho trợ lý ảo.",
-    "actionChecklist": [
-      "Đánh giá lại mức độ hiện diện của thương hiệu trong các câu trả lời do AI tạo ra",
-      "Theo dõi sát sao các nền tảng tích hợp tính năng đặt chỗ và mua hàng tự động như Google và ChatGPT",
-      "Nghiên cứu hành vi tiêu dùng của nhóm thế hệ Millennials đối với các kênh mua sắm tự động hóa",
-      "Chuẩn bị chiến lược nội dung thân thiện với các thuật toán tóm tắt và đề xuất của trợ lý AI"
-    ],
-    "id": "real-2026-09-30-nghien-cuu-moi-ve-1b8422",
-    "publishedAt": "30/09/2026",
-    "sourceUrl": "https://ppc.land/40-of-americans-would-let-ai-agents-act-for-them-channel-v-media-finds/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/09/ai-agent-crane-picks-red-cloche-consumer-choice.jpg",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
-    "category": "AI Marketing",
-    "platformIcon": "Sparkles",
-    "title": "Apple iOS 27 chặn tên miền phân phối của The Trade Desk trên Safari và Amazon tự động hóa DSP",
-    "isHot": false,
-    "illustration": "data-signal",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Safari iOS 27",
-      "The Trade Desk",
-      "Amazon DSP",
-      "Quảng cáo Programmatic"
-    ],
-    "summary": "Bản cập nhật iOS 27 của Apple đã chặn trực tiếp tên miền phân phối quảng cáo adsrvr.org và tên miền định danh UIDAPI.com của The Trade Desk trên trình duyệt Safari. Cùng lúc đó, Amazon cải tổ toàn bộ nền tảng quảng cáo với tên gọi DVA, ẩn các thiết lập điều khiển thủ công và đẩy mạnh tự động hóa bằng AI.",
-    "keyNumbers": [
-      {
-        "value": "iOS 27",
-        "label": "Phiên bản hệ điều hành Apple chặn tên miền quảng cáo"
-      },
-      {
-        "value": "2",
-        "label": "Tên miền chính của The Trade Desk bị khóa trên Safari"
-      },
-      {
-        "value": "1.000",
-        "label": "Giới hạn đánh giá thu thập tối đa trong chiến dịch Request Reviews"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Apple chặn trực tiếp tên miền phân phối quảng cáo của The Trade Desk",
-        "body": "Apple phát hành bản cập nhật iOS 27 vào ngày 14/9/2026. Trong vòng một tuần sau đó, The Trade Desk không thể tiếp tục hiển thị quảng cáo trên Safari đối với người dùng thiết bị Apple bị ảnh hưởng. Hai tên miền bị chặn bao gồm adsrvr.org đảm nhận yêu cầu và phân phối quảng cáo, cùng UIDAPI.com phục vụ chương trình Unified ID 2.0. Phía Apple đã ghi nhận phản ánh trên GitHub và hứa sẽ tiến hành điều tra nguyên nhân."
-      },
-      {
-        "heading": "Hành vi chặn tên miền ảnh hưởng sâu rộng tới ngành quảng cáo",
-        "body": "Safari đã chặn cookie bên thứ ba từ nhiều năm trước, thúc đẩy ngành quảng cáo xây dựng các giải pháp định danh thay thế. Tuy nhiên, việc chặn luôn tên miền trực tiếp phân phối quảng cáo khiến mẫu quảng cáo không thể hiển thị và lượt xem không thể ghi nhận. Bên cạnh The Trade Desk, bốn nhà cung cấp khác cũng bị đưa vào danh sách chặn trong tháng 9/2026 gồm ID5, Audigent, LiveRamp và Permutive. Trong khi đó, hệ thống phân phối ad.doubleclick.net của Google vẫn hoạt động bình thường trên Safari."
-      },
-      {
-        "heading": "Amazon đổi tên Amazon DSP thành DVA và tích hợp trợ lý AI",
-        "body": "Tại sự kiện unBoxed diễn ra ngày 29/9/2026 ở San Francisco, Amazon công bố đổi tên Amazon DSP thành DVA nhằm đại diện cho ba mảng hiển thị, video và âm thanh. Nền tảng này gộp Amazon Ads console và DSP lại thành giao diện Amazon Ads Agent dựa trên AI đàm thoại. Hệ thống mới được định vị là do con người dẫn dắt và được AI hỗ trợ nhằm đơn giản hóa trải nghiệm thiết lập chiến dịch. Đây là bước thay đổi cấu trúc công cụ lớn nhất của Amazon kể từ khi mua lại Sizmek vào năm 2019."
-      },
-      {
-        "heading": "Chuyển dịch thiết lập thủ công sang chế độ tự động hóa DVA+",
-        "body": "Thiết lập chiến dịch mặc định trên hệ thống mới hiện là DVA+, bao gồm hai loại hình chạy bằng AI là Performance Plus và Brand Plus. Các tính năng điều chỉnh thủ công như nhắm mục tiêu, nguồn cung, tần suất và đặt giá thầu đã bị ẩn sau nút bật Advanced Settings. Ngoài ra, Amazon ra mắt sản phẩm Full-Funnel Campaigns cho phép gộp quảng cáo tìm kiếm, quảng cáo hiển thị và video vào một chiến dịch duy nhất. Nhà quảng cáo chỉ cần cung cấp sản phẩm, mẫu quảng cáo và ngân sách để thuật toán tự động tối ưu."
-      },
-      {
-        "heading": "Các định dạng tương tác đàm thoại mới và vấn đề minh bạch giá thầu",
-        "body": "Amazon cũng giới thiệu các định dạng quảng cáo mới như Branded Conversations và Sponsored Prompts phục vụ tương tác đàm thoại. Đối với sản phẩm dưới 1.000 đánh giá, định dạng Request Reviews for Sponsored Ads cho phép thu thập tối đa 1.000 đánh giá bổ sung cho mỗi chiến dịch. Tuy nhiên, Amazon từ chối cam kết công khai cách xác định giá thầu thắng cuộc trong các phiên đấu giá. Quyết định này diễn ra trong bối cảnh Amazon đối mặt với khiếu nại từ FTC và 22 tổng chưởng lý bang từ tháng 8/2026 liên quan đến các khoản phụ phí ẩn."
-      }
-    ],
-    "impact": "Các chiến dịch programmatic targeting trên Safari bị đứt gãy khả năng hiển thị quảng cáo và thu thập tín hiệu người dùng do tên miền phân phối bị chặn. Đồng thời, nhà quản lý ngân sách phải thích ứng với việc các nền tảng quảng cáo lớn như Amazon ẩn cài đặt thủ công để ép người dùng chuyển sang các chiến dịch AI tự động.",
-    "ifIgnored": "Doanh nghiệp sẽ tiếp tục tiêu tốn ngân sách programmatic vào các luồng hiển thị bị lỗi trên thiết bị iOS mà không hề hay biết, đồng thời mất dần quyền kiểm soát chi tiết về đối tượng và giá thầu khi các nền tảng tự động hóa hoàn toàn hệ thống mua quảng cáo.",
-    "actionChecklist": [
-      "Kiểm tra ngay tỷ lệ phân bổ ngân sách và hiệu suất phân phối trên trình duyệt Safari đối với các chiến dịch chạy qua The Trade Desk.",
-      "Rà soát các giải pháp định danh thay thế như ID5, LiveRamp và Permutive để đánh giá mức độ ảnh hưởng từ đợt chặn của Safari.",
-      "Cập nhật giao diện Amazon Ads mới và chủ động bật Advanced Settings để duy trì quyền kiểm soát nhắm mục tiêu và giá thầu thủ công.",
-      "Đánh giá lại cấu trúc chiến dịch trên Amazon trước khi thử nghiệm các định dạng tự động hóa DVA+ và Full-Funnel Campaigns."
-    ],
-    "id": "real-2026-09-30-apple-ios-27-chan-8b3c51",
-    "publishedAt": "30/09/2026",
-    "sourceUrl": "https://ppc.land/apples-ios-27-blocks-the-trade-desk-from-serving-ads-on-safari/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/09/ios-27-safari-blocks-trade-desk-ad-delivery.jpg",
-      "credit": "Ảnh: PPC Land"
     }
   },
   {
