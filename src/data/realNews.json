@@ -1,65 +1,186 @@
 [
   {
-    "category": "Meta Ads",
+    "category": "Google Ads & SEO",
     "platformIcon": "Search",
-    "title": "Pinterest công bố Báo cáo Xu hướng Làm đẹp với 23 từ khóa tăng trưởng trên 500%",
+    "title": "Apple thử nghiệm iOS 27.2 nhằm khắc phục sự cố chặn domain quảng cáo của The Trade Desk",
     "isHot": false,
     "illustration": "data-signal",
     "readTime": "4 phút đọc",
     "tags": [
-      "Pinterest Ads",
-      "Xu hướng làm đẹp",
-      "Dữ liệu tìm kiếm",
-      "Thương mại điện tử"
+      "Apple Safari",
+      "Quyền riêng tư iOS",
+      "The Trade Desk",
+      "Trusted Server"
     ],
-    "summary": "Pinterest vừa phát hành Báo cáo Xu hướng Làm đẹp đầu tiên với 11 chủ đề và 120 từ khóa tìm kiếm. Báo cáo ghi nhận mức tăng trưởng phần trăm cao nhưng không cung cấp thể tích tìm kiếm tuyệt đối hay khung thời gian cụ thể.",
+    "summary": "Apple đang yêu cầu The Trade Desk thử nghiệm bản iOS 27.2 beta để kiểm tra khả năng gỡ chặn domain quảng cáo adsrvr.org bị Safari gắn cờ. Việc Safari chặn domain ở cấp hệ điều hành đang thúc đẩy các nhà xuất bản chuyển hướng sang giải pháp Trusted Server của IAB Tech Lab nhằm bảo vệ luồng dữ liệu quảng cáo.",
     "keyNumbers": [
       {
-        "value": "120",
-        "label": "từ khóa tìm kiếm"
+        "value": "9",
+        "label": "domain định danh và quảng cáo bị Safari đưa vào danh sách chặn"
       },
       {
-        "value": "23",
-        "label": "từ khóa tăng trên 500%"
+        "value": "15 phút 22 giây",
+        "label": "thời gian cuộc trao đổi kỹ thuật công khai đầu tiên giữa Apple và The Trade Desk"
       },
       {
-        "value": "1.585%",
-        "label": "tăng trưởng cao nhất"
+        "value": "30,7 tỷ USD",
+        "label": "doanh thu kỷ lục mảng Dịch vụ của Apple trong quý kết thúc vào tháng 6"
       }
     ],
     "content": [
       {
-        "heading": "Tổng quan báo cáo xu hướng làm đẹp",
-        "body": "Pinterest công bố báo cáo gồm 11 chủ đề và 120 từ khóa tìm kiếm đi kèm tỷ lệ tăng trưởng. Dẫn đầu bảng xếp hạng là từ khóa 'polka dot cat eye nails' với mức tăng trưởng 1.585%. Báo cáo chỉ ra xu hướng tìm kiếm của người dùng đang chuyển dịch sang sự cụ thể và cá nhân hóa cao độ trong lĩnh vực làm đẹp."
+        "heading": "Apple âm thầm bổ sung cơ chế chặn domain ở cấp hệ điều hành",
+        "body": "Thông qua cập nhật WebKit pull request 58670 vào tháng 2, Apple đã thêm 11 dòng code vào file WebPrivacyHelpers.mm để chặn trực tiếp các request tới một số domain nhất định. Đoạn code này kiểm tra domain trước khi chạy quy trình tra cứu tracker thông thường của trình duyệt Safari. Báo cáo WebKit bug 324771 do phía The Trade Desk gửi ngày 21/9 xác định 9 domain bị ảnh hưởng. Trong đó có 8 domain thuộc các giải pháp định danh hậu cookie như UID2, ID5, LiveRamp, Permutive, Audigent và domain phân phối quảng cáo cốt lõi adsrvr.org."
       },
       {
-        "heading": "Phân tích dữ liệu tăng trưởng",
-        "body": "Theo số liệu tổng hợp, mức tăng trưởng trung vị trên toàn bộ 120 từ khóa đạt 145,5%, trong khi mức trung bình là 277,3%. Có 70 từ khóa đạt từ 100% trở lên và 3 từ khóa vượt mức 1.000%, tất cả đều thuộc nhóm làm móng chrome. Ngược lại, mức thấp nhất trong báo cáo là 21% thuộc về từ khóa 'scalp detox'."
+        "heading": "Cuộc đối thoại kỹ thuật bất ngờ giữa Apple và ngành quảng cáo",
+        "body": "Vào ngày 5/10 lúc 12:29:29 giờ Thái Bình Dương, kỹ sư John Wilander của Apple đã đề nghị The Trade Desk thử nghiệm bản iOS 27.2 beta vừa phát hành. Chỉ 15 phút 22 giây sau đó, đại diện The Trade Desk xác nhận ghi nhận thay đổi trong build 24B5099f và tiến hành kiểm tra. Đây là trao đổi hai chiều đầu tiên giữa Apple và đơn vị công nghệ quảng cáo về vấn đề danh sách chặn. Tài liệu báo cáo đính kèm một tệp ảnh 51.16 KB ghi nhận các request bị chặn trên trang tin yahoo.com ở chế độ duyệt web thông thường."
       },
       {
-        "heading": "Hạn chế về dữ liệu và phương pháp",
-        "body": "Báo cáo không cung cấp khối lượng tìm kiếm tuyệt đối, không nêu khung thời gian so sánh và không giới hạn thị trường cụ thể. Các tỷ lệ phần trăm chỉ phản ánh tốc độ thay đổi chứ không đo lường quy mô thị trường thực tế. Do đó, nhà quản lý khó phân biệt được đâu là xu hướng ngách và đâu là xu hướng đại chúng."
+        "heading": "Nhà xuất bản dịch chuyển sang kiến trúc Trusted Server",
+        "body": "Động thái chặn domain của Safari khiến các nhà xuất bản buộc phải xem xét lại giải pháp Trusted Server do IAB Tech Lab ra mắt từ tháng 3/2025. Trước đây, thiết bị người dùng phải gửi request trực tiếp tới hàng chục công ty adtech, khiến Safari dễ dàng nhận diện và ngăn chặn. Trusted Server chuyển toàn bộ luồng đấu giá và xử lý dữ liệu về máy chủ do nhà xuất bản quản lý, buộc trình duyệt chỉ giao tiếp trực tiếp với trang web. Nếu muốn can thiệp, Apple buộc phải chặn chính website đó, điều sẽ làm gián đoạn trải nghiệm của người dùng Safari."
       },
       {
-        "heading": "Tính năng Hướng dẫn Làm đẹp mới",
-        "body": "Điểm sản phẩm đáng chú ý trong báo cáo là tính năng Beauty Guides, cho phép người dùng nhấn nút nhận hướng dẫn chi tiết khi xem các Pin về tóc hoặc móng. Tuy nhiên, tính năng này hiện chỉ khả dụng cho người dùng iOS tại Mỹ và chưa tích hợp sản phẩm quảng cáo hay thương mại rõ ràng."
+        "heading": "Sự chênh lệch vị thế và đà tăng trưởng của hệ sinh thái Apple Ads",
+        "body": "Đơn vị truyền thông Paradium đã thử nghiệm chạy lại mã Permutive qua Trusted Server để khôi phục luồng dữ liệu nhóm độc giả trên Safari. Sự can thiệp ở cấp hệ điều hành tạo lợi thế lớn cho mảng kinh doanh quảng cáo của chính Apple khi hãng mở rộng vị trí hiển thị trên App Store và Maps với ưu đãi 15% credit chi tiêu. Mảng Dịch vụ chứa mảng quảng cáo của Apple đã đạt doanh thu kỷ lục 30,7 tỷ USD trong quý kết thúc vào tháng 6. Việc thắt chặt chính sách theo dõi trên iOS tiếp tục củng cố quyền kiểm soát của Apple đối với toàn bộ hệ sinh thái quảng cáo di động."
       }
     ],
-    "impact": "Trưởng phòng Marketing ngành làm đẹp cần lưu ý các dữ liệu xu hướng từ Pinterest mang tính định tính về sở thích người dùng nhưng thiếu quy mô tìm kiếm thực tế, nên cần kết hợp thêm dữ liệu nội địa trước khi phân bổ ngân sách.",
-    "ifIgnored": "Dễ chạy theo các từ khóa có tốc độ tăng trưởng phần trăm cao nhưng thực tế có lượng tìm kiếm quá nhỏ tại thị trường mục tiêu, gây lãng phí ngân sách thử nghiệm.",
+    "impact": "Các chiến dịch quảng cáo nhắm mục tiêu và đo lường dựa trên dữ liệu định danh bên thứ ba (UID2, ID5) trên thiết bị iOS sẽ tiếp tục bị sụt giảm tín hiệu nghiêm trọng. Trưởng phòng Marketing cần chủ động chuyển hướng sang các giải pháp thu thập dữ liệu qua máy chủ (Server-Side) để bảo vệ hiệu quả phân phối ngân sách.",
+    "ifIgnored": "Doanh nghiệp sẽ đối mặt với tình trạng báo cáo sai lệch tỷ lệ chuyển đổi từ người dùng iOS, chi phí tiếp cận khách hàng trên Safari tăng cao và các tệp đối tượng retargeting bị teo nhỏ mà không thể chẩn đoán nguyên nhân kỹ thuật.",
     "actionChecklist": [
-      "Kiểm tra lại danh sách từ khóa làm đẹp đang nhắm mục tiêu xem có trùng khớp với các chủ đề xu hướng của Pinterest hay không.",
-      "Thận trọng khi đánh giá các tỷ lệ tăng trưởng bằng phần trăm mà không có dữ liệu về lượng tìm kiếm cơ sở.",
-      "Theo dõi sát quá trình triển khai tính năng Beauty Guides để nắm bắt cơ hội khi nền tảng mở rộng sang các thị trường khác.",
-      "Kết hợp dữ liệu từ Pinterest với công cụ tìm kiếm và mạng xã hội khác để xác thực nhu cầu thực tế tại thị trường Việt Nam."
+      "Rà soát lại tỷ trọng traffic và lượng chuyển đổi phát sinh từ trình duyệt Safari/iOS trong các chiến dịch hiện tại.",
+      "Kiểm tra mức độ phụ thuộc của hệ thống dữ liệu khách hàng vào các giải pháp định danh bên thứ ba.",
+      "Làm việc với đội ngũ kỹ thuật để đánh giá khả năng triển khai Server-Side Tagging hoặc Conversions API.",
+      "Cấu hình lại các mô hình attribution để giảm bớt sự phụ thuộc vào dữ liệu tracking theo thời gian thực trên thiết bị di động."
     ],
-    "id": "real-2026-10-06-pinterest-cong-bo-bao-8509d8",
-    "publishedAt": "06/10/2026",
-    "sourceUrl": "https://ppc.land/pinterest-beauty-report-23-of-120-searches-gain-500-or-more/",
+    "id": "real-2026-10-08-apple-thu-nghiem-ios-ef94f3",
+    "publishedAt": "08/10/2026",
+    "sourceUrl": "https://ppc.land/apple-asks-the-trade-desk-to-test-an-ios-27-2-build-that-may-unblock-ads/",
     "source": "PPC Land",
     "image": {
-      "url": "https://ppc.land/content/images/2026/10/pinterest-beauty-trend-report-1585-percent-nail-skyscraper-shadow-no-baseline.jpg",
+      "url": "https://ppc.land/content/images/size/w1200/2026/10/apple-safari-blocklist-trade-desk-adsrvr-ios-27-2-ad-tech-blockade.jpg",
       "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Thuật toán tìm kiếm AI ưu tiên các thương hiệu tích cực hoạt động trên mạng xã hội",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "3 phút đọc",
+    "tags": [
+      "SEO AI",
+      "Mạng xã hội",
+      "Google AI Overviews",
+      "Tối ưu hóa AI"
+    ],
+    "summary": "Nghiên cứu mới từ SE Ranking cho thấy việc duy trì sự hiện diện tích cực trên mạng xã hội giúp thương hiệu tăng mạnh khả năng hiển thị trong kết quả tìm kiếm của AI. Các chatbot và công cụ tìm kiếm AI như Google AI Overviews hay ChatGPT đang thường xuyên trích dẫn nguồn từ các nền tảng mạng xã hội lớn.",
+    "keyNumbers": [
+      {
+        "value": "67,66%",
+        "label": "Tỷ lệ liên kết mạng xã hội xuất hiện trong Google AI Overviews"
+      },
+      {
+        "value": "48,58%",
+        "label": "Tỷ lệ trích dẫn mạng xã hội trong các truy vấn không chứa tên thương hiệu"
+      },
+      {
+        "value": "86,4%",
+        "label": "Mức sụt giảm lượng trích dẫn Reddit trên ChatGPT chỉ trong 4 ngày"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Mối liên kết chặt chẽ giữa AI Search và Mạng xã hội",
+        "body": "Nghiên cứu từ SE Ranking trên 100.000 từ khóa thuộc nhiều lĩnh vực cho thấy các công cụ tìm kiếm AI đang phụ thuộc lớn vào dữ liệu mạng xã hội. Cụ thể, các liên kết mạng xã hội xuất hiện trong 67,66% câu trả lời của Google AI Overviews và 32,39% phản hồi của Google AI Mode. Ngược lại, ChatGPT chỉ trích dẫn các nguồn này trong 8,4% câu trả lời của mình. Điều này chứng minh việc duy trì hoạt động trên mạng xã hội trực tiếp ảnh hưởng đến cách thương hiệu hiển thị trước người dùng công cụ AI."
+      },
+      {
+        "heading": "Sự khác biệt về nguồn trích dẫn giữa các nền tảng AI",
+        "body": "Mỗi công cụ AI lại có xu hướng ưu tiên các nguồn dữ liệu mạng xã hội khác nhau để đưa vào câu trả lời. YouTube, nền tảng thuộc sở hữu của Google, là nguồn được trích dẫn phổ biến nhất trong các câu trả lời Google AI Overviews. Trong khi đó, Reddit và LinkedIn lại là những nền tảng mạng xã hội hàng đầu được ChatGPT tham chiếu nhiều nhất. Tuy nhiên, tỷ lệ trích dẫn Reddit, LinkedIn và Facebook trên ChatGPT vẫn ở mức dưới 1% cho các truy vấn thông thường."
+      },
+      {
+        "heading": "Tính biến động cao và các thỏa thuận dữ liệu thương mại",
+        "body": "Khả năng hiển thị trên các chatbot AI có thể thay đổi rất nhanh và mang tính biến động cao. Điển hình là vào tháng 8, lượng trích dẫn Reddit trên ChatGPT đã đột ngột giảm tới 86,4% chỉ trong vòng 4 ngày mà không rõ lý do. Ngược lại, nhờ thỏa thuận chia sẻ dữ liệu thương mại đang có hiệu lực giữa Google và Reddit, lượng trích dẫn từ nền tảng này trên Google AI vẫn duy trì ổn định. Sự khác biệt này buộc các thương hiệu phải đa dạng hóa kênh thay vì phụ thuộc vào một nền tảng duy nhất."
+      },
+      {
+        "heading": "Cơ hội lớn từ các truy vấn không chứa tên thương hiệu",
+        "body": "Nghiên cứu cũng chỉ ra rằng các nguồn mạng xã hội được trích dẫn trong 39,34% câu trả lời cho truy vấn có thương hiệu. Đối với các truy vấn không chứa tên thương hiệu, tỷ lệ trích dẫn này lên tới 48,58%. Facebook, YouTube và Reddit là những nguồn được trích dẫn nhiều nhất trong các trường hợp tìm kiếm này. Điều này mở ra cơ hội lớn cho doanh nghiệp tiếp cận khách hàng mới đang trong giai đoạn tìm hiểu sản phẩm thông qua nội dung mạng xã hội."
+      }
+    ],
+    "impact": "Thay đổi hoàn toàn tư duy làm SEO truyền thống. Trưởng phòng Marketing không thể chỉ tối ưu hóa website (On-page/Off-page) mà bắt buộc phải tích hợp chiến lược Social Media vào SEO (gọi là GEO - Generative Engine Optimization). Nếu bỏ bê mạng xã hội, thương hiệu sẽ biến mất hoàn toàn khỏi các kết quả tìm kiếm do AI tổng hợp, vốn đang dần thay thế trang kết quả tìm kiếm truyền thống.",
+    "ifIgnored": "Doanh nghiệp sẽ mất đi lượng truy cập tự nhiên khổng lồ khi Google chuyển dịch sang AI Overviews. Chi phí quảng cáo (CAC) sẽ tăng cao do phải bù đắp khoảng trống hiển thị tự nhiên bị mất vào tay các đối thủ tích cực làm nội dung trên YouTube, Facebook và các diễn đàn.",
+    "actionChecklist": [
+      "Đẩy mạnh sản xuất nội dung video trên YouTube vì đây là nguồn được Google AI Overviews ưu tiên trích dẫn nhiều nhất.",
+      "Xây dựng sự hiện diện và tham gia thảo luận tích cực trên các diễn đàn lớn để đón đầu nguồn trích dẫn của Google AI.",
+      "Tối ưu hóa nội dung trên LinkedIn và Facebook bằng cách sử dụng các từ khóa tự nhiên mà người dùng thường hỏi chatbot AI.",
+      "Theo dõi định kỳ tần suất thương hiệu được trích dẫn bởi Google AI Overviews và ChatGPT để đánh giá hiệu quả của chiến dịch GEO."
+    ],
+    "id": "real-2026-10-07-thuat-toan-tim-kiem-3bb493",
+    "publishedAt": "07/10/2026",
+    "sourceUrl": "https://www.socialmediatoday.com/news/ai-favors-brands-with-an-active-social-media-presence/832450/",
+    "source": "Social Media Today",
+    "image": {
+      "url": "https://imgproxy.divecdn.com/shtpdKEwEjQivoGG4_ZoaMBtyGez09_QxAioA8HgTJY/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9zZV9yYW5raW5nMS5wbmc=.webp",
+      "credit": "Ảnh: Social Media Today"
+    }
+  },
+  {
+    "category": "Meta Ads",
+    "platformIcon": "Facebook",
+    "title": "Instagram bổ sung bộ công cụ chỉnh sửa carousel chuyên sâu trên ứng dụng Edits",
+    "isHot": false,
+    "illustration": "creative-fatigue",
+    "readTime": "3 phút đọc",
+    "tags": [
+      "Instagram Carousel",
+      "Sáng tạo nội dung",
+      "Tương tác mạng xã hội"
+    ],
+    "summary": "Instagram vừa tích hợp các công cụ thiết kế chuyên sâu vào ứng dụng Edits, cho phép người dùng tối ưu hóa định dạng bài đăng carousel (ảnh xoay vòng). Bản cập nhật cung cấp hàng loạt tính năng từ tùy chỉnh font chữ, nhãn dán tự thiết kế đến hiệu ứng chuyển cảnh nhằm giữ chân người dùng lâu hơn. Đây là nỗ lực thúc đẩy định dạng carousel vốn có hiệu suất tương tác vượt trội hơn hẳn bài đăng đơn thông thường.",
+    "keyNumbers": [
+      {
+        "value": "12%",
+        "label": "Tỷ lệ tương tác trung bình cao hơn của bài đăng carousel so với bài đăng đơn"
+      },
+      {
+        "value": "2",
+        "label": "Vị trí slide được Instagram tự động hiển thị lại khi người dùng quay lại ứng dụng"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Đưa công cụ chỉnh sửa video chuyên nghiệp sang định dạng carousel",
+        "body": "Ứng dụng Edits của Instagram vốn tập trung vào dựng video nay đã được mở rộng để hỗ trợ thiết kế carousel. Người dùng có thể kéo thả hình ảnh và video vào các bố cục có sẵn, áp dụng các kiểu chữ độc quyền và tự cắt nhãn dán từ ảnh cá nhân. Sự kết hợp này giúp các chuỗi ảnh xoay vòng trở nên bắt mắt và giữ chân người dùng cuộn trang lâu hơn. Hiện tại, tính năng này đã khả dụng trên hệ điều hành iOS và sẽ sớm có mặt trên Android."
+      },
+      {
+        "heading": "Cơ chế hiển thị lặp lại độc đáo của Instagram",
+        "body": "Định dạng carousel sở hữu lợi thế hiển thị đặc biệt trên bảng tin của người dùng. Khi một người theo dõi lướt qua bài đăng mà không tương tác, Instagram sẽ tự động hiển thị lại bài đăng đó lần thứ hai nhưng bắt đầu từ slide thứ hai khi họ mở lại ứng dụng. Cơ chế này giúp tăng gấp đôi cơ hội tiếp cận tự nhiên mà không tốn thêm chi phí quảng cáo. Việc tối ưu hóa hình ảnh ở các slide sau do đó trở nên quan trọng không kém slide đầu tiên."
+      },
+      {
+        "heading": "Hiệu quả tương tác vượt trội được chứng minh",
+        "body": "Theo nghiên cứu từ Buffer, các bài đăng carousel mang lại tỷ lệ tương tác trung bình cao hơn 12% so với các bài đăng chỉ có một hình ảnh duy nhất. Người đứng đầu Instagram, Adam Mosseri, cũng từng khẳng định định dạng này giúp tăng thời gian dừng lại trên dòng thời gian, từ đó cải thiện thuật toán phân phối để đạt phạm vi tiếp cận lớn hơn. Trước đó, Instagram cũng đã bổ sung tính năng sắp xếp lại thứ tự ảnh sau khi đăng và thêm chú thích riêng cho từng slide."
+      },
+      {
+        "heading": "Tối ưu hóa trải nghiệm người dùng trên từng slide",
+        "body": "Việc bổ sung công cụ chỉnh sửa mới giúp các thương hiệu dễ dàng cá nhân hóa thông điệp trên từng slide. Instagram trước đó đã cho phép người dùng thay đổi thứ tự các slide và thêm chú thích riêng biệt cho từng hình ảnh trong chuỗi carousel. Những cải tiến liên tục này cho thấy nền tảng đang định hình carousel thành một định dạng kể chuyện chuyên sâu. Đội ngũ marketing cần tận dụng tối đa các công cụ này để tạo ra một hành trình trải nghiệm liền mạch cho khách hàng."
+      }
+    ],
+    "impact": "Giúp Trưởng phòng Marketing tối ưu hóa chi phí sản xuất nội dung organic và nâng cao hiệu suất quảng cáo nhờ định dạng carousel có tương tác cao hơn. Tận dụng được cơ chế hiển thị lại slide thứ hai để tăng tần suất tiếp cận tự nhiên mà không tốn thêm ngân sách.",
+    "ifIgnored": "Bỏ lỡ cơ hội gia tăng 12% tương tác tự nhiên và tiếp tục lãng phí ngân sách vào các bài đăng đơn lẻ có tỷ lệ chuyển đổi thấp hơn trên Instagram.",
+    "actionChecklist": [
+      "Yêu cầu đội ngũ thiết kế tải ứng dụng Edits trên iOS để thử nghiệm các font chữ và hiệu ứng cắt sticker mới cho chiến dịch sắp tới.",
+      "Thiết kế slide thứ hai của các bài đăng carousel như một điểm nhấn thu hút thứ hai để tận dụng thuật toán hiển thị lại của Instagram.",
+      "Thử nghiệm chuyển đổi các bài đăng đơn có hiệu suất tốt trước đây thành định dạng carousel nhiều slide để đánh giá mức độ tăng trưởng tương tác.",
+      "Cập nhật quy trình sản xuất nội dung, ưu tiên định dạng carousel cho các bài viết chia sẻ kiến thức hoặc giới thiệu sản phẩm chi tiết."
+    ],
+    "id": "real-2026-10-07-instagram-bo-sung-bo-e7ef64",
+    "publishedAt": "07/10/2026",
+    "sourceUrl": "https://www.socialmediatoday.com/news/edits-gets-carousel-editing-tools/832448/",
+    "source": "Social Media Today",
+    "image": {
+      "url": "https://imgproxy.divecdn.com/j3NzHu0ORsqD5EiKJZv6sBHfH96_O3qDtjZbrWGw3IY/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9pZ19jYXJvdXNlbF9lZGl0aW5nLnBuZw==.webp",
+      "credit": "Ảnh: Social Media Today"
     }
   },
   {
@@ -553,128 +674,6 @@
     "image": {
       "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/10/google-factcheck-featured-1600x840-1.jpg",
       "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Chương trình thử nghiệm chia sẻ doanh thu AI của Google chỉ trả dưới 0,1% doanh thu quảng cáo cho nhiều website",
-    "isHot": false,
-    "illustration": "zero-click",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Google SEO",
-      "AI Search",
-      "AI Overviews",
-      "Doanh thu AI"
-    ],
-    "summary": "Google đang thử nghiệm chi trả cho khoảng 100 nhà xuất bản nội dung khi dữ liệu của họ xuất hiện trong các phản hồi AI như Gemini và AI Overviews. Tuy nhiên, mức thù lao có sự chênh lệch rất lớn và nhiều website quy mô vừa và nhỏ chỉ nhận được khoản tiền tương đương dưới 0,1% doanh thu quảng cáo. Bên cạnh đó, công thức tính toán mức đóng góp nội dung của Google vẫn chưa được công khai rõ ràng.",
-    "keyNumbers": [
-      {
-        "value": "< 0,1%",
-        "label": "Tỷ lệ thù lao AI so với doanh thu quảng cáo của các site vừa và nhỏ"
-      },
-      {
-        "value": "100",
-        "label": "Số lượng nhà xuất bản kỹ thuật số tham gia đợt thử nghiệm"
-      },
-      {
-        "value": "> 1 triệu USD",
-        "label": "Mức chi trả hằng năm cao nhất cho một đơn vị tham gia sớm"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Chênh lệch thu nhập cực lớn giữa các website tham gia",
-        "body": "Báo cáo mới nhất cho biết Google đang trả tiền cho khoảng 100 nhà xuất bản kỹ thuật số trong chương trình thử nghiệm đóng góp nội dung cho AI. Mức thù lao giữa các đơn vị chênh lệch rất xa khi một số trang web nhỏ kiếm được chưa đến 1.000 USD sau nhiều tháng. Ngược lại, một đơn vị tham gia sớm có thể thu về hơn 1 triệu USD mỗi năm. Đối với các website quy mô vừa và nhỏ, khoản thanh toán này chỉ chiếm chưa đầy 0,1% tổng doanh thu quảng cáo của họ."
-      },
-      {
-        "heading": "Công thức tính toán tiền thù lao của Google chưa rõ ràng",
-        "body": "Nhiều nhà xuất bản tham gia thử nghiệm phản ánh rằng họ không thể biết chính xác Google căn cứ vào đâu để tính toán số tiền chi trả. Khoản thu nhập hiển thị trong Search Console có thể thay đổi liên tục qua từng tháng mà không đi kèm giải thích cụ thể. Google nêu trong tài liệu hướng dẫn rằng nội dung chỉ được tính tiền khi đóng góp đáng kể vào câu trả lời AI trên Gemini, AI Overviews hoặc AI Mode. Tuy nhiên, tiêu chuẩn thế nào là đóng góp đáng kể vẫn chưa được định nghĩa chi tiết."
-      },
-      {
-        "heading": "Chủ đề ngách có cơ hội nhận tiền bồi thường cao hơn",
-        "body": "Một số nhà xuất bản cho biết các nội dung thuộc chủ đề thu hút lượng tương tác cao nhưng ít người bao phủ có xu hướng nhận được mức thù lao tốt hơn. Những lĩnh vực như game hoặc phim hoạt hình anime là ví dụ điển hình cho xu hướng này. Một đơn vị mới tham gia chương trình vài tháng trước đã thu về khoảng 50.000 USD đến 60.000 USD. Mặc dù vậy, đại diện đơn vị này nhận định con số trên vẫn chưa đóng góp đáng kể vào tổng quy mô kinh doanh của doanh nghiệp."
-      },
-      {
-        "heading": "Các nhà xuất bản lớn vẫn ngần ngại chưa gia nhập",
-        "body": "Mức chi trả khiêm tốn khiến nhiều đơn vị xuất bản lớn quyết định đứng ngoài chương trình thử nghiệm. Họ tiếp tục đàm phán nhằm tạo áp lực buộc Google và các công ty công nghệ phải trả chi phí cao hơn cho dữ liệu đào tạo AI. Trước đó, đại diện một số doanh nghiệp truyền thông nhận xét mức thù lao Google đưa ra là quá thấp để họ chấp nhận tham gia. Hiện tại Google xác định chương trình vẫn ở giai đoạn đầu và chưa công bố lộ trình mở rộng cụ thể."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing không thể trông chờ vào nguồn tiền đền bù từ Google để bù đắp cho lượng truy cập tự nhiên sụt giảm do tính năng tìm kiếm AI. Doanh nghiệp cần lập tức định hình lại chiến lược SEO, chuyển trọng tâm từ việc kéo lượt nhấp chuột đơn thuần sang tối ưu hóa sự hiện diện thương hiệu ngay trong câu trả lời tổng hợp của các mô hình AI.",
-    "ifIgnored": "Doanh nghiệp sẽ tiếp tục tiêu tốn ngân sách cho chiến lược SEO truyền thống trong khi lượng truy cập tự nhiên ngày càng suy giảm. Việc phụ thuộc vào nguồn thu quảng cáo cũ hoặc ảo tưởng về khoản tiền bồi thường từ nền tảng sẽ làm giảm năng lực cạnh tranh và ảnh hưởng trực tiếp đến dòng tiền tiếp thị.",
-    "actionChecklist": [
-      "Rà soát danh mục nội dung SEO và ưu tiên sản xuất các chủ đề ngách chuyên sâu để tăng khả năng xuất hiện trong câu trả lời AI.",
-      "Theo dõi thường xuyên các chỉ số về hiển thị thương hiệu và lưu lượng truy cập từ các nền tảng AI trong công cụ quản trị.",
-      "Điều chỉnh mô hình dự báo doanh thu từ kênh SEO nhằm chuẩn bị sẵn kịch bản cho việc tỷ lệ nhấp chuột giảm.",
-      "Xây dựng các kênh kéo lưu lượng truy cập trực tiếp như bản tin email hay cộng đồng để giảm phụ thuộc vào thuật toán tìm kiếm."
-    ],
-    "id": "real-2026-10-01-chuong-trinh-thu-nghiem-4e93fc",
-    "publishedAt": "01/10/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/google-ai-pilot-pays-some-sites-under-0-1-of-ad-revenue/591717/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/09/google-ai-pilot-featured-1600x840-1.jpg",
-      "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
-    "category": "TikTok Shop & Ads",
-    "platformIcon": "Video",
-    "title": "TikTok chia cấp huy hiệu đối tác đại lý thành hai hạng chứng nhận chuyên môn",
-    "isHot": false,
-    "illustration": "account-security",
-    "readTime": "3 phút đọc",
-    "tags": [
-      "TikTok Ads",
-      "Agency Partner",
-      "Huy hiệu đại lý",
-      "Đối tác TikTok"
-    ],
-    "summary": "TikTok vừa cập nhật chương trình đối tác đại lý bằng việc chia các đối tác thành hai cấp độ huy hiệu riêng biệt nhằm phản ánh chính xác năng lực và kinh nghiệm chạy quảng cáo. Hệ thống phân cấp mới này giúp các nhà tiếp thị dễ dàng đánh giá và lựa chọn đúng đại lý phù hợp cho từng quy mô chiến dịch.",
-    "keyNumbers": [
-      {
-        "value": "2020",
-        "label": "Năm ra mắt chương trình đối tác đại lý TikTok"
-      },
-      {
-        "value": "600",
-        "label": "Đối tác được phê duyệt trên nhiều lĩnh vực"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Cấu trúc phân cấp huy hiệu đối tác mới",
-        "body": "TikTok đã chính thức công bố cập nhật cho chương trình đối tác nhằm làm nổi bật chuyên môn trên nền tảng của các đại lý. Theo cấu trúc mới, các đối tác sẽ nhận được huy hiệu Agency Partner hoặc Premier Agency Partner. Mỗi danh hiệu được thiết kế để đại diện cho độ sâu kinh nghiệm và mức độ am hiểu thực tế về quảng cáo TikTok của tổ chức đó. Cập nhật này mang lại cái nhìn minh bạch hơn cho các nhà tiếp thị khi lựa chọn đơn vị tư vấn."
-      },
-      {
-        "heading": "Tiêu chuẩn cho từng hạng chứng nhận",
-        "body": "Huy hiệu Agency Partner là dấu ấn thể hiện sự xuất sắc về vận hành, được trao cho các đại lý đáp ứng yêu cầu về hiệu suất và có đội ngũ chuyên gia chứng minh được năng lực. Trong khi đó, danh hiệu Premier Agency Partner là danh hiệu độc quyền chỉ dành cho một nhóm nhỏ các đối tác có hiệu suất hàng đầu trên toàn cầu. Hạng Premier ghi nhận các đơn vị liên tục tạo ra kết quả kinh doanh thực tế và cam kết mạnh mẽ với chiến lược tiếp thị ưu tiên TikTok. Cả hai chứng nhận đều cung cấp mức độ đảm bảo rằng đại lý đã đáp ứng các tiêu chuẩn của nền tảng."
-      },
-      {
-        "heading": "Đảm bảo sự an tâm cho các thương hiệu",
-        "body": "Sự phân chia này giúp các thương hiệu vận hành chiến dịch với sự tự tin cao hơn khi biết rõ năng lực của đơn vị hợp tác. Doanh nghiệp có thể chọn huy hiệu Agency Partner để khởi chạy và mở rộng các chiến dịch hiệu suất thông thường. Ngược lại, các thương hiệu có thể kết hợp với Premier Agency Partner khi thực hiện các chiến dịch chuyên biệt quy mô lớn. Việc sử dụng các chuyên gia đã qua kiểm duyệt giúp tối ưu hóa hiệu quả đầu tư tiếp thị."
-      },
-      {
-        "heading": "Quy mô mạng lưới đối tác của TikTok",
-        "body": "Được ra mắt từ năm 2020, chương trình đối tác đại lý của TikTok đã mở rộng đáng kể để hỗ trợ nhu cầu của các nhà tiếp thị. Hiện tại, chương trình kết nối doanh nghiệp với hơn 600 đối tác được phê duyệt trên nhiều lĩnh vực khác nhau. Các lĩnh vực này bao gồm sáng tạo nội dung, công nghệ tiếp thị và đo lường hiệu quả. Hệ thống huy hiệu mới sẽ tiếp tục củng cố chất lượng cho mạng lưới đối tác này."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing có cơ sở rõ ràng để thẩm định và lựa chọn agency thuê ngoài, phân biệt được đơn vị chạy ads thông thường với các đại lý chiến lược cho ngân sách lớn.",
-    "ifIgnored": "Dễ chọn sai đại lý không đủ năng lực vận hành, dẫn đến lãng phí ngân sách thử nghiệm và không đạt được hiệu quả tiếp thị cam kết trên TikTok.",
-    "actionChecklist": [
-      "Yêu cầu các agency đang hợp tác cung cấp minh chứng về hạng huy hiệu TikTok hiện tại.",
-      "Rà soát lại danh sách agency pitching để ưu tiên các đơn vị có chứng nhận chính thức từ TikTok.",
-      "Phân bổ chiến dịch quy mô lớn cho các agency đạt cấp Premier Agency Partner.",
-      "Sử dụng mạng lưới hơn 600 đối tác của TikTok để tìm kiếm các giải pháp về sáng tạo và đo lường."
-    ],
-    "id": "real-2026-09-29-tiktok-chia-cap-huy-1b7296",
-    "publishedAt": "29/09/2026",
-    "sourceUrl": "https://www.socialmediatoday.com/news/tiktok-adds-certification-tiers-for-agency-partners/831719/",
-    "source": "Social Media Today",
-    "image": {
-      "url": "https://imgproxy.divecdn.com/Z5PHA3Fts_5ZFHe_zTBZT_Jgyxoj-CZ9fuWeQ75WHdY/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS90aWt0b2tfcGFydG5lcl9iYWRnZXMucG5n.webp",
-      "credit": "Ảnh: Social Media Today"
     }
   },
   {
