@@ -2,6 +2,191 @@
   {
     "category": "Google Ads & SEO",
     "platformIcon": "Search",
+    "title": "Google hoàn tất cập nhật spam kéo dài 13 ngày và làn sóng phạt thủ công tăng mạnh",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Google Search",
+      "Cập nhật thuật toán",
+      "SEO",
+      "Phạt thủ công"
+    ],
+    "summary": "Google vừa hoàn tất bản cập nhật chống spam tháng 9/2026 sau gần 14 ngày càn quét trên quy mô toàn cầu. Đáng chú ý, cộng đồng SEO ghi nhận làn sóng phạt thủ công tăng đột biến, khiến nhiều website doanh nghiệp mất đến 90% lưu lượng truy cập chỉ sau một đêm.",
+    "keyNumbers": [
+      {
+        "value": "13 ngày 16 giờ",
+        "label": "Thời gian chạy cập nhật spam"
+      },
+      {
+        "value": "90%",
+        "label": "Lưu lượng truy cập bị sụt giảm ở một số website bị phạt"
+      },
+      {
+        "value": "14",
+        "label": "Loại hình phạt thủ công được ghi nhận"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Bản cập nhật chống spam dài nhất trong hơn một năm",
+        "body": "Bản cập nhật spam tháng 9/2026 của Google chính thức khép lại vào ngày 8/10/2026 sau 13 ngày 16 giờ vận hành liên tục. Đây là đợt cập nhật có thời gian chạy dài thứ sáu trong lịch sử của Google kể từ năm 2021 và dài gấp 7 lần mức thông thường. Google xác nhận đợt cập nhật này áp dụng trên toàn cầu cho tất cả ngôn ngữ nhưng không công bố chính sách cụ thể nào bị nhắm mục tiêu."
+      },
+      {
+        "heading": "Làn sóng phạt thủ công tăng đột biến",
+        "body": "Song song với cập nhật thuật toán tự động, các chuyên gia ghi nhận số lượng án phạt thủ công từ nhân viên Google tăng mạnh trong vài tuần qua. Các hành vi bị phạt nặng nhất bao gồm lạm dụng nội dung quy mô lớn, nội dung mỏng và spam thuần túy. Nhiều doanh nghiệp lâu năm sử dụng AI để sản xuất nội dung hàng loạt nhằm cắt giảm ngân sách SEO đã phải gánh chịu hậu quả nặng nề."
+      },
+      {
+        "heading": "Mối nguy kép: Mất cả SEO lẫn quảng cáo Google Ads",
+        "body": "Điểm cốt lõi các nhà quản lý cần lưu ý là mối liên kết chặt chẽ giữa SEO và Google Ads. Theo chính sách áp dụng từ ngày 23/12/2024, hệ thống sẽ tự động từ chối các quảng cáo dẫn về những website đang bị áp dụng hình phạt thủ công trên Search. Ngược lại, nếu website chỉ bị sụt giảm thứ hạng do thuật toán tự động, quảng cáo Google Ads vẫn sẽ hoạt động bình thường."
+      },
+      {
+        "heading": "Thời gian phục hồi kéo dài nhiều tháng",
+        "body": "Google nhấn mạnh rằng việc khôi phục thứ hạng sau khi bị ảnh hưởng bởi thuật toán chống spam có thể mất nhiều tháng. Đối với hình phạt thủ công, doanh nghiệp buộc phải khắc phục triệt để lỗi vi phạm và gửi yêu cầu xem xét lại thông qua Search Console. Việc lạm dụng AI tạo sinh để lách luật đang bị hệ thống SpamBrain quét gắt gao hơn bao gồm cả trên tính năng AI Overviews."
+      }
+    ],
+    "impact": "Ảnh hưởng trực tiếp đến hiệu quả chi phí marketing khi website bị phạt thủ công sẽ bị khóa luôn quảng cáo Google Ads, gây đứt gãy dòng khách hàng và lãng phí ngân sách chiến dịch.",
+    "ifIgnored": "Doanh nghiệp có thể mất trắng hơn 90% lượng truy cập tự nhiên chỉ sau một đêm, đồng thời bị vô hiệu hóa toàn bộ chiến dịch Google Ads đang chạy mà không rõ nguyên nhân nếu không theo dõi sát Search Console.",
+    "actionChecklist": [
+      "Kiểm tra ngay mục Manual Actions trong Google Search Console của tất cả website doanh nghiệp đang quản lý.",
+      "Rà soát và dừng ngay việc sử dụng AI tạo sinh để sản xuất nội dung hàng loạt, kém chất lượng nhằm mục đích thao túng SEO.",
+      "Kiểm tra trạng thái phê duyệt của các chiến dịch Google Ads để đảm bảo không có quảng cáo nào bị từ chối do lỗi trang đích bị phạt.",
+      "Chuẩn bị sẵn phương án phân bổ ngân sách sang các kênh dự phòng như Meta Ads hoặc TikTok Ads nếu kênh tìm kiếm tự nhiên bị biến động mạnh."
+    ],
+    "id": "real-2026-10-09-google-hoan-tat-cap-d4283c",
+    "publishedAt": "09/10/2026",
+    "sourceUrl": "https://ppc.land/googles-september-spam-update-ends-after-13-days-as-manual-actions-rise/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/size/w1200/2026/10/google-september-2026-spam-update-13-days-stopwatch-no-policy-named.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Bản cập nhật Jetpack 16.3 tối ưu hóa Form chuyển đổi và tích hợp lịch hẹn Zoom trực tiếp trên WordPress",
+    "isHot": false,
+    "illustration": "crm-automation",
+    "readTime": "3 phút đọc",
+    "tags": [
+      "WordPress",
+      "Tối ưu tỷ lệ chuyển đổi",
+      "Jetpack 16.3",
+      "Biểu mẫu thông minh"
+    ],
+    "summary": "Bản cập nhật Jetpack 16.3 mang đến những cải tiến quan trọng cho các website WordPress, nổi bật là tính năng logic điều kiện cho biểu mẫu thu thập thông tin và tích hợp đặt lịch Zoom trực tiếp. Bản nâng cấp này giúp các nhà tiếp thị tối ưu hóa trải nghiệm người dùng, tăng tỷ lệ chuyển đổi lead mà không cần cài đặt thêm nhiều plugin bên thứ ba gây nặng trang.",
+    "keyNumbers": [
+      {
+        "value": "16.3",
+        "label": "Phiên bản cập nhật mới nhất của plugin Jetpack"
+      },
+      {
+        "value": "3",
+        "label": "Khối chức năng mới được thêm vào bao gồm danh sách phát video và lịch hẹn Zoom"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Tích hợp logic điều kiện vào biểu mẫu thu thập thông tin",
+        "body": "Jetpack 16.3 bổ sung tính năng logic điều kiện cho khối biểu mẫu. Tính năng này cho phép tùy biến câu hỏi hiển thị dựa trên câu trả lời trước đó của khách truy cập, giúp thu thập thông tin chính xác và cá nhân hóa hơn. Ngoài ra, hệ thống quản lý phản hồi được cải tiến giúp kiểm soát thư rác hiệu quả và ngăn chặn việc vô tình xóa dữ liệu quan trọng của khách hàng."
+      },
+      {
+        "heading": "Đặt lịch hẹn Zoom trực tiếp không cần rời trang",
+        "body": "Khối chức năng mới Zoom Scheduler Block cho phép tích hợp trực tiếp lịch hẹn vào các bài viết hoặc trang đích trên WordPress. Khách truy cập có thể thực hiện đăng ký và đặt lịch họp Zoom ngay trên website của doanh nghiệp mà không cần chuyển hướng sang ứng dụng khác. Đây là cải tiến lớn giúp giảm thiểu tỷ lệ thoát trang và tối ưu hóa phễu chuyển đổi cho các dịch vụ tư vấn hoặc B2B."
+      },
+      {
+        "heading": "Tự động hóa danh sách phát video với VideoPress",
+        "body": "Bản cập nhật giới thiệu hai khối mới là Latest Videos Playlist và All Playlists giúp tự động cập nhật các video mới nhất từ VideoPress vào nội dung trang mà không cần thao tác thủ công. Trình phát video cũng được tối ưu hóa tốc độ tải trang và bổ sung các tính năng hỗ trợ người dùng khiếm thị hoặc mù màu. Điều này giúp cải thiện đáng kể trải nghiệm xem video trực quan và giữ chân khách hàng lâu hơn trên trang."
+      },
+      {
+        "heading": "Cải thiện kết nối hệ thống và bảo mật dữ liệu",
+        "body": "Jetpack 16.3 tối ưu hóa kết nối nền tảng giữa website tự host và dịch vụ đám mây của WordPress.com, giảm thiểu các cảnh báo lỗi kết nối giả lập trong phần Site Health. Về mặt bảo mật, bản cập nhật vá các lỗ hổng liên quan đến xử lý tham số yêu cầu trong tính năng cuộn vô hạn, cải thiện xác minh đăng nhập trong Account Protection và xác thực các thuộc tính khối được lưu trữ."
+      }
+    ],
+    "impact": "Giúp Trưởng phòng Marketing nâng cấp ngay lập tức khả năng thu thập lead chất lượng cao thông qua form thông minh và rút ngắn phễu đặt lịch hẹn tư vấn ngay trên website mà không tốn chi phí mua thêm công cụ ngoài. Đồng thời, việc tối ưu hóa tải video và sửa lỗi kết nối giúp duy trì điểm số sức khỏe website tốt hơn cho SEO.",
+    "ifIgnored": "Tiếp tục sử dụng các form tĩnh nhàm chán làm giảm tỷ lệ chuyển đổi lead, hoặc phải cài đặt quá nhiều plugin bên thứ ba để làm form động và đặt lịch, dẫn đến nguy cơ xung đột mã nguồn, làm chậm tốc độ tải trang và ảnh hưởng trực tiếp đến điểm số Core Web Vitals của Google SEO.",
+    "actionChecklist": [
+      "Cập nhật plugin Jetpack lên phiên bản 16.3 ngay trong quản trị WordPress.",
+      "Thử nghiệm thiết lập logic điều kiện trên các form đăng ký nhận tư vấn hiện tại để cá nhân hóa câu hỏi.",
+      "Tích hợp Zoom Scheduler Block vào các trang đích dịch vụ để khách hàng đặt lịch hẹn trực tiếp.",
+      "Kiểm tra lại bảng điều khiển Jetpack Stats mới được di chuyển để theo dõi lưu lượng truy cập chính xác hơn."
+    ],
+    "id": "real-2026-10-09-ban-cap-nhat-jetpack-10308a",
+    "publishedAt": "09/10/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/jetpack-16-3-wordpress-plugin-update-is-a-winner/592452/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/10/wordpress-jetpack-16-3-29.jpg",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
+    "category": "AI Marketing",
+    "platformIcon": "Sparkles",
+    "title": "Moloco trở thành đơn vị công nghệ đầu tiên đạt chứng nhận đo lường Retail Media của IAB Europe",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "3 phút đọc",
+    "tags": [
+      "Retail Media",
+      "Đo lường quảng cáo",
+      "Tiêu chuẩn IAB",
+      "Moloco"
+    ],
+    "summary": "IAB Europe vừa trao chứng nhận tiêu chuẩn đo lường Retail Media đầu tiên cho nhà cung cấp công nghệ Moloco. Đây là cột mốc quan trọng giúp chuẩn hóa cách tính doanh thu và hiệu quả quảng cáo trên các trang thương mại điện tử, giải quyết bài toán đo lường thiếu đồng nhất hiện nay.",
+    "keyNumbers": [
+      {
+        "value": "90%",
+        "label": "Tỷ lệ tuân thủ tối thiểu để đạt chứng nhận"
+      },
+      {
+        "value": "30 ngày",
+        "label": "Khung thời gian quy đổi doanh thu mặc định"
+      },
+      {
+        "value": "125.000+",
+        "label": "Nhà quảng cáo sử dụng giải pháp của Moloco"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Bước ngoặt chuẩn hóa đo lường Retail Media",
+        "body": "IAB Europe chính thức công bố Moloco là đơn vị cung cấp giải pháp công nghệ đầu tiên hoàn thành Chương trình Chứng nhận Retail Media. Trước đó, chỉ có hai nhà bán lẻ lớn là Albert Heijn và Nectar360 đạt được chứng nhận này. Việc một bên thứ ba cung cấp hạ tầng công nghệ như Moloco được kiểm toán độc lập bởi ABC UK giúp đảm bảo tính minh bạch và nhất quán cho toàn bộ chuỗi cung ứng quảng cáo mua sắm."
+      },
+      {
+        "heading": "Giải quyết bài toán mỗi nơi đo một kiểu",
+        "body": "Hiện nay, hiệu quả quảng cáo trên các nền tảng bán lẻ thường bị nhiễu do mỗi bên áp dụng một cách tính khác nhau. Tiêu chuẩn của IAB Europe đặt ra các quy tắc chung nghiêm ngặt, ví dụ như khung thời gian quy đổi doanh thu mặc định là 30 ngày và giảm xuống 7 ngày đối với thương mại nhanh. Ngoài ra, doanh số được tính là doanh thu gộp trừ khi mạng lưới quảng cáo tuyên bố báo cáo theo doanh thu thuần."
+      },
+      {
+        "heading": "Phạm vi kiểm toán chi tiết của nền tảng",
+        "body": "Quá trình kiểm toán của ABC UK đã đánh giá chi tiết năng lực nền tảng của Moloco bao gồm các chỉ số truyền thông và phương pháp phân bổ. Chứng nhận này áp dụng cho cả quảng cáo hiển thị tiêu chuẩn lẫn quảng cáo sản phẩm được tài trợ trên web, thiết bị di động và trong ứng dụng. Sự nhất quán này giúp các nhà quảng cáo dễ dàng đánh giá và so sánh hiệu quả giữa các nền tảng khác nhau."
+      },
+      {
+        "heading": "Chi phí và điều kiện duy trì chứng nhận",
+        "body": "Để đạt được chứng nhận này, các doanh nghiệp phải tuân thủ ít nhất 90% yêu cầu trong khung đo lường của IAB Europe. Chi phí chứng nhận dao động từ 7.500 euro đến 15.000 euro tùy thuộc vào quy mô doanh thu của công ty công nghệ quảng cáo, chưa bao gồm phí kiểm toán riêng biệt. Chứng nhận này có giá trị trong vòng hai năm trước khi phải thực hiện kiểm toán lại."
+      }
+    ],
+    "impact": "Giúp Trưởng phòng Marketing có cơ sở đối chiếu và yêu cầu các đối tác Retail Media tại Việt Nam như Shopee, Lazada, Grab minh bạch hóa cách tính ROAS. Xu hướng chuẩn hóa này sẽ ép các nền tảng thương mại điện tử địa phương phải áp dụng các bộ tiêu chuẩn đo lường quốc tế, giúp doanh nghiệp tối ưu hóa ngân sách quảng cáo đa kênh chính xác hơn.",
+    "ifIgnored": "Tiếp tục tối ưu ngân sách dựa trên các báo cáo ROAS thổi phồng hoặc không đồng nhất từ các sàn thương mại điện tử, dẫn đến việc phân bổ sai lệch ngân sách giữa các kênh quảng cáo và lãng phí chi phí marketing thực tế.",
+    "actionChecklist": [
+      "Rà soát lại khung thời gian quy đổi đang áp dụng trên các chiến dịch quảng cáo sàn để hiểu rõ cách họ ghi nhận lượt chuyển đổi.",
+      "Yêu cầu các đối tác quảng cáo bán lẻ làm rõ việc báo cáo doanh thu theo cơ chế gộp hay thuần.",
+      "Cập nhật xu hướng đo lường Retail Media theo tiêu chuẩn IAB để chuẩn bị cho việc tích hợp dữ liệu đa kênh trong tương lai.",
+      "Đánh giá lại hiệu quả của các chiến dịch Sponsored Products so với Standard Display dựa trên các tiêu chí phân bổ mới."
+    ],
+    "id": "real-2026-10-09-moloco-tro-thanh-don-15f5c9",
+    "publishedAt": "09/10/2026",
+    "sourceUrl": "https://ppc.land/moloco-gains-first-ad-tech-certification-in-iab-europe-retail-media-programme/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/10/moloco-iab-europe-retail-media-certification-third-seal-rubber-stamp-adding-machine.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
     "title": "Apple thử nghiệm iOS 27.2 nhằm khắc phục sự cố chặn domain quảng cáo của The Trade Desk",
     "isHot": false,
     "illustration": "data-signal",
@@ -184,69 +369,6 @@
     }
   },
   {
-    "category": "TikTok Shop & Ads",
-    "platformIcon": "Video",
-    "title": "Biến động lượt xem YouTube toàn cầu và sự phân mảnh của thị trường âm nhạc",
-    "isHot": false,
-    "illustration": "data-signal",
-    "readTime": "5 phút đọc",
-    "tags": [
-      "YouTube Charts",
-      "Phân tích dữ liệu",
-      "Xu hướng video",
-      "Hành vi người dùng"
-    ],
-    "summary": "Dữ liệu mới nhất từ YouTube cho thấy sự sụt giảm mạnh về lượng người xem của các bài hát đứng đầu toàn cầu, đồng thời phản ánh tính phân mảnh cao của thị trường âm nhạc quốc tế qua 15 thị trường được theo dõi. Bài viết cập nhật các số liệu chi tiết từ báo cáo xếp hạng tuần kết thúc vào ngày 1 tháng 10 năm 2026.",
-    "keyNumbers": [
-      {
-        "value": "57.331.821",
-        "label": "Lượt xem Dai Dai tuần mới nhất"
-      },
-      {
-        "value": "51,3%",
-        "label": "Mức giảm lượt xem của Dai Dai từ tháng 8"
-      },
-      {
-        "value": "7.084.018",
-        "label": "Lượt xem Patient Zero tại Mỹ"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Sự sụt giảm lượng người xem của bài hát dẫn đầu",
-        "body": "Bài hát Dai Dai của Shakira và Burna Boy tiếp tục giữ vị trí số một thế giới với 57.331.821 lượt xem trong tuần kết thúc vào ngày 1 tháng 10 năm 2026. Tuy nhiên, con số này đã giảm 51,3% so với mức đỉnh 117.818.800 lượt xem ghi nhận trong tuần kết thúc vào ngày 6 tháng 8. Phạm vi lãnh thổ của bài hát cũng thu hẹp, từ việc dẫn đầu chín thị trường xuống còn năm thị trường gồm Đức, Pháp, Vương quốc Anh, Hà Lan và Bồ Đào Nha."
-      },
-      {
-        "heading": "Sự xuất hiện của đĩa đơn Patient Zero",
-        "body": "Đĩa đơn Patient Zero của Taylor Swift ra mắt vào ngày 25 tháng 9 năm 2026 đã đạt 7.084.018 lượt xem tại Hoa Kỳ trong tuần đầu tiên đầy đủ, cao hơn 12% so với mức 6.318.710 lượt xem của bài hát dẫn đầu trước đó tại Mỹ. Bài hát này cũng đứng vị trí số một tại Australia, vị trí thứ hai tại Vương quốc Anh với 1.039.232 lượt xem, và đứng thứ chín trên bảng xếp hạng toàn cầu với 24.777.513 lượt xem."
-      },
-      {
-        "heading": "Tính phân mảnh của các bảng xếp hạng quốc gia",
-        "body": "Dữ liệu từ 15 thị trường quốc gia cho thấy không có một bài hát nào xuất hiện trong top 100 của tất cả các thị trường. Có tổng cộng 10 bản ghi âm khác nhau giữ vị trí số một tại các quốc gia khác nhau. Trong đó, 939 bản ghi âm chỉ xuất hiện duy nhất trong một thị trường và chỉ có 41 bản ghi âm xuất hiện từ năm thị trường trở lên."
-      },
-      {
-        "heading": "Độ phủ của nhóm nhạc KATSEYE",
-        "body": "Bài hát Hootie Frutti của nhóm KATSEYE ghi nhận mức độ phủ sóng rộng nhất khi có mặt trong 12 trên tổng số 15 thị trường được theo dõi, chỉ vắng mặt tại Ấn Độ, Indonesia và Nhật Bản. Trên bảng xếp hạng toàn cầu, bài hát này tăng từ vị trí thứ chín lên vị trí thứ sáu với 30.530.025 lượt xem, trong đó video chính thức đóng góp 9.339.386 lượt xem."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing cần nhận thức rõ sự phân mảnh nghiêm trọng của thị trường nội dung video và âm nhạc toàn cầu, nơi không có một công thức chung hay một kênh duy nhất thống trị mọi khu vực địa lý.",
-    "ifIgnored": "Bỏ qua xu hướng phân mảnh này sẽ dẫn đến việc áp dụng các chiến lược nội dung và phân bổ ngân sách quảng cáo video mang tính áp đặt chung chung, kém hiệu quả tại từng thị trường cụ thể.",
-    "actionChecklist": [
-      "Đánh giá lại hiệu suất phân bổ ngân sách video theo từng thị trường riêng biệt",
-      "Theo dõi sát sao các biến động về lượng tương tác và lượt xem hàng tuần trên các nền tảng",
-      "Điều chỉnh chiến lược sáng tạo nội dung phù hợp với thị hiếu phân mảnh của từng khu vực",
-      "Tận dụng dữ liệu bảng xếp hạng để tối ưu hóa thời điểm ra mắt chiến dịch tiếp thị mới"
-    ],
-    "id": "real-2026-10-06-bien-dong-luot-xem-336f60",
-    "publishedAt": "06/10/2026",
-    "sourceUrl": "https://ppc.land/shakiras-dai-dai-loses-51-of-weekly-youtube-views-since-august/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/10/youtube-music-charts-ten-leaders-fifteen-markets-shattered-vinyl-slide-projector.jpg",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
     "category": "Meta Ads",
     "platformIcon": "Facebook",
     "title": "Meta thử nghiệm giao diện Facebook ưu tiên Reels tại Ấn Độ",
@@ -303,69 +425,6 @@
     "image": {
       "url": "https://imgproxy.divecdn.com/H_uLETPFWqeIVBOn-11TJmVKu6Kt3S_FZkadB2pk2u8/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9mYl9yZWVsc19mZWVkMi5wbmc=.webp",
       "credit": "Ảnh: Social Media Today"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Google và Bộ Tư pháp Mỹ bất đồng về thời hạn mở cửa sàn giao dịch quảng cáo cho đối thủ",
-    "isHot": false,
-    "illustration": "cpm-auction",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Google Ads",
-      "Đấu thầu programmatic",
-      "Độc quyền công nghệ",
-      "Quảng cáo hiển thị"
-    ],
-    "summary": "Bộ Tư pháp Mỹ và Google đã trình lên tòa án dự thảo phán quyết dài 41 trang nhưng vẫn còn nhiều bất đồng lớn về cách thức mở cửa hệ thống quảng cáo của Google. Trong khi cơ quan quản lý muốn đẩy nhanh tiến độ trong vòng 6 tháng, Google lại đề xuất thời hạn 12 tháng và muốn trì hoãn áp dụng tại thị trường quốc tế lên đến 24 tháng. Phán quyết này sẽ tái định hình toàn bộ thị trường quảng cáo hiển thị tự động (programmatic display) trên toàn cầu.",
-    "keyNumbers": [
-      {
-        "value": "6 đến 12 tháng",
-        "label": "Thời hạn đề xuất mở cửa sàn AdX cho đối thủ"
-      },
-      {
-        "value": "24 tháng",
-        "label": "Thời gian tối đa Google muốn trì hoãn ở thị trường ngoài Mỹ"
-      },
-      {
-        "value": "6 năm",
-        "label": "Thời hạn hiệu lực tối thiểu của phán quyết"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Bối cảnh dự thảo phán quyết chung",
-        "body": "Vào ngày 2/10/2026, Bộ Tư pháp Mỹ cùng 17 bang nguyên đơn và Google đã nộp lên tòa án dự thảo phán quyết chung dài 41 trang. Tài liệu này được xây dựng sau khi Thẩm phán Leonie Brinkema bác bỏ các đề xuất cấu trúc lớn như buộc bán AdX hay mở mã nguồn thuật toán đấu thầu của DFP. Tuy nhiên, dự thảo vẫn chứa nhiều phần văn bản đặt trong dấu ngoặc vuông thể hiện sự bất đồng sâu sắc giữa hai bên về thời hạn thực thi và phạm vi địa lý. Quyết định cuối cùng hiện phụ thuộc hoàn toàn vào sự lựa chọn của thẩm phán đối với các điều khoản tranh chấp này."
-      },
-      {
-        "heading": "Các điều khoản kỹ thuật đã đạt đồng thuận",
-        "body": "Mặc dù còn nhiều bất đồng, hai bên đã thống nhất được một số nghĩa vụ mang tính bước ngoặt nhằm tăng tính cạnh tranh. Google sẽ phải xây dựng một bộ chuyển đổi cho phép các thực thể Prebid gửi yêu cầu và nhận giá thầu từ AdX. Trong vòng 12 tháng kể từ ngày phán quyết có hiệu lực, Google phải thiết lập liên kết máy chủ với Prebid Server để các bên thứ ba gửi thầu trực tiếp vào DFP. Ngoài ra, Google phải cung cấp tính năng xuất dữ liệu cấu hình và lịch sử DFP miễn phí cho các nhà xuất bản trong vòng 3 tháng, đồng thời xóa bỏ các quy tắc định giá thống nhất (Unified Pricing Rules) gây bất lợi cho đối thủ."
-      },
-      {
-        "heading": "Tranh chấp gay gắt về thời gian và địa lý",
-        "body": "Điểm mấu chốt nằm ở tốc độ triển khai khi phía nguyên đơn yêu cầu thời hạn chỉ bằng một nửa so với đề xuất của Google. Cụ thể, Bộ Tư pháp Mỹ muốn Google hoàn thành bộ chuyển đổi AdX và cho phép AdX đấu thầu trên các máy chủ quảng cáo của đối thủ trong vòng 6 tháng, trong khi Google đòi 12 tháng. Về mặt địa lý, Google muốn giới hạn các thời hạn này tại thị trường Mỹ trước, và cho phép kéo dài tối đa 24 tháng đối với các thị trường quốc tế để phù hợp với luật địa phương. Ngược lại, phía nguyên đơn muốn áp dụng phán quyết ngay lập tức trên phạm vi toàn cầu bao gồm cả các công ty con ngoài nước Mỹ."
-      },
-      {
-        "heading": "Giới hạn phạm vi áp dụng thực tế",
-        "body": "Phán quyết này chỉ áp dụng giới hạn cho mảng nhu cầu gián tiếp (Indirect Demand) thông qua các phiên đấu thầu công khai hoặc riêng tư trên mạng lưới web mở (open-web display). Các hình thức quảng cáo khác bao gồm AdSense, AdMob, DV360 sẽ không bị ảnh hưởng trực tiếp bởi phán quyết này. Định nghĩa về web mở cũng loại trừ quảng cáo tự nhiên (native ads), video trong luồng (in-stream video), quảng cáo tìm kiếm, quảng cáo mạng xã hội, ứng dụng di động và truyền hình kết nối (CTV). Dù phạm vi bị thu hẹp, đây vẫn là thay đổi lớn nhất trong lịch sử vận hành của Google Ad Manager."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing tại Việt Nam sẽ có cơ hội tiếp cận nguồn cung quảng cáo hiển thị cao cấp của Google thông qua các nền tảng DSP/SSP độc lập với chi phí tối ưu hơn, nhờ việc phá bỏ thế độc quyền của Google Ad Manager. Sự minh bạch về dữ liệu đấu thầu trong vòng 7 ngày cũng giúp doanh nghiệp tối ưu hóa hiệu quả chi tiêu quảng cáo programmatic tốt hơn.",
-    "ifIgnored": "Nếu bỏ qua, doanh nghiệp sẽ tiếp tục phải trả mức phí ẩn cao (ad tech fee) cho Google khi mua quảng cáo hiển thị, đồng thời mất đi cơ hội tiếp cận các giải pháp đấu thầu thay thế có chi phí tối ưu hơn và dữ liệu minh bạch hơn khi thị trường chuyển dịch.",
-    "actionChecklist": [
-      "Rà soát lại tỷ lệ ngân sách đang phân bổ cho quảng cáo hiển thị (display ads) thông qua các công cụ của Google.",
-      "Yêu cầu các đối tác agency cung cấp báo cáo chi tiết về chi phí công nghệ quảng cáo (ad tech fee) và hiệu quả của các phiên đấu thầu hiện tại.",
-      "Tìm hiểu và thử nghiệm tích hợp các giải pháp Header Bidding (như Prebid) để chuẩn bị đón đầu xu hướng mở cửa hệ thống.",
-      "Theo dõi sát sao phán quyết cuối cùng của tòa án Mỹ để kịp thời điều chỉnh chiến lược mua quảng cáo programmatic trong 12-24 tháng tới."
-    ],
-    "id": "real-2026-10-06-google-va-bo-tu-2c2df3",
-    "publishedAt": "06/10/2026",
-    "sourceUrl": "https://ppc.land/doj-seeks-6-months-google-12-to-open-its-ad-exchange-to-rivals/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/10/google-adx-prebid-proposed-judgment-six-vs-twelve-step-staircases-open-door.jpg",
-      "credit": "Ảnh: PPC Land"
     }
   },
   {
@@ -548,73 +607,6 @@
     "image": {
       "url": "https://imgproxy.divecdn.com/CpBkxL30e98bCAI2ZH5vVrRpE3s-Sn9YKiwUTQ_p8dY/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9tZXRhX211c2UucG5n.webp",
       "credit": "Ảnh: Social Media Today"
-    }
-  },
-  {
-    "category": "AI Marketing",
-    "platformIcon": "Sparkles",
-    "title": "Shopify tự động đưa sản phẩm lên các kênh mua sắm AI: Thách thức đo lường mới cho nhà quảng cáo",
-    "isHot": false,
-    "illustration": "data-signal",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Shopify",
-      "AI Shopping",
-      "Đo lường Pixel",
-      "Thương mại điện tử"
-    ],
-    "summary": "Shopify đã kích hoạt mặc định tính năng tự động đồng bộ sản phẩm lên các kênh mua sắm AI như Meta Muse, Google Gemini và Microsoft Copilot. Đáng chú ý, tính năng thanh toán trực tiếp ngay trong ứng dụng chat của các nền tảng này sẽ khiến các pixel theo dõi bên thứ ba không thể hoạt động, gây ra lỗ hổng lớn về dữ liệu đo lường chiến dịch.",
-    "keyNumbers": [
-      {
-        "value": "08/09/2026",
-        "label": "Ngày Meta ra mắt trợ lý AI Muse và Shopify tự động chia sẻ sản phẩm sang nền tảng này"
-      },
-      {
-        "value": "7 ngày",
-        "label": "Thời gian tối đa để Shopify dừng chia sẻ dữ liệu sản phẩm qua Shopify Catalog sau khi tắt quyền"
-      },
-      {
-        "value": "0 đồng",
-        "label": "Phí dịch vụ hiện tại từ các kênh AI như ChatGPT, Google, Copilot và Meta cho các giao dịch"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Tự động đồng bộ danh mục sản phẩm lên các kênh AI",
-        "body": "Shopify mặc định bật tính năng cho phép hệ thống tự động quản lý các kênh bán hàng dạng đại lý AI (Agentic Sales Channels). Cài đặt này tự động chia sẻ danh mục sản phẩm của cửa hàng lên các nền tảng AI mới nhất như Meta Muse, Microsoft Copilot và các kênh thử nghiệm khác. Ví dụ, ngay khi Meta ra mắt trợ lý AI Muse vào ngày 8/9/2026, sản phẩm của các cửa hàng đủ điều kiện đã lập tức được đồng bộ sang nền tảng này mà không cần thiết lập thủ công."
-      },
-      {
-        "heading": "Thanh toán trực tiếp bỏ qua website của doanh nghiệp",
-        "body": "Khách hàng có thể mua sắm và thanh toán trực tiếp ngay trong giao diện chat của Meta, Google AI Mode hoặc Copilot mà không cần truy cập website của bạn. Shopify gọi đây là tính năng thanh toán trực tiếp (direct checkout), được bật mặc định cho các thị trường đủ điều kiện như Mỹ, Canada hay Mexico. Điều này giúp rút ngắn hành trình mua hàng của người dùng nhưng lại thay đổi hoàn toàn cách thức tương tác thương mại điện tử truyền thống."
-      },
-      {
-        "heading": "Lỗ hổng đo lường do pixel không hoạt động",
-        "body": "Khi khách hàng thanh toán trực tiếp trong ứng dụng chat, các mã theo dõi như Google Analytics và pixel bên thứ ba sẽ không được kích hoạt. Shopify xác nhận chỉ có hệ thống theo dõi phía máy chủ (server-side tracking) hoạt động trong các phiên thanh toán này. Nếu chỉ dựa vào Google Analytics hoặc dashboard quảng cáo thông thường, nhà tiếp thị sẽ bỏ lỡ các số liệu chuyển đổi quan trọng này, dẫn đến việc đánh giá sai hiệu quả chiến dịch."
-      },
-      {
-        "heading": "Chi phí bằng không nhưng Meta dự kiến sẽ sớm thu phí",
-        "body": "Hiện tại, các nền tảng như ChatGPT, Google, Copilot và Meta chưa thu thêm bất kỳ khoản phí nào ngoài phí xử lý cổng thanh toán tiêu chuẩn của Shopify. Tuy nhiên, CEO Mark Zuckerberg của Meta đã tiết lộ kế hoạch dài hạn sẽ thu một tỷ lệ phần trăm nhỏ trên mỗi giao dịch thành công từ trợ lý AI Muse. Do đó, các thương hiệu cần chuẩn bị ngân sách cho mô hình chia sẻ doanh thu mới này khi các kênh mua sắm AI trở nên phổ biến hơn."
-      },
-      {
-        "heading": "Cách kiểm soát và tắt tính năng tự động đăng ký",
-        "body": "Nhà bán hàng hoàn toàn có thể chủ động tắt tính năng tự động đăng ký bằng cách tắt tùy chọn quản lý tự động trong quản trị Shopify. Khi đó, bạn có thể quản lý riêng lẻ quyền truy cập danh mục sản phẩm hoặc tính năng thanh toán trực tiếp cho từng kênh cụ thể. Lưu ý rằng việc rút sản phẩm khỏi Shopify Catalog có thể mất tới 7 ngày để hoàn tất xử lý trên hệ thống của các đối tác AI."
-      }
-    ],
-    "impact": "Việc pixel không kích hoạt khi thanh toán trực tiếp qua AI chat sẽ làm sai lệch nghiêm trọng dữ liệu tối ưu hóa chiến dịch quảng cáo (ROAS, CPA). Trưởng phòng Marketing sẽ không thể đánh giá chính xác hiệu quả của các nhóm quảng cáo nếu chỉ nhìn vào các công cụ đo lường client-side truyền thống.",
-    "ifIgnored": "Doanh nghiệp sẽ bị mất dấu dữ liệu chuyển đổi thực tế, dẫn đến việc tối ưu hóa sai tệp khách hàng trên Meta Ads và Google Ads. Đồng thời, bạn có thể vô tình chia sẻ toàn bộ danh mục sản phẩm độc quyền cho các mô hình AI đối thủ hoặc các kênh thử nghiệm chưa được kiểm chứng an toàn thông tin.",
-    "actionChecklist": [
-      "Truy cập mục Sales channels > Agentic trong quản trị Shopify để kiểm tra trạng thái các kênh AI đang hoạt động.",
-      "Chuyển cấu hình đo lường sang Server-Side Tracking (CAPI) để đảm bảo ghi nhận đơn hàng từ direct checkout của Google, Meta và Copilot.",
-      "Đối chiếu số liệu đơn hàng trực tiếp trên hệ thống admin Shopify với Google Analytics để phát hiện và bù đắp lượng chuyển đổi bị thiếu hụt.",
-      "Cân nhắc tắt tính năng tự động đăng ký kênh mới (Auto enroll new storefronts) để chủ động kiểm duyệt các nền tảng AI sẽ liên kết với sản phẩm của bạn."
-    ],
-    "id": "real-2026-10-02-shopify-tu-dong-dua-d0ef73",
-    "publishedAt": "02/10/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/shopify-now-enrolls-your-store-in-every-new-ai-shopping-channel/591049/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/09/shopify-ai-shopping-259.png",
-      "credit": "Ảnh: Search Engine Journal"
     }
   },
   {
