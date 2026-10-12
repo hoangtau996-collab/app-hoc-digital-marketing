@@ -2,6 +2,133 @@
   {
     "category": "Google Ads & SEO",
     "platformIcon": "Search",
+    "title": "Google Ads nới lỏng chính sách tên doanh nghiệp khác tên miền trang đích",
+    "isHot": true,
+    "illustration": "account-security",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Google Ads",
+      "Chính sách quảng cáo",
+      "Xác minh danh tính",
+      "Tên doanh nghiệp"
+    ],
+    "summary": "Google vừa cập nhật chính sách biên tập cho phép tên doanh nghiệp hiển thị trên quảng cáo khác với tên miền trang đích nếu đáp ứng đủ 3 điều kiện xác minh. Quy định mới tạo thuận lợi lớn cho các mô hình công ty mẹ - con và đại lý nhượng quyền nhưng loại trừ hoàn toàn các bên bán lại và tiếp thị liên kết.",
+    "keyNumbers": [
+      {
+        "value": "3",
+        "label": "điều kiện bắt buộc để tên doanh nghiệp được phép khác tên miền"
+      },
+      {
+        "value": "25",
+        "label": "ký tự tối đa cho trường tên doanh nghiệp trên mẫu quảng cáo"
+      },
+      {
+        "value": "7",
+        "label": "ngày cảnh báo tối thiểu trước khi Google tạm ngưng tài khoản vi phạm"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Cập nhật chính sách biên tập về tên doanh nghiệp",
+        "body": "Google thông báo điều chỉnh chính sách yêu cầu về tên doanh nghiệp trong phần Biên tập từ tháng 10/2026. Trước đây, trường tên hiển thị trên mẫu quảng cáo bắt buộc phải trùng khớp với tên miền trang đích hoặc tên pháp nhân đã xác minh. Thay đổi mới cho phép tên hiển thị khác biệt với địa chỉ website đích trong một số trường hợp cụ thể. Báo cáo từ Search Engine Roundtable ghi nhận ngày bắt đầu triển khai là 16/10/2026."
+      },
+      {
+        "heading": "Ba điều kiện bắt buộc để được áp dụng ngoại lệ",
+        "body": "Nhà quảng cáo muốn đặt tên hiển thị khác tên miền phải thỏa mãn đồng thời 3 tiêu chí nghiêm ngặt từ Google. Thứ nhất, tên doanh nghiệp phải phản ánh chính xác tên hoặc thương hiệu đã được công nhận của nhà quảng cáo. Thứ hai, phải có mối quan hệ trực tiếp đã được xác minh giữa nhà quảng cáo và chủ sở hữu tên miền. Thứ ba, các sản phẩm hoặc dịch vụ của chính nhà quảng cáo phải được cung cấp trực tiếp trên tên miền trang đích đó."
+      },
+      {
+        "heading": "Lệnh cấm đích danh đối với đơn vị bán lại và tiếp thị liên kết",
+        "body": "Chính sách mới loại trừ hoàn toàn bốn nhóm đối tượng trung gian khỏi diện áp dụng ngoại lệ này. Các bên bán lại bên thứ ba, đơn vị trung gian đặt chỗ độc lập, nhà phân phối tiếp thị liên kết và bên bán thứ cấp bị cấm sử dụng tên thương hiệu đứng độc lập làm tên doanh nghiệp của mình. Những đơn vị này chỉ có thể hiển thị tên thương hiệu kèm theo từ ngữ bổ trợ làm rõ vai trò, ví dụ kết hợp tên đại lý với địa điểm kinh doanh."
+      },
+      {
+        "heading": "Cơ chế kiểm duyệt và rủi ro tạm ngưng tài khoản",
+        "body": "Trường tên doanh nghiệp bị giới hạn tối đa 25 ký tự và không được chứa ngôn từ khuyến mại hay từ ngữ chung chung. Nếu nhà quảng cáo chỉnh sửa mẫu quảng cáo sau khi bị từ chối, hệ thống sẽ xem xét lại trong vòng 24 đến 48 giờ. Đối với các vi phạm lặp lại về chính sách này, Google sẽ gửi thông báo cảnh báo trước ít nhất 7 ngày trước khi tiến hành tạm ngưng tài khoản, trừ trường hợp vi phạm nghiêm trọng sẽ bị xử lý ngay lập tức."
+      }
+    ],
+    "impact": "Giúp các doanh nghiệp vận hành chuỗi nhượng quyền, công ty con bán hàng qua sàn hoặc website của tập đoàn mẹ hiển thị đúng nhận diện thương hiệu quen thuộc với khách hàng mà không lo bị từ chối duyệt quảng cáo. Ngược lại, các doanh nghiệp thương mại phân phối, đại lý du lịch, vé máy bay hoặc affiliate không còn đường tắt để mạo danh thương hiệu gốc trên mẫu quảng cáo.",
+    "ifIgnored": "Tài khoản quảng cáo của bên bán lại hoặc đại lý trung gian cố tình để tên nhãn hàng độc lập sẽ bị từ chối mẫu quảng cáo hàng loạt, đối mặt nguy cơ nhận cảnh báo 7 ngày và bị tạm ngưng toàn bộ tài khoản.",
+    "actionChecklist": [
+      "Rà soát toàn bộ tài khoản Google Ads đang trỏ về tên miền của đối tác, sàn hoặc công ty mẹ để chuẩn bị hồ sơ chứng minh quan hệ sở hữu.",
+      "Kiểm tra lại trường tên doanh nghiệp hiển thị đảm bảo độ dài không vượt quá 25 ký tự và không chứa từ ngữ khuyến mại.",
+      "Điều chỉnh tên hiển thị của các chiến dịch đại lý hoặc phân phối theo công thức tên thương hiệu kèm tên đại lý thay vì để tên nhãn hàng đứng riêng.",
+      "Theo dõi hòm thư quản trị tài khoản để phát hiện và xử lý ngay trong 24 đến 48 giờ nếu có cảnh báo vi phạm chính sách biên tập mới."
+    ],
+    "deadline": "Tháng 10/2026 (ngày 16/10/2026)",
+    "id": "real-2026-10-12-google-ads-noi-long-33da7d",
+    "publishedAt": "12/10/2026",
+    "sourceUrl": "https://ppc.land/google-ads-lets-business-names-differ-from-domains-under-3-conditions/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/10/google-ads-business-name-domain-policy-brand-nameplate-skyscraper-velvet-rope.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "AI Marketing",
+    "platformIcon": "Sparkles",
+    "title": "Meta mở rộng trợ lý mua sắm Muse vào tài khoản quảng cáo và nhà bán lẻ",
+    "isHot": false,
+    "illustration": "ai-budget",
+    "readTime": "5 phút đọc",
+    "tags": [
+      "Meta AI",
+      "Muse Agent",
+      "AI Marketing",
+      "Quảng cáo Meta"
+    ],
+    "summary": "Trợ lý mua sắm Muse của Meta đã bắt đầu kết nối trực tiếp với tài khoản quảng cáo của doanh nghiệp nhỏ tại Mỹ và Canada. Công cụ này ưu tiên xếp hạng các nhà bán hàng nổi tiếng trong các lựa chọn hàng đầu của mình. Việc tích hợp sâu này đặt ra câu hỏi lớn về quyền kiểm soát ngân sách và cách thuật toán phân phối hiển thị.",
+    "keyNumbers": [
+      {
+        "value": "5.000.000+",
+        "label": "lượt cài đặt Muse sau 22 ngày"
+      },
+      {
+        "value": "60,80 tỷ USD",
+        "label": "doanh thu quý 2 của Meta"
+      },
+      {
+        "value": "59,36 tỷ USD",
+        "label": "doanh thu từ quảng cáo của Meta"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Cơ chế hoạt động của trợ lý Muse",
+        "body": "Trợ lý Muse có quy tắc bắt buộc phải xếp hạng các nhà bán hàng nổi tiếng lên đầu trong số năm lựa chọn hàng đầu. Công cụ này tìm kiếm tối đa ba cửa hàng trên web mở, trả về không quá mười sản phẩm và loại bỏ các sản phẩm có giá nằm ngoài mức bình thường. Khi người mua gọi tên một thương hiệu, cửa hàng của thương hiệu đó được ưu tiên hiển thị trước các bên trung gian."
+      },
+      {
+        "heading": "Kết quả thử nghiệm và tìm kiếm",
+        "body": "Trong một bài kiểm tra năm mươi lượt từ một tài khoản duy nhất, truy vấn thông thường lấy khoảng sáu mươi sản phẩm từ ba mươi nhà bán hàng trong danh mục của Meta. Trình duyệt của trợ lý đã ghé thăm ba trang web và tìm thấy bốn sản phẩm tại hai nhà bán hàng. Sáu lựa chọn cuối cùng thường chia đều bốn từ trình duyệt và hai từ danh mục."
+      },
+      {
+        "heading": "Tích hợp vào tài khoản doanh nghiệp",
+        "body": "Ba tuần sau khi ra mắt, Meta mở rộng Muse cho các doanh nghiệp nhỏ tại Mỹ và Canada thông qua mười lăm kết nối, bao gồm Shopify, Stripe, QuickBooks và tài khoản quảng cáo Meta. Meta tuyên bố không có nội dung nào được đăng, gửi hoặc chi tiêu nếu không có sự phê duyệt của chủ sở hữu. Tuy nhiên, ranh giới giữa tác nhân quyết định hiển thị sản phẩm và tác nhân nằm trong tài khoản quảng cáo đang thu hút sự chú ý lớn."
+      },
+      {
+        "heading": "Bối cảnh tài chính của Meta",
+        "body": "Doanh thu quý hai của Meta đạt sáu mươi phẩy tám mươi tỷ đô la Mỹ, trong đó năm mươi chín phẩy ba mươi sáu tỷ đô la Mỹ đến từ quảng cáo. Tỷ trọng này giải thích lý do mọi hoạt động tự động hóa và quyết định của phần mềm trong tài khoản quảng cáo được theo dõi rất sát sao. Câu hỏi đặt ra là khi phần mềm tự động lựa chọn, ai sẽ là người kiểm tra lại các lựa chọn đó."
+      }
+    ],
+    "impact": "Trợ lý AI Muse đang dần can thiệp vào cách phân phối sản phẩm và kết nối trực tiếp với tài khoản quảng cáo, buộc Trưởng phòng Marketing phải nắm rõ mức độ kiểm soát thực tế của công cụ đối với ngân sách.",
+    "ifIgnored": "Nếu bỏ qua, nhà quảng cáo có thể bị động trước các quyết định phân phối tự động của AI, dẫn đến việc mất quyền kiểm soát chi tiêu và thứ hạng hiển thị sản phẩm.",
+    "actionChecklist": [
+      "Kiểm tra lại quyền kết nối và cấp phép của các bên thứ ba đối với tài khoản quảng cáo Meta.",
+      "Xác định rõ các giới hạn phê duyệt thủ công cho bất kỳ thay đổi ngân sách nào do AI đề xuất.",
+      "Theo dõi sát sao hiệusuất hiển thị sản phẩm của thương hiệu trên các trợ lý mua sắm AI mới nổi.",
+      "Đánh giá lại chiến lược tối ưu hóa danh mục sản phẩm để đáp ứng các tiêu chí ưu tiên của thuật toán."
+    ],
+    "id": "real-2026-10-12-meta-mo-rong-tro-af14b9",
+    "publishedAt": "12/10/2026",
+    "sourceUrl": "https://ppc.land/metas-muse-agent-puts-well-known-merchants-first-as-it-gains-ad-accounts/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/10/meta-muse-shopping-agent-well-known-merchants-doorman-gatekeeper.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
     "title": "Google bỏ bộ lọc danh mục nhạy cảm trên DV360, gom về 3 cấp độ và 10 chủ đề nội dung",
     "isHot": false,
     "illustration": "keyword-exclusion",
@@ -315,69 +442,6 @@
   {
     "category": "Google Ads & SEO",
     "platformIcon": "Search",
-    "title": "Google hoàn tất cập nhật spam kéo dài 13 ngày và làn sóng phạt thủ công tăng mạnh",
-    "isHot": false,
-    "illustration": "data-signal",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Google Search",
-      "Cập nhật thuật toán",
-      "SEO",
-      "Phạt thủ công"
-    ],
-    "summary": "Google vừa hoàn tất bản cập nhật chống spam tháng 9/2026 sau gần 14 ngày càn quét trên quy mô toàn cầu. Đáng chú ý, cộng đồng SEO ghi nhận làn sóng phạt thủ công tăng đột biến, khiến nhiều website doanh nghiệp mất đến 90% lưu lượng truy cập chỉ sau một đêm.",
-    "keyNumbers": [
-      {
-        "value": "13 ngày 16 giờ",
-        "label": "Thời gian chạy cập nhật spam"
-      },
-      {
-        "value": "90%",
-        "label": "Lưu lượng truy cập bị sụt giảm ở một số website bị phạt"
-      },
-      {
-        "value": "14",
-        "label": "Loại hình phạt thủ công được ghi nhận"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Bản cập nhật chống spam dài nhất trong hơn một năm",
-        "body": "Bản cập nhật spam tháng 9/2026 của Google chính thức khép lại vào ngày 8/10/2026 sau 13 ngày 16 giờ vận hành liên tục. Đây là đợt cập nhật có thời gian chạy dài thứ sáu trong lịch sử của Google kể từ năm 2021 và dài gấp 7 lần mức thông thường. Google xác nhận đợt cập nhật này áp dụng trên toàn cầu cho tất cả ngôn ngữ nhưng không công bố chính sách cụ thể nào bị nhắm mục tiêu."
-      },
-      {
-        "heading": "Làn sóng phạt thủ công tăng đột biến",
-        "body": "Song song với cập nhật thuật toán tự động, các chuyên gia ghi nhận số lượng án phạt thủ công từ nhân viên Google tăng mạnh trong vài tuần qua. Các hành vi bị phạt nặng nhất bao gồm lạm dụng nội dung quy mô lớn, nội dung mỏng và spam thuần túy. Nhiều doanh nghiệp lâu năm sử dụng AI để sản xuất nội dung hàng loạt nhằm cắt giảm ngân sách SEO đã phải gánh chịu hậu quả nặng nề."
-      },
-      {
-        "heading": "Mối nguy kép: Mất cả SEO lẫn quảng cáo Google Ads",
-        "body": "Điểm cốt lõi các nhà quản lý cần lưu ý là mối liên kết chặt chẽ giữa SEO và Google Ads. Theo chính sách áp dụng từ ngày 23/12/2024, hệ thống sẽ tự động từ chối các quảng cáo dẫn về những website đang bị áp dụng hình phạt thủ công trên Search. Ngược lại, nếu website chỉ bị sụt giảm thứ hạng do thuật toán tự động, quảng cáo Google Ads vẫn sẽ hoạt động bình thường."
-      },
-      {
-        "heading": "Thời gian phục hồi kéo dài nhiều tháng",
-        "body": "Google nhấn mạnh rằng việc khôi phục thứ hạng sau khi bị ảnh hưởng bởi thuật toán chống spam có thể mất nhiều tháng. Đối với hình phạt thủ công, doanh nghiệp buộc phải khắc phục triệt để lỗi vi phạm và gửi yêu cầu xem xét lại thông qua Search Console. Việc lạm dụng AI tạo sinh để lách luật đang bị hệ thống SpamBrain quét gắt gao hơn bao gồm cả trên tính năng AI Overviews."
-      }
-    ],
-    "impact": "Ảnh hưởng trực tiếp đến hiệu quả chi phí marketing khi website bị phạt thủ công sẽ bị khóa luôn quảng cáo Google Ads, gây đứt gãy dòng khách hàng và lãng phí ngân sách chiến dịch.",
-    "ifIgnored": "Doanh nghiệp có thể mất trắng hơn 90% lượng truy cập tự nhiên chỉ sau một đêm, đồng thời bị vô hiệu hóa toàn bộ chiến dịch Google Ads đang chạy mà không rõ nguyên nhân nếu không theo dõi sát Search Console.",
-    "actionChecklist": [
-      "Kiểm tra ngay mục Manual Actions trong Google Search Console của tất cả website doanh nghiệp đang quản lý.",
-      "Rà soát và dừng ngay việc sử dụng AI tạo sinh để sản xuất nội dung hàng loạt, kém chất lượng nhằm mục đích thao túng SEO.",
-      "Kiểm tra trạng thái phê duyệt của các chiến dịch Google Ads để đảm bảo không có quảng cáo nào bị từ chối do lỗi trang đích bị phạt.",
-      "Chuẩn bị sẵn phương án phân bổ ngân sách sang các kênh dự phòng như Meta Ads hoặc TikTok Ads nếu kênh tìm kiếm tự nhiên bị biến động mạnh."
-    ],
-    "id": "real-2026-10-09-google-hoan-tat-cap-d4283c",
-    "publishedAt": "09/10/2026",
-    "sourceUrl": "https://ppc.land/googles-september-spam-update-ends-after-13-days-as-manual-actions-rise/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/size/w1200/2026/10/google-september-2026-spam-update-13-days-stopwatch-no-policy-named.jpg",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
     "title": "Bản cập nhật Jetpack 16.3 tối ưu hóa Form chuyển đổi và tích hợp lịch hẹn Zoom trực tiếp trên WordPress",
     "isHot": false,
     "illustration": "crm-automation",
@@ -494,69 +558,6 @@
     "source": "PPC Land",
     "image": {
       "url": "https://ppc.land/content/images/2026/10/moloco-iab-europe-retail-media-certification-third-seal-rubber-stamp-adding-machine.jpg",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Apple thử nghiệm iOS 27.2 nhằm khắc phục sự cố chặn domain quảng cáo của The Trade Desk",
-    "isHot": false,
-    "illustration": "data-signal",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Apple Safari",
-      "Quyền riêng tư iOS",
-      "The Trade Desk",
-      "Trusted Server"
-    ],
-    "summary": "Apple đang yêu cầu The Trade Desk thử nghiệm bản iOS 27.2 beta để kiểm tra khả năng gỡ chặn domain quảng cáo adsrvr.org bị Safari gắn cờ. Việc Safari chặn domain ở cấp hệ điều hành đang thúc đẩy các nhà xuất bản chuyển hướng sang giải pháp Trusted Server của IAB Tech Lab nhằm bảo vệ luồng dữ liệu quảng cáo.",
-    "keyNumbers": [
-      {
-        "value": "9",
-        "label": "domain định danh và quảng cáo bị Safari đưa vào danh sách chặn"
-      },
-      {
-        "value": "15 phút 22 giây",
-        "label": "thời gian cuộc trao đổi kỹ thuật công khai đầu tiên giữa Apple và The Trade Desk"
-      },
-      {
-        "value": "30,7 tỷ USD",
-        "label": "doanh thu kỷ lục mảng Dịch vụ của Apple trong quý kết thúc vào tháng 6"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Apple âm thầm bổ sung cơ chế chặn domain ở cấp hệ điều hành",
-        "body": "Thông qua cập nhật WebKit pull request 58670 vào tháng 2, Apple đã thêm 11 dòng code vào file WebPrivacyHelpers.mm để chặn trực tiếp các request tới một số domain nhất định. Đoạn code này kiểm tra domain trước khi chạy quy trình tra cứu tracker thông thường của trình duyệt Safari. Báo cáo WebKit bug 324771 do phía The Trade Desk gửi ngày 21/9 xác định 9 domain bị ảnh hưởng. Trong đó có 8 domain thuộc các giải pháp định danh hậu cookie như UID2, ID5, LiveRamp, Permutive, Audigent và domain phân phối quảng cáo cốt lõi adsrvr.org."
-      },
-      {
-        "heading": "Cuộc đối thoại kỹ thuật bất ngờ giữa Apple và ngành quảng cáo",
-        "body": "Vào ngày 5/10 lúc 12:29:29 giờ Thái Bình Dương, kỹ sư John Wilander của Apple đã đề nghị The Trade Desk thử nghiệm bản iOS 27.2 beta vừa phát hành. Chỉ 15 phút 22 giây sau đó, đại diện The Trade Desk xác nhận ghi nhận thay đổi trong build 24B5099f và tiến hành kiểm tra. Đây là trao đổi hai chiều đầu tiên giữa Apple và đơn vị công nghệ quảng cáo về vấn đề danh sách chặn. Tài liệu báo cáo đính kèm một tệp ảnh 51.16 KB ghi nhận các request bị chặn trên trang tin yahoo.com ở chế độ duyệt web thông thường."
-      },
-      {
-        "heading": "Nhà xuất bản dịch chuyển sang kiến trúc Trusted Server",
-        "body": "Động thái chặn domain của Safari khiến các nhà xuất bản buộc phải xem xét lại giải pháp Trusted Server do IAB Tech Lab ra mắt từ tháng 3/2025. Trước đây, thiết bị người dùng phải gửi request trực tiếp tới hàng chục công ty adtech, khiến Safari dễ dàng nhận diện và ngăn chặn. Trusted Server chuyển toàn bộ luồng đấu giá và xử lý dữ liệu về máy chủ do nhà xuất bản quản lý, buộc trình duyệt chỉ giao tiếp trực tiếp với trang web. Nếu muốn can thiệp, Apple buộc phải chặn chính website đó, điều sẽ làm gián đoạn trải nghiệm của người dùng Safari."
-      },
-      {
-        "heading": "Sự chênh lệch vị thế và đà tăng trưởng của hệ sinh thái Apple Ads",
-        "body": "Đơn vị truyền thông Paradium đã thử nghiệm chạy lại mã Permutive qua Trusted Server để khôi phục luồng dữ liệu nhóm độc giả trên Safari. Sự can thiệp ở cấp hệ điều hành tạo lợi thế lớn cho mảng kinh doanh quảng cáo của chính Apple khi hãng mở rộng vị trí hiển thị trên App Store và Maps với ưu đãi 15% credit chi tiêu. Mảng Dịch vụ chứa mảng quảng cáo của Apple đã đạt doanh thu kỷ lục 30,7 tỷ USD trong quý kết thúc vào tháng 6. Việc thắt chặt chính sách theo dõi trên iOS tiếp tục củng cố quyền kiểm soát của Apple đối với toàn bộ hệ sinh thái quảng cáo di động."
-      }
-    ],
-    "impact": "Các chiến dịch quảng cáo nhắm mục tiêu và đo lường dựa trên dữ liệu định danh bên thứ ba (UID2, ID5) trên thiết bị iOS sẽ tiếp tục bị sụt giảm tín hiệu nghiêm trọng. Trưởng phòng Marketing cần chủ động chuyển hướng sang các giải pháp thu thập dữ liệu qua máy chủ (Server-Side) để bảo vệ hiệu quả phân phối ngân sách.",
-    "ifIgnored": "Doanh nghiệp sẽ đối mặt với tình trạng báo cáo sai lệch tỷ lệ chuyển đổi từ người dùng iOS, chi phí tiếp cận khách hàng trên Safari tăng cao và các tệp đối tượng retargeting bị teo nhỏ mà không thể chẩn đoán nguyên nhân kỹ thuật.",
-    "actionChecklist": [
-      "Rà soát lại tỷ trọng traffic và lượng chuyển đổi phát sinh từ trình duyệt Safari/iOS trong các chiến dịch hiện tại.",
-      "Kiểm tra mức độ phụ thuộc của hệ thống dữ liệu khách hàng vào các giải pháp định danh bên thứ ba.",
-      "Làm việc với đội ngũ kỹ thuật để đánh giá khả năng triển khai Server-Side Tagging hoặc Conversions API.",
-      "Cấu hình lại các mô hình attribution để giảm bớt sự phụ thuộc vào dữ liệu tracking theo thời gian thực trên thiết bị di động."
-    ],
-    "id": "real-2026-10-08-apple-thu-nghiem-ios-ef94f3",
-    "publishedAt": "08/10/2026",
-    "sourceUrl": "https://ppc.land/apple-asks-the-trade-desk-to-test-an-ios-27-2-build-that-may-unblock-ads/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/size/w1200/2026/10/apple-safari-blocklist-trade-desk-adsrvr-ios-27-2-ad-tech-blockade.jpg",
       "credit": "Ảnh: PPC Land"
     }
   },
