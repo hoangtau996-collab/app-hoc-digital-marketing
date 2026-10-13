@@ -2,6 +2,133 @@
   {
     "category": "Google Ads & SEO",
     "platformIcon": "Search",
+    "title": "Plugin All In One SEO trên WordPress dính hai lỗ hổng bảo mật mức độ trung bình",
+    "isHot": true,
+    "illustration": "account-security",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Bảo mật WordPress",
+      "All In One SEO",
+      "Lỗ hổng bảo mật",
+      "Cập nhật plugin"
+    ],
+    "summary": "Plugin All In One SEO phổ biến trên nền tảng WordPress vừa phát hiện hai lỗ hổng bảo mật cho phép kẻ tấn công chưa xác thực can thiệp vào website. Các quản trị viên cần tiến hành cập nhật hệ thống ngay lập tức để phòng ngừa rủi ro. Thông tin này ảnh hưởng trực tiếp đến hơn hai triệu trang web đang sử dụng plugin.",
+    "keyNumbers": [
+      {
+        "value": "2.000.000+",
+        "label": "Lượt cài đặt active"
+      },
+      {
+        "value": "6,5",
+        "label": "Điểm rủi ro lỗ hổng thứ nhất"
+      },
+      {
+        "value": "6,1",
+        "label": "Điểm rủi ro lỗ hổng thứ hai"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Thông tin chung về sự cố bảo mật",
+        "body": "Cảnh báo bảo mật mới đây đã được đưa ra đối với plugin All In One SEO trên WordPress, một công cụ quản lý tối ưu hóa công cụ tìm kiếm được sử dụng rộng rãi. Sự cố bao gồm hai lỗ hổng bảo mật khác nhau, ảnh hưởng đến hơn hai triệu lượt cài đặt hoạt động trên toàn cầu. Cả hai lỗ hổng này đều tạo điều kiện cho kẻ tấn công không cần xác thực thực hiện các hành vi độc hại dưới những điều kiện cụ thể. Việc phát hiện kịp thời giúp các nhà quản trị website chủ động phòng thủ trước khi bị khai thác."
+      },
+      {
+        "heading": "Lỗ hổng thực thi mã shortcode tùy ý",
+        "body": "Lỗ hổng đầu tiên mang mã định danh được đánh giá ở mức 6,5 điểm thuộc mức trung bình và ảnh hưởng đến mọi phiên bản từ 5.0.2 trở xuống. Điểm yếu này xuất phát từ việc thiếu bước kiểm tra xác thực trước khi plugin chạy hàm do_shortcode của WordPress. Kẻ tấn công không có tài khoản hoặc đặc quyền vẫn có thể khiến trang web thực thi các shortcode tùy ý. Điều kiện cần là tính năng breadcrumb của AIOSEO phải được hiển thị trên trang kết quả tìm kiếm của WordPress."
+      },
+      {
+        "heading": "Lỗ hổng tập lệnh chéo trang DOM",
+        "body": "Lỗ hổng thứ hai mang mã định danh được đánh giá ở mức 6,1 điểm trung bình, ảnh hưởng đến các phiên bản từ 5.0.1.1 trở xuống. Đây là lỗ hổng XSS dựa trên DOM do việc lọc đầu ra và làm sạch đầu vào chưa đầy đủ khi xử lý đường dẫn URL. Kẻ tấn công có thể chèn mã độc vào URL nhưng đòi hỏi người dùng được nhắm mục tiêu phải có quyền aioseo_manage_seo. Người dùng này cũng phải mở bảng điều khiển SEO Preview trên thanh quản trị WordPress khi truy cập đường dẫn chứa mã độc."
+      },
+      {
+        "heading": "Bản vá lỗi đã chính thức phát hành",
+        "body": "Nhà phát triển plugin đã nhanh chóng phát hành các bản vá riêng biệt cho từng lỗ hổng trong các bản cập nhật mới. Phiên bản 5.0.2.1 khắc phục triệt để lỗi thực thi shortcode tùy ý trên trang tìm kiếm của website. Trong khi đó, phiên bản 5.0.2 giải quyết dứt điểm vấn đề bảo mật liên quan đến tập lệnh chéo trang. Người dùng được khuyến nghị nâng cấp lên phiên bản 5.0.2.1 hoặc các bản mới hơn để đảm bảo an toàn toàn diện."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing quản lý website doanh nghiệp chạy trên nền tảng WordPress cần kiểm tra ngay lập tức phiên bản plugin AIOSEO đang sử dụng để tránh nguy cơ website bị chèn mã độc hoặc thao túng cấu trúc trang.",
+    "ifIgnored": "Nếu bỏ qua việc cập nhật, website có nguy cơ bị kẻ gian lợi dụng lỗ hổng để thực thi mã độc, làm suy giảm uy tín thương hiệu và ảnh hưởng nghiêm trọng đến thứ hạng trên công cụ tìm kiếm.",
+    "actionChecklist": [
+      "Kiểm tra phiên bản plugin All In One SEO hiện tại trên hệ thống website",
+      "Tiến hành cập nhật plugin lên phiên bản 5.0.2.1 hoặc mới hơn",
+      "Rà soát lại quyền truy cập và tài khoản quản trị viên của website WordPress",
+      "Kiểm tra hiển thị của tính năng breadcrumb trên trang kết quả tìm kiếm nội bộ"
+    ],
+    "deadline": "Cập nhật ngay lập tức",
+    "id": "real-2026-10-12-plugin-all-in-one-22f562",
+    "publishedAt": "12/10/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/all-in-one-seo-wordpress-plugin-vulnerable-to-two-exploits/592719/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/10/aioseo-wordpress-plugin-871.jpg",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
+    "category": "AI Marketing",
+    "platformIcon": "Sparkles",
+    "title": "Nghiên cứu mới: ChatGPT ưu tiên nguồn gốc, các trang tổng hợp kiến thức mất chỗ đứng",
+    "isHot": false,
+    "illustration": "zero-click",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "AI Search",
+      "ChatGPT",
+      "SEO",
+      "Nguồn gốc"
+    ],
+    "summary": "Dữ liệu mới từ Ahrefs cho thấy ChatGPT đang dịch chuyển mạnh mẽ sang việc trích dẫn các nguồn tin gốc, cơ quan chính phủ và trang kiểm định thay vì các bài viết tổng hợp thông tin. Các trang giải thích kiến thức tài chính và sức khỏe đã sụt giảm thứ hạng trích dẫn đáng kể trong giai đoạn từ tháng 3 đến tháng 9.",
+    "keyNumbers": [
+      {
+        "value": "64 đến 4",
+        "label": "Thứ hạng của PubMed trên ChatGPT"
+      },
+      {
+        "value": "18 đến 79",
+        "label": "Thứ hạng của WebMD trên ChatGPT"
+      },
+      {
+        "value": "14,4%",
+        "label": "Tỷ lệ câu trả lời chạy tìm kiếm web"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Sự trỗi dậy của nguồn tin gốc và cơ quan quản lý",
+        "body": "Dữ liệu từ Ahrefs phân tích các miền bị trích dẫn nhiều nhất trong câu trả lời của ChatGPT tại Mỹ cho thấy sự thay đổi lớn. PubMed đã leo từ vị trí 64 lên vị trí thứ 4 từ tháng 3 đến tháng 9. Trong khi đó, các trang tổng hợp thông tin như WebMD rơi từ vị trí 18 xuống 79. Các trang chính phủ, nghiên cứu, quản lý và đơn vị thử nghiệm sản phẩm thực tế đều tăng trưởng thứ hạng."
+      },
+      {
+        "heading": "Các trang giải thích và diễn đàn giảm thị phần",
+        "body": "Nhiều trang giải thích lĩnh vực sức khỏe và tài chính mất dần ưu thế trên mô hình của ChatGPT. Các thương hiệu lớn như Britannica, Investopedia và New York Post thậm chí rơi khỏi top 200 trang được trích dẫn nhiều nhất. Bên cạnh đó, tỷ lệ trích dẫn Reddit giảm mạnh từ 19,1% trong tháng 3 xuống còn 2,3% trong tháng 9. Wikipedia cũng ghi nhận mức giảm từ 14,1% xuống 2,9% trong cùng giai đoạn."
+      },
+      {
+        "heading": "Hành vi tìm kiếm web của ChatGPT",
+        "body": "Báo cáo xem xét mẫu gồm 66,6 triệu câu trả lời miễn phí, không đăng nhập trong tháng 8 và tháng 9 trên toàn cầu. Kết quả chỉ ra có 14,4% phản hồi liên quan đến việc thực hiện tìm kiếm trên web. Trung bình mỗi phản hồi cần khoảng 1,6 truy vấn phụ trợ để thu thập dữ liệu trước khi đưa ra câu trả lời cuối cùng cho người dùng."
+      },
+      {
+        "heading": "Định hướng chiến lược nội dung cho thương hiệu",
+        "body": "Xu hướng này chứng minh mô hình AI ưu tiên các tài liệu mà chỉ doanh nghiệp hoặc chuyên gia mới có thể tự tạo ra. Trưởng phòng Marketing cần dịch chuyển trọng tâm sang nghiên cứu gốc, dữ liệu thực tế và thông tin sản phẩm độc quyền. Việc tiếp tục dựa vào các bài viết tổng hợp lại kiến thức chung sẽ không còn mang lại hiệu quả hiển thị trên các công cụ tìm kiếm tích hợp AI."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing cần thay đổi chiến lược sản xuất nội dung, chuyển từ việc viết bài tổng hợp thông tin phổ thông sang xây dựng tài liệu nghiên cứu gốc và dữ liệu thực tế để duy trì khả năng hiển thị trên AI.",
+    "ifIgnored": "Thương hiệu sẽ mất dần nguồn lưu lượng truy cập gián tiếp từ các câu trả lời của ChatGPT khi nền tảng này ngày càng siết chặt việc ưu tiên trích dẫn các nguồn tin chính thống và sơ cấp.",
+    "actionChecklist": [
+      "Đánh giá lại tỷ lệ nội dung tự sản xuất so với nội dung tổng hợp trên website",
+      "Thống kê các chủ đề cốt lõi mà ChatGPT đang trích dẫn thương hiệu hoặc đối thủ",
+      "Bổ sung dữ liệu nghiên cứu gốc và báo cáo thử nghiệm sản phẩm vào chiến lược content",
+      "Kiểm tra mức độ hiển thị của website trên các công cụ tìm kiếm tích hợp AI"
+    ],
+    "id": "real-2026-10-12-nghien-cuu-moi-chatgpt-7fe439",
+    "publishedAt": "12/10/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/chatgpt-most-cited-sites-primary-sources-ahrefs/592682/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/10/chatgpt-primary-sources-featured.jpg",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
     "title": "Google Ads nới lỏng chính sách tên doanh nghiệp khác tên miền trang đích",
     "isHot": true,
     "illustration": "account-security",
@@ -254,70 +381,6 @@
   {
     "category": "AI Marketing",
     "platformIcon": "Sparkles",
-    "title": "Anthropic cấm dùng Claude để thao túng câu trả lời của công cụ tìm kiếm và AI",
-    "isHot": true,
-    "illustration": "ai-label",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "AI Marketing",
-      "Chính sách Claude",
-      "SEO AI",
-      "Anthropic"
-    ],
-    "summary": "Anthropic vừa cập nhật chính sách sử dụng có hiệu lực từ ngày 12/11/2026, nghiêm cấm hành vi dùng Claude để gieo rắc nội dung sai lệch nhằm thao túng nguồn dữ liệu của công cụ tìm kiếm và hệ thống AI. Nền tảng sẽ khóa tài khoản đối với các hành vi lập mạng lưới website vệ tinh giả mạo hoặc đánh giá ảo. Đồng thời, Anthropic đã rút việc tự động xuất bản nội dung ra khỏi danh mục rủi ro cao.",
-    "keyNumbers": [
-      {
-        "value": "70",
-        "label": "website vệ tinh giả mạo trong một mạng lưới bị triệt phá"
-      },
-      {
-        "value": "8.913",
-        "label": "bài viết AI bằng 20 ngôn ngữ từng bị phát hiện và gỡ bỏ"
-      },
-      {
-        "value": "11",
-        "label": "lĩnh vực rủi ro cao còn lại cần kiểm duyệt chặt chẽ"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Cấm triệt để việc gieo dữ liệu giả để thao túng AI và Search",
-        "body": "Chính sách mới của Anthropic bổ sung điều khoản cấm thao túng các nguồn dữ liệu mà công cụ tìm kiếm và hệ thống AI khai thác. Người dùng không được phép tạo mạng lưới các trang web đội lốt đơn vị độc lập để xác thực chéo cùng một thông tin sai lệch. Quy định này cũng cấm tạo chân dung giả, đánh giá ảo và bán công cụ phục vụ mục đích thao túng dư luận. Bất kỳ tài khoản cá nhân hay tổ chức nào dùng Claude API vi phạm đều sẽ bị khóa quyền truy cập."
-      },
-      {
-        "heading": "Động thái xử lý sau cuộc điều tra mạng lưới báo chí giả mạo",
-        "body": "Quy định mới bắt nguồn từ báo cáo bảo mật tháng 9 của Anthropic khi phát hiện khoảng 70 website giả dạng cơ quan tin tức địa phương liên quan đến một đại lý quảng cáo tại Pháp. Mạng lưới này dùng Claude xuất bản tự động ít nhất 8.913 bài viết bằng 20 ngôn ngữ, mỗi bài chứa 3 đến 4 liên kết nội bộ để tăng điểm uy tín SEO. Mặc dù lượng tương tác thực tế từ người dùng rất thấp, toàn bộ tài khoản Claude và tổ chức đứng sau chiến dịch này đã bị cấm vĩnh viễn."
-      },
-      {
-        "heading": "Gỡ bỏ xuất bản tự động khỏi danh mục rủi ro cao",
-        "body": "Trước đây, Anthropic xếp nội dung truyền thông và báo chí xuất bản tự động vào nhóm rủi ro cao, bắt buộc phải có chuyên gia con người thẩm định và công bố nhãn AI. Trong bản cập nhật mới, danh mục rủi ro cao chỉ còn 11 lĩnh vực đặc thù như tư vấn pháp lý, y tế, tài chính, tín dụng và nhà ở. Xuất bản nội dung thông thường không còn nằm trong nhóm này, giúp doanh nghiệp giảm bớt quy trình giải trình phức tạp khi vận hành content tự động hợp pháp."
-      },
-      {
-        "heading": "Xu hướng đồng bộ chính sách giữa các ông lớn công nghệ",
-        "body": "Động thái của Anthropic diễn ra song song với việc Google siết chặt quy định chống thư rác nhắm vào các hành vi thao túng câu trả lời AI tạo sinh. Các chiến thuật SEO mũ đen truyền thống như dùng mạng lưới site vệ tinh PBN do AI viết để lấy backlink hoặc ép AI Search trích dẫn đang bị chặn đứng từ gốc. Doanh nghiệp phụ thuộc vào việc bơm nội dung hàng loạt mà không đầu tư tính xác thực sẽ đối mặt với rủi ro bị phạt kép từ cả nhà cung cấp mô hình AI lẫn công cụ tìm kiếm."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing không thể tiếp tục dung túng cho các chiến dịch SEO vệ tinh dùng AI tạo bài hàng loạt để ép thứ hạng tìm kiếm hay thao túng trích dẫn trên AI Overview. Rủi ro mất trắng tài khoản doanh nghiệp trên nền tảng Claude API là có thật, kèm theo nguy cơ toàn bộ hệ thống website bị Google xếp vào diện spam thao túng AI.",
-    "ifIgnored": "Nếu đội ngũ nội bộ hoặc agency đối tác vẫn triển khai mạng lưới website vệ tinh tự động bằng Claude, toàn bộ tài khoản API có thể bị khóa vĩnh viễn ngay lập tức, làm tê liệt quy trình vận hành và khiến tên miền chính bị các công cụ tìm kiếm trừng phạt nặng nề.",
-    "actionChecklist": [
-      "Rà soát toàn bộ quy trình làm content SEO của đội ngũ nội bộ và agency để dừng ngay việc dùng Claude tạo mạng lưới site vệ tinh ẩn danh.",
-      "Kiểm tra lại hệ thống prompt và quy trình gọi API Claude, đảm bảo không vi phạm các điều khoản về tạo đánh giá giả hoặc danh tính giả.",
-      "Điều chỉnh chiến lược tối ưu hóa AI Search sang hướng xây dựng dữ liệu chuyên gia minh bạch và có thẩm quyền thực tế thay vì spam số lượng.",
-      "Tận dụng việc gỡ bỏ quy định rủi ro cao để đẩy nhanh tốc độ sản xuất nội dung tự động hợp lệ trong các mảng không thuộc tài chính, pháp lý và y tế."
-    ],
-    "deadline": "12/11/2026",
-    "id": "real-2026-10-09-anthropic-cam-dung-claude-b019e2",
-    "publishedAt": "09/10/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/claude-rules-fake-sources-ai-answers/592456/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/10/claude-fake-sources-featured.jpg",
-      "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
-    "category": "AI Marketing",
-    "platformIcon": "Sparkles",
     "title": "LinkedIn siết chặt phân phối nội dung AI rác với độ chính xác phát hiện đạt 94%",
     "isHot": false,
     "illustration": "ai-label",
@@ -375,68 +438,6 @@
     "image": {
       "url": "https://imgproxy.divecdn.com/vpisATGWFWb-yFMjh24kEQhyLCBUWIILYnB5gq8y_CY/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9saW5rZWRpbl9haV9zbG9wLnBuZw==.webp",
       "credit": "Ảnh: Social Media Today"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Google hoàn tất bản cập nhật thuật toán chống spam tháng 9 năm 2026 sau gần 14 ngày",
-    "isHot": false,
-    "illustration": "keyword-exclusion",
-    "readTime": "3 phút đọc",
-    "tags": [
-      "Google Update",
-      "SEO",
-      "Spam Update"
-    ],
-    "summary": "Google đã chính thức hoàn tất việc triển khai bản cập nhật chống spam tháng 9 năm 2026 trên toàn cầu sau gần 14 ngày hoạt động. Thời gian triển khai này kéo dài hơn đáng kể so với ba bản cập nhật tương tự trước đó trong năm nay. Trưởng phòng Marketing cần theo dõi sát sao dữ liệu trên Google Search Console để đánh giá đúng biến động lưu lượng truy cập.",
-    "keyNumbers": [
-      {
-        "value": "14",
-        "label": "ngày triển khai"
-      },
-      {
-        "value": "34%",
-        "label": "tỷ trọng truy cập trung vị trước cập nhật"
-      },
-      {
-        "value": "31%",
-        "label": "tỷ trọng truy cập trung vị trong cập nhật"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Thời gian triển khai kéo dài kỷ lục trong năm",
-        "body": "Bản cập nhật chống spam tháng 9 năm 2026 của Google đã kết thúc vào ngày 8 tháng 10, kéo dài gần 14 ngày kể từ khi bắt đầu vào ngày 24 tháng 9. Theo tài liệu lịch sử cập nhật của Google, thời gian thực tế là 13 ngày và 16 giờ. Con số này vượt trội so với các đợt cập nhật trước trong năm, vốn chỉ kéo dài từ 19 giờ 30 phút đến 2 ngày và 16 giờ."
-      },
-      {
-        "heading": "Biến động ban đầu từ dữ liệu trang web",
-        "body": "Dữ liệu ban đầu từ 32.569 trang web có kết nối Google Analytics cho thấy tỷ trọng lượt truy cập từ tìm kiếm tự nhiên của Google đã giảm từ 34% xuống còn 31%. Có 10% số trang web ghi nhận mức giảm một nửa trở lên trong tỷ trọng này. Tuy nhiên, các chuyên gia đánh giá đây chỉ là dữ liệu đọc sớm và chưa phản ánh chính xác các trang web bị Google xác định là spam."
-      },
-      {
-        "heading": "Nhiễu động từ công cụ theo dõi thứ hạng",
-        "body": "Nhiều công cụ theo dõi thứ hạng trong ngành đã ghi nhận các biến động đột ngột bắt đầu từ ngày 26 tháng 9. Những thay đổi này thực tế không xuất hiện đối với người dùng tìm kiếm trên Google do kết quả trả về từ quá trình tự động chưa hoàn chỉnh. Do đó, các đơn vị theo dõi khuyến nghị nên ưu tiên kiểm tra dữ liệu thực tế từ Google Search Console."
-      },
-      {
-        "heading": "Định hướng xử lý cho quản trị viên website",
-        "body": "Các trang web ghi nhận sự thay đổi lưu lượng sau bản cập nhật nên tiến hành rà soát lại các chính sách chống spam của Google. Việc thực hiện các điều chỉnh cần thiết có thể giúp cải thiện vị thế của trang web khi hệ thống tự động ghi nhận sự tuân thủ trong khoảng thời gian nhiều tháng."
-      }
-    ],
-    "impact": "Giúp Trưởng phòng Marketing phân biệt được đâu là biến động thật trên Google Search Console và đâu là lỗi hiển thị tạm thời từ các công cụ theo dõi thứ hạng bên thứ ba trong giai đoạn cập nhật thuật toán.",
-    "ifIgnored": "Dễ dẫn đến quyết định sai lầm khi vội vàng thay đổi cấu trúc website hoặc nội dung dựa trên các số liệu sụt giảm tạm thời chưa được kiểm chứng từ công cụ bên ngoài.",
-    "actionChecklist": [
-      "So sánh dữ liệu Search Console trong khoảng thời gian từ ngày 24 tháng 9 đến ngày 8 tháng 10.",
-      "Kiểm tra kỹ lưỡng các số liệu về lượt hiển thị và nhấp chuột thay vì chỉ nhìn vào thứ hạng từ bên thứ ba.",
-      "Rà soát lại nội dung và cấu trúc website theo đúng các chính sách chống spam hiện hành của Google.",
-      "Lập báo cáo đánh giá tác động dài hạn thay vì xử lý vội vàng dựa trên dữ liệu biến động ngắn hạn."
-    ],
-    "id": "real-2026-10-08-google-hoan-tat-ban-e2f5f8",
-    "publishedAt": "08/10/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/google-september-2026-spam-update-complete/592283/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/10/google-september-spam-update-calendar.jpg",
-      "credit": "Ảnh: Search Engine Journal"
     }
   },
   {
