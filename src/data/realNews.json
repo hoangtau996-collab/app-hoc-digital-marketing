@@ -1,5 +1,191 @@
 [
   {
+    "category": "TikTok Shop & Ads",
+    "platformIcon": "Video",
+    "title": "TikTok Shop bổ sung định dạng carousel gắn giỏ hàng và công cụ đẩy số livestream",
+    "isHot": false,
+    "illustration": "livestream",
+    "readTime": "3 phút đọc",
+    "tags": [
+      "TikTok Shop",
+      "GMV Max",
+      "Livestream shopping",
+      "Carousel bán hàng"
+    ],
+    "summary": "TikTok Shop vừa ra mắt loạt tính năng thương mại mới hỗ trợ nhà bán hàng thúc đẩy doanh số và mức độ tương tác. Các bổ sung đáng chú ý gồm bài đăng hình ảnh carousel có gắn liên kết sản phẩm, cơ chế kích cầu trong phiên livestream và tự động hóa quảng cáo với GMV Max Net Sales Boost. Cập nhật này giúp doanh nghiệp tối ưu chi phí sản xuất nội dung và gia tăng tỷ lệ chuyển đổi.",
+    "keyNumbers": [
+      {
+        "value": "2",
+        "label": "số ảnh tối thiểu để tạo bài đăng carousel gắn sản phẩm"
+      },
+      {
+        "value": "5 - 7",
+        "label": "khoảng số lượng ảnh được nền tảng khuyến nghị"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Định dạng hình ảnh carousel gắn liên kết sản phẩm",
+        "body": "Nhà bán hàng hiện có thể tạo các bài đăng dạng carousel lướt ảnh có gắn giỏ hàng trực tiếp trên nguồn cấp dữ liệu TikTok. Định dạng này cho phép chuyển đổi ảnh chụp sản phẩm có sẵn thành nội dung bán hàng mà không bắt buộc phải quay video. Người bán chỉ cần tải lên từ 2 hình ảnh trở lên và gắn liên kết sản phẩm tương ứng. TikTok khuyến nghị sử dụng từ 5 đến 7 hình ảnh để kiểm tra độ đón nhận của sản phẩm mới hoặc làm mới hình ảnh cho các mặt hàng bán chạy."
+      },
+      {
+        "heading": "Cơ chế kích cầu nhóm và đấu giá trong livestream",
+        "body": "Nền tảng bổ sung nhiều tính năng tương tác trực tiếp nhằm đẩy mạnh hành vi mua sắm khi đang phát sóng. Tính năng Group deal cho phép người bán thiết lập mức giá ưu đãi khi đạt mục tiêu số lượng đơn hàng theo nhóm. Bên cạnh đó, tính năng Price cut kích hoạt mức giảm giá chung cho tất cả người xem khi phiên live đạt mốc doanh số nhất định. Ngoài ra, tính năng Second chance giúp nhà bán hàng tiếp cận lại những người trả giá cao tiếp theo trong các phiên đấu giá."
+      },
+      {
+        "heading": "Bán hàng đa kênh và phân bổ kho hàng linh hoạt",
+        "body": "TikTok triển khai tính năng bán hàng đa kênh cho phép người bán kết hợp cả hình thức đấu giá lẫn bán giá cố định trong cùng một phiên live. Cơ chế kiểm soát tồn kho linh hoạt mới cũng được đưa vào vận hành. Nhà bán hàng có thể giữ lại một phần tồn kho dành riêng cho các hoạt động kích cầu trong livestream. Phần tồn kho còn lại vẫn được phân bổ để bán bình thường trên toàn bộ hệ thống nền tảng."
+      },
+      {
+        "heading": "Đăng ký định kỳ và tự động hóa quảng cáo GMV Max",
+        "body": "TikTok mở rộng thêm tùy chọn gói thuê bao mua định kỳ tự động cho các nhóm sản phẩm đủ điều kiện. Tính năng này giúp các thương hiệu tiêu dùng tạo nguồn doanh thu lặp lại ổn định từ tệp khách hàng quen. Song song đó, công cụ GMV Max Net Sales Boost được giới thiệu để tự động tạo và tối ưu hóa quảng cáo cho các sản phẩm chưa từng chạy chiến dịch. Đây là bước tiến mới nhằm tự động hóa phân bổ ngân sách cho danh mục sản phẩm dài hạn trên gian hàng."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing có thể giảm đáng kể chi phí sản xuất video ngắn nhờ tận dụng kho ảnh chụp sẵn cho định dạng carousel gắn link sản phẩm. Đồng thời, các tính năng giảm giá theo nhóm và phân bổ kho trong livestream cung cấp thêm kịch bản chốt đơn tức thì để kéo ROAS trong các khung giờ vàng.",
+    "ifIgnored": "Doanh nghiệp sẽ tiếp tục phụ thuộc vào chi phí sản xuất video tốn kém và bỏ lỡ lưu lượng truy cập từ định dạng hình ảnh đang được thuật toán ưu tiên. Các phiên livestream cũng thiếu công cụ giữ chân người xem, dẫn đến tỷ lệ rớt đơn cao so với đối thủ áp dụng khuyến mãi nhóm.",
+    "actionChecklist": [
+      "Soạn bộ ảnh 5 đến 7 tấm cho các sản phẩm chủ lực để dựng thử nghiệm định dạng carousel gắn giỏ hàng",
+      "Thiết lập kịch bản livestream mới áp dụng cơ chế Group deal và Price cut theo từng mốc số lượng bán",
+      "Tách phần trăm tồn kho dành riêng cho các deal xả hàng nhanh trong buổi livestream tiếp theo",
+      "Kiểm tra danh mục sản phẩm đủ điều kiện để kích hoạt thử nghiệm tính năng GMV Max Net Sales Boost"
+    ],
+    "id": "real-2026-10-14-tiktok-shop-bo-sung-81252a",
+    "publishedAt": "14/10/2026",
+    "sourceUrl": "https://www.socialmediatoday.com/news/tiktok-shop-offers-uk-merchants-more-engagement-tools/833064/",
+    "source": "Social Media Today",
+    "image": {
+      "url": "https://imgproxy.divecdn.com/d6N8u5BI_rNJCd_2E3iIgUI5gvE-lJCZ7tPPETxAYVA/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS90aWt0b2tfc2hvcHBhYmxlX2Nhcm91c2VsLnBuZw==.webp",
+      "credit": "Ảnh: Social Media Today"
+    }
+  },
+  {
+    "category": "TikTok Shop & Ads",
+    "platformIcon": "Video",
+    "title": "Báo cáo DoubleVerify: Chi tiêu quảng cáo mạng xã hội tăng nhưng tỷ lệ mua hàng giảm",
+    "isHot": false,
+    "illustration": "shop-health",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Social Commerce",
+      "DoubleVerify",
+      "Quảng cáo mạng xã hội",
+      "Hành vi người tiêu dùng"
+    ],
+    "summary": "Báo cáo mới từ DoubleVerify cho thấy chi tiêu quảng cáo mạng xã hội toàn cầu dự kiến đạt 408 tỷ USD trong năm 2026, tăng 19% so với năm trước đó. Tuy nhiên, tỷ lệ người tiêu dùng thực hiện mua sắm trực tiếp trên nền tảng mạng xã hội lại giảm xuống còn 25%, so với mức 30% của năm ngoái.",
+    "keyNumbers": [
+      {
+        "value": "408 tỷ USD",
+        "label": "Chi tiêu quảng cáo MXH 2026"
+      },
+      {
+        "value": "25%",
+        "label": "Tỷ lệ mua hàng qua MXH"
+      },
+      {
+        "value": "19%",
+        "label": "Tăng trưởng chi tiêu"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Biến động chi tiêu và hành vi mua sắm",
+        "body": "Báo cáo Global Insights của DoubleVerify ghi nhận mức chi tiêu cho quảng cáo trên các nền tảng chia sẻ truyền thông và mạng xã hội dự kiến đạt 408 tỷ USD trong năm 2026, tăng 19% so với năm 2025 theo dữ liệu từ EMARKETER. Trái ngược với dòng tiền quảng cáo đang tăng mạnh, tỷ lệ người tiêu dùng thực hiện giao dịch mua hàng trực tiếp trên mạng xã hội trong 12 tháng qua đã giảm từ 30% xuống còn 25%."
+      },
+      {
+        "heading": "Ảnh hưởng của influencer và mức độ tiếp cận",
+        "body": "Tác động của người có ảnh hưởng đến quyết định mua hàng của người tiêu dùng cũng ghi nhận sự sụt giảm từ 54% xuống còn 48%. Trong khi đó, tỷ lệ các nhà tiếp thị coi độ tiếp cận khán giả là thách thức lớn nhất trên mạng xã hội đã giảm từ 46% xuống còn 40%. Khảo sát được thực hiện với 22.000 người tiêu dùng tại 21 quốc gia và 2.020 nhà tiếp thị tại 25 quốc gia vào tháng 2 năm 2026."
+      },
+      {
+        "heading": "Mức độ phổ biến của các nền tảng Big Four",
+        "body": "DoubleVerify nhóm YouTube, Facebook, Instagram và TikTok thành bốn nền tảng hàng đầu với tỷ lệ người dùng toàn cầu lần lượt là 95%, 88%, 80% và 68%. Về xu hướng sử dụng trong 12 tháng tới, 52% người dùng TikTok kỳ vọng sẽ tăng thời gian sử dụng nền tảng này, dẫn đầu nhóm, theo sau là YouTube với 50%, Instagram với 46% và Facebook với 41%."
+      },
+      {
+        "heading": "Phương pháp và phạm vi khảo sát",
+        "body": "Khảo sát được thực hiện bởi Sapio Research thông qua các panel đối tác trực tuyến với sai số là 0,7 điểm phần trăm đối với người tiêu dùng và 2,2 điểm phần trăm đối với nhà tiếp thị ở mức độ tin cậy 95%. Báo cáo cũng chỉ ra sự khác biệt lớn theo khu vực địa lý, trong đó Bắc Mỹ ghi nhận mức độ sử dụng phần lớn các nền tảng thấp hơn so với các khu vực như Mỹ Latinh."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing cần nhận thức rõ khoảng cách giữa ngân sách quảng cáo đang phình to và hiệu quả chuyển đổi thực tế đang suy giảm để điều chỉnh kỳ vọng doanh thu từ kênh mạng xã hội.",
+    "ifIgnored": "Tiếp tục dồn ngân sách dựa trên giả định hành vi mua sắm trên mạng xã hội tăng trưởng tuyến tính, dẫn đến lãng phí chi phí khi tỷ lệ chuyển đổi thực tế của người dùng đã chững lại.",
+    "actionChecklist": [
+      "Đánh giá lại hiệu suất chuyển đổi thực tế trên các kênh mạng xã hội so với số liệu chi tiêu quảng cáo.",
+      "Kiểm tra lại hiệu quả thực tế của các chiến dịch hợp tác với influencer trong bối cảnh mức độ ảnh hưởng của họ đang giảm.",
+      "Điều chỉnh phân bổ ngân sách giữa việc xây dựng nhận diện thương hiệu và tối ưu hóa chuyển đổi trực tiếp.",
+      "Cập nhật các số liệu benchmark mới nhất về hành vi người dùng thay vì dựa vào dữ liệu cũ."
+    ],
+    "id": "real-2026-10-14-bao-cao-doubleverify-chi-58c47c",
+    "publishedAt": "14/10/2026",
+    "sourceUrl": "https://ppc.land/social-purchases-drop-to-25-from-30-doubleverify-surveys-show/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/10/doubleverify-social-purchases-drop-25-percent-ad-spend-coin-chute-storefront.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Google Ads cho phép nhà quảng cáo giới hạn tỷ lệ ngân sách cho Display và Search partners",
+    "isHot": true,
+    "illustration": "keyword-exclusion",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Google Ads",
+      "Ngân sách quảng cáo",
+      "Display Network",
+      "Search Partners"
+    ],
+    "summary": "Google Ads vừa bổ sung hai tính năng kiểm soát ngân sách mới, cho phép phân loại kênh ưu tiên và đặt giới hạn phần trăm ngân sách hàng ngày cho các kênh phụ. Thay đổi này giúp các nhà quảng cáo kiểm soát tốt hơn chi phí trên Mạng Hiển thị và Đối tác Tìm kiếm.",
+    "keyNumbers": [
+      {
+        "value": "15/10/2026",
+        "label": "Bắt đầu triển khai"
+      },
+      {
+        "value": "0%",
+        "label": "Mức giới hạn tối thiểu"
+      },
+      {
+        "value": "2027",
+        "label": "Dừng Display Expansion"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Cơ chế phân loại mức độ ưu tiên kênh",
+        "body": "Google Ads cung cấp tùy chọn xếp hạng các kênh quảng cáo thành mức ưu tiên cao hoặc ưu tiên thấp trên toàn tài khoản, ngân sách chia sẻ hoặc cấp chiến dịch. Theo mặc định, tất cả các kênh đều ở trạng thái ưu tiên cao và hệ thống AI sẽ phân bổ ngân sách vào các kênh này trước. Các kênh ưu tiên thấp chỉ nhận được ngân sách sau khi kênh ưu tiên cao đã được phân bổ đầy đủ."
+      },
+      {
+        "heading": "Giới hạn tỷ lệ phần trăm ngân sách",
+        "body": "Khi một kênh được đặt ở mức ưu tiên thấp, nhà quảng cáo có thể thiết lập phần trăm tối đa từ ngân sách hàng ngày dành cho kênh đó. Tính năng này được tính toán dựa trên ngân sách trung bình hàng ngày của chiến dịch thay vì dựa trên chi phí thực tế phát sinh. Ví dụ với ngân sách một nghìn đô la và tỷ lệ năm phần trăm, Google sẽ cố gắng giữ mức chi tiêu của kênh đó ở mức năm mươi đô la hoặc thấp hơn mỗi ngày."
+      },
+      {
+        "heading": "Quy tắc hoạt động và giới hạn kỹ thuật",
+        "body": "Giới hạn ngân sách này hoạt động theo nguyên tắc nỗ lực tốt nhất từ Google chứ không phải là một cam kết cố định tuyệt đối. Mức giới hạn sẽ được thiết lập lại vào mỗi ngày và không cộng dồn số dư chưa chi tiêu hoặc chi tiêu vượt mức từ ngày hôm trước. Nếu nhà quảng cáo đặt tỷ lệ phân bổ của kênh ưu tiên thấp về mức không phần trăm, Google sẽ ngừng chi tiêu hoàn toàn vào kênh đó."
+      },
+      {
+        "heading": "Ảnh hưởng đến các chiến lược giá thầu",
+        "body": "Đối với các chiến lược như Target CPA hoặc Target ROAS mà không bị giới hạn ngân sách, việc phân loại ưu tiên kênh đơn thuần sẽ không làm thay đổi cách phân phối chi phí. Tuy nhiên, giới hạn phân bổ ngân sách theo tỷ lệ phần trăm vẫn áp dụng bình thường cho các kênh ưu tiên thấp trong trường hợp này. Trong khi đó, tính năng Display Expansion cũ trên các chiến dịch tìm kiếm sẽ chính thức bị loại bỏ vào tháng hai năm hai mươi không trăm hai mươi bảy."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing có thể kiểm soát chặt chẽ hơn dòng tiền quảng cáo, ngăn việc ngân sách bị thất thoát vào các kênh hiệu quả kém như Mạng Hiển thị hay Đối tác Tìm kiếm mà không cần phải tắt hoàn toàn các chiến dịch Performance Max hay Search.",
+    "ifIgnored": "Nếu bỏ qua, các chiến dịch chạy giá thầu thông minh có thể tiếp tục lãng phí một phần ngân sách vào các lưu lượng truy cập kém chất lượng từ đối tác mà hệ thống tự động phân bổ trước đây.",
+    "actionChecklist": [
+      "Kiểm tra lại các chiến dịch Search, Shopping, Performance Max và Demand Gen hiện tại trong tài khoản.",
+      "Xác định các kênh phụ thuộc Mạng Hiển thị hoặc Đối tác Tìm kiếm cần đưa vào diện ưu tiên thấp.",
+      "Thiết lập tỷ lệ phần trăm ngân sách tối đa cho các kênh ưu tiên thấp dựa trên hiệu suất thực tế.",
+      "Theo dõi sát sao hiệu quả chiến dịch sau ngày mười lăm tháng mười để điều chỉnh giới hạn phù hợp."
+    ],
+    "deadline": "15/10/2026",
+    "id": "real-2026-10-14-google-ads-cho-phep-95961a",
+    "publishedAt": "14/10/2026",
+    "sourceUrl": "https://ppc.land/google-ads-lets-advertisers-limit-display-and-partner-spend-by-percentage/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/10/google-ads-channel-prioritization-display-search-partners-budget-cap-jigger-overflow.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
     "category": "Meta Ads",
     "platformIcon": "Facebook",
     "title": "Meta công bố mô hình quảng cáo GEM mới giúp tăng chuyển đổi và lượt nhấp",
@@ -315,133 +501,6 @@
     "image": {
       "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/10/chatgpt-primary-sources-featured.jpg",
       "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Google Ads nới lỏng chính sách tên doanh nghiệp khác tên miền trang đích",
-    "isHot": true,
-    "illustration": "account-security",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Google Ads",
-      "Chính sách quảng cáo",
-      "Xác minh danh tính",
-      "Tên doanh nghiệp"
-    ],
-    "summary": "Google vừa cập nhật chính sách biên tập cho phép tên doanh nghiệp hiển thị trên quảng cáo khác với tên miền trang đích nếu đáp ứng đủ 3 điều kiện xác minh. Quy định mới tạo thuận lợi lớn cho các mô hình công ty mẹ - con và đại lý nhượng quyền nhưng loại trừ hoàn toàn các bên bán lại và tiếp thị liên kết.",
-    "keyNumbers": [
-      {
-        "value": "3",
-        "label": "điều kiện bắt buộc để tên doanh nghiệp được phép khác tên miền"
-      },
-      {
-        "value": "25",
-        "label": "ký tự tối đa cho trường tên doanh nghiệp trên mẫu quảng cáo"
-      },
-      {
-        "value": "7",
-        "label": "ngày cảnh báo tối thiểu trước khi Google tạm ngưng tài khoản vi phạm"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Cập nhật chính sách biên tập về tên doanh nghiệp",
-        "body": "Google thông báo điều chỉnh chính sách yêu cầu về tên doanh nghiệp trong phần Biên tập từ tháng 10/2026. Trước đây, trường tên hiển thị trên mẫu quảng cáo bắt buộc phải trùng khớp với tên miền trang đích hoặc tên pháp nhân đã xác minh. Thay đổi mới cho phép tên hiển thị khác biệt với địa chỉ website đích trong một số trường hợp cụ thể. Báo cáo từ Search Engine Roundtable ghi nhận ngày bắt đầu triển khai là 16/10/2026."
-      },
-      {
-        "heading": "Ba điều kiện bắt buộc để được áp dụng ngoại lệ",
-        "body": "Nhà quảng cáo muốn đặt tên hiển thị khác tên miền phải thỏa mãn đồng thời 3 tiêu chí nghiêm ngặt từ Google. Thứ nhất, tên doanh nghiệp phải phản ánh chính xác tên hoặc thương hiệu đã được công nhận của nhà quảng cáo. Thứ hai, phải có mối quan hệ trực tiếp đã được xác minh giữa nhà quảng cáo và chủ sở hữu tên miền. Thứ ba, các sản phẩm hoặc dịch vụ của chính nhà quảng cáo phải được cung cấp trực tiếp trên tên miền trang đích đó."
-      },
-      {
-        "heading": "Lệnh cấm đích danh đối với đơn vị bán lại và tiếp thị liên kết",
-        "body": "Chính sách mới loại trừ hoàn toàn bốn nhóm đối tượng trung gian khỏi diện áp dụng ngoại lệ này. Các bên bán lại bên thứ ba, đơn vị trung gian đặt chỗ độc lập, nhà phân phối tiếp thị liên kết và bên bán thứ cấp bị cấm sử dụng tên thương hiệu đứng độc lập làm tên doanh nghiệp của mình. Những đơn vị này chỉ có thể hiển thị tên thương hiệu kèm theo từ ngữ bổ trợ làm rõ vai trò, ví dụ kết hợp tên đại lý với địa điểm kinh doanh."
-      },
-      {
-        "heading": "Cơ chế kiểm duyệt và rủi ro tạm ngưng tài khoản",
-        "body": "Trường tên doanh nghiệp bị giới hạn tối đa 25 ký tự và không được chứa ngôn từ khuyến mại hay từ ngữ chung chung. Nếu nhà quảng cáo chỉnh sửa mẫu quảng cáo sau khi bị từ chối, hệ thống sẽ xem xét lại trong vòng 24 đến 48 giờ. Đối với các vi phạm lặp lại về chính sách này, Google sẽ gửi thông báo cảnh báo trước ít nhất 7 ngày trước khi tiến hành tạm ngưng tài khoản, trừ trường hợp vi phạm nghiêm trọng sẽ bị xử lý ngay lập tức."
-      }
-    ],
-    "impact": "Giúp các doanh nghiệp vận hành chuỗi nhượng quyền, công ty con bán hàng qua sàn hoặc website của tập đoàn mẹ hiển thị đúng nhận diện thương hiệu quen thuộc với khách hàng mà không lo bị từ chối duyệt quảng cáo. Ngược lại, các doanh nghiệp thương mại phân phối, đại lý du lịch, vé máy bay hoặc affiliate không còn đường tắt để mạo danh thương hiệu gốc trên mẫu quảng cáo.",
-    "ifIgnored": "Tài khoản quảng cáo của bên bán lại hoặc đại lý trung gian cố tình để tên nhãn hàng độc lập sẽ bị từ chối mẫu quảng cáo hàng loạt, đối mặt nguy cơ nhận cảnh báo 7 ngày và bị tạm ngưng toàn bộ tài khoản.",
-    "actionChecklist": [
-      "Rà soát toàn bộ tài khoản Google Ads đang trỏ về tên miền của đối tác, sàn hoặc công ty mẹ để chuẩn bị hồ sơ chứng minh quan hệ sở hữu.",
-      "Kiểm tra lại trường tên doanh nghiệp hiển thị đảm bảo độ dài không vượt quá 25 ký tự và không chứa từ ngữ khuyến mại.",
-      "Điều chỉnh tên hiển thị của các chiến dịch đại lý hoặc phân phối theo công thức tên thương hiệu kèm tên đại lý thay vì để tên nhãn hàng đứng riêng.",
-      "Theo dõi hòm thư quản trị tài khoản để phát hiện và xử lý ngay trong 24 đến 48 giờ nếu có cảnh báo vi phạm chính sách biên tập mới."
-    ],
-    "deadline": "Tháng 10/2026 (ngày 16/10/2026)",
-    "id": "real-2026-10-12-google-ads-noi-long-33da7d",
-    "publishedAt": "12/10/2026",
-    "sourceUrl": "https://ppc.land/google-ads-lets-business-names-differ-from-domains-under-3-conditions/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/10/google-ads-business-name-domain-policy-brand-nameplate-skyscraper-velvet-rope.jpg",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
-    "category": "AI Marketing",
-    "platformIcon": "Sparkles",
-    "title": "Meta mở rộng trợ lý mua sắm Muse vào tài khoản quảng cáo và nhà bán lẻ",
-    "isHot": false,
-    "illustration": "ai-budget",
-    "readTime": "5 phút đọc",
-    "tags": [
-      "Meta AI",
-      "Muse Agent",
-      "AI Marketing",
-      "Quảng cáo Meta"
-    ],
-    "summary": "Trợ lý mua sắm Muse của Meta đã bắt đầu kết nối trực tiếp với tài khoản quảng cáo của doanh nghiệp nhỏ tại Mỹ và Canada. Công cụ này ưu tiên xếp hạng các nhà bán hàng nổi tiếng trong các lựa chọn hàng đầu của mình. Việc tích hợp sâu này đặt ra câu hỏi lớn về quyền kiểm soát ngân sách và cách thuật toán phân phối hiển thị.",
-    "keyNumbers": [
-      {
-        "value": "5.000.000+",
-        "label": "lượt cài đặt Muse sau 22 ngày"
-      },
-      {
-        "value": "60,80 tỷ USD",
-        "label": "doanh thu quý 2 của Meta"
-      },
-      {
-        "value": "59,36 tỷ USD",
-        "label": "doanh thu từ quảng cáo của Meta"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Cơ chế hoạt động của trợ lý Muse",
-        "body": "Trợ lý Muse có quy tắc bắt buộc phải xếp hạng các nhà bán hàng nổi tiếng lên đầu trong số năm lựa chọn hàng đầu. Công cụ này tìm kiếm tối đa ba cửa hàng trên web mở, trả về không quá mười sản phẩm và loại bỏ các sản phẩm có giá nằm ngoài mức bình thường. Khi người mua gọi tên một thương hiệu, cửa hàng của thương hiệu đó được ưu tiên hiển thị trước các bên trung gian."
-      },
-      {
-        "heading": "Kết quả thử nghiệm và tìm kiếm",
-        "body": "Trong một bài kiểm tra năm mươi lượt từ một tài khoản duy nhất, truy vấn thông thường lấy khoảng sáu mươi sản phẩm từ ba mươi nhà bán hàng trong danh mục của Meta. Trình duyệt của trợ lý đã ghé thăm ba trang web và tìm thấy bốn sản phẩm tại hai nhà bán hàng. Sáu lựa chọn cuối cùng thường chia đều bốn từ trình duyệt và hai từ danh mục."
-      },
-      {
-        "heading": "Tích hợp vào tài khoản doanh nghiệp",
-        "body": "Ba tuần sau khi ra mắt, Meta mở rộng Muse cho các doanh nghiệp nhỏ tại Mỹ và Canada thông qua mười lăm kết nối, bao gồm Shopify, Stripe, QuickBooks và tài khoản quảng cáo Meta. Meta tuyên bố không có nội dung nào được đăng, gửi hoặc chi tiêu nếu không có sự phê duyệt của chủ sở hữu. Tuy nhiên, ranh giới giữa tác nhân quyết định hiển thị sản phẩm và tác nhân nằm trong tài khoản quảng cáo đang thu hút sự chú ý lớn."
-      },
-      {
-        "heading": "Bối cảnh tài chính của Meta",
-        "body": "Doanh thu quý hai của Meta đạt sáu mươi phẩy tám mươi tỷ đô la Mỹ, trong đó năm mươi chín phẩy ba mươi sáu tỷ đô la Mỹ đến từ quảng cáo. Tỷ trọng này giải thích lý do mọi hoạt động tự động hóa và quyết định của phần mềm trong tài khoản quảng cáo được theo dõi rất sát sao. Câu hỏi đặt ra là khi phần mềm tự động lựa chọn, ai sẽ là người kiểm tra lại các lựa chọn đó."
-      }
-    ],
-    "impact": "Trợ lý AI Muse đang dần can thiệp vào cách phân phối sản phẩm và kết nối trực tiếp với tài khoản quảng cáo, buộc Trưởng phòng Marketing phải nắm rõ mức độ kiểm soát thực tế của công cụ đối với ngân sách.",
-    "ifIgnored": "Nếu bỏ qua, nhà quảng cáo có thể bị động trước các quyết định phân phối tự động của AI, dẫn đến việc mất quyền kiểm soát chi tiêu và thứ hạng hiển thị sản phẩm.",
-    "actionChecklist": [
-      "Kiểm tra lại quyền kết nối và cấp phép của các bên thứ ba đối với tài khoản quảng cáo Meta.",
-      "Xác định rõ các giới hạn phê duyệt thủ công cho bất kỳ thay đổi ngân sách nào do AI đề xuất.",
-      "Theo dõi sát sao hiệusuất hiển thị sản phẩm của thương hiệu trên các trợ lý mua sắm AI mới nổi.",
-      "Đánh giá lại chiến lược tối ưu hóa danh mục sản phẩm để đáp ứng các tiêu chí ưu tiên của thuật toán."
-    ],
-    "id": "real-2026-10-12-meta-mo-rong-tro-af14b9",
-    "publishedAt": "12/10/2026",
-    "sourceUrl": "https://ppc.land/metas-muse-agent-puts-well-known-merchants-first-as-it-gains-ad-accounts/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/10/meta-muse-shopping-agent-well-known-merchants-doorman-gatekeeper.jpg",
-      "credit": "Ảnh: PPC Land"
     }
   },
   {
