@@ -1,5 +1,189 @@
 [
   {
+    "category": "Meta Ads",
+    "platformIcon": "Facebook",
+    "title": "Meta cập nhật điều khoản: Tự động thu thập dữ liệu website nhà quảng cáo để huấn luyện AI",
+    "isHot": true,
+    "illustration": "data-signal",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Meta Ads",
+      "Điều khoản thương mại",
+      "Thu thập dữ liệu",
+      "Bảo mật AI"
+    ],
+    "summary": "Meta vừa sửa đổi Điều khoản Thương mại, cho phép hệ thống tự động quét và sao chép nội dung website liên kết với sản phẩm quảng cáo để huấn luyện các mô hình AI. Điều khoản này được áp dụng mặc định cho tất cả doanh nghiệp tiếp tục chạy quảng cáo mà không có tùy chọn từ chối riêng lẻ.",
+    "keyNumbers": [
+      {
+        "value": "7,5%",
+        "label": "thị phần quét dữ liệu AI của Meta vào tháng 7/2025, tăng từ 0,9% vào tháng 7/2024"
+      },
+      {
+        "value": "33%",
+        "label": "lưu lượng trình duyệt AI agent do bot Muse của Meta chiếm lĩnh chỉ sau 9 ngày ra mắt"
+      },
+      {
+        "value": "100 USD",
+        "label": "mức giới hạn trách nhiệm bồi thường của Meta (hoặc số phí đã trả trong 12 tháng trước)"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Cơ chế đồng ý thụ động qua điều khoản thương mại mới",
+        "body": "Bản cập nhật Điều khoản Thương mại của Meta bổ sung một điều khoản tại Mục 1, cho phép nền tảng dùng phần mềm tự động truy cập, lập chỉ mục, lưu bộ nhớ tạm, sao chép và quét lại các website liên kết với sản phẩm của doanh nghiệp. Nội dung thu thập được sẽ được Meta sử dụng để huấn luyện các sản phẩm công nghệ của chính mình. Doanh nghiệp chỉ cần tiếp tục sử dụng các sản phẩm thương mại của Meta là được tính đã đồng ý, hoàn toàn không có lựa chọn từ chối từng phần."
+      },
+      {
+        "heading": "Tranh cãi quanh phạm vi hoạt động của crawler Meta-ExternalAgent",
+        "body": "Đại diện Meta khẳng định bản cập nhật chỉ nhằm trích xuất thông tin sản phẩm chính xác phục vụ đề xuất nội dung và quảng cáo trên nền tảng. Tuy nhiên, giới quan sát trong ngành chỉ ra văn bản điều khoản có phạm vi rất rộng, cho phép Meta quyền quét dữ liệu trên toàn bộ web mở. Con bot phụ trách tác vụ này là Meta-ExternalAgent, vốn là một bot đa nhiệm chứ không được thiết kế riêng cho một tác vụ đơn lẻ, đồng thời các điều khoản mới không đề cập đến việc tuân thủ tệp robots.txt."
+      },
+      {
+        "heading": "Thời điểm áp dụng gắn liền tính năng duyệt sản phẩm trong ứng dụng",
+        "body": "Quyền thu thập dữ liệu mới có hiệu lực chỉ hai ngày sau khi Meta kích hoạt tính năng duyệt sản phẩm ngay trong ứng dụng trên các quảng cáo hiện có vào ngày 28/10. Khác với Google vốn đang ký hợp đồng thương mại trực tiếp và trả tiền cho từng nhà xuất bản nội dung, Meta chọn cách đưa thẳng quyền quét dữ liệu vào điều khoản sử dụng bắt buộc đối với các nhà quảng cáo. Tài liệu mới cũng bổ sung mục tính năng AI, cung cấp dịch vụ theo dạng nguyên trạng và giới hạn chặt chẽ trách nhiệm bồi thường."
+      },
+      {
+        "heading": "Sức ép kiểm soát dữ liệu trên môi trường AI agent",
+        "body": "Nghiên cứu từ các chuyên gia bảo mật cho thấy các cơ chế xin quyền truyền thống đang trở nên quá tải trước tốc độ của các AI agent. Khảo sát diện rộng trên 11.000 người tiêu dùng cho thấy 16% người dùng chấp nhận chia sẻ dữ liệu cho AI trong trạng thái miễn cưỡng vì thiếu lựa chọn thay thế. Với việc bot của Meta gia tăng thị phần thu thập dữ liệu từ 0,9% lên 7,5% trong vòng một năm, các website kinh doanh trực tuyến đang đứng trước bài toán bảo vệ tài nguyên số trước các công cụ tự động."
+      }
+    ],
+    "impact": "Mọi nội dung độc quyền, cấu trúc trang đích, bài viết sản phẩm và tài nguyên trên website của bạn khi gắn link quảng cáo Meta đều có thể bị thu nạp làm tài liệu huấn luyện AI cho nền tảng mà không được trả phí. Doanh nghiệp không thể tắt riêng quyền này nếu vẫn muốn tiếp tục chạy quảng cáo Facebook và Instagram.",
+    "ifIgnored": "Dữ liệu kinh doanh và tài sản trí tuệ trên website có nguy cơ bị đối thủ khai thác gián tiếp thông qua các công cụ gợi ý AI của Meta trong tương lai mà không có cơ chế bồi thường vượt quá 100 USD.",
+    "actionChecklist": [
+      "Rà soát lại toàn bộ đường dẫn website đang gắn trong các chiến dịch quảng cáo Meta Ads đang hoạt động.",
+      "Tách biệt các trang chứa nội dung nhạy cảm hoặc bí mật kinh doanh khỏi các liên kết chiến dịch quảng cáo công khai.",
+      "Cấu hình máy chủ và theo dõi nhật ký truy cập từ bot Meta-ExternalAgent để kiểm tra tần suất thu thập dữ liệu.",
+      "Họp với bộ phận pháp lý để đánh giá rủi ro sở hữu trí tuệ trước khi điều khoản mới chính thức có hiệu lực."
+    ],
+    "deadline": "30/10/2026",
+    "id": "real-2026-10-17-meta-cap-nhat-dieu-2ba48d",
+    "publishedAt": "17/10/2026",
+    "sourceUrl": "https://ppc.land/meta-grants-itself-the-right-to-crawl-advertisers-websites-for-ai/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/10/meta-commercial-terms-ai-crawl-advertiser-websites-self-signing-fountain-pen.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "Meta Ads",
+    "platformIcon": "Facebook",
+    "title": "Meta cập nhật điều khoản thương mại, mở rộng quyền quét website và huấn luyện AI",
+    "isHot": true,
+    "illustration": "data-signal",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Meta Ads",
+      "Điều khoản Meta",
+      "Thu thập dữ liệu",
+      "Huấn luyện AI"
+    ],
+    "summary": "Meta vừa bổ sung điều khoản thương mại mới, cho phép nền tảng quét nội dung website của mọi doanh nghiệp sử dụng dịch vụ để huấn luyện các sản phẩm AI. Quyền thu thập này không còn giới hạn ở các nhà quảng cáo trả tiền mà mở rộng ra toàn bộ tổ chức vận hành Trang Facebook hay Meta Business Suite. Doanh nghiệp chỉ có khoảng thời gian ngắn để kiểm tra cấu hình kỹ thuật trước khi điều khoản tự động có hiệu lực.",
+    "keyNumbers": [
+      {
+        "value": "3",
+        "label": "chuyên gia pháp lý cảnh báo phạm vi thu thập nội dung của Meta"
+      },
+      {
+        "value": "2",
+        "label": "tuần để các đơn vị kinh doanh đưa ra quyết định trước ngày áp dụng"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Mở rộng quyền thu thập dữ liệu sang mọi tài khoản kinh doanh",
+        "body": "Meta cập nhật Điều khoản Thương mại có hiệu lực từ ngày 30/10, mở rộng đáng kể quyền quét nội dung website. Thay vì chỉ áp dụng khi doanh nghiệp đặt mua quảng cáo như các điều khoản trước đây, quy định mới ràng buộc bất kỳ ai sử dụng sản phẩm của Meta cho mục đích thương mại. Điều này đồng nghĩa với việc chỉ cần quản trị một Trang Facebook hoặc đăng nhập Meta Business Suite, website của thương hiệu đã thuộc phạm vi bị thu thập thông tin."
+      },
+      {
+        "heading": "Cho phép dùng công cụ tự động và tạo tài khoản thử nghiệm",
+        "body": "Nội dung điều khoản mới cho phép Meta hoặc đối tác đại diện sử dụng web scraper, bot và các công cụ tự động để lấy dữ liệu từ các tên miền, liên kết gắn với sản phẩm của doanh nghiệp. Đáng chú ý, điều khoản cho phép Meta tạo thông tin đăng nhập kiểm thử để tiếp cận các trang này. Dữ liệu trích xuất sẽ được sử dụng trực tiếp vào mục đích nghiên cứu, cải tiến và huấn luyện các sản phẩm cũng như mô hình AI của Meta."
+      },
+      {
+        "heading": "Tranh cãi pháp lý xung quanh hiệu lực của tệp robots.txt",
+        "body": "Dù đại diện Meta tuyên bố người sở hữu website vẫn có thể điều hướng quyền truy cập bằng tệp robots.txt, cả Điều khoản Thương mại lẫn Điều khoản Tự phục vụ Quảng cáo đều không đề cập tới tệp này. Ba chuyên gia pháp lý tham gia rà soát nhận định câu chữ trong hợp đồng có thể trao cho Meta quyền lập luận rằng thỏa thuận thương mại được ưu tiên hơn các chỉ thị kỹ thuật. Giáo sư luật James Grimmelmann từ Đại học Cornell cảnh báo việc tự tạo tài khoản thử nghiệm có thể giúp bot vượt qua các cổng đăng ký thành viên thông thường."
+      },
+      {
+        "heading": "Phân loại bot crawler và cơ chế mặc nhiên chấp thuận",
+        "body": "Trong tài liệu hướng dẫn bot, Meta tách riêng bot Meta-ExternalAgent dùng để huấn luyện mô hình nền tảng AI và Meta-WebIndexer dùng để cải thiện kết quả tìm kiếm của Meta AI. Các nhà quản trị web có thể cấu hình chặn riêng Meta-ExternalAgent để không bị lấy dữ liệu huấn luyện, đồng thời giữ Meta-WebIndexer để giữ hiển thị trích dẫn nguồn. Meta nêu rõ việc tiếp tục sử dụng các dịch vụ kinh doanh sau ngày cập nhật sẽ được coi là đồng ý toàn bộ với các điều khoản mới."
+      }
+    ],
+    "impact": "Toàn bộ tài nguyên số gồm bài viết, tài liệu sản phẩm và dữ liệu niêm yết trên website thương hiệu có thể bị Meta thu thập làm dữ liệu huấn luyện AI miễn phí chỉ vì doanh nghiệp sở hữu Trang Facebook hoặc tài khoản quảng cáo. Doanh nghiệp có nguy cơ bị lộ các cấu trúc thông tin dành riêng cho thành viên do Meta được quyền tạo tài khoản thử nghiệm.",
+    "ifIgnored": "Nếu không can thiệp tệp cấu hình bot trước ngày áp dụng, website của bạn sẽ tự động cấp quyền cho Meta khai thác kho nội dung độc quyền để hoàn thiện các công cụ AI cạnh tranh trực tiếp, và bạn không thể khiếu nại về mặt pháp lý do đã mặc nhiên chấp thuận điều khoản.",
+    "actionChecklist": [
+      "Cập nhật tệp robots.txt trên máy chủ website để chặn riêng bot Meta-ExternalAgent nếu không muốn chia sẻ dữ liệu huấn luyện AI.",
+      "Giữ quyền truy cập cho bot Meta-WebIndexer nếu thương hiệu vẫn muốn xuất hiện và được trích dẫn nguồn trên công cụ tìm kiếm Meta AI.",
+      "Rà soát các phân vùng nội dung nội bộ hoặc khu vực đăng ký thành viên để ngăn chặn bot tạo thông tin đăng nhập kiểm thử.",
+      "Đánh giá lại toàn bộ các liên kết trang đích đang kết nối với Trang Facebook và Meta Business Suite trước thời điểm điều khoản kích hoạt."
+    ],
+    "deadline": "30/10",
+    "id": "real-2026-10-16-meta-cap-nhat-dieu-2f8843",
+    "publishedAt": "16/10/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/metas-new-terms-expand-crawling-rights-beyond-advertisers/593217/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/10/meta-commercial-terms-featured.jpg",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Floodlight tích hợp dữ liệu đăng nhập Google để đo lường chuyển đổi chéo thiết bị",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Google Marketing Platform",
+      "Floodlight",
+      "Đo lường chuyển đổi",
+      "DV360"
+    ],
+    "summary": "Google thông báo hệ thống theo dõi Floodlight sẽ dùng tín hiệu người dùng đăng nhập tài khoản Google để khôi phục các chuyển đổi web chưa được ghi nhận. Thay đổi này tự động áp dụng trên Display & Video 360, Search Ads 360 và Campaign Manager 360 từ tháng 11/2026 mà không yêu cầu nhà quảng cáo thao tác kỹ thuật.",
+    "keyNumbers": [
+      {
+        "value": "3",
+        "label": "nền tảng áp dụng gồm DV360, SA360 và CM360"
+      },
+      {
+        "value": "10%",
+        "label": "tỷ lệ người dùng ban đầu khi chuyển đổi báo cáo Floodlight tức thì"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Cơ chế khôi phục chuyển đổi bằng dữ liệu tài khoản Google",
+        "body": "Thay vì dựa hoàn toàn vào dữ liệu do doanh nghiệp tải lên, Floodlight sẽ khai thác dữ liệu từ người dùng đăng nhập tài khoản Google. Cơ chế này giúp kết nối hành vi xem quảng cáo trên một thiết bị với giao dịch mua sắm trên thiết bị khác. Ngoài ra, hệ thống cũng hỗ trợ nhận diện chuyển đổi giữa môi trường ứng dụng và trình duyệt web. Quy định hiện tại giới hạn ở việc chuyển đổi đích phải diễn ra trên nền tảng website."
+      },
+      {
+        "heading": "Phạm vi áp dụng trên hệ sinh thái Google Marketing Platform",
+        "body": "Báo cáo trên Display & Video 360, Search Ads 360 và Campaign Manager 360 sẽ đồng loạt ghi nhận số liệu chuyển đổi bổ sung này. Google cho biết các nhà quảng cáo không cần thực hiện thêm thao tác cài đặt nào trên hệ thống. Tính năng này giải quyết khoảng trống dữ liệu khi cookie bên thứ ba ngày càng bị hạn chế trên các trình duyệt. Dữ liệu tài khoản đăng nhập mang lại lợi thế độc quyền mà các đơn vị đo lường độc lập bên ngoài không thể tiếp cận."
+      },
+      {
+        "heading": "Những điểm bỏ ngỏ về thuật toán và so sánh dữ liệu",
+        "body": "Google chưa công bố tỷ lệ chuyển đổi ước tính sẽ được khôi phục cũng như cách phân định giữa số liệu thực tế và số liệu mô hình hóa. Nền tảng cũng chưa làm rõ liệu dữ liệu chuyển đổi mới này có được đưa vào các chiến lược giá thầu tự động ngay lập tức hay không. Nếu Google không điều chỉnh lại dữ liệu lịch sử, báo cáo giai đoạn sau tháng 11/2026 sẽ có sự tăng vọt số lượng chuyển đổi so với các kỳ trước. Sự thay đổi này xuất phát từ phương thức đo lường mới chứ không phản ánh sự thay đổi thực tế về hiệu quả chiến dịch."
+      },
+      {
+        "heading": "Điều chỉnh giao diện quản trị an toàn thương hiệu trên DV360",
+        "body": "Bên cạnh thay đổi về Floodlight, Google sẽ khai tử trang Brand Control Center ở cấp độ nhà quảng cáo trong Display & Video 360. Lý do được đưa ra là trang tổng quan độc lập này trùng lặp với các thiết lập sẵn có trong mục cài đặt quy tắc nhắm mục tiêu. Việc đóng trang này không làm ảnh hưởng đến các tiêu chuẩn an toàn thương hiệu đang chạy, quá trình phân phối chiến dịch hay số liệu báo cáo. Cấp độ đối tác vẫn duy trì Brand Control Center để theo dõi thiết lập chung."
+      }
+    ],
+    "impact": "Số lượng chuyển đổi ghi nhận trên DV360 và CM360 có thể tăng đột biến sau khi cập nhật, làm sai lệch kết quả so sánh ROI giữa Google và các nền tảng quảng cáo khác nếu đánh giá dựa trên cùng một bộ chỉ số attribution.",
+    "ifIgnored": "Doanh nghiệp sẽ ngộ nhận hiệu quả chiến dịch tăng trưởng đột biến vào cuối năm, dẫn đến việc phân bổ ngân sách sai lệch cho các kênh của Google thay vì các kênh đem lại giá trị thực tế.",
+    "actionChecklist": [
+      "Đánh dấu mốc tháng 11/2026 trên dashboard báo cáo để tách biệt dữ liệu đo lường cũ và mới",
+      "Rà soát lại quy tắc đối chiếu số liệu Floodlight giữa Campaign Manager 360 và Google Analytics 4",
+      "Thông báo cho đội ngũ media buying về khả năng biến động chỉ số CPA trên DV360 và SA360",
+      "Chuyển quy trình kiểm tra an toàn thương hiệu trên DV360 sang mục Cài đặt nhà quảng cáo"
+    ],
+    "deadline": "Tháng 11/2026",
+    "id": "real-2026-10-16-floodlight-tich-hop-du-a984d4",
+    "publishedAt": "16/10/2026",
+    "sourceUrl": "https://ppc.land/floodlight-gains-google-signed-in-data-to-recover-unattributed-conversions/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/10/google-floodlight-signed-in-data-unattributed-conversions-rooftop-searchlight-footprints.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
     "category": "TikTok Shop & Ads",
     "platformIcon": "Video",
     "title": "TikTok công bố dữ liệu xu hướng mua sắm dịp lễ hội với doanh số kỷ lục",
@@ -244,133 +428,6 @@
     }
   },
   {
-    "category": "TikTok Shop & Ads",
-    "platformIcon": "Video",
-    "title": "Báo cáo DoubleVerify: Chi tiêu quảng cáo mạng xã hội tăng nhưng tỷ lệ mua hàng giảm",
-    "isHot": false,
-    "illustration": "shop-health",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Social Commerce",
-      "DoubleVerify",
-      "Quảng cáo mạng xã hội",
-      "Hành vi người tiêu dùng"
-    ],
-    "summary": "Báo cáo mới từ DoubleVerify cho thấy chi tiêu quảng cáo mạng xã hội toàn cầu dự kiến đạt 408 tỷ USD trong năm 2026, tăng 19% so với năm trước đó. Tuy nhiên, tỷ lệ người tiêu dùng thực hiện mua sắm trực tiếp trên nền tảng mạng xã hội lại giảm xuống còn 25%, so với mức 30% của năm ngoái.",
-    "keyNumbers": [
-      {
-        "value": "408 tỷ USD",
-        "label": "Chi tiêu quảng cáo MXH 2026"
-      },
-      {
-        "value": "25%",
-        "label": "Tỷ lệ mua hàng qua MXH"
-      },
-      {
-        "value": "19%",
-        "label": "Tăng trưởng chi tiêu"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Biến động chi tiêu và hành vi mua sắm",
-        "body": "Báo cáo Global Insights của DoubleVerify ghi nhận mức chi tiêu cho quảng cáo trên các nền tảng chia sẻ truyền thông và mạng xã hội dự kiến đạt 408 tỷ USD trong năm 2026, tăng 19% so với năm 2025 theo dữ liệu từ EMARKETER. Trái ngược với dòng tiền quảng cáo đang tăng mạnh, tỷ lệ người tiêu dùng thực hiện giao dịch mua hàng trực tiếp trên mạng xã hội trong 12 tháng qua đã giảm từ 30% xuống còn 25%."
-      },
-      {
-        "heading": "Ảnh hưởng của influencer và mức độ tiếp cận",
-        "body": "Tác động của người có ảnh hưởng đến quyết định mua hàng của người tiêu dùng cũng ghi nhận sự sụt giảm từ 54% xuống còn 48%. Trong khi đó, tỷ lệ các nhà tiếp thị coi độ tiếp cận khán giả là thách thức lớn nhất trên mạng xã hội đã giảm từ 46% xuống còn 40%. Khảo sát được thực hiện với 22.000 người tiêu dùng tại 21 quốc gia và 2.020 nhà tiếp thị tại 25 quốc gia vào tháng 2 năm 2026."
-      },
-      {
-        "heading": "Mức độ phổ biến của các nền tảng Big Four",
-        "body": "DoubleVerify nhóm YouTube, Facebook, Instagram và TikTok thành bốn nền tảng hàng đầu với tỷ lệ người dùng toàn cầu lần lượt là 95%, 88%, 80% và 68%. Về xu hướng sử dụng trong 12 tháng tới, 52% người dùng TikTok kỳ vọng sẽ tăng thời gian sử dụng nền tảng này, dẫn đầu nhóm, theo sau là YouTube với 50%, Instagram với 46% và Facebook với 41%."
-      },
-      {
-        "heading": "Phương pháp và phạm vi khảo sát",
-        "body": "Khảo sát được thực hiện bởi Sapio Research thông qua các panel đối tác trực tuyến với sai số là 0,7 điểm phần trăm đối với người tiêu dùng và 2,2 điểm phần trăm đối với nhà tiếp thị ở mức độ tin cậy 95%. Báo cáo cũng chỉ ra sự khác biệt lớn theo khu vực địa lý, trong đó Bắc Mỹ ghi nhận mức độ sử dụng phần lớn các nền tảng thấp hơn so với các khu vực như Mỹ Latinh."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing cần nhận thức rõ khoảng cách giữa ngân sách quảng cáo đang phình to và hiệu quả chuyển đổi thực tế đang suy giảm để điều chỉnh kỳ vọng doanh thu từ kênh mạng xã hội.",
-    "ifIgnored": "Tiếp tục dồn ngân sách dựa trên giả định hành vi mua sắm trên mạng xã hội tăng trưởng tuyến tính, dẫn đến lãng phí chi phí khi tỷ lệ chuyển đổi thực tế của người dùng đã chững lại.",
-    "actionChecklist": [
-      "Đánh giá lại hiệu suất chuyển đổi thực tế trên các kênh mạng xã hội so với số liệu chi tiêu quảng cáo.",
-      "Kiểm tra lại hiệu quả thực tế của các chiến dịch hợp tác với influencer trong bối cảnh mức độ ảnh hưởng của họ đang giảm.",
-      "Điều chỉnh phân bổ ngân sách giữa việc xây dựng nhận diện thương hiệu và tối ưu hóa chuyển đổi trực tiếp.",
-      "Cập nhật các số liệu benchmark mới nhất về hành vi người dùng thay vì dựa vào dữ liệu cũ."
-    ],
-    "id": "real-2026-10-14-bao-cao-doubleverify-chi-58c47c",
-    "publishedAt": "14/10/2026",
-    "sourceUrl": "https://ppc.land/social-purchases-drop-to-25-from-30-doubleverify-surveys-show/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/10/doubleverify-social-purchases-drop-25-percent-ad-spend-coin-chute-storefront.jpg",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Google Ads cho phép nhà quảng cáo giới hạn tỷ lệ ngân sách cho Display và Search partners",
-    "isHot": true,
-    "illustration": "keyword-exclusion",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Google Ads",
-      "Ngân sách quảng cáo",
-      "Display Network",
-      "Search Partners"
-    ],
-    "summary": "Google Ads vừa bổ sung hai tính năng kiểm soát ngân sách mới, cho phép phân loại kênh ưu tiên và đặt giới hạn phần trăm ngân sách hàng ngày cho các kênh phụ. Thay đổi này giúp các nhà quảng cáo kiểm soát tốt hơn chi phí trên Mạng Hiển thị và Đối tác Tìm kiếm.",
-    "keyNumbers": [
-      {
-        "value": "15/10/2026",
-        "label": "Bắt đầu triển khai"
-      },
-      {
-        "value": "0%",
-        "label": "Mức giới hạn tối thiểu"
-      },
-      {
-        "value": "2027",
-        "label": "Dừng Display Expansion"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Cơ chế phân loại mức độ ưu tiên kênh",
-        "body": "Google Ads cung cấp tùy chọn xếp hạng các kênh quảng cáo thành mức ưu tiên cao hoặc ưu tiên thấp trên toàn tài khoản, ngân sách chia sẻ hoặc cấp chiến dịch. Theo mặc định, tất cả các kênh đều ở trạng thái ưu tiên cao và hệ thống AI sẽ phân bổ ngân sách vào các kênh này trước. Các kênh ưu tiên thấp chỉ nhận được ngân sách sau khi kênh ưu tiên cao đã được phân bổ đầy đủ."
-      },
-      {
-        "heading": "Giới hạn tỷ lệ phần trăm ngân sách",
-        "body": "Khi một kênh được đặt ở mức ưu tiên thấp, nhà quảng cáo có thể thiết lập phần trăm tối đa từ ngân sách hàng ngày dành cho kênh đó. Tính năng này được tính toán dựa trên ngân sách trung bình hàng ngày của chiến dịch thay vì dựa trên chi phí thực tế phát sinh. Ví dụ với ngân sách một nghìn đô la và tỷ lệ năm phần trăm, Google sẽ cố gắng giữ mức chi tiêu của kênh đó ở mức năm mươi đô la hoặc thấp hơn mỗi ngày."
-      },
-      {
-        "heading": "Quy tắc hoạt động và giới hạn kỹ thuật",
-        "body": "Giới hạn ngân sách này hoạt động theo nguyên tắc nỗ lực tốt nhất từ Google chứ không phải là một cam kết cố định tuyệt đối. Mức giới hạn sẽ được thiết lập lại vào mỗi ngày và không cộng dồn số dư chưa chi tiêu hoặc chi tiêu vượt mức từ ngày hôm trước. Nếu nhà quảng cáo đặt tỷ lệ phân bổ của kênh ưu tiên thấp về mức không phần trăm, Google sẽ ngừng chi tiêu hoàn toàn vào kênh đó."
-      },
-      {
-        "heading": "Ảnh hưởng đến các chiến lược giá thầu",
-        "body": "Đối với các chiến lược như Target CPA hoặc Target ROAS mà không bị giới hạn ngân sách, việc phân loại ưu tiên kênh đơn thuần sẽ không làm thay đổi cách phân phối chi phí. Tuy nhiên, giới hạn phân bổ ngân sách theo tỷ lệ phần trăm vẫn áp dụng bình thường cho các kênh ưu tiên thấp trong trường hợp này. Trong khi đó, tính năng Display Expansion cũ trên các chiến dịch tìm kiếm sẽ chính thức bị loại bỏ vào tháng hai năm hai mươi không trăm hai mươi bảy."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing có thể kiểm soát chặt chẽ hơn dòng tiền quảng cáo, ngăn việc ngân sách bị thất thoát vào các kênh hiệu quả kém như Mạng Hiển thị hay Đối tác Tìm kiếm mà không cần phải tắt hoàn toàn các chiến dịch Performance Max hay Search.",
-    "ifIgnored": "Nếu bỏ qua, các chiến dịch chạy giá thầu thông minh có thể tiếp tục lãng phí một phần ngân sách vào các lưu lượng truy cập kém chất lượng từ đối tác mà hệ thống tự động phân bổ trước đây.",
-    "actionChecklist": [
-      "Kiểm tra lại các chiến dịch Search, Shopping, Performance Max và Demand Gen hiện tại trong tài khoản.",
-      "Xác định các kênh phụ thuộc Mạng Hiển thị hoặc Đối tác Tìm kiếm cần đưa vào diện ưu tiên thấp.",
-      "Thiết lập tỷ lệ phần trăm ngân sách tối đa cho các kênh ưu tiên thấp dựa trên hiệu suất thực tế.",
-      "Theo dõi sát sao hiệu quả chiến dịch sau ngày mười lăm tháng mười để điều chỉnh giới hạn phù hợp."
-    ],
-    "deadline": "15/10/2026",
-    "id": "real-2026-10-14-google-ads-cho-phep-95961a",
-    "publishedAt": "14/10/2026",
-    "sourceUrl": "https://ppc.land/google-ads-lets-advertisers-limit-display-and-partner-spend-by-percentage/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/10/google-ads-channel-prioritization-display-search-partners-budget-cap-jigger-overflow.jpg",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
     "category": "Meta Ads",
     "platformIcon": "Facebook",
     "title": "Meta công bố mô hình quảng cáo GEM mới giúp tăng chuyển đổi và lượt nhấp",
@@ -495,70 +552,6 @@
     "source": "Search Engine Journal",
     "image": {
       "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/10/crux-diagnostic-halftone-4204892985.jpg",
-      "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Plugin All In One SEO trên WordPress dính hai lỗ hổng bảo mật mức độ trung bình",
-    "isHot": true,
-    "illustration": "account-security",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Bảo mật WordPress",
-      "All In One SEO",
-      "Lỗ hổng bảo mật",
-      "Cập nhật plugin"
-    ],
-    "summary": "Plugin All In One SEO phổ biến trên nền tảng WordPress vừa phát hiện hai lỗ hổng bảo mật cho phép kẻ tấn công chưa xác thực can thiệp vào website. Các quản trị viên cần tiến hành cập nhật hệ thống ngay lập tức để phòng ngừa rủi ro. Thông tin này ảnh hưởng trực tiếp đến hơn hai triệu trang web đang sử dụng plugin.",
-    "keyNumbers": [
-      {
-        "value": "2.000.000+",
-        "label": "Lượt cài đặt active"
-      },
-      {
-        "value": "6,5",
-        "label": "Điểm rủi ro lỗ hổng thứ nhất"
-      },
-      {
-        "value": "6,1",
-        "label": "Điểm rủi ro lỗ hổng thứ hai"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Thông tin chung về sự cố bảo mật",
-        "body": "Cảnh báo bảo mật mới đây đã được đưa ra đối với plugin All In One SEO trên WordPress, một công cụ quản lý tối ưu hóa công cụ tìm kiếm được sử dụng rộng rãi. Sự cố bao gồm hai lỗ hổng bảo mật khác nhau, ảnh hưởng đến hơn hai triệu lượt cài đặt hoạt động trên toàn cầu. Cả hai lỗ hổng này đều tạo điều kiện cho kẻ tấn công không cần xác thực thực hiện các hành vi độc hại dưới những điều kiện cụ thể. Việc phát hiện kịp thời giúp các nhà quản trị website chủ động phòng thủ trước khi bị khai thác."
-      },
-      {
-        "heading": "Lỗ hổng thực thi mã shortcode tùy ý",
-        "body": "Lỗ hổng đầu tiên mang mã định danh được đánh giá ở mức 6,5 điểm thuộc mức trung bình và ảnh hưởng đến mọi phiên bản từ 5.0.2 trở xuống. Điểm yếu này xuất phát từ việc thiếu bước kiểm tra xác thực trước khi plugin chạy hàm do_shortcode của WordPress. Kẻ tấn công không có tài khoản hoặc đặc quyền vẫn có thể khiến trang web thực thi các shortcode tùy ý. Điều kiện cần là tính năng breadcrumb của AIOSEO phải được hiển thị trên trang kết quả tìm kiếm của WordPress."
-      },
-      {
-        "heading": "Lỗ hổng tập lệnh chéo trang DOM",
-        "body": "Lỗ hổng thứ hai mang mã định danh được đánh giá ở mức 6,1 điểm trung bình, ảnh hưởng đến các phiên bản từ 5.0.1.1 trở xuống. Đây là lỗ hổng XSS dựa trên DOM do việc lọc đầu ra và làm sạch đầu vào chưa đầy đủ khi xử lý đường dẫn URL. Kẻ tấn công có thể chèn mã độc vào URL nhưng đòi hỏi người dùng được nhắm mục tiêu phải có quyền aioseo_manage_seo. Người dùng này cũng phải mở bảng điều khiển SEO Preview trên thanh quản trị WordPress khi truy cập đường dẫn chứa mã độc."
-      },
-      {
-        "heading": "Bản vá lỗi đã chính thức phát hành",
-        "body": "Nhà phát triển plugin đã nhanh chóng phát hành các bản vá riêng biệt cho từng lỗ hổng trong các bản cập nhật mới. Phiên bản 5.0.2.1 khắc phục triệt để lỗi thực thi shortcode tùy ý trên trang tìm kiếm của website. Trong khi đó, phiên bản 5.0.2 giải quyết dứt điểm vấn đề bảo mật liên quan đến tập lệnh chéo trang. Người dùng được khuyến nghị nâng cấp lên phiên bản 5.0.2.1 hoặc các bản mới hơn để đảm bảo an toàn toàn diện."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing quản lý website doanh nghiệp chạy trên nền tảng WordPress cần kiểm tra ngay lập tức phiên bản plugin AIOSEO đang sử dụng để tránh nguy cơ website bị chèn mã độc hoặc thao túng cấu trúc trang.",
-    "ifIgnored": "Nếu bỏ qua việc cập nhật, website có nguy cơ bị kẻ gian lợi dụng lỗ hổng để thực thi mã độc, làm suy giảm uy tín thương hiệu và ảnh hưởng nghiêm trọng đến thứ hạng trên công cụ tìm kiếm.",
-    "actionChecklist": [
-      "Kiểm tra phiên bản plugin All In One SEO hiện tại trên hệ thống website",
-      "Tiến hành cập nhật plugin lên phiên bản 5.0.2.1 hoặc mới hơn",
-      "Rà soát lại quyền truy cập và tài khoản quản trị viên của website WordPress",
-      "Kiểm tra hiển thị của tính năng breadcrumb trên trang kết quả tìm kiếm nội bộ"
-    ],
-    "deadline": "Cập nhật ngay lập tức",
-    "id": "real-2026-10-12-plugin-all-in-one-22f562",
-    "publishedAt": "12/10/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/all-in-one-seo-wordpress-plugin-vulnerable-to-two-exploits/592719/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/10/aioseo-wordpress-plugin-871.jpg",
       "credit": "Ảnh: Search Engine Journal"
     }
   },
