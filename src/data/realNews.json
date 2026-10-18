@@ -1,5 +1,131 @@
 [
   {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Google thay đổi 5 vị trí hiển thị liên kết trong AI Overviews và AI Mode",
+    "isHot": false,
+    "illustration": "zero-click",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Google AI",
+      "AI Overviews",
+      "SEO tìm kiếm",
+      "Lưu lượng web"
+    ],
+    "summary": "Google vừa công bố 5 điều chỉnh giao diện nhằm đưa liên kết website lên các vị trí cao hơn và dễ bấm hơn trong AI Overviews và AI Mode. Động thái này diễn ra trong bối cảnh lượng người dùng tính năng Preferred Sources đã tăng hơn 7 lần từ đầu năm nhưng dữ liệu nhấp chuột thực tế vẫn chưa được công bố.",
+    "keyNumbers": [
+      {
+        "value": "Hơn 7 lần",
+        "label": "Tăng trưởng người dùng Preferred Sources"
+      },
+      {
+        "value": "5 thay đổi",
+        "label": "Điều chỉnh hiển thị liên kết AI"
+      },
+      {
+        "value": "300.000",
+        "label": "Lượng theo dõi TikTok tối thiểu để mở Search profile"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Đưa liên kết nội dòng lên vị trí cao và thường xuyên hơn",
+        "body": "Google đang tiến hành cập nhật nhằm hiển thị các đường dẫn nhúng trực tiếp trong câu chữ của phản hồi AI ở vị trí cao hơn. Nền tảng khẳng định tần suất xuất hiện của các liên kết nội dòng này sẽ tăng lên rõ rệt so với trước đây. Mục tiêu là giúp người tìm kiếm có thể bấm ngay vào nguồn trích dẫn quan trọng ngay khi cần. Tuy vậy, Google không đưa ra số liệu cụ thể về tỷ lệ câu trả lời có chứa liên kết hay mức độ cải thiện lưu lượng."
+      },
+      {
+        "heading": "Thử nghiệm khu vực dành riêng cho các website chính thức",
+        "body": "Một khối hiển thị mới đang được Google thử nghiệm ở vị trí đầu câu trả lời AI dành riêng cho những trang web chính thức. Tính năng này nhắm vào các truy vấn thực hiện tác vụ cụ thể như nộp biểu mẫu hay gia hạn giấy tờ, nơi chỉ có một hoặc hai địa chỉ giải quyết dứt điểm. Giao diện mới sẽ kèm theo ngữ cảnh giải thích lý do đường dẫn đó hữu ích với người dùng. Google vẫn chưa công bố tiêu chuẩn chọn lọc cụ thể xem những tên miền nào sẽ được xếp vào diện website chính thức."
+      },
+      {
+        "heading": "Mở rộng tin tức dạng xoay vòng và làm nổi bật liên kết cuối câu trả lời",
+        "body": "Định dạng tin tức dạng xoay vòng hiển thị các bài viết thời sự đang được triển khai mở rộng tới nhiều ngôn ngữ và khu vực mới trên toàn cầu. Các thẻ xoay vòng này sẽ ưu tiên làm nổi bật nguồn tin được người dùng đưa vào danh sách Preferred Sources. Đồng thời, liên kết đặt ở cuối câu trả lời AI cũng được thiết kế lại bắt mắt hơn với ảnh thu nhỏ để khuyến khích nhấp chuột. Những thay đổi này là bước nối tiếp từ đợt nâng cấp giao diện xuất bản vào tháng 5 năm 2026."
+      },
+      {
+        "heading": "Gắn nhãn có thể nhấp cho tên nhà sáng tạo trên video",
+        "body": "Google đang thử nghiệm gắn liên kết trực tiếp vào tên nhà sáng tạo hoặc nhà xuất bản trên các kết quả video trong AI Mode. Đường dẫn này sẽ trỏ về trang Search profile tập hợp toàn bộ bài viết, video và mạng xã hội của tác giả. Để sở hữu hồ sơ này, chủ kênh phải đủ từ 18 tuổi và đạt tối thiểu 300.000 người theo dõi trên TikTok hoặc 100.000 người theo dõi trên YouTube, Instagram, X. Tính năng này mở ra cơ hội xây dựng nhận diện thương hiệu cá nhân trực tiếp từ giao diện tìm kiếm AI."
+      }
+    ],
+    "impact": "Lưu lượng truy cập tự nhiên (organic traffic) từ Google sang website của doanh nghiệp có cơ hội hồi phục nếu nội dung được AI chọn làm nguồn trích dẫn hàng đầu. Thay vì chỉ hiển thị câu trả lời thuần túy, việc Google đẩy liên kết lên đầu giúp giảm nhẹ nguy cơ zero-click đối với các truy vấn tìm kiếm chuyên sâu và mang tính tác vụ.",
+    "ifIgnored": "Doanh nghiệp sẽ tiếp tục bị mất trắng lượt truy cập vào tay các đoạn tóm tắt AI nếu cấu trúc bài viết không được tối ưu để Google chọn làm trích dẫn nội dòng. Các thương hiệu không xây dựng được thực thể website chính thức hoặc không xuất hiện trong danh sách Preferred Sources của người dùng sẽ bị đối thủ chiếm trọn các vị trí hiển thị ưu tiên trên đầu trang kết quả.",
+    "actionChecklist": [
+      "Tối ưu lại các bài viết thông tin theo cấu trúc câu trả lời ngắn gọn, chuẩn xác để thuật toán dễ gắn liên kết nội dòng",
+      "Khai báo đầy đủ Schema markup và hồ sơ thực thể doanh nghiệp để tăng cơ hội lọt vào khu vực website chính thức",
+      "Xây dựng chiến dịch kêu gọi độc giả và khách hàng thêm website vào danh sách Preferred Sources trên tài khoản cá nhân",
+      "Đồng bộ kênh video trên YouTube và TikTok để chuẩn bị điều kiện kích hoạt Search profile cho thương hiệu và chuyên gia"
+    ],
+    "id": "real-2026-10-18-google-thay-doi-5-eb5df8",
+    "publishedAt": "18/10/2026",
+    "sourceUrl": "https://ppc.land/google-pushes-links-higher-in-ai-answers-as-preferred-sources-use-rises-7x/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/10/google-ai-mode-preferred-sources-7x-links-higher-crane-hoisting-chain-link.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Dữ liệu thứ hạng Google bị nhiễu và lượng truy cập ChatGPT sụt giảm do lỗi đo lường",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "SEO",
+      "Google Analytics 4",
+      "ChatGPT",
+      "Đo lường dữ liệu"
+    ],
+    "summary": "Nhiều công cụ theo dõi thứ hạng Google vừa ghi nhận biến động bất thường do cơ chế chặn bot AI của nền tảng, khiến website biến mất tạm thời trên bảng xếp hạng. Đồng thời, lượng phiên truy cập từ ChatGPT trên Google Analytics 4 giảm mạnh vì lỗi kỹ thuật làm mất thẻ theo dõi nguồn. Trưởng phòng Marketing cần kiểm tra chéo các nguồn số liệu trước khi kết luận về hiệu quả SEO và kênh AI.",
+    "keyNumbers": [
+      {
+        "value": "8,0%",
+        "label": "Tỷ lệ trang kết quả Google bị thiếu website quen thuộc"
+      },
+      {
+        "value": "45%",
+        "label": "Mức sụt giảm phiên truy cập ChatGPT trên GA4 do mất thẻ UTM"
+      },
+      {
+        "value": "17,8 triệu",
+        "label": "Số trang tìm kiếm Nozzle thu thập để đánh giá độ nhiễu"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Công cụ theo dõi thứ hạng báo sai lệch do cơ chế chặn bot của Google",
+        "body": "Từ ngày 13/9 đến 9/10, công cụ đo thứ hạng Nozzle phát hiện 8,0% trang kết quả tìm kiếm bị mất phần lớn các website thường xuất hiện, so với mức chỉ 0,17% giai đoạn trước đó. Tỷ lệ này đạt đỉnh điểm khoảng một phần tư số trang trong giai đoạn 27 đến 29/9 và duy trì từ 5% đến 11% mỗi ngày từ ngày 1/10. Đối với các từ khóa mà trang web của doanh nghiệp thường có thứ hạng, có đến 58,6% trường hợp bị rớt khỏi top 10 trên các trang bị ảnh hưởng. Nguyên nhân được cho là phản ứng kỹ thuật của Google nhằm ngăn chặn hành vi thu thập dữ liệu tự động phục vụ AI."
+      },
+      {
+        "heading": "Lưu lượng truy cập từ ChatGPT giảm ảo trên báo cáo GA4",
+        "body": "Nhiều doanh nghiệp nhận thấy phiên truy cập từ ChatGPT trên Google Analytics 4 sụt giảm nghiêm trọng trong tháng 10. Graphite ghi nhận lưu lượng này giảm khoảng 45% trên các website có lượng truy cập đáng kể từ trợ lý AI. Nguyên nhân bắt nguồn từ việc các liên kết nội dòng trong câu trả lời của ChatGPT bị mất tham số theo dõi nguồn sau khi GPT-6 được triển khai, khiến dữ liệu truy cập bị đẩy sang nhóm Direct. OpenAI đã xác nhận lỗi này vào ngày 14/10 và bắt đầu triển khai bản sửa lỗi từ ngày 15/10."
+      },
+      {
+        "heading": "Google đẩy liên kết trích dẫn lên vị trí cao hơn trong kết quả AI",
+        "body": "Google đang cập nhật cách hiển thị liên kết trong AI Overviews và AI Mode, đưa các đường dẫn trích dẫn lên vị trí cao hơn trong câu trả lời tổng quan. Nền tảng cũng thử nghiệm hiển thị tên nhà sáng tạo nội dung và nhà xuất bản trên kết quả video của AI Mode để dẫn về hồ sơ tìm kiếm. Tuy nhiên, trong Google Search Console, mọi liên kết trong AI Overview đều được ghi nhận cùng một vị trí hiển thị chung. Do đó, việc đổi giao diện hiển thị không làm thay đổi thứ hạng vị trí trung bình trên báo cáo kỹ thuật."
+      },
+      {
+        "heading": "Bing Webmaster Tools bổ sung tính năng phân tích chủ đề tìm kiếm AI",
+        "body": "Microsoft vừa cập nhật tính năng thử nghiệm Topics Portfolio trong báo cáo AI Performance trên Bing Webmaster Tools. Công cụ này nhóm các truy vấn mà website được trích dẫn trong câu trả lời AI thành các chủ đề rộng, đi kèm ước tính tổng số lượt trích dẫn và số lượng tên miền liên quan. Báo cáo cũng cung cấp danh sách truy vấn cơ hội, nơi các website đối thủ được AI trích dẫn nhưng trang của bạn chưa xuất hiện. Doanh nghiệp cần lưu ý các chỉ số này mang tính định hướng tương đối chứ không phải số lượng tuyệt đối."
+      }
+    ],
+    "impact": "Tránh đưa ra quyết định sai lầm khi thấy lưu lượng AI sụt giảm hoặc thứ hạng SEO biến động mạnh trong tháng 10, vì phần lớn bắt nguồn từ lỗi phân bổ Direct trên GA4 và bot-detection của Google. Giúp người làm marketing tự tin giải trình số liệu với ban giám đốc mà không hoang mang về hiệu quả của đội ngũ SEO.",
+    "ifIgnored": "Doanh nghiệp có thể lãng phí nguồn lực để tái cấu trúc website hoặc xử phạt oan đội ngũ SEO do tin vào báo cáo thứ hạng bị nhiễu, đồng thời đánh giá sai tiềm năng chuyển đổi từ nguồn ChatGPT.",
+    "actionChecklist": [
+      "Đối chiếu dữ liệu thứ hạng bị tụt trên công cụ bên thứ ba với số lượt nhấp thực tế trong Google Search Console trước khi lập báo cáo.",
+      "Kiểm tra lưu lượng truy cập Direct trên GA4 từ ngày 8 đến 15/10 để bóc tách lượng truy cập thực tế chuyển hướng từ ChatGPT.",
+      "Cập nhật quy chuẩn gắn thẻ UTM thủ công cho các chiến dịch nội dung để giảm phụ thuộc vào tham số tự động của nền tảng AI.",
+      "Truy cập báo cáo AI Performance trong Bing Webmaster Tools để tìm các lỗ hổng nội dung mà đối thủ đang được trích dẫn."
+    ],
+    "id": "real-2026-10-17-du-lieu-thu-hang-510945",
+    "publishedAt": "17/10/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/seo-pulse-rank-tracker-data-chatgpt-tags-ai-search-links/593171/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/10/seo-pulse-october-16-2026.jpg",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
     "category": "Meta Ads",
     "platformIcon": "Facebook",
     "title": "Meta cập nhật điều khoản: Tự động thu thập dữ liệu website nhà quảng cáo để huấn luyện AI",
@@ -428,69 +554,6 @@
     }
   },
   {
-    "category": "Meta Ads",
-    "platformIcon": "Facebook",
-    "title": "Meta công bố mô hình quảng cáo GEM mới giúp tăng chuyển đổi và lượt nhấp",
-    "isHot": false,
-    "illustration": "ai-budget",
-    "readTime": "5 phút đọc",
-    "tags": [
-      "Meta Ads",
-      "GEM Model",
-      "AI Marketing",
-      "Thuật toán"
-    ],
-    "summary": "Meta vừa công bố tài liệu kỹ thuật về mô hình quảng cáo thế hệ mới mang tên GEM, hợp nhất các hệ thống dự đoán trước đây thành một mô hình nền tảng trung tâm huấn luyện trên hàng nghìn GPU. Theo dữ liệu do Meta tự công bố, hệ thống này mang lại mức cải thiện đáng kể về tỷ lệ chuyển đổi và lượt nhấp trên các bề mặt quảng cáo.",
-    "keyNumbers": [
-      {
-        "value": "18,9%",
-        "label": "Tăng chuyển đổi chung"
-      },
-      {
-        "value": "12%",
-        "label": "Tăng tỷ lệ nhấp chuột"
-      },
-      {
-        "value": "5,8%",
-        "label": "Tăng chuyển đổi Facebook"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Hợp nhất hệ thống dự đoán quảng cáo",
-        "body": "Meta đã thay thế các hệ thống dự đoán riêng biệt trước đây cho Facebook, Instagram và Reels bằng một mô hình nền tảng trung tâm duy nhất. Mô hình này học từ dữ liệu trên tất cả các nền tảng quảng cáo của công ty. Hệ thống đồng thời dự đoán tỷ lệ nhấp chuột trên mọi bề mặt và tỷ lệ chuyển đổi cho các mục tiêu tối ưu hóa chính."
-      },
-      {
-        "heading": "Hiệu suất theo công bố của Meta",
-        "body": "Theo tài liệu kỹ thuật, mô hình GEM mang lại cải thiện 18,9% về chuyển đổi và 12% về tỷ lệ nhấp chuột trên các bề mặt và mục tiêu quảng cáo. Ngoài ra, mô hình này đóng góp mức tăng chuyển đổi lần lượt là 5,8% trên Facebook, 4,1% trên Instagram và 1,6% cho chuyển đổi ngoài trang web đối với người dùng được nhắm mục tiêu trong năm qua. Tuy nhiên, các con số này chỉ do Meta cung cấp và chưa có đánh giá độc lập."
-      },
-      {
-        "heading": "Kiến trúc Kunlun và tối ưu hóa quy mô",
-        "body": "Phần lớn tài liệu tập trung vào kiến trúc Kunlun mới nhằm giúp mô hình đề xuất hoạt động giống mô hình ngôn ngữ lớn khi bổ sung năng lực tính toán. Kiến trúc này thay thế thiết kế Interformer trước đó và mang lại hiệu suất cao gấp đôi với cùng quy mô tính toán. Kunlun bao gồm ba phần gồm thành phần chú ý, thành phần tóm tắt và thành phần tương tác chéo."
-      },
-      {
-        "heading": "Kỹ thuật giảm chi phí vận hành",
-        "body": "Meta áp dụng ba kỹ thuật giảm chi phí chính gồm cơ chế block attention, công thức Generalized Dot-Product Attention và kỹ thuật song song chuyên gia cho thành phần tương tác chéo. Những cải tiến này giúp giảm chi phí độ dài chuỗi và cho phép nhiều hoạt động dạng chú ý chạy trong một nhân GPU duy nhất, mang lại tốc độ xử lý nhanh hơn gấp đôi."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing cần lưu ý rằng Meta đang dồn lực vào một mô hình AI trung tâm duy nhất để tối ưu hóa việc phân phối quảng cáo trên toàn bộ hệ sinh thái, điều này có thể làm thay đổi cách thuật toán phân phối ngân sách và tiếp cận khách hàng.",
-    "ifIgnored": "Nếu bỏ qua, nhà quản lý có thể không nắm bắt được sự chuyển dịch kỹ thuật cốt lõi của nền tảng, dẫn đến việc khó lý giải các biến động về hiệu suất chiến dịch và chi phí quảng cáo.",
-    "actionChecklist": [
-      "Theo dõi sát sao hiệu suất chuyển đổi thực tế trong tài khoản quảng cáo cá nhân",
-      "Đánh giá lại các mục tiêu tối ưu hóa chiến dịch theo các bề mặt Facebook và Instagram",
-      "Cập nhật kiến thức về việc Meta gộp các hệ thống dự đoán vào một mô hình trung tâm",
-      "Kiểm tra lại dữ liệu đo lường ngoại tuyến để đối chiếu với biến động chi phí"
-    ],
-    "id": "real-2026-10-14-meta-cong-bo-mo-1670fd",
-    "publishedAt": "14/10/2026",
-    "sourceUrl": "https://ppc.land/meta-says-its-gem-ads-model-lifted-conversions-18-9-across-its-apps/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/10/meta-gem-ads-model-18-9-percent-conversions-single-slide-projector.jpg",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
     "boQua": false,
     "category": "Google Ads & SEO",
     "platformIcon": "Search",
@@ -552,69 +615,6 @@
     "source": "Search Engine Journal",
     "image": {
       "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/10/crux-diagnostic-halftone-4204892985.jpg",
-      "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
-    "category": "AI Marketing",
-    "platformIcon": "Sparkles",
-    "title": "Nghiên cứu mới: ChatGPT ưu tiên nguồn gốc, các trang tổng hợp kiến thức mất chỗ đứng",
-    "isHot": false,
-    "illustration": "zero-click",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "AI Search",
-      "ChatGPT",
-      "SEO",
-      "Nguồn gốc"
-    ],
-    "summary": "Dữ liệu mới từ Ahrefs cho thấy ChatGPT đang dịch chuyển mạnh mẽ sang việc trích dẫn các nguồn tin gốc, cơ quan chính phủ và trang kiểm định thay vì các bài viết tổng hợp thông tin. Các trang giải thích kiến thức tài chính và sức khỏe đã sụt giảm thứ hạng trích dẫn đáng kể trong giai đoạn từ tháng 3 đến tháng 9.",
-    "keyNumbers": [
-      {
-        "value": "64 đến 4",
-        "label": "Thứ hạng của PubMed trên ChatGPT"
-      },
-      {
-        "value": "18 đến 79",
-        "label": "Thứ hạng của WebMD trên ChatGPT"
-      },
-      {
-        "value": "14,4%",
-        "label": "Tỷ lệ câu trả lời chạy tìm kiếm web"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Sự trỗi dậy của nguồn tin gốc và cơ quan quản lý",
-        "body": "Dữ liệu từ Ahrefs phân tích các miền bị trích dẫn nhiều nhất trong câu trả lời của ChatGPT tại Mỹ cho thấy sự thay đổi lớn. PubMed đã leo từ vị trí 64 lên vị trí thứ 4 từ tháng 3 đến tháng 9. Trong khi đó, các trang tổng hợp thông tin như WebMD rơi từ vị trí 18 xuống 79. Các trang chính phủ, nghiên cứu, quản lý và đơn vị thử nghiệm sản phẩm thực tế đều tăng trưởng thứ hạng."
-      },
-      {
-        "heading": "Các trang giải thích và diễn đàn giảm thị phần",
-        "body": "Nhiều trang giải thích lĩnh vực sức khỏe và tài chính mất dần ưu thế trên mô hình của ChatGPT. Các thương hiệu lớn như Britannica, Investopedia và New York Post thậm chí rơi khỏi top 200 trang được trích dẫn nhiều nhất. Bên cạnh đó, tỷ lệ trích dẫn Reddit giảm mạnh từ 19,1% trong tháng 3 xuống còn 2,3% trong tháng 9. Wikipedia cũng ghi nhận mức giảm từ 14,1% xuống 2,9% trong cùng giai đoạn."
-      },
-      {
-        "heading": "Hành vi tìm kiếm web của ChatGPT",
-        "body": "Báo cáo xem xét mẫu gồm 66,6 triệu câu trả lời miễn phí, không đăng nhập trong tháng 8 và tháng 9 trên toàn cầu. Kết quả chỉ ra có 14,4% phản hồi liên quan đến việc thực hiện tìm kiếm trên web. Trung bình mỗi phản hồi cần khoảng 1,6 truy vấn phụ trợ để thu thập dữ liệu trước khi đưa ra câu trả lời cuối cùng cho người dùng."
-      },
-      {
-        "heading": "Định hướng chiến lược nội dung cho thương hiệu",
-        "body": "Xu hướng này chứng minh mô hình AI ưu tiên các tài liệu mà chỉ doanh nghiệp hoặc chuyên gia mới có thể tự tạo ra. Trưởng phòng Marketing cần dịch chuyển trọng tâm sang nghiên cứu gốc, dữ liệu thực tế và thông tin sản phẩm độc quyền. Việc tiếp tục dựa vào các bài viết tổng hợp lại kiến thức chung sẽ không còn mang lại hiệu quả hiển thị trên các công cụ tìm kiếm tích hợp AI."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing cần thay đổi chiến lược sản xuất nội dung, chuyển từ việc viết bài tổng hợp thông tin phổ thông sang xây dựng tài liệu nghiên cứu gốc và dữ liệu thực tế để duy trì khả năng hiển thị trên AI.",
-    "ifIgnored": "Thương hiệu sẽ mất dần nguồn lưu lượng truy cập gián tiếp từ các câu trả lời của ChatGPT khi nền tảng này ngày càng siết chặt việc ưu tiên trích dẫn các nguồn tin chính thống và sơ cấp.",
-    "actionChecklist": [
-      "Đánh giá lại tỷ lệ nội dung tự sản xuất so với nội dung tổng hợp trên website",
-      "Thống kê các chủ đề cốt lõi mà ChatGPT đang trích dẫn thương hiệu hoặc đối thủ",
-      "Bổ sung dữ liệu nghiên cứu gốc và báo cáo thử nghiệm sản phẩm vào chiến lược content",
-      "Kiểm tra mức độ hiển thị của website trên các công cụ tìm kiếm tích hợp AI"
-    ],
-    "id": "real-2026-10-12-nghien-cuu-moi-chatgpt-7fe439",
-    "publishedAt": "12/10/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/chatgpt-most-cited-sites-primary-sources-ahrefs/592682/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/10/chatgpt-primary-sources-featured.jpg",
       "credit": "Ảnh: Search Engine Journal"
     }
   },
