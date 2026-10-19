@@ -2,6 +2,195 @@
   {
     "category": "Google Ads & SEO",
     "platformIcon": "Search",
+    "title": "Google SafeSearch siết quảng cáo nội dung nhạy cảm và nguy cơ mất hiển thị tìm kiếm",
+    "isHot": false,
+    "illustration": "shop-health",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Google Ads",
+      "Google Search",
+      "Chính sách quảng cáo",
+      "SEO website"
+    ],
+    "summary": "Google áp dụng trạng thái SafeSearch của người dùng làm điều kiện tiên quyết trước khi phân phối quảng cáo có yếu tố nhạy cảm. Đồng thời, các hệ thống phân loại tự động có thể đánh dấu nhầm toàn bộ tên miền là web người lớn, khiến doanh nghiệp mất phần lớn lưu lượng tự nhiên và tệp tiếp cận quảng cáo.",
+    "keyNumbers": [
+      {
+        "value": "30%",
+        "label": "Mức giảm kết quả gây sốc ngoài ý muốn sau khi Google tích hợp mô hình BERT"
+      },
+      {
+        "value": "700.000",
+        "label": "Lượng khách hàng trưởng thành bị bộ lọc chặn tiếp cận một nhà bán lẻ"
+      },
+      {
+        "value": "2 - 3 tháng",
+        "label": "Thời gian hệ thống phân loại của Google xử lý lại dữ liệu sau khi sửa lỗi"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Cơ chế kích hoạt và trạng thái mặc định của SafeSearch",
+        "body": "SafeSearch là công cụ lọc kết quả tìm kiếm của Google nhằm ẩn hoặc làm mờ nội dung bạo lực và tình dục. Hệ thống chia thành ba mức gồm Lọc toàn bộ (Filter), Làm mờ (Blur) và Tắt (Off). Google tự động cài đặt chế độ Filter cho tài khoản được xác định dưới 18 tuổi hoặc tài khoản trẻ em chịu quản lý Family Link, trong khi Blur là mặc định cho các đối tượng còn lại. Đáng chú ý, việc áp dụng mô hình máy học để ước lượng độ tuổi người dùng đồng nghĩa với việc rất nhiều tài khoản người lớn bị đưa vào chế độ Filter mà không hề hay biết."
+      },
+      {
+        "heading": "Điều kiện phân phối quảng cáo bị thu hẹp đáng kể",
+        "body": "Chính sách của Google quy định trạng thái SafeSearch của người dùng là điều kiện bắt buộc để kích hoạt quảng cáo có nội dung giới hạn mạnh hoặc giới hạn vừa phải. Nhóm này bao gồm các sản phẩm như trang phục hở hang, đồ chơi người lớn, sản phẩm chăm sóc sức khỏe tình dục hoặc dịch vụ giải trí người lớn. Những mẫu quảng cáo này vốn chỉ được phép xuất hiện trên Search Network và bị cấm hoàn toàn trên Display, YouTube hay AdMob. Khi thuật toán gán người dùng vào diện Filter thông qua ước lượng độ tuổi, quy mô tệp khán giả có thể tiếp cận của các chiến dịch này ngay lập tức bị thu hẹp."
+      },
+      {
+        "heading": "Nguy cơ thuật toán đánh dấu nhầm toàn bộ tên miền",
+        "body": "Hệ thống SafeSearch vận hành theo hai tầng: phân loại nội dung trang web và phân tích ý định truy vấn của người tìm kiếm. Nếu một website kinh doanh tổng hợp có chứa một số sản phẩm nhạy cảm mà không tách bạch, thuật toán có thể coi toàn bộ tên miền mang tính chất nhạy cảm và kích hoạt lọc trên diện rộng. Điển hình như chuỗi bán lẻ Lovehoney tại Anh từng ghi nhận hơn 700.000 khách hàng tiềm năng bị ngăn chặn tiếp cận và phải gửi hơn 600 khiếu nại tới Google. Khi đã bị xếp loại nhầm, việc khôi phục hiển thị tự nhiên sẽ tốn rất nhiều thời gian."
+      },
+      {
+        "heading": "Giải pháp kỹ thuật và thời gian khắc phục",
+        "body": "Google khuyến nghị các nhà xuất bản chủ động khai báo thẻ meta rating adult hoặc nhãn RTA trong mã nguồn HTML đối với những trang chứa nội dung nhạy cảm. Đối với video, doanh nghiệp cần gắn thẻ family_friendly giá trị no trong sơ đồ trang web video và đảm bảo bot tìm kiếm của Google vẫn thu thập được dữ liệu qua các cổng xác thực tuổi. Giải pháp căn cơ nhất là đưa các danh mục nhạy cảm sang một subdomain riêng biệt để bảo vệ tên miền chính. Khi khắc phục xong vi phạm, quản trị viên phải chờ từ 2 đến 3 tháng để các bộ phân loại quét lại trước khi có thể gửi yêu cầu xem xét."
+      }
+    ],
+    "impact": "Các doanh nghiệp kinh doanh thời trang đồ lót, đồ bơi, sản phẩm sức khỏe sinh sản hoặc thực phẩm chức năng đối mặt nguy cơ bị teo tóp tệp khách hàng quảng cáo Google Search. Nếu không cấu trúc website chuẩn, toàn bộ gian hàng trực tuyến có thể bị thuật toán gắn nhãn nhạy cảm, làm sụt giảm nghiêm trọng lượng truy cập tự nhiên từ khách hàng phổ thông.",
+    "ifIgnored": "Doanh nghiệp có thể mất trắng vị trí hiển thị tìm kiếm tự nhiên của các dòng sản phẩm đại trà do toàn bộ tên miền bị dính nhãn nhạy cảm. Thời gian để Google gỡ nhãn phạt kéo dài tới 3 tháng, gây gián đoạn doanh thu dài hạn mà không có cách nào xử lý nhanh bằng tiền quảng cáo.",
+    "actionChecklist": [
+      "Dùng cú pháp site:domain trên Google với bộ lọc SafeSearch bật để kiểm tra tên miền có bị ẩn hay không",
+      "Tách toàn bộ sản phẩm đồ lót, trang phục gợi cảm hoặc nhạy cảm sang subdomain riêng biệt",
+      "Gắn thẻ meta rating adult và nhãn video family_friendly đúng quy chuẩn trên các trang sản phẩm nhạy cảm",
+      "Mở quyền cho Googlebot truy cập qua các trang kiểm tra độ tuổi nhằm tránh bị thuật toán hạ hạng index"
+    ],
+    "id": "real-2026-10-18-google-safesearch-siet-quang-5fd4cd",
+    "publishedAt": "18/10/2026",
+    "sourceUrl": "https://ppc.land/safesearch/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/10/google-safesearch-filter-blur-venetian-blind-age-gate.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Cơ chế quảng cáo và quy định đăng ký trước trên Google Play cho ứng dụng mới",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Google Ads",
+      "Google Play",
+      "App Campaign",
+      "Tăng trưởng ứng dụng"
+    ],
+    "summary": "Google Play cho phép nhà phát triển chạy chiến dịch đăng ký trước tối đa 90 ngày cho mỗi quốc gia để gom người dùng trước giờ phát hành. Tính năng này kết hợp cùng định dạng quảng cáo App campaign theo giá thầu mục tiêu giúp tạo đợt bùng nổ lượt cài đặt ngay ngày đầu tiên ra mắt.",
+    "keyNumbers": [
+      {
+        "value": "90 ngày",
+        "label": "thời gian tối đa của chiến dịch đăng ký trước mỗi quốc gia"
+      },
+      {
+        "value": "200MB",
+        "label": "ngưỡng dung lượng ứng dụng được tự động tải qua dữ liệu di động hoặc Wi-Fi"
+      },
+      {
+        "value": "14 ngày",
+        "label": "cửa sổ ghi nhận chuyển đổi cài đặt từ người đã đăng ký trước"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Cơ chế tự động cài đặt và giới hạn kỹ thuật của Play Store",
+        "body": "Đăng ký trước thay thế nút cài đặt thông thường bằng nút đăng ký trước trên trang ứng dụng Google Play. Khi phát hành chính thức, thiết bị hợp lệ chạy Android 6.0 trở lên và Play Store phiên bản 19.2 trở lên sẽ tự động tải ứng dụng về máy. Ứng dụng dưới 200MB có thể tự tải qua mạng di động lẫn Wi-Fi, từ 200MB đến 2GB chỉ tải qua Wi-Fi, còn trên 2GB sẽ không hỗ trợ tự động tải. Nhà phát triển chỉ được chạy đăng ký trước cho tối đa hai ứng dụng cùng lúc trên mỗi tài khoản Play Console."
+      },
+      {
+        "heading": "Chạy quảng cáo tìm kiếm người đăng ký với Google Ads",
+        "body": "Google Ads cung cấp định dạng chiến dịch ứng dụng chuyên biệt dành riêng cho giai đoạn đăng ký trước trên điện thoại và máy tính bảng Android. Quảng cáo hiển thị trên Google Play, YouTube theo dạng trong luồng và mạng hiển thị của Google. Hệ thống sử dụng cơ chế đặt giá thầu mục tiêu cho mỗi lượt đăng ký trước (tCPpre) để tối ưu khối lượng chuyển đổi. Ngay khi ứng dụng chính thức mở bán tại một quốc gia, quảng cáo tại quốc gia đó sẽ tự động dừng lại."
+      },
+      {
+        "heading": "Sự khác biệt với mô hình Pre-order của Apple App Store",
+        "body": "Trên App Store, Apple cho phép mở đặt hàng trước từ hai đến 180 ngày đối với ứng dụng mới, và lên đến 365 ngày nếu mở rộng thị trường mới cho ứng dụng đã phát hành. Khác với Google Play tích hợp sẵn phần thưởng một lần duy nhất trong chiến dịch, Apple không cung cấp hệ thống thưởng sẵn có mà yêu cầu nhà phát triển tự lập trình nhận diện qua mã StoreKit. Apple cũng yêu cầu bản dựng phải vượt qua vòng duyệt App Review trước khi được mở đặt trước, trong khi Google Play sử dụng bản thử nghiệm riêng."
+      },
+      {
+        "heading": "Đo lường sai lệch và tối ưu chuyển đổi ngày phát hành",
+        "body": "Số liệu báo cáo thường chênh lệch lớn giữa Google Ads và Play Console do cơ chế ghi nhận khác nhau. Google Ads ghi nhận lượt đăng ký ngay cả khi người dùng sau đó hủy bỏ, trong khi Play Console chỉ giữ lại người dùng đang trong trạng thái đăng ký thực tế. Ngoài ra, việc người dùng hủy rồi bấm lại quảng cáo để đăng ký có thể khiến Google Ads tính chuyển đổi hai lần. Cửa sổ chuyển đổi của Play Console tính trong vòng 14 ngày kể từ khi ứng dụng chính thức cho phép tải về."
+      }
+    ],
+    "impact": "Giúp đội ngũ marketing chủ động dồn lực ngân sách để tích lũy tệp người dùng chất lượng cao trước ngày mở cổng, tạo đòn bẩy thứ hạng và tải tự nhiên ngay ngày đầu ra mắt thay vì rải ngân sách phân tán.",
+    "ifIgnored": "Nếu không kiểm soát dung lượng gói cài đặt dưới 200MB hoặc kéo dài chiến dịch quá 90 ngày mà chưa ra mắt, toàn bộ chiến dịch sẽ bị hủy bỏ tự động và tính năng tự động tải về qua mạng di động sẽ không thể kích hoạt.",
+    "actionChecklist": [
+      "Kiểm tra dung lượng file cài đặt ứng dụng Android để bảo đảm dưới ngưỡng 200MB cho tính năng tự động tải qua dữ liệu di động.",
+      "Lên lịch chạy chiến dịch quảng cáo đăng ký trước từ 3 đến 6 tuần trước ngày phát hành chính thức để tối ưu hiệu quả chuyển đổi.",
+      "Cấu hình đúng một phần thưởng vật phẩm duy nhất trong Play Console và kiểm tra kỹ lưỡng vì hệ thống không cho phép chỉnh sửa sau khi tạo.",
+      "Đối soát số liệu chuyển đổi giữa báo cáo Google Ads và Play Console dựa trên cửa sổ 14 ngày để đánh giá chi phí thực tế trên mỗi lượt cài đặt."
+    ],
+    "id": "real-2026-10-18-co-che-quang-cao-7eaf33",
+    "publishedAt": "18/10/2026",
+    "sourceUrl": "https://ppc.land/pre-registration/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/10/google-play-pre-registration-launch-day-queue-ribbon-scissors.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "AI Marketing",
+    "platformIcon": "Sparkles",
+    "title": "OpenAI API và Google không phản ánh chính xác nguồn trích dẫn trên ChatGPT",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "AI Search",
+      "ChatGPT",
+      "GEO",
+      "Đo lường AI"
+    ],
+    "summary": "Một nghiên cứu thực nghiệm chỉ ra rằng dữ liệu từ OpenAI API và kết quả tìm kiếm Google chỉ trùng khớp 26,2% số trang web thực tế được ChatGPT trích dẫn. Các công cụ theo dõi thứ hạng thương hiệu trên AI Search nếu chỉ dựa vào API có thể đang đưa ra bức tranh sai lệch lớn so với trải nghiệm của người dùng thật.",
+    "keyNumbers": [
+      {
+        "value": "26,2%",
+        "label": "Trang trích dẫn trên ChatGPT trùng với API và Google"
+      },
+      {
+        "value": "48,7%",
+        "label": "Tên miền trích dẫn được bao quát thành công"
+      },
+      {
+        "value": "44,5%",
+        "label": "Trang trích dẫn chỉ xuất hiện đúng 1 lần sau 20 lượt hỏi"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Sai lệch lớn giữa công cụ đo lường qua API và ứng dụng ChatGPT",
+        "body": "Nghiên cứu từ Đại học Quốc gia Singapore và Đại học Giao thông Tây An thực hiện trên 80 câu hỏi từ cơ sở dữ liệu Search Arena với các phiên bản ChatGPT. Kết quả chỉ ra rằng kết hợp cả Google và OpenAI Responses API chỉ phát hiện được 26,2% số trang cụ thể mà GPT-5.5 Instant trích dẫn. Ở cấp độ tên miền website, tỷ lệ bao quát cũng chỉ đạt mức 48,7%. Điều này cho thấy việc dùng API để giả lập hành vi tìm kiếm nguồn tin của ChatGPT tạo ra độ vênh rất lớn."
+      },
+      {
+        "heading": "Google đơn lẻ bỏ sót phần lớn nguồn tin của mô hình ngôn ngữ",
+        "body": "Nếu chỉ dựa vào kết quả tìm kiếm tự nhiên của Google qua SerpAPI, công cụ chỉ ghi nhận 6,4% số trang trích dẫn và 22,8% số website trên bản GPT-5.5 Instant. Danh sách nguồn của OpenAI API có độ bao phủ tốt hơn nhưng cũng chỉ đạt 22,5% tổng số trang được ứng dụng web viện dẫn. Ngoài ra, tính ngẫu nhiên giữa các lần chạy rất cao khi có tới 44,5% số trang riêng biệt chỉ xuất hiện duy nhất 1 lần trong 20 lần thử nghiệm cùng một câu hỏi. Độ biến động này khiến việc đo lường thứ hạng tĩnh gần như mất ý nghĩa."
+      },
+      {
+        "heading": "Cơ chế tự động viết lại truy vấn sang tiếng Anh",
+        "body": "Nghiên cứu phát hiện ChatGPT hầu như không dùng nguyên văn câu hỏi ban đầu của người dùng để truy vấn nguồn ngoài. Đối với các câu hỏi bằng tiếng Trung, GPT-5.3 Instant chuyển sang tìm kiếm hoàn toàn bằng tiếng Anh trong 67,0% số lần và con số này ở GPT-5.5 Instant là 69,6%. Xu hướng tự động dịch và viết lại truy vấn sang tiếng Anh là nguyên nhân khiến các trang thông tin bản địa thường bị bỏ qua nếu không có nội dung song ngữ tương ứng."
+      },
+      {
+        "heading": "Thách thức mới cho chiến lược tối ưu hóa công cụ tìm kiếm AI",
+        "body": "Các nhà nghiên cứu chỉ ra rằng mức độ trùng lặp giữa các lần chạy ổn định hơn ở cấp độ toàn bộ website thay vì từng URL riêng lẻ. Đồng thời, việc mô hình AI liên tục cập nhật phiên bản khiến tính nhất quán của kết quả tìm kiếm biến động mạnh. Do đó, các thương hiệu đang đầu tư ngân sách cho phần mềm theo dõi hiển thị trên AI cần xác thực rõ phương pháp thu thập dữ liệu của nhà cung cấp dịch vụ."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing có nguy cơ đưa ra quyết định sai lầm khi báo cáo hiệu quả hiển thị thương hiệu trên AI Search, do các công cụ bên thứ ba dùng API không phản ánh đúng những gì khách hàng nhìn thấy trên giao diện ChatGPT.",
+    "ifIgnored": "Doanh nghiệp lãng phí ngân sách vào các dịch vụ SEO AI ảo, tối ưu nhầm trang đích và bỏ lỡ khách hàng tiềm năng do cơ chế tự dịch truy vấn của chatbot.",
+    "actionChecklist": [
+      "Yêu cầu nhà cung cấp công cụ theo dõi AI giải trình phương thức lấy dữ liệu là cào trực tiếp giao diện hay gọi qua API.",
+      "Chuyển chỉ số đo lường hiện diện thương hiệu trên AI từ cấp độ từng URL chi tiết sang cấp độ toàn bộ tên miền website.",
+      "Thực hiện kiểm tra thủ công tối thiểu 10 đến 20 lần cho mỗi câu hỏi trọng tâm để đánh giá chính xác tần suất xuất hiện.",
+      "Bổ sung tóm tắt và từ khóa tiếng Anh vào các trang sản phẩm chủ lực nhằm đón đầu cơ chế tự động chuyển ngữ truy vấn của AI."
+    ],
+    "id": "real-2026-10-18-openai-api-va-google-2f0ad1",
+    "publishedAt": "18/10/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/openais-api-only-partly-matched-chatgpts-citations-paper-finds/593304/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/10/openai-citation-matching-featured.jpg",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
     "title": "Google thay đổi 5 vị trí hiển thị liên kết trong AI Overviews và AI Mode",
     "isHot": false,
     "illustration": "zero-click",
@@ -250,66 +439,6 @@
     }
   },
   {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Floodlight tích hợp dữ liệu đăng nhập Google để đo lường chuyển đổi chéo thiết bị",
-    "isHot": false,
-    "illustration": "data-signal",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Google Marketing Platform",
-      "Floodlight",
-      "Đo lường chuyển đổi",
-      "DV360"
-    ],
-    "summary": "Google thông báo hệ thống theo dõi Floodlight sẽ dùng tín hiệu người dùng đăng nhập tài khoản Google để khôi phục các chuyển đổi web chưa được ghi nhận. Thay đổi này tự động áp dụng trên Display & Video 360, Search Ads 360 và Campaign Manager 360 từ tháng 11/2026 mà không yêu cầu nhà quảng cáo thao tác kỹ thuật.",
-    "keyNumbers": [
-      {
-        "value": "3",
-        "label": "nền tảng áp dụng gồm DV360, SA360 và CM360"
-      },
-      {
-        "value": "10%",
-        "label": "tỷ lệ người dùng ban đầu khi chuyển đổi báo cáo Floodlight tức thì"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Cơ chế khôi phục chuyển đổi bằng dữ liệu tài khoản Google",
-        "body": "Thay vì dựa hoàn toàn vào dữ liệu do doanh nghiệp tải lên, Floodlight sẽ khai thác dữ liệu từ người dùng đăng nhập tài khoản Google. Cơ chế này giúp kết nối hành vi xem quảng cáo trên một thiết bị với giao dịch mua sắm trên thiết bị khác. Ngoài ra, hệ thống cũng hỗ trợ nhận diện chuyển đổi giữa môi trường ứng dụng và trình duyệt web. Quy định hiện tại giới hạn ở việc chuyển đổi đích phải diễn ra trên nền tảng website."
-      },
-      {
-        "heading": "Phạm vi áp dụng trên hệ sinh thái Google Marketing Platform",
-        "body": "Báo cáo trên Display & Video 360, Search Ads 360 và Campaign Manager 360 sẽ đồng loạt ghi nhận số liệu chuyển đổi bổ sung này. Google cho biết các nhà quảng cáo không cần thực hiện thêm thao tác cài đặt nào trên hệ thống. Tính năng này giải quyết khoảng trống dữ liệu khi cookie bên thứ ba ngày càng bị hạn chế trên các trình duyệt. Dữ liệu tài khoản đăng nhập mang lại lợi thế độc quyền mà các đơn vị đo lường độc lập bên ngoài không thể tiếp cận."
-      },
-      {
-        "heading": "Những điểm bỏ ngỏ về thuật toán và so sánh dữ liệu",
-        "body": "Google chưa công bố tỷ lệ chuyển đổi ước tính sẽ được khôi phục cũng như cách phân định giữa số liệu thực tế và số liệu mô hình hóa. Nền tảng cũng chưa làm rõ liệu dữ liệu chuyển đổi mới này có được đưa vào các chiến lược giá thầu tự động ngay lập tức hay không. Nếu Google không điều chỉnh lại dữ liệu lịch sử, báo cáo giai đoạn sau tháng 11/2026 sẽ có sự tăng vọt số lượng chuyển đổi so với các kỳ trước. Sự thay đổi này xuất phát từ phương thức đo lường mới chứ không phản ánh sự thay đổi thực tế về hiệu quả chiến dịch."
-      },
-      {
-        "heading": "Điều chỉnh giao diện quản trị an toàn thương hiệu trên DV360",
-        "body": "Bên cạnh thay đổi về Floodlight, Google sẽ khai tử trang Brand Control Center ở cấp độ nhà quảng cáo trong Display & Video 360. Lý do được đưa ra là trang tổng quan độc lập này trùng lặp với các thiết lập sẵn có trong mục cài đặt quy tắc nhắm mục tiêu. Việc đóng trang này không làm ảnh hưởng đến các tiêu chuẩn an toàn thương hiệu đang chạy, quá trình phân phối chiến dịch hay số liệu báo cáo. Cấp độ đối tác vẫn duy trì Brand Control Center để theo dõi thiết lập chung."
-      }
-    ],
-    "impact": "Số lượng chuyển đổi ghi nhận trên DV360 và CM360 có thể tăng đột biến sau khi cập nhật, làm sai lệch kết quả so sánh ROI giữa Google và các nền tảng quảng cáo khác nếu đánh giá dựa trên cùng một bộ chỉ số attribution.",
-    "ifIgnored": "Doanh nghiệp sẽ ngộ nhận hiệu quả chiến dịch tăng trưởng đột biến vào cuối năm, dẫn đến việc phân bổ ngân sách sai lệch cho các kênh của Google thay vì các kênh đem lại giá trị thực tế.",
-    "actionChecklist": [
-      "Đánh dấu mốc tháng 11/2026 trên dashboard báo cáo để tách biệt dữ liệu đo lường cũ và mới",
-      "Rà soát lại quy tắc đối chiếu số liệu Floodlight giữa Campaign Manager 360 và Google Analytics 4",
-      "Thông báo cho đội ngũ media buying về khả năng biến động chỉ số CPA trên DV360 và SA360",
-      "Chuyển quy trình kiểm tra an toàn thương hiệu trên DV360 sang mục Cài đặt nhà quảng cáo"
-    ],
-    "deadline": "Tháng 11/2026",
-    "id": "real-2026-10-16-floodlight-tich-hop-du-a984d4",
-    "publishedAt": "16/10/2026",
-    "sourceUrl": "https://ppc.land/floodlight-gains-google-signed-in-data-to-recover-unattributed-conversions/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/10/google-floodlight-signed-in-data-unattributed-conversions-rooftop-searchlight-footprints.jpg",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
     "category": "TikTok Shop & Ads",
     "platformIcon": "Video",
     "title": "TikTok công bố dữ liệu xu hướng mua sắm dịp lễ hội với doanh số kỷ lục",
@@ -436,65 +565,6 @@
     }
   },
   {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Hành vi tìm kiếm Black Friday thay đổi: Thách thức phân bổ ngân sách quảng cáo Q4",
-    "isHot": false,
-    "illustration": "keyword-exclusion",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Google Ads",
-      "Hành vi người dùng",
-      "Ngân sách quảng cáo",
-      "Tối ưu chiến dịch"
-    ],
-    "summary": "Dữ liệu mới về hành vi tìm kiếm cho thấy lượng quan tâm đến từ khóa Black Friday cốt lõi đã giảm sút, trong khi nhu cầu tìm kiếm thời điểm diễn ra chương trình lại tăng lên. Điều này đòi hỏi các nhà quản lý ngân sách quảng cáo phải xem xét lại chiến lược dồn tiền vào duy nhất một ngày cuối tuần.",
-    "keyNumbers": [
-      {
-        "value": "36%",
-        "label": "Giảm tìm kiếm Black Friday"
-      },
-      {
-        "value": "39%",
-        "label": "Tăng tìm kiếm ngày sale"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Sự dịch chuyển trong hành vi tìm kiếm",
-        "body": "Nghiên cứu từ cơ quan Marketing Signals chỉ ra rằng lượng tìm kiếm cho cụm từ Black Friday cốt lõi đã giảm 36% so với đỉnh điểm năm 2019. Các từ khóa liên quan đến ưu đãi giảm 40% và truy vấn tìm kiếm sale theo từng nhà bán lẻ giảm tới 68%. Ngược lại, các truy vấn theo dõi ngày tháng khuyến mại lại tăng 39% trên tổng số 19 thuật toán được khảo sát."
-      },
-      {
-        "heading": "Độ trễ và rủi ro khi tập trung một thời điểm",
-        "body": "Xu hướng người dùng đang trải đều nhu cầu tìm kiếm xuyên suốt tháng 11 thay vì chỉ tập trung vào một dịp cuối tuần duy nhất. Việc dồn toàn bộ ngân sách quảng cáo tìm kiếm vào một cuối tuần có sự cạnh tranh cao có thể khiến chiến dịch bỏ lỡ tập khách hàng đã bắt đầu tìm kiếm từ sớm. Dù vậy, dữ liệu này dựa trên ước tính thị trường và cần được kiểm chứng cẩn trọng với số liệu thực tế của từng ngành hàng."
-      },
-      {
-        "heading": "Biến động chi phí mỗi lượt nhấp chuột",
-        "body": "Chi phí ước tính cho các lượt nhấp chuột liên quan đến Black Friday nằm trong khoảng từ 35p đến £1,10, với từ khóa du lịch đạt mức cao nhất £1,44 mỗi nhấp chuột. Tuy nhiên, sự khác biệt về giá trị sản phẩm tạo ra bài toán biên độ lợi nhuận khác nhau cho từng mặt hàng. Các sản phẩm giá trị thấp chịu áp lực lớn hơn về chi phí quảng cáo so với hàng hóa giá trị cao."
-      },
-      {
-        "heading": "Tác động đến biên độ lợi nhuận sản phẩm",
-        "body": "Tỷ lệ chi phí nhấp chuột trên giá trị sản phẩm có sự chênh lệch lớn giữa các mặt hàng giá rẻ và hàng điện tử. Sản phẩm giá rẻ có ít dư địa hơn cho các lượt nhấp chuột không chuyển đổi, đòi hỏi chiến lược từ khóa phải vô cùng chặt chẽ. Ngược lại, các sản phẩm giá cao có biên độ rộng hơn để hấp thụ chi phí nhấp chuột lãng phí trong đấu giá."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing cần đánh giá lại mô hình phân bổ ngân sách tìm kiếm theo mùa vụ, tránh tình trạng tập trung quá mức vào một thời điểm cao điểm ngắn ngủi khi hành vi người tiêu dùng đã dàn đều ra cả tháng.",
-    "ifIgnored": "Bỏ qua xu hướng dịch chuyển này có thể dẫn đến việc lãng phí ngân sách quảng cáo vào các từ khóa cạnh tranh đắt đỏ trong khi khách hàng thực tế đã tìm kiếm và ra quyết định từ sớm hơn trong tháng.",
-    "actionChecklist": [
-      "Đánh giá lại lịch sử phân bổ ngân sách quảng cáo Q4 qua các năm.",
-      "Mở rộng khung thời gian chạy từ khóa khuyến mãi thay vì dồn hết vào cuối tuần chính.",
-      "Kiểm tra lại biên độ lợi nhuận và chi phí nhấp chuột ước tính theo từng nhóm sản phẩm.",
-      "Thắt chặt nhắm mục tiêu từ khóa đối với các mặt hàng có giá trị thấp để tránh lãng phí."
-    ],
-    "id": "real-2026-10-15-hanh-vi-tim-kiem-7b5d06",
-    "publishedAt": "15/10/2026",
-    "sourceUrl": "https://ppc.land/black-friday-searches-drop-36-in-uk-since-2019-marketing-signals-finds/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/10/marketing-signals-uk-black-friday-searches-drop-empty-spotlight-shoppers-spread.jpg",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
     "category": "TikTok Shop & Ads",
     "platformIcon": "Video",
     "title": "TikTok Shop bổ sung định dạng carousel gắn giỏ hàng và công cụ đẩy số livestream",
@@ -551,71 +621,6 @@
     "image": {
       "url": "https://imgproxy.divecdn.com/d6N8u5BI_rNJCd_2E3iIgUI5gvE-lJCZ7tPPETxAYVA/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS90aWt0b2tfc2hvcHBhYmxlX2Nhcm91c2VsLnBuZw==.webp",
       "credit": "Ảnh: Social Media Today"
-    }
-  },
-  {
-    "boQua": false,
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Google bổ sung các chỉ số điều hướng mềm thử nghiệm vào CrUX cho ứng dụng một trang",
-    "isHot": true,
-    "illustration": "page-speed",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Core Web Vitals",
-      "CrUX",
-      "SEO kỹ thuật",
-      "Google"
-    ],
-    "summary": "Google vừa đưa các phiên bản thử nghiệm của ba chỉ số Core Web Vitals vào Báo cáo Trải nghiệm Người dùng Chrome (CrUX), cho phép đo lường các thao tác điều hướng mềm trong ứng dụng một trang (SPA). Thay đổi này giúp phản ánh chính xác hiệu suất thực tế của các trang web hiện đại sử dụng JavaScript để thay đổi nội dung mà không cần tải lại toàn bộ.",
-    "keyNumbers": [
-      {
-        "value": "70%",
-        "label": "nguồn gốc trong CrUX có ít hoặc không có lưu lượng điều hướng mềm"
-      },
-      {
-        "value": "7,0%",
-        "label": "nguồn gốc trên Android có hơn một nửa lưu lượng là điều hướng mềm"
-      },
-      {
-        "value": "10,6%",
-        "label": "nguồn gốc trên máy tính có hơn một nửa lưu lượng là điều hướng mềm"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Cập nhật đo lường điều hướng mềm",
-        "body": "Chrome đã thêm các phiên bản thử nghiệm của tất cả ba chỉ số Core Web Vitals vào CrUX, tính toán các thao tác điều hướng mềm trong ứng dụng một trang. Các chỉ số này bao gồm experimental_largest_contentful_paint_with_softnavs cùng với các biến thể cho INP và CLS. Dữ liệu này hiện có sẵn trong BigQuery, CrUX API, History API và công cụ CrUX Vis từ ngày xuất bản 13 tháng 10. Trước đây, CrUX chỉ đo lường lần tải đầu tiên của SPA và gộp các thay đổi trong ứng dụng vào URL đích ban đầu."
-      },
-      {
-        "heading": "Tác động tới các loại trang web",
-        "body": "Khoảng 66% đến 75% nguồn gốc có chưa đến 5% lưu lượng là điều hướng mềm tùy thuộc vào nền tảng, nghĩa là phần lớn các trang web sẽ không thấy nhiều sự khác biệt. Trong số một nghìn trang web hàng đầu, 35% trên Android và 42% trên máy tính dựa vào điều hướng mềm cho hơn một nửa số lần xem trang của họ. Các trang web phụ thuộc nhiều vào điều hướng mềm sẽ thấy điểm số thử nghiệm của mình cao hơn do các cú nhấp chuột tiếp theo diễn ra nhanh hơn."
-      },
-      {
-        "heading": "Sự cải thiện của các chỉ số chính",
-        "body": "Đối với các nguồn gốc trên Android có từ 75% đến 100% điều hướng mềm, tỷ lệ có LCP tốt tăng từ 26% ở chỉ số ổn định lên 87% ở chỉ số thử nghiệm. Chỉ số INP được cải thiện bằng cách đo lường độ phản hồi cho mỗi lần xem trang thay vì dùng tương tác chậm nhất trong một phiên, giúp tăng gấp đôi tỷ lệ đạt cho các trang web SPA trên Android. Chỉ số CLS cũng tốt hơn do tất cả sự kiện dịch chuyển bố cục được nhóm theo lượt xem thay vì theo phiên làm việc."
-      },
-      {
-        "heading": "Lộ trình chuyển đổi chính thức",
-        "body": "Các điểm số ổn định hiện tại vẫn giữ nguyên trong giai đoạn này và Chrome đặt mục tiêu kết thúc trạng thái thử nghiệm vào tháng 5 năm 2027 tùy thuộc vào phản hồi nhận được. Google cho biết Google Search Console sẽ áp dụng dữ liệu mới này ngay sau khi các chỉ số chính thức rời khỏi giai đoạn thử nghiệm. Bản phát hành CrUX tháng 11 sắp tới sẽ là mốc kiểm tra tiếp theo với các phiên bản điều hướng mềm của FCP và các loại điều hướng."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing cần lưu ý rằng các trang web sử dụng công nghệ ứng dụng một trang (SPA) hoặc nhiều tính năng JavaScript động sẽ ghi nhận sự cải thiện đáng kể về điểm số Core Web Vitals khi tính đến điều hướng mềm, giúp phản ánh đúng hơn trải nghiệm người dùng thực tế.",
-    "ifIgnored": "Nếu bỏ qua thay đổi này, đội ngũ kỹ thuật và marketing có thể đánh giá sai hiệu suất trang web SPA trên di động và máy tính, dẫn đến việc hiểu sai cách Google ghi nhận trải nghiệm người dùng trước khi Search Console chính thức chuyển đổi dữ liệu vào tháng 5 năm 2027.",
-    "actionChecklist": [
-      "Bật nút chuyển đổi bao gồm điều hướng mềm trong CrUX Vis để so sánh các phiên bản chỉ số.",
-      "Kiểm tra tỷ lệ phần trăm lưu lượng truy cập điều hướng mềm trên trang web của doanh nghiệp.",
-      "Đánh giá lại hiệu suất LCP, INP và CLS thử nghiệm của các trang SPA để chuẩn bị cho thay đổi của Search Console.",
-      "Theo dõi các bản cập nhật dữ liệu hàng tháng của CrUX cho đến mốc tháng 5 năm 2027."
-    ],
-    "deadline": "Tháng 5 năm 2027",
-    "id": "real-2026-10-13-google-bo-sung-cac-7559a9",
-    "publishedAt": "13/10/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/google-experimental-soft-navigation-metrics-crux/592820/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/10/crux-diagnostic-halftone-4204892985.jpg",
-      "credit": "Ảnh: Search Engine Journal"
     }
   },
   {
