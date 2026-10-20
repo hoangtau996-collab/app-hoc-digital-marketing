@@ -2,63 +2,185 @@
   {
     "category": "Google Ads & SEO",
     "platformIcon": "Search",
-    "title": "Google SafeSearch siết quảng cáo nội dung nhạy cảm và nguy cơ mất hiển thị tìm kiếm",
+    "title": "Cùng một lượt truy cập nhưng GA4 và các công cụ đo thời gian tương tác lệch nhau tới ba lần",
     "isHot": false,
-    "illustration": "shop-health",
+    "illustration": "data-signal",
     "readTime": "4 phút đọc",
     "tags": [
-      "Google Ads",
-      "Google Search",
-      "Chính sách quảng cáo",
-      "SEO website"
+      "Google Analytics 4",
+      "Đo lường chuyển đổi",
+      "Tối ưu Landing Page",
+      "Hiệu quả quảng cáo"
     ],
-    "summary": "Google áp dụng trạng thái SafeSearch của người dùng làm điều kiện tiên quyết trước khi phân phối quảng cáo có yếu tố nhạy cảm. Đồng thời, các hệ thống phân loại tự động có thể đánh dấu nhầm toàn bộ tên miền là web người lớn, khiến doanh nghiệp mất phần lớn lưu lượng tự nhiên và tệp tiếp cận quảng cáo.",
+    "summary": "Chỉ số thời gian tương tác hiện không có một quy chuẩn kỹ thuật thống nhất nào trên toàn ngành dù đang được dùng để định giá quảng cáo và đánh giá landing page. Cùng một hành vi của người dùng, GA4 có thể ghi nhận tới 9 phút trong khi các nền tảng khác chỉ ghi nhận 3 hoặc 5 phút. Trưởng phòng Marketing cần nắm rõ cơ chế tính của GA4 để tránh ngộ nhận về chất lượng trải nghiệm trang đích.",
     "keyNumbers": [
       {
-        "value": "30%",
-        "label": "Mức giảm kết quả gây sốc ngoài ý muốn sau khi Google tích hợp mô hình BERT"
+        "value": "10 giây",
+        "label": "Ngưỡng mặc định để GA4 ghi nhận một phiên tương tác"
       },
       {
-        "value": "700.000",
-        "label": "Lượng khách hàng trưởng thành bị bộ lọc chặn tiếp cận một nhà bán lẻ"
+        "value": "34%",
+        "label": "Lượng pageview từ Google Search tới các trang nội dung sụt giảm"
       },
       {
-        "value": "2 - 3 tháng",
-        "label": "Thời gian hệ thống phân loại của Google xử lý lại dữ liệu sau khi sửa lỗi"
+        "value": "95%",
+        "label": "Tỷ lệ nhà xuất bản phải dùng nhiều hơn một công cụ đo lường thời gian"
       }
     ],
     "content": [
       {
-        "heading": "Cơ chế kích hoạt và trạng thái mặc định của SafeSearch",
-        "body": "SafeSearch là công cụ lọc kết quả tìm kiếm của Google nhằm ẩn hoặc làm mờ nội dung bạo lực và tình dục. Hệ thống chia thành ba mức gồm Lọc toàn bộ (Filter), Làm mờ (Blur) và Tắt (Off). Google tự động cài đặt chế độ Filter cho tài khoản được xác định dưới 18 tuổi hoặc tài khoản trẻ em chịu quản lý Family Link, trong khi Blur là mặc định cho các đối tượng còn lại. Đáng chú ý, việc áp dụng mô hình máy học để ước lượng độ tuổi người dùng đồng nghĩa với việc rất nhiều tài khoản người lớn bị đưa vào chế độ Filter mà không hề hay biết."
+        "heading": "Sự ra đời của chỉ số thay thế số lượt xem trang truyền thống",
+        "body": "Chỉ số engagement minutes đo lường thời lượng độc giả thực sự dành cho nội dung khi có tín hiệu chú ý như cuộn trang, di chuột hoặc gõ phím. Thước đo này thay thế cho số lượt xem trang và chỉ số thời gian trên trang vốn chỉ ghi nhận khoảng cách giữa các lần nhấp chuột thay vì việc đọc thực tế. Tuy nhiên, tổ chức kiểm toán truyền thông Media Rating Council (MRC) chưa từng công bố một tiêu chuẩn chung cho thời gian tương tác nội dung. Mỗi nhà cung cấp dịch vụ phân tích dữ liệu tự thiết lập quy tắc tính toán riêng biệt."
       },
       {
-        "heading": "Điều kiện phân phối quảng cáo bị thu hẹp đáng kể",
-        "body": "Chính sách của Google quy định trạng thái SafeSearch của người dùng là điều kiện bắt buộc để kích hoạt quảng cáo có nội dung giới hạn mạnh hoặc giới hạn vừa phải. Nhóm này bao gồm các sản phẩm như trang phục hở hang, đồ chơi người lớn, sản phẩm chăm sóc sức khỏe tình dục hoặc dịch vụ giải trí người lớn. Những mẫu quảng cáo này vốn chỉ được phép xuất hiện trên Search Network và bị cấm hoàn toàn trên Display, YouTube hay AdMob. Khi thuật toán gán người dùng vào diện Filter thông qua ước lượng độ tuổi, quy mô tệp khán giả có thể tiếp cận của các chiến dịch này ngay lập tức bị thu hẹp."
+        "heading": "Cùng một phiên truy cập nhưng ghi nhận chênh lệch từ 3 đến 9 phút",
+        "body": "Sự khác biệt kỹ thuật khiến các báo cáo phân tích cho ra kết quả rất xa nhau trên cùng một hành vi truy cập. Ví dụ, một người đọc bài viết 3 phút, xem video nhúng 2 phút mà không chạm chuột, rồi để tab mở 4 phút khi nghe điện thoại. Chartbeat chỉ tính khoảng 3 phút vì loại trừ thời gian phát video và dừng đếm sau 5 giây không hoạt động. Parse.ly tính khoảng 5 phút nếu trang được cấu hình theo dõi video. Trong khi đó, GA4 đo lường theo trạng thái tab đang mở ở màn hình chính và có thể ghi nhận tới 9 phút."
       },
       {
-        "heading": "Nguy cơ thuật toán đánh dấu nhầm toàn bộ tên miền",
-        "body": "Hệ thống SafeSearch vận hành theo hai tầng: phân loại nội dung trang web và phân tích ý định truy vấn của người tìm kiếm. Nếu một website kinh doanh tổng hợp có chứa một số sản phẩm nhạy cảm mà không tách bạch, thuật toán có thể coi toàn bộ tên miền mang tính chất nhạy cảm và kích hoạt lọc trên diện rộng. Điển hình như chuỗi bán lẻ Lovehoney tại Anh từng ghi nhận hơn 700.000 khách hàng tiềm năng bị ngăn chặn tiếp cận và phải gửi hơn 600 khiếu nại tới Google. Khi đã bị xếp loại nhầm, việc khôi phục hiển thị tự nhiên sẽ tốn rất nhiều thời gian."
+        "heading": "Tác động từ việc chuyển đổi định giá quảng cáo theo thời lượng thực tế",
+        "body": "Nhiều đơn vị xuất bản lớn đã chuyển sang bán quảng cáo theo chi phí mỗi giờ (CPH) thay cho mô hình CPM truyền thống. Mô hình này chỉ tính tiền khi quảng cáo xuất hiện trước mắt người dùng đang tương tác tích cực tối thiểu 5 giây. Một báo cáo của Digital Content Next từng chỉ ra rằng 80% nhà xuất bản cao cấp muốn bán quảng cáo dựa trên thời gian thực tế. Khi lưu lượng giới thiệu từ tìm kiếm sụt giảm, thời gian giữ chân người dùng trở thành thước đo sống còn để định giá vị trí hiển thị."
       },
       {
-        "heading": "Giải pháp kỹ thuật và thời gian khắc phục",
-        "body": "Google khuyến nghị các nhà xuất bản chủ động khai báo thẻ meta rating adult hoặc nhãn RTA trong mã nguồn HTML đối với những trang chứa nội dung nhạy cảm. Đối với video, doanh nghiệp cần gắn thẻ family_friendly giá trị no trong sơ đồ trang web video và đảm bảo bot tìm kiếm của Google vẫn thu thập được dữ liệu qua các cổng xác thực tuổi. Giải pháp căn cơ nhất là đưa các danh mục nhạy cảm sang một subdomain riêng biệt để bảo vệ tên miền chính. Khi khắc phục xong vi phạm, quản trị viên phải chờ từ 2 đến 3 tháng để các bộ phân loại quét lại trước khi có thể gửi yêu cầu xem xét."
+        "heading": "Cơ chế tính user engagement trên GA4 mà nhà quảng cáo cần lưu ý",
+        "body": "GA4 đo lường thời gian tương tác từ phía trình duyệt thông qua tham số engagement_time_msec khi màn hình ứng dụng hoặc tab web ở trạng thái hiển thị tiền cảnh. Mặc định sau 10 giây, một phiên mới được coi là có tương tác, và quản trị viên có thể tăng con số này lên tối đa 60 giây. Báo cáo trang đích mà Google đưa vào từ tháng 12 năm 2022 đặt chỉ số thời gian tương tác trung bình ngay cạnh tỷ lệ chuyển đổi. Tuy nhiên, thời gian tương tác dài đôi khi chỉ phản ánh việc khách hàng gặp khó khăn hoặc bối rối trong quá trình tìm thông tin trên trang đích."
       }
     ],
-    "impact": "Các doanh nghiệp kinh doanh thời trang đồ lót, đồ bơi, sản phẩm sức khỏe sinh sản hoặc thực phẩm chức năng đối mặt nguy cơ bị teo tóp tệp khách hàng quảng cáo Google Search. Nếu không cấu trúc website chuẩn, toàn bộ gian hàng trực tuyến có thể bị thuật toán gắn nhãn nhạy cảm, làm sụt giảm nghiêm trọng lượng truy cập tự nhiên từ khách hàng phổ thông.",
-    "ifIgnored": "Doanh nghiệp có thể mất trắng vị trí hiển thị tìm kiếm tự nhiên của các dòng sản phẩm đại trà do toàn bộ tên miền bị dính nhãn nhạy cảm. Thời gian để Google gỡ nhãn phạt kéo dài tới 3 tháng, gây gián đoạn doanh thu dài hạn mà không có cách nào xử lý nhanh bằng tiền quảng cáo.",
+    "impact": "Trưởng phòng Marketing dễ bị đánh lừa bởi chỉ số thời gian tương tác cao trên GA4 của các chiến dịch trả phí. Do GA4 tính toàn bộ thời gian tab hiển thị tiền cảnh mà không ngắt nhịp chặt chẽ sau 5 giây bất động như các công cụ chuyên sâu, số liệu trên báo cáo có thể cao gấp 2 đến 3 lần thời gian khách hàng thực sự đọc nội dung landing page.",
+    "ifIgnored": "Doanh nghiệp sẽ tiếp tục rót ngân sách vào các landing page hoặc bài PR giữ chân ảo, lầm tưởng thông điệp đang hấp dẫn trong khi khách hàng thực chất chỉ bỏ quên tab trình duyệt, dẫn đến lãng phí chi phí quảng cáo và tính toán sai chi phí trên mỗi lượt tương tác thực chất.",
     "actionChecklist": [
-      "Dùng cú pháp site:domain trên Google với bộ lọc SafeSearch bật để kiểm tra tên miền có bị ẩn hay không",
-      "Tách toàn bộ sản phẩm đồ lót, trang phục gợi cảm hoặc nhạy cảm sang subdomain riêng biệt",
-      "Gắn thẻ meta rating adult và nhãn video family_friendly đúng quy chuẩn trên các trang sản phẩm nhạy cảm",
-      "Mở quyền cho Googlebot truy cập qua các trang kiểm tra độ tuổi nhằm tránh bị thuật toán hạ hạng index"
+      "Kiểm tra lại cấu hình ngưỡng thời gian phiên tương tác trong GA4 và cân nhắc nâng từ mức mặc định 10 giây lên mức phù hợp hơn",
+      "Đối chiếu thời gian tương tác trung bình của từng trang đích với tỷ lệ chuyển đổi thực tế thay vì chỉ nhìn vào thời lượng truy cập",
+      "Yêu cầu các đối tác booking bài PR hoặc mạng quảng cáo làm rõ định nghĩa và công cụ đo lường thời gian trước khi ký hợp đồng",
+      "Bổ sung các sự kiện theo dõi độ sâu cuộn trang và tương tác nút bấm trên landing page để làm thước đo phụ trợ cho GA4"
     ],
-    "id": "real-2026-10-18-google-safesearch-siet-quang-5fd4cd",
-    "publishedAt": "18/10/2026",
-    "sourceUrl": "https://ppc.land/safesearch/",
+    "id": "real-2026-10-20-cung-mot-luot-truy-2a8f92",
+    "publishedAt": "20/10/2026",
+    "sourceUrl": "https://ppc.land/engagement-minutes/",
     "source": "PPC Land",
     "image": {
-      "url": "https://ppc.land/content/images/2026/10/google-safesearch-filter-blur-venetian-blind-age-gate.jpg",
+      "url": "https://ppc.land/content/images/2026/10/chartbeat-parsely-ga4-engagement-minutes-three-hand-wall-clock-rotary-phone.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Video",
+    "title": "YouTube bổ sung cơ chế thưởng Affiliate và đo lường doanh số cho YouTube Shopping",
+    "isHot": false,
+    "illustration": "affiliate-commission",
+    "readTime": "3 phút đọc",
+    "tags": [
+      "YouTube Shopping",
+      "Tiếp thị liên kết",
+      "YouTube Shorts",
+      "Đo lường chuyển đổi"
+    ],
+    "summary": "YouTube đang thử nghiệm chương trình thưởng mới cho nhà sáng tạo Shorts, đồng thời mở rộng tính năng thưởng tiếp thị liên kết (affiliate bonus) trên YouTube Shopping. Nền tảng cũng nâng cấp bảng điều khiển phân tích giúp đo lường chi tiết doanh số và lượt nhấp sản phẩm từ video.",
+    "keyNumbers": [
+      {
+        "value": "16",
+        "label": "video Shorts tối thiểu mỗi tháng trong một điều kiện thử nghiệm đối tác"
+      },
+      {
+        "value": "30",
+        "label": "ngày tối thiểu video gắn thẻ sản phẩm phải giữ ở chế độ công khai để nhận thưởng"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Thử nghiệm chương trình thưởng hiệu suất cho Shorts",
+        "body": "YouTube đang triển khai thử nghiệm chương trình thưởng tiền mặt cho nhà sáng tạo nội dung ngắn dựa trên tính nhất quán và hiệu suất đăng tải. Hiện tại, chương trình chỉ áp dụng theo hình thức thư mời kín tại các thị trường gồm Mỹ, Anh, Đức, Brazil, Nhật Bản và Hàn Quốc. Mức chi trả bổ sung sẽ căn cứ vào lượng người xem Shorts hợp lệ và có tương tác thực tế từ khán giả."
+      },
+      {
+        "heading": "Cơ chế thưởng bổ sung cho tiếp thị liên kết",
+        "body": "Nhằm thu hút thêm nhà sáng tạo tham gia YouTube Shopping, nền tảng cho phép áp dụng các ưu đãi độc quyền dành riêng cho từng sản phẩm cụ thể. Đây là công cụ giúp các thương hiệu tạo thêm động lực cho KOC đăng video giới thiệu hàng hóa bằng cách chi trả thêm phần thưởng ngoài mức hoa hồng chia sẻ thông thường. Nhà sáng tạo có thể kiểm tra danh mục sản phẩm đủ điều kiện, số tiền thưởng và tỷ lệ hoa hồng ngay trong Shopping Hub của YouTube Studio."
+      },
+      {
+        "heading": "Quy định định dạng và gắn nhãn tài trợ",
+        "body": "Các bản tóm tắt sáng tạo và gợi ý nội dung trong danh sách chiến dịch không mang tính bắt buộc, cho phép nhà sáng tạo tự do lồng ghép ưu đãi vào video. Tuy nhiên, để nhận tiền thưởng, video phải đáp ứng định dạng yêu cầu gồm video ngắn hoặc video dài có gắn thẻ trực tiếp sản phẩm tham gia. Đồng thời, nhà sáng tạo bắt buộc phải tích chọn xác nhận video có chứa nội dung quảng cáo trả phí và duy trì video công khai liên tục ít nhất 30 ngày."
+      },
+      {
+        "heading": "Nâng cấp giao diện phân tích hiệu quả bán hàng",
+        "body": "YouTube cập nhật màn hình số liệu phân tích chuyên sâu dành cho các nhà sáng tạo nội dung thương mại. Hệ thống mới cung cấp dữ liệu chi tiết về doanh số bán hàng được thúc đẩy trực tiếp từ video, cải thiện thống kê lượt hiển thị và số lượt nhấp vào sản phẩm. Báo cáo phân tích nâng cao cũng bổ sung các phân loại chi tiết theo từng người bán để đánh giá chính xác cơ hội chuyển đổi."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing có thêm công cụ điều phối ngân sách KOC linh hoạt hơn trên YouTube bằng việc kết hợp giữa hoa hồng cố định và tiền thưởng hiệu suất. Đồng thời, dữ liệu nhấp chuột và doanh số chi tiết giúp đánh giá hiệu quả chuyển đổi thực tế của từng định dạng video chính xác hơn.",
+    "ifIgnored": "Doanh nghiệp sẽ bỏ lỡ kênh tiếp thị liên kết nhiều tiềm năng trên video dài và Shorts, chậm chân trong việc thu hút KOC chất lượng khi đối thủ tận dụng cơ chế thưởng bổ sung để chiếm lĩnh vị trí hiển thị sản phẩm.",
+    "actionChecklist": [
+      "Kiểm tra tính năng YouTube Shopping Hub trong YouTube Studio để rà soát các sản phẩm đủ điều kiện tham gia chiến dịch",
+      "Thiết lập cơ cấu ngân sách thưởng bổ sung ngoài hoa hồng cho các dòng sản phẩm chiến lược cần đẩy mạnh doanh số",
+      "Bổ sung điều khoản bắt buộc KOC giữ video công khai tối thiểu 30 ngày và khai báo nhãn tài trợ vào hợp đồng hợp tác",
+      "Cập nhật bảng theo dõi hiệu quả để đo lường lượt nhấp sản phẩm và doanh số đóng góp từ từng video gắn thẻ"
+    ],
+    "id": "real-2026-10-19-youtube-bo-sung-co-45eab1",
+    "publishedAt": "19/10/2026",
+    "sourceUrl": "https://www.socialmediatoday.com/news/youtube-tests-new-shorts-incentives/833420/",
+    "source": "Social Media Today",
+    "image": {
+      "url": "https://imgproxy.divecdn.com/g_eRlFIxlm-o_dgYAH1PjEP1d9vZ0JwJIdLr3oCqjPc/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9zaHJ0c19sb2dvLnBuZw==.webp",
+      "credit": "Ảnh: Social Media Today"
+    }
+  },
+  {
+    "category": "Meta Ads",
+    "platformIcon": "Facebook",
+    "title": "Meta cho phép cài đặt đối tượng nhắm mục tiêu riêng cho từng mẫu sáng tạo trong cùng một nhóm quảng cáo",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Meta Ads",
+      "Targeting",
+      "Marketing API",
+      "Creative Audience"
+    ],
+    "summary": "Meta bắt đầu cho phép nhà quảng cáo thiết lập độ tuổi và giới tính riêng cho từng hình ảnh hoặc video bên trong cùng một nhóm quảng cáo qua Marketing API. Tuy nhiên, tính năng này yêu cầu nhóm quảng cáo tổng phải giữ cấu trúc nhắm mục tiêu diện rộng và hoàn toàn không tương thích với Advantage+ audience.",
+    "keyNumbers": [
+      {
+        "value": "8",
+        "label": "điểm cuối API bị ảnh hưởng"
+      },
+      {
+        "value": "18 - 25",
+        "label": "độ tuổi tối thiểu của nhóm quảng cáo"
+      },
+      {
+        "value": "100",
+        "label": "mã lỗi Graph API khi vi phạm quy tắc"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Cài đặt nhắm mục tiêu chi tiết theo từng media",
+        "body": "Meta vừa thử nghiệm tính năng Creative audience pairing cho phép phân bổ độ tuổi và giới tính riêng cho từng hình ảnh hoặc video trong cùng một nhóm quảng cáo. Thay vì áp dụng một đối tượng duy nhất cho toàn bộ nhóm, nhà quảng cáo có thể gán từng video hoặc hình ảnh cho các phân khúc khán giả khác nhau. Ví dụ, trong cùng một ad set, video hướng tới người chuẩn bị nghỉ hưu có thể cài độ tuổi 50-65, còn video tài khoản tiết kiệm áp dụng cho mọi lứa tuổi. Tính năng này được thử nghiệm thông qua Marketing API từ ngày 19/10/2026."
+      },
+      {
+        "heading": "Điều kiện bắt buộc ở cấp độ nhóm quảng cáo",
+        "body": "Để kích hoạt tính năng phân vùng theo từng mẫu sáng tạo, nhóm quảng cáo bắt buộc phải giữ ở trạng thái nhắm mục tiêu rộng. Độ tuổi tối thiểu của nhóm quảng cáo phải đặt trong khoảng 18 đến 25, độ tuổi tối đa phải là 65 và nhắm tới tất cả giới tính. Người dùng không thể tạo một nhóm quảng cáo thu hẹp rồi tiếp tục thu hẹp thêm theo từng media. Cấu trúc mới yêu cầu nhóm quảng cáo đóng vai trò là một phễu chứa rộng, sau đó các mẫu sáng tạo sẽ tự chia nhỏ phân khúc bên trong phễu đó."
+      },
+      {
+        "heading": "Không thể kết hợp với tự động hóa Advantage+",
+        "body": "Tính năng này tạo ra sự xung đột trực tiếp với định hướng tự động hóa của Meta. Tài liệu kỹ thuật ghi rõ không thể kết hợp tính năng phân bổ đối tượng theo mẫu sáng tạo với Advantage+ audience hoặc các đề xuất độ tuổi và giới tính tự động. Nếu nhà quảng cáo gửi yêu cầu vi phạm các quy tắc này qua API, hệ thống sẽ trả về mã lỗi Graph API 100. Điều này buộc các thương hiệu phải lựa chọn giữa việc để AI của Meta tự tìm đối tượng hoặc tự phân chia đối tượng theo từng media thủ công."
+      },
+      {
+        "heading": "Tác động sâu tới hệ thống và công cụ của bên thứ ba",
+        "body": "Cập nhật mới đụng chạm tới 8 điểm cuối Graph API khác nhau trên cả 3 cấp độ: nhóm quảng cáo, quảng cáo và mẫu sáng tạo. Điều này ảnh hưởng đến cả lệnh tạo mới lẫn các lệnh đọc và cập nhật chiến dịch hiện có. Do đó, tất cả các công cụ quản lý quảng cáo từ bên thứ ba hoặc phần mềm nội bộ kết nối API với Meta đều phải cập nhật lại cấu trúc dữ liệu. Hiện Meta chưa công bố rõ liệu tính năng này có xuất hiện trên giao diện Ads Manager thông thường hay không, cũng như tác động thực tế của nó tới thuật toán phân phối."
+      }
+    ],
+    "impact": "Cho phép Trưởng phòng Marketing tối ưu hóa chiến dịch đa sản phẩm trong cùng một nhóm quảng cáo duy nhất, giảm tình trạng phân mảnh ngân sách và hạn chế chồng chéo đấu giá giữa các ad set.",
+    "ifIgnored": "Doanh nghiệp tiếp tục chia nhỏ chiến dịch thành nhiều nhóm quảng cáo gây lãng phí ngân sách đấu giá nội bộ và tốn thời gian quản lý thủ công khi chạy nhiều dòng sản phẩm cùng lúc.",
+    "actionChecklist": [
+      "Rà soát lại các chiến dịch đang tách nhóm quảng cáo theo giới tính hoặc độ tuổi để đánh giá khả năng gộp nhóm",
+      "Yêu cầu đội ngũ kỹ thuật hoặc đối tác MarTech kiểm tra 8 điểm cuối Graph API v26.0 nếu đang sử dụng công cụ quản trị quảng cáo tự động",
+      "Thử nghiệm cấu trúc nhóm quảng cáo diện rộng kết hợp định danh khách hàng mục tiêu theo từng mẫu media cho các sản phẩm đa phân khúc",
+      "Đánh giá và so sánh hiệu quả giữa việc dùng Advantage+ audience tự động và việc phân bổ độ tuổi thủ công theo từng thiết kế sáng tạo"
+    ],
+    "id": "real-2026-10-19-meta-cho-phep-cai-222ea0",
+    "publishedAt": "19/10/2026",
+    "sourceUrl": "https://ppc.land/metas-per-creative-audiences-force-ad-sets-to-stay-open-to-all-genders/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/10/meta-per-creative-audiences-ad-set-all-genders-carousel-projector.jpg",
       "credit": "Ảnh: PPC Land"
     }
   },
@@ -317,70 +439,6 @@
   {
     "category": "Meta Ads",
     "platformIcon": "Facebook",
-    "title": "Meta cập nhật điều khoản: Tự động thu thập dữ liệu website nhà quảng cáo để huấn luyện AI",
-    "isHot": true,
-    "illustration": "data-signal",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Meta Ads",
-      "Điều khoản thương mại",
-      "Thu thập dữ liệu",
-      "Bảo mật AI"
-    ],
-    "summary": "Meta vừa sửa đổi Điều khoản Thương mại, cho phép hệ thống tự động quét và sao chép nội dung website liên kết với sản phẩm quảng cáo để huấn luyện các mô hình AI. Điều khoản này được áp dụng mặc định cho tất cả doanh nghiệp tiếp tục chạy quảng cáo mà không có tùy chọn từ chối riêng lẻ.",
-    "keyNumbers": [
-      {
-        "value": "7,5%",
-        "label": "thị phần quét dữ liệu AI của Meta vào tháng 7/2025, tăng từ 0,9% vào tháng 7/2024"
-      },
-      {
-        "value": "33%",
-        "label": "lưu lượng trình duyệt AI agent do bot Muse của Meta chiếm lĩnh chỉ sau 9 ngày ra mắt"
-      },
-      {
-        "value": "100 USD",
-        "label": "mức giới hạn trách nhiệm bồi thường của Meta (hoặc số phí đã trả trong 12 tháng trước)"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Cơ chế đồng ý thụ động qua điều khoản thương mại mới",
-        "body": "Bản cập nhật Điều khoản Thương mại của Meta bổ sung một điều khoản tại Mục 1, cho phép nền tảng dùng phần mềm tự động truy cập, lập chỉ mục, lưu bộ nhớ tạm, sao chép và quét lại các website liên kết với sản phẩm của doanh nghiệp. Nội dung thu thập được sẽ được Meta sử dụng để huấn luyện các sản phẩm công nghệ của chính mình. Doanh nghiệp chỉ cần tiếp tục sử dụng các sản phẩm thương mại của Meta là được tính đã đồng ý, hoàn toàn không có lựa chọn từ chối từng phần."
-      },
-      {
-        "heading": "Tranh cãi quanh phạm vi hoạt động của crawler Meta-ExternalAgent",
-        "body": "Đại diện Meta khẳng định bản cập nhật chỉ nhằm trích xuất thông tin sản phẩm chính xác phục vụ đề xuất nội dung và quảng cáo trên nền tảng. Tuy nhiên, giới quan sát trong ngành chỉ ra văn bản điều khoản có phạm vi rất rộng, cho phép Meta quyền quét dữ liệu trên toàn bộ web mở. Con bot phụ trách tác vụ này là Meta-ExternalAgent, vốn là một bot đa nhiệm chứ không được thiết kế riêng cho một tác vụ đơn lẻ, đồng thời các điều khoản mới không đề cập đến việc tuân thủ tệp robots.txt."
-      },
-      {
-        "heading": "Thời điểm áp dụng gắn liền tính năng duyệt sản phẩm trong ứng dụng",
-        "body": "Quyền thu thập dữ liệu mới có hiệu lực chỉ hai ngày sau khi Meta kích hoạt tính năng duyệt sản phẩm ngay trong ứng dụng trên các quảng cáo hiện có vào ngày 28/10. Khác với Google vốn đang ký hợp đồng thương mại trực tiếp và trả tiền cho từng nhà xuất bản nội dung, Meta chọn cách đưa thẳng quyền quét dữ liệu vào điều khoản sử dụng bắt buộc đối với các nhà quảng cáo. Tài liệu mới cũng bổ sung mục tính năng AI, cung cấp dịch vụ theo dạng nguyên trạng và giới hạn chặt chẽ trách nhiệm bồi thường."
-      },
-      {
-        "heading": "Sức ép kiểm soát dữ liệu trên môi trường AI agent",
-        "body": "Nghiên cứu từ các chuyên gia bảo mật cho thấy các cơ chế xin quyền truyền thống đang trở nên quá tải trước tốc độ của các AI agent. Khảo sát diện rộng trên 11.000 người tiêu dùng cho thấy 16% người dùng chấp nhận chia sẻ dữ liệu cho AI trong trạng thái miễn cưỡng vì thiếu lựa chọn thay thế. Với việc bot của Meta gia tăng thị phần thu thập dữ liệu từ 0,9% lên 7,5% trong vòng một năm, các website kinh doanh trực tuyến đang đứng trước bài toán bảo vệ tài nguyên số trước các công cụ tự động."
-      }
-    ],
-    "impact": "Mọi nội dung độc quyền, cấu trúc trang đích, bài viết sản phẩm và tài nguyên trên website của bạn khi gắn link quảng cáo Meta đều có thể bị thu nạp làm tài liệu huấn luyện AI cho nền tảng mà không được trả phí. Doanh nghiệp không thể tắt riêng quyền này nếu vẫn muốn tiếp tục chạy quảng cáo Facebook và Instagram.",
-    "ifIgnored": "Dữ liệu kinh doanh và tài sản trí tuệ trên website có nguy cơ bị đối thủ khai thác gián tiếp thông qua các công cụ gợi ý AI của Meta trong tương lai mà không có cơ chế bồi thường vượt quá 100 USD.",
-    "actionChecklist": [
-      "Rà soát lại toàn bộ đường dẫn website đang gắn trong các chiến dịch quảng cáo Meta Ads đang hoạt động.",
-      "Tách biệt các trang chứa nội dung nhạy cảm hoặc bí mật kinh doanh khỏi các liên kết chiến dịch quảng cáo công khai.",
-      "Cấu hình máy chủ và theo dõi nhật ký truy cập từ bot Meta-ExternalAgent để kiểm tra tần suất thu thập dữ liệu.",
-      "Họp với bộ phận pháp lý để đánh giá rủi ro sở hữu trí tuệ trước khi điều khoản mới chính thức có hiệu lực."
-    ],
-    "deadline": "30/10/2026",
-    "id": "real-2026-10-17-meta-cap-nhat-dieu-2ba48d",
-    "publishedAt": "17/10/2026",
-    "sourceUrl": "https://ppc.land/meta-grants-itself-the-right-to-crawl-advertisers-websites-for-ai/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/10/meta-commercial-terms-ai-crawl-advertiser-websites-self-signing-fountain-pen.jpg",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
-    "category": "Meta Ads",
-    "platformIcon": "Facebook",
     "title": "Meta cập nhật điều khoản thương mại, mở rộng quyền quét website và huấn luyện AI",
     "isHot": true,
     "illustration": "data-signal",
@@ -620,68 +678,6 @@
     "source": "Social Media Today",
     "image": {
       "url": "https://imgproxy.divecdn.com/d6N8u5BI_rNJCd_2E3iIgUI5gvE-lJCZ7tPPETxAYVA/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS90aWt0b2tfc2hvcHBhYmxlX2Nhcm91c2VsLnBuZw==.webp",
-      "credit": "Ảnh: Social Media Today"
-    }
-  },
-  {
-    "category": "AI Marketing",
-    "platformIcon": "Sparkles",
-    "title": "LinkedIn siết chặt phân phối nội dung AI rác với độ chính xác phát hiện đạt 94%",
-    "isHot": false,
-    "illustration": "ai-label",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "AI Marketing",
-      "Thuật toán LinkedIn",
-      "Nội dung AI"
-    ],
-    "summary": "LinkedIn công bố cơ chế kỹ thuật mới nhằm ngăn chặn làn sóng nội dung do AI tạo ra nhưng thiếu giá trị chuyên môn. Nền tảng áp dụng mô hình phân loại đa tác tử giúp giảm mạnh lượt hiển thị của bài viết rác ra ngoài tệp kết nối trực tiếp.",
-    "keyNumbers": [
-      {
-        "value": "94%",
-        "label": "độ chính xác phát hiện bài viết rác từ AI"
-      },
-      {
-        "value": "40%",
-        "label": "lượt xem nội dung AI rác đã bị cắt giảm"
-      },
-      {
-        "value": "1.000.000",
-        "label": "người dùng bấm nút báo cáo AI slop sau chưa đầy 3 tuần"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Định nghĩa và làn sóng phản đối nội dung AI rác",
-        "body": "LinkedIn chính thức định nghĩa nội dung AI rác là những bài đăng chung chung, lặp lại và không đóng góp góc nhìn thực tế cho người đọc. Vào tháng 8, nền tảng đã thử nghiệm tính năng cho phép thành viên gắn cờ báo cáo các bài viết nghi ngờ tạo bằng AI ngay trên dòng thời gian. Sau chưa đầy 3 tuần triển khai, hơn 1.000.000 người dùng đã sử dụng công cụ này để dọn dẹp bảng tin. Động thái này xuất phát từ việc luồng nội dung tự động hóa kém chất lượng đang làm suy giảm nghiêm trọng trải nghiệm mạng xã hội nghề nghiệp."
-      },
-      {
-        "heading": "Mô hình đào tạo giáo viên - học sinh để nhận diện tự động",
-        "body": "Đại diện kỹ thuật của LinkedIn cho biết hệ thống xử lý dữ liệu dựa trên phản hồi của người dùng để liên tục tinh chỉnh thuật toán. Nền tảng triển khai mô hình đào tạo kết hợp giữa hệ thống lớn đóng vai trò giáo viên và các mô hình nhỏ hơn làm học sinh. Mô hình lớn có nhiệm vụ cập nhật các mẫu nội dung AI mới nhất để tạo tập dữ liệu chuẩn mực. Sau đó, dữ liệu này được dùng để huấn luyện nhanh các mô hình nhỏ nhằm nhận diện kịp thời nội dung kém chất lượng theo thời gian thực."
-      },
-      {
-        "heading": "Hệ thống tác tử AI kết hợp đánh giá từ con người",
-        "body": "LinkedIn triển khai một mạng lưới các tác tử AI được thiết lập theo từng bộ quy tắc kiểm duyệt cụ thể. Mỗi tác tử sẽ đánh giá nội dung dựa trên những tiêu chí khắt khe như tính quảng cáo, tính cập nhật thời điểm hoặc chia sẻ thành tích cá nhân. Khi gặp những trường hợp phức tạp vượt quá khả năng phân tích, hệ thống sẽ chuyển tiếp bài viết tới chuyên viên kiểm duyệt con người. Tác tử AI sau đó học hỏi từ kết quả xử lý của con người để tự động nâng cấp độ chính xác cho các tình huống tương tự."
-      },
-      {
-        "heading": "Phạm vi kiểm duyệt mở rộng ra ngoài mạng lưới kết nối",
-        "body": "Hệ thống phân loại mới hiện đã được áp dụng cho toàn bộ các bài đăng được phân phối ra ngoài mạng lưới kết nối trực tiếp của tài khoản. Thuật toán đạt độ chính xác lên tới 94% trong việc phát hiện các bài viết thuộc diện rác tạo từ AI. Trước đó, nền tảng cũng ghi nhận mức giảm 40% tổng lượt xem đối với các dạng bài viết lạm dụng công cụ tự động. Những nội dung bị xác định là rác sẽ bị hạn chế hiển thị tối đa, ngăn chặn tình trạng chiếm dụng dòng thời gian của người dùng."
-      }
-    ],
-    "impact": "Chiến lược dùng AI tạo hàng loạt bài đăng nội dung chuyên môn chung chung để kéo tương tác tự nhiên trên LinkedIn chính thức hết hiệu quả. Bài viết không có trải nghiệm thực tế hoặc quan điểm độc bản sẽ bị thuật toán bóp hiển thị ngay khi ra khỏi tệp bạn bè bậc 1.",
-    "ifIgnored": "Doanh nghiệp lãng phí ngân sách sản xuất nội dung tự động, tài khoản thương hiệu và lãnh đạo bị thuật toán đánh tụt tương tác vĩnh viễn, đồng thời mất uy tín nghiêm trọng trước đối tác B2B.",
-    "actionChecklist": [
-      "Rà soát quy trình xuất bản trên LinkedIn, chấm dứt việc sao chép nguyên văn văn bản từ các công cụ tạo sinh",
-      "Yêu cầu đội ngũ bổ sung số liệu nội bộ, nghiên cứu tình huống thực tế và quan điểm cá nhân vào từng bài viết",
-      "Tập trung xây dựng mạng lưới kết nối trực tiếp bậc 1 chất lượng thay vì kỳ vọng thuật toán đẩy bài viết đại trà",
-      "Theo dõi tỷ lệ tương tác tự nhiên trên trang doanh nghiệp để phát hiện sớm các nội dung bị hạn chế phân phối"
-    ],
-    "id": "real-2026-10-08-linkedin-siet-chat-phan-c80305",
-    "publishedAt": "08/10/2026",
-    "sourceUrl": "https://www.socialmediatoday.com/news/linkedin-exec-offers-insight-into-the-battle-against-ai-slop/832576/",
-    "source": "Social Media Today",
-    "image": {
-      "url": "https://imgproxy.divecdn.com/vpisATGWFWb-yFMjh24kEQhyLCBUWIILYnB5gq8y_CY/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9saW5rZWRpbl9haV9zbG9wLnBuZw==.webp",
       "credit": "Ảnh: Social Media Today"
     }
   },
