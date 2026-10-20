@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import PMarcomLogo from './PMarcomLogo';
 import { 
   getAllRegisteredStudentsFromCloud, 
@@ -17,11 +17,14 @@ import {
   revokeAdminInCloud,
   diagnoseCloudAccess,
   reconcileGlobalStats,
-  fetchStudentsFromCloudOnly
+  fetchStudentsFromCloudOnly,
+  listenToAccessCodes,
+  fetchAllEnrollments
 } from '../firebase';
 import { markStudentDeleted, filterDeleted, getDeletedStudents } from '../utils/deletedStudents';
 import { updateStudentEmail, deleteStudentsPermanently, sendNotification } from '../utils/adminApi';
 import AccessCodeManager from './AccessCodeManager';
+import { trangThaiQuyen, gomLuotTheoEmail, TEN_KHOA } from '../utils/accessCode';
 import {
   SURVEY_QUESTIONS,
   SURVEY_TOTAL,
@@ -213,6 +216,9 @@ export default function AdminDashboardModal({
   const [selectedIndustry, setSelectedIndustry] = useState('ALL');
   const [selectedRole, setSelectedRole] = useState('ALL'); // 'ALL' | 'ADMIN' | 'STUDENT'
   const [selectedSurvey, setSelectedSurvey] = useState('ALL'); // 'ALL' | 'DONE' | 'MISSING'
+  /* Lọc theo quyền học. Đây là lối vào việc chăm sóc học viên: lọc nhóm "Sắp
+     hết hạn" ra để gọi mời gia hạn, lọc "Chưa nhập mã" ra để nhắc kích hoạt. */
+  const [selectedQuyen, setSelectedQuyen] = useState('ALL');
   // Học viên đang xem chi tiết khảo sát. Một khung riêng chứ không nhồi 5 câu
   // trả lời vào bảng: mỗi câu là một dòng dài, dựng thẳng vào bảng sẽ đẩy các
   // cột thao tác ra khỏi tầm nhìn.
@@ -257,10 +263,54 @@ export default function AdminDashboardModal({
 
   // Certificate Generator Modal state
   const [isCertGenOpen, setIsCertGenOpen] = useState(false);
-  /* Bảng mã kích hoạt. Mở dạng hộp thoại con như Tạo Chứng Nhận, không nhúng
-     thẳng vào dòng cuộn chính: bảng quản trị đã rất dài, thêm một khối CRUD
-     nữa vào giữa là người dùng mất dấu chỗ mình đang xem. */
-  const [isMaOpen, setIsMaOpen] = useState(false);
+  /* ---- Chia khu vực làm việc thành tab ---------------------------------
+   *
+   * Trước đây mọi thứ nằm trong một dòng cuộn thẳng: bốn thẻ số liệu, năm ô
+   * lọc, mười ba nút, kết quả chẩn đoán, bảng học viên, phân trang. Sáu trong
+   * mười ba nút đó không liên quan gì tới danh sách học viên — chúng là công cụ
+   * toàn hệ thống nhưng lại đứng ngay trong thanh lọc danh sách, nên vừa chật
+   * vừa dễ bấm nhầm.
+   *
+   * Tab không làm giảm số chức năng, chỉ làm mỗi lúc chỉ phải nhìn một nhóm.
+   */
+  const [tab, setTab] = useState('hoc-vien');
+
+  /* Dữ liệu mã kích hoạt, dùng để biết từng học viên còn quyền học hay không.
+     Tải ở đây chứ không trong AccessCodeManager: bảng học viên cần nó ngay cả
+     khi quản trị viên chưa mở tab mã lần nào. */
+  const [khoMa, setKhoMa] = useState([]);
+  const [luotNhapTatCa, setLuotNhapTatCa] = useState([]);
+
+  /* Sổ lượt nhập tải theo yêu cầu chứ không theo dõi liên tục: nó chỉ đổi khi
+     có học viên nhập mã mới, việc hiếm khi xảy ra đúng lúc quản trị viên đang
+     ngồi xem bảng. Nút "Tải lại lượt nhập" bên tab Mã gọi chính hàm này, nên
+     bấm một lần là cả hai tab cùng cập nhật. */
+  const taiLaiLuotNhap = () => {
+    fetchAllEnrollments().then((ds) => { if (ds) setLuotNhapTatCa(ds); });
+  };
+
+  useEffect(() => {
+    if (!isOpen) return;
+
+    // Kho mã theo dõi liên tục: quản trị viên xoá một mã ở tab bên cạnh thì cột
+    // quyền học ở bảng này phải đổi theo ngay, không phải đóng mở lại bảng.
+    const huy = listenToAccessCodes((ds) => { if (ds !== null) setKhoMa(ds); });
+    taiLaiLuotNhap();
+
+    return () => { if (typeof huy === 'function') huy(); };
+  }, [isOpen]);
+
+  const maTheoId = useMemo(() => {
+    const m = {};
+    khoMa.forEach((x) => { m[x.code] = x; });
+    return m;
+  }, [khoMa]);
+
+  const luotTheoEmail = useMemo(() => gomLuotTheoEmail(luotNhapTatCa), [luotNhapTatCa]);
+
+  /** Trạng thái quyền học của một học viên, tra theo email. */
+  const quyenCua = (sv) =>
+    trangThaiQuyen(sv, luotTheoEmail[String(sv?.email || '').trim().toLowerCase()] || [], maTheoId);
   const [certGenTab, setCertGenTab] = useState('manual'); // 'manual', 'excel'
   const [manualName, setManualName] = useState('');
   const [manualPhone, setManualPhone] = useState('');
@@ -475,7 +525,17 @@ export default function AdminDashboardModal({
       selectedSurvey === 'ALL' ||
       (selectedSurvey === 'DONE' ? hasSurvey(std) : !hasSurvey(std));
 
-    return matchesSearch && matchesIndustry && matchesRole && matchesSurvey;
+    // Lọc theo quyền học. 'CANH_BAO' gộp hai nhóm cần gọi điện: sắp hết hạn và
+    // đã hết quyền — đó là một việc chăm sóc khách hàng chứ không phải hai, nên
+    // không bắt quản trị viên lọc hai lần rồi tự cộng danh sách.
+    const q = selectedQuyen === 'ALL' ? null : quyenCua(std);
+    const matchesQuyen =
+      selectedQuyen === 'ALL' ||
+      (selectedQuyen === 'CANH_BAO'
+        ? q.loai === 'sap-het-han' || q.loai === 'het-quyen'
+        : q.loai === selectedQuyen);
+
+    return matchesSearch && matchesIndustry && matchesRole && matchesSurvey && matchesQuyen;
   });
 
   // Quyền cao nhất đứng đầu bảng, trong cùng một nhóm thì giữ nguyên thứ tự gốc.
@@ -525,6 +585,9 @@ export default function AdminDashboardModal({
         "Số Điện Thoại (Zalo)",
         "Email",
         "Phân Quyền",
+        "Quyền Học",
+        "Khoá Được Mở",
+        "Hạn Dùng Mã",
         "Ngành Nghề Kinh Doanh",
         `Tiến Độ Khoá Chính (/${COURSE_MODULES.length})`,
         `Tiến Độ Khoá Trade (/${TRADE_MODULES.length})`,
@@ -548,13 +611,19 @@ export default function AdminDashboardModal({
       const rows = exportSource.map((std, idx) => {
         const survey = surveyOf(std);
         const answers = survey?.answers || {};
+        // Cùng một phép tính với cột Quyền Học trên bảng. File xuất ra mà nói
+        // khác bảng đang nhìn là thứ phá vỡ lòng tin vào cả hai.
+        const q = quyenCua(std);
         return [
           idx + 1,
           cell(std.name),
           cell(std.phone),
           cell(std.email),
           cell(ROLE_LABEL[getAccountRole(std, adminRoster)]),
-          cell(std.industry || 'Kinh doanh'),
+          cell(q.nhan),
+          cell(q.loai === "lop-cu" ? "Miễn mã" : q.khoaMo.map((k) => TEN_KHOA[k]).join(" + ")),
+          cell(q.han ? new Date(q.han).toLocaleDateString("vi-VN") : ""),
+          cell(std.industry || "Kinh doanh"),
           cell(`${(std.completedModules || []).length}/${COURSE_MODULES.length}`),
           cell(`${(std.completedTradeModules || []).length}/${TRADE_MODULES.length}`),
           cell((std.completedModules || []).length >= COURSE_MODULES.length ? "Đã Tốt Nghiệp" : "Đang Học"),
@@ -1161,6 +1230,42 @@ export default function AdminDashboardModal({
           </button>
         </div>
 
+        {/* Thanh tab.
+            `shrink-0` để nó không bị bóp lại khi bảng học viên bên dưới giãn ra
+            chiếm hết chiều cao còn lại. */}
+        <div className="flex items-center gap-1.5 flex-wrap shrink-0 border-b border-emerald-900/40 pb-2">
+          {[
+            { id: 'hoc-vien', nhan: 'Học Viên', icon: Users, dem: totalStudentsCount },
+            { id: 'ma', nhan: 'Mã Kích Hoạt', icon: KeyRound, dem: khoMa.length },
+            { id: 'chung-nhan', nhan: 'Chứng Nhận', icon: Award, dem: null },
+            { id: 'he-thong', nhan: 'Hệ Thống', icon: ShieldCheck, dem: null },
+          ].map((t) => {
+            const Icon = t.icon;
+            const dangMo = tab === t.id;
+            return (
+              <button
+                key={t.id}
+                onClick={() => setTab(t.id)}
+                className={`px-3 py-1.5 rounded-xl text-xs font-extrabold transition flex items-center gap-1.5 cursor-pointer border ${
+                  dangMo
+                    ? 'bg-emerald-500/20 border-emerald-500/60 text-emerald-200'
+                    : 'bg-slate-900/70 border-slate-700 text-slate-400 hover:text-slate-200 hover:border-slate-500'
+                }`}
+              >
+                <Icon className="w-3.5 h-3.5" />
+                <span>{t.nhan}</span>
+                {t.dem !== null && (
+                  <span className={`px-1.5 rounded-md text-[10px] font-black ${
+                    dangMo ? 'bg-emerald-500/30 text-emerald-100' : 'bg-slate-800 text-slate-400'
+                  }`}>
+                    {t.dem}
+                  </span>
+                )}
+              </button>
+            );
+          })}
+        </div>
+
         {/* Notice Alert Banner */}
         {notice && (
           <div className="p-2.5 rounded-xl bg-emerald-950 border border-emerald-500 text-emerald-300 text-xs font-bold flex items-center justify-between shrink-0">
@@ -1169,6 +1274,8 @@ export default function AdminDashboardModal({
           </div>
         )}
 
+        {/* ---- TAB HỌC VIÊN ---- */}
+        {tab === 'hoc-vien' && (<>
         {/* Dashboard Overview Metric Cards (Compact) */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 shrink-0">
           <div className="p-2.5 rounded-xl glass-panel border border-emerald-800/60 space-y-0.5">
@@ -1265,6 +1372,26 @@ export default function AdminDashboardModal({
               </select>
             </div>
 
+            {/* Lọc theo quyền học — lối vào việc chăm sóc học viên. Lọc "Cần
+                liên hệ" ra là có ngay danh sách người sắp hoặc đã mất quyền, gửi
+                thông báo hàng loạt cho đúng nhóm đó bằng nút bên dưới. */}
+            <div className="relative shrink-0">
+              <select
+                value={selectedQuyen}
+                onChange={(e) => setSelectedQuyen(e.target.value)}
+                className="bg-slate-900/80 border border-emerald-900/60 rounded-xl px-3 py-1.5 text-xs text-white focus:outline-none cursor-pointer"
+                title="Lọc theo tình trạng quyền học"
+              >
+                <option value="ALL">Tất cả Quyền Học</option>
+                <option value="CANH_BAO">⚠ Cần liên hệ (sắp hết hạn + hết quyền)</option>
+                <option value="dang-hoc">Đang học</option>
+                <option value="sap-het-han">Sắp hết hạn</option>
+                <option value="het-quyen">Hết quyền</option>
+                <option value="chua-co-ma">Chưa nhập mã</option>
+                <option value="lop-cu">Lớp cũ (miễn mã)</option>
+              </select>
+            </div>
+
             {/* Industry Filter Dropdown */}
             <div className="relative shrink-0">
               <select
@@ -1305,62 +1432,10 @@ export default function AdminDashboardModal({
               <RefreshCw className={`w-3.5 h-3.5 ${isLoading ? 'animate-spin' : ''}`} />
             </button>
 
-            <button
-              onClick={runCloudCheck}
-              disabled={isChecking}
-              title="Kiểm tra vì sao danh sách không có dữ liệu từ Cloud"
-              className="px-3 py-1.5 rounded-xl bg-slate-900 border border-cyan-700 text-cyan-300 text-xs font-bold hover:bg-slate-800 transition cursor-pointer flex items-center gap-1.5 shrink-0"
-            >
-              <ShieldCheck className="w-3.5 h-3.5" />
-              <span>{isChecking ? 'Đang kiểm tra...' : 'Kiểm Tra Cloud'}</span>
-            </button>
-
-            {/* Chọn khoá để cấp bằng. Cùng một state với form tạo bằng bên
-                trong, nên chọn ở đâu cũng ra một kết quả. */}
-            <select
-              value={certCourse}
-              onChange={(e) => setCertCourse(e.target.value)}
-              className="bg-slate-900/80 border border-amber-500/50 text-amber-300 font-bold rounded-xl px-3 py-1.5 text-xs focus:outline-none cursor-pointer shrink-0"
-              title="Chọn khoá học để cấp Bằng Chứng Nhận"
-            >
-              {CERT_COURSE_OPTIONS.map((c) => (
-                <option key={c.key} value={c.key}>🎓 {c.title}</option>
-              ))}
-            </select>
-
-            <button
-              onClick={() => setIsCertGenOpen(true)}
-              className="px-3 py-1.5 rounded-xl bg-gradient-to-r from-amber-500 to-yellow-500 text-slate-950 text-xs font-black hover:brightness-110 transition flex items-center gap-1.5 cursor-pointer shadow-lg shrink-0"
-              title="Tạo thủ công hoặc upload file Excel tạo chứng nhận hàng loạt"
-            >
-              <Award className="w-3.5 h-3.5 text-slate-950" />
-              <span>Tạo Chứng Nhận</span>
-            </button>
-
-            <button
-              onClick={() => setIsMaOpen(true)}
-              className="px-3 py-1.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 text-slate-950 text-xs font-black hover:brightness-110 transition flex items-center gap-1.5 cursor-pointer shadow-lg shrink-0"
-              title="Tạo và quản lý mã kích hoạt khoá học"
-            >
-              <KeyRound className="w-3.5 h-3.5 text-slate-950" />
-              <span>Mã Kích Hoạt</span>
-            </button>
-
-            {/* Ảnh bìa trang chủ. Đóng hộp thoại này lại trước khi mở hộp thoại
-                kia: hai bảng chồng lên nhau thì bảng dưới vẫn cuộn được sau
-                lưng bảng trên, và đóng bảng trên xong người dùng rơi lại vào
-                một Bảng Quản Trị đã trôi đi mất chỗ cũ. */}
-            {onOpenCoverEditor && (
-              <button
-                onClick={() => { onClose(); onOpenCoverEditor(); }}
-                className="px-3 py-1.5 rounded-xl bg-slate-900 border border-amber-500/50 text-amber-300 text-xs font-bold hover:bg-slate-800 transition flex items-center gap-1.5 cursor-pointer shrink-0"
-                title="Đổi ảnh bìa trang chủ — tối đa 3 ảnh chạy lần lượt"
-              >
-                <ImagePlus className="w-3.5 h-3.5 text-amber-400" />
-                <span>Ảnh Bìa</span>
-              </button>
-            )}
-
+            {/* Kiểm Tra Cloud, Tạo Chứng Nhận, Mã Kích Hoạt và Ảnh Bìa đã dời
+                sang tab riêng. Chúng là công cụ toàn hệ thống, đứng ở đây thì
+                thanh này phình lên mười ba nút và che mất ba thứ thật sự thuộc
+                về danh sách: làm mới, in, xuất Excel. */}
             <button
               onClick={handlePrintReport}
               className="px-3 py-1.5 rounded-xl bg-slate-800 border border-slate-700 text-slate-200 text-xs font-bold hover:bg-slate-700 transition flex items-center gap-1.5 cursor-pointer shadow-md"
@@ -1378,62 +1453,6 @@ export default function AdminDashboardModal({
             </button>
           </div>
         </div>
-
-        {/* Kết quả chẩn đoán kết nối Cloud.
-            Hiện nguyên văn mã lỗi Firebase: đây là thứ duy nhất phân biệt được
-            "chưa ai đăng ký" với "bị máy chủ từ chối quyền đọc". */}
-        {cloudCheck && (
-          <div className="shrink-0 rounded-xl bg-slate-950/80 border border-cyan-800/60 p-3 space-y-1.5">
-            <div className="flex items-center justify-between">
-              <span className="text-[11px] font-black text-cyan-300 uppercase tracking-wide">
-                Chẩn đoán kết nối Cloud
-              </span>
-              <button
-                onClick={() => setCloudCheck(null)}
-                className="text-slate-500 hover:text-white text-xs"
-              >
-                ✕
-              </button>
-            </div>
-
-            {cloudCheck.map((step, idx) => (
-              <div key={idx} className="flex items-start gap-2 text-[11px]">
-                <span className={step.ok ? 'text-emerald-400' : 'text-rose-400'}>
-                  {step.ok ? '✓' : '✕'}
-                </span>
-                <span className="text-slate-300 font-semibold min-w-[210px]">{step.label}</span>
-                <span className={`font-mono ${step.ok ? 'text-slate-400' : 'text-rose-300'}`}>
-                  {step.detail}
-                </span>
-              </div>
-            ))}
-
-            {/* Kết luận: chỉ ra đúng bước hỏng đầu tiên và cách xử lý. */}
-            {(() => {
-              const failed = cloudCheck.find(s => !s.ok);
-              if (!failed) {
-                return (
-                  <p className="text-[11px] text-emerald-300 pt-1 border-t border-emerald-900/50">
-                    Đường lên Cloud thông suốt. Nếu danh sách vẫn trống thì đúng là chưa có học viên nào đăng ký thành công trên hệ thống online.
-                  </p>
-                );
-              }
-              const hint =
-                failed.label === 'Cấu hình Firebase'
-                  ? 'Khai báo biến môi trường VITE_FIREBASE_* rồi khởi động lại (local) hoặc redeploy (Vercel). Xem DEPLOYMENT.md.'
-                  : failed.label === 'Phiên đăng nhập Firebase Auth'
-                  ? 'Bạn đang đăng nhập bằng nhánh dự phòng tại máy, nhánh này KHÔNG cấp quyền quản trị. Phải đăng nhập bằng tài khoản có thật trên Firebase Authentication.'
-                  : failed.label === 'Có tên trong sổ phân quyền admins'
-                  ? 'Chưa có bản ghi quyền trên máy chủ nên Firestore từ chối cho đọc danh sách. Đăng xuất rồi đăng nhập lại bằng tài khoản Quản Trị Tối Cao để ứng dụng tự mồi sổ admins.'
-                  : 'Xem mã lỗi ở trên. `permission-denied` nghĩa là Firestore Rules chặn — thường do tài khoản chưa có trong sổ admins.';
-              return (
-                <p className="text-[11px] text-amber-300 pt-1 border-t border-amber-900/50">
-                  <strong>Hỏng ở bước:</strong> {failed.label}. {hint}
-                </p>
-              );
-            })()}
-          </div>
-        )}
 
         {/* Quy tắc phân quyền — nói rõ ngay tại chỗ thao tác để không ai phải
             bấm thử mới biết vì sao nút bị khoá. */}
@@ -1539,7 +1558,7 @@ export default function AdminDashboardModal({
             hình điện thoại. Ép sàn cao như vậy trong khung `h-[94dvh]` thì các
             hàng phía trên (bốn thẻ số liệu, ô lọc, hàng nút) bị đẩy ra ngoài. */}
         <div className="flex-1 min-h-[220px] sm:min-h-[460px] overflow-auto overscroll-contain rounded-2xl border border-emerald-900/50 glass-panel">
-          <table className="w-full text-left border-collapse min-w-[900px]">
+          <table className="w-full text-left border-collapse min-w-[1040px]">
             <thead>
               <tr className="bg-slate-900/90 text-emerald-400 text-[11px] font-extrabold uppercase tracking-wider border-b border-emerald-900/50 sticky top-0 backdrop-blur-md z-10">
                 <th className="py-2.5 px-3 w-8">
@@ -1556,6 +1575,10 @@ export default function AdminDashboardModal({
                 <th className="py-2.5 px-3">Số Điện Thoại</th>
                 <th className="py-2.5 px-3">Email</th>
                 <th className="py-2.5 px-3">Phân Quyền</th>
+                {/* Quyền học đứng cạnh Phân Quyền vì hai cột trả lời hai câu
+                    hỏi dễ lẫn nhau: một bên là "người này làm được gì trong hệ
+                    thống", bên kia là "người này còn vào học được không". */}
+                <th className="py-2.5 px-3">Quyền Học</th>
                 <th className="py-2.5 px-3">Ngành Nghề</th>
                 <th className="py-2.5 px-3 text-center">Tiến Độ (11/11)</th>
                 <th className="py-2.5 px-3 text-center">Khảo Sát</th>
@@ -1604,6 +1627,42 @@ export default function AdminDashboardModal({
                       <td className="py-2 px-3">
                         <RoleBadge role={role} />
                       </td>
+
+                      {/* Quyền học — tính lại từ sổ mã mỗi lần vẽ, không đọc cờ
+                          nào lưu sẵn trên hồ sơ. Nhờ vậy quản trị viên xoá một
+                          mã ở tab bên cạnh là cột này đổi theo ngay. */}
+                      <td className="py-2 px-3">
+                        {(() => {
+                          const q = quyenCua(std);
+                          const MAU = {
+                            emerald: 'bg-emerald-500/15 text-emerald-300 border-emerald-500/40',
+                            amber: 'bg-amber-500/15 text-amber-300 border-amber-500/40',
+                            rose: 'bg-rose-500/15 text-rose-300 border-rose-500/40',
+                            sky: 'bg-sky-500/15 text-sky-300 border-sky-500/40',
+                            slate: 'bg-slate-700/30 text-slate-400 border-slate-600/50',
+                          };
+                          return (
+                            <div className="space-y-0.5">
+                              <span className={`inline-block px-2 py-0.5 rounded-full text-[10px] font-extrabold border whitespace-nowrap ${MAU[q.mau]}`}>
+                                {q.nhan}
+                                {q.loai === 'sap-het-han' && ` · ${q.conLaiNgay} ngày`}
+                              </span>
+                              {q.duocVao && q.loai !== 'quan-tri' && (
+                                <div className="text-[10px] text-slate-400 whitespace-nowrap">
+                                  {q.loai === 'lop-cu'
+                                    ? 'Miễn mã'
+                                    : `${q.khoaMo.includes('main') ? 'DM' : ''}${
+                                        q.khoaMo.length === 2 ? '+' : ''
+                                      }${q.khoaMo.includes('trade') ? 'Trade' : ''}${
+                                        q.han ? ` · hết ${new Date(q.han).toLocaleDateString('vi-VN')}` : ''
+                                      }`}
+                                </div>
+                              )}
+                            </div>
+                          );
+                        })()}
+                      </td>
+
                       <td className="py-2 px-3">
                         <span className="px-2 py-0.5 rounded bg-slate-900 border border-slate-700 text-[10px] text-slate-300 font-medium">
                           {std.industry || 'Bất Động Sản'}
@@ -1730,7 +1789,7 @@ export default function AdminDashboardModal({
                 })
               ) : (
                 <tr>
-                  <td colSpan="11" className="p-8 text-center text-slate-400 text-xs">
+                  <td colSpan="12" className="p-8 text-center text-slate-400 text-xs">
                     Không tìm thấy tài khoản nào phù hợp với bộ lọc.
                   </td>
                 </tr>
@@ -1793,38 +1852,171 @@ export default function AdminDashboardModal({
           </div>
         </div>
 
-        {/* Bảng Mã Kích Hoạt.
-            `my-auto` trên tấm nền trong là bắt buộc khi dùng chung với
-            `items-center` và `overflow-y-auto`: thiếu nó thì nội dung cao hơn
-            màn hình bị tràn lên trên và không cuộn tới được phần đầu. */}
-        {isMaOpen && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/90 backdrop-blur-md overflow-y-auto">
-            <div className="relative w-full max-w-2xl glass-panel rounded-3xl border border-emerald-500/40 p-5 sm:p-6 shadow-2xl space-y-5 my-auto">
-              <div className="flex items-center justify-between border-b border-emerald-900/60 pb-3">
-                <div className="flex items-center gap-2.5">
-                  <div className="p-2 rounded-xl bg-emerald-500/20 text-emerald-400 border border-emerald-500/40">
-                    <KeyRound className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <h3 className="text-base font-black text-white uppercase tracking-wider">
-                      MÃ KÍCH HOẠT KHOÁ HỌC
-                    </h3>
-                    <p className="text-xs text-slate-400">
-                      Tạo mã theo từng khoá hoặc combo, đặt hạn dùng và số lượt
-                    </p>
-                  </div>
-                </div>
+        </>)}
 
-                <button
-                  onClick={() => setIsMaOpen(false)}
-                  className="w-8 h-8 rounded-full bg-slate-900 border border-slate-700 text-slate-400 hover:text-white flex items-center justify-center transition shrink-0"
+        {/* ---- TAB MÃ KÍCH HOẠT ----
+            Nhúng thẳng vào tab thay vì mở hộp thoại con chồng lên bảng quản
+            trị. Hộp thoại chồng hộp thoại có một tật khó chịu: bảng dưới vẫn
+            cuộn được sau lưng bảng trên, đóng bảng trên xong thì rơi lại vào
+            một trang đã trôi mất chỗ cũ. */}
+        {tab === 'ma' && (
+          <div className="flex-1 min-h-0 overflow-y-auto overscroll-contain pr-1">
+            <AccessCodeManager
+              adminEmail={currentUser?.email}
+              luotNhap={luotNhapTatCa}
+              onTaiLaiLuot={taiLaiLuotNhap}
+            />
+          </div>
+        )}
+
+        {/* ---- TAB CHỨNG NHẬN ---- */}
+        {tab === 'chung-nhan' && (
+          <div className="flex-1 min-h-0 overflow-y-auto overscroll-contain pr-1 space-y-4">
+            <div className="p-4 rounded-2xl bg-slate-900/60 border border-amber-500/40 space-y-3">
+              <h3 className="text-xs font-extrabold text-amber-300 flex items-center gap-2">
+                <Award className="w-4 h-4" /> Cấp Bằng Chứng Nhận
+              </h3>
+
+              <div className="space-y-1">
+                <label className="text-[11px] font-bold text-slate-300">Khoá học cấp bằng</label>
+                {/* Cùng một state với form bên trong hộp thoại tạo bằng, nên
+                    chọn ở đâu cũng ra một kết quả. */}
+                <select
+                  value={certCourse}
+                  onChange={(e) => setCertCourse(e.target.value)}
+                  className="w-full bg-slate-900/80 border border-amber-500/50 text-amber-300 font-bold rounded-xl px-3 py-2 text-xs focus:outline-none cursor-pointer"
                 >
-                  <X className="w-4 h-4" />
-                </button>
+                  {CERT_COURSE_OPTIONS.map((c) => (
+                    <option key={c.key} value={c.key}>🎓 {c.title}</option>
+                  ))}
+                </select>
               </div>
 
-              <AccessCodeManager adminEmail={currentUser?.email} />
+              <button
+                onClick={() => setIsCertGenOpen(true)}
+                className="w-full py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-yellow-500 text-slate-950 text-xs font-black hover:brightness-110 transition flex items-center justify-center gap-2 cursor-pointer shadow-lg"
+              >
+                <Award className="w-4 h-4" /> Mở Bảng Tạo Chứng Nhận
+              </button>
+
+              <p className="text-[11px] text-slate-400 leading-relaxed">
+                Tạo từng bằng bằng tay, hoặc tải lên file Excel để cấp hàng loạt.
+                Cấp bằng cho người chưa có tài khoản cũng được.
+              </p>
             </div>
+
+            <div className="p-3 rounded-xl bg-slate-900/40 border border-slate-700/60">
+              <p className="text-[11px] text-slate-400 leading-relaxed">
+                Muốn cấp bằng cho một học viên đang có trong danh sách thì sang tab{' '}
+                <button
+                  onClick={() => setTab('hoc-vien')}
+                  className="text-emerald-400 hover:text-emerald-300 font-bold underline underline-offset-2"
+                >
+                  Học Viên
+                </button>{' '}
+                và bấm biểu tượng bằng ở cột Thao Tác của đúng dòng đó — cách này
+                điền sẵn tên và email nên không gõ nhầm.
+              </p>
+            </div>
+          </div>
+        )}
+
+        {/* ---- TAB HỆ THỐNG ---- */}
+        {tab === 'he-thong' && (
+          <div className="flex-1 min-h-0 overflow-y-auto overscroll-contain pr-1 space-y-4">
+            <div className="p-4 rounded-2xl bg-slate-900/60 border border-cyan-700/50 space-y-3">
+              <h3 className="text-xs font-extrabold text-cyan-300 flex items-center gap-2">
+                <ShieldCheck className="w-4 h-4" /> Kiểm Tra Kết Nối Cloud
+              </h3>
+              <p className="text-[11px] text-slate-400 leading-relaxed">
+                Chạy khi danh sách học viên trống hoặc thiếu người. Công cụ này chỉ
+                ra đúng bước hỏng đầu tiên — phân biệt được &ldquo;chưa ai đăng
+                ký&rdquo; với &ldquo;bị máy chủ từ chối quyền đọc&rdquo;.
+              </p>
+              <button
+                onClick={runCloudCheck}
+                disabled={isChecking}
+                className="w-full py-2.5 rounded-xl bg-slate-900 border border-cyan-700 text-cyan-300 text-xs font-bold hover:bg-slate-800 transition cursor-pointer flex items-center justify-center gap-2 disabled:opacity-60"
+              >
+                <ShieldCheck className="w-4 h-4" />
+                {isChecking ? 'Đang kiểm tra...' : 'Chạy Kiểm Tra'}
+              </button>
+            </div>
+
+        {/* Kết quả chẩn đoán kết nối Cloud.
+            Hiện nguyên văn mã lỗi Firebase: đây là thứ duy nhất phân biệt được
+            "chưa ai đăng ký" với "bị máy chủ từ chối quyền đọc". */}
+        {cloudCheck && (
+          <div className="shrink-0 rounded-xl bg-slate-950/80 border border-cyan-800/60 p-3 space-y-1.5">
+            <div className="flex items-center justify-between">
+              <span className="text-[11px] font-black text-cyan-300 uppercase tracking-wide">
+                Chẩn đoán kết nối Cloud
+              </span>
+              <button
+                onClick={() => setCloudCheck(null)}
+                className="text-slate-500 hover:text-white text-xs"
+              >
+                ✕
+              </button>
+            </div>
+
+            {cloudCheck.map((step, idx) => (
+              <div key={idx} className="flex items-start gap-2 text-[11px]">
+                <span className={step.ok ? 'text-emerald-400' : 'text-rose-400'}>
+                  {step.ok ? '✓' : '✕'}
+                </span>
+                <span className="text-slate-300 font-semibold min-w-[210px]">{step.label}</span>
+                <span className={`font-mono ${step.ok ? 'text-slate-400' : 'text-rose-300'}`}>
+                  {step.detail}
+                </span>
+              </div>
+            ))}
+
+            {/* Kết luận: chỉ ra đúng bước hỏng đầu tiên và cách xử lý. */}
+            {(() => {
+              const failed = cloudCheck.find(s => !s.ok);
+              if (!failed) {
+                return (
+                  <p className="text-[11px] text-emerald-300 pt-1 border-t border-emerald-900/50">
+                    Đường lên Cloud thông suốt. Nếu danh sách vẫn trống thì đúng là chưa có học viên nào đăng ký thành công trên hệ thống online.
+                  </p>
+                );
+              }
+              const hint =
+                failed.label === 'Cấu hình Firebase'
+                  ? 'Khai báo biến môi trường VITE_FIREBASE_* rồi khởi động lại (local) hoặc redeploy (Vercel). Xem DEPLOYMENT.md.'
+                  : failed.label === 'Phiên đăng nhập Firebase Auth'
+                  ? 'Bạn đang đăng nhập bằng nhánh dự phòng tại máy, nhánh này KHÔNG cấp quyền quản trị. Phải đăng nhập bằng tài khoản có thật trên Firebase Authentication.'
+                  : failed.label === 'Có tên trong sổ phân quyền admins'
+                  ? 'Chưa có bản ghi quyền trên máy chủ nên Firestore từ chối cho đọc danh sách. Đăng xuất rồi đăng nhập lại bằng tài khoản Quản Trị Tối Cao để ứng dụng tự mồi sổ admins.'
+                  : 'Xem mã lỗi ở trên. `permission-denied` nghĩa là Firestore Rules chặn — thường do tài khoản chưa có trong sổ admins.';
+              return (
+                <p className="text-[11px] text-amber-300 pt-1 border-t border-amber-900/50">
+                  <strong>Hỏng ở bước:</strong> {failed.label}. {hint}
+                </p>
+              );
+            })()}
+          </div>
+        )}
+
+
+            {onOpenCoverEditor && (
+              <div className="p-4 rounded-2xl bg-slate-900/60 border border-amber-500/40 space-y-3">
+                <h3 className="text-xs font-extrabold text-amber-300 flex items-center gap-2">
+                  <ImagePlus className="w-4 h-4" /> Ảnh Bìa Trang Chủ
+                </h3>
+                <p className="text-[11px] text-slate-400 leading-relaxed">
+                  Tối đa 3 ảnh chạy lần lượt trên trang chủ. Bảng Quản Trị sẽ đóng
+                  lại khi mở trình sửa ảnh bìa.
+                </p>
+                <button
+                  onClick={() => { onClose(); onOpenCoverEditor(); }}
+                  className="w-full py-2.5 rounded-xl bg-slate-900 border border-amber-500/50 text-amber-300 text-xs font-bold hover:bg-slate-800 transition cursor-pointer flex items-center justify-center gap-2"
+                >
+                  <ImagePlus className="w-4 h-4" /> Mở Trình Sửa Ảnh Bìa
+                </button>
+              </div>
+            )}
           </div>
         )}
 

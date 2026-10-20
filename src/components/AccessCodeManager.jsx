@@ -62,10 +62,23 @@ const MAU_TINH_TRANG = {
   'khong-ton-tai': { chu: '—', lop: 'bg-slate-700/20 text-slate-400 border-slate-600/40' },
 };
 
-export default function AccessCodeManager({ adminEmail }) {
+/**
+ * `luotNhap` và `onTaiLaiLuot` nhận từ ngoài vào khi bảng cha đã có sẵn dữ liệu.
+ *
+ * Bảng Quản Trị cần sổ lượt nhập để vẽ cột Quyền Học trong danh sách học viên,
+ * nên nó đã tải sẵn rồi. Để component này tự tải một bản riêng là có hai bản sao
+ * của cùng một thứ: tốn một lượt đọc thừa, và tệ hơn, nút "Tải lại" ở đây chỉ
+ * làm mới bản của riêng nó — quản trị viên bấm xong quay sang tab Học Viên thấy
+ * số liệu vẫn cũ mà không hiểu vì sao.
+ *
+ * Vẫn giữ nhánh tự tải để component dùng được độc lập ở chỗ khác.
+ */
+export default function AccessCodeManager({ adminEmail, luotNhap: luotTuNgoai, onTaiLaiLuot }) {
   const [danhSach, setDanhSach] = useState([]);
   const [loiTai, setLoiTai] = useState(false);
-  const [luotNhap, setLuotNhap] = useState([]);
+  const [luotTuMinh, setLuotTuMinh] = useState([]);
+  const dungDuLieuNgoai = Array.isArray(luotTuNgoai);
+  const luotNhap = dungDuLieuNgoai ? luotTuNgoai : luotTuMinh;
   const [dangLuu, setDangLuu] = useState(false);
   const [thongBao, setThongBao] = useState('');
   const [daChep, setDaChep] = useState('');
@@ -89,10 +102,14 @@ export default function AccessCodeManager({ adminEmail }) {
   }, []);
 
   const taiLuotNhap = async () => {
+    // Dữ liệu do bảng cha giữ thì nhờ cha tải lại, để cả hai nơi cùng đổi theo.
+    if (dungDuLieuNgoai) { onTaiLaiLuot?.(); return; }
     const ds = await fetchAllEnrollments();
-    setLuotNhap(ds || []);
+    setLuotTuMinh(ds || []);
   };
-  useEffect(() => { taiLuotNhap(); }, []);
+  useEffect(() => {
+    if (!dungDuLieuNgoai) taiLuotNhap();
+  }, [dungDuLieuNgoai]);
 
   // Đếm số người đã nhập theo từng mã, lấy từ sổ lượt nhập thật.
   //

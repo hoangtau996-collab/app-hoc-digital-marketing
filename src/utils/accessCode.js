@@ -210,3 +210,95 @@ export function nhanPhamVi(khoa) {
   if (ds.length === KHOA_HOP_LE.length) return 'Combo cả 2 khoá';
   return TEN_KHOA[ds[0]] || ds[0];
 }
+
+/* ==================================================================== *
+ * TRẠNG THÁI QUYỀN HỌC — dùng cho Bảng Quản Trị
+ *
+ * Bảng học viên cần trả lời được bốn câu chỉ bằng cách liếc qua: người này còn
+ * học được không, học khoá nào, bằng mã nào, hạn tới bao giờ. Không có chỗ này
+ * thì quản trị viên phải mở bảng mã rồi tự dò email — việc mà làm với vài chục
+ * học viên là bỏ cuộc.
+ *
+ * Dùng lại tinhQuyenHoc() chứ không viết luật mới: quyền hiện trên bảng quản
+ * trị PHẢI đúng bằng quyền học viên thật sự có. Viết riêng một phép tính thứ
+ * hai cho giao diện quản trị là bảo đảm sớm muộn hai bên nói hai điều khác nhau,
+ * và lúc đó không ai biết bên nào đúng.
+ * ==================================================================== */
+
+/** Còn dưới ngần này ngày thì coi là sắp hết hạn, đủ sớm để kịp cấp mã mới. */
+export const NGAY_CANH_BAO = 7;
+
+export const NHAN_TRANG_THAI = {
+  'quan-tri': { chu: 'Quản trị', mau: 'amber' },
+  'lop-cu': { chu: 'Lớp cũ', mau: 'sky' },
+  'dang-hoc': { chu: 'Đang học', mau: 'emerald' },
+  'sap-het-han': { chu: 'Sắp hết hạn', mau: 'amber' },
+  'het-quyen': { chu: 'Hết quyền', mau: 'rose' },
+  'chua-co-ma': { chu: 'Chưa nhập mã', mau: 'slate' },
+};
+
+/**
+ * Trạng thái quyền học của MỘT học viên, đã sẵn sàng để hiển thị.
+ *
+ * @param {object} hocVien   Bản ghi học viên (cần `createdAt` và `role`).
+ * @param {Array}  luotNhap  Các lượt nhập mã CỦA RIÊNG người này.
+ * @param {object} maTheoId  Bản đồ { MÃ: bản ghi mã }.
+ * @param {number} bayGio
+ */
+export function trangThaiQuyen(hocVien, luotNhap = [], maTheoId = {}, bayGio = Date.now()) {
+  const quyen = tinhQuyenHoc({
+    user: hocVien,
+    isAdmin: hocVien?.role === 'admin',
+    luotNhap,
+    maTheoId,
+    bayGio,
+  });
+
+  // Hạn GẦN NHẤT trong các mã còn sống, không phải hạn xa nhất: người có hai mã
+  // thì cái hết trước sẽ lấy đi một phần quyền, và đó mới là mốc cần cảnh báo.
+  const cacHan = quyen.maSong
+    .map((m) => mocHetHan(m.hanDung))
+    .filter((t) => Number.isFinite(t))
+    .sort((a, b) => a - b);
+  const han = cacHan.length > 0 ? cacHan[0] : null;
+  const conLaiNgay = han === null ? null : Math.ceil((han - bayGio) / 86400000);
+
+  let loai;
+  if (quyen.nguon === 'quan-tri') loai = 'quan-tri';
+  else if (quyen.nguon === 'lop-cu') loai = 'lop-cu';
+  else if (!quyen.duocVao) {
+    // Phân biệt "chưa từng nhập mã nào" với "đã nhập nhưng mã chết rồi". Hai
+    // tình huống này cần hai cách xử lý khác hẳn: người đầu chờ được cấp mã,
+    // người sau là khách cũ đáng gọi điện mời gia hạn.
+    loai = luotNhap.length > 0 ? 'het-quyen' : 'chua-co-ma';
+  } else if (conLaiNgay !== null && conLaiNgay <= NGAY_CANH_BAO) loai = 'sap-het-han';
+  else loai = 'dang-hoc';
+
+  return {
+    loai,
+    nhan: NHAN_TRANG_THAI[loai]?.chu || loai,
+    mau: NHAN_TRANG_THAI[loai]?.mau || 'slate',
+    duocVao: quyen.duocVao,
+    khoaMo: quyen.khoaMo,
+    maSong: quyen.maSong,
+    han,
+    conLaiNgay,
+  };
+}
+
+/**
+ * Gom các lượt nhập mã theo email, để bảng học viên tra được trong một bước.
+ *
+ * Lặp qua cả danh sách lượt nhập cho TỪNG học viên là phép tính bình phương —
+ * 200 học viên với 300 lượt nhập là 60.000 vòng lặp mỗi lần gõ một chữ vào ô
+ * tìm kiếm. Gom trước một lần rồi tra theo khoá thì chỉ còn một vòng.
+ */
+export function gomLuotTheoEmail(luotNhap = []) {
+  const theoEmail = {};
+  for (const l of luotNhap) {
+    const e = String(l?.email || '').trim().toLowerCase();
+    if (!e) continue;
+    (theoEmail[e] = theoEmail[e] || []).push(l);
+  }
+  return theoEmail;
+}
