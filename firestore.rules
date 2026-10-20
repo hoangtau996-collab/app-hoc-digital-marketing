@@ -365,6 +365,115 @@ service cloud.firestore {
       allow write: if isAdmin();
     }
 
+    // ---- /access_codes và /enrollments : mã kích hoạt khoá học -----------
+    //
+    // ĐÂY LÀ RANH GIỚI THẬT của tính năng mã. Màn nhập mã trên giao diện chỉ là
+    // lớp sơn: ai mở công cụ nhà phát triển cũng tự đặt được biến "đã mở khoá"
+    // trong trình duyệt của họ. Thứ không giả được là một tài liệu trong
+    // /enrollments — vì muốn tạo nó phải qua được khối luật dưới đây, mà khối
+    // này chạy trên máy chủ Firestore và chỉ tin ID token do Firebase Auth ký.
+    //
+    // Nói cách khác: người ta tự mở được GIAO DIỆN học, nhưng không tự cấp được
+    // cho mình một suất học có thật trong sổ sách.
+
+    // Hạn dùng lưu dạng 'YYYY-MM-DD'. Mã còn hiệu lực HẾT ngày đó theo giờ Việt
+    // Nam: cộng 17 giờ vào 0 giờ UTC của ngày đó ra đúng 0 giờ VN ngày hôm sau.
+    // Phải khớp mocHetHan() trong src/utils/accessCode.js — lệch là máy chủ và
+    // giao diện nói hai hạn khác nhau.
+    function conHanDung(hanDung) {
+      return hanDung is string
+        && hanDung.size() == 10
+        && request.time < timestamp.date(
+             int(hanDung[0:4]), int(hanDung[5:7]), int(hanDung[8:10])
+           ) + duration.value(17, 'h');
+    }
+
+    // Mã còn phát được suất học không. Đọc từ `resource`, tức là trạng thái
+    // TRƯỚC lệnh ghi — đúng thứ cần xét khi quyết định có cho tiêu một lượt.
+    function maConPhatDuoc(ma) {
+      return ma.active == true
+        && ma.soLuot is int
+        && ma.soLuot > 0
+        && ma.daDung is int
+        && ma.daDung < ma.soLuot
+        && conHanDung(ma.hanDung);
+    }
+
+    match /access_codes/{code} {
+
+      // ĐỌC TỪNG MÃ: cho phép người đã đăng nhập, vì lúc nhập mã buộc phải đọc
+      // được mã mình vừa gõ, và sau đó mỗi lần vào học phải đọc lại để biết mã
+      // còn sống hay đã bị thu hồi.
+      //
+      // LIỆT KÊ: chỉ quản trị viên. Khác biệt giữa hai dòng này là toàn bộ vấn
+      // đề: cho liệt kê là một học viên bất kỳ tải về được cả kho mã đang lưu
+      // hành rồi đem bán lại. Đọc từng mã thì phải biết trước chuỗi mã mới đọc
+      // được, mà chuỗi đó dài 8 ký tự trên bảng 32 ký tự — dò từng cái một qua
+      // mạng là không khả thi.
+      allow get: if signedIn();
+      allow list: if isAdmin();
+
+      allow create, delete: if isAdmin();
+
+      // SỬA: quản trị viên tuỳ ý. Học viên chỉ được làm đúng một việc — cộng
+      // `daDung` thêm 1 khi tiêu một lượt — và chỉ khi mã còn phát được.
+      //
+      // `hasOnly(['daDung'])` là chốt chặn chính: thiếu nó thì học viên nào
+      // cũng tự nới hạn dùng, tự tăng số lượt, hoặc đổi phạm vi mã lẻ thành
+      // combo cả hai khoá. Cộng đúng 1 chứ không phải "lớn hơn hoặc bằng": cho
+      // phép nhảy nhiều bước là mở đường đốt sạch lượt của mã người khác.
+      allow update: if isAdmin()
+                    || (signedIn()
+                        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['daDung'])
+                        && request.resource.data.daDung == resource.data.daDung + 1
+                        && maConPhatDuoc(resource.data));
+    }
+
+    match /enrollments/{luotId} {
+
+      // Học viên đọc và liệt kê lượt nhập CỦA CHÍNH MÌNH. Lệnh liệt kê buộc
+      // phía máy khách phải lọc `where('email','==', <email của mình>)`, nếu
+      // không máy chủ từ chối thẳng chứ không phải lọc bớt rồi trả về.
+      allow get: if isAdmin()
+                 || (signedIn() && resource != null && resource.data.email == myEmail());
+      allow list: if isAdmin()
+                  || (signedIn() && resource.data.email == myEmail());
+
+      // TẠO LƯỢT NHẬP — chỗ quan trọng nhất của cả khối.
+      //
+      // Ba ràng buộc, mỗi cái chặn một kiểu gian lận khác nhau:
+      //
+      //  1. `email == myEmail()` — không ghi lượt nhập mang tên người khác.
+      //
+      //  2. Id tài liệu phải đúng khuôn `<id email của mình>__<MÃ>`. Đây là
+      //     ràng buộc chặn việc tiêu nhiều lượt bằng một mã: cùng người cùng mã
+      //     luôn ra cùng một id, nên lần thứ hai là `update` chứ không phải
+      //     `create`, mà `update` thì bị cấm ở dưới. Không có điều kiện này,
+      //     một người bấm mười lần là ăn hết mười suất của cả lớp.
+      //
+      //  3. Mã phải CÓ THẬT và còn phát được, đọc thẳng từ /access_codes.
+      //     Thiếu vế này thì ai cũng tự tạo cho mình một lượt nhập với chuỗi mã
+      //     bịa ra, và toàn bộ tính năng thành vô nghĩa.
+      allow create: if isAdmin()
+                    || (signedIn()
+                        && request.resource.data.email == myEmail()
+                        && request.resource.data.ma is string
+                        && luotId == myDocId() + '__' + request.resource.data.ma
+                        && exists(/databases/$(database)/documents/access_codes/$(request.resource.data.ma))
+                        && maConPhatDuoc(
+                             get(/databases/$(database)/documents/access_codes/$(request.resource.data.ma)).data
+                           ));
+
+      // Lượt đã nhập thì không ai sửa, kể cả quản trị viên. Đây là sổ sách: sửa
+      // được thì một người đổi `ma` trên lượt cũ của mình sang mã combo là có
+      // ngay quyền học khoá thứ hai mà không tiêu lượt nào.
+      allow update: if false;
+
+      // Xoá chỉ quản trị viên — dùng khi cần thu hồi quyền của đúng một người
+      // mà không đụng tới mã đang phát cho cả lớp.
+      allow delete: if isAdmin();
+    }
+
     // ---- Mặc định từ chối --------------------------------------------------
 
     // Collection nào chưa khai báo ở trên thì đóng. Thà hỏng rõ ràng còn hơn

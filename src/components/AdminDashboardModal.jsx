@@ -21,6 +21,7 @@ import {
 } from '../firebase';
 import { markStudentDeleted, filterDeleted, getDeletedStudents } from '../utils/deletedStudents';
 import { updateStudentEmail, deleteStudentsPermanently, sendNotification } from '../utils/adminApi';
+import AccessCodeManager from './AccessCodeManager';
 import {
   SURVEY_QUESTIONS,
   SURVEY_TOTAL,
@@ -256,6 +257,10 @@ export default function AdminDashboardModal({
 
   // Certificate Generator Modal state
   const [isCertGenOpen, setIsCertGenOpen] = useState(false);
+  /* Bảng mã kích hoạt. Mở dạng hộp thoại con như Tạo Chứng Nhận, không nhúng
+     thẳng vào dòng cuộn chính: bảng quản trị đã rất dài, thêm một khối CRUD
+     nữa vào giữa là người dùng mất dấu chỗ mình đang xem. */
+  const [isMaOpen, setIsMaOpen] = useState(false);
   const [certGenTab, setCertGenTab] = useState('manual'); // 'manual', 'excel'
   const [manualName, setManualName] = useState('');
   const [manualPhone, setManualPhone] = useState('');
@@ -1332,6 +1337,15 @@ export default function AdminDashboardModal({
               <span>Tạo Chứng Nhận</span>
             </button>
 
+            <button
+              onClick={() => setIsMaOpen(true)}
+              className="px-3 py-1.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 text-slate-950 text-xs font-black hover:brightness-110 transition flex items-center gap-1.5 cursor-pointer shadow-lg shrink-0"
+              title="Tạo và quản lý mã kích hoạt khoá học"
+            >
+              <KeyRound className="w-3.5 h-3.5 text-slate-950" />
+              <span>Mã Kích Hoạt</span>
+            </button>
+
             {/* Ảnh bìa trang chủ. Đóng hộp thoại này lại trước khi mở hộp thoại
                 kia: hai bảng chồng lên nhau thì bảng dưới vẫn cuộn được sau
                 lưng bảng trên, và đóng bảng trên xong người dùng rơi lại vào
@@ -1778,6 +1792,41 @@ export default function AdminDashboardModal({
             </button>
           </div>
         </div>
+
+        {/* Bảng Mã Kích Hoạt.
+            `my-auto` trên tấm nền trong là bắt buộc khi dùng chung với
+            `items-center` và `overflow-y-auto`: thiếu nó thì nội dung cao hơn
+            màn hình bị tràn lên trên và không cuộn tới được phần đầu. */}
+        {isMaOpen && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/90 backdrop-blur-md overflow-y-auto">
+            <div className="relative w-full max-w-2xl glass-panel rounded-3xl border border-emerald-500/40 p-5 sm:p-6 shadow-2xl space-y-5 my-auto">
+              <div className="flex items-center justify-between border-b border-emerald-900/60 pb-3">
+                <div className="flex items-center gap-2.5">
+                  <div className="p-2 rounded-xl bg-emerald-500/20 text-emerald-400 border border-emerald-500/40">
+                    <KeyRound className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h3 className="text-base font-black text-white uppercase tracking-wider">
+                      MÃ KÍCH HOẠT KHOÁ HỌC
+                    </h3>
+                    <p className="text-xs text-slate-400">
+                      Tạo mã theo từng khoá hoặc combo, đặt hạn dùng và số lượt
+                    </p>
+                  </div>
+                </div>
+
+                <button
+                  onClick={() => setIsMaOpen(false)}
+                  className="w-8 h-8 rounded-full bg-slate-900 border border-slate-700 text-slate-400 hover:text-white flex items-center justify-center transition shrink-0"
+                >
+                  <X className="w-4 h-4" />
+                </button>
+              </div>
+
+              <AccessCodeManager adminEmail={currentUser?.email} />
+            </div>
+          </div>
+        )}
 
         {/* Certificate Creation Sub-Modal (Manual & Bulk Excel Import) */}
         {isCertGenOpen && (

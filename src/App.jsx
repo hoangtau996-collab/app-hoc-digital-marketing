@@ -52,8 +52,12 @@ import {
   listenToCoverBanners,
   listenToCoverSliderConfig,
   normalizeCoverInterval,
-  COVER_INTERVAL_DEFAULT_MS
+  COVER_INTERVAL_DEFAULT_MS,
+  listenToMyEnrollments,
+  fetchAccessCodesByIds
 } from './firebase';
+import AccessCodeGate from './components/AccessCodeGate';
+import { tinhQuyenHoc } from './utils/accessCode';
 import { hasRealPhone } from './utils/industryOptions';
 import { sendGraduationEmail } from './utils/studentEmail';
 import { isModuleUnlocked, getGateMessage } from './utils/moduleGating';
@@ -712,6 +716,68 @@ export default function App() {
    */
   const isAdmin = currentUser?.role === 'admin';
 
+  /* ---- MÃ KÍCH HOẠT KHOÁ HỌC -------------------------------------------
+   *
+   * Quyền học KHÔNG lưu thành một cờ. Mỗi lần tải trang, ứng dụng đọc lại hai
+   * thứ rời nhau — các lượt nhập mã của học viên, và bản thân những mã đó — rồi
+   * tính lại quyền từ đầu (xem utils/accessCode.js). Nhờ vậy mã hết hạn hoặc bị
+   * Ban Quản Trị xoá là mất quyền ngay ở lần tải tiếp theo, không cần ai đi sửa
+   * hồ sơ từng người.
+   *
+   * `dangTaiQuyen` tồn tại để tránh một lỗi khó chịu: trong lúc chưa đọc xong
+   * dữ liệu thì danh sách mã còn rỗng, tính ra "chưa có quyền", và MỌI học viên
+   * — kể cả người có mã hợp lệ — bị đập màn nhập mã vào mặt trong một nhịp rồi
+   * mới biến mất. Thà chờ thêm một nhịp còn hơn doạ nhầm người đang học.
+   */
+  const [luotNhapMa, setLuotNhapMa] = useState([]);
+  const [maTheoId, setMaTheoId] = useState({});
+  const [dangTaiQuyen, setDangTaiQuyen] = useState(true);
+
+  useEffect(() => {
+    if (!currentUser?.email) {
+      setLuotNhapMa([]);
+      setMaTheoId({});
+      setDangTaiQuyen(false);
+      return;
+    }
+
+    setDangTaiQuyen(true);
+    const huy = listenToMyEnrollments(currentUser.email, (ds) => {
+      // `null` nghĩa là đọc hỏng. Để nguyên danh sách cũ thay vì xoá trắng:
+      // mạng chập chờn một nhịp không phải lý do để khoá người đang học.
+      if (ds !== null) setLuotNhapMa(ds);
+      setDangTaiQuyen(false);
+    });
+    return () => { if (typeof huy === 'function') huy(); };
+  }, [currentUser?.email]);
+
+  useEffect(() => {
+    let huy = false;
+    const ds = luotNhapMa.map((l) => l.ma).filter(Boolean);
+    if (ds.length === 0) { setMaTheoId({}); return; }
+
+    fetchAccessCodesByIds(ds).then((ket) => {
+      if (!huy) setMaTheoId(ket);
+    });
+    return () => { huy = true; };
+  }, [luotNhapMa]);
+
+  const quyenHoc = tinhQuyenHoc({
+    user: currentUser,
+    isAdmin,
+    luotNhap: luotNhapMa,
+    maTheoId,
+  });
+
+  const duocHocMain = quyenHoc.khoaMo.includes('main');
+  const duocHocTrade = quyenHoc.khoaMo.includes('trade');
+
+  // Chặn đường vào học. Đứng SAU bước hoàn tất hồ sơ: hỏi số điện thoại trước
+  // rồi mới hỏi mã, vì nếu mã hỏng thì Ban Quản Trị còn có đường gọi lại.
+  const canNhapMa =
+    !!currentUser && !needsProfileCompletion && !dangTaiQuyen && !quyenHoc.duocVao;
+
+
   // Điều kiện bắt buộc để mở khoá Trade Marketing: hoàn thành TOÀN BỘ khoá
   // Digital Marketing. Dùng phép so khớp theo id chứ không so độ dài mảng —
   // dữ liệu cũ trong máy có thể chứa id chuyên đề đã bị xoá, khiến đếm số
@@ -730,7 +796,19 @@ export default function App() {
     isAdmin || countMainCompleted(progress) === COURSE_MODULES.length;
 
   const mainCompletedCount = countMainCompleted(completedModules);
-  const isTradeCourseUnlocked = isTradeUnlockedFor(completedModules);
+  /* Khoá Trade mở khi học viên CÓ QUYỀN với nó, và thoả một trong hai đường:
+   *
+   *   - mua bằng mã  → vào thẳng, không bắt học xong khoá Digital Marketing.
+   *     Người trả tiền riêng cho Trade mà vẫn bị chặn là một lời hứa bị bẻ.
+   *   - lớp cũ       → giữ nguyên luật tuần tự đã có từ trước. Họ không mua mã,
+   *     nên không có gì để miễn luật cho họ, và đổi luật giữa chừng với người
+   *     đang học dở là lấy đi cái đích họ đang nhắm tới.
+   *
+   * Vế `duocHocTrade` đứng ngoài cùng là chốt chặn: học viên mua mã CHỈ cho
+   * khoá Digital Marketing thì học xong cũng không được mở sang Trade.
+   */
+  const isTradeCourseUnlocked =
+    duocHocTrade && (quyenHoc.nguon === 'ma' || isTradeUnlockedFor(completedModules));
 
   // Số chuyên đề Trade đã đạt, dùng làm điều kiện cấp bằng khoá Trade.
   // Đối chiếu theo id vì cùng lý do như trên: đếm độ dài mảng sẽ tính nhầm khi
@@ -2091,7 +2169,48 @@ export default function App() {
             )}
 
             {activeTab === 'course' && (
-              selectedModule ? (
+              // Cổng khoá của khoá chính, cùng lý do với cổng khoá Trade bên
+              // dưới: chặn ở chỗ kết xuất mới là chặn thật, ẩn nút trên menu
+              // chỉ là che giao diện.
+              //
+              // Nhánh này chỉ chạy với học viên mua mã CHỈ cho khoá Trade. Người
+              // chưa có mã nào đã bị màn nhập mã chặn từ trước, còn lớp cũ và
+              // quản trị viên luôn có đủ cả hai khoá.
+              !duocHocMain ? (
+                <div className="max-w-xl mx-auto text-center py-16 px-6 space-y-4">
+                  <div className="text-5xl">🔒</div>
+                  <h2 className="text-xl font-extrabold text-white">
+                    Mã của bạn chưa mở khoá Digital Marketing
+                  </h2>
+                  <p className="text-sm text-slate-300 leading-relaxed">
+                    Mã kích hoạt bạn đang dùng chỉ mở khoá <strong className="text-emerald-300">Trade
+                    Marketing</strong>. Để học thêm khoá Digital Marketing, liên hệ Ban Quản Trị
+                    để nhận mã phù hợp.
+                  </p>
+                  <div className="flex flex-wrap items-center justify-center gap-2 pt-1">
+                    <a
+                      href="https://zalo.me/0981813357"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-2.5 rounded-xl bg-sky-500/15 border border-sky-500/40 text-sky-200 text-xs font-bold hover:bg-sky-500/25 transition"
+                    >
+                      Zalo 0981813357
+                    </a>
+                    <a
+                      href="mailto:pmarcomvn@gmail.com?subject=Xin%20m%C3%A3%20kho%C3%A1%20Digital%20Marketing"
+                      className="px-4 py-2.5 rounded-xl bg-slate-800/70 border border-slate-600/60 text-slate-200 text-xs font-bold hover:bg-slate-700/70 transition"
+                    >
+                      pmarcomvn@gmail.com
+                    </a>
+                  </div>
+                  <button
+                    onClick={() => setActiveTab('trade')}
+                    className="text-xs font-bold text-emerald-400 hover:text-emerald-300 transition pt-1"
+                  >
+                    Vào khoá Trade Marketing của bạn →
+                  </button>
+                </div>
+              ) : selectedModule ? (
                 <div className="space-y-6 sm:space-y-8">
                   <LessonViewer
                     module={selectedModule}
@@ -2290,6 +2409,24 @@ export default function App() {
         isOpen={needsProfileCompletion && !!currentUser}
         user={currentUser}
         onComplete={handleCompleteProfile}
+        onLogout={handleLogout}
+      />
+
+      {/* Màn nhập mã kích hoạt.
+          Đặt SAU CompleteProfileModal và cũng ở z-[60]: khi cả hai cùng đủ điều
+          kiện thì bước hồ sơ phải xong trước, nên `canNhapMa` đã tự loại trừ
+          bằng `!needsProfileCompletion` thay vì chồng hai màn lên nhau. */}
+      <AccessCodeGate
+        isOpen={canNhapMa}
+        user={currentUser}
+        onRedeemed={() => {
+          // Không tự đặt cờ "đã mở" ở đây. Lượt nhập mới vừa ghi lên Firestore
+          // sẽ về qua listenToMyEnrollments, kéo theo bản ghi mã, và quyền được
+          // tính lại từ dữ liệu thật. Đặt cờ tại máy là tạo nguồn sự thật thứ
+          // hai — đúng thứ làm cho việc thu hồi mã mất tác dụng.
+          setActiveTab('course');
+          setSelectedModuleId(null);
+        }}
         onLogout={handleLogout}
       />
 

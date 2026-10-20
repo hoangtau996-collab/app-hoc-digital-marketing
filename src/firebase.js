@@ -31,7 +31,8 @@ import {
   query,
   orderBy,
   limit,
-  where
+  where,
+  runTransaction
 } from 'firebase/firestore';
 
 // Default Firebase Configuration for P MARCOM Academy
@@ -1749,6 +1750,245 @@ export async function saveCoverSliderConfig(intervalMs) {
     { intervalMs: normalizeCoverInterval(intervalMs), updatedAt: new Date().toISOString() },
     { merge: true }
   );
+}
+
+/* ==================================================================== *
+ * MÃ KÍCH HOẠT KHOÁ HỌC
+ *
+ * Hai bảng, cố ý tách rời (xem src/utils/accessCode.js để hiểu vì sao):
+ *
+ *   /access_codes/{MÃ}        bản thân mã — phạm vi, hạn dùng, số lượt
+ *   /enrollments/{id}         mỗi lượt nhập mã một tài liệu
+ *
+ * Mỗi lượt nhập một tài liệu riêng, KHÔNG gộp thành mảng trên một tài liệu của
+ * học viên. Mảng thì mỗi lần thêm phải ghi đè cả tài liệu, và luật Firestore
+ * không soi được từng phần tử bên trong mảng — tức là không chặn được việc tự
+ * ghi thêm một mã không có thật vào đó. Tài liệu riêng thì luật soi được từng
+ * lượt một, ngay lúc tạo.
+ * ==================================================================== */
+
+const MA_COLLECTION = 'access_codes';
+const LUOT_NHAP_COLLECTION = 'enrollments';
+
+/** Id tài liệu suy từ email, cùng phép biến đổi với recordStudentAccountToCloud. */
+function idTuEmail(email) {
+  return String(email || '').trim().toLowerCase().replace(/[^a-z0-9]/g, '_');
+}
+
+function doiRaMa(id, data) {
+  if (!data) return null;
+  return {
+    code: id,
+    khoa: Array.isArray(data.khoa) ? data.khoa : [],
+    hanDung: data.hanDung || '',
+    soLuot: Number(data.soLuot) || 0,
+    daDung: Number(data.daDung) || 0,
+    active: data.active !== false,
+    ghiChu: data.ghiChu || '',
+    createdAt: data.createdAt || '',
+    createdBy: data.createdBy || '',
+  };
+}
+
+/**
+ * Theo dõi toàn bộ kho mã. Chỉ quản trị viên đọc được (xem firestore.rules).
+ *
+ * Trả `null` khi lỗi để bảng quản trị phân biệt "chưa đọc được" với "đọc rồi,
+ * kho đang rỗng" — hai tình huống cần hiển thị khác hẳn nhau.
+ */
+export function listenToAccessCodes(callback) {
+  try {
+    return onSnapshot(
+      collection(db, MA_COLLECTION),
+      (snap) => {
+        const ds = [];
+        snap.forEach((d) => {
+          const ma = doiRaMa(d.id, d.data());
+          if (ma) ds.push(ma);
+        });
+        ds.sort((a, b) => String(b.createdAt).localeCompare(String(a.createdAt)));
+        callback(ds);
+      },
+      (err) => {
+        console.warn('Không đọc được kho mã:', err);
+        callback(null);
+      }
+    );
+  } catch (e) {
+    console.warn('listenToAccessCodes error', e);
+    callback(null);
+    return () => {};
+  }
+}
+
+/** Tạo mới hoặc sửa một mã. Chỉ quản trị viên. */
+export async function saveAccessCode(ma, boiEmail) {
+  const code = String(ma.code || '').trim().toUpperCase();
+  if (!code) throw new Error('Thiếu mã');
+
+  const payload = {
+    khoa: Array.isArray(ma.khoa) ? ma.khoa : [],
+    hanDung: ma.hanDung || '',
+    soLuot: Number(ma.soLuot) || 0,
+    active: ma.active !== false,
+    ghiChu: ma.ghiChu || '',
+    updatedAt: new Date().toISOString(),
+  };
+
+  // `daDung` chỉ đặt khi TẠO MỚI. Ghi đè nó lúc sửa sẽ xoá sạch số lượt đã
+  // phát ra, và mã hết lượt bỗng dưng dùng lại được — quản trị viên chỉ định
+  // sửa cái ghi chú mà vô tình mở lại cả một mã đã đóng.
+  const dangCo = await getDoc(doc(db, MA_COLLECTION, code));
+  if (!dangCo.exists()) {
+    payload.daDung = 0;
+    payload.createdAt = new Date().toISOString();
+    payload.createdBy = boiEmail || '';
+  }
+
+  await setDoc(doc(db, MA_COLLECTION, code), payload, { merge: true });
+  return code;
+}
+
+/**
+ * Xoá hẳn một mã.
+ *
+ * Lượt nhập của học viên KHÔNG bị xoá theo: đó là lịch sử, và yêu cầu đặt ra là
+ * thu hồi quyền chứ không phải xoá dấu vết người học. Quyền mất ngay vì phép
+ * tính trong accessCode.js không còn tìm thấy bản ghi mã.
+ */
+export async function deleteAccessCode(code) {
+  await deleteDoc(doc(db, MA_COLLECTION, String(code).trim().toUpperCase()));
+}
+
+/** Tải các mã theo danh sách id. Dùng cho học viên: họ chỉ đọc mã mình đã nhập. */
+export async function fetchAccessCodesByIds(danhSachMa) {
+  const ket = {};
+  const ds = [...new Set((danhSachMa || []).map((m) => String(m).trim().toUpperCase()))];
+
+  // Đọc từng tài liệu theo id, KHÔNG liệt kê cả collection: luật chỉ cho học
+  // viên `get` đúng mã họ đã nhập, lệnh liệt kê sẽ bị máy chủ từ chối thẳng.
+  await Promise.all(
+    ds.map(async (code) => {
+      if (!code) return;
+      try {
+        const snap = await getDoc(doc(db, MA_COLLECTION, code));
+        if (snap.exists()) ket[code] = doiRaMa(code, snap.data());
+      } catch (e) {
+        // Đọc hỏng thì để trống. accessCode.js coi mã không đọc được là mã
+        // chết, tức là chặn — sai theo hướng chặt, đúng như ý đồ ở đó.
+      }
+    })
+  );
+  return ket;
+}
+
+/** Theo dõi các lượt nhập mã của chính học viên đang đăng nhập. */
+export function listenToMyEnrollments(email, callback) {
+  const cleanEmail = String(email || '').trim().toLowerCase();
+  if (!cleanEmail) {
+    callback([]);
+    return () => {};
+  }
+
+  try {
+    // Bắt buộc lọc theo email: luật Firestore chỉ chấp nhận lệnh liệt kê khi
+    // bản thân truy vấn bảo đảm mọi tài liệu trả về đều của người gọi. Truy vấn
+    // không lọc bị từ chối thẳng chứ không phải lọc bớt rồi trả về.
+    return onSnapshot(
+      query(collection(db, LUOT_NHAP_COLLECTION), where('email', '==', cleanEmail)),
+      (snap) => {
+        const ds = [];
+        snap.forEach((d) => {
+          const v = d.data();
+          ds.push({ id: d.id, ma: v.ma, email: v.email, nhapLuc: v.nhapLuc || '' });
+        });
+        callback(ds);
+      },
+      (err) => {
+        console.warn('Không đọc được lượt nhập mã:', err);
+        callback(null);
+      }
+    );
+  } catch (e) {
+    console.warn('listenToMyEnrollments error', e);
+    callback(null);
+    return () => {};
+  }
+}
+
+/** Toàn bộ lượt nhập của mọi người — cho bảng quản trị. */
+export async function fetchAllEnrollments() {
+  try {
+    const snap = await getDocs(collection(db, LUOT_NHAP_COLLECTION));
+    const ds = [];
+    snap.forEach((d) => {
+      const v = d.data();
+      ds.push({ id: d.id, ma: v.ma, email: v.email, nhapLuc: v.nhapLuc || '' });
+    });
+    return ds;
+  } catch (e) {
+    console.warn('Không đọc được danh sách lượt nhập:', e);
+    return null;
+  }
+}
+
+/**
+ * Học viên nhập mã.
+ *
+ * CHẠY TRONG TRANSACTION, và đây không phải chuyện thừa cẩn thận. Mã có số lượt
+ * giới hạn; hai người bấm "Kích hoạt" cùng lúc trên mã còn đúng một lượt thì
+ * nếu đọc-rồi-ghi theo kiểu thường, cả hai cùng đọc thấy daDung = 9/10, cả hai
+ * cùng ghi 10, và mã 10 lượt phát ra 11 suất học. Transaction buộc lượt ghi thứ
+ * hai phải đọc lại và tính lại.
+ *
+ * Trả về { ok, loi, ma } thay vì ném lỗi: nơi gọi là một ô nhập liệu, cần hiển
+ * thị lời nhắn cho người dùng chứ không cần ngăn xếp lỗi.
+ */
+export async function redeemAccessCode(code, user) {
+  const ma = String(code || '').trim().toUpperCase();
+  const email = String(user?.email || '').trim().toLowerCase();
+
+  if (!ma) return { ok: false, loi: 'Chưa nhập mã.' };
+  if (!email) return { ok: false, loi: 'Chưa đăng nhập.' };
+
+  // Id ghép từ email và mã: cùng một người nhập lại đúng mã cũ sẽ đụng vào
+  // chính tài liệu đã có thay vì tạo thêm một lượt mới. Không có ràng buộc này
+  // thì một người bấm mười lần là ăn hết mười lượt của cả lớp.
+  const luotId = `${idTuEmail(email)}__${ma}`;
+
+  try {
+    return await runTransaction(db, async (tx) => {
+      const maRef = doc(db, MA_COLLECTION, ma);
+      const luotRef = doc(db, LUOT_NHAP_COLLECTION, luotId);
+
+      const maSnap = await tx.get(maRef);
+      if (!maSnap.exists()) return { ok: false, loi: 'khong-ton-tai' };
+
+      const banGhi = doiRaMa(ma, maSnap.data());
+
+      // Đã nhập mã này rồi thì cho qua, KHÔNG tính thêm lượt và KHÔNG báo lỗi.
+      // Học viên đổi máy hoặc xoá bộ nhớ trình duyệt sẽ gặp lại màn nhập mã, và
+      // bắt họ xin mã mới chỉ vì chuyện đó là hành người dùng.
+      const luotSnap = await tx.get(luotRef);
+      if (luotSnap.exists()) return { ok: true, ma: banGhi, daCo: true };
+
+      if (banGhi.active === false) return { ok: false, loi: 'tat' };
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(banGhi.hanDung)) return { ok: false, loi: 'hong' };
+      if (Date.now() > Date.parse(`${banGhi.hanDung}T23:59:59+07:00`)) return { ok: false, loi: 'het-han' };
+      if (banGhi.soLuot <= 0) return { ok: false, loi: 'hong' };
+      if (banGhi.daDung >= banGhi.soLuot) return { ok: false, loi: 'het-luot' };
+
+      tx.update(maRef, { daDung: banGhi.daDung + 1 });
+      tx.set(luotRef, { email, ma, nhapLuc: new Date().toISOString() });
+
+      return { ok: true, ma: { ...banGhi, daDung: banGhi.daDung + 1 } };
+    });
+  } catch (e) {
+    console.warn('redeemAccessCode error', e);
+    // Luật Firestore từ chối cũng rơi vào đây. Không nói "mã sai" vì chưa chắc
+    // sai mã — nói đúng thứ người dùng làm được: thử lại hoặc gọi hỗ trợ.
+    return { ok: false, loi: 'mang' };
+  }
 }
 
 export {

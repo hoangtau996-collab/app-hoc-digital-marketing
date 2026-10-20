@@ -238,6 +238,26 @@ npx firebase-tools deploy --only firestore:rules
 
 ⚠️ Bước `login` **bắt buộc phải chạy trong terminal mở được trình duyệt**. Phiên trợ lý AI không tự chạy được bước này — không có trình duyệt để hoàn tất OAuth — nên việc Publish rules luôn phải do người thật bấm.
 
+#### Mã kích hoạt khoá học — PHẢI Publish rules TRƯỚC khi đưa mã nguồn lên
+
+Hai collection mới: **`access_codes`** (kho mã) và **`enrollments`** (sổ lượt nhập mã).
+
+**Thứ tự deploy không được đảo.** Publish `firestore.rules` trước, rồi mới deploy ứng dụng. Làm ngược lại thì trong khoảng thời gian ở giữa, hai collection này chưa được khai báo nên rơi vào luật "Mặc định từ chối" ở cuối tệp — học viên mới đăng ký sẽ thấy màn nhập mã mà nhập mã nào cũng không được, còn Bảng Quản Trị thì không tạo nổi mã để cấp cho họ.
+
+Học viên cũ và quản trị viên KHÔNG bị ảnh hưởng trong khoảng đó: quyền của họ không cần đọc gì từ hai collection này (xem `duocMienMa` trong `src/utils/accessCode.js`).
+
+**Kiểm chứng ngay sau khi Publish**, theo đúng thứ tự:
+
+1. **Tạo mã.** Đăng nhập tài khoản quản trị → Bảng Quản Trị → nút **Mã Kích Hoạt** → bấm biểu tượng làm mới để sinh mã, chọn khoá, để nguyên hạn 90 ngày, số lượt 20 → **Tạo Mã**. Mã phải hiện ngay trong danh sách bên dưới với nhãn **Đang chạy**. Nếu báo "Không đọc được kho mã" thì rules chưa Publish.
+
+2. **Nhập mã.** Đăng ký một tài khoản học viên thử. Sau bước hoàn tất hồ sơ, màn **Nhập Mã Kích Hoạt** phải hiện ra và chặn đường vào học. Nhập mã vừa tạo → báo kích hoạt thành công và vào được lớp. Quay lại Bảng Quản Trị, mã đó phải nhảy lên **1/20 lượt**.
+
+3. **Thu hồi — phần quan trọng nhất.** Vẫn ở Bảng Quản Trị, bấm **Xoá** mã đó. Quay sang tài khoản học viên thử, tải lại trang: phải quay về màn nhập mã. Rồi vào lại Bảng Quản Trị kiểm tra: **học viên đó vẫn còn nguyên trong danh sách**, vẫn còn tiến độ và thông tin liên lạc. Đây là toàn bộ yêu cầu của tính năng — thu hồi quyền mà không xoá người — nên nếu chỉ kiểm chứng được một bước thì kiểm chứng bước này.
+
+4. **Hạn dùng.** Tạo một mã với hạn là ngày hôm nay, nhập thử bằng tài khoản học viên — phải vào được. (Muốn thử trường hợp hết hạn thì sửa hạn về ngày hôm qua trong Firebase Console rồi tải lại trang phía học viên.)
+
+⚠️ **Cú pháp rules chưa được kiểm tra bằng máy.** Môi trường làm việc không cài `firebase-tools` nên khối luật mới chỉ được rà bằng mắt. Nếu ô soạn thảo trên Console báo lỗi cú pháp lúc Publish, phần nhiều nằm ở hàm `conHanDung` — nó dùng cách cắt chuỗi `hanDung[0:4]` và `timestamp.date(...)` để đối chiếu hạn dùng theo giờ Việt Nam.
+
 #### Lần deploy sắp tới — hai thay đổi phải kiểm chứng ngay sau khi Publish
 
 **Cập nhật 2026-07-29: đã Publish.** Hai phần đầu đã kiểm chứng qua hành vi thật của ứng dụng; phần thứ ba vẫn **chưa ai thử**, xem mục 3.
