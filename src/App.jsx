@@ -2362,18 +2362,24 @@ export default function App() {
       )}
 
       {/* Certificate Modal */}
-      {/* Trợ lý Pipi - nút nổi góc phải, hiện ở mọi màn */}
-      <PipiChat
-        variant="fab"
-        onSelectModule={handleProtectedSelectModule}
-        setActiveTab={handleProtectedSelectTab}
-        setSearchQuery={setSearchQuery}
-        currentUser={currentUser}
-        onRequireLogin={() => {
-          setMigrationNotice('🔒 Đăng nhập tài khoản học viên để gửi lời nhắn tới Ban Quản Trị.');
-          setIsAuthOpen(true);
-        }}
-      />
+      {/* Trợ lý Pipi — nút nổi góc phải, hiện ở mọi màn TRỪ trang quản trị.
+          Pipi mở bài học, tra từ điển và nhắn tới Ban Quản Trị — ba việc của
+          học viên. Trên /quan-tri thì chính Ban Quản Trị đang ngồi đó, nên nút
+          này vừa thừa vừa che mất góc phải dưới, đúng chỗ bảng học viên có
+          thanh phân trang và cột Thao Tác. */}
+      {activeTab !== 'admin' && (
+        <PipiChat
+          variant="fab"
+          onSelectModule={handleProtectedSelectModule}
+          setActiveTab={handleProtectedSelectTab}
+          setSearchQuery={setSearchQuery}
+          currentUser={currentUser}
+          onRequireLogin={() => {
+            setMigrationNotice('🔒 Đăng nhập tài khoản học viên để gửi lời nhắn tới Ban Quản Trị.');
+            setIsAuthOpen(true);
+          }}
+        />
+      )}
 
       {/* Nhắc quay lại học khi lơ là quá 2 ngày */}
       <StudyReminderModal
