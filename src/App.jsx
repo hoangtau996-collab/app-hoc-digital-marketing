@@ -2553,8 +2553,14 @@ export default function App() {
         <footer className="border-t border-emerald-950 bg-[#0a1020] py-6 px-4 text-center text-xs text-slate-500">
           {/* Giới thiệu chéo các ứng dụng khác. Đặt TRÊN dòng bản quyền: dòng
               bản quyền là thứ đóng trang lại, có gì muốn mời thêm thì phải nói
-              trước nó. */}
-          <PartnerAppsBanner />
+              trước nó.
+
+              ẨN Ở TRANG QUẢN TRỊ. Dải này là quảng bá, nhắm vào học viên đang
+              đọc bài và có thể quan tâm sản phẩm khác. Quản trị viên vào
+              /quan-tri là để làm việc, không phải để được mời dùng thêm ứng
+              dụng — và năm tấm thẻ ảnh lớn nằm ngay dưới bảng mã chỉ làm trang
+              dài thêm mà không phục vụ việc gì đang làm. */}
+          {activeTab !== 'admin' && <PartnerAppsBanner />}
           <p>
             © 2026 HỌC VIỆN P MARCOM. Hệ thống Khóa Học Digital Thực Chiến.
           </p>
