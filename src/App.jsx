@@ -13,7 +13,7 @@ import CompleteProfileModal from './components/CompleteProfileModal';
 import UserProfileModal from './components/UserProfileModal';
 import DigitalGlossary from './components/DigitalGlossary';
 import FeatureMenuBar from './components/FeatureMenuBar';
-import AdminDashboardModal from './components/AdminDashboardModal';
+import AdminDashboardPage from './components/AdminDashboardPage';
 import CoverSlider from './components/CoverSlider';
 import CoverSliderModal from './components/CoverSliderModal';
 import SupportInboxModal from './components/SupportInboxModal';
@@ -129,7 +129,6 @@ export default function App() {
   const [isTradeCertOpen, setIsTradeCertOpen] = useState(false);
   const [isAuthOpen, setIsAuthOpen] = useState(false);
   const [isProfileOpen, setIsProfileOpen] = useState(false);
-  const [isAdminOpen, setIsAdminOpen] = useState(false);
   const [isCoverEditorOpen, setIsCoverEditorOpen] = useState(false);
   const [isReminderOpen, setIsReminderOpen] = useState(false);
   const [reminderIdleDays, setReminderIdleDays] = useState(0);
@@ -1233,6 +1232,16 @@ export default function App() {
       return { route: { tab, itemId: id, subId: null }, awaitingLogin: !!awaitingLogin };
     }
 
+    // Bảng Quản Trị không có mục con, nên bỏ qua hẳn `itemId`.
+    //
+    // CỐ Ý KHÔNG chặn người không phải quản trị viên ở đây. Lúc khôi phục địa
+    // chỉ từ thanh trình duyệt, phiên đăng nhập còn đang tải nên `isAdmin` chưa
+    // kịp đúng — chặn ở đây là đá văng chính quản trị viên vừa bấm F5 trên
+    // trang của họ. Việc chặn để trang đó tự lo, lúc ấy đã biết ai là ai.
+    if (tab === 'admin') {
+      return { route: { tab, itemId: null, subId: null }, awaitingLogin: false };
+    }
+
     // Ba tab còn lại không có cổng khoá, chỉ cần loại định danh không có thật —
     // tin mô phỏng do nút Live sinh ra chỉ nằm trong máy của chính người bấm,
     // nên liên kết loại đó gửi đi là chắc chắn rơi vào nhánh này.
@@ -1868,7 +1877,11 @@ export default function App() {
       setMigrationNotice('🔒 Khu vực này chỉ dành cho Ban Quản Trị Học Viện.');
       return;
     }
-    setIsAdminOpen(true);
+    // Điều hướng sang trang /quan-tri thay vì bật một hộp thoại. Nhờ vậy nút
+    // Quay Lại của trình duyệt hoạt động đúng, và địa chỉ dán được vào tin nhắn.
+    setActiveTab('admin');
+    setSelectedModuleId(null);
+    window.scrollTo({ top: 0 });
   };
 
   const handleProtectedSelectModule = (id) => {
@@ -2016,7 +2029,12 @@ export default function App() {
         t={t}
       />
 
-      {/* Feature Menu Bar (UX Navigation Bar) */}
+      {/* Feature Menu Bar (UX Navigation Bar)
+          Ẩn ở trang quản trị: đây là dải thẻ chức năng của khu vực HỌC — khoá
+          học, từ điển, công cụ. Để nó nằm trên Bảng Quản Trị thì nội dung quản
+          trị bị đẩy xuống gần hết màn hình đầu tiên, đổi lại chẳng phục vụ việc
+          gì đang làm. Thanh đầu trang vẫn còn, đủ để quay về. */}
+      {activeTab !== 'admin' && (
       <FeatureMenuBar
         activeTab={activeTab}
         setActiveTab={handleProtectedSelectTab}
@@ -2030,6 +2048,7 @@ export default function App() {
         lang={lang}
         t={t}
       />
+      )}
 
       {/*
         ẢNH BÌA TRANG CHỦ
@@ -2108,6 +2127,26 @@ export default function App() {
       )}
 
       {/* Main Container */}
+      {/* BẢNG QUẢN TRỊ LÀ MỘT TRANG RIÊNG, không dùng chung khung với khu vực
+          học. Hai lý do:
+
+          - Khung học bị bó `max-w-7xl` và có cột Sidebar 11 chuyên đề bên trái.
+            Bảng học viên mười hai cột nhét vào phần còn lại thì chỉ còn một khe
+            hẹp, đúng cái khó chịu cần dẹp.
+          - Danh sách chuyên đề chẳng liên quan gì tới việc quản trị. Để nó ở đó
+            là bắt mắt người dùng lọc bỏ một cột vô ích suốt buổi làm việc. */}
+      {activeTab === 'admin' ? (
+        <main className="flex-1 w-full">
+          <AdminDashboardPage
+            currentUser={currentUser}
+            trafficStats={trafficStats}
+            onIssueCertificateForStudent={handleAdminIssueCertificate}
+            onOpenCoverEditor={() => setIsCoverEditorOpen(true)}
+            onClose={() => handleProtectedSelectTab('course')}
+            t={t}
+          />
+        </main>
+      ) : (
       <main className="flex-1 max-w-7xl w-full mx-auto px-3 sm:px-6 lg:px-8 py-4 sm:py-8">
         <div className="flex flex-col lg:flex-row gap-4 sm:gap-8">
           
@@ -2320,6 +2359,7 @@ export default function App() {
 
         </div>
       </main>
+      )}
 
       {/* Certificate Modal */}
       {/* Trợ lý Pipi - nút nổi góc phải, hiện ở mọi màn */}
@@ -2443,16 +2483,8 @@ export default function App() {
         setTheme={setTheme}
       />
 
-      {/* Admin Master Dashboard Modal */}
-      <AdminDashboardModal
-        isOpen={isAdminOpen}
-        onClose={() => setIsAdminOpen(false)}
-        currentUser={currentUser}
-        trafficStats={trafficStats}
-        onIssueCertificateForStudent={handleAdminIssueCertificate}
-        onOpenCoverEditor={() => setIsCoverEditorOpen(true)}
-        t={t}
-      />
+      {/* Bảng Quản Trị đã thành trang riêng tại /quan-tri, không còn dựng ở đây
+          dưới dạng hộp thoại nổi. Xem nhánh `activeTab === 'admin'` phía trên. */}
 
       {/* Quản trị ảnh bìa trang chủ.
           Dựng có điều kiện `isAdmin` chứ không chỉ dựa vào cờ isOpen: ẩn nút mà

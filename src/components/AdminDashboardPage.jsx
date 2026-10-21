@@ -169,8 +169,7 @@ function RoleBadge({ role }) {
   );
 }
 
-export default function AdminDashboardModal({
-  isOpen,
+export default function AdminDashboardPage({
   onClose,
   currentUser,
   trafficStats,
@@ -290,7 +289,8 @@ export default function AdminDashboardModal({
   };
 
   useEffect(() => {
-    if (!isOpen) return;
+    // Trang chỉ được dựng khi quản trị viên đang đứng ở tab này, nên gắn vào
+    // lúc gắn component là đúng thời điểm.
 
     // Kho mã theo dõi liên tục: quản trị viên xoá một mã ở tab bên cạnh thì cột
     // quyền học ở bảng này phải đổi theo ngay, không phải đóng mở lại bảng.
@@ -298,7 +298,7 @@ export default function AdminDashboardModal({
     taiLaiLuotNhap();
 
     return () => { if (typeof huy === 'function') huy(); };
-  }, [isOpen]);
+  }, []);
 
   const maTheoId = useMemo(() => {
     const m = {};
@@ -443,52 +443,54 @@ export default function AdminDashboardModal({
     });
   };
 
+  // Gắn dữ liệu lúc dựng trang. Trang chỉ được dựng khi quản trị viên đang
+  // đứng ở tab Quản Trị, nên đây đúng là thời điểm cần tải.
   useEffect(() => {
-    if (isOpen) {
-      loadStudentsList();
-      loadAdminRoster().then(reconcileStats);
+    loadStudentsList();
+    loadAdminRoster().then(reconcileStats);
 
-      // Live subscription for all new student registrations on Cloud Firestore
-      const unsub = listenToAllStudentsFromCloud((cloudStudents) => {
-        if (cloudStudents && cloudStudents.length > 0) {
-          setStudents(prev => {
-            const emailMap = new Map();
-            [...SAMPLE_STUDENTS, ...prev, ...cloudStudents].forEach(item => {
-              if (item && item.email) {
-                const emailKey = item.email.toLowerCase();
-                const existing = emailMap.get(emailKey);
-                emailMap.set(emailKey, {
-                  ...existing,
-                  ...item,
-                  id: item.id || existing?.id || `user-${Date.now()}`,
-                  name: item.name || item.studentName || existing?.name || item.email.split('@')[0].toUpperCase(),
-                  phone: item.phone || existing?.phone || 'Chưa cập nhật',
-                  industry: item.industry || existing?.industry || 'Kinh doanh',
-                  completedModules: Array.isArray(item.completedModules) ? item.completedModules : (existing?.completedModules || []),
-                  createdAt: item.createdAt ? (typeof item.createdAt === 'string' ? item.createdAt : new Date(item.createdAt).toLocaleDateString('vi-VN')) : (existing?.createdAt || new Date().toLocaleDateString('vi-VN'))
-                });
-              }
-            });
-            // Lọc bia mộ ở đây nữa, nếu không listener realtime sẽ dựng lại
-            // học viên vừa xoá ngay khi Firestore đẩy dữ liệu về.
-            return withRootAdmins(filterDeleted(Array.from(emailMap.values())));
+    // Live subscription for all new student registrations on Cloud Firestore
+    const unsub = listenToAllStudentsFromCloud((cloudStudents) => {
+      if (cloudStudents && cloudStudents.length > 0) {
+        setStudents(prev => {
+          const emailMap = new Map();
+          [...SAMPLE_STUDENTS, ...prev, ...cloudStudents].forEach(item => {
+            if (item && item.email) {
+              const emailKey = item.email.toLowerCase();
+              const existing = emailMap.get(emailKey);
+              emailMap.set(emailKey, {
+                ...existing,
+                ...item,
+                id: item.id || existing?.id || `user-${Date.now()}`,
+                name: item.name || item.studentName || existing?.name || item.email.split('@')[0].toUpperCase(),
+                phone: item.phone || existing?.phone || 'Chưa cập nhật',
+                industry: item.industry || existing?.industry || 'Kinh doanh',
+                completedModules: Array.isArray(item.completedModules) ? item.completedModules : (existing?.completedModules || []),
+                createdAt: item.createdAt ? (typeof item.createdAt === 'string' ? item.createdAt : new Date(item.createdAt).toLocaleDateString('vi-VN')) : (existing?.createdAt || new Date().toLocaleDateString('vi-VN'))
+              });
+            }
           });
-        }
-      });
+          // Lọc bia mộ ở đây nữa, nếu không listener realtime sẽ dựng lại
+          // học viên vừa xoá ngay khi Firestore đẩy dữ liệu về.
+          return withRootAdmins(filterDeleted(Array.from(emailMap.values())));
+        });
+      }
+    });
 
-      return () => unsub();
-    }
-  }, [isOpen]);
+    return () => unsub();
+  }, []);
 
-  if (!isOpen) return null;
-
-  // Tầng chặn cuối. Kể cả khi isOpen bị bật bằng cách khác (sửa state qua
-  // devtools, lỗi truyền props), modal vẫn không được phép hiển thị danh sách
-  // học viên cho người không phải quản trị viên.
+  // Tầng chặn cuối. Kể cả khi người ta gõ thẳng địa chỉ /quan-tri vào thanh
+  // địa chỉ, trang vẫn không được phép hiển thị danh sách học viên cho người
+  // không phải quản trị viên.
+  //
+  // Đây chỉ là lớp chặn giao diện. Ranh giới thật nằm ở firestore.rules: không
+  // có bản ghi trong sổ /admins thì máy chủ từ chối trả về dữ liệu học viên,
+  // bất kể trình duyệt vẽ ra cái gì.
   if (currentUser?.role !== 'admin') {
     return (
-      <div className="fixed inset-0 z-[60] flex items-center justify-center p-4 bg-slate-950/85 backdrop-blur-md">
-        <div className="w-full max-w-sm glass-panel rounded-3xl border border-rose-500/50 p-7 text-center space-y-4 shadow-2xl">
+      <div className="w-full max-w-sm mx-auto px-4 py-16">
+        <div className="w-full glass-panel rounded-3xl border border-rose-500/50 p-7 text-center space-y-4 shadow-2xl">
           <div className="w-16 h-16 rounded-2xl bg-rose-950/80 border border-rose-500/50 flex items-center justify-center mx-auto text-rose-400">
             <ShieldCheck className="w-8 h-8" />
           </div>
@@ -1190,13 +1192,21 @@ export default function AdminDashboardModal({
     setIsCertGenOpen(false);
   };
 
+  /* TRANG RIÊNG, KHÔNG CÒN LÀ HỘP THOẠI NỔI.
+   *
+   * Bản trước nhốt cả bảng quản trị vào một khung `h-[94dvh]` nổi giữa màn
+   * hình. Hệ quả là hai thanh cuộn lồng nhau — cuộn trang và cuộn trong hộp —
+   * và chiều cao bị khoá cứng nên bảng học viên chỉ hở ra vài dòng dù màn hình
+   * còn thừa chỗ. Nhìn một danh sách vài chục người qua khe hẹp đó rất mệt.
+   *
+   * Ở trang riêng thì chiều cao do nội dung quyết định, trang cuộn tự nhiên như
+   * mọi trang khác, và chiều ngang nới ra 1600px để bảng mười hai cột thở được
+   * trên laptop. Các hộp thoại con bên trong (tạo chứng nhận, xem khảo sát) vẫn
+   * nổi như cũ — chúng đúng là việc tạm, làm xong thì đóng.
+   */
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-slate-950/90 backdrop-blur-md overflow-y-auto">
-      {/* `dvh` chứ không `vh`: trên trình duyệt điện thoại, `vh` tính theo màn
-          hình lúc thanh địa chỉ đã thu lại, nên `94vh` thực tế cao hơn phần
-          nhìn thấy được — đáy hộp thoại, tức hàng nút thao tác, nằm khuất dưới
-          thanh địa chỉ ngay khi vừa mở. `dvh` bám theo vùng nhìn thấy thật. */}
-      <div className="relative w-full max-w-6xl h-[94dvh] max-h-[980px] glass-panel rounded-3xl border border-emerald-500/40 p-3 sm:p-6 shadow-2xl space-y-3.5 my-auto flex flex-col">
+    <div className="w-full max-w-[1600px] mx-auto px-3 sm:px-5 lg:px-8 py-4 sm:py-6">
+      <div className="relative w-full glass-panel rounded-3xl border border-emerald-500/40 p-3 sm:p-6 shadow-2xl space-y-3.5 flex flex-col">
         
         {/* Modal Top Bar Header */}
         <div className="flex items-start sm:items-center justify-between gap-3 pb-3 border-b border-emerald-900/50 shrink-0">
@@ -1221,12 +1231,16 @@ export default function AdminDashboardModal({
             </div>
           </div>
 
+          {/* Nút chữ chứ không còn dấu ✕. Dấu ✕ nói "đóng cái đang đè lên màn
+              hình", đúng với hộp thoại nhưng sai với một trang — ở trang, việc
+              người dùng làm là ĐI chỗ khác, nên nút phải nói đi đâu. */}
           <button
             onClick={onClose}
-            className="w-8 h-8 rounded-full bg-slate-900 border border-emerald-900 text-slate-400 hover:text-white flex items-center justify-center transition cursor-pointer shrink-0"
-            title="Đóng bảng quản trị"
+            className="px-3 py-1.5 rounded-xl bg-slate-900 border border-emerald-800 text-slate-300 hover:text-white hover:border-emerald-500 text-xs font-bold flex items-center gap-1.5 transition cursor-pointer shrink-0"
+            title="Quay lại khu vực học"
           >
-            <X className="w-4 h-4" />
+            <X className="w-3.5 h-3.5" />
+            <span className="hidden sm:inline">Về Trang Học</span>
           </button>
         </div>
 
@@ -1557,7 +1571,15 @@ export default function AdminDashboardModal({
             `min-h` hạ xuống trên màn nhỏ: 460px là gần trọn chiều cao một màn
             hình điện thoại. Ép sàn cao như vậy trong khung `h-[94dvh]` thì các
             hàng phía trên (bốn thẻ số liệu, ô lọc, hàng nút) bị đẩy ra ngoài. */}
-        <div className="flex-1 min-h-[220px] sm:min-h-[460px] overflow-auto overscroll-contain rounded-2xl border border-emerald-900/50 glass-panel">
+        {/* CHỈ CUỘN NGANG, không cuộn dọc.
+            Bảng rộng 1040px nên trên màn hẹp vẫn phải kéo ngang — bỏ cuộn ngang
+            đi thì cột Thao Tác nằm ngoài màn hình vĩnh viễn mà không có thanh
+            cuộn nào chỉ ra điều đó.
+            Nhưng chiều dọc thì để trang tự cuộn. Khung cuộn dọc lồng trong
+            trang là thứ gây khó chịu nhất ở bản hộp thoại cũ: hai thanh cuộn
+            cạnh nhau, lăn chuột không biết cái nào chạy, và danh sách vài chục
+            người bị ép nhìn qua một khe cao 460px. */}
+        <div className="overflow-x-auto rounded-2xl border border-emerald-900/50 glass-panel">
           <table className="w-full text-left border-collapse min-w-[1040px]">
             <thead>
               <tr className="bg-slate-900/90 text-emerald-400 text-[11px] font-extrabold uppercase tracking-wider border-b border-emerald-900/50 sticky top-0 backdrop-blur-md z-10">
@@ -1860,7 +1882,7 @@ export default function AdminDashboardModal({
             cuộn được sau lưng bảng trên, đóng bảng trên xong thì rơi lại vào
             một trang đã trôi mất chỗ cũ. */}
         {tab === 'ma' && (
-          <div className="flex-1 min-h-0 overflow-y-auto overscroll-contain pr-1">
+          <div className="w-full">
             <AccessCodeManager
               adminEmail={currentUser?.email}
               luotNhap={luotNhapTatCa}
@@ -1871,7 +1893,7 @@ export default function AdminDashboardModal({
 
         {/* ---- TAB CHỨNG NHẬN ---- */}
         {tab === 'chung-nhan' && (
-          <div className="flex-1 min-h-0 overflow-y-auto overscroll-contain pr-1 space-y-4">
+          <div className="w-full space-y-4">
             <div className="p-4 rounded-2xl bg-slate-900/60 border border-amber-500/40 space-y-3">
               <h3 className="text-xs font-extrabold text-amber-300 flex items-center gap-2">
                 <Award className="w-4 h-4" /> Cấp Bằng Chứng Nhận
@@ -1923,7 +1945,7 @@ export default function AdminDashboardModal({
 
         {/* ---- TAB HỆ THỐNG ---- */}
         {tab === 'he-thong' && (
-          <div className="flex-1 min-h-0 overflow-y-auto overscroll-contain pr-1 space-y-4">
+          <div className="w-full space-y-4">
             <div className="p-4 rounded-2xl bg-slate-900/60 border border-cyan-700/50 space-y-3">
               <h3 className="text-xs font-extrabold text-cyan-300 flex items-center gap-2">
                 <ShieldCheck className="w-4 h-4" /> Kiểm Tra Kết Nối Cloud

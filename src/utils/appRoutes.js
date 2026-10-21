@@ -30,6 +30,7 @@
  */
 export const TAB_SEGMENTS = {
   course: 'digital-marketing',
+  admin: 'quan-tri',
   trade: 'trade-marketing',
   glossary: 'thuat-ngu',
   news: 'ban-tin',
@@ -66,6 +67,7 @@ export const HOME_ROUTE = { tab: 'course', itemId: null };
 /** Tên từng khu vực, dùng cho tiêu đề tab trình duyệt và dấu trang. */
 export const TAB_TITLES = {
   course: 'Khoá Digital Marketing',
+  admin: 'Bảng Quản Trị',
   trade: 'Khoá Trade Marketing',
   glossary: 'Từ Điển Thuật Ngữ',
   news: 'Bản Tin Thuật Toán',
