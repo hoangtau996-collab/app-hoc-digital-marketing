@@ -36,13 +36,16 @@ Trong vai trò Trưởng phòng Digital Marketing, sai lầm phổ biến nhất
         title: "2. Khung phân bổ 60/40 cho Trưởng Phòng",
         content: `### Mô hình phân bổ ngân sách chuẩn hóa theo ngành hàng
 
-Theo nghiên cứu kinh điển về hiệu quả quảng cáo của Les Binet & Peter Field, tỷ lệ vàng cân bằng giữa xây dựng thương hiệu (Brand Building) và thúc đẩy bán hàng (Sales Activation) là 60% Brand : 40% Performance cho đa số doanh nghiệp B2C.
+Từ cơ sở dữ liệu hiệu quả quảng cáo của IPA, Les Binet & Peter Field (The Long and the Short of It, 2013) thấy rằng trung bình khoảng 60% ngân sách cho xây dựng thương hiệu (Brand Building) và 40% cho kích hoạt bán hàng (Sales Activation) cho hiệu quả dài hạn tốt nhất. Đây là điểm xuất phát, không phải hằng số: tỷ lệ thay đổi theo ngành, giai đoạn thương hiệu và mô hình kinh doanh. Lưu ý: phân loại theo mục tiêu của hoạt động (xây trí nhớ dài hạn hay kích hoạt mua ngắn hạn), không theo kênh. Một video TikTok vẫn có thể là Brand Building.
 
-#### Tỷ lệ điều chỉnh linh hoạt theo mô hình kinh doanh:
-1. Thương mại điện tử & Bán lẻ (E-commerce / Retail): Phân bổ 40% Brand - 60% Performance để tối ưu dòng tiền và chuyển đổi trực tiếp.
-2. Sản phẩm giá trị cao & Bất động sản (High-ticket / Luxury): Phân bổ 70% Brand - 30% Performance vì khách hàng mất nhiều thời gian cân nhắc và yếu tố niềm tin là số 1.
-3. Hàng tiêu dùng nhanh (FMCG): Phân bổ 70% Brand - 30% Performance để đảm bảo sự hiện diện liên tục trên các điểm bán và kênh số.
-4. Doanh nghiệp khởi nghiệp (Startup): Phân bổ 20% Brand - 80% Performance ở giai đoạn đầu để chứng minh hiệu quả sản phẩm, sau đó nâng dần tỷ lệ Brand khi mở rộng quy mô.`,
+#### Tham chiếu tỷ lệ theo ngành (Binet & Field, Effectiveness in Context 2018):
+1. FMCG và hàng lâu bền: khoảng 60% Brand - 40% Activation.
+2. Dịch vụ tài chính: khoảng 80% Brand - 20% Activation, vì khách hàng mất nhiều thời gian cân nhắc và niềm tin là yếu tố then chốt.
+3. Dịch vụ mua theo dịp như du lịch, đồ ăn nhanh: khoảng 48% Brand - 52% Activation.
+4. B2B: khoảng 46% Brand - 54% Activation (The 5 Principles of Growth in B2B Marketing, 2019). Theo nghiên cứu, tỷ lệ Activation tối ưu hiếm khi vượt 55-56%.
+
+#### Kinh nghiệm thực chiến (không phải kết quả của Binet & Field):
+- Thương mại điện tử nhỏ và Startup giai đoạn đầu thường phải nghiêng về Performance (có khi tới 60-80%) vì ràng buộc dòng tiền và cần chứng minh hiệu quả sản phẩm. Hãy coi đây là lựa chọn tạm thời và nâng dần tỷ lệ Brand khi mở rộng quy mô.`,
         takeaway: "Không có tỷ lệ cố định duy nhất, Trưởng phòng cần căn chỉnh theo giai đoạn phát triển và biên lợi nhuận của sản phẩm."
       },
       {
@@ -81,22 +84,25 @@ Phương án A - Dồn 100% vào Performance:
 
 * Ngân sách: 300 triệu, toàn bộ chạy chuyển đổi.
 * Tệp có nhu cầu ngay ước tính 5% của 200.000 người tiếp cận, tương đương 10.000 người.
-* CPA trung bình 1.500.000 đồng, thu về 200 đơn hàng.
+* Tháng 1 đến 6: CPA trung bình 1.500.000 đồng, thu về 200 đơn hàng.
 * Doanh thu 200 đơn nhân 4.000.000 đồng bằng 800 triệu. ROAS bằng 2,67 lần.
+* Tháng 7 đến 12 (giả định): tệp khách nhận biết sẵn cạn dần, CPA tăng lên 2.000.000 đồng, chỉ còn 150 đơn, doanh thu 600 triệu. ROAS còn 2,0 lần.
 
 Phương án B - Chia 40% Brand và 60% Performance:
 
 * Performance 180 triệu, Brand 120 triệu.
 * Tháng 1 đến 3: CPA chưa cải thiện, chỉ còn 120 đơn, doanh thu 480 triệu. Nhìn qua thì kém hơn phương án A.
+* Tháng 4 đến 6 (giả định cải thiện đều): doanh thu khoảng 570, 660 rồi 750 triệu.
 * Tháng 7 đến 12: nhờ lượng nhận biết tích luỹ, tỷ lệ chuyển đổi tăng và CPA giảm còn 1.050.000 đồng. Với 180 triệu thu về 171 đơn, cộng thêm khoảng 40 đơn đến từ tìm kiếm thương hiệu và truy cập trực tiếp mà không tốn phí quảng cáo.
-* Tổng 211 đơn với chi phí quảng cáo 300 triệu, doanh thu 844 triệu. ROAS bằng 2,81 lần và vẫn đang tăng.
+* Tổng 211 đơn, doanh thu 844 triệu trên tổng chi marketing 300 triệu, tức hiệu suất marketing tổng (MER) 2,81 lần. Riêng phần Performance: 171 đơn, 684 triệu trên 180 triệu, ROAS 3,8 lần.
+* MER đo toàn bộ doanh thu trên toàn bộ chi marketing, dùng để đánh giá cả hệ thống. ROAS chỉ tính doanh thu do quảng cáo tạo ra, dùng để tối ưu từng kênh. 40 đơn tự nhiên không thuộc ROAS.
 
 #### Điều con số trên nói với bạn
 
 1. Trong 3 tháng đầu, phương án B **luôn trông có vẻ tệ hơn**. Đây chính là lý do đa số Trưởng phòng bị Ban Giám Đốc ép cắt Brand đúng vào lúc nó sắp phát huy tác dụng.
-2. Điểm hoà vốn giữa hai phương án thường rơi vào **tháng thứ 5 đến thứ 8**. Khi trình kế hoạch, bạn phải nói trước mốc thời gian này, nếu không mọi cuộc họp tháng 3 sẽ trở thành phiên xét xử.
-3. Phần 40 đơn đến từ Organic và Direct là **tài sản**, không phải chi phí. Nó vẫn chạy kể cả tháng nào bạn tắt quảng cáo.`,
-        takeaway: "Khi Ban Giám Đốc đòi cắt ngân sách Brand, đừng tranh luận bằng quan điểm. Hãy trình bảng so sánh CPA theo 12 tháng và chỉ rõ mốc hoà vốn tháng thứ 5 đến thứ 8."
+2. Phải phân biệt hai mốc. **Giao cắt theo tháng** (doanh thu tháng của B vượt A) trong ví dụ này rơi vào tháng thứ 7. **Hoà vốn lũy kế** đến muộn hơn nhiều: B hụt khoảng 1,38 tỷ sau 6 tháng, mỗi tháng sau đó gỡ lại 244 triệu, nên chỉ cân bằng vào khoảng tháng thứ 12. Nếu CPA của A không tăng, B hơn A chỉ 44 triệu/tháng và sau 12 tháng vẫn kém lũy kế khoảng 1,1 tỷ, phải hơn 3 năm mới hoà vốn. Các mốc này phụ thuộc hoàn toàn vào giả định, nên hãy tự lập bảng lũy kế 12 đến 24 tháng với số liệu doanh nghiệp và nói trước rằng giai đoạn đầu B sẽ trông kém hơn, nếu không mọi cuộc họp tháng 3 sẽ trở thành phiên xét xử.
+3. Phần 40 đơn đến từ Organic và Direct là **tài sản**, không phải chi phí. Nó không mất ngay khi bạn tạm dừng quảng cáo, nhưng sẽ hao mòn dần nếu cắt brand lâu dài.`,
+        takeaway: "Khi Ban Giám Đốc đòi cắt ngân sách Brand, đừng tranh luận bằng quan điểm. Hãy trình bảng so sánh CPA và doanh thu lũy kế theo 12 đến 24 tháng, phân biệt rõ mốc giao cắt theo tháng với mốc hoà vốn lũy kế, đừng hứa trước một mốc cố định."
       }
     ],
     quiz: [
@@ -110,7 +116,7 @@ Phương án B - Chia 40% Brand và 60% Performance:
           "Cắt giảm toàn bộ quảng cáo trả phí, chỉ làm bài viết website SEO"
         ],
         correct: 1,
-        explanation: "Với sản phẩm giá trị cao (High-ticket), yếu tố niềm tin (Trust) và độ uy tín thương hiệu chiếm 70% quyết định mua hàng. Quảng cáo ép chốt ngay (Performance thuần túy) sẽ có CPL cao và tỷ lệ hủy đơn lớn."
+        explanation: "Với sản phẩm giá trị cao và chu kỳ cân nhắc 3-6 tháng, khách hàng cần thời gian và bằng chứng để tin tưởng. Ngân sách nên nghiêng về xây dựng thương hiệu và nội dung uy tín, kết hợp nuôi dưỡng lead và retargeting. Quảng cáo ép chốt ngay (Performance thuần túy) thường cho CPL cao và tỷ lệ hủy đơn lớn."
       },
       {
         id: "q1_2",
@@ -153,12 +159,12 @@ Phương án B - Chia 40% Brand và 60% Performance:
         question: "Trong ví dụ so sánh 2 phương án ngân sách, vì sao phần đơn hàng đến từ Organic Search và Direct Traffic được coi là tài sản chứ không phải chi phí?",
         options: [
           "Vì nó được Google và Meta tài trợ miễn phí cho doanh nghiệp lớn",
-          "Vì nó vẫn tiếp tục tạo ra đơn hàng ngay cả trong tháng doanh nghiệp tắt quảng cáo trả phí",
+          "Vì nó là kết quả của nhận biết tích luỹ, không mất ngay khi doanh nghiệp tạm tắt quảng cáo trả phí",
           "Vì kế toán ghi nhận khoản này vào mục doanh thu tài chính",
           "Vì chi phí tạo ra nó luôn bằng 0 ngay từ đầu"
         ],
         correct: 1,
-        explanation: "Lượng truy cập tự nhiên và trực tiếp sinh ra từ nhận biết thương hiệu đã tích luỹ. Nó không tắt theo ngân sách quảng cáo, nên mang đặc tính của tài sản: đầu tư một lần, sinh lợi nhiều kỳ."
+        explanation: "Lượng truy cập tự nhiên và trực tiếp là kết quả của nhận biết thương hiệu đã tích luỹ, nên không tắt ngay khi dừng quảng cáo và mang đặc tính của tài sản. Tuy nhiên tài sản này hao mòn dần nếu không được nuôi: nghiên cứu Ehrenberg-Bass ghi nhận doanh số giảm trung bình 16% sau 1 năm và 25% sau 2 năm ngừng quảng cáo."
       }
     ]
   },
@@ -188,7 +194,8 @@ Phương án B - Chia 40% Brand và 60% Performance:
 #### 2. Outbound Marketing (Marketing Loa Phường - Chiến Lược Đẩy)
 * Triết lý: Đưa thông điệp sản phẩm đến tệp khách hàng tiềm năng một cách chủ động, trực diện và nhanh chóng.
 * Kênh triển khai: Paid Ads trên Meta, Google Display, TikTok Ads, Booking Influencers và Display Banners.
-* Đặc điểm: Đạt quy mô tiếp cận nhanh chóng trong thời gian ngắn, nhưng doanh thu dừng lại ngay khi ngắt ngân sách quảng cáo.`,
+* Đặc điểm: Đạt quy mô tiếp cận nhanh chóng trong thời gian ngắn, nhưng doanh thu từ quảng cáo chuyển đổi sụt rất nhanh, thường trong vài ngày đến vài tuần, khi ngắt ngân sách. Quảng cáo xây thương hiệu có hiệu ứng kéo dài hơn nhưng cũng hao mòn dần.
+* Tuân thủ: Outbound chỉ dùng dữ liệu có sự đồng ý hợp lệ của chủ thể dữ liệu. Từ 1/1/2026, Luật Bảo vệ dữ liệu cá nhân số 91/2025/QH15 cấm mua bán dữ liệu cá nhân, nên danh sách số điện thoại, email mua ngoài không được dùng để gọi hay nhắn quảng cáo.`,
         takeaway: "Inbound tạo nền móng tài sản bền vững, Outbound tạo bệ phóng tăng trưởng doanh thu ngắn hạn."
       },
       {
@@ -236,10 +243,12 @@ Kênh Inbound - Nội dung, SEO, cộng đồng:
 
 Sau 12 tháng, hai kênh cho tổng lượng khách gần bằng nhau. Điều khác biệt nằm ở **tháng thứ 13**:
 
-* Outbound tháng 13: dừng chi thì về 0 khách. Chi phí mỗi khách vẫn đang tăng.
+* Outbound tháng 13: dừng chi thì lượng khách sụt rất nhanh, chỉ còn chút dư âm trong vài tuần rồi gần như cạn. Chi phí mỗi khách vẫn đang tăng.
 * Inbound tháng 13: kho nội dung vẫn chạy, chi phí mỗi khách tiếp tục giảm, và phần lớn lưu lượng không còn phụ thuộc giá thầu quảng cáo.
 
-Đổi lại, Inbound có ba rủi ro thật sự phải nói rõ với Ban Giám Đốc: cần dòng tiền chịu lỗ 6 tháng đầu, phụ thuộc thuật toán tìm kiếm có thể thay đổi, và rất khó tăng tốc gấp khi cần doanh thu đột biến.`,
+Đổi lại, Inbound có ba rủi ro thật sự phải nói rõ với Ban Giám Đốc: cần dòng tiền chịu lỗ 6 tháng đầu, phụ thuộc thuật toán tìm kiếm có thể thay đổi, và rất khó tăng tốc gấp khi cần doanh thu đột biến.
+
+Rủi ro thuật toán đã rõ hơn từ 2025: Google AI Overviews, AI Mode (đã có tại Việt Nam) và các trợ lý AI trả lời trực tiếp nhiều truy vấn, làm giảm click vào website. Nghiên cứu của Pew Research (7/2025) cho thấy khi có tóm tắt AI, người dùng chỉ nhấp vào kết quả ở 8% số lượt, so với 15% khi không có. Inbound năm 2026 cần đo thêm mức độ thương hiệu được AI nhắc tới và trích dẫn (GEO/AEO), không chỉ thứ hạng và traffic, đồng thời ưu tiên nội dung có dữ liệu độc quyền, chuyên môn thực và kênh sở hữu (email, cộng đồng) ít phụ thuộc tìm kiếm.`,
         takeaway: "Đừng hỏi kênh nào rẻ hơn. Hãy hỏi doanh nghiệp có đủ dòng tiền chịu lỗ 6 tháng đầu của Inbound hay không. Nếu không, Outbound là lựa chọn bắt buộc chứ không phải lựa chọn tối ưu."
       }
     ],
@@ -254,14 +263,14 @@ Sau 12 tháng, hai kênh cho tổng lượng khách gần bằng nhau. Điều k
           "Gửi Email hàng loạt không cá nhân hóa tới danh sách dữ liệu tự thu thập"
         ],
         correct: 1,
-        explanation: "Bài viết chuẩn SEO giải quyết đúng nỗi đau là ví dụ điển hình của Inbound Marketing: Khách hàng chủ động tìm kiếm giải pháp và tìm thấy bài viết của bạn."
+        explanation: "Bài viết chuẩn SEO giải quyết đúng nỗi đau là ví dụ điển hình của Inbound Marketing: Khách hàng chủ động tìm kiếm giải pháp và tìm thấy bài viết của bạn. Lưu ý: mua danh sách số điện thoại để gọi hoặc nhắn quảng cáo không chỉ là Outbound mà còn vi phạm Luật Bảo vệ dữ liệu cá nhân 2025 (cấm mua bán dữ liệu cá nhân, phạt tới 10 lần khoản thu từ vi phạm) và quy định chống cuộc gọi rác."
       },
       {
         id: "q2_2",
         question: "Nhược điểm lớn nhất nếu doanh nghiệp chỉ phụ thuộc hoàn toàn vào Outbound Paid Ads là gì?",
         options: [
           "Không thể chủ động kiểm soát số lượng đơn hàng trong ngày",
-          "Giá thầu quảng cáo tăng theo thời gian và doanh thu dừng ngay lập tức khi tắt ngân sách quảng cáo",
+          "Giá thầu quảng cáo tăng theo thời gian và doanh thu từ quảng cáo chuyển đổi sụt nhanh khi tắt ngân sách",
           "Khách hàng không bao giờ nhấn vào quảng cáo hình ảnh",
           "Không thể đo lường chỉ số ROI của chiến dịch"
         ],
@@ -325,7 +334,7 @@ Sau 12 tháng, hai kênh cho tổng lượng khách gần bằng nhau. Điều k
 
 1. Phương pháp Tỷ lệ % Doanh thu (Percentage of Sales): Lấy một tỷ lệ cố định trên doanh thu dự kiến. Mốc tham chiếu quốc tế: khảo sát CMO năm 2024 và 2025 của Gartner ghi nhận ngân sách marketing trung bình ở mức **7,7% doanh thu doanh nghiệp**, giảm mạnh so với mức khoảng 11% của giai đoạn trước dịch. Tỷ lệ thực tế dao động rộng theo ngành, thường cao hơn ở hàng tiêu dùng và dịch vụ, thấp hơn ở sản xuất công nghiệp. Phương pháp này an toàn tài chính nhưng bị động khi có cơ hội lớn, và có một khiếm khuyết logic: ngân sách giảm đúng vào lúc doanh thu giảm, tức là cắt marketing đúng lúc cần nó nhất.
 2. Phương pháp Theo Đối thủ (Competitor Parity): Dựa trên chi tiêu ước tính của đối thủ cạnh tranh cùng phân khúc. Nhược điểm là dễ rơi vào cuộc chiến đốt tiền nếu tiềm lực tài chính không tương đồng.
-3. Phương pháp Theo Mục tiêu & Nhiệm vụ (Objective & Task Method - Khuyên dùng): Tính toán bằng công thức Ngân sách = (Số khách hàng mục tiêu x Chi phí CAC dự kiến) + Chi phí vận hành cố định. Phương pháp này giúp giải trình minh bạch từng đồng ngân sách với Giám đốc Tài chính.`,
+3. Phương pháp Theo Mục tiêu & Nhiệm vụ (Objective & Task Method - Khuyên dùng): Tính toán bằng công thức Ngân sách = (Số khách hàng mục tiêu x CPA quảng cáo dự kiến) + Chi phí vận hành cố định. Lưu ý: nếu dùng CAC đầy đủ (đã gồm nhân sự, công cụ, nội dung) thì không cộng thêm chi phí vận hành để tránh tính trùng. Phương pháp này giúp giải trình minh bạch từng đồng ngân sách với Giám đốc Tài chính.`,
         takeaway: "Lập ngân sách theo Mục tiêu & Nhiệm vụ là vũ khí giúp Trưởng phòng bảo vệ kế hoạch trước Ban Giám Đốc."
       },
       {
@@ -378,14 +387,14 @@ So sánh hai cách để giảm chi phí:
 * Giảm chi phí mỗi khách thô từ 180.000 xuống 160.000 đồng, tức tối ưu quảng cáo 11%: tiết kiệm khoảng 42 triệu.
 * Nâng tỷ lệ chốt từ 12% lên 14%, tức đào tạo lại đội tư vấn: số khách cần giảm còn 1.786, tiết kiệm khoảng 54 triệu.
 
-Trưởng phòng giỏi luôn kiểm tra tầng dưới phễu trước khi xin thêm tiền cho tầng trên.`,
+Về toán học, hai đòn bẩy này đối xứng: giảm chi phí mỗi khách thô 14,3% (xuống khoảng 154.000 đồng) cũng tiết kiệm đúng khoảng 54 triệu. Điểm khác nằm ở chi phí và độ khả thi: tối ưu thêm 14% trên một tài khoản quảng cáo đã tối ưu thường rất khó, còn nâng tỷ lệ chốt bằng đào tạo kịch bản tư vấn và phản hồi khách trong 5 phút thường rẻ hơn. Hãy ưu tiên tầng có dư địa cải thiện lớn nhất với chi phí thấp nhất, và Trưởng phòng giỏi luôn kiểm tra tầng dưới phễu trước khi xin thêm tiền cho tầng trên.`,
         takeaway: "Ngân sách phải được tính ngược qua từng tầng phễu và trình kèm giả định. Khi bị chất vấn, bạn bảo vệ giả định chứ không bảo vệ con số tổng."
       }
     ],
     quiz: [
       {
         id: "q3_1",
-        question: "Mục tiêu năm tới của bạn là mang về 1.000 khách hàng mới. Biết rằng chi phí trung bình để thu hút 1 khách hàng (CAC) của ngành là 500.000 VNĐ. Theo phương pháp Objective & Task, ngân sách chạy Ads tối thiểu cần lập là bao nhiêu?",
+        question: "Mục tiêu năm tới của bạn là mang về 1.000 khách hàng mới. Biết rằng chi phí quảng cáo trung bình để có 1 khách hàng (CPA quảng cáo) là 500.000 VNĐ. Theo phương pháp Objective & Task, ngân sách chạy Ads tối thiểu cần lập là bao nhiêu?",
         options: [
           "50.000.000 VNĐ",
           "500.000.000 VNĐ",
@@ -393,7 +402,7 @@ Trưởng phòng giỏi luôn kiểm tra tầng dưới phễu trước khi xin 
           "Tùy hứng chi trả theo từng tháng"
         ],
         correct: 1,
-        explanation: "Ngân sách Ads = 1.000 khách hàng x 500.000 VNĐ = 500.000.000 VNĐ (Chưa bao gồm chi phí nhân sự và vận hành sản xuất nội dung)."
+        explanation: "Ngân sách Ads = 1.000 khách hàng x 500.000 VNĐ = 500.000.000 VNĐ (Chưa bao gồm chi phí nhân sự và vận hành sản xuất nội dung). Lưu ý: nếu đề cho CAC đầy đủ (đã gồm nhân sự, công cụ) thì 1.000 x CAC là tổng ngân sách thu hút khách, không phải riêng ngân sách Ads."
       },
       {
         id: "q3_2",
@@ -441,7 +450,7 @@ Trưởng phòng giỏi luôn kiểm tra tầng dưới phễu trước khi xin 
           "Đổi toàn bộ kênh quảng cáo sang nền tảng mới có chi phí rẻ hơn"
         ],
         correct: 1,
-        explanation: "Tỷ lệ chốt 8% so với chuẩn ngành 15% cho thấy điểm nghẽn nằm ở tầng dưới phễu. Nâng tỷ lệ chốt làm giảm số khách tiềm năng cần mua, kéo ngân sách xuống theo cấp số nhân, hiệu quả hơn nhiều so với tối ưu giá thầu quảng cáo."
+        explanation: "Tỷ lệ chốt 8% so với mức 15% của ngành cho thấy điểm nghẽn nằm ở tầng dưới phễu. Số khách tiềm năng cần mua tỷ lệ nghịch với tỷ lệ chốt: nâng từ 8% lên 15% làm số khách cần, và ngân sách quảng cáo, giảm khoảng 47% (1 - 8/15) mà không phải đụng tới giá thầu. Vì dư địa ở tầng dưới phễu lớn như vậy, đây là đòn bẩy ưu tiên."
       }
     ]
   },
@@ -464,7 +473,7 @@ Trưởng phòng giỏi luôn kiểm tra tầng dưới phễu trước khi xin 
 
 #### 1. Quy mô vừa và nhỏ (SME 3-5 nhân sự):
 * Digital Manager: Quản trị chiến lược, phân bổ ngân sách và làm chủ OKRs.
-* Performance Specialist: Chuyên trách tối ưu thầu quảng cáo Meta, Google và TikTok.
+* Performance Specialist: Quản lý cấu trúc chiến dịch tự động (Meta Advantage+, Google Performance Max) trên Meta, Google và TikTok, lên kế hoạch thử nghiệm sáng tạo và giữ chất lượng dữ liệu chuyển đổi đưa vào nền tảng. Việc chỉnh thầu và nhắm chọn thủ công phần lớn đã được nền tảng tự động hoá.
 * Content & Graphic Executive: Sáng tạo bài viết, thiết kế banner và video ngắn TikTok.
 * Outsource & Freelancer: Thuê bên ngoài dựng Video chuyên nghiệp và làm Website khi cần.
 
@@ -472,7 +481,7 @@ Trưởng phòng giỏi luôn kiểm tra tầng dưới phễu trước khi xin 
 * Leader Performance Team: Quản lý Media Buying, A/B Testing và dữ liệu CRM.
 * Leader Content & Creative Team: Quản lý Copywriter, Video Editor và Graphic Designer.
 * Leader SEO & Organic Growth: Phát triển traffic tự nhiên và cộng đồng Social.
-* MarTech & Analytics Specialist: Quản lý hạ tầng dữ liệu GA4, CDP và Tracking Pixels.`,
+* MarTech & Analytics Specialist: Quản lý hạ tầng dữ liệu GA4, CDP, Pixel kết hợp Conversions API/server-side tracking, và quản lý đồng ý (consent) của người dùng.`,
         takeaway:
           "Sơ đồ tổ chức phải bám theo quy mô ngân sách mà mỗi nhân sự thực sự vận hành nổi, không bám theo mong muốn có đủ vai trò. Tuyển đủ đầu người trước khi có ngân sách nuôi việc cho họ là cách nhanh nhất để cả đội cùng nhàn rỗi rồi cùng bị cắt giảm."
       },
@@ -482,7 +491,12 @@ Trưởng phòng giỏi luôn kiểm tra tầng dưới phễu trước khi xin 
         content: `### Nguyên tắc phân định: Giữ gì In-house và Thuê gì Agency?
 
 * Giữ In-house: Dữ liệu khách hàng CRM, chiến lược thương hiệu cốt lõi, cơ chế giá bán và các kênh quảng cáo tạo ra doanh thu hàng ngày.
-* Thuê Outsource / Agency: Các chiến dịch truyền thông lớn theo mùa vụ, dịch vụ sản xuất Video TVC hoành tráng, booking mạng lưới KOL/KOC quy mô lớn hoặc thử nghiệm kênh công nghệ mới chưa có nhân sự nội bộ am hiểu.`,
+* Thuê Outsource / Agency: Các chiến dịch truyền thông lớn theo mùa vụ, dịch vụ sản xuất Video TVC hoành tráng, booking mạng lưới KOL/KOC quy mô lớn hoặc thử nghiệm kênh công nghệ mới chưa có nhân sự nội bộ am hiểu.
+
+#### Ràng buộc pháp lý khi thuê ngoài (từ 1/1/2026)
+1. Luật Bảo vệ dữ liệu cá nhân số 91/2025/QH15: khi chia sẻ dữ liệu CRM hay tệp đối tượng cho agency, doanh nghiệp là bên kiểm soát, agency là bên xử lý dữ liệu. Hợp đồng phải có điều khoản xử lý dữ liệu cá nhân, phạm vi sử dụng, bảo mật, xoá hoặc trả dữ liệu khi kết thúc, và dữ liệu phải có căn cứ đồng ý hợp lệ.
+2. Luật Quảng cáo sửa đổi số 75/2025/QH15: người có ảnh hưởng phải kiểm chứng thông tin sản phẩm và công khai việc quảng cáo. Khi booking KOL/KOC qua agency, doanh nghiệp vẫn phải cung cấp đủ tài liệu sản phẩm, yêu cầu gắn nhãn quảng cáo, duyệt kịch bản trước khi đăng và lưu bằng chứng.
+3. Tài khoản quảng cáo, Business Portfolio và Pixel đứng tên doanh nghiệp, agency chỉ được cấp quyền.`,
         takeaway:
           "Nguyên tắc phân định gói trong một câu: giữ trong nhà thứ mất đi thì doanh nghiệp mất năng lực cạnh tranh — dữ liệu khách hàng, chiến lược, cơ chế giá. Thuê ngoài thứ chỉ cần năng lực sản xuất theo đợt. Để agency đứng tên tài khoản quảng cáo là tự đặt mình vào thế bị động khi muốn đổi đối tác."
       },
@@ -653,6 +667,7 @@ Nhầm lẫn phổ biến nhất là dùng khảo sát số đông để trả l
 * Công cụ: phỏng vấn sâu, thảo luận nhóm, đọc bình luận và đánh giá sản phẩm, nghe lại ghi âm cuộc gọi tư vấn.
 * Chỉ cần 8 đến 12 cuộc phỏng vấn là các chủ đề bắt đầu lặp lại, đủ để rút ra kết luận. Con số này có cơ sở học thuật: nghiên cứu của Guest, Bunce và Johnson đăng trên tạp chí Field Methods năm 2006 cho thấy các chủ đề cơ bản đã xuất hiện đủ sau khoảng 6 cuộc, và tới cuộc thứ 12 thì gần như không còn chủ đề mới. Điều kiện đi kèm: các cuộc phỏng vấn phải nằm trong **cùng một phân khúc tương đối đồng nhất**. Phỏng vấn 12 người thuộc 4 phân khúc khác nhau thì chưa bão hoà ở phân khúc nào cả.
 * Kết quả cho ra câu nói nguyên văn của khách hàng, dùng trực tiếp làm nội dung quảng cáo.
+* Lưu ý pháp lý: ghi âm giọng nói và nội dung tư vấn là dữ liệu cá nhân. Theo Luật Bảo vệ dữ liệu cá nhân 2025 (hiệu lực 1/1/2026), khi dùng ghi âm, phỏng vấn hay câu nói nguyên văn cho nghiên cứu cần có sự đồng ý của khách cho đúng mục đích đó, ẩn danh hoá trước khi chia sẻ nội bộ, và xin phép riêng nếu dùng lời khách trong quảng cáo.
 
 #### Trình tự đúng: Định tính trước, Định lượng sau
 
@@ -674,7 +689,7 @@ Phân tích đối thủ hời hợt dừng ở việc chụp màn hình quảng
 #### Lớp 1 - Lớp hiển thị: họ đang nói gì
 
 * Thư viện quảng cáo Meta cho biết đối thủ đang chạy bao nhiêu mẫu, mẫu nào chạy lâu nhất.
-* Mẫu quảng cáo chạy liên tục trên 30 ngày gần như chắc chắn đang có hiệu quả. Đây là tín hiệu đáng tin hơn mọi lời đồn trong ngành.
+* Mẫu quảng cáo chạy liên tục trên 30 ngày là một tín hiệu đáng chú ý rằng đối thủ đang hài lòng với nó, nhưng không phải bằng chứng hiệu quả: Thư viện quảng cáo Meta tại Việt Nam không hiển thị chi tiêu hay kết quả, và mẫu đó có thể chỉ chạy nền với ngân sách nhỏ. Hãy kết hợp với tần suất đối thủ làm biến thể từ cùng một ý tưởng và đối chiếu các nguồn khác trước khi kết luận.
 * Ghi lại: thông điệp chính, ưu đãi, định dạng, và nhóm khách hàng mà hình ảnh nhắm tới.
 
 #### Lớp 2 - Lớp cấu trúc: họ đang bán thế nào
@@ -692,7 +707,7 @@ Phân tích đối thủ hời hợt dừng ở việc chụp màn hình quảng
 #### Kết luận rút ra phải là hành động
 
 Một bản phân tích đối thủ tốt luôn kết thúc bằng ba câu: chỗ nào họ mạnh mà ta nên tránh đối đầu trực diện, chỗ nào họ bỏ trống mà ta chiếm được, và chỗ nào họ yếu mà ta tấn công được ngay trong 30 ngày.`,
-        takeaway: "Mẫu quảng cáo của đối thủ chạy liên tục trên 30 ngày là bằng chứng đáng tin nhất về việc thông điệp đó đang mang lại hiệu quả."
+        takeaway: "Mẫu quảng cáo của đối thủ chạy liên tục trên 30 ngày là tín hiệu đáng chú ý, nhưng chỉ thành bằng chứng khi đối chiếu thêm với số biến thể họ làm từ cùng ý tưởng và các nguồn khác."
       },
       {
         id: "m5-s4",
@@ -727,6 +742,7 @@ Bước 3 - Ước lượng SOM thực tế:
 2. Chi phí thu hút một khách hàng hiện tại: 2.500.000 đồng.
 3. Số khách có thể giành được: 3 tỷ chia 2,5 triệu bằng **1.200 khách**.
 4. SOM bằng 1.200 nhân 18 triệu bằng **21,6 tỷ đồng**, tương đương **3,1% của SAM**.
+5. Lưu ý: 21,6 tỷ là giá trị hợp đồng năm hoá của 1.200 khách. Nếu khách vào đều trong năm, doanh thu ghi nhận trong năm đầu chỉ khoảng một nửa, tức khoảng 10,8 tỷ, và còn thấp hơn nếu có khách huỷ. Khi cam kết doanh thu năm, hãy dùng con số ghi nhận chứ không dùng giá trị năm hoá.
 
 #### Dùng con số này để làm gì
 
@@ -871,7 +887,11 @@ Số liệu giả định cho 4 khách hàng tiêu biểu.
 
 #### Sai lầm ngân sách hay gặp
 
-Đa số doanh nghiệp chạy quảng cáo bám đuổi cho toàn bộ danh sách khách đã mua. Điều đó có nghĩa là **tiền được chia đều cho cả khách A đang sẵn sàng mua lẫn khách D đã bỏ đi**. Chỉ cần tách nhóm B ra và dồn riêng ngân sách cho họ, phần lớn doanh nghiệp thấy hiệu quả tăng rõ rệt mà không cần thêm một đồng ngân sách nào.`,
+Đa số doanh nghiệp chạy quảng cáo bám đuổi cho toàn bộ danh sách khách đã mua. Điều đó có nghĩa là **tiền được chia đều cho cả khách A đang sẵn sàng mua lẫn khách D đã bỏ đi**. Chỉ cần tách nhóm B ra và dồn riêng ngân sách cho họ, phần lớn doanh nghiệp thấy hiệu quả tăng rõ rệt mà không cần thêm một đồng ngân sách nào.
+
+#### Lưu ý pháp lý 2026
+
+Từ 1/1/2026, Luật Bảo vệ dữ liệu cá nhân số 91/2025/QH15 và Nghị định 356/2025/NĐ-CP (thay Nghị định 13/2023) yêu cầu doanh nghiệp chỉ dùng số điện thoại, email, lịch sử mua của khách cho tiếp thị (gửi Zalo, SMS, email, tải tệp Custom Audience hay tệp loại trừ lên nền tảng quảng cáo) khi đã có sự đồng ý rõ ràng cho mục đích đó, có cơ chế rút lại đồng ý và không mua bán dữ liệu. Trước khi chấm RFM và kích hoạt chiến dịch, hãy rà lại điều khoản đồng ý tại điểm thu thập dữ liệu và phối hợp với bộ phận pháp chế.`,
         takeaway: "Nhóm đáng chi tiền nhất không phải khách trung thành mà là khách từng chi nhiều nhưng lâu rồi chưa quay lại. Kéo họ về luôn rẻ hơn tìm khách mới tương đương."
       }
     ],
@@ -881,36 +901,36 @@ Số liệu giả định cho 4 khách hàng tiêu biểu.
         question: "Phát biểu nào sau đây thể hiện một Customer Insight (Sự thật ngầm hiểu) sâu sắc chứ không chỉ là thông tin bề nổi?",
         options: [
           "Phụ nữ 30 tuổi thích mua sắm quần áo đẹp vào cuối tuần",
-          "Tôi mua đồ hiệu đắt tiền không phải vì thích chất vải, mà vì muốn nhận được ánh nhìn nể trọng từ đồng nghiệp khi bước vào phòng họp",
+          "Tôi muốn bước vào phòng họp với vẻ ngoài khiến đồng nghiệp nể trọng, nhưng tôi ngại chi cả tháng lương cho một món đồ hiệu mà sợ người khác nghĩ mình chơi trội",
           "Khách hàng nam 40 tuổi thích chơi golf và đi du lịch",
           "Người tiêu dùng muốn mua hàng giá rẻ nhất có thể"
         ],
         correct: 1,
-        explanation: "Bản chất Insight là động lực tâm lý thầm kín phía sau hành vi (muốn nhận sự nể trọng), mở ra góc truyền thông chạm đúng tim đen khách hàng."
+        explanation: "Phát biểu này nêu đủ Truth - Need - Friction như bài 2: sự thật đời sống (họp với đồng nghiệp hàng ngày), nhu cầu thầm kín (muốn được nể trọng) và rào cản (ngại chi tiền, sợ bị nghĩ là chơi trội). Chính rào cản mở ra góc truyền thông chạm đúng tim đen khách hàng."
       },
       {
         id: "q6_2",
-        question: "Hành trình khách hàng 5A (Kotler Marketing 4.0) bao gồm những giai đoạn nào theo đúng thứ tự?",
+        question: "Trong mô hình Truth - Need - Friction, yếu tố nào quyết định một phát biểu là Customer Insight thật chứ không chỉ là mô tả nhu cầu?",
         options: [
-          "Aware (Nhận biết) -> Appeal (Thích) -> Ask (Tìm hiểu) -> Act (Hành động mua) -> Advocate (Ủng hộ/Giới thiệu)",
-          "Attention -> Interest -> Desire -> Action -> Retention",
-          "Ads -> Click -> Buy -> Review -> Refund",
-          "Search -> Compare -> Order -> Cancel -> Complain"
+          "Nêu được rào cản (Friction) đang ngăn khách hàng hành động dù họ có nhu cầu",
+          "Có số liệu nhân khẩu học cụ thể như độ tuổi, thu nhập",
+          "Nêu được kênh mạng xã hội khách hàng hay dùng",
+          "Được viết bằng ngôn ngữ cảm xúc, nhiều hình ảnh"
         ],
         correct: 0,
-        explanation: "Mô hình 5A đại diện cho hành trình trên không gian số: Nhận biết thương hiệu -> Cảm thấy cuốn hút -> Chủ động hỏi/tìm hiểu -> Mua hàng -> Trở thành người ủng hộ truyền thông."
+        explanation: "Insight thật luôn có rào cản nằm trong đó. Câu chỉ nêu nhu cầu mà không nêu thứ đang cản khách hàng lại thì mới là mô tả nhu cầu, và nội dung viết từ nó sẽ nghe đúng nhưng không chạm."
       },
       {
         id: "q6_3",
-        question: "Khái niệm 'Reason to Buy' (Lý do mua hàng) của sản phẩm thường được chia thành 2 nhóm yếu tố chính nào?",
+        question: "Bản Persona của bạn chỉ ghi: 'Nữ, 28-35 tuổi, thu nhập 15-25 triệu, sống tại Hà Nội'. Theo phương pháp Customer Persona 360, bản này còn thiếu gì để viết được nội dung?",
         options: [
-          "Lý do Lý trí (Functional Benefits) và Lý do Cảm xúc (Emotional Benefits)",
-          "Lý do Giá rẻ và Lý do Miễn phí vận chuyển",
-          "Lý do Quảng cáo đẹp và Lý do Nhạc hay",
-          "Lý do Sếp bắt mua và Lý do Bạn bè xúi giục"
+          "Ba tầng tâm lý: nỗi đau thầm kín, kỳ vọng mong ước và thói quen số",
+          "Một ảnh đại diện minh hoạ cho persona",
+          "Một cái tên riêng đặt cho persona",
+          "Không thiếu gì, nhân khẩu học là đủ để chạy quảng cáo"
         ],
         correct: 0,
-        explanation: "Khách hàng mua hàng bằng Cảm xúc (Emotional) và bào chữa hợp lý hóa quyết định đó bằng Lý trí (Functional)."
+        explanation: "Chân dung dừng ở nhân khẩu học thì không viết nội dung được. Nỗi đau, kỳ vọng và thói quen số mới quyết định viết gì và đăng ở đâu."
       },
       {
         id: "q6_4",
@@ -955,10 +975,11 @@ Số liệu giả định cho 4 khách hàng tiêu biểu.
         title: "1. Cấu trúc Ngôi nhà Thông điệp (Message House)",
         content: `### Chuẩn hóa thông điệp chiến dịch truyền thông
 
-1. Big Idea (Ý tưởng lớn): Thông điệp cốt lõi gói gọn định vị chiến dịch trong một câu ấn tượng.
-2. Key Message (Thông điệp chính): Lời hứa thương hiệu gửi tới đúng tệp khách hàng mục tiêu.
-3. Content Pillars (Trụ cột nội dung): Các chủ đề lớn nâng đỡ cho thông điệp chính như tính năng sản phẩm, câu chuyện người dùng và phân tích chuyên gia.
-4. Proof Points (Bằng chứng xác minh): Dữ liệu kiểm định, giải thưởng uy tín, đánh giá từ khách hàng để tạo sự tin tưởng lý trí.`,
+1. Mái - Thông điệp bao trùm (Umbrella Message): một câu nêu giá trị cốt lõi, lời hứa thương hiệu gửi tới đúng tệp khách hàng mục tiêu.
+2. Cột - 3 đến 4 thông điệp hỗ trợ (Supporting Messages): mỗi cột là một lý do để tin vào thông điệp mái, ví dụ hiệu quả, an toàn, tiện lợi.
+3. Móng - Bằng chứng (Proof Points): dữ liệu kiểm định, chứng nhận, giải thưởng uy tín, đánh giá từ khách hàng cho từng cột để tạo sự tin tưởng lý trí.
+
+Phân biệt hai khái niệm hay bị trộn: Big Idea là cách thể hiện sáng tạo của thông điệp mái trong một chiến dịch; Content Pillars (trụ cột nội dung như câu chuyện người dùng, phân tích chuyên gia) là bước sau, khi chuyển thông điệp thành kế hoạch nội dung.`,
         takeaway:
           "Ngôi nhà thông điệp tồn tại để mọi kênh nói cùng một điều. Thiếu nó thì mỗi kênh tự diễn giải, hết ba tháng chiến dịch khách hàng nhớ năm thông điệp khác nhau, tức là không nhớ gì. Proof Points là tầng hay bị bỏ nhất và cũng là tầng khiến lời hứa trở nên đáng tin."
       },
@@ -969,7 +990,9 @@ Số liệu giả định cho 4 khách hàng tiêu biểu.
 
 * Hook (3 giây đầu): Gây tò mò hoặc đánh thẳng vào nỗi đau để ngăn người dùng vuốt qua bài quảng cáo.
 * Story (15-30 giây tiếp): Dẫn dắt câu chuyện biến chuyển thực tế trước và sau khi sử dụng giải pháp.
-* Offer & CTA (5 giây cuối): Đưa ra ưu đãi độc quyền kèm lời kêu gọi bấm vào liên kết mua hàng ngay lập tức.`,
+* Offer & CTA (5 giây cuối): Đưa ra ưu đãi độc quyền kèm lời kêu gọi bấm vào liên kết mua hàng ngay lập tức.
+
+Lưu ý: cấu trúc trước-sau rất hiệu quả nhưng bị giới hạn ở nhiều ngành. Tiêu chuẩn quảng cáo của Meta cấm hình so sánh trước-sau với sản phẩm giảm cân và cấm gợi cảm giác tiêu cực về ngoại hình; thực phẩm chức năng, mỹ phẩm và dịch vụ y tế không được ngụ ý công dụng chữa bệnh. Nếu dùng KOL hay khách thật kể trải nghiệm, nội dung phải đúng trải nghiệm thật và ghi rõ là quảng cáo theo Luật Quảng cáo sửa đổi 2025.`,
         takeaway:
           "Ba giây đầu quyết định toàn bộ phần sau có được xem hay không, nên công sức phải dồn vào Hook chứ không phải vào đoạn kết. Video dựng công phu mà mở đầu chậm thì chỉ số duy nhất nó tạo ra là chi phí."
       },
@@ -983,9 +1006,11 @@ Câu trả lời quảng cáo này không chạy được là vô dụng với T
 #### Bốn chỉ số theo thứ tự phễu
 
 1. **Hook Rate** bằng số lượt xem 3 giây chia số lượt hiển thị. Đo sức hút của 3 giây đầu.
-2. **Hold Rate** bằng số lượt xem hết video chia số lượt xem 3 giây. Đo sức giữ chân của phần thân.
-3. **CTR** bằng số lượt bấm chia số lượt hiển thị. Đo sức thuyết phục của lời kêu gọi hành động.
+2. **Hold Rate** bằng số lượt ThruPlay (xem 15 giây, hoặc xem hết nếu video ngắn hơn) chia số lượt xem 3 giây. Đo sức giữ chân của phần thân.
+3. **CTR** bằng số lượt bấm liên kết chia số lượt hiển thị (CTR liên kết, không phải CTR tất cả). Đo sức thuyết phục của lời kêu gọi hành động.
 4. **CVR** bằng số chuyển đổi chia số lượt bấm. Đo mức độ khớp giữa quảng cáo và trang đích.
+
+Công thức trên theo cách đo của Meta. TikTok Ads Manager không có lượt xem 3 giây mà dùng lượt xem 2 giây và 6 giây: Hook dùng lượt xem 2 giây (hoặc 6 giây) chia lượt hiển thị, Hold dùng lượt xem 6 giây hoặc lượt xem hết chia lượt xem 2 giây. Chỉ so sánh các mẫu trong cùng một nền tảng.
 
 #### Bảng chẩn đoán theo triệu chứng
 
@@ -1000,24 +1025,27 @@ Các ngưỡng dưới đây là mức tham chiếu để so sánh giữa các m
 
 Bối cảnh giả định, mỗi mẫu chi 30 triệu đồng.
 
-Mẫu A: hiển thị 500.000, xem 3 giây 140.000, xem hết 12.000, bấm 3.500, đơn hàng 42.
+Mẫu A: hiển thị 500.000, xem 3 giây 140.000, ThruPlay 12.000, bấm liên kết 3.500, đơn hàng 42.
 
 * Hook Rate 28%, Hold Rate 8,6%, CTR 0,7%, CVR 1,2%.
 
-Mẫu B: hiển thị 480.000, xem 3 giây 76.000, xem hết 20.000, bấm 4.800, đơn hàng 168.
+Mẫu B: hiển thị 480.000, xem 3 giây 76.000, ThruPlay 20.000, bấm liên kết 4.800, đơn hàng 168.
 
 * Hook Rate 15,8%, Hold Rate 26,3%, CTR 1,0%, CVR 3,5%.
 
 Đọc kết quả: mẫu A có mở đầu giật gân hơn nên Hook Rate gần gấp đôi, nhưng phần thân rỗng nên rơi rụng gần hết. Mẫu B mở đầu kém hơn nhưng giữ chân tốt và trang đích khớp, cho ra số đơn gấp 4 lần.
 
-Hành động đúng không phải là bỏ mẫu A, mà là **ghép 3 giây đầu của mẫu A vào phần thân của mẫu B** rồi chạy thử lại. Đây là cách kiểm định theo từng thành phần, hiệu quả hơn nhiều so với làm lại video từ đầu.`,
+Hành động đúng không phải là bỏ mẫu A, mà là **ghép 3 giây đầu của mẫu A vào phần thân của mẫu B** rồi chạy thử lại. Đây là cách kiểm định theo từng thành phần, hiệu quả hơn nhiều so với làm lại video từ đầu.
+
+#### Dùng AI tạo sinh để nhân biến thể
+AI tạo sinh và công cụ sáng tạo tích hợp của Meta Advantage+ và TikTok giúp tạo nhanh 10-20 biến thể Hook, hình ảnh, video để thử nghiệm theo đúng bốn tầng Hook, Hold, CTR, CVR ở trên. Đi kèm là nghĩa vụ pháp lý: Luật Trí tuệ nhân tạo số 134/2025/QH15 (hiệu lực 1/3/2026) yêu cầu gắn nhãn hình ảnh, âm thanh, video do AI tạo ra, các nền tảng cũng có quy định gắn nhãn riêng. Không dùng AI giả giọng hoặc gương mặt người thật khi chưa được phép, và kiểm tra bản quyền cùng độ đúng của tuyên bố sản phẩm trước khi đăng.`,
         takeaway: "Đừng đánh giá mẫu quảng cáo bằng một con số tổng. Tách theo bốn tầng Hook, Hold, CTR, CVR để biết chính xác cần sửa đoạn nào."
       }
     ],
     quiz: [
       {
         id: "q7_1",
-        question: "Trong quảng cáo video ngắn (TikTok Ads, Meta Reels), yếu tố nào quyết định đến 80% tỷ lệ người dùng dừng lại xem tiếp thay vì vuốt qua?",
+        question: "Trong quảng cáo video ngắn (TikTok Ads, Meta Reels), phần nào ảnh hưởng lớn nhất tới việc người xem dừng lại thay vì vuốt qua?",
         options: [
           "Đoạn Hook trong 3 giây đầu tiên của Video",
           "Độ phân giải video 4K siêu nét",
@@ -1025,13 +1053,13 @@ Hành động đúng không phải là bỏ mẫu A, mà là **ghép 3 giây đ�
           "Bản nhạc nền không lời êm dịu"
         ],
         correct: 0,
-        explanation: "Khoảng chú ý của người dùng số hiện nay chỉ khoảng 3 giây. Nếu 3s đầu (Hook) không đủ ấn tượng, người dùng sẽ vuốt qua bài quảng cáo ngay."
+        explanation: "Nghiên cứu của Facebook và Nielsen (khoảng 2016) cho thấy khoảng 47% giá trị của một chiến dịch video được tạo ra trong 3 giây đầu và 74% trong 10 giây đầu. Vì vậy đoạn Hook là nơi đáng đầu tư nhất: nếu 3 giây đầu không đủ ấn tượng, người dùng sẽ vuốt qua ngay."
       },
       {
         id: "q7_2",
         question: "Cấu trúc Message House giúp Trưởng phòng giải quyết bài toán gì trong truyền thông?",
         options: [
-          "Đảm bảo toàn bộ nội dung đăng tải trên mọi kênh nhất quán với Big Idea chung, không bị manh mún vụn vặt",
+          "Đảm bảo toàn bộ nội dung đăng tải trên mọi kênh nhất quán với thông điệp bao trùm chung, không bị manh mún vụn vặt",
           "Tự động tạo ra bài viết đăng lên Facebook hàng ngày",
           "Cắt giảm chi phí mua bản quyền phông chữ thiết kế",
           "Giúp video quảng cáo tự động lên xu hướng mà không cần duyệt"
@@ -1049,7 +1077,7 @@ Hành động đúng không phải là bỏ mẫu A, mà là **ghép 3 giây đ�
           "Các thẻ hashtag gắn ở cuối bài viết"
         ],
         correct: 0,
-        explanation: "Proof Points cung cấp sự tin cậy lý trí (chứng nhận ISO, kết quả lâm sàng, 10.000+ feedback 5 sao) để chứng minh cho Key Message."
+        explanation: "Proof Points cung cấp sự tin cậy lý trí (chứng nhận ISO, kết quả lâm sàng, 10.000+ feedback 5 sao) để chứng minh cho từng thông điệp hỗ trợ và thông điệp mái."
       },
       {
         id: "q7_4",
@@ -1101,7 +1129,10 @@ Hành động đúng không phải là bỏ mẫu A, mà là **ghép 3 giây đ�
 5. Unexpected Twist (Cú twist bất ngờ): Dẫn dắt câu chuyện theo hướng bình thường và tạo kết thúc bất ngờ.
 6. Relatability (Nói hộ lòng người): Diễn tả chính xác những trải nghiệm thầm kín mà ai cũng từng gặp phải.
 7. Co-creation Challenge (Thử thách cộng đồng): Tạo trào lưu nhảy hoặc biến hình trên TikTok thu hút người dùng hưởng ứng.
-8. Hero's Journey Storytelling (Hành trình vượt khó): Câu chuyện truyền cảm hứng chạm đến sự đồng cảm.`,
+8. Hero's Journey Storytelling (Hành trình vượt khó): Câu chuyện truyền cảm hứng chạm đến sự đồng cảm.
+
+#### Tuân thủ khi lan truyền (từ 1/1/2026)
+Thử thách cộng đồng và bắt trend thường dựa vào KOL, KOC để khởi động. Luật Quảng cáo sửa đổi số 75/2025/QH15 gọi họ là người chuyển tải sản phẩm quảng cáo, với nghĩa vụ xác minh người quảng cáo, chỉ giới thiệu sản phẩm đã dùng hoặc hiểu rõ, và công bố rõ là quảng cáo trước và trong khi thực hiện. Hợp đồng phải yêu cầu KOL/KOC ghi rõ là quảng cáo (ví dụ #quangcao), chỉ nói về trải nghiệm thật, và doanh nghiệp phải có tài liệu chứng minh công dụng vì cùng chịu trách nhiệm nếu nội dung sai sự thật.`,
         takeaway:
           "Lan truyền là kết quả của một động cơ cụ thể chứ không phải của may mắn. Nhưng chọn động cơ trước khi chọn thông điệp là cách nhanh nhất tạo ra nội dung viral mà không ai nhớ của thương hiệu nào. Nhóm Tranh luận rủi ro nhất: phải lường trước kịch bản xấu rồi mới dùng."
       },
@@ -1238,7 +1269,7 @@ Sai lầm thường gặp là chỉ hiển thị nút chia sẻ cho nhóm ngư�
       },
       {
         id: "q8_5",
-        question: "Chiến dịch có nội dung tốt nhưng chỉ 800 trên 100.000 người nhìn thấy thực sự chia sẻ. Nguyên nhân khả dĩ nhất và cách xử lý?",
+        question: "Chiến dịch yêu cầu người xem bấm link, đăng ký tài khoản, xác minh email, tải ứng dụng rồi điền thông tin mới được chia sẻ. Kết quả chỉ 800 trên 100.000 người nhìn thấy thực sự chia sẻ. Nguyên nhân khả dĩ nhất và cách xử lý?",
         options: [
           "Nội dung chưa đủ hấp dẫn, cần thuê người nổi tiếng quảng bá",
           "Quy trình có quá nhiều bước thao tác, mỗi bước làm rơi khoảng một nửa số người, cần rà soát và cắt bớt các bước trung gian",
@@ -1246,7 +1277,7 @@ Sai lầm thường gặp là chỉ hiển thị nút chia sẻ cho nhóm ngư�
           "Chọn sai khung giờ đăng bài"
         ],
         correct: 1,
-        explanation: "Tỷ lệ rơi 99,2% là dấu hiệu điển hình của ma sát quy trình chứ không phải nội dung kém. Mỗi bước bổ sung như đăng ký, xác minh, tải ứng dụng đều cắt khoảng một nửa. Cắt bớt vài bước giữa thường nhân nhiều lần kết quả."
+        explanation: "Với năm bước thao tác trước khi được chia sẻ, ma sát quy trình là nghi phạm đầu tiên. Mỗi bước bổ sung như đăng ký, xác minh, tải ứng dụng làm rơi một phần lớn người tham gia, nên cần cắt các bước trung gian trước khi kết luận nội dung kém."
       }
     ]
   },
@@ -1286,7 +1317,7 @@ Kế hoạch 12 tháng gần như luôn sai từ tháng thứ 4 vì thị trư�
 #### Chặng 1 - Ngày 1 đến 30: Dựng nền và đo đạc
 
 1. Kiểm toán hiện trạng: gắn đủ mã theo dõi, dựng bảng báo cáo, xác định số liệu nền của từng chỉ số.
-2. Dọn dẹp: tắt các chiến dịch không có chuyển đổi trong 60 ngày qua, gộp các nhóm quảng cáo trùng tệp.
+2. Dọn dẹp: tắt các chiến dịch chuyển đổi (mục tiêu bán hàng, khách tiềm năng) không phát sinh chuyển đổi trong 60 ngày qua, gộp các nhóm quảng cáo trùng tệp. Với chiến dịch nhận diện, đánh giá theo chỉ số đúng mục tiêu (tiếp cận, lượt xem, mức tăng tìm kiếm thương hiệu) hoặc kiểm chứng bằng thử nghiệm tăng trưởng (lift test) trước khi cắt.
 3. Chuẩn hoá quy trình: ai duyệt nội dung, bao lâu báo cáo một lần, ngưỡng nào thì tắt chiến dịch.
 4. Kết quả cần có cuối chặng: một bảng số liệu nền được mọi bên thống nhất. Chưa vội tăng trưởng.
 
@@ -1319,7 +1350,7 @@ Một bản kế hoạch chỉ trình phương án thuận lợi sẽ bị Ban G
 #### Bốn rủi ro thường gặp và ngưỡng kích hoạt
 
 1. **Chi phí quảng cáo tăng đột biến vào mùa cao điểm.** Ngưỡng kích hoạt: CPM tăng quá 40% so với trung bình 30 ngày. Phương án: chuyển ngân sách sang kênh có chi phí ổn định hơn, đẩy mạnh tệp khách cũ, tạm dừng mở rộng tệp lạnh.
-2. **Tài khoản quảng cáo bị khoá.** Ngưỡng kích hoạt: ngay khi có cảnh báo đầu tiên. Phương án: duy trì sẵn tài khoản dự phòng đã được xác minh, sao lưu toàn bộ tệp khách hàng ra tệp riêng, không để một tài khoản gánh quá 60% ngân sách.
+2. **Tài khoản quảng cáo bị khoá.** Ngưỡng kích hoạt: ngay khi có cảnh báo đầu tiên. Phương án chuẩn bị từ trước: xác minh doanh nghiệp, có ít nhất 2 quản trị viên đã bật xác thực hai lớp; nếu doanh nghiệp có nhiều thương hiệu, mỗi thương hiệu dùng một Business Manager hợp lệ riêng; giữ dữ liệu khách hàng trong CRM của doanh nghiệp (có sự đồng ý theo Luật Bảo vệ dữ liệu cá nhân 2025); đa dạng kênh (Google, TikTok, Zalo, email) để không kênh nào gánh quá 60% doanh thu. Khi tài khoản bị hạn chế: gửi kháng nghị và hoàn tất xác minh qua kênh chính thức của Meta, tìm đúng nguyên nhân, **không dùng tài khoản khác chạy lại nội dung đó** vì Meta coi là lách chế tài (Evading Enforcement) và có thể khoá lan sang BM, Trang và tài khoản cá nhân của quản trị viên.
 3. **Nội dung chủ lực mất hiệu lực.** Ngưỡng kích hoạt: tần suất hiển thị vượt 3,5 lần và CTR giảm quá 30% so với tuần đầu. Phương án: luôn có sẵn ít nhất 3 mẫu chưa dùng trong kho.
 4. **Đối thủ tung khuyến mãi cắt giá sâu.** Ngưỡng kích hoạt: tỷ lệ chuyển đổi giảm quá 25% mà chi phí hiển thị không đổi. Phương án: không chạy đua giảm giá. Chuyển thông điệp sang giá trị dài hạn, dịch vụ hậu mãi và bảo hành.
 
@@ -1355,7 +1386,7 @@ Dưới đây là bản rút gọn của một kế hoạch quý, với các con
 
 **Strategy - Chiến lược:**
 
-Bài toán không nằm ở việc mua thêm hội viên. Với tỷ lệ rời bỏ 6,5%, mỗi tháng mất 156 hội viên. Giảm rời bỏ xuống 5% giữ lại 36 hội viên mỗi tháng mà không tốn đồng nào chi phí thu hút. Vì vậy chiến lược ưu tiên giữ chân trước, mở rộng sau.
+Bài toán không chỉ nằm ở việc mua thêm hội viên. Với tỷ lệ rời bỏ 6,5%, mỗi tháng mất 156 hội viên, gần bằng toàn bộ số hội viên mới mua được. Giảm rời bỏ xuống 5% giữ lại 36 hội viên mỗi tháng. Nhưng giữ chân không miễn phí: ngân sách giữ chân 88 triệu tương đương khoảng 2,4 triệu đồng cho mỗi hội viên giữ lại, đắt hơn chi phí thu hút mới. Vì vậy phải đặt mục tiêu giảm rời bỏ sâu hơn (xuống 4% thì giữ lại 60 người, khoảng 1,5 triệu mỗi người) hoặc giảm chi phí chương trình thì giữ chân mới thực sự rẻ hơn thu hút. Chiến lược vẫn ưu tiên vá thùng thủng trước, mở rộng sau, nhưng với chi phí mỗi hội viên giữ lại được theo dõi như CAC.
 
 **Tactics - Chiến thuật và phân bổ:**
 
@@ -1378,12 +1409,13 @@ Bài toán không nằm ở việc mua thêm hội viên. Với tỷ lệ rời 
 
 Đây là bước mà đa số kế hoạch bỏ qua. Hãy tính ngược:
 
-* Cần tăng doanh thu 600 triệu mỗi tháng. Phí hội viên trung bình 750.000 đồng mỗi tháng, tức cần thêm **800 hội viên hoạt động**.
-* Nguồn 1 - Giảm rời bỏ: giữ lại thêm 36 hội viên mỗi tháng, sau 3 tháng cộng dồn khoảng **108 hội viên**.
-* Nguồn 2 - Thu hút mới: 99 triệu chia cho chi phí mục tiêu 1.100.000 đồng bằng 90 hội viên mỗi tháng, sau 3 tháng khoảng **270 hội viên**.
-* Tổng khả thi khoảng 378 hội viên, chỉ đạt **47% mục tiêu 800**.
+* Cần tăng doanh thu 600 triệu mỗi tháng. Phí hội viên trung bình 750.000 đồng mỗi tháng, tức cần thêm **800 hội viên hoạt động ròng**, từ 2.400 lên 3.200.
+* Số hội viên ròng bằng số mới trừ số rời bỏ. Hiện tại 220 triệu chia 1.400.000 đồng được khoảng 157 hội viên mới mỗi tháng, vừa đủ bù 156 người rời bỏ, nên doanh thu đi ngang ở 1,8 tỷ.
+* Nguồn 1 - Giảm rời bỏ: kể cả đạt ngay 5% từ tháng đầu, mỗi tháng vẫn mất khoảng **120 hội viên**.
+* Nguồn 2 - Thu hút mới: 99 triệu chia cho chi phí mục tiêu 1.100.000 đồng bằng **90 hội viên mỗi tháng**.
+* Kết quả ròng: 90 trừ 120 bằng **giảm khoảng 30 hội viên mỗi tháng**. Sau 3 tháng còn khoảng 2.315 hội viên, doanh thu khoảng 1,74 tỷ, tức đi lùi chứ không tiến về 2,4 tỷ.
 
-Kết luận trung thực phải trình Ban Giám Đốc: với ngân sách 220 triệu, mục tiêu 2,4 tỷ là không khả thi trong một quý. Hoặc nâng ngân sách lên khoảng 400 triệu, hoặc giãn mục tiêu ra 6 tháng. Trình bày phép tính này giúp bạn thương lượng bằng dữ liệu thay vì bằng cảm tính.`,
+Kết luận trung thực phải trình Ban Giám Đốc: với ngân sách 220 triệu và cách chia này, mục tiêu 2,4 tỷ không khả thi. Số hội viên chỉ tiến dần về mức cân bằng khoảng 1.800 (90 người mới bù vừa đủ 5% rời bỏ), nên giãn thời hạn bao lâu cũng không đạt. Muốn tăng ròng 800 hội viên trong 3 tháng với tỷ lệ rời bỏ 5%, cần khoảng 400 hội viên mới mỗi tháng (tổng khoảng 1.200, trong đó khoảng 400 người để bù rời bỏ), tức khoảng 440 triệu cho thu hút ở mức 1.100.000 đồng, cộng 88 triệu giữ chân và 33 triệu thử nghiệm là khoảng **560 triệu mỗi tháng**. Nếu giãn ra 6 tháng, cần khoảng 270 hội viên mới mỗi tháng, khoảng 300 triệu cho thu hút, tổng ngân sách khoảng **420 triệu mỗi tháng**. Trình bày phép tính này giúp bạn thương lượng bằng dữ liệu thay vì bằng cảm tính.`,
         takeaway: "Bước quan trọng nhất của lập kế hoạch là kiểm chứng ngược xem mục tiêu có khả thi với ngân sách được giao hay không, và dám trình con số đó ra."
       }
     ],
@@ -1441,12 +1473,12 @@ Kết luận trung thực phải trình Ban Giám Đốc: với ngân sách 220 
         question: "Trong ví dụ chuỗi phòng tập, vì sao chiến lược ưu tiên giữ chân hội viên trước khi mở rộng thu hút mới?",
         options: [
           "Vì giữ chân là công việc dễ làm hơn thu hút mới",
-          "Vì với tỷ lệ rời bỏ 6,5% mỗi tháng đang mất 156 hội viên, giảm xuống 5% giữ lại được 36 hội viên mà không tốn chi phí thu hút nào",
+          "Vì với tỷ lệ rời bỏ 6,5% mỗi tháng đang mất 156 hội viên, gần bằng số hội viên mới mua được, nên phải chặn bớt thất thoát trước khi đổ thêm tiền thu hút",
           "Vì Ban Giám Đốc yêu cầu như vậy",
           "Vì quảng cáo thu hút mới đang bị Meta hạn chế"
         ],
         correct: 1,
-        explanation: "Khi tỷ lệ rời bỏ cao, việc đổ tiền thu hút hội viên mới giống như bơm nước vào thùng thủng. Mỗi hội viên giữ lại được tương đương một hội viên mới nhưng không tốn chi phí thu hút, nên đây là đòn bẩy rẻ nhất."
+        explanation: "Khi tỷ lệ rời bỏ cao, việc đổ tiền thu hút hội viên mới giống như bơm nước vào thùng thủng. Tuy nhiên giữ chân không miễn phí: trong ví dụ, 88 triệu cho 36 hội viên giữ lại là khoảng 2,4 triệu mỗi người, đắt hơn chi phí thu hút mới. Vì vậy phải so chi phí mỗi hội viên giữ lại với CAC, và đặt mục tiêu giảm rời bỏ đủ sâu thì giữ chân mới là đòn bẩy rẻ hơn."
       }
     ]
   },
@@ -1505,7 +1537,7 @@ Kết luận thực dụng: luôn duy trì một nguồn số liệu độc lậ
         title: "3. Chuyên sâu: Đọc báo cáo và phát hiện số liệu đánh lừa",
         content: `### Vì sao tổng doanh thu các nền tảng luôn lớn hơn doanh thu thật
 
-Đây là tình huống mọi Trưởng phòng đều gặp: cộng doanh thu Meta báo cáo với doanh thu Google báo cáo thì ra 900 triệu, nhưng kế toán chỉ ghi nhận 600 triệu. Không ai gian lận cả. Nguyên nhân là **ghi nhận trùng**.
+Đây là tình huống mọi Trưởng phòng đều gặp: cộng doanh thu Meta báo cáo với doanh thu Google báo cáo thì ra 900 triệu, nhưng kế toán chỉ ghi nhận 600 triệu. Không ai gian lận cả. Nguyên nhân lớn nhất là **ghi nhận trùng**, cộng thêm một số cơ chế khác của nền tảng.
 
 Mỗi nền tảng đều nhận công về mình khi khách hàng có chạm vào quảng cáo của nền tảng đó. Một khách hàng thấy quảng cáo Meta rồi sau đó tìm trên Google mới mua sẽ được **cả hai nền tảng cùng ghi nhận trọn vẹn**.
 
@@ -1516,27 +1548,27 @@ Bối cảnh giả định, doanh thu thật trong tháng là 600 triệu.
 * Meta báo cáo: 520 triệu.
 * Google báo cáo: 380 triệu.
 * Tổng cộng lại: 900 triệu, tức **vượt 50% so với thực tế**.
-* Phần chênh 300 triệu chính là các đơn hàng có chạm vào cả hai kênh.
+* Phần chênh 300 triệu đến từ nhiều nguồn: đơn được cả hai nền tảng cùng nhận công, cửa sổ ghi nhận rộng (Meta mặc định 7 ngày sau nhấp và 1 ngày sau xem, gồm cả lượt xem không nhấp), chuyển đổi do nền tảng ước tính, đơn bị huỷ hoặc hoàn COD, và chênh lệch ngày ghi nhận. Đối soát định kỳ bằng mã đơn hàng hoặc UTM với hệ thống bán hàng để biết phần nào là trùng.
 
 Nếu Trưởng phòng dùng con số 900 triệu để báo cáo, ROAS sẽ bị thổi phồng và mọi quyết định phân bổ ngân sách sau đó đều dựa trên nền sai.
 
 #### Ba chỉ số phải phân biệt rõ
 
 1. **ROAS nền tảng**: do Meta hoặc Google tự báo. Chỉ dùng để so sánh các chiến dịch trong cùng một nền tảng, tuyệt đối không cộng dồn giữa các nền tảng.
-2. **ROAS tổng hợp**: bằng tổng doanh thu thật từ hệ thống bán hàng chia cho tổng chi phí quảng cáo mọi kênh. Đây là con số duy nhất nên dùng khi báo cáo Ban Giám Đốc.
+2. **ROAS tổng hợp**: bằng tổng doanh thu thật từ hệ thống bán hàng chia cho tổng chi phí quảng cáo mọi kênh. Đây là con số ROAS nên dùng khi báo cáo lên trên, thay cho ROAS từng nền tảng. Với Ban Giám Đốc, đặt nó cạnh lợi nhuận đóng góp, CAC/LTV và thời gian hoàn vốn như tháp KPI ở bài 1. Lưu ý nó bao gồm cả doanh thu tự nhiên, nên cần thử nghiệm tăng trưởng để biết phần thật sự do quảng cáo tạo ra.
 3. **MER**: tỷ lệ tổng doanh thu trên tổng chi marketing, bao gồm cả chi phí nhân sự và công cụ. Đây là chỉ số Giám Đốc Tài Chính quan tâm.
 
 #### Bốn cái bẫy khác trong báo cáo
 
 * **Tỷ lệ phần trăm không kèm mẫu số.** Tỷ lệ chuyển đổi tăng từ 2% lên 6% nghe rất ấn tượng, nhưng nếu đó là 3 đơn trên 50 lượt bấm thì hoàn toàn có thể là ngẫu nhiên.
-* **So sánh với kỳ liền trước thay vì cùng kỳ năm trước.** Tháng 2 luôn thấp hơn tháng 1 vì có Tết, không phải vì chiến dịch kém.
+* **So sánh với kỳ liền trước thay vì cùng kỳ năm trước.** So với kỳ liền trước dễ bị mùa vụ đánh lừa. Ở Việt Nam, Tết âm lịch rơi vào tháng 1 hoặc tháng 2 tuỳ năm, nên kể cả so cùng kỳ năm trước cũng phải căn theo số ngày trước và sau Tết thay vì theo tháng dương lịch.
 * **Trung bình che giấu phân hoá.** ROAS trung bình 3,0 lần có thể là tổng của một chiến dịch đạt 8,0 lần và bốn chiến dịch đạt 1,2 lần. Luôn nhìn phân bố, đừng chỉ nhìn số trung bình.
 * **Chỉ báo cáo chiến dịch thắng.** Bỏ đi các chiến dịch thua khiến bức tranh sai lệch và làm mất cơ hội học từ thất bại.
 
 #### Nguyên tắc trình bày
 
 Mọi con số trong báo cáo phải trả lời được ba câu hỏi: lấy từ nguồn nào, tính trên mẫu số bao nhiêu, và so sánh với mốc nào. Thiếu một trong ba thì con số đó chưa đủ tin cậy để ra quyết định.`,
-        takeaway: "Không bao giờ cộng doanh thu do các nền tảng tự báo cáo. Chỉ số duy nhất đáng tin khi trình Ban Giám Đốc là doanh thu thật từ hệ thống bán hàng chia cho tổng chi phí quảng cáo."
+        takeaway: "Không bao giờ cộng doanh thu do các nền tảng tự báo cáo. Khi trình Ban Giám Đốc, dùng ROAS tổng hợp tính từ doanh thu thật của hệ thống bán hàng, đặt cạnh lợi nhuận, CAC/LTV và thời gian hoàn vốn."
       }
     ],
     quiz: [
@@ -1581,12 +1613,12 @@ Mọi con số trong báo cáo phải trả lời được ba câu hỏi: lấy 
         question: "Meta báo doanh thu 400 triệu, Google báo 300 triệu, nhưng hệ thống bán hàng chỉ ghi nhận 500 triệu. Cách hiểu đúng là gì?",
         options: [
           "Một trong hai nền tảng đang báo cáo gian lận",
-          "Có 200 triệu là đơn hàng được cả hai nền tảng cùng ghi nhận do khách chạm vào cả hai kênh, nên phải dùng con số 500 triệu từ hệ thống bán hàng",
+          "Ít nhất 200 triệu là phần bị ghi nhận chồng chéo (đơn chạm cả hai kênh, cửa sổ ghi nhận rộng, chuyển đổi ước tính...), nên phải dùng con số 500 triệu từ hệ thống bán hàng làm doanh thu thật",
           "Hệ thống bán hàng bị lỗi và cần kiểm tra lại",
           "Nên lấy trung bình cộng của ba con số để báo cáo"
         ],
         correct: 1,
-        explanation: "Mỗi nền tảng đều nhận trọn công về mình khi khách có chạm vào quảng cáo của họ, dẫn tới ghi nhận trùng. Con số đáng tin duy nhất là doanh thu thật từ hệ thống bán hàng."
+        explanation: "Mỗi nền tảng đều nhận trọn công về mình khi khách có chạm vào quảng cáo của họ, dẫn tới ghi nhận trùng; cửa sổ ghi nhận rộng, chuyển đổi ước tính và đơn hoàn còn thổi phồng thêm. 200 triệu chỉ là mức tối thiểu, có thể lớn hơn nếu một phần doanh thu đến từ kênh tự nhiên. Con số đáng tin là doanh thu thật từ hệ thống bán hàng."
       },
       {
         id: "q10_5",
@@ -1721,13 +1753,13 @@ Rút ra một nguyên tắc kiểm tra: mỗi khi bạn đề xuất một cải
         id: "q11_1",
         question: "Doanh nghiệp của bạn đang bị khóa tài khoản quảng cáo chính vào đúng tuần sale cao điểm nhất năm. Là Trưởng phòng Digital Marketing, hành động khẩn cấp đầu tiên của bạn là gì?",
         options: [
-          "Kích hoạt ngay hệ thống tài khoản quảng cáo dự phòng (Backup BM/Ad Accounts) đã chuẩn bị sẵn và điều hướng ngân sách sang kênh phụ",
+          "Gửi kháng nghị và hoàn tất xác minh qua kênh chính thức của Meta, tìm đúng nguyên nhân khoá, đồng thời chuyển ngân sách sang các kênh đã chuẩn bị sẵn (Google, TikTok, Zalo, email/SMS tới khách cũ có đồng ý)",
           "Nghỉ việc ngay lập tức để tránh trách nhiệm",
           "Ngồi chờ phản hồi từ đội ngũ hỗ trợ Facebook trong 2 tuần",
           "Đổ lỗi cho nhân viên chạy Ads"
         ],
         correct: 0,
-        explanation: "Phương án dự phòng tài khoản (Contingency Account Infrastructure) là yêu cầu bắt buộc đối với một Trưởng phòng bài bản để đảm bảo dòng tiền kinh doanh không bị ngắt đoạn."
+        explanation: "Dự phòng đúng nghĩa là đa dạng kênh và tài sản hợp lệ được chuẩn bị từ trước (doanh nghiệp đã xác minh, nhiều quản trị viên, mỗi thương hiệu một Business Manager hợp lệ riêng), để dòng tiền không bị ngắt đoạn. Dùng tài khoản khác để chạy tiếp nội dung vừa bị chặn vi phạm chính sách Evading Enforcement của Meta và có thể khiến cả BM, Trang và tài khoản cá nhân bị khoá theo."
       },
       {
         id: "q11_2",
@@ -1745,13 +1777,13 @@ Rút ra một nguyên tắc kiểm tra: mỗi khi bạn đề xuất một cải
         id: "q11_3",
         question: "Chỉ số nào cho thấy hoạt động chăm sóc khách hàng cũ (Retention/CRM) của phòng Digital Marketing đang phát huy tác dụng rõ rệt?",
         options: [
-          "Tỷ lệ khách hàng mua lại (Repeat Purchase Rate) tăng và Chi phí thu hút khách hàng trung bình (Blended CAC) giảm",
+          "Tỷ lệ khách hàng mua lại (Repeat Purchase Rate) và giá trị trọn đời (LTV) tăng, kéo tỷ lệ LTV/CAC cải thiện",
           "Số lượng tin nhắn rác nhận được hàng ngày",
           "Giá bán niêm yết của sản phẩm tăng lên",
           "Số lượt thích trang Fanpage tăng đột biến"
         ],
         correct: 0,
-        explanation: "Khi tệp khách cũ mua lại nhiều (Repeat Purchase Rate cao), doanh nghiệp thu thêm doanh thu mà không mất thêm tiền quảng cáo mới, giúp Blended CAC giảm đáng kể."
+        explanation: "Mua lại không đổi CAC, vì CAC tính trên khách mới, nhưng làm mỗi khách sinh nhiều doanh thu và lợi nhuận hơn, nên LTV và tỷ lệ LTV/CAC cải thiện, như ví dụ cửa hàng thời trang ở bài 3."
       },
       {
         id: "q11_4",

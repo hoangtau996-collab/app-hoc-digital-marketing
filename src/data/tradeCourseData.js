@@ -327,9 +327,11 @@ Gói nhỏ, sản phẩm ăn liền và đồ uống lạnh là nhóm hợp kên
         title: 'E-commerce và HoReCa — hai kênh đang lên',
         content: `### EC — E-commerce (Thương mại điện tử)
 
-Shopee, Lazada, TikTok Shop, và sàn của chính thương hiệu.
+Shopee và TikTok Shop là hai sàn dẫn đầu, cộng lại khoảng 97% doanh số của 4 sàn lớn năm 2025 (Shopee khoảng 56%, TikTok Shop khoảng 41%; tổng doanh số 4 sàn ước 429.660 tỷ đồng, tăng 34,75% — theo Metric). Tiếp theo là Lazada, cùng website/ứng dụng bán hàng riêng của thương hiệu (D2C) và các kênh social commerce, livestream. Thứ hạng các sàn đổi nhanh, nên cập nhật số liệu này hằng năm.
 
 **Đặc trưng: chạy bằng dữ liệu.**
+
+**Khung pháp lý mới:** từ 01/07/2026, Luật Thương mại điện tử 2025 (số 122/2025/QH15) và Nghị định 248/2026/NĐ-CP có hiệu lực. Sàn phải xác thực người bán, người livestream bán hàng phải xác thực danh tính, trách nhiệm với hàng giả tăng lên. Nhãn hàng vì vậy phải kiểm soát chặt KOL, affiliate và nội dung khuyến mại online. Chương trình khuyến mại trên sàn vẫn phải tuân thủ quy định khuyến mại như ở kênh offline.
 
 Điều thú vị của kênh này là mọi khái niệm Trade truyền thống đều có bản tương đương:
 
@@ -378,7 +380,9 @@ Gợi ý theo ngành hàng bạn muốn theo:
 1. **Sữa, bánh kẹo, gia vị, hoá mỹ phẩm** — học MT trước, vì đây là nơi phần lớn ngân sách và dữ liệu nằm ở đó.
 2. **Nước giải khát, bia, thuốc lá, mì gói** — học GT trước, vì độ phủ là chiến trường chính.
 3. **Mỹ phẩm, thực phẩm chức năng, đồ gia dụng nhỏ** — học E-commerce trước.
-4. **Nguyên liệu pha chế, bia, nước đóng chai** — học HoReCa trước.`,
+4. **Nguyên liệu pha chế, bia, nước đóng chai** — học HoReCa trước.
+
+**Lưu ý pháp lý:** thuốc lá và rượu không được khuyến mại hay dùng làm hàng khuyến mại; quảng cáo thuốc lá bị cấm. Trade Marketing ngành thuốc lá chủ yếu là phân phối và trưng bày trong khuôn khổ luật. Với bia, quảng cáo và khuyến mại có nhiều hạn chế theo Luật Phòng, chống tác hại của rượu, bia, nên phải kiểm tra pháp lý trước khi thiết kế chương trình.`,
         takeaway:
           'E-commerce là Trade Marketing vận hành bằng dữ liệu, mọi khái niệm truyền thống đều có bản tương đương. HoReCa vận hành bằng quan hệ với chủ quán, chu kỳ dài nhưng bền.'
       },
@@ -536,6 +540,14 @@ Các dạng khuyến mãi: chiết khấu, combo, tích lũy, quà tặng kèm, 
 
 **Chọn sai mechanic có thể phá giá cả ngành hàng.**
 
+**Giới hạn pháp lý khi chọn mechanic** (căn cứ Nghị định 81/2018, sửa đổi bởi Nghị định 128/2024 và Nghị định 239/2026):
+
+- Giảm giá tối đa 50% giá ngay trước khuyến mại, trừ chương trình khuyến mại tập trung theo quy định (được tới 100%).
+- Giá trị quà tặng, hàng khuyến mại tối đa 50% giá trị hàng được khuyến mại.
+- Thông báo khuyến mại với Sở Công Thương trước khi chạy.
+- Khuyến mại may rủi phải đăng ký, và việc xác định trúng thưởng phải có khách hàng chứng kiến (trực tiếp hoặc trực tuyến).
+- Có danh mục hàng không được khuyến mại: rượu, thuốc lá, sữa thay thế sữa mẹ, thuốc kê đơn (cho người tiêu dùng).
+
 #### 05. POSM & Visual Merchandising
 
 Standee, wobbler, kệ trưng bày, poster, hangtag. Tiêu chuẩn trưng bày, quy trình brief thiết kế, đặt sản xuất và đo mức độ tuân thủ tại điểm bán.
@@ -583,9 +595,17 @@ Lượng hàng công ty bán được cho nhà phân phối hoặc nhà bán l�
 
 Lượng hàng thực sự được shopper mua khỏi kệ. **Đây mới là con số phản ánh nhu cầu thật.**
 
-#### Coverage — Độ phủ
+#### Coverage — Độ bao phủ
 
-Tỷ lệ điểm bán có hàng của mình trên tổng số điểm bán trong khu vực.
+Số điểm bán, hoặc tỷ lệ điểm bán, được đội Sales viếng thăm định kỳ (nằm trong tuyến bán hàng). Được viếng thăm chưa chắc đã có hàng.
+
+#### ND — Numeric Distribution (Độ phủ số điểm bán)
+
+Tỷ lệ số điểm bán có bán sản phẩm của mình trên tổng số điểm bán của ngành hàng. Mỗi điểm bán tính như nhau, tiệm tạp hoá nhỏ cũng bằng một đại siêu thị.
+
+#### WD — Weighted Distribution (Độ phủ có trọng số)
+
+Tỷ lệ doanh số ngành hàng của những điểm bán có hàng của mình trên tổng doanh số ngành hàng. **ND cao mà WD thấp nghĩa là có mặt ở nhiều tiệm nhỏ nhưng thiếu ở các điểm bán lớn.** Đây là chỉ số cốt lõi trong báo cáo Retail Audit ở kênh MT.
 
 #### SOS — Share of Shelf
 
@@ -593,7 +613,7 @@ Tỷ lệ diện tích kệ nhãn hàng chiếm được so với toàn ngành h
 
 #### OSA — On Shelf Availability
 
-Tỷ lệ thời gian sản phẩm thực sự có mặt trên kệ. **Hết hàng bằng mất doanh số vĩnh viễn** — shopper đứng trước kệ sẽ mua của đối thủ chứ không quay lại lần sau.
+Tỷ lệ lượt kiểm tra (điểm bán × SKU trong danh mục phải có) mà sản phẩm có mặt trên kệ. **Hết hàng gây mất doanh số đáng kể** — một phần shopper đổi sang nhãn đối thủ và có thể mất luôn khách, số còn lại mua ở cửa hàng khác, đổi sang biến thể khác cùng nhãn hoặc hoãn mua. Hết hàng lặp lại nhiều lần thì nguy cơ mất khách lâu dài tăng lên.
 
 #### POSM — Point of Sale Materials
 
@@ -635,7 +655,7 @@ Giả sử phát cho 500 điểm bán, đi kiểm tra mẫu 60 điểm thì 42 �
 
 Khi kiểm tra, ghi rõ ba mức: **có và đúng chỗ**, **có nhưng sai chỗ hoặc hỏng**, **không có**. Ba mức này dẫn tới ba cách xử lý hoàn toàn khác nhau.`,
         takeaway:
-          'Sell-out là con số phản ánh nhu cầu thật, không phải sell-in. OSA quan trọng vì hết hàng đồng nghĩa mất doanh số vĩnh viễn chứ không phải hoãn lại.'
+          'Sell-out là con số phản ánh nhu cầu thật, không phải sell-in. OSA quan trọng vì hết hàng làm mất một phần doanh số, có shopper chuyển hẳn sang đối thủ, và hết hàng lặp lại thì nguy cơ mất khách lâu dài tăng lên.'
       },
       {
         id: 'tm3-s3',
@@ -646,9 +666,11 @@ Mã đơn vị hàng hoá. Một nhãn hàng có thể có hàng chục SKU khá
 
 #### ROI chương trình
 
-Doanh thu tăng thêm chia cho chi phí bỏ ra. **Câu hỏi cuối cùng của mọi hoạt động Trade.**
+**ROI = (Lợi nhuận gộp tăng thêm − Chi phí chương trình) / Chi phí chương trình**, trong đó **Lợi nhuận gộp tăng thêm = Doanh thu tăng thêm × Biên lợi nhuận gộp**. ROI lớn hơn 0 nghĩa là chương trình tạo ra nhiều lợi nhuận hơn số tiền đã bỏ ra. **Câu hỏi cuối cùng của mọi hoạt động Trade.**
 
 Lưu ý quan trọng: phải tính trên phần doanh thu **tăng thêm** so với mốc nền, không phải tổng doanh thu trong kỳ chạy chương trình. Nhầm chỗ này là báo cáo nào cũng đẹp.
+
+Phân biệt với chỉ số **doanh thu tăng thêm trên mỗi đồng chi phí** (doanh thu tăng thêm chia cho chi phí). Đây là một chỉ số khác, không phải ROI, vì doanh thu chưa trừ giá vốn.
 
 #### A&P — Advertising & Promotion
 
@@ -672,10 +694,10 @@ Kế hoạch kinh doanh chung ký với khách hàng lớn ở kênh MT. Thườ
 
 - **Sell-in** — làm đẹp bằng cách đẩy hàng vào kho nhà phân phối cuối kỳ. Kiểm chứng bằng cách so với sell-out cùng kỳ.
 - **Sell-out** — khó làm đẹp nhất, nên đây là con số đáng tin nhất. Chỉ méo khi kỳ có khuyến mãi sâu kéo doanh số của kỳ sau về.
-- **Coverage** — làm đẹp bằng cách tính cả điểm bán chỉ nhập một lần rồi thôi. Kiểm chứng bằng số điểm bán có mua lặp lại.
+- **Độ phủ (ND)** — làm đẹp bằng cách tính cả điểm bán chỉ nhập một lần rồi thôi. Kiểm chứng bằng số điểm bán có mua lặp lại.
 - **Share of shelf** — làm đẹp bằng cách đo tại vài điểm bán tốt nhất rồi suy ra cả khu vực. Kiểm chứng bằng mẫu ngẫu nhiên.
 - **OSA** — làm đẹp bằng cách chỉ đi kiểm tra vào ngày vừa châm hàng. Kiểm chứng bằng cách đi vào các thời điểm khác nhau trong tuần.
-- **ROI chương trình** — làm đẹp bằng cách lấy tổng doanh thu thay vì phần tăng thêm, hoặc bỏ quên chi phí sản xuất POSM.
+- **ROI chương trình** — làm đẹp bằng cách lấy tổng doanh thu thay vì phần tăng thêm, lấy doanh thu thay cho lợi nhuận gộp, hoặc bỏ quên chi phí sản xuất POSM.
 
 ### Cách tính ROI đúng, làm một lần bằng số cụ thể
 
@@ -685,11 +707,14 @@ Giả sử một chương trình trưng bày kéo dài một tháng:
 2. **Doanh số tháng chạy chương trình:** 520.000.000 đồng.
 3. **Phần tăng thêm:** 520.000.000 − 400.000.000 = 120.000.000 đồng.
 4. **Tổng chi phí:** phí trưng bày 70.000.000 đồng, sản xuất POSM 20.000.000 đồng, nhân sự triển khai 10.000.000 đồng — cộng lại 100.000.000 đồng.
-5. **ROI:** (120.000.000 − 100.000.000) chia 100.000.000, bằng **0,2 lần**.
+5. **Lợi nhuận gộp tăng thêm:** giả sử biên lợi nhuận gộp của ngành hàng là 30%, ta có 120.000.000 × 30% = 36.000.000 đồng.
+6. **ROI:** (36.000.000 − 100.000.000) chia 100.000.000, bằng **−0,64 lần**. Chương trình lỗ 64.000.000 đồng, dù doanh số tháng chạy tăng 30% so với mốc nền.
 
-Nếu lấy nhầm tổng doanh thu 520.000.000 đồng làm tử số, ROI hiện lên 4,2 lần — sai gấp hơn hai mươi lần. Đây chính là lỗi mà câu hỏi kiểm tra của chuyên đề này nhắm tới.
+Nếu chỉ nhìn doanh thu tăng thêm trên mỗi đồng chi phí (120.000.000 chia 100.000.000, bằng 1,2 đồng) thì dễ tưởng chương trình có lãi. Với biên lợi nhuận gộp 30%, doanh thu tăng thêm phải đạt ít nhất khoảng 333.333.333 đồng (100.000.000 chia 30%) thì chương trình mới hoà vốn.
 
-**Chưa xong ở bước 5.** Còn phải kiểm tra tác dụng phụ: tháng sau doanh số có tụt xuống dưới mốc nền không (dấu hiệu chương trình chỉ kéo nhu cầu về sớm), tồn kho ở kênh ra sao, và giá bán trên kệ có bị neo ở mức khuyến mãi không.
+Nếu lấy nhầm tổng doanh thu 520.000.000 đồng làm tử số và quên nhân biên lợi nhuận, con số hiện lên (520.000.000 − 100.000.000) chia 100.000.000, bằng 4,2 lần — một chương trình đang lỗ bỗng trông như lãi gấp bốn lần chi phí. Đây chính là lỗi mà câu hỏi kiểm tra của chuyên đề này nhắm tới.
+
+**Chưa xong ở bước 6.** Còn phải kiểm tra tác dụng phụ: tháng sau doanh số có tụt xuống dưới mốc nền không (dấu hiệu chương trình chỉ kéo nhu cầu về sớm), tồn kho ở kênh ra sao, và giá bán trên kệ có bị neo ở mức khuyến mãi không.
 
 ### Bốn thứ phải chốt TRƯỚC khi chạy bất kỳ chương trình nào
 
@@ -700,14 +725,14 @@ Nếu lấy nhầm tổng doanh thu 520.000.000 đồng làm tử số, ROI hi�
 
 Chốt sau khi có kết quả thì con số nào cũng biện minh được.`,
         takeaway:
-          'ROI chương trình phải tính trên doanh thu tăng thêm so với mốc nền, không phải tổng doanh thu trong kỳ. Với mỗi chỉ số, luôn hỏi thêm nó có thể bị làm đẹp bằng cách nào.'
+          'ROI chương trình bằng (lợi nhuận gộp tăng thêm − chi phí) chia chi phí, trong đó lợi nhuận gộp tăng thêm là doanh thu tăng thêm so với mốc nền nhân biên lợi nhuận gộp, không phải tổng doanh thu trong kỳ. Với mỗi chỉ số, luôn hỏi thêm nó có thể bị làm đẹp bằng cách nào.'
       },
       {
         id: 'tm3-s4',
-        title: 'Về Nielsen và Kantar — rào cản của người mới',
+        title: 'Về NielsenIQ và Worldpanel — rào cản của người mới',
         content: `### Vấn đề có thật
 
-Nhiều tin tuyển dụng kênh MT yêu cầu kinh nghiệm với **Nielsen Retail Audit** hoặc **Kantar Worldpanel**. Theo dữ liệu phân tích tin tuyển dụng tháng 7/2026, con số này lên tới khoảng 78% với các vị trí kênh MT.
+Nhiều tin tuyển dụng kênh MT yêu cầu kinh nghiệm với **NielsenIQ (NIQ) Retail Measurement** (trước đây là Nielsen Retail Audit) hoặc **Worldpanel by Numerator** (trước đây là Kantar Worldpanel). Mảng đo lường bán lẻ của Nielsen tách thành NielsenIQ từ năm 2021; Kantar Worldpanel sáp nhập vào Numerator và đổi tên từ 07/2025. Tin tuyển dụng có thể vẫn ghi tên cũ Nielsen/Kantar, cần nhận ra đây là cùng một loại dữ liệu. Theo dữ liệu phân tích tin tuyển dụng tháng 7/2026, con số này lên tới khoảng 78% với các vị trí kênh MT.
 
 Đây là công cụ trả phí, chỉ doanh nghiệp mới có license. **Bạn không thể tự học ở nhà.**
 
@@ -715,28 +740,28 @@ Nhiều tin tuyển dụng kênh MT yêu cầu kinh nghiệm với **Nielsen Ret
 
 Đây là rào cản về quyền truy cập công cụ, không phải rào cản về năng lực. Cách đi vòng:
 
-- **Vào doanh nghiệp Việt hoặc chuỗi bán lẻ nội địa trước.** Nhóm này thường không đòi Nielsen/Kantar và chấp nhận nền Event hoặc Activation.
+- **Vào doanh nghiệp Việt hoặc chuỗi bán lẻ nội địa trước.** Nhóm này thường không đòi NielsenIQ/Worldpanel và chấp nhận nền Event hoặc Activation.
 - **Lấy nền thực chiến 1-2 năm**, hiểu chắc cấu trúc kênh và bộ chỉ số.
 - **Tiếp cận công cụ sau**, khi đã vào được doanh nghiệp có license. Học đọc dữ liệu Retail Audit mất vài tuần nếu đã hiểu bản chất chỉ số.
 
 ### Điều nhà tuyển dụng thực sự tìm
 
-Yêu cầu Nielsen trong tin tuyển dụng thường là cách viết tắt cho "biết đọc dữ liệu thị trường và ra quyết định từ số". Nếu bạn chứng minh được năng lực đó bằng dữ liệu tự thu thập từ store check, nhiều nhà tuyển dụng sẵn sàng bỏ qua phần công cụ.
+Yêu cầu Nielsen hay NielsenIQ trong tin tuyển dụng thường là cách viết tắt cho "biết đọc dữ liệu thị trường và ra quyết định từ số". Nếu bạn chứng minh được năng lực đó bằng dữ liệu tự thu thập từ store check, nhiều nhà tuyển dụng sẵn sàng bỏ qua phần công cụ.
 
 ### Hai công cụ này khác nhau ở đâu
 
 Biết để không nói nhầm khi được hỏi:
 
-- **Nielsen Retail Audit** đo phía cửa hàng: hàng bán ra bao nhiêu, giá bao nhiêu, chiếm bao nhiêu diện tích kệ, có hết hàng không. Dữ liệu lấy từ mẫu điểm bán.
-- **Kantar Worldpanel** đo phía hộ gia đình: ai mua, mua bao lâu một lần, mua thêm hay đổi từ nhãn nào sang. Dữ liệu lấy từ nhật ký mua sắm của các hộ tham gia.
+- **NielsenIQ Retail Measurement** (trước là Nielsen Retail Audit) đo phía cửa hàng: hàng bán ra bao nhiêu, giá bao nhiêu, chiếm bao nhiêu diện tích kệ, có hết hàng không. Dữ liệu lấy từ mẫu điểm bán.
+- **Worldpanel by Numerator** (trước là Kantar Worldpanel) đo phía hộ gia đình: ai mua, mua bao lâu một lần, mua thêm hay đổi từ nhãn nào sang. Dữ liệu lấy từ nhật ký mua sắm của các hộ tham gia.
 
-Nói gọn: **Nielsen trả lời "bán được bao nhiêu", Kantar trả lời "ai đang mua và vì sao đổi".** Câu hỏi kinh doanh khác nhau thì dùng công cụ khác nhau.
+Nói gọn: **NielsenIQ trả lời "bán được bao nhiêu", Worldpanel trả lời "ai đang mua và vì sao đổi".** Câu hỏi kinh doanh khác nhau thì dùng công cụ khác nhau.
 
 ### Nguồn dữ liệu miễn phí dùng được ngay
 
 Trong lúc chưa có license, đây là những thứ tự làm được:
 
-- **Dữ liệu store check của chính bạn.** Quy mô nhỏ nhưng là dữ liệu sơ cấp, và bạn hiểu rõ nó được thu thập thế nào — điều mà nhiều người dùng Nielsen không nói được.
+- **Dữ liệu store check của chính bạn.** Quy mô nhỏ nhưng là dữ liệu sơ cấp, và bạn hiểu rõ nó được thu thập thế nào — điều mà nhiều người dùng NielsenIQ không nói được.
 - **Dữ liệu công khai trên sàn thương mại điện tử.** Thứ hạng tìm kiếm, số lượt đánh giá, giá bán theo thời gian đều xem được không mất phí.
 - **Báo cáo thường niên của doanh nghiệp niêm yết.** Nhiều công ty hàng tiêu dùng công bố cơ cấu doanh thu theo kênh và ngành hàng.
 - **Bài phân tích chiến dịch trên báo ngành.** Đọc để hiểu cách người trong nghề lập luận, không phải để lấy số.
@@ -745,11 +770,11 @@ Trong lúc chưa có license, đây là những thứ tự làm được:
 
 Đừng giấu và cũng đừng ghi đại vào hồ sơ là đã biết dùng. Cách nói thẳng và có lợi hơn:
 
-*"Em chưa được dùng Nielsen vì đó là công cụ có license của doanh nghiệp. Nhưng em đã tự thu thập dữ liệu từ store check ở 8 điểm bán trong 3 tháng, đây là bảng số và đây là ba kết luận em rút ra được. Nếu được tiếp cận Retail Audit, em nghĩ mình đọc được sau vài tuần vì bản chất chỉ số thì giống nhau."*
+*"Em chưa được dùng NielsenIQ vì đó là công cụ có license của doanh nghiệp. Nhưng em đã tự thu thập dữ liệu từ store check ở 8 điểm bán trong 3 tháng, đây là bảng số và đây là ba kết luận em rút ra được. Nếu được tiếp cận Retail Audit, em nghĩ mình đọc được sau vài tuần vì bản chất chỉ số thì giống nhau."*
 
 Câu này chuyển cuộc trò chuyện từ chỗ bạn thiếu sang chỗ bạn đã chủ động làm.`,
         takeaway:
-          'Nielsen và Kantar là rào cản quyền truy cập công cụ chứ không phải rào cản năng lực. Chuỗi bán lẻ và F&B nội địa là cửa vào dễ hơn nhiều so với FMCG đa quốc gia.'
+          'NielsenIQ và Worldpanel by Numerator (trước là Nielsen và Kantar) là rào cản quyền truy cập công cụ chứ không phải rào cản năng lực. Chuỗi bán lẻ và F&B nội địa là cửa vào dễ hơn nhiều so với FMCG đa quốc gia.'
       }
     ],
     quiz: [
@@ -794,7 +819,7 @@ Câu này chuyển cuộc trò chuyện từ chỗ bạn thiếu sang chỗ bạ
       },
       {
         id: 'qtm3_4',
-        question: 'Người mới chưa có kinh nghiệm Nielsen/Kantar nên đi đường nào?',
+        question: 'Người mới chưa có kinh nghiệm NielsenIQ/Worldpanel (trước là Nielsen/Kantar) nên đi đường nào?',
         options: [
           'Mua license cá nhân để tự học ở nhà',
           'Bỏ qua kênh MT, chỉ làm GT suốt sự nghiệp',
@@ -803,7 +828,7 @@ Câu này chuyển cuộc trò chuyện từ chỗ bạn thiếu sang chỗ bạ
         ],
         correct: 3,
         explanation:
-          'Đây là rào cản quyền truy cập công cụ, không phải rào cản năng lực. Chuỗi bán lẻ và F&B nội địa thường không đòi Nielsen/Kantar và chấp nhận nền Event/Activation, là cửa vào dễ hơn nhiều so với FMCG đa quốc gia.'
+          'Đây là rào cản quyền truy cập công cụ, không phải rào cản năng lực. Chuỗi bán lẻ và F&B nội địa thường không đòi NielsenIQ/Worldpanel và chấp nhận nền Event/Activation, là cửa vào dễ hơn nhiều so với FMCG đa quốc gia.'
       }
     ]
   },
@@ -891,7 +916,7 @@ Các dải lương này là mặt bằng tham khảo, thay đổi theo ngành h�
 
 - **12-18 triệu** — dải lương phổ biến cho vị trí Junior Trade Marketing
 - **18-28 triệu** — dải lương phổ biến cho vị trí Mid-level
-- **78%** — tỷ lệ tin tuyển dụng kênh MT có yêu cầu Nielsen hoặc Kantar
+- **78%** — tỷ lệ tin tuyển dụng kênh MT có yêu cầu NielsenIQ hoặc Worldpanel (tin đăng thường vẫn ghi tên cũ Nielsen/Kantar)
 - **2 năm** — mức kinh nghiệm tối thiểu được yêu cầu phổ biến nhất
 
 Nguồn: phân tích 60 tin tuyển dụng Trade Marketing trên CareerLink quý 2/2026, kết hợp dữ liệu tuyển dụng TopCV, JobsGO, CareerViet và VietnamWorks tháng 7/2026.
@@ -908,7 +933,7 @@ Nguồn: phân tích 60 tin tuyển dụng Trade Marketing trên CareerLink quý
 ### Ba yêu cầu xuất hiện thường xuyên
 
 - **Shopper Marketing** — hiểu tâm lý và hành vi người mua tại điểm bán
-- **Nielsen / Kantar** — đọc dữ liệu Retail Audit và Worldpanel, chủ yếu ở kênh MT
+- **NielsenIQ / Worldpanel by Numerator** (trước là Nielsen / Kantar) — đọc dữ liệu đo lường bán lẻ và Worldpanel, chủ yếu ở kênh MT
 - **Đàm phán** — với nhà cung cấp in ấn, POSM, agency và với khách hàng kênh
 
 ### Cách dùng danh sách này
@@ -922,7 +947,7 @@ Tin tuyển dụng viết theo khuôn, nên phải biết chỗ nào là bắt b
 - **Phần "Mô tả công việc" mới là thứ đáng đọc kỹ.** Nó cho biết vị trí này thiên về kênh nào, ngành hàng nào, và có phải đi thị trường nhiều không.
 - **Phần "Yêu cầu" thường viết rộng hơn thực tế.** Danh sách 10 gạch đầu dòng hiếm khi bắt buộc đủ cả 10.
 - **Số năm kinh nghiệm là khoảng thương lượng được**, đặc biệt ở doanh nghiệp nội địa. Thiếu một năm mà có sản phẩm thật mang tới thì vẫn vào vòng phỏng vấn.
-- **Tên công cụ cụ thể mới là rào cản thật** — Nielsen, Kantar, hệ thống DMS nội bộ. Đây là thứ không tự học ở nhà được.
+- **Tên công cụ cụ thể mới là rào cản thật** — NielsenIQ, Worldpanel, hệ thống DMS nội bộ. Đây là thứ không tự học ở nhà được.
 
 ### Dịch yêu cầu tuyển dụng sang bằng chứng cần có
 
@@ -958,7 +983,7 @@ Số liệu tuyển dụng ở trên lấy từ phân tích tin đăng quý 2/20
 
 **Chuỗi bán lẻ và F&B nội địa là cửa vào dễ hơn nhiều so với FMCG đa quốc gia.** Lý do:
 
-- Thường không đòi kinh nghiệm Nielsen/Kantar
+- Thường không đòi kinh nghiệm NielsenIQ/Worldpanel
 - Chấp nhận nền Event hoặc Activation, vốn là thứ nhiều sinh viên đã có
 - Quy mô đội nhỏ nên được làm nhiều việc, học nhanh hơn
 - Ít tầng phê duyệt nên thấy được kết quả của quyết định mình đưa ra
@@ -1014,11 +1039,16 @@ Người làm Trade giỏi thường là người thật sự tò mò về ngàn
       },
       {
         id: 'qtm4_2',
-        question: 'Theo dữ liệu tuyển dụng tháng 7/2026, tỷ lệ tin tuyển dụng kênh MT yêu cầu Nielsen hoặc Kantar là bao nhiêu?',
-        options: ['Khoảng 32%', 'Khoảng 50%', 'Khoảng 78%', 'Khoảng 95%'],
+        question: 'NielsenIQ Retail Measurement (trước là Nielsen Retail Audit) và Worldpanel by Numerator (trước là Kantar Worldpanel) khác nhau ở điểm nào?',
+        options: [
+          'Hai tên gọi khác nhau của cùng một bộ dữ liệu, chỉ khác nhà cung cấp',
+          'NielsenIQ đo hành vi mua của mẫu hộ gia đình, Worldpanel đo doanh số tại cửa hàng',
+          'NielsenIQ đo doanh số, giá và độ phủ tại cửa hàng; Worldpanel đo hành vi mua của mẫu hộ gia đình',
+          'Cả hai đều chỉ đo dữ liệu trên sàn thương mại điện tử'
+        ],
         correct: 2,
         explanation:
-          'Khoảng 78% tin tuyển dụng kênh MT có yêu cầu này, theo phân tích 60 tin tuyển dụng trên CareerLink quý 2/2026. Đây là lý do người mới nên cân nhắc vào chuỗi bán lẻ hoặc F&B nội địa trước.'
+          'NielsenIQ đo phía cửa hàng: bán được bao nhiêu, giá bao nhiêu, độ phủ và hết hàng, dữ liệu lấy từ mẫu điểm bán. Worldpanel đo phía hộ gia đình: ai mua, mua bao lâu một lần, đổi từ nhãn nào sang. Tin tuyển dụng có thể vẫn ghi tên cũ Nielsen/Kantar.'
       },
       {
         id: 'qtm4_3',
@@ -1026,7 +1056,7 @@ Người làm Trade giỏi thường là người thật sự tò mò về ngàn
         options: [
           'FMCG đa quốc gia, vì có chương trình management trainee bài bản',
           'Dược phẩm, vì ít cạnh tranh nhất',
-          'Chuỗi bán lẻ và F&B nội địa, vì thường không đòi Nielsen/Kantar và chấp nhận nền Event/Activation',
+          'Chuỗi bán lẻ và F&B nội địa, vì thường không đòi NielsenIQ/Worldpanel và chấp nhận nền Event/Activation',
           'Thương mại điện tử, vì tất cả đều làm từ xa'
         ],
         correct: 2,
@@ -1038,13 +1068,13 @@ Người làm Trade giỏi thường là người thật sự tò mò về ngàn
         question: 'Yêu cầu nào sau đây KHÔNG nằm trong nhóm "gần như luôn có" của tin tuyển dụng Trade Marketing?',
         options: [
           'Quản lý POSM',
-          'Đọc dữ liệu Nielsen Retail Audit',
+          'Đọc dữ liệu NielsenIQ Retail Measurement (trước là Nielsen Retail Audit)',
           'Phân tích số liệu và thành thạo Excel',
           'Đi thị trường định kỳ'
         ],
         correct: 1,
         explanation:
-          'Nielsen/Kantar thuộc nhóm "thường xuyên" và chủ yếu ở kênh MT (khoảng 78%), không phải nhóm gần như luôn có. Sáu yêu cầu gần như luôn có là: am hiểu kênh, quản lý POSM, lập kế hoạch, phân tích số liệu, đi thị trường, phối hợp đa phòng ban.'
+          'NielsenIQ/Worldpanel thuộc nhóm "thường xuyên" và chủ yếu ở kênh MT (khoảng 78%), không phải nhóm gần như luôn có. Sáu yêu cầu gần như luôn có là: am hiểu kênh, quản lý POSM, lập kế hoạch, phân tích số liệu, đi thị trường, phối hợp đa phòng ban.'
       }
     ]
   },
@@ -1257,7 +1287,7 @@ Câu kiểm tra tư duy chỉ số. Nêu được hiện tượng (hàng dồn �
 
 **3. "Có 100 triệu cho một chương trình, làm sao biết nó hiệu quả?"**
 
-Câu kiểm tra tư duy đo lường. Bốn thứ phải chốt trước khi chạy: mốc so sánh, mục tiêu cụ thể, cách đo, ngưỡng dừng. Sau đó tính ROI trên phần doanh thu tăng thêm và kiểm tra tác dụng phụ.
+Câu kiểm tra tư duy đo lường. Bốn thứ phải chốt trước khi chạy: mốc so sánh, mục tiêu cụ thể, cách đo, ngưỡng dừng. Sau đó tính ROI trên lợi nhuận gộp của phần doanh thu tăng thêm (doanh thu tăng thêm × biên lợi nhuận gộp, trừ chi phí rồi chia chi phí) và kiểm tra tác dụng phụ.
 
 **4. "Vì sao chọn Trade Marketing?"**
 

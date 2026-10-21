@@ -32,3 +32,6 @@ dist-ssr
 
 # File tạm do quy trình cập nhật tin sinh ra, chỉ dùng trong một lần chạy
 tin-vua-them.txt
+
+# Sản phẩm/báo cáo nội bộ (vd báo cáo kiểm tra nội dung) — không đẩy lên GitHub
+outputs/

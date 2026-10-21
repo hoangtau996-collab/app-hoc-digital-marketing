@@ -47,14 +47,14 @@ export const LESSON_CASES = {
   'm1-s3': {
     brand: 'Coca-Cola',
     year: '2020',
-    title: 'Cắt ngân sách vì không đo được ROI, rồi phải nói lại',
+    title: 'Coca-Cola cắt sâu quảng cáo mùa dịch vì cho rằng không thể thu về kết quả',
     facts: [
       'Trong đợt dịch năm 2020, Coca-Cola giảm hơn 30% chi tiêu quảng cáo toàn cầu.',
       'Tổng Giám Đốc James Quincey giải thích trên báo cáo quý 2 năm 2020: "Tại sao tôi lại muốn chi tiền trong giai đoạn không thể thu về kết quả, nhất là khi đang phong toả gắt gao".',
       'Các phân tích sau đó, trong đó có bài của Mark Ritson trên Marketing Week so sánh Coca-Cola với P&G cùng thời kỳ, chỉ ra doanh nghiệp giữ ngân sách phục hồi nhanh hơn doanh nghiệp cắt sâu.',
     ],
-    lesson: 'Câu "không đo được ROI nên cắt" nghe rất hợp lý trong phòng họp. Nhiệm vụ của Trưởng phòng là dịch mục tiêu kinh doanh thành bộ chỉ số đo được ngay từ đầu, để đến lúc khó khăn còn có số liệu mà bảo vệ ngân sách.',
-    source: 'Coca-Cola, báo cáo kết quả quý 2/2020; Marketing Week — Mark Ritson, "P&G and Coke\'s pandemic performances prove it: You don\'t cut ad spend in a crisis"',
+    lesson: 'Việc cắt sâu là sai hay đúng là quan điểm tranh luận của Mark Ritson, không phải kết luận đã được chứng minh: Coca-Cola có yếu tố gây nhiễu là kênh tiêu thụ tại chỗ (nhà hàng, sự kiện) bị đóng cửa, điều P&G với hàng gia dụng không gặp. Điều Trưởng phòng rút ra được: khi bị yêu cầu cắt ngân sách, cần có số liệu tách được tác động của quảng cáo khỏi tác động của bối cảnh, nếu không cuộc tranh luận chỉ còn dựa trên quan điểm.',
+    source: 'Coca-Cola, cuộc gọi báo cáo kết quả quý 2/2020 (21/7/2020); Marketing Week — Mark Ritson, "P&G and Coke\'s pandemic performances prove it: You don\'t cut ad spend in a crisis"',
   },
 
   'm1-s4': {
@@ -64,10 +64,10 @@ export const LESSON_CASES = {
     facts: [
       'Năm 2020 Airbnb giảm 58% tổng chi marketing, tương đương 662 triệu đô la, so với mức 1,14 tỷ đô la của năm 2019.',
       'Trong đó phần cắt sâu nhất là quảng cáo hiệu suất, giảm 541 triệu đô la. Phần thương hiệu như truyền hình và tài trợ chỉ giảm 121 triệu đô la, tức chưa bằng một phần tư mức cắt của quảng cáo hiệu suất.',
-      'Dù cắt như vậy, Airbnb vẫn thu hút được 95% lượng truy cập của năm trước đó.',
+      'Theo phát biểu của Tổng Giám Đốc (con số này không có trong báo cáo tài chính), dù cắt như vậy Airbnb vẫn thu hút được 95% lượng truy cập của năm trước đó.',
       'Đồng sáng lập kiêm Tổng Giám Đốc Brian Chesky nói: "Điều này cho thấy thương hiệu của chúng tôi vốn đã rất mạnh. Nó là một danh từ và cũng là một động từ trong văn hoá đại chúng". Airbnb sau đó tuyên bố chuyển dịch ngân sách sang thương hiệu một cách lâu dài.',
     ],
-    lesson: 'Đây là bằng chứng thực nghiệm quy mô lớn cho Định luật 95-5: phần lớn lưu lượng mà quảng cáo hiệu suất nhận công về mình vốn đã thuộc về thương hiệu. Nhưng lưu ý điều kiện đi kèm, Airbnb làm được vì đã có sẵn một thương hiệu cực mạnh. Doanh nghiệp chưa có tài sản đó mà cắt tương tự sẽ mất doanh thu thật.',
+    lesson: 'Đây là minh hoạ thực tế cho việc quảng cáo hiệu suất có thể đang nhận công cho lưu lượng vốn đến từ thương hiệu. Lưu ý: con số 95% là phát biểu của CEO, và năm 2020 là năm đặc biệt khi nhu cầu du lịch sụp đổ nên quảng cáo hiệu suất vốn đã kém hiệu quả. Airbnb làm được còn vì đã có sẵn một thương hiệu cực mạnh. Doanh nghiệp chưa có tài sản đó mà cắt tương tự có thể mất doanh thu thật.',
     source: 'Campaign — "Airbnb slashes spend in permanent shift from performance marketing to brand"; báo cáo tài chính Airbnb 2020',
   },
 
@@ -75,15 +75,15 @@ export const LESSON_CASES = {
 
   'm2-s1': {
     brand: 'HubSpot',
-    year: '2005 đến nay',
+    year: '2006 đến nay',
     title: 'Doanh nghiệp đặt ra khái niệm Inbound Marketing và tự chứng minh nó',
     facts: [
-      'Thuật ngữ Inbound Marketing do Brian Halligan và Dharmesh Shah đưa ra khi sáng lập HubSpot năm 2005.',
+      'Thuật ngữ Inbound Marketing gắn với Brian Halligan và Dharmesh Shah, hai người sáng lập HubSpot năm 2006 và phổ biến khái niệm này qua cuốn sách "Inbound Marketing" (2009).',
       'HubSpot xây dựng chính mình bằng phương pháp đó: kho bài viết, khoá học miễn phí HubSpot Academy và bộ công cụ dùng thử, thay vì mua khách hàng bằng quảng cáo.',
       'Công ty niêm yết trên sàn New York năm 2014 và hiện là doanh nghiệp phần mềm marketing hàng tỷ đô la doanh thu.',
     ],
     lesson: 'Inbound không phải là làm nội dung cho vui. Nó là quyết định đầu tư dài hạn để chuyển chi phí thu hút khách từ dạng thuê sang dạng sở hữu. Cái giá phải trả là nhiều năm chưa thấy kết quả.',
-    source: 'HubSpot — lịch sử công ty và hồ sơ niêm yết 2014',
+    source: 'HubSpot — lịch sử công ty và hồ sơ niêm yết 2014; Brian Halligan & Dharmesh Shah, "Inbound Marketing", 2009; Fortune, 8/8/2011',
   },
 
   'm2-s2': {
@@ -174,11 +174,11 @@ export const LESSON_CASES = {
     title: 'P&G cắt mạnh chi phí agency và thu gọn số đối tác',
     facts: [
       'Ông Marc Pritchard, Giám đốc Thương hiệu của P&G, dẫn dắt chương trình siết minh bạch chuỗi cung ứng quảng cáo từ năm 2017.',
-      'P&G công bố cắt hơn 1 tỷ đô la chi phí agency và sản xuất, đồng thời giảm mạnh số lượng đối tác trong danh sách agency.',
+      'Đầu năm 2018 P&G công bố đã tiết kiệm 750 triệu đô la chi phí agency và sản xuất, giảm số agency từ khoảng 6.000 xuống 2.500, với mục tiêu đưa tổng chi phí này từ 2 tỷ đô la xuống 1,15 tỷ đô la.',
       'Cùng thời gian đó P&G đưa nhiều năng lực về nội bộ và chuyển sang mô hình nhóm làm việc cố định theo thương hiệu.',
     ],
     lesson: 'Nguyên tắc phân định không phải là in-house tốt hơn hay agency tốt hơn. Nó là: giữ trong nhà phần lặp lại hàng ngày và phần chạm vào dữ liệu khách hàng, thuê ngoài phần biến động theo mùa vụ.',
-    source: 'P&G — phát biểu của Marc Pritchard tại các hội nghị ANA 2017-2019',
+    source: 'P&G — phát biểu của Marc Pritchard tại các hội nghị ANA 2017-2019; CNBC — số liệu do Giám đốc Tài chính Jon Moeller công bố, 24/1/2018; Campaign',
   },
 
   'm4-s3': {
@@ -252,15 +252,15 @@ export const LESSON_CASES = {
 
   'm6-s1': {
     brand: 'Netflix',
-    year: '2018 đến nay',
+    year: '2016 đến nay',
     title: 'Netflix bỏ hẳn cách phân nhóm theo tuổi và giới tính',
     facts: [
-      'Netflix thay việc phân nhóm theo nhân khẩu học bằng khoảng 2.000 nhóm sở thích dựng hoàn toàn từ hành vi xem thật.',
-      'Lãnh đạo mảng sản phẩm của Netflix phát biểu rằng chủng tộc, giới tính hay sắc tộc của một người nói rất ít về việc người đó thực sự thích xem gì.',
-      'Các nhóm sở thích này được dùng cho cả việc gợi ý nội dung lẫn quyết định đầu tư sản xuất phim.',
+      'Năm 2016, khi chuyển sang một thuật toán gợi ý toàn cầu, Netflix thay việc phân nhóm theo nhân khẩu học bằng khoảng 2.000 nhóm sở thích dựng hoàn toàn từ hành vi xem thật.',
+      'Năm 2016, ông Todd Yellin, Phó Chủ tịch phụ trách sản phẩm của Netflix, nói rằng địa lý, tuổi và giới tính gần như vô dụng trong việc dự đoán khẩu vị xem, và Netflix "vứt chúng vào sọt rác".',
+      'Các nhóm sở thích này được dùng để gợi ý nội dung cho người xem.',
     ],
     lesson: 'Chân dung khách hàng dừng ở tuổi, giới tính và thu nhập thì gần như không dùng được để viết nội dung. Tầng thực sự có giá trị là nỗi đau, kỳ vọng và thói quen tiêu thụ nội dung, vì chỉ ba tầng đó mới đổi được thành thông điệp.',
-    source: 'Netflix — công bố về mô hình taste clusters',
+    source: 'Fortune — bài về cách Netflix dự đoán khẩu vị xem, phát biểu của Todd Yellin, 27/3/2016',
   },
 
   'm6-s2': {
@@ -297,11 +297,11 @@ export const LESSON_CASES = {
     title: 'Shot on iPhone: một Big Idea nuôi được cả chục năm nội dung',
     facts: [
       'Apple khởi động chiến dịch Shot on iPhone năm 2015 với các bức ảnh do chính người dùng chụp, đặt trên bảng quảng cáo ngoài trời khắp thế giới.',
-      'Chiến dịch từng giành giải Sư Tử Vàng hạng mục Outdoor tại Cannes Lions năm 2015.',
+      'Chiến dịch giành giải Grand Prix, giải cao nhất hạng mục Outdoor, tại Cannes Lions năm 2015, kèm 5 giải Sư Tử Vàng.',
       'Cấu trúc thông điệp không đổi qua các năm, chỉ thay lớp nội dung bên trên theo từng đời máy và từng tính năng mới.',
     ],
     lesson: 'Đây chính là Ngôi nhà Thông điệp vận hành đúng cách. Big Idea là "máy trong tay bạn đủ tốt để tạo ra tác phẩm". Trụ cột nội dung là ảnh người dùng. Bằng chứng là chính những bức ảnh đó. Nhờ vậy mọi thị trường triển khai khác nhau mà vẫn không lệch thông điệp.',
-    source: 'Apple — chiến dịch Shot on iPhone; Cannes Lions 2015',
+    source: 'Apple — chiến dịch Shot on iPhone; Cannes Lions 2015; MacRumors, 23/6/2015',
   },
 
   'm7-s2': {
@@ -351,13 +351,13 @@ export const LESSON_CASES = {
     year: '2008 đến 2010',
     title: 'Chương trình giới thiệu hai chiều đưa người dùng từ 100 nghìn lên 4 triệu',
     facts: [
-      'Tháng 9 năm 2008 Dropbox ra mắt chương trình giới thiệu tặng 500MB dung lượng cho cả người mời lẫn người được mời, tối đa 16GB.',
+      'Năm 2008 Dropbox ra mắt chương trình giới thiệu tặng 250MB cho cả người mời lẫn người được mời (tối đa 8GB với tài khoản miễn phí). Đến tháng 4/2012 mức thưởng được nâng lên 500MB, tối đa 16GB.',
       'Trong 15 tháng, số người đăng ký tăng từ khoảng 100 nghìn lên 4 triệu, tức tăng 3.900%.',
       'Dropbox ghi nhận chương trình này tạo mức tăng bền vững khoảng 60% lượng đăng ký, và ở giai đoạn cao điểm khoảng 35% lượt đăng ký mỗi ngày đến từ giới thiệu.',
       'Tháng 4 năm 2010 có 2,8 triệu lời mời được gửi đi.',
     ],
     lesson: 'Điểm mấu chốt là phần thưởng dành cho cả hai phía. Thưởng một phía biến người giới thiệu thành người đi xin xỏ bạn bè. Thưởng hai phía biến lời mời thành món quà, và tỷ lệ người nhận tham gia tăng theo, tức là vế thứ hai trong công thức K-Factor.',
-    source: 'Dropbox — số liệu tăng trưởng do Drew Houston công bố; tổng hợp các phân tích chương trình giới thiệu Dropbox',
+    source: 'Dropbox — số liệu tăng trưởng do Drew Houston công bố; tổng hợp các phân tích chương trình giới thiệu Dropbox; TidBITS, 4/4/2012',
   },
 
   'm8-s3': {
@@ -465,10 +465,11 @@ export const LESSON_CASES = {
       'Ông Kevin Frisch, khi đó phụ trách marketing hiệu suất và CRM của Uber, cho biết đã tắt khoảng 100 triệu đô la trong tổng ngân sách quảng cáo trực tuyến khoảng 150 triệu đô la một năm.',
       'Sau khi tắt, số lượt cài đặt ứng dụng của người dùng gần như không thay đổi.',
       'Cơ chế được phát hiện: một số mạng quảng cáo tạo lượt bấm hàng loạt trên hàng nghìn thiết bị, để khi người dùng tự cài ứng dụng thì mạng đó vẫn nhận được công.',
-      'Uber khởi kiện năm mạng quảng cáo và giành phần thắng trong vụ kiện liên quan tới Fetch Media.',
+      'Năm 2019 Uber khởi kiện năm mạng quảng cáo do Fetch Media phân phối ngân sách. Trước đó Uber và Fetch đã dàn xếp ngoài toà (3/2019, không công bố điều khoản).',
+      'Riêng Phunware, một đơn vị trong chuỗi này, đã đồng ý trả Uber 6 triệu đô la vào năm 2020 để khép lại vụ kiện.',
     ],
     lesson: 'Đây là dạng cực đoan nhất của việc ghi nhận trùng: nền tảng nhận công cho những chuyển đổi vốn dĩ đã xảy ra. Cách kiểm chứng duy nhất là thử tắt hẳn một kênh trong một khoảng thời gian và đo phần doanh thu thật bị mất, thay vì tin vào báo cáo của chính kênh đó.',
-    source: 'Uber v. Fetch Media; Forbes — "One Of Uber\'s Lawsuits Against Ad Fraud Comes Full Circle", 2021; WARC',
+    source: 'Phunware — hồ sơ 8-K nộp SEC về thoả thuận với Uber, 10/2020; AdExchanger — vụ kiện năm mạng quảng cáo, 6/2019; Forbes — "One Of Uber\'s Lawsuits Against Ad Fraud Comes Full Circle", 2021; WARC',
   },
 
   /* ================= CHUYÊN ĐỀ 11 - TƯ VẤN ================= */
@@ -494,23 +495,23 @@ export const LESSON_CASES = {
       'Cuối năm 2009 Domino\'s tung chiến dịch Pizza Turnaround, phát nguyên văn các lời chê gay gắt của khách hàng về bánh của chính mình trên quảng cáo.',
       'Song song đó hãng thay đổi công thức bánh, chứ không chỉ thay thông điệp truyền thông.',
       'Quý 1 năm 2010 doanh thu cùng cửa hàng tại Mỹ tăng 14,3%, mức tăng kỷ lục của ngành nhà hàng phục vụ nhanh khi đó.',
-      'Đà tăng còn tiếp diễn, quý 3 năm 2010 tăng 11,2% so với cùng kỳ.',
+      'Đà tăng còn tiếp diễn, quý 3 năm 2010 doanh thu cùng cửa hàng tại Mỹ tăng 11,7% so với cùng kỳ.',
     ],
     lesson: 'Không chiến dịch truyền thông nào cứu được một sản phẩm dở. Domino\'s thành công vì đã sửa sản phẩm trước rồi mới truyền thông. Khi chẩn đoán ra vấn đề nằm ngoài phạm vi marketing, việc của Trưởng phòng là nói thẳng chứ không phải chạy thêm quảng cáo.',
-    source: "Domino's Pizza — thông cáo kết quả tài chính quý 1/2010; Campaign — case study Domino's và Crispin Porter & Bogusky",
+    source: "Domino's Pizza — thông cáo kết quả tài chính quý 1/2010 và quý 3/2010 (8-K nộp SEC); Campaign — case study Domino's và Crispin Porter & Bogusky",
   },
 
   'm11-s3': {
     brand: 'Baemin Việt Nam',
     year: '2019 đến 2023',
-    title: 'Truyền thông xuất sắc không cứu được bài toán đơn vị kinh tế',
+    title: 'Truyền thông được đánh giá cao không cứu được vị thế cạnh tranh và bài toán lợi nhuận',
     facts: [
       'Baemin, do Woowa Brothers Việt Nam vận hành, vào thị trường Việt Nam năm 2019 và nhanh chóng được giới marketing đánh giá cao về chất lượng sáng tạo và mức độ bản địa hoá.',
       'Theo thống kê năm 2022, Baemin chỉ nắm khoảng 12% thị phần giao đồ ăn tại Việt Nam, trong khi Grab chiếm khoảng 45% và ShopeeFood khoảng 41%.',
       'Baemin chính thức dừng hoạt động tại Việt Nam từ ngày 8 tháng 12 năm 2023.',
       'Ông Niklas Östberg, đồng sáng lập kiêm Tổng Giám Đốc Delivery Hero, công ty mẹ, nói rằng hoạt động kinh doanh tại Việt Nam "không bao giờ có lãi".',
     ],
-    lesson: 'Đây là minh chứng đắt giá nhất cho nguyên tắc của cả chuyên đề: khi chi phí thu hút khách vượt lợi nhuận gộp mỗi đơn, vấn đề nằm ở mô hình kinh doanh chứ không nằm ở quảng cáo. Baemin làm truyền thông thuộc nhóm tốt nhất thị trường và vẫn phải rút, vì tối ưu quảng cáo chỉ làm chậm tốc độ lỗ chứ không đảo được dấu.',
-    source: 'VnExpress, Tuổi Trẻ, Vietstock — tin Baemin dừng hoạt động tại Việt Nam, tháng 11-12/2023; phát biểu của Tổng Giám Đốc Delivery Hero',
+    lesson: 'Baemin được đánh giá cao về sáng tạo nhưng chỉ giữ khoảng 12% thị phần và không tìm được đường sinh lãi. Đây là ví dụ cho thấy truyền thông tốt không bù được vị thế cạnh tranh và bài toán lợi nhuận. Muốn kết luận về đơn vị kinh tế thì cần số liệu chi phí thu hút khách và biên lợi nhuận mỗi đơn, mà Baemin không công bố.',
+    source: 'VnExpress, Tuổi Trẻ, Vietstock — tin Baemin dừng hoạt động tại Việt Nam, tháng 11-12/2023; phát biểu của Tổng Giám Đốc Delivery Hero; KED Global, 27/11/2023',
   },
 };

@@ -80,11 +80,11 @@ export const GLOSSARY_ITEMS = [
     term: 'LTV (Customer Lifetime Value)',
     category: 'kpi',
     categoryLabel: 'Chỉ Số & KPIs',
-    shortDef: 'Tổng giá trị doanh thu mà 1 khách hàng đóng góp cho doanh nghiệp trong suốt vòng đời.',
-    definition: 'LTV thể hiện giá trị dài hạn của khách hàng. Doanh nghiệp có LTV cao có thể chấp nhận chi chi phí CAC cao hơn ở lần bán đầu tiên.',
-    formula: 'LTV = Giá Trị Đơn Trung Bình x Số Lần Mua Trung Bình/Năm x Số Năm Gắn Bán',
-    example: 'Khách hàng mua mỹ phẩm trung bình 500.000 VNĐ/đơn, mua 4 lần/năm và gắn bó 3 năm. Khi đó LTV = 500k x 4 x 3 = 6.000.000 VNĐ.',
-    takeaway: 'Tỷ lệ vàng bền vững của doanh nghiệp là LTV / CAC >= 3x (LTV gấp ít nhất 3 lần chi phí thu hút khách hàng).',
+    shortDef: 'Tổng lợi nhuận gộp mà 1 khách hàng đóng góp cho doanh nghiệp trong suốt vòng đời.',
+    definition: 'LTV thể hiện giá trị dài hạn của khách hàng. Doanh nghiệp có LTV cao có thể chấp nhận chi chi phí CAC cao hơn ở lần bán đầu tiên. Khi đem LTV so với CAC, phải dùng LTV tính theo lợi nhuận gộp: LTV tính theo doanh thu chưa trừ giá vốn nên thổi phồng tỷ lệ LTV/CAC lên 2-3 lần.',
+    formula: 'LTV = Giá Trị Đơn Trung Bình x Số Lần Mua Trung Bình/Năm x Số Năm Gắn Bó x Biên Lợi Nhuận Gộp',
+    example: 'Khách hàng mua mỹ phẩm trung bình 500.000 VNĐ/đơn, mua 4 lần/năm, gắn bó 3 năm, biên lợi nhuận gộp 40%. Doanh thu vòng đời = 500k x 4 x 3 = 6.000.000 VNĐ, còn LTV theo lợi nhuận gộp = 6.000.000 x 40% = 2.400.000 VNĐ.',
+    takeaway: 'Ngưỡng tham khảo phổ biến là LTV / CAC >= 3x, với LTV tính theo lợi nhuận gộp (LTV gấp ít nhất 3 lần chi phí thu hút khách hàng).',
     icon: 'Repeat'
   },
   {
@@ -188,9 +188,9 @@ export const GLOSSARY_ITEMS = [
     category: 'media',
     categoryLabel: 'Kênh & Công Nghệ Số',
     shortDef: 'Nền tảng quảng cáo trên mạng xã hội dựa trên sở thích và hành vi người dùng.',
-    definition: 'Meta Ads sử dụng thuật toán máy học (Machine Learning) để phân phối quảng cáo tới đúng tệp đối tượng mục tiêu dựa trên Lookalike Audiences và Pixel Data.',
+    definition: 'Meta Ads sử dụng thuật toán máy học (Machine Learning) để phân phối quảng cáo. Từ 2025 các chiến dịch mặc định bật tự động hoá Advantage+ (ví dụ Advantage+ sales campaigns, Advantage+ audience); tệp Lookalike và tệp tuỳ chỉnh chủ yếu đóng vai trò tín hiệu gợi ý cho thuật toán. Dữ liệu chuyển đổi từ Pixel kết hợp Conversions API quyết định chất lượng tối ưu.',
     example: 'Chạy chiến dịch quảng cáo Messenger tư vấn sản phẩm thời trang nữ độ tuổi 22-35 tại TP.HCM.',
-    takeaway: 'Hiệu quả Meta Ads hiện nay phụ thuộc 80% vào chất lượng nội dung Sáng tạo (Creative) và Hook Video.',
+    takeaway: 'Khi nhắm chọn đối tượng đã được tự động hoá, chất lượng và số lượng nội dung Sáng tạo (Creative), đặc biệt là Hook Video, trở thành đòn bẩy lớn nhất của nhà quảng cáo.',
     icon: 'Share2'
   },
   {
@@ -257,7 +257,7 @@ export const GLOSSARY_ITEMS = [
     categoryLabel: 'Sáng Tạo & Truyền Thông',
     shortDef: 'Thử thách kích hoạt người dùng tự tạo nội dung lan truyền cho thương hiệu.',
     definition: 'UGC Challenge thu hút hàng nghìn video tham gia từ cộng đồng trên TikTok bằng âm thanh cuốn hút, điệu nhảy dễ nhớ và giải thưởng kích thích.',
-    example: 'Thử thách nhảy #VuDieuRuaTay của Biti\'s đạt hơn 300 triệu lượt xem trên TikTok.',
+    example: 'Thử thách #vudieuruatay (vũ đạo của Quang Đăng trên bài Ghen Cô Vy, chiến dịch phòng dịch của Bộ Y tế năm 2020) lan ra toàn cầu nhờ chỉ có 6 động tác dễ bắt chước, là bài học điển hình về rào cản tham gia thấp.',
     takeaway: 'Rào cản tham gia (Barrier to Entry) phải cực kỳ đơn giản để bất kỳ ai cũng có thể quay video hưởng ứng.',
     icon: 'Video'
   },
@@ -319,7 +319,7 @@ export const GLOSSARY_ITEMS = [
     shortDef: 'Thước đo sức khỏe mô hình kinh doanh: giá trị khách hàng so với chi phí thu hút.',
     definition: 'Tỷ lệ này cho biết mỗi đồng bỏ ra để có khách hàng mới sẽ thu lại bao nhiêu đồng giá trị trong suốt vòng đời khách hàng đó.',
     formula: 'LTV/CAC = Giá Trị Vòng Đời Khách Hàng / Chi Phí Thu Hút Khách Hàng',
-    example: 'LTV đạt 6.000.000 VNĐ trong khi CAC là 1.500.000 VNĐ. Khi đó tỷ lệ = 4x, mô hình kinh doanh rất khỏe.',
+    example: 'Khách hàng ở mục LTV mang lại 6.000.000 VNĐ doanh thu vòng đời, tức 2.400.000 VNĐ lợi nhuận gộp, trong khi CAC là 1.500.000 VNĐ. Tỷ lệ đúng = 2.400.000 / 1.500.000 = 1,6x, mô hình còn mong manh. Nếu lấy nhầm doanh thu thì ra 4x và tưởng là rất khỏe.',
     takeaway: 'Dưới 1x là đốt tiền; 1-3x là mong manh; từ 3x là bền vững; trên 5x có thể bạn đang đầu tư quá dè dặt cho tăng trưởng.',
     icon: 'Gauge'
   },
@@ -425,7 +425,7 @@ export const GLOSSARY_ITEMS = [
     category: 'kpi',
     categoryLabel: 'Chỉ Số & KPIs',
     shortDef: 'Phần trăm người tiếp cận có tương tác thực với nội dung của bạn.',
-    definition: 'Engagement Rate tổng hợp Like, Comment, Share, Save và Click. Trên TikTok và Reels, chỉ số Save và Share có trọng số cao nhất với thuật toán phân phối.',
+    definition: 'Engagement Rate tổng hợp Like, Comment, Share, Save và Click. Trên TikTok và Reels, chỉ số Save và Share có trọng số cao nhất với thuật toán phân phối. Lưu ý: trong GA4, Engagement Rate = Số phiên tương tác / Tổng số phiên, khác hoàn toàn ER mạng xã hội. Với mạng xã hội, luôn ghi rõ mẫu số (theo reach, theo impressions hay theo follower) vì mỗi công cụ tính một kiểu.',
     formula: 'ER = (Tổng Tương Tác / Tổng Reach) x 100%',
     example: 'Bài viết reach 50.000 người, nhận 2.500 tương tác các loại. Khi đó ER = 5%.',
     takeaway: 'Comment và Share đáng giá hơn Like rất nhiều. Hãy thiết kế nội dung tạo tranh luận hoặc đáng để lưu lại.',
@@ -436,10 +436,10 @@ export const GLOSSARY_ITEMS = [
     term: 'Bounce Rate (Tỷ Lệ Thoát Trang)',
     category: 'kpi',
     categoryLabel: 'Chỉ Số & KPIs',
-    shortDef: 'Phần trăm phiên truy cập rời đi mà không có bất kỳ tương tác nào.',
-    definition: 'Bounce Rate cao thường do trang tải chậm, nội dung không khớp với lời hứa trong quảng cáo, hoặc trải nghiệm mobile kém.',
-    formula: 'Bounce Rate = (Số Phiên Chỉ Xem 1 Trang / Tổng Số Phiên) x 100%',
-    example: 'Landing Page nhận 10.000 phiên truy cập, 6.500 phiên thoát ngay lập tức. Khi đó Bounce Rate = 65%.',
+    shortDef: 'Phần trăm phiên truy cập không có tương tác (non-engaged session) theo định nghĩa GA4.',
+    definition: 'Trong GA4, phiên tương tác (engaged session) là phiên kéo dài hơn 10 giây, hoặc có ít nhất 1 sự kiện chuyển đổi (key event), hoặc có từ 2 lượt xem trang/màn hình trở lên; phiên không đạt điều kiện nào được tính là thoát. Cách tính cũ "phiên chỉ xem 1 trang" là của Universal Analytics, đã ngừng từ 2023, không so sánh trực tiếp hai con số. Bounce Rate cao thường do trang tải chậm, nội dung không khớp với lời hứa trong quảng cáo, hoặc trải nghiệm mobile kém.',
+    formula: 'Bounce Rate (GA4) = (Số Phiên Không Tương Tác / Tổng Số Phiên) x 100% = 100% - Engagement Rate',
+    example: 'Landing Page nhận 10.000 phiên truy cập, 3.500 phiên là phiên tương tác (Engagement Rate = 35%), 6.500 phiên còn lại rời đi trong vòng 10 giây, chỉ xem 1 trang và không có key event. Khi đó Bounce Rate = 6.500 / 10.000 = 65% = 100% - 35%.',
     takeaway: 'Mỗi giây tải trang chậm thêm có thể làm giảm khoảng 7% tỷ lệ chuyển đổi. Tối ưu tốc độ trước khi tối ưu nội dung.',
     icon: 'TrendingDown'
   },
@@ -512,7 +512,7 @@ export const GLOSSARY_ITEMS = [
     definition: 'SOV đo mức độ áp đảo của thương hiệu trên các kênh truyền thông, tính theo ngân sách quảng cáo, lượt đề cập hoặc lượng thảo luận mạng xã hội.',
     formula: 'SOV = (Lượng Truyền Thông Của Bạn / Tổng Lượng Truyền Thông Toàn Ngành) x 100%',
     example: 'Toàn ngành sữa hạt có 10.000 bài đề cập trong quý, thương hiệu của bạn chiếm 1.500 bài. Khi đó SOV = 15%.',
-    takeaway: 'Quy luật ESOV: khi SOV lớn hơn thị phần hiện tại, thị phần năm sau có xu hướng tăng theo phần chênh lệch đó.',
+    takeaway: 'Quy luật ESOV (Binet & Field): ESOV = SOV - SOM (thị phần). Trung bình cứ 10 điểm ESOV giúp thị phần tăng khoảng 0,5 điểm % mỗi năm. Quy luật này đo SOV theo chi tiêu quảng cáo; SOV theo lượt đề cập (social listening) là chỉ số khác, không áp trực tiếp được.',
     icon: 'Megaphone'
   },
   {
@@ -841,7 +841,7 @@ export const GLOSSARY_ITEMS = [
     shortDef: 'Loại chiến dịch Google tự động phân phối trên toàn bộ kho quảng cáo bằng máy học.',
     definition: 'PMax gộp Search, Display, YouTube, Gmail, Discover và Maps vào một chiến dịch duy nhất. Nhà quảng cáo cung cấp tài sản sáng tạo, tín hiệu đối tượng và mục tiêu, thuật toán lo phần phân phối.',
     example: 'Shop thời trang cấp feed sản phẩm, 15 ảnh, 5 video và tín hiệu tệp khách cũ, PMax tự tìm điểm chạm hiệu quả nhất cho từng người.',
-    takeaway: 'PMax là hộp đen. Hãy tách riêng chiến dịch cho từng nhóm sản phẩm có biên lợi nhuận khác nhau để kiểm soát được hiệu quả.',
+    takeaway: 'PMax nay đã có báo cáo hiệu quả theo kênh, báo cáo cụm từ tìm kiếm và từ khoá phủ định cấp chiến dịch, hãy kiểm tra định kỳ. Vẫn nên tách chiến dịch theo nhóm sản phẩm có biên lợi nhuận khác nhau và loại trừ từ khoá thương hiệu nếu muốn đo đúng phần tăng thêm.',
     icon: 'Boxes'
   },
   {
@@ -874,7 +874,7 @@ export const GLOSSARY_ITEMS = [
     shortDef: 'Hệ sinh thái quảng cáo và chăm sóc khách hàng trên nền tảng nhắn tin lớn nhất Việt Nam.',
     definition: 'Zalo Ads cho phép nhắm mục tiêu theo vị trí, độ tuổi, giới tính và sở thích, kết hợp Zalo OA để nuôi dưỡng khách hàng qua tin nhắn broadcast và ZNS.',
     example: 'Chuỗi cửa hàng chạy Zalo Ads tăng người quan tâm OA, sau đó gửi broadcast thông báo ưu đãi cuối tuần cho toàn bộ tệp.',
-    takeaway: 'Zalo OA là kênh sở hữu, không phụ thuộc thuật toán. Đây là tài sản chống rủi ro khi chi phí quảng cáo trả phí tăng cao.',
+    takeaway: 'Zalo OA là kênh sở hữu, không phụ thuộc thuật toán. Đây là tài sản chống rủi ro khi chi phí quảng cáo trả phí tăng cao. Chỉ gửi tin quảng cáo cho người đã đồng ý nhận và luôn có cách từ chối; từ 1/1/2026, Luật Bảo vệ dữ liệu cá nhân 2025 (số 91/2025/QH15) nghiêm cấm mua bán dữ liệu cá nhân và yêu cầu sự đồng ý rõ ràng cho mục đích tiếp thị.',
     icon: 'MessageCircle'
   },
   {
@@ -942,7 +942,7 @@ export const GLOSSARY_ITEMS = [
     shortDef: 'Tin nhắn thương hiệu qua SMS hoặc Zalo Notification Service tới số điện thoại khách hàng.',
     definition: 'ZNS có chi phí thấp hơn SMS và hỗ trợ nội dung phong phú hơn nhưng phải theo mẫu được duyệt. Cả hai đều mạnh ở nhóm tin giao dịch và nhắc lịch.',
     example: 'Phòng khám gửi ZNS nhắc lịch tái khám trước 24 giờ, giảm mạnh tỷ lệ khách quên hẹn.',
-    takeaway: 'Ưu tiên dùng tin nhắn cho mục đích giao dịch và nhắc nhở. Lạm dụng để bán hàng sẽ khiến khách chặn thương hiệu vĩnh viễn.',
+    takeaway: 'Ưu tiên dùng tin nhắn cho mục đích giao dịch và nhắc nhở. Lạm dụng để bán hàng sẽ khiến khách chặn thương hiệu vĩnh viễn. Chỉ gửi tin quảng cáo cho người đã đồng ý nhận và luôn có cách từ chối; từ 1/1/2026, Luật Bảo vệ dữ liệu cá nhân 2025 (số 91/2025/QH15) nghiêm cấm mua bán dữ liệu cá nhân và yêu cầu sự đồng ý rõ ràng cho mục đích tiếp thị.',
     icon: 'Send'
   },
   {
@@ -1170,8 +1170,8 @@ export const GLOSSARY_ITEMS = [
     categoryLabel: 'Dữ Liệu & Đo Lường',
     shortDef: 'Nền tảng phân tích website và app thế hệ mới của Google, đo lường theo sự kiện.',
     definition: 'GA4 thay mô hình phiên truy cập bằng mô hình sự kiện, hợp nhất dữ liệu web và app, hỗ trợ báo cáo theo phễu, cohort và quy kết dựa trên dữ liệu.',
-    example: 'Thiết lập sự kiện chuyển đổi purchase và generate_lead để đo đúng doanh thu theo từng nguồn traffic trong báo cáo Acquisition.',
-    takeaway: 'GA4 chỉ giữ dữ liệu tối đa 14 tháng ở gói miễn phí. Hãy xuất dữ liệu định kỳ nếu cần so sánh nhiều năm.',
+    example: 'Đánh dấu purchase và generate_lead là sự kiện chính (key event, tên gọi thay cho "conversion" trong GA4 từ 3/2024) để đo doanh thu theo từng nguồn traffic trong báo cáo Acquisition; nhập các key event này sang Google Ads để trở thành chuyển đổi dùng cho đặt giá thầu.',
+    takeaway: 'Mặc định GA4 chỉ giữ dữ liệu chi tiết dùng cho Explorations 2 tháng, hãy chỉnh lên 14 tháng ngay khi tạo property. Báo cáo chuẩn (tổng hợp) không bị xoá, nhưng muốn phân tích chi tiết nhiều năm thì nên bật xuất dữ liệu sang BigQuery.',
     icon: 'ChartColumn'
   },
   {
@@ -1224,9 +1224,9 @@ export const GLOSSARY_ITEMS = [
     category: 'data',
     categoryLabel: 'Dữ Liệu & Đo Lường',
     shortDef: 'Quy tắc phân bổ công trạng của một chuyển đổi cho các điểm chạm trong hành trình.',
-    definition: 'Các mô hình phổ biến gồm Last Click, First Click, Linear, Time Decay, Position Based và Data-Driven. Mỗi mô hình cho ra một bức tranh hiệu quả kênh rất khác nhau.',
+    definition: 'Về lý thuyết có các mô hình Last Click, First Click, Linear, Time Decay, Position Based và Data-Driven. Mỗi mô hình cho ra một bức tranh hiệu quả kênh rất khác nhau. Từ cuối 2023, Google Ads và GA4 chỉ còn Data-Driven và Last Click; các mô hình dựa trên quy tắc (First Click, Linear, Time Decay, Position Based) đã bị gỡ khỏi công cụ của Google, chỉ còn trong công cụ bên thứ ba hoặc tự tính.',
     example: 'Cùng một đơn hàng, Last Click ghi công toàn bộ cho Google Search trong khi Data-Driven chia công cho cả TikTok, Facebook và Search.',
-    takeaway: 'Last Click luôn thổi phồng kênh cuối phễu và bóp nghẹt ngân sách các kênh xây nhận biết ở đầu phễu.',
+    takeaway: 'Last Click luôn thổi phồng kênh cuối phễu và bóp nghẹt ngân sách các kênh xây nhận biết ở đầu phễu. Mọi mô hình quy kết chỉ chia công trên các điểm chạm đã ghi nhận, không chứng minh được quảng cáo tạo ra đơn hàng tăng thêm; muốn biết điều đó phải chạy thử nghiệm đối chứng (lift test) hoặc MMM.',
     icon: 'GitBranch'
   },
   {
@@ -1269,7 +1269,7 @@ export const GLOSSARY_ITEMS = [
     category: 'data',
     categoryLabel: 'Dữ Liệu & Đo Lường',
     shortDef: 'Dữ liệu khách hàng do doanh nghiệp tự thu thập và toàn quyền sở hữu.',
-    definition: 'First-party Data gồm thông tin đăng ký, lịch sử mua, hành vi trên website và app, dữ liệu chăm sóc khách hàng. Đây là tài sản có giá trị nhất khi cookie bên thứ ba biến mất.',
+    definition: 'First-party Data gồm thông tin đăng ký, lịch sử mua, hành vi trên website và app, dữ liệu chăm sóc khách hàng. Đây là tài sản ngày càng quan trọng khi tín hiệu theo dõi bị suy giảm: Safari và Firefox chặn cookie bên thứ ba mặc định, iOS yêu cầu xin phép theo dõi (ATT), và luật bảo vệ dữ liệu cá nhân bắt buộc có sự đồng ý. Chrome vẫn giữ cookie bên thứ ba sau khi Google từ bỏ kế hoạch loại bỏ và dừng Privacy Sandbox.',
     example: 'Doanh nghiệp tải danh sách 50.000 khách hàng đã mua lên nền tảng quảng cáo để tạo tệp tương đồng chất lượng cao.',
     takeaway: 'Mỗi chiến dịch nên có mục tiêu thu thập dữ liệu sở hữu, không chỉ mục tiêu doanh số trước mắt.',
     icon: 'Lock'
@@ -1608,10 +1608,10 @@ export const GLOSSARY_ITEMS = [
     term: 'ROI Chương Trình Trade',
     category: 'trade',
     categoryLabel: 'Trade Marketing & Điểm Bán',
-    shortDef: 'Doanh thu TĂNG THÊM so với mốc nền chia cho chi phí bỏ ra.',
-    definition: 'Đây là câu hỏi cuối cùng của mọi hoạt động Trade. Chỗ sai phổ biến nhất là lấy tổng doanh thu trong kỳ chạy chương trình thay vì phần tăng thêm — làm vậy thì báo cáo nào cũng đẹp, vì phần lớn doanh thu đó vốn dĩ đã xảy ra kể cả không chạy chương trình.',
-    formula: 'ROI = (Doanh thu tăng thêm so với mốc nền − Chi phí chương trình) / Chi phí chương trình',
-    example: 'Mốc nền 400.000.000 đồng/tháng, tháng chạy chương trình đạt 520.000.000 đồng, chi phí 100.000.000 đồng. Phần tăng thêm là 120.000.000 đồng, ROI = (120.000.000 − 100.000.000) / 100.000.000 = 0,2 lần. Nếu lấy nhầm tổng 520.000.000 đồng thì ROI hiện lên 4,2 lần — sai gấp hơn hai mươi lần.',
+    shortDef: 'Lợi nhuận gộp TĂNG THÊM so với mốc nền, trừ chi phí, rồi chia cho chi phí bỏ ra.',
+    definition: 'Đây là câu hỏi cuối cùng của mọi hoạt động Trade. Có hai chỗ sai phổ biến. Thứ nhất là lấy tổng doanh thu trong kỳ chạy chương trình thay vì phần tăng thêm — làm vậy thì báo cáo nào cũng đẹp, vì phần lớn doanh thu đó vốn dĩ đã xảy ra kể cả không chạy chương trình. Thứ hai là lấy doanh thu tăng thêm trừ thẳng chi phí: doanh thu chưa trừ giá vốn, nên chương trình đang lỗ vẫn có thể hiện ra là có lãi. Giống mục ROI chung, ROI Trade phải tính trên lợi nhuận.',
+    formula: 'ROI = (Doanh thu tăng thêm so với mốc nền × Biên lợi nhuận gộp − Chi phí chương trình) / Chi phí chương trình',
+    example: 'Mốc nền 400.000.000 đồng/tháng, tháng chạy chương trình đạt 520.000.000 đồng, chi phí 100.000.000 đồng, biên lợi nhuận gộp 40%. Phần tăng thêm là 120.000.000 đồng doanh thu, tức 48.000.000 đồng lợi nhuận gộp. ROI = (48.000.000 − 100.000.000) / 100.000.000 = −0,52 lần: chương trình lỗ 52.000.000 đồng. Muốn hoà vốn, doanh thu tăng thêm phải đạt 100.000.000 / 40% = 250.000.000 đồng. Nếu lấy nhầm doanh thu tăng thêm trừ thẳng chi phí thì ra 0,2 lần, trông như có lãi; lấy nhầm tổng 520.000.000 đồng thì ra 4,2 lần.',
     takeaway: 'Xác định mốc so sánh TRƯỚC khi chạy, không phải sau khi có kết quả. Và luôn kiểm tra tác dụng phụ: chương trình có kéo doanh số tháng sau về không, tồn kho ra sao.',
     icon: 'Scale'
   },
