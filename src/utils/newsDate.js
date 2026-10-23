@@ -69,18 +69,35 @@ export function relativeNewsDate(publishedAt, receivedAt) {
 }
 
 /**
+ * Quy mọi tin về MỘT trục thời gian duy nhất để so sánh.
+ *
+ * Tin nạp bằng nút Live có `receivedAt` chính xác tới mili giây. Tin biên tập
+ * chỉ có ngày đăng, quy về 0 giờ ngày đó. Nhờ vậy tin vừa bấm Live hôm nay vẫn
+ * đứng trên tin biên tập cùng ngày — nó mới hơn thật — nhưng tin bấm Live từ
+ * tuần trước thì nằm đúng chỗ của tuần trước.
+ */
+function mocTin(t) {
+  if (typeof t?.receivedAt === 'number' && Number.isFinite(t.receivedAt)) {
+    return t.receivedAt;
+  }
+  const d = parseVnDate(t?.publishedAt);
+  return d ? d.getTime() : 0;
+}
+
+/**
  * So sánh để xếp tin mới lên đầu.
  *
- * Tin nạp bằng nút Live luôn đứng trên tin biên tập cùng ngày, vì người dùng
- * vừa bấm nút xong thì phải thấy ngay kết quả ở đầu danh sách.
+ * BẢN TRƯỚC SO TRÊN HAI TRỤC RỜI NHAU và đó là một lỗi nặng: nó xét `receivedAt`
+ * trước, coi tin không có mốc ấy như `0`. Mà tin biên tập — toàn bộ tin thật do
+ * quy trình tự động đăng — không bao giờ có `receivedAt`. Kết quả: BẤT KỲ tin
+ * nào từng nạp bằng nút Live đều vĩnh viễn đứng trên MỌI tin thật, kể cả khi nó
+ * đã cũ hàng tháng.
+ *
+ * Triệu chứng nhìn thấy đúng bằng triệu chứng của lỗi localStorage ngày trước:
+ * đầu bản tin đứng yên ở một ngày cũ, tin mới đổ về mỗi sáng nhưng bị đẩy xuống
+ * dưới nên người dùng tưởng quy trình tự động đã chết. Máy chủ vẫn chạy đúng,
+ * chỉ có thứ tự hiển thị nói dối.
  */
 export function compareNewsRecency(a, b) {
-  const ar = typeof a.receivedAt === 'number' ? a.receivedAt : 0;
-  const br = typeof b.receivedAt === 'number' ? b.receivedAt : 0;
-  if (ar !== br) return br - ar;
-
-  const ad = parseVnDate(a.publishedAt);
-  const bd = parseVnDate(b.publishedAt);
-  if (ad && bd && ad.getTime() !== bd.getTime()) return bd - ad;
-  return 0;
+  return mocTin(b) - mocTin(a);
 }
