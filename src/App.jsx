@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import CourseOverview from './components/CourseOverview';
+import HomeLanding from './components/HomeLanding';
 import LessonViewer from './components/LessonViewer';
 import LiveNewsFeed from './components/LiveNewsFeed';
 import ManagerTools, { MANAGER_TOOLS } from './components/ManagerTools';
@@ -1232,6 +1233,12 @@ export default function App() {
       return { route: { tab, itemId: id, subId: null }, awaitingLogin: !!awaitingLogin };
     }
 
+    // Trang chủ Học Viện cũng không có mục con. Phải có nhánh riêng ở đây:
+    // rơi xuống nhánh cuối thì nó bị đem đi tra trong bộ công cụ.
+    if (tab === HOME_ROUTE.tab) {
+      return { route: { tab, itemId: null, subId: null }, awaitingLogin: false };
+    }
+
     // Bảng Quản Trị không có mục con, nên bỏ qua hẳn `itemId`.
     //
     // CỐ Ý KHÔNG chặn người không phải quản trị viên ở đây. Lúc khôi phục địa
@@ -1300,17 +1307,12 @@ export default function App() {
    * Ghi địa chỉ, giữ nguyên phần query và hash mà nơi khác có thể đang dùng.
    *
    * KHÔNG viết đè khi địa chỉ đang hiển thị đã mô tả đúng màn hình này, dù nó
-   * viết khác cách. Một màn hình có thể có nhiều lối vào hợp lệ: `/` và
-   * `/digital-marketing` cùng ra tổng quan khoá chính, `/chuyen-de/module-01` là tên cũ
-   * của `/digital-marketing/module-01`. Thiếu luật này thì ai mở trang chủ cũng bị đổi
-   * địa chỉ thành `/digital-marketing` ngay trước mắt — trang chủ mất địa chỉ trang chủ,
-   * và mọi liên kết cũ vừa mở ra đã bị viết lại thành tên mới.
+   * viết khác cách. Một màn hình có thể có nhiều lối vào hợp lệ:
+   * `/chuyen-de/module-01` là tên cũ của `/digital-marketing/module-01`. Thiếu
+   * luật này thì mọi liên kết cũ vừa mở ra đã bị viết lại thành tên mới.
    *
    * Địa chỉ do ứng dụng SINH RA thì vẫn luôn là dạng chuẩn (`buildPath`). Luật
    * này chỉ tôn trọng thứ người dùng tự gõ hoặc tự bấm vào.
-   *
-   * `handleGoHome` là nơi duy nhất KHÔNG đi qua hàm này, vì nó cố tình ghi ra
-   * `/` chứ không ghi dạng chuẩn — xem lý do ở đó.
    */
   const writeHistory = (route, mode) => {
     if (isSameRoute(parseRoute(window.location.pathname), route)) return;
@@ -1923,35 +1925,56 @@ export default function App() {
    * mỗi khoá mở thêm lại khiến điều đó sai thêm một lần. `/` là chỗ duy nhất
    * đứng trên mọi khoá.
    *
-   * Hôm nay `/` hiện đúng tổng quan khoá Digital Marketing vì đó là khoá duy
-   * nhất đủ lớn để làm mặt tiền. Khi có khoá thứ hai thì thứ hiện ở `/` sẽ
-   * đổi, còn địa chỉ này thì không — đó chính là lý do phải tách hai thứ ra
-   * ngay từ bây giờ, lúc còn rẻ.
+   * `/` nay là trang giới thiệu riêng (HomeLanding), tab `home`. Trang chủ có
+   * tab của riêng nó nên đổi tab là đủ — effect đồng bộ tự ghi ra `/`, không
+   * phải tự đẩy lịch sử như hồi `/` còn dùng chung tab với tổng quan khoá.
    *
-   * Ghi địa chỉ ngay trong hàm chứ không chờ effect đồng bộ: khi người dùng
-   * đang đứng sẵn ở trang chủ thì không state nào đổi, effect không có gì để
-   * chạy, mà lúc đó địa chỉ có thể vẫn đang là `/digital-marketing`.
+   * KHÔNG xoá chuyên đề đang mở: về trang chủ rồi bấm "Khoá Học" thì thanh
+   * menu tự đưa về tổng quan, còn nút "Học tiếp" trên trang chủ cần đúng
+   * tiến độ đó để biết mời vào chuyên đề nào.
    */
   const handleGoHome = () => {
-    const home = { tab: 'course', itemId: null, subId: null };
-
-    // Bản trước chỉ gọi `setActiveTab('course')` và KHÔNG xoá chuyên đề đang
-    // mở. Lệnh đó không đưa ai về trang chủ cả: đang đọc dở một bài thì tab
-    // vốn đã là 'course' nên bấm vào không đổi gì, còn bấm từ tab khác sang
-    // thì rơi đúng vào chuyên đề mở dở lần trước.
-    setActiveTab('course');
-    setSelectedModuleId(null);
-
-    const url = '/' + window.location.search + window.location.hash;
-    if (url !== window.location.pathname + window.location.search + window.location.hash) {
-      window.history.pushState(null, '', url);
-    }
-
-    // Nói cho effect đồng bộ biết địa chỉ này đã đúng rồi, đừng viết đè bằng
-    // dạng chuẩn `/digital-marketing`.
-    lastRouteRef.current = home;
-    syncDocumentTitle(home);
+    setActiveTab(HOME_ROUTE.tab);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+
+  /* Chuyên đề nên học tiếp: chuyên đề đầu tiên chưa đạt mà đã mở khoá. Cùng
+     luật với nút "Vào khoá chính" của trang Trade Marketing. `null` khi đã
+     đạt hết — lúc đó nút trên trang chủ mời ôn lại thay vì học tiếp. */
+  const resumeModule = COURSE_MODULES.find(
+    (m) => !completedModules.includes(m.id)
+      && isModuleUnlocked(COURSE_MODULES, m.id, completedModules, isAdmin)
+  ) || null;
+  const hasCourseProgress = !!currentUser && completedModules.length > 0;
+
+  const homeStartLabel = !hasCourseProgress
+    ? 'Bắt đầu học ngay'
+    : resumeModule ? `Học tiếp Chuyên đề ${resumeModule.number}` : 'Ôn lại khoá học';
+
+  /**
+   * Nút chính của trang chủ. Chưa đăng nhập thì ĐỨNG YÊN ở trang chủ và mở
+   * hộp đăng nhập (`handleProtectedSelectModule` lo việc đó) — chuyển sang
+   * trang khoá học rồi mới bật hộp thoại là đẩy người ta ra khỏi chỗ họ vừa
+   * quyết định bấm.
+   */
+  const handleStartLearning = () => {
+    const target = resumeModule || COURSE_MODULES[0];
+    if (!currentUser) {
+      handleProtectedSelectModule(target.id);
+      return;
+    }
+    setActiveTab('course');
+    if (hasCourseProgress && !resumeModule) setSelectedModuleId(null);
+    else handleProtectedSelectModule(target.id);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  // Ô tìm kiếm trên Header lọc danh sách chuyên đề, mà trang chủ không còn
+  // danh sách đó. Gõ tìm ở trang chủ thì chuyển sang tổng quan khoá để kết quả
+  // hiện ra, thay vì gõ xong không thấy gì đổi.
+  useEffect(() => {
+    if (searchQuery && activeTab === HOME_ROUTE.tab) setActiveTab('course');
+  }, [searchQuery]);
 
   /**
    * Về tổng quan khoá Digital Marketing — địa chỉ `/digital-marketing`.
@@ -2098,7 +2121,7 @@ export default function App() {
         Thẻ og:image trong index.html vẫn trỏ v3, KHÔNG đổi sang v4: Facebook
         và Zalo cắt ảnh share về 1,91:1, đưa ảnh 2,76:1 lên thì mất hai đầu.
       */}
-      {activeTab === 'course' && !selectedModuleId && (
+      {(activeTab === HOME_ROUTE.tab || (activeTab === 'course' && !selectedModuleId)) && (
         <CoverSlider
           banners={coverBanners}
           intervalMs={coverIntervalMs}
@@ -2144,6 +2167,23 @@ export default function App() {
             onOpenCoverEditor={() => setIsCoverEditorOpen(true)}
             onClose={() => handleProtectedSelectTab('course')}
             t={t}
+          />
+        </main>
+      ) : activeTab === HOME_ROUTE.tab ? (
+        /* TRANG CHỦ HỌC VIỆN: tràn hết bề ngang, không có Sidebar. Danh sách
+           11 chuyên đề là thứ của trang khoá học; đặt nó cạnh một trang giới
+           thiệu là kéo lại đúng cảm giác ngộp mà trang này sinh ra để dẹp. */
+        <main className="flex-1 w-full">
+          <HomeLanding
+            onStartLearning={handleStartLearning}
+            startLabel={homeStartLabel}
+            onOpenCourse={() => {
+              handleOpenCourseHome();
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+            onRegisterCTA={handleRegisterCTA}
+            totalModules={COURSE_MODULES.length}
+            trafficStats={trafficStats}
           />
         </main>
       ) : (
@@ -2215,7 +2255,12 @@ export default function App() {
               // Nhánh này chỉ chạy với học viên mua mã CHỈ cho khoá Trade. Người
               // chưa có mã nào đã bị màn nhập mã chặn từ trước, còn lớp cũ và
               // quản trị viên luôn có đủ cả hai khoá.
-              !duocHocMain ? (
+              //
+              // `currentUser &&`: khách chưa đăng nhập có `khoaMo` rỗng nên
+              // trước đây cũng rơi vào đây và đọc thấy "mã của bạn chỉ mở khoá
+              // Trade" — một câu sai với người chưa có mã nào. Khách được xem
+              // tổng quan; bấm vào chuyên đề thì cổng đăng nhập lo phần còn lại.
+              currentUser && !duocHocMain ? (
                 <div className="max-w-xl mx-auto text-center py-16 px-6 space-y-4">
                   <div className="text-5xl">🔒</div>
                   <h2 className="text-xl font-extrabold text-white">

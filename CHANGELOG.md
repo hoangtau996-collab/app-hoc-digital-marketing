@@ -8,6 +8,23 @@ TODO — chưa có quy ước đánh phiên bản; cân nhắc gắn thẻ Git k
 
 ---
 
+## [Chưa phát hành] — 2026-10-23
+
+### Thay đổi — Trang chủ `/` thành trang giới thiệu riêng
+
+- **`/` và `/digital-marketing` nay là hai màn hình khác nhau.** Thêm tab `home` (`HOME_ROUTE` trong `utils/appRoutes.js`), không có đoạn đường dẫn nên tự ra `/`. Tổng quan khoá với lưới 11 chuyên đề giữ nguyên ở `/digital-marketing`; logo Header về `/`, nút "Khoá Học" / "Digital" về `/digital-marketing`.
+- Thành phần mới `HomeLanding`: hero + quỹ đạo kênh động, 4 số liệu thị trường Việt Nam có ghi nguồn (DataReportal Digital 2026; e-Conomy SEA 2025, đánh dấu "ước tính"), 4 lý do Marketing quan trọng, bảng Truyền thống và Digital, hành trình khách hàng 5 chặng bấm được, hệ sinh thái 6 kênh, CTA cuối trang (chỗ duy nhất còn giá và "39 suất") kèm số truy cập, học viên, chứng nhận.
+- Trang chủ tràn hết bề ngang, **không có Sidebar**. Ảnh bìa vẫn hiện ở cả trang chủ và tổng quan khoá.
+- Nút chính đổi nhãn theo tiến độ: "Bắt đầu học ngay", "Học tiếp Chuyên đề N", hoặc "Ôn lại khoá học". Khách chưa đăng nhập bấm vào thì ở yên trang chủ và mở hộp đăng nhập.
+- Gõ ô tìm kiếm khi đang ở trang chủ thì tự chuyển sang tổng quan khoá để thấy kết quả.
+- Màu của trang chủ dùng biến `--h-*` trên lớp `.home-*` trong `index.css`, không dùng lớp màu Tailwind, để tránh các quy tắc `!important` của giao diện sáng.
+
+### Sửa lỗi — Khách chưa đăng nhập thấy "Mã của bạn chưa mở khoá Digital Marketing"
+
+- Khách có `khoaMo` rỗng nên rơi vào màn dành cho học viên chỉ có mã Trade. Trước đây mọi khách vào `/` đều thấy câu này. Nay điều kiện là `currentUser && !duocHocMain`; khách xem được tổng quan, bấm chuyên đề thì cổng đăng nhập xử lý.
+
+---
+
 ## [Chưa phát hành] — 2026-08-11
 
 ### Thêm mới — Dải giới thiệu website & ứng dụng khác ở chân trang

@@ -61,8 +61,15 @@ const SEGMENT_ALIASES = {
   'khoa-hoc': 'course',
 };
 
-/** Màn hình mặc định: tổng quan khoá Digital Marketing, tức địa chỉ `/`. */
-export const HOME_ROUTE = { tab: 'course', itemId: null };
+/**
+ * Màn hình mặc định: TRANG CHỦ HỌC VIỆN, tức địa chỉ `/`.
+ *
+ * `home` cố ý KHÔNG có mặt trong `TAB_SEGMENTS`: nó không có đoạn đường dẫn
+ * nào, và `buildPath` vốn đã trả `/` cho mọi tab không có đoạn riêng. Trước
+ * đây `/` mở thẳng tổng quan khoá Digital Marketing; nay trang chủ là trang
+ * giới thiệu riêng, còn tổng quan khoá nằm ở `/digital-marketing`.
+ */
+export const HOME_ROUTE = { tab: 'home', itemId: null };
 
 /** Tên từng khu vực, dùng cho tiêu đề tab trình duyệt và dấu trang. */
 export const TAB_TITLES = {
@@ -78,6 +85,9 @@ const SITE_TITLE = 'HỌC VIỆN P MARCOM';
 
 /** Tiêu đề trang chủ — giữ trùng khít thẻ `<title>` tĩnh trong index.html. */
 export const HOME_DOCUMENT_TITLE = `${SITE_TITLE} | Khóa Học Digital Thực Chiến`;
+
+/** Tab có thật trong ứng dụng: các tab có đoạn đường dẫn, cộng trang chủ. */
+const isKnownTab = (tab) => tab === HOME_ROUTE.tab || !!TAB_SEGMENTS[tab];
 
 /**
  * Địa chỉ hỏng không phải lý do để làm sập ứng dụng: `decodeURIComponent` ném
@@ -128,20 +138,11 @@ export function parseRoute(pathname) {
 /**
  * Dựng đường dẫn từ trạng thái điều hướng. Nghịch đảo của `parseRoute`.
  *
- * Tổng quan khoá chính ra `/digital-marketing` chứ không ra `/`, dù `/` cũng
- * mở đúng trang đó. Có hai lý do:
- *
- *   1. Khoá chính phải gọi được TÊN CỦA CHÍNH NÓ. Trả về `/` thì bấm vào tab
- *      Digital Marketing chỉ thấy tên miền trần — khoá lớn nhất của học viện
- *      thành khoá duy nhất không có gì để sao chép gửi đi.
- *   2. Địa chỉ ứng dụng SINH RA là địa chỉ chuẩn. `/` vẫn mở đúng trang và
- *      `writeHistory` bên App.jsx cố ý KHÔNG viết đè nó khi người dùng đang
- *      đứng sẵn ở đó — trang chủ giữ nguyên là trang chủ.
- *
- * Việc `/` và `/digital-marketing` cùng mở một trang không làm loãng tín hiệu
- * xếp hạng: index.html khai canonical tuyệt đối trỏ về `/`, nên cỗ máy tìm
- * kiếm gom cả hai về một mối. Đó cũng là lý do canonical phải là thẻ TĨNH —
- * xem ghi chú "ĐÃ GỠ" trong index.html.
+ * Tổng quan khoá chính ra `/digital-marketing`, trang chủ Học Viện (`home`)
+ * ra `/`. Hai màn hình khác nhau thì hai địa chỉ khác nhau: khoá chính phải
+ * gọi được TÊN CỦA CHÍNH NÓ để sao chép gửi đi, còn `/` là chỗ đứng trên mọi
+ * khoá. Canonical trong index.html vẫn là thẻ TĨNH trỏ về `/` — xem ghi chú
+ * "ĐÃ GỠ" ở đó.
  */
 export function buildPath(route) {
   const segment = TAB_SEGMENTS[route?.tab];
@@ -183,9 +184,9 @@ export function isSameRoute(a, b) {
  * @param {string} [itemLabel] Tên mục đang mở, nơi gọi tra từ dữ liệu.
  */
 export function buildDocumentTitle(route, itemLabel) {
-  const tab = TAB_SEGMENTS[route?.tab] ? route.tab : HOME_ROUTE.tab;
+  const tab = isKnownTab(route?.tab) ? route.tab : HOME_ROUTE.tab;
 
-  if (tab === 'course' && !route?.itemId) return HOME_DOCUMENT_TITLE;
+  if (tab === HOME_ROUTE.tab) return HOME_DOCUMENT_TITLE;
 
   const section = TAB_TITLES[tab];
   return itemLabel ? `${itemLabel} | ${section} — ${SITE_TITLE}` : `${section} | ${SITE_TITLE}`;

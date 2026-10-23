@@ -11,6 +11,7 @@ Cập nhật: **2026-08-11**
 | Việc | Trạng thái | Ghi chú |
 |---|---|---|
 | Đọc lại nội dung mới viết cho khoá Trade | Chờ chủ dự án duyệt | Đã bổ sung ~17.000 ký tự vào 16 bài sẵn có và 32 thuật ngữ Trade vào Từ Điển. Nội dung do trợ lý soạn dựa trên tài liệu gốc, chưa qua kiểm duyệt chuyên môn — nên đọc lại phần bảng lương, mẫu store check và khung Trade Plan trước khi mở cho học viên |
+| Cập nhật số liệu thị trường trên trang chủ | Định kỳ | `MARKET_STATS` trong `HomeLanding.jsx`: DataReportal ra "Digital <năm>" khoảng tháng 2, e-Conomy SEA khoảng tháng 11. Đổi số thì đổi luôn dòng nguồn |
 | — | — | Ngoài mục trên, không có việc nào đang chạy. Nhiệm vụ tiếp theo áp dụng [Nguyên tắc Context tối thiểu](AI_MEMORY.md#nguyên-tắc-context-tối-thiểu) |
 
 ## Chờ phản hồi từ chủ dự án
