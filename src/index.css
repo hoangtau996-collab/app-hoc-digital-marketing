@@ -1319,7 +1319,14 @@ html.dark .home-gradient-text {
   text-align: right;
 }
 
+/* Một dòng, cắt bằng dấu "…": trên ảnh hẹp, dòng ghi công dài xuống ba dòng
+   là che mất nửa tấm ảnh. Bản đầy đủ nằm ở thuộc tính title và liên kết vẫn
+   dẫn về trang gốc trên Commons — đủ điều kiện ghi công của CC BY / BY-SA. */
 .home-photo figcaption a {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   color: rgba(255, 255, 255, 0.85);
   text-decoration: none;
 }
@@ -1339,7 +1346,11 @@ html.dark .home-gradient-text {
   letter-spacing: 0.04em;
 }
 
-.home-compare-photo { border-radius: 1.25rem; border: 1px solid var(--h-line); aspect-ratio: 16 / 9; }
+.home-compare-photo { border-radius: 1.25rem; border: 1px solid var(--h-line); aspect-ratio: 4 / 5; }
+
+@media (min-width: 640px) {
+  .home-compare-photo { aspect-ratio: 16 / 9; }
+}
 
 /* Ảnh "Truyền thống" ngả màu cũ để hai tấm tự nói lên sự đối lập. */
 .home-compare-photo.is-old img { filter: grayscale(0.85) sepia(0.25) contrast(0.95); }
@@ -1475,6 +1486,16 @@ html.dark .home-gradient-text {
   color: var(--h-muted);
   font-size: 0.8rem;
   font-weight: 600;
+}
+
+/* Điện thoại: ba thẻ ảnh 16:9 xếp chồng dài gần hai màn hình. Đổi thành hàng
+   ngang ảnh nhỏ bên trái, tiêu đề bên phải — gọn như danh sách tin của báo. */
+@media (max-width: 767px) {
+  .home-news-card { flex-direction: row; align-items: stretch; }
+  .home-news-media { flex: 0 0 38%; aspect-ratio: auto; min-height: 7rem; }
+  .home-news-body { padding: 0.8rem 0.9rem; gap: 0.4rem; }
+  .home-news-body .home-h3 { font-size: 0.92rem; }
+  .home-news-badge { top: 0.4rem; left: 0.4rem; font-size: 0.62rem; padding: 0.15rem 0.5rem; }
 }
 
 /* Thuật ngữ */

@@ -189,7 +189,7 @@ function HomePhoto({ id, label, className = '' }) {
       />
       {label && <span className="home-photo-label">{label}</span>}
       <figcaption>
-        <a href={photo.source} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
+        <a href={photo.source} target="_blank" rel="noopener noreferrer" title={photo.credit} onClick={(e) => e.stopPropagation()}>
           {photo.credit}
         </a>
       </figcaption>
@@ -232,6 +232,19 @@ export default function HomeLanding({
     const id = setInterval(() => setStep((s) => (s + 1) % JOURNEY.length), 4500);
     return () => clearInterval(id);
   }, [autoPlay]);
+
+  // Ảnh của mỗi chặng chỉ dựng khi chặng đó được chọn, nên chuyển chặng là
+  // khung ảnh trắng một nhịp trong lúc tải. Tải trước cả năm ảnh khi trang đã
+  // yên, để không giành băng thông với ảnh bìa và phần đầu trang.
+  useEffect(() => {
+    const id = setTimeout(() => {
+      JOURNEY_PHOTOS.forEach((key) => {
+        const url = HOME_PHOTOS[key]?.url;
+        if (url) new Image().src = url;
+      });
+    }, 3000);
+    return () => clearTimeout(id);
+  }, []);
 
   const pickStep = (i) => {
     setAutoPlay(false);
