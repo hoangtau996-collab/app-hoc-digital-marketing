@@ -8,6 +8,17 @@ TODO — chưa có quy ước đánh phiên bản; cân nhắc gắn thẻ Git k
 
 ---
 
+## [Chưa phát hành] — 2026-10-23 (đợt 3)
+
+### Thay đổi — Thanh tiêu đề và thanh menu gọn, dễ nhìn; bỏ giá khỏi đầu trang
+
+- **Bỏ giá 2.999.999 VNĐ** khỏi Header (huy hiệu cạnh tên khoá) và khỏi phần đầu trang `/digital-marketing` (huy hiệu "Chỉ còn 39 suất" nhấp nháy và ô "Giá Trị Đào Tạo"; thay bằng nút "Đăng ký học viên" không kèm giá). Gỡ luôn huy hiệu lượt truy cập trên Header. Giá chỉ còn ở nút cuối trang chủ.
+- **Header:** tên Học Viện thành dòng chữ nhỏ, tên khoá viết hoa đầu từ thay vì in hoa toàn bộ. Mọi nút cùng một kiểu bo tròn, cùng chiều cao, nền trung tính; chỉ nút Đăng nhập tô màu. Bỏ cờ emoji ở nút ngôn ngữ và emoji 🔑 ở nút Quản Trị; nút Hộp Thư báo thư mới bằng chấm số thay vì tô hồng cả nút.
+- **Thanh menu:** các tab nằm chung một dải nền, tab đang mở tô màu đậm. Nhãn Hot/Live/Pro nhỏ, không viền; Live có chấm nhấp nháy. Bỏ nhãn "Main" và "Mở" (thừa).
+- Style ở nhóm `.nav-*` trong `index.css`, bọc trong `@layer components` — để ngoài layer thì `display` của nút đè mất lớp `hidden` của Tailwind (đã xảy ra: nút lẽ ra ẩn trên điện thoại hiện ra chèn lên tên khoá).
+
+---
+
 ## [Chưa phát hành] — 2026-10-23 (đợt 2)
 
 ### Thêm mới — Ảnh thật, Tin tức Live, Thư viện thuật ngữ, Công cụ tính trên trang chủ

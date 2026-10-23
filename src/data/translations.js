@@ -2,7 +2,7 @@ export const TRANSLATIONS = {
   vi: {
     // Header & Brand
     academyName: "HỌC VIỆN P MARCOM",
-    courseTitle: "KHÓA HỌC DIGITAL THỰC CHIẾN",
+    courseTitle: "Khóa Học Digital Thực Chiến",
     courseValue: "Trị Giá: 2.999.999 VNĐ (CHỈ CÒN 39 SUẤT MIỄN PHÍ - ĐĂNG KÝ NGAY)",
     realtimeTraffic: "Tổng Lượt Truy Cập Web",
     searchPlaceholder: "Tìm bài học...",
@@ -85,7 +85,7 @@ export const TRANSLATIONS = {
   en: {
     // Header & Brand
     academyName: "P MARCOM ACADEMY",
-    courseTitle: "DIGITAL MARKETING MANAGER",
+    courseTitle: "Digital Marketing Manager",
     courseValue: "Value: 2,999,999 VND (FREE)",
     realtimeTraffic: "Real-Time Visits",
     searchPlaceholder: "Search lessons...",

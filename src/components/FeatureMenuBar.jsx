@@ -55,8 +55,7 @@ export default function FeatureMenuBar({
       title: textDict.menuCourseTitle,
       subtitle: textDict.menuCourseSub,
       icon: BookOpen,
-      badge: 'Main',
-      badgeBg: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40',
+      // Không nhãn: "Main" chỉ nói lại điều tab này vốn đã là.
       action: () => {
         setActiveTab('course');
         onSelectModule(null);
@@ -72,10 +71,9 @@ export default function FeatureMenuBar({
         ? `${tradePassedCount}/${tradeTotalModules} chuyên đề nâng cao`
         : 'Mở sau khi tốt nghiệp khoá chính',
       icon: isTradeCourseUnlocked ? GraduationCap : Lock,
-      badge: isTradeCourseUnlocked ? 'Mở' : 'Khoá',
-      badgeBg: isTradeCourseUnlocked
-        ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40'
-        : 'bg-slate-500/20 text-slate-400 border-slate-500/40',
+      // Đã mở thì không cần nhãn — biểu tượng mũ tốt nghiệp đã nói đủ.
+      badge: isTradeCourseUnlocked ? null : 'Khoá',
+      badgeTone: 'muted',
       action: () => setActiveTab('trade')
     },
     {
@@ -84,7 +82,7 @@ export default function FeatureMenuBar({
       subtitle: textDict.menuGlossarySub,
       icon: Sparkles,
       badge: 'Hot',
-      badgeBg: 'bg-amber-500/20 text-amber-300 border-amber-500/40',
+      badgeTone: 'hot',
       action: () => setActiveTab('glossary')
     },
     {
@@ -93,7 +91,7 @@ export default function FeatureMenuBar({
       subtitle: textDict.menuNewsSub,
       icon: Newspaper,
       badge: 'Live',
-      badgeBg: 'bg-rose-500/20 text-rose-300 border-rose-500/40',
+      badgeTone: 'live',
       action: () => setActiveTab('news')
     },
     {
@@ -102,7 +100,7 @@ export default function FeatureMenuBar({
       subtitle: textDict.menuToolsSub,
       icon: Wrench,
       badge: 'Pro',
-      badgeBg: 'bg-teal-500/20 text-teal-300 border-teal-500/40',
+      badgeTone: 'pro',
       action: () => setActiveTab('tools')
     },
     {
@@ -111,7 +109,7 @@ export default function FeatureMenuBar({
       subtitle: `${passedCount}/${totalModules} ${textDict.passedModulesCount || 'Đã Đạt'}`,
       icon: Award,
       badge: `${passedCount}/${totalModules}`,
-      badgeBg: 'bg-amber-500/20 text-amber-300 border-amber-500/40',
+      badgeTone: 'count',
       action: onOpenCertificate
     }
   ];
@@ -132,14 +130,14 @@ export default function FeatureMenuBar({
        cao chừng 700px, cộng cả Header và thanh đáy thì chỉ còn non 75% cho nội
        dung bài học. Nay cuộn xuống đọc bài là nó nhường chỗ. */
     <div
-      className="w-full bg-[#141f36]/95 backdrop-blur-lg border-b border-emerald-900/50 py-2.5 px-3 sm:px-6 lg:sticky z-30 shadow-xl"
+      className="nav-bar w-full py-2.5 px-3 sm:px-6 lg:sticky z-30"
       style={{ top: 'var(--app-header-h, 60px)' }}
     >
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3">
-        
-        {/* Swappable Horizontal Feature Menu Row */}
-        <div className="w-full md:w-auto flex items-center gap-2 overflow-x-auto no-scrollbar py-1 scroll-smooth">
-          
+      <div className="max-w-7xl mx-auto">
+
+        {/* Cuộn ngang trên màn hẹp; dải `.nav-track` ôm vừa các tab. */}
+        <div className="overflow-x-auto no-scrollbar scroll-smooth">
+        <div className="nav-track">
           {/*
             MỤC MENU CHÍNH — bố cục MỘT DÒNG.
             Bản trước xếp hai dòng (tiêu đề + phụ đề) nên mỗi mục rộng khoảng
@@ -156,20 +154,18 @@ export default function FeatureMenuBar({
                 key={item.id}
                 onClick={item.action}
                 title={item.subtitle}
-                className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg transition shrink-0 border cursor-pointer ${
-                  isActive
-                    ? 'bg-gradient-to-r from-emerald-600 to-teal-600 text-white border-emerald-400 shadow-md'
-                    : 'glass-panel hover:bg-emerald-950/40 text-slate-300 hover:text-white border-emerald-900/40'
-                }`}
+                aria-current={isActive ? 'page' : undefined}
+                className={`nav-tab ${isActive ? 'is-active' : ''}`}
               >
-                <Icon className={`w-4 h-4 shrink-0 ${isActive ? 'text-white' : 'text-emerald-400'}`} />
-                <span className="text-xs font-bold whitespace-nowrap">{item.title}</span>
-                <span className={`text-[9px] font-extrabold px-1.5 py-0.5 rounded border shrink-0 ${item.badgeBg}`}>
-                  {item.badge}
-                </span>
+                <Icon className="w-4 h-4" />
+                <span>{item.title}</span>
+                {item.badge && (
+                  <span className={`nav-badge nav-badge-${item.badgeTone}`}>{item.badge}</span>
+                )}
               </button>
             );
           })}
+        </div>
         </div>
 
       </div>

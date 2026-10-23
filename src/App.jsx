@@ -2053,7 +2053,6 @@ export default function App() {
         setTheme={setTheme}
         textScale={textScale}
         setTextScale={setTextScale}
-        trafficStats={trafficStats}
         lang={lang}
         toggleLanguage={toggleLanguage}
         t={t}

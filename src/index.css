@@ -1717,3 +1717,270 @@ html.dark .home-verdict.is-win strong { color: #4cc38a; }
 
 .home-reveal-ready .home-news-card.is-visible:hover,
 .home-reveal-ready .home-tool.is-visible:hover { transform: translateY(-4px); }
+
+/* ============================================================
+   THANH TIÊU ĐỀ + THANH MENU (Header.jsx, FeatureMenuBar.jsx)
+
+   Cùng thủ pháp với `.home-*`: màu đi qua biến `--n-*`, không qua lớp màu
+   Tailwind, để các quy tắc `!important` của giao diện sáng không ép lại.
+
+   Một kiểu nút duy nhất cho cả hàng: cùng chiều cao, cùng bo tròn, nền trung
+   tính. Chỉ MỘT thứ được tô màu đậm ở mỗi thanh — nút Đăng nhập trên Header,
+   tab đang mở trên thanh menu — để mắt biết ngay chỗ nào quan trọng. Bản cũ
+   tô hồng cả Chứng chỉ, Quản Trị lẫn huy hiệu giá nên không cái nào nổi.
+
+   BỌC TRONG `@layer components`, KHÔNG ĐƯỢC BỎ. Các nút này đi kèm lớp ẩn
+   hiện theo màn hình của Tailwind (`hidden sm:inline-flex`). CSS nằm ngoài
+   layer luôn thắng CSS trong layer bất kể độ ưu tiên, nên để `.nav-btn` trần
+   thì `display: inline-flex` của nó đè mất `hidden` — nút lẽ ra ẩn trên điện
+   thoại lại hiện ra và chèn lên tên khoá học. Trong layer components thì lớp
+   tiện ích (layer utilities, xếp sau) thắng đúng như mong đợi.
+   ============================================================ */
+@layer components {
+:root {
+  --n-surface: #fffdf7;
+  --n-track: rgba(100, 149, 237, 0.08);
+  --n-hover: rgba(100, 149, 237, 0.12);
+  --n-line: rgba(100, 149, 237, 0.24);
+  --n-ink: #1b2436;
+  --n-muted: #575143;
+  --n-primary: #3563d1;
+  --n-accent: #d32e70;
+}
+
+html.dark {
+  --n-surface: rgba(24, 36, 61, 0.75);
+  --n-track: rgba(100, 149, 237, 0.08);
+  --n-hover: rgba(100, 149, 237, 0.16);
+  --n-line: rgba(100, 149, 237, 0.22);
+  --n-ink: #e6ecf8;
+  --n-muted: #a9b4cc;
+  --n-primary: #93b3f6;
+  --n-accent: #f873a8;
+}
+
+/* Khối thương hiệu */
+.nav-brand-eyebrow {
+  display: block;
+  color: var(--n-primary);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.nav-brand-title {
+  color: var(--n-ink);
+  font-size: 0.92rem;
+  font-weight: 900;
+  letter-spacing: 0.01em;
+  line-height: 1.25;
+}
+
+@media (min-width: 640px) {
+  .nav-brand-eyebrow { font-size: 0.72rem; }
+  .nav-brand-title { font-size: 1.12rem; }
+}
+
+/* Nút trên Header */
+.nav-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  height: 2.35rem;
+  padding: 0 0.85rem;
+  border-radius: 9999px;
+  border: 1px solid var(--n-line);
+  background: var(--n-surface);
+  color: var(--n-ink);
+  font-size: 0.82rem;
+  font-weight: 700;
+  white-space: nowrap;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+}
+
+.nav-btn:hover { border-color: var(--n-primary); background: var(--n-hover); }
+.nav-btn:focus-visible { outline: 2px solid var(--n-primary); outline-offset: 2px; }
+.nav-btn svg { color: var(--n-primary); flex-shrink: 0; }
+
+.nav-btn-icon { width: 2.35rem; padding: 0; }
+
+.nav-btn-primary {
+  border-color: transparent;
+  background: linear-gradient(135deg, #3563d1 0%, #6495ED 100%);
+  color: #ffffff;
+  box-shadow: 0 6px 18px rgba(53, 99, 209, 0.3);
+}
+
+.nav-btn-primary:hover { background: linear-gradient(135deg, #2b4faa 0%, #4a7ce4 100%); }
+.nav-btn-primary svg { color: #ffffff; }
+
+/* Số đếm nhỏ trong nút (tiến độ chứng chỉ) */
+.nav-count {
+  padding: 0.05rem 0.45rem;
+  border-radius: 9999px;
+  background: var(--n-hover);
+  color: var(--n-primary);
+  font-size: 0.72rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Số thư chưa đọc trên nút Hộp Thư. Không dùng `text-white`: giao diện sáng
+   ép lớp đó thành chữ tối, số đỏ chữ đen là không đọc được. */
+.nav-unread {
+  position: absolute;
+  top: -0.4rem;
+  right: -0.4rem;
+  min-width: 1.15rem;
+  height: 1.15rem;
+  padding: 0 0.25rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ea4c8b;
+  color: #ffffff;
+  font-size: 0.66rem;
+  font-weight: 900;
+  font-variant-numeric: tabular-nums;
+  box-shadow: 0 0 0 2px var(--n-surface);
+}
+
+.nav-avatar {
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-left: -0.45rem;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ea4c8b 0%, #f873a8 100%);
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 900;
+  flex-shrink: 0;
+}
+
+.nav-search {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.nav-search svg {
+  position: absolute;
+  left: 0.8rem;
+  color: var(--n-muted);
+  pointer-events: none;
+}
+
+.nav-search input {
+  width: 100%;
+  height: 2.35rem;
+  padding: 0 0.9rem 0 2.2rem;
+  border-radius: 9999px;
+  border: 1px solid var(--n-line);
+  background: var(--n-surface);
+  color: var(--n-ink);
+  font-size: 0.82rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nav-search input:focus { border-color: var(--n-primary); box-shadow: 0 0 0 3px var(--n-hover); }
+
+/* Thanh menu */
+.nav-bar {
+  background: rgba(255, 253, 247, 0.92);
+  border-bottom: 1px solid var(--n-line);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+html.dark .nav-bar { background: rgba(14, 21, 38, 0.92); }
+
+/* Dải nền chung ôm các tab: các mục đọc thành MỘT nhóm điều hướng thay vì
+   bảy ô viền rời rạc. */
+.nav-track {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0.3rem;
+  border-radius: 1rem;
+  background: var(--n-track);
+  border: 1px solid var(--n-line);
+}
+
+.nav-tab {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 0.75rem;
+  border: 0;
+  background: transparent;
+  color: var(--n-muted);
+  font-size: 0.85rem;
+  font-weight: 700;
+  white-space: nowrap;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-tab svg { color: var(--n-primary); flex-shrink: 0; }
+.nav-tab:hover { background: var(--n-hover); color: var(--n-ink); }
+.nav-tab:focus-visible { outline: 2px solid var(--n-primary); outline-offset: 1px; }
+
+.nav-tab.is-active {
+  background: linear-gradient(135deg, #3563d1 0%, #6495ED 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(53, 99, 209, 0.32);
+}
+
+.nav-tab.is-active svg { color: #ffffff; }
+
+/* Nhãn nhỏ cạnh tên tab: chữ màu trên nền nhạt, không viền. */
+.nav-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.08rem 0.45rem;
+  border-radius: 9999px;
+  font-size: 0.64rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  line-height: 1.5;
+}
+
+.nav-badge-hot { background: rgba(234, 76, 139, 0.12); color: var(--n-accent); }
+.nav-badge-pro,
+.nav-badge-count { background: var(--n-hover); color: var(--n-primary); }
+.nav-badge-muted { background: rgba(154, 145, 121, 0.16); color: var(--n-muted); }
+.nav-badge-live { background: rgba(234, 76, 139, 0.12); color: var(--n-accent); }
+
+.nav-badge-live::before {
+  content: "";
+  width: 0.38rem;
+  height: 0.38rem;
+  border-radius: 9999px;
+  background: currentColor;
+  animation: nav-blink 1.6s ease-in-out infinite;
+}
+
+@keyframes nav-blink { 50% { opacity: 0.25; } }
+
+.nav-tab.is-active .nav-badge { background: rgba(255, 255, 255, 0.22); color: #ffffff; }
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-badge-live::before { animation: none; }
+}
+} /* hết @layer components */

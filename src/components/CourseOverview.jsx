@@ -14,8 +14,6 @@ import {
   Zap,
   Award,
   Eye,
-  Tag,
-  Gift,
   Lock
 } from 'lucide-react';
 import { getBlockingModule } from '../utils/moduleGating';
@@ -71,16 +69,16 @@ export default function CourseOverview({
             <PMarcomLogo className="w-5 h-5" showText={false} /> HỌC VIỆN P MARCOM • CHƯƠNG TRÌNH ĐÀO TẠO THỰC CHUYÊN SÂU
           </div>
 
-          {/* Special Course Value Badge — bấm vào dẫn tới đăng ký học viên */}
+          {/* ĐÃ GỠ huy hiệu "Giá Trị Khóa Học 2.999.999 VNĐ · Chỉ còn 39 suất"
+              nhấp nháy ở góc này, cùng ô "Giá Trị Đào Tạo" bên dưới — chủ dự
+              án không muốn giá nằm ở đầu trang. Lời mời đăng ký giữ lại thành
+              một nút gọn, không kèm giá. */}
           <button
             type="button"
             onClick={onRegisterCTA}
-            title="Đăng ký học viên ngay"
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-amber-500/20 via-emerald-500/20 to-teal-500/20 border border-amber-400/60 text-amber-300 text-xs font-extrabold shadow-lg animate-pulse hover:brightness-125 hover:scale-[1.02] transition cursor-pointer"
+            className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/40 text-emerald-300 text-xs font-extrabold hover:bg-emerald-500/25 transition cursor-pointer"
           >
-            <Gift className="w-4 h-4 text-amber-400" />
-            <span>Giá Trị Khóa Học: <span className="line-through text-slate-400 font-semibold">2.999.999 VNĐ</span></span>
-            <span className="bg-amber-400 text-slate-950 px-2.5 py-0.5 rounded-full font-black uppercase text-[10px]">CHỈ CÒN 39 SUẤT • ĐĂNG KÝ NGAY</span>
+            Đăng ký học viên <ChevronRight className="w-4 h-4" />
           </button>
         </div>
 
@@ -96,7 +94,7 @@ export default function CourseOverview({
         </div>
 
         {/* Real-time Web Traffic & Completion Stats Dashboard Bar */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3.5 pt-4 border-t border-emerald-900/50 relative z-10">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 pt-4 border-t border-emerald-900/50 relative z-10">
           
           {/* Stat 1: Total Cumulative Web Traffic Counter */}
           <div className="glass-panel p-3.5 rounded-2xl border border-teal-500/30 shadow-lg relative overflow-hidden group hover:border-teal-400 transition">
@@ -147,34 +145,6 @@ export default function CourseOverview({
             <div className="text-[10px] text-slate-400 mt-0.5">
               Quản lý & Trưởng phòng Digital
             </div>
-          </div>
-
-          {/* Stat 4: Course Value Showcase */}
-          <div className="glass-panel p-3.5 rounded-2xl border border-amber-400/50 shadow-lg group hover:border-amber-400 transition bg-gradient-to-br from-amber-950/30 to-emerald-950/30">
-            <div className="flex items-center justify-between mb-1">
-              <span className="text-[11px] font-extrabold text-amber-400 uppercase tracking-wider flex items-center gap-1">
-                <Tag className="w-3.5 h-3.5 text-amber-400" /> Giá Trị Đào Tạo
-              </span>
-              <button
-                type="button"
-                onClick={onRegisterCTA}
-                title="Đăng ký học viên ngay"
-                className="text-[9px] font-extrabold px-1.5 py-0.5 rounded bg-amber-400 text-slate-950 uppercase animate-bounce hover:brightness-110 cursor-pointer"
-              >
-                CHỈ CÒN 39 SUẤT
-              </button>
-            </div>
-            <div className="text-lg sm:text-xl font-black text-amber-400 tracking-tight">
-              2.999.999 VNĐ
-            </div>
-            <button
-              type="button"
-              onClick={onRegisterCTA}
-              title="Đăng ký học viên ngay"
-              className="text-[10px] text-emerald-300 font-extrabold mt-0.5 flex items-center gap-1 hover:text-emerald-200 hover:underline cursor-pointer"
-            >
-              🔥 CHỈ CÒN 39 SUẤT • ĐĂNG KÝ NGAY
-            </button>
           </div>
 
         </div>
