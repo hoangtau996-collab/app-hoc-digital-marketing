@@ -170,8 +170,11 @@ function CountUp({ value, decimals }) {
   Ảnh chụp thật từ Wikimedia Commons (data/homePhotos.js).
 
   Ảnh hỏng thì ẨN HẲN khung, không để ô vỡ — cùng cách LessonPhoto làm.
-  Giấy phép CC BY / CC BY-SA bắt buộc ghi tác giả, giấy phép và đường dẫn
-  nguồn, nên dòng ghi công luôn đi kèm ảnh và bấm được về trang gốc.
+
+  KHÔNG ghi công đè lên ảnh: chủ dự án muốn ảnh sạch. Nhưng giấy phép CC BY /
+  CC BY-SA vẫn bắt buộc ghi tác giả, giấy phép và nguồn, nên toàn bộ ghi công
+  gom vào khối "Nguồn ảnh minh hoạ" ở cuối trang (PhotoCredits). Thêm ảnh mới
+  vào homePhotos.js là nó tự có mặt ở đó.
 */
 function HomePhoto({ id, label, className = '' }) {
   const photo = HOME_PHOTOS[id];
@@ -188,12 +191,26 @@ function HomePhoto({ id, label, className = '' }) {
         onError={() => setFailed(true)}
       />
       {label && <span className="home-photo-label">{label}</span>}
-      <figcaption>
-        <a href={photo.source} target="_blank" rel="noopener noreferrer" title={photo.credit} onClick={(e) => e.stopPropagation()}>
-          {photo.credit}
-        </a>
-      </figcaption>
     </figure>
+  );
+}
+
+/* Ghi công ảnh gom một chỗ, thu gọn mặc định để không thành thêm một khối chữ. */
+function PhotoCredits() {
+  const photos = Object.values(HOME_PHOTOS);
+  if (photos.length === 0) return null;
+
+  return (
+    <details className="home-credits">
+      <summary>Nguồn ảnh minh hoạ ({photos.length})</summary>
+      <ul>
+        {photos.map((p) => (
+          <li key={p.source}>
+            <a href={p.source} target="_blank" rel="noopener noreferrer">{p.credit}</a>
+          </li>
+        ))}
+      </ul>
+    </details>
   );
 }
 
@@ -491,6 +508,8 @@ export default function HomeLanding({
               </div>
             </div>
           </div>
+
+          <PhotoCredits />
         </section>
 
       </div>

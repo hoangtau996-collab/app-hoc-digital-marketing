@@ -12,7 +12,7 @@ TODO — chưa có quy ước đánh phiên bản; cân nhắc gắn thẻ Git k
 
 ### Thêm mới — Ảnh thật, Tin tức Live, Thư viện thuật ngữ, Công cụ tính trên trang chủ
 
-- **11 ảnh chụp thật** từ Wikimedia Commons (`data/homePhotos.js`, CC BY / CC BY-SA, đã kiểm tra HTTP 200): 4 thẻ "Vì sao Marketing quan trọng", cặp ảnh đối chiếu Truyền thống và Digital (ảnh truyền thống ngả màu cũ), mỗi chặng hành trình khách hàng một ảnh. Ghi công một dòng đè đáy ảnh, bấm về trang gốc; ảnh hỏng thì tự ẩn khung. Ảnh hành trình được tải trước sau 3 giây để chuyển chặng không bị trắng khung.
+- **11 ảnh chụp thật** từ Wikimedia Commons (`data/homePhotos.js`, CC BY / CC BY-SA, đã kiểm tra HTTP 200): 4 thẻ "Vì sao Marketing quan trọng", cặp ảnh đối chiếu Truyền thống và Digital (ảnh truyền thống ngả màu cũ), mỗi chặng hành trình khách hàng một ảnh. Ảnh hiển thị sạch, không chữ đè lên. Ghi công (bắt buộc theo CC BY / BY-SA) gom vào khối thu gọn "Nguồn ảnh minh hoạ" ở cuối trang chủ, mỗi dòng dẫn về trang gốc. Ảnh hỏng thì tự ẩn khung. Ảnh hành trình được tải trước sau 3 giây để chuyển chặng không bị trắng khung.
 - **Tin tức Live** (`HomeLiveSections.jsx`, ngay sau số liệu thị trường): 3 tin thật mới nhất từ bản tin tự động, chỉ lấy tin có `sourceUrl` (tin mô phỏng của nút Live không lên trang chủ). Ảnh báo gốc hỏng thì dùng tranh SVG có sẵn. Điện thoại hiện dạng danh sách ảnh nhỏ.
 - **Thư viện thuật ngữ**: tra nhanh không cần dấu ("chuyen doi" vẫn ra), 12 chip thuật ngữ hay gặp, "Thuật ngữ của ngày" đổi theo ngày lịch.
 - **Công cụ tính**: máy tính ROAS và hoà vốn chạy ngay trên trang (ROAS = doanh thu ÷ chi phí; hoà vốn = 1 ÷ biên lợi nhuận gộp; báo lãi/lỗ bằng số tiền), số mặc định ghi rõ là ví dụ giả định. Kèm lưới 8 công cụ đầy đủ.

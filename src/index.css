@@ -1306,32 +1306,34 @@ html.dark .home-gradient-text {
 
 .home-card:hover .home-photo img { transform: scale(1.05); }
 
-/* Ghi công nằm đè đáy ảnh trên nền mờ: đủ đọc, không chiếm thêm chiều cao. */
-.home-photo figcaption {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 1.25rem 0.6rem 0.35rem;
-  background: linear-gradient(to top, rgba(10, 16, 32, 0.75), transparent);
-  font-size: 0.62rem;
-  line-height: 1.3;
-  text-align: right;
+/* Ghi công ảnh ở cuối trang chủ (PhotoCredits) — thu gọn, chữ nhỏ, màu nhạt. */
+.home-credits {
+  margin-top: 1.5rem;
+  text-align: center;
+  color: var(--h-muted);
+  font-size: 0.75rem;
 }
 
-/* Một dòng, cắt bằng dấu "…": trên ảnh hẹp, dòng ghi công dài xuống ba dòng
-   là che mất nửa tấm ảnh. Bản đầy đủ nằm ở thuộc tính title và liên kết vẫn
-   dẫn về trang gốc trên Commons — đủ điều kiện ghi công của CC BY / BY-SA. */
-.home-photo figcaption a {
-  display: block;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  color: rgba(255, 255, 255, 0.85);
-  text-decoration: none;
+.home-credits summary {
+  display: inline-block;
+  cursor: pointer;
+  font-weight: 700;
+  opacity: 0.85;
 }
 
-.home-photo figcaption a:hover { text-decoration: underline; }
+.home-credits summary:hover { color: var(--h-primary); }
+
+.home-credits ul {
+  list-style: none;
+  margin-top: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.35rem 1.25rem;
+}
+
+.home-credits a { color: var(--h-muted); text-decoration: none; }
+.home-credits a:hover { color: var(--h-primary); text-decoration: underline; }
 
 .home-photo-label {
   position: absolute;
