@@ -2,6 +2,196 @@
   {
     "category": "Meta Ads",
     "platformIcon": "Facebook",
+    "title": "Meta cập nhật thuật toán đề xuất Reels và mở rộng Creator Marketing Hub",
+    "isHot": false,
+    "illustration": "creative-fatigue",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Meta Ads",
+      "Instagram Reels",
+      "Thuật toán Meta",
+      "Creator Hub"
+    ],
+    "summary": "Meta vừa công bố các nâng cấp thuật toán đề xuất trên Facebook và Instagram cùng dữ liệu tăng trưởng trong quý 3. Nội dung mới xuất bản trong ngày đầu đang chiếm tỷ trọng áp đảo trong các đề xuất tự động. Nền tảng đồng thời triển khai Creator Marketing Hub tích hợp trợ lý AI cho toàn bộ nhà quảng cáo.",
+    "keyNumbers": [
+      {
+        "value": "gần 45%",
+        "label": "Reels được đề xuất trên Instagram có tuổi đời dưới 1 ngày"
+      },
+      {
+        "value": "hơn 10 triệu",
+        "label": "nhà sáng tạo hiện có trên Creator Marketing Hub"
+      },
+      {
+        "value": "hơn 500 triệu",
+        "label": "người dùng hoạt động hàng tháng trên Threads"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Instagram ưu tiên mạnh mẽ video mới xuất bản trong ngày",
+        "body": "Thời gian sử dụng trung bình của mỗi người dùng Instagram đạt mức cao kỷ lục trong quý 3 nhờ sự tăng trưởng của Reels và Feed. Meta đã nâng cấp kiến trúc mô hình xếp hạng chuỗi video liên tiếp thay vì đánh giá từng video riêng lẻ, kết hợp thêm các tín hiệu thời gian xem chi tiết. Thay đổi này giúp thời gian xem Reels trên Instagram tăng hơn 4%. Đáng chú ý, gần 45% video Reels được thuật toán đề xuất hiện có độ tuổi dưới 1 ngày, tăng hơn 11 điểm phần trăm so với quý 2. Phần lớn tương tác tự nhiên của video ngắn hiện nay dồn hết vào 24 giờ đầu tiên sau khi đăng tải."
+      },
+      {
+        "heading": "Facebook ứng dụng kiến trúc AI tạo sinh để xếp hạng nội dung",
+        "body": "Thời gian xem Reels trên Facebook cũng đạt mức cao kỷ lục và tăng trưởng hai con số so với cùng kỳ năm trước. Meta đã hoàn tất triển khai toàn cầu cấu trúc truy xuất dữ liệu mới lấy cảm hứng từ các mô hình ngôn ngữ lớn LLM. Hệ thống mới gắn nhãn ngữ nghĩa cho nội dung và đề xuất bài viết phù hợp ngay cả khi bài đăng đó chưa tích lũy được lượng tương tác ban đầu. Kiến trúc này đang xử lý khoảng một phần tư lượt xem Feed từ nguồn chưa kết nối và một nửa lượt xem Reels, giúp tăng 1% thời gian xem. Tại thị trường Mỹ, Meta cũng tăng gấp đôi dữ liệu lịch sử mà mô hình xếp hạng có thể xét duyệt."
+      },
+      {
+        "heading": "Mở cổng Creator Marketing Hub tích hợp trợ lý AI cho mọi tài khoản",
+        "body": "Meta đã chính thức mở Creator Marketing Hub cho tất cả các nhà quảng cáo với cơ sở dữ liệu hơn 10 triệu nhà sáng tạo nội dung. Doanh nghiệp có thể trực tiếp tìm kiếm đối tác để triển khai các chiến dịch nội dung hợp tác. Meta đang tích hợp trợ lý Meta AI Business Assistant vào cổng này để hỗ trợ nhãn hàng tương tác bằng câu lệnh. Trợ lý AI sẽ giúp tìm nhà sáng tạo phù hợp, gợi ý nội dung để chạy quảng cáo Partnership Ads và hướng dẫn quy trình vận hành chiến dịch."
+      },
+      {
+        "heading": "Mạng xã hội Threads vượt mốc 500 triệu người dùng",
+        "body": "Nền tảng Threads đã vượt qua mạng xã hội X về số lượng người dùng hoạt động hàng tháng, đạt hơn 500 triệu người dùng. Thời gian sử dụng trung bình mỗi người dùng trên Threads tăng hơn 20% so với cùng kỳ năm ngoái nhờ cải thiện độ liên quan và tính thời sự của nội dung gợi ý. Sự tăng trưởng này mở rộng tệp khán giả tiềm năng cho các thương hiệu xây dựng cộng đồng và tiếp cận tự nhiên. Nền tảng này đang từng bước hoàn thiện để tạo ra thêm các cơ hội thương mại hóa cho hệ sinh thái quảng cáo của Meta."
+      }
+    ],
+    "impact": "Vòng đời nội dung ngắn bị thu hẹp mạnh xuống dưới 24 giờ, biến tần suất đăng và tốc độ bắt sóng tương tác ngày đầu thành yếu tố sống còn cho phân phối tự nhiên. Các video dạng re-up hoặc tổng hợp nội dung cũ bị bóp tương tác triệt để. Tuy nhiên, việc Facebook ứng dụng AI phân tích ngữ nghĩa mở ra cơ hội cho các video mới toanh của thương hiệu nhỏ được phân phối ngay lập tức mà không cần mồi sẵn tương tác.",
+    "ifIgnored": "Doanh nghiệp sẽ lãng phí ngân sách sản xuất vào các video mất nhiều tuần trau chuốt nhưng không tạo được sóng tương tác trong ngày đầu tiên. Đội ngũ tiếp tục tái sử dụng nội dung cũ sẽ bị thuật toán loại khỏi luồng đề xuất, dẫn đến lượt xem tự nhiên sụt giảm nghiêm trọng và chi phí phân phối trả phí tăng cao.",
+    "actionChecklist": [
+      "Tăng tần suất sản xuất Reels ngắn và tập trung dồn toàn bộ tương tác nội bộ, mồi bình luận trong 24 giờ đầu sau đăng tải",
+      "Ngừng hoàn toàn việc đăng lại các video tổng hợp hoặc nội dung không nguyên bản lên fanpage và kênh Instagram",
+      "Truy cập Creator Marketing Hub trên Trình quản lý quảng cáo để tìm kiếm tệp nhà sáng tạo phù hợp và thử nghiệm định dạng Partnership Ads",
+      "Tối ưu phần mô tả và nội dung nói trong video bằng từ khóa ngữ nghĩa rõ ràng để mô hình AI của Facebook nhận diện đúng chủ đề đề xuất"
+    ],
+    "id": "real-2026-10-22-meta-cap-nhat-thuat-dcfe40",
+    "publishedAt": "22/10/2026",
+    "sourceUrl": "https://www.socialmediatoday.com/news/meta-offers-insights-on-individual-platform-growth/833807/",
+    "source": "Social Media Today",
+    "image": {
+      "url": "https://imgproxy.divecdn.com/_qCZFatzkmrQT81320LquVewz1MFOBUNAXrQJC5FJB4/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9tZXRhX2FwcHMucG5n.webp",
+      "credit": "Ảnh: Social Media Today"
+    }
+  },
+  {
+    "category": "Meta Ads",
+    "platformIcon": "Facebook",
+    "title": "Meta cập nhật điều khoản: Nhà quảng cáo chịu toàn bộ trách nhiệm khi AI tự ý sửa nội dung",
+    "isHot": true,
+    "illustration": "ai-label",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Meta Ads",
+      "Trí tuệ nhân tạo",
+      "Chính sách quảng cáo",
+      "Advantage+"
+    ],
+    "summary": "Từ ngày 30/10, Meta bổ sung điều khoản thương mại mới quy định nhà quảng cáo phải chịu toàn bộ trách nhiệm pháp lý đối với mọi nội dung do AI tạo ra hoặc chỉnh sửa. Đáng chú ý, các tính năng tự động tối ưu bằng AI thường được hệ thống kích hoạt mặc định trong tài khoản.",
+    "keyNumbers": [
+      {
+        "value": "30/10",
+        "label": "Thời điểm áp dụng điều khoản AI mới"
+      },
+      {
+        "value": "3%",
+        "label": "Tăng trưởng chuyển đổi Meta công bố khi bật Product Browsing"
+      },
+      {
+        "value": "117.700",
+        "label": "Số nhà quảng cáo trong đợt thử nghiệm của Meta"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Chuyển giao toàn bộ rủi ro pháp lý sang nhà quảng cáo",
+        "body": "Bắt đầu từ ngày 30/10, Meta áp dụng mục Tính năng AI mới trong Điều khoản Thương mại mà không yêu cầu ký kết lại, việc tiếp tục chạy quảng cáo đồng nghĩa với việc chấp thuận. Theo nội dung này, nhà quảng cáo phải chịu trách nhiệm hoàn toàn cho những gì AI của Meta tạo ra hoặc chỉnh sửa trên mẫu quảng cáo. Đáng nói, chính Meta cũng thừa nhận trong điều khoản rằng các công cụ AI có thể mắc sai sót và không phải lúc nào cũng mang lại kết quả chính xác hoặc phù hợp."
+      },
+      {
+        "heading": "Cơ chế tự động bật tính năng sáng tạo AI",
+        "body": "Nhiều đại lý quảng cáo phản ánh tình trạng Meta tự ý can thiệp vào mẫu quảng cáo bằng AI mà không báo trước. Hệ thống tự động dịch văn bản, tạo thêm liên kết trang, thậm chí tự ghép ảnh và tạo định dạng quay vòng từ tư liệu sẵn có của nhãn hàng. Các tùy chọn tự động hóa này thường bị ẩn sâu trong các menu thu gọn của Trình quản lý quảng cáo. Nếu người thiết lập chiến dịch không chủ động bỏ chọn từng mục một cách thủ công, các tính năng nâng cao bằng AI vẫn sẽ tự động áp dụng."
+      },
+      {
+        "heading": "Bài toán kiểm soát chất lượng từ chính nội bộ Meta",
+        "body": "Trước đó, chính các kỹ sư của Meta đã thừa nhận mô hình AI của họ gặp hiện tượng ảo giác khi triển khai thực tế và buộc phải phân tách một agent độc lập thành 14 subagent chuyên biệt để kiểm soát. Ngay cả với kiến trúc mới, hệ thống vẫn chỉ đạt mức khoảng hai phần ba thay đổi không cần con người can thiệp, đồng nghĩa khoảng một phần ba trường hợp còn lại vẫn xảy ra lỗi. Tuy nhiên, thay vì cam kết chất lượng, điều khoản mới lại đẩy toàn bộ hậu quả khi AI mắc lỗi sang phía khách hàng trả tiền."
+      },
+      {
+        "heading": "Ép bật tính năng duyệt sản phẩm ngay trước mùa mua sắm",
+        "body": "Bên cạnh chính sách AI, Meta cũng thông báo từ ngày 28/10 sẽ tự động bật tính năng duyệt sản phẩm trong ứng dụng đối với các quảng cáo đang chạy trên Facebook và Instagram trừ khi nhà quảng cáo chủ động chọn tắt. Thay vì đưa thẳng người dùng về website nhãn hàng, tính năng này giữ chân khách hàng trong ứng dụng để xem chi tiết sản phẩm. Thời điểm áp dụng diễn ra chỉ 30 ngày trước đợt mua sắm Black Friday ngày 27/11, gây khó khăn lớn cho việc theo dõi hành trình chuyển đổi."
+      }
+    ],
+    "impact": "Doanh nghiệp đối mặt nguy cơ vi phạm pháp luật quảng cáo hoặc sai lệch thông điệp thương hiệu do AI tự ý bịa đặt thông tin sản phẩm, trong khi Meta hoàn toàn phủi bỏ trách nhiệm bồi thường. Thêm vào đó, việc giữ chân người dùng trong ứng dụng sẽ làm gián đoạn luồng dữ liệu theo dõi trực tiếp trên website của doanh nghiệp.",
+    "ifIgnored": "Nếu để mặc định các cài đặt của Meta, nhãn hàng có thể bị phạt vì quảng cáo sai sự thật hoặc mất uy tín thương hiệu nghiêm trọng khi AI tự chế hình ảnh, câu chữ mà không một ai trong đội ngũ phê duyệt.",
+    "actionChecklist": [
+      "Rà soát toàn bộ chiến dịch đang hoạt động và tắt thủ công các tùy chọn Advantage+ Creative bị ẩn trong Trình quản lý quảng cáo.",
+      "Kiểm tra email thông báo từ Meta và chủ động tắt tính năng duyệt sản phẩm trong ứng dụng trước ngày 28/10 nếu muốn giữ luồng traffic về web.",
+      "Bổ sung quy trình kiểm tra định kỳ hình ảnh và nội dung hiển thị thực tế của quảng cáo đang chạy để phát hiện sớm các can thiệp từ AI.",
+      "Lưu trữ ảnh chụp màn hình thiết lập chiến dịch và thông báo với ban giám đốc về thay đổi pháp lý trong điều khoản mới của Meta."
+    ],
+    "deadline": "30/10",
+    "id": "real-2026-10-22-meta-cap-nhat-dieu-3aed87",
+    "publishedAt": "22/10/2026",
+    "sourceUrl": "https://ppc.land/metas-ai-rewrites-the-ads-from-october-30-advertisers-carry-the-risk/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/size/w1200/2026/10/meta-oct-30-terms-ai-ad-edits-advertiser-liability-scissors-billboard.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "AI Marketing",
+    "platformIcon": "Sparkles",
+    "title": "OpenAI công bố cơ chế vận hành hệ thống phân phối và đấu giá quảng cáo trên ChatGPT",
+    "isHot": false,
+    "illustration": "cpm-auction",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "ChatGPT Ads",
+      "AI Marketing",
+      "Đấu giá quảng cáo",
+      "OpenAI"
+    ],
+    "summary": "OpenAI vừa tiết lộ chi tiết kỹ thuật về cách hệ thống quảng cáo trên ChatGPT phân tích ý định người dùng qua hội thoại đa lượt và tiến hành đấu giá. Hệ thống phân phối quảng cáo hoạt động hoàn toàn độc lập với mô hình tạo câu trả lời tự nhiên nhằm đảm bảo tính khách quan. Đáng chú ý, một mẫu quảng cáo thắng thầu đấu giá vẫn có thể không được hiển thị nếu không vượt qua các bước kiểm tra ngữ cảnh sau đấu giá.",
+    "keyNumbers": [
+      {
+        "value": "1 tỷ USD",
+        "label": "Doanh thu quy năm đạt được dưới 200 ngày"
+      },
+      {
+        "value": "200",
+        "label": "Số ngày để ChatGPT Ads đạt mốc 1 tỷ USD doanh thu quy năm"
+      },
+      {
+        "value": "100.000",
+        "label": "Số lượng nhà quảng cáo đã tham gia chạy quảng cáo"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Tách biệt hoàn toàn giữa câu trả lời organic và quảng cáo",
+        "body": "OpenAI cho biết hệ thống chọn quảng cáo hoạt động độc lập với hệ thống tạo câu trả lời của ChatGPT. Cả hai hệ thống đều sử dụng mô hình và mã nguồn riêng biệt dù cùng truy cập vào ngữ cảnh hội thoại. Việc lựa chọn quảng cáo không tác động ngược trở lại nội dung câu trả lời do ChatGPT tạo ra. Nếu hệ thống quảng cáo bị chậm hoặc gặp sự cố, câu trả lời tự nhiên vẫn được hiển thị bình thường. Quảng cáo xuất hiện quá muộn sẽ không hiển thị cùng câu trả lời đó."
+      },
+      {
+        "heading": "Mô hình Orchestrator phân tích ngữ cảnh hội thoại đa lượt",
+        "body": "OpenAI gọi mô hình quản lý việc chọn quảng cáo là orchestrator với nhiệm vụ đọc toàn bộ hội thoại và kích hoạt các công cụ tìm kiếm quảng cáo phù hợp. Hệ thống biến các phần hội thoại thành truy vấn tìm kiếm dạng embeddings để hiểu ý định người dùng mà không phụ thuộc vào từ khóa chính xác. Các phiên hội thoại dạng stateful giúp duy trì chi tiết từ các tin nhắn trước thay vì phải bắt đầu lại từ đầu khi có tin nhắn mới. Mô hình phải phân biệt giữa ý định hiện tại với thông tin cũ hoặc các câu hỏi mang tính giả định. Khi người dùng bật tính năng quảng cáo cá nhân hóa, hệ thống có thể tham khảo thêm thông tin không nhạy cảm từ các cuộc trò chuyện trước."
+      },
+      {
+        "heading": "Quy trình đấu giá và lý do quảng cáo thắng thầu vẫn không xuất hiện",
+        "body": "Sau khi lọc các quảng cáo tiềm năng theo vị trí địa lý, chính sách, ngân sách và tốc độ phân phối, hệ thống sẽ đánh giá độ phù hợp và hiệu suất dự kiến. Bộ điều phối gửi các ứng viên đủ điều kiện sang một công cụ đấu giá riêng biệt để xếp hạng và định giá cuối cùng. Đáng chú ý, việc thắng thầu trong cuộc đấu giá không đảm bảo quảng cáo sẽ chắc chắn được hiển thị tới người dùng. Hệ thống tiếp tục thực hiện các bước kiểm tra bổ sung sau đấu giá để đảm bảo quảng cáo phù hợp với ngữ cảnh trò chuyện cụ thể. Nếu quảng cáo bỏ lỡ khung thời gian phân phối hoặc không qua được bước kiểm tra ngữ cảnh, lượt hiển thị sẽ bị hủy."
+      },
+      {
+        "heading": "Đo lường hiệu quả và thách thức trong việc tối ưu chiến dịch",
+        "body": "OpenAI đã đạt mốc 1 tỷ USD doanh thu quy năm chỉ trong chưa đầy 200 ngày sau khi ra mắt quảng cáo ChatGPT. Hiện tại đã có hơn 100.000 nhà quảng cáo tham gia nền tảng này nhưng báo cáo chưa công bố các chỉ số hiệu suất chuẩn. Nhà quảng cáo gặp khó khăn khi số lượt hiển thị thấp vì không rõ nguyên nhân xuất phát từ khâu đấu giá, kiểm tra chính sách hay thời gian phân phối. Hệ thống lưu nhật ký nội bộ về các lý do thất bại nhưng chưa rõ mức độ chia sẻ dữ liệu này cho nhà quảng cáo. Việc thiếu tính minh bạch trong báo cáo khiến nhà quảng cáo khó đưa ra quyết định điều chỉnh giá thầu hay mẫu quảng cáo."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing cần hiểu rằng cơ chế quảng cáo trên môi trường hội thoại AI dựa trên việc phân tích ý định tích lũy qua nhiều câu hỏi chứ không chỉ phụ thuộc vào từ khóa đơn lẻ. Việc tối ưu quảng cáo AI đòi hỏi cách tiếp cận mới về nội dung trang đích và chuẩn bị cho các tiêu chuẩn đo lường khác biệt so với tìm kiếm truyền thống.",
+    "ifIgnored": "Nếu áp dụng tư duy quảng cáo từ khóa truyền thống vào ChatGPT Ads, doanh nghiệp sẽ lãng phí ngân sách do không tối ưu được cho ngữ cảnh hội thoại đa lượt và không xác định được nguyên nhân vì sao quảng cáo bị sụt giảm lượt hiển thị.",
+    "actionChecklist": [
+      "Rà soát lại chiến lược từ khóa để chuyển sang tối ưu nội dung theo ngữ cảnh và hành vi tìm kiếm dạng hội thoại.",
+      "Cập nhật thông tin trang đích sao cho giải quyết cụ thể các nhu cầu chuyên sâu được đề cập trong cuộc trò chuyện.",
+      "Theo dõi các báo cáo hiển thị và nhật ký phân phối khi thử nghiệm quảng cáo trên các nền tảng AI.",
+      "Chuẩn bị ngân sách thử nghiệm cho kênh quảng cáo AI Search bên cạnh các kênh Google Ads và Meta Ads truyền thống."
+    ],
+    "id": "real-2026-10-22-openai-cong-bo-co-d234c4",
+    "publishedAt": "22/10/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/openai-details-chatgpt-llm-ad-stack/593857/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/10/shutterstock_2810482073_1600x840-92.png",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
+    "category": "Meta Ads",
+    "platformIcon": "Facebook",
     "title": "Doanh thu quảng cáo nhà sáng tạo trên Meta tăng 97% lên 15 tỷ USD",
     "isHot": false,
     "illustration": "affiliate-commission",
@@ -310,69 +500,6 @@
     }
   },
   {
-    "category": "Meta Ads",
-    "platformIcon": "Facebook",
-    "title": "Meta cho phép cài đặt đối tượng nhắm mục tiêu riêng cho từng mẫu sáng tạo trong cùng một nhóm quảng cáo",
-    "isHot": false,
-    "illustration": "data-signal",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Meta Ads",
-      "Targeting",
-      "Marketing API",
-      "Creative Audience"
-    ],
-    "summary": "Meta bắt đầu cho phép nhà quảng cáo thiết lập độ tuổi và giới tính riêng cho từng hình ảnh hoặc video bên trong cùng một nhóm quảng cáo qua Marketing API. Tuy nhiên, tính năng này yêu cầu nhóm quảng cáo tổng phải giữ cấu trúc nhắm mục tiêu diện rộng và hoàn toàn không tương thích với Advantage+ audience.",
-    "keyNumbers": [
-      {
-        "value": "8",
-        "label": "điểm cuối API bị ảnh hưởng"
-      },
-      {
-        "value": "18 - 25",
-        "label": "độ tuổi tối thiểu của nhóm quảng cáo"
-      },
-      {
-        "value": "100",
-        "label": "mã lỗi Graph API khi vi phạm quy tắc"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Cài đặt nhắm mục tiêu chi tiết theo từng media",
-        "body": "Meta vừa thử nghiệm tính năng Creative audience pairing cho phép phân bổ độ tuổi và giới tính riêng cho từng hình ảnh hoặc video trong cùng một nhóm quảng cáo. Thay vì áp dụng một đối tượng duy nhất cho toàn bộ nhóm, nhà quảng cáo có thể gán từng video hoặc hình ảnh cho các phân khúc khán giả khác nhau. Ví dụ, trong cùng một ad set, video hướng tới người chuẩn bị nghỉ hưu có thể cài độ tuổi 50-65, còn video tài khoản tiết kiệm áp dụng cho mọi lứa tuổi. Tính năng này được thử nghiệm thông qua Marketing API từ ngày 19/10/2026."
-      },
-      {
-        "heading": "Điều kiện bắt buộc ở cấp độ nhóm quảng cáo",
-        "body": "Để kích hoạt tính năng phân vùng theo từng mẫu sáng tạo, nhóm quảng cáo bắt buộc phải giữ ở trạng thái nhắm mục tiêu rộng. Độ tuổi tối thiểu của nhóm quảng cáo phải đặt trong khoảng 18 đến 25, độ tuổi tối đa phải là 65 và nhắm tới tất cả giới tính. Người dùng không thể tạo một nhóm quảng cáo thu hẹp rồi tiếp tục thu hẹp thêm theo từng media. Cấu trúc mới yêu cầu nhóm quảng cáo đóng vai trò là một phễu chứa rộng, sau đó các mẫu sáng tạo sẽ tự chia nhỏ phân khúc bên trong phễu đó."
-      },
-      {
-        "heading": "Không thể kết hợp với tự động hóa Advantage+",
-        "body": "Tính năng này tạo ra sự xung đột trực tiếp với định hướng tự động hóa của Meta. Tài liệu kỹ thuật ghi rõ không thể kết hợp tính năng phân bổ đối tượng theo mẫu sáng tạo với Advantage+ audience hoặc các đề xuất độ tuổi và giới tính tự động. Nếu nhà quảng cáo gửi yêu cầu vi phạm các quy tắc này qua API, hệ thống sẽ trả về mã lỗi Graph API 100. Điều này buộc các thương hiệu phải lựa chọn giữa việc để AI của Meta tự tìm đối tượng hoặc tự phân chia đối tượng theo từng media thủ công."
-      },
-      {
-        "heading": "Tác động sâu tới hệ thống và công cụ của bên thứ ba",
-        "body": "Cập nhật mới đụng chạm tới 8 điểm cuối Graph API khác nhau trên cả 3 cấp độ: nhóm quảng cáo, quảng cáo và mẫu sáng tạo. Điều này ảnh hưởng đến cả lệnh tạo mới lẫn các lệnh đọc và cập nhật chiến dịch hiện có. Do đó, tất cả các công cụ quản lý quảng cáo từ bên thứ ba hoặc phần mềm nội bộ kết nối API với Meta đều phải cập nhật lại cấu trúc dữ liệu. Hiện Meta chưa công bố rõ liệu tính năng này có xuất hiện trên giao diện Ads Manager thông thường hay không, cũng như tác động thực tế của nó tới thuật toán phân phối."
-      }
-    ],
-    "impact": "Cho phép Trưởng phòng Marketing tối ưu hóa chiến dịch đa sản phẩm trong cùng một nhóm quảng cáo duy nhất, giảm tình trạng phân mảnh ngân sách và hạn chế chồng chéo đấu giá giữa các ad set.",
-    "ifIgnored": "Doanh nghiệp tiếp tục chia nhỏ chiến dịch thành nhiều nhóm quảng cáo gây lãng phí ngân sách đấu giá nội bộ và tốn thời gian quản lý thủ công khi chạy nhiều dòng sản phẩm cùng lúc.",
-    "actionChecklist": [
-      "Rà soát lại các chiến dịch đang tách nhóm quảng cáo theo giới tính hoặc độ tuổi để đánh giá khả năng gộp nhóm",
-      "Yêu cầu đội ngũ kỹ thuật hoặc đối tác MarTech kiểm tra 8 điểm cuối Graph API v26.0 nếu đang sử dụng công cụ quản trị quảng cáo tự động",
-      "Thử nghiệm cấu trúc nhóm quảng cáo diện rộng kết hợp định danh khách hàng mục tiêu theo từng mẫu media cho các sản phẩm đa phân khúc",
-      "Đánh giá và so sánh hiệu quả giữa việc dùng Advantage+ audience tự động và việc phân bổ độ tuổi thủ công theo từng thiết kế sáng tạo"
-    ],
-    "id": "real-2026-10-19-meta-cho-phep-cai-222ea0",
-    "publishedAt": "19/10/2026",
-    "sourceUrl": "https://ppc.land/metas-per-creative-audiences-force-ad-sets-to-stay-open-to-all-genders/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/10/meta-per-creative-audiences-ad-set-all-genders-carousel-projector.jpg",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
     "category": "AI Marketing",
     "platformIcon": "Sparkles",
     "title": "OpenAI API và Google không phản ánh chính xác nguồn trích dẫn trên ChatGPT",
@@ -555,132 +682,6 @@
     "source": "Search Engine Journal",
     "image": {
       "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/10/meta-commercial-terms-featured.jpg",
-      "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
-    "category": "TikTok Shop & Ads",
-    "platformIcon": "Video",
-    "title": "TikTok công bố dữ liệu xu hướng mua sắm dịp lễ hội với doanh số kỷ lục",
-    "isHot": false,
-    "illustration": "shop-health",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "TikTok Shop",
-      "Xu hướng mua sắm",
-      "Livestream Shopping"
-    ],
-    "summary": "TikTok vừa công bố các dữ liệu mới về hành vi mua sắm dịp lễ hội, cho thấy doanh số ấn tượng từ TikTok Shop và sự bùng nổ của các phiên phát trực tiếp. Nội dung tìm kiếm và thảo luận về mua sắm đang tăng vọt trên nền tảng này.",
-    "keyNumbers": [
-      {
-        "value": "500.000.000 USD",
-        "label": "Doanh số TikTok Shop từ Black Friday đến Cyber Monday năm trước"
-      },
-      {
-        "value": "263%",
-        "label": "Lượng thảo luận #holidayshopping tăng theo tháng trong tháng 9"
-      },
-      {
-        "value": "84%",
-        "label": "Doanh số TikTok Live tăng trưởng"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Sự bùng nổ của nội dung mua sắm lễ hội",
-        "body": "TikTok ghi nhận lượng nội dung gắn thẻ #holidayshopping tăng 263% theo tháng vào tháng 9. Nền tảng này đóng vai trò quan trọng trong việc giúp người dùng khám phá các sản phẩm mới mà họ chưa từng định mua trước đó. Các chiến dịch quảng cáo và nội dung tự nhiên đang thúc đẩy mạnh mẽ hành vi chuẩn bị mua sắm sớm của người dùng."
-      },
-      {
-        "heading": "Danh mục sản phẩm có mức tăng trưởng mạnh",
-        "body": "Dữ liệu cho thấy người dùng có xu hướng mua sắm quà tặng cao cấp nhiều hơn trong dịp Black Friday và Cyber Monday. Cụ thể, tìm kiếm trang sức vàng tăng 1,134% theo tháng trong tháng 9, trong khi nhẫn opal tăng 825%. Doanh số các sản phẩm sưu tầm tăng 230% theo năm trong tháng 10 và các thiết bị chơi game được 1 trong 5 người dùng tại Mỹ dự định mua."
-      },
-      {
-        "heading": "Động lực từ TikTok Shop và Livestream",
-        "body": "TikTok Shop ghi nhận doanh số vượt 500 triệu USD trong giai đoạn từ Black Friday đến Cyber Monday năm trước. Doanh số qua TikTok Live cũng tăng 84% qua các phiên phát sóng với tổng cộng 1,6 tỷ lượt xem. Riêng tại thị trường Mỹ, doanh số mua sắm qua Live đã tăng gấp đôi trong nửa đầu năm so với cùng kỳ năm trước."
-      },
-      {
-        "heading": "Cải thiện trải nghiệm trả hàng cho người bán",
-        "body": "Nhằm hỗ trợ tốt hơn cho hoạt động thương mại điện tử, TikTok đã công bố hợp tác với Happy Returns. Giải pháp này giúp người mua dễ dàng trả hàng và nhận hoàn tiền ngay lập tức tại khoảng 10.000 địa điểm Return Bar tại Mỹ. Điều này giúp người bán trên nền tảng giảm bớt chi phí và sự phức tạp trong khâu vận hành hậu cần ngược."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing có thể tận dụng các số liệu về mức độ tăng trưởng tìm kiếm của từng ngành hàng cụ thể trên TikTok để định hướng danh mục sản phẩm chủ lực cho mùa cao điểm mua sắm.",
-    "ifIgnored": "Bỏ qua các xu hướng tìm kiếm ngách đang tăng trưởng mạnh trên TikTok có thể khiến thương hiệu bỏ lỡ cơ hội tiếp cận tập khách hàng có nhu cầu cao trong mùa lễ hội.",
-    "actionChecklist": [
-      "Rà soát lại danh mục sản phẩm để đẩy mạnh các mặt hàng có xu hướng tìm kiếm tăng cao",
-      "Lên kế hoạch phân bổ ngân sách cho các chiến dịch quảng cáo TikTok Shop trong mùa cao điểm",
-      "Tích hợp hình thức livestream bán hàng vào chiến lược tiếp thị để tận dụng mức độ tương tác cao",
-      "Tối ưu hóa quy trình chăm sóc khách hàng và chính sách đổi trả để nâng cao tỷ lệ chuyển đổi"
-    ],
-    "id": "real-2026-10-15-tiktok-cong-bo-du-02421f",
-    "publishedAt": "15/10/2026",
-    "sourceUrl": "https://www.socialmediatoday.com/news/tiktok-shares-holiday-sales-data/833191/",
-    "source": "Social Media Today",
-    "image": {
-      "url": "https://imgproxy.divecdn.com/Y4ZmvMFIMSqp4fqK6QP6VSNEJdYXSyfKg8o4E5lDU40/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS90aWt0b2tfbG9nby5wbmc=.webp",
-      "credit": "Ảnh: Social Media Today"
-    }
-  },
-  {
-    "category": "AI Marketing",
-    "platformIcon": "Sparkles",
-    "title": "Lượng truy cập từ ChatGPT giảm mạnh trong báo cáo phân tích thực chất do lỗi gắn thẻ",
-    "isHot": true,
-    "illustration": "data-signal",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "ChatGPT",
-      "Google Analytics 4",
-      "AI Search",
-      "Tracking"
-    ],
-    "summary": "Nhiều nhà quản trị hoảng hốt khi lượng truy cập từ ChatGPT giảm mạnh trên Google Analytics 4 từ ngày 9 tháng 10. Các phân tích cho thấy đây là lỗi kỹ thuật khi các liên kết từ ChatGPT bị mất thẻ UTM và nguồn giới thiệu, khiến lượng khách hàng này bị gom nhầm vào mục truy cập trực tiếp.",
-    "keyNumbers": [
-      {
-        "value": "22% đến 57%",
-        "label": "mức giảm phiên ChatGPT trong GA4"
-      },
-      {
-        "value": "46%",
-        "label": "lượng truy cập giảm từ ChatGPT"
-      },
-      {
-        "value": "42%",
-        "label": "tỷ lệ phản hồi chứa URL trực tiếp"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Sự sụt giảm bất thường trên Google Analytics 4",
-        "body": "Bắt đầu từ ngày 9 tháng 10, các trang web có lượng truy cập đáng kể từ kênh trợ lý AI ghi nhận số phiên truy cập từ ChatGPT giảm từ 22% đến 57%. CEO Ethan Smith của công ty Graphite ước tính con số này sụt giảm khoảng 45% so với mức cơ sở trước đó. Trong khi đó, tổng lượng truy cập chung của các trang web này vẫn duy trì ổn định trong suốt khoảng thời gian diễn ra sự biến động."
-      },
-      {
-        "heading": "Nguyên nhân do liên kết mất thẻ theo dõi",
-        "body": "Các nhà phân tích chỉ ra rằng sau khi phiên bản GPT-6 ra mắt, ChatGPT bắt đầu mở liên kết trong văn bản trả lời mà không đính kèm thẻ utm_source=chatgpt.com hoặc thông tin nguồn giới thiệu. Do thiếu các dấu hiệu nhận biết này, các lượt truy cập từ người dùng vô tình bị đẩy vào mục Direct trong các công cụ đo lường như Google Analytics 4. Adobe ghi nhận lượng truy cập ChatGPT giảm khoảng 31.000 lượt mỗi ngày trong khi lượng truy cập trực tiếp tăng khoảng 26.000 lượt mỗi ngày."
-      },
-      {
-        "heading": "Thay đổi trong định dạng trả lời của ChatGPT",
-        "body": "Tỷ lệ các câu trả lời có chứa liên kết nguồn được gắn thẻ đã giảm mạnh từ khoảng 98% vào ngày 8 tháng 10 xuống còn 66% vào ngày 14 tháng 10. Đồng thời, định dạng giao diện trả lời thông minh Intelligent UI của ChatGPT tăng từ 2% lên khoảng 35%. Nghiên cứu từ Peec AI cũng cho thấy ChatGPT đã đưa URL trực tiếp của trang web vào 42% câu trả lời, trong đó có 54% trỏ về trang chủ."
-      },
-      {
-        "heading": "Phản hồi và quá trình khắc phục lỗi",
-        "body": "Adobe cho biết OpenAI đã xác nhận đây là một lỗi kỹ thuật và quá trình sửa lỗi bắt đầu triển khai từ ngày 15 tháng 10. Các lượt nhấp chuột được gắn thẻ bắt đầu quay trở lại mức từ 95% đến 100% so với tuần trước đó trên nhiều tên miền. Tuy nhiên, dữ liệu cũ đã bị lệch và các bên thứ ba vẫn đang theo dõi sát sao tiến độ khôi phục trên toàn bộ hệ thống."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing cần phân biệt rõ sự sụt giảm lượng truy cập thực tế và lỗi kỹ thuật hiển thị trên Google Analytics 4 để tránh báo cáo sai lệch với ban lãnh đạo.",
-    "ifIgnored": "Nếu bỏ qua, bạn có thể hiểu nhầm rằng kênh AI đang kém hiệu quả, dẫn đến việc cắt giảm ngân sách hoặc chiến lược SEO cho AI một cách oan uổng.",
-    "actionChecklist": [
-      "Ghi chú mốc thời gian từ ngày 8 đến 15 tháng 10 vào báo cáo phân tích dữ liệu",
-      "Kiểm tra song song lượng truy cập từ ChatGPT và Direct cho từng trang đích",
-      "Đánh giá lại lưu lượng truy cập trang chủ nơi các URL trực tiếp thường trỏ đến",
-      "Chủ động thiết lập tham số UTM riêng cho các chiến dịch quảng cáo qua ChatGPT"
-    ],
-    "deadline": "15/10/2026",
-    "id": "real-2026-10-15-luong-truy-cap-tu-fc13a2",
-    "publishedAt": "15/10/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/chatgpt-traffic-drop-appears-to-be-a-tracking-problem/593157/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/10/chatgpt-traffic-tracking-1600x840-1.jpg",
       "credit": "Ảnh: Search Engine Journal"
     }
   },
