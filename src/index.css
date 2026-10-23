@@ -940,12 +940,19 @@ html.dark .home-gradient-text {
 }
 
 /* Vì sao Marketing / Hệ sinh thái */
+/* Thẻ có ảnh tràn mép phía trên, nên phần đệm dời vào `.home-why-body`. */
 .home-why {
-  padding: 1.5rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, border-color 0.25s ease, opacity 0.6s ease;
+}
+
+.home-why-body {
+  padding: 1.25rem 1.5rem 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
-  transition: transform 0.25s ease, border-color 0.25s ease, opacity 0.6s ease;
 }
 
 .home-why:hover,
@@ -1087,14 +1094,26 @@ html.dark .home-gradient-text {
 
 .home-journey-step.is-active .home-journey-name { color: var(--h-primary); }
 
+/* Khung chi tiết của chặng: ảnh bên trái, chữ bên phải; điện thoại xếp dọc. */
 .home-journey-panel {
+  overflow: hidden;
+  display: grid;
+  animation: home-pop 0.45s ease;
+}
+
+.home-journey-content {
   padding: 1.5rem;
-  text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  animation: home-pop 0.45s ease;
+  justify-content: center;
+  gap: 0.9rem;
+}
+
+@media (min-width: 768px) {
+  /* Chỉ chia hai cột khi ảnh thật sự có mặt: ảnh hỏng tự ẩn, chia cứng thì
+     chữ bị dồn vào cột trái hẹp cạnh một khoảng trống. */
+  .home-journey-panel:has(> .home-photo) { grid-template-columns: 0.9fr 1.1fr; }
+  .home-journey-content { padding: 2rem 2.25rem; }
 }
 
 .home-journey-ask {
@@ -1264,5 +1283,414 @@ html.dark .home-gradient-text {
   .home-orbit-spin,
   .home-orbit-counter,
   .home-orbit-core,
-  .home-journey-panel { animation: none; }
+  .home-journey-panel,
+  .home-live-dot::after { animation: none; }
 }
+
+/* ---------- Trang chủ: ảnh chụp thật (HomePhoto) ---------- */
+.home-photo {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  background: var(--h-primary-soft);
+}
+
+.home-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.home-card:hover .home-photo img { transform: scale(1.05); }
+
+/* Ghi công nằm đè đáy ảnh trên nền mờ: đủ đọc, không chiếm thêm chiều cao. */
+.home-photo figcaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1.25rem 0.6rem 0.35rem;
+  background: linear-gradient(to top, rgba(10, 16, 32, 0.75), transparent);
+  font-size: 0.62rem;
+  line-height: 1.3;
+  text-align: right;
+}
+
+.home-photo figcaption a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+}
+
+.home-photo figcaption a:hover { text-decoration: underline; }
+
+.home-photo-label {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #3563d1 0%, #6495ED 100%);
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.home-compare-photo { border-radius: 1.25rem; border: 1px solid var(--h-line); aspect-ratio: 16 / 9; }
+
+/* Ảnh "Truyền thống" ngả màu cũ để hai tấm tự nói lên sự đối lập. */
+.home-compare-photo.is-old img { filter: grayscale(0.85) sepia(0.25) contrast(0.95); }
+.home-compare-photo.is-old .home-photo-label { background: #77705d; }
+
+.home-journey-photo { aspect-ratio: auto; min-height: 220px; }
+
+@media (min-width: 768px) {
+  .home-journey-photo { min-height: 300px; }
+}
+
+/* ---------- Trang chủ: chi tiết dùng chung cho ba mục "sống" ---------- */
+.home-label {
+  color: var(--h-muted);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.home-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--h-primary);
+  font-weight: 800;
+  font-size: 0.92rem;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.home-link:hover { text-decoration: underline; }
+
+.home-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Chấm "Live" có vòng lan toả */
+.home-live-dot {
+  position: relative;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 9999px;
+  background: #ea4c8b;
+}
+
+.home-live-dot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background: #ea4c8b;
+  animation: home-ping 1.6s ease-out infinite;
+}
+
+@keyframes home-ping {
+  from { transform: scale(1); opacity: 0.7; }
+  to { transform: scale(2.8); opacity: 0; }
+}
+
+/* Tin tức */
+.home-news-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  text-align: left;
+  cursor: pointer;
+  color: inherit;
+  transition: transform 0.25s ease, border-color 0.25s ease, opacity 0.6s ease;
+}
+
+.home-news-card:hover { transform: translateY(-4px); border-color: var(--h-primary); }
+
+.home-news-media {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--h-primary-soft);
+}
+
+.home-news-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.home-news-card:hover .home-news-img { transform: scale(1.05); }
+
+/* Tranh SVG dự phòng có tỉ lệ 640x200 và tự kèm khung; căn giữa trong ô 16:9. */
+.home-news-fallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--h-primary);
+  background: #101a2e;
+}
+
+.home-news-fallback figure { width: 100%; border: 0; border-radius: 0; box-shadow: none; }
+.home-news-fallback figcaption { display: none; }
+
+.home-news-badge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  padding: 0.25rem 0.7rem;
+  border-radius: 9999px;
+  background: rgba(10, 16, 32, 0.72);
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  backdrop-filter: blur(6px);
+}
+
+.home-news-body {
+  padding: 1.1rem 1.25rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  flex: 1;
+}
+
+.home-news-meta {
+  margin-top: auto;
+  color: var(--h-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* Thuật ngữ */
+.home-search {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.35rem 1rem;
+  border-radius: 9999px;
+  background: #ffffff;
+  border: 1.5px solid var(--h-line);
+  color: var(--h-primary);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+html.dark .home-search { background: rgba(14, 21, 38, 0.8); }
+
+.home-search:focus-within {
+  border-color: var(--h-primary);
+  box-shadow: 0 0 0 4px var(--h-primary-soft);
+}
+
+.home-search input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.6rem 0;
+  border: 0 !important;
+  outline: none;
+  background: transparent;
+  color: var(--h-ink);
+  font-size: 1rem;
+}
+
+/* Không đặt `margin` ở đây: khoảng cách giữa các khối do `space-y-5` của
+   khung cha lo, mà lớp đó có độ ưu tiên 0 nên `margin: 0` sẽ đè mất. */
+.home-search-results {
+  list-style: none;
+  padding: 0.35rem;
+  border-radius: 1rem;
+  border: 1px solid var(--h-line);
+  background: var(--h-card);
+}
+
+.home-search-results button {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  padding: 0.6rem 0.75rem;
+  border-radius: 0.75rem;
+  background: none;
+  border: 0;
+  text-align: left;
+  cursor: pointer;
+  color: var(--h-ink);
+}
+
+.home-search-results button:hover { background: var(--h-primary-soft); }
+.home-search-results strong { font-size: 0.92rem; font-weight: 800; }
+.home-search-results span { font-size: 0.8rem; color: var(--h-muted); }
+
+.home-chip-btn { cursor: pointer; transition: background-color 0.2s ease, transform 0.2s ease; }
+.home-chip-btn:hover { background: var(--h-primary); color: #ffffff; transform: translateY(-1px); }
+
+.home-term-today {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  background: var(--h-hero), var(--h-card);
+}
+
+@media (min-width: 640px) {
+  .home-term-today { padding: 1.75rem; }
+}
+
+.home-term-title {
+  font-size: clamp(1.25rem, 2.6vw, 1.6rem);
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+html.dark .home-term-title { color: var(--h-ink); }
+
+.home-formula {
+  padding: 0.75rem 1rem;
+  border-radius: 0.85rem;
+  border-left: 3px solid var(--h-accent);
+  background: var(--h-accent-soft);
+  color: var(--h-ink);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+/* Máy tính ROAS */
+/* `space-between`: nhãn dài xuống hai dòng thì ô nhập vẫn thẳng hàng đáy với
+   hai ô bên cạnh. */
+.home-field { display: flex; flex-direction: column; justify-content: space-between; gap: 0.4rem; min-width: 0; }
+
+.home-input-wrap {
+  display: flex;
+  align-items: center;
+  border-radius: 0.85rem;
+  border: 1.5px solid var(--h-line);
+  background: #ffffff;
+  overflow: hidden;
+}
+
+html.dark .home-input-wrap { background: rgba(14, 21, 38, 0.8); }
+
+.home-input-wrap:focus-within { border-color: var(--h-primary); box-shadow: 0 0 0 4px var(--h-primary-soft); }
+
+.home-input-wrap input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.7rem 0.8rem;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: var(--h-ink);
+  font-weight: 800;
+  font-size: 1rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.home-input-suffix {
+  padding: 0 0.8rem;
+  color: var(--h-muted);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.home-bar-row {
+  display: grid;
+  grid-template-columns: 7.5rem 1fr 4rem;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--h-muted);
+}
+
+.home-bar-row strong {
+  text-align: right;
+  color: var(--h-ink);
+  font-size: 1rem;
+  font-weight: 900;
+  font-variant-numeric: tabular-nums;
+}
+
+.home-bar {
+  height: 0.7rem;
+  border-radius: 9999px;
+  background: var(--h-primary-soft);
+  overflow: hidden;
+}
+
+.home-bar i {
+  display: block;
+  height: 100%;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, #3563d1, #6495ED);
+  transition: width 0.4s ease;
+}
+
+.home-bar-accent i { background: linear-gradient(90deg, #d32e70, #f873a8); }
+
+.home-verdict {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35rem 0.75rem;
+  padding: 1rem 1.25rem;
+  border-radius: 1rem;
+  border: 1px solid var(--h-line);
+  color: var(--h-muted);
+  font-size: 0.9rem;
+}
+
+.home-verdict span {
+  padding: 0.2rem 0.7rem;
+  border-radius: 9999px;
+  font-weight: 900;
+  font-size: 0.82rem;
+}
+
+.home-verdict strong { font-size: clamp(1.3rem, 3vw, 1.7rem); font-weight: 900; font-variant-numeric: tabular-nums; }
+.home-verdict em { font-style: normal; font-size: 0.8rem; flex-basis: 100%; }
+
+.home-verdict.is-win { background: rgba(34, 160, 107, 0.1); border-color: rgba(34, 160, 107, 0.35); }
+.home-verdict.is-win span { background: #22a06b; color: #ffffff; }
+.home-verdict.is-win strong { color: #1b8a5a; }
+html.dark .home-verdict.is-win strong { color: #4cc38a; }
+
+.home-verdict.is-loss { background: var(--h-accent-soft); border-color: rgba(234, 76, 139, 0.4); }
+.home-verdict.is-loss span { background: #d32e70; color: #ffffff; }
+.home-verdict.is-loss strong { color: var(--h-accent); }
+
+.home-verdict.is-even span { background: var(--h-primary); color: #ffffff; }
+
+/* Lưới công cụ */
+.home-tool {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.45rem;
+  padding: 1rem;
+  text-align: left;
+  cursor: pointer;
+  color: var(--h-ink);
+  transition: transform 0.25s ease, border-color 0.25s ease, opacity 0.6s ease;
+}
+
+.home-tool:hover { transform: translateY(-3px); border-color: var(--h-primary); }
+.home-tool strong { font-size: 0.92rem; font-weight: 800; line-height: 1.3; }
+.home-tool .home-muted { font-size: 0.8rem; line-height: 1.4; }
+
+.home-reveal-ready .home-news-card.is-visible:hover,
+.home-reveal-ready .home-tool.is-visible:hover { transform: translateY(-4px); }

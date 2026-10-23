@@ -1969,6 +1969,13 @@ export default function App() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  /** Từ trang chủ mở một tab (và một mục trong tab, nếu có). */
+  const openFromHome = (tab, id = null) => {
+    openItem(tab, id);
+    setActiveTab(tab);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   // Ô tìm kiếm trên Header lọc danh sách chuyên đề, mà trang chủ không còn
   // danh sách đó. Gõ tìm ở trang chủ thì chuyển sang tổng quan khoá để kết quả
   // hiện ra, thay vì gõ xong không thấy gì đổi.
@@ -2184,6 +2191,16 @@ export default function App() {
             onRegisterCTA={handleRegisterCTA}
             totalModules={COURSE_MODULES.length}
             trafficStats={trafficStats}
+            /* Ba mục tin tức, thuật ngữ, công cụ trên trang chủ là cửa ngõ
+               sang tab đầy đủ. Đặt mục và đổi tab cùng lúc để effect đồng bộ
+               ghi thẳng ra `/ban-tin/<id>`, `/thuat-ngu/<id>`, `/cong-cu/<id>`. */
+            newsFeed={newsFeed}
+            onOpenNews={(id) => openFromHome('news', id)}
+            onOpenAllNews={() => openFromHome('news')}
+            onOpenTerm={(id) => openFromHome('glossary', id)}
+            onOpenGlossary={() => openFromHome('glossary')}
+            onOpenTool={(id) => openFromHome('tools', id)}
+            onOpenAllTools={() => openFromHome('tools')}
           />
         </main>
       ) : (

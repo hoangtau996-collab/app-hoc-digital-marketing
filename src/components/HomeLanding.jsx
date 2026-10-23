@@ -16,6 +16,8 @@ import {
   TrendingUp,
   Users,
 } from 'lucide-react';
+import { HomeNews, HomeGlossary, HomeToolkit } from './HomeLiveSections';
+import { HOME_PHOTOS } from '../data/homePhotos';
 
 /*
   TRANG CHỦ HỌC VIỆN — địa chỉ `/`.
@@ -63,10 +65,10 @@ const MARKET_STATS = [
 ];
 
 const WHY_MARKETING = [
-  { icon: Target, title: 'Tạo ra nhu cầu', text: 'Sản phẩm tốt mà không ai biết tới thì cũng như chưa tồn tại.' },
-  { icon: Heart, title: 'Xây dựng niềm tin', text: 'Thương hiệu mạnh khiến khách chọn bạn mà không cần mặc cả.' },
-  { icon: TrendingUp, title: 'Kéo doanh thu', text: 'Một chiến dịch đúng là một kênh bán hàng chạy suốt 24/7.' },
-  { icon: Compass, title: 'Định hướng kinh doanh', text: 'Marketing mang tiếng nói khách hàng vào bàn chiến lược.' },
+  { icon: Target, photo: 'why-demand', title: 'Tạo ra nhu cầu', text: 'Sản phẩm tốt mà không ai biết tới thì cũng như chưa tồn tại.' },
+  { icon: Heart, photo: 'why-trust', title: 'Xây dựng niềm tin', text: 'Thương hiệu mạnh khiến khách chọn bạn mà không cần mặc cả.' },
+  { icon: TrendingUp, photo: 'why-revenue', title: 'Kéo doanh thu', text: 'Một chiến dịch đúng là một kênh bán hàng chạy suốt 24/7.' },
+  { icon: Compass, photo: 'why-strategy', title: 'Định hướng kinh doanh', text: 'Marketing mang tiếng nói khách hàng vào bàn chiến lược.' },
 ];
 
 const COMPARE_ROWS = [
@@ -76,6 +78,9 @@ const COMPARE_ROWS = [
   { label: 'Tối ưu', old: 'Hết chiến dịch mới biết kết quả', next: 'Điều chỉnh ngay trong ngày' },
   { label: 'Tương tác', old: 'Một chiều', next: 'Hai chiều, phản hồi tức thì' },
 ];
+
+/* `photo` là khoá trong data/homePhotos.js, cùng thứ tự với chặng. */
+const JOURNEY_PHOTOS = ['journey-awareness', 'journey-interest', 'journey-consideration', 'journey-purchase', 'journey-loyalty'];
 
 const JOURNEY = [
   { stage: 'Nhận biết', ask: '“Thương hiệu này là ai?”', channels: ['Mạng xã hội', 'Video ngắn', 'KOL / KOC'], metrics: 'Reach, lượt xem' },
@@ -161,6 +166,37 @@ function CountUp({ value, decimals }) {
   return <span ref={ref}>{formatVi(shown, decimals)}</span>;
 }
 
+/*
+  Ảnh chụp thật từ Wikimedia Commons (data/homePhotos.js).
+
+  Ảnh hỏng thì ẨN HẲN khung, không để ô vỡ — cùng cách LessonPhoto làm.
+  Giấy phép CC BY / CC BY-SA bắt buộc ghi tác giả, giấy phép và đường dẫn
+  nguồn, nên dòng ghi công luôn đi kèm ảnh và bấm được về trang gốc.
+*/
+function HomePhoto({ id, label, className = '' }) {
+  const photo = HOME_PHOTOS[id];
+  const [failed, setFailed] = useState(false);
+  if (!photo || failed) return null;
+
+  return (
+    <figure className={`home-photo ${className}`}>
+      <img
+        src={photo.url}
+        alt={photo.caption}
+        loading="lazy"
+        decoding="async"
+        onError={() => setFailed(true)}
+      />
+      {label && <span className="home-photo-label">{label}</span>}
+      <figcaption>
+        <a href={photo.source} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
+          {photo.credit}
+        </a>
+      </figcaption>
+    </figure>
+  );
+}
+
 function SectionHead({ eyebrow, title, sub }) {
   return (
     <div className="home-reveal max-w-2xl mx-auto text-center space-y-3 mb-8 sm:mb-10">
@@ -178,6 +214,13 @@ export default function HomeLanding({
   onRegisterCTA,
   totalModules = 11,
   trafficStats = { totalTraffic: 0, totalEnrolled: 0, totalGraduates: 0 },
+  newsFeed = [],
+  onOpenNews,
+  onOpenAllNews,
+  onOpenTerm,
+  onOpenGlossary,
+  onOpenTool,
+  onOpenAllTools,
 }) {
   const rootRef = useReveal();
   const [step, setStep] = useState(0);
@@ -279,6 +322,10 @@ export default function HomeLanding({
           </p>
         </section>
 
+        {/* TIN TỨC LIVE — ngay sau số liệu thị trường: số liệu nói thị trường
+            lớn, bản tin cho thấy nó đang chuyển động từng ngày. */}
+        <HomeNews newsFeed={newsFeed} onOpenNews={onOpenNews} onOpenAllNews={onOpenAllNews} />
+
         {/* 3. VÌ SAO MARKETING QUAN TRỌNG */}
         <section className="home-section">
           <SectionHead
@@ -286,11 +333,14 @@ export default function HomeLanding({
             title="Bán hàng là kết quả. Marketing là nguyên nhân."
           />
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
-            {WHY_MARKETING.map(({ icon: Icon, title, text }) => (
+            {WHY_MARKETING.map(({ icon: Icon, photo, title, text }) => (
               <div key={title} className="home-reveal home-card home-why">
-                <span className="home-icon"><Icon className="w-5 h-5" /></span>
-                <h3 className="home-h3">{title}</h3>
-                <p className="home-muted text-sm">{text}</p>
+                <HomePhoto id={photo} className="home-why-photo" />
+                <div className="home-why-body">
+                  <span className="home-icon"><Icon className="w-5 h-5" /></span>
+                  <h3 className="home-h3">{title}</h3>
+                  <p className="home-muted text-sm">{text}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -302,6 +352,10 @@ export default function HomeLanding({
             eyebrow="Truyền thống và Digital"
             title="Cùng một ngân sách, khác ở chỗ biết rõ nó đi đâu"
           />
+          <div className="home-reveal grid grid-cols-2 gap-3 sm:gap-5 mb-4 sm:mb-5">
+            <HomePhoto id="compare-traditional" label="Truyền thống" className="home-compare-photo is-old" />
+            <HomePhoto id="compare-digital" label="Digital" className="home-compare-photo" />
+          </div>
           <div className="home-reveal home-card home-compare">
             <div className="home-compare-head">
               <span />
@@ -344,15 +398,19 @@ export default function HomeLanding({
               ))}
             </div>
             <div key={step} className="home-card home-journey-panel" role="tabpanel">
-              <p className="home-journey-ask">{current.ask}</p>
-              <div className="flex flex-wrap justify-center gap-2">
-                {current.channels.map((c) => (
-                  <span key={c} className="home-chip">{c}</span>
-                ))}
+              <HomePhoto id={JOURNEY_PHOTOS[step]} className="home-journey-photo" />
+              <div className="home-journey-content">
+                <p className="home-label">Chặng {step + 1} · {current.stage}</p>
+                <p className="home-journey-ask">{current.ask}</p>
+                <div className="flex flex-wrap gap-2">
+                  {current.channels.map((c) => (
+                    <span key={c} className="home-chip">{c}</span>
+                  ))}
+                </div>
+                <p className="home-muted text-sm">
+                  Chỉ số cần theo dõi: <strong className="home-strong">{current.metrics}</strong>
+                </p>
               </div>
-              <p className="home-muted text-sm">
-                Chỉ số cần theo dõi: <strong className="home-strong">{current.metrics}</strong>
-              </p>
             </div>
           </div>
         </section>
@@ -375,6 +433,10 @@ export default function HomeLanding({
             ))}
           </div>
         </section>
+
+        <HomeGlossary onOpenTerm={onOpenTerm} onOpenGlossary={onOpenGlossary} />
+
+        <HomeToolkit onOpenTool={onOpenTool} onOpenAllTools={onOpenAllTools} />
 
         {/* 7. LỜI MỜI CUỐI TRANG — chỗ duy nhất nhắc tới giá, đúng như đã chốt:
             một lời kêu gọi đăng ký, không lặp lại khắp trang. */}
