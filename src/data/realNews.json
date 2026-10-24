@@ -1,5 +1,189 @@
 [
   {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Google nới lỏng cam kết bảo mật, đưa dữ liệu Gmail và Photos vào cá nhân hóa quảng cáo",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Google Ads",
+      "Dữ liệu cá nhân",
+      "Chính sách bảo mật"
+    ],
+    "summary": "Google vừa cập nhật chính sách quyền riêng tư có hiệu lực từ ngày 16/10/2026, tạo ngoại lệ cho cam kết kéo dài suốt 5 năm qua. Hệ thống quảng cáo giờ đây có thể tận dụng dữ liệu từ Gmail, Drive và Google Photos nếu người dùng liên kết các dịch vụ này với Search hoặc Gemini. Sự thay đổi này mở đường cho AI khai thác sâu hơn tín hiệu cá nhân để phân phối quảng cáo chính xác hơn.",
+    "keyNumbers": [
+      {
+        "value": "16/10/2026",
+        "label": "Ngày chính sách mới chính thức có hiệu lực"
+      },
+      {
+        "value": "5 năm",
+        "label": "Thời gian giữ nguyên cam kết bảo mật trước khi sửa đổi"
+      },
+      {
+        "value": "54",
+        "label": "Phiên bản chính sách lưu trữ được so sánh từ năm 1999"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Ngoại lệ mới trong cam kết bảo mật 5 năm",
+        "body": "Google đã cập nhật chính sách quyền riêng tư có hiệu lực từ ngày 16/10/2026, thay đổi cam kết được giữ nguyên từng câu chữ kể từ ngày 01/7/2021. Trước đây, hãng cam kết không bao giờ chọn quảng cáo dựa trên nội dung bên trong Gmail, Drive hoặc Google Photos. Quy định mới bổ sung điều kiện rằng dữ liệu từ các ứng dụng này có thể được dùng để cá nhân hóa quảng cáo nếu người dùng cho phép Search hoặc Gemini truy cập. Nhà quảng cáo không đọc được email hay ảnh của người dùng, nhưng quảng cáo hiển thị sẽ được định hình từ các tóm tắt và phán đoán do AI rút ra."
+      },
+      {
+        "heading": "Bổ sung căn cứ cá nhân hóa nội dung quảng cáo",
+        "body": "So sánh đối chiếu với 54 phiên bản chính sách lưu trữ từ ngày 09/6/1999 cho thấy đây là lần đầu tiên xuất hiện ngoại lệ dạng này. Phần mô tả quảng cáo cá nhân hóa đã được sửa thành dựa trên sở thích, hoạt động hoặc nội dung được cá nhân hóa từ các dịch vụ Google. Khái niệm nội dung được cá nhân hóa trở thành cơ sở độc lập thứ ba để nền tảng nhắm chọn quảng cáo. Câu khẳng định không hiển thị quảng cáo dựa trên nội dung riêng tư nay đã gắn thêm điều khoản loại trừ khi người dùng cấp quyền chia sẻ dữ liệu giữa các dịch vụ."
+      },
+      {
+        "heading": "Cơ chế khai thác qua tính năng Personal Intelligence",
+        "body": "Chính sách mới gắn liền trực tiếp với Personal Intelligence, tính năng cho phép AI Mode và các công cụ khác của Google truy xuất thư điện tử và tệp tin của người dùng. Một ghi chú giải thích bổ sung chỉ ra rằng dữ liệu luân chuyển giữa các dịch vụ có thể được dùng để tùy biến trải nghiệm, bao gồm cả quảng cáo. Ví dụ thực tế được nêu ra là khi người dùng hỏi Search về việc đặt phòng khách sạn, hệ thống có thể đọc chi tiết email để gợi ý lịch trình phù hợp. Việc tích hợp này giúp thuật toán nắm bắt nhu cầu tiêu dùng sát sao theo ngữ cảnh thực tế của từng tài khoản."
+      },
+      {
+        "heading": "Các ranh giới bảo mật cốt lõi vẫn được giữ nguyên",
+        "body": "Dù mở rộng quyền khai thác dữ liệu liên kết, Google khẳng định vẫn giữ nguyên hai lớp bảo vệ cơ bản trong chính sách quảng cáo. Nền tảng tiếp tục cam kết không hiển thị quảng cáo cá nhân hóa dựa trên các danh mục nhạy cảm như chủng tộc, tôn giáo, xu hướng tính dục hoặc sức khỏe. Quy định không chia sẻ thông tin định danh cá nhân cho nhà quảng cáo cũng không thay đổi. Đây là lần sửa đổi chính sách thứ 4 trong năm 2026 nhằm từng bước định hình lại cơ chế kiểm soát hoạt động và dữ liệu trên nền tảng."
+      }
+    ],
+    "impact": "Các thuật toán tự động như Performance Max và Smart Bidding sẽ gián tiếp hưởng lợi từ nguồn dữ liệu ý định mua sắm sâu hơn trong hòm thư và ảnh của người dùng đã bật Gemini. Nhà quảng cáo không thể tự chọn nhắm mục tiêu vào dữ liệu này, nhưng hiệu quả phân phối tự động có thể tăng nhờ thuật toán Google hiểu rõ ngữ cảnh chi tiêu của khách hàng hơn.",
+    "ifIgnored": "Doanh nghiệp sẽ khó lý giải được biến động về hiệu quả hiển thị của các chiến dịch tự động và bỏ lỡ cơ hội chuẩn bị các mẫu thông điệp phù hợp với hành trình mua hàng đa ngữ cảnh mà AI của Google đang tiếp cận.",
+    "actionChecklist": [
+      "Theo dõi biến động tỷ lệ chuyển đổi và CPA của các chiến dịch Performance Max sau mốc cập nhật tháng 10/2026.",
+      "Bổ sung các mẫu quảng cáo linh hoạt theo ngữ cảnh đời sống để thuật toán AI dễ dàng ghép nối với nhu cầu cá nhân hóa của người dùng.",
+      "Làm rõ cơ chế nhắm chọn này với ban giám đốc nhằm khẳng định doanh nghiệp không vi phạm quyền riêng tư vì dữ liệu do Google ẩn danh xử lý nội bộ.",
+      "Tiếp tục củng cố hệ thống first-party data độc lập của doanh nghiệp để không phụ thuộc hoàn toàn vào các tín hiệu ngầm của Google."
+    ],
+    "id": "real-2026-10-23-google-noi-long-cam-d5d225",
+    "publishedAt": "23/10/2026",
+    "sourceUrl": "https://ppc.land/google-lets-connected-gmail-and-photos-data-shape-ads-5-years-after-pledge/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/size/w1200/2026/10/google-privacy-policy-gmail-photos-ad-pledge-exception-sealed-cabinet-slide-projector.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Các công cụ rank tracker vật lộn với dữ liệu sai lệch do Google chống AI scraping",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "SEO Google",
+      "Rank Tracker",
+      "Ahrefs",
+      "Dữ liệu SERP"
+    ],
+    "summary": "Các công cụ theo dõi thứ hạng từ khóa phổ biến như Ahrefs, AccuRanker và SEOmonitor đang gặp nhiều khó khăn khi Google thắt chặt cơ chế chống thu thập dữ liệu tự động. Việc Google cung cấp các trang kết quả tìm kiếm thiếu hụt khiến dữ liệu báo cáo SEO bị nhiễu và sai lệch đáng kể trong thời gian qua.",
+    "keyNumbers": [
+      {
+        "value": "5% đến 20%",
+        "label": "Tỷ lệ kết quả SERP bị ảnh hưởng theo Ahrefs"
+      },
+      {
+        "value": "8,7%",
+        "label": "Trang nhất bị biến dạng dữ liệu giai đoạn 13/9 - 21/10"
+      },
+      {
+        "value": "10%",
+        "label": "Từ khóa ghi nhận sai trên SEOmonitor giai đoạn 9/10 - 13/10"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Google thắt chặt chống AI scraping làm sai lệch dữ liệu rank tracker",
+        "body": "Google đang triển khai các biện pháp kỹ thuật chống lại việc cào dữ liệu từ các công cụ AI, vô tình khiến các nền tảng theo dõi thứ hạng nhận về kết quả SERP bị thiếu hoặc sai lệch. Công cụ Nozzle ghi nhận tỷ lệ trang nhất bị ảnh hưởng tăng vọt từ 0,17% lên 8,7% trong khoảng thời gian từ ngày 13/9 đến ngày 21/10. Hiện tượng này khiến nhiều website đột ngột biến mất khỏi kết quả tìm kiếm trên công cụ đo lường dù thực tế vị trí không đổi. Các nhà cung cấp dữ liệu lớn như Ahrefs, AccuRanker và SEOmonitor đều đã xác nhận sự cố kỹ thuật này."
+      },
+      {
+        "heading": "Ahrefs và SEOmonitor tiến hành dọn dẹp và xử lý lại dữ liệu",
+        "body": "Ahrefs cho biết đang tiến hành làm sạch các kết quả trong quá khứ bị ảnh hưởng bởi hiện tượng nhiễu dữ liệu từ Google. Theo ước tính từ Ahrefs, khoảng 5% đến 20% kết quả tìm kiếm đã bị ảnh hưởng trong những tuần qua tùy thuộc vào nhà cung cấp dữ liệu. Trong khi đó, SEOmonitor ghi nhận khoảng 10% số từ khóa theo dõi bị sai kết quả từ ngày 9/10 đến ngày 13/10. SEOmonitor đã phải tiến hành xử lý lại toàn bộ từ khóa bị ảnh hưởng và áp dụng bộ lọc mới từ ngày 13/10."
+      },
+      {
+        "heading": "Giải pháp đối phó từ AccuRanker và BrightLocal",
+        "body": "AccuRanker áp dụng quy trình kiểm tra hai bước nhằm phát hiện các trang kết quả bị thiếu hụt website hiển thị. Nếu trang kết quả mới mất hơn một nửa số domain quen thuộc, công cụ sẽ thực hiện tải lại dữ liệu ở phiên làm việc khác trước khi ghi nhận. BrightLocal cho biết đang bổ sung thêm nhiều nhà cung cấp dữ liệu dự phòng để đảm bảo tính liên tục khi một bên bị gián đoạn. Tuy nhiên, lãnh đạo BrightLocal thừa nhận hiện chưa có giải pháp đơn lẻ nào giải quyết triệt để vấn đề này."
+      },
+      {
+        "heading": "Hiển thị dữ liệu tạm thời và cơ chế giữ nguyên thứ hạng",
+        "body": "Để tránh gây hoang mang cho người dùng, một số công cụ áp dụng quy tắc giữ nguyên vị trí cũ trong lúc xác minh. Điển hình như SEOmonitor có thể tiếp tục hiển thị thứ hạng đã ghi nhận trước đó tối đa trong hai lượt cập nhật hàng ngày đối với các biến động sụt giảm bất thường. AccuRanker cũng cho phép người dùng chủ động bấm tải lại từ khóa để lấy dữ liệu mới nhất trực tiếp. Điều này đồng nghĩa với việc báo cáo thứ hạng theo ngày có thể có độ trễ hoặc được điều chỉnh hồi truy."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing có thể nhận báo cáo sụt giảm thứ hạng SEO ảo hoặc biến động vị trí thất thường từ agency và team in-house, dẫn đến đánh giá sai hiệu quả chiến dịch và hoang mang không cần thiết.",
+    "ifIgnored": "Bạn có thể đưa ra các quyết định can thiệp kỹ thuật vội vàng, gây tốn kém chi phí, phá vỡ cấu trúc SEO đang ổn định hoặc đánh giá sai năng lực của bộ phận SEO dựa trên dữ liệu công cụ bị nhiễu.",
+    "actionChecklist": [
+      "Đối chiếu biến động thứ hạng từ Ahrefs/SEOmonitor với dữ liệu thực tế trên Google Search Console trước khi kết luận.",
+      "Yêu cầu team SEO và Agency kiểm tra lại các báo cáo thứ hạng trong giai đoạn tháng 9 và tháng 10 xem đã được làm sạch chưa.",
+      "Tạm hoãn các quyết định thay đổi lớn về Technical SEO nếu chỉ dựa vào báo cáo sụt giảm từ một công cụ rank tracker duy nhất.",
+      "Thiết lập quy trình xác minh thứ hạng thủ công đối với các từ khóa chiến lược mang lại chuyển đổi cao."
+    ],
+    "id": "real-2026-10-23-cac-cong-cu-rank-211af3",
+    "publishedAt": "23/10/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/rank-trackers-suspect-google-results/594049/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/10/rank-data-inspection-4202414687.jpg",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
+    "category": "Meta Ads",
+    "platformIcon": "Facebook",
+    "title": "Meta quy định nhà quảng cáo chịu toàn bộ trách nhiệm pháp lý cho nội dung AI tự động chỉnh sửa từ ngày 30 tháng 10",
+    "isHot": true,
+    "illustration": "account-security",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Meta Ads",
+      "Chính sách quảng cáo",
+      "Trí tuệ nhân tạo"
+    ],
+    "summary": "Meta sắp áp dụng điều khoản thương mại mới từ ngày 30 tháng 10, buộc nhà quảng cáo phải chịu hoàn toàn trách nhiệm cho mọi thay đổi do AI thực hiện trên quảng cáo. Điều này diễn ra trong bối cảnh nhiều công cụ tự động của Meta tự ý thêm liên kết, dịch văn bản và tạo ảnh mà không cần sự đồng thuận rõ ràng.",
+    "keyNumbers": [
+      {
+        "value": "100",
+        "label": "Mức giới hạn trách nhiệm pháp lý tính bằng USD của Meta"
+      },
+      {
+        "value": "12",
+        "label": "Số tháng tính tổng chi tiêu để xác định mức bồi thường"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Thay đổi điều khoản thương mại từ ngày 30 tháng 10",
+        "body": "Meta chuẩn bị cập nhật các điều khoản thương mại với một phần mới mang tên Tính năng AI. Theo đó, doanh nghiệp chạy quảng cáo trên Facebook và Instagram sẽ phải chịu hoàn toàn trách nhiệm cho những gì tính năng trí tuệ nhân tạo của Meta tạo ra hoặc thay đổi. Điều khoản này áp dụng ngay cả với những tính năng mà Meta tự động bật mà nhà quảng cáo không chủ động lựa chọn. Quy định mới này chính thức có hiệu lực từ ngày 30 tháng 10."
+      },
+      {
+        "heading": "Công cụ tự động của Meta hoạt động trong thực tế",
+        "body": "Nhiều cơ quan quảng cáo và nhãn hàng ghi nhận tình trạng hệ thống tự động thêm liên kết trang web, dịch văn bản và tạo hình ảnh từ ảnh gốc trong các chiến dịch đang chạy. Đơn cử như Bookshop.org đã bị hệ thống tự động thêm hình minh họa do AI tạo ra sau một bản cập nhật tài khoản. Agency Exverus cũng cho biết họ buộc phải tạm dừng các quảng cáo đang chạy để loại bỏ các thay đổi không mong muốn do tính năng tự động gây ra."
+      },
+      {
+        "heading": "Rủi ro pháp lý và trách nhiệm thuộc về doanh nghiệp",
+        "body": "Meta nêu rõ trong điều khoản rằng các tính năng AI của họ có thể mắc lỗi và đưa ra kết quả không chính xác, đồng thời mọi rủi ro đều thuộc về nhà quảng cáo. Các điều khoản hiện hành cũng giới hạn mức bồi thường của Meta ở mức tối đa là một trăm đô la Mỹ hoặc số tiền đã chi trả trong mười hai tháng qua. Doanh nghiệp không có cách nào khác ngoài việc liên tục tắt các tính năng tự động này hoặc chấp nhận rủi ro pháp lý."
+      },
+      {
+        "heading": "Phản ứng của các chuyên gia vận hành quảng cáo",
+        "body": "Nhiều chuyên gia vận hành quảng cáo cho biết việc Meta tự động bật các tính năng AI và đẩy toàn bộ rủi ro pháp lý sang phía doanh nghiệp tạo ra mối lo ngại lớn về vận hành. Một số đơn vị đã chủ động tắt toàn bộ các tính năng tự động hóa AI theo mặc định trên mọi chiến dịch. Hành động này giúp đảm bảo quảng cáo đúng tệp khách hàng và tránh các nội dung phát sinh ngoài ý muốn."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing phải đối mặt với rủi ro pháp lý và tổn hại thương hiệu khi Meta tự ý thay đổi nội dung quảng cáo bằng AI mà doanh nghiệp phải gánh chịu toàn bộ trách nhiệm.",
+    "ifIgnored": "Nếu bỏ qua, các chiến dịch quảng cáo có thể bị AI tự động chèn hình ảnh hoặc văn bản sai lệch, dẫn đến việc doanh nghiệp phải chịu phạt hoặc khiếu nại từ bên thứ ba mà không thể quy trách nhiệm cho nền tảng.",
+    "actionChecklist": [
+      "Kiểm tra ngay các cài đặt chiến dịch Meta Ads để tắt các tính năng AI tự động áp dụng",
+      "Rà soát lại toàn bộ quảng cáo đang chạy để phát hiện các liên kết hoặc hình ảnh do AI tự ý thêm vào",
+      "Thiết lập quy trình kiểm duyệt thủ công cho mọi tài khoản quảng cáo trước ngày 30 tháng 10",
+      "Đào tạo đội ngũ vận hành cách vô hiệu hóa các menu ẩn tự động tối ưu hóa hình ảnh của Meta"
+    ],
+    "deadline": "30 tháng 10",
+    "id": "real-2026-10-22-meta-quy-dinh-nha-21e322",
+    "publishedAt": "22/10/2026",
+    "sourceUrl": "https://ppc.land/meta-makes-advertisers-solely-responsible-for-its-ai-ad-edits-from-oct-30/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/10/meta-commercial-terms-ai-features-advertiser-liability-red-handed-paintbrush.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
     "category": "Meta Ads",
     "platformIcon": "Facebook",
     "title": "Meta cập nhật thuật toán đề xuất Reels và mở rộng Creator Marketing Hub",
@@ -190,69 +374,6 @@
     }
   },
   {
-    "category": "Meta Ads",
-    "platformIcon": "Facebook",
-    "title": "Doanh thu quảng cáo nhà sáng tạo trên Meta tăng 97% lên 15 tỷ USD",
-    "isHot": false,
-    "illustration": "affiliate-commission",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Meta Ads",
-      "Creator Ads",
-      "AI Creative",
-      "Doanh thu quảng cáo"
-    ],
-    "summary": "Mô hình quảng cáo hợp tác giữa thương hiệu và nhà sáng tạo trên Meta đã đạt tốc độ doanh thu hàng năm 15 tỷ USD, ghi nhận mức tăng trưởng 97% so với cùng kỳ năm ngoái. Đồng thời, gần 10 triệu nhà quảng cáo đã sử dụng các công cụ sáng tạo AI trong quý ba năm 2026.",
-    "keyNumbers": [
-      {
-        "value": "97%",
-        "label": "Tăng trưởng quảng cáo nhà sáng tạo"
-      },
-      {
-        "value": "15 tỷ USD",
-        "label": "Doanh thu hàng năm"
-      },
-      {
-        "value": "10 triệu",
-        "label": "Nhà quảng cáo dùng AI"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Tăng trưởng mạnh mẽ từ quảng cáo hợp tác nhà sáng tạo",
-        "body": "Trong buổi công bố kết quả kinh doanh quý ba năm 2026, Giám đốc tài chính Susan Li cho biết các quảng cáo đối tác giữa thương hiệu và nhà sáng tạo đã tăng trưởng hơn 97% so với cùng kỳ năm trước. Mức doanh thu theo tốc độ hàng năm hiện đã vượt mốc 15 tỷ USD. Hình thức mượn sức ảnh hưởng từ gương mặt nhà sáng tạo đang trở thành động lực lớn cho chi tiêu ngân sách."
-      },
-      {
-        "heading": "Sự bùng nổ của công cụ sáng tạo AI",
-        "body": "Báo cáo cũng chỉ ra rằng gần 10 triệu nhà quảng cáo đã sử dụng ít nhất một công cụ sáng tạo AI tạo sinh trong quý này. Meta đang tối ưu hóa hệ thống phân phối nội dung thông qua các mô hình xếp hạng mới. Các cải tiến này giúp tăng thời gian xem trên Instagram Reels và Facebook, đồng thời mở rộng lượng hàng tồn kho quảng cáo."
-      },
-      {
-        "heading": "Biến động về giá quảng cáo và lượt hiển thị",
-        "body": "Trên toàn cầu, giá trung bình mỗi quảng cáo đã tăng 14% so với cùng kỳ năm ngoái nhờ hiệu suất cải thiện. Tổng số lượt hiển thị quảng cáo tăng 10%, đánh dấu mức tăng chậm nhất trong năm quý gần đây theo dữ liệu Meta công bố. Tại Mỹ và Canada, giá mỗi quảng cáo ghi nhận mức tăng 23% với 8% lượng hiển thị bổ sung."
-      },
-      {
-        "heading": "Doanh thu khác từ WhatsApp và chi phí hạ tầng",
-        "body": "Khoản doanh thu khác trong gia đình ứng dụng tăng khoảng 59% lên 1,1 tỷ USD, chủ yếu nhờ vào tin nhắn trả phí và doanh thu đăng ký trên WhatsApp. Trong khi đó, Meta nâng triển vọng chi tiêu vốn cả năm 2026 lên khoảng từ 135 tỷ USD đến 145 tỷ USD, thu hẹp khoảng dự báo so với mức từ 130 tỷ USD trước đó."
-      }
-    ],
-    "impact": "Xu hướng người tiêu dùng tương tác mạnh với nội dung do nhà sáng tạo sản xuất và công cụ AI đòi hỏi Trưởng phòng Marketing phải dịch chuyển ngân sách sang dạng nội dung hợp tác thay vì quảng cáo truyền thống.",
-    "ifIgnored": "Bỏ qua xu hướng này sẽ khiến chiến dịch thiếu sức hút do chi phí quảng cáo cơ bản trên nền tảng tiếp tục tăng cao trong khi hiệu quả từ nội dung tự sản xuất giảm sút.",
-    "actionChecklist": [
-      "Đánh giá lại tỷ lệ ngân sách dành cho các chiến dịch hợp tác với nhà sáng tạo",
-      "Thử nghiệm các công cụ AI tạo sinh của Meta để tối ưu hóa tài nguyên quảng cáo",
-      "Theo dõi biến động giá quảng cáo trung bình để điều chỉnh giá thầu phù hợp",
-      "Tận dụng các bề mặt hiển thị mới như Reels để tối ưu hóa thời gian hiển thị"
-    ],
-    "id": "real-2026-10-21-doanh-thu-quang-cao-056779",
-    "publishedAt": "21/10/2026",
-    "sourceUrl": "https://ppc.land/metas-ads-with-creators-gain-97-to-a-15bn-annual-run-rate/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/10/meta-partnership-ads-creator-15bn-run-rate-executive-borrowed-face-mask.jpg",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
     "category": "AI Marketing",
     "platformIcon": "Sparkles",
     "title": "W3C đề xuất tuyên bố 9 điểm về Web trong kỷ nguyên AI, định hình lại cách Agent tương tác với nội dung",
@@ -375,69 +496,6 @@
     "image": {
       "url": "https://imgproxy.divecdn.com/VtA4S00nbK3fkhZisR_oRdSWiAD_SQr6kDJG4iDSOoI/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS95b3V0dWJlX2N1bHR1cmVfYW5kX3RyZW5kc19BSS5wbmc=.webp",
       "credit": "Ảnh: Social Media Today"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Cùng một lượt truy cập nhưng GA4 và các công cụ đo thời gian tương tác lệch nhau tới ba lần",
-    "isHot": false,
-    "illustration": "data-signal",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Google Analytics 4",
-      "Đo lường chuyển đổi",
-      "Tối ưu Landing Page",
-      "Hiệu quả quảng cáo"
-    ],
-    "summary": "Chỉ số thời gian tương tác hiện không có một quy chuẩn kỹ thuật thống nhất nào trên toàn ngành dù đang được dùng để định giá quảng cáo và đánh giá landing page. Cùng một hành vi của người dùng, GA4 có thể ghi nhận tới 9 phút trong khi các nền tảng khác chỉ ghi nhận 3 hoặc 5 phút. Trưởng phòng Marketing cần nắm rõ cơ chế tính của GA4 để tránh ngộ nhận về chất lượng trải nghiệm trang đích.",
-    "keyNumbers": [
-      {
-        "value": "10 giây",
-        "label": "Ngưỡng mặc định để GA4 ghi nhận một phiên tương tác"
-      },
-      {
-        "value": "34%",
-        "label": "Lượng pageview từ Google Search tới các trang nội dung sụt giảm"
-      },
-      {
-        "value": "95%",
-        "label": "Tỷ lệ nhà xuất bản phải dùng nhiều hơn một công cụ đo lường thời gian"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Sự ra đời của chỉ số thay thế số lượt xem trang truyền thống",
-        "body": "Chỉ số engagement minutes đo lường thời lượng độc giả thực sự dành cho nội dung khi có tín hiệu chú ý như cuộn trang, di chuột hoặc gõ phím. Thước đo này thay thế cho số lượt xem trang và chỉ số thời gian trên trang vốn chỉ ghi nhận khoảng cách giữa các lần nhấp chuột thay vì việc đọc thực tế. Tuy nhiên, tổ chức kiểm toán truyền thông Media Rating Council (MRC) chưa từng công bố một tiêu chuẩn chung cho thời gian tương tác nội dung. Mỗi nhà cung cấp dịch vụ phân tích dữ liệu tự thiết lập quy tắc tính toán riêng biệt."
-      },
-      {
-        "heading": "Cùng một phiên truy cập nhưng ghi nhận chênh lệch từ 3 đến 9 phút",
-        "body": "Sự khác biệt kỹ thuật khiến các báo cáo phân tích cho ra kết quả rất xa nhau trên cùng một hành vi truy cập. Ví dụ, một người đọc bài viết 3 phút, xem video nhúng 2 phút mà không chạm chuột, rồi để tab mở 4 phút khi nghe điện thoại. Chartbeat chỉ tính khoảng 3 phút vì loại trừ thời gian phát video và dừng đếm sau 5 giây không hoạt động. Parse.ly tính khoảng 5 phút nếu trang được cấu hình theo dõi video. Trong khi đó, GA4 đo lường theo trạng thái tab đang mở ở màn hình chính và có thể ghi nhận tới 9 phút."
-      },
-      {
-        "heading": "Tác động từ việc chuyển đổi định giá quảng cáo theo thời lượng thực tế",
-        "body": "Nhiều đơn vị xuất bản lớn đã chuyển sang bán quảng cáo theo chi phí mỗi giờ (CPH) thay cho mô hình CPM truyền thống. Mô hình này chỉ tính tiền khi quảng cáo xuất hiện trước mắt người dùng đang tương tác tích cực tối thiểu 5 giây. Một báo cáo của Digital Content Next từng chỉ ra rằng 80% nhà xuất bản cao cấp muốn bán quảng cáo dựa trên thời gian thực tế. Khi lưu lượng giới thiệu từ tìm kiếm sụt giảm, thời gian giữ chân người dùng trở thành thước đo sống còn để định giá vị trí hiển thị."
-      },
-      {
-        "heading": "Cơ chế tính user engagement trên GA4 mà nhà quảng cáo cần lưu ý",
-        "body": "GA4 đo lường thời gian tương tác từ phía trình duyệt thông qua tham số engagement_time_msec khi màn hình ứng dụng hoặc tab web ở trạng thái hiển thị tiền cảnh. Mặc định sau 10 giây, một phiên mới được coi là có tương tác, và quản trị viên có thể tăng con số này lên tối đa 60 giây. Báo cáo trang đích mà Google đưa vào từ tháng 12 năm 2022 đặt chỉ số thời gian tương tác trung bình ngay cạnh tỷ lệ chuyển đổi. Tuy nhiên, thời gian tương tác dài đôi khi chỉ phản ánh việc khách hàng gặp khó khăn hoặc bối rối trong quá trình tìm thông tin trên trang đích."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing dễ bị đánh lừa bởi chỉ số thời gian tương tác cao trên GA4 của các chiến dịch trả phí. Do GA4 tính toàn bộ thời gian tab hiển thị tiền cảnh mà không ngắt nhịp chặt chẽ sau 5 giây bất động như các công cụ chuyên sâu, số liệu trên báo cáo có thể cao gấp 2 đến 3 lần thời gian khách hàng thực sự đọc nội dung landing page.",
-    "ifIgnored": "Doanh nghiệp sẽ tiếp tục rót ngân sách vào các landing page hoặc bài PR giữ chân ảo, lầm tưởng thông điệp đang hấp dẫn trong khi khách hàng thực chất chỉ bỏ quên tab trình duyệt, dẫn đến lãng phí chi phí quảng cáo và tính toán sai chi phí trên mỗi lượt tương tác thực chất.",
-    "actionChecklist": [
-      "Kiểm tra lại cấu hình ngưỡng thời gian phiên tương tác trong GA4 và cân nhắc nâng từ mức mặc định 10 giây lên mức phù hợp hơn",
-      "Đối chiếu thời gian tương tác trung bình của từng trang đích với tỷ lệ chuyển đổi thực tế thay vì chỉ nhìn vào thời lượng truy cập",
-      "Yêu cầu các đối tác booking bài PR hoặc mạng quảng cáo làm rõ định nghĩa và công cụ đo lường thời gian trước khi ký hợp đồng",
-      "Bổ sung các sự kiện theo dõi độ sâu cuộn trang và tương tác nút bấm trên landing page để làm thước đo phụ trợ cho GA4"
-    ],
-    "id": "real-2026-10-20-cung-mot-luot-truy-2a8f92",
-    "publishedAt": "20/10/2026",
-    "sourceUrl": "https://ppc.land/engagement-minutes/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/10/chartbeat-parsely-ga4-engagement-minutes-three-hand-wall-clock-rotary-phone.jpg",
-      "credit": "Ảnh: PPC Land"
     }
   },
   {
@@ -622,66 +680,6 @@
     "source": "Search Engine Journal",
     "image": {
       "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/10/seo-pulse-october-16-2026.jpg",
-      "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
-    "category": "Meta Ads",
-    "platformIcon": "Facebook",
-    "title": "Meta cập nhật điều khoản thương mại, mở rộng quyền quét website và huấn luyện AI",
-    "isHot": true,
-    "illustration": "data-signal",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Meta Ads",
-      "Điều khoản Meta",
-      "Thu thập dữ liệu",
-      "Huấn luyện AI"
-    ],
-    "summary": "Meta vừa bổ sung điều khoản thương mại mới, cho phép nền tảng quét nội dung website của mọi doanh nghiệp sử dụng dịch vụ để huấn luyện các sản phẩm AI. Quyền thu thập này không còn giới hạn ở các nhà quảng cáo trả tiền mà mở rộng ra toàn bộ tổ chức vận hành Trang Facebook hay Meta Business Suite. Doanh nghiệp chỉ có khoảng thời gian ngắn để kiểm tra cấu hình kỹ thuật trước khi điều khoản tự động có hiệu lực.",
-    "keyNumbers": [
-      {
-        "value": "3",
-        "label": "chuyên gia pháp lý cảnh báo phạm vi thu thập nội dung của Meta"
-      },
-      {
-        "value": "2",
-        "label": "tuần để các đơn vị kinh doanh đưa ra quyết định trước ngày áp dụng"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Mở rộng quyền thu thập dữ liệu sang mọi tài khoản kinh doanh",
-        "body": "Meta cập nhật Điều khoản Thương mại có hiệu lực từ ngày 30/10, mở rộng đáng kể quyền quét nội dung website. Thay vì chỉ áp dụng khi doanh nghiệp đặt mua quảng cáo như các điều khoản trước đây, quy định mới ràng buộc bất kỳ ai sử dụng sản phẩm của Meta cho mục đích thương mại. Điều này đồng nghĩa với việc chỉ cần quản trị một Trang Facebook hoặc đăng nhập Meta Business Suite, website của thương hiệu đã thuộc phạm vi bị thu thập thông tin."
-      },
-      {
-        "heading": "Cho phép dùng công cụ tự động và tạo tài khoản thử nghiệm",
-        "body": "Nội dung điều khoản mới cho phép Meta hoặc đối tác đại diện sử dụng web scraper, bot và các công cụ tự động để lấy dữ liệu từ các tên miền, liên kết gắn với sản phẩm của doanh nghiệp. Đáng chú ý, điều khoản cho phép Meta tạo thông tin đăng nhập kiểm thử để tiếp cận các trang này. Dữ liệu trích xuất sẽ được sử dụng trực tiếp vào mục đích nghiên cứu, cải tiến và huấn luyện các sản phẩm cũng như mô hình AI của Meta."
-      },
-      {
-        "heading": "Tranh cãi pháp lý xung quanh hiệu lực của tệp robots.txt",
-        "body": "Dù đại diện Meta tuyên bố người sở hữu website vẫn có thể điều hướng quyền truy cập bằng tệp robots.txt, cả Điều khoản Thương mại lẫn Điều khoản Tự phục vụ Quảng cáo đều không đề cập tới tệp này. Ba chuyên gia pháp lý tham gia rà soát nhận định câu chữ trong hợp đồng có thể trao cho Meta quyền lập luận rằng thỏa thuận thương mại được ưu tiên hơn các chỉ thị kỹ thuật. Giáo sư luật James Grimmelmann từ Đại học Cornell cảnh báo việc tự tạo tài khoản thử nghiệm có thể giúp bot vượt qua các cổng đăng ký thành viên thông thường."
-      },
-      {
-        "heading": "Phân loại bot crawler và cơ chế mặc nhiên chấp thuận",
-        "body": "Trong tài liệu hướng dẫn bot, Meta tách riêng bot Meta-ExternalAgent dùng để huấn luyện mô hình nền tảng AI và Meta-WebIndexer dùng để cải thiện kết quả tìm kiếm của Meta AI. Các nhà quản trị web có thể cấu hình chặn riêng Meta-ExternalAgent để không bị lấy dữ liệu huấn luyện, đồng thời giữ Meta-WebIndexer để giữ hiển thị trích dẫn nguồn. Meta nêu rõ việc tiếp tục sử dụng các dịch vụ kinh doanh sau ngày cập nhật sẽ được coi là đồng ý toàn bộ với các điều khoản mới."
-      }
-    ],
-    "impact": "Toàn bộ tài nguyên số gồm bài viết, tài liệu sản phẩm và dữ liệu niêm yết trên website thương hiệu có thể bị Meta thu thập làm dữ liệu huấn luyện AI miễn phí chỉ vì doanh nghiệp sở hữu Trang Facebook hoặc tài khoản quảng cáo. Doanh nghiệp có nguy cơ bị lộ các cấu trúc thông tin dành riêng cho thành viên do Meta được quyền tạo tài khoản thử nghiệm.",
-    "ifIgnored": "Nếu không can thiệp tệp cấu hình bot trước ngày áp dụng, website của bạn sẽ tự động cấp quyền cho Meta khai thác kho nội dung độc quyền để hoàn thiện các công cụ AI cạnh tranh trực tiếp, và bạn không thể khiếu nại về mặt pháp lý do đã mặc nhiên chấp thuận điều khoản.",
-    "actionChecklist": [
-      "Cập nhật tệp robots.txt trên máy chủ website để chặn riêng bot Meta-ExternalAgent nếu không muốn chia sẻ dữ liệu huấn luyện AI.",
-      "Giữ quyền truy cập cho bot Meta-WebIndexer nếu thương hiệu vẫn muốn xuất hiện và được trích dẫn nguồn trên công cụ tìm kiếm Meta AI.",
-      "Rà soát các phân vùng nội dung nội bộ hoặc khu vực đăng ký thành viên để ngăn chặn bot tạo thông tin đăng nhập kiểm thử.",
-      "Đánh giá lại toàn bộ các liên kết trang đích đang kết nối với Trang Facebook và Meta Business Suite trước thời điểm điều khoản kích hoạt."
-    ],
-    "deadline": "30/10",
-    "id": "real-2026-10-16-meta-cap-nhat-dieu-2f8843",
-    "publishedAt": "16/10/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/metas-new-terms-expand-crawling-rights-beyond-advertisers/593217/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/10/meta-commercial-terms-featured.jpg",
       "credit": "Ảnh: Search Engine Journal"
     }
   },
