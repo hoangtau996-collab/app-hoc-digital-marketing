@@ -2,6 +2,128 @@
   {
     "category": "Google Ads & SEO",
     "platformIcon": "Search",
+    "title": "Cơ chế Đặt giá thầu dựa trên giá trị (Value-based Bidding) trên Google, Meta và TikTok",
+    "isHot": false,
+    "illustration": "cpm-auction",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Value-based Bidding",
+      "Target ROAS",
+      "Smart Bidding",
+      "Tối ưu doanh thu"
+    ],
+    "summary": "Giá thầu dựa trên giá trị (Value-based bidding) tự động định giá từng phiên đấu giá quảng cáo dựa trên giá trị chuyển đổi dự đoán thay vì chỉ đếm số lượng chuyển đổi. Việc áp dụng thành công chiến lược này đòi hỏi nhà quảng cáo phải đáp ứng đúng các ngưỡng dữ liệu đầu vào và thiết lập chính xác trên các nền tảng Google, Meta và TikTok.",
+    "keyNumbers": [
+      {
+        "value": "1.1x - 5x",
+        "label": "Mức tăng giá trị khách hàng mới trên Google Ads"
+      },
+      {
+        "value": "15",
+        "label": "Lượng chuyển đổi tối thiểu trong 30 ngày cho Target ROAS"
+      },
+      {
+        "value": "12%",
+        "label": "Mức cải thiện ROAS trung bình trong thử nghiệm của Meta"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Nguyên lý định giá theo giá trị kỳ vọng",
+        "body": "Đặt giá thầu dựa trên giá trị tự động dự đoán hai yếu tố tại mỗi phiên đấu giá là xác suất chuyển đổi và giá trị chuyển đổi dự kiến. Tích số của hai chỉ số này tạo ra giá trị kỳ vọng của phiên đấu giá để hệ thống quyết định mức chi tiêu. Ví dụ, một lượt nhấp có tỷ lệ chuyển đổi dự kiến 2% và giá trị đơn hàng 150 USD sẽ có giá trị kỳ vọng là 3 USD. Với Target ROAS 500%, mức giá thầu tương ứng là 60 cents, trong khi đơn hàng 600 USD với cùng tỷ lệ chuyển đổi sẽ chấp nhận giá thầu 2.40 USD. Ngược lại, chiến lược Target CPA sẽ đặt mức giá thầu bằng nhau cho cả hai trường hợp."
+      },
+      {
+        "heading": "Quy định ngưỡng dữ liệu trên Google Ads",
+        "body": "Để thuật toán học chính xác, Google khuyến nghị tài khoản đạt tối thiểu 15 chuyển đổi trong 30 ngày gần nhất cho chiến dịch Target ROAS. Thời gian trễ chuyển đổi nên dưới 7 ngày và cần từ 3 tuần hoặc 1 đến 2 chu kỳ chuyển đổi nạp dữ liệu trước khi chuyển đổi chiến dịch. Riêng chiến dịch Demand Gen yêu cầu nghiêm ngặt hơn với 50 chuyển đổi có giá trị trong 35 ngày ở cấp chiến dịch, bao gồm 10 chuyển đổi trong 7 ngày gần nhất. Ngoài ra, tài khoản Demand Gen cần đạt 100 chuyển đổi và giữ nguyên giá thầu lẫn mẫu quảng cáo trong 14 ngày sau khi khởi chạy."
+      },
+      {
+        "heading": "Cập nhật tính năng điều chỉnh giá trị và mục tiêu vòng đời",
+        "body": "Google đã chính thức đưa hệ số nhân phần trăm cho giá trị khách hàng mới ra khỏi bản thử nghiệm beta. Tính năng này cho phép điều chỉnh mức tăng từ 1.1x đến 5x trên các mạng Search, Shopping, Performance Max và Demand Gen. Khi áp dụng hệ số 1.2x, một đơn hàng đầu tiên trị giá 100 USD sẽ được hệ thống ghi nhận thành 120 USD. Việc bổ sung giá trị này giúp thuật toán chủ động đặt giá thầu cao hơn để tranh chấp những khách hàng có giá trị vòng đời cao."
+      },
+      {
+        "heading": "Cơ chế triển khai kỹ thuật trên Meta và TikTok",
+        "body": "Meta cho phép thiết lập mục tiêu tối ưu hóa VALUE trong Ads Manager để sử dụng chiến dịch Highest Value hoặc đặt sàn ROAS tối thiểu. Trên Meta Marketing API, thông số roas_average_floor được nhân quy đổi 10.000 lần, ví dụ giá trị 15000 tương ứng với ROAS tối thiểu 1.5 trong khoảng cho phép từ 100 đến 10,000,000. TikTok VBO dành cho website cũng cung cấp hai lựa chọn tương tự là Highest Value hoặc Minimum ROAS. Thử nghiệm nội bộ của Meta cho thấy việc tối ưu hóa ROAS dựa trên lợi nhuận gửi qua Conversions API giúp cải thiện trung bình 12% ROAS."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing có thể chuyển hướng tối ưu hóa chi tiêu quảng cáo gắn liền với doanh thu và lợi nhuận thực tế thay vì chạy theo số lượng đơn hàng thuần túy. Tuy nhiên, nếu nạp sai dữ liệu giá trị hoặc chuyển sang VBB khi chưa đủ ngưỡng chuyển đổi tối thiểu, thuật toán sẽ phân bổ ngân sách lệch lạc và làm suy giảm hiệu suất chiến dịch.",
+    "ifIgnored": "Nếu tiếp tục tối ưu theo số lượng chuyển đổi (CPA) khi danh mục sản phẩm có sự chênh lệch giá trị lớn, hệ thống sẽ chi trả mức giá thầu như nhau cho đơn hàng nhỏ và đơn hàng lớn, khiến doanh nghiệp mất các khách hàng VIP vào tay đối thủ đang dùng Value-based Bidding.",
+    "actionChecklist": [
+      "Rà soát thẻ chuyển đổi hoặc Pixel để đảm bảo truyền đúng giá trị đơn hàng động hoặc điểm số chất lượng lead.",
+      "Kiểm tra điều kiện tài khoản đạt tối thiểu 15 chuyển đổi trong 30 ngày trước khi bật Target ROAS trên Google Ads.",
+      "Cấu hình hệ số nhân từ 1.1x đến 5x cho khách hàng mới trong thiết lập mục tiêu vòng đời của Google Ads.",
+      "Đảm bảo các truy vấn qua API Meta truyền đúng định dạng quy đổi 10.000 lần cho thông số roas_average_floor."
+    ],
+    "id": "real-2026-10-24-co-che-dat-gia-da837e",
+    "publishedAt": "24/10/2026",
+    "sourceUrl": "https://ppc.land/value-based-bidding/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/size/w1200/2026/10/google-meta-value-based-bidding-target-roas-balance-scale.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Chỉ số CRR trong đo lường quảng cáo: Cách tính điểm hòa vốn và bẫy sai lệch doanh thu",
+    "isHot": false,
+    "illustration": "ai-budget",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Google Ads",
+      "Đo lường Marketing",
+      "ROAS",
+      "Tối ưu chi phí"
+    ],
+    "summary": "Tỷ lệ chi phí trên doanh thu (CRR) là phép đảo ngược của ROAS, giúp nhà quản lý dễ dàng đối soát chi phí quảng cáo trực tiếp với biên lợi nhuận gộp trên báo cáo tài chính. Tuy nhiên, việc các đại lý và nền tảng áp dụng các cách tính tử số và mẫu số khác nhau có thể tạo ra bức tranh hiệu quả giả tạo.",
+    "keyNumbers": [
+      {
+        "value": "20%",
+        "label": "Tỷ lệ CRR tương đương chỉ số ROAS bằng 5"
+      },
+      {
+        "value": "30%",
+        "label": "Ngưỡng biên lợi nhuận gộp hòa vốn khi CRR đạt 30%"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Bản chất chỉ số CRR và mối quan hệ với ROAS",
+        "body": "Tỷ lệ chi phí trên doanh thu (CRR hay KUR) được tính bằng cách chia chi phí quảng cáo cho doanh thu tạo ra và thể hiện dưới dạng phần trăm. Công thức này là phép đảo ngược trực tiếp của ROAS, trong đó CRR bằng 1 chia cho ROAS. Ví dụ, mức ROAS bằng 4 tương đương CRR 25%, ROAS bằng 5 tương đương 20%, và ROAS bằng 10 tương đương 10%. Điểm tiện lợi của chỉ số này là nó hiển thị dưới dạng phần trăm giúp so sánh trực tiếp với biên lợi nhuận gộp trên báo cáo tài chính."
+      },
+      {
+        "heading": "Những biến số dễ gây sai lệch trong tử số và mẫu số",
+        "body": "Đầu vào của công thức CRR không thống nhất giữa các bên báo cáo và nền tảng. Nhiều nơi chỉ tính ngân sách quảng cáo thuần, nhưng một số đại lý bao gồm cả phí dịch vụ khiến tỷ lệ chi phí tăng từ 60% lên 68% trong một ví dụ thực tế. Ở phần mẫu số, doanh thu có thể tính theo giá trị giỏ hàng thô gồm thuế 19%, doanh thu thuần hoặc doanh thu sau khi trừ hàng hoàn trả. Doanh nghiệp đo lường CRR trên doanh thu gộp trước khi trừ tỷ lệ hoàn trả có thể ghi nhận chỉ số đẹp hơn thực tế tài chính nhiều điểm phần trăm."
+      },
+      {
+        "heading": "Cách thiết lập mục tiêu chiến dịch trên các nền tảng quảng cáo",
+        "body": "Hầu hết nền tảng như Google Ads và Microsoft Advertising đặt thầu theo ROAS mục tiêu thay vì CRR trực tiếp. Khi doanh nghiệp muốn duy trì CRR mục tiêu là 20%, nhà quản lý phải nhập mức ROAS mục tiêu là 500% vào giao diện quảng cáo. Google Ads yêu cầu chiến dịch Shopping phải đạt tối thiểu 15 chuyển đổi trên mỗi Merchant Center ID trong 30 ngày trước đó. Các công cụ bên thứ ba khuyến cáo không nên thay đổi CRR mục tiêu quá 20% trong một lần điều chỉnh để tránh gây hại cho hiệu suất quảng cáo."
+      },
+      {
+        "heading": "Rủi ro biến động dữ liệu và quy tắc nhân giá trị chuyển đổi",
+        "body": "Mức CRR 20% có thể mang lại hiệu quả tuyệt vời cho sản phẩm có biên lợi nhuận 60%, nhưng sẽ gây thua lỗ nặng cho sản phẩm chỉ có biên lợi nhuận 15%. Vào tháng 10/2026, Google chính thức đưa tính năng áp dụng hệ số nhân giá trị chuyển đổi từ 1,1x đến 5x ra khỏi bản beta. Việc phóng đại giá trị đơn hàng từ 100 euro lên 120 euro khiến CRR báo cáo đẹp hơn số liệu tiền mặt thực tế. Để đối phó với điều này, Google đã bổ sung cột Giá trị chuyển đổi ban đầu từ tháng 11/2025 giúp nhà quảng cáo đối soát giá trị gốc."
+      }
+    ],
+    "impact": "Giúp Trưởng phòng Marketing chuẩn hóa công thức tính hiệu quả quảng cáo theo biên lợi nhuận thực tế của doanh nghiệp, tránh bị đánh lừa bởi báo cáo ROAS ảo từ agency hoặc các quy tắc nhân giá trị chuyển đổi của Google Ads.",
+    "ifIgnored": "Doanh nghiệp dễ phê duyệt ngân sách quảng cáo dựa trên CRR hoặc ROAS báo cáo đẹp mắt nhưng thực tế đang gánh chịu thua lỗ do không trừ phí agency, tỷ lệ hoàn hàng và thuế khỏi doanh thu thuần.",
+    "actionChecklist": [
+      "Yêu cầu bộ phận Media quy đổi ngay ROAS mục tiêu sang CRR tương ứng dựa trên biên lợi nhuận gộp của từng nhóm sản phẩm",
+      "Thống nhất quy chuẩn tử số và mẫu số với agency bao gồm việc có cộng phí quản lý và trừ tiền hoàn trả hàng hay không",
+      "Bật cột Giá trị chuyển đổi ban đầu trong Google Ads để kiểm tra dữ liệu gốc trước khi áp dụng các hệ số nhân từ 1,1x đến 5x",
+      "Tránh điều chỉnh mục tiêu CRR hoặc ROAS quá 20% trong một lần cập nhật để bảo vệ giai đoạn học của thuật toán đấu thầu"
+    ],
+    "id": "real-2026-10-24-chi-so-crr-trong-a478fa",
+    "publishedAt": "24/10/2026",
+    "sourceUrl": "https://ppc.land/cost-revenue-ratio/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/10/cost-revenue-ratio-kur-inverse-roas-ad-man-shears-revenue-pie.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
     "title": "Google nới lỏng cam kết bảo mật, đưa dữ liệu Gmail và Photos vào cá nhân hóa quảng cáo",
     "isHot": false,
     "illustration": "data-signal",
@@ -122,65 +244,6 @@
     "image": {
       "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/10/rank-data-inspection-4202414687.jpg",
       "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
-    "category": "Meta Ads",
-    "platformIcon": "Facebook",
-    "title": "Meta quy định nhà quảng cáo chịu toàn bộ trách nhiệm pháp lý cho nội dung AI tự động chỉnh sửa từ ngày 30 tháng 10",
-    "isHot": true,
-    "illustration": "account-security",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Meta Ads",
-      "Chính sách quảng cáo",
-      "Trí tuệ nhân tạo"
-    ],
-    "summary": "Meta sắp áp dụng điều khoản thương mại mới từ ngày 30 tháng 10, buộc nhà quảng cáo phải chịu hoàn toàn trách nhiệm cho mọi thay đổi do AI thực hiện trên quảng cáo. Điều này diễn ra trong bối cảnh nhiều công cụ tự động của Meta tự ý thêm liên kết, dịch văn bản và tạo ảnh mà không cần sự đồng thuận rõ ràng.",
-    "keyNumbers": [
-      {
-        "value": "100",
-        "label": "Mức giới hạn trách nhiệm pháp lý tính bằng USD của Meta"
-      },
-      {
-        "value": "12",
-        "label": "Số tháng tính tổng chi tiêu để xác định mức bồi thường"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Thay đổi điều khoản thương mại từ ngày 30 tháng 10",
-        "body": "Meta chuẩn bị cập nhật các điều khoản thương mại với một phần mới mang tên Tính năng AI. Theo đó, doanh nghiệp chạy quảng cáo trên Facebook và Instagram sẽ phải chịu hoàn toàn trách nhiệm cho những gì tính năng trí tuệ nhân tạo của Meta tạo ra hoặc thay đổi. Điều khoản này áp dụng ngay cả với những tính năng mà Meta tự động bật mà nhà quảng cáo không chủ động lựa chọn. Quy định mới này chính thức có hiệu lực từ ngày 30 tháng 10."
-      },
-      {
-        "heading": "Công cụ tự động của Meta hoạt động trong thực tế",
-        "body": "Nhiều cơ quan quảng cáo và nhãn hàng ghi nhận tình trạng hệ thống tự động thêm liên kết trang web, dịch văn bản và tạo hình ảnh từ ảnh gốc trong các chiến dịch đang chạy. Đơn cử như Bookshop.org đã bị hệ thống tự động thêm hình minh họa do AI tạo ra sau một bản cập nhật tài khoản. Agency Exverus cũng cho biết họ buộc phải tạm dừng các quảng cáo đang chạy để loại bỏ các thay đổi không mong muốn do tính năng tự động gây ra."
-      },
-      {
-        "heading": "Rủi ro pháp lý và trách nhiệm thuộc về doanh nghiệp",
-        "body": "Meta nêu rõ trong điều khoản rằng các tính năng AI của họ có thể mắc lỗi và đưa ra kết quả không chính xác, đồng thời mọi rủi ro đều thuộc về nhà quảng cáo. Các điều khoản hiện hành cũng giới hạn mức bồi thường của Meta ở mức tối đa là một trăm đô la Mỹ hoặc số tiền đã chi trả trong mười hai tháng qua. Doanh nghiệp không có cách nào khác ngoài việc liên tục tắt các tính năng tự động này hoặc chấp nhận rủi ro pháp lý."
-      },
-      {
-        "heading": "Phản ứng của các chuyên gia vận hành quảng cáo",
-        "body": "Nhiều chuyên gia vận hành quảng cáo cho biết việc Meta tự động bật các tính năng AI và đẩy toàn bộ rủi ro pháp lý sang phía doanh nghiệp tạo ra mối lo ngại lớn về vận hành. Một số đơn vị đã chủ động tắt toàn bộ các tính năng tự động hóa AI theo mặc định trên mọi chiến dịch. Hành động này giúp đảm bảo quảng cáo đúng tệp khách hàng và tránh các nội dung phát sinh ngoài ý muốn."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing phải đối mặt với rủi ro pháp lý và tổn hại thương hiệu khi Meta tự ý thay đổi nội dung quảng cáo bằng AI mà doanh nghiệp phải gánh chịu toàn bộ trách nhiệm.",
-    "ifIgnored": "Nếu bỏ qua, các chiến dịch quảng cáo có thể bị AI tự động chèn hình ảnh hoặc văn bản sai lệch, dẫn đến việc doanh nghiệp phải chịu phạt hoặc khiếu nại từ bên thứ ba mà không thể quy trách nhiệm cho nền tảng.",
-    "actionChecklist": [
-      "Kiểm tra ngay các cài đặt chiến dịch Meta Ads để tắt các tính năng AI tự động áp dụng",
-      "Rà soát lại toàn bộ quảng cáo đang chạy để phát hiện các liên kết hoặc hình ảnh do AI tự ý thêm vào",
-      "Thiết lập quy trình kiểm duyệt thủ công cho mọi tài khoản quảng cáo trước ngày 30 tháng 10",
-      "Đào tạo đội ngũ vận hành cách vô hiệu hóa các menu ẩn tự động tối ưu hóa hình ảnh của Meta"
-    ],
-    "deadline": "30 tháng 10",
-    "id": "real-2026-10-22-meta-quy-dinh-nha-21e322",
-    "publishedAt": "22/10/2026",
-    "sourceUrl": "https://ppc.land/meta-makes-advertisers-solely-responsible-for-its-ai-ad-edits-from-oct-30/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/10/meta-commercial-terms-ai-features-advertiser-liability-red-handed-paintbrush.jpg",
-      "credit": "Ảnh: PPC Land"
     }
   },
   {
@@ -371,69 +434,6 @@
     "image": {
       "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/10/shutterstock_2810482073_1600x840-92.png",
       "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
-    "category": "AI Marketing",
-    "platformIcon": "Sparkles",
-    "title": "W3C đề xuất tuyên bố 9 điểm về Web trong kỷ nguyên AI, định hình lại cách Agent tương tác với nội dung",
-    "isHot": false,
-    "illustration": "ai-label",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "W3C",
-      "AI Agent",
-      "SEO",
-      "Dữ liệu cấu trúc"
-    ],
-    "summary": "W3C vừa công bố tài thảo luận đề xuất tuyên bố 9 điểm nhằm đặt con người lên trên các AI agent, khi lưu lượng truy cập từ bot và AI chiếm tỷ trọng lớn trên web. Văn bản này tập trung vào các vấn đề crawl, sự đồng thuận, thanh toán, định danh và khả năng tiếp cận khi phần mềm duyệt web thay cho con người.",
-    "keyNumbers": [
-      {
-        "value": "2,5 tỷ",
-        "label": "Người dùng AI"
-      },
-      {
-        "value": "1.700%",
-        "label": "Tăng trưởng yêu cầu từ AI Agent"
-      },
-      {
-        "value": "47,6%",
-        "label": "Lưu lượng agentic từ Comet"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Bối cảnh lưu lượng truy cập AI trên web",
-        "body": "Tài liệu của W3C dẫn nguồn từ các mạng lưới bảo mật cho thấy sự bùng nổ của lưu lượng truy cập không phải do con người. Trong năm 2026, hơn nửa lưu lượng truy cập trên mạng lưới Cloudflare không bắt nguồn từ con người. Số lượng yêu cầu hàng ngày từ AI agent đã tăng hơn 1.700% trong một năm tính đến tháng 9 năm 2026. Trong khi đó, dữ liệu từ HUMAN Security vào tháng 6 năm 2026 ghi nhận Comet tạo ra 47,6% lưu lượng agentic, Claude đạt 20,8%, Atlas chiếm 16,5% và ChatGPT Agent đóng góp 7,0%."
-      },
-      {
-        "heading": "Sự đứt gãy trong thỏa thuận crawl dữ liệu",
-        "body": "W3C chỉ ra rằng hợp đồng ngầm giữa nhà cung cấp nội dung và công cụ tìm kiếm về việc crawl nội dung đổi lấy khách truy cập vẫn chưa có sự tương đương đối với hệ thống AI. Các công cụ trả lời tự động và crawler làm giảm tỷ lệ nhấp chuột, trong khi các quy tắc phía máy chủ chưa kiểm soát tốt yêu cầu từ AI crawler. Tệp robots.txt hiện tại vẫn là tín hiệu chính nhưng cần phải tiến hóa thêm tại IETF để đáp ứng nhu cầu kiểm soát của website."
-      },
-      {
-        "heading": "Thách thức về hạ tầng và định dạng dữ liệu",
-        "body": "Hoạt động thu thập dữ liệu quy mô lớn gây áp lực lớn lên hạ tầng của các nhà xuất bản nội dung lớn. Ngoài ra, mã HTML thông thường tỏ ra kém hiệu quả đối với AI agent do hiện tượng quá tải token và lỗi trích xuất nhiễu. Do đó, các agent thường ưu tiên văn bản định dạng nhẹ như markdown và dữ liệu cấu trúc dạng json, yaml, csv hơn là HTML truyền thống."
-      },
-      {
-        "heading": "Vấn đề nội dung tổng hợp và định danh",
-        "body": "Nội dung do AI tạo ra bao gồm văn bản, hình ảnh, âm thanh và video có chi phí thấp nhưng tạo cảm giác đáng tin cậy cho một bộ phận lớn người dùng. W3C đề cập đến việc thiếu cơ chế đảm bảo nội dung không phải do máy móc tạo ra, làm gia tăng rủi ro về nguồn gốc, danh tính và chứng thực thông tin. Động thái này đòi hỏi các tiêu chuẩn minh bạch cao hơn từ các bên phát triển công nghệ."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing cần chuẩn bị cho việc website phải phục vụ các AI agent thay vì chỉ con người, từ việc tối ưu dữ liệu cấu trúc đến việc kiểm soát lưu lượng truy cập tự động đang chiếm ưu thế.",
-    "ifIgnored": "Doanh nghiệp có thể mất kiểm soát về cách AI sử dụng nội dung sản phẩm, đối mặt với việc sụt giảm lưu lượng truy cập tự nhiên và bỏ lỡ cơ hội tiếp cận nhóm khách hàng sử dụng công cụ AI agent.",
-    "actionChecklist": [
-      "Đánh giá lại lưu lượng truy cập từ bot và AI agent trên hệ thống website",
-      "Bổ sung và tối ưu dữ liệu cấu trúc như JSON, YAML để AI agent dễ dàng đọc hiểu",
-      "Theo dõi các đề xuất tiêu chuẩn mới từ W3C về định danh và quyền riêng tư của AI",
-      "Kiểm tra lại chiến lược phân phối nội dung để thích ứng với việc người dùng tra cứu qua AI thay vì click trực tiếp"
-    ],
-    "id": "real-2026-10-21-w3c-de-xuat-tuyen-c3a7d9",
-    "publishedAt": "21/10/2026",
-    "sourceUrl": "https://ppc.land/w3c-drafts-9-point-declaration-putting-people-ahead-of-ai-agents/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/10/w3c-ai-agents-declaration-user-loyalty-falconer-falcon-glove.jpg",
-      "credit": "Ảnh: PPC Land"
     }
   },
   {
