@@ -2,6 +2,192 @@
   {
     "category": "Google Ads & SEO",
     "platformIcon": "Search",
+    "title": "Google Ads tách quy định an toàn trẻ em thành hai cấp độ phạt từ ngày 11/01/2027",
+    "isHot": true,
+    "illustration": "account-security",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Google Ads",
+      "Chính sách quảng cáo",
+      "Khóa tài khoản",
+      "An toàn trẻ em"
+    ],
+    "summary": "Google Ads chính thức cập nhật chính sách về an toàn trẻ em, tách biệt thành hai nhóm vi phạm với mức xử phạt khác nhau từ ngày 11/01/2027. Vi phạm nghiêm trọng sẽ bị đình chỉ tài khoản ngay lập tức, trong khi các vi phạm nhẹ hơn sẽ nhận được cảnh báo trước ít nhất 7 ngày.",
+    "keyNumbers": [
+      {
+        "value": "11/01/2027",
+        "label": "ngày bắt đầu áp dụng chính sách mới"
+      },
+      {
+        "value": "7 ngày",
+        "label": "thời gian cảnh báo trước khi tạm khóa tài khoản ở cấp độ 2"
+      },
+      {
+        "value": "81 ngày",
+        "label": "thời hạn cho nhà quảng cáo rà soát chiến dịch trước khi phạt"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Tách riêng chính sách An toàn Trẻ em thành quy định độc lập",
+        "body": "Google Ads đã đăng thông báo chính thức vào ngày 22/10/2026 về việc cập nhật điều khoản dịch vụ. Theo đó, chính sách Lạm dụng và bóc lột tình dục trẻ em sẽ được đổi tên thành An toàn Trẻ em và tách khỏi nhóm chính sách Nội dung không phù hợp. Quy định mới sẽ chính thức đi vào hiệu lực thi hành từ ngày 11/01/2027. Google dành ra khoảng thời gian 81 ngày giúp các doanh nghiệp tiến hành kiểm tra lại toàn bộ tài nguyên quảng cáo."
+      },
+      {
+        "heading": "Cấp độ 1: Vi phạm nghiêm trọng bị đình chỉ tài khoản tức thì",
+        "body": "Cấp độ phạt nặng nhất áp dụng cho các hành vi liên quan đến bóc lột hoặc lạm dụng tình dục trẻ em. Ngay khi phát hiện vi phạm thuộc nhóm này, Google sẽ khóa tài khoản quảng cáo ngay lập tức mà không gửi cảnh báo trước. Nhà quảng cáo vi phạm sẽ bị cấm vĩnh viễn việc sử dụng Google Ads. Hệ thống có thể đánh giá vi phạm dựa trên dữ liệu từ mẫu quảng cáo, trang đích và các tài khoản liên quan."
+      },
+      {
+        "heading": "Cấp độ 2: Cảnh báo trước 7 ngày cho các nội dung nhạy cảm",
+        "body": "Cấp độ thứ hai dành cho các nội dung không mang tính bất hợp pháp nhưng có rủi ro bị lạm dụng, ví dụ như hình ảnh khỏa thân của trẻ em không mang tính tình dục. Với các lỗi này, hệ thống sẽ gửi thông báo cảnh báo trước ít nhất 7 ngày cho nhà quảng cáo điều chỉnh trước khi tiến hành khóa tài khoản. Đây là sự thay đổi đáng chú ý giúp các thương hiệu thuộc ngành hàng mẹ và bé hoặc thời trang tránh bị khóa tài khoản đột ngột."
+      },
+      {
+        "heading": "Áp dụng toàn cầu trên mọi định dạng nội dung và hình ảnh AI",
+        "body": "Chính sách An toàn Trẻ em mới sẽ có hiệu lực trên phạm vi toàn cầu và không có ngoại lệ theo quốc gia. Quy định kiểm duyệt bao phủ toàn bộ các định dạng bao gồm văn bản, âm thanh, hình ảnh và video. Các nội dung được tạo bởi trí tuệ nhân tạo (AI), hình ảnh mô phỏng, hoạt hình hay ảnh qua chỉnh sửa Photoshop đều thuộc phạm vi áp dụng. Khái niệm người vị thành niên vẫn được giữ nguyên là bất kỳ ai dưới 18 tuổi."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing cần đặc biệt chú ý nếu doanh nghiệp đang chạy quảng cáo cho các ngành hàng như sản phẩm trẻ em, thời trang đồ bơi, nhiếp ảnh gia đình hoặc sử dụng hình ảnh AI có nhân vật dưới 18 tuổi. Việc nắm rõ hai cấp độ phạt giúp đội ngũ thiết lập quy trình xử lý khủng hoảng trong 7 ngày nếu dính cảnh báo nhẹ, đồng thời loại bỏ triệt để nguy cơ bị khóa sạch hệ thống tài khoản do vi phạm nghiêm trọng.",
+    "ifIgnored": "Doanh nghiệp có thể bị đình chỉ vĩnh viễn toàn bộ các tài khoản Google Ads liên kết nếu vô tình vi phạm các tiêu chuẩn nghiêm trọng, dẫn đến đứt gãy hoàn toàn kênh chuyển đổi quảng cáo tìm kiếm và hiển thị mà không thể phục hồi.",
+    "actionChecklist": [
+      "Rà soát toàn bộ hình ảnh, video có xuất hiện người dưới 18 tuổi trên tất cả chiến dịch đang chạy.",
+      "Kiểm tra cẩn thận các hình ảnh đồ bơi, trang phục trẻ em hoặc tư liệu do AI tạo ra để loại bỏ góc chụp nhạy cảm.",
+      "Xây dựng quy trình phản ứng nhanh 7 ngày cho đội ngũ Marketing để kịp gỡ bỏ quảng cáo khi nhận thông báo vi phạm.",
+      "Hoàn tất việc gỡ bỏ hoặc sửa đổi các mẫu quảng cáo có nguy cơ trước mốc thời gian 11/01/2027."
+    ],
+    "deadline": "11/01/2027",
+    "id": "real-2026-10-25-google-ads-tach-quy-f66e6d",
+    "publishedAt": "25/10/2026",
+    "sourceUrl": "https://ppc.land/google-ads-splits-child-safety-rules-into-two-penalty-tiers-from-january-11/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/size/w1200/2026/10/google-ads-child-safety-two-tier-penalty-red-yellow-card-hourglass.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Báo cáo IAS cảnh báo 3 chiêu thức gian lận quảng cáo hiển thị và ứng dụng di động",
+    "isHot": false,
+    "illustration": "cpm-auction",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Gian lận quảng cáo",
+      "Lưu lượng ảo",
+      "An toàn thương hiệu",
+      "Quảng cáo hiển thị"
+    ],
+    "summary": "Công ty xác minh quảng cáo Integral Ad Science (IAS) công bố 3 mạng lưới gian lận quy mô lớn gồm Genisys, Papyrus và các ứng dụng máy tính. Các mạng lưới này sử dụng trí tuệ nhân tạo, giả mạo ID ứng dụng và chạy trình duyệt ẩn để tạo ra lượng nhấp chuột cao gấp gần 25 lần bình thường. Việc hiểu rõ các cơ chế gian lận giúp thương hiệu bảo vệ ngân sách khi mua quảng cáo hiển thị.",
+    "keyNumbers": [
+      {
+        "value": "25 lần",
+        "label": "Tỷ lệ nhấp từ ứng dụng đọc sách Papyrus cao bất thường"
+      },
+      {
+        "value": "95%",
+        "label": "Mức giảm lượng đấu giá sau khi gỡ bỏ ứng dụng Genisys"
+      },
+      {
+        "value": "500",
+        "label": "Tên miền do AI tạo ra trong mạng lưới Genisys"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Mạng lưới Genisys dùng AI tạo gần 500 tên miền và giả mạo ID ứng dụng",
+        "body": "Mạng lưới Genisys đã lợi dụng thiết bị di động để tự động tải các trang web ẩn dưới nền mà người dùng không hay biết. Lưu lượng truy cập giả được dẫn qua gần 500 tên miền do AI tạo ra dưới dạng các trang tin tức và blog. Gian lận này sử dụng kỹ thuật giả mạo ID gói ứng dụng để che giấu nguồn gốc thực tế. Nhà quảng cáo đấu giá cho vị trí hiển thị trên ứng dụng phổ biến nhưng thực chất quảng cáo chạy ở nơi khác. Sau khi hợp tác cùng Google, các ứng dụng vi phạm đã bị vô hiệu hóa, giúp lượng yêu cầu đấu giá giảm hơn 95%."
+      },
+      {
+        "heading": "Ứng dụng Papyrus ẩn trình duyệt tạo nhấp chuột ảo tiêu tốn 1 triệu USD mỗi tháng",
+        "body": "Mạng lưới Papyrus nhúng một trình duyệt ẩn phía sau các ứng dụng đọc tiểu thuyết trên thiết bị di động. Trình duyệt này tự động tải trang web và nhấp vào quảng cáo ngoài tầm nhìn của người dùng. Tỷ lệ nhấp chuột từ ứng dụng này chạy cao gấp gần 25 lần so với lưu lượng truy cập thông thường. Mô hình gian lận Papyrus ước tính tiêu tốn khoảng 1 triệu USD chi phí quảng cáo mỗi tháng."
+      },
+      {
+        "heading": "Ứng dụng máy tính tự động làm mới quảng cáo khi bị ẩn hoặc khóa màn hình",
+        "body": "Nghiên cứu của IAS cho thấy nhiều ứng dụng máy tính liên tục làm mới quảng cáo ngay cả khi bị thu nhỏ hoặc màn hình bị khóa. Các nhà phát triển đã tắt tính năng tiết kiệm tài nguyên nền của Chromium đối với khung hiển thị quảng cáo để giữ bộ đếm thời gian chạy liên tục. Một ứng dụng đã tạo yêu cầu quảng cáo trên 1 tên miền chính và 4 tên miền phụ liên kết để giả làm lượt truy cập tự nhiên. Ngoài ra, việc ghi đè tiêu đề Client Hint khiến lưu lượng gian lận nhìn giống hệt trình duyệt Chrome thông thường."
+      },
+      {
+        "heading": "Tác động của gian lận quảng cáo đến hoạt động mua Programmatic Ads",
+        "body": "Các thủ thuật gian lận hiện đại kết hợp trí tuệ nhân tạo và trình duyệt ẩn để mô phỏng hành vi người dùng thật. Doanh nghiệp mua quảng cáo hiển thị qua các mạng lưới tự động có rủi ro chi trả cho lượt xem và lượt nhấp không có thực. Mặc dù một số mạng lưới gian lận đã bị ngăn chặn, rủi ro từ việc giả mạo ID và sửa đổi Client Hint vẫn tồn tại. Trưởng phòng Marketing cần chủ động rà soát hệ thống xác minh để tránh thất thoát ngân sách."
+      }
+    ],
+    "impact": "Giúp Trưởng phòng Marketing nhận diện các hình thức gian lận quảng cáo qua ứng dụng ẩn và AI, từ đó chủ động loại bỏ các vị trí hiển thị kém chất lượng.",
+    "ifIgnored": "Doanh nghiệp lãng phí ngân sách cho các lượt xem và nhấp chuột ảo, dẫn đến sai lệch dữ liệu chuyển đổi và giảm hiệu quả chiến dịch quảng cáo.",
+    "actionChecklist": [
+      "Cấu hình công cụ xác minh quảng cáo để lọc lưu lượng truy cập không hợp lệ.",
+      "Rà soát và loại bỏ các vị trí quảng cáo có tỷ lệ nhấp chuột cao bất thường.",
+      "Giới hạn danh sách các ứng dụng và tên miền được phép hiển thị quảng cáo.",
+      "Yêu cầu các đối tác ad-network minh bạch dữ liệu ID ứng dụng và Client Hint."
+    ],
+    "id": "real-2026-10-25-bao-cao-ias-canh-c8b58d",
+    "publishedAt": "25/10/2026",
+    "sourceUrl": "https://ppc.land/hidden-reading-app-clicks-ran-nearly-25x-above-other-traffic-ias-says/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/size/w1200/2026/10/ias-papyrus-reading-app-hidden-clicks-puppeteer-hand-novel.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "AI Marketing",
+    "platformIcon": "Sparkles",
+    "title": "X công bố hướng dẫn tối ưu quảng cáo mùa lễ hội và khuyến nghị cho thuật toán AI",
+    "isHot": false,
+    "illustration": "ai-budget",
+    "readTime": "3 phút đọc",
+    "tags": [
+      "X Ads",
+      "Tối ưu quảng cáo",
+      "Mùa lễ hội",
+      "Gợi ý AI"
+    ],
+    "summary": "X vừa chia sẻ các nguyên tắc quan trọng nhằm giúp các nhà quảng cáo tối ưu hiệu quả chiến dịch trong mùa mua sắm lễ hội. Nền tảng khuyến nghị rút ngắn độ dài văn bản, sử dụng văn phong tự nhiên và đơn giản hóa nội dung để thuật toán AI dễ dàng tóm tắt và đề xuất sản phẩm.",
+    "keyNumbers": [
+      {
+        "value": "50 - 100",
+        "label": "Ký tự tối ưu cho một mẫu quảng cáo đạt hiệu quả cao trên X"
+      },
+      {
+        "value": "1",
+        "label": "Điểm đến duy nhất nên chuyển hướng người dùng trong bài quảng cáo"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Tối ưu độ dài bài viết quảng cáo",
+        "body": "X khuyến nghị các mẫu quảng cáo đạt hiệu quả cao nhất nên có độ dài ngắn, chỉ từ 50 đến 100 ký tự, tương đương với khoảng 1 câu văn. Người dùng trên X có thói quen lướt nhanh và tiếp nhận thông tin cô đọng. Việc viết quá dài sẽ khiến thông điệp bị loãng và làm giảm tỷ lệ chuyển đổi của chiến dịch. Đội ngũ phát triển nền tảng nhấn mạnh rằng sự ngắn gọn chính là yếu tố then chốt để thu hút sự chú ý."
+      },
+      {
+        "heading": "Phong cách văn viết tự nhiên và Lời kêu gọi hành động rõ ràng",
+        "body": "Doanh nghiệp được khuyên nên giao tiếp trên X như một con người thực sự thay vì sử dụng văn phong quảng cáo quá đà. Mẫu quảng cáo cần cung cấp lý do để người mua hành động ngay lập tức, ví dụ như các ưu đãi có thời hạn hoặc chương trình độc quyền. Lời kêu gọi hành động phải cực kỳ rõ ràng và dễ hiểu. Việc truyền tải đúng công dụng sản phẩm và đối tượng hướng tới sẽ giúp nâng cao tỷ lệ tương tác."
+      },
+      {
+        "heading": "Tối ưu hóa nội dung cho thuật toán gợi ý bằng AI",
+        "body": "Mô hình AI trên X đang ngày càng đóng vai trò quan trọng trong việc hướng dẫn quyết định mua sắm của người dùng. Để xuất hiện trong các đề xuất AI, thương hiệu cần mô tả sản phẩm bằng ngôn từ bình dị, làm rõ chức năng, đối tượng phục vụ và điểm vượt trội. Khi mô hình AI có thể tóm tắt thương hiệu trong 1 câu, sản phẩm sẽ dễ dàng được đưa vào danh sách gợi ý tự động. Sự rõ ràng trong thông điệp là nền tảng để công cụ AI nhận diện và phân phối chính xác."
+      },
+      {
+        "heading": "Loại bỏ các yếu tố gây xao nhãng khỏi quảng cáo",
+        "body": "Nền tảng yêu cầu nhà quảng cáo cắt bỏ mọi chi tiết làm phân tán sự chú ý của người xem khỏi mục tiêu chính. Quảng cáo chỉ nên dẫn người dùng đến 1 nơi duy nhất là website hoặc ứng dụng doanh nghiệp. Nhà quảng cáo không nên gắn thẻ các tài khoản khác vì mỗi thẻ là một lối thoát khiến khách hàng rời bỏ nội dung. Ngoài ra, việc dùng hashtag và nhiều biểu tượng cảm xúc cũng không được phép trong quảng cáo nhằm tránh gây nhiễu."
+      }
+    ],
+    "impact": "Giúp Trưởng phòng Marketing điều chỉnh lại cấu trúc nội dung quảng cáo trên X, hạn chế thất thoát lưu lượng truy cập do các liên kết thừa và gia tăng cơ hội xuất hiện trong kết quả tìm kiếm, gợi ý tự động từ AI của nền tảng.",
+    "ifIgnored": "Doanh nghiệp sẽ tiếp tục lãng phí ngân sách vào các mẫu quảng cáo dài dòng, chèn nhiều hashtag hay gắn thẻ tài khoản phụ khiến tỷ lệ chuyển đổi thấp và bị thuật toán AI của X bỏ qua khi đề xuất sản phẩm.",
+    "actionChecklist": [
+      "Rút ngắn văn bản quảng cáo trên X xuống còn 50 đến 100 ký tự với thông điệp cô đọng.",
+      "Loại bỏ toàn bộ hashtag, việc gắn thẻ tài khoản khác và bớt biểu tượng cảm xúc trong bài quảng cáo.",
+      "Mô tả công năng sản phẩm bằng ngôn từ đơn giản để mô hình AI dễ dàng tóm tắt trong 1 câu.",
+      "Đảm bảo quảng cáo chỉ chứa 1 liên kết duy nhất dẫn về trang đích website hoặc ứng dụng."
+    ],
+    "id": "real-2026-10-25-x-cong-bo-huong-2f4564",
+    "publishedAt": "25/10/2026",
+    "sourceUrl": "https://www.socialmediatoday.com/news/x-provides-holiday-campaign-tips/833908/",
+    "source": "Social Media Today",
+    "image": {
+      "url": "https://imgproxy.divecdn.com/ua2Hio8Dsltltak85FZHHNHCimzHIBvaiOtJBKzLUbI/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9ob2xpZGF5c19vbl9YLnBuZw==.webp",
+      "credit": "Ảnh: Social Media Today"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
     "title": "Cơ chế Đặt giá thầu dựa trên giá trị (Value-based Bidding) trên Google, Meta và TikTok",
     "isHot": false,
     "illustration": "cpm-auction",
@@ -118,68 +304,6 @@
     "source": "PPC Land",
     "image": {
       "url": "https://ppc.land/content/images/2026/10/cost-revenue-ratio-kur-inverse-roas-ad-man-shears-revenue-pie.jpg",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Google nới lỏng cam kết bảo mật, đưa dữ liệu Gmail và Photos vào cá nhân hóa quảng cáo",
-    "isHot": false,
-    "illustration": "data-signal",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Google Ads",
-      "Dữ liệu cá nhân",
-      "Chính sách bảo mật"
-    ],
-    "summary": "Google vừa cập nhật chính sách quyền riêng tư có hiệu lực từ ngày 16/10/2026, tạo ngoại lệ cho cam kết kéo dài suốt 5 năm qua. Hệ thống quảng cáo giờ đây có thể tận dụng dữ liệu từ Gmail, Drive và Google Photos nếu người dùng liên kết các dịch vụ này với Search hoặc Gemini. Sự thay đổi này mở đường cho AI khai thác sâu hơn tín hiệu cá nhân để phân phối quảng cáo chính xác hơn.",
-    "keyNumbers": [
-      {
-        "value": "16/10/2026",
-        "label": "Ngày chính sách mới chính thức có hiệu lực"
-      },
-      {
-        "value": "5 năm",
-        "label": "Thời gian giữ nguyên cam kết bảo mật trước khi sửa đổi"
-      },
-      {
-        "value": "54",
-        "label": "Phiên bản chính sách lưu trữ được so sánh từ năm 1999"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Ngoại lệ mới trong cam kết bảo mật 5 năm",
-        "body": "Google đã cập nhật chính sách quyền riêng tư có hiệu lực từ ngày 16/10/2026, thay đổi cam kết được giữ nguyên từng câu chữ kể từ ngày 01/7/2021. Trước đây, hãng cam kết không bao giờ chọn quảng cáo dựa trên nội dung bên trong Gmail, Drive hoặc Google Photos. Quy định mới bổ sung điều kiện rằng dữ liệu từ các ứng dụng này có thể được dùng để cá nhân hóa quảng cáo nếu người dùng cho phép Search hoặc Gemini truy cập. Nhà quảng cáo không đọc được email hay ảnh của người dùng, nhưng quảng cáo hiển thị sẽ được định hình từ các tóm tắt và phán đoán do AI rút ra."
-      },
-      {
-        "heading": "Bổ sung căn cứ cá nhân hóa nội dung quảng cáo",
-        "body": "So sánh đối chiếu với 54 phiên bản chính sách lưu trữ từ ngày 09/6/1999 cho thấy đây là lần đầu tiên xuất hiện ngoại lệ dạng này. Phần mô tả quảng cáo cá nhân hóa đã được sửa thành dựa trên sở thích, hoạt động hoặc nội dung được cá nhân hóa từ các dịch vụ Google. Khái niệm nội dung được cá nhân hóa trở thành cơ sở độc lập thứ ba để nền tảng nhắm chọn quảng cáo. Câu khẳng định không hiển thị quảng cáo dựa trên nội dung riêng tư nay đã gắn thêm điều khoản loại trừ khi người dùng cấp quyền chia sẻ dữ liệu giữa các dịch vụ."
-      },
-      {
-        "heading": "Cơ chế khai thác qua tính năng Personal Intelligence",
-        "body": "Chính sách mới gắn liền trực tiếp với Personal Intelligence, tính năng cho phép AI Mode và các công cụ khác của Google truy xuất thư điện tử và tệp tin của người dùng. Một ghi chú giải thích bổ sung chỉ ra rằng dữ liệu luân chuyển giữa các dịch vụ có thể được dùng để tùy biến trải nghiệm, bao gồm cả quảng cáo. Ví dụ thực tế được nêu ra là khi người dùng hỏi Search về việc đặt phòng khách sạn, hệ thống có thể đọc chi tiết email để gợi ý lịch trình phù hợp. Việc tích hợp này giúp thuật toán nắm bắt nhu cầu tiêu dùng sát sao theo ngữ cảnh thực tế của từng tài khoản."
-      },
-      {
-        "heading": "Các ranh giới bảo mật cốt lõi vẫn được giữ nguyên",
-        "body": "Dù mở rộng quyền khai thác dữ liệu liên kết, Google khẳng định vẫn giữ nguyên hai lớp bảo vệ cơ bản trong chính sách quảng cáo. Nền tảng tiếp tục cam kết không hiển thị quảng cáo cá nhân hóa dựa trên các danh mục nhạy cảm như chủng tộc, tôn giáo, xu hướng tính dục hoặc sức khỏe. Quy định không chia sẻ thông tin định danh cá nhân cho nhà quảng cáo cũng không thay đổi. Đây là lần sửa đổi chính sách thứ 4 trong năm 2026 nhằm từng bước định hình lại cơ chế kiểm soát hoạt động và dữ liệu trên nền tảng."
-      }
-    ],
-    "impact": "Các thuật toán tự động như Performance Max và Smart Bidding sẽ gián tiếp hưởng lợi từ nguồn dữ liệu ý định mua sắm sâu hơn trong hòm thư và ảnh của người dùng đã bật Gemini. Nhà quảng cáo không thể tự chọn nhắm mục tiêu vào dữ liệu này, nhưng hiệu quả phân phối tự động có thể tăng nhờ thuật toán Google hiểu rõ ngữ cảnh chi tiêu của khách hàng hơn.",
-    "ifIgnored": "Doanh nghiệp sẽ khó lý giải được biến động về hiệu quả hiển thị của các chiến dịch tự động và bỏ lỡ cơ hội chuẩn bị các mẫu thông điệp phù hợp với hành trình mua hàng đa ngữ cảnh mà AI của Google đang tiếp cận.",
-    "actionChecklist": [
-      "Theo dõi biến động tỷ lệ chuyển đổi và CPA của các chiến dịch Performance Max sau mốc cập nhật tháng 10/2026.",
-      "Bổ sung các mẫu quảng cáo linh hoạt theo ngữ cảnh đời sống để thuật toán AI dễ dàng ghép nối với nhu cầu cá nhân hóa của người dùng.",
-      "Làm rõ cơ chế nhắm chọn này với ban giám đốc nhằm khẳng định doanh nghiệp không vi phạm quyền riêng tư vì dữ liệu do Google ẩn danh xử lý nội bộ.",
-      "Tiếp tục củng cố hệ thống first-party data độc lập của doanh nghiệp để không phụ thuộc hoàn toàn vào các tín hiệu ngầm của Google."
-    ],
-    "id": "real-2026-10-23-google-noi-long-cam-d5d225",
-    "publishedAt": "23/10/2026",
-    "sourceUrl": "https://ppc.land/google-lets-connected-gmail-and-photos-data-shape-ads-5-years-after-pledge/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/size/w1200/2026/10/google-privacy-policy-gmail-photos-ad-pledge-exception-sealed-cabinet-slide-projector.jpg",
       "credit": "Ảnh: PPC Land"
     }
   },
@@ -307,70 +431,6 @@
     "image": {
       "url": "https://imgproxy.divecdn.com/_qCZFatzkmrQT81320LquVewz1MFOBUNAXrQJC5FJB4/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9tZXRhX2FwcHMucG5n.webp",
       "credit": "Ảnh: Social Media Today"
-    }
-  },
-  {
-    "category": "Meta Ads",
-    "platformIcon": "Facebook",
-    "title": "Meta cập nhật điều khoản: Nhà quảng cáo chịu toàn bộ trách nhiệm khi AI tự ý sửa nội dung",
-    "isHot": true,
-    "illustration": "ai-label",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Meta Ads",
-      "Trí tuệ nhân tạo",
-      "Chính sách quảng cáo",
-      "Advantage+"
-    ],
-    "summary": "Từ ngày 30/10, Meta bổ sung điều khoản thương mại mới quy định nhà quảng cáo phải chịu toàn bộ trách nhiệm pháp lý đối với mọi nội dung do AI tạo ra hoặc chỉnh sửa. Đáng chú ý, các tính năng tự động tối ưu bằng AI thường được hệ thống kích hoạt mặc định trong tài khoản.",
-    "keyNumbers": [
-      {
-        "value": "30/10",
-        "label": "Thời điểm áp dụng điều khoản AI mới"
-      },
-      {
-        "value": "3%",
-        "label": "Tăng trưởng chuyển đổi Meta công bố khi bật Product Browsing"
-      },
-      {
-        "value": "117.700",
-        "label": "Số nhà quảng cáo trong đợt thử nghiệm của Meta"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Chuyển giao toàn bộ rủi ro pháp lý sang nhà quảng cáo",
-        "body": "Bắt đầu từ ngày 30/10, Meta áp dụng mục Tính năng AI mới trong Điều khoản Thương mại mà không yêu cầu ký kết lại, việc tiếp tục chạy quảng cáo đồng nghĩa với việc chấp thuận. Theo nội dung này, nhà quảng cáo phải chịu trách nhiệm hoàn toàn cho những gì AI của Meta tạo ra hoặc chỉnh sửa trên mẫu quảng cáo. Đáng nói, chính Meta cũng thừa nhận trong điều khoản rằng các công cụ AI có thể mắc sai sót và không phải lúc nào cũng mang lại kết quả chính xác hoặc phù hợp."
-      },
-      {
-        "heading": "Cơ chế tự động bật tính năng sáng tạo AI",
-        "body": "Nhiều đại lý quảng cáo phản ánh tình trạng Meta tự ý can thiệp vào mẫu quảng cáo bằng AI mà không báo trước. Hệ thống tự động dịch văn bản, tạo thêm liên kết trang, thậm chí tự ghép ảnh và tạo định dạng quay vòng từ tư liệu sẵn có của nhãn hàng. Các tùy chọn tự động hóa này thường bị ẩn sâu trong các menu thu gọn của Trình quản lý quảng cáo. Nếu người thiết lập chiến dịch không chủ động bỏ chọn từng mục một cách thủ công, các tính năng nâng cao bằng AI vẫn sẽ tự động áp dụng."
-      },
-      {
-        "heading": "Bài toán kiểm soát chất lượng từ chính nội bộ Meta",
-        "body": "Trước đó, chính các kỹ sư của Meta đã thừa nhận mô hình AI của họ gặp hiện tượng ảo giác khi triển khai thực tế và buộc phải phân tách một agent độc lập thành 14 subagent chuyên biệt để kiểm soát. Ngay cả với kiến trúc mới, hệ thống vẫn chỉ đạt mức khoảng hai phần ba thay đổi không cần con người can thiệp, đồng nghĩa khoảng một phần ba trường hợp còn lại vẫn xảy ra lỗi. Tuy nhiên, thay vì cam kết chất lượng, điều khoản mới lại đẩy toàn bộ hậu quả khi AI mắc lỗi sang phía khách hàng trả tiền."
-      },
-      {
-        "heading": "Ép bật tính năng duyệt sản phẩm ngay trước mùa mua sắm",
-        "body": "Bên cạnh chính sách AI, Meta cũng thông báo từ ngày 28/10 sẽ tự động bật tính năng duyệt sản phẩm trong ứng dụng đối với các quảng cáo đang chạy trên Facebook và Instagram trừ khi nhà quảng cáo chủ động chọn tắt. Thay vì đưa thẳng người dùng về website nhãn hàng, tính năng này giữ chân khách hàng trong ứng dụng để xem chi tiết sản phẩm. Thời điểm áp dụng diễn ra chỉ 30 ngày trước đợt mua sắm Black Friday ngày 27/11, gây khó khăn lớn cho việc theo dõi hành trình chuyển đổi."
-      }
-    ],
-    "impact": "Doanh nghiệp đối mặt nguy cơ vi phạm pháp luật quảng cáo hoặc sai lệch thông điệp thương hiệu do AI tự ý bịa đặt thông tin sản phẩm, trong khi Meta hoàn toàn phủi bỏ trách nhiệm bồi thường. Thêm vào đó, việc giữ chân người dùng trong ứng dụng sẽ làm gián đoạn luồng dữ liệu theo dõi trực tiếp trên website của doanh nghiệp.",
-    "ifIgnored": "Nếu để mặc định các cài đặt của Meta, nhãn hàng có thể bị phạt vì quảng cáo sai sự thật hoặc mất uy tín thương hiệu nghiêm trọng khi AI tự chế hình ảnh, câu chữ mà không một ai trong đội ngũ phê duyệt.",
-    "actionChecklist": [
-      "Rà soát toàn bộ chiến dịch đang hoạt động và tắt thủ công các tùy chọn Advantage+ Creative bị ẩn trong Trình quản lý quảng cáo.",
-      "Kiểm tra email thông báo từ Meta và chủ động tắt tính năng duyệt sản phẩm trong ứng dụng trước ngày 28/10 nếu muốn giữ luồng traffic về web.",
-      "Bổ sung quy trình kiểm tra định kỳ hình ảnh và nội dung hiển thị thực tế của quảng cáo đang chạy để phát hiện sớm các can thiệp từ AI.",
-      "Lưu trữ ảnh chụp màn hình thiết lập chiến dịch và thông báo với ban giám đốc về thay đổi pháp lý trong điều khoản mới của Meta."
-    ],
-    "deadline": "30/10",
-    "id": "real-2026-10-22-meta-cap-nhat-dieu-3aed87",
-    "publishedAt": "22/10/2026",
-    "sourceUrl": "https://ppc.land/metas-ai-rewrites-the-ads-from-october-30-advertisers-carry-the-risk/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/size/w1200/2026/10/meta-oct-30-terms-ai-ad-edits-advertiser-liability-scissors-billboard.jpg",
-      "credit": "Ảnh: PPC Land"
     }
   },
   {
@@ -617,69 +677,6 @@
     "source": "Search Engine Journal",
     "image": {
       "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/10/openai-citation-matching-featured.jpg",
-      "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Dữ liệu thứ hạng Google bị nhiễu và lượng truy cập ChatGPT sụt giảm do lỗi đo lường",
-    "isHot": false,
-    "illustration": "data-signal",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "SEO",
-      "Google Analytics 4",
-      "ChatGPT",
-      "Đo lường dữ liệu"
-    ],
-    "summary": "Nhiều công cụ theo dõi thứ hạng Google vừa ghi nhận biến động bất thường do cơ chế chặn bot AI của nền tảng, khiến website biến mất tạm thời trên bảng xếp hạng. Đồng thời, lượng phiên truy cập từ ChatGPT trên Google Analytics 4 giảm mạnh vì lỗi kỹ thuật làm mất thẻ theo dõi nguồn. Trưởng phòng Marketing cần kiểm tra chéo các nguồn số liệu trước khi kết luận về hiệu quả SEO và kênh AI.",
-    "keyNumbers": [
-      {
-        "value": "8,0%",
-        "label": "Tỷ lệ trang kết quả Google bị thiếu website quen thuộc"
-      },
-      {
-        "value": "45%",
-        "label": "Mức sụt giảm phiên truy cập ChatGPT trên GA4 do mất thẻ UTM"
-      },
-      {
-        "value": "17,8 triệu",
-        "label": "Số trang tìm kiếm Nozzle thu thập để đánh giá độ nhiễu"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Công cụ theo dõi thứ hạng báo sai lệch do cơ chế chặn bot của Google",
-        "body": "Từ ngày 13/9 đến 9/10, công cụ đo thứ hạng Nozzle phát hiện 8,0% trang kết quả tìm kiếm bị mất phần lớn các website thường xuất hiện, so với mức chỉ 0,17% giai đoạn trước đó. Tỷ lệ này đạt đỉnh điểm khoảng một phần tư số trang trong giai đoạn 27 đến 29/9 và duy trì từ 5% đến 11% mỗi ngày từ ngày 1/10. Đối với các từ khóa mà trang web của doanh nghiệp thường có thứ hạng, có đến 58,6% trường hợp bị rớt khỏi top 10 trên các trang bị ảnh hưởng. Nguyên nhân được cho là phản ứng kỹ thuật của Google nhằm ngăn chặn hành vi thu thập dữ liệu tự động phục vụ AI."
-      },
-      {
-        "heading": "Lưu lượng truy cập từ ChatGPT giảm ảo trên báo cáo GA4",
-        "body": "Nhiều doanh nghiệp nhận thấy phiên truy cập từ ChatGPT trên Google Analytics 4 sụt giảm nghiêm trọng trong tháng 10. Graphite ghi nhận lưu lượng này giảm khoảng 45% trên các website có lượng truy cập đáng kể từ trợ lý AI. Nguyên nhân bắt nguồn từ việc các liên kết nội dòng trong câu trả lời của ChatGPT bị mất tham số theo dõi nguồn sau khi GPT-6 được triển khai, khiến dữ liệu truy cập bị đẩy sang nhóm Direct. OpenAI đã xác nhận lỗi này vào ngày 14/10 và bắt đầu triển khai bản sửa lỗi từ ngày 15/10."
-      },
-      {
-        "heading": "Google đẩy liên kết trích dẫn lên vị trí cao hơn trong kết quả AI",
-        "body": "Google đang cập nhật cách hiển thị liên kết trong AI Overviews và AI Mode, đưa các đường dẫn trích dẫn lên vị trí cao hơn trong câu trả lời tổng quan. Nền tảng cũng thử nghiệm hiển thị tên nhà sáng tạo nội dung và nhà xuất bản trên kết quả video của AI Mode để dẫn về hồ sơ tìm kiếm. Tuy nhiên, trong Google Search Console, mọi liên kết trong AI Overview đều được ghi nhận cùng một vị trí hiển thị chung. Do đó, việc đổi giao diện hiển thị không làm thay đổi thứ hạng vị trí trung bình trên báo cáo kỹ thuật."
-      },
-      {
-        "heading": "Bing Webmaster Tools bổ sung tính năng phân tích chủ đề tìm kiếm AI",
-        "body": "Microsoft vừa cập nhật tính năng thử nghiệm Topics Portfolio trong báo cáo AI Performance trên Bing Webmaster Tools. Công cụ này nhóm các truy vấn mà website được trích dẫn trong câu trả lời AI thành các chủ đề rộng, đi kèm ước tính tổng số lượt trích dẫn và số lượng tên miền liên quan. Báo cáo cũng cung cấp danh sách truy vấn cơ hội, nơi các website đối thủ được AI trích dẫn nhưng trang của bạn chưa xuất hiện. Doanh nghiệp cần lưu ý các chỉ số này mang tính định hướng tương đối chứ không phải số lượng tuyệt đối."
-      }
-    ],
-    "impact": "Tránh đưa ra quyết định sai lầm khi thấy lưu lượng AI sụt giảm hoặc thứ hạng SEO biến động mạnh trong tháng 10, vì phần lớn bắt nguồn từ lỗi phân bổ Direct trên GA4 và bot-detection của Google. Giúp người làm marketing tự tin giải trình số liệu với ban giám đốc mà không hoang mang về hiệu quả của đội ngũ SEO.",
-    "ifIgnored": "Doanh nghiệp có thể lãng phí nguồn lực để tái cấu trúc website hoặc xử phạt oan đội ngũ SEO do tin vào báo cáo thứ hạng bị nhiễu, đồng thời đánh giá sai tiềm năng chuyển đổi từ nguồn ChatGPT.",
-    "actionChecklist": [
-      "Đối chiếu dữ liệu thứ hạng bị tụt trên công cụ bên thứ ba với số lượt nhấp thực tế trong Google Search Console trước khi lập báo cáo.",
-      "Kiểm tra lưu lượng truy cập Direct trên GA4 từ ngày 8 đến 15/10 để bóc tách lượng truy cập thực tế chuyển hướng từ ChatGPT.",
-      "Cập nhật quy chuẩn gắn thẻ UTM thủ công cho các chiến dịch nội dung để giảm phụ thuộc vào tham số tự động của nền tảng AI.",
-      "Truy cập báo cáo AI Performance trong Bing Webmaster Tools để tìm các lỗ hổng nội dung mà đối thủ đang được trích dẫn."
-    ],
-    "id": "real-2026-10-17-du-lieu-thu-hang-510945",
-    "publishedAt": "17/10/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/seo-pulse-rank-tracker-data-chatgpt-tags-ai-search-links/593171/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/10/seo-pulse-october-16-2026.jpg",
       "credit": "Ảnh: Search Engine Journal"
     }
   },
