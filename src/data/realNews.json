@@ -2,6 +2,200 @@
   {
     "category": "Google Ads & SEO",
     "platformIcon": "Search",
+    "title": "Google cập nhật chính sách riêng tư: Dữ liệu Gmail và Photos bắt đầu tham gia cá nhân hóa quảng cáo trong AI Mode",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Google Ads",
+      "AI Mode",
+      "Cá nhân hóa quảng cáo",
+      "Chính sách riêng tư"
+    ],
+    "summary": "Google vừa chính thức cập nhật chính sách quyền riêng tư, cho phép dữ liệu từ Gmail, Google Photos và Google Drive tham gia cá nhân hóa quảng cáo trong Gemini và AI Mode trên Search. Thay đổi này áp dụng cho những người dùng bật tính năng Personal Intelligence. Dù nhà quảng cáo không có tùy chỉnh nhắm mục tiêu riêng, các chiến dịch Performance Max, Shopping và Broad Match sẽ tự động khai thác tín hiệu ngữ cảnh này.",
+    "keyNumbers": [
+      {
+        "value": "16/10",
+        "label": "ngày chính sách riêng tư mới chính thức có hiệu lực"
+      },
+      {
+        "value": "3",
+        "label": "dạng chiến dịch đủ điều kiện phân phối quảng cáo trong AI Mode"
+      },
+      {
+        "value": "2017",
+        "label": "năm Google từng dừng việc quét Gmail để nhắm mục tiêu quảng cáo"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Thay đổi quan trọng trong chính sách quyền riêng tư của Google",
+        "body": "Google đã bổ sung ngoại lệ trong chính sách riêng tư từ ngày 16 tháng 10. Trước đây, Google khẳng định không dùng nội dung Drive, Gmail hay Photos để hiển thị quảng cáo cá nhân hóa sau khi dừng quét Gmail tự động vào năm 2017. Quy định mới mở ra ngoại lệ khi người dùng chủ động cho phép các ứng dụng này kết nối với dịch vụ Google có hỗ trợ quảng cáo. Khi người dùng bật Personal Intelligence trong Gemini hoặc AI Mode, hệ thống có thể trích xuất thông tin để điều chỉnh nội dung hiển thị bao gồm cả quảng cáo."
+      },
+      {
+        "heading": "Cơ chế dữ liệu ứng dụng kết nối tác động tới hiển thị quảng cáo",
+        "body": "Tính năng Personal Intelligence được Google thử nghiệm từ tháng 01/2026 cho tài khoản cá nhân đăng ký Google AI Pro và Ultra tại Mỹ. Hệ thống có thể tham chiếu lịch trình bay trong Gmail và hình ảnh chuyến đi trong Google Photos để hiểu nhu cầu mua sắm thực tế. Ví dụ khi người dùng tìm kiếm áo khoác, AI Mode tự động đối chiếu địa điểm và thời gian chuyến đi trong email để đề xuất sản phẩm phù hợp. Quảng cáo không ghép trực tiếp từ nội dung gốc email hay ảnh mà dựa trên các bản tóm tắt và trích đoạn suy luận do AI xử lý."
+      },
+      {
+        "heading": "Cơ chế bảo mật và giới hạn quyền truy cập dữ liệu",
+        "body": "Google cam kết nhà quảng cáo không được phép truy cập vào hộp thư Gmail hay kho ảnh của người dùng. Các danh mục nhạy cảm như chủng tộc, tôn giáo, xu hướng tính dục và sức khỏe tiếp tục bị loại trừ hoàn toàn khỏi việc cá nhân hóa quảng cáo. Người dùng có thể chủ động ngắt kết nối ứng dụng trong phần cài đặt tài khoản Google để dừng chia sẻ dữ liệu. Việc tắt quảng cáo cá nhân hóa trong My Ad Center không nhất thiết ngăn ứng dụng kết nối nạp dữ liệu vào các tính năng AI trừ khi người dùng ngắt kết nối ứng dụng hoàn toàn."
+      },
+      {
+        "heading": "Tác động thực tế đối với nhà quảng cáo trên Google Ads",
+        "body": "Nhà quảng cáo sẽ không thấy bất kỳ nút bật tắt hay phân khúc đối tượng mới nào trong giao diện Google Ads. Việc phân phối quảng cáo dựa trên dữ liệu kết nối nằm hoàn toàn ở phía người dùng. Google xác định ba loại chiến dịch đủ điều kiện thử nghiệm gồm Performance Max, Shopping và chiến dịch Search dùng từ khóa mở rộng bao gồm AI Max. Hiện tại Google chưa cung cấp báo cáo riêng để theo dõi lượt hiển thị nào được kích hoạt nhờ tín hiệu từ Gmail hay Photos."
+      }
+    ],
+    "impact": "Ngân sách chạy Performance Max và Broad Match của bạn sẽ tự động tiếp cận khách hàng tiềm năng ở độ chính xác cao hơn nhờ AI đọc hiểu bối cảnh đời sống cá nhân của họ từ Gmail và Photos, dù bạn không thể chủ động cài đặt đối tượng này thủ công.",
+    "ifIgnored": "Nếu tiếp tục phụ thuộc hoàn toàn vào từ khóa khớp chính xác và bỏ qua các chiến dịch tự động hóa như Performance Max hay Broad Match, bạn sẽ bỏ lỡ lượng lớn hiển thị chất lượng cao từ nhóm người dùng AI Mode.",
+    "actionChecklist": [
+      "Rà soát lại tỷ lệ phân bổ ngân sách cho chiến dịch Performance Max và Search Broad Match trên tài khoản Google Ads.",
+      "Tối ưu hóa nguồn cấp dữ liệu sản phẩm trong Google Merchant Center để AI đối chiếu chính xác thuộc tính khi ghép nối nhu cầu khách hàng.",
+      "Bổ sung mẫu quảng cáo đa dạng về ngữ cảnh và công dụng sản phẩm nhằm đón đầu các truy vấn phức tạp trong AI Mode.",
+      "Báo cáo và theo dõi sát hiệu suất của chiến dịch AI Max để đánh giá sự thay đổi về tỷ lệ chuyển đổi."
+    ],
+    "id": "real-2026-10-27-google-cap-nhat-chinh-d9afd7",
+    "publishedAt": "27/10/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/google-privacy-policy-connected-apps-ai-mode-ads/594546/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/10/shutterstock_1921284380_1600x840-860.png",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
+    "category": "AI Marketing",
+    "platformIcon": "Sparkles",
+    "title": "Shopify chuyển Cơ sở dữ liệu AI Agent vào Merchant Admin và ngừng ứng dụng cũ",
+    "isHot": false,
+    "illustration": "shop-health",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Shopify",
+      "AI Agent",
+      "E-commerce",
+      "AI Search"
+    ],
+    "summary": "Shopify đã di chuyển cơ sở dữ liệu (Knowledge Base) phục vụ các đại lý AI bán hàng trực tiếp vào Merchant Admin và sẽ ngừng ứng dụng cũ từ ngày 15/01/2027. Các thông tin chính sách và liên hệ sẽ được xuất bản mặc định để ứng dụng AI truy cập. Những cửa hàng có trên 1.000 dữ liệu sẽ phải tự nhập lại thủ công trước thời hạn đóng ứng dụng.",
+    "keyNumbers": [
+      {
+        "value": "1.000",
+        "label": "giới hạn dữ liệu tối đa trong trang quản trị mới"
+      },
+      {
+        "value": "15/01/2027",
+        "label": "thời hạn ứng dụng Knowledge Base cũ dừng hoạt động"
+      },
+      {
+        "value": "48 giờ",
+        "label": "thời gian tối đa để hệ thống hoàn tất quét lại cửa hàng"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Thay đổi vị trí quản lý dữ liệu AI",
+        "body": "Shopify chính thức thay thế ứng dụng Knowledge Base độc lập bằng tính năng tích hợp trực tiếp trong Merchant Admin tại mục Sales channels > Agentic > Knowledge base. Cơ sở dữ liệu này lưu trữ các thông tin ngoài sản phẩm giúp đại lý AI trả lời thắc mắc của khách hàng như chính sách đổi trả hay thời gian giao hàng. Các dữ liệu được chia thành 10 danh mục quản lý khác nhau. Theo Changelog ngày 26/10, ứng dụng cũ sẽ dừng hoạt động hoàn toàn sau ngày 15/01/2027."
+      },
+      {
+        "heading": "Cơ chế quét và tự động xuất bản thông tin",
+        "body": "Thông tin chính sách cửa hàng và liên hệ sẽ được tự động xuất bản ngay khi tạo để các ứng dụng AI như Shop app truy cập qua Storefront MCP. Shopify thực hiện quét giao diện định kỳ để cập nhật dữ liệu mới cho nhà bán hàng phê duyệt. Nếu giao diện thay đổi nhưng chưa cập nhật, nhà bán hàng có thể yêu cầu quét lại với thời gian xử lý lên đến 48 giờ. Các gian hàng cài đặt mật khẩu sẽ không thể quét giao diện mà chỉ dùng được dữ liệu do quản trị viên nhập."
+      },
+      {
+        "heading": "Quy định chuyển đổi dữ liệu cho nhà bán hàng",
+        "body": "Những gian hàng sở hữu hơn 1.000 dữ liệu trên ứng dụng cũ sẽ không được hệ thống tự động chuyển sang cơ sở dữ liệu mới. Các nhà bán lẻ lớn này buộc phải tự rà soát và nhập lại những dữ liệu cần thiết trước ngày 15/01/2027. Đối với các cửa hàng nhỏ hơn, dữ liệu đã tạo hoặc chỉnh sửa được tự động chuyển giao và xuất bản. Hệ thống mới áp dụng mức giới hạn tối đa 1.000 dữ liệu cho mỗi gian hàng."
+      },
+      {
+        "heading": "Đánh giá hiệu quả thực tế và lưu ý kỹ thuật",
+        "body": "Thử nghiệm trên 122 cửa hàng Shopify trong tháng 8 và tháng 9 cho thấy chỉ có 2 trong số 88 cửa hàng được truy vấn đưa ra câu trả lời dùng được về việc hủy đơn hàng. Việc cập nhật cơ sở dữ liệu giúp tăng độ chính xác cho câu trả lời của AI nhưng không làm tăng số lần hiển thị cửa hàng trên kết quả tìm kiếm AI. Ngoài ra, Shopify đã đánh giá công cụ Storefront MCP là deprecated để chuyển hướng lập trình viên sang Ask MCP."
+      }
+    ],
+    "impact": "Ảnh hưởng trực tiếp đến độ chính xác khi các trợ lý AI (như ChatGPT, Shop app) giải đáp thắc mắc của khách mua hàng, tác động tới tỷ lệ chốt đơn và trải nghiệm người dùng trên nền tảng thương mại AI.",
+    "ifIgnored": "Các gian hàng có trên 1.000 dữ liệu sẽ mất toàn bộ thông tin tùy chỉnh khi ứng dụng cũ bị xóa vào ngày 15/01/2027, khiến trợ lý AI đưa ra thông tin sai lệch hoặc không thể trả lời khách hàng.",
+    "actionChecklist": [
+      "Truy cập mục Sales channels > Agentic > Knowledge base trong Shopify Admin để kiểm tra giao diện mới.",
+      "Rà soát số lượng dữ liệu trên ứng dụng cũ để chuẩn bị di chuyển thủ công nếu vượt quá 1.000 dữ liệu.",
+      "Bổ sung các điều khoản còn thiếu (như chính sách hủy đơn) vào mục Additional Facts.",
+      "Trực tiếp thử nghiệm đặt các câu hỏi thực tế của người mua để kiểm tra phản hồi của AI."
+    ],
+    "deadline": "15/01/2027",
+    "id": "real-2026-10-27-shopify-chuyen-co-so-6b74bf",
+    "publishedAt": "27/10/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/shopify-ai-agent-knowledge-base-admin/594551/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/10/shopify-knowledge-base-admin.jpg",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Safari 27.2 sửa lỗi tự động xóa cookie sau 7 ngày trên các trang web dùng CNAME",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Safari 27.2",
+      "Cookie",
+      "Server Side Tracking",
+      "Đo lường chuyển đổi"
+    ],
+    "summary": "Apple đã phát hành thông tin kỹ thuật cho Safari 27.2, trong đó sửa lỗi khiến cookie của các trang web dùng CNAME bị giới hạn thời gian tồn tại trong 7 ngày. Tuy nhiên, bản vá này chỉ áp dụng cho phản hồi của trang chính và không nới lỏng các quy định hạn chế đối với tên miền theo dõi phía máy chủ.",
+    "keyNumbers": [
+      {
+        "value": "27.2",
+        "label": "Phiên bản Safari sửa lỗi giới hạn cookie"
+      },
+      {
+        "value": "7 ngày",
+        "label": "Thời hạn cookie từng bị áp nhầm cho trang chính"
+      },
+      {
+        "value": "20",
+        "label": "Số bản sửa lỗi được xử lý trong đợt cập nhật"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Sửa lỗi vô tình rút ngắn thời hạn cookie trên Safari",
+        "body": "Apple đã công bố thông tin về Safari 27.2 với 20 bản sửa lỗi kỹ thuật, trong đó có một điều chỉnh quan trọng liên quan đến cách quản lý cookie. Bản cập nhật này chấm dứt tình trạng Safari tự động hạ thời hạn cookie về 7 ngày đối với các trang web sử dụng bản ghi CNAME trỏ về tên miền khác. Sự cố này trước đây ảnh hưởng trực tiếp đến các website vận hành qua CDN hoặc các nền tảng thương mại điện tử hosted. Việc khắc phục giúp khôi phục thời gian lưu cookie chính xác cho phản hồi từ máy chủ của trang gốc."
+      },
+      {
+        "heading": "Phân biệt giữa trang chính và các tên miền theo dõi",
+        "body": "Bản sửa lỗi trong Safari 27.2 chỉ áp dụng cho phản hồi HTTP từ chính trang web khi người dùng truy cập trực tiếp. Các cơ chế đo lường sử dụng tên miền phụ để theo dõi phía máy chủ vẫn bị giới hạn thời gian cookie. Điều này có nghĩa là các thiết lập server-side tracking trỏ CNAME đến bên thứ ba vẫn chịu mức trần 7 ngày từ tính năng Intelligent Tracking Prevention. Đội ngũ WebKit không thay đổi chính sách bảo vệ quyền riêng tư mà chỉ sửa một lỗi phát sinh ngoài quy định."
+      },
+      {
+        "heading": "Lịch sử các quy định hạn chế cookie của Apple",
+        "body": "Apple đã bắt đầu áp dụng mức trần 7 ngày cho cookie tạo bởi JavaScript từ các phiên bản trước. Đến ngày 12/11/2020, WebKit mở rộng việc hạn chế này sang các phản hồi HTTP của CNAME ẩn danh từ Safari 14. Sau đó vào ngày 27/3/2023, phiên bản Safari 16.4 tiếp tục áp dụng giới hạn này cho cả kỹ thuật che giấu địa chỉ IP. Lỗi vừa được sửa trên 27.2 đã áp dụng nhầm giới hạn này lên cả phản hồi của trang chính."
+      },
+      {
+        "heading": "Tác động tới đo lường và dữ liệu chuyển đổi",
+        "body": "Khi lỗi này còn tồn tại, khách hàng quay lại mua hàng sau 8 ngày từ quảng cáo có thể bị ghi nhận thành người dùng mới trên Safari. Sự cố khiến dữ liệu phiên đăng nhập, giỏ hàng và định danh người dùng bị xóa bỏ sau 7 ngày không quay lại. Bản cập nhật 27.2 giải quyết vấn đề mất phiên làm việc trên trang chính nhưng không khôi phục tự động các cookie cũ. Nhà quản lý cần nắm rõ phạm vi của bản vá để đánh giá chính xác số liệu báo cáo."
+      },
+      {
+        "heading": "Những điểm Safari 27.2 chưa thay đổi",
+        "body": "Bản công bố của WebKit hoàn toàn không đề cập đến việc thay đổi giới hạn 7 ngày của JavaScript cookie. Báo cáo cũng không nhắc tới các danh sách tên miền quảng cáo bị chặn hay tính năng Link Tracking Protection. Mã lỗi nội bộ 183787115 chỉ ghi nhận việc xử lý phản hồi điều hướng cấp cao nhất. Do đó các giải pháp theo dõi nâng cao vẫn cần tuân thủ các quy định hiện hành của Safari."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing sẽ hiểu đúng bản chất dữ liệu đo lường trên thiết bị Safari, phân biệt được sự cố mất phiên làm việc của landing page gốc với các hạn chế của hệ thống server-side tracking.",
+    "ifIgnored": "Báo cáo chuyển đổi và hành vi khách hàng trên thiết bị Apple tiếp tục bị đánh giá sai lệch, dẫn đến việc tối ưu ngân sách quảng cáo dựa trên dữ liệu chuyển đổi bị ngắt đoạn.",
+    "actionChecklist": [
+      "Kiểm tra lại cấu hình CNAME của website chính và các trang landing page đang chạy quảng cáo",
+      "Rà soát lại dữ liệu chuyển đổi từ người dùng Safari để đánh giá mức độ ảnh hưởng của chu kỳ 7 ngày",
+      "Đánh giá lại giải pháp server-side tracking để đảm bảo tuân thủ các quy định về cookie của Safari",
+      "Cập nhật cho đội ngũ kỹ thuật về sự khác biệt giữa cookie trang chính và cookie trên tên miền phụ"
+    ],
+    "id": "real-2026-10-27-safari-27-2-sua-7d6669",
+    "publishedAt": "27/10/2026",
+    "sourceUrl": "https://ppc.land/safari-27-2-drops-a-mistaken-7-day-cap-on-cookies-of-cname-hosted-sites/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/10/apple-safari-27-2-cname-cookie-7-day-cap-fix-calendar-ribbon-shears.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
     "title": "Pinterest mở bán quảng cáo lập trình qua Google DV360 và Amazon DSP tại Châu Á - Thái Bình Dương",
     "isHot": false,
     "illustration": "cpm-auction",
@@ -375,128 +569,6 @@
     }
   },
   {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Chỉ số CRR trong đo lường quảng cáo: Cách tính điểm hòa vốn và bẫy sai lệch doanh thu",
-    "isHot": false,
-    "illustration": "ai-budget",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Google Ads",
-      "Đo lường Marketing",
-      "ROAS",
-      "Tối ưu chi phí"
-    ],
-    "summary": "Tỷ lệ chi phí trên doanh thu (CRR) là phép đảo ngược của ROAS, giúp nhà quản lý dễ dàng đối soát chi phí quảng cáo trực tiếp với biên lợi nhuận gộp trên báo cáo tài chính. Tuy nhiên, việc các đại lý và nền tảng áp dụng các cách tính tử số và mẫu số khác nhau có thể tạo ra bức tranh hiệu quả giả tạo.",
-    "keyNumbers": [
-      {
-        "value": "20%",
-        "label": "Tỷ lệ CRR tương đương chỉ số ROAS bằng 5"
-      },
-      {
-        "value": "30%",
-        "label": "Ngưỡng biên lợi nhuận gộp hòa vốn khi CRR đạt 30%"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Bản chất chỉ số CRR và mối quan hệ với ROAS",
-        "body": "Tỷ lệ chi phí trên doanh thu (CRR hay KUR) được tính bằng cách chia chi phí quảng cáo cho doanh thu tạo ra và thể hiện dưới dạng phần trăm. Công thức này là phép đảo ngược trực tiếp của ROAS, trong đó CRR bằng 1 chia cho ROAS. Ví dụ, mức ROAS bằng 4 tương đương CRR 25%, ROAS bằng 5 tương đương 20%, và ROAS bằng 10 tương đương 10%. Điểm tiện lợi của chỉ số này là nó hiển thị dưới dạng phần trăm giúp so sánh trực tiếp với biên lợi nhuận gộp trên báo cáo tài chính."
-      },
-      {
-        "heading": "Những biến số dễ gây sai lệch trong tử số và mẫu số",
-        "body": "Đầu vào của công thức CRR không thống nhất giữa các bên báo cáo và nền tảng. Nhiều nơi chỉ tính ngân sách quảng cáo thuần, nhưng một số đại lý bao gồm cả phí dịch vụ khiến tỷ lệ chi phí tăng từ 60% lên 68% trong một ví dụ thực tế. Ở phần mẫu số, doanh thu có thể tính theo giá trị giỏ hàng thô gồm thuế 19%, doanh thu thuần hoặc doanh thu sau khi trừ hàng hoàn trả. Doanh nghiệp đo lường CRR trên doanh thu gộp trước khi trừ tỷ lệ hoàn trả có thể ghi nhận chỉ số đẹp hơn thực tế tài chính nhiều điểm phần trăm."
-      },
-      {
-        "heading": "Cách thiết lập mục tiêu chiến dịch trên các nền tảng quảng cáo",
-        "body": "Hầu hết nền tảng như Google Ads và Microsoft Advertising đặt thầu theo ROAS mục tiêu thay vì CRR trực tiếp. Khi doanh nghiệp muốn duy trì CRR mục tiêu là 20%, nhà quản lý phải nhập mức ROAS mục tiêu là 500% vào giao diện quảng cáo. Google Ads yêu cầu chiến dịch Shopping phải đạt tối thiểu 15 chuyển đổi trên mỗi Merchant Center ID trong 30 ngày trước đó. Các công cụ bên thứ ba khuyến cáo không nên thay đổi CRR mục tiêu quá 20% trong một lần điều chỉnh để tránh gây hại cho hiệu suất quảng cáo."
-      },
-      {
-        "heading": "Rủi ro biến động dữ liệu và quy tắc nhân giá trị chuyển đổi",
-        "body": "Mức CRR 20% có thể mang lại hiệu quả tuyệt vời cho sản phẩm có biên lợi nhuận 60%, nhưng sẽ gây thua lỗ nặng cho sản phẩm chỉ có biên lợi nhuận 15%. Vào tháng 10/2026, Google chính thức đưa tính năng áp dụng hệ số nhân giá trị chuyển đổi từ 1,1x đến 5x ra khỏi bản beta. Việc phóng đại giá trị đơn hàng từ 100 euro lên 120 euro khiến CRR báo cáo đẹp hơn số liệu tiền mặt thực tế. Để đối phó với điều này, Google đã bổ sung cột Giá trị chuyển đổi ban đầu từ tháng 11/2025 giúp nhà quảng cáo đối soát giá trị gốc."
-      }
-    ],
-    "impact": "Giúp Trưởng phòng Marketing chuẩn hóa công thức tính hiệu quả quảng cáo theo biên lợi nhuận thực tế của doanh nghiệp, tránh bị đánh lừa bởi báo cáo ROAS ảo từ agency hoặc các quy tắc nhân giá trị chuyển đổi của Google Ads.",
-    "ifIgnored": "Doanh nghiệp dễ phê duyệt ngân sách quảng cáo dựa trên CRR hoặc ROAS báo cáo đẹp mắt nhưng thực tế đang gánh chịu thua lỗ do không trừ phí agency, tỷ lệ hoàn hàng và thuế khỏi doanh thu thuần.",
-    "actionChecklist": [
-      "Yêu cầu bộ phận Media quy đổi ngay ROAS mục tiêu sang CRR tương ứng dựa trên biên lợi nhuận gộp của từng nhóm sản phẩm",
-      "Thống nhất quy chuẩn tử số và mẫu số với agency bao gồm việc có cộng phí quản lý và trừ tiền hoàn trả hàng hay không",
-      "Bật cột Giá trị chuyển đổi ban đầu trong Google Ads để kiểm tra dữ liệu gốc trước khi áp dụng các hệ số nhân từ 1,1x đến 5x",
-      "Tránh điều chỉnh mục tiêu CRR hoặc ROAS quá 20% trong một lần cập nhật để bảo vệ giai đoạn học của thuật toán đấu thầu"
-    ],
-    "id": "real-2026-10-24-chi-so-crr-trong-a478fa",
-    "publishedAt": "24/10/2026",
-    "sourceUrl": "https://ppc.land/cost-revenue-ratio/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/10/cost-revenue-ratio-kur-inverse-roas-ad-man-shears-revenue-pie.jpg",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Các công cụ rank tracker vật lộn với dữ liệu sai lệch do Google chống AI scraping",
-    "isHot": false,
-    "illustration": "data-signal",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "SEO Google",
-      "Rank Tracker",
-      "Ahrefs",
-      "Dữ liệu SERP"
-    ],
-    "summary": "Các công cụ theo dõi thứ hạng từ khóa phổ biến như Ahrefs, AccuRanker và SEOmonitor đang gặp nhiều khó khăn khi Google thắt chặt cơ chế chống thu thập dữ liệu tự động. Việc Google cung cấp các trang kết quả tìm kiếm thiếu hụt khiến dữ liệu báo cáo SEO bị nhiễu và sai lệch đáng kể trong thời gian qua.",
-    "keyNumbers": [
-      {
-        "value": "5% đến 20%",
-        "label": "Tỷ lệ kết quả SERP bị ảnh hưởng theo Ahrefs"
-      },
-      {
-        "value": "8,7%",
-        "label": "Trang nhất bị biến dạng dữ liệu giai đoạn 13/9 - 21/10"
-      },
-      {
-        "value": "10%",
-        "label": "Từ khóa ghi nhận sai trên SEOmonitor giai đoạn 9/10 - 13/10"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Google thắt chặt chống AI scraping làm sai lệch dữ liệu rank tracker",
-        "body": "Google đang triển khai các biện pháp kỹ thuật chống lại việc cào dữ liệu từ các công cụ AI, vô tình khiến các nền tảng theo dõi thứ hạng nhận về kết quả SERP bị thiếu hoặc sai lệch. Công cụ Nozzle ghi nhận tỷ lệ trang nhất bị ảnh hưởng tăng vọt từ 0,17% lên 8,7% trong khoảng thời gian từ ngày 13/9 đến ngày 21/10. Hiện tượng này khiến nhiều website đột ngột biến mất khỏi kết quả tìm kiếm trên công cụ đo lường dù thực tế vị trí không đổi. Các nhà cung cấp dữ liệu lớn như Ahrefs, AccuRanker và SEOmonitor đều đã xác nhận sự cố kỹ thuật này."
-      },
-      {
-        "heading": "Ahrefs và SEOmonitor tiến hành dọn dẹp và xử lý lại dữ liệu",
-        "body": "Ahrefs cho biết đang tiến hành làm sạch các kết quả trong quá khứ bị ảnh hưởng bởi hiện tượng nhiễu dữ liệu từ Google. Theo ước tính từ Ahrefs, khoảng 5% đến 20% kết quả tìm kiếm đã bị ảnh hưởng trong những tuần qua tùy thuộc vào nhà cung cấp dữ liệu. Trong khi đó, SEOmonitor ghi nhận khoảng 10% số từ khóa theo dõi bị sai kết quả từ ngày 9/10 đến ngày 13/10. SEOmonitor đã phải tiến hành xử lý lại toàn bộ từ khóa bị ảnh hưởng và áp dụng bộ lọc mới từ ngày 13/10."
-      },
-      {
-        "heading": "Giải pháp đối phó từ AccuRanker và BrightLocal",
-        "body": "AccuRanker áp dụng quy trình kiểm tra hai bước nhằm phát hiện các trang kết quả bị thiếu hụt website hiển thị. Nếu trang kết quả mới mất hơn một nửa số domain quen thuộc, công cụ sẽ thực hiện tải lại dữ liệu ở phiên làm việc khác trước khi ghi nhận. BrightLocal cho biết đang bổ sung thêm nhiều nhà cung cấp dữ liệu dự phòng để đảm bảo tính liên tục khi một bên bị gián đoạn. Tuy nhiên, lãnh đạo BrightLocal thừa nhận hiện chưa có giải pháp đơn lẻ nào giải quyết triệt để vấn đề này."
-      },
-      {
-        "heading": "Hiển thị dữ liệu tạm thời và cơ chế giữ nguyên thứ hạng",
-        "body": "Để tránh gây hoang mang cho người dùng, một số công cụ áp dụng quy tắc giữ nguyên vị trí cũ trong lúc xác minh. Điển hình như SEOmonitor có thể tiếp tục hiển thị thứ hạng đã ghi nhận trước đó tối đa trong hai lượt cập nhật hàng ngày đối với các biến động sụt giảm bất thường. AccuRanker cũng cho phép người dùng chủ động bấm tải lại từ khóa để lấy dữ liệu mới nhất trực tiếp. Điều này đồng nghĩa với việc báo cáo thứ hạng theo ngày có thể có độ trễ hoặc được điều chỉnh hồi truy."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing có thể nhận báo cáo sụt giảm thứ hạng SEO ảo hoặc biến động vị trí thất thường từ agency và team in-house, dẫn đến đánh giá sai hiệu quả chiến dịch và hoang mang không cần thiết.",
-    "ifIgnored": "Bạn có thể đưa ra các quyết định can thiệp kỹ thuật vội vàng, gây tốn kém chi phí, phá vỡ cấu trúc SEO đang ổn định hoặc đánh giá sai năng lực của bộ phận SEO dựa trên dữ liệu công cụ bị nhiễu.",
-    "actionChecklist": [
-      "Đối chiếu biến động thứ hạng từ Ahrefs/SEOmonitor với dữ liệu thực tế trên Google Search Console trước khi kết luận.",
-      "Yêu cầu team SEO và Agency kiểm tra lại các báo cáo thứ hạng trong giai đoạn tháng 9 và tháng 10 xem đã được làm sạch chưa.",
-      "Tạm hoãn các quyết định thay đổi lớn về Technical SEO nếu chỉ dựa vào báo cáo sụt giảm từ một công cụ rank tracker duy nhất.",
-      "Thiết lập quy trình xác minh thứ hạng thủ công đối với các từ khóa chiến lược mang lại chuyển đổi cao."
-    ],
-    "id": "real-2026-10-23-cac-cong-cu-rank-211af3",
-    "publishedAt": "23/10/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/rank-trackers-suspect-google-results/594049/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/10/rank-data-inspection-4202414687.jpg",
-      "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
     "category": "Meta Ads",
     "platformIcon": "Facebook",
     "title": "Meta cập nhật thuật toán đề xuất Reels và mở rộng Creator Marketing Hub",
@@ -557,69 +629,6 @@
     "image": {
       "url": "https://imgproxy.divecdn.com/_qCZFatzkmrQT81320LquVewz1MFOBUNAXrQJC5FJB4/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9tZXRhX2FwcHMucG5n.webp",
       "credit": "Ảnh: Social Media Today"
-    }
-  },
-  {
-    "category": "AI Marketing",
-    "platformIcon": "Sparkles",
-    "title": "OpenAI công bố cơ chế vận hành hệ thống phân phối và đấu giá quảng cáo trên ChatGPT",
-    "isHot": false,
-    "illustration": "cpm-auction",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "ChatGPT Ads",
-      "AI Marketing",
-      "Đấu giá quảng cáo",
-      "OpenAI"
-    ],
-    "summary": "OpenAI vừa tiết lộ chi tiết kỹ thuật về cách hệ thống quảng cáo trên ChatGPT phân tích ý định người dùng qua hội thoại đa lượt và tiến hành đấu giá. Hệ thống phân phối quảng cáo hoạt động hoàn toàn độc lập với mô hình tạo câu trả lời tự nhiên nhằm đảm bảo tính khách quan. Đáng chú ý, một mẫu quảng cáo thắng thầu đấu giá vẫn có thể không được hiển thị nếu không vượt qua các bước kiểm tra ngữ cảnh sau đấu giá.",
-    "keyNumbers": [
-      {
-        "value": "1 tỷ USD",
-        "label": "Doanh thu quy năm đạt được dưới 200 ngày"
-      },
-      {
-        "value": "200",
-        "label": "Số ngày để ChatGPT Ads đạt mốc 1 tỷ USD doanh thu quy năm"
-      },
-      {
-        "value": "100.000",
-        "label": "Số lượng nhà quảng cáo đã tham gia chạy quảng cáo"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Tách biệt hoàn toàn giữa câu trả lời organic và quảng cáo",
-        "body": "OpenAI cho biết hệ thống chọn quảng cáo hoạt động độc lập với hệ thống tạo câu trả lời của ChatGPT. Cả hai hệ thống đều sử dụng mô hình và mã nguồn riêng biệt dù cùng truy cập vào ngữ cảnh hội thoại. Việc lựa chọn quảng cáo không tác động ngược trở lại nội dung câu trả lời do ChatGPT tạo ra. Nếu hệ thống quảng cáo bị chậm hoặc gặp sự cố, câu trả lời tự nhiên vẫn được hiển thị bình thường. Quảng cáo xuất hiện quá muộn sẽ không hiển thị cùng câu trả lời đó."
-      },
-      {
-        "heading": "Mô hình Orchestrator phân tích ngữ cảnh hội thoại đa lượt",
-        "body": "OpenAI gọi mô hình quản lý việc chọn quảng cáo là orchestrator với nhiệm vụ đọc toàn bộ hội thoại và kích hoạt các công cụ tìm kiếm quảng cáo phù hợp. Hệ thống biến các phần hội thoại thành truy vấn tìm kiếm dạng embeddings để hiểu ý định người dùng mà không phụ thuộc vào từ khóa chính xác. Các phiên hội thoại dạng stateful giúp duy trì chi tiết từ các tin nhắn trước thay vì phải bắt đầu lại từ đầu khi có tin nhắn mới. Mô hình phải phân biệt giữa ý định hiện tại với thông tin cũ hoặc các câu hỏi mang tính giả định. Khi người dùng bật tính năng quảng cáo cá nhân hóa, hệ thống có thể tham khảo thêm thông tin không nhạy cảm từ các cuộc trò chuyện trước."
-      },
-      {
-        "heading": "Quy trình đấu giá và lý do quảng cáo thắng thầu vẫn không xuất hiện",
-        "body": "Sau khi lọc các quảng cáo tiềm năng theo vị trí địa lý, chính sách, ngân sách và tốc độ phân phối, hệ thống sẽ đánh giá độ phù hợp và hiệu suất dự kiến. Bộ điều phối gửi các ứng viên đủ điều kiện sang một công cụ đấu giá riêng biệt để xếp hạng và định giá cuối cùng. Đáng chú ý, việc thắng thầu trong cuộc đấu giá không đảm bảo quảng cáo sẽ chắc chắn được hiển thị tới người dùng. Hệ thống tiếp tục thực hiện các bước kiểm tra bổ sung sau đấu giá để đảm bảo quảng cáo phù hợp với ngữ cảnh trò chuyện cụ thể. Nếu quảng cáo bỏ lỡ khung thời gian phân phối hoặc không qua được bước kiểm tra ngữ cảnh, lượt hiển thị sẽ bị hủy."
-      },
-      {
-        "heading": "Đo lường hiệu quả và thách thức trong việc tối ưu chiến dịch",
-        "body": "OpenAI đã đạt mốc 1 tỷ USD doanh thu quy năm chỉ trong chưa đầy 200 ngày sau khi ra mắt quảng cáo ChatGPT. Hiện tại đã có hơn 100.000 nhà quảng cáo tham gia nền tảng này nhưng báo cáo chưa công bố các chỉ số hiệu suất chuẩn. Nhà quảng cáo gặp khó khăn khi số lượt hiển thị thấp vì không rõ nguyên nhân xuất phát từ khâu đấu giá, kiểm tra chính sách hay thời gian phân phối. Hệ thống lưu nhật ký nội bộ về các lý do thất bại nhưng chưa rõ mức độ chia sẻ dữ liệu này cho nhà quảng cáo. Việc thiếu tính minh bạch trong báo cáo khiến nhà quảng cáo khó đưa ra quyết định điều chỉnh giá thầu hay mẫu quảng cáo."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing cần hiểu rằng cơ chế quảng cáo trên môi trường hội thoại AI dựa trên việc phân tích ý định tích lũy qua nhiều câu hỏi chứ không chỉ phụ thuộc vào từ khóa đơn lẻ. Việc tối ưu quảng cáo AI đòi hỏi cách tiếp cận mới về nội dung trang đích và chuẩn bị cho các tiêu chuẩn đo lường khác biệt so với tìm kiếm truyền thống.",
-    "ifIgnored": "Nếu áp dụng tư duy quảng cáo từ khóa truyền thống vào ChatGPT Ads, doanh nghiệp sẽ lãng phí ngân sách do không tối ưu được cho ngữ cảnh hội thoại đa lượt và không xác định được nguyên nhân vì sao quảng cáo bị sụt giảm lượt hiển thị.",
-    "actionChecklist": [
-      "Rà soát lại chiến lược từ khóa để chuyển sang tối ưu nội dung theo ngữ cảnh và hành vi tìm kiếm dạng hội thoại.",
-      "Cập nhật thông tin trang đích sao cho giải quyết cụ thể các nhu cầu chuyên sâu được đề cập trong cuộc trò chuyện.",
-      "Theo dõi các báo cáo hiển thị và nhật ký phân phối khi thử nghiệm quảng cáo trên các nền tảng AI.",
-      "Chuẩn bị ngân sách thử nghiệm cho kênh quảng cáo AI Search bên cạnh các kênh Google Ads và Meta Ads truyền thống."
-    ],
-    "id": "real-2026-10-22-openai-cong-bo-co-d234c4",
-    "publishedAt": "22/10/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/openai-details-chatgpt-llm-ad-stack/593857/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/10/shutterstock_2810482073_1600x840-92.png",
-      "credit": "Ảnh: Search Engine Journal"
     }
   },
   {
