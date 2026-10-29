@@ -2,6 +2,195 @@
   {
     "category": "Google Ads & SEO",
     "platformIcon": "Search",
+    "title": "Tăng trưởng quảng cáo Google chậm lại còn 10,5% do AI Mode thu hẹp diện tích hiển thị",
+    "isHot": false,
+    "illustration": "cpm-auction",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Google Ads",
+      "AI Mode",
+      "Multiturn Ads",
+      "Tìm kiếm AI"
+    ],
+    "summary": "Tăng trưởng doanh thu quảng cáo quý 3 của Google giảm xuống 10,5% đạt 82 tỷ USD do sự bùng nổ của chế độ AI Mode làm giảm không gian hiển thị quảng cáo truyền thống. Để bù đắp, Google mở rộng quảng cáo AI Mode sang 10 thị trường mới và bắt đầu thử nghiệm định dạng quảng cáo đa lượt trong các đoạn hội thoại AI.",
+    "keyNumbers": [
+      {
+        "value": "10,5%",
+        "label": "Tăng trưởng doanh thu quảng cáo Google quý 3"
+      },
+      {
+        "value": "82 tỷ USD",
+        "label": "Doanh thu quảng cáo Alphabet đạt được"
+      },
+      {
+        "value": "10",
+        "label": "Thị trường mới mở rộng quảng cáo AI Mode"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Tăng trưởng quảng cáo tìm kiếm chậm lại do AI Mode thu hẹp vị trí hiển thị",
+        "body": "Doanh thu quảng cáo tổng thể của Alphabet trong quý 3 tăng 10,5% lên mức 82 tỷ USD, thấp hơn kỳ vọng 83,5 tỷ USD của các nhà phân tích. Tăng trưởng mảng tìm kiếm chậm lại còn 12%, đạt 63,4 tỷ USD so với mức 17% ở quý 2. Lãnh đạo Google giải thích sự sụt giảm này một phần do sự gia tăng mạnh mẽ của các truy vấn AI Mode. Trang kết quả AI Mode hiển thị ít vị trí quảng cáo hơn hẳn so với trang tìm kiếm truyền thống."
+      },
+      {
+        "heading": "Mở rộng quảng cáo AI Mode tới 10 quốc gia mới bao gồm Đông Nam Á",
+        "body": "Để giải quyết tình trạng thiếu hụt vị trí hiển thị, Google đã mở rộng quảng cáo trong AI Mode tới 10 quốc gia mới. Danh sách các thị trường mới bao gồm Malaysia, Philippines, Singapore, Úc, Canada, Ấn Độ, Kenya, New Zealand, Nigeria và Pakistan. Trong quý 4, Google sẽ tiếp tục triển khai tính năng này tại Brazil, Mexico và Vương quốc Anh. Việc phủ sóng các quốc gia Đông Nam Á lân cận cho thấy thị trường Việt Nam cũng sẽ sớm chịu tác động từ sự thay đổi này."
+      },
+      {
+        "heading": "Thử nghiệm định dạng quảng cáo đa lượt Multiturn Ads trong hội thoại AI",
+        "body": "Google chính thức ra mắt định dạng quảng cáo đa lượt (multiturn ads) tại thị trường Mỹ đối với các truy vấn AI Mode. Quảng cáo này sẽ xuất hiện ở các câu trả lời tiếp theo khi người dùng tiếp tục hỏi đáp chuyên sâu với AI và được dán nhãn 'Sponsored'. Theo dữ liệu từ Google, câu hỏi ở AI Mode có độ dài trung bình gấp 3 lần truy vấn thông thường. Nền tảng này khẳng định tỷ lệ nhấp CTR của danh sách sản phẩm tài trợ trong AI Mode hiện tương đương với danh sách tự nhiên."
+      },
+      {
+        "heading": "Tích hợp ứng dụng trực tiếp vào giao diện tìm kiếm qua Connected Apps",
+        "body": "Google giới thiệu bản xem trước của Connected Apps Platform, cho phép các nhà phát triển xây dựng ứng dụng chạy trực tiếp bên trong Google Search và Gemini. Người dùng có thể tương tác với hơn 50 ứng dụng như Adobe hay Peloton mà không cần rời khỏi trang tìm kiếm. Doanh nghiệp đăng ký và nộp ứng dụng thông qua Google Connected Console để tiếp cận nhóm người dùng có ý định chuyển đổi cao. Xu hướng này tiếp tục củng cố chiến lược giữ chân người dùng ở lại hoàn toàn trong hệ sinh thái của Google."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing sẽ phải đối mặt với nguy cơ giá thầu CPM và CPC quảng cáo tìm kiếm truyền thống tăng cao do diện tích hiển thị bị thu hẹp. Đồng thời, hành vi tìm kiếm của người dùng đang chuyển dịch sang các truy vấn hội thoại dài, đòi hỏi thay đổi chiến lược từ khóa và cấu trúc chiến dịch quảng cáo.",
+    "ifIgnored": "Doanh nghiệp sẽ bị mất lượt truy cập tự nhiên lẫn trả phí khi Google chuyển hướng người dùng sang giao diện AI Mode, dẫn đến sụt giảm hiệu quả chuyển đổi và lãng phí ngân sách vào các từ khóa ngắn truyền thống đã giảm lượng hiển thị.",
+    "actionChecklist": [
+      "Rà soát lại danh sách từ khóa Google Ads để bổ sung các cụm từ tìm kiếm dạng hội thoại dài và câu hỏi chi tiết.",
+      "Tối ưu hóa dữ liệu nguồn cung cấp sản phẩm (Product Feed) để chuẩn bị cho định dạng hiển thị sản phẩm tài trợ trong AI Mode.",
+      "Theo dõi biến động CPC và CTR trên các chiến dịch Search Ads hiện tại để chủ động điều chỉnh ngân sách hợp lý.",
+      "Nghiên cứu cơ hội tích hợp ứng dụng doanh nghiệp vào nền tảng Google Connected Apps để giữ chân khách hàng."
+    ],
+    "id": "real-2026-10-29-tang-truong-quang-cao-9cb812",
+    "publishedAt": "29/10/2026",
+    "sourceUrl": "https://ppc.land/googles-ad-growth-slows-to-10-5-as-ai-mode-ads-go-to-10-more-markets/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/10/google-alphabet-q3-ad-growth-ai-mode-cloud-billboard-speech-bubble.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Google mở rộng quảng cáo AI Mode: Tự động áp dụng trên Search và Performance Max",
+    "isHot": false,
+    "illustration": "ai-budget",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Google Ads",
+      "AI Mode",
+      "Performance Max",
+      "Tối ưu ngân sách"
+    ],
+    "summary": "Google ghi nhận doanh thu mảng Search quý 3 năm 2026 tăng trưởng chậm lại, một phần do hiệu suất kiếm tiền từ tính năng AI Mode chưa đạt kỳ vọng. Nền tảng quyết định mở rộng hiển thị quảng cáo AI Mode ra 10 thị trường mới và mặc định kích hoạt trên toàn bộ các chiến dịch Search, Shopping và Performance Max hiện có.",
+    "keyNumbers": [
+      {
+        "value": "12%",
+        "label": "Tăng trưởng doanh thu Google Search quý 3 năm 2026"
+      },
+      {
+        "value": "63,35 tỷ USD",
+        "label": "Doanh thu mảng Search trong quý 3 năm 2026"
+      },
+      {
+        "value": "10",
+        "label": "Thị trường mới mở rộng quảng cáo AI Mode"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Doanh thu Google Search giảm tốc do khả năng kiếm tiền từ AI Mode còn thấp",
+        "body": "Tốc độ tăng trưởng doanh thu từ mảng Google Search & Other trong quý 3 năm 2026 đạt 12% so với cùng kỳ, ghi nhận mức 63,35 tỷ USD. Đây là quý thứ hai liên tiếp tăng trưởng của mảng này bị chậm lại, sau khi đạt 19% ở quý 1 và 17% ở quý 2. Doanh thu Search quý này gần như đi ngang so với mức 63,27 tỷ USD của quý trước đó. Đại diện Google cho biết việc tỷ lệ tiền tệ hóa trong AI Mode còn thấp là một trong những lý do chính khiến tăng trưởng Search hạ nhiệt."
+      },
+      {
+        "heading": "Tự động áp dụng cho mọi chiến dịch Search, Shopping và Performance Max",
+        "body": "Google xác nhận toàn bộ các chiến dịch Search, Shopping và Performance Max hiện có sẽ mặc định đủ điều kiện hiển thị quảng cáo trong AI Mode. Nhà quảng cáo không có tùy chọn phân tách hoặc tắt riêng tính năng hiển thị này khỏi các chiến dịch đang chạy. Ngoài ra, nền tảng cũng chính thức thử nghiệm quảng cáo trong tính năng câu hỏi nối tiếp của AI Mode tại Mỹ. Sự thay đổi này buộc các doanh nghiệp phải xem xét lại cấu trúc chiến dịch để kiểm soát luồng truy vấn."
+      },
+      {
+        "heading": "Đặc điểm truy vấn AI Mode và tỷ lệ nhấp chuột thực tế",
+        "body": "Các truy vấn mới từ người dùng trong AI Search phần lớn nằm ở đoạn trên của phễu bán hàng với các câu hỏi tìm hiểu thông tin chung. Mặc dù vậy, dữ liệu nội bộ của Google công bố cho thấy người dùng đã bắt đầu quen thuộc với quảng cáo xuất hiện trong AI Mode. Tỷ lệ nhấp chuột giữa danh sách sản phẩm tài trợ và sản phẩm tự nhiên trong AI Mode được ghi nhận ở mức tương đương nhau. Google khẳng định các truy vấn AI này sẽ tạo ra nhiều cơ hội thương mại hơn theo thời gian."
+      },
+      {
+        "heading": "Mở rộng hiển thị quảng cáo AI Mode ra 10 thị trường quốc tế",
+        "body": "Google đang đẩy mạnh mở rộng quy mô quảng cáo AI Mode sang 10 thị trường tiếp theo gồm Úc, Canada, Ấn Độ, Kenya, Malaysia, New Zealand, Nigeria, Pakistan, Philippines và Singapore. Nền tảng cũng dự kiến bổ sung thêm các quốc gia khác như Anh, Brazil và Mexico trong quý 4 năm 2026. Việc quảng cáo AI Mode tiến sát các thị trường Đông Nam Á cho thấy xu hướng này sẽ sớm tác động trực tiếp tới Việt Nam. Các nhà quản lý quảng cáo cần chủ động chuẩn bị kịch bản tối ưu tài khoản từ sớm."
+      }
+    ],
+    "impact": "Ngân sách quảng cáo Google Ads (đặc biệt là Performance Max) sẽ tự động bị phân bổ thêm vào các truy vấn AI Mode mang tính chất tìm kiếm thông tin ở đầu phễu, làm thay đổi cơ cấu chi phí nhấp chuột và tỷ lệ chuyển đổi cuối cùng.",
+    "ifIgnored": "Doanh nghiệp sẽ lãng phí ngân sách vào các nhấp chuột không tạo ra chuyển đổi ngay do không thể chủ động tắt hiển thị trên AI Mode, dẫn đến cướp ngân sách của các từ khóa mua sắm cốt lõi và làm giảm ROI tổng thể.",
+    "actionChecklist": [
+      "Rà soát lại danh sách từ khóa phủ định trong các chiến dịch Search để chặn các truy vấn tìm kiếm thông tin chung chung do AI Mode kích hoạt.",
+      "Kiểm tra và bổ sung nội dung quảng cáo trên Performance Max để đảm bảo thông điệp phù hợp với người dùng ở giai đoạn nhận thức sản phẩm.",
+      "Theo dõi chặt chẽ biến động chi phí mỗi nhấp chuột và tỷ lệ chuyển đổi của các chiến dịch đang chạy tại khu vực Đông Nam Á.",
+      "Tối ưu hóa trang đích để sẵn sàng giải đáp các thắc mắc chuyên sâu từ lượng người dùng truy cập thông qua các câu hỏi nối tiếp của AI."
+    ],
+    "id": "real-2026-10-28-google-mo-rong-quang-c24f34",
+    "publishedAt": "28/10/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/google-search-growth-slows-again-ai-mode/594862/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/10/google-search-growth-ai-mode-1600x840-1.jpg",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
+    "category": "Meta Ads",
+    "platformIcon": "Facebook",
+    "title": "Meta nâng cấp hạ tầng AI giúp tăng tỷ lệ chuyển đổi và lượt nhấp quảng cáo",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Meta Ads",
+      "Thuật toán AI",
+      "Tối ưu chuyển đổi",
+      "Partnership Ads"
+    ],
+    "summary": "Meta vừa công bố thông tin chi tiết về các hệ thống phân phối quảng cáo mới được cải tiến bằng trí tuệ nhân tạo. Nhờ năng lực xử lý dữ liệu mở rộng, nền tảng này ghi nhận sự gia tăng đáng kể về lượt nhấp và chuyển đổi cho các đối tác quảng cáo trên Facebook.",
+    "keyNumbers": [
+      {
+        "value": "15,7%",
+        "label": "Tăng trưởng chuyển đổi trên Facebook trong Q2 2026"
+      },
+      {
+        "value": "8,3%",
+        "label": "Tăng trưởng lượt nhấp quảng cáo trong Q2 2026"
+      },
+      {
+        "value": "5%",
+        "label": "Tăng chuyển đổi với cùng chi phí nhờ AI Business Assistant"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Nâng cấp mô hình Andromeda gia tăng hiệu suất hiển thị",
+        "body": "Mô hình xếp hạng quảng cáo Andromeda của Meta đã mở rộng khả năng xem xét các sản phẩm tiềm năng cho từng doanh nghiệp. Hệ thống này kết nối sản phẩm phù hợp hơn với sở thích riêng của từng người dùng trên nền tảng. Trong quý 2 năm 2026, các cải tiến hệ thống đã giúp tăng 8,3% lượt nhấp quảng cáo và 15,7% lượt chuyển đổi trên Facebook. Sang quý 3, mô hình Andromeda tiếp tục giúp tăng thêm 1,4% lượt chuyển đổi cho người chạy quảng cáo."
+      },
+      {
+        "heading": "Đột phá từ công nghệ gợi ý GEM và GenRecs",
+        "body": "Mô hình gợi ý quảng cáo tạo sinh GEM hiện có thể xử lý lượng dữ liệu lớn hơn để hiển thị đúng mẫu quảng cáo tới đúng đối tượng. GEM đánh giá lịch sử tương tác quảng cáo của người dùng kết hợp với nhiều tín hiệu dữ liệu mới. Bên cạnh đó, hệ thống GenRecs giúp dự đoán các chương trình khuyến mãi phù hợp nhất cho từng cá nhân. Hệ thống này có khả năng phân phối hiệu quả ngay cả với các nhóm quảng cáo mới tạo chưa có nhiều lịch sử tương tác."
+      },
+      {
+        "heading": "Triển khai truy xuất tạo sinh và trợ lý AI cho doanh nghiệp",
+        "body": "Meta đã chính thức triển khai công nghệ truy xuất tạo sinh trên Facebook Feed trong quý 3. Cải tiến này giúp tăng gần 2% lượt chuyển đổi trên các phân khúc đối tượng được mục tiêu hóa. Ngoài ra, thử nghiệm trợ lý kinh doanh AI cho thấy công cụ này giúp mang lại thêm 5% lượt chuyển đổi ở cùng mức chi phí. Nền tảng này cũng đang phát triển tính năng thanh toán trực tiếp ngay trong các đại lý AI như Muse."
+      },
+      {
+        "heading": "Quảng cáo hợp tác Partnership Ads tăng trưởng vượt bậc",
+        "body": "Hình thức Partnership Ads cho phép thương hiệu chạy quảng cáo cùng các nhà sáng tạo nội dung và đối tác kinh doanh. Trong quý 3, định dạng này ghi nhận mức tăng trưởng hơn 97% so với cùng kỳ năm ngoái. Doanh thu quy mô hàng năm của Partnership Ads hiện đã vượt mốc 15 tỷ USD. Sự kết hợp giữa các trung tâm dữ liệu mới và thuật toán AI đang giúp Meta phân tích xu hướng phản hồi của khách hàng nhanh chóng hơn."
+      }
+    ],
+    "impact": "Tăng hiệu quả chuyển đổi tự nhiên cho các chiến dịch quảng cáo nhờ thuật toán ghép nối AI thông minh hơn, đặc biệt giúp các quảng cáo mới lên camp cắn tiền và tìm đúng đối tượng nhanh hơn mà không phụ thuộc quá nhiều vào lịch sử tài khoản.",
+    "ifIgnored": "Doanh nghiệp sẽ bỏ lỡ cơ hội tối ưu chi phí trên mỗi chuyển đổi (CPA) và có nguy cơ bị tụt hậu so với đối thủ khi không áp dụng các định dạng mới như Partnership Ads hay công cụ trợ lý AI.",
+    "actionChecklist": [
+      "Cập nhật và làm sạch dữ liệu nguồn cấp sản phẩm (product feed) để mô hình Andromeda phân tích chính xác",
+      "Bổ sung định dạng Partnership Ads kết hợp với Creators vào cơ cấu ngân sách thử nghiệm",
+      "Để các chiến dịch mới có đủ thời gian tích lũy tín hiệu dữ liệu cho thuật toán GenRecs học máy",
+      "Theo dõi và đăng ký sử dụng trợ lý AI business assistant ngay khi Meta mở rộng quyền truy cập tại Việt Nam"
+    ],
+    "id": "real-2026-10-28-meta-nang-cap-ha-c59d75",
+    "publishedAt": "28/10/2026",
+    "sourceUrl": "https://www.socialmediatoday.com/news/meta-says-its-expanded-processing-capacity-is-driving-ad-results/873133/",
+    "source": "Social Media Today",
+    "image": {
+      "url": "https://imgproxy.divecdn.com/MfIOTDAv-J0dXBQpKZ-dYPTu48natx1BFWY-QF8sGGA/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9tZXRhX2FkX3JhbmtpbmcyLnBuZw==.webp",
+      "credit": "Ảnh: Social Media Today"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
     "title": "Google cập nhật chính sách riêng tư: Dữ liệu Gmail và Photos bắt đầu tham gia cá nhân hóa quảng cáo trong AI Mode",
     "isHot": false,
     "illustration": "data-signal",
@@ -383,133 +572,6 @@
     }
   },
   {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Google Ads tách quy định an toàn trẻ em thành hai cấp độ phạt từ ngày 11/01/2027",
-    "isHot": true,
-    "illustration": "account-security",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Google Ads",
-      "Chính sách quảng cáo",
-      "Khóa tài khoản",
-      "An toàn trẻ em"
-    ],
-    "summary": "Google Ads chính thức cập nhật chính sách về an toàn trẻ em, tách biệt thành hai nhóm vi phạm với mức xử phạt khác nhau từ ngày 11/01/2027. Vi phạm nghiêm trọng sẽ bị đình chỉ tài khoản ngay lập tức, trong khi các vi phạm nhẹ hơn sẽ nhận được cảnh báo trước ít nhất 7 ngày.",
-    "keyNumbers": [
-      {
-        "value": "11/01/2027",
-        "label": "ngày bắt đầu áp dụng chính sách mới"
-      },
-      {
-        "value": "7 ngày",
-        "label": "thời gian cảnh báo trước khi tạm khóa tài khoản ở cấp độ 2"
-      },
-      {
-        "value": "81 ngày",
-        "label": "thời hạn cho nhà quảng cáo rà soát chiến dịch trước khi phạt"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Tách riêng chính sách An toàn Trẻ em thành quy định độc lập",
-        "body": "Google Ads đã đăng thông báo chính thức vào ngày 22/10/2026 về việc cập nhật điều khoản dịch vụ. Theo đó, chính sách Lạm dụng và bóc lột tình dục trẻ em sẽ được đổi tên thành An toàn Trẻ em và tách khỏi nhóm chính sách Nội dung không phù hợp. Quy định mới sẽ chính thức đi vào hiệu lực thi hành từ ngày 11/01/2027. Google dành ra khoảng thời gian 81 ngày giúp các doanh nghiệp tiến hành kiểm tra lại toàn bộ tài nguyên quảng cáo."
-      },
-      {
-        "heading": "Cấp độ 1: Vi phạm nghiêm trọng bị đình chỉ tài khoản tức thì",
-        "body": "Cấp độ phạt nặng nhất áp dụng cho các hành vi liên quan đến bóc lột hoặc lạm dụng tình dục trẻ em. Ngay khi phát hiện vi phạm thuộc nhóm này, Google sẽ khóa tài khoản quảng cáo ngay lập tức mà không gửi cảnh báo trước. Nhà quảng cáo vi phạm sẽ bị cấm vĩnh viễn việc sử dụng Google Ads. Hệ thống có thể đánh giá vi phạm dựa trên dữ liệu từ mẫu quảng cáo, trang đích và các tài khoản liên quan."
-      },
-      {
-        "heading": "Cấp độ 2: Cảnh báo trước 7 ngày cho các nội dung nhạy cảm",
-        "body": "Cấp độ thứ hai dành cho các nội dung không mang tính bất hợp pháp nhưng có rủi ro bị lạm dụng, ví dụ như hình ảnh khỏa thân của trẻ em không mang tính tình dục. Với các lỗi này, hệ thống sẽ gửi thông báo cảnh báo trước ít nhất 7 ngày cho nhà quảng cáo điều chỉnh trước khi tiến hành khóa tài khoản. Đây là sự thay đổi đáng chú ý giúp các thương hiệu thuộc ngành hàng mẹ và bé hoặc thời trang tránh bị khóa tài khoản đột ngột."
-      },
-      {
-        "heading": "Áp dụng toàn cầu trên mọi định dạng nội dung và hình ảnh AI",
-        "body": "Chính sách An toàn Trẻ em mới sẽ có hiệu lực trên phạm vi toàn cầu và không có ngoại lệ theo quốc gia. Quy định kiểm duyệt bao phủ toàn bộ các định dạng bao gồm văn bản, âm thanh, hình ảnh và video. Các nội dung được tạo bởi trí tuệ nhân tạo (AI), hình ảnh mô phỏng, hoạt hình hay ảnh qua chỉnh sửa Photoshop đều thuộc phạm vi áp dụng. Khái niệm người vị thành niên vẫn được giữ nguyên là bất kỳ ai dưới 18 tuổi."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing cần đặc biệt chú ý nếu doanh nghiệp đang chạy quảng cáo cho các ngành hàng như sản phẩm trẻ em, thời trang đồ bơi, nhiếp ảnh gia đình hoặc sử dụng hình ảnh AI có nhân vật dưới 18 tuổi. Việc nắm rõ hai cấp độ phạt giúp đội ngũ thiết lập quy trình xử lý khủng hoảng trong 7 ngày nếu dính cảnh báo nhẹ, đồng thời loại bỏ triệt để nguy cơ bị khóa sạch hệ thống tài khoản do vi phạm nghiêm trọng.",
-    "ifIgnored": "Doanh nghiệp có thể bị đình chỉ vĩnh viễn toàn bộ các tài khoản Google Ads liên kết nếu vô tình vi phạm các tiêu chuẩn nghiêm trọng, dẫn đến đứt gãy hoàn toàn kênh chuyển đổi quảng cáo tìm kiếm và hiển thị mà không thể phục hồi.",
-    "actionChecklist": [
-      "Rà soát toàn bộ hình ảnh, video có xuất hiện người dưới 18 tuổi trên tất cả chiến dịch đang chạy.",
-      "Kiểm tra cẩn thận các hình ảnh đồ bơi, trang phục trẻ em hoặc tư liệu do AI tạo ra để loại bỏ góc chụp nhạy cảm.",
-      "Xây dựng quy trình phản ứng nhanh 7 ngày cho đội ngũ Marketing để kịp gỡ bỏ quảng cáo khi nhận thông báo vi phạm.",
-      "Hoàn tất việc gỡ bỏ hoặc sửa đổi các mẫu quảng cáo có nguy cơ trước mốc thời gian 11/01/2027."
-    ],
-    "deadline": "11/01/2027",
-    "id": "real-2026-10-25-google-ads-tach-quy-f66e6d",
-    "publishedAt": "25/10/2026",
-    "sourceUrl": "https://ppc.land/google-ads-splits-child-safety-rules-into-two-penalty-tiers-from-january-11/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/size/w1200/2026/10/google-ads-child-safety-two-tier-penalty-red-yellow-card-hourglass.jpg",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Báo cáo IAS cảnh báo 3 chiêu thức gian lận quảng cáo hiển thị và ứng dụng di động",
-    "isHot": false,
-    "illustration": "cpm-auction",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Gian lận quảng cáo",
-      "Lưu lượng ảo",
-      "An toàn thương hiệu",
-      "Quảng cáo hiển thị"
-    ],
-    "summary": "Công ty xác minh quảng cáo Integral Ad Science (IAS) công bố 3 mạng lưới gian lận quy mô lớn gồm Genisys, Papyrus và các ứng dụng máy tính. Các mạng lưới này sử dụng trí tuệ nhân tạo, giả mạo ID ứng dụng và chạy trình duyệt ẩn để tạo ra lượng nhấp chuột cao gấp gần 25 lần bình thường. Việc hiểu rõ các cơ chế gian lận giúp thương hiệu bảo vệ ngân sách khi mua quảng cáo hiển thị.",
-    "keyNumbers": [
-      {
-        "value": "25 lần",
-        "label": "Tỷ lệ nhấp từ ứng dụng đọc sách Papyrus cao bất thường"
-      },
-      {
-        "value": "95%",
-        "label": "Mức giảm lượng đấu giá sau khi gỡ bỏ ứng dụng Genisys"
-      },
-      {
-        "value": "500",
-        "label": "Tên miền do AI tạo ra trong mạng lưới Genisys"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Mạng lưới Genisys dùng AI tạo gần 500 tên miền và giả mạo ID ứng dụng",
-        "body": "Mạng lưới Genisys đã lợi dụng thiết bị di động để tự động tải các trang web ẩn dưới nền mà người dùng không hay biết. Lưu lượng truy cập giả được dẫn qua gần 500 tên miền do AI tạo ra dưới dạng các trang tin tức và blog. Gian lận này sử dụng kỹ thuật giả mạo ID gói ứng dụng để che giấu nguồn gốc thực tế. Nhà quảng cáo đấu giá cho vị trí hiển thị trên ứng dụng phổ biến nhưng thực chất quảng cáo chạy ở nơi khác. Sau khi hợp tác cùng Google, các ứng dụng vi phạm đã bị vô hiệu hóa, giúp lượng yêu cầu đấu giá giảm hơn 95%."
-      },
-      {
-        "heading": "Ứng dụng Papyrus ẩn trình duyệt tạo nhấp chuột ảo tiêu tốn 1 triệu USD mỗi tháng",
-        "body": "Mạng lưới Papyrus nhúng một trình duyệt ẩn phía sau các ứng dụng đọc tiểu thuyết trên thiết bị di động. Trình duyệt này tự động tải trang web và nhấp vào quảng cáo ngoài tầm nhìn của người dùng. Tỷ lệ nhấp chuột từ ứng dụng này chạy cao gấp gần 25 lần so với lưu lượng truy cập thông thường. Mô hình gian lận Papyrus ước tính tiêu tốn khoảng 1 triệu USD chi phí quảng cáo mỗi tháng."
-      },
-      {
-        "heading": "Ứng dụng máy tính tự động làm mới quảng cáo khi bị ẩn hoặc khóa màn hình",
-        "body": "Nghiên cứu của IAS cho thấy nhiều ứng dụng máy tính liên tục làm mới quảng cáo ngay cả khi bị thu nhỏ hoặc màn hình bị khóa. Các nhà phát triển đã tắt tính năng tiết kiệm tài nguyên nền của Chromium đối với khung hiển thị quảng cáo để giữ bộ đếm thời gian chạy liên tục. Một ứng dụng đã tạo yêu cầu quảng cáo trên 1 tên miền chính và 4 tên miền phụ liên kết để giả làm lượt truy cập tự nhiên. Ngoài ra, việc ghi đè tiêu đề Client Hint khiến lưu lượng gian lận nhìn giống hệt trình duyệt Chrome thông thường."
-      },
-      {
-        "heading": "Tác động của gian lận quảng cáo đến hoạt động mua Programmatic Ads",
-        "body": "Các thủ thuật gian lận hiện đại kết hợp trí tuệ nhân tạo và trình duyệt ẩn để mô phỏng hành vi người dùng thật. Doanh nghiệp mua quảng cáo hiển thị qua các mạng lưới tự động có rủi ro chi trả cho lượt xem và lượt nhấp không có thực. Mặc dù một số mạng lưới gian lận đã bị ngăn chặn, rủi ro từ việc giả mạo ID và sửa đổi Client Hint vẫn tồn tại. Trưởng phòng Marketing cần chủ động rà soát hệ thống xác minh để tránh thất thoát ngân sách."
-      }
-    ],
-    "impact": "Giúp Trưởng phòng Marketing nhận diện các hình thức gian lận quảng cáo qua ứng dụng ẩn và AI, từ đó chủ động loại bỏ các vị trí hiển thị kém chất lượng.",
-    "ifIgnored": "Doanh nghiệp lãng phí ngân sách cho các lượt xem và nhấp chuột ảo, dẫn đến sai lệch dữ liệu chuyển đổi và giảm hiệu quả chiến dịch quảng cáo.",
-    "actionChecklist": [
-      "Cấu hình công cụ xác minh quảng cáo để lọc lưu lượng truy cập không hợp lệ.",
-      "Rà soát và loại bỏ các vị trí quảng cáo có tỷ lệ nhấp chuột cao bất thường.",
-      "Giới hạn danh sách các ứng dụng và tên miền được phép hiển thị quảng cáo.",
-      "Yêu cầu các đối tác ad-network minh bạch dữ liệu ID ứng dụng và Client Hint."
-    ],
-    "id": "real-2026-10-25-bao-cao-ias-canh-c8b58d",
-    "publishedAt": "25/10/2026",
-    "sourceUrl": "https://ppc.land/hidden-reading-app-clicks-ran-nearly-25x-above-other-traffic-ias-says/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/size/w1200/2026/10/ias-papyrus-reading-app-hidden-clicks-puppeteer-hand-novel.jpg",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
     "category": "AI Marketing",
     "platformIcon": "Sparkles",
     "title": "X công bố hướng dẫn tối ưu quảng cáo mùa lễ hội và khuyến nghị cho thuật toán AI",
@@ -628,68 +690,6 @@
     "source": "Social Media Today",
     "image": {
       "url": "https://imgproxy.divecdn.com/_qCZFatzkmrQT81320LquVewz1MFOBUNAXrQJC5FJB4/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9tZXRhX2FwcHMucG5n.webp",
-      "credit": "Ảnh: Social Media Today"
-    }
-  },
-  {
-    "category": "AI Marketing",
-    "platformIcon": "Sparkles",
-    "title": "Nghiên cứu mới từ YouTube về cách nhà sáng tạo ứng dụng trí tuệ nhân tạo trong video",
-    "isHot": "false",
-    "illustration": "ai-video",
-    "readTime": "3 phút đọc",
-    "tags": [
-      "AI Marketing",
-      "YouTube",
-      "Sáng tạo nội dung"
-    ],
-    "summary": "YouTube công bố báo cáo mới từ nghiên cứu thực hiện bởi NRG về xu hướng ứng dụng trí tuệ nhân tạo của những người đăng tải video. Dữ liệu cho thấy tỷ lệ lớn nhà sáng tạo quan tâm đến việc sử dụng công nghệ này để đưa chính mình vào nội dung video.",
-    "keyNumbers": [
-      {
-        "value": "700",
-        "label": "số người được khảo sát"
-      },
-      {
-        "value": "61%",
-        "label": "muốn đưa bản thân vào AI"
-      },
-      {
-        "value": "72%",
-        "label": "người đăng video dùng AI"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Nghiên cứu mới về công cụ AI trên YouTube",
-        "body": "YouTube vừa công bố một báo cáo mới trong chuỗi Culture & Trends, tìm hiểu cách các nhà sáng tạo tích hợp công cụ trí tuệ nhân tạo vào quy trình làm việc. Báo cáo này bao gồm các xu hướng sử dụng AI từ những người thường xuyên tải video lên nền tảng trực tuyến."
-      },
-      {
-        "heading": "Khảo sát hành vi của nhà sáng tạo",
-        "body": "Nghiên cứu được thực hiện thông qua việc ủy quyền cho NRG khảo sát gần 700 người trong độ tuổi từ 14 đến 44. Tất cả các đối tượng này đều đã đăng ít nhất một video trực tuyến trong khoảng thời gian 12 tháng gần đây để tìm hiểu về cách họ sử dụng công cụ AI."
-      },
-      {
-        "heading": "Xu hướng đưa bản thân vào nội dung video",
-        "body": "Dữ liệu cho thấy 61% số người đã đăng video trong 12 tháng qua thể hiện sự quan tâm đến việc sử dụng AI để đưa chính bản thân họ vào nội dung video. Đây là cách thức phổ biến nhất được nhóm khảo sát sử dụng để thay đổi bối cảnh hoặc làm mới video."
-      },
-      {
-        "heading": "Tỷ lệ sử dụng công nghệ AI tổng quát",
-        "body": "Có tới 72% những người đăng video, thuộc nhóm tuổi từ 14 đến 44 trong khảo sát, cho biết họ đang sử dụng AI trên các video hoặc hình ảnh của mình. Họ dùng công nghệ này để thay đổi trang phục kỹ thuật số, đóng các vai trò khác nhau hoặc khám phá những cách tiếp cận mới cho đam mê cá nhân."
-      }
-    ],
-    "impact": "Giúp Trưởng phòng Marketing nắm bắt xu hướng người dùng ứng dụng AI tạo sinh vào video để điều chỉnh chiến lược nội dung sáng tạo cho thương hiệu.",
-    "ifIgnored": "Bỏ lỡ cơ hội thấu hiểu hành vi làm video bằng AI của nhóm sáng tạo trẻ, dẫn đến việc sản xuất nội dung thiếu tính cập nhật và kém thu hút trên nền tảng.",
-    "actionChecklist": [
-      "Khảo sát các công cụ AI tạo sinh video hiện có trên thị trường",
-      "Đánh giá khả năng áp dụng hình ảnh cá nhân hóa vào chiến dịch video",
-      "Thử nghiệm tính năng tạo hình ảnh và bối cảnh bằng AI cho sản phẩm",
-      "Theo dõi sát sao các quy định và nhãn dán nội dung AI trên nền tảng"
-    ],
-    "id": "real-2026-10-21-nghien-cuu-moi-tu-d1e976",
-    "publishedAt": "21/10/2026",
-    "sourceUrl": "https://www.socialmediatoday.com/news/youtube-shares-data-on-how-creators-are-using-ai/833657/",
-    "source": "Social Media Today",
-    "image": {
-      "url": "https://imgproxy.divecdn.com/VtA4S00nbK3fkhZisR_oRdSWiAD_SQr6kDJG4iDSOoI/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS95b3V0dWJlX2N1bHR1cmVfYW5kX3RyZW5kc19BSS5wbmc=.webp",
       "credit": "Ảnh: Social Media Today"
     }
   },
