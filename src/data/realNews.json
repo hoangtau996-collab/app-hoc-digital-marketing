@@ -2,6 +2,191 @@
   {
     "category": "Google Ads & SEO",
     "platformIcon": "Search",
+    "title": "Google chia sẻ thay đổi hành vi tìm kiếm trong AI Mode và định hướng Google Ads cho 2027",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Google Ads",
+      "AI Search",
+      "Hành vi người dùng",
+      "Chiến lược 2027"
+    ],
+    "summary": "Dữ liệu mới từ Google cho thấy người dùng đang đặt các câu hỏi dài hơn và bắt đầu quá trình nghiên cứu sản phẩm sớm hơn thông qua AI Mode. Mặc dù công cụ AI giúp tóm tắt thông tin nhanh chóng, người tìm kiếm vẫn có nhu cầu cao đối với các nội dung mang góc nhìn và trải nghiệm thực tế từ con người.",
+    "keyNumbers": [
+      {
+        "value": "Gấp 3 lần",
+        "label": "Độ dài câu truy vấn trong AI Mode so với tìm kiếm truyền thống"
+      },
+      {
+        "value": "Hơn 1/6",
+        "label": "Tỷ lệ tìm kiếm AI Mode tại Mỹ sử dụng tính năng đa phương thức"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Hành vi tìm kiếm trở nên hội thoại và dịch chuyển lên đầu phễu",
+        "body": "Người dùng Google đang đặt các câu hỏi dài gấp 3 lần so với tìm kiếm truyền thống khi sử dụng AI Mode. Ngoài ra, hơn 1/6 số lượt tìm kiếm AI Mode tại Mỹ hiện đã mang tính đa phương thức, kết hợp cả hình ảnh và giọng nói. Điều này cho phép người dùng đưa vào các chi tiết cá nhân và làm rõ những quyết định phức tạp ngay trong lúc tìm kiếm. Quá trình khám phá thương hiệu do đó đang dịch chuyển mạnh lên phần trên của phễu bán hàng."
+      },
+      {
+        "heading": "Người dùng vẫn tìm kiếm góc nhìn thực tế từ con người",
+        "body": "Mặc dù người dùng đánh giá cao sự rõ ràng của các tóm tắt AI, họ vẫn chủ động tìm kiếm thông tin chi tiết và góc nhìn thực tế từ con người. Các kênh như diễn đàn, podcast và video đánh giá tiếp tục là nơi khách hàng nghiên cứu trước khi quyết định. Khách hàng không chỉ muốn đọc mô tả tính năng mà muốn biết sản phẩm hoạt động ra sao trong thực tế. Việc chỉ lặp lại nội dung quảng cáo trên video sẽ không mang lại thêm giá trị cho người mua."
+      },
+      {
+        "heading": "Đánh giá lại ý định mua hàng từ các câu truy vấn dài",
+        "body": "Các câu hỏi dài hơn giúp nhà quảng cáo nắm bắt rõ nhu cầu của khách hàng trước khi họ biết tới tên sản phẩm cụ thể. Tuy nhiên, chỉ riêng độ dài câu hỏi chưa phản ánh ý định mua hàng mạnh hơn hay tỷ lệ chuyển đổi cao hơn. Đội ngũ tiếp thị cần rà soát lại các thắc mắc lặp đi lặp lại của khách hàng để thử nghiệm các thông điệp quảng cáo phù hợp. Việc giải quyết đúng nhu cầu ban đầu sẽ giúp dẫn dắt người tìm kiếm đi sâu hơn vào phễu chuyển đổi."
+      },
+      {
+        "heading": "Tối ưu hóa trang đích và nội dung hỗ trợ quyết định",
+        "body": "Nhà quảng cáo cần rà soát lại trang đích để đảm bảo cung cấp đủ thông tin về giá cả, độ tương thích, cách cài đặt và hạn chế của sản phẩm. Nếu người dùng cần giải đáp những câu hỏi này trước khi mua, thông tin phải được hiển thị rõ ràng và dễ tìm. Bổ sung các liên kết đến video trải nghiệm thực tế hoặc câu chuyện khách hàng ngay trên trang đích sẽ củng cố niềm tin. Đội ngũ tiếp thị cũng cần theo dõi hành trình người dùng dài hạn thay vì chỉ dựa vào chỉ số nhấp chuột ngắn hạn."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing cần thay đổi tư duy cấu trúc chiến dịch Google Ads, chuyển hướng ngân sách từ việc chỉ tập trung vào các từ khóa tên sản phẩm ở cuối phễu sang việc phủ các câu hỏi khám phá ở đầu phễu, đồng thời phải nâng cấp chất lượng trang đích bằng nội dung trải nghiệm thực tế.",
+    "ifIgnored": "Doanh nghiệp sẽ tiếp tục lãng phí ngân sách đấu thầu các từ khóa ngắn đắt đỏ ở cuối phễu nhưng bỏ lỡ khách hàng ngay từ giai đoạn tìm kiếm ban đầu, dẫn đến tỷ lệ chuyển đổi giảm sút khi người dùng chuyển sang tìm kiếm hội thoại bằng AI.",
+    "actionChecklist": [
+      "Rà soát báo cáo từ khóa tìm kiếm trong Google Ads để phát hiện các câu hỏi dạng hội thoại dài của khách hàng.",
+      "Cập nhật thông điệp quảng cáo tập trung giải quyết vấn đề cụ thể thay vì chỉ nhắc lại tên tính năng.",
+      "Bổ sung thông tin chi tiết về giá, độ tương thích và hạn chế sản phẩm trực tiếp lên các trang đích chính.",
+      "Tích hợp video đánh giá thực tế và câu chuyện khách hàng vào trang đích để tăng tỷ lệ thuyết phục."
+    ],
+    "id": "real-2026-10-29-google-chia-se-thay-15d89d",
+    "publishedAt": "29/10/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/google-search-behavior-shifts-2027-ads-strategy/594971/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/10/ads-decoded_10.26-376.jpg",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
+    "category": "Meta Ads",
+    "platformIcon": "Facebook",
+    "title": "Meta công bố hiệu quả từ hệ thống AI và năng lực xử lý dữ liệu mới",
+    "isHot": false,
+    "illustration": "ai-budget",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Meta Ads",
+      "Trí tuệ nhân tạo",
+      "Tối ưu chiến dịch",
+      "Hiệu suất quảng cáo"
+    ],
+    "summary": "Meta chia sẻ những dữ liệu mới về hệ thống phân phối quảng cáo được vận hành bởi trí tuệ nhân tạo. Các cải tiến kỹ thuật giúp gia tăng đáng kể số lượng nhấp chuột và tỷ lệ chuyển đổi trên nền tảng Facebook.",
+    "keyNumbers": [
+      {
+        "value": "8,3%",
+        "label": "Tăng lượt nhấp chuột trên Facebook trong quý 2 năm 2026"
+      },
+      {
+        "value": "15,7%",
+        "label": "Tăng tỷ lệ chuyển đổi trên Facebook trong quý 2 năm 2026"
+      },
+      {
+        "value": "97%",
+        "label": "Tăng trưởng doanh thu quảng cáo hợp tác theo năm trong quý 3"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Cải tiến hệ thống xếp hạng quảng cáo Andromeda",
+        "body": "Meta đã nâng cấp hệ thống xếp hạng quảng cáo Andromeda trong bước đầu tiên của quy trình hiển thị. Hệ thống này hiện có khả năng xem xét phạm vi sản phẩm tiềm năng rộng hơn cho mỗi doanh nghiệp. Các sản phẩm được căn chỉnh tốt hơn với sở thích của từng người dùng để tạo ra cơ hội khớp nối chính xác. Nhờ vậy, hiệu suất phân phối quảng cáo được cải thiện rõ rệt dựa trên sự thấu hiểu hành vi."
+      },
+      {
+        "heading": "Ứng dụng mô hình đề xuất quảng cáo tạo sinh GEM và GenRecs",
+        "body": "Mô hình đề xuất quảng cáo tạo sinh GEM có khả năng xử lý lượng dữ liệu lớn hơn để hiển thị quảng cáo phù hợp. GEM đánh giá lịch sử tương tác quảng cáo của từng người dùng với nhiều tín hiệu hơn. Bên cạnh đó, hệ thống GenRecs giúp dự đoán các chương trình khuyến mãi phù hợp ngay cả với các quảng cáo hoàn toàn mới chưa có nhiều lịch sử tương tác. Các công nghệ này giúp nâng cao độ chính xác trong việc tiếp cận khách hàng mục tiêu."
+      },
+      {
+        "heading": "Hiệu suất chuyển đổi cụ thể trong quý 3",
+        "body": "Trong quý 3, những cải tiến đối với mô hình Andromeda đã giúp tăng tỷ lệ chuyển đổi thêm 1,4% trên Facebook. Cùng kỳ này, Meta đã ra mắt tính năng truy xuất tạo sinh trên Bảng tin Facebook. Tính năng này mang lại mức tăng gần 2% về tỷ lệ chuyển đổi trên các phân khúc được nhắm mục tiêu. Năng lực phân tích dữ liệu mở rộng giúp hệ thống đánh giá hành động nhanh hơn để cải thiện hiệu suất."
+      },
+      {
+        "heading": "Trợ lý AI và sự bùng nổ của quảng cáo hợp tác",
+        "body": "Trợ lý kinh doanh AI của Meta đang được triển khai dần tới các nhà quảng cáo và ghi nhận hiệu suất khả quan. Công cụ này mang lại thêm 5% tỷ lệ chuyển đổi với cùng một mức chi phí. Ngoài ra, quảng cáo hợp tác với các nhà sáng tạo đã tăng trưởng hơn 97% so với cùng kỳ năm trước trong quý 3. Hình thức này hiện đã vượt mốc doanh thu địnhrun-rate hàng năm là 15 tỷ đô la Mỹ."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing cần nắm bắt các chỉ số tăng trưởng chuyển đổi từ hệ thống AI của Meta để điều chỉnh kỳ vọng ngân sách. Việc Meta cải thiện mô hình nhắm mục tiêu và phân phối giúp tối ưu hóa hiệu quả chiến dịch mà không cần thay đổi thủ công quá nhiều.",
+    "ifIgnored": "Nếu bỏ qua các cập nhật này, đội ngũ marketing có thể tiếp tục áp dụng cách thiết lập chiến dịch cũ, bỏ lỡ cơ hội tận dụng mô hình AI mới để gia tăng tỷ lệ chuyển đổi và giảm chi phí.",
+    "actionChecklist": [
+      "Đánh giá lại hiệu suất chiến dịch trên Facebook sau các cập nhật thuật toán mới",
+      "Thử nghiệm các mẫu quảng cáo mới ngay cả khi chưa có nhiều lịch sử tương tác",
+      "Xem xét mở rộng hợp tác với các nhà sáng tạo nội dung để tận dụng kênh quảng cáo hợp tác",
+      "Theo dõi tiến trình tiếp cận trợ lý kinh doanh AI của Meta để tối ưu hóa chi phí"
+    ],
+    "id": "real-2026-10-29-meta-cong-bo-hieu-eb7617",
+    "publishedAt": "29/10/2026",
+    "sourceUrl": "https://www.marketingdive.com/news/sociable-meta-says-its-expanded-processing-capacity-is-driving-ad-results/873191/",
+    "source": "Marketing Dive",
+    "image": {
+      "url": "https://imgproxy.divecdn.com/MfIOTDAv-J0dXBQpKZ-dYPTu48natx1BFWY-QF8sGGA/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9tZXRhX2FkX3JhbmtpbmcyLnBuZw==.webp",
+      "credit": "Ảnh: Marketing Dive"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Tốc độ tăng trưởng doanh thu quảng cáo Google Search giảm tốc dù lưu lượng tìm kiếm tăng mạnh nhờ AI Mode",
+    "isHot": false,
+    "illustration": "zero-click",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Google Ads",
+      "AI Mode",
+      "Doanh thu quảng cáo",
+      "Xu hướng tìm kiếm"
+    ],
+    "summary": "Google ghi nhận mức tăng trưởng doanh thu quảng cáo Search giảm tốc trong quý III xuống còn 12% do sự bùng nổ của AI Mode mang lại khả năng kiếm tiền thấp hơn. Cùng lúc đó, các đối thủ như OpenAI và Meta đang gia tăng áp lực cạnh tranh bằng các công cụ quảng cáo và tác nhân mua sắm mới.",
+    "keyNumbers": [
+      {
+        "value": "12%",
+        "label": "Tăng trưởng doanh thu Search quý III 2026"
+      },
+      {
+        "value": "63,4 tỷ USD",
+        "label": "Doanh thu Google Search trong quý"
+      },
+      {
+        "value": "51,4 tỷ USD",
+        "label": "Chi phí đầu tư AI trong quý III"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Doanh thu quảng cáo Search tăng trưởng chậm lại",
+        "body": "Tốc độ tăng trưởng doanh thu quảng cáo cho các dịch vụ cốt lõi của Google là Search và YouTube đã giảm tốc trong quý III so với cùng kỳ năm trước. Trong khi tìm kiếm và YouTube từng tăng trưởng doanh thu quảng cáo 15% trong quý III 2025, các phân khúc này chỉ ghi nhận mức tăng lần lượt là 12% và 9% trong quý III 2026. Tổng doanh thu quảng cáo của Google tăng 10,6% tính đến kỳ kết thúc vào ngày 30 tháng 9. Doanh thu từ tìm kiếm đạt 63,4 tỷ USD, vẫn là mảng kinh doanh lớn nhất của Google."
+      },
+      {
+        "heading": "Sự dịch chuyển hành vi sang AI Mode",
+        "body": "Các lãnh đạo Google nhấn mạnh sức hút của các dịch vụ tích hợp trí tuệ nhân tạo như AI Mode đang dẫn đến hành vi tìm kiếm dài hơn và phức tạp hơn. Điều này tạo ra nhiều cơ hội tiếp thị ở phễu trên hơn và thúc đẩy khối lượng tìm kiếm đạt mức tăng trưởng nhanh nhất trong năm năm qua. Tuy nhiên, sự bùng nổ của các truy vấn AI Mode lại đi kèm với mức độ kiếm tiền thấp hơn, gây ra khoảng cách giữa hoạt động tìm kiếm và doanh thu. Google đang mở rộng dịch vụ quảng cáo AI Mode ra quốc tế và đưa định dạng quảng cáo đa lượt sang Hoa Kỳ."
+      },
+      {
+        "heading": "Áp lực cạnh tranh từ các nền tảng khác",
+        "body": "Google Search đang phải đối mặt với những thách thức cạnh tranh mới khi OpenAI nhanh chóng xây dựng mảng kinh doanh quảng cáo cho ChatGPT. Trong khi đó, Meta đang tăng cường sự tập trung vào tác nhân Muse hướng đến người tiêu dùng. Các dịch vụ dạng tác nhân của Google bao gồm Giỏ hàng Mua sắm Universal mới giúp người dùng lưu sản phẩm, theo dõi khuyến mãi và mua hàng từ nhiều nhà bán lẻ khác nhau. Giỏ hàng này đã bắt đầu được triển khai tại Hoa Kỳ vào đầu tháng."
+      },
+      {
+        "heading": "Chi phí đầu tư khổng lồ vào AI",
+        "body": "Google là một trong số các công ty công nghệ phải đối mặt với áp lực lớn hơn trong việc chứng minh các khoản đầu tư khổng lồ vào AI. Chi phí vốn đạt 51,4 tỷ USD trong quý III trong khi dòng tiền tự do âm ở mức 9,1 tỷ USD. Công ty cho biết chi phí vốn dự kiến sẽ đạt từ 195 tỷ USD đến 205 tỷ USD trong năm nay và sẽ tiếp tục tăng đáng kể vào năm 2027. Điều này phản ánh chiến lược dài hạn của hãng trong việc tái định hình trải nghiệm tìm kiếm."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing cần lưu ý rằng lưu lượng tìm kiếm chuyển dịch sang AI Mode đang mang lại hiệu quả kiếm tiền thấp hơn cho Google, dẫn đến những thay đổi về định dạng quảng cáo và chi phí. Việc các đối thủ như OpenAI và Meta thúc đẩy công cụ mua sắm và quảng cáo riêng đòi hỏi chiến lược phân bổ ngân sách đa nền tảng linh hoạt hơn.",
+    "ifIgnored": "Nếu bỏ qua xu hướng này, nhà quản lý có thể tiếp tục phân bổ ngân sách theo mô hình tìm kiếm truyền thống mà không tối ưu hóa cho các định dạng quảng cáo đa lượt và hành vi tìm kiếm mới của AI Mode, dẫn đến việc bỏ lỡ các cơ hội tiếp cận khách hàng ở phễu trên.",
+    "actionChecklist": [
+      "Đánh giá lại hiệu quả chiến dịch Google Search dưới sự ảnh hưởng của lưu lượng truy cập AI Mode",
+      "Theo dõi sát sao tác động của định dạng quảng cáo đa lượt mới đối với chi phí chuyển đổi",
+      "Chuẩn bị ngân sách và chiến lược thử nghiệm cho các công cụ quảng cáo mới từ các đối thủ AI cạnh tranh",
+      "Tối ưu hóa nội dung phễu trên để đón đầu hành vi tìm kiếm dài và phức tạp hơn của người dùng"
+    ],
+    "id": "real-2026-10-29-toc-do-tang-truong-4a5a4b",
+    "publishedAt": "29/10/2026",
+    "sourceUrl": "https://www.marketingdive.com/news/googles-ai-overhaul-of-search-hits-snags-as-ad-revenue-growth-cools/873150/",
+    "source": "Marketing Dive",
+    "image": {
+      "url": "https://imgproxy.divecdn.com/dLRdUulL1iEvNR4mkfzoqdf69qwsi7EgY7J1R6PNB0A/g:nowe:0:75/c:1024:578/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMTY2NjcxNDgyLmpwZw==.webp",
+      "credit": "Ảnh: Marketing Dive"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
     "title": "Tăng trưởng quảng cáo Google chậm lại còn 10,5% do AI Mode thu hẹp diện tích hiển thị",
     "isHot": false,
     "illustration": "cpm-auction",
@@ -383,132 +568,6 @@
     }
   },
   {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Pinterest mở bán quảng cáo lập trình qua Google DV360 và Amazon DSP tại Châu Á - Thái Bình Dương",
-    "isHot": false,
-    "illustration": "cpm-auction",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Programmatic Ads",
-      "Pinterest Ads",
-      "Google DV360",
-      "Amazon Ads"
-    ],
-    "summary": "Pinterest chính thức cho phép mua vị trí quảng cáo hiển thị và video thông qua các nền tảng DSP phổ biến như Google Display & Video 360 và Amazon Ads DVA+. Tính năng Programmatic Deals này hiện đã khả dụng rộng rãi tại khu vực Châu Á - Thái Bình Dương, Bắc Mỹ và Nam Mỹ. Thay đổi giúp các doanh nghiệp lớn dễ dàng tích hợp quảng cáo Pinterest vào kế hoạch truyền thông và hệ thống đo lường tập trung.",
-    "keyNumbers": [
-      {
-        "value": "0,23 USD",
-        "label": "ARPU trung bình của Pinterest ở phần còn lại thế giới trong Q2/2026"
-      },
-      {
-        "value": "87,0 triệu USD",
-        "label": "Doanh thu khu vực còn lại thế giới của Pinterest trong Q2/2026, tăng 38%"
-      },
-      {
-        "value": "465,1 triệu USD",
-        "label": "Giá trị thương vụ Pinterest thâu tóm tvScientific hoàn tất vào 17/02/2026"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Pinterest mở rộng kênh bán quảng cáo qua các DSP bên ngoài",
-        "body": "Pinterest công bố triển khai chính thức tính năng Programmatic Deals tại Bắc Mỹ, Nam Mỹ và Châu Á - Thái Bình Dương. Sản phẩm này đưa các vị trí hiển thị và video chọn lọc của Pinterest vào hệ thống DSP mà các nhà quảng cáo doanh nghiệp đang sử dụng. Điều này cho phép doanh nghiệp phân bổ ngân sách và đo lường quảng cáo Pinterest đồng bộ cùng các kênh truyền thông khác. Tuy nhiên, dịch vụ chưa hỗ trợ tự phục vụ và người mua phải liên hệ đại diện bán hàng của Pinterest."
-      },
-      {
-        "heading": "Hạ tầng cung ứng từ Magnite và Google Ad Manager",
-        "body": "Magnite đóng vai trò đối tác hạ tầng cung ứng chính giúp kết nối dữ liệu người dùng và kho quảng cáo của Pinterest tới các nền tảng mua. Tại khu vực Châu Á - Thái Bình Dương và Mỹ La-tinh, Pinterest làm việc cùng Google Ad Manager để mở rộng quyền truy cập lập trình. Việc kết nối tín hiệu định hướng hành vi người dùng từ Pinterest sang nền tảng open web của Magnite hứa hẹn tối ưu hóa hiệu quả chiến dịch. Trước đó, Pinterest từng ký hợp tác hiển thị quảng cáo do Google cung cấp từ tháng 02/2024."
-      },
-      {
-        "heading": "Các nền tảng DSP hỗ trợ và chiến lược đấu giá",
-        "body": "Người mua quảng cáo hiện có thể tiếp cận kho hiển thị của Pinterest qua Amazon Ads DVA+, Google Display & Video 360, Yahoo DSP và DeepIntent. Pinterest không công bố bảng giá cụ thể hay các điều khoản giao dịch chi tiết cho từng vị trí quảng cáo. Danh sách đối tác DSP này vẫn chưa khép lại và có thể tiếp tục bổ sung thêm. Việc mở rộng nền tảng mua nhằm mục đích gia tăng số lượng người mua cạnh tranh đấu giá cho cùng một vị trí hiển thị."
-      },
-      {
-        "heading": "Tổ chức nhân sự hợp nhất mảng programmatic và CTV",
-        "body": "Nỗ lực thương mại hóa này được dẫn dắt bởi Jason Fairchild, Tổng quản lý mảng Programmatic & Affiliate tại Pinterest. Ông đồng thời là CEO của tvScientific, nền tảng quảng cáo TV kết nối mà Pinterest mua lại vào ngày 17/02/2026 với giá 465,1 triệu USD. Cơ cấu này đưa toàn bộ mảng programmatic, affiliate và TV thông minh về dưới sự điều hành của một lãnh đạo duy nhất. Quyết định hướng tới mục tiêu mở rộng quy mô chuyển đổi từ nhu cầu tìm kiếm ý tưởng của người dùng."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing tại Việt Nam có thể gộp ngân sách Pinterest vào các hệ thống mua programmatic tập trung như Google DV360, giúp đo lường hiệu quả đa kênh đồng bộ và giảm bớt thao tác quản lý chiến dịch rời rạc.",
-    "ifIgnored": "Bỏ lỡ phương thức mua quảng cáo tối ưu chi phí đấu giá cho thị trường APAC, đồng thời tạo ra lỗ hổng trong việc hợp nhất dữ liệu đo lường chiến dịch đa kênh trên cùng một công cụ.",
-    "actionChecklist": [
-      "Liên hệ đại diện bán hàng Pinterest để yêu cầu mở quyền truy cập Programmatic Deals",
-      "Rà soát thiết lập trên Google Display & Video 360 hoặc Amazon Ads DVA+ để sẵn sàng kết nối nguồn cung Pinterest",
-      "Đánh giá lại ngân sách phân bổ cho các chiến dịch hiển thị và video tại thị trường APAC",
-      "Cập nhật luồng báo cáo đa kênh để theo dõi hiệu quả quảng cáo Pinterest chung với các kênh programmatic khác"
-    ],
-    "id": "real-2026-10-26-pinterest-mo-ban-quang-5acad6",
-    "publishedAt": "26/10/2026",
-    "sourceUrl": "https://ppc.land/pinterest-sells-ads-through-amazon-and-google-dsps-in-3-regions-not-europe/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/size/w1200/2026/10/pinterest-programmatic-deals-dsp-walled-garden-three-gates-open.jpg",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Google và OpenAI phát triển Generative UI: Xu hướng AI tự tạo giao diện giữ chân người dùng",
-    "isHot": false,
-    "illustration": "zero-click",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Google SEO",
-      "Generative UI",
-      "AI Search",
-      "Zero Click"
-    ],
-    "summary": "Google và OpenAI đang phát triển công nghệ Generative UI, cho phép AI tự động thiết kế giao diện tương tác trực tiếp trong câu trả lời tìm kiếm thay vì dẫn liên kết về website. Xu hướng này có nguy cơ biến Google thành một nền tảng trung gian thu phí hoặc hoa hồng tương tự mô hình Booking.com.",
-    "keyNumbers": [
-      {
-        "value": "2,5 tỷ",
-        "label": "người dùng hàng tháng của Google AI Overviews"
-      },
-      {
-        "value": "1,2 tỷ",
-        "label": "người dùng hàng tuần của ChatGPT"
-      },
-      {
-        "value": "1 tỷ",
-        "label": "người dùng hàng tháng của Google AI Mode"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Cơ chế hoạt động của Generative UI trên Google và ChatGPT",
-        "body": "Google và OpenAI đã bắt đầu triển khai các giao diện AI động do máy tính tự tạo ngay trong kết quả tìm kiếm. Thay vì chỉ trả về văn bản hoặc danh sách liên kết, AI sẽ tự viết mã hoặc lắp ghép các linh kiện để tạo ra công cụ tính toán, biểu đồ, bản đồ và nút bấm tương tác. Ngày 19/08/2026, Google chính thức mở rộng Generative UI trên AI Mode toàn cầu bằng tiếng Anh và bắt đầu thử nghiệm trong AI Overviews. Trước đó, ngày 07/10/2026, OpenAI cũng ra mắt Intelligent UI trên GPT-6 cho người dùng ChatGPT."
-      },
-      {
-        "heading": "Nguy cơ biến các nền tảng tìm kiếm thành chợ trung gian",
-        "body": "Mục tiêu cốt lõi của Generative UI là giữ người dùng ở lại trên nền tảng lâu hơn hoặc hoàn thành toàn bộ tác vụ mà không cần truy cập website gốc. Nếu các dữ liệu sản phẩm, phòng khách sạn hay giờ mở cửa được đưa trực tiếp vào giao diện AI, Google có thể chuyển mình thành một nền tảng dịch vụ như Booking.com. Doanh nghiệp khi đó sẽ đứng trước lựa chọn chấp nhận trả phí hoa hồng hoặc chi tiêu quảng cáo để thu về đơn hàng ngay trên giao diện của Google."
-      },
-      {
-        "heading": "Thực trạng dữ liệu doanh nghiệp trên giao diện AI hiện tại",
-        "body": "Hiện tại, các ví dụ do Google và OpenAI công bố mới chỉ dừng lại ở công cụ học tập, tính toán hoặc mô phỏng dựa trên dữ liệu sẵn có của mô hình AI. Chưa có bằng chứng cho thấy dữ liệu riêng của các website bán lẻ hay dịch vụ được hiển thị trực tiếp bên trong các giao diện động này. Google vẫn duy trì các liên kết nổi bật dẫn đến nguồn web bên cạnh giao diện AI, nhưng quảng cáo hiển thị trong AI Overviews và AI Mode đã được bắt đầu thử nghiệm từ năm 2025."
-      },
-      {
-        "heading": "Sự nâng cấp mô hình AI hỗ trợ khả năng lập trình giao diện",
-        "body": "Khả năng tạo giao diện tức thì phụ thuộc rất lớn vào năng lực viết mã của mô hình ngôn ngữ lớn. Google đang phát triển mô hình Gemini 4 và đã giới thiệu bản thử nghiệm Gemini 4 Argon vào ngày 30/09 nhằm thu hẹp khoảng cách về lập trình tự động. Việc nâng cao năng lực viết mã giúp AI xây dựng các công cụ phức tạp hơn ngay trên trang kết quả tìm kiếm, củng cố thêm xu hướng tìm kiếm không lượt nhấp."
-      }
-    ],
-    "impact": "Lưu lượng truy cập tự nhiên từ tìm kiếm Google có nguy cơ sụt giảm mạnh khi người dùng hoàn tất thao tác trực tiếp trên giao diện AI. Trưởng phòng Marketing cần chuẩn bị tinh thần dịch chuyển ngân sách sang quảng cáo trên AI Search hoặc chấp nhận mô hình chia sẻ hoa hồng nền tảng.",
-    "ifIgnored": "Doanh nghiệp sẽ hoàn toàn bị động và mất nguồn thu chính khi các công cụ tìm kiếm đóng băng lưu lượng truy cập miễn phí vè website.",
-    "actionChecklist": [
-      "Đánh giá lại tỷ trọng lưu lượng truy cập từ kênh SEO truyền thống để chuẩn bị kịch bản sụt giảm traffic",
-      "Tăng cường đầu tư xây dựng thương hiệu trực tiếp nhằm duy trì lượng người dùng chủ động truy cập ứng dụng hoặc website",
-      "Rà soát và chuẩn hóa cấu trúc dữ liệu sản phẩm để sẵn sàng kết nối khi các nền tảng AI mở rộng tích hợp",
-      "Theo dõi sát các hình thức quảng cáo mới trên AI Overviews và AI Mode để thử nghiệm sớm"
-    ],
-    "id": "real-2026-10-26-google-va-openai-phat-e09763",
-    "publishedAt": "26/10/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/generative-ui-could-turn-google-into-your-booking-com/593414/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/10/generative-ui-33.png",
-      "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
     "category": "AI Marketing",
     "platformIcon": "Sparkles",
     "title": "Clorox từ bỏ chiến dịch truyền thống để xây dựng hệ thống nội dung liên tục tối ưu bằng AI",
@@ -627,69 +686,6 @@
     "source": "Social Media Today",
     "image": {
       "url": "https://imgproxy.divecdn.com/ua2Hio8Dsltltak85FZHHNHCimzHIBvaiOtJBKzLUbI/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9ob2xpZGF5c19vbl9YLnBuZw==.webp",
-      "credit": "Ảnh: Social Media Today"
-    }
-  },
-  {
-    "category": "Meta Ads",
-    "platformIcon": "Facebook",
-    "title": "Meta cập nhật thuật toán đề xuất Reels và mở rộng Creator Marketing Hub",
-    "isHot": false,
-    "illustration": "creative-fatigue",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Meta Ads",
-      "Instagram Reels",
-      "Thuật toán Meta",
-      "Creator Hub"
-    ],
-    "summary": "Meta vừa công bố các nâng cấp thuật toán đề xuất trên Facebook và Instagram cùng dữ liệu tăng trưởng trong quý 3. Nội dung mới xuất bản trong ngày đầu đang chiếm tỷ trọng áp đảo trong các đề xuất tự động. Nền tảng đồng thời triển khai Creator Marketing Hub tích hợp trợ lý AI cho toàn bộ nhà quảng cáo.",
-    "keyNumbers": [
-      {
-        "value": "gần 45%",
-        "label": "Reels được đề xuất trên Instagram có tuổi đời dưới 1 ngày"
-      },
-      {
-        "value": "hơn 10 triệu",
-        "label": "nhà sáng tạo hiện có trên Creator Marketing Hub"
-      },
-      {
-        "value": "hơn 500 triệu",
-        "label": "người dùng hoạt động hàng tháng trên Threads"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Instagram ưu tiên mạnh mẽ video mới xuất bản trong ngày",
-        "body": "Thời gian sử dụng trung bình của mỗi người dùng Instagram đạt mức cao kỷ lục trong quý 3 nhờ sự tăng trưởng của Reels và Feed. Meta đã nâng cấp kiến trúc mô hình xếp hạng chuỗi video liên tiếp thay vì đánh giá từng video riêng lẻ, kết hợp thêm các tín hiệu thời gian xem chi tiết. Thay đổi này giúp thời gian xem Reels trên Instagram tăng hơn 4%. Đáng chú ý, gần 45% video Reels được thuật toán đề xuất hiện có độ tuổi dưới 1 ngày, tăng hơn 11 điểm phần trăm so với quý 2. Phần lớn tương tác tự nhiên của video ngắn hiện nay dồn hết vào 24 giờ đầu tiên sau khi đăng tải."
-      },
-      {
-        "heading": "Facebook ứng dụng kiến trúc AI tạo sinh để xếp hạng nội dung",
-        "body": "Thời gian xem Reels trên Facebook cũng đạt mức cao kỷ lục và tăng trưởng hai con số so với cùng kỳ năm trước. Meta đã hoàn tất triển khai toàn cầu cấu trúc truy xuất dữ liệu mới lấy cảm hứng từ các mô hình ngôn ngữ lớn LLM. Hệ thống mới gắn nhãn ngữ nghĩa cho nội dung và đề xuất bài viết phù hợp ngay cả khi bài đăng đó chưa tích lũy được lượng tương tác ban đầu. Kiến trúc này đang xử lý khoảng một phần tư lượt xem Feed từ nguồn chưa kết nối và một nửa lượt xem Reels, giúp tăng 1% thời gian xem. Tại thị trường Mỹ, Meta cũng tăng gấp đôi dữ liệu lịch sử mà mô hình xếp hạng có thể xét duyệt."
-      },
-      {
-        "heading": "Mở cổng Creator Marketing Hub tích hợp trợ lý AI cho mọi tài khoản",
-        "body": "Meta đã chính thức mở Creator Marketing Hub cho tất cả các nhà quảng cáo với cơ sở dữ liệu hơn 10 triệu nhà sáng tạo nội dung. Doanh nghiệp có thể trực tiếp tìm kiếm đối tác để triển khai các chiến dịch nội dung hợp tác. Meta đang tích hợp trợ lý Meta AI Business Assistant vào cổng này để hỗ trợ nhãn hàng tương tác bằng câu lệnh. Trợ lý AI sẽ giúp tìm nhà sáng tạo phù hợp, gợi ý nội dung để chạy quảng cáo Partnership Ads và hướng dẫn quy trình vận hành chiến dịch."
-      },
-      {
-        "heading": "Mạng xã hội Threads vượt mốc 500 triệu người dùng",
-        "body": "Nền tảng Threads đã vượt qua mạng xã hội X về số lượng người dùng hoạt động hàng tháng, đạt hơn 500 triệu người dùng. Thời gian sử dụng trung bình mỗi người dùng trên Threads tăng hơn 20% so với cùng kỳ năm ngoái nhờ cải thiện độ liên quan và tính thời sự của nội dung gợi ý. Sự tăng trưởng này mở rộng tệp khán giả tiềm năng cho các thương hiệu xây dựng cộng đồng và tiếp cận tự nhiên. Nền tảng này đang từng bước hoàn thiện để tạo ra thêm các cơ hội thương mại hóa cho hệ sinh thái quảng cáo của Meta."
-      }
-    ],
-    "impact": "Vòng đời nội dung ngắn bị thu hẹp mạnh xuống dưới 24 giờ, biến tần suất đăng và tốc độ bắt sóng tương tác ngày đầu thành yếu tố sống còn cho phân phối tự nhiên. Các video dạng re-up hoặc tổng hợp nội dung cũ bị bóp tương tác triệt để. Tuy nhiên, việc Facebook ứng dụng AI phân tích ngữ nghĩa mở ra cơ hội cho các video mới toanh của thương hiệu nhỏ được phân phối ngay lập tức mà không cần mồi sẵn tương tác.",
-    "ifIgnored": "Doanh nghiệp sẽ lãng phí ngân sách sản xuất vào các video mất nhiều tuần trau chuốt nhưng không tạo được sóng tương tác trong ngày đầu tiên. Đội ngũ tiếp tục tái sử dụng nội dung cũ sẽ bị thuật toán loại khỏi luồng đề xuất, dẫn đến lượt xem tự nhiên sụt giảm nghiêm trọng và chi phí phân phối trả phí tăng cao.",
-    "actionChecklist": [
-      "Tăng tần suất sản xuất Reels ngắn và tập trung dồn toàn bộ tương tác nội bộ, mồi bình luận trong 24 giờ đầu sau đăng tải",
-      "Ngừng hoàn toàn việc đăng lại các video tổng hợp hoặc nội dung không nguyên bản lên fanpage và kênh Instagram",
-      "Truy cập Creator Marketing Hub trên Trình quản lý quảng cáo để tìm kiếm tệp nhà sáng tạo phù hợp và thử nghiệm định dạng Partnership Ads",
-      "Tối ưu phần mô tả và nội dung nói trong video bằng từ khóa ngữ nghĩa rõ ràng để mô hình AI của Facebook nhận diện đúng chủ đề đề xuất"
-    ],
-    "id": "real-2026-10-22-meta-cap-nhat-thuat-dcfe40",
-    "publishedAt": "22/10/2026",
-    "sourceUrl": "https://www.socialmediatoday.com/news/meta-offers-insights-on-individual-platform-growth/833807/",
-    "source": "Social Media Today",
-    "image": {
-      "url": "https://imgproxy.divecdn.com/_qCZFatzkmrQT81320LquVewz1MFOBUNAXrQJC5FJB4/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9tZXRhX2FwcHMucG5n.webp",
       "credit": "Ảnh: Social Media Today"
     }
   },
