@@ -2,6 +2,192 @@
   {
     "category": "Google Ads & SEO",
     "platformIcon": "Search",
+    "title": "Google xác nhận thay đổi tCPA và ngân sách không làm đặt lại trạng thái Learning",
+    "isHot": false,
+    "illustration": "ai-budget",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Google Ads",
+      "Smart Bidding",
+      "Ngân sách",
+      "Tối ưu hóa"
+    ],
+    "summary": "Google chính thức xác nhận việc điều chỉnh mục tiêu tCPA, tROAS hoặc ngân sách trên các chiến dịch đang hoạt động ổn định sẽ không xóa dữ liệu lịch sử hay đưa chiến dịch về lại trạng thái học (Learning). Bên cạnh đó, đại diện Google cũng đưa ra những lưu ý quan trọng về cách dùng Seasonality Adjustments và các tính năng phân bổ ngân sách mới.",
+    "keyNumbers": [
+      {
+        "value": "10%",
+        "label": "Mức linh hoạt ROAS hiệu dụng của Smart Bidding Exploration"
+      },
+      {
+        "value": "50%",
+        "label": "Tỷ lệ phân bổ Display Expansion cần cài đặt trước tháng 2/2027"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Thay đổi mục tiêu và ngân sách không làm mất dữ liệu học",
+        "body": "Quan điểm cho rằng điều chỉnh tCPA, tROAS hoặc thay đổi ngân sách hàng ngày quá 20% sẽ làm xóa sạch dữ liệu học của Smart Bidding là một hiểu lầm phổ biến. Đại diện Google xác nhận rằng với các chiến dịch đang chạy ổn định, việc thay đổi mục tiêu hoặc ngân sách sẽ không xóa dữ liệu lịch sử và không làm kích hoạt lại trạng thái Learning trong giao diện. Hệ thống phía sau đã có sẵn dữ liệu về bức tranh đấu giá và có thể tự động điều chỉnh giá thầu tương ứng với mục tiêu mới. Tuy nhiên, hiệu suất vẫn có thể biến động nhẹ khi luồng lưu lượng truy cập và mức thầu thay đổi."
+      },
+      {
+        "heading": "Hạn chế sử dụng Seasonality Adjustments cho các đợt khuyến mãi thông thường",
+        "body": "Google khuyến nghị nhà quảng cáo không nhất thiết phải bật tính năng điều chỉnh theo mùa cho các đợt sale định kỳ như Black Friday hay Cyber Monday. Mô hình học máy theo năm của Google đã tự động dự đoán trước các đợt tăng trưởng lượng truy cập tiêu chuẩn này. Theo nghiên cứu từ Optmyzr trên các tài khoản giai đoạn 2022-2024, các tài khoản bật điều chỉnh theo mùa có mức tăng CPC cao gấp khoảng 2 lần so với các tài khoản không sử dụng. Nhà quảng cáo chỉ nên dùng tính năng này cho các đợt giảm giá bất ngờ hoặc chương trình ưu đãi giảm sâu vượt ngoài kịch bản hàng năm."
+      },
+      {
+        "heading": "Cơ chế hoạt động của Promotion Mode và Smart Bidding Exploration",
+        "body": "Tính năng Promotion Mode đang được triển khai cho chiến dịch Search và Performance Max, cho phép lên lịch các giai đoạn ưu đãi với ngân sách và điều chỉnh giá thầu riêng. Tính năng này kết hợp khả năng tăng tốc nhanh với cơ chế Smart Bidding Exploration để thu hút thêm lưu lượng truy cập trong thời gian khuyến mãi. Smart Bidding Exploration cung cấp mức linh hoạt khoảng 10% ROAS hiệu dụng để đấu giá vào các truy vấn mới. Tuy nhiên, cơ chế khám phá này đòi hỏi chiến dịch tROAS phải có ngân sách không bị giới hạn, nếu ngân sách bị chạm trần thì tính năng sẽ tự động tắt."
+      },
+      {
+        "heading": "Cập nhật quan trọng đối với Display Expansion từ tháng 2/2027",
+        "body": "Bắt đầu từ tháng 2/2027, Google sẽ thay đổi cơ chế phân bổ mặc định đối với các chiến dịch Display Expansion. Nhà quảng cáo cần tiến hành rà soát các chiến dịch Tìm kiếm đang sử dụng Display Expansion ngay từ bây giờ. Để duy trì hành vi phân bổ như hiện tại, bạn cần chủ động cài đặt mạng Hiển thị ở mức Ưu tiên thấp với tỷ lệ phân bổ 50%. Việc nắm rõ các quy tắc phân bổ ngân sách mới sẽ giúp doanh nghiệp kiểm soát chi phí tối ưu hơn trên từng kênh."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing có thể tự tin linh hoạt điều chỉnh ngân sách và mục tiêu tCPA/tROAS theo tình hình kinh doanh thực tế mà không sợ phá vỡ máy học, đồng thời chủ động cắt giảm chi phí CPC gia tăng vô ích do cài đặt thủ công không cần thiết.",
+    "ifIgnored": "Doanh nghiệp sẽ tiếp tục bị trói buộc bởi định kiến cũ, bỏ lỡ các cơ hội tối ưu giá thầu linh hoạt, hoặc khiến chi phí quảng cáo tăng vọt trong các dịp lễ lớn do áp dụng Seasonality Adjustments sai cách.",
+    "actionChecklist": [
+      "Rà soát chiến dịch Google Ads đang chạy ổn định để sẵn sàng điều chỉnh tCPA/tROAS theo mục tiêu kinh doanh mới.",
+      "Bỏ tính năng Seasonality Adjustments cho các đợt khuyến mãi định kỳ thông thường để tránh tăng CPC.",
+      "Đảm bảo ngân sách không bị giới hạn đối với chiến dịch tROAS nếu muốn kích hoạt Smart Bidding Exploration.",
+      "Cấu hình Display Expansion về mức Low Priority với tỷ lệ 50% cho các chiến dịch Search trước tháng 2/2027."
+    ],
+    "deadline": "Tháng 2/2027",
+    "id": "real-2026-10-30-google-xac-nhan-thay-2e3842",
+    "publishedAt": "30/10/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/google-ads-product-manager-revealed-details-that-matter-before-black-friday/594102/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/10/google-ads-bfcm-987.png",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Doanh thu quảng cáo Reddit tăng 54% nhưng lượng truy cập từ tìm kiếm suy giảm mạnh",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Reddit Ads",
+      "SEO",
+      "Biến động lưu lượng",
+      "Doanh thu quảng cáo"
+    ],
+    "summary": "Reddit ghi nhận doanh thu quảng cáo quý 3 đạt 847 triệu USD, tăng 54% so với cùng kỳ năm trước. Tuy nhiên, lượng người dùng truy cập từ công cụ tìm kiếm giảm đáng kể, đe dọa làm sụt giảm lượng người dùng hoạt động hằng ngày trong quý tới.",
+    "keyNumbers": [
+      {
+        "value": "847 triệu USD",
+        "label": "doanh thu quảng cáo quý 3"
+      },
+      {
+        "value": "54%",
+        "label": "tăng trưởng doanh thu quảng cáo"
+      },
+      {
+        "value": "130,3 triệu",
+        "label": "người dùng hoạt động hằng ngày"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Kết quả kinh doanh quý 3",
+        "body": "Reddit đạt tổng doanh thu 895 triệu USD trong quý 3 năm 2026, trong đó doanh thu quảng cáo chiếm 847 triệu USD. Mức tăng trưởng doanh thu quảng cáo đạt 54%, giảm nhẹ so với các quý trước nhưng vẫn duy trì ở mức cao. Doanh thu tại thị trường Mỹ tăng 50% lên 718,9 triệu USD, trong khi thị trường quốc tế tăng 67% lên 176,1 triệu USD."
+      },
+      {
+        "heading": "Biến động lưu lượng tìm kiếm",
+        "body": "Lượng truy cập giới thiệu từ các công cụ tìm kiếm giảm mạnh trong quý 3 và tiếp tục đà giảm sang tháng 10. Lượng truy cập từ tìm kiếm đã giảm trung bình hơn 1 triệu lượt mỗi tuần trong tháng 10. Xu hướng này bắt nguồn từ sự thay đổi của tìm kiếm web khi chuyển dịch thành nền tảng tích hợp AI."
+      },
+      {
+        "heading": "Nguy cơ sụt giảm người dùng",
+        "body": "Do ảnh hưởng từ việc sụt giảm lưu lượng tìm kiếm, Reddit cảnh báo số lượng người dùng hoạt động hằng ngày có thể giảm ở mức hai chữ số thấp trong quý 4 từ nền tảng hiện tại là 130 triệu. Công ty đang phải tăng mạnh chi phí bán hàng và marketing để bù đắp lượng reach bị thiếu hụt."
+      },
+      {
+        "heading": "Tăng trưởng doanh thu trên mỗi người dùng",
+        "body": "Mặc dù lượng người dùng hoạt động hằng ngày tại Mỹ giảm 2% so với cùng kỳ năm trước, doanh thu tại đây vẫn tăng 50%. Điều này cho thấy sự tăng trưởng đến từ việc khai thác nhiều giá trị hơn từ mỗi khách truy cập thay vì mở rộng quy mô người dùng mới. Doanh thu trung bình trên mỗi người dùng quy đổi toàn cầu tăng 36% lên 6,87 USD."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing cần lưu ý rằng nền tảng Reddit đang chịu áp lực lớn về lưu lượng truy cập tự nhiên từ SEO do sự thay đổi của tìm kiếm tích hợp AI, buộc họ phải tăng chi phí marketing để duy trì quy mô người dùng.",
+    "ifIgnored": "Nếu bỏ qua tín hiệu này, nhà quảng cáo có thể bất ngờ trước sự biến động về quy mô tập khách hàng tiềm năng trên Reddit và chi phí hiển thị quảng cáo khi nền tảng này siết chặt khai thác giá trị trên từng người dùng.",
+    "actionChecklist": [
+      "Đánh giá lại hiệu suất chiến dịch quảng cáo trên Reddit trước biến động lưu lượng người dùng",
+      "Theo dõi sát chi phí quảng cáo và chỉ số doanh thu trên mỗi lượt hiển thị",
+      "Đa dạng hóa các kênh phân phối ngoài Reddit để giảm thiểu rủi ro từ việc sụt giảm traffic tìm kiếm",
+      "Kiểm tra lại tỷ lệ chuyển đổi từ phễu dưới để tối ưu hóa ngân sách hiện tại"
+    ],
+    "id": "real-2026-10-29-doanh-thu-quang-cao-318233",
+    "publishedAt": "29/10/2026",
+    "sourceUrl": "https://ppc.land/reddit-ad-revenue-gains-54-to-847m-as-daily-users-stall-at-130-3m/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/10/reddit-q3-2026-ad-revenue-847m-stalled-users-pitch-room-arrow.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "AI Marketing",
+    "platformIcon": "Search",
+    "title": "T-Mobile chi 956 triệu USD cho quảng cáo trong quý 3",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "T-Mobile",
+      "Ngân sách quảng cáo",
+      "Dữ liệu viễn thông",
+      "AdTech"
+    ],
+    "summary": "T-Mobile ghi nhận chi phí quảng cáo đạt 956 triệu USD trong quý 3 năm 2026, tăng 5,5% so với cùng kỳ năm trước. Trong khi đó, các thương vụ thâu tóm công nghệ quảng cáo lớn không được công bố chi tiết doanh thu trong báo cáo tài chính.",
+    "keyNumbers": [
+      {
+        "value": "956 triệu USD",
+        "label": "Chi phí quảng cáo quý 3"
+      },
+      {
+        "value": "3,46 tỷ USD",
+        "label": "Lợi nhuận ròng"
+      },
+      {
+        "value": "4,9%",
+        "label": "Tỷ lệ chi phí quảng cáo trên doanh thu dịch vụ"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Chi phí quảng cáo tăng trưởng ổn định",
+        "body": "T-Mobile US công bố chi phí quảng cáo đạt 956 triệu USD trong quý 3 năm 2026, tăng 5,5% từ mức 906 triệu USD của năm trước đó. Tính trong chín tháng đầu năm, tổng chi phí này đạt 2.783 triệu USD, tăng 7,8% so với mức 2.582 triệu USD. Khoản chi này tăng trưởng gần như song hành với quy mô kinh doanh chung của doanh nghiệp."
+      },
+      {
+        "heading": "Tỷ trọng chi phí so với doanh thu",
+        "body": "Khi so sánh với doanh thu dịch vụ, ngân sách quảng cáo giữ mức ổn định ở tỷ lệ 4,9% trong quý 3, so với mức 5,0% của cùng kỳ năm trước. Trong chín tháng đầu năm, tỷ lệ này tiếp tục duy trì ổn định ở mức 4,9% cho cả hai năm. Điều này cho thấy chiến lược phân bổ ngân sách tiếp thị được kiểm soát chặt chẽ theo nhịp tăng trưởng doanh thu."
+      },
+      {
+        "heading": "Thiếu vắng dữ liệu tài chính từ mảng công nghệ quảng cáo",
+        "body": "Báo cáo tài chính không ghi nhận số liệu doanh thu cụ thể cho Vistar Media và Blis, hai công ty công nghệ quảng cáo mà T-Mobile đã mua lại đầu năm 2025 với tổng giá trị 801 triệu USD bằng tiền mặt. Hồ sơ nộp lên cơ quan chức năng không tách bạch doanh thu từ mảng giải pháp quảng cáo này. Do đó, các thương hiệu và đại lý khó lòng nắm bắt được hiệu quả kinh doanh thực tế của các đơn vị này."
+      },
+      {
+        "heading": "Tác động từ công nghệ AI mua sắm và dữ liệu viễn thông",
+        "body": "Giám đốc điều hành Jonathan Freier cho biết công ty chưa ghi nhận tác động đáng kể nào từ các trợ lý mua sắm ứng dụng trí tuệ nhân tạo như Muse của Meta đối với việc lựa chọn gói cước. Tuy nhiên, Vistar đã công bố các phân khúc đối tượng dựa trên dữ liệu mạng viễn thông của T-Mobile để phục vụ màn hình kỹ thuật số ngoài trời thông qua nền tảng riêng."
+      }
+    ],
+    "impact": "Giúp Trưởng phòng Marketing nắm bắt xu hướng phân bổ ngân sách tiếp thị của các tập đoàn viễn thông lớn và hiểu rõ cách các nền tảng tích hợp dữ liệu mạng vào quảng cáo ngoài trời.",
+    "ifIgnored": "Bỏ qua cách các tập đoàn lớn tối ưu hóa chi phí quảng cáo so với doanh thu dịch vụ và thiếu cập nhật về việc tích hợp dữ liệu viễn thông vào chiến dịch AdTech.",
+    "actionChecklist": [
+      "Đánh giá lại tỷ lệ chi phí quảng cáo so với doanh thu dịch vụ của doanh nghiệp mình.",
+      "Theo dõi sát sao việc tích hợp dữ liệu bên thứ nhất từ nhà mạng vào các chiến dịch lập kế hoạch truyền thông.",
+      "Kiểm tra lại hiệu quả phân bổ ngân sách giữa các kênh truyền hình, kỹ thuật số và ngoài trời.",
+      "Cập nhật các quy định pháp lý và tranh chấp liên quan đến quyền riêng tư dữ liệu khách hàng."
+    ],
+    "id": "real-2026-10-29-t-mobile-chi-956-997fbf",
+    "publishedAt": "29/10/2026",
+    "sourceUrl": "https://ppc.land/t-mobiles-ad-spend-gains-5-5-to-956m-in-the-third-quarter/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/10/t-mobile-q3-2026-ad-spend-956m-vistar-blis-locked-briefcases-billboard.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
     "title": "Google chia sẻ thay đổi hành vi tìm kiếm trong AI Mode và định hướng Google Ads cho 2027",
     "isHot": false,
     "illustration": "data-signal",
@@ -374,69 +560,6 @@
     }
   },
   {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Google cập nhật chính sách riêng tư: Dữ liệu Gmail và Photos bắt đầu tham gia cá nhân hóa quảng cáo trong AI Mode",
-    "isHot": false,
-    "illustration": "data-signal",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Google Ads",
-      "AI Mode",
-      "Cá nhân hóa quảng cáo",
-      "Chính sách riêng tư"
-    ],
-    "summary": "Google vừa chính thức cập nhật chính sách quyền riêng tư, cho phép dữ liệu từ Gmail, Google Photos và Google Drive tham gia cá nhân hóa quảng cáo trong Gemini và AI Mode trên Search. Thay đổi này áp dụng cho những người dùng bật tính năng Personal Intelligence. Dù nhà quảng cáo không có tùy chỉnh nhắm mục tiêu riêng, các chiến dịch Performance Max, Shopping và Broad Match sẽ tự động khai thác tín hiệu ngữ cảnh này.",
-    "keyNumbers": [
-      {
-        "value": "16/10",
-        "label": "ngày chính sách riêng tư mới chính thức có hiệu lực"
-      },
-      {
-        "value": "3",
-        "label": "dạng chiến dịch đủ điều kiện phân phối quảng cáo trong AI Mode"
-      },
-      {
-        "value": "2017",
-        "label": "năm Google từng dừng việc quét Gmail để nhắm mục tiêu quảng cáo"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Thay đổi quan trọng trong chính sách quyền riêng tư của Google",
-        "body": "Google đã bổ sung ngoại lệ trong chính sách riêng tư từ ngày 16 tháng 10. Trước đây, Google khẳng định không dùng nội dung Drive, Gmail hay Photos để hiển thị quảng cáo cá nhân hóa sau khi dừng quét Gmail tự động vào năm 2017. Quy định mới mở ra ngoại lệ khi người dùng chủ động cho phép các ứng dụng này kết nối với dịch vụ Google có hỗ trợ quảng cáo. Khi người dùng bật Personal Intelligence trong Gemini hoặc AI Mode, hệ thống có thể trích xuất thông tin để điều chỉnh nội dung hiển thị bao gồm cả quảng cáo."
-      },
-      {
-        "heading": "Cơ chế dữ liệu ứng dụng kết nối tác động tới hiển thị quảng cáo",
-        "body": "Tính năng Personal Intelligence được Google thử nghiệm từ tháng 01/2026 cho tài khoản cá nhân đăng ký Google AI Pro và Ultra tại Mỹ. Hệ thống có thể tham chiếu lịch trình bay trong Gmail và hình ảnh chuyến đi trong Google Photos để hiểu nhu cầu mua sắm thực tế. Ví dụ khi người dùng tìm kiếm áo khoác, AI Mode tự động đối chiếu địa điểm và thời gian chuyến đi trong email để đề xuất sản phẩm phù hợp. Quảng cáo không ghép trực tiếp từ nội dung gốc email hay ảnh mà dựa trên các bản tóm tắt và trích đoạn suy luận do AI xử lý."
-      },
-      {
-        "heading": "Cơ chế bảo mật và giới hạn quyền truy cập dữ liệu",
-        "body": "Google cam kết nhà quảng cáo không được phép truy cập vào hộp thư Gmail hay kho ảnh của người dùng. Các danh mục nhạy cảm như chủng tộc, tôn giáo, xu hướng tính dục và sức khỏe tiếp tục bị loại trừ hoàn toàn khỏi việc cá nhân hóa quảng cáo. Người dùng có thể chủ động ngắt kết nối ứng dụng trong phần cài đặt tài khoản Google để dừng chia sẻ dữ liệu. Việc tắt quảng cáo cá nhân hóa trong My Ad Center không nhất thiết ngăn ứng dụng kết nối nạp dữ liệu vào các tính năng AI trừ khi người dùng ngắt kết nối ứng dụng hoàn toàn."
-      },
-      {
-        "heading": "Tác động thực tế đối với nhà quảng cáo trên Google Ads",
-        "body": "Nhà quảng cáo sẽ không thấy bất kỳ nút bật tắt hay phân khúc đối tượng mới nào trong giao diện Google Ads. Việc phân phối quảng cáo dựa trên dữ liệu kết nối nằm hoàn toàn ở phía người dùng. Google xác định ba loại chiến dịch đủ điều kiện thử nghiệm gồm Performance Max, Shopping và chiến dịch Search dùng từ khóa mở rộng bao gồm AI Max. Hiện tại Google chưa cung cấp báo cáo riêng để theo dõi lượt hiển thị nào được kích hoạt nhờ tín hiệu từ Gmail hay Photos."
-      }
-    ],
-    "impact": "Ngân sách chạy Performance Max và Broad Match của bạn sẽ tự động tiếp cận khách hàng tiềm năng ở độ chính xác cao hơn nhờ AI đọc hiểu bối cảnh đời sống cá nhân của họ từ Gmail và Photos, dù bạn không thể chủ động cài đặt đối tượng này thủ công.",
-    "ifIgnored": "Nếu tiếp tục phụ thuộc hoàn toàn vào từ khóa khớp chính xác và bỏ qua các chiến dịch tự động hóa như Performance Max hay Broad Match, bạn sẽ bỏ lỡ lượng lớn hiển thị chất lượng cao từ nhóm người dùng AI Mode.",
-    "actionChecklist": [
-      "Rà soát lại tỷ lệ phân bổ ngân sách cho chiến dịch Performance Max và Search Broad Match trên tài khoản Google Ads.",
-      "Tối ưu hóa nguồn cấp dữ liệu sản phẩm trong Google Merchant Center để AI đối chiếu chính xác thuộc tính khi ghép nối nhu cầu khách hàng.",
-      "Bổ sung mẫu quảng cáo đa dạng về ngữ cảnh và công dụng sản phẩm nhằm đón đầu các truy vấn phức tạp trong AI Mode.",
-      "Báo cáo và theo dõi sát hiệu suất của chiến dịch AI Max để đánh giá sự thay đổi về tỷ lệ chuyển đổi."
-    ],
-    "id": "real-2026-10-27-google-cap-nhat-chinh-d9afd7",
-    "publishedAt": "27/10/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/google-privacy-policy-connected-apps-ai-mode-ads/594546/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/10/shutterstock_1921284380_1600x840-860.png",
-      "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
     "category": "AI Marketing",
     "platformIcon": "Sparkles",
     "title": "Shopify chuyển Cơ sở dữ liệu AI Agent vào Merchant Admin và ngừng ứng dụng cũ",
@@ -501,73 +624,6 @@
     }
   },
   {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Safari 27.2 sửa lỗi tự động xóa cookie sau 7 ngày trên các trang web dùng CNAME",
-    "isHot": false,
-    "illustration": "data-signal",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Safari 27.2",
-      "Cookie",
-      "Server Side Tracking",
-      "Đo lường chuyển đổi"
-    ],
-    "summary": "Apple đã phát hành thông tin kỹ thuật cho Safari 27.2, trong đó sửa lỗi khiến cookie của các trang web dùng CNAME bị giới hạn thời gian tồn tại trong 7 ngày. Tuy nhiên, bản vá này chỉ áp dụng cho phản hồi của trang chính và không nới lỏng các quy định hạn chế đối với tên miền theo dõi phía máy chủ.",
-    "keyNumbers": [
-      {
-        "value": "27.2",
-        "label": "Phiên bản Safari sửa lỗi giới hạn cookie"
-      },
-      {
-        "value": "7 ngày",
-        "label": "Thời hạn cookie từng bị áp nhầm cho trang chính"
-      },
-      {
-        "value": "20",
-        "label": "Số bản sửa lỗi được xử lý trong đợt cập nhật"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Sửa lỗi vô tình rút ngắn thời hạn cookie trên Safari",
-        "body": "Apple đã công bố thông tin về Safari 27.2 với 20 bản sửa lỗi kỹ thuật, trong đó có một điều chỉnh quan trọng liên quan đến cách quản lý cookie. Bản cập nhật này chấm dứt tình trạng Safari tự động hạ thời hạn cookie về 7 ngày đối với các trang web sử dụng bản ghi CNAME trỏ về tên miền khác. Sự cố này trước đây ảnh hưởng trực tiếp đến các website vận hành qua CDN hoặc các nền tảng thương mại điện tử hosted. Việc khắc phục giúp khôi phục thời gian lưu cookie chính xác cho phản hồi từ máy chủ của trang gốc."
-      },
-      {
-        "heading": "Phân biệt giữa trang chính và các tên miền theo dõi",
-        "body": "Bản sửa lỗi trong Safari 27.2 chỉ áp dụng cho phản hồi HTTP từ chính trang web khi người dùng truy cập trực tiếp. Các cơ chế đo lường sử dụng tên miền phụ để theo dõi phía máy chủ vẫn bị giới hạn thời gian cookie. Điều này có nghĩa là các thiết lập server-side tracking trỏ CNAME đến bên thứ ba vẫn chịu mức trần 7 ngày từ tính năng Intelligent Tracking Prevention. Đội ngũ WebKit không thay đổi chính sách bảo vệ quyền riêng tư mà chỉ sửa một lỗi phát sinh ngoài quy định."
-      },
-      {
-        "heading": "Lịch sử các quy định hạn chế cookie của Apple",
-        "body": "Apple đã bắt đầu áp dụng mức trần 7 ngày cho cookie tạo bởi JavaScript từ các phiên bản trước. Đến ngày 12/11/2020, WebKit mở rộng việc hạn chế này sang các phản hồi HTTP của CNAME ẩn danh từ Safari 14. Sau đó vào ngày 27/3/2023, phiên bản Safari 16.4 tiếp tục áp dụng giới hạn này cho cả kỹ thuật che giấu địa chỉ IP. Lỗi vừa được sửa trên 27.2 đã áp dụng nhầm giới hạn này lên cả phản hồi của trang chính."
-      },
-      {
-        "heading": "Tác động tới đo lường và dữ liệu chuyển đổi",
-        "body": "Khi lỗi này còn tồn tại, khách hàng quay lại mua hàng sau 8 ngày từ quảng cáo có thể bị ghi nhận thành người dùng mới trên Safari. Sự cố khiến dữ liệu phiên đăng nhập, giỏ hàng và định danh người dùng bị xóa bỏ sau 7 ngày không quay lại. Bản cập nhật 27.2 giải quyết vấn đề mất phiên làm việc trên trang chính nhưng không khôi phục tự động các cookie cũ. Nhà quản lý cần nắm rõ phạm vi của bản vá để đánh giá chính xác số liệu báo cáo."
-      },
-      {
-        "heading": "Những điểm Safari 27.2 chưa thay đổi",
-        "body": "Bản công bố của WebKit hoàn toàn không đề cập đến việc thay đổi giới hạn 7 ngày của JavaScript cookie. Báo cáo cũng không nhắc tới các danh sách tên miền quảng cáo bị chặn hay tính năng Link Tracking Protection. Mã lỗi nội bộ 183787115 chỉ ghi nhận việc xử lý phản hồi điều hướng cấp cao nhất. Do đó các giải pháp theo dõi nâng cao vẫn cần tuân thủ các quy định hiện hành của Safari."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing sẽ hiểu đúng bản chất dữ liệu đo lường trên thiết bị Safari, phân biệt được sự cố mất phiên làm việc của landing page gốc với các hạn chế của hệ thống server-side tracking.",
-    "ifIgnored": "Báo cáo chuyển đổi và hành vi khách hàng trên thiết bị Apple tiếp tục bị đánh giá sai lệch, dẫn đến việc tối ưu ngân sách quảng cáo dựa trên dữ liệu chuyển đổi bị ngắt đoạn.",
-    "actionChecklist": [
-      "Kiểm tra lại cấu hình CNAME của website chính và các trang landing page đang chạy quảng cáo",
-      "Rà soát lại dữ liệu chuyển đổi từ người dùng Safari để đánh giá mức độ ảnh hưởng của chu kỳ 7 ngày",
-      "Đánh giá lại giải pháp server-side tracking để đảm bảo tuân thủ các quy định về cookie của Safari",
-      "Cập nhật cho đội ngũ kỹ thuật về sự khác biệt giữa cookie trang chính và cookie trên tên miền phụ"
-    ],
-    "id": "real-2026-10-27-safari-27-2-sua-7d6669",
-    "publishedAt": "27/10/2026",
-    "sourceUrl": "https://ppc.land/safari-27-2-drops-a-mistaken-7-day-cap-on-cookies-of-cname-hosted-sites/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/10/apple-safari-27-2-cname-cookie-7-day-cap-fix-calendar-ribbon-shears.jpg",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
     "category": "AI Marketing",
     "platformIcon": "Sparkles",
     "title": "Clorox từ bỏ chiến dịch truyền thống để xây dựng hệ thống nội dung liên tục tối ưu bằng AI",
@@ -628,65 +684,6 @@
     "image": {
       "url": "https://imgproxy.divecdn.com/NMt6t4n-CijjRIWwM1wIN4nhexsBPWn-ryobn983bp0/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9EU0MwMTE5MS5qcGc=.webp",
       "credit": "Ảnh: Marketing Dive"
-    }
-  },
-  {
-    "category": "AI Marketing",
-    "platformIcon": "Sparkles",
-    "title": "X công bố hướng dẫn tối ưu quảng cáo mùa lễ hội và khuyến nghị cho thuật toán AI",
-    "isHot": false,
-    "illustration": "ai-budget",
-    "readTime": "3 phút đọc",
-    "tags": [
-      "X Ads",
-      "Tối ưu quảng cáo",
-      "Mùa lễ hội",
-      "Gợi ý AI"
-    ],
-    "summary": "X vừa chia sẻ các nguyên tắc quan trọng nhằm giúp các nhà quảng cáo tối ưu hiệu quả chiến dịch trong mùa mua sắm lễ hội. Nền tảng khuyến nghị rút ngắn độ dài văn bản, sử dụng văn phong tự nhiên và đơn giản hóa nội dung để thuật toán AI dễ dàng tóm tắt và đề xuất sản phẩm.",
-    "keyNumbers": [
-      {
-        "value": "50 - 100",
-        "label": "Ký tự tối ưu cho một mẫu quảng cáo đạt hiệu quả cao trên X"
-      },
-      {
-        "value": "1",
-        "label": "Điểm đến duy nhất nên chuyển hướng người dùng trong bài quảng cáo"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Tối ưu độ dài bài viết quảng cáo",
-        "body": "X khuyến nghị các mẫu quảng cáo đạt hiệu quả cao nhất nên có độ dài ngắn, chỉ từ 50 đến 100 ký tự, tương đương với khoảng 1 câu văn. Người dùng trên X có thói quen lướt nhanh và tiếp nhận thông tin cô đọng. Việc viết quá dài sẽ khiến thông điệp bị loãng và làm giảm tỷ lệ chuyển đổi của chiến dịch. Đội ngũ phát triển nền tảng nhấn mạnh rằng sự ngắn gọn chính là yếu tố then chốt để thu hút sự chú ý."
-      },
-      {
-        "heading": "Phong cách văn viết tự nhiên và Lời kêu gọi hành động rõ ràng",
-        "body": "Doanh nghiệp được khuyên nên giao tiếp trên X như một con người thực sự thay vì sử dụng văn phong quảng cáo quá đà. Mẫu quảng cáo cần cung cấp lý do để người mua hành động ngay lập tức, ví dụ như các ưu đãi có thời hạn hoặc chương trình độc quyền. Lời kêu gọi hành động phải cực kỳ rõ ràng và dễ hiểu. Việc truyền tải đúng công dụng sản phẩm và đối tượng hướng tới sẽ giúp nâng cao tỷ lệ tương tác."
-      },
-      {
-        "heading": "Tối ưu hóa nội dung cho thuật toán gợi ý bằng AI",
-        "body": "Mô hình AI trên X đang ngày càng đóng vai trò quan trọng trong việc hướng dẫn quyết định mua sắm của người dùng. Để xuất hiện trong các đề xuất AI, thương hiệu cần mô tả sản phẩm bằng ngôn từ bình dị, làm rõ chức năng, đối tượng phục vụ và điểm vượt trội. Khi mô hình AI có thể tóm tắt thương hiệu trong 1 câu, sản phẩm sẽ dễ dàng được đưa vào danh sách gợi ý tự động. Sự rõ ràng trong thông điệp là nền tảng để công cụ AI nhận diện và phân phối chính xác."
-      },
-      {
-        "heading": "Loại bỏ các yếu tố gây xao nhãng khỏi quảng cáo",
-        "body": "Nền tảng yêu cầu nhà quảng cáo cắt bỏ mọi chi tiết làm phân tán sự chú ý của người xem khỏi mục tiêu chính. Quảng cáo chỉ nên dẫn người dùng đến 1 nơi duy nhất là website hoặc ứng dụng doanh nghiệp. Nhà quảng cáo không nên gắn thẻ các tài khoản khác vì mỗi thẻ là một lối thoát khiến khách hàng rời bỏ nội dung. Ngoài ra, việc dùng hashtag và nhiều biểu tượng cảm xúc cũng không được phép trong quảng cáo nhằm tránh gây nhiễu."
-      }
-    ],
-    "impact": "Giúp Trưởng phòng Marketing điều chỉnh lại cấu trúc nội dung quảng cáo trên X, hạn chế thất thoát lưu lượng truy cập do các liên kết thừa và gia tăng cơ hội xuất hiện trong kết quả tìm kiếm, gợi ý tự động từ AI của nền tảng.",
-    "ifIgnored": "Doanh nghiệp sẽ tiếp tục lãng phí ngân sách vào các mẫu quảng cáo dài dòng, chèn nhiều hashtag hay gắn thẻ tài khoản phụ khiến tỷ lệ chuyển đổi thấp và bị thuật toán AI của X bỏ qua khi đề xuất sản phẩm.",
-    "actionChecklist": [
-      "Rút ngắn văn bản quảng cáo trên X xuống còn 50 đến 100 ký tự với thông điệp cô đọng.",
-      "Loại bỏ toàn bộ hashtag, việc gắn thẻ tài khoản khác và bớt biểu tượng cảm xúc trong bài quảng cáo.",
-      "Mô tả công năng sản phẩm bằng ngôn từ đơn giản để mô hình AI dễ dàng tóm tắt trong 1 câu.",
-      "Đảm bảo quảng cáo chỉ chứa 1 liên kết duy nhất dẫn về trang đích website hoặc ứng dụng."
-    ],
-    "id": "real-2026-10-25-x-cong-bo-huong-2f4564",
-    "publishedAt": "25/10/2026",
-    "sourceUrl": "https://www.socialmediatoday.com/news/x-provides-holiday-campaign-tips/833908/",
-    "source": "Social Media Today",
-    "image": {
-      "url": "https://imgproxy.divecdn.com/ua2Hio8Dsltltak85FZHHNHCimzHIBvaiOtJBKzLUbI/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9ob2xpZGF5c19vbl9YLnBuZw==.webp",
-      "credit": "Ảnh: Social Media Today"
     }
   },
   {
