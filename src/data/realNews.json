@@ -2,6 +2,195 @@
   {
     "category": "Google Ads & SEO",
     "platformIcon": "Search",
+    "title": "Google xác nhận truy vấn tìm kiếm AI dài gấp 3 lần và thay đổi cơ chế hiển thị quảng cáo",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Google Ads",
+      "AI Overviews",
+      "Tìm kiếm đa phương thức",
+      "Hành vi người dùng"
+    ],
+    "summary": "Google thông báo các câu hỏi tìm kiếm bằng AI hiện dài trung bình gấp 3 lần so với tìm kiếm truyền thống, đồng thời cứ 1 trong 6 lượt tìm kiếm là tìm kiếm đa phương thức. Đáng chú ý, hệ thống quảng cáo trên các giao diện AI của Google hiện được tự động khớp với cả câu truy vấn lẫn nội dung câu trả lời do AI tạo ra.",
+    "keyNumbers": [
+      {
+        "value": "3x",
+        "label": "Độ dài trung bình truy vấn AI so với tìm kiếm từ khóa"
+      },
+      {
+        "value": "1/6",
+        "label": "Tỷ lệ tìm kiếm đa phương thức bằng hình ảnh hoặc giọng nói"
+      },
+      {
+        "value": "65%",
+        "label": "Tỷ lệ tăng trưởng tìm kiếm bằng hình ảnh theo năm"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Xu hướng tìm kiếm AI dài gấp 3 lần và tìm kiếm đa phương thức",
+        "body": "Google xác nhận các truy vấn tìm kiếm bằng AI hiện dài trung bình gấp 3 lần so với tìm kiếm từ khóa truyền thống. Bên cạnh đó, cứ 1 trong 6 lượt tìm kiếm hiện nay là tìm kiếm đa phương thức, kết hợp hình ảnh, video hoặc giọng nói. Người dùng không còn cố gắng gọt dũa ý định thành từ khóa ngắn mà đặt thẳng các câu hỏi chi tiết. Họ thực hiện các cuộc hội thoại nhiều bước và đưa ra quyết định mua sắm phức tạp ngay trên giao diện tìm kiếm."
+      },
+      {
+        "heading": "Cơ chế khớp quảng cáo mới trên giao diện AI Overviews",
+        "body": "Điểm quan trọng nhất đối với nhà quảng cáo là cơ chế phân phối quảng cáo đã thay đổi trên các bề mặt tìm kiếm AI. Quảng cáo Google Ads hiện được hệ thống tự động khớp với cả câu truy vấn của người dùng lẫn nội dung câu trả lời do AI tạo ra. Điều này đồng nghĩa với việc quảng cáo có thể xuất hiện dựa trên ngữ cảnh mà AI đang phản hồi chứ không chỉ dựa vào từ khóa người dùng nhập. Google cũng khuyến nghị các nhà bán lẻ bổ sung 6 trường dữ liệu sản phẩm tùy chọn để tối ưu hiển thị."
+      },
+      {
+        "heading": "Bối cảnh dữ liệu và tính chính xác của các con số",
+        "body": "Các con số này được Shivani Mohan, Phó Chủ tịch Nghiên cứu Trải nghiệm Người dùng và Khoa học Dữ liệu tại Google, chia sẻ trên podcast Ads Decoded. Trước đó vào tháng 5, Google từng công bố dữ liệu tương tự nhưng giới hạn trong tính năng AI Mode tại thị trường Mỹ. Cụ thể, báo cáo tháng 5 chỉ ra các câu hỏi nối tiếp trong AI Mode tăng trưởng hơn 40% mỗi tháng tại Mỹ. Ngoài ra, dữ liệu từ tháng 7 năm 2025 cho thấy tìm kiếm bằng hình ảnh trên Google đã tăng 65% so với cùng kỳ năm trước."
+      },
+      {
+        "heading": "Sự dịch chuyển từ tìm kiếm từ khóa sang tìm kiếm hội thoại",
+        "body": "Người dùng đang chuyển dịch từ việc tìm kiếm một lần sang trải nghiệm hội thoại liên tục để giải quyết nhu cầu. Tính năng tìm kiếm bằng giọng nói và camera Search Live đã được mở rộng cho toàn bộ người dùng Mỹ từ ngày 24 tháng 9 năm 2025. Sự thay đổi này khiến người dùng tương tác sâu hơn và tìm hiểu sản phẩm từ rất sớm trước khi đi đến quyết định mua hàng cuối cùng. Do đó, cách tiếp cận đối tượng qua từ khóa chính xác đơn lẻ không còn bao phủ được toàn bộ hành trình khách hàng."
+      }
+    ],
+    "impact": "Nội dung quảng cáo Google Ads không còn chỉ đấu thầu theo từ khóa tìm kiếm mà phải tối ưu theo ngữ cảnh câu trả lời AI. Việc người dùng tìm kiếm dài gấp 3 lần và dùng hình ảnh đòi hỏi chiến dịch phải phủ rộng các từ khóa dài, cập nhật dữ liệu sản phẩm chi tiết để xuất hiện đúng lúc AI tư vấn cho khách hàng.",
+    "ifIgnored": "Nếu tiếp tục chỉ tập trung vào các từ khóa ngắn truyền thống và bỏ qua dữ liệu nguồn cấp sản phẩm chi tiết, nhà quảng cáo sẽ bỏ lỡ lượng lớn lưu lượng truy cập từ các truy vấn AI và bị đối thủ chiếm lĩnh không gian hiển thị trong các câu trả lời tổng hợp của Google.",
+    "actionChecklist": [
+      "Cập nhật và bổ sung đầy đủ 6 trường dữ liệu sản phẩm tùy chọn trong Google Merchant Center.",
+      "Mở rộng danh sách từ khóa đuôi dài và các cụm từ tìm kiếm dạng câu hỏi tự nhiên.",
+      "Rà soát chiến dịch tìm kiếm để thích ứng với cơ chế hiển thị quảng cáo theo nội dung phản hồi AI.",
+      "Tối ưu hóa hình ảnh sản phẩm và nội dung thị giác trên website để phục vụ tìm kiếm đa phương thức."
+    ],
+    "id": "real-2026-11-01-google-xac-nhan-truy-a1916f",
+    "publishedAt": "01/11/2026",
+    "sourceUrl": "https://ppc.land/google-tells-advertisers-ai-search-queries-now-run-3x-longer/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/11/google-ads-decoded-ai-search-3x-longer-queries-typewriter-paper-ribbon.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Cập nhật hướng dẫn spam của Google, kiểm soát nhà hàng và doanh thu chế độ AI",
+    "isHot": "false",
+    "illustration": "zero-click",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Google SEO",
+      "Spam Guide",
+      "AI Mode",
+      "Business Profile"
+    ],
+    "summary": "Google vừa cập nhật hướng dẫn spam yêu cầu chặn lập chỉ mục các trang chia sẻ, đồng thời cho phép nhà hàng trực tiếp quản lý đơn vị đặt món. Ngoài ra, dữ liệu mới cho thấy các trang được AI trích dẫn thường có câu trả lời trực tiếp ngay dòng đầu tiên.",
+    "keyNumbers": [
+      {
+        "value": "23%",
+        "label": "trang được trích dẫn trả lời trực tiếp"
+      },
+      {
+        "value": "14%",
+        "label": "trang không được trích dẫn trả lời trực tiếp"
+      },
+      {
+        "value": "63,35 tỷ USD",
+        "label": "doanh thu tìm kiếm quý ba của Google"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Cập nhật hướng dẫn spam cho trang chia sẻ",
+        "body": "Google bổ sung phần mới vào hướng dẫn phòng chống spam người dùng tạo ra vào ngày 26 tháng 10. Nền tảng khuyến nghị áp dụng thẻ noindex hoặc chặn thu thập thông tin qua robots.txt đối với các trang tạo ra để chia sẻ trực tiếp, cộng tác hoặc tiện ích thay vì tìm kiếm công cộng. Việc này nhằm đảm bảo chỉ nội dung thực sự phục vụ tìm kiếm được lập chỉ mục."
+      },
+      {
+        "heading": "Nhà hàng kiểm soát nhà cung cấp đặt món",
+        "body": "Các nhà hàng hiện có thể tự tắt các nhà cung cấp đặt món bên thứ ba trực tiếp từ bảng điều khiển Google Business Profile. Tính năng này áp dụng trên toàn cầu theo xác nhận từ quản lý sản phẩm Google. Trước đây, nhà hàng phải gửi yêu cầu gỡ bỏ và chờ đợi đối tác hoàn tất thao tác trong tối đa năm ngày làm việc."
+      },
+      {
+        "heading": "Dữ liệu lập chỉ mục và phản hồi của John Mueller",
+        "body": "Một người dùng trên mạng xã hội phản ánh báo cáo lập chỉ mục trang không được cập nhật từ ngày 16 tháng 10. John Mueller từ Google phản hồi rằng người dùng nên kiểm tra ngày tháng trên báo cáo và cho biết việc thay đổi lập chỉ mục phản ánh trước qua báo cáo hiệu suất. Ông cũng lưu ý các trang web mới có số liệu ổn định thường không thay đổi nhanh chóng."
+      },
+      {
+        "heading": "Đặc điểm của trang được AI trích dẫn",
+        "body": "Phân tích 193.507 câu trả lời AI từ ChatGPT, Google AI Mode và AI Overviews cho thấy các trang được trích dẫn thường mở đầu bằng câu trả lời trực tiếp. Cụ thể, các trang được trích dẫn trả lời trực tiếp ngay dòng đầu tiên ở mức 23 phần trăm, trong khi các trang không được trích dẫn chỉ đạt 14 phần trăm. So với mười kết quả hàng đầu của Google mà AI không bao giờ lấy lên, tỷ lệ này là 20 phần trăm so với 5 phần trăm."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing cần rà soát lại cấu trúc website để chặn lập chỉ mục các trang tạo nội dung chia sẻ nội bộ, đồng thời kiểm tra ngay các liên kết đặt món trên hồ sơ doanh nghiệp của nhà hàng để tránh thất thoát khách hàng.",
+    "ifIgnored": "Nếu bỏ qua, các trang tiện ích chia sẻ có thể bị lập chỉ mục nhầm làm loãng chất lượng SEO tổng thể và các liên kết đặt món không mong muốn trên Google Business Profile vẫn tiếp tục hiển thị.",
+    "actionChecklist": [
+      "Kiểm tra và áp dụng thẻ noindex hoặc robots.txt cho các trang chia sẻ nội bộ",
+      "Đăng nhập Google Business Profile để rà soát và tắt các nhà cung cấp đặt món không sử dụng",
+      "Kiểm tra báo cáo hiệu suất Search Console để đánh giá biến động lập chỉ mục thay vì chỉ nhìn báo cáo độ trễ",
+      "Tối ưu hóa các trang đích quan trọng bằng cách đưa câu trả lời trực tiếp ngay dòng đầu tiên"
+    ],
+    "id": "real-2026-10-31-cap-nhat-huong-dan-053e00",
+    "publishedAt": "31/10/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/seo-pulse-spam-guide-restaurant-controls-ai-mode-revenue/595031/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/10/seo-pulse-spam-guide-restaurant-controls-featured.jpg",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
+    "category": "AI Marketing",
+    "platformIcon": "Sparkles",
+    "title": "Khoảng trống AI: Biết thương hiệu nhưng không đề xuất",
+    "isHot": false,
+    "illustration": "zero-click",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "AI Search",
+      "Thương hiệu",
+      "SEO",
+      "Đo lường"
+    ],
+    "summary": "Nhiều thương hiệu tự tin vì chatbot nhận diện đúng tên tuổi, nhưng lại vắng mặt trong các câu hỏi gợi ý giải pháp của khách hàng. Khảo sát cho thấy phần lớn người mua B2B khởi đầu hành trình từ AI và bị chatbot dẫn dắt sang nhà cung cấp khác.",
+    "keyNumbers": [
+      {
+        "value": "51%",
+        "label": "người mua B2B bắt đầu từ AI"
+      },
+      {
+        "value": "69%",
+        "label": "chatbot làm đổi nhà cung cấp"
+      },
+      {
+        "value": "29%",
+        "label": "marketer theo dõi hiển thị AI"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Thực trạng nhận diện và đề xuất",
+        "body": "Thực nghiệm cho thấy khi hỏi chatbot các câu hỏi của khách hàng mục tiêu, các công cụ AI dù biết rất rõ lý lịch cá nhân nhà sáng lập nhưng hầu như không đưa doanh nghiệp vào danh sách đề xuất. Khoảng cách giữa việc máy móc nhận diện tên tuổi và việc máy móc chủ động giới thiệu sản phẩm đang là bài toán đo lường sai lệch của nhiều đội ngũ. Đo lường lượt tìm kiếm thương hiệu trực tiếp không còn phản ánh đúng khả năng chiến thắng trong kỷ nguyên tìm kiếm bằng AI."
+      },
+      {
+        "heading": "Hành vi mới của khách hàng B2B",
+        "body": "Theo khảo sát tháng 3 năm 2026 của G2 với 1.076 người mua phần mềm B2B, có 51% người tham gia cho biết họ bắt đầu quá trình nghiên cứu bằng chatbot AI thường xuyên hơn Google, tăng từ 29% trong báo cáo năm 2025. Đáng chú ý, 69% người mua thừa nhận chatbot đã dẫn dắt họ lựa chọn một nhà cung cấp khác với dự định ban đầu. Cứ ba người mua thì có một người chốt đơn từ một đơn vị mà họ chưa từng nghe tên trước đó."
+      },
+      {
+        "heading": "Dữ liệu cũ và nguồn trích dẫn",
+        "body": "Các công cụ trả lời tự động thường mặc định sử dụng dữ liệu cũ trên web, vốn thiên về các thông tin xuất hiện lâu đời nhất từ các cơ sở dữ liệu và thông cáo báo chí cũ. Điều này khiến các doanh nghiệp vừa đổi thương hiệu hoặc tái cơ cấu gặp bất lợi lớn khi AI vẫn mô tả họ theo dữ liệu quá khứ. Hơn nữa, AI thường không trích dẫn trực tiếp trang của doanh nghiệp mà ưu tiên dẫn nguồn từ các bài tổng hợp danh sách bên thứ ba."
+      },
+      {
+        "heading": "Tác động đến định giá và đầu tư",
+        "body": "Sự thay đổi này không chỉ ảnh hưởng đến lượng truy cập mà đã bắt đầu tác động trực tiếp đến giá trị doanh nghiệp trong các thương vụ M&A và hoạch định ngân sách. Trong một báo cáo thị trường năm 2026-2027 với khoảng 100 bên nhận thâu tóm tích cực, có tới 91% đánh giá khả năng chống chịu trước AI là yếu tố quan trọng quyết định giá trị doanh nghiệp. Việc phụ thuộc vào lượng truy cập tìm kiếm thay vì sở hữu quan hệ khách hàng trực tiếp đang bị thị trường định giá chiết khấu."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing cần nhận ra chỉ số nhận diện thương hiệu truyền thống qua truy vấn tên gọi đang che giấu sự sụt giảm trong danh sách đề xuất thực tế của AI.",
+    "ifIgnored": "Tiếp tục tối ưu sai chỉ số hiển thị tên tuổi, trong khi đối thủ giành trọn khách hàng mới ngay từ bước AI lập danh sách rút gọn.",
+    "actionChecklist": [
+      "Kiểm tra ngay các câu hỏi ngành hàng trên ChatGPT và Gemini",
+      "Rà soát và cập nhật dữ liệu cũ trên các trang tổng hợp",
+      "Chuyển trọng tâm đo lường từ nhận diện sang tỷ lệ xuất hiện trong gợi ý",
+      "Đánh giá lại mức độ phụ thuộc kênh tìm kiếm so với sở hữu dữ liệu khách hàng"
+    ],
+    "id": "real-2026-10-30-khoang-trong-ai-biet-b551a1",
+    "publishedAt": "30/10/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/the-ai-search-measurement-gap-brands-must-close-in-2027-and-beyond/593881/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/10/measurement-gap-682.png",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
     "title": "Google xác nhận thay đổi tCPA và ngân sách không làm đặt lại trạng thái Learning",
     "isHot": false,
     "illustration": "ai-budget",
@@ -57,69 +246,6 @@
     "image": {
       "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/10/google-ads-bfcm-987.png",
       "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Doanh thu quảng cáo Reddit tăng 54% nhưng lượng truy cập từ tìm kiếm suy giảm mạnh",
-    "isHot": false,
-    "illustration": "data-signal",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Reddit Ads",
-      "SEO",
-      "Biến động lưu lượng",
-      "Doanh thu quảng cáo"
-    ],
-    "summary": "Reddit ghi nhận doanh thu quảng cáo quý 3 đạt 847 triệu USD, tăng 54% so với cùng kỳ năm trước. Tuy nhiên, lượng người dùng truy cập từ công cụ tìm kiếm giảm đáng kể, đe dọa làm sụt giảm lượng người dùng hoạt động hằng ngày trong quý tới.",
-    "keyNumbers": [
-      {
-        "value": "847 triệu USD",
-        "label": "doanh thu quảng cáo quý 3"
-      },
-      {
-        "value": "54%",
-        "label": "tăng trưởng doanh thu quảng cáo"
-      },
-      {
-        "value": "130,3 triệu",
-        "label": "người dùng hoạt động hằng ngày"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Kết quả kinh doanh quý 3",
-        "body": "Reddit đạt tổng doanh thu 895 triệu USD trong quý 3 năm 2026, trong đó doanh thu quảng cáo chiếm 847 triệu USD. Mức tăng trưởng doanh thu quảng cáo đạt 54%, giảm nhẹ so với các quý trước nhưng vẫn duy trì ở mức cao. Doanh thu tại thị trường Mỹ tăng 50% lên 718,9 triệu USD, trong khi thị trường quốc tế tăng 67% lên 176,1 triệu USD."
-      },
-      {
-        "heading": "Biến động lưu lượng tìm kiếm",
-        "body": "Lượng truy cập giới thiệu từ các công cụ tìm kiếm giảm mạnh trong quý 3 và tiếp tục đà giảm sang tháng 10. Lượng truy cập từ tìm kiếm đã giảm trung bình hơn 1 triệu lượt mỗi tuần trong tháng 10. Xu hướng này bắt nguồn từ sự thay đổi của tìm kiếm web khi chuyển dịch thành nền tảng tích hợp AI."
-      },
-      {
-        "heading": "Nguy cơ sụt giảm người dùng",
-        "body": "Do ảnh hưởng từ việc sụt giảm lưu lượng tìm kiếm, Reddit cảnh báo số lượng người dùng hoạt động hằng ngày có thể giảm ở mức hai chữ số thấp trong quý 4 từ nền tảng hiện tại là 130 triệu. Công ty đang phải tăng mạnh chi phí bán hàng và marketing để bù đắp lượng reach bị thiếu hụt."
-      },
-      {
-        "heading": "Tăng trưởng doanh thu trên mỗi người dùng",
-        "body": "Mặc dù lượng người dùng hoạt động hằng ngày tại Mỹ giảm 2% so với cùng kỳ năm trước, doanh thu tại đây vẫn tăng 50%. Điều này cho thấy sự tăng trưởng đến từ việc khai thác nhiều giá trị hơn từ mỗi khách truy cập thay vì mở rộng quy mô người dùng mới. Doanh thu trung bình trên mỗi người dùng quy đổi toàn cầu tăng 36% lên 6,87 USD."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing cần lưu ý rằng nền tảng Reddit đang chịu áp lực lớn về lưu lượng truy cập tự nhiên từ SEO do sự thay đổi của tìm kiếm tích hợp AI, buộc họ phải tăng chi phí marketing để duy trì quy mô người dùng.",
-    "ifIgnored": "Nếu bỏ qua tín hiệu này, nhà quảng cáo có thể bất ngờ trước sự biến động về quy mô tập khách hàng tiềm năng trên Reddit và chi phí hiển thị quảng cáo khi nền tảng này siết chặt khai thác giá trị trên từng người dùng.",
-    "actionChecklist": [
-      "Đánh giá lại hiệu suất chiến dịch quảng cáo trên Reddit trước biến động lưu lượng người dùng",
-      "Theo dõi sát chi phí quảng cáo và chỉ số doanh thu trên mỗi lượt hiển thị",
-      "Đa dạng hóa các kênh phân phối ngoài Reddit để giảm thiểu rủi ro từ việc sụt giảm traffic tìm kiếm",
-      "Kiểm tra lại tỷ lệ chuyển đổi từ phễu dưới để tối ưu hóa ngân sách hiện tại"
-    ],
-    "id": "real-2026-10-29-doanh-thu-quang-cao-318233",
-    "publishedAt": "29/10/2026",
-    "sourceUrl": "https://ppc.land/reddit-ad-revenue-gains-54-to-847m-as-daily-users-stall-at-130-3m/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/10/reddit-q3-2026-ad-revenue-847m-stalled-users-pitch-room-arrow.jpg",
-      "credit": "Ảnh: PPC Land"
     }
   },
   {
@@ -434,69 +560,6 @@
     }
   },
   {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Google mở rộng quảng cáo AI Mode: Tự động áp dụng trên Search và Performance Max",
-    "isHot": false,
-    "illustration": "ai-budget",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Google Ads",
-      "AI Mode",
-      "Performance Max",
-      "Tối ưu ngân sách"
-    ],
-    "summary": "Google ghi nhận doanh thu mảng Search quý 3 năm 2026 tăng trưởng chậm lại, một phần do hiệu suất kiếm tiền từ tính năng AI Mode chưa đạt kỳ vọng. Nền tảng quyết định mở rộng hiển thị quảng cáo AI Mode ra 10 thị trường mới và mặc định kích hoạt trên toàn bộ các chiến dịch Search, Shopping và Performance Max hiện có.",
-    "keyNumbers": [
-      {
-        "value": "12%",
-        "label": "Tăng trưởng doanh thu Google Search quý 3 năm 2026"
-      },
-      {
-        "value": "63,35 tỷ USD",
-        "label": "Doanh thu mảng Search trong quý 3 năm 2026"
-      },
-      {
-        "value": "10",
-        "label": "Thị trường mới mở rộng quảng cáo AI Mode"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Doanh thu Google Search giảm tốc do khả năng kiếm tiền từ AI Mode còn thấp",
-        "body": "Tốc độ tăng trưởng doanh thu từ mảng Google Search & Other trong quý 3 năm 2026 đạt 12% so với cùng kỳ, ghi nhận mức 63,35 tỷ USD. Đây là quý thứ hai liên tiếp tăng trưởng của mảng này bị chậm lại, sau khi đạt 19% ở quý 1 và 17% ở quý 2. Doanh thu Search quý này gần như đi ngang so với mức 63,27 tỷ USD của quý trước đó. Đại diện Google cho biết việc tỷ lệ tiền tệ hóa trong AI Mode còn thấp là một trong những lý do chính khiến tăng trưởng Search hạ nhiệt."
-      },
-      {
-        "heading": "Tự động áp dụng cho mọi chiến dịch Search, Shopping và Performance Max",
-        "body": "Google xác nhận toàn bộ các chiến dịch Search, Shopping và Performance Max hiện có sẽ mặc định đủ điều kiện hiển thị quảng cáo trong AI Mode. Nhà quảng cáo không có tùy chọn phân tách hoặc tắt riêng tính năng hiển thị này khỏi các chiến dịch đang chạy. Ngoài ra, nền tảng cũng chính thức thử nghiệm quảng cáo trong tính năng câu hỏi nối tiếp của AI Mode tại Mỹ. Sự thay đổi này buộc các doanh nghiệp phải xem xét lại cấu trúc chiến dịch để kiểm soát luồng truy vấn."
-      },
-      {
-        "heading": "Đặc điểm truy vấn AI Mode và tỷ lệ nhấp chuột thực tế",
-        "body": "Các truy vấn mới từ người dùng trong AI Search phần lớn nằm ở đoạn trên của phễu bán hàng với các câu hỏi tìm hiểu thông tin chung. Mặc dù vậy, dữ liệu nội bộ của Google công bố cho thấy người dùng đã bắt đầu quen thuộc với quảng cáo xuất hiện trong AI Mode. Tỷ lệ nhấp chuột giữa danh sách sản phẩm tài trợ và sản phẩm tự nhiên trong AI Mode được ghi nhận ở mức tương đương nhau. Google khẳng định các truy vấn AI này sẽ tạo ra nhiều cơ hội thương mại hơn theo thời gian."
-      },
-      {
-        "heading": "Mở rộng hiển thị quảng cáo AI Mode ra 10 thị trường quốc tế",
-        "body": "Google đang đẩy mạnh mở rộng quy mô quảng cáo AI Mode sang 10 thị trường tiếp theo gồm Úc, Canada, Ấn Độ, Kenya, Malaysia, New Zealand, Nigeria, Pakistan, Philippines và Singapore. Nền tảng cũng dự kiến bổ sung thêm các quốc gia khác như Anh, Brazil và Mexico trong quý 4 năm 2026. Việc quảng cáo AI Mode tiến sát các thị trường Đông Nam Á cho thấy xu hướng này sẽ sớm tác động trực tiếp tới Việt Nam. Các nhà quản lý quảng cáo cần chủ động chuẩn bị kịch bản tối ưu tài khoản từ sớm."
-      }
-    ],
-    "impact": "Ngân sách quảng cáo Google Ads (đặc biệt là Performance Max) sẽ tự động bị phân bổ thêm vào các truy vấn AI Mode mang tính chất tìm kiếm thông tin ở đầu phễu, làm thay đổi cơ cấu chi phí nhấp chuột và tỷ lệ chuyển đổi cuối cùng.",
-    "ifIgnored": "Doanh nghiệp sẽ lãng phí ngân sách vào các nhấp chuột không tạo ra chuyển đổi ngay do không thể chủ động tắt hiển thị trên AI Mode, dẫn đến cướp ngân sách của các từ khóa mua sắm cốt lõi và làm giảm ROI tổng thể.",
-    "actionChecklist": [
-      "Rà soát lại danh sách từ khóa phủ định trong các chiến dịch Search để chặn các truy vấn tìm kiếm thông tin chung chung do AI Mode kích hoạt.",
-      "Kiểm tra và bổ sung nội dung quảng cáo trên Performance Max để đảm bảo thông điệp phù hợp với người dùng ở giai đoạn nhận thức sản phẩm.",
-      "Theo dõi chặt chẽ biến động chi phí mỗi nhấp chuột và tỷ lệ chuyển đổi của các chiến dịch đang chạy tại khu vực Đông Nam Á.",
-      "Tối ưu hóa trang đích để sẵn sàng giải đáp các thắc mắc chuyên sâu từ lượng người dùng truy cập thông qua các câu hỏi nối tiếp của AI."
-    ],
-    "id": "real-2026-10-28-google-mo-rong-quang-c24f34",
-    "publishedAt": "28/10/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/google-search-growth-slows-again-ai-mode/594862/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/10/google-search-growth-ai-mode-1600x840-1.jpg",
-      "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
     "category": "Meta Ads",
     "platformIcon": "Facebook",
     "title": "Meta nâng cấp hạ tầng AI giúp tăng tỷ lệ chuyển đổi và lượt nhấp quảng cáo",
@@ -557,70 +620,6 @@
     "image": {
       "url": "https://imgproxy.divecdn.com/MfIOTDAv-J0dXBQpKZ-dYPTu48natx1BFWY-QF8sGGA/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9tZXRhX2FkX3JhbmtpbmcyLnBuZw==.webp",
       "credit": "Ảnh: Social Media Today"
-    }
-  },
-  {
-    "category": "AI Marketing",
-    "platformIcon": "Sparkles",
-    "title": "Shopify chuyển Cơ sở dữ liệu AI Agent vào Merchant Admin và ngừng ứng dụng cũ",
-    "isHot": false,
-    "illustration": "shop-health",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Shopify",
-      "AI Agent",
-      "E-commerce",
-      "AI Search"
-    ],
-    "summary": "Shopify đã di chuyển cơ sở dữ liệu (Knowledge Base) phục vụ các đại lý AI bán hàng trực tiếp vào Merchant Admin và sẽ ngừng ứng dụng cũ từ ngày 15/01/2027. Các thông tin chính sách và liên hệ sẽ được xuất bản mặc định để ứng dụng AI truy cập. Những cửa hàng có trên 1.000 dữ liệu sẽ phải tự nhập lại thủ công trước thời hạn đóng ứng dụng.",
-    "keyNumbers": [
-      {
-        "value": "1.000",
-        "label": "giới hạn dữ liệu tối đa trong trang quản trị mới"
-      },
-      {
-        "value": "15/01/2027",
-        "label": "thời hạn ứng dụng Knowledge Base cũ dừng hoạt động"
-      },
-      {
-        "value": "48 giờ",
-        "label": "thời gian tối đa để hệ thống hoàn tất quét lại cửa hàng"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Thay đổi vị trí quản lý dữ liệu AI",
-        "body": "Shopify chính thức thay thế ứng dụng Knowledge Base độc lập bằng tính năng tích hợp trực tiếp trong Merchant Admin tại mục Sales channels > Agentic > Knowledge base. Cơ sở dữ liệu này lưu trữ các thông tin ngoài sản phẩm giúp đại lý AI trả lời thắc mắc của khách hàng như chính sách đổi trả hay thời gian giao hàng. Các dữ liệu được chia thành 10 danh mục quản lý khác nhau. Theo Changelog ngày 26/10, ứng dụng cũ sẽ dừng hoạt động hoàn toàn sau ngày 15/01/2027."
-      },
-      {
-        "heading": "Cơ chế quét và tự động xuất bản thông tin",
-        "body": "Thông tin chính sách cửa hàng và liên hệ sẽ được tự động xuất bản ngay khi tạo để các ứng dụng AI như Shop app truy cập qua Storefront MCP. Shopify thực hiện quét giao diện định kỳ để cập nhật dữ liệu mới cho nhà bán hàng phê duyệt. Nếu giao diện thay đổi nhưng chưa cập nhật, nhà bán hàng có thể yêu cầu quét lại với thời gian xử lý lên đến 48 giờ. Các gian hàng cài đặt mật khẩu sẽ không thể quét giao diện mà chỉ dùng được dữ liệu do quản trị viên nhập."
-      },
-      {
-        "heading": "Quy định chuyển đổi dữ liệu cho nhà bán hàng",
-        "body": "Những gian hàng sở hữu hơn 1.000 dữ liệu trên ứng dụng cũ sẽ không được hệ thống tự động chuyển sang cơ sở dữ liệu mới. Các nhà bán lẻ lớn này buộc phải tự rà soát và nhập lại những dữ liệu cần thiết trước ngày 15/01/2027. Đối với các cửa hàng nhỏ hơn, dữ liệu đã tạo hoặc chỉnh sửa được tự động chuyển giao và xuất bản. Hệ thống mới áp dụng mức giới hạn tối đa 1.000 dữ liệu cho mỗi gian hàng."
-      },
-      {
-        "heading": "Đánh giá hiệu quả thực tế và lưu ý kỹ thuật",
-        "body": "Thử nghiệm trên 122 cửa hàng Shopify trong tháng 8 và tháng 9 cho thấy chỉ có 2 trong số 88 cửa hàng được truy vấn đưa ra câu trả lời dùng được về việc hủy đơn hàng. Việc cập nhật cơ sở dữ liệu giúp tăng độ chính xác cho câu trả lời của AI nhưng không làm tăng số lần hiển thị cửa hàng trên kết quả tìm kiếm AI. Ngoài ra, Shopify đã đánh giá công cụ Storefront MCP là deprecated để chuyển hướng lập trình viên sang Ask MCP."
-      }
-    ],
-    "impact": "Ảnh hưởng trực tiếp đến độ chính xác khi các trợ lý AI (như ChatGPT, Shop app) giải đáp thắc mắc của khách mua hàng, tác động tới tỷ lệ chốt đơn và trải nghiệm người dùng trên nền tảng thương mại AI.",
-    "ifIgnored": "Các gian hàng có trên 1.000 dữ liệu sẽ mất toàn bộ thông tin tùy chỉnh khi ứng dụng cũ bị xóa vào ngày 15/01/2027, khiến trợ lý AI đưa ra thông tin sai lệch hoặc không thể trả lời khách hàng.",
-    "actionChecklist": [
-      "Truy cập mục Sales channels > Agentic > Knowledge base trong Shopify Admin để kiểm tra giao diện mới.",
-      "Rà soát số lượng dữ liệu trên ứng dụng cũ để chuẩn bị di chuyển thủ công nếu vượt quá 1.000 dữ liệu.",
-      "Bổ sung các điều khoản còn thiếu (như chính sách hủy đơn) vào mục Additional Facts.",
-      "Trực tiếp thử nghiệm đặt các câu hỏi thực tế của người mua để kiểm tra phản hồi của AI."
-    ],
-    "deadline": "15/01/2027",
-    "id": "real-2026-10-27-shopify-chuyen-co-so-6b74bf",
-    "publishedAt": "27/10/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/shopify-ai-agent-knowledge-base-admin/594551/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/10/shopify-knowledge-base-admin.jpg",
-      "credit": "Ảnh: Search Engine Journal"
     }
   },
   {
