@@ -1,5 +1,198 @@
 [
   {
+    "category": "AI Marketing",
+    "platformIcon": "Sparkles",
+    "title": "Microsoft Clarity phát hiện hành vi AI Agent làm biến dạng dữ liệu phễu chuyển đổi website",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "AI Agent",
+      "Microsoft Clarity",
+      "Đo lường Marketing",
+      "Tỷ lệ chuyển đổi"
+    ],
+    "summary": "Nghiên cứu mới từ Microsoft Clarity trên 5,2 triệu phiên truy cập cho thấy các AI agent xuất hiện ở bước thanh toán (Checkout) với tỷ lệ 25,21%, cao hơn nhiều so với 14,65% của người dùng thực. Do các công cụ phân tích hiện tại đo lường chung cả AI agent lẫn người thật, dữ liệu phễu chuyển đổi trên website đang đứng trước nguy cơ bị sai lệch nghiêm trọng.",
+    "keyNumbers": [
+      {
+        "value": "25,21%",
+        "label": "Tỷ lệ phiên AI agent ghi nhận Checkout so với 14,65% ở người dùng"
+      },
+      {
+        "value": "88%",
+        "label": "Mức tăng trưởng lượng phiên AI agent chỉ trong 3 tuần"
+      },
+      {
+        "value": "5,2 triệu",
+        "label": "Số phiên truy cập AI agent được phân tích trên 230.511 dự án"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Báo cáo từ Microsoft Clarity về hành vi của AI Agent",
+        "body": "Microsoft Clarity đã phân tích hơn 5,2 triệu phiên truy cập web có sự tham gia của AI agent trên 230.511 dự án từ ngày 13/8 đến ngày 9/9/2026. Kết quả cho thấy hành động Thanh toán (Checkout) xuất hiện trong 25,21% phiên của AI agent, cao hơn mức 14,65% ở các phiên chỉ có người dùng thực. Tuy nhiên, Clarity cho biết hệ thống chưa thể tách biệt chính xác thao tác nào do AI thực hiện và thao tác nào do con người bấm. Nhiều phiên làm việc của AI agent có bước chuyển giao cho con người (human handoff) khi xuất hiện yêu cầu đăng nhập hoặc nhập thẻ thanh toán."
+      },
+      {
+        "heading": "Sự bùng nổ lưu lượng truy cập từ AI agent và công cụ theo dõi mới",
+        "body": "Dữ liệu của Microsoft ghi nhận khối lượng phiên làm việc của AI agent đã tăng 88% chỉ trong vòng 3 tuần. Nhằm giúp các nhà vận hành website hiểu rõ hơn về đối tượng này, Clarity đã ra mắt Bảng điều khiển Báo cáo Hoạt động Agent (Agent Activity Dashboard). Hệ thống phát hiện agent thông qua các nhà cung cấp trình duyệt agentic thuộc ba hệ sinh thái gồm OpenAI, Google và Anthropic. Điều này rất quan trọng vì hầu hết các bộ công cụ phân tích hiện tại được xây dựng để hiểu người dùng người thật chứ không phải agent hành động thay họ."
+      },
+      {
+        "heading": "Khác biệt rõ rệt trong phễu hành vi giữa AI agent và người dùng thật",
+        "body": "Các hành động quan trọng (Smart Events) cho thấy sự phân bổ trọng số khác nhau giữa hai nhóm đối tượng. Ở nhóm AI agent, hành động Đặt lịch hẹn (Book appointment) đạt 8,42% và Kiểm tra phòng/trạng thái (Check availability) đạt 2,41%, trong khi cả hai đều không nằm trong top 10 của người dùng thật. Ngược lại, người dùng thật có tỷ lệ Nhấp liên kết ngoài (Outbound click) cao gần gấp đôi với 26,99% so với 14,28% của AI agent. Ngoài ra, người dùng thật có tỷ lệ Đăng nhập (Login) là 8,84%, Thêm vào giỏ hàng (Add to cart) là 3,31% và Tải xuống (Download) là 2,97%."
+      },
+      {
+        "heading": "Biến dạng dữ liệu chuyển đổi và thách thức đo lường CRO",
+        "body": "Dữ liệu phễu của AI agent có sự bất thường lớn khi tỷ lệ Checkout đạt 25,21% nhưng Add to cart chỉ chiếm 2,33%, tức là chênh lệch hơn 10 lần. Trong khi đó, ở người dùng thật, sự kiện Xác nhận đơn hàng (Order success) đạt 1,79% và Bắt đầu thanh toán (Begin checkout) đạt 1,62%. Do hành động Checkout trong dữ liệu AI agent có thể chỉ là nhấp vào nút thanh toán hoặc ghé trang thanh toán chứ không phải hoàn tất giao dịch, dữ liệu này đang đi thẳng vào các công cụ phân tích chung. Sự lẫn lộn này có thể làm sai lệch hoàn toàn báo cáo hiệu suất chuyển đổi của website."
+      }
+    ],
+    "impact": "Lưu lượng truy cập từ AI agent đang tăng 88% và hòa chung vào dữ liệu Analytics hiện tại, gây ra tình trạng báo cáo ảo ở các bước phễu (như Checkout tăng vọt 25,21% dù Add to cart chỉ 2,33%), khiến Trưởng phòng Marketing đánh giá sai hiệu quả chuyển đổi thực tế.",
+    "ifIgnored": "Doanh nghiệp sẽ đưa ra các quyết định tối ưu hóa CRO sai lầm dựa trên số liệu phân tích bị nhiễu, lãng phí ngân sách quảng cáo vào các luồng traffic không tạo ra doanh thu thực sự.",
+    "actionChecklist": [
+      "Kích hoạt và kiểm tra Bảng điều khiển Báo cáo Hoạt động Agent (Agent Activity Dashboard) trên Microsoft Clarity.",
+      "Rà soát lại quy trình ghi nhận sự kiện Smart Events để phân biệt giữa click Checkout và giao dịch thành công (Order success).",
+      "Tách biệt chỉ số chuyển đổi (CRO) của traffic người thật và traffic có AI agent tham gia trong các báo cáo hiệu suất.",
+      "Tối ưu lại giao diện cho các hành vi phổ biến của AI agent như Đặt lịch hẹn (Book appointment) và Kiểm tra trạng thái (Check availability)."
+    ],
+    "id": "real-2026-11-01-microsoft-clarity-phat-hien-2228b3",
+    "publishedAt": "01/11/2026",
+    "sourceUrl": "https://ppc.land/checkout-appears-in-25-of-ai-agent-sessions-vs-15-for-humans-clarity-finds/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/11/microsoft-clarity-ai-agent-sessions-checkout-cash-register-shared-hands.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "Meta Ads",
+    "platformIcon": "Video",
+    "title": "Instagram thử nghiệm video dài 90 phút và vung tiền thu hút nhà sáng tạo",
+    "isHot": false,
+    "illustration": "ai-video",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Instagram Features",
+      "Video dài",
+      "Creator Economy",
+      "Meta"
+    ],
+    "summary": "Instagram đang bắt đầu thử nghiệm tính năng Features cho phép đăng tải các video dài tới 90 phút. Để cạnh tranh với YouTube, Meta sẵn sàng chi trả các khoản tiền thưởng lên tới 500.000 USD cho những nhà sáng tạo nội dung hàng đầu. Tuy nhiên, việc thiếu cơ chế chia sẻ doanh thu bền vững có thể khiến nỗ lực này lặp lại thất bại của IGTV trong quá khứ.",
+    "keyNumbers": [
+      {
+        "value": "90 phút",
+        "label": "Thời lượng video tối đa trên tính năng Features"
+      },
+      {
+        "value": "500.000 USD",
+        "label": "Thù lao cao nhất Instagram trả cho nhà sáng tạo"
+      },
+      {
+        "value": "1 USD - 10 USD",
+        "label": "Doanh thu YouTube trả cho 1.000 lượt xem video dài"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Instagram thử nghiệm tính năng Features hỗ trợ video dài 90 phút",
+        "body": "Instagram đang tiến hành thử nghiệm tính năng mới có tên Features cho phép các nhà sáng tạo đăng tải video có độ dài lên tới 90 phút. Để thu hút người dùng trải nghiệm, Meta sẵn sàng chi trả khoản kinh phí trực tiếp cho một số nhà sáng tạo nội dung. Một phát ngôn viên của Meta đã xác nhận việc công ty đang cấp vốn trực tiếp cho nội dung trên Features. Việc mở rộng thời lượng video này thể hiện nỗ lực mới nhất của nền tảng trong việc cạnh tranh lượng người xem video dài."
+      },
+      {
+        "heading": "Các gói thù lao lớn dành riêng cho những nhà sáng tạo hàng đầu",
+        "body": "Theo các nguồn tin, Instagram đã đề nghị thanh toán cho một số nhà sáng tạo chọn lọc số tiền 50.000 USD để đăng video dài lên Features. Bên cạnh đó, một số ngôi sao lớn khác thậm chí được thỏa thuận các hợp đồng trị giá 6 chữ số lên tới 500.000 USD. Việc trả thưởng trước này được coi là bước đi ngắn hạn nhằm tạo làn sóng nội dung ban đầu cho tính năng mới. Giám đốc Instagram Adam Mosseri cũng thừa nhận bài toán kinh tế đóng vai trò rất quan trọng đối với các nhà sáng tạo."
+      },
+      {
+        "heading": "Thách thức về bài toán doanh thu bền vững so với YouTube",
+        "body": "Dù đưa ra các khoản tiền thưởng lớn, Instagram vẫn chưa có cơ chế chia sẻ doanh thu quảng cáo dài hạn thu hút như YouTube. Theo phân tích từ VidIQ, mô hình chia sẻ doanh thu quảng cáo của YouTube trả cho nhà sáng tạo trung bình từ 1 USD đến 10 USD cho mỗi 1.000 lượt xem video dài. Trong khi đó, nguồn thu nhập từ lượt xem đơn thuần trên Instagram gần như bằng 0 nếu không có hợp đồng tài trợ thương hiệu. Các nhà sáng tạo có trên 1 triệu người đăng ký thu về khoảng 50.000 USD mỗi tháng trên YouTube nhưng chỉ đạt từ 5.000 USD đến 15.000 USD trên Instagram."
+      },
+      {
+        "heading": "Bài học lịch sử từ thất bại của IGTV trong quá khứ",
+        "body": "Đây không phải lần đầu tiên Meta chi tiền mặt để thúc đẩy định dạng video dài trên nền tảng của mình. Vào năm 2021, Meta từng công bố kế hoạch chi 1 tỷ USD trong năm 2022 cho các nhà sáng tạo nội dung, bao gồm tiền thưởng cho video IGTV. Tuy nhiên, chiến lược trả tiền trước này đã không tạo ra sự tăng trưởng bền vững về người dùng. Đến đầu năm 2022, Meta đã phải từng bước đóng cửa ứng dụng IGTV độc lập do thiếu hiệu quả."
+      },
+      {
+        "heading": "Định hướng chiến lược nội dung video cho thương hiệu",
+        "body": "Các nền tảng khác như X cũng từng tổ chức giải thưởng 175.000 USD nhưng chỉ tạo ra sự bùng nổ bài đăng tạm thời. Nếu không có cơ chế phân chia doanh thu ổn định, tính năng video dài của Instagram khó tạo ra thói quen xem video lâu dài. Đối với các thương hiệu, sự xuất hiện của video 90 phút mở ra không gian mới cho nội dung chuyên sâu và tài trợ. Tuy nhiên, doanh nghiệp cần theo dõi sát hiệu quả thực tế trước khi chuyển dịch ngân sách lớn sang định dạng mới này."
+      }
+    ],
+    "impact": "Sự xuất hiện của định dạng video dài trên Instagram mở ra kênh tài trợ nội dung chuyên sâu mới với KOL/KOC, tuy nhiên Trưởng phòng Marketing chưa nên vội vã dịch chuyển ngân sách lớn từ YouTube hay Reels sang Features khi Meta chưa chứng minh được khả năng giữ chân người xem video dài.",
+    "ifIgnored": "Thương hiệu có thể bỏ lỡ cơ hội hợp tác sớm với các nhà sáng tạo đang được Meta tài trợ kinh phí, hoặc ngược lại tiêu tốn tài nguyên sản xuất video dài đắt đỏ trên một tính năng thiếu lượng người xem ổn định.",
+    "actionChecklist": [
+      "Rà soát danh sách KOL/KOC hiện tại để đánh giá khả năng sản xuất video nội dung dài.",
+      "Thử nghiệm tài trợ thương hiệu trong các chuỗi video dài của nhà sáng tạo được Meta cấp vốn.",
+      "Theo dõi chỉ số giữ chân người xem (retention rate) đối với các video 90 phút thử nghiệm trên Instagram.",
+      "Duy trì tỷ trọng ngân sách chính cho video dài trên YouTube thay vì dồn lực quá sớm vào Features."
+    ],
+    "id": "real-2026-11-01-instagram-thu-nghiem-video-800ac6",
+    "publishedAt": "01/11/2026",
+    "sourceUrl": "https://www.socialmediatoday.com/news/instagram-offers-to-pay-creators-for-long-form-content/873402/",
+    "source": "Social Media Today",
+    "image": {
+      "url": "https://imgproxy.divecdn.com/Fnl-3ZX5_izgfhnB-ftLsecfo9z06J5IaTJc92SFUJk/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9pbnN0YWdyYW1fZmVhdHVyZXMucG5n.webp",
+      "credit": "Ảnh: Social Media Today"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Thương hiệu lớn thống trị tìm kiếm AI nhưng vẫn để ngỏ cơ hội cho website nhỏ",
+    "isHot": false,
+    "illustration": "zero-click",
+    "readTime": "5 phút đọc",
+    "tags": [
+      "Tìm kiếm AI",
+      "Google AI Overviews",
+      "ChatGPT",
+      "Chiến lược SEO"
+    ],
+    "summary": "Nghiên cứu mới từ BrightEdge cho thấy các thương hiệu lớn đang thống trị kết quả tìm kiếm trên ChatGPT và Google AI Overviews đối với các truy vấn đặt chỗ và giao dịch. Tuy nhiên, các truy vấn mang tính truyền cảm hứng và trải nghiệm thực tế lại mở ra cơ hội lớn cho các website nhỏ và nội dung do người dùng tạo.",
+    "keyNumbers": [
+      {
+        "value": "28,3%",
+        "label": "Hilton dẫn đầu Google AI Overviews"
+      },
+      {
+        "value": "29,4%",
+        "label": "Marriott dẫn đầu ChatGPT"
+      },
+      {
+        "value": "78%",
+        "label": "Nền tảng đặt chỗ xuất hiện ở câu hỏi ngân sách"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Thương hiệu lớn thống trị từng ngành hàng cụ thể",
+        "body": "Dữ liệu từ BrightEdge chỉ ra rằng các thương hiệu lớn và quen thuộc với người tiêu dùng đang chiếm lĩnh vị trí hàng đầu trên cả Google AI Overviews và ChatGPT. American Airlines, Royal Caribbean và Expedia lần lượt dẫn đầu các danh mục hãng hàng không, hãng tàu du lịch và nền tảng đặt vé. Sự thống trị này phản ánh mức độ nhận diện thương hiệu mạnh mẽ và lòng trung thành lâu năm của khách hàng trên các công cụ tìm kiếm tích hợp trí tuệ nhân tạo."
+      },
+      {
+        "heading": "Sự khác biệt giữa các công cụ tìm kiếm AI",
+        "body": "Trong khi một số thương hiệu giữ vững vị thế độc tôn, thị phần hiển thị giữa các nền tảng vẫn có sự dao động đáng kể. Ví dụ, Expedia có mức độ hiển thị gấp 2,2 lần so với Kayak trên Google AI Overviews với tỷ lệ 31,3% so với 14,4%, nhưng khoảng cách này thu hẹp xuống còn 1,4 lần trên ChatGPT. Đối với phân khúc khách sạn, Hilton dẫn đầu Google AI Overviews đạt 28,3%, trong khi Marriott lại chiếm ưu thế trên ChatGPT với 29,4%."
+      },
+      {
+        "heading": "Áp lực cạnh tranh tại các truy vấn giá rẻ",
+        "body": "Các nền tảng đặt chỗ xuất hiện trong 78% câu trả lời của Google AI Overviews liên quan đến các từ khóa giá rẻ, ưu đãi, ngân sách hoặc phút chót, trong khi tỷ lệ này ở các câu trả lời khác chỉ là 17%. Riêng Expedia xuất hiện trong 44% các câu trả lời liên quan đến ngân sách. Điều này cho thấy các câu hỏi tập trung vào giá cả là khu vực chiến lược mà các nền tảng đặt chỗ cần đặc biệt theo dõi và tối ưu."
+      },
+      {
+        "heading": "Cơ hội cho website nhỏ qua nội dung trải nghiệm",
+        "body": "Bên cạnh các truy vấn giao dịch vốn chỉ chiếm 9% tổng số lượng theo dõi, các truy vấn truyền cảm hứng và so sánh chiếm phần lớn thời lượng panel. Các nền tảng như YouTube, Reddit và các blog du lịch nhỏ nổi bật hơn trong các câu hỏi đòi hỏi trải nghiệm thực tế, phán đoán con người và ý kiến chủ quan. Đây là điểm sáng để các thương hiệu nhỏ hơn chen chân vào hệ thống tìm kiếm AI."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing cần nhận ra rằng tìm kiếm AI không xếp hạng theo cách truyền thống mà đo lường mức độ hiển thị tổng thể, đòi hỏi sự dịch chuyển từ SEO từ khóa thuần túy sang tối ưu hóa nội dung mang tính trải nghiệm và ý kiến chủ quan.",
+    "ifIgnored": "Nếu bỏ qua xu hướng này, doanh nghiệp sẽ mất đi phần lớn thị phần hiển thị trên các công cụ AI thế hệ mới, đặc biệt ở nhóm khách hàng đang tìm kiếm nguồn cảm hứng và thông tin so sánh trước khi ra quyết định.",
+    "actionChecklist": [
+      "Đánh giá lại mức độ hiển thị của thương hiệu trên Google AI Overviews và ChatGPT.",
+      "Tập trung sản xuất nội dung mang tính trải nghiệm thực tế và góc nhìn chủ quan để đón đầu các truy vấn truyền cảm hứng.",
+      "Theo dõi sát sao các từ khóa có chứa yếu tố ngân sách và giá rẻ mà đối thủ đang chiếm lĩnh.",
+      "Kết hợp khai thác nội dung do người dùng tạo và các nền tảng bên ngoài như YouTube và Reddit vào chiến lược hiển thị."
+    ],
+    "id": "real-2026-10-31-thuong-hieu-lon-thong-2040d0",
+    "publishedAt": "31/10/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/big-brands-dominate-ai-search-but-leave-openings-for-smaller-sites/595397/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/10/travel-ai-seo-407.jpg",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
     "category": "Google Ads & SEO",
     "platformIcon": "Search",
     "title": "Google xác nhận truy vấn tìm kiếm AI dài gấp 3 lần và thay đổi cơ chế hiển thị quảng cáo",
@@ -312,65 +505,6 @@
     }
   },
   {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Google chia sẻ thay đổi hành vi tìm kiếm trong AI Mode và định hướng Google Ads cho 2027",
-    "isHot": false,
-    "illustration": "data-signal",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Google Ads",
-      "AI Search",
-      "Hành vi người dùng",
-      "Chiến lược 2027"
-    ],
-    "summary": "Dữ liệu mới từ Google cho thấy người dùng đang đặt các câu hỏi dài hơn và bắt đầu quá trình nghiên cứu sản phẩm sớm hơn thông qua AI Mode. Mặc dù công cụ AI giúp tóm tắt thông tin nhanh chóng, người tìm kiếm vẫn có nhu cầu cao đối với các nội dung mang góc nhìn và trải nghiệm thực tế từ con người.",
-    "keyNumbers": [
-      {
-        "value": "Gấp 3 lần",
-        "label": "Độ dài câu truy vấn trong AI Mode so với tìm kiếm truyền thống"
-      },
-      {
-        "value": "Hơn 1/6",
-        "label": "Tỷ lệ tìm kiếm AI Mode tại Mỹ sử dụng tính năng đa phương thức"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Hành vi tìm kiếm trở nên hội thoại và dịch chuyển lên đầu phễu",
-        "body": "Người dùng Google đang đặt các câu hỏi dài gấp 3 lần so với tìm kiếm truyền thống khi sử dụng AI Mode. Ngoài ra, hơn 1/6 số lượt tìm kiếm AI Mode tại Mỹ hiện đã mang tính đa phương thức, kết hợp cả hình ảnh và giọng nói. Điều này cho phép người dùng đưa vào các chi tiết cá nhân và làm rõ những quyết định phức tạp ngay trong lúc tìm kiếm. Quá trình khám phá thương hiệu do đó đang dịch chuyển mạnh lên phần trên của phễu bán hàng."
-      },
-      {
-        "heading": "Người dùng vẫn tìm kiếm góc nhìn thực tế từ con người",
-        "body": "Mặc dù người dùng đánh giá cao sự rõ ràng của các tóm tắt AI, họ vẫn chủ động tìm kiếm thông tin chi tiết và góc nhìn thực tế từ con người. Các kênh như diễn đàn, podcast và video đánh giá tiếp tục là nơi khách hàng nghiên cứu trước khi quyết định. Khách hàng không chỉ muốn đọc mô tả tính năng mà muốn biết sản phẩm hoạt động ra sao trong thực tế. Việc chỉ lặp lại nội dung quảng cáo trên video sẽ không mang lại thêm giá trị cho người mua."
-      },
-      {
-        "heading": "Đánh giá lại ý định mua hàng từ các câu truy vấn dài",
-        "body": "Các câu hỏi dài hơn giúp nhà quảng cáo nắm bắt rõ nhu cầu của khách hàng trước khi họ biết tới tên sản phẩm cụ thể. Tuy nhiên, chỉ riêng độ dài câu hỏi chưa phản ánh ý định mua hàng mạnh hơn hay tỷ lệ chuyển đổi cao hơn. Đội ngũ tiếp thị cần rà soát lại các thắc mắc lặp đi lặp lại của khách hàng để thử nghiệm các thông điệp quảng cáo phù hợp. Việc giải quyết đúng nhu cầu ban đầu sẽ giúp dẫn dắt người tìm kiếm đi sâu hơn vào phễu chuyển đổi."
-      },
-      {
-        "heading": "Tối ưu hóa trang đích và nội dung hỗ trợ quyết định",
-        "body": "Nhà quảng cáo cần rà soát lại trang đích để đảm bảo cung cấp đủ thông tin về giá cả, độ tương thích, cách cài đặt và hạn chế của sản phẩm. Nếu người dùng cần giải đáp những câu hỏi này trước khi mua, thông tin phải được hiển thị rõ ràng và dễ tìm. Bổ sung các liên kết đến video trải nghiệm thực tế hoặc câu chuyện khách hàng ngay trên trang đích sẽ củng cố niềm tin. Đội ngũ tiếp thị cũng cần theo dõi hành trình người dùng dài hạn thay vì chỉ dựa vào chỉ số nhấp chuột ngắn hạn."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing cần thay đổi tư duy cấu trúc chiến dịch Google Ads, chuyển hướng ngân sách từ việc chỉ tập trung vào các từ khóa tên sản phẩm ở cuối phễu sang việc phủ các câu hỏi khám phá ở đầu phễu, đồng thời phải nâng cấp chất lượng trang đích bằng nội dung trải nghiệm thực tế.",
-    "ifIgnored": "Doanh nghiệp sẽ tiếp tục lãng phí ngân sách đấu thầu các từ khóa ngắn đắt đỏ ở cuối phễu nhưng bỏ lỡ khách hàng ngay từ giai đoạn tìm kiếm ban đầu, dẫn đến tỷ lệ chuyển đổi giảm sút khi người dùng chuyển sang tìm kiếm hội thoại bằng AI.",
-    "actionChecklist": [
-      "Rà soát báo cáo từ khóa tìm kiếm trong Google Ads để phát hiện các câu hỏi dạng hội thoại dài của khách hàng.",
-      "Cập nhật thông điệp quảng cáo tập trung giải quyết vấn đề cụ thể thay vì chỉ nhắc lại tên tính năng.",
-      "Bổ sung thông tin chi tiết về giá, độ tương thích và hạn chế sản phẩm trực tiếp lên các trang đích chính.",
-      "Tích hợp video đánh giá thực tế và câu chuyện khách hàng vào trang đích để tăng tỷ lệ thuyết phục."
-    ],
-    "id": "real-2026-10-29-google-chia-se-thay-15d89d",
-    "publishedAt": "29/10/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/google-search-behavior-shifts-2027-ads-strategy/594971/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/10/ads-decoded_10.26-376.jpg",
-      "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
     "category": "Meta Ads",
     "platformIcon": "Facebook",
     "title": "Meta công bố hiệu quả từ hệ thống AI và năng lực xử lý dữ liệu mới",
@@ -557,132 +691,6 @@
     "image": {
       "url": "https://ppc.land/content/images/2026/10/google-alphabet-q3-ad-growth-ai-mode-cloud-billboard-speech-bubble.jpg",
       "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
-    "category": "Meta Ads",
-    "platformIcon": "Facebook",
-    "title": "Meta nâng cấp hạ tầng AI giúp tăng tỷ lệ chuyển đổi và lượt nhấp quảng cáo",
-    "isHot": false,
-    "illustration": "data-signal",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Meta Ads",
-      "Thuật toán AI",
-      "Tối ưu chuyển đổi",
-      "Partnership Ads"
-    ],
-    "summary": "Meta vừa công bố thông tin chi tiết về các hệ thống phân phối quảng cáo mới được cải tiến bằng trí tuệ nhân tạo. Nhờ năng lực xử lý dữ liệu mở rộng, nền tảng này ghi nhận sự gia tăng đáng kể về lượt nhấp và chuyển đổi cho các đối tác quảng cáo trên Facebook.",
-    "keyNumbers": [
-      {
-        "value": "15,7%",
-        "label": "Tăng trưởng chuyển đổi trên Facebook trong Q2 2026"
-      },
-      {
-        "value": "8,3%",
-        "label": "Tăng trưởng lượt nhấp quảng cáo trong Q2 2026"
-      },
-      {
-        "value": "5%",
-        "label": "Tăng chuyển đổi với cùng chi phí nhờ AI Business Assistant"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Nâng cấp mô hình Andromeda gia tăng hiệu suất hiển thị",
-        "body": "Mô hình xếp hạng quảng cáo Andromeda của Meta đã mở rộng khả năng xem xét các sản phẩm tiềm năng cho từng doanh nghiệp. Hệ thống này kết nối sản phẩm phù hợp hơn với sở thích riêng của từng người dùng trên nền tảng. Trong quý 2 năm 2026, các cải tiến hệ thống đã giúp tăng 8,3% lượt nhấp quảng cáo và 15,7% lượt chuyển đổi trên Facebook. Sang quý 3, mô hình Andromeda tiếp tục giúp tăng thêm 1,4% lượt chuyển đổi cho người chạy quảng cáo."
-      },
-      {
-        "heading": "Đột phá từ công nghệ gợi ý GEM và GenRecs",
-        "body": "Mô hình gợi ý quảng cáo tạo sinh GEM hiện có thể xử lý lượng dữ liệu lớn hơn để hiển thị đúng mẫu quảng cáo tới đúng đối tượng. GEM đánh giá lịch sử tương tác quảng cáo của người dùng kết hợp với nhiều tín hiệu dữ liệu mới. Bên cạnh đó, hệ thống GenRecs giúp dự đoán các chương trình khuyến mãi phù hợp nhất cho từng cá nhân. Hệ thống này có khả năng phân phối hiệu quả ngay cả với các nhóm quảng cáo mới tạo chưa có nhiều lịch sử tương tác."
-      },
-      {
-        "heading": "Triển khai truy xuất tạo sinh và trợ lý AI cho doanh nghiệp",
-        "body": "Meta đã chính thức triển khai công nghệ truy xuất tạo sinh trên Facebook Feed trong quý 3. Cải tiến này giúp tăng gần 2% lượt chuyển đổi trên các phân khúc đối tượng được mục tiêu hóa. Ngoài ra, thử nghiệm trợ lý kinh doanh AI cho thấy công cụ này giúp mang lại thêm 5% lượt chuyển đổi ở cùng mức chi phí. Nền tảng này cũng đang phát triển tính năng thanh toán trực tiếp ngay trong các đại lý AI như Muse."
-      },
-      {
-        "heading": "Quảng cáo hợp tác Partnership Ads tăng trưởng vượt bậc",
-        "body": "Hình thức Partnership Ads cho phép thương hiệu chạy quảng cáo cùng các nhà sáng tạo nội dung và đối tác kinh doanh. Trong quý 3, định dạng này ghi nhận mức tăng trưởng hơn 97% so với cùng kỳ năm ngoái. Doanh thu quy mô hàng năm của Partnership Ads hiện đã vượt mốc 15 tỷ USD. Sự kết hợp giữa các trung tâm dữ liệu mới và thuật toán AI đang giúp Meta phân tích xu hướng phản hồi của khách hàng nhanh chóng hơn."
-      }
-    ],
-    "impact": "Tăng hiệu quả chuyển đổi tự nhiên cho các chiến dịch quảng cáo nhờ thuật toán ghép nối AI thông minh hơn, đặc biệt giúp các quảng cáo mới lên camp cắn tiền và tìm đúng đối tượng nhanh hơn mà không phụ thuộc quá nhiều vào lịch sử tài khoản.",
-    "ifIgnored": "Doanh nghiệp sẽ bỏ lỡ cơ hội tối ưu chi phí trên mỗi chuyển đổi (CPA) và có nguy cơ bị tụt hậu so với đối thủ khi không áp dụng các định dạng mới như Partnership Ads hay công cụ trợ lý AI.",
-    "actionChecklist": [
-      "Cập nhật và làm sạch dữ liệu nguồn cấp sản phẩm (product feed) để mô hình Andromeda phân tích chính xác",
-      "Bổ sung định dạng Partnership Ads kết hợp với Creators vào cơ cấu ngân sách thử nghiệm",
-      "Để các chiến dịch mới có đủ thời gian tích lũy tín hiệu dữ liệu cho thuật toán GenRecs học máy",
-      "Theo dõi và đăng ký sử dụng trợ lý AI business assistant ngay khi Meta mở rộng quyền truy cập tại Việt Nam"
-    ],
-    "id": "real-2026-10-28-meta-nang-cap-ha-c59d75",
-    "publishedAt": "28/10/2026",
-    "sourceUrl": "https://www.socialmediatoday.com/news/meta-says-its-expanded-processing-capacity-is-driving-ad-results/873133/",
-    "source": "Social Media Today",
-    "image": {
-      "url": "https://imgproxy.divecdn.com/MfIOTDAv-J0dXBQpKZ-dYPTu48natx1BFWY-QF8sGGA/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9tZXRhX2FkX3JhbmtpbmcyLnBuZw==.webp",
-      "credit": "Ảnh: Social Media Today"
-    }
-  },
-  {
-    "category": "AI Marketing",
-    "platformIcon": "Sparkles",
-    "title": "Clorox từ bỏ chiến dịch truyền thống để xây dựng hệ thống nội dung liên tục tối ưu bằng AI",
-    "isHot": false,
-    "illustration": "creative-fatigue",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "AI Marketing",
-      "Tối ưu sáng tạo",
-      "TikTok Shop",
-      "Thử nghiệm nội dung"
-    ],
-    "summary": "Tập đoàn Clorox chính thức chuyển đổi từ các chiến dịch lớn đắt đỏ sang mô hình hệ thống tạo nội dung liên tục, tận dụng AI và mạng xã hội để phản hồi tín hiệu thị trường theo thời gian thực. Mô hình này giúp các nhãn hàng như Pine-Sol và Brita tăng mạnh hiệu suất tiếp thị, kiểm thử nhanh nội dung với chi phí tối ưu trước khi mở rộng ngân sách quảng cáo.",
-    "keyNumbers": [
-      {
-        "value": "1.742%",
-        "label": "Tăng trưởng lượt hiển thị tự nhiên hàng năm của Brita"
-      },
-      {
-        "value": "13%",
-        "label": "Tỷ lệ tương tác trung bình của Pine-Sol trên mạng xã hội"
-      },
-      {
-        "value": "600",
-        "label": "Nội dung tự nhiên Hidden Valley tạo ra trong thời gian ngắn"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Chuyển đổi từ chiến dịch lớn sang hệ thống nội dung liên tục",
-        "body": "Giám đốc Marketing Eric Schwartz của Clorox nhận định kỷ nguyên lên kế hoạch và chạy các chiến dịch quảng cáo lớn kéo dài cả năm đã kết thúc. Người tiêu dùng đòi hỏi thương hiệu phải liên tục cập nhật theo xu hướng nhanh của văn hóa mạng xã hội. Clorox thay thế các chiến dịch truyền thống bằng một hệ thống duy trì sự liên quan liên tục nhằm phát hiện cơ hội và điều chỉnh kịp thời. Hệ thống này kết hợp giữa nhân sự tiếp thị nhạy bén, công cụ tự động hóa AI và các đối tác đại lý."
-      },
-      {
-        "heading": "Tận dụng AI để tối ưu quảng cáo đang chạy mà không tốn chi phí quay lại",
-        "body": "Trong chiến dịch ra mắt dòng sản phẩm Clorox Pure Allergen Neutralizer, thương hiệu đã ứng dụng AI để phân tích tín hiệu thị trường và tối ưu hóa mẫu quảng cáo đang phát sóng. Nhờ AI, đội ngũ tiếp thị điều chỉnh nội dung hiển thị theo từng dịp và sản phẩm thúc đẩy dùng thử mà không tốn chi phí quay lại hay mất thời gian đánh giá sau chiến dịch. Quảng cáo không còn cố định khi vừa phát sóng mà liên tục được cải thiện ngay trong lúc đang triển khai thực tế. Cách làm này giúp giảm thiểu thời gian ra quyết định và tăng tốc độ đưa ý tưởng mới ra thị trường."
-      },
-      {
-        "heading": "Thử nghiệm nội dung số lượng lớn kết hợp bán hàng trên TikTok Shop",
-        "body": "Nhãn hàng Pine-Sol đã chuyển đổi mạng xã hội thành hệ thống lắng nghe và phản hồi liên tục với hơn 150 bài đăng tự nhiên mỗi tháng. Thương hiệu thử nghiệm nội dung trên hơn 80 nhóm đối tượng khác nhau và đạt tỷ lệ tương tác trung bình 13%. Sau một năm, Pine-Sol thương mại hóa nội dung khi mở bán 4 sản phẩm giới hạn trên TikTok Shop và cháy hàng chỉ trong vài giờ. Tương tự, thương hiệu Brita sản xuất hơn 100 tài sản nội dung mỗi tháng để tiếp cận Gen Z, thu về 22 triệu lượt tương tác và tăng 1.742% lượt hiển thị tự nhiên so với cùng kỳ."
-      },
-      {
-        "heading": "Phản ứng theo thời gian thực để tạo bùng nổ hiển thị tự nhiên",
-        "body": "Khi thương hiệu nước sốt Hidden Valley vô tình trở thành tâm điểm chú ý trên mạng xã hội liên quan đến quy định hành lý của TSA, đội ngũ tiếp thị đã phản ứng chỉ trong vài giờ. Clorox đã huy động đội ngũ mạng xã hội, truyền thông và thực tập sinh tạo ra hơn 600 nội dung dạng tự nhiên. Chiến dịch linh hoạt này mang về hơn 6 tỷ lượt hiển thị và 2.500 lượt xuất hiện trên báo chí, giúp đảo ngược đà giảm phần trăm thị phần. Điều này chứng minh sức mạnh của việc kết hợp nền tảng thương hiệu với khả năng phản ứng theo thời gian thực."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing cần tái cơ cấu quy trình sản xuất quảng cáo từ mô hình tập trung vào chiến dịch lớn sang mô hình vòng lặp học hỏi liên tục: dùng AI tối ưu nội dung đang chạy và sản xuất nội dung số lượng lớn (high-volume) để thử nghiệm đa dạng tệp khách hàng trước khi tăng ngân sách.",
-    "ifIgnored": "Nếu tiếp tục dồn phần lớn ngân sách vào sản xuất video quảng cáo truyền thống tốn kém, thương hiệu sẽ chậm chân trước xu hướng mạng xã hội, chịu chi phí CPM đắt đỏ do nội dung nhanh thoái hóa và bỏ lỡ cơ hội chuyển đổi trực tiếp trên TikTok Shop.",
-    "actionChecklist": [
-      "Chuyển đổi lịch trình chiến dịch cố định sang mô hình vòng lặp học hỏi và tối ưu hóa nội dung liên tục.",
-      "Ứng dụng AI để chỉnh sửa và biến tấu các mẫu quảng cáo đang chạy dựa trên dữ liệu phản hồi thực tế mà không cần quay lại.",
-      "Xây dựng quy trình sản xuất nội dung số lượng lớn dạng tự nhiên để thử nghiệm tệp người dùng trên TikTok và Instagram trước khi đổ ngân sách quảng cáo.",
-      "Rút ngắn thời gian duyệt nội dung và đưa ra quyết định dựa trên tín hiệu thị trường thay vì chờ đợi sự chắc chắn tuyệt đối."
-    ],
-    "id": "real-2026-10-26-clorox-tu-bo-chien-333ad6",
-    "publishedAt": "26/10/2026",
-    "sourceUrl": "https://www.marketingdive.com/news/why-clorox-shifted-from-creating-brand-campaigns-to-systems-of-relevance/838232/",
-    "source": "Marketing Dive",
-    "image": {
-      "url": "https://imgproxy.divecdn.com/NMt6t4n-CijjRIWwM1wIN4nhexsBPWn-ryobn983bp0/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9EU0MwMTE5MS5qcGc=.webp",
-      "credit": "Ảnh: Marketing Dive"
     }
   },
   {
