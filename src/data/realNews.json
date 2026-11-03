@@ -1,5 +1,196 @@
 [
   {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Google dịch AI Overviews sang cột phải cho từ khóa thương hiệu và thay đổi cách xử lý Performance Max",
+    "isHot": false,
+    "illustration": "zero-click",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Google Ads",
+      "AI Overviews",
+      "Performance Max",
+      "Ngân sách quảng cáo"
+    ],
+    "summary": "Google vừa âm thầm chuyển AI Overviews cho các từ khóa thương hiệu sang cột bên phải trên máy tính, đồng thời cập nhật chính sách cho phép Performance Max trả lại truy vấn thương hiệu cho chiến dịch Search chuyên biệt. Những thay đổi này diễn ra trong bối cảnh nhiều nhà quảng cáo đang xem xét lại từ 10% đến 30% ngân sách tìm kiếm.",
+    "keyNumbers": [
+      {
+        "value": "10% đến 30%",
+        "label": "ngân sách tìm kiếm bị xem xét lại"
+      },
+      {
+        "value": "12%",
+        "label": "tốc độ tăng trưởng doanh thu quảng cáo tìm kiếm quý 3"
+      },
+      {
+        "value": "5%",
+        "label": "chi phí mỗi lượt nhấp từ khóa thương hiệu tăng trong quý"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Thay đổi vị trí AI Overviews và bảng tri thức",
+        "body": "Vào ngày 2 tháng 11, Google đã di chuyển AI Overviews cho nhiều từ khóa thương hiệu ra khỏi các vị trí chính ở giữa trang và đặt sang cột bên phải của kết quả tìm kiếm trên máy tính. Động thái này gần như thay thế bảng tri thức thương hiệu truyền thống bằng một bản tóm tắt do AI tạo ra mà các nhãn hàng không thể tự chỉnh sửa. Các ví dụ được ghi nhận cho thấy sự xuất hiện của AI Overviews đối với nhiều tên tuổi lớn, trong khi các số liệu trước đó của Ahrefs cho thấy mức độ phủ sóng của AI Overviews trên từ khóa thương hiệu đã ở mức cao."
+      },
+      {
+        "heading": "Cập nhật chính sách đối với Performance Max",
+        "body": "Cùng thời điểm, Google cập nhật tài liệu trợ giúp, nêu rõ các chiến dịch Performance Max có thể lọc ra các tìm kiếm điều hướng và tìm kiếm theo thương hiệu để nhường chỗ cho các chiến dịch Search thương hiệu chuyên biệt. Điều này giúp các nhãn hàng kiểm soát tốt hơn các truy vấn liên quan đến tên thương hiệu của mình. Tài liệu hướng dẫn các nhà quảng cáo cung cấp ngân sách đầy đủ và quảng cáo mạnh mẽ cho các chiến dịch Search thương hiệu này."
+      },
+      {
+        "heading": "Áp lực lên ngân sách tìm kiếm từ các nhà quản lý",
+        "body": "Dữ liệu từ các cuộc phỏng vấn giới chuyên môn cho thấy từ 10% đến 30% ngân sách tìm kiếm đang chịu sự giám sát chặt chẽ hơn từ các khách hàng khi AI Overviews chiếm thêm nhiều không gian hiển thị. Doanh thu quảng cáo tìm kiếm của Google ghi nhận mức tăng trưởng 12% trong quý thứ ba, chậm nhất trong năm, một phần do ảnh hưởng của AI Mode. Trong khi đó, chi phí mỗi lượt nhấp chuột cho từ khóa thương hiệu tăng 5% trong quý này."
+      },
+      {
+        "heading": "Các cập nhật kỹ thuật và tín hiệu mạng",
+        "body": "Trong giao diện quản lý, Google Ads bổ sung phần ưu đãi mới cho phép nhà quảng cáo lọc các chương trình khuyến mãi theo trạng thái. Một thay đổi kỹ thuật quan trọng khác được thông báo sẽ diễn ra vào ngày 11 tháng 11 năm 2027, khi các thẻ quảng cáo của Google nhận địa chỉ IP đầy đủ trong trình quản lý thẻ phía máy chủ, yêu cầu các nhà quảng cáo phải tuân thủ việc thông báo và lấy sự đồng thuận hợp pháp từ người dùng."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing cần đánh giá lại hiệu quả thực tế của từ khóa thương hiệu khi bảng tri thức bị thay thế bởi AI Overviews, đồng thời tách biệt ngân sách Performance Max và Search thương hiệu để kiểm soát chi phí tốt hơn.",
+    "ifIgnored": "Bỏ qua thay đổi này có thể khiến doanh nghiệp mất quyền kiểm soát thông điệp thương hiệu trên trang kết quả tìm kiếm, lãng phí ngân sách do chồng chéo giữa Performance Max và Search, đồng thời đối mặt với chi phí nhấp chuột ngày càng tăng.",
+    "actionChecklist": [
+      "Kiểm tra lại hiển thị của từ khóa thương hiệu trên trang kết quả tìm kiếm",
+      "Tách biệt rõ ràng ngân sách cho chiến dịch Search thương hiệu và Performance Max",
+      "Theo dõi sát chi phí mỗi lượt nhấp chuột của từ khóa thương hiệu hàng quý",
+      "Chuẩn bị kế hoạch cập nhật chính sách quyền riêng tư và thẻ phía máy chủ cho năm 2027"
+    ],
+    "id": "real-2026-11-03-google-dich-ai-overviews-9215c9",
+    "publishedAt": "03/11/2026",
+    "sourceUrl": "https://ppc.land/google-moves-brand-ai-overviews-aside-as-buyers-question-search-budgets/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/11/google-brand-ai-overviews-search-budget-scrutiny-ledger-loupe-coin-stack.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Google dịch chuyển AI Overviews từ kết quả chính sang cột phải đối với các tìm kiếm thương hiệu",
+    "isHot": "false",
+    "illustration": "zero-click",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Google Search",
+      "AI Overviews",
+      "SEO",
+      "Thương hiệu"
+    ],
+    "summary": "Google vừa thay đổi giao diện trang kết quả tìm kiếm máy tính bằng cách chuyển các phần tóm tắt AI Overviews cho từ khóa thương hiệu sang cột bên phải. Thay đổi này trả lại vị trí đầu tiên ở cột chính cho website chính thức của doanh nghiệp nhưng đặt ra bài toán mới về việc kiểm soát nội dung hiển thị do AI tạo ra.",
+    "keyNumbers": [
+      {
+        "value": "63",
+        "label": "thương hiệu trong danh sách 100 có AI Overviews"
+      },
+      {
+        "value": "82,91%",
+        "label": "tỷ lệ xuất hiện AI Overviews trên từ khóa thương hiệu"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Sự thay đổi về vị trí hiển thị",
+        "body": "Google đã âm thầm di chuyển các phần tóm tắt AI Overviews cho nhiều tìm kiếm mang tên thương hiệu sang cột bên phải trên giao diện máy tính. Vị trí này trước đây vốn là nơi hiển thị của bảng thông tin kiến thức truyền thống. Các ví dụ ghi nhận bao gồm tìm kiếm cho các thương hiệu lớn như Apple, Zillow, Coca-Cola và chính Google."
+      },
+      {
+        "heading": "Trả lại vị trí đầu cho website doanh nghiệp",
+        "body": "Trong các mẫu thử nghiệm, website chính thức của thương hiệu đã xuất hiện trở lại ở vị trí cao nhất tại cột bên trái, thay vì bị phần tóm tắt AI đẩy xuống dưới như trước. Tuy nhiên, nội dung mô tả doanh nghiệp giờ đây hoàn toàn do AI tổng hợp và hiển thị kèm các dữ liệu thương mại tại cột bên phải."
+      },
+      {
+        "heading": "Dữ liệu thống kê về tần suất xuất hiện",
+        "body": "Theo dữ liệu từ Ahrefs dựa trên các đợt quét kết quả tìm kiếm tại Mỹ, tỷ lệ xuất hiện AI Overviews trên các từ khóa thương hiệu đã tăng mạnh từ mức trung bình 61,3% trong tháng 7 lên 73,3% trong tháng 9. Tính riêng nhóm 100 tên thương hiệu độc lập, con số này đạt 63 trường hợp vào cuối tháng 9."
+      },
+      {
+        "heading": "Góc nhìn từ các chuyên gia SEO",
+        "body": "Giới chuyên gia đánh giá việc chuyển AI Overviews sang cột phải giúp cải thiện trải nghiệm so với việc đặt ngay giữa kết quả tìm kiếm chính. Dù vậy, việc phụ thuộc vào khả năng tự tổng hợp nội dung của AI về thương hiệu thay vì hoàn toàn dựa vào website riêng vẫn là điểm cần lưu ý đối với các nhà quản trị."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing cần kiểm tra lại cách thương hiệu của mình hiển thị trong phần tóm tắt AI mới ở cột phải màn hình máy tính, đồng thời theo dõi biến động lưu lượng truy cập tự nhiên khi website chính thức đã quay lại vị trí đầu tiên ở cột chính.",
+    "ifIgnored": "Doanh nghiệp có thể bỏ lỡ cơ hội tối ưu hóa thông tin thương hiệu do AI tổng hợp, dẫn đến việc người dùng tiếp nhận các thông tin không chính xác hoặc thiếu sót về sản phẩm ngay trên trang kết quả tìm kiếm.",
+    "actionChecklist": [
+      "Thực hiện tìm kiếm từ khóa thương hiệu trên máy tính để kiểm tra giao diện AI Overviews hiện tại",
+      "Rà soát lại các thông tin mô tả, xếp hạng và liên kết mạng xã hội xuất hiện trong bảng tóm tắt bên phải",
+      "Theo dõi số liệu chuyển đổi và lưu lượng truy cập tự nhiên từ các từ khóa thương hiệu",
+      "Cập nhật chiến lược nội dung trên website để tối ưu hóa dữ liệu hiển thị cho các công cụ AI"
+    ],
+    "id": "real-2026-11-03-google-dich-chuyen-ai-3ff579",
+    "publishedAt": "03/11/2026",
+    "sourceUrl": "https://ppc.land/google-moves-ai-overviews-for-brand-searches-out-of-the-main-results/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/11/google-ai-overviews-brand-search-right-column-unmanned-typewriter-side-desk.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "boQua": false,
+    "category": "TikTok Shop & Ads",
+    "platformIcon": "Video",
+    "title": "TikTok ra mắt trung tâm an toàn thương hiệu và công cụ bảo vệ bản quyền mới",
+    "isHot": false,
+    "illustration": "account-security",
+    "readTime": "3 phút đọc",
+    "tags": [
+      "TikTok Ads",
+      "An toàn thương hiệu",
+      "Bảo vệ bản quyền",
+      "Chính sách nền tảng"
+    ],
+    "summary": "TikTok vừa công bố trang web trung tâm an toàn thương hiệu cùng các tài nguyên và công cụ mới dành cho nhà quảng cáo. Nền tảng này cũng chia sẻ dữ liệu thực thi tiêu chuẩn cộng đồng tại khu vực châu Á - Thái Bình Dương nhằm tăng cường minh bạch.",
+    "keyNumbers": [
+      {
+        "value": "30.000.000",
+        "label": "video vi phạm bị xóa"
+      },
+      {
+        "value": "97,4%",
+        "label": "video xóa tự động toàn cầu"
+      },
+      {
+        "value": "99,6%",
+        "label": "video xóa chủ động tại Singapore"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Ra mắt trang web và tài nguyên an toàn thương hiệu mới",
+        "body": "TikTok đã chính thức ra mắt một trang web trung tâm an toàn thương hiệu nhằm cung cấp quyền truy cập dễ dàng vào các công cụ tư vấn và hướng dẫn. Nền tảng này tích hợp các video từ chuyên gia nội bộ thảo luận về những lưu ý quan trọng dành cho nhà tiếp thị. Trang web đi kèm các liên kết tài liệu như cẩm nang bảo vệ thương hiệu và tổng quan về an toàn trí tuệ nhân tạo. Những tài nguyên này giúp doanh nghiệp củng cố sự hiện diện an toàn hơn khi triển khai chiến dịch."
+      },
+      {
+        "heading": "Bổ sung công cụ kiểm soát rủi ro và bản quyền",
+        "body": "Nền tảng bổ sung các tính năng bảo vệ thương hiệu mới giúp doanh nghiệp nhận diện các khu vực rủi ro tiềm ẩn. Các giải pháp bao gồm công cụ thấu hiểu nhận thức thương hiệu đặt tại trung tâm doanh nghiệp của TikTok. Ngoài ra, hệ thống còn cung cấp tùy chọn báo cáo vi phạm bản quyền, nhãn hiệu và tính năng chống hàng giả cho người bán. Các tính năng này hỗ trợ nhà quảng cáo kiểm soát tốt hơn tài sản trí tuệ trên môi trường số."
+      },
+      {
+        "heading": "Dữ liệu thực thi tiêu chuẩn cộng đồng khu vực châu Á - Thái Bình Dương",
+        "body": "Tại diễn đàn truyền thông có trách nhiệm khu vực châu Á - Thái Bình Dương tổ chức tại Singapore, TikTok đã công bố dữ liệu kiểm duyệt. Trong khoảng thời gian từ tháng 4 đến tháng 6 năm 2026, nền tảng đã gỡ bỏ hơn 30 triệu video tại 10 thị trường trong khu vực do vi phạm tiêu chuẩn cộng đồng. Riêng tại Singapore, hơn 476.000 video đã bị gỡ bỏ, chiếm 0,5% tổng số video được đăng tải. Các số liệu này phản ánh nỗ lực làm sạch môi trường nội dung của nền tảng."
+      },
+      {
+        "heading": "Hiệu quả từ công nghệ kiểm duyệt tự động",
+        "body": "TikTok ghi nhận tỷ lệ cao trong việc sử dụng công nghệ để xử lý nội dung vi phạm trên nền tảng. Tại Singapore, có 99,6% số video vi phạm bị gỡ bỏ theo hình thức chủ động trước khi bị báo cáo. Khoảng 77,7% trong số đó được xử lý thành công trong thời gian 24 giờ kể từ khi đăng tải. Trên phạm vi toàn cầu, các công cụ kiểm duyệt tự động của TikTok chiếm 97,4% tổng số lượng video bị gỡ bỏ trong quý."
+      },
+      {
+        "heading": "Khung trí tuệ nhân tạo có trách nhiệm cho thương hiệu",
+        "body": "Bên cạnh các công cụ quản lý nội dung, TikTok cũng thiết lập khung trí tuệ nhân tạo có trách nhiệm dành cho các thương hiệu. Khung này định hướng cách doanh nghiệp ứng dụng công nghệ AI một cách an toàn trong các hoạt động tiếp thị. Những biện pháp mở rộng này nhằm tạo ra hành lang pháp lý rõ ràng hơn cho các nhãn hàng khi khai thác các tính năng mới trên TikTok."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing có thêm kênh kiểm soát rủi ro thương hiệu và các công cụ bảo vệ bản quyền trực tiếp trên trung tâm doanh nghiệp của TikTok, giúp hạn chế việc quảng cáo hiển thị cạnh nội dung độc hại hoặc bị xâm phạm tài sản trí tuệ.",
+    "ifIgnored": "Doanh nghiệp có thể bỏ lỡ các công cụ báo cáo vi phạm bản quyền và chống hàng giả mới, đồng thời thiếu hụt thông tin cập nhật về các tiêu chuẩn kiểm duyệt nội dung của nền tảng tại khu vực.",
+    "actionChecklist": [
+      "Truy cập trang web trung tâm an toàn thương hiệu mới của TikTok để đọc cẩm nang bảo vệ thương hiệu.",
+      "Sử dụng công cụ thấu hiểu nhận thức thương hiệu trong trung tâm doanh nghiệp của TikTok.",
+      "Kiểm tra các tùy chọn báo cáo vi phạm bản quyền và nhãn hiệu để bảo vệ tài sản doanh nghiệp.",
+      "Đọc kỹ tổng quan về an toàn trí tuệ nhân tạo để áp dụng đúng khung vận hành của nền tảng."
+    ],
+    "deadline": "Giữa năm 2026",
+    "id": "real-2026-11-02-tiktok-ra-mat-trung-2a33c4",
+    "publishedAt": "02/11/2026",
+    "sourceUrl": "https://www.socialmediatoday.com/news/tiktok-adds-new-brand-safety-resources/873529/",
+    "source": "Social Media Today",
+    "image": {
+      "url": "https://imgproxy.divecdn.com/uJILKCTaAEJ1EzAssbuegpTmAUH7xf0xlK8riB3Z9Oc/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS90aWt0b2tfYnJhbmRfc2FmZXR5X2NlbnRlcl8ySHZReFZzLnBuZw==.webp",
+      "credit": "Ảnh: Social Media Today"
+    }
+  },
+  {
     "category": "AI Marketing",
     "platformIcon": "Sparkles",
     "title": "Microsoft Clarity phát hiện hành vi AI Agent làm biến dạng dữ liệu phễu chuyển đổi website",
@@ -442,69 +633,6 @@
     }
   },
   {
-    "category": "AI Marketing",
-    "platformIcon": "Search",
-    "title": "T-Mobile chi 956 triệu USD cho quảng cáo trong quý 3",
-    "isHot": false,
-    "illustration": "data-signal",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "T-Mobile",
-      "Ngân sách quảng cáo",
-      "Dữ liệu viễn thông",
-      "AdTech"
-    ],
-    "summary": "T-Mobile ghi nhận chi phí quảng cáo đạt 956 triệu USD trong quý 3 năm 2026, tăng 5,5% so với cùng kỳ năm trước. Trong khi đó, các thương vụ thâu tóm công nghệ quảng cáo lớn không được công bố chi tiết doanh thu trong báo cáo tài chính.",
-    "keyNumbers": [
-      {
-        "value": "956 triệu USD",
-        "label": "Chi phí quảng cáo quý 3"
-      },
-      {
-        "value": "3,46 tỷ USD",
-        "label": "Lợi nhuận ròng"
-      },
-      {
-        "value": "4,9%",
-        "label": "Tỷ lệ chi phí quảng cáo trên doanh thu dịch vụ"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Chi phí quảng cáo tăng trưởng ổn định",
-        "body": "T-Mobile US công bố chi phí quảng cáo đạt 956 triệu USD trong quý 3 năm 2026, tăng 5,5% từ mức 906 triệu USD của năm trước đó. Tính trong chín tháng đầu năm, tổng chi phí này đạt 2.783 triệu USD, tăng 7,8% so với mức 2.582 triệu USD. Khoản chi này tăng trưởng gần như song hành với quy mô kinh doanh chung của doanh nghiệp."
-      },
-      {
-        "heading": "Tỷ trọng chi phí so với doanh thu",
-        "body": "Khi so sánh với doanh thu dịch vụ, ngân sách quảng cáo giữ mức ổn định ở tỷ lệ 4,9% trong quý 3, so với mức 5,0% của cùng kỳ năm trước. Trong chín tháng đầu năm, tỷ lệ này tiếp tục duy trì ổn định ở mức 4,9% cho cả hai năm. Điều này cho thấy chiến lược phân bổ ngân sách tiếp thị được kiểm soát chặt chẽ theo nhịp tăng trưởng doanh thu."
-      },
-      {
-        "heading": "Thiếu vắng dữ liệu tài chính từ mảng công nghệ quảng cáo",
-        "body": "Báo cáo tài chính không ghi nhận số liệu doanh thu cụ thể cho Vistar Media và Blis, hai công ty công nghệ quảng cáo mà T-Mobile đã mua lại đầu năm 2025 với tổng giá trị 801 triệu USD bằng tiền mặt. Hồ sơ nộp lên cơ quan chức năng không tách bạch doanh thu từ mảng giải pháp quảng cáo này. Do đó, các thương hiệu và đại lý khó lòng nắm bắt được hiệu quả kinh doanh thực tế của các đơn vị này."
-      },
-      {
-        "heading": "Tác động từ công nghệ AI mua sắm và dữ liệu viễn thông",
-        "body": "Giám đốc điều hành Jonathan Freier cho biết công ty chưa ghi nhận tác động đáng kể nào từ các trợ lý mua sắm ứng dụng trí tuệ nhân tạo như Muse của Meta đối với việc lựa chọn gói cước. Tuy nhiên, Vistar đã công bố các phân khúc đối tượng dựa trên dữ liệu mạng viễn thông của T-Mobile để phục vụ màn hình kỹ thuật số ngoài trời thông qua nền tảng riêng."
-      }
-    ],
-    "impact": "Giúp Trưởng phòng Marketing nắm bắt xu hướng phân bổ ngân sách tiếp thị của các tập đoàn viễn thông lớn và hiểu rõ cách các nền tảng tích hợp dữ liệu mạng vào quảng cáo ngoài trời.",
-    "ifIgnored": "Bỏ qua cách các tập đoàn lớn tối ưu hóa chi phí quảng cáo so với doanh thu dịch vụ và thiếu cập nhật về việc tích hợp dữ liệu viễn thông vào chiến dịch AdTech.",
-    "actionChecklist": [
-      "Đánh giá lại tỷ lệ chi phí quảng cáo so với doanh thu dịch vụ của doanh nghiệp mình.",
-      "Theo dõi sát sao việc tích hợp dữ liệu bên thứ nhất từ nhà mạng vào các chiến dịch lập kế hoạch truyền thông.",
-      "Kiểm tra lại hiệu quả phân bổ ngân sách giữa các kênh truyền hình, kỹ thuật số và ngoài trời.",
-      "Cập nhật các quy định pháp lý và tranh chấp liên quan đến quyền riêng tư dữ liệu khách hàng."
-    ],
-    "id": "real-2026-10-29-t-mobile-chi-956-997fbf",
-    "publishedAt": "29/10/2026",
-    "sourceUrl": "https://ppc.land/t-mobiles-ad-spend-gains-5-5-to-956m-in-the-third-quarter/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/10/t-mobile-q3-2026-ad-spend-956m-vistar-blis-locked-briefcases-billboard.jpg",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
     "category": "Meta Ads",
     "platformIcon": "Facebook",
     "title": "Meta công bố hiệu quả từ hệ thống AI và năng lực xử lý dữ liệu mới",
@@ -565,132 +693,6 @@
     "image": {
       "url": "https://imgproxy.divecdn.com/MfIOTDAv-J0dXBQpKZ-dYPTu48natx1BFWY-QF8sGGA/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9tZXRhX2FkX3JhbmtpbmcyLnBuZw==.webp",
       "credit": "Ảnh: Marketing Dive"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Tốc độ tăng trưởng doanh thu quảng cáo Google Search giảm tốc dù lưu lượng tìm kiếm tăng mạnh nhờ AI Mode",
-    "isHot": false,
-    "illustration": "zero-click",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Google Ads",
-      "AI Mode",
-      "Doanh thu quảng cáo",
-      "Xu hướng tìm kiếm"
-    ],
-    "summary": "Google ghi nhận mức tăng trưởng doanh thu quảng cáo Search giảm tốc trong quý III xuống còn 12% do sự bùng nổ của AI Mode mang lại khả năng kiếm tiền thấp hơn. Cùng lúc đó, các đối thủ như OpenAI và Meta đang gia tăng áp lực cạnh tranh bằng các công cụ quảng cáo và tác nhân mua sắm mới.",
-    "keyNumbers": [
-      {
-        "value": "12%",
-        "label": "Tăng trưởng doanh thu Search quý III 2026"
-      },
-      {
-        "value": "63,4 tỷ USD",
-        "label": "Doanh thu Google Search trong quý"
-      },
-      {
-        "value": "51,4 tỷ USD",
-        "label": "Chi phí đầu tư AI trong quý III"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Doanh thu quảng cáo Search tăng trưởng chậm lại",
-        "body": "Tốc độ tăng trưởng doanh thu quảng cáo cho các dịch vụ cốt lõi của Google là Search và YouTube đã giảm tốc trong quý III so với cùng kỳ năm trước. Trong khi tìm kiếm và YouTube từng tăng trưởng doanh thu quảng cáo 15% trong quý III 2025, các phân khúc này chỉ ghi nhận mức tăng lần lượt là 12% và 9% trong quý III 2026. Tổng doanh thu quảng cáo của Google tăng 10,6% tính đến kỳ kết thúc vào ngày 30 tháng 9. Doanh thu từ tìm kiếm đạt 63,4 tỷ USD, vẫn là mảng kinh doanh lớn nhất của Google."
-      },
-      {
-        "heading": "Sự dịch chuyển hành vi sang AI Mode",
-        "body": "Các lãnh đạo Google nhấn mạnh sức hút của các dịch vụ tích hợp trí tuệ nhân tạo như AI Mode đang dẫn đến hành vi tìm kiếm dài hơn và phức tạp hơn. Điều này tạo ra nhiều cơ hội tiếp thị ở phễu trên hơn và thúc đẩy khối lượng tìm kiếm đạt mức tăng trưởng nhanh nhất trong năm năm qua. Tuy nhiên, sự bùng nổ của các truy vấn AI Mode lại đi kèm với mức độ kiếm tiền thấp hơn, gây ra khoảng cách giữa hoạt động tìm kiếm và doanh thu. Google đang mở rộng dịch vụ quảng cáo AI Mode ra quốc tế và đưa định dạng quảng cáo đa lượt sang Hoa Kỳ."
-      },
-      {
-        "heading": "Áp lực cạnh tranh từ các nền tảng khác",
-        "body": "Google Search đang phải đối mặt với những thách thức cạnh tranh mới khi OpenAI nhanh chóng xây dựng mảng kinh doanh quảng cáo cho ChatGPT. Trong khi đó, Meta đang tăng cường sự tập trung vào tác nhân Muse hướng đến người tiêu dùng. Các dịch vụ dạng tác nhân của Google bao gồm Giỏ hàng Mua sắm Universal mới giúp người dùng lưu sản phẩm, theo dõi khuyến mãi và mua hàng từ nhiều nhà bán lẻ khác nhau. Giỏ hàng này đã bắt đầu được triển khai tại Hoa Kỳ vào đầu tháng."
-      },
-      {
-        "heading": "Chi phí đầu tư khổng lồ vào AI",
-        "body": "Google là một trong số các công ty công nghệ phải đối mặt với áp lực lớn hơn trong việc chứng minh các khoản đầu tư khổng lồ vào AI. Chi phí vốn đạt 51,4 tỷ USD trong quý III trong khi dòng tiền tự do âm ở mức 9,1 tỷ USD. Công ty cho biết chi phí vốn dự kiến sẽ đạt từ 195 tỷ USD đến 205 tỷ USD trong năm nay và sẽ tiếp tục tăng đáng kể vào năm 2027. Điều này phản ánh chiến lược dài hạn của hãng trong việc tái định hình trải nghiệm tìm kiếm."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing cần lưu ý rằng lưu lượng tìm kiếm chuyển dịch sang AI Mode đang mang lại hiệu quả kiếm tiền thấp hơn cho Google, dẫn đến những thay đổi về định dạng quảng cáo và chi phí. Việc các đối thủ như OpenAI và Meta thúc đẩy công cụ mua sắm và quảng cáo riêng đòi hỏi chiến lược phân bổ ngân sách đa nền tảng linh hoạt hơn.",
-    "ifIgnored": "Nếu bỏ qua xu hướng này, nhà quản lý có thể tiếp tục phân bổ ngân sách theo mô hình tìm kiếm truyền thống mà không tối ưu hóa cho các định dạng quảng cáo đa lượt và hành vi tìm kiếm mới của AI Mode, dẫn đến việc bỏ lỡ các cơ hội tiếp cận khách hàng ở phễu trên.",
-    "actionChecklist": [
-      "Đánh giá lại hiệu quả chiến dịch Google Search dưới sự ảnh hưởng của lưu lượng truy cập AI Mode",
-      "Theo dõi sát sao tác động của định dạng quảng cáo đa lượt mới đối với chi phí chuyển đổi",
-      "Chuẩn bị ngân sách và chiến lược thử nghiệm cho các công cụ quảng cáo mới từ các đối thủ AI cạnh tranh",
-      "Tối ưu hóa nội dung phễu trên để đón đầu hành vi tìm kiếm dài và phức tạp hơn của người dùng"
-    ],
-    "id": "real-2026-10-29-toc-do-tang-truong-4a5a4b",
-    "publishedAt": "29/10/2026",
-    "sourceUrl": "https://www.marketingdive.com/news/googles-ai-overhaul-of-search-hits-snags-as-ad-revenue-growth-cools/873150/",
-    "source": "Marketing Dive",
-    "image": {
-      "url": "https://imgproxy.divecdn.com/dLRdUulL1iEvNR4mkfzoqdf69qwsi7EgY7J1R6PNB0A/g:nowe:0:75/c:1024:578/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMTY2NjcxNDgyLmpwZw==.webp",
-      "credit": "Ảnh: Marketing Dive"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Tăng trưởng quảng cáo Google chậm lại còn 10,5% do AI Mode thu hẹp diện tích hiển thị",
-    "isHot": false,
-    "illustration": "cpm-auction",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Google Ads",
-      "AI Mode",
-      "Multiturn Ads",
-      "Tìm kiếm AI"
-    ],
-    "summary": "Tăng trưởng doanh thu quảng cáo quý 3 của Google giảm xuống 10,5% đạt 82 tỷ USD do sự bùng nổ của chế độ AI Mode làm giảm không gian hiển thị quảng cáo truyền thống. Để bù đắp, Google mở rộng quảng cáo AI Mode sang 10 thị trường mới và bắt đầu thử nghiệm định dạng quảng cáo đa lượt trong các đoạn hội thoại AI.",
-    "keyNumbers": [
-      {
-        "value": "10,5%",
-        "label": "Tăng trưởng doanh thu quảng cáo Google quý 3"
-      },
-      {
-        "value": "82 tỷ USD",
-        "label": "Doanh thu quảng cáo Alphabet đạt được"
-      },
-      {
-        "value": "10",
-        "label": "Thị trường mới mở rộng quảng cáo AI Mode"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Tăng trưởng quảng cáo tìm kiếm chậm lại do AI Mode thu hẹp vị trí hiển thị",
-        "body": "Doanh thu quảng cáo tổng thể của Alphabet trong quý 3 tăng 10,5% lên mức 82 tỷ USD, thấp hơn kỳ vọng 83,5 tỷ USD của các nhà phân tích. Tăng trưởng mảng tìm kiếm chậm lại còn 12%, đạt 63,4 tỷ USD so với mức 17% ở quý 2. Lãnh đạo Google giải thích sự sụt giảm này một phần do sự gia tăng mạnh mẽ của các truy vấn AI Mode. Trang kết quả AI Mode hiển thị ít vị trí quảng cáo hơn hẳn so với trang tìm kiếm truyền thống."
-      },
-      {
-        "heading": "Mở rộng quảng cáo AI Mode tới 10 quốc gia mới bao gồm Đông Nam Á",
-        "body": "Để giải quyết tình trạng thiếu hụt vị trí hiển thị, Google đã mở rộng quảng cáo trong AI Mode tới 10 quốc gia mới. Danh sách các thị trường mới bao gồm Malaysia, Philippines, Singapore, Úc, Canada, Ấn Độ, Kenya, New Zealand, Nigeria và Pakistan. Trong quý 4, Google sẽ tiếp tục triển khai tính năng này tại Brazil, Mexico và Vương quốc Anh. Việc phủ sóng các quốc gia Đông Nam Á lân cận cho thấy thị trường Việt Nam cũng sẽ sớm chịu tác động từ sự thay đổi này."
-      },
-      {
-        "heading": "Thử nghiệm định dạng quảng cáo đa lượt Multiturn Ads trong hội thoại AI",
-        "body": "Google chính thức ra mắt định dạng quảng cáo đa lượt (multiturn ads) tại thị trường Mỹ đối với các truy vấn AI Mode. Quảng cáo này sẽ xuất hiện ở các câu trả lời tiếp theo khi người dùng tiếp tục hỏi đáp chuyên sâu với AI và được dán nhãn 'Sponsored'. Theo dữ liệu từ Google, câu hỏi ở AI Mode có độ dài trung bình gấp 3 lần truy vấn thông thường. Nền tảng này khẳng định tỷ lệ nhấp CTR của danh sách sản phẩm tài trợ trong AI Mode hiện tương đương với danh sách tự nhiên."
-      },
-      {
-        "heading": "Tích hợp ứng dụng trực tiếp vào giao diện tìm kiếm qua Connected Apps",
-        "body": "Google giới thiệu bản xem trước của Connected Apps Platform, cho phép các nhà phát triển xây dựng ứng dụng chạy trực tiếp bên trong Google Search và Gemini. Người dùng có thể tương tác với hơn 50 ứng dụng như Adobe hay Peloton mà không cần rời khỏi trang tìm kiếm. Doanh nghiệp đăng ký và nộp ứng dụng thông qua Google Connected Console để tiếp cận nhóm người dùng có ý định chuyển đổi cao. Xu hướng này tiếp tục củng cố chiến lược giữ chân người dùng ở lại hoàn toàn trong hệ sinh thái của Google."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing sẽ phải đối mặt với nguy cơ giá thầu CPM và CPC quảng cáo tìm kiếm truyền thống tăng cao do diện tích hiển thị bị thu hẹp. Đồng thời, hành vi tìm kiếm của người dùng đang chuyển dịch sang các truy vấn hội thoại dài, đòi hỏi thay đổi chiến lược từ khóa và cấu trúc chiến dịch quảng cáo.",
-    "ifIgnored": "Doanh nghiệp sẽ bị mất lượt truy cập tự nhiên lẫn trả phí khi Google chuyển hướng người dùng sang giao diện AI Mode, dẫn đến sụt giảm hiệu quả chuyển đổi và lãng phí ngân sách vào các từ khóa ngắn truyền thống đã giảm lượng hiển thị.",
-    "actionChecklist": [
-      "Rà soát lại danh sách từ khóa Google Ads để bổ sung các cụm từ tìm kiếm dạng hội thoại dài và câu hỏi chi tiết.",
-      "Tối ưu hóa dữ liệu nguồn cung cấp sản phẩm (Product Feed) để chuẩn bị cho định dạng hiển thị sản phẩm tài trợ trong AI Mode.",
-      "Theo dõi biến động CPC và CTR trên các chiến dịch Search Ads hiện tại để chủ động điều chỉnh ngân sách hợp lý.",
-      "Nghiên cứu cơ hội tích hợp ứng dụng doanh nghiệp vào nền tảng Google Connected Apps để giữ chân khách hàng."
-    ],
-    "id": "real-2026-10-29-tang-truong-quang-cao-9cb812",
-    "publishedAt": "29/10/2026",
-    "sourceUrl": "https://ppc.land/googles-ad-growth-slows-to-10-5-as-ai-mode-ads-go-to-10-more-markets/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/10/google-alphabet-q3-ad-growth-ai-mode-cloud-billboard-speech-bubble.jpg",
-      "credit": "Ảnh: PPC Land"
     }
   },
   {
