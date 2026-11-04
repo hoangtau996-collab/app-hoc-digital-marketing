@@ -1,5 +1,196 @@
 [
   {
+    "category": "Meta Ads",
+    "platformIcon": "Facebook",
+    "title": "Ngân sách quảng cáo mạng xã hội tăng 40% trong mùa lễ hội nhờ chiến lược phân bổ đa ngành",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Meta Ads",
+      "Nghiên cứu thị trường",
+      "Phân bổ ngân sách",
+      "Quảng cáo lễ hội"
+    ],
+    "summary": "Dữ liệu từ Nielsen Ad Intel cho thấy chi phí quảng cáo truyền thông xã hội tại Malaysia đã tăng 40% lên 186 triệu RM trong tháng 3 nhờ chuỗi sự kiện lễ hội. Tuy truyền hình vẫn chiếm thị phần lớn nhất với 44.8%, tốc độ tăng trưởng của mạng xã hội và kênh kỹ thuật số lại vượt trội hơn hẳn.",
+    "keyNumbers": [
+      {
+        "value": "186 triệu RM",
+        "label": "Chi tiêu mạng xã hội tháng 3"
+      },
+      {
+        "value": "40%",
+        "label": "Tăng trưởng quảng cáo xã hội"
+      },
+      {
+        "value": "55,9%",
+        "label": "Tăng trưởng quảng cáo kỹ thuật số"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Bối cảnh chi tiêu mùa lễ hội",
+        "body": "Tổng chi phí quảng cáo được theo dõi tại Malaysia đạt 604,4 triệu RM trong tháng 3 năm 2026, tăng hơn 20% so với tháng 2. Sự kiện Tết Nguyên đán, tháng Ramadan và Hari Raya Aidilfitri diễn ra gần nhau đã kéo dòng tiền ngân sách tập trung mạnh vào quý đầu năm. Truyền hình mặt đất vẫn giữ vị trí kênh đơn lẻ lớn nhất với 271 triệu RM, tương đương 44,8% tổng chi tiêu trong tháng."
+      },
+      {
+        "heading": "Tốc độ tăng trưởng của mạng xã hội",
+        "body": "Quảng cáo trên mạng xã hội ghi nhận mức tăng 40% trong một tháng, từ 132,9 triệu RM lên 186 triệu RM. Trong khi đó, quảng cáo kỹ thuật số tăng 55,9% đạt 52,1 triệu RM và truyền hình mặt đất tăng từ 243,8 triệu RM lên 271 triệu RM. Riêng mạng xã hội đã đóng góp khoảng 52% trong tổng số 101,8 triệu RM tăng thêm trên bốn kênh được liệt kê từ tháng 2 sang tháng 3."
+      },
+      {
+        "heading": "Độ trễ thời điểm chi tiêu giữa các ngành",
+        "body": "Không phải mọi ngành hàng đều dồn ngân sách vào cùng một thời điểm trong mùa lễ hội. Ngành bán lẻ và thực phẩm đẩy mạnh chi tiêu từ sớm, với chi phí bán lẻ đạt 70,5 triệu RM trong tháng 2 và 69,1 triệu RM trong tháng 3. Sau lễ Hari Raya, chi tiêu bán lẻ giảm 53,5% và thực phẩm giảm 30% trong tháng 4."
+      },
+      {
+        "heading": "Sự bứt phá của nhóm công nghệ và truyền thông",
+        "body": "Trái ngược với đà giảm của ngành bán lẻ sau lễ hội, chi tiêu quảng cáo cho Công nghệ thông tin tăng vọt từ 6,3 triệu RM trong tháng 2 lên 39,9 triệu RM trong tháng 3 và chạm 51,6 triệu RM vào tháng 4. Ngành truyền thông cũng tăng từ 9,1 triệu RM lên 28,5 triệu RM trong tháng 3 và đạt đỉnh 34,7 triệu RM vào tháng 4, cho thấy mỗi ngành có một chu kỳ cạnh tranh riêng biệt."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing cần nhận diện rõ các ngành hàng có độ trễ chu kỳ chi tiêu khác nhau để tối ưu hóa thời điểm phân bổ ngân sách Meta Ads, tránh việc chạy theo một khung thời gian lễ hội chung chung của thị trường.",
+    "ifIgnored": "Nếu bỏ qua các mốc biến động chi tiêu theo ngành, doanh nghiệp có thể rót tiền sai thời điểm cao điểm của đối thủ cạnh tranh, dẫn đến lãng phí ngân sách và hiệu suất chuyển đổi thấp trên các nền tảng mạng xã hội.",
+    "actionChecklist": [
+      "Phân tích dữ liệu lịch sử ngành hàng để xác định chính xác thời điểm khách hàng mục tiêu tăng mức độ tương tác.",
+      "Lên kế hoạch dịch chuyển một phần ngân sách từ các kênh truyền thống sang mạng xã hội để đón đầu tốc độ tăng trưởng 40%.",
+      "Điều chỉnh thông điệp quảng cáo theo từng giai đoạn trước, trong và sau chuỗi sự kiện lễ hội lớn.",
+      "Theo dõi sát sao hành vi thay đổi của người tiêu dùng để điều chỉnh giá thầu Meta Ads kịp thời theo từng tuần."
+    ],
+    "id": "real-2026-11-04-ngan-sach-quang-cao-bb99f6",
+    "publishedAt": "04/11/2026",
+    "sourceUrl": "https://ppc.land/social-ad-spend-gains-40-in-malaysias-festive-march-nielsen-finds/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/11/nielsen-malaysia-social-ad-spend-40-festive-march-console-tv-phone-cord-coin-column.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "boQua": false,
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Safari thử nghiệm Adaptive Dark Mode tự động đổi màu website sáng thành tối",
+    "isHot": false,
+    "illustration": "zero-click",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Safari",
+      "Dark Mode",
+      "WebKit",
+      "Trải nghiệm người dùng"
+    ],
+    "summary": "Apple vừa giới thiệu Adaptive Dark Mode trong bản thử nghiệm Safari 27.3 beta, tính năng tự động chuyển đổi các trang web có giao diện sáng sang tối. Việc này diễn ra ở cấp độ trình duyệt mà không cần website phải có sẵn giao diện tối, ảnh hưởng trực tiếp đến cách hiển thị của nội dung và banner quảng cáo.",
+    "keyNumbers": [
+      {
+        "value": "40%",
+        "label": "lượt truy cập trang web từ người dùng ở chế độ tối"
+      },
+      {
+        "value": "10%",
+        "label": "lượt truy cập trang web có hỗ trợ chế độ tối"
+      },
+      {
+        "value": "4,5:1",
+        "label": "tỷ lệ tương phản tối thiểu theo chuẩn WCAG"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Cơ chế hoạt động của Adaptive Dark Mode",
+        "body": "Nhóm WebKit của Apple đã phát hành Adaptive Dark Mode trong Safari 27.3 beta vào ngày 03/11/2026. Tính năng này hoạt động bên trong công cụ trình duyệt WebKit, tự động phân tích và đảo ngược độ sáng của màu sắc nhưng vẫn giữ nguyên sắc thái. Các trang web không khai báo thẻ HTML hoặc quy tắc CSS tương thích sẽ bị trình duyệt tự động chuyển đổi giao diện khi người dùng kích hoạt."
+      },
+      {
+        "heading": "Tác động đến hình ảnh và banner quảng cáo",
+        "body": "Hầu hết các bức ảnh và hình ảnh chụp được giữ nguyên vẹn để bảo toàn chất lượng gốc. Tuy nhiên, các logo dạng đen trắng hoặc SVG đơn giản có thể bị trình duyệt can thiệp đảo ngược màu sắc. Riêng các banner quảng cáo dạng hình ảnh có nền trắng sẽ giữ nguyên dạng, tạo thành một ô sáng nổi bật trên nền tối của trang web."
+      },
+      {
+        "heading": "Vấn đề với mã lệnh và script của bên thứ ba",
+        "body": "Trong phiên bản thử nghiệm đầu tiên này, từ khóa cho phép từ chối tính năng chưa hoạt động. Các tập lệnh và thẻ quảng cáo của nhà xuất bản vẫn đọc được mã màu gốc do lập trình viên viết thay vì màu tối mà người dùng nhìn thấy trên màn hình. Điều này tạo ra sự lệch pha giữa dữ liệu kỹ thuật và trải nghiệm thực tế của người dùng."
+      },
+      {
+        "heading": "Khoảng trống dữ liệu và khả năng tương thích",
+        "body": "Theo dữ liệu từ Chrome Platform Status được dẫn nguồn trong bài công bố, gần 40% lượt tải trang đến từ người dùng ở chế độ tối nhưng chỉ có 10% trang web hỗ trợ chế độ này. Hiện tại, các chi tiết thực tế như nền tảng chạy bản beta hay ngày phát hành chính thức của Safari 27.3 vẫn chưa được công bố cụ thể."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing cần lưu ý rằng các banner quảng cáo hiển thị trên Safari có thể bị đặt vào giao diện tối hoàn toàn mới mà hệ thống tracking hoặc creative chưa được thiết kế thích ứng, làm giảm hiệu quả thị giác.",
+    "ifIgnored": "Nếu bỏ qua, các mẫu quảng cáo động hoặc banner nền trắng có thể hiển thị lệch lạc, gây mất thẩm mỹ và làm giảm tỷ lệ nhấp khi người dùng lướt web trên các thiết bị Apple.",
+    "actionChecklist": [
+      "Kiểm tra lại toàn bộ các creative banner quảng cáo hiển thị trên nền tảng Safari.",
+      "Theo dõi sát sao các bản cập nhật tiếp theo của Safari 27.3 beta về từ khóa từ chối tính năng.",
+      "Đánh giá lại độ tương phản màu sắc của các thiết kế HTML và CSS động.",
+      "Chuẩn bị sẵn các quy tắc CSS hỗ trợ chế độ tối để chủ động kiểm soát hiển thị thay vì phụ thuộc vào trình duyệt."
+    ],
+    "deadline": "04/11/2026",
+    "id": "real-2026-11-04-safari-thu-nghiem-adaptive-28a4d2",
+    "publishedAt": "04/11/2026",
+    "sourceUrl": "https://ppc.land/safaris-new-dark-mode-repaints-light-websites-without-the-sites-knowing/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/11/apple-safari-27-3-adaptive-dark-mode-hidden-repaint-sign-painter-billboard.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "Meta Ads",
+    "platformIcon": "Search",
+    "title": "Reddit giới thiệu dữ liệu mới về cộng đồng game thủ và hiệu quả quảng cáo",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Reddit Ads",
+      "Gaming",
+      "ROAS",
+      "Social Media"
+    ],
+    "summary": "Reddit công bố dữ liệu nghiên cứu mới về hơn 1.300 cộng đồng game thủ trên nền tảng, cho thấy tiềm năng lớn nhưng chưa được khai thác triệt để của các nhà quảng cáo. Báo cáo cũng chỉ ra mức độ hiệu quả của quảng cáo khi kết hợp với các kênh truyền thông khác.",
+    "keyNumbers": [
+      {
+        "value": "1.300",
+        "label": "Cộng đồng game"
+      },
+      {
+        "value": "$8,58",
+        "label": "ROAS trung bình"
+      },
+      {
+        "value": "32%",
+        "label": "Game thủ không dùng TikTok"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Tiềm năng từ các cộng đồng game",
+        "body": "Reddit sở hữu hơn 1.300 cộng đồng liên quan đến game, nơi các cuộc trò chuyện do chính người chơi tạo ra định hình quyết định mua sắm. Nghiên cứu cho thấy các nhà quảng cáo mảng game hiện chưa tận dụng tốt cơ hội này. Nhóm đối tượng người dùng game trên nền tảng này có mức độ tương tác cao và ảnh hưởng trực tiếp đến hành vi khám phá sản phẩm."
+      },
+      {
+        "heading": "Hiệu quả chi tiêu quảng cáo",
+        "body": "Theo phân tích các chương trình khuyến mãi trên Reddit, quảng cáo mang lại lợi nhuận trên chi tiêu quảng cáo trung bình là 8,58 đô la cho các nhà quảng cáo game. Thảo luận trên nền tảng cũng tạo ra hiệu ứng lan tỏa sang các kênh khác. Cụ thể, truyền hình đóng góp 18% vào tổng hiệu quả phối hợp, tìm kiếm có trả tiền đạt 17%, video trực tuyến đạt 15% và mạng xã hội trả phí đạt 12%."
+      },
+      {
+        "heading": "Độ phủ đối tượng độc đáo",
+        "body": "Dữ liệu nghiên cứu chỉ ra rằng có tới 32% game thủ tại Mỹ trên Reddit không sử dụng TikTok, tạo ra khả năng tiếp cận đối tượng người dùng độc đáo. Gần 3/4, tương đương 71%, game thủ Mỹ trên nền tảng đã mua sản phẩm liên quan đến game dựa trên thông tin tìm thấy tại đây. Thị phần quảng cáo game của nền tảng này đã tăng 46% từ năm 2023, trong khi các kênh mạng xã hội trả phí khác giảm 8%."
+      },
+      {
+        "heading": "Chiến lược tối ưu hóa toàn phễu",
+        "body": "Phân tích gợi ý rằng các thương hiệu game đang đầu tư dưới mức thực tế vào quảng cáo trên Reddit, với mức đầu tư trung bình chỉ chiếm 5% chi phí mạng xã hội trả phí. Các thương hiệu áp dụng chiến lược toàn phễu cho các mục tiêu chiến dịch chính đạt hiệu quả ROAS tổng thể cao hơn 19% so với mức trung bình của chiến thuật đơn lẻ. Trong đó, định dạng quảng cáo video mang lại hiệu quả ROAS mạnh mẽ nhất."
+      }
+    ],
+    "impact": "Cung cấp cho Trưởng phòng Marketing dữ liệu cụ thể về hiệu quả của Reddit Ads đối với ngành game và khả năng bổ trợ đa kênh, giúp mở rộng danh mục phân bổ ngân sách ra ngoài các nền tảng quen thuộc như TikTok hay Meta.",
+    "ifIgnored": "Bỏ qua một kênh tiềm năng với lượng người dùng độc lập cao, đánh mất cơ hội tiếp cận nhóm khách hàng game thủ không dùng mạng xã hội khác và bỏ lỡ hiệu ứng lan tỏa sang các kênh truyền thông hiện tại.",
+    "actionChecklist": [
+      "Đánh giá lại tỷ trọng phân bổ ngân sách quảng cáo cho Reddit trong chiến dịch game",
+      "Thử nghiệm chiến dịch toàn phễu với định dạng video để tối ưu ROAS",
+      "Đo lường hiệu ứng lan tỏa từ Reddit sang các kênh tìm kiếm và mạng xã hội khác",
+      "Nghiên cứu đặc thù của các cộng đồng game thủ trước khi triển khai nội dung"
+    ],
+    "id": "real-2026-11-03-reddit-gioi-thieu-du-58e976",
+    "publishedAt": "03/11/2026",
+    "sourceUrl": "https://www.socialmediatoday.com/news/reddit-pitches-its-1300-gaming-related-communities-to-brands/873673/",
+    "source": "Social Media Today",
+    "image": {
+      "url": "https://imgproxy.divecdn.com/EHVCCIHz7ybiXEuI-ROk2h8OQ1e6EirWxxKHS-qq1CE/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9yZWRkaXRfZ2FtaW5nXzlLdXJQaGUucG5n.webp",
+      "credit": "Ảnh: Social Media Today"
+    }
+  },
+  {
     "category": "Google Ads & SEO",
     "platformIcon": "Search",
     "title": "Google dịch AI Overviews sang cột phải cho từ khóa thương hiệu và thay đổi cách xử lý Performance Max",
@@ -191,69 +382,6 @@
     }
   },
   {
-    "category": "AI Marketing",
-    "platformIcon": "Sparkles",
-    "title": "Microsoft Clarity phát hiện hành vi AI Agent làm biến dạng dữ liệu phễu chuyển đổi website",
-    "isHot": false,
-    "illustration": "data-signal",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "AI Agent",
-      "Microsoft Clarity",
-      "Đo lường Marketing",
-      "Tỷ lệ chuyển đổi"
-    ],
-    "summary": "Nghiên cứu mới từ Microsoft Clarity trên 5,2 triệu phiên truy cập cho thấy các AI agent xuất hiện ở bước thanh toán (Checkout) với tỷ lệ 25,21%, cao hơn nhiều so với 14,65% của người dùng thực. Do các công cụ phân tích hiện tại đo lường chung cả AI agent lẫn người thật, dữ liệu phễu chuyển đổi trên website đang đứng trước nguy cơ bị sai lệch nghiêm trọng.",
-    "keyNumbers": [
-      {
-        "value": "25,21%",
-        "label": "Tỷ lệ phiên AI agent ghi nhận Checkout so với 14,65% ở người dùng"
-      },
-      {
-        "value": "88%",
-        "label": "Mức tăng trưởng lượng phiên AI agent chỉ trong 3 tuần"
-      },
-      {
-        "value": "5,2 triệu",
-        "label": "Số phiên truy cập AI agent được phân tích trên 230.511 dự án"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Báo cáo từ Microsoft Clarity về hành vi của AI Agent",
-        "body": "Microsoft Clarity đã phân tích hơn 5,2 triệu phiên truy cập web có sự tham gia của AI agent trên 230.511 dự án từ ngày 13/8 đến ngày 9/9/2026. Kết quả cho thấy hành động Thanh toán (Checkout) xuất hiện trong 25,21% phiên của AI agent, cao hơn mức 14,65% ở các phiên chỉ có người dùng thực. Tuy nhiên, Clarity cho biết hệ thống chưa thể tách biệt chính xác thao tác nào do AI thực hiện và thao tác nào do con người bấm. Nhiều phiên làm việc của AI agent có bước chuyển giao cho con người (human handoff) khi xuất hiện yêu cầu đăng nhập hoặc nhập thẻ thanh toán."
-      },
-      {
-        "heading": "Sự bùng nổ lưu lượng truy cập từ AI agent và công cụ theo dõi mới",
-        "body": "Dữ liệu của Microsoft ghi nhận khối lượng phiên làm việc của AI agent đã tăng 88% chỉ trong vòng 3 tuần. Nhằm giúp các nhà vận hành website hiểu rõ hơn về đối tượng này, Clarity đã ra mắt Bảng điều khiển Báo cáo Hoạt động Agent (Agent Activity Dashboard). Hệ thống phát hiện agent thông qua các nhà cung cấp trình duyệt agentic thuộc ba hệ sinh thái gồm OpenAI, Google và Anthropic. Điều này rất quan trọng vì hầu hết các bộ công cụ phân tích hiện tại được xây dựng để hiểu người dùng người thật chứ không phải agent hành động thay họ."
-      },
-      {
-        "heading": "Khác biệt rõ rệt trong phễu hành vi giữa AI agent và người dùng thật",
-        "body": "Các hành động quan trọng (Smart Events) cho thấy sự phân bổ trọng số khác nhau giữa hai nhóm đối tượng. Ở nhóm AI agent, hành động Đặt lịch hẹn (Book appointment) đạt 8,42% và Kiểm tra phòng/trạng thái (Check availability) đạt 2,41%, trong khi cả hai đều không nằm trong top 10 của người dùng thật. Ngược lại, người dùng thật có tỷ lệ Nhấp liên kết ngoài (Outbound click) cao gần gấp đôi với 26,99% so với 14,28% của AI agent. Ngoài ra, người dùng thật có tỷ lệ Đăng nhập (Login) là 8,84%, Thêm vào giỏ hàng (Add to cart) là 3,31% và Tải xuống (Download) là 2,97%."
-      },
-      {
-        "heading": "Biến dạng dữ liệu chuyển đổi và thách thức đo lường CRO",
-        "body": "Dữ liệu phễu của AI agent có sự bất thường lớn khi tỷ lệ Checkout đạt 25,21% nhưng Add to cart chỉ chiếm 2,33%, tức là chênh lệch hơn 10 lần. Trong khi đó, ở người dùng thật, sự kiện Xác nhận đơn hàng (Order success) đạt 1,79% và Bắt đầu thanh toán (Begin checkout) đạt 1,62%. Do hành động Checkout trong dữ liệu AI agent có thể chỉ là nhấp vào nút thanh toán hoặc ghé trang thanh toán chứ không phải hoàn tất giao dịch, dữ liệu này đang đi thẳng vào các công cụ phân tích chung. Sự lẫn lộn này có thể làm sai lệch hoàn toàn báo cáo hiệu suất chuyển đổi của website."
-      }
-    ],
-    "impact": "Lưu lượng truy cập từ AI agent đang tăng 88% và hòa chung vào dữ liệu Analytics hiện tại, gây ra tình trạng báo cáo ảo ở các bước phễu (như Checkout tăng vọt 25,21% dù Add to cart chỉ 2,33%), khiến Trưởng phòng Marketing đánh giá sai hiệu quả chuyển đổi thực tế.",
-    "ifIgnored": "Doanh nghiệp sẽ đưa ra các quyết định tối ưu hóa CRO sai lầm dựa trên số liệu phân tích bị nhiễu, lãng phí ngân sách quảng cáo vào các luồng traffic không tạo ra doanh thu thực sự.",
-    "actionChecklist": [
-      "Kích hoạt và kiểm tra Bảng điều khiển Báo cáo Hoạt động Agent (Agent Activity Dashboard) trên Microsoft Clarity.",
-      "Rà soát lại quy trình ghi nhận sự kiện Smart Events để phân biệt giữa click Checkout và giao dịch thành công (Order success).",
-      "Tách biệt chỉ số chuyển đổi (CRO) của traffic người thật và traffic có AI agent tham gia trong các báo cáo hiệu suất.",
-      "Tối ưu lại giao diện cho các hành vi phổ biến của AI agent như Đặt lịch hẹn (Book appointment) và Kiểm tra trạng thái (Check availability)."
-    ],
-    "id": "real-2026-11-01-microsoft-clarity-phat-hien-2228b3",
-    "publishedAt": "01/11/2026",
-    "sourceUrl": "https://ppc.land/checkout-appears-in-25-of-ai-agent-sessions-vs-15-for-humans-clarity-finds/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/11/microsoft-clarity-ai-agent-sessions-checkout-cash-register-shared-hands.jpg",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
     "category": "Meta Ads",
     "platformIcon": "Video",
     "title": "Instagram thử nghiệm video dài 90 phút và vung tiền thu hút nhà sáng tạo",
@@ -381,69 +509,6 @@
     "image": {
       "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/10/travel-ai-seo-407.jpg",
       "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Google xác nhận truy vấn tìm kiếm AI dài gấp 3 lần và thay đổi cơ chế hiển thị quảng cáo",
-    "isHot": false,
-    "illustration": "data-signal",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Google Ads",
-      "AI Overviews",
-      "Tìm kiếm đa phương thức",
-      "Hành vi người dùng"
-    ],
-    "summary": "Google thông báo các câu hỏi tìm kiếm bằng AI hiện dài trung bình gấp 3 lần so với tìm kiếm truyền thống, đồng thời cứ 1 trong 6 lượt tìm kiếm là tìm kiếm đa phương thức. Đáng chú ý, hệ thống quảng cáo trên các giao diện AI của Google hiện được tự động khớp với cả câu truy vấn lẫn nội dung câu trả lời do AI tạo ra.",
-    "keyNumbers": [
-      {
-        "value": "3x",
-        "label": "Độ dài trung bình truy vấn AI so với tìm kiếm từ khóa"
-      },
-      {
-        "value": "1/6",
-        "label": "Tỷ lệ tìm kiếm đa phương thức bằng hình ảnh hoặc giọng nói"
-      },
-      {
-        "value": "65%",
-        "label": "Tỷ lệ tăng trưởng tìm kiếm bằng hình ảnh theo năm"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Xu hướng tìm kiếm AI dài gấp 3 lần và tìm kiếm đa phương thức",
-        "body": "Google xác nhận các truy vấn tìm kiếm bằng AI hiện dài trung bình gấp 3 lần so với tìm kiếm từ khóa truyền thống. Bên cạnh đó, cứ 1 trong 6 lượt tìm kiếm hiện nay là tìm kiếm đa phương thức, kết hợp hình ảnh, video hoặc giọng nói. Người dùng không còn cố gắng gọt dũa ý định thành từ khóa ngắn mà đặt thẳng các câu hỏi chi tiết. Họ thực hiện các cuộc hội thoại nhiều bước và đưa ra quyết định mua sắm phức tạp ngay trên giao diện tìm kiếm."
-      },
-      {
-        "heading": "Cơ chế khớp quảng cáo mới trên giao diện AI Overviews",
-        "body": "Điểm quan trọng nhất đối với nhà quảng cáo là cơ chế phân phối quảng cáo đã thay đổi trên các bề mặt tìm kiếm AI. Quảng cáo Google Ads hiện được hệ thống tự động khớp với cả câu truy vấn của người dùng lẫn nội dung câu trả lời do AI tạo ra. Điều này đồng nghĩa với việc quảng cáo có thể xuất hiện dựa trên ngữ cảnh mà AI đang phản hồi chứ không chỉ dựa vào từ khóa người dùng nhập. Google cũng khuyến nghị các nhà bán lẻ bổ sung 6 trường dữ liệu sản phẩm tùy chọn để tối ưu hiển thị."
-      },
-      {
-        "heading": "Bối cảnh dữ liệu và tính chính xác của các con số",
-        "body": "Các con số này được Shivani Mohan, Phó Chủ tịch Nghiên cứu Trải nghiệm Người dùng và Khoa học Dữ liệu tại Google, chia sẻ trên podcast Ads Decoded. Trước đó vào tháng 5, Google từng công bố dữ liệu tương tự nhưng giới hạn trong tính năng AI Mode tại thị trường Mỹ. Cụ thể, báo cáo tháng 5 chỉ ra các câu hỏi nối tiếp trong AI Mode tăng trưởng hơn 40% mỗi tháng tại Mỹ. Ngoài ra, dữ liệu từ tháng 7 năm 2025 cho thấy tìm kiếm bằng hình ảnh trên Google đã tăng 65% so với cùng kỳ năm trước."
-      },
-      {
-        "heading": "Sự dịch chuyển từ tìm kiếm từ khóa sang tìm kiếm hội thoại",
-        "body": "Người dùng đang chuyển dịch từ việc tìm kiếm một lần sang trải nghiệm hội thoại liên tục để giải quyết nhu cầu. Tính năng tìm kiếm bằng giọng nói và camera Search Live đã được mở rộng cho toàn bộ người dùng Mỹ từ ngày 24 tháng 9 năm 2025. Sự thay đổi này khiến người dùng tương tác sâu hơn và tìm hiểu sản phẩm từ rất sớm trước khi đi đến quyết định mua hàng cuối cùng. Do đó, cách tiếp cận đối tượng qua từ khóa chính xác đơn lẻ không còn bao phủ được toàn bộ hành trình khách hàng."
-      }
-    ],
-    "impact": "Nội dung quảng cáo Google Ads không còn chỉ đấu thầu theo từ khóa tìm kiếm mà phải tối ưu theo ngữ cảnh câu trả lời AI. Việc người dùng tìm kiếm dài gấp 3 lần và dùng hình ảnh đòi hỏi chiến dịch phải phủ rộng các từ khóa dài, cập nhật dữ liệu sản phẩm chi tiết để xuất hiện đúng lúc AI tư vấn cho khách hàng.",
-    "ifIgnored": "Nếu tiếp tục chỉ tập trung vào các từ khóa ngắn truyền thống và bỏ qua dữ liệu nguồn cấp sản phẩm chi tiết, nhà quảng cáo sẽ bỏ lỡ lượng lớn lưu lượng truy cập từ các truy vấn AI và bị đối thủ chiếm lĩnh không gian hiển thị trong các câu trả lời tổng hợp của Google.",
-    "actionChecklist": [
-      "Cập nhật và bổ sung đầy đủ 6 trường dữ liệu sản phẩm tùy chọn trong Google Merchant Center.",
-      "Mở rộng danh sách từ khóa đuôi dài và các cụm từ tìm kiếm dạng câu hỏi tự nhiên.",
-      "Rà soát chiến dịch tìm kiếm để thích ứng với cơ chế hiển thị quảng cáo theo nội dung phản hồi AI.",
-      "Tối ưu hóa hình ảnh sản phẩm và nội dung thị giác trên website để phục vụ tìm kiếm đa phương thức."
-    ],
-    "id": "real-2026-11-01-google-xac-nhan-truy-a1916f",
-    "publishedAt": "01/11/2026",
-    "sourceUrl": "https://ppc.land/google-tells-advertisers-ai-search-queries-now-run-3x-longer/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/11/google-ads-decoded-ai-search-3x-longer-queries-typewriter-paper-ribbon.jpg",
-      "credit": "Ảnh: PPC Land"
     }
   },
   {
@@ -630,69 +695,6 @@
     "image": {
       "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/10/google-ads-bfcm-987.png",
       "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
-    "category": "Meta Ads",
-    "platformIcon": "Facebook",
-    "title": "Meta công bố hiệu quả từ hệ thống AI và năng lực xử lý dữ liệu mới",
-    "isHot": false,
-    "illustration": "ai-budget",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Meta Ads",
-      "Trí tuệ nhân tạo",
-      "Tối ưu chiến dịch",
-      "Hiệu suất quảng cáo"
-    ],
-    "summary": "Meta chia sẻ những dữ liệu mới về hệ thống phân phối quảng cáo được vận hành bởi trí tuệ nhân tạo. Các cải tiến kỹ thuật giúp gia tăng đáng kể số lượng nhấp chuột và tỷ lệ chuyển đổi trên nền tảng Facebook.",
-    "keyNumbers": [
-      {
-        "value": "8,3%",
-        "label": "Tăng lượt nhấp chuột trên Facebook trong quý 2 năm 2026"
-      },
-      {
-        "value": "15,7%",
-        "label": "Tăng tỷ lệ chuyển đổi trên Facebook trong quý 2 năm 2026"
-      },
-      {
-        "value": "97%",
-        "label": "Tăng trưởng doanh thu quảng cáo hợp tác theo năm trong quý 3"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Cải tiến hệ thống xếp hạng quảng cáo Andromeda",
-        "body": "Meta đã nâng cấp hệ thống xếp hạng quảng cáo Andromeda trong bước đầu tiên của quy trình hiển thị. Hệ thống này hiện có khả năng xem xét phạm vi sản phẩm tiềm năng rộng hơn cho mỗi doanh nghiệp. Các sản phẩm được căn chỉnh tốt hơn với sở thích của từng người dùng để tạo ra cơ hội khớp nối chính xác. Nhờ vậy, hiệu suất phân phối quảng cáo được cải thiện rõ rệt dựa trên sự thấu hiểu hành vi."
-      },
-      {
-        "heading": "Ứng dụng mô hình đề xuất quảng cáo tạo sinh GEM và GenRecs",
-        "body": "Mô hình đề xuất quảng cáo tạo sinh GEM có khả năng xử lý lượng dữ liệu lớn hơn để hiển thị quảng cáo phù hợp. GEM đánh giá lịch sử tương tác quảng cáo của từng người dùng với nhiều tín hiệu hơn. Bên cạnh đó, hệ thống GenRecs giúp dự đoán các chương trình khuyến mãi phù hợp ngay cả với các quảng cáo hoàn toàn mới chưa có nhiều lịch sử tương tác. Các công nghệ này giúp nâng cao độ chính xác trong việc tiếp cận khách hàng mục tiêu."
-      },
-      {
-        "heading": "Hiệu suất chuyển đổi cụ thể trong quý 3",
-        "body": "Trong quý 3, những cải tiến đối với mô hình Andromeda đã giúp tăng tỷ lệ chuyển đổi thêm 1,4% trên Facebook. Cùng kỳ này, Meta đã ra mắt tính năng truy xuất tạo sinh trên Bảng tin Facebook. Tính năng này mang lại mức tăng gần 2% về tỷ lệ chuyển đổi trên các phân khúc được nhắm mục tiêu. Năng lực phân tích dữ liệu mở rộng giúp hệ thống đánh giá hành động nhanh hơn để cải thiện hiệu suất."
-      },
-      {
-        "heading": "Trợ lý AI và sự bùng nổ của quảng cáo hợp tác",
-        "body": "Trợ lý kinh doanh AI của Meta đang được triển khai dần tới các nhà quảng cáo và ghi nhận hiệu suất khả quan. Công cụ này mang lại thêm 5% tỷ lệ chuyển đổi với cùng một mức chi phí. Ngoài ra, quảng cáo hợp tác với các nhà sáng tạo đã tăng trưởng hơn 97% so với cùng kỳ năm trước trong quý 3. Hình thức này hiện đã vượt mốc doanh thu địnhrun-rate hàng năm là 15 tỷ đô la Mỹ."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing cần nắm bắt các chỉ số tăng trưởng chuyển đổi từ hệ thống AI của Meta để điều chỉnh kỳ vọng ngân sách. Việc Meta cải thiện mô hình nhắm mục tiêu và phân phối giúp tối ưu hóa hiệu quả chiến dịch mà không cần thay đổi thủ công quá nhiều.",
-    "ifIgnored": "Nếu bỏ qua các cập nhật này, đội ngũ marketing có thể tiếp tục áp dụng cách thiết lập chiến dịch cũ, bỏ lỡ cơ hội tận dụng mô hình AI mới để gia tăng tỷ lệ chuyển đổi và giảm chi phí.",
-    "actionChecklist": [
-      "Đánh giá lại hiệu suất chiến dịch trên Facebook sau các cập nhật thuật toán mới",
-      "Thử nghiệm các mẫu quảng cáo mới ngay cả khi chưa có nhiều lịch sử tương tác",
-      "Xem xét mở rộng hợp tác với các nhà sáng tạo nội dung để tận dụng kênh quảng cáo hợp tác",
-      "Theo dõi tiến trình tiếp cận trợ lý kinh doanh AI của Meta để tối ưu hóa chi phí"
-    ],
-    "id": "real-2026-10-29-meta-cong-bo-hieu-eb7617",
-    "publishedAt": "29/10/2026",
-    "sourceUrl": "https://www.marketingdive.com/news/sociable-meta-says-its-expanded-processing-capacity-is-driving-ad-results/873191/",
-    "source": "Marketing Dive",
-    "image": {
-      "url": "https://imgproxy.divecdn.com/MfIOTDAv-J0dXBQpKZ-dYPTu48natx1BFWY-QF8sGGA/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9tZXRhX2FkX3JhbmtpbmcyLnBuZw==.webp",
-      "credit": "Ảnh: Marketing Dive"
     }
   },
   {
