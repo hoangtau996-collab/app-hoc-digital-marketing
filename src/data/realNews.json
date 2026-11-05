@@ -1,5 +1,186 @@
 [
   {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Chuyển đổi từ thứ hạng SEO sang đo lường sự hiện diện trên AI với mô hình 3 cổng",
+    "isHot": false,
+    "illustration": "zero-click",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "GEO",
+      "AI Search",
+      "Đo lường Marketing",
+      "SEO"
+    ],
+    "summary": "Duy trì thứ hạng cao trên Google không còn đảm bảo thu hút được khách hàng tiềm năng khi các công cụ AI chuyển từ việc hiển thị danh sách sang đưa ra kết luận trực tiếp. Doanh nghiệp cần thay đổi cách báo cáo SEO bằng mô hình ba cổng nhằm đo lường chính xác khả năng xuất hiện, độ chính xác nội dung và mức độ được AI đề xuất.",
+    "keyNumbers": [
+      {
+        "value": "30%",
+        "label": "Tỷ lệ xuất hiện ví dụ khi thương hiệu có mặt trong 12 trên 40 câu trả lời AI"
+      },
+      {
+        "value": "3",
+        "label": "Cổng đo lường hiệu quả gồm xuất hiện, định vị thông tin và mức độ đề xuất"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Khác biệt bản chất giữa xếp hạng danh sách và câu trả lời AI",
+        "body": "Thứ hạng tìm kiếm truyền thống đo lường vị trí của doanh nghiệp trong một danh sách các lựa chọn để người dùng tự so sánh. Trong khi đó, công cụ tìm kiếm AI đưa ra phán quyết trực tiếp và tiền lọc các phương án trước khi người dùng kịp xem xét. Việc doanh nghiệp duy trì thứ hạng cao ở trang nhất không đồng nghĩa với việc vẫn thu hút được lượng truy cập chất lượng. Trong nhiều trường hợp, người dùng không hề bấm vào liên kết vì AI đã giải quyết xong nhu cầu tìm kiếm của họ."
+      },
+      {
+        "heading": "Tỷ lệ trích dẫn đang trở thành số liệu ảo mới",
+        "body": "Việc chỉ thống kê tần suất xuất hiện hoặc tỷ lệ trích dẫn trên AI đang lặp lại sai lầm của việc chạy theo thứ hạng từ khóa trước đây. Một mô hình AI có thể nhắc tên thương hiệu của bạn nhưng lại trực tiếp đề xuất giải pháp của đối thủ cạnh tranh. AI cũng có thể trích dẫn bài viết của bạn để giải thích một thuật ngữ ngành rồi hướng khách hàng sang mua sản phẩm ở nơi khác. Nếu không gắn việc trích dẫn với ý định mua hàng của người dùng, các báo cáo hiện diện AI sẽ không mang lại giá trị thực tế."
+      },
+      {
+        "heading": "Đo lường sự hiện diện qua Cổng 1 (Inclusion) và Cổng 2 (Framing)",
+        "body": "Mô hình đo lường ba cổng giúp doanh nghiệp đánh giá chính xác vị thế trên công cụ AI. Cổng 1 kiểm tra xem thương hiệu có được nhắc tên hoặc trích dẫn nguồn hay không, ví dụ xuất hiện trong 12 trên 40 câu hỏi thử nghiệm tương đương tỷ lệ 30%. Cổng 2 đánh giá tính chính xác của mô hình khi mô tả về sản phẩm, tránh trường hợp AI trích dẫn đúng nhưng lại định vị sai thương hiệu. Doanh nghiệp cần phát hiện các trang sản phẩm cũ hoặc thông tin mâu thuẫn trên mạng để điều chỉnh kịp thời nguồn dữ liệu mà AI thu thập."
+      },
+      {
+        "heading": "Cổng 3 (Endorsement) và tác động đến quyết định mua hàng",
+        "body": "Cổng 3 đo lường tỷ lệ thương hiệu được AI trực tiếp đề xuất cho các câu hỏi ở giai đoạn ra quyết định mua hàng. Ví dụ khi người dùng yêu cầu AI gợi ý phần mềm cho một agency 10 người, công cụ có thể vượt qua Cổng 1 và Cổng 2 nhưng vẫn thất bại ở Cổng 3 nếu AI đánh giá đối thủ phù hợp hơn. Đây là khu vực cạnh tranh quan trọng nhất mà Trưởng phòng Marketing cần theo dõi sát sao. Việc AI đề xuất thương hiệu thường có tương quan trực tiếp đến sự gia tăng của các lượt tìm kiếm thương hiệu trên thị trường."
+      }
+    ],
+    "impact": "Tái cấu trúc khung báo cáo SEO và GEO của phòng marketing, giúp Trưởng phòng Marketing đánh giá đúng hiệu quả đầu tư nội dung, loại bỏ các chỉ số ảo và tập trung tối ưu hóa dữ liệu để AI chủ động đề xuất sản phẩm tới khách hàng tiềm năng.",
+    "ifIgnored": "Doanh nghiệp sẽ tiếp tục hài lòng với các báo cáo đẹp về thứ hạng từ khóa hay lượt trích dẫn AI vô nghĩa, trong khi lượng khách hàng tiềm năng chất lượng thực sự chạm tới website sụt giảm mà không rõ nguyên nhân.",
+    "actionChecklist": [
+      "Tách riêng chỉ số lượt nhắc tên thương hiệu và trích dẫn website khi kiểm tra trên các công cụ AI",
+      "Rà soát và cập nhật lại các trang thông tin sản phẩm cũ để tránh việc AI định vị sai thương hiệu",
+      "Xây dựng bộ câu hỏi kiểm thử dựa trên kịch bản ra quyết định mua hàng thực tế của khách hàng",
+      "Theo dõi sự tương quan giữa tần suất được AI đề xuất với lượng tìm kiếm từ khóa thương hiệu"
+    ],
+    "id": "real-2026-11-05-chuyen-doi-tu-thu-64c2aa",
+    "publishedAt": "05/11/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/ai-visibility-vs-search-rankings-is-your-agency-measuring-the-wrong-thing-for-2027-spa/594163/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/10/webpros-partner-stories-featured-1600x832-443.png",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
+    "category": "AI Marketing",
+    "platformIcon": "Sparkles",
+    "title": "ChatGPT đạt 20% lượng tìm kiếm của Google và làn sóng dịch chuyển quảng cáo AI",
+    "isHot": false,
+    "illustration": "zero-click",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "ChatGPT Ads",
+      "Tìm kiếm AI",
+      "Google Search",
+      "Xu hướng SEO"
+    ],
+    "summary": "Lượng truy vấn tìm kiếm trên ChatGPT đã đạt mức khoảng 20% so với Google, thúc đẩy dịch chuyển dòng tiền quảng cáo sang các nền tảng hội thoại AI. Sự bùng nổ của câu trả lời tổng hợp AI cũng khiến lưu lượng truy cập web truyền thống suy giảm, trực tiếp tác động đến doanh thu của các mạng lưới quảng cáo hiển thị.",
+    "keyNumbers": [
+      {
+        "value": "20%",
+        "label": "Lượng tìm kiếm ChatGPT so với Google"
+      },
+      {
+        "value": "6,9%",
+        "label": "Doanh thu Taboola giảm do AI summary"
+      },
+      {
+        "value": "89",
+        "label": "Quốc gia Criteo triển khai quảng cáo ChatGPT"
+      }
+    ],
+    "content": [
+      {
+        "heading": "ChatGPT cán mốc quy mô bằng một phần năm Google Search",
+        "body": "Đại diện OpenAI xác nhận lượng câu hỏi dạng tìm kiếm trên ChatGPT hiện đạt khoảng một phần năm quy mô của Google. Số lượng người dùng ChatGPT đã tăng từ 1 tỷ lên 1,2 tỷ chỉ trong hai tháng, trung bình tăng khoảng 100 triệu người dùng mỗi tháng. Ngoài ra, tính năng hội thoại bằng giọng nói của ChatGPT đã đạt 250 triệu người dùng hằng tuần. Với quy mô lưu lượng này, ChatGPT chính thức trở thành một kênh truyền thông độc lập đủ lớn để các thương hiệu phân bổ ngân sách quảng cáo riêng biệt."
+      },
+      {
+        "heading": "Mạng quảng cáo web truyền thống chịu áp lực từ tóm tắt AI",
+        "body": "Taboola công bố doanh thu quý giảm 6,9% xuống còn 462,3 triệu USD do số lượt hiển thị quảng cáo suy giảm dưới tác động của các bản tóm tắt AI. Ban lãnh đạo Taboola nhận định hành vi tìm kiếm và tương tác nội dung trên web mở của người dùng đang thay đổi sâu sắc khi họ nhận được câu trả lời ngay trên giao diện chatbot. Việc người dùng không bấm vào bài viết chi tiết khiến nguồn cung vị trí quảng cáo bên dưới các bài báo bị thu hẹp đáng kể. Hiện Taboola và Yahoo cũng đã gửi thông báo hòa giải liên quan đến thỏa thuận dịch vụ quảng cáo giữa hai bên."
+      },
+      {
+        "heading": "Criteo biến ChatGPT thành kênh tăng trưởng nhanh nhất",
+        "body": "Criteo xác nhận ChatGPT đã trở thành đối tác và kênh tăng trưởng nhanh nhất của công ty trong thời gian qua. Nền tảng này đã mở rộng mạng lưới quảng cáo dữ liệu mua sắm trên ChatGPT từ 7 quốc gia lên 89 quốc gia. Tổng chi tiêu cho Connected TV, quảng cáo trên nền tảng AI và tích hợp mạng xã hội hiện chiếm 13% chi tiêu trong mảng Commerce Growth của Criteo, tăng từ mức 6% trước đó. Điều này cho thấy các đối tác dữ liệu bán lẻ đang chủ động tích hợp sâu vào hệ sinh thái AI."
+      },
+      {
+        "heading": "Trợ lý AI tự động gia tăng mạnh mẽ trên các website",
+        "body": "Microsoft Clarity ra mắt tính năng phân tích đại lý tự động nhằm theo dõi hành vi của các bot AI truy cập website từ khâu tìm kiếm đến thanh toán. Số lượng đại lý AI hoạt động trên hệ thống đã tăng gần gấp đôi chỉ trong ba tuần, đạt mốc gần 2 triệu đại lý. Công cụ này cũng cho phép doanh nghiệp kiểm thử khả năng hoàn tất tác vụ mua sắm và đặt dịch vụ của các bot AI. Điều này đòi hỏi các trang web phải tối ưu hóa hạ tầng để sẵn sàng phục vụ cả người dùng lẫn các agent AI."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing đối mặt với sự sụt giảm lưu lượng truy cập tự nhiên (organic traffic) từ Google và web mở do xu hướng tìm kiếm không cần nhấp chuột (zero-click). Đồng thời, ngân sách tìm kiếm cần cân nhắc chia sẻ sang các kênh AI mới như ChatGPT Ads thay vì phụ thuộc hoàn toàn vào Google Search hay Native Ads truyền thống.",
+    "ifIgnored": "Nếu tiếp tục giữ nguyên 100% ngân sách tìm kiếm trên Google và SEO truyền thống, doanh nghiệp sẽ bỏ lỡ tiếp cận 20% lượng tìm kiếm đang chuyển dịch sang ChatGPT. Chi phí thu hút khách hàng (CAC) sẽ tăng cao do hiệu suất quảng cáo hiển thị trên báo điện tử suy giảm.",
+    "actionChecklist": [
+      "Đánh giá lại tỷ lệ traffic từ Google Search và chuẩn bị kịch bản sụt giảm organic traffic do AI tóm tắt nội dung.",
+      "Khảo sát khả năng thử nghiệm các định dạng quảng cáo mua sắm và hiển thị trên ChatGPT thông qua đối tác như Criteo.",
+      "Cập nhật cấu trúc dữ liệu website để đảm bảo các đại lý AI (AI agents) có thể thu thập thông tin sản phẩm và giá chính xác.",
+      "Theo dõi lưu lượng truy vấn thương hiệu trên các công cụ tìm kiếm AI để tối ưu hóa sự xuất hiện của thương hiệu (GEO - Generative Engine Optimization)."
+    ],
+    "id": "real-2026-11-05-chatgpt-dat-20-luong-10dc5b",
+    "publishedAt": "05/11/2026",
+    "sourceUrl": "https://ppc.land/chatgpt-reaches-a-fifth-of-google-search-volume-as-taboola-blames-ai/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/11/landline-2026-11-05-chatgpt-fifth-google-search-taboola-ai-summaries-teller-hatch-newsstand-coin.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Google thử nghiệm hiển thị tối đa 4 vị trí quảng cáo dưới câu trả lời trong AI Mode",
+    "isHot": false,
+    "illustration": "cpm-auction",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Google Ads",
+      "AI Mode",
+      "Tìm kiếm AI",
+      "Mật độ quảng cáo"
+    ],
+    "summary": "Google vừa được ghi nhận hiển thị tới 4 quảng cáo văn bản bên dưới một câu trả lời duy nhất trong giao diện Google AI Mode. Thay đổi này nâng mật độ quảng cáo từ mức 1 đến 3 vị trí trước đây lên bằng mức trần 4 vị trí của trang tìm kiếm truyền thống từ năm 2016. Động thái diễn ra khi Google mở rộng quảng cáo AI Mode sang 10 thị trường mới bao gồm một số quốc gia khu vực Đông Nam Á.",
+    "keyNumbers": [
+      {
+        "value": "4",
+        "label": "quảng cáo tối đa xuất hiện dưới một câu trả lời trong AI Mode"
+      },
+      {
+        "value": "10",
+        "label": "thị trường mới được mở rộng quảng cáo AI Mode từ ngày 28/10"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Ghi nhận mật độ quảng cáo mới trong giao diện Google AI Mode",
+        "body": "Báo cáo ngày 4/11/2026 từ Search Engine Roundtable cho biết Google có thể hiển thị tới 4 quảng cáo Google Ads bên dưới phản hồi AI Mode cho một truy vấn. Trước đó, số lượng quảng cáo thường chỉ dừng ở mức 1 hoặc 2 vị trí, đôi khi là 3. Việc gia tăng này khiến khoảng không gian trả tiền bên dưới câu trả lời AI chiếm diện tích lớn hơn. Google hiện chưa xác nhận đây là thử nghiệm ngắn hạn hay thay đổi cố định."
+      },
+      {
+        "heading": "Cấu trúc hiển thị và các đoạn mô tả do AI tự tạo",
+        "body": "Khối 4 quảng cáo xếp chồng nằm ngay dưới nhãn Sponsored và nằm ngay trên ô nhập câu hỏi tiếp theo. Phía trên các thẻ quảng cáo xuất hiện một câu dẫn do AI của Google tự viết mà nhà quảng cáo không thể chỉnh sửa hay từ chối. Trong khi đó, các liên kết nội dung tự nhiên bị đẩy sang bảng phụ bên phải màn hình. Cả 4 thương hiệu xuất hiện trong ví dụ đều chi tiền để quảng bá các dịch vụ hiển thị trên công cụ tìm kiếm AI."
+      },
+      {
+        "heading": "Áp dụng lại mức trần 4 vị trí quảng cáo áp dụng từ năm 2016",
+        "body": "Vào tháng 2/2016, Google xác nhận áp dụng tối đa 4 quảng cáo phía trên kết quả tìm kiếm tự nhiên cho các truy vấn mang tính thương mại cao. Đến tháng 10/2025, nền tảng này cam kết người dùng sẽ không thấy quá 4 quảng cáo trong một nhóm kết quả trả tiền. Việc xuất hiện 4 quảng cáo trong AI Mode đưa diện tích hiển thị AI về đúng giới hạn tối đa mà Google đã duy trì trong suốt một thập kỷ."
+      },
+      {
+        "heading": "Tăng tốc thương mại hóa và mở rộng thị trường toàn cầu",
+        "body": "Tại cuộc họp báo cáo kết quả kinh doanh quý 3, đại diện Google xác nhận đang mở rộng quảng cáo AI Mode đến nhiều người dùng và nhiều truy vấn hơn để cải thiện doanh thu. Ngày 28/10, quảng cáo AI Mode đã được triển khai tới 10 thị trường mới như Singapore, Malaysia, Philippines, Ấn Độ, Úc, Canada. Google cũng ra mắt quảng cáo đa lượt hỏi đáp tại Mỹ và có kế hoạch mở rộng sang Anh, Mexico, Brazil trong quý 4."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing cần chuẩn bị cho sự thay đổi về cấu trúc chi phí và tỷ lệ hiển thị trên Google Ads khi không gian tìm kiếm AI bị thương mại hóa mạnh hơn. Việc xuất hiện tới 4 vị trí quảng cáo kèm các câu giải thích tự động từ AI đòi hỏi doanh nghiệp phải điều chỉnh lại thông điệp quảng cáo và chiến lược đấu thầu từ khóa.",
+    "ifIgnored": "Doanh nghiệp nguy cơ mất lưu lượng truy cập tìm kiếm tự nhiên khi các kết quả không trả tiền tiếp tục bị đẩy xuống thấp hơn dưới khối 4 quảng cáo, đồng thời bỏ lỡ các vị trí xuất hiện ưu tiên trong trải nghiệm tìm kiếm AI mới.",
+    "actionChecklist": [
+      "Rà soát hiệu quả các chiến dịch Google Ads hiện tại để đánh giá tác động khi xuất hiện trong giao diện AI",
+      "Theo dõi biến động của chi phí CPC và tỷ lệ CTR trên các từ khóa tìm kiếm mang tính thương mại",
+      "Tối ưu lại thông điệp quảng cáo để đảm bảo tính ngắn gọn và hiển thị tốt cùng các đoạn dẫn tự động của AI",
+      "Phối hợp chiến lược Google Ads với các hoạt động tối ưu hóa sự hiện diện thương hiệu trên câu trả lời AI"
+    ],
+    "id": "real-2026-11-05-google-thu-nghiem-hien-1607a3",
+    "publishedAt": "05/11/2026",
+    "sourceUrl": "https://ppc.land/google-ai-mode-gains-a-fourth-ad-slot-below-some-answers/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/11/google-ai-mode-fourth-ad-slot-answer-balloon-hanging-tickets-ladder.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
     "category": "Meta Ads",
     "platformIcon": "Facebook",
     "title": "Ngân sách quảng cáo mạng xã hội tăng 40% trong mùa lễ hội nhờ chiến lược phân bổ đa ngành",
@@ -188,128 +369,6 @@
     "image": {
       "url": "https://imgproxy.divecdn.com/EHVCCIHz7ybiXEuI-ROk2h8OQ1e6EirWxxKHS-qq1CE/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9yZWRkaXRfZ2FtaW5nXzlLdXJQaGUucG5n.webp",
       "credit": "Ảnh: Social Media Today"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Google dịch AI Overviews sang cột phải cho từ khóa thương hiệu và thay đổi cách xử lý Performance Max",
-    "isHot": false,
-    "illustration": "zero-click",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Google Ads",
-      "AI Overviews",
-      "Performance Max",
-      "Ngân sách quảng cáo"
-    ],
-    "summary": "Google vừa âm thầm chuyển AI Overviews cho các từ khóa thương hiệu sang cột bên phải trên máy tính, đồng thời cập nhật chính sách cho phép Performance Max trả lại truy vấn thương hiệu cho chiến dịch Search chuyên biệt. Những thay đổi này diễn ra trong bối cảnh nhiều nhà quảng cáo đang xem xét lại từ 10% đến 30% ngân sách tìm kiếm.",
-    "keyNumbers": [
-      {
-        "value": "10% đến 30%",
-        "label": "ngân sách tìm kiếm bị xem xét lại"
-      },
-      {
-        "value": "12%",
-        "label": "tốc độ tăng trưởng doanh thu quảng cáo tìm kiếm quý 3"
-      },
-      {
-        "value": "5%",
-        "label": "chi phí mỗi lượt nhấp từ khóa thương hiệu tăng trong quý"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Thay đổi vị trí AI Overviews và bảng tri thức",
-        "body": "Vào ngày 2 tháng 11, Google đã di chuyển AI Overviews cho nhiều từ khóa thương hiệu ra khỏi các vị trí chính ở giữa trang và đặt sang cột bên phải của kết quả tìm kiếm trên máy tính. Động thái này gần như thay thế bảng tri thức thương hiệu truyền thống bằng một bản tóm tắt do AI tạo ra mà các nhãn hàng không thể tự chỉnh sửa. Các ví dụ được ghi nhận cho thấy sự xuất hiện của AI Overviews đối với nhiều tên tuổi lớn, trong khi các số liệu trước đó của Ahrefs cho thấy mức độ phủ sóng của AI Overviews trên từ khóa thương hiệu đã ở mức cao."
-      },
-      {
-        "heading": "Cập nhật chính sách đối với Performance Max",
-        "body": "Cùng thời điểm, Google cập nhật tài liệu trợ giúp, nêu rõ các chiến dịch Performance Max có thể lọc ra các tìm kiếm điều hướng và tìm kiếm theo thương hiệu để nhường chỗ cho các chiến dịch Search thương hiệu chuyên biệt. Điều này giúp các nhãn hàng kiểm soát tốt hơn các truy vấn liên quan đến tên thương hiệu của mình. Tài liệu hướng dẫn các nhà quảng cáo cung cấp ngân sách đầy đủ và quảng cáo mạnh mẽ cho các chiến dịch Search thương hiệu này."
-      },
-      {
-        "heading": "Áp lực lên ngân sách tìm kiếm từ các nhà quản lý",
-        "body": "Dữ liệu từ các cuộc phỏng vấn giới chuyên môn cho thấy từ 10% đến 30% ngân sách tìm kiếm đang chịu sự giám sát chặt chẽ hơn từ các khách hàng khi AI Overviews chiếm thêm nhiều không gian hiển thị. Doanh thu quảng cáo tìm kiếm của Google ghi nhận mức tăng trưởng 12% trong quý thứ ba, chậm nhất trong năm, một phần do ảnh hưởng của AI Mode. Trong khi đó, chi phí mỗi lượt nhấp chuột cho từ khóa thương hiệu tăng 5% trong quý này."
-      },
-      {
-        "heading": "Các cập nhật kỹ thuật và tín hiệu mạng",
-        "body": "Trong giao diện quản lý, Google Ads bổ sung phần ưu đãi mới cho phép nhà quảng cáo lọc các chương trình khuyến mãi theo trạng thái. Một thay đổi kỹ thuật quan trọng khác được thông báo sẽ diễn ra vào ngày 11 tháng 11 năm 2027, khi các thẻ quảng cáo của Google nhận địa chỉ IP đầy đủ trong trình quản lý thẻ phía máy chủ, yêu cầu các nhà quảng cáo phải tuân thủ việc thông báo và lấy sự đồng thuận hợp pháp từ người dùng."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing cần đánh giá lại hiệu quả thực tế của từ khóa thương hiệu khi bảng tri thức bị thay thế bởi AI Overviews, đồng thời tách biệt ngân sách Performance Max và Search thương hiệu để kiểm soát chi phí tốt hơn.",
-    "ifIgnored": "Bỏ qua thay đổi này có thể khiến doanh nghiệp mất quyền kiểm soát thông điệp thương hiệu trên trang kết quả tìm kiếm, lãng phí ngân sách do chồng chéo giữa Performance Max và Search, đồng thời đối mặt với chi phí nhấp chuột ngày càng tăng.",
-    "actionChecklist": [
-      "Kiểm tra lại hiển thị của từ khóa thương hiệu trên trang kết quả tìm kiếm",
-      "Tách biệt rõ ràng ngân sách cho chiến dịch Search thương hiệu và Performance Max",
-      "Theo dõi sát chi phí mỗi lượt nhấp chuột của từ khóa thương hiệu hàng quý",
-      "Chuẩn bị kế hoạch cập nhật chính sách quyền riêng tư và thẻ phía máy chủ cho năm 2027"
-    ],
-    "id": "real-2026-11-03-google-dich-ai-overviews-9215c9",
-    "publishedAt": "03/11/2026",
-    "sourceUrl": "https://ppc.land/google-moves-brand-ai-overviews-aside-as-buyers-question-search-budgets/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/11/google-brand-ai-overviews-search-budget-scrutiny-ledger-loupe-coin-stack.jpg",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Google dịch chuyển AI Overviews từ kết quả chính sang cột phải đối với các tìm kiếm thương hiệu",
-    "isHot": "false",
-    "illustration": "zero-click",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Google Search",
-      "AI Overviews",
-      "SEO",
-      "Thương hiệu"
-    ],
-    "summary": "Google vừa thay đổi giao diện trang kết quả tìm kiếm máy tính bằng cách chuyển các phần tóm tắt AI Overviews cho từ khóa thương hiệu sang cột bên phải. Thay đổi này trả lại vị trí đầu tiên ở cột chính cho website chính thức của doanh nghiệp nhưng đặt ra bài toán mới về việc kiểm soát nội dung hiển thị do AI tạo ra.",
-    "keyNumbers": [
-      {
-        "value": "63",
-        "label": "thương hiệu trong danh sách 100 có AI Overviews"
-      },
-      {
-        "value": "82,91%",
-        "label": "tỷ lệ xuất hiện AI Overviews trên từ khóa thương hiệu"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Sự thay đổi về vị trí hiển thị",
-        "body": "Google đã âm thầm di chuyển các phần tóm tắt AI Overviews cho nhiều tìm kiếm mang tên thương hiệu sang cột bên phải trên giao diện máy tính. Vị trí này trước đây vốn là nơi hiển thị của bảng thông tin kiến thức truyền thống. Các ví dụ ghi nhận bao gồm tìm kiếm cho các thương hiệu lớn như Apple, Zillow, Coca-Cola và chính Google."
-      },
-      {
-        "heading": "Trả lại vị trí đầu cho website doanh nghiệp",
-        "body": "Trong các mẫu thử nghiệm, website chính thức của thương hiệu đã xuất hiện trở lại ở vị trí cao nhất tại cột bên trái, thay vì bị phần tóm tắt AI đẩy xuống dưới như trước. Tuy nhiên, nội dung mô tả doanh nghiệp giờ đây hoàn toàn do AI tổng hợp và hiển thị kèm các dữ liệu thương mại tại cột bên phải."
-      },
-      {
-        "heading": "Dữ liệu thống kê về tần suất xuất hiện",
-        "body": "Theo dữ liệu từ Ahrefs dựa trên các đợt quét kết quả tìm kiếm tại Mỹ, tỷ lệ xuất hiện AI Overviews trên các từ khóa thương hiệu đã tăng mạnh từ mức trung bình 61,3% trong tháng 7 lên 73,3% trong tháng 9. Tính riêng nhóm 100 tên thương hiệu độc lập, con số này đạt 63 trường hợp vào cuối tháng 9."
-      },
-      {
-        "heading": "Góc nhìn từ các chuyên gia SEO",
-        "body": "Giới chuyên gia đánh giá việc chuyển AI Overviews sang cột phải giúp cải thiện trải nghiệm so với việc đặt ngay giữa kết quả tìm kiếm chính. Dù vậy, việc phụ thuộc vào khả năng tự tổng hợp nội dung của AI về thương hiệu thay vì hoàn toàn dựa vào website riêng vẫn là điểm cần lưu ý đối với các nhà quản trị."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing cần kiểm tra lại cách thương hiệu của mình hiển thị trong phần tóm tắt AI mới ở cột phải màn hình máy tính, đồng thời theo dõi biến động lưu lượng truy cập tự nhiên khi website chính thức đã quay lại vị trí đầu tiên ở cột chính.",
-    "ifIgnored": "Doanh nghiệp có thể bỏ lỡ cơ hội tối ưu hóa thông tin thương hiệu do AI tổng hợp, dẫn đến việc người dùng tiếp nhận các thông tin không chính xác hoặc thiếu sót về sản phẩm ngay trên trang kết quả tìm kiếm.",
-    "actionChecklist": [
-      "Thực hiện tìm kiếm từ khóa thương hiệu trên máy tính để kiểm tra giao diện AI Overviews hiện tại",
-      "Rà soát lại các thông tin mô tả, xếp hạng và liên kết mạng xã hội xuất hiện trong bảng tóm tắt bên phải",
-      "Theo dõi số liệu chuyển đổi và lưu lượng truy cập tự nhiên từ các từ khóa thương hiệu",
-      "Cập nhật chiến lược nội dung trên website để tối ưu hóa dữ liệu hiển thị cho các công cụ AI"
-    ],
-    "id": "real-2026-11-03-google-dich-chuyen-ai-3ff579",
-    "publishedAt": "03/11/2026",
-    "sourceUrl": "https://ppc.land/google-moves-ai-overviews-for-brand-searches-out-of-the-main-results/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/11/google-ai-overviews-brand-search-right-column-unmanned-typewriter-side-desk.jpg",
-      "credit": "Ảnh: PPC Land"
     }
   },
   {
@@ -571,69 +630,6 @@
     "source": "Search Engine Journal",
     "image": {
       "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/10/seo-pulse-spam-guide-restaurant-controls-featured.jpg",
-      "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
-    "category": "AI Marketing",
-    "platformIcon": "Sparkles",
-    "title": "Khoảng trống AI: Biết thương hiệu nhưng không đề xuất",
-    "isHot": false,
-    "illustration": "zero-click",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "AI Search",
-      "Thương hiệu",
-      "SEO",
-      "Đo lường"
-    ],
-    "summary": "Nhiều thương hiệu tự tin vì chatbot nhận diện đúng tên tuổi, nhưng lại vắng mặt trong các câu hỏi gợi ý giải pháp của khách hàng. Khảo sát cho thấy phần lớn người mua B2B khởi đầu hành trình từ AI và bị chatbot dẫn dắt sang nhà cung cấp khác.",
-    "keyNumbers": [
-      {
-        "value": "51%",
-        "label": "người mua B2B bắt đầu từ AI"
-      },
-      {
-        "value": "69%",
-        "label": "chatbot làm đổi nhà cung cấp"
-      },
-      {
-        "value": "29%",
-        "label": "marketer theo dõi hiển thị AI"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Thực trạng nhận diện và đề xuất",
-        "body": "Thực nghiệm cho thấy khi hỏi chatbot các câu hỏi của khách hàng mục tiêu, các công cụ AI dù biết rất rõ lý lịch cá nhân nhà sáng lập nhưng hầu như không đưa doanh nghiệp vào danh sách đề xuất. Khoảng cách giữa việc máy móc nhận diện tên tuổi và việc máy móc chủ động giới thiệu sản phẩm đang là bài toán đo lường sai lệch của nhiều đội ngũ. Đo lường lượt tìm kiếm thương hiệu trực tiếp không còn phản ánh đúng khả năng chiến thắng trong kỷ nguyên tìm kiếm bằng AI."
-      },
-      {
-        "heading": "Hành vi mới của khách hàng B2B",
-        "body": "Theo khảo sát tháng 3 năm 2026 của G2 với 1.076 người mua phần mềm B2B, có 51% người tham gia cho biết họ bắt đầu quá trình nghiên cứu bằng chatbot AI thường xuyên hơn Google, tăng từ 29% trong báo cáo năm 2025. Đáng chú ý, 69% người mua thừa nhận chatbot đã dẫn dắt họ lựa chọn một nhà cung cấp khác với dự định ban đầu. Cứ ba người mua thì có một người chốt đơn từ một đơn vị mà họ chưa từng nghe tên trước đó."
-      },
-      {
-        "heading": "Dữ liệu cũ và nguồn trích dẫn",
-        "body": "Các công cụ trả lời tự động thường mặc định sử dụng dữ liệu cũ trên web, vốn thiên về các thông tin xuất hiện lâu đời nhất từ các cơ sở dữ liệu và thông cáo báo chí cũ. Điều này khiến các doanh nghiệp vừa đổi thương hiệu hoặc tái cơ cấu gặp bất lợi lớn khi AI vẫn mô tả họ theo dữ liệu quá khứ. Hơn nữa, AI thường không trích dẫn trực tiếp trang của doanh nghiệp mà ưu tiên dẫn nguồn từ các bài tổng hợp danh sách bên thứ ba."
-      },
-      {
-        "heading": "Tác động đến định giá và đầu tư",
-        "body": "Sự thay đổi này không chỉ ảnh hưởng đến lượng truy cập mà đã bắt đầu tác động trực tiếp đến giá trị doanh nghiệp trong các thương vụ M&A và hoạch định ngân sách. Trong một báo cáo thị trường năm 2026-2027 với khoảng 100 bên nhận thâu tóm tích cực, có tới 91% đánh giá khả năng chống chịu trước AI là yếu tố quan trọng quyết định giá trị doanh nghiệp. Việc phụ thuộc vào lượng truy cập tìm kiếm thay vì sở hữu quan hệ khách hàng trực tiếp đang bị thị trường định giá chiết khấu."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing cần nhận ra chỉ số nhận diện thương hiệu truyền thống qua truy vấn tên gọi đang che giấu sự sụt giảm trong danh sách đề xuất thực tế của AI.",
-    "ifIgnored": "Tiếp tục tối ưu sai chỉ số hiển thị tên tuổi, trong khi đối thủ giành trọn khách hàng mới ngay từ bước AI lập danh sách rút gọn.",
-    "actionChecklist": [
-      "Kiểm tra ngay các câu hỏi ngành hàng trên ChatGPT và Gemini",
-      "Rà soát và cập nhật dữ liệu cũ trên các trang tổng hợp",
-      "Chuyển trọng tâm đo lường từ nhận diện sang tỷ lệ xuất hiện trong gợi ý",
-      "Đánh giá lại mức độ phụ thuộc kênh tìm kiếm so với sở hữu dữ liệu khách hàng"
-    ],
-    "id": "real-2026-10-30-khoang-trong-ai-biet-b551a1",
-    "publishedAt": "30/10/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/the-ai-search-measurement-gap-brands-must-close-in-2027-and-beyond/593881/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/10/measurement-gap-682.png",
       "credit": "Ảnh: Search Engine Journal"
     }
   },
