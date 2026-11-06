@@ -2,6 +2,192 @@
   {
     "category": "Google Ads & SEO",
     "platformIcon": "Search",
+    "title": "Áp dụng nguyên tắc quyền tối thiểu để bảo vệ tài khoản quảng cáo và hệ thống AI",
+    "isHot": true,
+    "illustration": "account-security",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Bảo mật tài khoản",
+      "Quyền truy cập",
+      "Google Ads",
+      "AI Agent"
+    ],
+    "summary": "Nguyên tắc cấp quyền tối thiểu đang trở thành tiêu chuẩn bắt buộc để bảo vệ tài khoản quảng cáo và các công cụ AI khỏi nguy cơ chiếm đoạt tài nguyên. Việc duy trì quyền hạn dư thừa cho agency cũ hoặc AI agent khiến doanh nghiệp đối mặt với rủi ro mất tài khoản và thất thoát ngân sách nghiêm trọng.",
+    "keyNumbers": [
+      {
+        "value": "Dưới 5%",
+        "label": "Quyền đám mây được cấp thực sự được sử dụng"
+      },
+      {
+        "value": "22,4%",
+        "label": "Tổ chức cấp định danh riêng cho AI agent"
+      },
+      {
+        "value": "6 năm",
+        "label": "Thời gian agency cũ giữ quyền gây sự cố Merchant Center"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Nguyên tắc quyền tối thiểu và lý do ra đời",
+        "body": "Nguyên tắc cấp quyền tối thiểu ra đời từ năm 1975, yêu cầu giới hạn mỗi cá nhân, phần mềm hoặc AI agent ở mức quyền tối thiểu cần thiết để hoàn thành công việc. Trong ngành quảng cáo, nguyên tắc này chi phối phân quyền người dùng trên Google Ads, Meta Business Portfolios cũng như các công cụ bên thứ ba. Việc kiểm soát quyền hạn giúp giới hạn thiệt hại khi tài khoản bị xâm nhập hoặc xảy ra sự cố ngoài ý muốn. Bất kỳ quyền hạn nào được cấp ngoài phạm vi công việc đều trở thành nguy cơ bảo mật tiềm ẩn đối với doanh nghiệp."
+      },
+      {
+        "heading": "Thực trạng dư thừa quyền hạn và các rủi ro thực tế",
+        "body": "Báo cáo năm 2023 của Microsoft chỉ ra rằng dưới 5% số quyền đám mây được cấp thực sự được sử dụng bởi các định danh công việc. Thực tế quản lý tài khoản quảng cáo tại nhiều agency ghi nhận tình trạng nhân sự giữ quyền Admin cho toàn bộ tài khoản dù không sử dụng hết. Vào tháng 3/2026, một agency cũ từng giữ quyền truy cập tài khoản Merchant Center của khách hàng suốt khoảng 6 năm đã đóng tài khoản của mình và kéo theo cả tài khoản của khách hàng. Khi tài khoản bị chiếm đoạt phiên làm việc, kẻ tấn công thường thêm quyền quản trị viên mới nếu phiên đó sở hữu quyền Admin."
+      },
+      {
+        "heading": "Thách thức bảo mật mới từ các công cụ AI Agent",
+        "body": "Sự phát triển của các công cụ AI có khả năng chỉnh sửa chiến dịch trực tiếp mang lại rủi ro bảo mật mới thông qua hình thức tấn công prompt injection. Kẻ tấn công có thể chèn văn bản ẩn trong trang web hoặc nội dung đầu vào để điều khiển AI agent thực hiện hành vi trái phép. Theo báo cáo năm 2026 từ Okta, chỉ 22,4% tổ chức phát triển agent cấp cho mỗi công cụ một định danh riêng với quyền hạn được giới hạn chặt chẽ. Việc trao quyền quá rộng cho AI agent trên dữ liệu nhạy cảm làm gia tăng đáng kể diện tấn công của doanh nghiệp."
+      },
+      {
+        "heading": "Lộ trình siết chặt quy định của các nền tảng",
+        "body": "Các nền tảng quảng cáo đang chủ động triển khai các biện pháp kỹ thuật để ép buộc nguyên tắc quyền tối thiểu. Từ ngày 15/7/2026, Google yêu cầu sử dụng passkey đối với các thao tác nhạy cảm, bao gồm việc thay đổi quyền truy cập người dùng. Bên cạnh đó, server MCP quảng cáo của X ra mắt ngày 24/8/2026 đã phân tách rõ hai phạm vi quyền đọc và quyền ghi riêng biệt. Những thay đổi này buộc các nhà quảng cáo phải rà soát lại toàn bộ quy trình cấp phát và thu hồi quyền hạn."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing cần chuyển đổi ngay mô hình quản trị tài khoản quảng cáo và công cụ AI từ cấp quyền rộng rãi sang mô hình kiểm soát quyền tối thiểu. Điều này giúp ngăn chặn nguy cơ mất tài khoản, thất thoát ngân sách và bảo vệ dữ liệu khách hàng khi làm việc với agency hoặc tích hợp các công cụ tự động hóa.",
+    "ifIgnored": "Doanh nghiệp đối mặt với rủi ro bị chiếm quyền quản trị tài khoản quảng cáo, mất toàn bộ dữ liệu Merchant Center khi agency ngừng hợp tác, hoặc bị can thiệp ngân sách do các công cụ AI agent bị tấn công chèn lệnh điều khiển.",
+    "actionChecklist": [
+      "Rà soát toàn bộ quyền truy cập Admin trên Google Ads và Meta Business Portfolios để hạ cấp các tài khoản không cần thiết.",
+      "Thu hồi ngay lập tức quyền truy cập tài khoản Merchant Center và tài khoản quảng cáo của các agency hoặc nhân sự đã dừng hợp tác.",
+      "Thiết lập đăng ký passkey cho các tài khoản Google Ads trước mốc thời hạn 15/7/2026.",
+      "Phân tách rõ quyền chỉ đọc (read-only) cho các AI agent và công cụ báo cáo thay vì cấp quyền chỉnh sửa chiến dịch."
+    ],
+    "deadline": "15/7/2026",
+    "id": "real-2026-11-05-ap-dung-nguyen-tac-a75d0e",
+    "publishedAt": "05/11/2026",
+    "sourceUrl": "https://ppc.land/least-privilege-access/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/11/ppc-land-least-privilege-access-explainer-pocket-knife-fanned-blades-one-in-use.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "AI Marketing",
+    "platformIcon": "Sparkles",
+    "title": "Ngưỡng phê duyệt ngân sách cho AI: Cơ chế kiểm soát rủi ro chi tiêu quảng cáo tự động",
+    "isHot": false,
+    "illustration": "ai-budget",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "AI Marketing",
+      "Quản lý ngân sách",
+      "Tự động hóa quảng cáo",
+      "An toàn vận hành"
+    ],
+    "summary": "Ngưỡng phê duyệt là hạn mức chi tiêu tối đa mà tác nhân AI được phép thực hiện tự động trước khi cần con người ký duyệt. Cơ chế này giúp các doanh nghiệp khai thác sức mạnh tự động hóa của AI nhưng vẫn đảm bảo kiểm soát chặt chẽ an toàn tài chính.",
+    "keyNumbers": [
+      {
+        "value": "30%",
+        "label": "Hạn mức dịch chuyển ngân sách tối đa của IAB Tech Lab"
+      },
+      {
+        "value": "24 giờ",
+        "label": "Thời hạn hiệu lực tối đa của phê duyệt ngoại lệ trên AdCP"
+      },
+      {
+        "value": "3 tỷ USD",
+        "label": "Ngân sách truyền thông hàng năm được Fluency quản lý với ngưỡng AI bằng không"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Khái niệm và cơ chế hoạt động của ngưỡng phê duyệt",
+        "body": "Ngưỡng phê duyệt là một giới hạn tài chính xác định mức chi tiêu mà một tác nhân AI có thể tự ý quyết định. Mỗi ngưỡng phê duyệt bao gồm ba thành phần chính: thước đo, hạn mức và quy trình leo cấp. Khi đại lý AI đưa ra yêu cầu chi tiêu vượt quá thẩm quyền, hệ thống sẽ tạm dừng giao dịch để chờ con người xem xét. Nếu không có ai phê duyệt hoặc quá thời hạn quy định, giao dịch mua quảng cáo sẽ không thể tiến hành."
+      },
+      {
+        "heading": "Các chuẩn giao thức kiểm soát chi tiêu bằng AI",
+        "body": "Giao thức AdCP phiên bản 3.0 phát hành ngày 22/04/2026 đã cập nhật bộ kiểm soát gồm reallocation_threshold và human_review_required. Đối với các chiến dịch quảng cáo nhạy cảm như nhà ở, tín dụng, việc làm hoặc dược phẩm, AdCP bắt buộc cài đặt đánh giá của con người và không cho phép đặt thành sai. Việc hạ cấp yêu cầu này đòi hỏi bản ghi đè với lý do viết tối thiểu 20 ký tự, email người duyệt và sự phê duyệt không quá 24 giờ. Trong khi đó, bộ máy của IAB Tech Lab giới hạn bất kỳ đề xuất phân bổ lại ngân sách đơn lẻ nào ở mức 30% tổng ngân sách."
+      },
+      {
+        "heading": "Mức độ phân quyền trên các nền tảng quảng cáo lớn",
+        "body": "Các nền tảng mua quảng cáo đang áp dụng những cấp độ tự quản khác nhau cho AI. Kiến trúc rào chắn của PubMatic ra mắt ngày 05/08/2026 sử dụng phân quyền hai tầng, trong đó ngưỡng ngân sách toàn nền tảng nằm trên cài đặt người mua và yêu cầu mã xác thực một lần khi vượt ngưỡng. Nền tảng Yahoo DSP công bố ngày 06/01/2026 yêu cầu mọi thay đổi do tác nhân AI thực hiện đều phải có sự chấp thuận của người dùng. Nền tảng Fluency quản lý 3 tỷ USD ngân sách truyền thông hàng năm hoàn toàn từ chối quyền thực thi của các mô hình ngôn ngữ lớn, chỉ khởi chạy chiến dịch sau khi đội ngũ nhà quảng cáo ký duyệt."
+      },
+      {
+        "heading": "Khung pháp lý và bài học quản trị rủi ro chi tiêu",
+        "body": "Khái niệm ngưỡng phê duyệt kế thừa từ quy trình quản trị tài chính doanh nghiệp và thu mua công. Điều 14 của Luật AI Châu Âu yêu cầu người giám sát hệ thống rủi ro cao phải có khả năng can thiệp hoặc dừng hệ thống bất kỳ lúc nào, với thời hạn áp dụng bắt buộc từ ngày 02/12/2027. Ngoài ra, Điều 22 của Quy định Bảo vệ Dữ liệu Chung (GDPR) về các quyết định tự động hóa cũng củng cố cơ chế bắt buộc con người xem xét. Việc đặt ngưỡng quá thấp sẽ làm giảm hiệu quả tự động hóa, nhưng ngưỡng quá cao lại đẩy toàn bộ rủi ro trách nhiệm lên người thiết lập."
+      }
+    ],
+    "impact": "Giúp Trưởng phòng Marketing chủ động xây dựng khung quản trị tài chính an toàn khi áp dụng các công cụ AI tối ưu quảng cáo, tránh nguy cơ AI tự động tiêu vượt ngân sách hoặc phân bổ sai chiến lược.",
+    "ifIgnored": "Doanh nghiệp đối mặt với rủi ro thất thoát ngân sách lớn khi AI tự động đưa ra các quyết định mua quảng cáo đắt đỏ không qua kiểm duyệt, đồng thời gặp vướng mắc về trách nhiệm pháp lý khi xảy ra sự cố.",
+    "actionChecklist": [
+      "Rà soát toàn bộ các tập lệnh và công cụ AI đang chạy quảng cáo để cài đặt hạn mức chi tiêu tự động tối đa.",
+      "Bắt buộc cài đặt quy trình phê duyệt thủ công của con người đối với các chiến dịch có ngân sách lớn hoặc ngành hàng nhạy cảm.",
+      "Thiết lập kênh thông báo khẩn cấp và cơ chế xác thực nhiều lớp khi có đề xuất chi tiêu vượt ngưỡng.",
+      "Định kỳ kiểm tra nhật ký phê duyệt ngoại lệ để ngăn chặn hành vi chia nhỏ giao dịch nhằm lách ngưỡng kiểm soát."
+    ],
+    "id": "real-2026-11-05-nguong-phe-duyet-ngan-6dde5c",
+    "publishedAt": "05/11/2026",
+    "sourceUrl": "https://ppc.land/approval-threshold/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/11/ppc-land-approval-threshold-explainer-freighter-load-line-suspended-crate.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "TikTok Shop & Ads",
+    "platformIcon": "Video",
+    "title": "TikTok ra mắt ứng dụng mua sắm độc lập tại thị trường Đông Nam Á",
+    "isHot": false,
+    "illustration": "shop-health",
+    "readTime": "3 phút đọc",
+    "tags": [
+      "TikTok Shop",
+      "Thương mại điện tử",
+      "Đông Nam Á",
+      "Ứng dụng mua sắm"
+    ],
+    "summary": "TikTok đang thử nghiệm một ứng dụng mua sắm TikTok Shop riêng biệt tại một số thị trường Đông Nam Á nhằm tăng cường hành vi khám phá và mua hàng của người dùng. Ứng dụng này tập trung hiển thị danh mục sản phẩm, kết hợp với các video ngắn và livestream hướng tới việc giữ chân người mua trong hệ sinh thái của hãng.",
+    "keyNumbers": [
+      {
+        "value": "500 tỷ USD",
+        "label": "GMV của Douyin năm 2025"
+      },
+      {
+        "value": "26,2 tỷ USD",
+        "label": "GMV toàn cầu TikTok nửa đầu năm 2025"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Thử nghiệm ứng dụng TikTok Shop riêng biệt tại Đông Nam Á",
+        "body": "TikTok vừa phát hành ứng dụng mua sắm TikTok Shop độc lập tại một số thị trường châu Á bao gồm Singapore, Thailand, Malaysia và Philippines. Nền tảng mới này tập trung chủ yếu vào việc hiển thị danh mục sản phẩm và kích thích hành vi mua sắm trực tiếp của người dùng. Bên cạnh các gợi ý sản phẩm cá nhân hóa, ứng dụng vẫn tích hợp các buổi livestream và video ngắn chọn lọc để cung cấp thông tin cho sản phẩm. Đây là nỗ lực mới nhất nhằm biến nền tảng này thành điểm đến thường xuyên cho việc khám phá hàng hóa."
+      },
+      {
+        "heading": "Kỳ vọng tái hiện thành công từ mô hình Douyin tại Trung Quốc",
+        "body": "Việc tách biệt ứng dụng nhằm mục đích tái hiện mô hình doanh thu thành công của ứng dụng chị em Douyin tại thị trường Trung Quốc. Trong năm 2025, Douyin đã tạo ra gần 500 tỷ USD tổng doanh số hàng hóa (GMV), trong đó hoạt động bán hàng qua livestream đóng góp tỷ trọng rất lớn. TikTok đã và đang nỗ lực thúc đẩy hoạt động mua sắm trên ứng dụng quốc tế để khai thác tiềm năng doanh thu khổng lồ từ việc kết hợp giải trí với thương mại. Việc ra mắt ứng dụng riêng giúp thương hiệu định hình rõ ràng hơn chức năng mua sắm trong mắt người tiêu dùng."
+      },
+      {
+        "heading": "Thách thức từ thói quen tách biệt giải trí và mua sắm",
+        "body": "Mặc dù đạt được những tiến triển nhất định, quy mô thương mại điện tử của TikTok trên toàn cầu vẫn chưa đạt đến mức độ của thị trường Trung Quốc. Trong nửa đầu năm 2025, TikTok ghi nhận tổng doanh số GMV toàn cầu đạt 26,2 tỷ USD. Một rào cản lớn là người dùng quốc tế thường có thói quen tách biệt giữa việc xem video giải trí và truy cập các ứng dụng mua sắm chuyên biệt. Hầu hết các mạng xã hội từng thử nghiệm hợp nhất hai tính năng này đều gặp khó khăn trong việc tạo ra khối lượng giao dịch đột phá."
+      },
+      {
+        "heading": "Hướng đi mới cho chiến lược giữ chân người mua hàng",
+        "body": "Ứng dụng mua sắm độc lập được kỳ vọng sẽ giải quyết xung đột thói quen này bằng cách cung cấp không gian mua sắm chuyên biệt nhưng vẫn nằm trong hệ sinh thái của TikTok. Chiến lược này giúp người dùng tập trung vào việc tìm kiếm ưu đãi và sản phẩm mà không bị xao nhãng bởi luồng nội dung giải trí thông thường. Đồng thời, việc xuất hiện ứng dụng riêng giúp củng cố nhận thương hiệu TikTok như một nền tảng bán lẻ chuyên nghiệp. Mô hình này hứa hẹn mở ra kênh tiếp cận khách hàng mới cho các nhà bán hàng trong khu vực."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing tại Việt Nam cần chuẩn bị cho sự chuyển dịch kênh bán khi TikTok thử nghiệm ứng dụng mua sắm riêng tại các nước láng giềng Đông Nam Á. Nếu mô hình này mở rộng sang Việt Nam, chiến lược phân bổ ngân sách sẽ cần tách biệt giữa chiến dịch xây dựng thương hiệu trên ứng dụng chính và chiến dịch chuyển đổi trực tiếp trên ứng dụng mua sắm mới.",
+    "ifIgnored": "Doanh nghiệp có nguy cơ chậm chân trong việc xây dựng gian hàng và tối ưu hóa nguồn lực trên ứng dụng mua sắm mới khi nền tảng triển khai diện rộng. Điều này sẽ khiến thương hiệu mất lợi thế hiển thị ban đầu vào tay các đối thủ cạnh tranh nhanh nhạy hơn.",
+    "actionChecklist": [
+      "Theo dõi lộ trình ra mắt ứng dụng TikTok Shop độc lập tại thị trường Việt Nam.",
+      "Đánh giá lại hiệu quả vận hành của gian hàng TikTok Shop hiện tại trên ứng dụng chính.",
+      "Rà soát và chuẩn bị sẵn danh mục sản phẩm, hình ảnh và video ngắn tối ưu cho giao diện mua sắm chuyên biệt.",
+      "Lên kế hoạch phân bổ lại ngân sách quảng cáo chuyển đổi giữa hình thức livestream và gian hàng thương mại."
+    ],
+    "id": "real-2026-11-05-tiktok-ra-mat-ung-019e7e",
+    "publishedAt": "05/11/2026",
+    "sourceUrl": "https://www.socialmediatoday.com/news/tiktok-launches-standalone-shopping-app/873952/",
+    "source": "Social Media Today",
+    "image": {
+      "url": "https://imgproxy.divecdn.com/GCIKeDjRHCyyy4g8i7KEoDzUo3_WUm55uyrhHaQVXQA/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS90aWt0b2tfc2hvcHBpbmdfYXBwLnBuZw==.webp",
+      "credit": "Ảnh: Social Media Today"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
     "title": "Chuyển đổi từ thứ hạng SEO sang đo lường sự hiện diện trên AI với mô hình 3 cổng",
     "isHot": false,
     "illustration": "zero-click",
@@ -177,134 +363,6 @@
     "source": "PPC Land",
     "image": {
       "url": "https://ppc.land/content/images/2026/11/google-ai-mode-fourth-ad-slot-answer-balloon-hanging-tickets-ladder.jpg",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
-    "category": "Meta Ads",
-    "platformIcon": "Facebook",
-    "title": "Ngân sách quảng cáo mạng xã hội tăng 40% trong mùa lễ hội nhờ chiến lược phân bổ đa ngành",
-    "isHot": false,
-    "illustration": "data-signal",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Meta Ads",
-      "Nghiên cứu thị trường",
-      "Phân bổ ngân sách",
-      "Quảng cáo lễ hội"
-    ],
-    "summary": "Dữ liệu từ Nielsen Ad Intel cho thấy chi phí quảng cáo truyền thông xã hội tại Malaysia đã tăng 40% lên 186 triệu RM trong tháng 3 nhờ chuỗi sự kiện lễ hội. Tuy truyền hình vẫn chiếm thị phần lớn nhất với 44.8%, tốc độ tăng trưởng của mạng xã hội và kênh kỹ thuật số lại vượt trội hơn hẳn.",
-    "keyNumbers": [
-      {
-        "value": "186 triệu RM",
-        "label": "Chi tiêu mạng xã hội tháng 3"
-      },
-      {
-        "value": "40%",
-        "label": "Tăng trưởng quảng cáo xã hội"
-      },
-      {
-        "value": "55,9%",
-        "label": "Tăng trưởng quảng cáo kỹ thuật số"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Bối cảnh chi tiêu mùa lễ hội",
-        "body": "Tổng chi phí quảng cáo được theo dõi tại Malaysia đạt 604,4 triệu RM trong tháng 3 năm 2026, tăng hơn 20% so với tháng 2. Sự kiện Tết Nguyên đán, tháng Ramadan và Hari Raya Aidilfitri diễn ra gần nhau đã kéo dòng tiền ngân sách tập trung mạnh vào quý đầu năm. Truyền hình mặt đất vẫn giữ vị trí kênh đơn lẻ lớn nhất với 271 triệu RM, tương đương 44,8% tổng chi tiêu trong tháng."
-      },
-      {
-        "heading": "Tốc độ tăng trưởng của mạng xã hội",
-        "body": "Quảng cáo trên mạng xã hội ghi nhận mức tăng 40% trong một tháng, từ 132,9 triệu RM lên 186 triệu RM. Trong khi đó, quảng cáo kỹ thuật số tăng 55,9% đạt 52,1 triệu RM và truyền hình mặt đất tăng từ 243,8 triệu RM lên 271 triệu RM. Riêng mạng xã hội đã đóng góp khoảng 52% trong tổng số 101,8 triệu RM tăng thêm trên bốn kênh được liệt kê từ tháng 2 sang tháng 3."
-      },
-      {
-        "heading": "Độ trễ thời điểm chi tiêu giữa các ngành",
-        "body": "Không phải mọi ngành hàng đều dồn ngân sách vào cùng một thời điểm trong mùa lễ hội. Ngành bán lẻ và thực phẩm đẩy mạnh chi tiêu từ sớm, với chi phí bán lẻ đạt 70,5 triệu RM trong tháng 2 và 69,1 triệu RM trong tháng 3. Sau lễ Hari Raya, chi tiêu bán lẻ giảm 53,5% và thực phẩm giảm 30% trong tháng 4."
-      },
-      {
-        "heading": "Sự bứt phá của nhóm công nghệ và truyền thông",
-        "body": "Trái ngược với đà giảm của ngành bán lẻ sau lễ hội, chi tiêu quảng cáo cho Công nghệ thông tin tăng vọt từ 6,3 triệu RM trong tháng 2 lên 39,9 triệu RM trong tháng 3 và chạm 51,6 triệu RM vào tháng 4. Ngành truyền thông cũng tăng từ 9,1 triệu RM lên 28,5 triệu RM trong tháng 3 và đạt đỉnh 34,7 triệu RM vào tháng 4, cho thấy mỗi ngành có một chu kỳ cạnh tranh riêng biệt."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing cần nhận diện rõ các ngành hàng có độ trễ chu kỳ chi tiêu khác nhau để tối ưu hóa thời điểm phân bổ ngân sách Meta Ads, tránh việc chạy theo một khung thời gian lễ hội chung chung của thị trường.",
-    "ifIgnored": "Nếu bỏ qua các mốc biến động chi tiêu theo ngành, doanh nghiệp có thể rót tiền sai thời điểm cao điểm của đối thủ cạnh tranh, dẫn đến lãng phí ngân sách và hiệu suất chuyển đổi thấp trên các nền tảng mạng xã hội.",
-    "actionChecklist": [
-      "Phân tích dữ liệu lịch sử ngành hàng để xác định chính xác thời điểm khách hàng mục tiêu tăng mức độ tương tác.",
-      "Lên kế hoạch dịch chuyển một phần ngân sách từ các kênh truyền thống sang mạng xã hội để đón đầu tốc độ tăng trưởng 40%.",
-      "Điều chỉnh thông điệp quảng cáo theo từng giai đoạn trước, trong và sau chuỗi sự kiện lễ hội lớn.",
-      "Theo dõi sát sao hành vi thay đổi của người tiêu dùng để điều chỉnh giá thầu Meta Ads kịp thời theo từng tuần."
-    ],
-    "id": "real-2026-11-04-ngan-sach-quang-cao-bb99f6",
-    "publishedAt": "04/11/2026",
-    "sourceUrl": "https://ppc.land/social-ad-spend-gains-40-in-malaysias-festive-march-nielsen-finds/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/11/nielsen-malaysia-social-ad-spend-40-festive-march-console-tv-phone-cord-coin-column.jpg",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
-    "boQua": false,
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Safari thử nghiệm Adaptive Dark Mode tự động đổi màu website sáng thành tối",
-    "isHot": false,
-    "illustration": "zero-click",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Safari",
-      "Dark Mode",
-      "WebKit",
-      "Trải nghiệm người dùng"
-    ],
-    "summary": "Apple vừa giới thiệu Adaptive Dark Mode trong bản thử nghiệm Safari 27.3 beta, tính năng tự động chuyển đổi các trang web có giao diện sáng sang tối. Việc này diễn ra ở cấp độ trình duyệt mà không cần website phải có sẵn giao diện tối, ảnh hưởng trực tiếp đến cách hiển thị của nội dung và banner quảng cáo.",
-    "keyNumbers": [
-      {
-        "value": "40%",
-        "label": "lượt truy cập trang web từ người dùng ở chế độ tối"
-      },
-      {
-        "value": "10%",
-        "label": "lượt truy cập trang web có hỗ trợ chế độ tối"
-      },
-      {
-        "value": "4,5:1",
-        "label": "tỷ lệ tương phản tối thiểu theo chuẩn WCAG"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Cơ chế hoạt động của Adaptive Dark Mode",
-        "body": "Nhóm WebKit của Apple đã phát hành Adaptive Dark Mode trong Safari 27.3 beta vào ngày 03/11/2026. Tính năng này hoạt động bên trong công cụ trình duyệt WebKit, tự động phân tích và đảo ngược độ sáng của màu sắc nhưng vẫn giữ nguyên sắc thái. Các trang web không khai báo thẻ HTML hoặc quy tắc CSS tương thích sẽ bị trình duyệt tự động chuyển đổi giao diện khi người dùng kích hoạt."
-      },
-      {
-        "heading": "Tác động đến hình ảnh và banner quảng cáo",
-        "body": "Hầu hết các bức ảnh và hình ảnh chụp được giữ nguyên vẹn để bảo toàn chất lượng gốc. Tuy nhiên, các logo dạng đen trắng hoặc SVG đơn giản có thể bị trình duyệt can thiệp đảo ngược màu sắc. Riêng các banner quảng cáo dạng hình ảnh có nền trắng sẽ giữ nguyên dạng, tạo thành một ô sáng nổi bật trên nền tối của trang web."
-      },
-      {
-        "heading": "Vấn đề với mã lệnh và script của bên thứ ba",
-        "body": "Trong phiên bản thử nghiệm đầu tiên này, từ khóa cho phép từ chối tính năng chưa hoạt động. Các tập lệnh và thẻ quảng cáo của nhà xuất bản vẫn đọc được mã màu gốc do lập trình viên viết thay vì màu tối mà người dùng nhìn thấy trên màn hình. Điều này tạo ra sự lệch pha giữa dữ liệu kỹ thuật và trải nghiệm thực tế của người dùng."
-      },
-      {
-        "heading": "Khoảng trống dữ liệu và khả năng tương thích",
-        "body": "Theo dữ liệu từ Chrome Platform Status được dẫn nguồn trong bài công bố, gần 40% lượt tải trang đến từ người dùng ở chế độ tối nhưng chỉ có 10% trang web hỗ trợ chế độ này. Hiện tại, các chi tiết thực tế như nền tảng chạy bản beta hay ngày phát hành chính thức của Safari 27.3 vẫn chưa được công bố cụ thể."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing cần lưu ý rằng các banner quảng cáo hiển thị trên Safari có thể bị đặt vào giao diện tối hoàn toàn mới mà hệ thống tracking hoặc creative chưa được thiết kế thích ứng, làm giảm hiệu quả thị giác.",
-    "ifIgnored": "Nếu bỏ qua, các mẫu quảng cáo động hoặc banner nền trắng có thể hiển thị lệch lạc, gây mất thẩm mỹ và làm giảm tỷ lệ nhấp khi người dùng lướt web trên các thiết bị Apple.",
-    "actionChecklist": [
-      "Kiểm tra lại toàn bộ các creative banner quảng cáo hiển thị trên nền tảng Safari.",
-      "Theo dõi sát sao các bản cập nhật tiếp theo của Safari 27.3 beta về từ khóa từ chối tính năng.",
-      "Đánh giá lại độ tương phản màu sắc của các thiết kế HTML và CSS động.",
-      "Chuẩn bị sẵn các quy tắc CSS hỗ trợ chế độ tối để chủ động kiểm soát hiển thị thay vì phụ thuộc vào trình duyệt."
-    ],
-    "deadline": "04/11/2026",
-    "id": "real-2026-11-04-safari-thu-nghiem-adaptive-28a4d2",
-    "publishedAt": "04/11/2026",
-    "sourceUrl": "https://ppc.land/safaris-new-dark-mode-repaints-light-websites-without-the-sites-knowing/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/11/apple-safari-27-3-adaptive-dark-mode-hidden-repaint-sign-painter-billboard.jpg",
       "credit": "Ảnh: PPC Land"
     }
   },
@@ -630,66 +688,6 @@
     "source": "Search Engine Journal",
     "image": {
       "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/10/seo-pulse-spam-guide-restaurant-controls-featured.jpg",
-      "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Google xác nhận thay đổi tCPA và ngân sách không làm đặt lại trạng thái Learning",
-    "isHot": false,
-    "illustration": "ai-budget",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Google Ads",
-      "Smart Bidding",
-      "Ngân sách",
-      "Tối ưu hóa"
-    ],
-    "summary": "Google chính thức xác nhận việc điều chỉnh mục tiêu tCPA, tROAS hoặc ngân sách trên các chiến dịch đang hoạt động ổn định sẽ không xóa dữ liệu lịch sử hay đưa chiến dịch về lại trạng thái học (Learning). Bên cạnh đó, đại diện Google cũng đưa ra những lưu ý quan trọng về cách dùng Seasonality Adjustments và các tính năng phân bổ ngân sách mới.",
-    "keyNumbers": [
-      {
-        "value": "10%",
-        "label": "Mức linh hoạt ROAS hiệu dụng của Smart Bidding Exploration"
-      },
-      {
-        "value": "50%",
-        "label": "Tỷ lệ phân bổ Display Expansion cần cài đặt trước tháng 2/2027"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Thay đổi mục tiêu và ngân sách không làm mất dữ liệu học",
-        "body": "Quan điểm cho rằng điều chỉnh tCPA, tROAS hoặc thay đổi ngân sách hàng ngày quá 20% sẽ làm xóa sạch dữ liệu học của Smart Bidding là một hiểu lầm phổ biến. Đại diện Google xác nhận rằng với các chiến dịch đang chạy ổn định, việc thay đổi mục tiêu hoặc ngân sách sẽ không xóa dữ liệu lịch sử và không làm kích hoạt lại trạng thái Learning trong giao diện. Hệ thống phía sau đã có sẵn dữ liệu về bức tranh đấu giá và có thể tự động điều chỉnh giá thầu tương ứng với mục tiêu mới. Tuy nhiên, hiệu suất vẫn có thể biến động nhẹ khi luồng lưu lượng truy cập và mức thầu thay đổi."
-      },
-      {
-        "heading": "Hạn chế sử dụng Seasonality Adjustments cho các đợt khuyến mãi thông thường",
-        "body": "Google khuyến nghị nhà quảng cáo không nhất thiết phải bật tính năng điều chỉnh theo mùa cho các đợt sale định kỳ như Black Friday hay Cyber Monday. Mô hình học máy theo năm của Google đã tự động dự đoán trước các đợt tăng trưởng lượng truy cập tiêu chuẩn này. Theo nghiên cứu từ Optmyzr trên các tài khoản giai đoạn 2022-2024, các tài khoản bật điều chỉnh theo mùa có mức tăng CPC cao gấp khoảng 2 lần so với các tài khoản không sử dụng. Nhà quảng cáo chỉ nên dùng tính năng này cho các đợt giảm giá bất ngờ hoặc chương trình ưu đãi giảm sâu vượt ngoài kịch bản hàng năm."
-      },
-      {
-        "heading": "Cơ chế hoạt động của Promotion Mode và Smart Bidding Exploration",
-        "body": "Tính năng Promotion Mode đang được triển khai cho chiến dịch Search và Performance Max, cho phép lên lịch các giai đoạn ưu đãi với ngân sách và điều chỉnh giá thầu riêng. Tính năng này kết hợp khả năng tăng tốc nhanh với cơ chế Smart Bidding Exploration để thu hút thêm lưu lượng truy cập trong thời gian khuyến mãi. Smart Bidding Exploration cung cấp mức linh hoạt khoảng 10% ROAS hiệu dụng để đấu giá vào các truy vấn mới. Tuy nhiên, cơ chế khám phá này đòi hỏi chiến dịch tROAS phải có ngân sách không bị giới hạn, nếu ngân sách bị chạm trần thì tính năng sẽ tự động tắt."
-      },
-      {
-        "heading": "Cập nhật quan trọng đối với Display Expansion từ tháng 2/2027",
-        "body": "Bắt đầu từ tháng 2/2027, Google sẽ thay đổi cơ chế phân bổ mặc định đối với các chiến dịch Display Expansion. Nhà quảng cáo cần tiến hành rà soát các chiến dịch Tìm kiếm đang sử dụng Display Expansion ngay từ bây giờ. Để duy trì hành vi phân bổ như hiện tại, bạn cần chủ động cài đặt mạng Hiển thị ở mức Ưu tiên thấp với tỷ lệ phân bổ 50%. Việc nắm rõ các quy tắc phân bổ ngân sách mới sẽ giúp doanh nghiệp kiểm soát chi phí tối ưu hơn trên từng kênh."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing có thể tự tin linh hoạt điều chỉnh ngân sách và mục tiêu tCPA/tROAS theo tình hình kinh doanh thực tế mà không sợ phá vỡ máy học, đồng thời chủ động cắt giảm chi phí CPC gia tăng vô ích do cài đặt thủ công không cần thiết.",
-    "ifIgnored": "Doanh nghiệp sẽ tiếp tục bị trói buộc bởi định kiến cũ, bỏ lỡ các cơ hội tối ưu giá thầu linh hoạt, hoặc khiến chi phí quảng cáo tăng vọt trong các dịp lễ lớn do áp dụng Seasonality Adjustments sai cách.",
-    "actionChecklist": [
-      "Rà soát chiến dịch Google Ads đang chạy ổn định để sẵn sàng điều chỉnh tCPA/tROAS theo mục tiêu kinh doanh mới.",
-      "Bỏ tính năng Seasonality Adjustments cho các đợt khuyến mãi định kỳ thông thường để tránh tăng CPC.",
-      "Đảm bảo ngân sách không bị giới hạn đối với chiến dịch tROAS nếu muốn kích hoạt Smart Bidding Exploration.",
-      "Cấu hình Display Expansion về mức Low Priority với tỷ lệ 50% cho các chiến dịch Search trước tháng 2/2027."
-    ],
-    "deadline": "Tháng 2/2027",
-    "id": "real-2026-10-30-google-xac-nhan-thay-2e3842",
-    "publishedAt": "30/10/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/google-ads-product-manager-revealed-details-that-matter-before-black-friday/594102/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/10/google-ads-bfcm-987.png",
       "credit": "Ảnh: Search Engine Journal"
     }
   },
