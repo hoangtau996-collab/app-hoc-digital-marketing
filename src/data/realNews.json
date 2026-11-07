@@ -2,6 +2,196 @@
   {
     "category": "Google Ads & SEO",
     "platformIcon": "Search",
+    "title": "Google cập nhật tính năng Gemini cho Workspace và tối ưu hóa Google Maps",
+    "isHot": false,
+    "illustration": "shop-health",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Google Business Profile",
+      "Gemini Workspace",
+      "Local SEO",
+      "Google Maps"
+    ],
+    "summary": "Google đang triển khai các công cụ Gemini cho tài khoản Google Workspace để quản lý Google Business Profile. Đồng thời, nút nhắn tin trên Google Maps được đưa lên vị trí nổi bật ngay cạnh nút gọi, cùng nhiều cập nhật mới về giờ hoạt động và nhãn thực đơn.",
+    "keyNumbers": [
+      {
+        "value": "06/11",
+        "label": "Thời điểm cập nhật trang trợ giúp"
+      },
+      {
+        "value": "05/11",
+        "label": "Thời điểm đăng bản tin doanh nghiệp"
+      },
+      {
+        "value": "13/10",
+        "label": "Mốc thời gian thay đổi khu vực hỗ trợ"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Tích hợp Gemini vào tài khoản Workspace",
+        "body": "Google thông báo các doanh nghiệp quản lý Google Business Profile bằng tài khoản Google Workspace đang dần nhận quyền truy cập các công cụ profile của Gemini. Quản trị viên Workspace cần bật quyền truy cập ứng dụng Gemini trong bảng điều khiển quản trị trước khi nhân viên liên kết. Tuy nhiên, trang trợ giúp hiện tại vẫn ghi nhận yêu cầu đăng nhập tài khoản Google cá nhân, tạo ra sự khác biệt nhỏ với bản tin cập nhật gần đây."
+      },
+      {
+        "heading": "Thay đổi vị trí nút nhắn tin trên Google Maps",
+        "body": "Nút nhắn tin trên Google Maps đã được di chuyển lên vị trí cao hơn, hiển thị nổi bật ngay cạnh nút gọi trên cả thiết bị Android và iOS. Khách hàng có thể gửi tin nhắn qua các tùy chọn doanh nghiệp đã thiết lập, bao gồm cả WhatsApp và tin nhắn văn bản. Doanh nghiệp cần kiểm tra lại các liên kết này để tránh tình trạng hộp thư không được đọc hoặc liên kết hỏng nằm ở vị trí quan trọng."
+      },
+      {
+        "heading": "Tính năng tạo giờ hoạt động bằng ngôn ngữ tự nhiên",
+        "body": "Trình chỉnh sửa giờ hoạt động của Business Profile bổ sung phần tạo giờ tự động, cho phép chủ doanh nghiệp gõ lịch trình bằng ngôn ngữ tự nhiên để hệ thống tự điền. Công cụ này hỗ trợ các trường hợp như ngày chỉ nhận lịch hẹn hoặc giờ đóng cửa nghỉ trưa. Chủ doanh nghiệp có thể xem lại và chỉnh sửa các mốc giờ này trước khi lưu lại chính thức."
+      },
+      {
+        "heading": "Cập nhật nhãn thực đơn và quy trình kháng cáo",
+        "body": "Các nhà hàng có thể tắt dịch vụ đặt món từ bên thứ ba trực tiếp từ bảng điều khiển Business Profile. Phần nhãn thực đơn bổ sung các lựa chọn không chứa sữa, không chứa gluten, cùng với nhãn Kosher và Halal dành cho đơn vị có chứng nhận. Ngoài ra, công cụ kháng cáo cho phép tải lên tài liệu hỗ trợ trước khi gửi yêu cầu xét duyệt."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing quản lý chuỗi cửa hàng hoặc hệ thống local SEO cần lưu ý vị trí mới của nút nhắn tin trên Google Maps để tối ưu tỷ lệ chuyển đổi khách hàng tiềm năng tại điểm bán.",
+    "ifIgnored": "Bỏ qua các cập nhật này có thể khiến doanh nghiệp mất khách hàng vào tay đối thủ do liên kết nhắn tin trên bản đồ bị hỏng hoặc bỏ lỡ cách cập nhật giờ làm việc tự động nhanh chóng.",
+    "actionChecklist": [
+      "Kiểm tra bảng điều khiển Workspace để kích hoạt quyền truy cập Gemini cho nhân sự phụ trách.",
+      "Thử nghiệm bấm vào nút nhắn tin trên Google Maps của doanh nghiệp để đảm bảo liên kết hoạt động trơn tru.",
+      "Cập nhật giờ hoạt động chi tiết bằng tính năng tạo giờ mới cho các dịp đặc biệt.",
+      "Ra soát lại các nhãn thực đơn và dịch vụ đặt món bên thứ ba trên trang doanh nghiệp."
+    ],
+    "deadline": "06/11/2026",
+    "id": "real-2026-11-06-google-cap-nhat-tinh-1b8fb2",
+    "publishedAt": "06/11/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/google-gemini-business-profile-workspace-2/596120/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/11/gemini-business-profile-featured.jpg",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Doanh thu tìm kiếm của Google chậm lại do AI Mode: Bài học về hiệu suất quảng cáo",
+    "isHot": false,
+    "illustration": "zero-click",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Google Ads",
+      "AI Mode",
+      "SEO",
+      "Doanh thu tìm kiếm"
+    ],
+    "summary": "Báo cáo quý 3 của Alphabet ghi nhận lượng truy vấn tìm kiếm đạt mức cao nhất trong 5 năm, nhưng tốc độ tăng trưởng doanh thu tìm kiếm lại chậm lại. Nguyên nhân chính được xác định là do các truy vấn qua AI Mode có khả năng kiếm tiền thấp hơn so với tìm kiếm truyền thống.",
+    "keyNumbers": [
+      {
+        "value": "63,35 tỷ USD",
+        "label": "Doanh thu tìm kiếm và các mục khác trong quý 3"
+      },
+      {
+        "value": "12%",
+        "label": "Tỷ lệ tăng trưởng doanh thu tìm kiếm quý 3"
+      },
+      {
+        "value": "19%",
+        "label": "Tỷ lệ tăng trưởng doanh thu tìm kiếm quý 1"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Sự chênh lệch giữa lượng truy vấn và doanh thu",
+        "body": "Alphabet báo cáo tốc độ tăng trưởng truy vấn tìm kiếm trên Google đạt mức cao nhất trong 5 năm qua. Tuy nhiên, trong cùng quý, doanh thu tìm kiếm lại tăng trưởng ở mức chậm nhất trong năm. Doanh thu từ mảng tìm kiếm và các mục khác đạt 63,35 tỷ USD, giảm từ mức 19% trong quý 1 và 17% trong quý 2 xuống còn 12%."
+      },
+      {
+        "heading": "Tác động từ AI Mode đến khả năng kiếm tiền",
+        "body": "Giám đốc kinh doanh của Google, Philipp Schindler, chỉ ra rằng sự tăng trưởng mạnh mẽ của các truy vấn AI Mode đã tác động làm giảm khả năng kiếm tiền so với tìm kiếm thông thường. Đây là yếu tố cấu trúc duy nhất trong số các nguyên nhân được liệt kê không mang tính tạm thời, khi Google đang tích cực mở rộng AI Mode."
+      },
+      {
+        "heading": "Các yếu tố tạm thời và cấu trúc",
+        "body": "Google lý giải sự chậm lại bao gồm bốn nguyên nhân chính: biến động tỷ giá ngoại tệ, nhà bán lẻ tại châu Á - Thái Bình Dương giảm chi tiêu sau thay đổi quy định nhập khẩu của EU, chi tiêu giải trí bình thường hóa sau World Cup, và sự bùng nổ của các truy vấn AI Mode ít mang lại doanh thu quảng cáo hơn."
+      },
+      {
+        "heading": "Hệ quả đối với cách đo lường truy vấn",
+        "body": "Các truy vấn trong AI Mode có độ dài trung bình gấp ba lần so với tìm kiếm truyền thống và bao gồm các cuộc hội thoại đa lượt. Khi định nghĩa về truy vấn thay đổi, các nhà quản lý cần theo dõi sát sao cách các nền tảng tính phí và phân bổ giá trị quảng cáo trong các kết quả trả lời bằng trí tuệ nhân tạo."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing cần nhận thức rằng lưu lượng truy vấn tìm kiếm tăng chưa chắc đồng nghĩa với hiệu quả phân phối ngân sách quảng cáo giữ nguyên, do tỷ suất sinh lời của quảng cáo trong các câu trả lời AI đang thấp hơn tìm kiếm truyền thống.",
+    "ifIgnored": "Nếu bỏ qua xu hướng này, nhà quản lý có thể tiếp tục phân bổ ngân sách dựa trên lượng hiển thị và click truyền thống mà không lường trước việc chi phí cho mỗi chuyển đổi có thể tăng lên khi Google đẩy mạnh AI Mode.",
+    "actionChecklist": [
+      "Đánh giá lại hiệu quả chi tiêu chiến dịch Google Search hiện tại theo từng định dạng hiển thị.",
+      "Theo dõi sát tỷ lệ chuyển đổi thực tế thay vì chỉ nhìn vào số lượng hiển thị hay lượt click.",
+      "Cập nhật các kịch bản đo lường dữ liệu để tách biệt lưu lượng từ tìm kiếm truyền thống và AI Mode.",
+      "Điều chỉnh chiến lược nội dung để tối ưu hóa khả năng hiển thị trong các câu trả lời do AI tạo ra."
+    ],
+    "id": "real-2026-11-05-doanh-thu-tim-kiem-2b52da",
+    "publishedAt": "05/11/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/google-search-queries-hit-a-5-year-high-and-search-revenue-didnt-follow/595485/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/11/duane-forrester-decodes-google-search-752.png",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
+    "category": "TikTok Shop & Ads",
+    "platformIcon": "Video",
+    "title": "L'Oréal thử nghiệm chiến lược phim ngắn kịch tính đặt giải trí lên trên sản phẩm",
+    "isHot": "false",
+    "illustration": "ai-video",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Phim ngắn",
+      "Video dọc",
+      "Tiếp thị giải trí",
+      "Chiến lược nội dung"
+    ],
+    "summary": "Thương hiệu Urban Decay thuộc tập đoàn L'Oréal vừa ra mắt một series phim ngắn sáu tập trên nền tảng ReelShort mang tên Ghost Hunter Hotline. Nội dung thiên về giải trí và văn hóa hẹn hò hiện đại này đã đạt được hàng triệu lượt xem chỉ sau vài ngày ra mắt, đánh dấu sự dịch chuyển từ quảng cáo truyền thống sang nội dung hướng đến khán giả trước tiên.",
+    "keyNumbers": [
+      {
+        "value": "3,8 triệu",
+        "label": "Lượt xem trong 5 ngày"
+      },
+      {
+        "value": "6",
+        "label": "Số tập phim ngắn"
+      },
+      {
+        "value": "4",
+        "label": "Tuần để hoàn thiện"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Xu hướng phim ngắn giải trí lên ngôi",
+        "body": "L'Oréal tiếp tục mở rộng thử nghiệm với thể loại video ngắn có cốt truyện kịch tính sau chiến dịch kỳ nghỉ trước đó của Maybelline. Thương hiệu Urban Decay đã ra mắt series sáu tập mang tên Ghost Hunter Hotline trên nền tảng chuyên biệt ReelShort vào cuối tháng mười. Mỗi tập phim kéo dài vài phút, khai thác chủ đề hẹn hò hiện đại kết hợp yếu tố mùa lễ hội và khéo léo lồng ghép sản phẩm xịt khóa nền của hãng."
+      },
+      {
+        "heading": "Hiệu quả ấn tượng về lượt xem",
+        "body": "Theo dữ liệu từ thương hiệu, series này đã thu hút 3,8 triệu lượt xem chỉ trong năm ngày đầu tiên sau khi phát hành. Nội dung hiện đứng ở vị trí thứ hai trên bảng xếp hạng các chương trình ngắn được xem nhiều nhất của ReelShort. Thành công này cho thấy khả năng thu hút người dùng lướt mạng xã hội bằng các nội dung mang tính giải trí cao thay vì thông điệp quảng cáo lộ liễu."
+      },
+      {
+        "heading": "Đặt khán giả và giải trí lên hàng đầu",
+        "body": "Han Wen, Giám đốc kỹ thuật số và marketing của L'Oréal USA, chia sẻ rằng tư duy làm quảng cáo kiểu cũ tập trung hoàn toàn vào sản phẩm cần được thay đổi trong kỷ nguyên người sáng tạo. Mục tiêu cốt lõi của marketing hiện đại là đặt khán giả lên trên hết và coi giải trí là mục đích chính. Thương hiệu cần chấp nhận thử nghiệm các định dạng mới mặc dù không phải canh bạc nào cũng thành công."
+      },
+      {
+        "heading": "Tốc độ sản xuất và hợp tác nền tảng",
+        "body": "Thay vì làm việc qua các agency trung gian như trước, L'Oréal đã tự sản xuất và phát hành nội dung trực tiếp hợp tác với ReelShort để tận dụng am hiểu sâu sắc về khán giả của nền tảng này. Quá trình sản xuất series này chỉ mất khoảng bốn tuần, minh chứng cho yếu tố tốc độ quan trọng trong bối cảnh các xu hướng thay đổi liên tục. ReelShort cũng đang trên đà tạo ra doanh thu hơn 1 tỷ USD trong năm nay theo các phân tích thị trường."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing thấy rõ xu hướng dịch chuyển ngân sách và nguồn lực sang định dạng video giải trí dạng dọc (microdrama) thay vì TVC hay quảng cáo sản phẩm truyền thống. Việc hợp tác trực tiếp với nền tảng phát hành giúp rút ngắn thời gian triển khai chiến dịch xuống còn bốn tuần, tối ưu hóa tốc độ bám bắt xu hướng.",
+    "ifIgnored": "Bỏ qua xu hướng nội dung giải trí ngắn, thương hiệu sẽ tiếp tục áp dụng mô hình quảng cáo sản phẩm truyền thống vốn kém hiệu quả với nhóm khách hàng trẻ tuổi thích lướt xem video cốt truyện. Doanh nghiệp cũng sẽ bỏ lỡ cơ hội tiếp cận lượng lớn khán giả đang chuyển dịch mạnh mẽ sang các nền tảng video di động chuyên biệt.",
+    "actionChecklist": [
+      "Đánh giá lại tỷ trọng phân bổ ngân sách cho các định dạng video ngắn có cốt truyện giải trí thay vì chỉ làm video quảng cáo sản phẩm đơn thuần",
+      "Khảo sát các nền tảng phát hành video ngắn và mạng xã hội tại thị trường nội địa để tìm kiếm cơ hội hợp tác sản xuất nội dung ngách",
+      "Rút ngắn quy trình phê duyệt và sản xuất nội dung sáng tạo xuống dưới bốn tuần để kịp thời đón đầu các trào lưu mới của giới trẻ",
+      "Thử nghiệm lồng ghép sản phẩm một cách khéo léo vào bên trong một kịch bản câu chuyện có yếu tố kịch tính hoặc hài hước"
+    ],
+    "id": "real-2026-11-05-l-oreal-thu-nghiem-efc6e0",
+    "publishedAt": "05/11/2026",
+    "sourceUrl": "https://www.marketingdive.com/news/loreals-evolving-microdrama-strategy-puts-entertainment-over-product/873646/",
+    "source": "Marketing Dive",
+    "image": {
+      "url": "https://imgproxy.divecdn.com/EF8I4ZcIxLixMqzOwszDjXRCSnA-AqiRXqwQN8pwZHw/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9naG9zdC1odW50ZXItaG90bGluZS1pZy5qcGc=.webp",
+      "credit": "Ảnh: Marketing Dive"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
     "title": "Áp dụng nguyên tắc quyền tối thiểu để bảo vệ tài khoản quảng cáo và hệ thống AI",
     "isHot": true,
     "illustration": "account-security",
@@ -496,199 +686,6 @@
     "image": {
       "url": "https://imgproxy.divecdn.com/uJILKCTaAEJ1EzAssbuegpTmAUH7xf0xlK8riB3Z9Oc/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS90aWt0b2tfYnJhbmRfc2FmZXR5X2NlbnRlcl8ySHZReFZzLnBuZw==.webp",
       "credit": "Ảnh: Social Media Today"
-    }
-  },
-  {
-    "category": "Meta Ads",
-    "platformIcon": "Video",
-    "title": "Instagram thử nghiệm video dài 90 phút và vung tiền thu hút nhà sáng tạo",
-    "isHot": false,
-    "illustration": "ai-video",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Instagram Features",
-      "Video dài",
-      "Creator Economy",
-      "Meta"
-    ],
-    "summary": "Instagram đang bắt đầu thử nghiệm tính năng Features cho phép đăng tải các video dài tới 90 phút. Để cạnh tranh với YouTube, Meta sẵn sàng chi trả các khoản tiền thưởng lên tới 500.000 USD cho những nhà sáng tạo nội dung hàng đầu. Tuy nhiên, việc thiếu cơ chế chia sẻ doanh thu bền vững có thể khiến nỗ lực này lặp lại thất bại của IGTV trong quá khứ.",
-    "keyNumbers": [
-      {
-        "value": "90 phút",
-        "label": "Thời lượng video tối đa trên tính năng Features"
-      },
-      {
-        "value": "500.000 USD",
-        "label": "Thù lao cao nhất Instagram trả cho nhà sáng tạo"
-      },
-      {
-        "value": "1 USD - 10 USD",
-        "label": "Doanh thu YouTube trả cho 1.000 lượt xem video dài"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Instagram thử nghiệm tính năng Features hỗ trợ video dài 90 phút",
-        "body": "Instagram đang tiến hành thử nghiệm tính năng mới có tên Features cho phép các nhà sáng tạo đăng tải video có độ dài lên tới 90 phút. Để thu hút người dùng trải nghiệm, Meta sẵn sàng chi trả khoản kinh phí trực tiếp cho một số nhà sáng tạo nội dung. Một phát ngôn viên của Meta đã xác nhận việc công ty đang cấp vốn trực tiếp cho nội dung trên Features. Việc mở rộng thời lượng video này thể hiện nỗ lực mới nhất của nền tảng trong việc cạnh tranh lượng người xem video dài."
-      },
-      {
-        "heading": "Các gói thù lao lớn dành riêng cho những nhà sáng tạo hàng đầu",
-        "body": "Theo các nguồn tin, Instagram đã đề nghị thanh toán cho một số nhà sáng tạo chọn lọc số tiền 50.000 USD để đăng video dài lên Features. Bên cạnh đó, một số ngôi sao lớn khác thậm chí được thỏa thuận các hợp đồng trị giá 6 chữ số lên tới 500.000 USD. Việc trả thưởng trước này được coi là bước đi ngắn hạn nhằm tạo làn sóng nội dung ban đầu cho tính năng mới. Giám đốc Instagram Adam Mosseri cũng thừa nhận bài toán kinh tế đóng vai trò rất quan trọng đối với các nhà sáng tạo."
-      },
-      {
-        "heading": "Thách thức về bài toán doanh thu bền vững so với YouTube",
-        "body": "Dù đưa ra các khoản tiền thưởng lớn, Instagram vẫn chưa có cơ chế chia sẻ doanh thu quảng cáo dài hạn thu hút như YouTube. Theo phân tích từ VidIQ, mô hình chia sẻ doanh thu quảng cáo của YouTube trả cho nhà sáng tạo trung bình từ 1 USD đến 10 USD cho mỗi 1.000 lượt xem video dài. Trong khi đó, nguồn thu nhập từ lượt xem đơn thuần trên Instagram gần như bằng 0 nếu không có hợp đồng tài trợ thương hiệu. Các nhà sáng tạo có trên 1 triệu người đăng ký thu về khoảng 50.000 USD mỗi tháng trên YouTube nhưng chỉ đạt từ 5.000 USD đến 15.000 USD trên Instagram."
-      },
-      {
-        "heading": "Bài học lịch sử từ thất bại của IGTV trong quá khứ",
-        "body": "Đây không phải lần đầu tiên Meta chi tiền mặt để thúc đẩy định dạng video dài trên nền tảng của mình. Vào năm 2021, Meta từng công bố kế hoạch chi 1 tỷ USD trong năm 2022 cho các nhà sáng tạo nội dung, bao gồm tiền thưởng cho video IGTV. Tuy nhiên, chiến lược trả tiền trước này đã không tạo ra sự tăng trưởng bền vững về người dùng. Đến đầu năm 2022, Meta đã phải từng bước đóng cửa ứng dụng IGTV độc lập do thiếu hiệu quả."
-      },
-      {
-        "heading": "Định hướng chiến lược nội dung video cho thương hiệu",
-        "body": "Các nền tảng khác như X cũng từng tổ chức giải thưởng 175.000 USD nhưng chỉ tạo ra sự bùng nổ bài đăng tạm thời. Nếu không có cơ chế phân chia doanh thu ổn định, tính năng video dài của Instagram khó tạo ra thói quen xem video lâu dài. Đối với các thương hiệu, sự xuất hiện của video 90 phút mở ra không gian mới cho nội dung chuyên sâu và tài trợ. Tuy nhiên, doanh nghiệp cần theo dõi sát hiệu quả thực tế trước khi chuyển dịch ngân sách lớn sang định dạng mới này."
-      }
-    ],
-    "impact": "Sự xuất hiện của định dạng video dài trên Instagram mở ra kênh tài trợ nội dung chuyên sâu mới với KOL/KOC, tuy nhiên Trưởng phòng Marketing chưa nên vội vã dịch chuyển ngân sách lớn từ YouTube hay Reels sang Features khi Meta chưa chứng minh được khả năng giữ chân người xem video dài.",
-    "ifIgnored": "Thương hiệu có thể bỏ lỡ cơ hội hợp tác sớm với các nhà sáng tạo đang được Meta tài trợ kinh phí, hoặc ngược lại tiêu tốn tài nguyên sản xuất video dài đắt đỏ trên một tính năng thiếu lượng người xem ổn định.",
-    "actionChecklist": [
-      "Rà soát danh sách KOL/KOC hiện tại để đánh giá khả năng sản xuất video nội dung dài.",
-      "Thử nghiệm tài trợ thương hiệu trong các chuỗi video dài của nhà sáng tạo được Meta cấp vốn.",
-      "Theo dõi chỉ số giữ chân người xem (retention rate) đối với các video 90 phút thử nghiệm trên Instagram.",
-      "Duy trì tỷ trọng ngân sách chính cho video dài trên YouTube thay vì dồn lực quá sớm vào Features."
-    ],
-    "id": "real-2026-11-01-instagram-thu-nghiem-video-800ac6",
-    "publishedAt": "01/11/2026",
-    "sourceUrl": "https://www.socialmediatoday.com/news/instagram-offers-to-pay-creators-for-long-form-content/873402/",
-    "source": "Social Media Today",
-    "image": {
-      "url": "https://imgproxy.divecdn.com/Fnl-3ZX5_izgfhnB-ftLsecfo9z06J5IaTJc92SFUJk/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9pbnN0YWdyYW1fZmVhdHVyZXMucG5n.webp",
-      "credit": "Ảnh: Social Media Today"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Thương hiệu lớn thống trị tìm kiếm AI nhưng vẫn để ngỏ cơ hội cho website nhỏ",
-    "isHot": false,
-    "illustration": "zero-click",
-    "readTime": "5 phút đọc",
-    "tags": [
-      "Tìm kiếm AI",
-      "Google AI Overviews",
-      "ChatGPT",
-      "Chiến lược SEO"
-    ],
-    "summary": "Nghiên cứu mới từ BrightEdge cho thấy các thương hiệu lớn đang thống trị kết quả tìm kiếm trên ChatGPT và Google AI Overviews đối với các truy vấn đặt chỗ và giao dịch. Tuy nhiên, các truy vấn mang tính truyền cảm hứng và trải nghiệm thực tế lại mở ra cơ hội lớn cho các website nhỏ và nội dung do người dùng tạo.",
-    "keyNumbers": [
-      {
-        "value": "28,3%",
-        "label": "Hilton dẫn đầu Google AI Overviews"
-      },
-      {
-        "value": "29,4%",
-        "label": "Marriott dẫn đầu ChatGPT"
-      },
-      {
-        "value": "78%",
-        "label": "Nền tảng đặt chỗ xuất hiện ở câu hỏi ngân sách"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Thương hiệu lớn thống trị từng ngành hàng cụ thể",
-        "body": "Dữ liệu từ BrightEdge chỉ ra rằng các thương hiệu lớn và quen thuộc với người tiêu dùng đang chiếm lĩnh vị trí hàng đầu trên cả Google AI Overviews và ChatGPT. American Airlines, Royal Caribbean và Expedia lần lượt dẫn đầu các danh mục hãng hàng không, hãng tàu du lịch và nền tảng đặt vé. Sự thống trị này phản ánh mức độ nhận diện thương hiệu mạnh mẽ và lòng trung thành lâu năm của khách hàng trên các công cụ tìm kiếm tích hợp trí tuệ nhân tạo."
-      },
-      {
-        "heading": "Sự khác biệt giữa các công cụ tìm kiếm AI",
-        "body": "Trong khi một số thương hiệu giữ vững vị thế độc tôn, thị phần hiển thị giữa các nền tảng vẫn có sự dao động đáng kể. Ví dụ, Expedia có mức độ hiển thị gấp 2,2 lần so với Kayak trên Google AI Overviews với tỷ lệ 31,3% so với 14,4%, nhưng khoảng cách này thu hẹp xuống còn 1,4 lần trên ChatGPT. Đối với phân khúc khách sạn, Hilton dẫn đầu Google AI Overviews đạt 28,3%, trong khi Marriott lại chiếm ưu thế trên ChatGPT với 29,4%."
-      },
-      {
-        "heading": "Áp lực cạnh tranh tại các truy vấn giá rẻ",
-        "body": "Các nền tảng đặt chỗ xuất hiện trong 78% câu trả lời của Google AI Overviews liên quan đến các từ khóa giá rẻ, ưu đãi, ngân sách hoặc phút chót, trong khi tỷ lệ này ở các câu trả lời khác chỉ là 17%. Riêng Expedia xuất hiện trong 44% các câu trả lời liên quan đến ngân sách. Điều này cho thấy các câu hỏi tập trung vào giá cả là khu vực chiến lược mà các nền tảng đặt chỗ cần đặc biệt theo dõi và tối ưu."
-      },
-      {
-        "heading": "Cơ hội cho website nhỏ qua nội dung trải nghiệm",
-        "body": "Bên cạnh các truy vấn giao dịch vốn chỉ chiếm 9% tổng số lượng theo dõi, các truy vấn truyền cảm hứng và so sánh chiếm phần lớn thời lượng panel. Các nền tảng như YouTube, Reddit và các blog du lịch nhỏ nổi bật hơn trong các câu hỏi đòi hỏi trải nghiệm thực tế, phán đoán con người và ý kiến chủ quan. Đây là điểm sáng để các thương hiệu nhỏ hơn chen chân vào hệ thống tìm kiếm AI."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing cần nhận ra rằng tìm kiếm AI không xếp hạng theo cách truyền thống mà đo lường mức độ hiển thị tổng thể, đòi hỏi sự dịch chuyển từ SEO từ khóa thuần túy sang tối ưu hóa nội dung mang tính trải nghiệm và ý kiến chủ quan.",
-    "ifIgnored": "Nếu bỏ qua xu hướng này, doanh nghiệp sẽ mất đi phần lớn thị phần hiển thị trên các công cụ AI thế hệ mới, đặc biệt ở nhóm khách hàng đang tìm kiếm nguồn cảm hứng và thông tin so sánh trước khi ra quyết định.",
-    "actionChecklist": [
-      "Đánh giá lại mức độ hiển thị của thương hiệu trên Google AI Overviews và ChatGPT.",
-      "Tập trung sản xuất nội dung mang tính trải nghiệm thực tế và góc nhìn chủ quan để đón đầu các truy vấn truyền cảm hứng.",
-      "Theo dõi sát sao các từ khóa có chứa yếu tố ngân sách và giá rẻ mà đối thủ đang chiếm lĩnh.",
-      "Kết hợp khai thác nội dung do người dùng tạo và các nền tảng bên ngoài như YouTube và Reddit vào chiến lược hiển thị."
-    ],
-    "id": "real-2026-10-31-thuong-hieu-lon-thong-2040d0",
-    "publishedAt": "31/10/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/big-brands-dominate-ai-search-but-leave-openings-for-smaller-sites/595397/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/10/travel-ai-seo-407.jpg",
-      "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Cập nhật hướng dẫn spam của Google, kiểm soát nhà hàng và doanh thu chế độ AI",
-    "isHot": "false",
-    "illustration": "zero-click",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Google SEO",
-      "Spam Guide",
-      "AI Mode",
-      "Business Profile"
-    ],
-    "summary": "Google vừa cập nhật hướng dẫn spam yêu cầu chặn lập chỉ mục các trang chia sẻ, đồng thời cho phép nhà hàng trực tiếp quản lý đơn vị đặt món. Ngoài ra, dữ liệu mới cho thấy các trang được AI trích dẫn thường có câu trả lời trực tiếp ngay dòng đầu tiên.",
-    "keyNumbers": [
-      {
-        "value": "23%",
-        "label": "trang được trích dẫn trả lời trực tiếp"
-      },
-      {
-        "value": "14%",
-        "label": "trang không được trích dẫn trả lời trực tiếp"
-      },
-      {
-        "value": "63,35 tỷ USD",
-        "label": "doanh thu tìm kiếm quý ba của Google"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Cập nhật hướng dẫn spam cho trang chia sẻ",
-        "body": "Google bổ sung phần mới vào hướng dẫn phòng chống spam người dùng tạo ra vào ngày 26 tháng 10. Nền tảng khuyến nghị áp dụng thẻ noindex hoặc chặn thu thập thông tin qua robots.txt đối với các trang tạo ra để chia sẻ trực tiếp, cộng tác hoặc tiện ích thay vì tìm kiếm công cộng. Việc này nhằm đảm bảo chỉ nội dung thực sự phục vụ tìm kiếm được lập chỉ mục."
-      },
-      {
-        "heading": "Nhà hàng kiểm soát nhà cung cấp đặt món",
-        "body": "Các nhà hàng hiện có thể tự tắt các nhà cung cấp đặt món bên thứ ba trực tiếp từ bảng điều khiển Google Business Profile. Tính năng này áp dụng trên toàn cầu theo xác nhận từ quản lý sản phẩm Google. Trước đây, nhà hàng phải gửi yêu cầu gỡ bỏ và chờ đợi đối tác hoàn tất thao tác trong tối đa năm ngày làm việc."
-      },
-      {
-        "heading": "Dữ liệu lập chỉ mục và phản hồi của John Mueller",
-        "body": "Một người dùng trên mạng xã hội phản ánh báo cáo lập chỉ mục trang không được cập nhật từ ngày 16 tháng 10. John Mueller từ Google phản hồi rằng người dùng nên kiểm tra ngày tháng trên báo cáo và cho biết việc thay đổi lập chỉ mục phản ánh trước qua báo cáo hiệu suất. Ông cũng lưu ý các trang web mới có số liệu ổn định thường không thay đổi nhanh chóng."
-      },
-      {
-        "heading": "Đặc điểm của trang được AI trích dẫn",
-        "body": "Phân tích 193.507 câu trả lời AI từ ChatGPT, Google AI Mode và AI Overviews cho thấy các trang được trích dẫn thường mở đầu bằng câu trả lời trực tiếp. Cụ thể, các trang được trích dẫn trả lời trực tiếp ngay dòng đầu tiên ở mức 23 phần trăm, trong khi các trang không được trích dẫn chỉ đạt 14 phần trăm. So với mười kết quả hàng đầu của Google mà AI không bao giờ lấy lên, tỷ lệ này là 20 phần trăm so với 5 phần trăm."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing cần rà soát lại cấu trúc website để chặn lập chỉ mục các trang tạo nội dung chia sẻ nội bộ, đồng thời kiểm tra ngay các liên kết đặt món trên hồ sơ doanh nghiệp của nhà hàng để tránh thất thoát khách hàng.",
-    "ifIgnored": "Nếu bỏ qua, các trang tiện ích chia sẻ có thể bị lập chỉ mục nhầm làm loãng chất lượng SEO tổng thể và các liên kết đặt món không mong muốn trên Google Business Profile vẫn tiếp tục hiển thị.",
-    "actionChecklist": [
-      "Kiểm tra và áp dụng thẻ noindex hoặc robots.txt cho các trang chia sẻ nội bộ",
-      "Đăng nhập Google Business Profile để rà soát và tắt các nhà cung cấp đặt món không sử dụng",
-      "Kiểm tra báo cáo hiệu suất Search Console để đánh giá biến động lập chỉ mục thay vì chỉ nhìn báo cáo độ trễ",
-      "Tối ưu hóa các trang đích quan trọng bằng cách đưa câu trả lời trực tiếp ngay dòng đầu tiên"
-    ],
-    "id": "real-2026-10-31-cap-nhat-huong-dan-053e00",
-    "publishedAt": "31/10/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/seo-pulse-spam-guide-restaurant-controls-ai-mode-revenue/595031/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/10/seo-pulse-spam-guide-restaurant-controls-featured.jpg",
-      "credit": "Ảnh: Search Engine Journal"
     }
   },
   {
