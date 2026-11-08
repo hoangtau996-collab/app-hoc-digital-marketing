@@ -1,5 +1,194 @@
 [
   {
+    "category": "TikTok Shop & Ads",
+    "platformIcon": "Video",
+    "title": "TikTok công bố Playbook Q5 với tuyên bố CPM hạ nhiệt nhưng thắt chặt quy tắc ngân sách Smart+",
+    "isHot": false,
+    "illustration": "cpm-auction",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "TikTok Ads",
+      "Chi phí CPM",
+      "Smart+ Campaign",
+      "Chiến dịch Q5"
+    ],
+    "summary": "TikTok vừa phát hành tài liệu hướng dẫn Q5 kéo dài từ ngày 01/12/2026 đến 31/01/2027 với khẳng định CPM toàn cầu sẽ giảm mạnh sau đỉnh điểm tháng 11. Tuy nhiên, tài liệu cũng đưa ra yêu cầu ngân sách khắt khe cho chiến dịch Smart+ app và sử dụng dữ liệu biểu đồ không hiển thị giá trị cụ thể.",
+    "keyNumbers": [
+      {
+        "value": "10 đến 50 lần",
+        "label": "bắt buộc cho ngân sách ngày Smart+ app so với bid mục tiêu"
+      },
+      {
+        "value": "62 ngày",
+        "label": "độ dài cửa sổ Q5 được TikTok xác định"
+      },
+      {
+        "value": "2.250",
+        "label": "kích thước mẫu khảo sát hành vi người dùng Q5 của TikTok"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Tuyên bố giảm chi phí CPM trong cửa sổ Q5 kéo dài 62 ngày",
+        "body": "TikTok xác định giai đoạn Q5 kéo dài từ 01/12/2026 đến 31/01/2027, dài hơn đáng kể so với khung thời gian 3 tuần mà Meta từng định nghĩa. Nền tảng lập luận rằng chi phí CPM toàn cầu sẽ hạ nhiệt sau mức đỉnh mua sắm tháng 11 trong khi lượng tương tác người dùng vẫn duy trì cao. Điều này tạo cơ hội cho các nhà quảng cáo tối ưu ngân sách truyền thông vào đầu năm mới. Tuy nhiên, các biểu đồ CPM do TikTok công bố hoàn toàn không hiển thị trục số hay tỷ lệ phần trăm giảm thực tế."
+      },
+      {
+        "heading": "Quy tắc ngân sách nghiêm ngặt đối với chiến dịch Smart+ App",
+        "body": "Điểm đáng chú ý nhất trong hướng dẫn kỹ thuật là yêu cầu vận hành dành cho chiến dịch ứng dụng Smart+. TikTok quy định ngân sách hàng ngày phải đạt từ 10 đến 50 lần mức giá thầu mục tiêu để hệ thống học và tối ưu hiệu quả. Nếu đặt ngân sách thấp hơn ngưỡng này, thuật toán sẽ khó phân phối ổn định. Quy định này đòi hỏi doanh nghiệp phải chuẩn bị dòng tiền đủ lớn nếu muốn theo đuổi chiến dịch tự động hóa của nền tảng."
+      },
+      {
+        "heading": "Số liệu khảo sát hành vi người dùng và những điểm nghi vấn",
+        "body": "Để khuyến khích chi tiêu, TikTok trích dẫn khảo sát cho thấy 85% người dùng dành thời lượng tương đương hoặc nhiều hơn trên app sau kỳ nghỉ. Đồng thời, 73% kỳ vọng giữ nguyên hoặc tăng lượt tải ứng dụng và 64% duy trì thời gian chơi game. Mặc dù vậy, các dữ liệu này trích từ cuộc khảo sát thực hiện từ tháng 09/2023 với mẫu 2.250 người. Việc thiếu số liệu CPM thời gian thực khiến nhà quảng cáo cần kiểm chứng cẩn trọng trước khi dồn ngân sách."
+      },
+      {
+        "heading": "Yêu cầu làm mới nội dung sáng tạo và bật các tính năng hỗ trợ",
+        "body": "Do thời gian Q5 kéo dài tới hai tháng, TikTok khuyến nghị các thương hiệu phải tăng khối lượng và tần suất làm mới ad creative để tránh tình trạng kiệt sức quảng cáo. Playbook cũng gợi ý kích hoạt nút chuyển đổi sự kiện khuyến mãi Q5 và tính năng phân bổ tiến độ ngân sách trong Ads Manager. Các nhà quảng cáo được khuyên nên chốt khung ngân sách sớm, theo dõi biến động CPM và sẵn sàng mở rộng quy mô ngay khi chi phí đấu giá có dấu hiệu giảm sâu."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing cần tính toán lại mức chi ngân sách cho các chiến dịch Smart+ trên TikTok để đáp ứng quy tắc gấp 10-50 lần bid mục tiêu, tránh tình trạng chiến dịch bị kẹt giai đoạn học do thiếu ngân sách.",
+    "ifIgnored": "Doanh nghiệp có thể lãng phí ngân sách khi chạy chiến dịch Smart+ không đủ ngưỡng phân phối, hoặc bỏ lỡ thời điểm CPM hạ nhiệt trong tháng 12 và tháng 01 do không chuẩn bị sẵn ad creative mới.",
+    "actionChecklist": [
+      "Kiểm tra lại ngân sách ngày của các chiến dịch Smart+ app đảm bảo đạt 10 đến 50 lần giá thầu mục tiêu",
+      "Lên kế hoạch sản xuất thêm nội dung sáng tạo để thay thế định kỳ trong suốt 62 ngày của cửa sổ Q5",
+      "Theo dõi biến động CPM thực tế trên tài khoản TikTok Ads từ đầu tháng 12 thay vì chỉ tin vào biểu đồ của nền tảng",
+      "Tìm và thử nghiệm tính năng chuyển đổi sự kiện khuyến mại Q5 trong giao diện TikTok Ads Manager"
+    ],
+    "id": "real-2026-11-07-tiktok-cong-bo-playbook-c7a144",
+    "publishedAt": "07/11/2026",
+    "sourceUrl": "https://ppc.land/tiktok-says-its-cpms-drop-after-november-across-a-two-month-q5-window/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/11/tiktok-q5-window-cpm-claim-snow-hill-sled-blank-surveyor-pole.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "Meta Ads",
+    "platformIcon": "Facebook",
+    "title": "Meta tự động chuyển đổi Accounts Center thành Meta Account và hợp nhất dữ liệu người dùng",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Meta Ads",
+      "Tài khoản Meta",
+      "Dữ liệu người dùng",
+      "Quyền riêng tư"
+    ],
+    "summary": "Meta đang tự động chuyển đổi Trung tâm tài khoản (Accounts Center) của người dùng thành hệ thống Meta Account mới mà không cung cấp tùy chọn từ chối. Thay đổi này hợp nhất thông tin đăng nhập và cài đặt trên Facebook, Instagram, Threads, Meta AI và các thiết bị phần cứng. Quy trình chuyển đổi đã được chuẩn bị từ ngày 23/04/2026 và triển khai diện rộng trong khoảng 1 năm.",
+    "keyNumbers": [
+      {
+        "value": "1 năm",
+        "label": "thời gian triển khai tự động diện rộng"
+      },
+      {
+        "value": "4",
+        "label": "thay đổi lớn trong hệ thống tài khoản mới"
+      },
+      {
+        "value": "3",
+        "label": "cam kết giữ nguyên tính năng đối với người dùng"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Lộ trình chuyển đổi tự động không có tùy chọn từ chối",
+        "body": "Meta đã bắt đầu gửi email thông báo cho người dùng từ ngày 05/11/2026 về việc tài khoản của họ đã được nâng cấp sang Meta Account. Trước đó, vào ngày 23/04/2026, Meta đã công bố kế hoạch cập nhật tự động này với thời gian hoàn tất kéo dài khoảng 1 năm. Người dùng chỉ nhận được thông báo sau khi quá trình chuyển đổi đã diễn ra thành công trên hệ thống. Tài khoản mới tự động gộp các hồ sơ Facebook, Instagram hoặc Threads từng nằm chung trong Trung tâm tài khoản trước đó. Email thông báo từ Meta hoàn toàn không đưa ra bất kỳ nút bấm hay cơ chế nào để từ chối việc chuyển đổi."
+      },
+      {
+        "heading": "Đơn giản hóa đăng nhập và quản lý bảo mật tập trung",
+        "body": "Tài khoản Meta Account hoạt động như một hệ thống đăng nhập đơn cho toàn bộ ứng dụng và thiết bị thuộc Meta. Người dùng có thể sử dụng 1 mật khẩu duy nhất hoặc đăng nhập bảo mật bằng vân tay và khuôn mặt thông qua Passkey. Cài đặt chi tiết về bảo mật, thông tin cá nhân và tùy chỉnh quảng cáo được gom về một giao diện quản lý duy nhất. Tính năng xác thực hai yếu tố sẽ tự động áp dụng trên tất cả hồ sơ và thiết bị kết nối trong cùng tài khoản. Ngoài ra, tính năng Passkey còn hỗ trợ tự động điền thông tin thanh toán của người dùng."
+      },
+      {
+        "heading": "Mở rộng hệ sinh thái kết nối sang Meta AI và thiết bị phần cứng",
+        "body": "Tài khoản mới không chỉ giới hạn ở các mạng xã hội truyền thống mà mở rộng sang Threads, Meta AI và các thiết bị phần cứng như kính AI hay Meta Quest. Người dùng có thể dễ dàng chia sẻ tin tức và đồng bộ ảnh đại diện giữa Facebook và Instagram. Các thiết bị như Ray-Ban Meta và công cụ Wit.ai cũng nằm trong phạm vi quản lý của tài khoản hợp nhất này. Đối với WhatsApp, Meta cho biết hiện chưa áp dụng đầy đủ toàn bộ tính năng của Meta Account. Ngoài ra, phụ huynh có thể giám sát tài khoản của con trên Instagram, Facebook hoặc Meta Horizon mà không cần tạo hồ sơ riêng cho ứng dụng đó."
+      },
+      {
+        "heading": "Những câu hỏi mở về luồng dữ liệu quảng cáo và quyền riêng tư",
+        "body": "Thông báo của Meta tập trung vào sự tiện lợi nhưng hoàn toàn bỏ qua các thuật ngữ về sự chấp thuận hay dữ liệu người dùng. Từ năm 2024, việc nhóm tài khoản trong Trung tâm tài khoản là căn cứ để Meta định hình việc hợp nhất dữ liệu quảng cáo tại Châu Âu. Tài liệu hỗ trợ cập nhật cách đây 10 tuần vẫn chưa làm rõ việc hợp nhất mới có thay đổi cách dữ liệu di chuyển giữa các ứng dụng hay không. Meta cam kết không thay đổi tin nhắn, danh sách bạn bè, người theo dõi hay cách chia sẻ nội dung giữa các hồ sơ. Tuy nhiên, việc liên kết tự động có thể đã xảy ra chỉ qua thao tác đăng bài chéo hoặc đăng ký ứng dụng mới trước đây."
+      }
+    ],
+    "impact": "Tác động trực tiếp tới Trưởng phòng Marketing là khả năng chuẩn hóa và hợp nhất tín hiệu dữ liệu người dùng (data signals) trên toàn bộ sinh thái Meta. Khi người dùng bị định danh duy nhất qua Meta Account, hiệu quả phân tệp và việc tối ưu hóa đối tượng tùy chỉnh (Custom Audiences) giữa Facebook, Instagram và Threads sẽ nâng cao độ chính xác, nhưng đồng thời rủi ro mất theo dõi gia tăng nếu người dùng tắt tùy chỉnh quảng cáo tập trung tại một nơi.",
+    "ifIgnored": "Nếu bỏ qua cập nhật này, doanh nghiệp sẽ thụ động trước các biến động về tệp đối tượng target và độ chính xác của Pixel/Conversions API khi Meta tái cấu trúc định danh người dùng. Ngoài ra, nhà quảng cáo có thể bỏ lỡ cơ hội tiếp cận người dùng trên các không gian quảng cáo mới liên kết như Meta AI và Threads.",
+    "actionChecklist": [
+      "Rà soát lại hiệu quả hiển thị quảng cáo cross-platform giữa Facebook và Instagram để đánh giá biến động tệp đối tượng.",
+      "Cập nhật cấu hình Conversions API để đảm bảo nhận diện chính xác định danh người dùng trong hệ sinh thái Meta.",
+      "Theo dõi chặt chẽ các chính sách và tùy chọn quảng cáo mới đối với nền tảng Threads và Meta AI.",
+      "Chuẩn bị các phương án dự phòng cho tệp Custom Audiences phòng trường hợp người dùng thắt chặt tùy chỉnh quảng cáo tập trung."
+    ],
+    "id": "real-2026-11-07-meta-tu-dong-chuyen-666a09",
+    "publishedAt": "07/11/2026",
+    "sourceUrl": "https://ppc.land/meta-forces-users-onto-meta-accounts-with-no-opt-out-offered/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/11/meta-accounts-center-meta-account-no-opt-out-ad-data-paper-doll-chain-shears-out-of-reach.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "ChatGPT gửi 0,62% lưu lượng truy cập hữu cơ của Google: Dữ liệu đo lường AI",
+    "isHot": false,
+    "illustration": "zero-click",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "AI Visibility",
+      "ChatGPT Traffic",
+      "SEO Metrics",
+      "GA4 Data"
+    ],
+    "summary": "Các dữ liệu mới cho thấy trợ lý AI chỉ gửi một lượng lưu lượng truy cập rất nhỏ so với Google, đặt ra câu hỏi lớn về hiệu quả đo lường hiện tại. Trưởng phòng Marketing cần đánh giá lại cách phân bổ ngân sách cho tầm hiển thị AI thay vì chỉ dựa vào các chỉ số click ảo.",
+    "keyNumbers": [
+      {
+        "value": "0,62%",
+        "label": "Lưu lượng ChatGPT so với Google"
+      },
+      {
+        "value": "0,73%",
+        "label": "Lưu lượng từ mọi LLM"
+      },
+      {
+        "value": "13,8%",
+        "label": "Tỷ lệ chuyển đổi của ChatGPT"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Lưu lượng truy cập thực tế từ AI rất nhỏ",
+        "body": "Nghiên cứu trên 100 trang web trong 12 tháng cho thấy ChatGPT chỉ gửi 0,62% khối lượng lưu lượng truy cập hữu cơ của Google. Tính chung tất cả các mô hình ngôn ngữ lớn, con số này chỉ là 0,73%. Mặc dù khách từ ChatGPT có tỷ lệ chuyển đổi đạt 13,8% so với 3,02% của Google, Google vẫn điều khiển tới 96,5% tổng số chuyển đổi trong tập dữ liệu."
+      },
+      {
+        "heading": "Ảnh hưởng ẩn chưa lộ diện qua Direct và Brand Search",
+        "body": "Nhiều người lập luận rằng AI đóng vai trò như bảng hiệu kỹ thuật số, kích thích tìm kiếm trực tiếp sau đó. Tuy nhiên, khi kiểm tra 12 thuộc tính GA4, lượng truy cập Direct tăng mạnh nhưng lượng truy cập có gắn kết thực sự gần như không đổi. Các kiểm tra hồi quy chéo cho thấy chưa thể cô lập mối liên hệ nhân quả rõ ràng giữa tầm hiển thị AI và tìm kiếm thương hiệu."
+      },
+      {
+        "heading": "Khung chất lượng dữ liệu AMEC và bài toán đo lường",
+        "body": "Hiệp hội Đo lường và Đánh giá Truyền thông Quốc tế đã công bố các nguyên tắc chất lượng dữ liệu để giải quyết thách thức dữ liệu phi cấu trúc thời kỳ AI. Các chỉ số hiển thị AI hiện tại thường không vượt qua các bài kiểm tra về độ chính xác và hành vi thực tế. Một số liệu có thể nhất quán nội bộ nhưng lại không phản ánh đúng hành vi mua hàng ngoài đời thực."
+      },
+      {
+        "heading": "Góc nhìn mới về kênh thương hiệu thay vì kênh chuyển đổi",
+        "body": "Các chuyên gia nhận định AI giống kênh thương hiệu hoặc biển quảng cáo kỹ thuật số hơn là một công cụ dẫn dắt click truyền thống. Sự quen thuộc với thương hiệu là một kết quả marketing, nhưng không nên tin tưởng mù quáng vào các mô hình phân bổ hiện tại. Trưởng phòng Marketing cần xây dựng các chỉ số đo lường thực chất hơn trước kỳ họp đánh giá quý."
+      }
+    ],
+    "impact": "Giúp Trưởng phòng Marketing tránh việc rót ngân sách vô căn cứ vào các chỉ số hiển thị AI chưa được kiểm chứng, đồng thời tối ưu lại cách đánh giá hiệu quả kênh tìm kiếm.",
+    "ifIgnored": "Tiếp tục lãng phí ngân sách dựa trên các báo cáo lưu lượng ảo từ bot và các chỉ số đo lường AI sai lệch không phản ánh đúng doanh thu thực tế.",
+    "actionChecklist": [
+      "Kiểm tra lại chất lượng dữ liệu lưu lượng Direct trong GA4 để loại bỏ traffic ảo từ bot",
+      "Đánh giá lại tỷ lệ chuyển đổi thực tế từ các nguồn giới thiệu AI so với tìm kiếm hữu cơ",
+      "Chuyển dịch cách nhìn nhận AI thành kênh xây dựng thương hiệu thay vì kỳ vọng lượng click trực tiếp",
+      "Áp dụng các tiêu chuẩn kiểm định dữ liệu nghiêm ngặt trước khi trình bày báo cáo ngân sách AI trước ban lãnh đạo"
+    ],
+    "id": "real-2026-11-06-chatgpt-gui-0-62-3a598c",
+    "publishedAt": "06/11/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/ai-visibility-isnt-a-sham-most-ways-of-measuring-it-are/594405/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/10/ai-sham-409.png",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
     "category": "Google Ads & SEO",
     "platformIcon": "Search",
     "title": "Google cập nhật tính năng Gemini cho Workspace và tối ưu hóa Google Maps",
@@ -187,133 +376,6 @@
     "image": {
       "url": "https://imgproxy.divecdn.com/EF8I4ZcIxLixMqzOwszDjXRCSnA-AqiRXqwQN8pwZHw/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9naG9zdC1odW50ZXItaG90bGluZS1pZy5qcGc=.webp",
       "credit": "Ảnh: Marketing Dive"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Áp dụng nguyên tắc quyền tối thiểu để bảo vệ tài khoản quảng cáo và hệ thống AI",
-    "isHot": true,
-    "illustration": "account-security",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Bảo mật tài khoản",
-      "Quyền truy cập",
-      "Google Ads",
-      "AI Agent"
-    ],
-    "summary": "Nguyên tắc cấp quyền tối thiểu đang trở thành tiêu chuẩn bắt buộc để bảo vệ tài khoản quảng cáo và các công cụ AI khỏi nguy cơ chiếm đoạt tài nguyên. Việc duy trì quyền hạn dư thừa cho agency cũ hoặc AI agent khiến doanh nghiệp đối mặt với rủi ro mất tài khoản và thất thoát ngân sách nghiêm trọng.",
-    "keyNumbers": [
-      {
-        "value": "Dưới 5%",
-        "label": "Quyền đám mây được cấp thực sự được sử dụng"
-      },
-      {
-        "value": "22,4%",
-        "label": "Tổ chức cấp định danh riêng cho AI agent"
-      },
-      {
-        "value": "6 năm",
-        "label": "Thời gian agency cũ giữ quyền gây sự cố Merchant Center"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Nguyên tắc quyền tối thiểu và lý do ra đời",
-        "body": "Nguyên tắc cấp quyền tối thiểu ra đời từ năm 1975, yêu cầu giới hạn mỗi cá nhân, phần mềm hoặc AI agent ở mức quyền tối thiểu cần thiết để hoàn thành công việc. Trong ngành quảng cáo, nguyên tắc này chi phối phân quyền người dùng trên Google Ads, Meta Business Portfolios cũng như các công cụ bên thứ ba. Việc kiểm soát quyền hạn giúp giới hạn thiệt hại khi tài khoản bị xâm nhập hoặc xảy ra sự cố ngoài ý muốn. Bất kỳ quyền hạn nào được cấp ngoài phạm vi công việc đều trở thành nguy cơ bảo mật tiềm ẩn đối với doanh nghiệp."
-      },
-      {
-        "heading": "Thực trạng dư thừa quyền hạn và các rủi ro thực tế",
-        "body": "Báo cáo năm 2023 của Microsoft chỉ ra rằng dưới 5% số quyền đám mây được cấp thực sự được sử dụng bởi các định danh công việc. Thực tế quản lý tài khoản quảng cáo tại nhiều agency ghi nhận tình trạng nhân sự giữ quyền Admin cho toàn bộ tài khoản dù không sử dụng hết. Vào tháng 3/2026, một agency cũ từng giữ quyền truy cập tài khoản Merchant Center của khách hàng suốt khoảng 6 năm đã đóng tài khoản của mình và kéo theo cả tài khoản của khách hàng. Khi tài khoản bị chiếm đoạt phiên làm việc, kẻ tấn công thường thêm quyền quản trị viên mới nếu phiên đó sở hữu quyền Admin."
-      },
-      {
-        "heading": "Thách thức bảo mật mới từ các công cụ AI Agent",
-        "body": "Sự phát triển của các công cụ AI có khả năng chỉnh sửa chiến dịch trực tiếp mang lại rủi ro bảo mật mới thông qua hình thức tấn công prompt injection. Kẻ tấn công có thể chèn văn bản ẩn trong trang web hoặc nội dung đầu vào để điều khiển AI agent thực hiện hành vi trái phép. Theo báo cáo năm 2026 từ Okta, chỉ 22,4% tổ chức phát triển agent cấp cho mỗi công cụ một định danh riêng với quyền hạn được giới hạn chặt chẽ. Việc trao quyền quá rộng cho AI agent trên dữ liệu nhạy cảm làm gia tăng đáng kể diện tấn công của doanh nghiệp."
-      },
-      {
-        "heading": "Lộ trình siết chặt quy định của các nền tảng",
-        "body": "Các nền tảng quảng cáo đang chủ động triển khai các biện pháp kỹ thuật để ép buộc nguyên tắc quyền tối thiểu. Từ ngày 15/7/2026, Google yêu cầu sử dụng passkey đối với các thao tác nhạy cảm, bao gồm việc thay đổi quyền truy cập người dùng. Bên cạnh đó, server MCP quảng cáo của X ra mắt ngày 24/8/2026 đã phân tách rõ hai phạm vi quyền đọc và quyền ghi riêng biệt. Những thay đổi này buộc các nhà quảng cáo phải rà soát lại toàn bộ quy trình cấp phát và thu hồi quyền hạn."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing cần chuyển đổi ngay mô hình quản trị tài khoản quảng cáo và công cụ AI từ cấp quyền rộng rãi sang mô hình kiểm soát quyền tối thiểu. Điều này giúp ngăn chặn nguy cơ mất tài khoản, thất thoát ngân sách và bảo vệ dữ liệu khách hàng khi làm việc với agency hoặc tích hợp các công cụ tự động hóa.",
-    "ifIgnored": "Doanh nghiệp đối mặt với rủi ro bị chiếm quyền quản trị tài khoản quảng cáo, mất toàn bộ dữ liệu Merchant Center khi agency ngừng hợp tác, hoặc bị can thiệp ngân sách do các công cụ AI agent bị tấn công chèn lệnh điều khiển.",
-    "actionChecklist": [
-      "Rà soát toàn bộ quyền truy cập Admin trên Google Ads và Meta Business Portfolios để hạ cấp các tài khoản không cần thiết.",
-      "Thu hồi ngay lập tức quyền truy cập tài khoản Merchant Center và tài khoản quảng cáo của các agency hoặc nhân sự đã dừng hợp tác.",
-      "Thiết lập đăng ký passkey cho các tài khoản Google Ads trước mốc thời hạn 15/7/2026.",
-      "Phân tách rõ quyền chỉ đọc (read-only) cho các AI agent và công cụ báo cáo thay vì cấp quyền chỉnh sửa chiến dịch."
-    ],
-    "deadline": "15/7/2026",
-    "id": "real-2026-11-05-ap-dung-nguyen-tac-a75d0e",
-    "publishedAt": "05/11/2026",
-    "sourceUrl": "https://ppc.land/least-privilege-access/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/11/ppc-land-least-privilege-access-explainer-pocket-knife-fanned-blades-one-in-use.jpg",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
-    "category": "AI Marketing",
-    "platformIcon": "Sparkles",
-    "title": "Ngưỡng phê duyệt ngân sách cho AI: Cơ chế kiểm soát rủi ro chi tiêu quảng cáo tự động",
-    "isHot": false,
-    "illustration": "ai-budget",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "AI Marketing",
-      "Quản lý ngân sách",
-      "Tự động hóa quảng cáo",
-      "An toàn vận hành"
-    ],
-    "summary": "Ngưỡng phê duyệt là hạn mức chi tiêu tối đa mà tác nhân AI được phép thực hiện tự động trước khi cần con người ký duyệt. Cơ chế này giúp các doanh nghiệp khai thác sức mạnh tự động hóa của AI nhưng vẫn đảm bảo kiểm soát chặt chẽ an toàn tài chính.",
-    "keyNumbers": [
-      {
-        "value": "30%",
-        "label": "Hạn mức dịch chuyển ngân sách tối đa của IAB Tech Lab"
-      },
-      {
-        "value": "24 giờ",
-        "label": "Thời hạn hiệu lực tối đa của phê duyệt ngoại lệ trên AdCP"
-      },
-      {
-        "value": "3 tỷ USD",
-        "label": "Ngân sách truyền thông hàng năm được Fluency quản lý với ngưỡng AI bằng không"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Khái niệm và cơ chế hoạt động của ngưỡng phê duyệt",
-        "body": "Ngưỡng phê duyệt là một giới hạn tài chính xác định mức chi tiêu mà một tác nhân AI có thể tự ý quyết định. Mỗi ngưỡng phê duyệt bao gồm ba thành phần chính: thước đo, hạn mức và quy trình leo cấp. Khi đại lý AI đưa ra yêu cầu chi tiêu vượt quá thẩm quyền, hệ thống sẽ tạm dừng giao dịch để chờ con người xem xét. Nếu không có ai phê duyệt hoặc quá thời hạn quy định, giao dịch mua quảng cáo sẽ không thể tiến hành."
-      },
-      {
-        "heading": "Các chuẩn giao thức kiểm soát chi tiêu bằng AI",
-        "body": "Giao thức AdCP phiên bản 3.0 phát hành ngày 22/04/2026 đã cập nhật bộ kiểm soát gồm reallocation_threshold và human_review_required. Đối với các chiến dịch quảng cáo nhạy cảm như nhà ở, tín dụng, việc làm hoặc dược phẩm, AdCP bắt buộc cài đặt đánh giá của con người và không cho phép đặt thành sai. Việc hạ cấp yêu cầu này đòi hỏi bản ghi đè với lý do viết tối thiểu 20 ký tự, email người duyệt và sự phê duyệt không quá 24 giờ. Trong khi đó, bộ máy của IAB Tech Lab giới hạn bất kỳ đề xuất phân bổ lại ngân sách đơn lẻ nào ở mức 30% tổng ngân sách."
-      },
-      {
-        "heading": "Mức độ phân quyền trên các nền tảng quảng cáo lớn",
-        "body": "Các nền tảng mua quảng cáo đang áp dụng những cấp độ tự quản khác nhau cho AI. Kiến trúc rào chắn của PubMatic ra mắt ngày 05/08/2026 sử dụng phân quyền hai tầng, trong đó ngưỡng ngân sách toàn nền tảng nằm trên cài đặt người mua và yêu cầu mã xác thực một lần khi vượt ngưỡng. Nền tảng Yahoo DSP công bố ngày 06/01/2026 yêu cầu mọi thay đổi do tác nhân AI thực hiện đều phải có sự chấp thuận của người dùng. Nền tảng Fluency quản lý 3 tỷ USD ngân sách truyền thông hàng năm hoàn toàn từ chối quyền thực thi của các mô hình ngôn ngữ lớn, chỉ khởi chạy chiến dịch sau khi đội ngũ nhà quảng cáo ký duyệt."
-      },
-      {
-        "heading": "Khung pháp lý và bài học quản trị rủi ro chi tiêu",
-        "body": "Khái niệm ngưỡng phê duyệt kế thừa từ quy trình quản trị tài chính doanh nghiệp và thu mua công. Điều 14 của Luật AI Châu Âu yêu cầu người giám sát hệ thống rủi ro cao phải có khả năng can thiệp hoặc dừng hệ thống bất kỳ lúc nào, với thời hạn áp dụng bắt buộc từ ngày 02/12/2027. Ngoài ra, Điều 22 của Quy định Bảo vệ Dữ liệu Chung (GDPR) về các quyết định tự động hóa cũng củng cố cơ chế bắt buộc con người xem xét. Việc đặt ngưỡng quá thấp sẽ làm giảm hiệu quả tự động hóa, nhưng ngưỡng quá cao lại đẩy toàn bộ rủi ro trách nhiệm lên người thiết lập."
-      }
-    ],
-    "impact": "Giúp Trưởng phòng Marketing chủ động xây dựng khung quản trị tài chính an toàn khi áp dụng các công cụ AI tối ưu quảng cáo, tránh nguy cơ AI tự động tiêu vượt ngân sách hoặc phân bổ sai chiến lược.",
-    "ifIgnored": "Doanh nghiệp đối mặt với rủi ro thất thoát ngân sách lớn khi AI tự động đưa ra các quyết định mua quảng cáo đắt đỏ không qua kiểm duyệt, đồng thời gặp vướng mắc về trách nhiệm pháp lý khi xảy ra sự cố.",
-    "actionChecklist": [
-      "Rà soát toàn bộ các tập lệnh và công cụ AI đang chạy quảng cáo để cài đặt hạn mức chi tiêu tự động tối đa.",
-      "Bắt buộc cài đặt quy trình phê duyệt thủ công của con người đối với các chiến dịch có ngân sách lớn hoặc ngành hàng nhạy cảm.",
-      "Thiết lập kênh thông báo khẩn cấp và cơ chế xác thực nhiều lớp khi có đề xuất chi tiêu vượt ngưỡng.",
-      "Định kỳ kiểm tra nhật ký phê duyệt ngoại lệ để ngăn chặn hành vi chia nhỏ giao dịch nhằm lách ngưỡng kiểm soát."
-    ],
-    "id": "real-2026-11-05-nguong-phe-duyet-ngan-6dde5c",
-    "publishedAt": "05/11/2026",
-    "sourceUrl": "https://ppc.land/approval-threshold/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/11/ppc-land-approval-threshold-explainer-freighter-load-line-suspended-crate.jpg",
-      "credit": "Ảnh: PPC Land"
     }
   },
   {
@@ -616,75 +678,6 @@
     "source": "Social Media Today",
     "image": {
       "url": "https://imgproxy.divecdn.com/EHVCCIHz7ybiXEuI-ROk2h8OQ1e6EirWxxKHS-qq1CE/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9yZWRkaXRfZ2FtaW5nXzlLdXJQaGUucG5n.webp",
-      "credit": "Ảnh: Social Media Today"
-    }
-  },
-  {
-    "boQua": false,
-    "category": "TikTok Shop & Ads",
-    "platformIcon": "Video",
-    "title": "TikTok ra mắt trung tâm an toàn thương hiệu và công cụ bảo vệ bản quyền mới",
-    "isHot": false,
-    "illustration": "account-security",
-    "readTime": "3 phút đọc",
-    "tags": [
-      "TikTok Ads",
-      "An toàn thương hiệu",
-      "Bảo vệ bản quyền",
-      "Chính sách nền tảng"
-    ],
-    "summary": "TikTok vừa công bố trang web trung tâm an toàn thương hiệu cùng các tài nguyên và công cụ mới dành cho nhà quảng cáo. Nền tảng này cũng chia sẻ dữ liệu thực thi tiêu chuẩn cộng đồng tại khu vực châu Á - Thái Bình Dương nhằm tăng cường minh bạch.",
-    "keyNumbers": [
-      {
-        "value": "30.000.000",
-        "label": "video vi phạm bị xóa"
-      },
-      {
-        "value": "97,4%",
-        "label": "video xóa tự động toàn cầu"
-      },
-      {
-        "value": "99,6%",
-        "label": "video xóa chủ động tại Singapore"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Ra mắt trang web và tài nguyên an toàn thương hiệu mới",
-        "body": "TikTok đã chính thức ra mắt một trang web trung tâm an toàn thương hiệu nhằm cung cấp quyền truy cập dễ dàng vào các công cụ tư vấn và hướng dẫn. Nền tảng này tích hợp các video từ chuyên gia nội bộ thảo luận về những lưu ý quan trọng dành cho nhà tiếp thị. Trang web đi kèm các liên kết tài liệu như cẩm nang bảo vệ thương hiệu và tổng quan về an toàn trí tuệ nhân tạo. Những tài nguyên này giúp doanh nghiệp củng cố sự hiện diện an toàn hơn khi triển khai chiến dịch."
-      },
-      {
-        "heading": "Bổ sung công cụ kiểm soát rủi ro và bản quyền",
-        "body": "Nền tảng bổ sung các tính năng bảo vệ thương hiệu mới giúp doanh nghiệp nhận diện các khu vực rủi ro tiềm ẩn. Các giải pháp bao gồm công cụ thấu hiểu nhận thức thương hiệu đặt tại trung tâm doanh nghiệp của TikTok. Ngoài ra, hệ thống còn cung cấp tùy chọn báo cáo vi phạm bản quyền, nhãn hiệu và tính năng chống hàng giả cho người bán. Các tính năng này hỗ trợ nhà quảng cáo kiểm soát tốt hơn tài sản trí tuệ trên môi trường số."
-      },
-      {
-        "heading": "Dữ liệu thực thi tiêu chuẩn cộng đồng khu vực châu Á - Thái Bình Dương",
-        "body": "Tại diễn đàn truyền thông có trách nhiệm khu vực châu Á - Thái Bình Dương tổ chức tại Singapore, TikTok đã công bố dữ liệu kiểm duyệt. Trong khoảng thời gian từ tháng 4 đến tháng 6 năm 2026, nền tảng đã gỡ bỏ hơn 30 triệu video tại 10 thị trường trong khu vực do vi phạm tiêu chuẩn cộng đồng. Riêng tại Singapore, hơn 476.000 video đã bị gỡ bỏ, chiếm 0,5% tổng số video được đăng tải. Các số liệu này phản ánh nỗ lực làm sạch môi trường nội dung của nền tảng."
-      },
-      {
-        "heading": "Hiệu quả từ công nghệ kiểm duyệt tự động",
-        "body": "TikTok ghi nhận tỷ lệ cao trong việc sử dụng công nghệ để xử lý nội dung vi phạm trên nền tảng. Tại Singapore, có 99,6% số video vi phạm bị gỡ bỏ theo hình thức chủ động trước khi bị báo cáo. Khoảng 77,7% trong số đó được xử lý thành công trong thời gian 24 giờ kể từ khi đăng tải. Trên phạm vi toàn cầu, các công cụ kiểm duyệt tự động của TikTok chiếm 97,4% tổng số lượng video bị gỡ bỏ trong quý."
-      },
-      {
-        "heading": "Khung trí tuệ nhân tạo có trách nhiệm cho thương hiệu",
-        "body": "Bên cạnh các công cụ quản lý nội dung, TikTok cũng thiết lập khung trí tuệ nhân tạo có trách nhiệm dành cho các thương hiệu. Khung này định hướng cách doanh nghiệp ứng dụng công nghệ AI một cách an toàn trong các hoạt động tiếp thị. Những biện pháp mở rộng này nhằm tạo ra hành lang pháp lý rõ ràng hơn cho các nhãn hàng khi khai thác các tính năng mới trên TikTok."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing có thêm kênh kiểm soát rủi ro thương hiệu và các công cụ bảo vệ bản quyền trực tiếp trên trung tâm doanh nghiệp của TikTok, giúp hạn chế việc quảng cáo hiển thị cạnh nội dung độc hại hoặc bị xâm phạm tài sản trí tuệ.",
-    "ifIgnored": "Doanh nghiệp có thể bỏ lỡ các công cụ báo cáo vi phạm bản quyền và chống hàng giả mới, đồng thời thiếu hụt thông tin cập nhật về các tiêu chuẩn kiểm duyệt nội dung của nền tảng tại khu vực.",
-    "actionChecklist": [
-      "Truy cập trang web trung tâm an toàn thương hiệu mới của TikTok để đọc cẩm nang bảo vệ thương hiệu.",
-      "Sử dụng công cụ thấu hiểu nhận thức thương hiệu trong trung tâm doanh nghiệp của TikTok.",
-      "Kiểm tra các tùy chọn báo cáo vi phạm bản quyền và nhãn hiệu để bảo vệ tài sản doanh nghiệp.",
-      "Đọc kỹ tổng quan về an toàn trí tuệ nhân tạo để áp dụng đúng khung vận hành của nền tảng."
-    ],
-    "deadline": "Giữa năm 2026",
-    "id": "real-2026-11-02-tiktok-ra-mat-trung-2a33c4",
-    "publishedAt": "02/11/2026",
-    "sourceUrl": "https://www.socialmediatoday.com/news/tiktok-adds-new-brand-safety-resources/873529/",
-    "source": "Social Media Today",
-    "image": {
-      "url": "https://imgproxy.divecdn.com/uJILKCTaAEJ1EzAssbuegpTmAUH7xf0xlK8riB3Z9Oc/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS90aWt0b2tfYnJhbmRfc2FmZXR5X2NlbnRlcl8ySHZReFZzLnBuZw==.webp",
       "credit": "Ảnh: Social Media Today"
     }
   },
