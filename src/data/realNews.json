@@ -1,5 +1,186 @@
 [
   {
+    "category": "Meta Ads",
+    "platformIcon": "Facebook",
+    "title": "Công cụ AI của Meta tự ý lấy mã giảm giá trên website đưa vào quảng cáo dù đã tắt ưu đãi",
+    "isHot": false,
+    "illustration": "ai-budget",
+    "readTime": "3 phút đọc",
+    "tags": [
+      "Meta Ads",
+      "Trí tuệ nhân tạo",
+      "Commerce Manager",
+      "Khuyến mãi"
+    ],
+    "summary": "Các công cụ quảng cáo sử dụng AI của Meta bị phát hiện tự động quét mã giảm giá từ website doanh nghiệp và hiển thị lên quảng cáo Facebook và Instagram. Sự cố này xảy ra ngay cả khi nhà quảng cáo đã chủ động tắt tính năng hiển thị ưu đãi trên mẫu quảng cáo đó.",
+    "keyNumbers": [
+      {
+        "value": "15,7%",
+        "label": "tỷ lệ chuyển đổi tăng thêm trên Facebook trong Q2 2026 nhờ AI"
+      },
+      {
+        "value": "> 8%",
+        "label": "mức tăng lượt nhấp quảng cáo nhờ cải tiến hệ thống xếp hạng"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Phát hiện lỗi tự động lấy mã ưu đãi từ website",
+        "body": "Chuyên gia tư vấn tiếp thị số Bram Van der Hallen vừa phát hiện một sơ hở trên hệ thống quảng cáo của Meta. Cụ thể, các công cụ tự động hóa AI của Meta có thể tự động nhận diện mã ưu đãi từ website của doanh nghiệp và đưa chúng vào quảng cáo Facebook và Instagram. Đáng lo ngại là hiện tượng này vẫn xảy ra ngay cả khi nhà quảng cáo đã tắt tùy chọn hiển thị ưu đãi trên mẫu quảng cáo gốc. Việc hệ thống tự ý trích xuất dữ liệu có thể làm đảo lộn kế hoạch phân phối ưu đãi của thương hiệu."
+      },
+      {
+        "heading": "Rủi ro lộ sâu khuyến mãi tới sai đối tượng",
+        "body": "Vấn đề này gây ra rủi ro rất lớn cho bất kỳ doanh nghiệp nào đang triển khai nhiều chương trình khuyến mãi cùng lúc. Một mã giảm giá vốn chỉ dành riêng cho một chiến dịch cụ thể hoặc một nhóm khách hàng nhất định có thể bị AI quét và hiển thị tràn lan ở nơi khác. Điều này dẫn đến việc khách hàng không thuộc đối tượng target vẫn nhận được ưu đãi sâu. Hậu quả là doanh nghiệp bị sụt giảm biên lợi nhuận ngoài dự kiến và gặp bối rối trong khâu vận hành."
+      },
+      {
+        "heading": "Nguyên nhân và cách xử lý trong Commerce Manager",
+        "body": "Theo phân tích từ Bram Van der Hallen, tính năng tự động này liên quan trực tiếp đến thiết lập trong Commerce Manager. Khi tùy chọn hiển thị ưu đãi tự động phát hiện từ website được kích hoạt trong Commerce Manager, Meta sẽ mặc định có quyền áp dụng các ưu đãi đó lên quảng cáo. Nhà quảng cáo cần phải chủ động truy cập vào phần cài đặt này để cập nhật và vô hiệu hóa tính năng. Đây là bước quản lý bổ sung mà các Marketer buộc phải lưu tâm để bảo vệ chiến dịch của mình."
+      },
+      {
+        "heading": "Nỗ lực tối ưu AI của Meta và mặt trái tự động hóa",
+        "body": "Sự cố này xuất hiện trong bối cảnh Meta đang nỗ lực mở rộng năng lực xử lý AI để tối ưu hóa hiệu quả quảng cáo. Công ty cho biết những cải tiến trong hệ thống xếp hạng quảng cáo đã giúp tăng hơn 8% lượt nhấp và tăng 15,7% tỷ lệ chuyển đổi trên Facebook trong Q2 2026. Tuy nhiên, khi các hệ thống ngày càng phụ thuộc vào AI để tìm kiếm hiệu quả và tối ưu chi phí, các lỗi tự động hóa là điều khó tránh khỏi. Nhà quảng cáo cần luôn cảnh giác trước những thay đổi ngầm của thuật toán để tránh chịu thiệt hại."
+      }
+    ],
+    "impact": "Doanh nghiệp có nguy cơ bị rò rỉ các mã giảm giá độc quyền hoặc chương trình ưu đãi riêng biệt tới sai tập khách hàng, dẫn đến suy giảm biên lợi nhuận và làm xáo trộn chiến lược giá.",
+    "ifIgnored": "Nếu không rà soát cài đặt ngay, các chiến dịch Meta Ads có thể tiếp tục tự động áp dụng mã giảm giá không mong muốn, gây thất thoát ngân sách và tạo ra xung đột khi xử lý đơn hàng với khách hàng.",
+    "actionChecklist": [
+      "Truy cập ngay vào giao diện Commerce Manager của tài khoản doanh nghiệp trên Meta.",
+      "Tìm và kiểm tra phần cài đặt tính năng tự động phát hiện ưu đãi từ website.",
+      "Tắt tùy chọn cho phép Meta tự động hiển thị các ưu đãi đã quét được lên chiến dịch quảng cáo.",
+      "Kiểm tra lại toàn bộ các quảng cáo đang chạy trên Facebook và Instagram để đảm bảo hiển thị đúng giá."
+    ],
+    "id": "real-2026-11-08-cong-cu-ai-cua-93b1af",
+    "publishedAt": "08/11/2026",
+    "sourceUrl": "https://www.socialmediatoday.com/news/metas-ai-ads-included-unapproved-discounts/874067/",
+    "source": "Social Media Today",
+    "image": {
+      "url": "https://imgproxy.divecdn.com/jtFl8l6BsGmGnMdnKkBuXTUVcdNE3PFfV9vasuIPtAs/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9tZXRhX2xvZ28yLnBuZw==.webp",
+      "credit": "Ảnh: Social Media Today"
+    }
+  },
+  {
+    "category": "AI Marketing",
+    "platformIcon": "Sparkles",
+    "title": "Cloudflare hợp tác OpenAI phát triển mô hình tối ưu website cho AI agent thay thế SEO truyền thống",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "AI Marketing",
+      "SEO AI",
+      "Cloudflare",
+      "OpenAI"
+    ],
+    "summary": "Tổng giám đốc Cloudflare Matthew Prince nhận định việc tối ưu hóa website cho các AI agent tìm kiếm là phiên bản mới của SEO. Nền tảng này đã ghi nhận doanh thu từ nhóm sản phẩm Act 4, bao gồm thỏa thuận cung cấp tín hiệu cập nhật trang web cho bot thu thập dữ liệu của OpenAI.",
+    "keyNumbers": [
+      {
+        "value": "782,5 triệu USD",
+        "label": "Doanh thu quý 3 của Cloudflare, tăng 39% so với cùng kỳ"
+      },
+      {
+        "value": "1.000 lần",
+        "label": "Dự báo tỷ lệ lưu lượng truy cập từ máy so với con người trong 5 năm tới"
+      }
+    ],
+    "content": [
+      {
+        "heading": "OpenAI chi trả kinh phí nhận thông báo cập nhật nội dung web",
+        "body": "Cloudflare đã xác nhận OpenAI đang trả phí để nhận các tín hiệu cảnh báo mỗi khi một trang web có sự thay đổi nội dung, chẳng hạn như khi nhà hàng cập nhật bảng giá. Cơ chế này giúp robot thu thập dữ liệu của OpenAI không phải quét lại toàn bộ trang web liên tục, qua đó tối ưu hóa chi phí vận hành cho AI. Chương trình thử nghiệm này được công bố từ ngày 8/7 dựa trên các tín hiệu độ tươi mới của nội dung. Cloudflare hiện chưa công bố con số doanh thu chi tiết từ thỏa thuận này."
+      },
+      {
+        "heading": "Khái niệm SEO mới dành riêng cho các AI agent",
+        "body": "Đối với các doanh nghiệp muốn thu hút thêm lưu lượng truy cập từ AI agent, Cloudflare đang hỗ trợ dịch vụ mà Giám đốc điều hành Matthew Prince gọi là một phiên bản SEO mới. Thay vì người dùng tự tìm kiếm và truy cập vài trang web, các AI agent có thể truy xuất dữ liệu từ 1.000 website cùng lúc để đưa ra câu trả lời duy nhất. Việc tối ưu hóa giúp thông tin của doanh nghiệp xuất hiện chính xác trong kết quả xử lý của agent."
+      },
+      {
+        "heading": "Lựa chọn giữa cho phép hoặc chặn AI crawler quét dữ liệu",
+        "body": "Doanh nghiệp hiện đối mặt với hai lựa chọn trên bảng điều khiển Cloudflare là cho phép hoặc chặn các công cụ quét dữ liệu AI. Một số đơn vị coi AI agent là cơ hội thu hút khách hàng, trong khi những doanh nghiệp khác xem đây là nguy cơ tiêu tốn tài nguyên máy chủ mà không đem lại giá trị. Lưu lượng truy cập không phải từ con người dự báo sẽ gấp 1.000 lần người thực, tạo áp lực lớn lên băng thông và hạ tầng vận hành."
+      },
+      {
+        "heading": "Mô hình thu phí vi mô đối với lượt truy cập của AI",
+        "body": "Cloudflare đã ra mắt bản thử nghiệm beta cho hai sản phẩm Monetization Gateway và Pay Per Use vào ngày 30/9. Monetization Gateway cho phép bên bán thu phí AI agent trên mỗi truy vấn, còn Pay Per Use trả tiền cho nhà xuất bản chấp nhận ưu đãi từ công ty AI. Doanh nghiệp có thể giảm phí hoặc miễn phí cho agent nếu agent cung cấp rõ mục đích truy cập nhằm phục vụ cơ hội quảng cáo."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing cần thay đổi góc nhìn về hạ tầng website, không chỉ tối ưu cho người dùng thực hay các công cụ tìm kiếm truyền thống mà phải chuẩn bị cấu hình cho AI crawler. Việc cân đối giữa chi phí máy chủ và khả năng hiển thị thương hiệu trên các câu trả lời của AI sẽ trực tiếp ảnh hưởng đến ngân sách vận hành kỹ thuật số.",
+    "ifIgnored": "Doanh nghiệp đối mặt với nguy cơ bị cạn kiệt tài nguyên máy chủ do lưu lượng quét dữ liệu khổng lồ từ AI agent mà không thu lại lượt chuyển đổi, hoặc ngược lại sẽ bị loại khỏi kết quả tìm kiếm của các công cụ AI nếu chặn crawler một cách thụ động.",
+    "actionChecklist": [
+      "Rà soát cấu hình Cloudflare AI Crawl Control trên hệ thống website của công ty",
+      "Đánh giá chi phí băng thông máy chủ tạo ra bởi các bot thu thập dữ liệu AI",
+      "Phân loại các trang nội dung ưu tiên cho AI crawler tiếp cận và các trang cần bảo vệ",
+      "Theo dõi thử nghiệm các tính năng Monetization Gateway và Pay Per Use để chuẩn bị cơ chế thương mại hóa dữ liệu"
+    ],
+    "id": "real-2026-11-08-cloudflare-hop-tac-openai-9cd8eb",
+    "publishedAt": "08/11/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/cloudflare-ai-agent-optimization-new-seo/596248/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/11/cloudflare-openai-featured.jpg",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Google Ads bổ sung 3 nhóm ngày thiết lập sẵn cho lịch hiển thị tiện ích quảng cáo",
+    "isHot": false,
+    "illustration": "ai-budget",
+    "readTime": "3 phút đọc",
+    "tags": [
+      "Google Ads",
+      "Asset Scheduling",
+      "Sitelink",
+      "Tối ưu ngân sách"
+    ],
+    "summary": "Google Ads vừa cập nhật thêm 3 khoảng ngày tùy chọn sẵn trong phần cài đặt lịch hiển thị tiện ích bao gồm tất cả các ngày, từ thứ Hai đến thứ Sáu và cuối tuần. Cập nhật này giúp đơn giản hóa quy trình thiết lập sitelink cho các đợt khuyến mãi cao điểm, đồng thời đi kèm nhắc nhở quan trọng về cơ chế phân bổ ngân sách tháng của hệ thống.",
+    "keyNumbers": [
+      {
+        "value": "3",
+        "label": "khoảng ngày thiết lập sẵn mới trong Asset scheduling"
+      },
+      {
+        "value": "30,4",
+        "label": "hệ số nhân ngân sách hàng ngày tính chi tiêu tối đa tháng"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Thêm 3 nhóm ngày tùy chọn sẵn trong Asset scheduling",
+        "body": "Google Ads bổ sung 3 tùy chọn nhóm ngày gồm All days, Mondays - Fridays và Saturdays - Sundays trong phần thiết lập lịch hiển thị tiện ích mở rộng. Trước đây, nhà quảng cáo phải chọn từng ngày thủ công, mất 5 dòng thiết lập cho ngày trong tuần hoặc 2 dòng cho cuối tuần. Cập nhật này giúp thao tác thiết lập sitelink và các tiện ích khác trở nên nhanh chóng hơn. Tính năng mới nằm trong mục Advanced options của phần Asset scheduling."
+      },
+      {
+        "heading": "Tiết kiệm thời gian thiết lập cho đợt khuyến mãi lớn",
+        "body": "Tính năng mới giúp đơn giản hóa việc cài đặt các ưu đãi chỉ chạy vào cuối tuần hoặc chỉ áp dụng từ thứ Hai đến thứ Sáu. Người quản lý nhiều tài khoản sẽ giảm đáng kể số lần nhấp chuột và hạn chế tình trạng rối loạn lịch hiển thị trong giao diện. Nhà quảng cáo cũng có thể thêm nhiều lịch chạy khác nhau trên cùng một tiện ích bằng liên kết Add Schedule. Việc triển khai hiện chưa xuất hiện đồng loạt trên mọi tài khoản mà đang được mở theo từng giai đoạn."
+      },
+      {
+        "heading": "Lưu ý quan trọng về cơ chế phân bổ ngân sách theo lịch",
+        "body": "Ngay bên dưới bảng cài đặt lịch tiện ích, Google Ads hiển thị lưu ý về việc phân bổ ngân sách chiến dịch theo tháng. Hệ thống sẽ hướng tới hạn mức chi tiêu tháng bằng 30,4 lần ngân sách trung bình hàng ngày, phân bổ trên các ngày chiến dịch thực sự hoạt động. Nếu một chiến dịch bị tắt vào một số ngày trong tuần, ngân sách của những ngày hoạt động sẽ tăng lên, tối đa gấp 2 lần ngân sách hàng ngày."
+      },
+      {
+        "heading": "Phân biệt lịch chiến dịch và lịch tiện ích",
+        "body": "Lịch chiến dịch quyết định việc chiến dịch có chạy và phát sinh chi phí hay không, đồng thời ảnh hưởng trực tiếp đến tốc độ chi tiêu ngân sách. Trong khi đó, lịch tiện ích chỉ quyết định điều kiện xuất hiện của tiện ích đi kèm quảng cáo. Nếu cài đặt tiện ích chạy vào cuối tuần nhưng chiến dịch lại tắt vào cuối tuần, tiện ích sẽ không thể hiển thị vì không có quảng cáo đi kèm."
+      },
+      {
+        "heading": "Cập nhật theo giai đoạn và phạm vi áp dụng",
+        "body": "Tính năng này được ghi nhận công khai từ ngày 30/10/2026 và được cộng đồng chuyên gia tìm kiếm trả phí chia sẻ. Hiện tại Google chưa cập nhật tài liệu hướng dẫn chính thức cho các nhóm ngày mới này. Các tài khoản có chi tiêu lớn thường được cập nhật sớm hơn. Do đó nhà quảng cáo cần kiểm tra trực tiếp từng tài khoản trước khi lập kế hoạch cho đợt khuyến mãi."
+      }
+    ],
+    "impact": "Giúp Trưởng phòng Marketing tối ưu thời gian thao tác cho đội ngũ khi cài đặt chiến dịch khuyến mãi lớn, đồng thời rà soát lại cơ chế phân bổ ngân sách của Google Ads để tránh tình trạng chi phí bị dồn ép vào các ngày chiến dịch hoạt động.",
+    "ifIgnored": "Đội ngũ sẽ tiếp tục mất nhiều thời gian cài đặt thủ công từng ngày cho tiện ích, dễ gặp lỗi xung đột giữa lịch tiện ích và lịch chiến dịch, cũng như có thể bị bất ngờ khi chi phí hàng ngày tăng vọt do hệ thống tự điều chỉnh ngân sách theo quy tắc 30,4 lần.",
+    "actionChecklist": [
+      "Truy cập mục Advanced options trong Asset scheduling trên Google Ads để kiểm tra tính năng mới",
+      "Đồng bộ chính xác lịch hiển thị của tiện ích với lịch chạy thực tế của từng chiến dịch",
+      "Tính toán lại ngân sách hàng ngày của các chiến dịch chỉ chạy một số ngày trong tuần",
+      "Tối ưu lại quy trình chuẩn bị sitelink cho các chương trình ưu đãi sắp tới"
+    ],
+    "id": "real-2026-11-08-google-ads-bo-sung-be70b8",
+    "publishedAt": "08/11/2026",
+    "sourceUrl": "https://ppc.land/google-ads-asset-scheduling-gains-3-day-ranges-ahead-of-black-friday/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/11/google-ads-asset-scheduling-3-day-ranges-five-entries-to-one-credenza-sliding-door-loose-knobs.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
     "category": "TikTok Shop & Ads",
     "platformIcon": "Video",
     "title": "TikTok công bố Playbook Q5 với tuyên bố CPM hạ nhiệt nhưng thắt chặt quy tắc ngân sách Smart+",
@@ -253,69 +434,6 @@
     }
   },
   {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Doanh thu tìm kiếm của Google chậm lại do AI Mode: Bài học về hiệu suất quảng cáo",
-    "isHot": false,
-    "illustration": "zero-click",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Google Ads",
-      "AI Mode",
-      "SEO",
-      "Doanh thu tìm kiếm"
-    ],
-    "summary": "Báo cáo quý 3 của Alphabet ghi nhận lượng truy vấn tìm kiếm đạt mức cao nhất trong 5 năm, nhưng tốc độ tăng trưởng doanh thu tìm kiếm lại chậm lại. Nguyên nhân chính được xác định là do các truy vấn qua AI Mode có khả năng kiếm tiền thấp hơn so với tìm kiếm truyền thống.",
-    "keyNumbers": [
-      {
-        "value": "63,35 tỷ USD",
-        "label": "Doanh thu tìm kiếm và các mục khác trong quý 3"
-      },
-      {
-        "value": "12%",
-        "label": "Tỷ lệ tăng trưởng doanh thu tìm kiếm quý 3"
-      },
-      {
-        "value": "19%",
-        "label": "Tỷ lệ tăng trưởng doanh thu tìm kiếm quý 1"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Sự chênh lệch giữa lượng truy vấn và doanh thu",
-        "body": "Alphabet báo cáo tốc độ tăng trưởng truy vấn tìm kiếm trên Google đạt mức cao nhất trong 5 năm qua. Tuy nhiên, trong cùng quý, doanh thu tìm kiếm lại tăng trưởng ở mức chậm nhất trong năm. Doanh thu từ mảng tìm kiếm và các mục khác đạt 63,35 tỷ USD, giảm từ mức 19% trong quý 1 và 17% trong quý 2 xuống còn 12%."
-      },
-      {
-        "heading": "Tác động từ AI Mode đến khả năng kiếm tiền",
-        "body": "Giám đốc kinh doanh của Google, Philipp Schindler, chỉ ra rằng sự tăng trưởng mạnh mẽ của các truy vấn AI Mode đã tác động làm giảm khả năng kiếm tiền so với tìm kiếm thông thường. Đây là yếu tố cấu trúc duy nhất trong số các nguyên nhân được liệt kê không mang tính tạm thời, khi Google đang tích cực mở rộng AI Mode."
-      },
-      {
-        "heading": "Các yếu tố tạm thời và cấu trúc",
-        "body": "Google lý giải sự chậm lại bao gồm bốn nguyên nhân chính: biến động tỷ giá ngoại tệ, nhà bán lẻ tại châu Á - Thái Bình Dương giảm chi tiêu sau thay đổi quy định nhập khẩu của EU, chi tiêu giải trí bình thường hóa sau World Cup, và sự bùng nổ của các truy vấn AI Mode ít mang lại doanh thu quảng cáo hơn."
-      },
-      {
-        "heading": "Hệ quả đối với cách đo lường truy vấn",
-        "body": "Các truy vấn trong AI Mode có độ dài trung bình gấp ba lần so với tìm kiếm truyền thống và bao gồm các cuộc hội thoại đa lượt. Khi định nghĩa về truy vấn thay đổi, các nhà quản lý cần theo dõi sát sao cách các nền tảng tính phí và phân bổ giá trị quảng cáo trong các kết quả trả lời bằng trí tuệ nhân tạo."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing cần nhận thức rằng lưu lượng truy vấn tìm kiếm tăng chưa chắc đồng nghĩa với hiệu quả phân phối ngân sách quảng cáo giữ nguyên, do tỷ suất sinh lời của quảng cáo trong các câu trả lời AI đang thấp hơn tìm kiếm truyền thống.",
-    "ifIgnored": "Nếu bỏ qua xu hướng này, nhà quản lý có thể tiếp tục phân bổ ngân sách dựa trên lượng hiển thị và click truyền thống mà không lường trước việc chi phí cho mỗi chuyển đổi có thể tăng lên khi Google đẩy mạnh AI Mode.",
-    "actionChecklist": [
-      "Đánh giá lại hiệu quả chi tiêu chiến dịch Google Search hiện tại theo từng định dạng hiển thị.",
-      "Theo dõi sát tỷ lệ chuyển đổi thực tế thay vì chỉ nhìn vào số lượng hiển thị hay lượt click.",
-      "Cập nhật các kịch bản đo lường dữ liệu để tách biệt lưu lượng từ tìm kiếm truyền thống và AI Mode.",
-      "Điều chỉnh chiến lược nội dung để tối ưu hóa khả năng hiển thị trong các câu trả lời do AI tạo ra."
-    ],
-    "id": "real-2026-11-05-doanh-thu-tim-kiem-2b52da",
-    "publishedAt": "05/11/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/google-search-queries-hit-a-5-year-high-and-search-revenue-didnt-follow/595485/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/11/duane-forrester-decodes-google-search-752.png",
-      "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
     "category": "TikTok Shop & Ads",
     "platformIcon": "Video",
     "title": "L'Oréal thử nghiệm chiến lược phim ngắn kịch tính đặt giải trí lên trên sản phẩm",
@@ -497,69 +615,6 @@
     }
   },
   {
-    "category": "AI Marketing",
-    "platformIcon": "Sparkles",
-    "title": "ChatGPT đạt 20% lượng tìm kiếm của Google và làn sóng dịch chuyển quảng cáo AI",
-    "isHot": false,
-    "illustration": "zero-click",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "ChatGPT Ads",
-      "Tìm kiếm AI",
-      "Google Search",
-      "Xu hướng SEO"
-    ],
-    "summary": "Lượng truy vấn tìm kiếm trên ChatGPT đã đạt mức khoảng 20% so với Google, thúc đẩy dịch chuyển dòng tiền quảng cáo sang các nền tảng hội thoại AI. Sự bùng nổ của câu trả lời tổng hợp AI cũng khiến lưu lượng truy cập web truyền thống suy giảm, trực tiếp tác động đến doanh thu của các mạng lưới quảng cáo hiển thị.",
-    "keyNumbers": [
-      {
-        "value": "20%",
-        "label": "Lượng tìm kiếm ChatGPT so với Google"
-      },
-      {
-        "value": "6,9%",
-        "label": "Doanh thu Taboola giảm do AI summary"
-      },
-      {
-        "value": "89",
-        "label": "Quốc gia Criteo triển khai quảng cáo ChatGPT"
-      }
-    ],
-    "content": [
-      {
-        "heading": "ChatGPT cán mốc quy mô bằng một phần năm Google Search",
-        "body": "Đại diện OpenAI xác nhận lượng câu hỏi dạng tìm kiếm trên ChatGPT hiện đạt khoảng một phần năm quy mô của Google. Số lượng người dùng ChatGPT đã tăng từ 1 tỷ lên 1,2 tỷ chỉ trong hai tháng, trung bình tăng khoảng 100 triệu người dùng mỗi tháng. Ngoài ra, tính năng hội thoại bằng giọng nói của ChatGPT đã đạt 250 triệu người dùng hằng tuần. Với quy mô lưu lượng này, ChatGPT chính thức trở thành một kênh truyền thông độc lập đủ lớn để các thương hiệu phân bổ ngân sách quảng cáo riêng biệt."
-      },
-      {
-        "heading": "Mạng quảng cáo web truyền thống chịu áp lực từ tóm tắt AI",
-        "body": "Taboola công bố doanh thu quý giảm 6,9% xuống còn 462,3 triệu USD do số lượt hiển thị quảng cáo suy giảm dưới tác động của các bản tóm tắt AI. Ban lãnh đạo Taboola nhận định hành vi tìm kiếm và tương tác nội dung trên web mở của người dùng đang thay đổi sâu sắc khi họ nhận được câu trả lời ngay trên giao diện chatbot. Việc người dùng không bấm vào bài viết chi tiết khiến nguồn cung vị trí quảng cáo bên dưới các bài báo bị thu hẹp đáng kể. Hiện Taboola và Yahoo cũng đã gửi thông báo hòa giải liên quan đến thỏa thuận dịch vụ quảng cáo giữa hai bên."
-      },
-      {
-        "heading": "Criteo biến ChatGPT thành kênh tăng trưởng nhanh nhất",
-        "body": "Criteo xác nhận ChatGPT đã trở thành đối tác và kênh tăng trưởng nhanh nhất của công ty trong thời gian qua. Nền tảng này đã mở rộng mạng lưới quảng cáo dữ liệu mua sắm trên ChatGPT từ 7 quốc gia lên 89 quốc gia. Tổng chi tiêu cho Connected TV, quảng cáo trên nền tảng AI và tích hợp mạng xã hội hiện chiếm 13% chi tiêu trong mảng Commerce Growth của Criteo, tăng từ mức 6% trước đó. Điều này cho thấy các đối tác dữ liệu bán lẻ đang chủ động tích hợp sâu vào hệ sinh thái AI."
-      },
-      {
-        "heading": "Trợ lý AI tự động gia tăng mạnh mẽ trên các website",
-        "body": "Microsoft Clarity ra mắt tính năng phân tích đại lý tự động nhằm theo dõi hành vi của các bot AI truy cập website từ khâu tìm kiếm đến thanh toán. Số lượng đại lý AI hoạt động trên hệ thống đã tăng gần gấp đôi chỉ trong ba tuần, đạt mốc gần 2 triệu đại lý. Công cụ này cũng cho phép doanh nghiệp kiểm thử khả năng hoàn tất tác vụ mua sắm và đặt dịch vụ của các bot AI. Điều này đòi hỏi các trang web phải tối ưu hóa hạ tầng để sẵn sàng phục vụ cả người dùng lẫn các agent AI."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing đối mặt với sự sụt giảm lưu lượng truy cập tự nhiên (organic traffic) từ Google và web mở do xu hướng tìm kiếm không cần nhấp chuột (zero-click). Đồng thời, ngân sách tìm kiếm cần cân nhắc chia sẻ sang các kênh AI mới như ChatGPT Ads thay vì phụ thuộc hoàn toàn vào Google Search hay Native Ads truyền thống.",
-    "ifIgnored": "Nếu tiếp tục giữ nguyên 100% ngân sách tìm kiếm trên Google và SEO truyền thống, doanh nghiệp sẽ bỏ lỡ tiếp cận 20% lượng tìm kiếm đang chuyển dịch sang ChatGPT. Chi phí thu hút khách hàng (CAC) sẽ tăng cao do hiệu suất quảng cáo hiển thị trên báo điện tử suy giảm.",
-    "actionChecklist": [
-      "Đánh giá lại tỷ lệ traffic từ Google Search và chuẩn bị kịch bản sụt giảm organic traffic do AI tóm tắt nội dung.",
-      "Khảo sát khả năng thử nghiệm các định dạng quảng cáo mua sắm và hiển thị trên ChatGPT thông qua đối tác như Criteo.",
-      "Cập nhật cấu trúc dữ liệu website để đảm bảo các đại lý AI (AI agents) có thể thu thập thông tin sản phẩm và giá chính xác.",
-      "Theo dõi lưu lượng truy vấn thương hiệu trên các công cụ tìm kiếm AI để tối ưu hóa sự xuất hiện của thương hiệu (GEO - Generative Engine Optimization)."
-    ],
-    "id": "real-2026-11-05-chatgpt-dat-20-luong-10dc5b",
-    "publishedAt": "05/11/2026",
-    "sourceUrl": "https://ppc.land/chatgpt-reaches-a-fifth-of-google-search-volume-as-taboola-blames-ai/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/11/landline-2026-11-05-chatgpt-fifth-google-search-taboola-ai-summaries-teller-hatch-newsstand-coin.jpg",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
     "category": "Google Ads & SEO",
     "platformIcon": "Search",
     "title": "Google thử nghiệm hiển thị tối đa 4 vị trí quảng cáo dưới câu trả lời trong AI Mode",
@@ -616,69 +671,6 @@
     "image": {
       "url": "https://ppc.land/content/images/2026/11/google-ai-mode-fourth-ad-slot-answer-balloon-hanging-tickets-ladder.jpg",
       "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
-    "category": "Meta Ads",
-    "platformIcon": "Search",
-    "title": "Reddit giới thiệu dữ liệu mới về cộng đồng game thủ và hiệu quả quảng cáo",
-    "isHot": false,
-    "illustration": "data-signal",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Reddit Ads",
-      "Gaming",
-      "ROAS",
-      "Social Media"
-    ],
-    "summary": "Reddit công bố dữ liệu nghiên cứu mới về hơn 1.300 cộng đồng game thủ trên nền tảng, cho thấy tiềm năng lớn nhưng chưa được khai thác triệt để của các nhà quảng cáo. Báo cáo cũng chỉ ra mức độ hiệu quả của quảng cáo khi kết hợp với các kênh truyền thông khác.",
-    "keyNumbers": [
-      {
-        "value": "1.300",
-        "label": "Cộng đồng game"
-      },
-      {
-        "value": "$8,58",
-        "label": "ROAS trung bình"
-      },
-      {
-        "value": "32%",
-        "label": "Game thủ không dùng TikTok"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Tiềm năng từ các cộng đồng game",
-        "body": "Reddit sở hữu hơn 1.300 cộng đồng liên quan đến game, nơi các cuộc trò chuyện do chính người chơi tạo ra định hình quyết định mua sắm. Nghiên cứu cho thấy các nhà quảng cáo mảng game hiện chưa tận dụng tốt cơ hội này. Nhóm đối tượng người dùng game trên nền tảng này có mức độ tương tác cao và ảnh hưởng trực tiếp đến hành vi khám phá sản phẩm."
-      },
-      {
-        "heading": "Hiệu quả chi tiêu quảng cáo",
-        "body": "Theo phân tích các chương trình khuyến mãi trên Reddit, quảng cáo mang lại lợi nhuận trên chi tiêu quảng cáo trung bình là 8,58 đô la cho các nhà quảng cáo game. Thảo luận trên nền tảng cũng tạo ra hiệu ứng lan tỏa sang các kênh khác. Cụ thể, truyền hình đóng góp 18% vào tổng hiệu quả phối hợp, tìm kiếm có trả tiền đạt 17%, video trực tuyến đạt 15% và mạng xã hội trả phí đạt 12%."
-      },
-      {
-        "heading": "Độ phủ đối tượng độc đáo",
-        "body": "Dữ liệu nghiên cứu chỉ ra rằng có tới 32% game thủ tại Mỹ trên Reddit không sử dụng TikTok, tạo ra khả năng tiếp cận đối tượng người dùng độc đáo. Gần 3/4, tương đương 71%, game thủ Mỹ trên nền tảng đã mua sản phẩm liên quan đến game dựa trên thông tin tìm thấy tại đây. Thị phần quảng cáo game của nền tảng này đã tăng 46% từ năm 2023, trong khi các kênh mạng xã hội trả phí khác giảm 8%."
-      },
-      {
-        "heading": "Chiến lược tối ưu hóa toàn phễu",
-        "body": "Phân tích gợi ý rằng các thương hiệu game đang đầu tư dưới mức thực tế vào quảng cáo trên Reddit, với mức đầu tư trung bình chỉ chiếm 5% chi phí mạng xã hội trả phí. Các thương hiệu áp dụng chiến lược toàn phễu cho các mục tiêu chiến dịch chính đạt hiệu quả ROAS tổng thể cao hơn 19% so với mức trung bình của chiến thuật đơn lẻ. Trong đó, định dạng quảng cáo video mang lại hiệu quả ROAS mạnh mẽ nhất."
-      }
-    ],
-    "impact": "Cung cấp cho Trưởng phòng Marketing dữ liệu cụ thể về hiệu quả của Reddit Ads đối với ngành game và khả năng bổ trợ đa kênh, giúp mở rộng danh mục phân bổ ngân sách ra ngoài các nền tảng quen thuộc như TikTok hay Meta.",
-    "ifIgnored": "Bỏ qua một kênh tiềm năng với lượng người dùng độc lập cao, đánh mất cơ hội tiếp cận nhóm khách hàng game thủ không dùng mạng xã hội khác và bỏ lỡ hiệu ứng lan tỏa sang các kênh truyền thông hiện tại.",
-    "actionChecklist": [
-      "Đánh giá lại tỷ trọng phân bổ ngân sách quảng cáo cho Reddit trong chiến dịch game",
-      "Thử nghiệm chiến dịch toàn phễu với định dạng video để tối ưu ROAS",
-      "Đo lường hiệu ứng lan tỏa từ Reddit sang các kênh tìm kiếm và mạng xã hội khác",
-      "Nghiên cứu đặc thù của các cộng đồng game thủ trước khi triển khai nội dung"
-    ],
-    "id": "real-2026-11-03-reddit-gioi-thieu-du-58e976",
-    "publishedAt": "03/11/2026",
-    "sourceUrl": "https://www.socialmediatoday.com/news/reddit-pitches-its-1300-gaming-related-communities-to-brands/873673/",
-    "source": "Social Media Today",
-    "image": {
-      "url": "https://imgproxy.divecdn.com/EHVCCIHz7ybiXEuI-ROk2h8OQ1e6EirWxxKHS-qq1CE/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9yZWRkaXRfZ2FtaW5nXzlLdXJQaGUucG5n.webp",
-      "credit": "Ảnh: Social Media Today"
     }
   },
   {
