@@ -1,5 +1,191 @@
 [
   {
+    "category": "AI Marketing",
+    "platformIcon": "Sparkles",
+    "title": "LinkedIn ứng dụng AI LLM nâng cấp thuật toán gợi ý nội dung ngoài mạng lưới kết nối",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "3 phút đọc",
+    "tags": [
+      "LinkedIn",
+      "Thuật toán AI",
+      "LLM",
+      "Phân phối nội dung"
+    ],
+    "summary": "LinkedIn công bố chi tiết về mô hình AI Profile Relevance giúp phân phối nội dung từ các tài khoản chưa kết nối tới bảng tin người dùng. Công nghệ này tạo bản tóm tắt hồ sơ cá nhân bằng LLM để cá nhân hóa nguồn cấp dữ liệu chuẩn xác hơn.",
+    "keyNumbers": [
+      {
+        "value": "-18,8%",
+        "label": "Giảm tỷ lệ ẩn bài viết trên Bảng tin"
+      },
+      {
+        "value": "+17,7%",
+        "label": "Tăng tương tác lan truyền cho tài khoản mới"
+      },
+      {
+        "value": "+1,8%",
+        "label": "Tăng trưởng người dùng hoạt động hàng ngày"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Cơ chế hoạt động của mô hình Profile Relevance",
+        "body": "LinkedIn áp dụng các vector nhúng từ mô hình ngôn ngữ lớn (LLM) để kết nối người dùng với các bài viết phù hợp dựa trên bối cảnh nghề nghiệp. Hệ thống tự động tóm tắt thông tin hồ sơ và lịch sử đăng bài của từng thành viên thành một dạng câu lệnh định hướng. Dựa trên bản tóm tắt này, thuật toán tạo ra bộ hướng dẫn cá nhân hóa về những chủ đề người dùng quan tâm. Đây là phương thức giúp LinkedIn tối ưu hóa các bài đăng gợi ý từ những người họ chưa bấm theo dõi."
+      },
+      {
+        "heading": "Các yếu tố đánh giá độ tương quan nội dung",
+        "body": "Mô hình mới của LinkedIn đánh giá mức độ phù hợp của từng bài đăng so với bối cảnh nghề nghiệp của thành viên dựa trên nhiều tiêu chí cụ thể. Các yếu tố này bao gồm chủ đề, vị trí địa lý, chức danh công việc, công ty, ngành nghề, cấp bậc và trình độ học vấn. Hệ thống đã qua kiểm định thủ công trước khi đưa vào vận hành tự động quy mô lớn. Nhờ đó, trải nghiệm đọc tin của người dùng giảm bớt tín hiệu rác và tập trung vào nội dung có giá trị."
+      },
+      {
+        "heading": "Hiệu quả đo lường qua các thử nghiệm trực tuyến",
+        "body": "Kết quả thử nghiệm trực tuyến cho thấy lượt xem cập nhật trên Bảng tin tăng +0,54% và tỷ lệ lan truyền tăng +0,94%. Đáng chú ý, tỷ lệ người dùng ẩn bài viết giảm -18,8%, phản ánh mức độ hài lòng cao hơn đối với các nội dung được gợi ý. Đối với người dùng, bảng tin hiển thị các nội dung chất lượng cao vượt ra ngoài mạng lưới kết nối trực tiếp nhưng vẫn bám sát bối cảnh chuyên môn. Ngay cả những thành viên ít hoạt động trước đó cũng nhận được các gợi ý chuẩn xác."
+      },
+      {
+        "heading": "Lợi ích mở rộng phạm vi tiếp cận cho nhà sáng tạo B2B",
+        "body": "Hệ thống khuyến khích nhà sáng tạo nội dung sản xuất bài viết chất lượng vì khả năng tiếp cận tập khách hàng mới ngoài mạng lưới sẵn có được nâng cao. Đối với các tài khoản mới khởi tạo hoặc có ít dữ liệu lịch sử, thuật toán giúp ghi nhận mức tăng +17,7% về tương tác lan truyền. Chỉ số người dùng hoạt động hàng ngày (DAU) toàn nền tảng cũng ghi nhận mức tăng +1,8%. Điều này chứng minh khả năng dự đoán chính xác của mô hình ngay cả khi dữ liệu tương tác ban đầu còn thưa thớt."
+      }
+    ],
+    "impact": "Tối ưu hóa khả năng phân phối tự nhiên (organic reach) cho các chiến dịch content marketing B2B trên LinkedIn mà không hoàn toàn phụ thuộc vào chi phí quảng cáo.",
+    "ifIgnored": "Nếu tiếp tục xây dựng nội dung chung chung không xoay quanh chủ đề chuyên môn chuẩn hóa, bài đăng của doanh nghiệp sẽ bị AI đánh giá thấp và mất đi lượt tiếp cận tự nhiên từ tập khách hàng mục tiêu ngoài mạng lưới.",
+    "actionChecklist": [
+      "Cập nhật chính xác và đầy đủ các thông tin bối cảnh nghề nghiệp, chức danh và ngành nghề trên trang LinkedIn doanh nghiệp cũng như nhân sự chủ chốt.",
+      "Định hướng bài viết tập trung vào các chủ đề chuyên môn sâu để thuật toán LLM phân loại chính xác đối tượng đọc.",
+      "Theo dõi chỉ số tương tác từ người dùng ngoài mạng lưới kết nối hiện tại để đánh giá hiệu quả tiếp cận tự nhiên.",
+      "Xây dựng kế hoạch đăng bài chất lượng ngay từ giai đoạn đầu tạo tài khoản để tận dụng mức ưu đãi phân phối +17,7% của thuật toán mới."
+    ],
+    "id": "real-2026-11-09-linkedin-ung-dung-ai-498238",
+    "publishedAt": "09/11/2026",
+    "sourceUrl": "https://www.socialmediatoday.com/news/linkedin-explains-its-improved-content-recommendation-system/874206/",
+    "source": "Social Media Today",
+    "image": {
+      "url": "https://imgproxy.divecdn.com/YfXlGTm6wGw8AJR70CRfDQ9qVNPD9Bt2MF4s1tOqykg/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9saW5rZWRpbl9yZWNvbW1lbmRhdGlvbl9yZWxldmFuY2UyLnBuZw==.webp",
+      "credit": "Ảnh: Social Media Today"
+    }
+  },
+  {
+    "category": "Meta Ads",
+    "platformIcon": "Sparkles",
+    "title": "Instagram ra mắt công cụ AI tạo hiệu ứng hình ảnh không cần kỹ năng lập trình",
+    "isHot": false,
+    "illustration": "ai-video",
+    "readTime": "3 phút đọc",
+    "tags": [
+      "Instagram Stories",
+      "Meta AI",
+      "Effect Builder",
+      "Sáng tạo nội dung"
+    ],
+    "summary": "Instagram vừa trình làng Effect Builder trên web, cho phép người dùng xây dựng hiệu ứng kỹ thuật số bằng lệnh câu hỏi AI mà không cần viết mã. Các hiệu ứng sau khi được Meta phê duyệt sẽ xuất hiện công khai trên kho Stories và tự động đính kèm đường dẫn về tài khoản của người sáng tạo.",
+    "keyNumbers": [
+      {
+        "value": "24 giờ",
+        "label": "Thời gian Meta kiểm duyệt hiệu ứng"
+      },
+      {
+        "value": "10/2025",
+        "label": "Thời điểm ra mắt tính năng AI Restyle"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Tạo hiệu ứng thị giác bằng câu lệnh hội thoại",
+        "body": "Instagram chính thức công bố công cụ Effect Builder chạy trên nền web thuộc nền tảng Edits. Công cụ này hoạt động dựa trên các câu lệnh hội thoại, cho phép người dùng mô tả hiệu ứng thị giác mong muốn mà không cần kiến thức lập trình hay thiết kế. Người dùng có thể xem trước hiệu ứng trực tiếp trên ảnh cá nhân và tinh chỉnh các thuộc tính trước khi xuất bản."
+      },
+      {
+        "heading": "Phân tích phong cách từ hình ảnh tham chiếu",
+        "body": "Một điểm đáng chú ý của Effect Builder là khả năng tải lên hình ảnh làm tài liệu tham chiếu phong cách. Trí tuệ nhân tạo Meta AI sẽ phân tích các yếu tố như màu sắc, ánh sáng và kết cấu của bức ảnh để định hình diện mạo cho hiệu ứng mới. Tính năng này giúp đội ngũ sản xuất nội dung duy trì tính thống nhất về nhận diện thị giác trong các chiến dịch truyền thông."
+      },
+      {
+        "heading": "Quy trình kiểm duyệt và gắn link thương hiệu",
+        "body": "Mọi hiệu ứng do người dùng tạo ra phải gửi cho Meta kiểm duyệt tính an toàn trước khi phát hành công khai. Thời gian kiểm duyệt thường hoàn tất trong vòng dưới 24 giờ và người tạo có thể theo dõi trạng thái trong mục Thư viện. Khi hiệu ứng được xuất bản lên kho Stories, hệ thống sẽ tự động gắn đường dẫn trỏ về trang cá nhân của người tạo ra nó."
+      },
+      {
+        "heading": "Mở rộng công cụ sáng tạo lên giao diện máy tính",
+        "body": "Effect Builder là bước tiếp theo trong chiến lược mở rộng ứng dụng Edits sang giao diện máy tính, tiếp nối bản phát hành cho hệ điều hành MacOS. Việc đưa công cụ lên trình duyệt web giúp đội ngũ thiết kế dễ dàng thao tác các chi tiết phức tạp hơn so với màn hình di động. Đây cũng là phiên bản phát triển chuyên sâu hơn từ tính năng AI Restyle từng xuất hiện vào tháng 10 năm 2025."
+      }
+    ],
+    "impact": "Giúp Trưởng phòng Marketing cắt giảm chi phí sản xuất AR filter thương hiệu bằng cách cho phép đội ngũ in-house tự tạo hiệu ứng bằng AI chỉ trong vài phút. Đồng thời, đường dẫn tự động trỏ về profile trên mỗi hiệu ứng xuất bản giúp tăng lượng truy cập tự nhiên (organic traffic) từ người dùng Stories.",
+    "ifIgnored": "Doanh nghiệp sẽ tiếp tục phải tốn chi phí thuê đối tác bên ngoài thiết kế các hiệu ứng AR phức tạp cho chiến dịch. Ngoài ra, thương hiệu dễ bỏ lỡ một kênh kéo traffic tự nhiên miễn phí từ tệp người dùng Instagram năng động.",
+    "actionChecklist": [
+      "Truy cập nền tảng Edits trên trình duyệt máy tính để trải nghiệm tính năng Effect Builder.",
+      "Tải lên hình ảnh nhận diện thương hiệu để Meta AI học phong cách màu sắc và kết cấu.",
+      "Tạo thử nghiệm 1 đến 2 hiệu ứng thị giác cho chiến dịch tiếp theo và gửi Meta duyệt.",
+      "Lên kế hoạch phối hợp với KOC sử dụng hiệu ứng thương hiệu nhằm tối ưu lượng chuyển hướng về profile."
+    ],
+    "id": "real-2026-11-09-instagram-ra-mat-cong-41c3a1",
+    "publishedAt": "09/11/2026",
+    "sourceUrl": "https://www.socialmediatoday.com/news/instagram-launches-visual-effects-creator-for-edits/874205/",
+    "source": "Social Media Today",
+    "image": {
+      "url": "https://imgproxy.divecdn.com/5ajo4UXSQaMWq4Y-JgYvrrFU3hu-oqFHGUQuBLXh9D4/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9pZ19lZmZlY3RfYnVpbGRlcjIucG5n.webp",
+      "credit": "Ảnh: Social Media Today"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Google Ads MCP server phát hành phiên bản 0.0.6, tự động bật bốn công cụ ghi dữ liệu",
+    "isHot": false,
+    "illustration": "account-security",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Google Ads",
+      "AI Agent",
+      "MCP Server",
+      "Bảo mật tài khoản"
+    ],
+    "summary": "Google vừa phát hành phiên bản 0.0.6 của Google Ads MCP server, bổ sung bốn công cụ ghi dữ liệu được kích hoạt mặc định. Tài liệu hướng dẫn trước đó vẫn mô tả hệ thống ở trạng thái chỉ đọc, gây rủi ro vô tình thay đổi tài khoản quảng cáo nếu đội ngũ kỹ thuật sử dụng cài đặt mặc định.",
+    "keyNumbers": [
+      {
+        "value": "0.0.6",
+        "label": "phiên bản phát hành ngày 2/11/2026"
+      },
+      {
+        "value": "7",
+        "label": "tổng số công cụ trên server"
+      },
+      {
+        "value": "20 MB",
+        "label": "giới hạn dung lượng tệp hình ảnh"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Bổ sung bốn công cụ ghi dữ liệu mới",
+        "body": "Phiên bản 0.0.6 ra mắt ngày 2/11/2026 mang lại khả năng thay đổi tài khoản Google Ads lần đầu tiên trong lịch sử dự án. Bốn công cụ mới bao gồm tạo tài nguyên quảng cáo, tải video lên YouTube, quản lý nhãn tài khoản và quản lý liên kết nhãn. Các chiến dịch, ngân sách, giá thầu và từ khóa hiện vẫn nằm ngoài phạm vi tác động của các công cụ này."
+      },
+      {
+        "heading": "Cơ chế kích hoạt mặc định gây hiểu lầm",
+        "body": "Tệp cấu hình đi kèm tự động bật hai không gian tên nhãn và tài nguyên mà không cần thiết lập thủ công. Trong khi đó, tài liệu hướng dẫn của Google cập nhật lần cuối vào ngày 30/10 vẫn khẳng định hệ thống chỉ có tính năng đọc. Các đội ngũ nội bộ cài đặt theo hướng dẫn cũ sẽ vô tình cấp quyền ghi dữ liệu nếu không chủ động tắt trong tệp cấu hình."
+      },
+      {
+        "heading": "Cơ chế kiểm tra xác thực qua hai bước",
+        "body": "Mỗi thao tác ghi dữ liệu đều yêu cầu chạy qua hai bước gồm kiểm tra thử và xác nhận bằng mã checksum tính toán theo chuẩn SHA-256. Bước đầu tiên trả về danh sách thay đổi và mã xác thực mà không thực thi lệnh trên tài khoản. Bước thứ hai yêu cầu gọi lại đúng tham số cùng mã checksum để thực hiện thay đổi chính thức."
+      },
+      {
+        "heading": "Giới hạn kỹ thuật đối với hình ảnh và video",
+        "body": "Công cụ hình ảnh chấp nhận định dạng PNG, JPEG và GIF với giới hạn dung lượng là 20 MB truyền qua tệp cục bộ hoặc dữ liệu mã hóa base64. Công cụ tải video hỗ trợ mười một định dạng tệp khác nhau nhưng chỉ hoạt động ở chế độ cục bộ. Tác vụ tải video chạy dưới dạng nền do kích thước tệp lớn và mặc định đặt quyền riêng tư ở mức không công khai."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing cần rà soát ngay lập tức các cấu hình MCP server đang kết nối với tài khoản Google Ads để tránh việc AI assistant tự động thực hiện các thay đổi tài nguyên hoặc nhãn mà không qua kiểm soát chặt chẽ.",
+    "ifIgnored": "Nếu bỏ qua, đội ngũ có thể vô tình vận hành phiên bản cho phép ghi dữ liệu dựa trên tài liệu cũ, dẫn đến rủi ro phát sinh thay đổi không mong muốn trên tài khoản quảng cáo.",
+    "actionChecklist": [
+      "Kiểm tra tệp cấu hình tools_config.yaml trên hệ thống",
+      "Chuyển nhãn labels và tài nguyên assets về trạng thái false nếu muốn duy trì chế độ chỉ đọc",
+      "Cập nhật lại quy trình phê duyệt các công cụ AI kết nối với API quảng cáo",
+      "Xác minh lại mã checksum và tham số trước khi thực hiện bất kỳ lệnh ghi nào"
+    ],
+    "deadline": "Ngày 02/11/2026",
+    "id": "real-2026-11-09-google-ads-mcp-server-7d4536",
+    "publishedAt": "09/11/2026",
+    "sourceUrl": "https://ppc.land/google-ads-mcp-server-gains-4-write-tools-still-cant-change-budgets/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/11/google-ads-mcp-server-4-write-tools-read-only-vitrine-grabber-arm-locked-cash-register.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
     "category": "Meta Ads",
     "platformIcon": "Facebook",
     "title": "Công cụ AI của Meta tự ý lấy mã giảm giá trên website đưa vào quảng cáo dù đã tắt ưu đãi",
@@ -434,128 +620,6 @@
     }
   },
   {
-    "category": "TikTok Shop & Ads",
-    "platformIcon": "Video",
-    "title": "L'Oréal thử nghiệm chiến lược phim ngắn kịch tính đặt giải trí lên trên sản phẩm",
-    "isHot": "false",
-    "illustration": "ai-video",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Phim ngắn",
-      "Video dọc",
-      "Tiếp thị giải trí",
-      "Chiến lược nội dung"
-    ],
-    "summary": "Thương hiệu Urban Decay thuộc tập đoàn L'Oréal vừa ra mắt một series phim ngắn sáu tập trên nền tảng ReelShort mang tên Ghost Hunter Hotline. Nội dung thiên về giải trí và văn hóa hẹn hò hiện đại này đã đạt được hàng triệu lượt xem chỉ sau vài ngày ra mắt, đánh dấu sự dịch chuyển từ quảng cáo truyền thống sang nội dung hướng đến khán giả trước tiên.",
-    "keyNumbers": [
-      {
-        "value": "3,8 triệu",
-        "label": "Lượt xem trong 5 ngày"
-      },
-      {
-        "value": "6",
-        "label": "Số tập phim ngắn"
-      },
-      {
-        "value": "4",
-        "label": "Tuần để hoàn thiện"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Xu hướng phim ngắn giải trí lên ngôi",
-        "body": "L'Oréal tiếp tục mở rộng thử nghiệm với thể loại video ngắn có cốt truyện kịch tính sau chiến dịch kỳ nghỉ trước đó của Maybelline. Thương hiệu Urban Decay đã ra mắt series sáu tập mang tên Ghost Hunter Hotline trên nền tảng chuyên biệt ReelShort vào cuối tháng mười. Mỗi tập phim kéo dài vài phút, khai thác chủ đề hẹn hò hiện đại kết hợp yếu tố mùa lễ hội và khéo léo lồng ghép sản phẩm xịt khóa nền của hãng."
-      },
-      {
-        "heading": "Hiệu quả ấn tượng về lượt xem",
-        "body": "Theo dữ liệu từ thương hiệu, series này đã thu hút 3,8 triệu lượt xem chỉ trong năm ngày đầu tiên sau khi phát hành. Nội dung hiện đứng ở vị trí thứ hai trên bảng xếp hạng các chương trình ngắn được xem nhiều nhất của ReelShort. Thành công này cho thấy khả năng thu hút người dùng lướt mạng xã hội bằng các nội dung mang tính giải trí cao thay vì thông điệp quảng cáo lộ liễu."
-      },
-      {
-        "heading": "Đặt khán giả và giải trí lên hàng đầu",
-        "body": "Han Wen, Giám đốc kỹ thuật số và marketing của L'Oréal USA, chia sẻ rằng tư duy làm quảng cáo kiểu cũ tập trung hoàn toàn vào sản phẩm cần được thay đổi trong kỷ nguyên người sáng tạo. Mục tiêu cốt lõi của marketing hiện đại là đặt khán giả lên trên hết và coi giải trí là mục đích chính. Thương hiệu cần chấp nhận thử nghiệm các định dạng mới mặc dù không phải canh bạc nào cũng thành công."
-      },
-      {
-        "heading": "Tốc độ sản xuất và hợp tác nền tảng",
-        "body": "Thay vì làm việc qua các agency trung gian như trước, L'Oréal đã tự sản xuất và phát hành nội dung trực tiếp hợp tác với ReelShort để tận dụng am hiểu sâu sắc về khán giả của nền tảng này. Quá trình sản xuất series này chỉ mất khoảng bốn tuần, minh chứng cho yếu tố tốc độ quan trọng trong bối cảnh các xu hướng thay đổi liên tục. ReelShort cũng đang trên đà tạo ra doanh thu hơn 1 tỷ USD trong năm nay theo các phân tích thị trường."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing thấy rõ xu hướng dịch chuyển ngân sách và nguồn lực sang định dạng video giải trí dạng dọc (microdrama) thay vì TVC hay quảng cáo sản phẩm truyền thống. Việc hợp tác trực tiếp với nền tảng phát hành giúp rút ngắn thời gian triển khai chiến dịch xuống còn bốn tuần, tối ưu hóa tốc độ bám bắt xu hướng.",
-    "ifIgnored": "Bỏ qua xu hướng nội dung giải trí ngắn, thương hiệu sẽ tiếp tục áp dụng mô hình quảng cáo sản phẩm truyền thống vốn kém hiệu quả với nhóm khách hàng trẻ tuổi thích lướt xem video cốt truyện. Doanh nghiệp cũng sẽ bỏ lỡ cơ hội tiếp cận lượng lớn khán giả đang chuyển dịch mạnh mẽ sang các nền tảng video di động chuyên biệt.",
-    "actionChecklist": [
-      "Đánh giá lại tỷ trọng phân bổ ngân sách cho các định dạng video ngắn có cốt truyện giải trí thay vì chỉ làm video quảng cáo sản phẩm đơn thuần",
-      "Khảo sát các nền tảng phát hành video ngắn và mạng xã hội tại thị trường nội địa để tìm kiếm cơ hội hợp tác sản xuất nội dung ngách",
-      "Rút ngắn quy trình phê duyệt và sản xuất nội dung sáng tạo xuống dưới bốn tuần để kịp thời đón đầu các trào lưu mới của giới trẻ",
-      "Thử nghiệm lồng ghép sản phẩm một cách khéo léo vào bên trong một kịch bản câu chuyện có yếu tố kịch tính hoặc hài hước"
-    ],
-    "id": "real-2026-11-05-l-oreal-thu-nghiem-efc6e0",
-    "publishedAt": "05/11/2026",
-    "sourceUrl": "https://www.marketingdive.com/news/loreals-evolving-microdrama-strategy-puts-entertainment-over-product/873646/",
-    "source": "Marketing Dive",
-    "image": {
-      "url": "https://imgproxy.divecdn.com/EF8I4ZcIxLixMqzOwszDjXRCSnA-AqiRXqwQN8pwZHw/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9naG9zdC1odW50ZXItaG90bGluZS1pZy5qcGc=.webp",
-      "credit": "Ảnh: Marketing Dive"
-    }
-  },
-  {
-    "category": "TikTok Shop & Ads",
-    "platformIcon": "Video",
-    "title": "TikTok ra mắt ứng dụng mua sắm độc lập tại thị trường Đông Nam Á",
-    "isHot": false,
-    "illustration": "shop-health",
-    "readTime": "3 phút đọc",
-    "tags": [
-      "TikTok Shop",
-      "Thương mại điện tử",
-      "Đông Nam Á",
-      "Ứng dụng mua sắm"
-    ],
-    "summary": "TikTok đang thử nghiệm một ứng dụng mua sắm TikTok Shop riêng biệt tại một số thị trường Đông Nam Á nhằm tăng cường hành vi khám phá và mua hàng của người dùng. Ứng dụng này tập trung hiển thị danh mục sản phẩm, kết hợp với các video ngắn và livestream hướng tới việc giữ chân người mua trong hệ sinh thái của hãng.",
-    "keyNumbers": [
-      {
-        "value": "500 tỷ USD",
-        "label": "GMV của Douyin năm 2025"
-      },
-      {
-        "value": "26,2 tỷ USD",
-        "label": "GMV toàn cầu TikTok nửa đầu năm 2025"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Thử nghiệm ứng dụng TikTok Shop riêng biệt tại Đông Nam Á",
-        "body": "TikTok vừa phát hành ứng dụng mua sắm TikTok Shop độc lập tại một số thị trường châu Á bao gồm Singapore, Thailand, Malaysia và Philippines. Nền tảng mới này tập trung chủ yếu vào việc hiển thị danh mục sản phẩm và kích thích hành vi mua sắm trực tiếp của người dùng. Bên cạnh các gợi ý sản phẩm cá nhân hóa, ứng dụng vẫn tích hợp các buổi livestream và video ngắn chọn lọc để cung cấp thông tin cho sản phẩm. Đây là nỗ lực mới nhất nhằm biến nền tảng này thành điểm đến thường xuyên cho việc khám phá hàng hóa."
-      },
-      {
-        "heading": "Kỳ vọng tái hiện thành công từ mô hình Douyin tại Trung Quốc",
-        "body": "Việc tách biệt ứng dụng nhằm mục đích tái hiện mô hình doanh thu thành công của ứng dụng chị em Douyin tại thị trường Trung Quốc. Trong năm 2025, Douyin đã tạo ra gần 500 tỷ USD tổng doanh số hàng hóa (GMV), trong đó hoạt động bán hàng qua livestream đóng góp tỷ trọng rất lớn. TikTok đã và đang nỗ lực thúc đẩy hoạt động mua sắm trên ứng dụng quốc tế để khai thác tiềm năng doanh thu khổng lồ từ việc kết hợp giải trí với thương mại. Việc ra mắt ứng dụng riêng giúp thương hiệu định hình rõ ràng hơn chức năng mua sắm trong mắt người tiêu dùng."
-      },
-      {
-        "heading": "Thách thức từ thói quen tách biệt giải trí và mua sắm",
-        "body": "Mặc dù đạt được những tiến triển nhất định, quy mô thương mại điện tử của TikTok trên toàn cầu vẫn chưa đạt đến mức độ của thị trường Trung Quốc. Trong nửa đầu năm 2025, TikTok ghi nhận tổng doanh số GMV toàn cầu đạt 26,2 tỷ USD. Một rào cản lớn là người dùng quốc tế thường có thói quen tách biệt giữa việc xem video giải trí và truy cập các ứng dụng mua sắm chuyên biệt. Hầu hết các mạng xã hội từng thử nghiệm hợp nhất hai tính năng này đều gặp khó khăn trong việc tạo ra khối lượng giao dịch đột phá."
-      },
-      {
-        "heading": "Hướng đi mới cho chiến lược giữ chân người mua hàng",
-        "body": "Ứng dụng mua sắm độc lập được kỳ vọng sẽ giải quyết xung đột thói quen này bằng cách cung cấp không gian mua sắm chuyên biệt nhưng vẫn nằm trong hệ sinh thái của TikTok. Chiến lược này giúp người dùng tập trung vào việc tìm kiếm ưu đãi và sản phẩm mà không bị xao nhãng bởi luồng nội dung giải trí thông thường. Đồng thời, việc xuất hiện ứng dụng riêng giúp củng cố nhận thương hiệu TikTok như một nền tảng bán lẻ chuyên nghiệp. Mô hình này hứa hẹn mở ra kênh tiếp cận khách hàng mới cho các nhà bán hàng trong khu vực."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing tại Việt Nam cần chuẩn bị cho sự chuyển dịch kênh bán khi TikTok thử nghiệm ứng dụng mua sắm riêng tại các nước láng giềng Đông Nam Á. Nếu mô hình này mở rộng sang Việt Nam, chiến lược phân bổ ngân sách sẽ cần tách biệt giữa chiến dịch xây dựng thương hiệu trên ứng dụng chính và chiến dịch chuyển đổi trực tiếp trên ứng dụng mua sắm mới.",
-    "ifIgnored": "Doanh nghiệp có nguy cơ chậm chân trong việc xây dựng gian hàng và tối ưu hóa nguồn lực trên ứng dụng mua sắm mới khi nền tảng triển khai diện rộng. Điều này sẽ khiến thương hiệu mất lợi thế hiển thị ban đầu vào tay các đối thủ cạnh tranh nhanh nhạy hơn.",
-    "actionChecklist": [
-      "Theo dõi lộ trình ra mắt ứng dụng TikTok Shop độc lập tại thị trường Việt Nam.",
-      "Đánh giá lại hiệu quả vận hành của gian hàng TikTok Shop hiện tại trên ứng dụng chính.",
-      "Rà soát và chuẩn bị sẵn danh mục sản phẩm, hình ảnh và video ngắn tối ưu cho giao diện mua sắm chuyên biệt.",
-      "Lên kế hoạch phân bổ lại ngân sách quảng cáo chuyển đổi giữa hình thức livestream và gian hàng thương mại."
-    ],
-    "id": "real-2026-11-05-tiktok-ra-mat-ung-019e7e",
-    "publishedAt": "05/11/2026",
-    "sourceUrl": "https://www.socialmediatoday.com/news/tiktok-launches-standalone-shopping-app/873952/",
-    "source": "Social Media Today",
-    "image": {
-      "url": "https://imgproxy.divecdn.com/GCIKeDjRHCyyy4g8i7KEoDzUo3_WUm55uyrhHaQVXQA/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS90aWt0b2tfc2hvcHBpbmdfYXBwLnBuZw==.webp",
-      "credit": "Ảnh: Social Media Today"
-    }
-  },
-  {
     "category": "Google Ads & SEO",
     "platformIcon": "Search",
     "title": "Chuyển đổi từ thứ hạng SEO sang đo lường sự hiện diện trên AI với mô hình 3 cổng",
@@ -612,65 +676,6 @@
     "image": {
       "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/10/webpros-partner-stories-featured-1600x832-443.png",
       "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Google thử nghiệm hiển thị tối đa 4 vị trí quảng cáo dưới câu trả lời trong AI Mode",
-    "isHot": false,
-    "illustration": "cpm-auction",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Google Ads",
-      "AI Mode",
-      "Tìm kiếm AI",
-      "Mật độ quảng cáo"
-    ],
-    "summary": "Google vừa được ghi nhận hiển thị tới 4 quảng cáo văn bản bên dưới một câu trả lời duy nhất trong giao diện Google AI Mode. Thay đổi này nâng mật độ quảng cáo từ mức 1 đến 3 vị trí trước đây lên bằng mức trần 4 vị trí của trang tìm kiếm truyền thống từ năm 2016. Động thái diễn ra khi Google mở rộng quảng cáo AI Mode sang 10 thị trường mới bao gồm một số quốc gia khu vực Đông Nam Á.",
-    "keyNumbers": [
-      {
-        "value": "4",
-        "label": "quảng cáo tối đa xuất hiện dưới một câu trả lời trong AI Mode"
-      },
-      {
-        "value": "10",
-        "label": "thị trường mới được mở rộng quảng cáo AI Mode từ ngày 28/10"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Ghi nhận mật độ quảng cáo mới trong giao diện Google AI Mode",
-        "body": "Báo cáo ngày 4/11/2026 từ Search Engine Roundtable cho biết Google có thể hiển thị tới 4 quảng cáo Google Ads bên dưới phản hồi AI Mode cho một truy vấn. Trước đó, số lượng quảng cáo thường chỉ dừng ở mức 1 hoặc 2 vị trí, đôi khi là 3. Việc gia tăng này khiến khoảng không gian trả tiền bên dưới câu trả lời AI chiếm diện tích lớn hơn. Google hiện chưa xác nhận đây là thử nghiệm ngắn hạn hay thay đổi cố định."
-      },
-      {
-        "heading": "Cấu trúc hiển thị và các đoạn mô tả do AI tự tạo",
-        "body": "Khối 4 quảng cáo xếp chồng nằm ngay dưới nhãn Sponsored và nằm ngay trên ô nhập câu hỏi tiếp theo. Phía trên các thẻ quảng cáo xuất hiện một câu dẫn do AI của Google tự viết mà nhà quảng cáo không thể chỉnh sửa hay từ chối. Trong khi đó, các liên kết nội dung tự nhiên bị đẩy sang bảng phụ bên phải màn hình. Cả 4 thương hiệu xuất hiện trong ví dụ đều chi tiền để quảng bá các dịch vụ hiển thị trên công cụ tìm kiếm AI."
-      },
-      {
-        "heading": "Áp dụng lại mức trần 4 vị trí quảng cáo áp dụng từ năm 2016",
-        "body": "Vào tháng 2/2016, Google xác nhận áp dụng tối đa 4 quảng cáo phía trên kết quả tìm kiếm tự nhiên cho các truy vấn mang tính thương mại cao. Đến tháng 10/2025, nền tảng này cam kết người dùng sẽ không thấy quá 4 quảng cáo trong một nhóm kết quả trả tiền. Việc xuất hiện 4 quảng cáo trong AI Mode đưa diện tích hiển thị AI về đúng giới hạn tối đa mà Google đã duy trì trong suốt một thập kỷ."
-      },
-      {
-        "heading": "Tăng tốc thương mại hóa và mở rộng thị trường toàn cầu",
-        "body": "Tại cuộc họp báo cáo kết quả kinh doanh quý 3, đại diện Google xác nhận đang mở rộng quảng cáo AI Mode đến nhiều người dùng và nhiều truy vấn hơn để cải thiện doanh thu. Ngày 28/10, quảng cáo AI Mode đã được triển khai tới 10 thị trường mới như Singapore, Malaysia, Philippines, Ấn Độ, Úc, Canada. Google cũng ra mắt quảng cáo đa lượt hỏi đáp tại Mỹ và có kế hoạch mở rộng sang Anh, Mexico, Brazil trong quý 4."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing cần chuẩn bị cho sự thay đổi về cấu trúc chi phí và tỷ lệ hiển thị trên Google Ads khi không gian tìm kiếm AI bị thương mại hóa mạnh hơn. Việc xuất hiện tới 4 vị trí quảng cáo kèm các câu giải thích tự động từ AI đòi hỏi doanh nghiệp phải điều chỉnh lại thông điệp quảng cáo và chiến lược đấu thầu từ khóa.",
-    "ifIgnored": "Doanh nghiệp nguy cơ mất lưu lượng truy cập tìm kiếm tự nhiên khi các kết quả không trả tiền tiếp tục bị đẩy xuống thấp hơn dưới khối 4 quảng cáo, đồng thời bỏ lỡ các vị trí xuất hiện ưu tiên trong trải nghiệm tìm kiếm AI mới.",
-    "actionChecklist": [
-      "Rà soát hiệu quả các chiến dịch Google Ads hiện tại để đánh giá tác động khi xuất hiện trong giao diện AI",
-      "Theo dõi biến động của chi phí CPC và tỷ lệ CTR trên các từ khóa tìm kiếm mang tính thương mại",
-      "Tối ưu lại thông điệp quảng cáo để đảm bảo tính ngắn gọn và hiển thị tốt cùng các đoạn dẫn tự động của AI",
-      "Phối hợp chiến lược Google Ads với các hoạt động tối ưu hóa sự hiện diện thương hiệu trên câu trả lời AI"
-    ],
-    "id": "real-2026-11-05-google-thu-nghiem-hien-1607a3",
-    "publishedAt": "05/11/2026",
-    "sourceUrl": "https://ppc.land/google-ai-mode-gains-a-fourth-ad-slot-below-some-answers/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/11/google-ai-mode-fourth-ad-slot-answer-balloon-hanging-tickets-ladder.jpg",
-      "credit": "Ảnh: PPC Land"
     }
   },
   {
