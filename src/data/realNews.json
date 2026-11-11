@@ -2,6 +2,196 @@
   {
     "category": "AI Marketing",
     "platformIcon": "Sparkles",
+    "title": "Supermetrics ra mắt công cụ điều hành chiến dịch quảng cáo đa kênh qua AI chat",
+    "isHot": false,
+    "illustration": "ai-budget",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "AI Marketing",
+      "Tự động hóa quảng cáo",
+      "ChatGPT Ads",
+      "Supermetrics"
+    ],
+    "summary": "Supermetrics chính thức phát hành công cụ Campaign Manager, cho phép các nhà quảng cáo tạo và điều chỉnh chiến dịch trên 7 nền tảng trực tiếp từ giao diện hội thoại AI. Danh sách hỗ trợ hiện bao gồm Google, Meta, LinkedIn, Microsoft Advertising, TikTok, Snapchat và mới nhất là ChatGPT Ads.",
+    "keyNumbers": [
+      {
+        "value": "7 nền tảng",
+        "label": "kênh quảng cáo được điều khiển từ một cửa sổ chat"
+      },
+      {
+        "value": "86%",
+        "label": "mức giảm thời gian dựng chiến dịch trong thử nghiệm thực tế"
+      },
+      {
+        "value": "1.000.000.000 USD",
+        "label": "doanh thu quy năm của ChatGPT Ads tính đến ngày 31/8"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Điều khiển quảng cáo 7 nền tảng trong một khung chat AI",
+        "body": "Supermetrics ra mắt công cụ Campaign Manager giúp kết nối trực tiếp các mô hình AI như Claude và ChatGPT với tài khoản quảng cáo của doanh nghiệp. Nền tảng này hỗ trợ thao tác trên 7 kênh gồm Google, Meta, LinkedIn, Microsoft Advertising, TikTok, Snapchat và kênh mới bổ sung là ChatGPT Ads. Người dùng có thể yêu cầu AI thay đổi ngân sách, bật tắt chiến dịch hoặc hoán đổi mẫu quảng cáo trên nhiều tài khoản cùng lúc chỉ qua một câu lệnh. Giải pháp này nhằm xóa bỏ rào cản phân mảnh dữ liệu khi đội ngũ phải chuyển đổi qua lại giữa nhiều trình quản lý quảng cáo riêng biệt."
+      },
+      {
+        "heading": "Cơ chế phân quyền và kiểm soát an toàn ngân sách",
+        "body": "Để ngăn chặn rủi ro AI tự ý tiêu tiền, Supermetrics thiết lập nhiều lớp kiểm soát kỹ thuật trước khi áp dụng thay đổi vào tài khoản thực tế. Mặc định quyền ghi dữ liệu phải được bật thủ công cho từng tài khoản quảng cáo riêng biệt. Nhà quảng cáo có thể đặt trần giới hạn thay đổi ngân sách và thiết lập quy trình duyệt lệnh đối với các hành động quan trọng. Hệ thống cũng cung cấp tính năng Business Context để lưu trữ sẵn mục tiêu, hạn mức chi tiêu và quy chuẩn đặt tên, đồng thời ghi lại toàn bộ nhật ký thay đổi để phục vụ kiểm toán nội bộ."
+      },
+      {
+        "heading": "Sự trỗi dậy của mạng lưới quảng cáo ChatGPT Ads",
+        "body": "Việc bổ sung ChatGPT Ads vào danh sách quản lý diễn ra trong bối cảnh mảng kinh doanh quảng cáo của OpenAI tăng trưởng rất nhanh. Sau giai đoạn thử nghiệm tự phục vụ vào tháng 4 với mức giá cố định 60 USD CPM cho mục tiêu tiếp cận, kênh này đã đạt quy mô doanh thu 1.000.000.000 USD tính theo tỷ lệ năm vào ngày 31/8. Tính đến tháng 10, mạng lưới quảng cáo này đã mở rộng ra 89 quốc gia với hơn 100.000 nhà quảng cáo từng triển khai chiến dịch. Hiện tại các nhãn hàng có thể tiếp cận kênh này qua Ads Manager tự phục vụ hoặc hệ thống đối tác công nghệ tích hợp."
+      },
+      {
+        "heading": "Hiệu quả thực tế từ mô hình thử nghiệm ban đầu",
+        "body": "Đơn vị thử nghiệm Premier Cru Solutions, một đại lý tiếp thị gồm 6 nhân sự, ghi nhận mức tiết kiệm khoảng 30% tổng thời gian làm việc khi kết hợp công cụ này với Claude. Trong một dự án tái cấu trúc chiến dịch Google Search, thời gian triển khai thực tế giảm từ mức ước tính 14 giờ xuống chỉ còn 2 giờ trước khi tinh chỉnh. Tốc độ dựng chiến dịch nhờ đó giảm khoảng 86% so với thao tác thủ công thông thường. Tuy nhiên, đơn vị này nhấn mạnh việc ứng dụng AI nhằm tối ưu hóa quy trình làm việc chứ không nhằm mục đích cắt giảm nhân sự vận hành."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing có thể rút ngắn đáng kể chu kỳ thực thi từ khâu phân tích dữ liệu đến tối ưu ngân sách trên toàn bộ các kênh quảng cáo lớn mà không cần thao tác thủ công từng nền tảng. Đồng thời, doanh nghiệp có thêm phương thức tự động hóa để sớm tiếp cận và khai thác vị trí hiển thị mới trên ChatGPT Ads.",
+    "ifIgnored": "Đội ngũ quảng cáo sẽ tiếp tục lãng phí hàng chục giờ mỗi tuần cho các tác vụ điều chỉnh thủ công lặp lại giữa các nền tảng phân mảnh, làm chậm tốc độ phản ứng với biến động thị trường và bỏ lỡ lợi thế khai thác các kênh quảng cáo đàm thoại AI mới.",
+    "actionChecklist": [
+      "Rà soát thời gian vận hành thủ công của đội ngũ media buyer khi chuyển đổi giữa các nền tảng Meta, Google và TikTok",
+      "Thiết lập văn bản quy định hạn mức ngân sách tối đa được phép điều chỉnh tự động qua API của bên thứ ba",
+      "Khảo sát tính khả thi và chi phí triển khai hiển thị thử nghiệm trên kênh ChatGPT Ads cho các thị trường mục tiêu",
+      "Chuẩn hóa bộ quy tắc đặt tên chiến dịch và dữ liệu ngữ cảnh kinh doanh của doanh nghiệp trước khi kết nối vào các trợ lý AI"
+    ],
+    "id": "real-2026-11-11-supermetrics-ra-mat-cong-8dd25e",
+    "publishedAt": "11/11/2026",
+    "sourceUrl": "https://ppc.land/supermetrics-ai-campaign-tool-gains-chatgpt-ads-its-7th-ad-platform/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/size/w1200/2026/11/supermetrics-campaign-manager-chatgpt-ads-7th-platform-pipe-organ-seventh-pipe-punched-roll.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "AI Marketing",
+    "platformIcon": "Sparkles",
+    "title": "74% marketer mất dấu chuyển đổi khi dùng trợ lý AI để chốt đơn",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "AI Agent",
+      "Đo lường chuyển đổi",
+      "Smart Bidding",
+      "Dữ liệu quảng cáo"
+    ],
+    "summary": "Khảo sát từ Invoca trên 451 lãnh đạo marketing cho thấy gần ba phần tư doanh nghiệp ứng dụng trợ lý AI không thể theo dõi luồng khách hàng từ lượt nhấp quảng cáo đến đơn hàng thực tế. Đáng chú ý, chỉ 19% doanh nghiệp gửi dữ liệu hội thoại ngược về nền tảng quảng cáo để tối ưu máy học.",
+    "keyNumbers": [
+      {
+        "value": "74%",
+        "label": "Marketer không thể theo dõi lead qua AI đến khi chốt đơn"
+      },
+      {
+        "value": "19%",
+        "label": "Doanh nghiệp trả kết quả hội thoại về nền tảng quảng cáo"
+      },
+      {
+        "value": "26%",
+        "label": "Doanh nghiệp gắn được hội thoại AI với chiến dịch cụ thể"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Đứt gãy luồng dữ liệu từ nhấp chuột đến doanh thu",
+        "body": "Báo cáo Broken Funnel do Invoca công bố chỉ ra rằng trong số 323 doanh nghiệp đang vận hành hoặc thử nghiệm trợ lý AI, có đến 74% không thể theo dõi hành trình khách hàng từ cú nhấp đầu tiên đến khâu chốt đơn. Bên cạnh đó, chỉ 27% cho biết trợ lý AI nắm được hành trình số trước đó như mẫu quảng cáo đã nhấp hay các trang đã xem. Tình trạng này khiến bộ phận marketing không thể chứng minh hiệu quả tài chính thực tế mà công nghệ AI mang lại."
+      },
+      {
+        "heading": "Đo lường trợ lý bán hàng bằng chỉ số hỗ trợ kỹ thuật",
+        "body": "Nhiều doanh nghiệp đang đối xử với AI bán hàng như một tổng đài chăm sóc khách hàng thay vì một kênh tạo doanh thu. Khảo sát ghi nhận 20% đo lường AI chủ yếu qua mức độ hài lòng của khách hàng, 16% theo dõi số lượng hội thoại và 10% đo tỷ lệ giải quyết độc lập không cần con người. Chỉ có 7% marketer đo lường trợ lý AI dựa trên doanh thu trực tiếp và 27% tính toán theo doanh thu, lịch hẹn hoặc tỷ lệ chuyển đổi."
+      },
+      {
+        "heading": "Tổn hại tín hiệu tối ưu của các thuật toán quảng cáo",
+        "body": "Khoảng cách đo lường lớn nhất nằm ở việc chỉ 19% doanh nghiệp gửi ngược kết quả tương tác của AI về các hệ thống như Google Ads hay Meta. Các thuật toán đặt thầu thông minh như Smart Bidding phụ thuộc hoàn toàn vào dữ liệu chuyển đổi thực tế để tìm kiếm khách hàng giá trị cao. Khi thiếu tín hiệu doanh thu, hệ thống máy học sẽ tiếp tục tối ưu vào các hành vi bề nổi như bắt đầu chat hoặc điền biểu mẫu, dẫn đến việc thu hút tệp khách kém chất lượng."
+      },
+      {
+        "heading": "Rò rỉ dữ liệu nghiêm trọng ở các điểm chuyển giao",
+        "body": "Sự đứt gãy đo lường càng trầm trọng hơn khi khách hàng được chuyển tiếp từ AI sang các kênh khác ngoài đời thực. Báo cáo ghi nhận 56% marketer bị mất dấu chuyển đổi khi khách hàng được bàn giao cho đại lý hoặc chi nhánh địa phương. Chuyển giao qua tin nhắn làm mất dấu 46% và cuộc gọi thoại làm mất 40%, khiến chỉ 21% doanh nghiệp có thể theo dõi và tác động xuyên suốt toàn bộ phễu bán hàng."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing đối mặt nguy cơ đốt ngân sách quảng cáo vì hệ thống máy học trên Meta và Google đang tối ưu cho các tương tác hội thoại ảo thay vì đơn hàng thực tế, đồng thời khó bảo vệ ngân sách công nghệ trước ban giám đốc khi không chứng minh được doanh thu từ AI.",
+    "ifIgnored": "Chi phí thu hút khách hàng (CAC) sẽ tăng dần theo thời gian do thuật toán tiếp tục phân phối tới tệp người dùng chỉ thích nhắn tin nhưng không mua, biến khoản đầu tư vào trợ lý AI thành gánh nặng chi phí thay vì đòn bẩy doanh số.",
+    "actionChecklist": [
+      "Rà soát quy trình tích hợp để đẩy sự kiện chuyển đổi từ trợ lý AI về Meta Conversions API và Google Offline Conversions.",
+      "Gắn mã theo dõi UTM và click ID vào phiên trò chuyện để AI lưu trữ được nguồn chiến dịch quảng cáo gốc.",
+      "Thay đổi KPI chính của trợ lý AI từ số lượng tin nhắn hoặc tỷ lệ giải quyết sang số lịch hẹn hoặc doanh thu phát sinh.",
+      "Thiết lập định danh khách hàng duy nhất để kết nối dữ liệu giữa bot chat với phần mềm CRM tại các điểm bán."
+    ],
+    "id": "real-2026-11-11-74-marketer-mat-dau-0fbd31",
+    "publishedAt": "11/11/2026",
+    "sourceUrl": "https://ppc.land/74-of-marketers-cant-track-if-ai-agent-leads-become-sales-invoca-finds/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/11/invoca-broken-funnel-74-percent-ai-agent-leads-19-report-back-homing-pigeon-loft-tape-recorder.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Google kích hoạt bản cập nhật cốt lõi tháng 11/2026 trên toàn cầu",
+    "isHot": true,
+    "illustration": "data-signal",
+    "readTime": "3 phút đọc",
+    "tags": [
+      "Google Core Update",
+      "SEO",
+      "Thuật toán tìm kiếm",
+      "Google Search"
+    ],
+    "summary": "Google vừa chính thức triển khai bản cập nhật cốt lõi tháng 11/2026 trên phạm vi toàn cầu cho tất cả các ngôn ngữ từ ngày 10/11/2026. Quá trình này dự kiến kéo dài tối đa 2 tuần và có thể gây biến động mạnh về thứ hạng website. Doanh nghiệp được khuyến cáo không nên vội vã can thiệp dữ liệu cho đến khi đợt cập nhật hoàn tất.",
+    "keyNumbers": [
+      {
+        "value": "2 tuần",
+        "label": "thời gian tối đa để hoàn tất đợt cập nhật"
+      },
+      {
+        "value": "3",
+        "label": "số đợt cập nhật cốt lõi được ghi nhận trong năm"
+      },
+      {
+        "value": "8",
+        "label": "tổng số đợt cập nhật xếp hạng hiển thị trên bảng trạng thái năm nay"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Thông tin chính thức về đợt cập nhật cốt lõi",
+        "body": "Đợt triển khai bắt đầu lúc 10:06 a.m. PT ngày 10/11/2026 theo thông báo trên Google Search Status Dashboard và LinkedIn. Google khẳng định đây là cập nhật định kỳ nhằm hiển thị tốt hơn các nội dung phù hợp và hữu ích cho người dùng. Đợt này áp dụng trên toàn thế giới và áp dụng đồng thời cho tất cả các ngôn ngữ. Hệ thống có thể mất tối đa 2 tuần để phủ sóng toàn diện trên mọi máy chủ."
+      },
+      {
+        "heading": "Tần suất cập nhật thuật toán trong năm",
+        "body": "Đây là bản cập nhật cốt lõi thứ 3 trong năm, tiếp nối các đợt vào tháng 3 và tháng 5. Bản cập nhật tháng 3 kéo dài 12 ngày, 4 giờ, trong khi đợt tháng 5 diễn ra trong 11 ngày, 21 giờ và kết thúc vào ngày 02/06/2026. Ngoài ra, Google đã thực hiện 3 đợt cập nhật chống spam vào tháng 6, tháng 8 và tháng 9. Tính chung, đây là bản cập nhật thứ 8 xuất hiện trên bảng theo dõi trạng thái xếp hạng của hãng từ đầu năm."
+      },
+      {
+        "heading": "Biến động thứ hạng và hướng dẫn phân tích số liệu",
+        "body": "Google cho biết các cập nhật cốt lõi không nhắm vào từng trang web hay bài viết cụ thể mà nhằm làm mới hệ thống đánh giá theo sự thay đổi của nội dung trên web. Thứ hạng từ khóa có thể dao động liên tục trong suốt thời gian hệ thống điều chỉnh. Hãng tìm kiếm khuyến nghị quản trị viên nên chờ ít nhất 1 tuần sau khi đợt cập nhật kết thúc rồi mới tiến hành đối soát dữ liệu trên Search Console. Mốc so sánh chuẩn được gợi ý là dữ liệu của 1 tuần trước thời điểm ngày 10/11/2026."
+      },
+      {
+        "heading": "Trùng lặp thời điểm với mùa mua sắm cuối năm",
+        "body": "Nếu kéo dài đủ 2 tuần, quá trình cập nhật sẽ kết thúc vào khoảng ngày 24/11/2026. Thời điểm này rơi ngay trước giai đoạn cao điểm mua sắm gồm Lễ Tạ ơn, Black Friday và Cyber Monday tại nhiều thị trường. Các website thương mại điện tử cần cẩn trọng khi phân tích dữ liệu vì lưu lượng truy cập dịp lễ sẽ rất khác so với tuần thông thường trước cập nhật. Đội ngũ tiếp thị cần phân tách rõ giữa biến động do nhu cầu mùa vụ và biến động do thuật toán."
+      }
+    ],
+    "impact": "Lưu lượng truy cập tự nhiên của doanh nghiệp có thể tăng hoặc giảm đột biến trong 2 tuần tới, làm xáo trộn tỷ trọng đóng góp doanh thu giữa kênh Organic Search và Paid Search. Nếu lượng truy cập tự nhiên suy giảm mạnh, Trưởng phòng Marketing sẽ phải chịu áp lực điều chuyển thêm ngân sách quảng cáo trả phí để bù đắp chỉ tiêu doanh số.",
+    "ifIgnored": "Nếu vội vàng sửa đổi cấu trúc website hoặc nội dung khi thuật toán chưa ổn định, doanh nghiệp có nguy cơ tối ưu sai hướng và làm tụt hạng sâu hơn. Ngoài ra, việc so sánh nhầm số liệu biến động mùa vụ cuối năm với ảnh hưởng thuật toán sẽ dẫn đến quyết định phân bổ ngân sách sai lệch hoàn toàn.",
+    "actionChecklist": [
+      "Thông báo cho bộ phận SEO và Content tạm dừng các đợt tái cấu trúc website lớn cho đến khi đợt cập nhật kết thúc hoàn toàn.",
+      "Lưu lại ảnh chụp dữ liệu hiệu suất của toàn bộ website trên Google Search Console trong tuần trước ngày 10/11/2026 để làm mốc đối chiếu.",
+      "Chuẩn bị sẵn kịch bản và ngân sách dự phòng cho Google Ads nhằm bù đắp lưu lượng truy cập nếu các từ khóa chuyển đổi chính bị mất vị trí.",
+      "Theo dõi sát bảng trạng thái Google Search Status Dashboard để nắm bắt thời điểm bản cập nhật chính thức hoàn tất."
+    ],
+    "deadline": "Khoảng ngày 24/11/2026 hoàn tất triển khai",
+    "id": "real-2026-11-10-google-kich-hoat-ban-9e4685",
+    "publishedAt": "10/11/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/google-november-2026-core-update/596614/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/11/google-core-update-featured.jpg",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
+    "category": "AI Marketing",
+    "platformIcon": "Sparkles",
     "title": "LinkedIn ứng dụng AI LLM nâng cấp thuật toán gợi ý nội dung ngoài mạng lưới kết nối",
     "isHot": false,
     "illustration": "data-signal",
@@ -367,132 +557,6 @@
     }
   },
   {
-    "category": "TikTok Shop & Ads",
-    "platformIcon": "Video",
-    "title": "TikTok công bố Playbook Q5 với tuyên bố CPM hạ nhiệt nhưng thắt chặt quy tắc ngân sách Smart+",
-    "isHot": false,
-    "illustration": "cpm-auction",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "TikTok Ads",
-      "Chi phí CPM",
-      "Smart+ Campaign",
-      "Chiến dịch Q5"
-    ],
-    "summary": "TikTok vừa phát hành tài liệu hướng dẫn Q5 kéo dài từ ngày 01/12/2026 đến 31/01/2027 với khẳng định CPM toàn cầu sẽ giảm mạnh sau đỉnh điểm tháng 11. Tuy nhiên, tài liệu cũng đưa ra yêu cầu ngân sách khắt khe cho chiến dịch Smart+ app và sử dụng dữ liệu biểu đồ không hiển thị giá trị cụ thể.",
-    "keyNumbers": [
-      {
-        "value": "10 đến 50 lần",
-        "label": "bắt buộc cho ngân sách ngày Smart+ app so với bid mục tiêu"
-      },
-      {
-        "value": "62 ngày",
-        "label": "độ dài cửa sổ Q5 được TikTok xác định"
-      },
-      {
-        "value": "2.250",
-        "label": "kích thước mẫu khảo sát hành vi người dùng Q5 của TikTok"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Tuyên bố giảm chi phí CPM trong cửa sổ Q5 kéo dài 62 ngày",
-        "body": "TikTok xác định giai đoạn Q5 kéo dài từ 01/12/2026 đến 31/01/2027, dài hơn đáng kể so với khung thời gian 3 tuần mà Meta từng định nghĩa. Nền tảng lập luận rằng chi phí CPM toàn cầu sẽ hạ nhiệt sau mức đỉnh mua sắm tháng 11 trong khi lượng tương tác người dùng vẫn duy trì cao. Điều này tạo cơ hội cho các nhà quảng cáo tối ưu ngân sách truyền thông vào đầu năm mới. Tuy nhiên, các biểu đồ CPM do TikTok công bố hoàn toàn không hiển thị trục số hay tỷ lệ phần trăm giảm thực tế."
-      },
-      {
-        "heading": "Quy tắc ngân sách nghiêm ngặt đối với chiến dịch Smart+ App",
-        "body": "Điểm đáng chú ý nhất trong hướng dẫn kỹ thuật là yêu cầu vận hành dành cho chiến dịch ứng dụng Smart+. TikTok quy định ngân sách hàng ngày phải đạt từ 10 đến 50 lần mức giá thầu mục tiêu để hệ thống học và tối ưu hiệu quả. Nếu đặt ngân sách thấp hơn ngưỡng này, thuật toán sẽ khó phân phối ổn định. Quy định này đòi hỏi doanh nghiệp phải chuẩn bị dòng tiền đủ lớn nếu muốn theo đuổi chiến dịch tự động hóa của nền tảng."
-      },
-      {
-        "heading": "Số liệu khảo sát hành vi người dùng và những điểm nghi vấn",
-        "body": "Để khuyến khích chi tiêu, TikTok trích dẫn khảo sát cho thấy 85% người dùng dành thời lượng tương đương hoặc nhiều hơn trên app sau kỳ nghỉ. Đồng thời, 73% kỳ vọng giữ nguyên hoặc tăng lượt tải ứng dụng và 64% duy trì thời gian chơi game. Mặc dù vậy, các dữ liệu này trích từ cuộc khảo sát thực hiện từ tháng 09/2023 với mẫu 2.250 người. Việc thiếu số liệu CPM thời gian thực khiến nhà quảng cáo cần kiểm chứng cẩn trọng trước khi dồn ngân sách."
-      },
-      {
-        "heading": "Yêu cầu làm mới nội dung sáng tạo và bật các tính năng hỗ trợ",
-        "body": "Do thời gian Q5 kéo dài tới hai tháng, TikTok khuyến nghị các thương hiệu phải tăng khối lượng và tần suất làm mới ad creative để tránh tình trạng kiệt sức quảng cáo. Playbook cũng gợi ý kích hoạt nút chuyển đổi sự kiện khuyến mãi Q5 và tính năng phân bổ tiến độ ngân sách trong Ads Manager. Các nhà quảng cáo được khuyên nên chốt khung ngân sách sớm, theo dõi biến động CPM và sẵn sàng mở rộng quy mô ngay khi chi phí đấu giá có dấu hiệu giảm sâu."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing cần tính toán lại mức chi ngân sách cho các chiến dịch Smart+ trên TikTok để đáp ứng quy tắc gấp 10-50 lần bid mục tiêu, tránh tình trạng chiến dịch bị kẹt giai đoạn học do thiếu ngân sách.",
-    "ifIgnored": "Doanh nghiệp có thể lãng phí ngân sách khi chạy chiến dịch Smart+ không đủ ngưỡng phân phối, hoặc bỏ lỡ thời điểm CPM hạ nhiệt trong tháng 12 và tháng 01 do không chuẩn bị sẵn ad creative mới.",
-    "actionChecklist": [
-      "Kiểm tra lại ngân sách ngày của các chiến dịch Smart+ app đảm bảo đạt 10 đến 50 lần giá thầu mục tiêu",
-      "Lên kế hoạch sản xuất thêm nội dung sáng tạo để thay thế định kỳ trong suốt 62 ngày của cửa sổ Q5",
-      "Theo dõi biến động CPM thực tế trên tài khoản TikTok Ads từ đầu tháng 12 thay vì chỉ tin vào biểu đồ của nền tảng",
-      "Tìm và thử nghiệm tính năng chuyển đổi sự kiện khuyến mại Q5 trong giao diện TikTok Ads Manager"
-    ],
-    "id": "real-2026-11-07-tiktok-cong-bo-playbook-c7a144",
-    "publishedAt": "07/11/2026",
-    "sourceUrl": "https://ppc.land/tiktok-says-its-cpms-drop-after-november-across-a-two-month-q5-window/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/11/tiktok-q5-window-cpm-claim-snow-hill-sled-blank-surveyor-pole.jpg",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
-    "category": "Meta Ads",
-    "platformIcon": "Facebook",
-    "title": "Meta tự động chuyển đổi Accounts Center thành Meta Account và hợp nhất dữ liệu người dùng",
-    "isHot": false,
-    "illustration": "data-signal",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Meta Ads",
-      "Tài khoản Meta",
-      "Dữ liệu người dùng",
-      "Quyền riêng tư"
-    ],
-    "summary": "Meta đang tự động chuyển đổi Trung tâm tài khoản (Accounts Center) của người dùng thành hệ thống Meta Account mới mà không cung cấp tùy chọn từ chối. Thay đổi này hợp nhất thông tin đăng nhập và cài đặt trên Facebook, Instagram, Threads, Meta AI và các thiết bị phần cứng. Quy trình chuyển đổi đã được chuẩn bị từ ngày 23/04/2026 và triển khai diện rộng trong khoảng 1 năm.",
-    "keyNumbers": [
-      {
-        "value": "1 năm",
-        "label": "thời gian triển khai tự động diện rộng"
-      },
-      {
-        "value": "4",
-        "label": "thay đổi lớn trong hệ thống tài khoản mới"
-      },
-      {
-        "value": "3",
-        "label": "cam kết giữ nguyên tính năng đối với người dùng"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Lộ trình chuyển đổi tự động không có tùy chọn từ chối",
-        "body": "Meta đã bắt đầu gửi email thông báo cho người dùng từ ngày 05/11/2026 về việc tài khoản của họ đã được nâng cấp sang Meta Account. Trước đó, vào ngày 23/04/2026, Meta đã công bố kế hoạch cập nhật tự động này với thời gian hoàn tất kéo dài khoảng 1 năm. Người dùng chỉ nhận được thông báo sau khi quá trình chuyển đổi đã diễn ra thành công trên hệ thống. Tài khoản mới tự động gộp các hồ sơ Facebook, Instagram hoặc Threads từng nằm chung trong Trung tâm tài khoản trước đó. Email thông báo từ Meta hoàn toàn không đưa ra bất kỳ nút bấm hay cơ chế nào để từ chối việc chuyển đổi."
-      },
-      {
-        "heading": "Đơn giản hóa đăng nhập và quản lý bảo mật tập trung",
-        "body": "Tài khoản Meta Account hoạt động như một hệ thống đăng nhập đơn cho toàn bộ ứng dụng và thiết bị thuộc Meta. Người dùng có thể sử dụng 1 mật khẩu duy nhất hoặc đăng nhập bảo mật bằng vân tay và khuôn mặt thông qua Passkey. Cài đặt chi tiết về bảo mật, thông tin cá nhân và tùy chỉnh quảng cáo được gom về một giao diện quản lý duy nhất. Tính năng xác thực hai yếu tố sẽ tự động áp dụng trên tất cả hồ sơ và thiết bị kết nối trong cùng tài khoản. Ngoài ra, tính năng Passkey còn hỗ trợ tự động điền thông tin thanh toán của người dùng."
-      },
-      {
-        "heading": "Mở rộng hệ sinh thái kết nối sang Meta AI và thiết bị phần cứng",
-        "body": "Tài khoản mới không chỉ giới hạn ở các mạng xã hội truyền thống mà mở rộng sang Threads, Meta AI và các thiết bị phần cứng như kính AI hay Meta Quest. Người dùng có thể dễ dàng chia sẻ tin tức và đồng bộ ảnh đại diện giữa Facebook và Instagram. Các thiết bị như Ray-Ban Meta và công cụ Wit.ai cũng nằm trong phạm vi quản lý của tài khoản hợp nhất này. Đối với WhatsApp, Meta cho biết hiện chưa áp dụng đầy đủ toàn bộ tính năng của Meta Account. Ngoài ra, phụ huynh có thể giám sát tài khoản của con trên Instagram, Facebook hoặc Meta Horizon mà không cần tạo hồ sơ riêng cho ứng dụng đó."
-      },
-      {
-        "heading": "Những câu hỏi mở về luồng dữ liệu quảng cáo và quyền riêng tư",
-        "body": "Thông báo của Meta tập trung vào sự tiện lợi nhưng hoàn toàn bỏ qua các thuật ngữ về sự chấp thuận hay dữ liệu người dùng. Từ năm 2024, việc nhóm tài khoản trong Trung tâm tài khoản là căn cứ để Meta định hình việc hợp nhất dữ liệu quảng cáo tại Châu Âu. Tài liệu hỗ trợ cập nhật cách đây 10 tuần vẫn chưa làm rõ việc hợp nhất mới có thay đổi cách dữ liệu di chuyển giữa các ứng dụng hay không. Meta cam kết không thay đổi tin nhắn, danh sách bạn bè, người theo dõi hay cách chia sẻ nội dung giữa các hồ sơ. Tuy nhiên, việc liên kết tự động có thể đã xảy ra chỉ qua thao tác đăng bài chéo hoặc đăng ký ứng dụng mới trước đây."
-      }
-    ],
-    "impact": "Tác động trực tiếp tới Trưởng phòng Marketing là khả năng chuẩn hóa và hợp nhất tín hiệu dữ liệu người dùng (data signals) trên toàn bộ sinh thái Meta. Khi người dùng bị định danh duy nhất qua Meta Account, hiệu quả phân tệp và việc tối ưu hóa đối tượng tùy chỉnh (Custom Audiences) giữa Facebook, Instagram và Threads sẽ nâng cao độ chính xác, nhưng đồng thời rủi ro mất theo dõi gia tăng nếu người dùng tắt tùy chỉnh quảng cáo tập trung tại một nơi.",
-    "ifIgnored": "Nếu bỏ qua cập nhật này, doanh nghiệp sẽ thụ động trước các biến động về tệp đối tượng target và độ chính xác của Pixel/Conversions API khi Meta tái cấu trúc định danh người dùng. Ngoài ra, nhà quảng cáo có thể bỏ lỡ cơ hội tiếp cận người dùng trên các không gian quảng cáo mới liên kết như Meta AI và Threads.",
-    "actionChecklist": [
-      "Rà soát lại hiệu quả hiển thị quảng cáo cross-platform giữa Facebook và Instagram để đánh giá biến động tệp đối tượng.",
-      "Cập nhật cấu hình Conversions API để đảm bảo nhận diện chính xác định danh người dùng trong hệ sinh thái Meta.",
-      "Theo dõi chặt chẽ các chính sách và tùy chọn quảng cáo mới đối với nền tảng Threads và Meta AI.",
-      "Chuẩn bị các phương án dự phòng cho tệp Custom Audiences phòng trường hợp người dùng thắt chặt tùy chỉnh quảng cáo tập trung."
-    ],
-    "id": "real-2026-11-07-meta-tu-dong-chuyen-666a09",
-    "publishedAt": "07/11/2026",
-    "sourceUrl": "https://ppc.land/meta-forces-users-onto-meta-accounts-with-no-opt-out-offered/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/11/meta-accounts-center-meta-account-no-opt-out-ad-data-paper-doll-chain-shears-out-of-reach.jpg",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
     "category": "Google Ads & SEO",
     "platformIcon": "Search",
     "title": "ChatGPT gửi 0,62% lưu lượng truy cập hữu cơ của Google: Dữ liệu đo lường AI",
@@ -616,65 +680,6 @@
     "source": "Search Engine Journal",
     "image": {
       "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/11/gemini-business-profile-featured.jpg",
-      "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Chuyển đổi từ thứ hạng SEO sang đo lường sự hiện diện trên AI với mô hình 3 cổng",
-    "isHot": false,
-    "illustration": "zero-click",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "GEO",
-      "AI Search",
-      "Đo lường Marketing",
-      "SEO"
-    ],
-    "summary": "Duy trì thứ hạng cao trên Google không còn đảm bảo thu hút được khách hàng tiềm năng khi các công cụ AI chuyển từ việc hiển thị danh sách sang đưa ra kết luận trực tiếp. Doanh nghiệp cần thay đổi cách báo cáo SEO bằng mô hình ba cổng nhằm đo lường chính xác khả năng xuất hiện, độ chính xác nội dung và mức độ được AI đề xuất.",
-    "keyNumbers": [
-      {
-        "value": "30%",
-        "label": "Tỷ lệ xuất hiện ví dụ khi thương hiệu có mặt trong 12 trên 40 câu trả lời AI"
-      },
-      {
-        "value": "3",
-        "label": "Cổng đo lường hiệu quả gồm xuất hiện, định vị thông tin và mức độ đề xuất"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Khác biệt bản chất giữa xếp hạng danh sách và câu trả lời AI",
-        "body": "Thứ hạng tìm kiếm truyền thống đo lường vị trí của doanh nghiệp trong một danh sách các lựa chọn để người dùng tự so sánh. Trong khi đó, công cụ tìm kiếm AI đưa ra phán quyết trực tiếp và tiền lọc các phương án trước khi người dùng kịp xem xét. Việc doanh nghiệp duy trì thứ hạng cao ở trang nhất không đồng nghĩa với việc vẫn thu hút được lượng truy cập chất lượng. Trong nhiều trường hợp, người dùng không hề bấm vào liên kết vì AI đã giải quyết xong nhu cầu tìm kiếm của họ."
-      },
-      {
-        "heading": "Tỷ lệ trích dẫn đang trở thành số liệu ảo mới",
-        "body": "Việc chỉ thống kê tần suất xuất hiện hoặc tỷ lệ trích dẫn trên AI đang lặp lại sai lầm của việc chạy theo thứ hạng từ khóa trước đây. Một mô hình AI có thể nhắc tên thương hiệu của bạn nhưng lại trực tiếp đề xuất giải pháp của đối thủ cạnh tranh. AI cũng có thể trích dẫn bài viết của bạn để giải thích một thuật ngữ ngành rồi hướng khách hàng sang mua sản phẩm ở nơi khác. Nếu không gắn việc trích dẫn với ý định mua hàng của người dùng, các báo cáo hiện diện AI sẽ không mang lại giá trị thực tế."
-      },
-      {
-        "heading": "Đo lường sự hiện diện qua Cổng 1 (Inclusion) và Cổng 2 (Framing)",
-        "body": "Mô hình đo lường ba cổng giúp doanh nghiệp đánh giá chính xác vị thế trên công cụ AI. Cổng 1 kiểm tra xem thương hiệu có được nhắc tên hoặc trích dẫn nguồn hay không, ví dụ xuất hiện trong 12 trên 40 câu hỏi thử nghiệm tương đương tỷ lệ 30%. Cổng 2 đánh giá tính chính xác của mô hình khi mô tả về sản phẩm, tránh trường hợp AI trích dẫn đúng nhưng lại định vị sai thương hiệu. Doanh nghiệp cần phát hiện các trang sản phẩm cũ hoặc thông tin mâu thuẫn trên mạng để điều chỉnh kịp thời nguồn dữ liệu mà AI thu thập."
-      },
-      {
-        "heading": "Cổng 3 (Endorsement) và tác động đến quyết định mua hàng",
-        "body": "Cổng 3 đo lường tỷ lệ thương hiệu được AI trực tiếp đề xuất cho các câu hỏi ở giai đoạn ra quyết định mua hàng. Ví dụ khi người dùng yêu cầu AI gợi ý phần mềm cho một agency 10 người, công cụ có thể vượt qua Cổng 1 và Cổng 2 nhưng vẫn thất bại ở Cổng 3 nếu AI đánh giá đối thủ phù hợp hơn. Đây là khu vực cạnh tranh quan trọng nhất mà Trưởng phòng Marketing cần theo dõi sát sao. Việc AI đề xuất thương hiệu thường có tương quan trực tiếp đến sự gia tăng của các lượt tìm kiếm thương hiệu trên thị trường."
-      }
-    ],
-    "impact": "Tái cấu trúc khung báo cáo SEO và GEO của phòng marketing, giúp Trưởng phòng Marketing đánh giá đúng hiệu quả đầu tư nội dung, loại bỏ các chỉ số ảo và tập trung tối ưu hóa dữ liệu để AI chủ động đề xuất sản phẩm tới khách hàng tiềm năng.",
-    "ifIgnored": "Doanh nghiệp sẽ tiếp tục hài lòng với các báo cáo đẹp về thứ hạng từ khóa hay lượt trích dẫn AI vô nghĩa, trong khi lượng khách hàng tiềm năng chất lượng thực sự chạm tới website sụt giảm mà không rõ nguyên nhân.",
-    "actionChecklist": [
-      "Tách riêng chỉ số lượt nhắc tên thương hiệu và trích dẫn website khi kiểm tra trên các công cụ AI",
-      "Rà soát và cập nhật lại các trang thông tin sản phẩm cũ để tránh việc AI định vị sai thương hiệu",
-      "Xây dựng bộ câu hỏi kiểm thử dựa trên kịch bản ra quyết định mua hàng thực tế của khách hàng",
-      "Theo dõi sự tương quan giữa tần suất được AI đề xuất với lượng tìm kiếm từ khóa thương hiệu"
-    ],
-    "id": "real-2026-11-05-chuyen-doi-tu-thu-64c2aa",
-    "publishedAt": "05/11/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/ai-visibility-vs-search-rankings-is-your-agency-measuring-the-wrong-thing-for-2027-spa/594163/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/10/webpros-partner-stories-featured-1600x832-443.png",
       "credit": "Ảnh: Search Engine Journal"
     }
   },
