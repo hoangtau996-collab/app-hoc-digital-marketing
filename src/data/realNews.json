@@ -1,5 +1,194 @@
 [
   {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Google cảnh báo việc chặn bot trên CDN có thể làm mất sản phẩm khỏi Google Shopping và Ads",
+    "isHot": false,
+    "illustration": "page-speed",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Google Ads",
+      "Google Shopping",
+      "Tối ưu CDN",
+      "Googlebot"
+    ],
+    "summary": "Google vừa đưa ra cảnh báo quan trọng về rủi ro biến mất sản phẩm trên Google Shopping và dừng chạy quảng cáo Google Ads khi doanh nghiệp nâng cấp hệ thống CDN. Việc bật cấu hình chặn bot diện rộng để bảo vệ máy chủ gốc sẽ vô tình khóa truy cập của Googlebot. Doanh nghiệp cần phối hợp giữa bộ phận Marketing và IT để đảm bảo dòng chảy dữ liệu quảng cáo không bị ngắt quãng.",
+    "keyNumbers": [
+      {
+        "value": "1 - 2 ngày",
+        "label": "Thời gian tối đa cho phép trả mã lỗi 429 hoặc 503 trước khi ảnh hưởng Googlebot"
+      },
+      {
+        "value": "100.000",
+        "label": "Số lượng URL độc nhất crawler có thể truy cập liên tục khiến máy chủ quá tải"
+      },
+      {
+        "value": "32%",
+        "label": "Tỷ lệ lưu lượng truy cập tự động từ các bot ghi nhận trên hệ thống Cloudflare"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Hiện tượng tăng đột biến truy cập khi chuyển sang CDN",
+        "body": "Khi doanh nghiệp chuyển website sang mạng phân phối nội dung (CDN), máy chủ gốc có thể bị quá tải đột ngột do Googlebot. Nguyên nhân là khi hạ tầng CDN giúp website phản hồi nhanh hơn, hệ thống tự động của Google sẽ nhận diện máy chủ hoạt động tốt và tăng tốc độ quét. Lúc này, bộ nhớ đệm (cache) của CDN mới khởi động còn trống. Tất cả yêu cầu truy cập từ Googlebot đều bị chuyển thẳng về máy chủ gốc, tạo ra đợt tăng lưu lượng đột biến."
+      },
+      {
+        "heading": "Rủi ro biến mất sản phẩm khỏi Google Shopping và Ads",
+        "body": "Để bảo vệ máy chủ gốc khỏi bị sập, nhiều quản trị viên hệ thống thường bật tính năng chặn tự động tất cả các bot trên bảng điều khiển CDN. Việc chặn nhầm các bộ quét đã được xác minh của Google sẽ làm ngắt kết nối dữ liệu. Theo cảnh báo từ Google, hành động này khiến các trang nội dung bị loại khỏi kết quả tìm kiếm. Nguy hiểm hơn, các sản phẩm hiển thị trên Google Shopping và các chiến dịch Google Ads cũng sẽ lập tức dừng hoạt động."
+      },
+      {
+        "heading": "Cơ chế hoạt động của bộ đệm lạnh và Googlebot",
+        "body": "Người dùng thông thường chỉ truy cập vào một số trang phổ biến như trang chủ hay trang khuyến mãi, giúp các trang này nhanh chóng được lưu cache. Ngược lại, bộ quét Googlebot có nhiệm vụ khám phá toàn bộ danh mục sản phẩm trên hệ thống. Khi crawler duyệt qua hàng trăm nghìn URL chưa được lưu cache, máy chủ gốc vẫn phải gánh toàn bộ tải xử lý. Nếu máy chủ phản hồi lỗi 429 hoặc 503 quá thời gian cho phép, Google sẽ coi hệ thống không ổn định và cắt giảm ngân sách quét."
+      },
+      {
+        "heading": "Giải pháp kỹ thuật khuyến nghị từ Google",
+        "body": "Google đưa ra các hướng dẫn cụ thể để xử lý tình trạng quá tải mà không làm gián đoạn quảng cáo. Doanh nghiệp cần cấu hình tường lửa CDN để cho phép các crawler đã xác minh của Google đi qua an toàn. Trước khi chính thức chuyển đổi DNS sang CDN, kỹ thuật viên nên thực hiện làm nóng bộ nhớ đệm bằng cách chủ động tải trước các URL sản phẩm quan trọng. Nếu máy chủ gốc quá tải, việc trả về mã lỗi 429 hoặc 503 chỉ được kéo dài tối đa 1 đến 2 ngày."
+      }
+    ],
+    "impact": "Quyết định kỹ thuật của bộ phận IT khi nâng cấp hạ tầng mạng có thể vô tình ngắt luồng dữ liệu sản phẩm, khiến các chiến dịch Google Ads và Google Shopping ngừng hoạt động mà đội ngũ Marketing không hề hay biết.",
+    "ifIgnored": "Tổn thất doanh thu trực tiếp do quảng cáo ngưng hiển thị, mất vị trí hiển thị sản phẩm trên Google Shopping và tốn thời gian khôi phục lại chỉ mục cùng điểm chất lượng của chiến dịch.",
+    "actionChecklist": [
+      "Họp ngay với đội ngũ IT/Dev để rà soát quy tắc chặn bot trên hệ thống CDN hiện tại.",
+      "Đảm bảo các crawler đã xác minh của Google được đưa vào danh sách cho phép (whitelist).",
+      "Yêu cầu kỹ thuật viên thực hiện làm nóng bộ nhớ đệm (warm up cache) trước khi đổi DNS.",
+      "Giám sát tần suất mã lỗi 429 và 503, không để máy chủ quá tải kéo dài vượt quá 1 ngày."
+    ],
+    "id": "real-2026-11-12-google-canh-bao-viec-dde55c",
+    "publishedAt": "12/11/2026",
+    "sourceUrl": "https://ppc.land/google-says-cdn-bot-blocks-can-drop-products-from-shopping-and-ads/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/11/google-cdn-bot-blocking-googlebot-shopping-ads-shopkeeper-bug-sprayer-fallen-honeybee.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Google Ads khóa tài khoản lập tức nếu dùng AI mạo danh người nổi tiếng dù có gắn nhãn công khai",
+    "isHot": true,
+    "illustration": "account-security",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Google Ads",
+      "Khóa tài khoản",
+      "Hình ảnh AI",
+      "Chính sách quảng cáo"
+    ],
+    "summary": "Google vừa cập nhật nội dung làm rõ trong chính sách Thực hành kinh doanh không thể chấp nhận (Unacceptable Business Practices). Theo đó, mọi quảng cáo sử dụng trí tuệ nhân tạo để mạo danh hình ảnh, giọng nói hoặc video của người nổi tiếng sẽ bị cấm hoàn toàn. Việc nhà quảng cáo chủ động gắn nhãn khai báo nội dung AI cũng không giúp tài khoản tránh khỏi án phạt đình chỉ ngay lập tức.",
+    "keyNumbers": [
+      {
+        "value": "0 ngày",
+        "label": "Thời gian gia hạn trước khi áp dụng án phạt khóa tài khoản"
+      },
+      {
+        "value": "7 ngày",
+        "label": "Thời gian báo trước đối với vi phạm thường, nhưng vi phạm mạo danh bị khóa ngay"
+      },
+      {
+        "value": "2 / 3.379",
+        "label": "Số quảng cáo AI có gắn nhãn minh bạch trong nghiên cứu tháng 10/2026"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Làm rõ chính sách về việc mạo danh người của công chúng",
+        "body": "Vào ngày 11/11/2026, Google đã bổ sung văn bản làm rõ trong trung tâm trợ giúp chính sách quảng cáo. Theo nền tảng này, các quảng cáo sử dụng trí tuệ nhân tạo để mạo danh người nổi tiếng đều vi phạm nghiêm trọng quy định. Ngay cả khi nhà quảng cáo có gắn nhãn công khai rằng nội dung được tạo hoặc chỉnh sửa bằng AI, quảng cáo đó vẫn không được chấp nhận. Google khẳng định đây không phải là quy định mới phát sinh mà chỉ là lời giải thích chi tiết giúp người chạy quảng cáo hiểu đúng bản chất quy định hiện hành."
+      },
+      {
+        "heading": "Cơ chế xử phạt cực kỳ nghiêm ngặt không báo trước",
+        "body": "Google xếp vi phạm mạo danh người nổi tiếng vào nhóm vi phạm đặc biệt nghiêm trọng. Đối với các vi phạm thông thường khác, hệ thống sẽ gửi thông báo trước ít nhất 7 ngày để nhà quảng cáo khắc phục. Tuy nhiên, với vi phạm nghiêm trọng này, tài khoản quảng cáo sẽ bị đình chỉ ngay lập tức tại thời điểm phát hiện mà không có bất kỳ cảnh báo nào trước đó. Nhà quảng cáo hoàn toàn không có thời gian gia hạn hay cơ hội gỡ bỏ mẫu quảng cáo để cứu tài khoản."
+      },
+      {
+        "heading": "Tại sao việc khai báo AI không bảo vệ được tài khoản",
+        "body": "Nhiều nhà quảng cáo nhầm tưởng rằng việc dán nhãn công khai nội dung AI sẽ giúp mẫu quảng cáo hợp lệ. Thực tế, việc dán nhãn chỉ minh bạch phương thức tạo ra quảng cáo, trong khi quy định mạo danh cấm việc tạo ấn tượng giả về sự tham gia của một cá nhân thật. Một video deepfake giả dạng nhà đầu tư hoặc người ảnh hưởng để khuyên người dùng mua hàng vẫn mang tính chất lừa đảo, bất chấp việc có dòng chữ ghi nhận tạo bởi AI hay không. Do đó, nhãn dán AI hoàn toàn không có tác dụng làm căn cứ bào chữa khi hệ thống rà soát."
+      },
+      {
+        "heading": "Đối tượng ảnh hưởng và phạm vi định nghĩa của Google",
+        "body": "Google định nghĩa người của công chúng bao gồm quan chức chính phủ, nghệ sĩ, vận động viên, người ảnh hưởng và các nhà kinh doanh nổi tiếng. Các trường hợp vi phạm phổ biến bao gồm việc dùng AI giả giọng nói ca sĩ để quảng cáo sản phẩm hoặc tạo video giả dạng YouTuber nhằm lôi kéo người xem. Chính sách này áp dụng cho toàn bộ hình ảnh, video, tên tuổi và giọng nói được tái tạo bằng công cụ nhân tạo. Nền tảng yêu cầu nhà quảng cáo phải có văn bản chấp thuận chính thức và hợp pháp nếu muốn sử dụng hình ảnh của những cá nhân này."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing cần ngay lập tức rà soát lại toàn bộ kho sáng tạo (creatives) đang chạy trên Google Ads, đặc biệt là các chiến dịch sử dụng hình ảnh hoặc giọng nói AI của người nổi tiếng và KOLs. Việc mơ hồ giữa khai báo AI và vi phạm bản quyền hình ảnh có thể khiến toàn bộ tài khoản Google Ads của doanh nghiệp bị khóa vĩnh viễn.",
+    "ifIgnored": "Doanh nghiệp đối mặt với nguy cơ bị dừng toàn bộ hoạt động quảng cáo trên Google Search, YouTube và Display ngay lập tức. Tài khoản bị khóa vĩnh viễn không báo trước sẽ làm gián đoạn dòng doanh thu, mất sạch dữ liệu chiến dịch và ảnh hưởng nghiêm trọng đến uy tín thương hiệu.",
+    "actionChecklist": [
+      "Rà soát toàn bộ mẫu quảng cáo hình ảnh và video đang sử dụng công nghệ AI tạo hình ảnh hoặc giọng nói.",
+      "Dừng ngay các chiến dịch tạo video deepfake hoặc giả lập KOLs/người nổi tiếng dù có gắn nhãn AI hay không.",
+      "Kiểm tra và lưu trữ đầy đủ văn bản chấp thuận bản quyền truyền thông nếu doanh nghiệp có hợp tác chính thức với KOLs.",
+      "Cập nhật quy trình kiểm duyệt nội dung đầu vào cho đội ngũ sáng tạo nhằm tránh các vi phạm nghiêm trọng trên Google Ads."
+    ],
+    "id": "real-2026-11-12-google-ads-khoa-tai-3e373e",
+    "publishedAt": "12/11/2026",
+    "sourceUrl": "https://ppc.land/ai-labels-wont-save-public-figure-impersonators-from-google-ads-suspension/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/11/google-ads-ai-impersonation-label-no-defense-instant-suspension-vaudeville-hook-faceless-standee-blank-tag.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "AI Marketing",
+    "platformIcon": "Sparkles",
+    "title": "Tối ưu dữ liệu sản phẩm để tránh thất thoát doanh số trên ChatGPT Shopping và Google AI Overviews",
+    "isHot": false,
+    "illustration": "shop-health",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "AI Shopping",
+      "ChatGPT Shopping",
+      "Google AI Overviews",
+      "Product Feed"
+    ],
+    "summary": "Các công cụ tìm kiếm AI như ChatGPT và Google AI Overviews đang trực tiếp đề xuất thẻ sản phẩm cùng link mua hàng cho người dùng. Báo cáo của Adobe dự báo lưu lượng truy cập từ AI đến các trang bán lẻ tại Mỹ sẽ tăng 130% trong mùa lễ hội. Doanh nghiệp cần chủ động rà soát dữ liệu sản phẩm để tránh bị loại khỏi kết quả đề xuất hoặc bị đối thủ giành mất lượt nhấp mua hàng.",
+    "keyNumbers": [
+      {
+        "value": "130%",
+        "label": "Tăng trưởng lưu lượng AI đến web bán lẻ"
+      },
+      {
+        "value": "61,54%",
+        "label": "Tỷ lệ đề xuất ChatGPT từ nguồn dữ liệu tích hợp"
+      },
+      {
+        "value": "41,8%",
+        "label": "Thị phần trích dẫn thuộc về Top 10 nhà bán hàng"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Cơ chế hoạt động của ChatGPT Shopping và Google AI Overviews",
+        "body": "Khi người dùng hỏi mua sắm trên ChatGPT hoặc Google, câu trả lời sẽ xuất hiện dưới dạng thẻ sản phẩm kèm giá, đánh giá sao và liên kết mua hàng. ChatGPT thu thập dữ liệu qua giao thức Agentic Commerce Protocol (ACP) và các tích hợp như Shopify Catalog để dẫn người dùng về website của doanh nghiệp. Trong khi đó, Google dựa vào cơ sở dữ liệu Shopping Graph chứa hơn 50 tỷ danh mục sản phẩm thông qua nguồn dữ liệu từ Google Merchant Center. Cả hai nền tảng đều đang thử nghiệm tính năng thanh toán tự động thông qua đại lý AI."
+      },
+      {
+        "heading": "Ba nhóm lỗi dữ liệu khiến doanh nghiệp mất lượt nhấp",
+        "body": "Sản phẩm của doanh nghiệp có thể hoàn toàn biến mất khỏi câu trả lời hoặc bị xếp thứ hạng sau các đối thủ cạnh tranh. Lỗi thứ hai là hiển thị sai mức giá, sai tình trạng còn hàng hoặc thông số kỹ thuật không chính xác do AI lấy dữ liệu cũ. Lỗi thứ ba xảy ra khi sản phẩm hiển thị đúng vị trí đầu tiên nhưng liên kết mua hàng lại dẫn tới một đại lý hoặc sàn thương mại điện tử khác thay vì website chính thức của thương hiệu. Những sai sót này phần lớn xuất phát từ việc dữ liệu không đồng nhất giữa các nguồn."
+      },
+      {
+        "heading": "Sự sụt giảm hiển thị của các cửa hàng không kết nối Feed chuẩn",
+        "body": "Một phân tích ghi nhận trên Search Engine Journal cho thấy tỷ lệ đề xuất sản phẩm trên ChatGPT đến từ các nguồn dữ liệu tích hợp đã tăng từ 8,26% lên 61,54% chỉ trong một ngày tháng 7/2026. Trong số 517 cửa hàng bị theo dõi có sự biến động hiển thị từ 33% trở lên, có tới 450 cửa hàng bị sụt giảm lưu lượng. Đồng thời, thị phần trích dẫn của 10 nhà bán hàng hàng đầu đã tăng từ 22,5% lên 41,8%. Điều này cho thấy các cửa hàng không kết nối feed dữ liệu chuẩn đang đối mặt với rủi ro bị loại bỏ khỏi danh sách đề xuất."
+      },
+      {
+        "heading": "Quy trình kiểm toán và khắc phục lỗi dữ liệu sản phẩm",
+        "body": "Doanh nghiệp cần xây dựng bộ câu hỏi tìm kiếm theo danh mục, công dụng, ngân sách và kịch bản quà tặng để thử nghiệm trên ChatGPT, AI Overviews và Gemini ở phiên bản ẩn danh. Tiếp theo, hãy ghi lại danh sách hiển thị, đối chiếu thứ hạng với đối thủ và ưu tiên sửa lỗi cho các sản phẩm bán chạy nhất. Đội ngũ kỹ thuật cần cập nhật mã Schema Product, bổ sung đầy đủ các mã định danh như GTIN, MPN và thông tin biến thể. Cuối cùng, doanh nghiệp phải đảm bảo mức giá và tồn kho được đồng bộ chính xác giữa nguồn dữ liệu feed, trang sản phẩm và các kênh bán lẻ."
+      }
+    ],
+    "impact": "Giúp Trưởng phòng Marketing làm chủ kênh phân phối mới trên các công cụ AI Search, bảo vệ doanh thu từ các sản phẩm chủ lực và tránh để các nhà bán lẻ hoặc đối thủ cạnh tranh chiếm mất lượng khách hàng có ý định mua sắm cao.",
+    "ifIgnored": "Doanh nghiệp sẽ mất hoàn toàn sự xuất hiện trên ChatGPT Shopping và Google AI Overviews, dẫn đến việc sụt giảm lưu lượng truy cập tự nhiên và lãng phí ngân sách tiếp thị khi khách hàng bị chuyển hướng sang mua ở kênh của đối thủ.",
+    "actionChecklist": [
+      "Cung cấp đầy đủ mã GTIN, MPN và dữ liệu biến thể sản phẩm trong mã Schema",
+      "Đồng bộ hóa giá và tình trạng còn kho giữa Google Merchant Center, Shopify Catalog và website",
+      "Tạo bộ câu hỏi thử nghiệm theo ngữ cảnh sử dụng để kiểm tra vị trí hiển thị của sản phẩm chủ lực trên các công cụ AI",
+      "Kết nối trực tiếp nguồn dữ liệu sản phẩm vào các giao thức ACP và UCP của nền tảng"
+    ],
+    "id": "real-2026-11-12-toi-uu-du-lieu-f1b92e",
+    "publishedAt": "12/11/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/fix-ai-shopping-errors-writesonic-spa/595790/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/11/writesonic-partner-stories-featured-1600x832-887.png",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
     "category": "AI Marketing",
     "platformIcon": "Sparkles",
     "title": "Supermetrics ra mắt công cụ điều hành chiến dịch quảng cáo đa kênh qua AI chat",
@@ -312,70 +501,6 @@
     }
   },
   {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Google Ads MCP server phát hành phiên bản 0.0.6, tự động bật bốn công cụ ghi dữ liệu",
-    "isHot": false,
-    "illustration": "account-security",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Google Ads",
-      "AI Agent",
-      "MCP Server",
-      "Bảo mật tài khoản"
-    ],
-    "summary": "Google vừa phát hành phiên bản 0.0.6 của Google Ads MCP server, bổ sung bốn công cụ ghi dữ liệu được kích hoạt mặc định. Tài liệu hướng dẫn trước đó vẫn mô tả hệ thống ở trạng thái chỉ đọc, gây rủi ro vô tình thay đổi tài khoản quảng cáo nếu đội ngũ kỹ thuật sử dụng cài đặt mặc định.",
-    "keyNumbers": [
-      {
-        "value": "0.0.6",
-        "label": "phiên bản phát hành ngày 2/11/2026"
-      },
-      {
-        "value": "7",
-        "label": "tổng số công cụ trên server"
-      },
-      {
-        "value": "20 MB",
-        "label": "giới hạn dung lượng tệp hình ảnh"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Bổ sung bốn công cụ ghi dữ liệu mới",
-        "body": "Phiên bản 0.0.6 ra mắt ngày 2/11/2026 mang lại khả năng thay đổi tài khoản Google Ads lần đầu tiên trong lịch sử dự án. Bốn công cụ mới bao gồm tạo tài nguyên quảng cáo, tải video lên YouTube, quản lý nhãn tài khoản và quản lý liên kết nhãn. Các chiến dịch, ngân sách, giá thầu và từ khóa hiện vẫn nằm ngoài phạm vi tác động của các công cụ này."
-      },
-      {
-        "heading": "Cơ chế kích hoạt mặc định gây hiểu lầm",
-        "body": "Tệp cấu hình đi kèm tự động bật hai không gian tên nhãn và tài nguyên mà không cần thiết lập thủ công. Trong khi đó, tài liệu hướng dẫn của Google cập nhật lần cuối vào ngày 30/10 vẫn khẳng định hệ thống chỉ có tính năng đọc. Các đội ngũ nội bộ cài đặt theo hướng dẫn cũ sẽ vô tình cấp quyền ghi dữ liệu nếu không chủ động tắt trong tệp cấu hình."
-      },
-      {
-        "heading": "Cơ chế kiểm tra xác thực qua hai bước",
-        "body": "Mỗi thao tác ghi dữ liệu đều yêu cầu chạy qua hai bước gồm kiểm tra thử và xác nhận bằng mã checksum tính toán theo chuẩn SHA-256. Bước đầu tiên trả về danh sách thay đổi và mã xác thực mà không thực thi lệnh trên tài khoản. Bước thứ hai yêu cầu gọi lại đúng tham số cùng mã checksum để thực hiện thay đổi chính thức."
-      },
-      {
-        "heading": "Giới hạn kỹ thuật đối với hình ảnh và video",
-        "body": "Công cụ hình ảnh chấp nhận định dạng PNG, JPEG và GIF với giới hạn dung lượng là 20 MB truyền qua tệp cục bộ hoặc dữ liệu mã hóa base64. Công cụ tải video hỗ trợ mười một định dạng tệp khác nhau nhưng chỉ hoạt động ở chế độ cục bộ. Tác vụ tải video chạy dưới dạng nền do kích thước tệp lớn và mặc định đặt quyền riêng tư ở mức không công khai."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing cần rà soát ngay lập tức các cấu hình MCP server đang kết nối với tài khoản Google Ads để tránh việc AI assistant tự động thực hiện các thay đổi tài nguyên hoặc nhãn mà không qua kiểm soát chặt chẽ.",
-    "ifIgnored": "Nếu bỏ qua, đội ngũ có thể vô tình vận hành phiên bản cho phép ghi dữ liệu dựa trên tài liệu cũ, dẫn đến rủi ro phát sinh thay đổi không mong muốn trên tài khoản quảng cáo.",
-    "actionChecklist": [
-      "Kiểm tra tệp cấu hình tools_config.yaml trên hệ thống",
-      "Chuyển nhãn labels và tài nguyên assets về trạng thái false nếu muốn duy trì chế độ chỉ đọc",
-      "Cập nhật lại quy trình phê duyệt các công cụ AI kết nối với API quảng cáo",
-      "Xác minh lại mã checksum và tham số trước khi thực hiện bất kỳ lệnh ghi nào"
-    ],
-    "deadline": "Ngày 02/11/2026",
-    "id": "real-2026-11-09-google-ads-mcp-server-7d4536",
-    "publishedAt": "09/11/2026",
-    "sourceUrl": "https://ppc.land/google-ads-mcp-server-gains-4-write-tools-still-cant-change-budgets/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/11/google-ads-mcp-server-4-write-tools-read-only-vitrine-grabber-arm-locked-cash-register.jpg",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
     "category": "Meta Ads",
     "platformIcon": "Facebook",
     "title": "Công cụ AI của Meta tự ý lấy mã giảm giá trên website đưa vào quảng cáo dù đã tắt ưu đãi",
@@ -490,132 +615,6 @@
     "source": "Search Engine Journal",
     "image": {
       "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/11/cloudflare-openai-featured.jpg",
-      "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Google Ads bổ sung 3 nhóm ngày thiết lập sẵn cho lịch hiển thị tiện ích quảng cáo",
-    "isHot": false,
-    "illustration": "ai-budget",
-    "readTime": "3 phút đọc",
-    "tags": [
-      "Google Ads",
-      "Asset Scheduling",
-      "Sitelink",
-      "Tối ưu ngân sách"
-    ],
-    "summary": "Google Ads vừa cập nhật thêm 3 khoảng ngày tùy chọn sẵn trong phần cài đặt lịch hiển thị tiện ích bao gồm tất cả các ngày, từ thứ Hai đến thứ Sáu và cuối tuần. Cập nhật này giúp đơn giản hóa quy trình thiết lập sitelink cho các đợt khuyến mãi cao điểm, đồng thời đi kèm nhắc nhở quan trọng về cơ chế phân bổ ngân sách tháng của hệ thống.",
-    "keyNumbers": [
-      {
-        "value": "3",
-        "label": "khoảng ngày thiết lập sẵn mới trong Asset scheduling"
-      },
-      {
-        "value": "30,4",
-        "label": "hệ số nhân ngân sách hàng ngày tính chi tiêu tối đa tháng"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Thêm 3 nhóm ngày tùy chọn sẵn trong Asset scheduling",
-        "body": "Google Ads bổ sung 3 tùy chọn nhóm ngày gồm All days, Mondays - Fridays và Saturdays - Sundays trong phần thiết lập lịch hiển thị tiện ích mở rộng. Trước đây, nhà quảng cáo phải chọn từng ngày thủ công, mất 5 dòng thiết lập cho ngày trong tuần hoặc 2 dòng cho cuối tuần. Cập nhật này giúp thao tác thiết lập sitelink và các tiện ích khác trở nên nhanh chóng hơn. Tính năng mới nằm trong mục Advanced options của phần Asset scheduling."
-      },
-      {
-        "heading": "Tiết kiệm thời gian thiết lập cho đợt khuyến mãi lớn",
-        "body": "Tính năng mới giúp đơn giản hóa việc cài đặt các ưu đãi chỉ chạy vào cuối tuần hoặc chỉ áp dụng từ thứ Hai đến thứ Sáu. Người quản lý nhiều tài khoản sẽ giảm đáng kể số lần nhấp chuột và hạn chế tình trạng rối loạn lịch hiển thị trong giao diện. Nhà quảng cáo cũng có thể thêm nhiều lịch chạy khác nhau trên cùng một tiện ích bằng liên kết Add Schedule. Việc triển khai hiện chưa xuất hiện đồng loạt trên mọi tài khoản mà đang được mở theo từng giai đoạn."
-      },
-      {
-        "heading": "Lưu ý quan trọng về cơ chế phân bổ ngân sách theo lịch",
-        "body": "Ngay bên dưới bảng cài đặt lịch tiện ích, Google Ads hiển thị lưu ý về việc phân bổ ngân sách chiến dịch theo tháng. Hệ thống sẽ hướng tới hạn mức chi tiêu tháng bằng 30,4 lần ngân sách trung bình hàng ngày, phân bổ trên các ngày chiến dịch thực sự hoạt động. Nếu một chiến dịch bị tắt vào một số ngày trong tuần, ngân sách của những ngày hoạt động sẽ tăng lên, tối đa gấp 2 lần ngân sách hàng ngày."
-      },
-      {
-        "heading": "Phân biệt lịch chiến dịch và lịch tiện ích",
-        "body": "Lịch chiến dịch quyết định việc chiến dịch có chạy và phát sinh chi phí hay không, đồng thời ảnh hưởng trực tiếp đến tốc độ chi tiêu ngân sách. Trong khi đó, lịch tiện ích chỉ quyết định điều kiện xuất hiện của tiện ích đi kèm quảng cáo. Nếu cài đặt tiện ích chạy vào cuối tuần nhưng chiến dịch lại tắt vào cuối tuần, tiện ích sẽ không thể hiển thị vì không có quảng cáo đi kèm."
-      },
-      {
-        "heading": "Cập nhật theo giai đoạn và phạm vi áp dụng",
-        "body": "Tính năng này được ghi nhận công khai từ ngày 30/10/2026 và được cộng đồng chuyên gia tìm kiếm trả phí chia sẻ. Hiện tại Google chưa cập nhật tài liệu hướng dẫn chính thức cho các nhóm ngày mới này. Các tài khoản có chi tiêu lớn thường được cập nhật sớm hơn. Do đó nhà quảng cáo cần kiểm tra trực tiếp từng tài khoản trước khi lập kế hoạch cho đợt khuyến mãi."
-      }
-    ],
-    "impact": "Giúp Trưởng phòng Marketing tối ưu thời gian thao tác cho đội ngũ khi cài đặt chiến dịch khuyến mãi lớn, đồng thời rà soát lại cơ chế phân bổ ngân sách của Google Ads để tránh tình trạng chi phí bị dồn ép vào các ngày chiến dịch hoạt động.",
-    "ifIgnored": "Đội ngũ sẽ tiếp tục mất nhiều thời gian cài đặt thủ công từng ngày cho tiện ích, dễ gặp lỗi xung đột giữa lịch tiện ích và lịch chiến dịch, cũng như có thể bị bất ngờ khi chi phí hàng ngày tăng vọt do hệ thống tự điều chỉnh ngân sách theo quy tắc 30,4 lần.",
-    "actionChecklist": [
-      "Truy cập mục Advanced options trong Asset scheduling trên Google Ads để kiểm tra tính năng mới",
-      "Đồng bộ chính xác lịch hiển thị của tiện ích với lịch chạy thực tế của từng chiến dịch",
-      "Tính toán lại ngân sách hàng ngày của các chiến dịch chỉ chạy một số ngày trong tuần",
-      "Tối ưu lại quy trình chuẩn bị sitelink cho các chương trình ưu đãi sắp tới"
-    ],
-    "id": "real-2026-11-08-google-ads-bo-sung-be70b8",
-    "publishedAt": "08/11/2026",
-    "sourceUrl": "https://ppc.land/google-ads-asset-scheduling-gains-3-day-ranges-ahead-of-black-friday/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/11/google-ads-asset-scheduling-3-day-ranges-five-entries-to-one-credenza-sliding-door-loose-knobs.jpg",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "ChatGPT gửi 0,62% lưu lượng truy cập hữu cơ của Google: Dữ liệu đo lường AI",
-    "isHot": false,
-    "illustration": "zero-click",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "AI Visibility",
-      "ChatGPT Traffic",
-      "SEO Metrics",
-      "GA4 Data"
-    ],
-    "summary": "Các dữ liệu mới cho thấy trợ lý AI chỉ gửi một lượng lưu lượng truy cập rất nhỏ so với Google, đặt ra câu hỏi lớn về hiệu quả đo lường hiện tại. Trưởng phòng Marketing cần đánh giá lại cách phân bổ ngân sách cho tầm hiển thị AI thay vì chỉ dựa vào các chỉ số click ảo.",
-    "keyNumbers": [
-      {
-        "value": "0,62%",
-        "label": "Lưu lượng ChatGPT so với Google"
-      },
-      {
-        "value": "0,73%",
-        "label": "Lưu lượng từ mọi LLM"
-      },
-      {
-        "value": "13,8%",
-        "label": "Tỷ lệ chuyển đổi của ChatGPT"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Lưu lượng truy cập thực tế từ AI rất nhỏ",
-        "body": "Nghiên cứu trên 100 trang web trong 12 tháng cho thấy ChatGPT chỉ gửi 0,62% khối lượng lưu lượng truy cập hữu cơ của Google. Tính chung tất cả các mô hình ngôn ngữ lớn, con số này chỉ là 0,73%. Mặc dù khách từ ChatGPT có tỷ lệ chuyển đổi đạt 13,8% so với 3,02% của Google, Google vẫn điều khiển tới 96,5% tổng số chuyển đổi trong tập dữ liệu."
-      },
-      {
-        "heading": "Ảnh hưởng ẩn chưa lộ diện qua Direct và Brand Search",
-        "body": "Nhiều người lập luận rằng AI đóng vai trò như bảng hiệu kỹ thuật số, kích thích tìm kiếm trực tiếp sau đó. Tuy nhiên, khi kiểm tra 12 thuộc tính GA4, lượng truy cập Direct tăng mạnh nhưng lượng truy cập có gắn kết thực sự gần như không đổi. Các kiểm tra hồi quy chéo cho thấy chưa thể cô lập mối liên hệ nhân quả rõ ràng giữa tầm hiển thị AI và tìm kiếm thương hiệu."
-      },
-      {
-        "heading": "Khung chất lượng dữ liệu AMEC và bài toán đo lường",
-        "body": "Hiệp hội Đo lường và Đánh giá Truyền thông Quốc tế đã công bố các nguyên tắc chất lượng dữ liệu để giải quyết thách thức dữ liệu phi cấu trúc thời kỳ AI. Các chỉ số hiển thị AI hiện tại thường không vượt qua các bài kiểm tra về độ chính xác và hành vi thực tế. Một số liệu có thể nhất quán nội bộ nhưng lại không phản ánh đúng hành vi mua hàng ngoài đời thực."
-      },
-      {
-        "heading": "Góc nhìn mới về kênh thương hiệu thay vì kênh chuyển đổi",
-        "body": "Các chuyên gia nhận định AI giống kênh thương hiệu hoặc biển quảng cáo kỹ thuật số hơn là một công cụ dẫn dắt click truyền thống. Sự quen thuộc với thương hiệu là một kết quả marketing, nhưng không nên tin tưởng mù quáng vào các mô hình phân bổ hiện tại. Trưởng phòng Marketing cần xây dựng các chỉ số đo lường thực chất hơn trước kỳ họp đánh giá quý."
-      }
-    ],
-    "impact": "Giúp Trưởng phòng Marketing tránh việc rót ngân sách vô căn cứ vào các chỉ số hiển thị AI chưa được kiểm chứng, đồng thời tối ưu lại cách đánh giá hiệu quả kênh tìm kiếm.",
-    "ifIgnored": "Tiếp tục lãng phí ngân sách dựa trên các báo cáo lưu lượng ảo từ bot và các chỉ số đo lường AI sai lệch không phản ánh đúng doanh thu thực tế.",
-    "actionChecklist": [
-      "Kiểm tra lại chất lượng dữ liệu lưu lượng Direct trong GA4 để loại bỏ traffic ảo từ bot",
-      "Đánh giá lại tỷ lệ chuyển đổi thực tế từ các nguồn giới thiệu AI so với tìm kiếm hữu cơ",
-      "Chuyển dịch cách nhìn nhận AI thành kênh xây dựng thương hiệu thay vì kỳ vọng lượng click trực tiếp",
-      "Áp dụng các tiêu chuẩn kiểm định dữ liệu nghiêm ngặt trước khi trình bày báo cáo ngân sách AI trước ban lãnh đạo"
-    ],
-    "id": "real-2026-11-06-chatgpt-gui-0-62-3a598c",
-    "publishedAt": "06/11/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/ai-visibility-isnt-a-sham-most-ways-of-measuring-it-are/594405/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/10/ai-sham-409.png",
       "credit": "Ảnh: Search Engine Journal"
     }
   },
