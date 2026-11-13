@@ -2,6 +2,188 @@
   {
     "category": "Google Ads & SEO",
     "platformIcon": "Search",
+    "title": "Amazon công bố danh mục 156 thuộc tính báo cáo hợp nhất cho hệ thống quảng cáo",
+    "isHot": true,
+    "illustration": "data-signal",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Amazon Ads",
+      "Báo cáo hợp nhất",
+      "DSP",
+      "Sponsored Products"
+    ],
+    "summary": "Amazon vừa công bố tài liệu tham khảo chi tiết cho hệ thống báo cáo hợp nhất gồm 156 thuộc tính thuộc 11 danh mục. Sự thay đổi này chuẩn hóa thuật ngữ từ các hệ thống cũ sang cấu trúc mới, trong đó có 85 thuộc tính áp dụng cho Sponsored Products và 137 thuộc tính cho DVA+.",
+    "keyNumbers": [
+      {
+        "value": "156",
+        "label": "Tổng số thuộc tính báo cáo"
+      },
+      {
+        "value": "85",
+        "label": "Thuộc tính cho Sponsored Products"
+      },
+      {
+        "value": "137",
+        "label": "Thuộc tính áp dụng cho DVA+"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Cấu trúc báo cáo hợp nhất mới của Amazon",
+        "body": "Amazon Ads đã phát hành danh sách chi tiết gồm 156 thuộc tính có tên trong hệ thống báo cáo hợp nhất, chia thành 11 danh mục. Mỗi thuộc tính đều được đánh dấu rõ ràng áp dụng cho các sản phẩm quảng cáo nào, bao gồm DVA+, Sponsored Brands, Sponsored Display, Sponsored Products và Streaming TV Smart mode/Sponsored TV. Mức độ bao phủ giữa các sản phẩm có sự chênh lệch đáng kể."
+      },
+      {
+        "heading": "Thay đổi về thuật ngữ từ DSP sang cấu trúc mới",
+        "body": "Các thuật ngữ lập trình cũ của Amazon DSP được đưa vào cấu trúc quảng cáo tài trợ quen thuộc. Cụ thể, các thuật ngữ order, line item và creative trong DSP nay chuyển đổi thành campaign, ad group và ad. Bên cạnh đó, các trường dữ liệu sử dụng từ ASIN trước đây trong quảng cáo tài trợ đã được đổi tên, ví dụ Advertised ASIN nay thành Advertised product ID."
+      },
+      {
+        "heading": "Cách xử lý dữ liệu không tương thích",
+        "body": "Khi một chiều dữ liệu không áp dụng cho một sản phẩm quảng cáo cụ thể, giá trị của nó sẽ hiển thị dưới dạng null thay vì tạo ra một báo cáo riêng biệt. Phía Amazon cho biết đây là hành vi dự kiến nhằm cho phép các sản phẩm quảng cáo khác nhau cùng chia sẻ một định dạng báo cáo chung."
+      },
+      {
+        "heading": "Sự phân bổ dữ liệu theo từng danh mục",
+        "body": "Các danh mục như cung ứng, công nghệ và địa lý chủ yếu thuộc về hệ thống mua hàng lập trình DVA+. Trong tổng số 35 thuộc tính cung ứng, có 32 thuộc tính chỉ dành riêng cho DVA+. Ngược lại, một số danh mục khác như tiền tệ, thời gian, đối tượng, chuyển đổi và benchmark được chia sẻ chung cho nhiều loại sản phẩm."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing quản lý ngân sách trên Amazon cần nắm rõ việc thay đổi thuật ngữ từ DSP và Sponsored Ads sang cấu trúc báo cáo chung, đồng thời chuẩn bị tinh thần xử lý các giá trị null khi trích xuất dữ liệu không tương thích giữa các định dạng quảng cáo.",
+    "ifIgnored": "Nếu bỏ qua thay đổi này, đội ngũ vận hành sẽ gặp lỗi khi xây dựng lại các bảng báo cáo định kỳ do sự thay đổi tên gọi trường dữ liệu và nhầm lẫn về các chỉ số trả về giá trị trống.",
+    "actionChecklist": [
+      "Kiểm tra lại toàn bộ hệ thống báo cáo và bảng tổng hợp dữ liệu nội bộ hiện tại",
+      "Cập nhật từ vựng thuật ngữ mới từ DSP sang cấu trúc campaign, ad group và ad",
+      "Rà soát các trường dữ liệu ASIN đã đổi tên thành product ID trong tài liệu tham khảo",
+      "Lưu ý hiện tượng giá trị null xuất hiện khi trích xuất dữ liệu không hỗ trợ chéo"
+    ],
+    "deadline": "31/12/2026",
+    "id": "real-2026-11-12-amazon-cong-bo-danh-3c0654",
+    "publishedAt": "12/11/2026",
+    "sourceUrl": "https://ppc.land/85-of-amazons-156-unified-report-dimensions-apply-to-sponsored-products/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/11/mp-og-db0f0087-ba79-4258-ac3e-9e18c01f18f1.png",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Google giải thích nguyên nhân dữ liệu Google Analytics lệch với số liệu click của Search Console",
+    "isHot": "false",
+    "illustration": "zero-click",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Google Search Console",
+      "Google Analytics",
+      "SEO",
+      "HTTP Referer"
+    ],
+    "summary": "Google vừa bổ sung tài liệu kỹ thuật chính thức giải thích cơ chế định danh lưu lượng truy cập tìm kiếm thông qua HTTP Referer header. Tài liệu này làm rõ lý do vì sao dữ liệu đo lường trên công cụ phân tích website thường xuyên không khớp với số liệu click hiển thị trong Search Console.",
+    "keyNumbers": [
+      {
+        "value": "2011",
+        "label": "năm ẩn từ khóa tìm kiếm"
+      },
+      {
+        "value": "2020",
+        "label": "mốc cập nhật chính sách trình duyệt"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Cơ chế truyền thông tin Referer của Google",
+        "body": "Google Search áp dụng chính sách referrer nguồn gốc, nghĩa là HTTP Referer header chỉ chứa giao thức và tên miền của trang giới thiệu mà không kèm theo đường dẫn chi tiết hay tham số truy vấn. Trình duyệt của người dùng có thể bỏ qua header này hoặc chặn quyền truy cập JavaScript vì lý do bảo mật và quyền riêng tư. Khi header bị thiếu, các công cụ phân tích thường ghi nhận các phiên truy cập này vào mục lưu lượng trực tiếp. Do đó, log máy chủ web có thể ghi lại nhiều lượt truy cập từ Google Search hơn so với số liệu mà thẻ JavaScript đo được trên cùng một trang web."
+      },
+      {
+        "heading": "Sự chồng chéo giữa Tìm kiếm, Discover và Google Images",
+        "body": "Tài liệu kỹ thuật chỉ ra rằng lưu lượng truy cập từ Google Discover và Google Images đều sử dụng chung giá trị Referer với các nguồn tìm kiếm thông thường trên web hoặc ứng dụng. Điều này khiến các nhà quản trị website không thể tách bạch riêng biệt lưu lượng từ Discover hoặc tìm kiếm hình ảnh chỉ dựa vào thông tin từ header. Mọi truy cập khớp với các mẫu của Google đều bị gộp chung thành Google Search trên hệ thống phân tích. Việc phân tách chi tiết các kênh này hiện chỉ phụ thuộc vào báo cáo chuyên biệt bên trong Search Console."
+      },
+      {
+        "heading": "Các trường hợp làm mất dữ liệu đo lường",
+        "body": "Trình duyệt hoặc hệ điều hành của người dùng có thể bỏ qua HTTP Referer header trong các chế độ duyệt web riêng tư hoặc khi bật tính năng chống lấy dấu vân tay. Việc mở kết quả tìm kiếm trong tab mới cũng làm mất thông tin giới thiệu này trên một số trình duyệt di động hoặc máy tính. Thêm vào đó, các tiện ích mở rộng bảo mật hoặc cài đặt trình duyệt nghiêm ngặt từ phía người dùng cũng chặn trực tiếp header gửi đi. Công nghệ theo dõi dựa trên mã JavaScript còn có thể bị ảnh hưởng bởi cài đặt đồng thuận cookie và các trình chặn quảng cáo."
+      },
+      {
+        "heading": "Ý nghĩa đối với việc báo cáo lưu lượng tự nhiên",
+        "body": "Dữ liệu truy vấn từ khóa tìm kiếm hoàn toàn không được truyền qua header từ thời điểm Google chuyển hướng sang kết nối mã hóa. Các nhà quản trị website phải tra cứu báo cáo hiệu suất trực tiếp trong Search Console để xem từ khóa người dùng đã nhập. Việc so sánh số liệu giữa Google Analytics và Search Console đòi hỏi phải hiểu rõ sự khác biệt về cách ghi nhận kỹ thuật giữa log máy chủ và thẻ đo lường trên trình duyệt. Tài liệu mới này đóng vai trò hướng dẫn tham khảo để rà soát lại các quy tắc phân kênh và bộ lọc trong hệ thống phân tích."
+      }
+    ],
+    "impact": "Giúp Trưởng phòng Marketing hiểu rõ nguyên nhân kỹ thuật gây lệch dữ liệu giữa Search Console và các công cụ phân tích, từ đó điều chỉnh lại cách đánh giá hiệu quả kênh tìm kiếm tự nhiên và Google Discover.",
+    "ifIgnored": "Tiếp tục diễn giải sai lệch số liệu báo cáo lưu lượng tự nhiên, dẫn đến việc đánh giá sai hiệu quả chiến dịch SEO và phân bổ nhầm lẫn giữa các kênh traffic trực tiếp và tìm kiếm.",
+    "actionChecklist": [
+      "Kiểm tra lại hệ thống ghi nhận log máy chủ và thẻ JavaScript trên website",
+      "Rà soát các bộ lọc và quy tắc phân kênh lưu lượng trong Google Analytics",
+      "Sử dụng báo cáo hiệu suất trong Search Console để phân tích từ khóa thay vì tìm kiếm trong analytics",
+      "Lưu ý sự chồng chéo lưu lượng giữa Google Discover và tìm kiếm thông thường khi lập báo cáo"
+    ],
+    "id": "real-2026-11-12-google-giai-thich-nguyen-77149b",
+    "publishedAt": "12/11/2026",
+    "sourceUrl": "https://ppc.land/google-explains-why-analytics-wont-match-search-console-click-counts/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/11/mp-og-cb25b494-dcf9-4dd1-986c-8b5fa2242047.png",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "Meta Ads",
+    "platformIcon": "Facebook",
+    "title": "Công cụ AI của Meta tự động lấy ưu đãi từ website đưa vào quảng cáo dù đã tắt tính năng khuyến mãi",
+    "isHot": false,
+    "illustration": "account-security",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Meta Ads",
+      "Quảng cáo AI",
+      "Lỗi hệ thống",
+      "Thương mại điện tử"
+    ],
+    "summary": "Các báo cáo gần đây cho thấy các công cụ quảng cáo tích hợp trí tuệ nhân tạo của Meta đã tự động lấy các ưu đãi từ website của cửa hàng và hiển thị chúng trong các chiến dịch quảng cáo trên Facebook và Instagram, ngay cả khi doanh nghiệp đã tắt tùy chọn khuyến mãi trên mẫu quảng cáo gốc.",
+    "keyNumbers": [
+      {
+        "value": "8%",
+        "label": "Tăng trưởng nhấp chuột"
+      },
+      {
+        "value": "15,7%",
+        "label": "Tăng trưởng chuyển đổi"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Lỗi tự động lấy ưu đãi từ website",
+        "body": "Cố vấn tiếp thị kỹ thuật số Bram Van der Hallen đã phát hiện ra rằng các công cụ AI của Meta có khả năng tự động phát hiện ưu đãi từ trang web doanh nghiệp. Những ưu đãi này sau đó được đưa vào các quảng cáo trên Meta mà không cần sự đồng ý. Sự cố xảy ra ngay cả khi người quản lý đã tắt tùy chọn quảng cáo gốc liên quan đến khuyến mãi. Điều này gây ra nhiều rủi ro lớn cho các nhà quảng cáo đang chạy nhiều chương trình cùng lúc."
+      },
+      {
+        "heading": "Nguyên nhân từ cài đặt Commerce Manager",
+        "body": "Vấn đề bắt nguồn từ việc tính năng hiển thị ưu đãi phát hiện từ trang web và quảng cáo được bật sẵn trong Commerce Manager. Khi tùy chọn này hoạt động, hệ thống AI sẽ tự động quét và áp dụng các chương trình giảm giá. Meta tận dụng khả năng xử lý mở rộng để tối ưu hóa hiệu suất nhưng lại tạo ra các lỗi không mong muốn. Các hệ thống AI luôn tìm kiếm sự hiệu quả và tối ưu ở mọi nơi có thể, dẫn đến việc áp dụng nhầm ưu đãi."
+      },
+      {
+        "heading": "Tác động đến các chiến dịch hiện tại",
+        "body": "Sự cố này ảnh hưởng trực tiếp đến bất kỳ doanh nghiệp nào đang chạy quảng cáo trên Meta với nhiều hơn một ưu đãi đang hoạt động. Một chương trình giảm giá dành riêng cho một chiến dịch hoặc một đối tượng cụ thể có thể bị lệch sang hiển thị ở nơi khác. Điều này làm sai lệch chiến lược giá và gây thất thoát doanh thu không đáng có cho doanh nghiệp. Các nhà quản lý ngân sách cần phải cực kỳ cẩn trọng với các tính năng tự động hóa này."
+      },
+      {
+        "heading": "Hiệu suất tổng thể của hệ thống Meta",
+        "body": "Trong một diễn biến liên quan, Meta cho biết các cải tiến đối với hệ thống xếp hạng quảng cáo đã mang lại kết quả tích cực trong quý 2 năm 2026. Cụ thể, lượng nhấp chuột vào quảng cáo trên Facebook đã tăng hơn 8%. Đồng thời, tỷ lệ chuyển đổi cũng ghi nhận mức tăng trưởng 15,7%. Tuy nhiên, sự gia tăng của tự động hóa đồng nghĩa với việc rủi ro vận hành cũng tăng theo."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing đối mặt với nguy cơ rò rỉ mã giảm giá sai đối tượng do tính năng tự động quét website của Meta AI.",
+    "ifIgnored": "Chiến dịch quảng cáo có thể tự động áp dụng mức ưu đãi không mong muốn, gây thất thoát ngân sách và sai lệch chiến lược giá bán.",
+    "actionChecklist": [
+      "Kiểm tra ngay cài đặt trong Commerce Manager của tài khoản quảng cáo.",
+      "Tắt tùy chọn tự động hiển thị ưu đãi phát hiện từ website nếu không sử dụng.",
+      "Rà soát lại toàn bộ các chiến dịch đang chạy có kèm mã giảm giá hoặc khuyến mãi.",
+      "Thông báo cho đội ngũ vận hành chiến dịch theo dõi sát sao các phản hồi từ khách hàng."
+    ],
+    "id": "real-2026-11-12-cong-cu-ai-cua-b9b778",
+    "publishedAt": "12/11/2026",
+    "sourceUrl": "https://www.marketingdive.com/news/sociable-metas-ai-ads-included-unapproved-discounts/874525/",
+    "source": "Marketing Dive",
+    "image": {
+      "url": "https://imgproxy.divecdn.com/jtFl8l6BsGmGnMdnKkBuXTUVcdNE3PFfV9vasuIPtAs/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9tZXRhX2xvZ28yLnBuZw==.webp",
+      "credit": "Ảnh: Marketing Dive"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
     "title": "Google cảnh báo việc chặn bot trên CDN có thể làm mất sản phẩm khỏi Google Shopping và Ads",
     "isHot": false,
     "illustration": "page-speed",
@@ -186,132 +368,6 @@
     "image": {
       "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/11/writesonic-partner-stories-featured-1600x832-887.png",
       "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
-    "category": "AI Marketing",
-    "platformIcon": "Sparkles",
-    "title": "Supermetrics ra mắt công cụ điều hành chiến dịch quảng cáo đa kênh qua AI chat",
-    "isHot": false,
-    "illustration": "ai-budget",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "AI Marketing",
-      "Tự động hóa quảng cáo",
-      "ChatGPT Ads",
-      "Supermetrics"
-    ],
-    "summary": "Supermetrics chính thức phát hành công cụ Campaign Manager, cho phép các nhà quảng cáo tạo và điều chỉnh chiến dịch trên 7 nền tảng trực tiếp từ giao diện hội thoại AI. Danh sách hỗ trợ hiện bao gồm Google, Meta, LinkedIn, Microsoft Advertising, TikTok, Snapchat và mới nhất là ChatGPT Ads.",
-    "keyNumbers": [
-      {
-        "value": "7 nền tảng",
-        "label": "kênh quảng cáo được điều khiển từ một cửa sổ chat"
-      },
-      {
-        "value": "86%",
-        "label": "mức giảm thời gian dựng chiến dịch trong thử nghiệm thực tế"
-      },
-      {
-        "value": "1.000.000.000 USD",
-        "label": "doanh thu quy năm của ChatGPT Ads tính đến ngày 31/8"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Điều khiển quảng cáo 7 nền tảng trong một khung chat AI",
-        "body": "Supermetrics ra mắt công cụ Campaign Manager giúp kết nối trực tiếp các mô hình AI như Claude và ChatGPT với tài khoản quảng cáo của doanh nghiệp. Nền tảng này hỗ trợ thao tác trên 7 kênh gồm Google, Meta, LinkedIn, Microsoft Advertising, TikTok, Snapchat và kênh mới bổ sung là ChatGPT Ads. Người dùng có thể yêu cầu AI thay đổi ngân sách, bật tắt chiến dịch hoặc hoán đổi mẫu quảng cáo trên nhiều tài khoản cùng lúc chỉ qua một câu lệnh. Giải pháp này nhằm xóa bỏ rào cản phân mảnh dữ liệu khi đội ngũ phải chuyển đổi qua lại giữa nhiều trình quản lý quảng cáo riêng biệt."
-      },
-      {
-        "heading": "Cơ chế phân quyền và kiểm soát an toàn ngân sách",
-        "body": "Để ngăn chặn rủi ro AI tự ý tiêu tiền, Supermetrics thiết lập nhiều lớp kiểm soát kỹ thuật trước khi áp dụng thay đổi vào tài khoản thực tế. Mặc định quyền ghi dữ liệu phải được bật thủ công cho từng tài khoản quảng cáo riêng biệt. Nhà quảng cáo có thể đặt trần giới hạn thay đổi ngân sách và thiết lập quy trình duyệt lệnh đối với các hành động quan trọng. Hệ thống cũng cung cấp tính năng Business Context để lưu trữ sẵn mục tiêu, hạn mức chi tiêu và quy chuẩn đặt tên, đồng thời ghi lại toàn bộ nhật ký thay đổi để phục vụ kiểm toán nội bộ."
-      },
-      {
-        "heading": "Sự trỗi dậy của mạng lưới quảng cáo ChatGPT Ads",
-        "body": "Việc bổ sung ChatGPT Ads vào danh sách quản lý diễn ra trong bối cảnh mảng kinh doanh quảng cáo của OpenAI tăng trưởng rất nhanh. Sau giai đoạn thử nghiệm tự phục vụ vào tháng 4 với mức giá cố định 60 USD CPM cho mục tiêu tiếp cận, kênh này đã đạt quy mô doanh thu 1.000.000.000 USD tính theo tỷ lệ năm vào ngày 31/8. Tính đến tháng 10, mạng lưới quảng cáo này đã mở rộng ra 89 quốc gia với hơn 100.000 nhà quảng cáo từng triển khai chiến dịch. Hiện tại các nhãn hàng có thể tiếp cận kênh này qua Ads Manager tự phục vụ hoặc hệ thống đối tác công nghệ tích hợp."
-      },
-      {
-        "heading": "Hiệu quả thực tế từ mô hình thử nghiệm ban đầu",
-        "body": "Đơn vị thử nghiệm Premier Cru Solutions, một đại lý tiếp thị gồm 6 nhân sự, ghi nhận mức tiết kiệm khoảng 30% tổng thời gian làm việc khi kết hợp công cụ này với Claude. Trong một dự án tái cấu trúc chiến dịch Google Search, thời gian triển khai thực tế giảm từ mức ước tính 14 giờ xuống chỉ còn 2 giờ trước khi tinh chỉnh. Tốc độ dựng chiến dịch nhờ đó giảm khoảng 86% so với thao tác thủ công thông thường. Tuy nhiên, đơn vị này nhấn mạnh việc ứng dụng AI nhằm tối ưu hóa quy trình làm việc chứ không nhằm mục đích cắt giảm nhân sự vận hành."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing có thể rút ngắn đáng kể chu kỳ thực thi từ khâu phân tích dữ liệu đến tối ưu ngân sách trên toàn bộ các kênh quảng cáo lớn mà không cần thao tác thủ công từng nền tảng. Đồng thời, doanh nghiệp có thêm phương thức tự động hóa để sớm tiếp cận và khai thác vị trí hiển thị mới trên ChatGPT Ads.",
-    "ifIgnored": "Đội ngũ quảng cáo sẽ tiếp tục lãng phí hàng chục giờ mỗi tuần cho các tác vụ điều chỉnh thủ công lặp lại giữa các nền tảng phân mảnh, làm chậm tốc độ phản ứng với biến động thị trường và bỏ lỡ lợi thế khai thác các kênh quảng cáo đàm thoại AI mới.",
-    "actionChecklist": [
-      "Rà soát thời gian vận hành thủ công của đội ngũ media buyer khi chuyển đổi giữa các nền tảng Meta, Google và TikTok",
-      "Thiết lập văn bản quy định hạn mức ngân sách tối đa được phép điều chỉnh tự động qua API của bên thứ ba",
-      "Khảo sát tính khả thi và chi phí triển khai hiển thị thử nghiệm trên kênh ChatGPT Ads cho các thị trường mục tiêu",
-      "Chuẩn hóa bộ quy tắc đặt tên chiến dịch và dữ liệu ngữ cảnh kinh doanh của doanh nghiệp trước khi kết nối vào các trợ lý AI"
-    ],
-    "id": "real-2026-11-11-supermetrics-ra-mat-cong-8dd25e",
-    "publishedAt": "11/11/2026",
-    "sourceUrl": "https://ppc.land/supermetrics-ai-campaign-tool-gains-chatgpt-ads-its-7th-ad-platform/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/size/w1200/2026/11/supermetrics-campaign-manager-chatgpt-ads-7th-platform-pipe-organ-seventh-pipe-punched-roll.jpg",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
-    "category": "AI Marketing",
-    "platformIcon": "Sparkles",
-    "title": "74% marketer mất dấu chuyển đổi khi dùng trợ lý AI để chốt đơn",
-    "isHot": false,
-    "illustration": "data-signal",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "AI Agent",
-      "Đo lường chuyển đổi",
-      "Smart Bidding",
-      "Dữ liệu quảng cáo"
-    ],
-    "summary": "Khảo sát từ Invoca trên 451 lãnh đạo marketing cho thấy gần ba phần tư doanh nghiệp ứng dụng trợ lý AI không thể theo dõi luồng khách hàng từ lượt nhấp quảng cáo đến đơn hàng thực tế. Đáng chú ý, chỉ 19% doanh nghiệp gửi dữ liệu hội thoại ngược về nền tảng quảng cáo để tối ưu máy học.",
-    "keyNumbers": [
-      {
-        "value": "74%",
-        "label": "Marketer không thể theo dõi lead qua AI đến khi chốt đơn"
-      },
-      {
-        "value": "19%",
-        "label": "Doanh nghiệp trả kết quả hội thoại về nền tảng quảng cáo"
-      },
-      {
-        "value": "26%",
-        "label": "Doanh nghiệp gắn được hội thoại AI với chiến dịch cụ thể"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Đứt gãy luồng dữ liệu từ nhấp chuột đến doanh thu",
-        "body": "Báo cáo Broken Funnel do Invoca công bố chỉ ra rằng trong số 323 doanh nghiệp đang vận hành hoặc thử nghiệm trợ lý AI, có đến 74% không thể theo dõi hành trình khách hàng từ cú nhấp đầu tiên đến khâu chốt đơn. Bên cạnh đó, chỉ 27% cho biết trợ lý AI nắm được hành trình số trước đó như mẫu quảng cáo đã nhấp hay các trang đã xem. Tình trạng này khiến bộ phận marketing không thể chứng minh hiệu quả tài chính thực tế mà công nghệ AI mang lại."
-      },
-      {
-        "heading": "Đo lường trợ lý bán hàng bằng chỉ số hỗ trợ kỹ thuật",
-        "body": "Nhiều doanh nghiệp đang đối xử với AI bán hàng như một tổng đài chăm sóc khách hàng thay vì một kênh tạo doanh thu. Khảo sát ghi nhận 20% đo lường AI chủ yếu qua mức độ hài lòng của khách hàng, 16% theo dõi số lượng hội thoại và 10% đo tỷ lệ giải quyết độc lập không cần con người. Chỉ có 7% marketer đo lường trợ lý AI dựa trên doanh thu trực tiếp và 27% tính toán theo doanh thu, lịch hẹn hoặc tỷ lệ chuyển đổi."
-      },
-      {
-        "heading": "Tổn hại tín hiệu tối ưu của các thuật toán quảng cáo",
-        "body": "Khoảng cách đo lường lớn nhất nằm ở việc chỉ 19% doanh nghiệp gửi ngược kết quả tương tác của AI về các hệ thống như Google Ads hay Meta. Các thuật toán đặt thầu thông minh như Smart Bidding phụ thuộc hoàn toàn vào dữ liệu chuyển đổi thực tế để tìm kiếm khách hàng giá trị cao. Khi thiếu tín hiệu doanh thu, hệ thống máy học sẽ tiếp tục tối ưu vào các hành vi bề nổi như bắt đầu chat hoặc điền biểu mẫu, dẫn đến việc thu hút tệp khách kém chất lượng."
-      },
-      {
-        "heading": "Rò rỉ dữ liệu nghiêm trọng ở các điểm chuyển giao",
-        "body": "Sự đứt gãy đo lường càng trầm trọng hơn khi khách hàng được chuyển tiếp từ AI sang các kênh khác ngoài đời thực. Báo cáo ghi nhận 56% marketer bị mất dấu chuyển đổi khi khách hàng được bàn giao cho đại lý hoặc chi nhánh địa phương. Chuyển giao qua tin nhắn làm mất dấu 46% và cuộc gọi thoại làm mất 40%, khiến chỉ 21% doanh nghiệp có thể theo dõi và tác động xuyên suốt toàn bộ phễu bán hàng."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing đối mặt nguy cơ đốt ngân sách quảng cáo vì hệ thống máy học trên Meta và Google đang tối ưu cho các tương tác hội thoại ảo thay vì đơn hàng thực tế, đồng thời khó bảo vệ ngân sách công nghệ trước ban giám đốc khi không chứng minh được doanh thu từ AI.",
-    "ifIgnored": "Chi phí thu hút khách hàng (CAC) sẽ tăng dần theo thời gian do thuật toán tiếp tục phân phối tới tệp người dùng chỉ thích nhắn tin nhưng không mua, biến khoản đầu tư vào trợ lý AI thành gánh nặng chi phí thay vì đòn bẩy doanh số.",
-    "actionChecklist": [
-      "Rà soát quy trình tích hợp để đẩy sự kiện chuyển đổi từ trợ lý AI về Meta Conversions API và Google Offline Conversions.",
-      "Gắn mã theo dõi UTM và click ID vào phiên trò chuyện để AI lưu trữ được nguồn chiến dịch quảng cáo gốc.",
-      "Thay đổi KPI chính của trợ lý AI từ số lượng tin nhắn hoặc tỷ lệ giải quyết sang số lịch hẹn hoặc doanh thu phát sinh.",
-      "Thiết lập định danh khách hàng duy nhất để kết nối dữ liệu giữa bot chat với phần mềm CRM tại các điểm bán."
-    ],
-    "id": "real-2026-11-11-74-marketer-mat-dau-0fbd31",
-    "publishedAt": "11/11/2026",
-    "sourceUrl": "https://ppc.land/74-of-marketers-cant-track-if-ai-agent-leads-become-sales-invoca-finds/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/11/invoca-broken-funnel-74-percent-ai-agent-leads-19-report-back-homing-pigeon-loft-tape-recorder.jpg",
-      "credit": "Ảnh: PPC Land"
     }
   },
   {
@@ -615,70 +671,6 @@
     "source": "Search Engine Journal",
     "image": {
       "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/11/cloudflare-openai-featured.jpg",
-      "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Google cập nhật tính năng Gemini cho Workspace và tối ưu hóa Google Maps",
-    "isHot": false,
-    "illustration": "shop-health",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Google Business Profile",
-      "Gemini Workspace",
-      "Local SEO",
-      "Google Maps"
-    ],
-    "summary": "Google đang triển khai các công cụ Gemini cho tài khoản Google Workspace để quản lý Google Business Profile. Đồng thời, nút nhắn tin trên Google Maps được đưa lên vị trí nổi bật ngay cạnh nút gọi, cùng nhiều cập nhật mới về giờ hoạt động và nhãn thực đơn.",
-    "keyNumbers": [
-      {
-        "value": "06/11",
-        "label": "Thời điểm cập nhật trang trợ giúp"
-      },
-      {
-        "value": "05/11",
-        "label": "Thời điểm đăng bản tin doanh nghiệp"
-      },
-      {
-        "value": "13/10",
-        "label": "Mốc thời gian thay đổi khu vực hỗ trợ"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Tích hợp Gemini vào tài khoản Workspace",
-        "body": "Google thông báo các doanh nghiệp quản lý Google Business Profile bằng tài khoản Google Workspace đang dần nhận quyền truy cập các công cụ profile của Gemini. Quản trị viên Workspace cần bật quyền truy cập ứng dụng Gemini trong bảng điều khiển quản trị trước khi nhân viên liên kết. Tuy nhiên, trang trợ giúp hiện tại vẫn ghi nhận yêu cầu đăng nhập tài khoản Google cá nhân, tạo ra sự khác biệt nhỏ với bản tin cập nhật gần đây."
-      },
-      {
-        "heading": "Thay đổi vị trí nút nhắn tin trên Google Maps",
-        "body": "Nút nhắn tin trên Google Maps đã được di chuyển lên vị trí cao hơn, hiển thị nổi bật ngay cạnh nút gọi trên cả thiết bị Android và iOS. Khách hàng có thể gửi tin nhắn qua các tùy chọn doanh nghiệp đã thiết lập, bao gồm cả WhatsApp và tin nhắn văn bản. Doanh nghiệp cần kiểm tra lại các liên kết này để tránh tình trạng hộp thư không được đọc hoặc liên kết hỏng nằm ở vị trí quan trọng."
-      },
-      {
-        "heading": "Tính năng tạo giờ hoạt động bằng ngôn ngữ tự nhiên",
-        "body": "Trình chỉnh sửa giờ hoạt động của Business Profile bổ sung phần tạo giờ tự động, cho phép chủ doanh nghiệp gõ lịch trình bằng ngôn ngữ tự nhiên để hệ thống tự điền. Công cụ này hỗ trợ các trường hợp như ngày chỉ nhận lịch hẹn hoặc giờ đóng cửa nghỉ trưa. Chủ doanh nghiệp có thể xem lại và chỉnh sửa các mốc giờ này trước khi lưu lại chính thức."
-      },
-      {
-        "heading": "Cập nhật nhãn thực đơn và quy trình kháng cáo",
-        "body": "Các nhà hàng có thể tắt dịch vụ đặt món từ bên thứ ba trực tiếp từ bảng điều khiển Business Profile. Phần nhãn thực đơn bổ sung các lựa chọn không chứa sữa, không chứa gluten, cùng với nhãn Kosher và Halal dành cho đơn vị có chứng nhận. Ngoài ra, công cụ kháng cáo cho phép tải lên tài liệu hỗ trợ trước khi gửi yêu cầu xét duyệt."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing quản lý chuỗi cửa hàng hoặc hệ thống local SEO cần lưu ý vị trí mới của nút nhắn tin trên Google Maps để tối ưu tỷ lệ chuyển đổi khách hàng tiềm năng tại điểm bán.",
-    "ifIgnored": "Bỏ qua các cập nhật này có thể khiến doanh nghiệp mất khách hàng vào tay đối thủ do liên kết nhắn tin trên bản đồ bị hỏng hoặc bỏ lỡ cách cập nhật giờ làm việc tự động nhanh chóng.",
-    "actionChecklist": [
-      "Kiểm tra bảng điều khiển Workspace để kích hoạt quyền truy cập Gemini cho nhân sự phụ trách.",
-      "Thử nghiệm bấm vào nút nhắn tin trên Google Maps của doanh nghiệp để đảm bảo liên kết hoạt động trơn tru.",
-      "Cập nhật giờ hoạt động chi tiết bằng tính năng tạo giờ mới cho các dịp đặc biệt.",
-      "Ra soát lại các nhãn thực đơn và dịch vụ đặt món bên thứ ba trên trang doanh nghiệp."
-    ],
-    "deadline": "06/11/2026",
-    "id": "real-2026-11-06-google-cap-nhat-tinh-1b8fb2",
-    "publishedAt": "06/11/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/google-gemini-business-profile-workspace-2/596120/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/11/gemini-business-profile-featured.jpg",
       "credit": "Ảnh: Search Engine Journal"
     }
   },
