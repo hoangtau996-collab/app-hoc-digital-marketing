@@ -1,125 +1,183 @@
 [
   {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Amazon công bố danh mục 156 thuộc tính báo cáo hợp nhất cho hệ thống quảng cáo",
-    "isHot": true,
-    "illustration": "data-signal",
+    "category": "AI Marketing",
+    "platformIcon": "Sparkles",
+    "title": "Trợ lý AI Shopper Agent: Xu hướng mới làm thay đổi Retail Media và hành vi mua sắm",
+    "isHot": false,
+    "illustration": "zero-click",
     "readTime": "4 phút đọc",
     "tags": [
-      "Amazon Ads",
-      "Báo cáo hợp nhất",
-      "DSP",
-      "Sponsored Products"
+      "Shopper Agent",
+      "AI Marketing",
+      "Retail Media",
+      "Dữ liệu sản phẩm"
     ],
-    "summary": "Amazon vừa công bố tài liệu tham khảo chi tiết cho hệ thống báo cáo hợp nhất gồm 156 thuộc tính thuộc 11 danh mục. Sự thay đổi này chuẩn hóa thuật ngữ từ các hệ thống cũ sang cấu trúc mới, trong đó có 85 thuộc tính áp dụng cho Sponsored Products và 137 thuộc tính cho DVA+.",
+    "summary": "Các doanh nghiệp bán lẻ đang đua nhau triển khai trợ lý AI riêng trên website và ứng dụng để giữ chân khách hàng từ khâu tìm kiếm đến thanh toán. Sự xuất hiện của trợ lý AI đang đe dọa các vị trí quảng cáo truyền thống và buộc các thương hiệu phải thay đổi cách tối ưu hóa dữ liệu sản phẩm.",
     "keyNumbers": [
       {
-        "value": "156",
-        "label": "Tổng số thuộc tính báo cáo"
+        "value": "71%",
+        "label": "Tăng trưởng lưu lượng truy cập từ AI vào tháng 9"
       },
       {
-        "value": "85",
-        "label": "Thuộc tính cho Sponsored Products"
+        "value": "90%",
+        "label": "Tỷ lệ chuyển đổi tốt hơn từ nguồn truy cập AI"
       },
       {
-        "value": "137",
-        "label": "Thuộc tính áp dụng cho DVA+"
+        "value": "3 lần",
+        "label": "Tỷ lệ chuyển đổi của Walmart qua ChatGPT kém hơn so với về web"
       }
     ],
     "content": [
       {
-        "heading": "Cấu trúc báo cáo hợp nhất mới của Amazon",
-        "body": "Amazon Ads đã phát hành danh sách chi tiết gồm 156 thuộc tính có tên trong hệ thống báo cáo hợp nhất, chia thành 11 danh mục. Mỗi thuộc tính đều được đánh dấu rõ ràng áp dụng cho các sản phẩm quảng cáo nào, bao gồm DVA+, Sponsored Brands, Sponsored Display, Sponsored Products và Streaming TV Smart mode/Sponsored TV. Mức độ bao phủ giữa các sản phẩm có sự chênh lệch đáng kể."
+        "heading": "Shopper Agent là gì và cơ chế hoạt động",
+        "body": "Shopper Agent là phần mềm AI do chính thương hiệu vận hành trên website hoặc ứng dụng để hỗ trợ khách hàng từ lúc tìm sản phẩm đến khi thanh toán. Trợ lý này truy cập trực tiếp vào hệ thống của doanh nghiệp bao gồm danh mục sản phẩm, tồn kho theo thời gian thực, giá cả và lịch sử mua hàng. Bằng cách sử dụng các giao thức mở như Model Context Protocol (MCP), agent có thể tự động thêm hàng vào giỏ và áp dụng mã giảm giá. Việc doanh nghiệp tự sở hữu agent giúp giữ nguyên quy trình xử lý gian lận, thuế và chính sách đổi trả hàng."
       },
       {
-        "heading": "Thay đổi về thuật ngữ từ DSP sang cấu trúc mới",
-        "body": "Các thuật ngữ lập trình cũ của Amazon DSP được đưa vào cấu trúc quảng cáo tài trợ quen thuộc. Cụ thể, các thuật ngữ order, line item và creative trong DSP nay chuyển đổi thành campaign, ad group và ad. Bên cạnh đó, các trường dữ liệu sử dụng từ ASIN trước đây trong quảng cáo tài trợ đã được đổi tên, ví dụ Advertised ASIN nay thành Advertised product ID."
+        "heading": "Lưu lượng truy cập từ AI tăng vọt và tác động tới chuyển đổi",
+        "body": "Báo cáo ngày 29/10/2026 của Adobe từ hơn 1 nghìn tỷ lượt truy cập cho thấy lưu lượng đến từ AI tăng 71% so với cùng kỳ năm trước vào tháng 9. Nguồn truy cập này có tỷ lệ chuyển đổi tốt hơn 90% so với các nguồn khác, trái ngược với mức kém hơn 9% của tháng 8/2025. Adobe dự báo lượng truy cập từ AI sẽ tiếp tục tăng 159% trong ngày Thanksgiving, 95% trong ngày Black Friday và 88% trong Cyber Monday. Amazon cũng ghi nhận hơn 250 triệu khách hàng đã sử dụng trợ lý Rufus với số lượng người dùng hàng tháng tăng 149% so với cùng kỳ."
       },
       {
-        "heading": "Cách xử lý dữ liệu không tương thích",
-        "body": "Khi một chiều dữ liệu không áp dụng cho một sản phẩm quảng cáo cụ thể, giá trị của nó sẽ hiển thị dưới dạng null thay vì tạo ra một báo cáo riêng biệt. Phía Amazon cho biết đây là hành vi dự kiến nhằm cho phép các sản phẩm quảng cáo khác nhau cùng chia sẻ một định dạng báo cáo chung."
+        "heading": "Thách thức đối với Retail Media và hiển thị quảng cáo",
+        "body": "Khi người tiêu dùng đặt câu hỏi trực tiếp cho trợ lý AI thay vì duyệt danh mục sản phẩm, các vị trí banner và ô sản phẩm được tài trợ sẽ mất đi lượt xem. Logic xếp hạng của trợ lý AI trở thành gian hàng hiển thị mới và quyết định sản phẩm nào được xuất hiện. Các trợ lý AI bên ngoài có thể bỏ qua toàn bộ danh sách quảng cáo được tài trợ của sàn thương mại điện tử. Tuy nhiên, 65% thương hiệu được BCG khảo sát vào tháng 10/2026 vẫn kỳ vọng ngân sách Retail Media sẽ tăng lên khi các công cụ AI phổ biến hơn."
       },
       {
-        "heading": "Sự phân bổ dữ liệu theo từng danh mục",
-        "body": "Các danh mục như cung ứng, công nghệ và địa lý chủ yếu thuộc về hệ thống mua hàng lập trình DVA+. Trong tổng số 35 thuộc tính cung ứng, có 32 thuộc tính chỉ dành riêng cho DVA+. Ngược lại, một số danh mục khác như tiền tệ, thời gian, đối tượng, chuyển đổi và benchmark được chia sẻ chung cho nhiều loại sản phẩm."
+        "heading": "Rào cản niềm tin và tầm quan trọng của nguồn dữ liệu",
+        "body": "Số liệu từ Walmart cho thấy các đơn hàng thực hiện trực tiếp bên trong ChatGPT có tỷ lệ chuyển đổi kém hơn 3 lần so với lượt bấm chuyển về website Walmart. Khảo sát của Salesforce trên 2.500 người tiêu dùng ghi nhận 76% người mua không muốn AI tự động thực hiện giao dịch thay họ. BCG cũng chỉ ra chỉ có 4% người tiêu dùng sẵn sàng để AI hoàn tất việc mua hàng một cách độc lập. Do trợ lý AI đọc các thuộc tính văn bản chứ không đọc hình ảnh, độ đầy đủ của bảng dữ liệu sản phẩm sẽ quyết định trực tiếp việc sản phẩm có được gợi ý hay không."
       }
     ],
-    "impact": "Trưởng phòng Marketing quản lý ngân sách trên Amazon cần nắm rõ việc thay đổi thuật ngữ từ DSP và Sponsored Ads sang cấu trúc báo cáo chung, đồng thời chuẩn bị tinh thần xử lý các giá trị null khi trích xuất dữ liệu không tương thích giữa các định dạng quảng cáo.",
-    "ifIgnored": "Nếu bỏ qua thay đổi này, đội ngũ vận hành sẽ gặp lỗi khi xây dựng lại các bảng báo cáo định kỳ do sự thay đổi tên gọi trường dữ liệu và nhầm lẫn về các chỉ số trả về giá trị trống.",
+    "impact": "Trưởng phòng Marketing sẽ thấy hiệu quả của banner và vị trí tài trợ truyền thống giảm sút khi người dùng chuyển sang hỏi đáp với AI. Nguồn lưu lượng truy cập từ AI mang lại tỷ lệ chuyển đổi cao vượt trội, yêu cầu đội ngũ phải chuẩn hóa lại toàn bộ hệ thống nguồn dữ liệu sản phẩm (product feed) để AI có thể đọc và trích xuất thông tin chính xác.",
+    "ifIgnored": "Doanh nghiệp sẽ mất lượt hiển thị trên các công cụ tìm kiếm AI, bị đối thủ cạnh tranh chiếm vị trí đề xuất tự nhiên và lãng phí ngân sách vào các vị trí quảng cáo hiển thị đang giảm dần lượng tương tác.",
     "actionChecklist": [
-      "Kiểm tra lại toàn bộ hệ thống báo cáo và bảng tổng hợp dữ liệu nội bộ hiện tại",
-      "Cập nhật từ vựng thuật ngữ mới từ DSP sang cấu trúc campaign, ad group và ad",
-      "Rà soát các trường dữ liệu ASIN đã đổi tên thành product ID trong tài liệu tham khảo",
-      "Lưu ý hiện tượng giá trị null xuất hiện khi trích xuất dữ liệu không hỗ trợ chéo"
+      "Rà soát và chuẩn hóa toàn bộ thuộc tính văn bản trong nguồn dữ liệu sản phẩm thay vì chỉ tập trung vào hình ảnh",
+      "Đánh giá lại hiệu quả của các vị trí quảng cáo banner và tài trợ hiển thị trên website cũng như sàn thương mại điện tử",
+      "Nghiên cứu tích hợp các giao thức kết nối dữ liệu sản phẩm như MCP hoặc UCP để chuẩn bị cho thương mại dựa trên AI",
+      "Theo dõi tỷ lệ chuyển đổi và lượng truy cập đến từ các công cụ AI trong hệ thống phân tích web"
     ],
-    "deadline": "31/12/2026",
-    "id": "real-2026-11-12-amazon-cong-bo-danh-3c0654",
-    "publishedAt": "12/11/2026",
-    "sourceUrl": "https://ppc.land/85-of-amazons-156-unified-report-dimensions-apply-to-sponsored-products/",
+    "id": "real-2026-11-13-tro-ly-ai-shopper-4253bf",
+    "publishedAt": "13/11/2026",
+    "sourceUrl": "https://ppc.land/shopper-agent/",
     "source": "PPC Land",
     "image": {
-      "url": "https://ppc.land/content/images/2026/11/mp-og-db0f0087-ba79-4258-ac3e-9e18c01f18f1.png",
+      "url": "https://ppc.land/content/images/2026/11/shopper-agent-explainer-retailer-owned-ai-guides-checkout-walmart-chatgpt-converted-3x-worse-storefront.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "AI Marketing",
+    "platformIcon": "Sparkles",
+    "title": "Trợ lý AI cá nhân thay đổi cách người tiêu dùng duyệt web và mua sắm",
+    "isHot": false,
+    "illustration": "ai-budget",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "AI Agent",
+      "Meta Muse",
+      "Hành vi khách hàng",
+      "Tự động hóa"
+    ],
+    "summary": "Trợ lý AI cá nhân đang chuyển từ thử nghiệm sang các sản phẩm thương mại như Meta Muse, thay mặt người dùng thực hiện các tác vụ duyệt web và mua sắm. Xu hướng này tạo ra những thay đổi đáng kể về lưu lượng truy cập, cách lựa chọn sản phẩm và thách thức bảo mật đối với các nhà quản lý marketing.",
+    "keyNumbers": [
+      {
+        "value": "76%",
+        "label": "người mua sắm không muốn AI mua hàng thay"
+      },
+      {
+        "value": "58,2 triệu",
+        "label": "yêu cầu trình duyệt từ trợ lý AI"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Sự xuất hiện của trợ lý AI cá nhân",
+        "body": "Trợ lý AI cá nhân là phần mềm chạy trên mô hình ngôn ngữ lớn, thực hiện các tác vụ thay cho một cá nhân bằng cách sử dụng tài khoản, dữ liệu và thông tin thanh toán của người đó. Khác với chatbot thông thường chỉ trả lời câu hỏi, trợ lý AI có thẩm quyền được ủy quyền để hành động trực tiếp. Vào tháng 9 năm 2026, Meta đã ra mắt Muse và tích hợp các công cụ kết nối với các nền tảng kinh doanh như Shopify và tài khoản quảng cáo Meta."
+      },
+      {
+        "heading": "Tác động đến lưu lượng truy cập và đo lường",
+        "body": "Sự phát triển của các tác nhân AI đang làm thay đổi bản chất của lưu lượng truy cập website. Dữ liệu ghi nhận hàng chục triệu yêu cầu trình duyệt từ các tác nhân AI, trong đó phần lớn xuất phát từ cơ sở hạ tầng đám mây và không tự nhận diện là AI. Điều này khiến các bộ lọc bot truyền thống có nguy cơ phân loại nhầm các phiên truy cập đại diện cho khách hàng thực tế."
+      },
+      {
+        "heading": "Thay đổi trong hành vi lựa chọn sản phẩm",
+        "body": "Khi trợ lý AI thực hiện việc tìm kiếm và mua sắm thay mặt con người, các quyết định lựa chọn sản phẩm có thể dịch chuyển ra khỏi các giao diện trang web truyền thống. Trong các thử nghiệm sơ bộ, phần lớn các lựa chọn mua sắm cuối cùng đến từ việc trình duyệt truy cập trực tiếp vào các trang web thay vì thông qua các danh mục có sẵn của nền tảng. Điều này đặt ra bài toán mới về cách tối ưu hóa sự hiện diện của thương hiệu trước các thuật toán thay vì chỉ tập trung vào người tiêu dùng cuối."
+      },
+      {
+        "heading": "Thách thức về bảo mật và quyền riêng tư",
+        "body": "Việc sử dụng trợ lý AI đi kèm với những rủi ro bảo mật đáng kể như mã độc trong các tiện ích mở rộng hoặc rò rỉ dữ liệu người dùng. Các cơ quan bảo vệ dữ liệu đã đưa ra cảnh báo về các lỗ hổng bảo mật và tình trạng quá tải sự đồng thuận khi người dùng phải liên tục cấp quyền cho các tác nhân tự động thực hiện giao dịch."
+      }
+    ],
+    "impact": "Trợ lý AI cá nhân đứng giữa ý định của khách hàng và website, làm thay đổi nguồn gốc lưu lượng truy cập và cách thức ra quyết định mua hàng, khiến các chỉ số phân tích hành vi truyền thống kém chính xác.",
+    "ifIgnored": "Bỏ qua xu hướng này dẫn đến việc hiểu sai các phiên truy cập từ bot AI là khách hàng thật, đồng thời mất đi cơ hội tối ưu hóa sản phẩm để hiển thị khi AI thay mặt người dùng mua sắm.",
+    "actionChecklist": [
+      "Đánh giá lại hệ thống lọc bot và phân tích lưu lượng truy cập website để nhận diện các yêu cầu từ trình duyệt AI.",
+      "Theo dõi sát các cập nhật kết nối kinh doanh và tài khoản quảng cáo từ các nền tảng lớn như Meta Muse.",
+      "Kiểm tra tính minh bạch và khả năng đọc dữ liệu sản phẩm của bot AI trên trang web của doanh nghiệp.",
+      "Cập nhật chiến lược đo lường hiệu suất khi hành vi mua sắm dần dịch chuyển sang các tác nhân tự động."
+    ],
+    "id": "real-2026-11-13-tro-ly-ai-ca-c69696",
+    "publishedAt": "13/11/2026",
+    "sourceUrl": "https://ppc.land/personal-ai-agent/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/11/personal-ai-agent-explainer-delegated-authority-76-percent-shoppers-decline-key-ring-handoff.jpg",
       "credit": "Ảnh: PPC Land"
     }
   },
   {
     "category": "Google Ads & SEO",
     "platformIcon": "Search",
-    "title": "Google giải thích nguyên nhân dữ liệu Google Analytics lệch với số liệu click của Search Console",
-    "isHot": "false",
-    "illustration": "zero-click",
+    "title": "Năng lực AI của nhân sự quảng cáo chưa được đánh giá đúng mức",
+    "isHot": false,
+    "illustration": "account-security",
     "readTime": "4 phút đọc",
     "tags": [
-      "Google Search Console",
-      "Google Analytics",
-      "SEO",
-      "HTTP Referer"
+      "Google Ads",
+      "Kỹ năng AI",
+      "Quản trị ngân sách",
+      "Đo lường hiệu suất"
     ],
-    "summary": "Google vừa bổ sung tài liệu kỹ thuật chính thức giải thích cơ chế định danh lưu lượng truy cập tìm kiếm thông qua HTTP Referer header. Tài liệu này làm rõ lý do vì sao dữ liệu đo lường trên công cụ phân tích website thường xuyên không khớp với số liệu click hiển thị trong Search Console.",
+    "summary": "Nghiên cứu mới cho thấy phần lớn nhân sự chưa bao giờ được đánh giá năng lực AI một cách chính thức, dù nhà quản lý rất coi trọng kỹ năng này khi tuyển dụng. Điều này tạo ra rủi ro lớn trong việc quản lý ngân sách quảng cáo tự động.",
     "keyNumbers": [
       {
-        "value": "2011",
-        "label": "năm ẩn từ khóa tìm kiếm"
+        "value": "72%",
+        "label": "nhân sự chưa từng được đánh giá kỹ năng AI"
       },
       {
-        "value": "2020",
-        "label": "mốc cập nhật chính sách trình duyệt"
+        "value": "69%",
+        "label": "quản lý coi trọng AI khi tuyển dụng"
       }
     ],
     "content": [
       {
-        "heading": "Cơ chế truyền thông tin Referer của Google",
-        "body": "Google Search áp dụng chính sách referrer nguồn gốc, nghĩa là HTTP Referer header chỉ chứa giao thức và tên miền của trang giới thiệu mà không kèm theo đường dẫn chi tiết hay tham số truy vấn. Trình duyệt của người dùng có thể bỏ qua header này hoặc chặn quyền truy cập JavaScript vì lý do bảo mật và quyền riêng tư. Khi header bị thiếu, các công cụ phân tích thường ghi nhận các phiên truy cập này vào mục lưu lượng trực tiếp. Do đó, log máy chủ web có thể ghi lại nhiều lượt truy cập từ Google Search hơn so với số liệu mà thẻ JavaScript đo được trên cùng một trang web."
+        "heading": "Khoảng trống trong đánh giá năng lực AI",
+        "body": "Khảo sát cho thấy phần lớn nhân sự chưa từng được đánh giá năng lực AI một cách chính thức. Tuy nhiên, phần lớn nhà quản lý vẫn coi đây là yếu tố quan trọng khi tuyển dụng. Doanh nghiệp đang tuyển dụng và thăng遷 dựa trên các tiêu chí chưa được đo lường thực tế."
       },
       {
-        "heading": "Sự chồng chéo giữa Tìm kiếm, Discover và Google Images",
-        "body": "Tài liệu kỹ thuật chỉ ra rằng lưu lượng truy cập từ Google Discover và Google Images đều sử dụng chung giá trị Referer với các nguồn tìm kiếm thông thường trên web hoặc ứng dụng. Điều này khiến các nhà quản trị website không thể tách bạch riêng biệt lưu lượng từ Discover hoặc tìm kiếm hình ảnh chỉ dựa vào thông tin từ header. Mọi truy cập khớp với các mẫu của Google đều bị gộp chung thành Google Search trên hệ thống phân tích. Việc phân tách chi tiết các kênh này hiện chỉ phụ thuộc vào báo cáo chuyên biệt bên trong Search Console."
+        "heading": "Đào tạo nội bộ chưa đáp ứng thực tế",
+        "body": "Đa số nhân sự từng nhận được đào tạo về AI từ công ty nhưng không áp dụng được nhiều vào công việc. Hầu hết người làm nghề tự học qua tài nguyên miễn phí và qua quá trình thử sai thực tế. Việc thử nghiệm này diễn ra trực tiếp trên ngân sách quảng cáo của khách hàng."
       },
       {
-        "heading": "Các trường hợp làm mất dữ liệu đo lường",
-        "body": "Trình duyệt hoặc hệ điều hành của người dùng có thể bỏ qua HTTP Referer header trong các chế độ duyệt web riêng tư hoặc khi bật tính năng chống lấy dấu vân tay. Việc mở kết quả tìm kiếm trong tab mới cũng làm mất thông tin giới thiệu này trên một số trình duyệt di động hoặc máy tính. Thêm vào đó, các tiện ích mở rộng bảo mật hoặc cài đặt trình duyệt nghiêm ngặt từ phía người dùng cũng chặn trực tiếp header gửi đi. Công nghệ theo dõi dựa trên mã JavaScript còn có thể bị ảnh hưởng bởi cài đặt đồng thuận cookie và các trình chặn quảng cáo."
+        "heading": "Vấn đề đo lường trong ngành quảng cáo",
+        "body": "Ngành quảng cáo vốn đo lường mọi chỉ số đến từng chữ số thập phân nhưng lại đánh giá nhân sự bằng cảm tính hàng năm. Việc thiếu các bài kiểm tra thực tế khiến những người chỉ biết nói về tự động hóa dễ được đánh giá cao hơn người thực tế tối ưu chiến dịch."
       },
       {
-        "heading": "Ý nghĩa đối với việc báo cáo lưu lượng tự nhiên",
-        "body": "Dữ liệu truy vấn từ khóa tìm kiếm hoàn toàn không được truyền qua header từ thời điểm Google chuyển hướng sang kết nối mã hóa. Các nhà quản trị website phải tra cứu báo cáo hiệu suất trực tiếp trong Search Console để xem từ khóa người dùng đã nhập. Việc so sánh số liệu giữa Google Analytics và Search Console đòi hỏi phải hiểu rõ sự khác biệt về cách ghi nhận kỹ thuật giữa log máy chủ và thẻ đo lường trên trình duyệt. Tài liệu mới này đóng vai trò hướng dẫn tham khảo để rà soát lại các quy tắc phân kênh và bộ lọc trong hệ thống phân tích."
+        "heading": "Định nghĩa lại năng lực AI cho người chạy quảng cáo",
+        "body": "Năng lực AI thực sự không nằm ở việc viết câu lệnh hay hiểu lý thuyết chung chung. Kỹ năng cốt lõi là biết khi nào nên giao việc cho hệ thống tự động, khi nào cần kiểm tra lại kết quả và khi nào tuyệt đối không dùng tự động hóa."
       }
     ],
-    "impact": "Giúp Trưởng phòng Marketing hiểu rõ nguyên nhân kỹ thuật gây lệch dữ liệu giữa Search Console và các công cụ phân tích, từ đó điều chỉnh lại cách đánh giá hiệu quả kênh tìm kiếm tự nhiên và Google Discover.",
-    "ifIgnored": "Tiếp tục diễn giải sai lệch số liệu báo cáo lưu lượng tự nhiên, dẫn đến việc đánh giá sai hiệu quả chiến dịch SEO và phân bổ nhầm lẫn giữa các kênh traffic trực tiếp và tìm kiếm.",
+    "impact": "Trưởng phòng Marketing đang đánh giá năng lực đội ngũ phụ trách Google Ads dựa trên các tín hiệu bề nổi như chứng chỉ hoặc cách thuyết trình, thay vì kiểm tra khả năng kiểm soát hệ thống tự động thực tế.",
+    "ifIgnored": "Tiếp tục phân bổ ngân sách cho nhân sự dựa trên cảm tính, dẫn đến việc tài khoản bị thất thoát ngân sách do không kiểm soát chặt chẽ các quyết định của hệ thống tự động.",
     "actionChecklist": [
-      "Kiểm tra lại hệ thống ghi nhận log máy chủ và thẻ JavaScript trên website",
-      "Rà soát các bộ lọc và quy tắc phân kênh lưu lượng trong Google Analytics",
-      "Sử dụng báo cáo hiệu suất trong Search Console để phân tích từ khóa thay vì tìm kiếm trong analytics",
-      "Lưu ý sự chồng chéo lưu lượng giữa Google Discover và tìm kiếm thông thường khi lập báo cáo"
+      "Kiểm tra lại cách đội ngũ đang giám sát các quyết định đặt giá thầu tự động trên tài khoản",
+      "Yêu cầu nhân sự báo cáo chi tiết về các từ khóa phủ định và vị trí hiển thị thay vì chỉ xem số liệu tổng quan",
+      "Đánh giá năng lực nhân sự dựa trên số lần họ can thiệp kịp thời để sửa lỗi của hệ thống tự động",
+      "Xây dựng tiêu chuẩn nội bộ để kiểm chứng kỹ năng xử lý tình huống thực tế của nhân sự chạy quảng cáo"
     ],
-    "id": "real-2026-11-12-google-giai-thich-nguyen-77149b",
-    "publishedAt": "12/11/2026",
-    "sourceUrl": "https://ppc.land/google-explains-why-analytics-wont-match-search-console-click-counts/",
-    "source": "PPC Land",
+    "id": "real-2026-11-13-nang-luc-ai-cua-4b5425",
+    "publishedAt": "13/11/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/72-of-workers-say-their-ai-skills-are-untested-heres-how-ppc-managers-prove-theirs/596205/",
+    "source": "Search Engine Journal",
     "image": {
-      "url": "https://ppc.land/content/images/2026/11/mp-og-cb25b494-dcf9-4dd1-986c-8b5fa2242047.png",
-      "credit": "Ảnh: PPC Land"
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/11/ppc-skill-957.png",
+      "credit": "Ảnh: Search Engine Journal"
     }
   },
   {
@@ -553,65 +611,6 @@
     "source": "Social Media Today",
     "image": {
       "url": "https://imgproxy.divecdn.com/5ajo4UXSQaMWq4Y-JgYvrrFU3hu-oqFHGUQuBLXh9D4/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9pZ19lZmZlY3RfYnVpbGRlcjIucG5n.webp",
-      "credit": "Ảnh: Social Media Today"
-    }
-  },
-  {
-    "category": "Meta Ads",
-    "platformIcon": "Facebook",
-    "title": "Công cụ AI của Meta tự ý lấy mã giảm giá trên website đưa vào quảng cáo dù đã tắt ưu đãi",
-    "isHot": false,
-    "illustration": "ai-budget",
-    "readTime": "3 phút đọc",
-    "tags": [
-      "Meta Ads",
-      "Trí tuệ nhân tạo",
-      "Commerce Manager",
-      "Khuyến mãi"
-    ],
-    "summary": "Các công cụ quảng cáo sử dụng AI của Meta bị phát hiện tự động quét mã giảm giá từ website doanh nghiệp và hiển thị lên quảng cáo Facebook và Instagram. Sự cố này xảy ra ngay cả khi nhà quảng cáo đã chủ động tắt tính năng hiển thị ưu đãi trên mẫu quảng cáo đó.",
-    "keyNumbers": [
-      {
-        "value": "15,7%",
-        "label": "tỷ lệ chuyển đổi tăng thêm trên Facebook trong Q2 2026 nhờ AI"
-      },
-      {
-        "value": "> 8%",
-        "label": "mức tăng lượt nhấp quảng cáo nhờ cải tiến hệ thống xếp hạng"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Phát hiện lỗi tự động lấy mã ưu đãi từ website",
-        "body": "Chuyên gia tư vấn tiếp thị số Bram Van der Hallen vừa phát hiện một sơ hở trên hệ thống quảng cáo của Meta. Cụ thể, các công cụ tự động hóa AI của Meta có thể tự động nhận diện mã ưu đãi từ website của doanh nghiệp và đưa chúng vào quảng cáo Facebook và Instagram. Đáng lo ngại là hiện tượng này vẫn xảy ra ngay cả khi nhà quảng cáo đã tắt tùy chọn hiển thị ưu đãi trên mẫu quảng cáo gốc. Việc hệ thống tự ý trích xuất dữ liệu có thể làm đảo lộn kế hoạch phân phối ưu đãi của thương hiệu."
-      },
-      {
-        "heading": "Rủi ro lộ sâu khuyến mãi tới sai đối tượng",
-        "body": "Vấn đề này gây ra rủi ro rất lớn cho bất kỳ doanh nghiệp nào đang triển khai nhiều chương trình khuyến mãi cùng lúc. Một mã giảm giá vốn chỉ dành riêng cho một chiến dịch cụ thể hoặc một nhóm khách hàng nhất định có thể bị AI quét và hiển thị tràn lan ở nơi khác. Điều này dẫn đến việc khách hàng không thuộc đối tượng target vẫn nhận được ưu đãi sâu. Hậu quả là doanh nghiệp bị sụt giảm biên lợi nhuận ngoài dự kiến và gặp bối rối trong khâu vận hành."
-      },
-      {
-        "heading": "Nguyên nhân và cách xử lý trong Commerce Manager",
-        "body": "Theo phân tích từ Bram Van der Hallen, tính năng tự động này liên quan trực tiếp đến thiết lập trong Commerce Manager. Khi tùy chọn hiển thị ưu đãi tự động phát hiện từ website được kích hoạt trong Commerce Manager, Meta sẽ mặc định có quyền áp dụng các ưu đãi đó lên quảng cáo. Nhà quảng cáo cần phải chủ động truy cập vào phần cài đặt này để cập nhật và vô hiệu hóa tính năng. Đây là bước quản lý bổ sung mà các Marketer buộc phải lưu tâm để bảo vệ chiến dịch của mình."
-      },
-      {
-        "heading": "Nỗ lực tối ưu AI của Meta và mặt trái tự động hóa",
-        "body": "Sự cố này xuất hiện trong bối cảnh Meta đang nỗ lực mở rộng năng lực xử lý AI để tối ưu hóa hiệu quả quảng cáo. Công ty cho biết những cải tiến trong hệ thống xếp hạng quảng cáo đã giúp tăng hơn 8% lượt nhấp và tăng 15,7% tỷ lệ chuyển đổi trên Facebook trong Q2 2026. Tuy nhiên, khi các hệ thống ngày càng phụ thuộc vào AI để tìm kiếm hiệu quả và tối ưu chi phí, các lỗi tự động hóa là điều khó tránh khỏi. Nhà quảng cáo cần luôn cảnh giác trước những thay đổi ngầm của thuật toán để tránh chịu thiệt hại."
-      }
-    ],
-    "impact": "Doanh nghiệp có nguy cơ bị rò rỉ các mã giảm giá độc quyền hoặc chương trình ưu đãi riêng biệt tới sai tập khách hàng, dẫn đến suy giảm biên lợi nhuận và làm xáo trộn chiến lược giá.",
-    "ifIgnored": "Nếu không rà soát cài đặt ngay, các chiến dịch Meta Ads có thể tiếp tục tự động áp dụng mã giảm giá không mong muốn, gây thất thoát ngân sách và tạo ra xung đột khi xử lý đơn hàng với khách hàng.",
-    "actionChecklist": [
-      "Truy cập ngay vào giao diện Commerce Manager của tài khoản doanh nghiệp trên Meta.",
-      "Tìm và kiểm tra phần cài đặt tính năng tự động phát hiện ưu đãi từ website.",
-      "Tắt tùy chọn cho phép Meta tự động hiển thị các ưu đãi đã quét được lên chiến dịch quảng cáo.",
-      "Kiểm tra lại toàn bộ các quảng cáo đang chạy trên Facebook và Instagram để đảm bảo hiển thị đúng giá."
-    ],
-    "id": "real-2026-11-08-cong-cu-ai-cua-93b1af",
-    "publishedAt": "08/11/2026",
-    "sourceUrl": "https://www.socialmediatoday.com/news/metas-ai-ads-included-unapproved-discounts/874067/",
-    "source": "Social Media Today",
-    "image": {
-      "url": "https://imgproxy.divecdn.com/jtFl8l6BsGmGnMdnKkBuXTUVcdNE3PFfV9vasuIPtAs/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9tZXRhX2xvZ28yLnBuZw==.webp",
       "credit": "Ảnh: Social Media Today"
     }
   },
