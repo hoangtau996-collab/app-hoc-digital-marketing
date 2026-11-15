@@ -1,5 +1,190 @@
 [
   {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Tự động hạ giá thầu Google Ads khi từ khóa thương hiệu không có đối thủ cạnh tranh",
+    "isHot": false,
+    "illustration": "cpm-auction",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Google Ads",
+      "Brand Search",
+      "Đấu thầu tự động",
+      "Tối ưu ngân sách"
+    ],
+    "summary": "Lunio hợp tác với Revvim tích hợp công cụ Agentic Bid Optimization giúp tự động giảm giá thầu Google Search và Shopping xuống mức tối thiểu khi không có đối thủ cạnh tranh cùng từ khóa thương hiệu. Hệ thống khôi phục giá thầu đầy đủ ngay khi đối thủ xuất hiện. Doanh nghiệp chỉ trả phí dựa trên số tiền thực tế tiết kiệm được.",
+    "keyNumbers": [
+      {
+        "value": "31%",
+        "label": "Tỷ lệ truy cập thương hiệu không có đối thủ đấu giá"
+      },
+      {
+        "value": "76%",
+        "label": "Mức giảm CPC trên các từ khóa thương hiệu lớn"
+      },
+      {
+        "value": "8 phút 45 giây",
+        "label": "Thời gian phản ứng trung bình với từ khóa tìm kiếm cao"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Cơ chế vận hành song song hai chiến dịch",
+        "body": "Hệ thống hoạt động dựa trên việc phối hợp hai chiến dịch trên tài khoản Google Ads. Khi có đối thủ tham gia đấu giá, chiến dịch chính giữ nguyên giá thầu ban đầu để bảo vệ vị trí hiển thị hàng đầu. Khi không có đối thủ, lưu lượng tìm kiếm được chuyển sang chiến dịch phụ với mức giá thầu tối thiểu. Các kịch bản Google Ads Script tự động cập nhật danh sách từ khóa phủ định để điều hướng lưu lượng giữa hai chiến dịch."
+      },
+      {
+        "heading": "Thời gian phản ứng và khả năng tương thích",
+        "body": "Công cụ chạy trực tiếp trên các chiến dịch hiện có mà không cần khởi tạo lại cấu trúc quảng cáo. Hệ thống tương thích hoàn toàn với Smart Bidding và Performance Max. Theo dữ liệu từ Revvim, hệ thống phản ứng trung bình trong 8 phút 45 giây đối với từ khóa có lượng tìm kiếm lớn và 35 phút đối với từ khóa có lượng tìm kiếm thấp. Mọi thao tác điều chỉnh đều được lưu lại trong lịch sử thay đổi của tài khoản."
+      },
+      {
+        "heading": "Quy trình triển khai và mô hình chi phí",
+        "body": "Để vận hành, doanh nghiệp cần cấp quyền truy cập Standard trên Google Ads và quyền truy cập Google Search Console. Sau khi thống nhất danh sách từ khóa phòng thủ, hệ thống trải qua giai đoạn học tối thiểu 7 ngày. Việc đánh giá hiệu quả được tiến hành vào ngày 10 và ngày 30. Doanh nghiệp không phải trả chi phí khởi tạo ban đầu mà trả phí dựa trên tỷ lệ phần trăm số tiền ngân sách đã thu hồi được."
+      },
+      {
+        "heading": "Kết quả thực tế từ các doanh nghiệp áp dụng",
+        "body": "Một thương hiệu giao đồ ăn trực tuyến đã tiết kiệm hơn 6,4 triệu USD trong năm 2025 và giảm 76% CPC trên 15 từ khóa thương hiệu. Dữ liệu phân tích cho thấy 31% lượng truy cập thương hiệu của đơn vị này hoàn toàn không có đối thủ đấu giá. Một hãng xe điện cũng thu hồi hơn 240.000 USD trong 6 tháng, trong khi một thương hiệu trang sức tại Anh giảm 42% CPC từ khóa thương hiệu vào thời điểm cao điểm."
+      }
+    ],
+    "impact": "Trực tiếp chấm dứt tình trạng lãng phí ngân sách khi phải trả giá thầu phòng thủ cao cho các nhấp chuột không có ai cạnh tranh trên Google Search.",
+    "ifIgnored": "Doanh nghiệp sẽ tiếp tục chi trả mức chi phí trên mỗi nhấp chuột (CPC) cao cho các từ khóa thương hiệu ngay cả trong những khoảng thời gian đối thủ không hề chạy quảng cáo.",
+    "actionChecklist": [
+      "Kiểm tra báo cáo Thông tin chi tiết về phiên đấu giá (Auction Insights) để xác định tỷ lệ phiên đấu giá từ khóa thương hiệu không có đối thủ.",
+      "Tách riêng chiến dịch từ khóa thương hiệu (Brand Search) khỏi các chiến dịch tìm kiếm chung để kiểm soát chi phí chính xác.",
+      "Cấp quyền truy cập Google Search Console để đối soát lượng truy cập tự nhiên với lưu lượng quảng cáo tìm kiếm trả phí.",
+      "Thử nghiệm kịch bản Google Ads Script để tự động hóa việc theo dõi và điều chỉnh giá thầu theo thời gian thực."
+    ],
+    "id": "real-2026-11-14-tu-dong-ha-gia-1da747",
+    "publishedAt": "14/11/2026",
+    "sourceUrl": "https://ppc.land/lunio-cuts-google-brand-bids-when-no-rival-is-in-the-auction/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/11/lunio-revvim-agentic-bid-optimization-google-brand-search-uncontested-auctions-toll-plaza-empty-lane.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Video",
+    "title": "YouTube Studio nâng cấp Analytics thành Insights và đưa trợ lý AI Ask Studio lên di động",
+    "isHot": false,
+    "illustration": "ai-video",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "YouTube Studio",
+      "Analytics",
+      "Ask Studio",
+      "AI Marketing"
+    ],
+    "summary": "YouTube chính thức triển khai giao diện Insights thay thế Analytics trên máy tính với các bản tóm tắt nguyên nhân biến động chỉ số bằng ngôn ngữ tự nhiên. Trợ lý AI Ask Studio cũng đã có mặt trên ứng dụng di động Android và iPhone với khả năng phân tích tối đa 10 hình ảnh tải lên cùng lúc.",
+    "keyNumbers": [
+      {
+        "value": "10",
+        "label": "hình ảnh tải lên cùng lúc được trợ lý Ask Studio xử lý trên di động"
+      },
+      {
+        "value": "4.431",
+        "label": "lượt xem video thông báo tính năng mới tính đến ngày 14/11/2026"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Analytics chuyển thành Insights với tóm tắt ngôn ngữ tự nhiên",
+        "body": "Ngày 13/11/2026, YouTube triển khai giao diện Insights trên giao diện máy tính để thay đổi cách hiển thị số liệu trong YouTube Studio. Thay vì bắt người dùng tự phân tích dữ liệu thô, Insights sử dụng câu văn tự nhiên để giải thích lý do số liệu tăng hoặc giảm. Các chỉ số chính được nhóm vào các thẻ có thể tùy chỉnh khoảng thời gian 7 ngày, 28 ngày hoặc 90 ngày. Những báo cáo chi tiết và công cụ phân tích nâng cao vẫn được giữ nguyên khi chọn nút Advanced mode ở góc phải."
+      },
+      {
+        "heading": "Đưa trợ lý AI Ask Studio lên ứng dụng di động",
+        "body": "Cùng ngày 13/11/2026, trợ lý trò chuyện Ask Studio tích hợp trong YouTube Studio chính thức có mặt trên ứng dụng di động Android và iPhone. Công cụ AI này bổ sung khả năng đọc và phân tích dữ liệu từ tối đa 10 hình ảnh tải lên cùng một lúc. Tuy nhiên, YouTube chưa công bố chi tiết tiêu chuẩn cụ thể để các kênh được xác định là đủ điều kiện sử dụng tính năng này. Đây là cải tiến giúp đội ngũ quản lý kênh làm việc linh hoạt ngay trên điện thoại."
+      },
+      {
+        "heading": "Tab Research thay thế hoàn toàn tab Trends",
+        "body": "YouTube chính thức thay thế công cụ Trends cũ bằng tab Research được cá nhân hóa theo từng lĩnh vực nội dung. Công cụ mới sử dụng dữ liệu người xem để xếp hạng các video đạt thành công nổi bật từ những kênh khác, hỗ trợ tìm kiếm ý tưởng nội dung và tiêu đề. Thay đổi này nối tiếp đợt thử nghiệm được ghi nhận từ ngày 16/07/2026. Tính năng lưu từ khóa cũ trên máy tính bị ngừng hỗ trợ và người dùng có 3 tháng để tải dữ liệu về dưới dạng tệp CSV."
+      },
+      {
+        "heading": "Phản ứng từ người dùng và giữ nguyên các chỉ số chuyên sâu",
+        "body": "Tính đến ngày 14/11/2026, video công bố cập nhật trên Creator Insider thu hút 4.431 lượt xem, 340 lượt thích và 123 bình luận. Một số nhà quản lý kênh phản ánh việc loại bỏ các tab nằm ngang khiến thao tác chuyển đổi báo cáo tốn nhiều bước hơn. YouTube khẳng định các chỉ số đo lường nâng cao như Unique Reach ra mắt ngày 22/05/2026 hay chỉ số xem chung trên TV vẫn được giữ nguyên trong chế độ nâng cao."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing sẽ rút ngắn thời gian đọc báo cáo hiệu suất YouTube nhờ các bản tóm tắt tự động, đồng thời sở hữu thêm công cụ AI nghiên cứu video đối thủ trên tab Research và phân tích hình ảnh hình thu nhỏ ngay trên di động.",
+    "ifIgnored": "Bỏ qua cập nhật sẽ khiến đội ngũ lúng túng khi giao diện báo cáo YouTube thay đổi, không khai thác được dữ liệu nghiên cứu ý tưởng từ đối thủ và bỏ lỡ thời hạn 3 tháng để xuất dữ liệu từ khóa đã lưu.",
+    "actionChecklist": [
+      "Đăng nhập YouTube Studio trên máy tính để làm quen với giao diện Insights và kiểm tra nút Advanced mode.",
+      "Cập nhật ứng dụng YouTube Studio trên di động để kiểm tra quyền truy cập trợ lý AI Ask Studio.",
+      "Truy cập tab Research mới trên máy tính để phân tích các video xu hướng trong cùng lĩnh vực nội dung.",
+      "Tải xuống tệp CSV lưu trữ danh sách từ khóa trên bản máy tính trước khi tính năng cũ bị đóng hoàn toàn."
+    ],
+    "id": "real-2026-11-14-youtube-studio-nang-cap-135406",
+    "publishedAt": "14/11/2026",
+    "sourceUrl": "https://ppc.land/youtube-studios-numbers-learn-to-talk-as-analytics-becomes-insights/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/2026/11/youtube-studio-analytics-becomes-insights-research-tab-plain-language-adding-machine-speech-bubble.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "AI Marketing",
+    "platformIcon": "Sparkles",
+    "title": "Meta Muse và OpenAI chiếm gần 90% lượng truy cập AI Agent vào các trang thương mại điện tử",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "AI Agent",
+      "Meta Muse",
+      "Traffic Thương mại điện tử",
+      "Phân tích dữ liệu"
+    ],
+    "summary": "Báo cáo tháng 10 của HUMAN Security cho thấy các AI agent từ Meta và OpenAI chiếm gần 90% tổng lượt yêu cầu từ agent đến các website và ứng dụng được bảo vệ. Trong đó, riêng Meta Muse đã chiếm 59% và gửi số lượng yêu cầu gấp 3,7 lần so với ChatGPT Agent. Đáng chú ý, 85% lượt truy cập của AI agent tập trung vào trang sản phẩm và tìm kiếm, gây ảnh hưởng trực tiếp đến tính chính xác của dữ liệu phân tích website.",
+    "keyNumbers": [
+      {
+        "value": "59%",
+        "label": "Thị phần lượt yêu cầu từ Meta Muse trong tháng 10"
+      },
+      {
+        "value": "85%",
+        "label": "Lượt truy cập agent hướng vào trang sản phẩm và tìm kiếm"
+      },
+      {
+        "value": "gần 90%",
+        "label": "Tổng thị phần của Meta và OpenAI kết hợp"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Sự bùng nổ của Meta Muse và làn sóng AI Agent",
+        "body": "Lượng yêu cầu từ các AI agent trong tháng 10 đã tăng khoảng 8 lần so với tháng 8 và gấp khoảng 2,6 lần so với tháng 9. Meta Muse ra mắt vào ngày 8/9 đã tăng thêm 19 điểm phần trăm thị phần so với tháng 9, với số lượng yêu cầu tăng gần gấp 4 lần. Hiện tại, Muse gửi số lượng yêu cầu gấp 3,7 lần so với ChatGPT Agent. Trong khi đó, dù ChatGPT Agent tăng 44% số lượng yêu cầu, thị phần của công cụ này vẫn giảm từ 28,5% xuống 15,9% do sự tăng trưởng quá nhanh của Muse."
+      },
+      {
+        "heading": "Xu hướng chuyển dịch và sự suy giảm của các trình duyệt độc lập",
+        "body": "Báo cáo ghi nhận sự sụt giảm mạnh của các trình duyệt AI agent độc lập khi người dùng ưu tiên sử dụng agent tích hợp sẵn trên các nền tảng quen thuộc. Trình duyệt Genspark biến mất khỏi danh sách 10 agent hàng đầu, trong khi Perplexity Comet giảm từ 41% trong tháng 8 xuống 9,4% vào tháng 9 và chỉ còn 3,6% trong tháng 10. Comet cũng là agent duy nhất trong top 10 bị giảm khoảng 30% khối lượng yêu cầu kể từ tháng 8. Ngoài ra, OpenAI cũng đã ngừng cung cấp trình duyệt ChatGPT Atlas độc lập vào tháng 8."
+      },
+      {
+        "heading": "AI agent tập trung xem hàng thay vì hoàn tất đơn hàng",
+        "body": "Khoảng 60% lượt yêu cầu từ AI agent nhắm vào các website thương mại điện tử, đưa ngành này trở thành nhóm chịu ảnh hưởng lớn nhất. Trong tháng 10, có 85% lượt truy cập của agent hướng vào các trang sản phẩm và tìm kiếm, tăng so với mức 81% của tháng trước. Ngược lại, tỷ lệ truy cập vào trang thanh toán giảm từ 2,4% xuống 1,9%. Điều này cho thấy các AI agent hiện chủ yếu thực hiện hành vi duyệt sản phẩm và thu thập thông tin giá cả thay vì tiến hành đặt hàng."
+      },
+      {
+        "heading": "Thách thức trong việc nhận diện và xác thực kỹ thuật",
+        "body": "Theo báo cáo, công cụ phân tích dữ liệu trên hầu hết các website hiện nay không thể phân biệt được AI agent với người dùng thực tế. Meta Muse hoạt động bằng cách hiển thị truy cập dưới dạng hoạt động của người dùng thực. Từ ngày 7/11 đến 9/11, Muse đã chuyển chữ ký Web Bot Auth từ meta.com sang muse.ai. Tính đến ngày 10/11, khoảng một nửa số yêu cầu của Muse trên mạng lưới DataDome không được ký xác thực, gây khó khăn cho các hệ thống chống bot hiện tại."
+      }
+    ],
+    "impact": "Dữ liệu lượng truy cập, tỷ lệ chuyển đổi và hành vi người dùng trên các trang thương mại điện tử bị làm sai lệch nghiêm trọng do hệ thống phân tích không phân biệt được Meta Muse với khách hàng thực. Nếu không cập nhật quy tắc xác thực, doanh nghiệp sẽ lãng phí tài nguyên máy chủ và đọc sai báo cáo hiệu quả marketing.",
+    "ifIgnored": "Doanh nghiệp sẽ đưa ra các quyết định tối ưu hóa ngân sách và giao diện dựa trên dữ liệu ảo, lầm tưởng traffic tăng trưởng tốt nhưng tỷ lệ chuyển đổi thực tế lại sụt giảm. Đồng thời, hệ thống bảo vệ bot cũ kỹ có thể chặn nhầm truy cập hợp lệ hoặc bỏ sót các agent quét dữ liệu sản phẩm.",
+    "actionChecklist": [
+      "Yêu cầu đội ngũ IT/Bảo mật cập nhật danh mục xác thực chữ ký Web Bot Auth sang tên miền muse.ai",
+      "Rà soát hệ thống Google Analytics để thiết lập bộ lọc nhận diện lượng truy cập tự động từ các AI agent",
+      "Tính toán lại tỷ lệ chuyển đổi (CR) thực tế trên trang sản phẩm bằng cách loại trừ ảo giác truy cập từ agent",
+      "Cấu hình lại tường lửa WAF và CDN trước các đợt chạy chiến dịch quảng cáo mua sắm lớn"
+    ],
+    "id": "real-2026-11-14-meta-muse-va-openai-ab060b",
+    "publishedAt": "14/11/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/meta-muse-ai-agent-requests-human-security/597388/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/11/meta-muse-featured.jpg",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
     "category": "AI Marketing",
     "platformIcon": "Sparkles",
     "title": "Trợ lý AI Shopper Agent: Xu hướng mới làm thay đổi Retail Media và hành vi mua sắm",
@@ -237,132 +422,6 @@
     "image": {
       "url": "https://imgproxy.divecdn.com/jtFl8l6BsGmGnMdnKkBuXTUVcdNE3PFfV9vasuIPtAs/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9tZXRhX2xvZ28yLnBuZw==.webp",
       "credit": "Ảnh: Marketing Dive"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Google cảnh báo việc chặn bot trên CDN có thể làm mất sản phẩm khỏi Google Shopping và Ads",
-    "isHot": false,
-    "illustration": "page-speed",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Google Ads",
-      "Google Shopping",
-      "Tối ưu CDN",
-      "Googlebot"
-    ],
-    "summary": "Google vừa đưa ra cảnh báo quan trọng về rủi ro biến mất sản phẩm trên Google Shopping và dừng chạy quảng cáo Google Ads khi doanh nghiệp nâng cấp hệ thống CDN. Việc bật cấu hình chặn bot diện rộng để bảo vệ máy chủ gốc sẽ vô tình khóa truy cập của Googlebot. Doanh nghiệp cần phối hợp giữa bộ phận Marketing và IT để đảm bảo dòng chảy dữ liệu quảng cáo không bị ngắt quãng.",
-    "keyNumbers": [
-      {
-        "value": "1 - 2 ngày",
-        "label": "Thời gian tối đa cho phép trả mã lỗi 429 hoặc 503 trước khi ảnh hưởng Googlebot"
-      },
-      {
-        "value": "100.000",
-        "label": "Số lượng URL độc nhất crawler có thể truy cập liên tục khiến máy chủ quá tải"
-      },
-      {
-        "value": "32%",
-        "label": "Tỷ lệ lưu lượng truy cập tự động từ các bot ghi nhận trên hệ thống Cloudflare"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Hiện tượng tăng đột biến truy cập khi chuyển sang CDN",
-        "body": "Khi doanh nghiệp chuyển website sang mạng phân phối nội dung (CDN), máy chủ gốc có thể bị quá tải đột ngột do Googlebot. Nguyên nhân là khi hạ tầng CDN giúp website phản hồi nhanh hơn, hệ thống tự động của Google sẽ nhận diện máy chủ hoạt động tốt và tăng tốc độ quét. Lúc này, bộ nhớ đệm (cache) của CDN mới khởi động còn trống. Tất cả yêu cầu truy cập từ Googlebot đều bị chuyển thẳng về máy chủ gốc, tạo ra đợt tăng lưu lượng đột biến."
-      },
-      {
-        "heading": "Rủi ro biến mất sản phẩm khỏi Google Shopping và Ads",
-        "body": "Để bảo vệ máy chủ gốc khỏi bị sập, nhiều quản trị viên hệ thống thường bật tính năng chặn tự động tất cả các bot trên bảng điều khiển CDN. Việc chặn nhầm các bộ quét đã được xác minh của Google sẽ làm ngắt kết nối dữ liệu. Theo cảnh báo từ Google, hành động này khiến các trang nội dung bị loại khỏi kết quả tìm kiếm. Nguy hiểm hơn, các sản phẩm hiển thị trên Google Shopping và các chiến dịch Google Ads cũng sẽ lập tức dừng hoạt động."
-      },
-      {
-        "heading": "Cơ chế hoạt động của bộ đệm lạnh và Googlebot",
-        "body": "Người dùng thông thường chỉ truy cập vào một số trang phổ biến như trang chủ hay trang khuyến mãi, giúp các trang này nhanh chóng được lưu cache. Ngược lại, bộ quét Googlebot có nhiệm vụ khám phá toàn bộ danh mục sản phẩm trên hệ thống. Khi crawler duyệt qua hàng trăm nghìn URL chưa được lưu cache, máy chủ gốc vẫn phải gánh toàn bộ tải xử lý. Nếu máy chủ phản hồi lỗi 429 hoặc 503 quá thời gian cho phép, Google sẽ coi hệ thống không ổn định và cắt giảm ngân sách quét."
-      },
-      {
-        "heading": "Giải pháp kỹ thuật khuyến nghị từ Google",
-        "body": "Google đưa ra các hướng dẫn cụ thể để xử lý tình trạng quá tải mà không làm gián đoạn quảng cáo. Doanh nghiệp cần cấu hình tường lửa CDN để cho phép các crawler đã xác minh của Google đi qua an toàn. Trước khi chính thức chuyển đổi DNS sang CDN, kỹ thuật viên nên thực hiện làm nóng bộ nhớ đệm bằng cách chủ động tải trước các URL sản phẩm quan trọng. Nếu máy chủ gốc quá tải, việc trả về mã lỗi 429 hoặc 503 chỉ được kéo dài tối đa 1 đến 2 ngày."
-      }
-    ],
-    "impact": "Quyết định kỹ thuật của bộ phận IT khi nâng cấp hạ tầng mạng có thể vô tình ngắt luồng dữ liệu sản phẩm, khiến các chiến dịch Google Ads và Google Shopping ngừng hoạt động mà đội ngũ Marketing không hề hay biết.",
-    "ifIgnored": "Tổn thất doanh thu trực tiếp do quảng cáo ngưng hiển thị, mất vị trí hiển thị sản phẩm trên Google Shopping và tốn thời gian khôi phục lại chỉ mục cùng điểm chất lượng của chiến dịch.",
-    "actionChecklist": [
-      "Họp ngay với đội ngũ IT/Dev để rà soát quy tắc chặn bot trên hệ thống CDN hiện tại.",
-      "Đảm bảo các crawler đã xác minh của Google được đưa vào danh sách cho phép (whitelist).",
-      "Yêu cầu kỹ thuật viên thực hiện làm nóng bộ nhớ đệm (warm up cache) trước khi đổi DNS.",
-      "Giám sát tần suất mã lỗi 429 và 503, không để máy chủ quá tải kéo dài vượt quá 1 ngày."
-    ],
-    "id": "real-2026-11-12-google-canh-bao-viec-dde55c",
-    "publishedAt": "12/11/2026",
-    "sourceUrl": "https://ppc.land/google-says-cdn-bot-blocks-can-drop-products-from-shopping-and-ads/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/11/google-cdn-bot-blocking-googlebot-shopping-ads-shopkeeper-bug-sprayer-fallen-honeybee.jpg",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Google Ads khóa tài khoản lập tức nếu dùng AI mạo danh người nổi tiếng dù có gắn nhãn công khai",
-    "isHot": true,
-    "illustration": "account-security",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Google Ads",
-      "Khóa tài khoản",
-      "Hình ảnh AI",
-      "Chính sách quảng cáo"
-    ],
-    "summary": "Google vừa cập nhật nội dung làm rõ trong chính sách Thực hành kinh doanh không thể chấp nhận (Unacceptable Business Practices). Theo đó, mọi quảng cáo sử dụng trí tuệ nhân tạo để mạo danh hình ảnh, giọng nói hoặc video của người nổi tiếng sẽ bị cấm hoàn toàn. Việc nhà quảng cáo chủ động gắn nhãn khai báo nội dung AI cũng không giúp tài khoản tránh khỏi án phạt đình chỉ ngay lập tức.",
-    "keyNumbers": [
-      {
-        "value": "0 ngày",
-        "label": "Thời gian gia hạn trước khi áp dụng án phạt khóa tài khoản"
-      },
-      {
-        "value": "7 ngày",
-        "label": "Thời gian báo trước đối với vi phạm thường, nhưng vi phạm mạo danh bị khóa ngay"
-      },
-      {
-        "value": "2 / 3.379",
-        "label": "Số quảng cáo AI có gắn nhãn minh bạch trong nghiên cứu tháng 10/2026"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Làm rõ chính sách về việc mạo danh người của công chúng",
-        "body": "Vào ngày 11/11/2026, Google đã bổ sung văn bản làm rõ trong trung tâm trợ giúp chính sách quảng cáo. Theo nền tảng này, các quảng cáo sử dụng trí tuệ nhân tạo để mạo danh người nổi tiếng đều vi phạm nghiêm trọng quy định. Ngay cả khi nhà quảng cáo có gắn nhãn công khai rằng nội dung được tạo hoặc chỉnh sửa bằng AI, quảng cáo đó vẫn không được chấp nhận. Google khẳng định đây không phải là quy định mới phát sinh mà chỉ là lời giải thích chi tiết giúp người chạy quảng cáo hiểu đúng bản chất quy định hiện hành."
-      },
-      {
-        "heading": "Cơ chế xử phạt cực kỳ nghiêm ngặt không báo trước",
-        "body": "Google xếp vi phạm mạo danh người nổi tiếng vào nhóm vi phạm đặc biệt nghiêm trọng. Đối với các vi phạm thông thường khác, hệ thống sẽ gửi thông báo trước ít nhất 7 ngày để nhà quảng cáo khắc phục. Tuy nhiên, với vi phạm nghiêm trọng này, tài khoản quảng cáo sẽ bị đình chỉ ngay lập tức tại thời điểm phát hiện mà không có bất kỳ cảnh báo nào trước đó. Nhà quảng cáo hoàn toàn không có thời gian gia hạn hay cơ hội gỡ bỏ mẫu quảng cáo để cứu tài khoản."
-      },
-      {
-        "heading": "Tại sao việc khai báo AI không bảo vệ được tài khoản",
-        "body": "Nhiều nhà quảng cáo nhầm tưởng rằng việc dán nhãn công khai nội dung AI sẽ giúp mẫu quảng cáo hợp lệ. Thực tế, việc dán nhãn chỉ minh bạch phương thức tạo ra quảng cáo, trong khi quy định mạo danh cấm việc tạo ấn tượng giả về sự tham gia của một cá nhân thật. Một video deepfake giả dạng nhà đầu tư hoặc người ảnh hưởng để khuyên người dùng mua hàng vẫn mang tính chất lừa đảo, bất chấp việc có dòng chữ ghi nhận tạo bởi AI hay không. Do đó, nhãn dán AI hoàn toàn không có tác dụng làm căn cứ bào chữa khi hệ thống rà soát."
-      },
-      {
-        "heading": "Đối tượng ảnh hưởng và phạm vi định nghĩa của Google",
-        "body": "Google định nghĩa người của công chúng bao gồm quan chức chính phủ, nghệ sĩ, vận động viên, người ảnh hưởng và các nhà kinh doanh nổi tiếng. Các trường hợp vi phạm phổ biến bao gồm việc dùng AI giả giọng nói ca sĩ để quảng cáo sản phẩm hoặc tạo video giả dạng YouTuber nhằm lôi kéo người xem. Chính sách này áp dụng cho toàn bộ hình ảnh, video, tên tuổi và giọng nói được tái tạo bằng công cụ nhân tạo. Nền tảng yêu cầu nhà quảng cáo phải có văn bản chấp thuận chính thức và hợp pháp nếu muốn sử dụng hình ảnh của những cá nhân này."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing cần ngay lập tức rà soát lại toàn bộ kho sáng tạo (creatives) đang chạy trên Google Ads, đặc biệt là các chiến dịch sử dụng hình ảnh hoặc giọng nói AI của người nổi tiếng và KOLs. Việc mơ hồ giữa khai báo AI và vi phạm bản quyền hình ảnh có thể khiến toàn bộ tài khoản Google Ads của doanh nghiệp bị khóa vĩnh viễn.",
-    "ifIgnored": "Doanh nghiệp đối mặt với nguy cơ bị dừng toàn bộ hoạt động quảng cáo trên Google Search, YouTube và Display ngay lập tức. Tài khoản bị khóa vĩnh viễn không báo trước sẽ làm gián đoạn dòng doanh thu, mất sạch dữ liệu chiến dịch và ảnh hưởng nghiêm trọng đến uy tín thương hiệu.",
-    "actionChecklist": [
-      "Rà soát toàn bộ mẫu quảng cáo hình ảnh và video đang sử dụng công nghệ AI tạo hình ảnh hoặc giọng nói.",
-      "Dừng ngay các chiến dịch tạo video deepfake hoặc giả lập KOLs/người nổi tiếng dù có gắn nhãn AI hay không.",
-      "Kiểm tra và lưu trữ đầy đủ văn bản chấp thuận bản quyền truyền thông nếu doanh nghiệp có hợp tác chính thức với KOLs.",
-      "Cập nhật quy trình kiểm duyệt nội dung đầu vào cho đội ngũ sáng tạo nhằm tránh các vi phạm nghiêm trọng trên Google Ads."
-    ],
-    "id": "real-2026-11-12-google-ads-khoa-tai-3e373e",
-    "publishedAt": "12/11/2026",
-    "sourceUrl": "https://ppc.land/ai-labels-wont-save-public-figure-impersonators-from-google-ads-suspension/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/11/google-ads-ai-impersonation-label-no-defense-instant-suspension-vaudeville-hook-faceless-standee-blank-tag.jpg",
-      "credit": "Ảnh: PPC Land"
     }
   },
   {
@@ -612,65 +671,6 @@
     "image": {
       "url": "https://imgproxy.divecdn.com/5ajo4UXSQaMWq4Y-JgYvrrFU3hu-oqFHGUQuBLXh9D4/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9pZ19lZmZlY3RfYnVpbGRlcjIucG5n.webp",
       "credit": "Ảnh: Social Media Today"
-    }
-  },
-  {
-    "category": "AI Marketing",
-    "platformIcon": "Sparkles",
-    "title": "Cloudflare hợp tác OpenAI phát triển mô hình tối ưu website cho AI agent thay thế SEO truyền thống",
-    "isHot": false,
-    "illustration": "data-signal",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "AI Marketing",
-      "SEO AI",
-      "Cloudflare",
-      "OpenAI"
-    ],
-    "summary": "Tổng giám đốc Cloudflare Matthew Prince nhận định việc tối ưu hóa website cho các AI agent tìm kiếm là phiên bản mới của SEO. Nền tảng này đã ghi nhận doanh thu từ nhóm sản phẩm Act 4, bao gồm thỏa thuận cung cấp tín hiệu cập nhật trang web cho bot thu thập dữ liệu của OpenAI.",
-    "keyNumbers": [
-      {
-        "value": "782,5 triệu USD",
-        "label": "Doanh thu quý 3 của Cloudflare, tăng 39% so với cùng kỳ"
-      },
-      {
-        "value": "1.000 lần",
-        "label": "Dự báo tỷ lệ lưu lượng truy cập từ máy so với con người trong 5 năm tới"
-      }
-    ],
-    "content": [
-      {
-        "heading": "OpenAI chi trả kinh phí nhận thông báo cập nhật nội dung web",
-        "body": "Cloudflare đã xác nhận OpenAI đang trả phí để nhận các tín hiệu cảnh báo mỗi khi một trang web có sự thay đổi nội dung, chẳng hạn như khi nhà hàng cập nhật bảng giá. Cơ chế này giúp robot thu thập dữ liệu của OpenAI không phải quét lại toàn bộ trang web liên tục, qua đó tối ưu hóa chi phí vận hành cho AI. Chương trình thử nghiệm này được công bố từ ngày 8/7 dựa trên các tín hiệu độ tươi mới của nội dung. Cloudflare hiện chưa công bố con số doanh thu chi tiết từ thỏa thuận này."
-      },
-      {
-        "heading": "Khái niệm SEO mới dành riêng cho các AI agent",
-        "body": "Đối với các doanh nghiệp muốn thu hút thêm lưu lượng truy cập từ AI agent, Cloudflare đang hỗ trợ dịch vụ mà Giám đốc điều hành Matthew Prince gọi là một phiên bản SEO mới. Thay vì người dùng tự tìm kiếm và truy cập vài trang web, các AI agent có thể truy xuất dữ liệu từ 1.000 website cùng lúc để đưa ra câu trả lời duy nhất. Việc tối ưu hóa giúp thông tin của doanh nghiệp xuất hiện chính xác trong kết quả xử lý của agent."
-      },
-      {
-        "heading": "Lựa chọn giữa cho phép hoặc chặn AI crawler quét dữ liệu",
-        "body": "Doanh nghiệp hiện đối mặt với hai lựa chọn trên bảng điều khiển Cloudflare là cho phép hoặc chặn các công cụ quét dữ liệu AI. Một số đơn vị coi AI agent là cơ hội thu hút khách hàng, trong khi những doanh nghiệp khác xem đây là nguy cơ tiêu tốn tài nguyên máy chủ mà không đem lại giá trị. Lưu lượng truy cập không phải từ con người dự báo sẽ gấp 1.000 lần người thực, tạo áp lực lớn lên băng thông và hạ tầng vận hành."
-      },
-      {
-        "heading": "Mô hình thu phí vi mô đối với lượt truy cập của AI",
-        "body": "Cloudflare đã ra mắt bản thử nghiệm beta cho hai sản phẩm Monetization Gateway và Pay Per Use vào ngày 30/9. Monetization Gateway cho phép bên bán thu phí AI agent trên mỗi truy vấn, còn Pay Per Use trả tiền cho nhà xuất bản chấp nhận ưu đãi từ công ty AI. Doanh nghiệp có thể giảm phí hoặc miễn phí cho agent nếu agent cung cấp rõ mục đích truy cập nhằm phục vụ cơ hội quảng cáo."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing cần thay đổi góc nhìn về hạ tầng website, không chỉ tối ưu cho người dùng thực hay các công cụ tìm kiếm truyền thống mà phải chuẩn bị cấu hình cho AI crawler. Việc cân đối giữa chi phí máy chủ và khả năng hiển thị thương hiệu trên các câu trả lời của AI sẽ trực tiếp ảnh hưởng đến ngân sách vận hành kỹ thuật số.",
-    "ifIgnored": "Doanh nghiệp đối mặt với nguy cơ bị cạn kiệt tài nguyên máy chủ do lưu lượng quét dữ liệu khổng lồ từ AI agent mà không thu lại lượt chuyển đổi, hoặc ngược lại sẽ bị loại khỏi kết quả tìm kiếm của các công cụ AI nếu chặn crawler một cách thụ động.",
-    "actionChecklist": [
-      "Rà soát cấu hình Cloudflare AI Crawl Control trên hệ thống website của công ty",
-      "Đánh giá chi phí băng thông máy chủ tạo ra bởi các bot thu thập dữ liệu AI",
-      "Phân loại các trang nội dung ưu tiên cho AI crawler tiếp cận và các trang cần bảo vệ",
-      "Theo dõi thử nghiệm các tính năng Monetization Gateway và Pay Per Use để chuẩn bị cơ chế thương mại hóa dữ liệu"
-    ],
-    "id": "real-2026-11-08-cloudflare-hop-tac-openai-9cd8eb",
-    "publishedAt": "08/11/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/cloudflare-ai-agent-optimization-new-seo/596248/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/11/cloudflare-openai-featured.jpg",
-      "credit": "Ảnh: Search Engine Journal"
     }
   },
   {
