@@ -1,5 +1,194 @@
 [
   {
+    "category": "TikTok Shop & Ads",
+    "platformIcon": "Video",
+    "title": "TikTok ra mắt Báo cáo Live Shopping: 60% doanh nghiệp nhỏ đạt doanh thu một phiên live vượt cả tuần",
+    "isHot": false,
+    "illustration": "livestream",
+    "readTime": "3 phút đọc",
+    "tags": [
+      "TikTok Shop",
+      "Livestream Shopping",
+      "Báo cáo TikTok",
+      "Chuyển đổi O2O"
+    ],
+    "summary": "TikTok UK vừa phát hành Báo cáo Live Shopping đầu tiên cung cấp cái nhìn toàn diện về sự phát triển của hình thức bán hàng qua video trực tiếp. Dữ liệu cho thấy livestream không chỉ thúc đẩy doanh số trên ứng dụng mà còn tác động mạnh mẽ đến quyết định mua sắm tại cửa hàng thực tế của người tiêu dùng.",
+    "keyNumbers": [
+      {
+        "value": "55%",
+        "label": "Tăng trưởng doanh số livestream năm qua"
+      },
+      {
+        "value": "60%",
+        "label": "Doanh nghiệp nhỏ có doanh thu 1 phiên live vượt cả tuần"
+      },
+      {
+        "value": "30%",
+        "label": "Người xem livestream sau đó mua hàng tại cửa hàng"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Doanh số từ livestream tăng trưởng mạnh mẽ",
+        "body": "TikTok UK chính thức công bố báo cáo Live Shopping đầu tiên dài 20 trang nhằm cung cấp cái nhìn chi tiết về xu hướng bán hàng qua livestream. Theo báo cáo, doanh số bán hàng từ livestream trên TikTok tại Anh đã tăng 55% so với cùng kỳ năm ngoái. Đáng chú ý, hơn 60% doanh nghiệp vừa và nhỏ cho biết một phiên livestream duy nhất mang lại doanh thu cao hơn các kênh khác trong cả tuần thông thường. Ngoài ra, hơn 50% người trưởng thành tại Anh đang cân nhắc mua hàng qua các phiên livestream trong 12 tháng tới."
+      },
+      {
+        "heading": "Tác động lan tỏa tới kênh bán hàng trực tiếp",
+        "body": "Báo cáo chỉ ra rằng livestream không chỉ thúc đẩy giao dịch mua sắm trực tiếp ngay trên ứng dụng. Có tới hơn 30% người xem livestream sau đó đã đến cửa hàng thực tế để mua sản phẩm được trình diễn. Điều này cho thấy livestream tạo ra hiệu ứng tác động đa kênh mạnh mẽ vượt ngoài nền tảng trực tuyến. Các thương hiệu có thể tận dụng lượng người xem trực tiếp để kích thích nhu cầu mua sắm tại hệ thống cửa hàng vật lý."
+      },
+      {
+        "heading": "Các ngành hàng dẫn đầu xu hướng mua sắm trực tiếp",
+        "body": "Tài liệu hướng dẫn của TikTok phân tích sâu về các ngành hàng có sức hút lớn nhất khi bán qua livestream. Danh sách các ngành hàng hàng đầu bao gồm làm đẹp, thời trang, hàng tiêu dùng nhanh, đồ cũ, thiết bị điện tử, nhà cửa đời sống cùng với sách và đồ sưu tầm. Riêng ngành hàng làm đẹp trên TikTok Shop tại Anh đã ghi nhận mức tăng trưởng 60% so với cùng kỳ năm trước vào năm ngoái. Nhờ sự tăng trưởng này, TikTok đã trở thành nhà bán lẻ sản phẩm làm đẹp lớn thứ tư tại thị trường Anh."
+      },
+      {
+        "heading": "Định hướng chiến lược livestream cho thương hiệu",
+        "body": "TikTok đang nỗ lực biến hoạt động mua sắm trong ứng dụng thành một thành tố quan trọng hơn theo mô hình thành công của Douyin tại Trung Quốc. Dù tốc độ gia tăng người dùng mua sắm trực tiếp tại Anh vẫn chưa đạt mức kỳ vọng tối đa của ban lãnh đạo, nền tảng này vẫn đang đạt tiến triển ổn định. Báo cáo cung cấp các dữ liệu chi tiết theo từng ngành hàng giúp các nhà tiếp thị xây dựng lộ trình tiếp cận hiệu quả hơn. Việc kết hợp giữa giải trí và thương mại tiếp tục là trụ cột thu hút người dùng trên ứng dụng."
+      }
+    ],
+    "impact": "Báo cáo chứng minh livestream là kênh tạo nhu cầu đa kênh (O2O) chứ không chỉ là công cụ chốt đơn thuần túy trên app. Trưởng phòng Marketing cần định vị lại livestream trong phễu tiếp thị, sử dụng dữ liệu trực tiếp để thúc đẩy cả doanh số online lẫn lưu lượng khách hàng ghé thăm cửa hàng vật lý.",
+    "ifIgnored": "Nếu tiếp tục đánh giá hiệu quả livestream duy nhất bằng doanh số phát sinh ngay trong phiên trực tiếp, bạn sẽ bỏ sót hơn 30% giá trị chuyển đổi ngoại tuyến và đánh giá thấp ROI thực tế của kênh bán hàng này.",
+    "actionChecklist": [
+      "Tích hợp mã ưu đãi hoặc voucher riêng trên livestream để đo lường tỷ lệ người xem đến mua hàng tại cửa hàng thực tế.",
+      "Rà soát lại danh mục sản phẩm livestream, ưu tiên các ngành hàng có sức hút cao như làm đẹp, thời trang và hàng tiêu dùng nhanh.",
+      "Xây dựng kịch bản livestream chú trọng trải nghiệm sản phẩm trực quan nhằm kích thích nhu cầu mua sắm của khách hàng.",
+      "Phát triển lịch livestream định kỳ thay vì chỉ chạy các phiên sự kiện đơn lẻ để duy trì doanh thu ổn định cho thương hiệu."
+    ],
+    "id": "real-2026-11-15-tiktok-ra-mat-bao-d26115",
+    "publishedAt": "15/11/2026",
+    "sourceUrl": "https://www.socialmediatoday.com/news/tiktok-uk-publishes-live-shopping-report/874711/",
+    "source": "Social Media Today",
+    "image": {
+      "url": "https://imgproxy.divecdn.com/HSe9kXo_qaiXdHG7aBAUQH6OMLoM2r2ggHYnvXr3nlE/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS90aWt0b2tfdWtfc2hvcHBpbmdfcmVwb3J0LnBuZw==.webp",
+      "credit": "Ảnh: Social Media Today"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Google thử nghiệm tính năng loại trừ thu nhập hộ gia đình trong chiến dịch Performance Max",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Google Ads",
+      "Performance Max",
+      "Targeting",
+      "Nhân khẩu học"
+    ],
+    "summary": "Google bắt đầu cập nhật tài liệu hướng dẫn cho phép một số tài khoản thử nghiệm loại trừ đối tượng theo thu nhập hộ gia đình trong chiến dịch Performance Max. Tính năng này bổ sung thêm lựa chọn bên cạnh hai tiêu chí loại trừ sẵn có là độ tuổi và giới tính. Đáng chú ý, Việt Nam nằm trong danh sách 20 thị trường được hỗ trợ dữ liệu thu nhập hộ gia đình trên hệ thống Google Ads.",
+    "keyNumbers": [
+      {
+        "value": "7",
+        "label": "nhóm thu nhập hộ gia đình có thể loại trừ"
+      },
+      {
+        "value": "20",
+        "label": "thị trường hỗ trợ bao gồm Việt Nam"
+      },
+      {
+        "value": "3",
+        "label": "tiêu chí loại trừ nhân khẩu học trong PMax"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Bổ sung tiêu chí thu nhập vào thiết lập Performance Max",
+        "body": "Google đã đưa tính năng loại trừ thu nhập hộ gia đình vào bước 3 trong quy trình cài đặt chiến dịch Performance Max đối với các tài khoản nằm trong chương trình thử nghiệm beta. Trước đây, chiến dịch PMax chỉ hỗ trợ loại trừ đối tượng dựa trên độ tuổi và giới tính. Việc bổ sung này giúp nhà quảng cáo tối ưu hóa chi phí bằng cách ngăn quảng cáo hiển thị tới các nhóm khách hàng không phù hợp với phân khúc giá của sản phẩm. Tính năng mới đặc biệt hữu ích cho các ngành hàng cao cấp hoặc các dịch vụ có quy định nghiêm ngặt về đối tượng phục vụ."
+      },
+      {
+        "heading": "Phân chia 7 phân khúc thu nhập và danh mục Unknown",
+        "body": "Mức thu nhập hộ gia đình được chia thành 7 nhóm bao gồm top 10%, 11-20%, 21-30%, 31-40%, 41-50%, 50% còn lại và nhóm không xác định (Unknown). Nhà quảng cáo có thể tích chọn loại trừ từng nhóm cụ thể ngay ở cấp độ chiến dịch. Đối với danh mục Unknown, Google khuyến cáo chỉ nên loại trừ khi doanh nghiệp có yêu cầu pháp lý bắt buộc hoặc muốn thắt chặt đối tượng mục tiêu. Việc loại trừ nhóm Unknown sẽ đảm bảo quảng cáo không tiếp cận sai đối tượng nhưng cũng có thể làm giảm đáng kể quy mô hiển thị."
+      },
+      {
+        "heading": "Phạm vi áp dụng tại Việt Nam và các thị trường",
+        "body": "Dữ liệu phân loại thu nhập hộ gia đình của Google được ghi nhận hỗ trợ tại 20 thị trường toàn cầu, trong đó có Việt Nam cùng các nước khu vực Châu Á - Thái Bình Dương như Singapore, Thái Lan, Nhật Bản và Úc. Ngược lại, danh sách này hiện chưa ghi nhận bất kỳ quốc gia Châu Âu nào. Tuy nhiên, tính năng loại trừ này trong PMax hiện vẫn ghi nhận trạng thái thử nghiệm giới hạn và chưa mở rộng đồng loạt cho mọi tài khoản. Nhà quảng cáo cần kiểm tra trực tiếp giao diện cài đặt chiến dịch để xác nhận tài khoản đã được kích hoạt hay chưa."
+      },
+      {
+        "heading": "Cơ chế ước tính dữ liệu và điểm mâu thuẫn trên trang hướng dẫn",
+        "body": "Google thu thập và ước tính thu nhập dựa trên thông tin cài đặt tài khoản Google của người dùng hoặc qua hoạt động trên các dịch vụ của Google và mạng lưới Display Network. Do là dữ liệu ước tính, Google không thể xác định chính xác thu nhập của tất cả người dùng. Đáng chú ý, tài liệu hướng dẫn của Google hiện xuất hiện sự bất cập khi một đoạn văn bản vẫn khẳng định PMax chỉ hỗ trợ loại trừ độ tuổi và giới tính. Người vận hành chiến dịch nên tin cậy vào các tùy chọn hiển thị thực tế trong trình quản lý quảng cáo thay vì chỉ dựa vào tài liệu."
+      }
+    ],
+    "impact": "Giúp Trưởng phòng Marketing kiểm soát chính xác hơn đối tượng nhận quảng cáo PMax tại Việt Nam, giảm lãng phí ngân sách vào các phân khúc khách hàng không có khả năng chi trả cho sản phẩm cao cấp.",
+    "ifIgnored": "Tiếp tục tiêu tốn ngân sách Performance Max cho các nhóm công chúng không phù hợp, dẫn đến chi phí trên mỗi chuyển đổi (CPA) tăng cao và giảm hiệu quả tổng thể của chiến dịch.",
+    "actionChecklist": [
+      "Kiểm tra phần Cài đặt chiến dịch PMax trong tài khoản Google Ads xem đã xuất hiện tính năng Household income exclusions chưa.",
+      "Rà soát danh mục sản phẩm đang chạy PMax để xác định những phân khúc thu nhập cần loại trừ.",
+      "Đánh giá lượng truy cập từ nhóm Unknown trước khi quyết định loại trừ nhóm này để tránh làm sụt giảm quy mô hiển thị quá mức.",
+      "Theo dõi sự thay đổi của chỉ số CPA và tỷ lệ chuyển đổi sau khi thử nghiệm loại trừ các nhóm thu nhập thấp."
+    ],
+    "id": "real-2026-11-15-google-thu-nghiem-tinh-9c8d7f",
+    "publishedAt": "15/11/2026",
+    "sourceUrl": "https://ppc.land/google-opens-pmax-household-income-exclusions-to-select-advertisers/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/size/w1200/2026/11/google-performance-max-household-income-exclusions-beta-seven-brackets-apartment-block-shutter.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Video",
+    "title": "YouTube thử nghiệm đổi nút Bỏ qua thành Tiếp theo trên một số quảng cáo video",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "3 phút đọc",
+    "tags": [
+      "YouTube Ads",
+      "Google Ads",
+      "Quảng cáo Video",
+      "Nút Skip Ads"
+    ],
+    "summary": "YouTube bị phát hiện đang thử nghiệm thay thế nút Skip quen thuộc bằng nút Next trên một số định dạng quảng cáo video di động. Thay đổi này chưa được Google công bố chính thức, gây ra nhiều câu hỏi về cách tính phí CPV và hành vi xem của người dùng. Việc đổi nhãn nút bấm có thể ảnh hưởng trực tiếp đến tỷ lệ giữ chân người xem và cách ghi nhận lượt xem TrueView.",
+    "keyNumbers": [
+      {
+        "value": "5 giây",
+        "label": "thời gian tối thiểu người xem phải chờ trước khi bấm bỏ qua quảng cáo trong luồng"
+      },
+      {
+        "value": "30 giây",
+        "label": "ngưỡng thời gian xem quảng cáo để kích hoạt tính phí CPV cho nhà quảng cáo"
+      },
+      {
+        "value": "40%",
+        "label": "mức giảm tối đa sự gián đoạn quảng cáo mà Google từng công bố khi thử nghiệm ad pods năm 2018"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Ghi nhận thay đổi thực tế trên nút bấm quảng cáo YouTube",
+        "body": "Đầu tháng 11 năm 2026, chuyên gia tiếp thị Anthony Higman đã chia sẻ hình ảnh ghi lại nút bấm có chữ Next thay cho nút Skip ở góc dưới bên phải quảng cáo video dạng dọc. Đi kèm với nút Next là biểu tượng chuyển tiếp quen thuộc và nhãn thông báo Ít gián đoạn hơn sau khoảng nghỉ này nằm ở góc trên bên trái. Tuy nhiên, hình ảnh này chỉ là một khung hình tĩnh nên chưa rõ hành động bấm vào nút sẽ bỏ qua hoàn toàn quảng cáo để về video gốc hay chuyển sang một quảng cáo khác trong cùng cụm."
+      },
+      {
+        "heading": "Nghi vấn về hành vi của người dùng và trải nghiệm xem",
+        "body": "Một số nguồn tin cho rằng đây là dấu hiệu chấm dứt tính năng bỏ qua quảng cáo, khuyến khích người xem tiếp tục theo dõi thay vì thoát ra ngay lập tức. Tuy nhiên, cụm từ Ít gián đoạn hơn sau khoảng nghỉ này gợi ý đây có thể là một cụm gồm nhiều quảng cáo nối tiếp nhau. Nếu nút Next chỉ chuyển sang quảng cáo thứ hai trong cùng cụm thay vì quay lại video chính, tải lượng quảng cáo trong mỗi lần tạm dừng sẽ tăng lên đáng kể."
+      },
+      {
+        "heading": "Quy định tính phí và ghi nhận lượt xem của Google Ads",
+        "body": "Theo tài liệu trợ giúp của Google Ads tính đến ngày 15 tháng 11 năm 2026, quy định tính phí CPV vẫn áp dụng khi người xem theo dõi hết 30 giây hoặc toàn bộ video ngắn hơn. Đối với quảng cáo trên YouTube Shorts, lượt xem TrueView được tính khi người dùng xem 10 giây hoặc thực hiện thao tác tương tác như bấm nút kêu gọi hành động. Hiện tại, Google chưa công bố tài liệu nào xác nhận việc bấm nút Next có được hệ thống báo cáo ghi nhận giống như thao tác bỏ qua thông thường hay không."
+      },
+      {
+        "heading": "Chuỗi điều chỉnh liên tục xung quanh vị trí nút bỏ qua",
+        "body": "Đây không phải lần đầu tiên khu vực nút bỏ qua quảng cáo trên YouTube bị thay đổi trong năm 2026. Vào ngày 31 tháng 1 năm 2026, một biểu ngữ quảng cáo đã xuất hiện che một phần nút Skip Ad trên giao diện video. Tiếp đó, vào ngày 17 tháng 3 năm 2026, biểu ngữ liên quan vẫn tiếp tục hiển thị trên màn hình ngay cả khi người xem đã bấm bỏ qua quảng cáo."
+      }
+    ],
+    "impact": "Thay đổi nhãn nút bấm từ Skip sang Next có thể làm thay đổi tâm lý người xem, khiến họ nhầm tưởng phải xem tiếp quảng cáo khác thay vì thoát ra video chính. Điều này có thể làm gia tăng nhân tạo thời lượng xem trên 30 giây, đẩy chi phí CPV của doanh nghiệp lên cao dù chất lượng chú ý của khách hàng không tăng.",
+    "ifIgnored": "Nếu không theo dõi kỹ tỷ lệ xem hết (VTR) và chi phí trên mỗi lượt xem (CPV) trong giai đoạn thử nghiệm này, bạn có thể tốn ngân sách cho những lượt xem thụ động do người dùng bấm nhầm nút Next, dẫn đến báo cáo hiệu quả chiến dịch bị sai lệch.",
+    "actionChecklist": [
+      "Tăng cường theo dõi chỉ số VTR và CPV thực tế trên các chiến dịch YouTube Ads chạy dạng skippable",
+      "Phân tích lại tỷ lệ chuyển đổi từ các lượt xem trên 30 giây để kiểm tra chất lượng lượng truy cập",
+      "Thử nghiệm bổ sung các thông điệp thu hút mạnh mẽ ngay trong 5 giây đầu tiên của video quảng cáo",
+      "Cập nhật thường xuyên các thông báo kỹ thuật từ Google Ads về quy tắc ghi nhận lượt xem TrueView"
+    ],
+    "id": "real-2026-11-15-youtube-thu-nghiem-doi-11b65f",
+    "publishedAt": "15/11/2026",
+    "sourceUrl": "https://ppc.land/youtube-drops-the-word-skip-from-some-ad-buttons-in-favour-of-next/",
+    "source": "PPC Land",
+    "image": {
+      "url": "https://ppc.land/content/images/size/w1200/2026/11/youtube-skip-button-becomes-next-higman-unannounced-ad-change-slide-projector-arrow-button-corridor.jpg",
+      "credit": "Ảnh: PPC Land"
+    }
+  },
+  {
     "category": "Google Ads & SEO",
     "platformIcon": "Search",
     "title": "Tự động hạ giá thầu Google Ads khi từ khóa thương hiệu không có đối thủ cạnh tranh",
@@ -182,128 +371,6 @@
     "image": {
       "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/11/meta-muse-featured.jpg",
       "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
-    "category": "AI Marketing",
-    "platformIcon": "Sparkles",
-    "title": "Trợ lý AI Shopper Agent: Xu hướng mới làm thay đổi Retail Media và hành vi mua sắm",
-    "isHot": false,
-    "illustration": "zero-click",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Shopper Agent",
-      "AI Marketing",
-      "Retail Media",
-      "Dữ liệu sản phẩm"
-    ],
-    "summary": "Các doanh nghiệp bán lẻ đang đua nhau triển khai trợ lý AI riêng trên website và ứng dụng để giữ chân khách hàng từ khâu tìm kiếm đến thanh toán. Sự xuất hiện của trợ lý AI đang đe dọa các vị trí quảng cáo truyền thống và buộc các thương hiệu phải thay đổi cách tối ưu hóa dữ liệu sản phẩm.",
-    "keyNumbers": [
-      {
-        "value": "71%",
-        "label": "Tăng trưởng lưu lượng truy cập từ AI vào tháng 9"
-      },
-      {
-        "value": "90%",
-        "label": "Tỷ lệ chuyển đổi tốt hơn từ nguồn truy cập AI"
-      },
-      {
-        "value": "3 lần",
-        "label": "Tỷ lệ chuyển đổi của Walmart qua ChatGPT kém hơn so với về web"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Shopper Agent là gì và cơ chế hoạt động",
-        "body": "Shopper Agent là phần mềm AI do chính thương hiệu vận hành trên website hoặc ứng dụng để hỗ trợ khách hàng từ lúc tìm sản phẩm đến khi thanh toán. Trợ lý này truy cập trực tiếp vào hệ thống của doanh nghiệp bao gồm danh mục sản phẩm, tồn kho theo thời gian thực, giá cả và lịch sử mua hàng. Bằng cách sử dụng các giao thức mở như Model Context Protocol (MCP), agent có thể tự động thêm hàng vào giỏ và áp dụng mã giảm giá. Việc doanh nghiệp tự sở hữu agent giúp giữ nguyên quy trình xử lý gian lận, thuế và chính sách đổi trả hàng."
-      },
-      {
-        "heading": "Lưu lượng truy cập từ AI tăng vọt và tác động tới chuyển đổi",
-        "body": "Báo cáo ngày 29/10/2026 của Adobe từ hơn 1 nghìn tỷ lượt truy cập cho thấy lưu lượng đến từ AI tăng 71% so với cùng kỳ năm trước vào tháng 9. Nguồn truy cập này có tỷ lệ chuyển đổi tốt hơn 90% so với các nguồn khác, trái ngược với mức kém hơn 9% của tháng 8/2025. Adobe dự báo lượng truy cập từ AI sẽ tiếp tục tăng 159% trong ngày Thanksgiving, 95% trong ngày Black Friday và 88% trong Cyber Monday. Amazon cũng ghi nhận hơn 250 triệu khách hàng đã sử dụng trợ lý Rufus với số lượng người dùng hàng tháng tăng 149% so với cùng kỳ."
-      },
-      {
-        "heading": "Thách thức đối với Retail Media và hiển thị quảng cáo",
-        "body": "Khi người tiêu dùng đặt câu hỏi trực tiếp cho trợ lý AI thay vì duyệt danh mục sản phẩm, các vị trí banner và ô sản phẩm được tài trợ sẽ mất đi lượt xem. Logic xếp hạng của trợ lý AI trở thành gian hàng hiển thị mới và quyết định sản phẩm nào được xuất hiện. Các trợ lý AI bên ngoài có thể bỏ qua toàn bộ danh sách quảng cáo được tài trợ của sàn thương mại điện tử. Tuy nhiên, 65% thương hiệu được BCG khảo sát vào tháng 10/2026 vẫn kỳ vọng ngân sách Retail Media sẽ tăng lên khi các công cụ AI phổ biến hơn."
-      },
-      {
-        "heading": "Rào cản niềm tin và tầm quan trọng của nguồn dữ liệu",
-        "body": "Số liệu từ Walmart cho thấy các đơn hàng thực hiện trực tiếp bên trong ChatGPT có tỷ lệ chuyển đổi kém hơn 3 lần so với lượt bấm chuyển về website Walmart. Khảo sát của Salesforce trên 2.500 người tiêu dùng ghi nhận 76% người mua không muốn AI tự động thực hiện giao dịch thay họ. BCG cũng chỉ ra chỉ có 4% người tiêu dùng sẵn sàng để AI hoàn tất việc mua hàng một cách độc lập. Do trợ lý AI đọc các thuộc tính văn bản chứ không đọc hình ảnh, độ đầy đủ của bảng dữ liệu sản phẩm sẽ quyết định trực tiếp việc sản phẩm có được gợi ý hay không."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing sẽ thấy hiệu quả của banner và vị trí tài trợ truyền thống giảm sút khi người dùng chuyển sang hỏi đáp với AI. Nguồn lưu lượng truy cập từ AI mang lại tỷ lệ chuyển đổi cao vượt trội, yêu cầu đội ngũ phải chuẩn hóa lại toàn bộ hệ thống nguồn dữ liệu sản phẩm (product feed) để AI có thể đọc và trích xuất thông tin chính xác.",
-    "ifIgnored": "Doanh nghiệp sẽ mất lượt hiển thị trên các công cụ tìm kiếm AI, bị đối thủ cạnh tranh chiếm vị trí đề xuất tự nhiên và lãng phí ngân sách vào các vị trí quảng cáo hiển thị đang giảm dần lượng tương tác.",
-    "actionChecklist": [
-      "Rà soát và chuẩn hóa toàn bộ thuộc tính văn bản trong nguồn dữ liệu sản phẩm thay vì chỉ tập trung vào hình ảnh",
-      "Đánh giá lại hiệu quả của các vị trí quảng cáo banner và tài trợ hiển thị trên website cũng như sàn thương mại điện tử",
-      "Nghiên cứu tích hợp các giao thức kết nối dữ liệu sản phẩm như MCP hoặc UCP để chuẩn bị cho thương mại dựa trên AI",
-      "Theo dõi tỷ lệ chuyển đổi và lượng truy cập đến từ các công cụ AI trong hệ thống phân tích web"
-    ],
-    "id": "real-2026-11-13-tro-ly-ai-shopper-4253bf",
-    "publishedAt": "13/11/2026",
-    "sourceUrl": "https://ppc.land/shopper-agent/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/11/shopper-agent-explainer-retailer-owned-ai-guides-checkout-walmart-chatgpt-converted-3x-worse-storefront.jpg",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
-    "category": "AI Marketing",
-    "platformIcon": "Sparkles",
-    "title": "Trợ lý AI cá nhân thay đổi cách người tiêu dùng duyệt web và mua sắm",
-    "isHot": false,
-    "illustration": "ai-budget",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "AI Agent",
-      "Meta Muse",
-      "Hành vi khách hàng",
-      "Tự động hóa"
-    ],
-    "summary": "Trợ lý AI cá nhân đang chuyển từ thử nghiệm sang các sản phẩm thương mại như Meta Muse, thay mặt người dùng thực hiện các tác vụ duyệt web và mua sắm. Xu hướng này tạo ra những thay đổi đáng kể về lưu lượng truy cập, cách lựa chọn sản phẩm và thách thức bảo mật đối với các nhà quản lý marketing.",
-    "keyNumbers": [
-      {
-        "value": "76%",
-        "label": "người mua sắm không muốn AI mua hàng thay"
-      },
-      {
-        "value": "58,2 triệu",
-        "label": "yêu cầu trình duyệt từ trợ lý AI"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Sự xuất hiện của trợ lý AI cá nhân",
-        "body": "Trợ lý AI cá nhân là phần mềm chạy trên mô hình ngôn ngữ lớn, thực hiện các tác vụ thay cho một cá nhân bằng cách sử dụng tài khoản, dữ liệu và thông tin thanh toán của người đó. Khác với chatbot thông thường chỉ trả lời câu hỏi, trợ lý AI có thẩm quyền được ủy quyền để hành động trực tiếp. Vào tháng 9 năm 2026, Meta đã ra mắt Muse và tích hợp các công cụ kết nối với các nền tảng kinh doanh như Shopify và tài khoản quảng cáo Meta."
-      },
-      {
-        "heading": "Tác động đến lưu lượng truy cập và đo lường",
-        "body": "Sự phát triển của các tác nhân AI đang làm thay đổi bản chất của lưu lượng truy cập website. Dữ liệu ghi nhận hàng chục triệu yêu cầu trình duyệt từ các tác nhân AI, trong đó phần lớn xuất phát từ cơ sở hạ tầng đám mây và không tự nhận diện là AI. Điều này khiến các bộ lọc bot truyền thống có nguy cơ phân loại nhầm các phiên truy cập đại diện cho khách hàng thực tế."
-      },
-      {
-        "heading": "Thay đổi trong hành vi lựa chọn sản phẩm",
-        "body": "Khi trợ lý AI thực hiện việc tìm kiếm và mua sắm thay mặt con người, các quyết định lựa chọn sản phẩm có thể dịch chuyển ra khỏi các giao diện trang web truyền thống. Trong các thử nghiệm sơ bộ, phần lớn các lựa chọn mua sắm cuối cùng đến từ việc trình duyệt truy cập trực tiếp vào các trang web thay vì thông qua các danh mục có sẵn của nền tảng. Điều này đặt ra bài toán mới về cách tối ưu hóa sự hiện diện của thương hiệu trước các thuật toán thay vì chỉ tập trung vào người tiêu dùng cuối."
-      },
-      {
-        "heading": "Thách thức về bảo mật và quyền riêng tư",
-        "body": "Việc sử dụng trợ lý AI đi kèm với những rủi ro bảo mật đáng kể như mã độc trong các tiện ích mở rộng hoặc rò rỉ dữ liệu người dùng. Các cơ quan bảo vệ dữ liệu đã đưa ra cảnh báo về các lỗ hổng bảo mật và tình trạng quá tải sự đồng thuận khi người dùng phải liên tục cấp quyền cho các tác nhân tự động thực hiện giao dịch."
-      }
-    ],
-    "impact": "Trợ lý AI cá nhân đứng giữa ý định của khách hàng và website, làm thay đổi nguồn gốc lưu lượng truy cập và cách thức ra quyết định mua hàng, khiến các chỉ số phân tích hành vi truyền thống kém chính xác.",
-    "ifIgnored": "Bỏ qua xu hướng này dẫn đến việc hiểu sai các phiên truy cập từ bot AI là khách hàng thật, đồng thời mất đi cơ hội tối ưu hóa sản phẩm để hiển thị khi AI thay mặt người dùng mua sắm.",
-    "actionChecklist": [
-      "Đánh giá lại hệ thống lọc bot và phân tích lưu lượng truy cập website để nhận diện các yêu cầu từ trình duyệt AI.",
-      "Theo dõi sát các cập nhật kết nối kinh doanh và tài khoản quảng cáo từ các nền tảng lớn như Meta Muse.",
-      "Kiểm tra tính minh bạch và khả năng đọc dữ liệu sản phẩm của bot AI trên trang web của doanh nghiệp.",
-      "Cập nhật chiến lược đo lường hiệu suất khi hành vi mua sắm dần dịch chuyển sang các tác nhân tự động."
-    ],
-    "id": "real-2026-11-13-tro-ly-ai-ca-c69696",
-    "publishedAt": "13/11/2026",
-    "sourceUrl": "https://ppc.land/personal-ai-agent/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/11/personal-ai-agent-explainer-delegated-authority-76-percent-shoppers-decline-key-ring-handoff.jpg",
-      "credit": "Ảnh: PPC Land"
     }
   },
   {
@@ -549,69 +616,6 @@
     "image": {
       "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/11/google-core-update-featured.jpg",
       "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
-    "category": "AI Marketing",
-    "platformIcon": "Sparkles",
-    "title": "LinkedIn ứng dụng AI LLM nâng cấp thuật toán gợi ý nội dung ngoài mạng lưới kết nối",
-    "isHot": false,
-    "illustration": "data-signal",
-    "readTime": "3 phút đọc",
-    "tags": [
-      "LinkedIn",
-      "Thuật toán AI",
-      "LLM",
-      "Phân phối nội dung"
-    ],
-    "summary": "LinkedIn công bố chi tiết về mô hình AI Profile Relevance giúp phân phối nội dung từ các tài khoản chưa kết nối tới bảng tin người dùng. Công nghệ này tạo bản tóm tắt hồ sơ cá nhân bằng LLM để cá nhân hóa nguồn cấp dữ liệu chuẩn xác hơn.",
-    "keyNumbers": [
-      {
-        "value": "-18,8%",
-        "label": "Giảm tỷ lệ ẩn bài viết trên Bảng tin"
-      },
-      {
-        "value": "+17,7%",
-        "label": "Tăng tương tác lan truyền cho tài khoản mới"
-      },
-      {
-        "value": "+1,8%",
-        "label": "Tăng trưởng người dùng hoạt động hàng ngày"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Cơ chế hoạt động của mô hình Profile Relevance",
-        "body": "LinkedIn áp dụng các vector nhúng từ mô hình ngôn ngữ lớn (LLM) để kết nối người dùng với các bài viết phù hợp dựa trên bối cảnh nghề nghiệp. Hệ thống tự động tóm tắt thông tin hồ sơ và lịch sử đăng bài của từng thành viên thành một dạng câu lệnh định hướng. Dựa trên bản tóm tắt này, thuật toán tạo ra bộ hướng dẫn cá nhân hóa về những chủ đề người dùng quan tâm. Đây là phương thức giúp LinkedIn tối ưu hóa các bài đăng gợi ý từ những người họ chưa bấm theo dõi."
-      },
-      {
-        "heading": "Các yếu tố đánh giá độ tương quan nội dung",
-        "body": "Mô hình mới của LinkedIn đánh giá mức độ phù hợp của từng bài đăng so với bối cảnh nghề nghiệp của thành viên dựa trên nhiều tiêu chí cụ thể. Các yếu tố này bao gồm chủ đề, vị trí địa lý, chức danh công việc, công ty, ngành nghề, cấp bậc và trình độ học vấn. Hệ thống đã qua kiểm định thủ công trước khi đưa vào vận hành tự động quy mô lớn. Nhờ đó, trải nghiệm đọc tin của người dùng giảm bớt tín hiệu rác và tập trung vào nội dung có giá trị."
-      },
-      {
-        "heading": "Hiệu quả đo lường qua các thử nghiệm trực tuyến",
-        "body": "Kết quả thử nghiệm trực tuyến cho thấy lượt xem cập nhật trên Bảng tin tăng +0,54% và tỷ lệ lan truyền tăng +0,94%. Đáng chú ý, tỷ lệ người dùng ẩn bài viết giảm -18,8%, phản ánh mức độ hài lòng cao hơn đối với các nội dung được gợi ý. Đối với người dùng, bảng tin hiển thị các nội dung chất lượng cao vượt ra ngoài mạng lưới kết nối trực tiếp nhưng vẫn bám sát bối cảnh chuyên môn. Ngay cả những thành viên ít hoạt động trước đó cũng nhận được các gợi ý chuẩn xác."
-      },
-      {
-        "heading": "Lợi ích mở rộng phạm vi tiếp cận cho nhà sáng tạo B2B",
-        "body": "Hệ thống khuyến khích nhà sáng tạo nội dung sản xuất bài viết chất lượng vì khả năng tiếp cận tập khách hàng mới ngoài mạng lưới sẵn có được nâng cao. Đối với các tài khoản mới khởi tạo hoặc có ít dữ liệu lịch sử, thuật toán giúp ghi nhận mức tăng +17,7% về tương tác lan truyền. Chỉ số người dùng hoạt động hàng ngày (DAU) toàn nền tảng cũng ghi nhận mức tăng +1,8%. Điều này chứng minh khả năng dự đoán chính xác của mô hình ngay cả khi dữ liệu tương tác ban đầu còn thưa thớt."
-      }
-    ],
-    "impact": "Tối ưu hóa khả năng phân phối tự nhiên (organic reach) cho các chiến dịch content marketing B2B trên LinkedIn mà không hoàn toàn phụ thuộc vào chi phí quảng cáo.",
-    "ifIgnored": "Nếu tiếp tục xây dựng nội dung chung chung không xoay quanh chủ đề chuyên môn chuẩn hóa, bài đăng của doanh nghiệp sẽ bị AI đánh giá thấp và mất đi lượt tiếp cận tự nhiên từ tập khách hàng mục tiêu ngoài mạng lưới.",
-    "actionChecklist": [
-      "Cập nhật chính xác và đầy đủ các thông tin bối cảnh nghề nghiệp, chức danh và ngành nghề trên trang LinkedIn doanh nghiệp cũng như nhân sự chủ chốt.",
-      "Định hướng bài viết tập trung vào các chủ đề chuyên môn sâu để thuật toán LLM phân loại chính xác đối tượng đọc.",
-      "Theo dõi chỉ số tương tác từ người dùng ngoài mạng lưới kết nối hiện tại để đánh giá hiệu quả tiếp cận tự nhiên.",
-      "Xây dựng kế hoạch đăng bài chất lượng ngay từ giai đoạn đầu tạo tài khoản để tận dụng mức ưu đãi phân phối +17,7% của thuật toán mới."
-    ],
-    "id": "real-2026-11-09-linkedin-ung-dung-ai-498238",
-    "publishedAt": "09/11/2026",
-    "sourceUrl": "https://www.socialmediatoday.com/news/linkedin-explains-its-improved-content-recommendation-system/874206/",
-    "source": "Social Media Today",
-    "image": {
-      "url": "https://imgproxy.divecdn.com/YfXlGTm6wGw8AJR70CRfDQ9qVNPD9Bt2MF4s1tOqykg/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9saW5rZWRpbl9yZWNvbW1lbmRhdGlvbl9yZWxldmFuY2UyLnBuZw==.webp",
-      "credit": "Ảnh: Social Media Today"
     }
   },
   {
