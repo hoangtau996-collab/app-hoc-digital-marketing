@@ -2,6 +2,197 @@
   {
     "category": "Google Ads & SEO",
     "platformIcon": "Search",
+    "title": "Google Ads tăng phụ phí quy định tại Pháp và Ý lên 3% từ năm 2027",
+    "isHot": false,
+    "illustration": "ai-budget",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Google Ads",
+      "Phụ phí quảng cáo",
+      "Cài đặt vị trí",
+      "Tối ưu ngân sách"
+    ],
+    "summary": "Google Ads thông báo điều chỉnh phụ phí chi phí vận hành quy định tại Pháp và Ý lên mức 3% kể từ ngày 1/1/2027. Đáng chú ý, các chiến dịch không chủ động nhắm mục tiêu đến Châu Âu vẫn có thể bị tính phụ phí nếu giữ cài đặt nhắm vị trí mặc định. Trưởng phòng Marketing cần kiểm tra lại cài đặt tài khoản để tránh thất thoát ngân sách.",
+    "keyNumbers": [
+      {
+        "value": "3%",
+        "label": "Mức phụ phí vận hành áp dụng tại Pháp và Ý từ ngày 1/1/2027"
+      },
+      {
+        "value": "2,25%",
+        "label": "Mức phụ phí giảm tại Thổ Nhĩ Kỳ từ ngày 1/1/2027"
+      },
+      {
+        "value": "5%",
+        "label": "Tỷ lệ tăng chuyển đổi Google công bố khi dùng tùy chọn Presence or interest"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Thay đổi mức phụ phí vận hành tại Pháp và Ý từ năm 2027",
+        "body": "Google Ads thông báo điều chỉnh khoản phụ phí chi phí vận hành do quy định tại một số thị trường bắt đầu từ ngày 1/1/2027. Cụ thể, mức phụ phí cho quảng cáo hiển thị tại Pháp sẽ tăng từ 2% lên 3%, trong khi tại Ý sẽ tăng từ 2,5% lên 3%. Mức phí này được tính bổ sung trực tiếp trên tổng hóa đơn chi tiêu quảng cáo và ngân sách chiến dịch hiện có. Ngược lại, phụ phí tại Thổ Nhĩ Kỳ sẽ giảm từ 4,5% xuống còn 2,25% từ ngày 1/1/2027. Các quốc gia khác như Tây Ban Nha duy trì 3%, Áo duy trì 5% và Vương quốc Anh duy trì 2%."
+      },
+      {
+        "heading": "Phụ phí tính theo vị trí hiển thị quảng cáo thực tế",
+        "body": "Google quy định rõ phụ phí áp dụng dựa trên nơi quảng cáo được hiển thị thực tế, bất kể doanh nghiệp của bạn đặt trụ sở tại đâu. Phụ phí này tính dựa trên số lượt hiển thị hoặc lượt nhấp sinh ra ở từng quốc gia thuộc phạm vi quy định. Do đó, ngay cả khi nhà quảng cáo không chủ động nhắm mục tiêu đến Pháp hay Ý, hóa đơn vẫn có thể xuất hiện các khoản phí này. Google sẽ không hoàn lại phụ phí phát sinh từ các lượt nhấp và lượt hiển thị hợp lệ. Điều này đồng nghĩa với việc ngân sách của bạn có thể bị tiêu tốn ngoài dự kiến nếu cài đặt chiến dịch không chặt chẽ."
+      },
+      {
+        "heading": "Rủi ro từ tùy chọn nhắm mục tiêu vị trí mặc định",
+        "body": "Nguyên nhân chính khiến tài khoản phát sinh phụ phí từ quốc gia không nhắm tới nằm ở tùy chọn cài đặt vị trí nâng cao. Google Ads đặt mặc định tùy chọn Presence or interest, tức bao gồm cả những người đang ở hoặc quan tâm đến vị trí mục tiêu. Mặc dù Google đưa ra dữ liệu nội bộ cho thấy tùy chọn này giúp tăng 5% chuyển đổi ở một số ngành, nó mở ra khả năng người dùng ở Châu Âu nhìn thấy quảng cáo của bạn. Các chiến dịch tự động hóa như Demand Gen hay AI Max cũng tích hợp cơ chế này, làm tăng nguy cơ hiển thị quảng cáo ngoài phạm vi mong muốn. Nhà quảng cáo cần chủ động chuyển sang tùy chọn Presence để giới hạn chính xác người dùng thực tế đang ở khu vực target."
+      },
+      {
+        "heading": "Tác động đến hiệu quả ROAS và chi phí chuyển đổi",
+        "body": "Khi khoản phụ phí 3% được cộng trực tiếp vào chi tiêu, các chỉ số hiệu quả chiến dịch sẽ bị thay đổi đáng kể. Việc tính toán chi phí trên mỗi chuyển đổi hoặc tỷ lệ hoàn vốn đầu tư quảng cáo cần phải điều chỉnh lại theo hệ số mới. Đối với các doanh nghiệp có biên lợi nhuận mỏng, khoản phụ phí bổ sung này sẽ trực tiếp làm giảm hiệu quả tài chính của chiến dịch. Các nhà quản lý chiến dịch cần chủ động rà soát lại mức ROAS hòa vốn cho thị trường Châu Âu. Việc bỏ qua điều chỉnh này có thể dẫn đến đánh giá sai lệch về hiệu quả thực tế của ngân sách."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing sẽ đối mặt với tình trạng ngân sách quảng cáo bị bòn rút ẩn nếu tài khoản giữ nguyên cài đặt vị trí mặc định của Google. Các chiến dịch nhắm mục tiêu Châu Âu hoặc toàn cầu sẽ gia tăng chi phí thực tế, buộc phải tính toán lại bài toán ROI và điều chỉnh KPI chuyển đổi.",
+    "ifIgnored": "Doanh nghiệp phải trả thêm các khoản phụ phí tự động cấn trừ vào hóa đơn thanh toán mà không thể yêu cầu hoàn lại từ Google. Đồng thời, các báo cáo hiệu quả chiến dịch sẽ bị sai lệch chỉ số CPA và ROAS, dẫn đến các quyết định phân bổ ngân sách thiếu chính xác.",
+    "actionChecklist": [
+      "Truy cập cài đặt vị trí nâng cao trong tất cả chiến dịch Google Ads và chuyển từ tùy chọn Presence or interest sang Presence.",
+      "Bật báo cáo vị trí hiển thị thực tế Matched locations để lọc và phát hiện các lượt hiển thị phát sinh từ Pháp, Ý hoặc các khu vực chịu phụ phí.",
+      "Cập nhật lại công thức tính ROAS hòa vốn và Target CPA đối với các chiến dịch đang chạy tại thị trường Châu Âu.",
+      "Kiểm tra hòm thư quản trị tài khoản để cập nhật các thông báo điều chỉnh phí từ Google Payments."
+    ],
+    "deadline": "01/01/2027",
+    "id": "real-2026-11-17-google-ads-tang-phu-331e18",
+    "publishedAt": "17/11/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/google-ads-surcharges-rise-to-3-in-france-and-italy-local-us-advertisers-can-be-billed-too/596938/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/11/surcharge-854.png",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Video",
+    "title": "Xu hướng quảng cáo mùa lễ hội bắt đầu sớm hơn và gia tăng tần suất hiển thị trên truyền hình",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Quảng cáo mùa lễ hội",
+      "Nghiên cứu Nielsen",
+      "Chiến lược video",
+      "Hành vi người tiêu dùng"
+    ],
+    "summary": "Dữ liệu mới từ Nielsen cho thấy các chiến dịch quảng cáo mùa lễ hội đang dịch chuyển thời điểm khởi động sớm hơn vào tháng 9 và tháng 10. Ngành bán lẻ tiếp tục thống trị với phần lớn thị phần quảng cáo trên cả truyền hình tuyến tính và nền tảng phát trực tuyến.",
+    "keyNumbers": [
+      {
+        "value": "6 lần",
+        "label": "lượng ad tháng 9 so với 2021"
+      },
+      {
+        "value": "63,7%",
+        "label": "thị phần ad bán lẻ tháng 10"
+      },
+      {
+        "value": "3,2 lần",
+        "label": "mức tăng doanh số mỹ phẩm"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Thời điểm khởi động chiến dịch dịch chuyển sớm",
+        "body": "Các hoạt động quảng cáo phục vụ mùa lễ hội đang diễn ra sớm hơn trên lịch trình khi các thương hiệu cố gắng tối ưu hóa giai đoạn quý 4. Số lượng quảng cáo chạy trong tháng 9 đã tăng gấp sáu lần so với cùng kỳ năm 2021 và ghi nhận mức tăng 11% so với tháng 9 năm 2025. Riêng trong tháng 9, các nội dung sáng tạo mùa lễ hội chiếm 1% tổng số quảng cáo trên truyền hình tuyến tính."
+      },
+      {
+        "heading": "Sự thống trị của ngành bán lẻ",
+        "body": "Ngành bán lẻ tiếp tục dẫn đầu trên cả truyền hình phát trực tuyến lẫn truyền hình tuyến tính, vượt trước các xu hướng lịch sử trong tháng 10. Danh mục này chiếm trung bình 45% chi tiêu quảng cáo truyền hình tuyến tính trong năm năm qua và duy trì tỷ trọng lớn trong môi trường phát trực tuyến. Tính riêng tháng 10, có tới 63,7% quảng cáo lễ hội đến từ các nhà bán lẻ."
+      },
+      {
+        "heading": "Thông điệp khuyến mại và áp lực lạm phát",
+        "body": "Thông điệp khuyến mại đóng vai trò chủ đạo khi hơn một phần ba số quảng cáo bán lẻ được Nielsen đánh giá trong năm năm qua có đề cập đến các sự kiện ưu đãi Black Friday hoặc Cyber Monday. Các nhà bán lẻ hiện chịu áp lực phải tiếp cận nhóm khách hàng thận trọng trong bối cảnh lạm phát kéo dài. Nhiều chiến dịch đã chuyển hướng tập trung vào việc tặng quà mang tính cá nhân hóa và chu đáo thay vì chỉ dựa vào giá rẻ."
+      },
+      {
+        "heading": "Hiệu quả doanh số theo từng ngành hàng",
+        "body": "Các nghiên cứu chuẩn mực về truyền hình kết nối cho thấy các chiến lược lễ hội hiệu quả có thể thúc đẩy mạnh mẽ hiệu suất kinh doanh. Các thương hiệu mỹ phẩm ghi nhận mức tăng doanh số gấp 3,2 lần so với các chiến dịch không phải dịp lễ hội. Trong khi đó, các cửa hàng bách hóa đạt mức tăng doanh số gấp 2,4 lần theo ghi nhận từ đơn vị đo lường."
+      },
+      {
+        "heading": "Sự thay đổi chi tiêu ở các danh mục khác",
+        "body": "Bên ngoài ngành bán lẻ, xu hướng chi tiêu theo danh mục có sự dao động rõ rệt hơn theo thời gian. Ngành ô tô đã giảm tỷ trọng từ 16% chi tiêu quảng cáo truyền hình tuyến tính cho lễ hội vào năm 2023 xuống chỉ còn 7,7% vào năm 2025 do chuyển dịch sang nền tảng phát trực tuyến. Quảng cáo thực phẩm và đồ uống cũng sụt giảm giữa năm 2024 và năm 2025 khi các thương hiệu lớn thắt chặt ngân sách."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing cần nhận thức rõ việc người tiêu dùng và các đối thủ đang đẩy mạnh các chiến dịch mua sắm và truyền thông từ rất sớm, đòi hỏi kế hoạch ngân sách và nội dung quý 4 phải được chuẩn bị từ tháng 9 thay vì chờ đến sát dịp lễ.",
+    "ifIgnored": "Nếu bỏ qua xu hướng khởi động sớm, thương hiệu sẽ bỏ lỡ giai đoạn tiếp cận nhóm khách hàng bắt đầu lên kế hoạch mua sắm từ sớm và đánh mất thị phần vào tay các đối thủ cạnh tranh đã triển khai từ tháng 9.",
+    "actionChecklist": [
+      "Đẩy sớm thời điểm ra mắt các thông điệp và chiến dịch ưu đãi mùa lễ hội bắt đầu từ tháng 9.",
+      "Phân bổ lại ngân sách hợp lý giữa truyền hình tuyến tính và các nền tảng phát trực tuyến.",
+      "Tích hợp các thông điệp quà tặng cá nhân hóa để thu hút nhóm người tiêu dùng thận trọng vì lạm phát.",
+      "Đo lường kỹ lưỡng tỷ lệ tăng trưởng doanh số thực tế để điều chỉnh tần suất hiển thị của quảng cáo."
+    ],
+    "id": "real-2026-11-17-xu-huong-quang-cao-0f4464",
+    "publishedAt": "17/11/2026",
+    "sourceUrl": "https://www.marketingdive.com/news/holiday-tv-ads-from-retailers-arrive-earlier-more-frequently-in-2026/874883/",
+    "source": "Marketing Dive",
+    "image": {
+      "url": "https://imgproxy.divecdn.com/VpdLS_rE1Vw4EopTwqgJ3meBSjYrPYCkf1ZFxRXBX3w/g:nowe:0:142/c:2121:1198/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0xMDg2NjY2ODQyLmpwZw==.webp",
+      "credit": "Ảnh: Marketing Dive"
+    }
+  },
+  {
+    "category": "Meta Ads",
+    "platformIcon": "Video",
+    "title": "Chiến lược nội dung đa kênh dựa trên văn hóa Meme của Meow Mix",
+    "isHot": false,
+    "illustration": "creative-fatigue",
+    "readTime": "3 phút đọc",
+    "tags": [
+      "Content Marketing",
+      "Social Media",
+      "Video Ads",
+      "Meme Marketing"
+    ],
+    "summary": "Meow Mix triển khai chiến dịch \"Behind the Memeow\" sử dụng các meme mèo nổi tiếng để kết nối với khách hàng trên đa nền tảng. Chiến dịch tập trung vào việc lồng ghép thương hiệu một cách tự nhiên vào các nội dung giải trí lan truyền.",
+    "keyNumbers": [
+      {
+        "value": "3",
+        "label": "số lượng video 30 giây"
+      },
+      {
+        "value": "tháng 2",
+        "label": "thời hạn kết thúc chiến dịch"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Tận dụng văn hóa Meme",
+        "body": "Meow Mix vừa ra mắt chiến dịch Behind the Memeow nhằm tái hiện nguồn gốc của các meme mèo nổi tiếng như Table Cat, Keyboard Cat và Huh Cat. Thương hiệu khéo léo đưa sản phẩm vào các tình huống hài hước để thay đổi hành vi của các nhân vật meme. Đây là cách tiếp cận nhằm thu hút sự chú ý của thế hệ người tiêu dùng mới thông qua nội dung giải trí."
+      },
+      {
+        "heading": "Đa dạng hóa kênh phân phối",
+        "body": "Chiến dịch được triển khai trên quy mô lớn bao gồm mạng xã hội, video, quảng cáo hiển thị, âm thanh và bán lẻ. Chiến lược ưu tiên mạng xã hội với sự hỗ trợ trả phí trên Meta, Pinterest, Snapchat, Reddit và TikTok. Sự kết hợp này đảm bảo thương hiệu xuất hiện ở mọi điểm chạm quan trọng của khách hàng."
+      },
+      {
+        "heading": "Hợp tác nội dung tùy chỉnh",
+        "body": "Ngoài quảng cáo truyền thống, Meow Mix còn thực hiện các hợp tác với người có ảnh hưởng và đối tác nội dung Pubity. Việc làm mới giai điệu thương hiệu trong mỗi video giúp duy trì tính nhất quán nhưng vẫn tạo được sự mới mẻ. Cách làm này giúp thương hiệu duy trì sự hiện diện trong các cuộc hội thoại về thú cưng trên internet."
+      },
+      {
+        "heading": "Tư duy kỷ luật trong chi tiêu",
+        "body": "CEO Mark Smucker nhấn mạnh tầm quan trọng của việc đánh giá hiệu quả chi tiêu marketing để đạt được lợi nhuận gia tăng. Công ty tập trung vào việc lựa chọn kênh đầu tư cẩn trọng thay vì dàn trải ngân sách. Đây là bài học về việc tối ưu hóa ROI trong bối cảnh cạnh tranh gay gắt ở ngành hàng chăm sóc thú cưng."
+      }
+    ],
+    "impact": "Cung cấp mô hình kết hợp giữa nội dung giải trí (meme) và quảng cáo trả phí để giảm thiểu sự kháng cự của người dùng đối với quảng cáo (ad fatigue).",
+    "ifIgnored": "Bỏ lỡ cơ hội áp dụng phương pháp lồng ghép thương hiệu vào các xu hướng văn hóa có sẵn, dẫn đến chi phí quảng cáo cao hơn do nội dung thiếu tính hấp dẫn tự nhiên.",
+    "actionChecklist": [
+      "Rà soát các xu hướng meme hiện tại phù hợp với hình ảnh thương hiệu.",
+      "Thử nghiệm định dạng video 30 giây với nội dung giải trí thay vì quảng cáo trực diện.",
+      "Đánh giá lại hiệu quả chi tiêu trên từng nền tảng để tối ưu hóa ROI.",
+      "Thiết lập quan hệ đối tác với các nhà sáng tạo nội dung có tệp khán giả phù hợp."
+    ],
+    "deadline": "Tháng 2/2027",
+    "id": "real-2026-11-16-chien-luoc-noi-dung-559664",
+    "publishedAt": "16/11/2026",
+    "sourceUrl": "https://www.marketingdive.com/news/meow-mix-reimagines-iconic-cat-memes-for-multichannel-campaign/874724/",
+    "source": "Marketing Dive",
+    "image": {
+      "url": "https://imgproxy.divecdn.com/AAQQVhyTYPQGgjVNFMKy9w2-ZAc709Y8LEzA6YMvxsc/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9NTV82LmpwZw==.webp",
+      "credit": "Ảnh: Marketing Dive"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
     "title": "Biến động thị phần CMS tháng 11 năm 2026 và xu hướng nền tảng website",
     "isHot": false,
     "illustration": "page-speed",
@@ -379,69 +570,6 @@
   },
   {
     "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Tự động hạ giá thầu Google Ads khi từ khóa thương hiệu không có đối thủ cạnh tranh",
-    "isHot": false,
-    "illustration": "cpm-auction",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Google Ads",
-      "Brand Search",
-      "Đấu thầu tự động",
-      "Tối ưu ngân sách"
-    ],
-    "summary": "Lunio hợp tác với Revvim tích hợp công cụ Agentic Bid Optimization giúp tự động giảm giá thầu Google Search và Shopping xuống mức tối thiểu khi không có đối thủ cạnh tranh cùng từ khóa thương hiệu. Hệ thống khôi phục giá thầu đầy đủ ngay khi đối thủ xuất hiện. Doanh nghiệp chỉ trả phí dựa trên số tiền thực tế tiết kiệm được.",
-    "keyNumbers": [
-      {
-        "value": "31%",
-        "label": "Tỷ lệ truy cập thương hiệu không có đối thủ đấu giá"
-      },
-      {
-        "value": "76%",
-        "label": "Mức giảm CPC trên các từ khóa thương hiệu lớn"
-      },
-      {
-        "value": "8 phút 45 giây",
-        "label": "Thời gian phản ứng trung bình với từ khóa tìm kiếm cao"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Cơ chế vận hành song song hai chiến dịch",
-        "body": "Hệ thống hoạt động dựa trên việc phối hợp hai chiến dịch trên tài khoản Google Ads. Khi có đối thủ tham gia đấu giá, chiến dịch chính giữ nguyên giá thầu ban đầu để bảo vệ vị trí hiển thị hàng đầu. Khi không có đối thủ, lưu lượng tìm kiếm được chuyển sang chiến dịch phụ với mức giá thầu tối thiểu. Các kịch bản Google Ads Script tự động cập nhật danh sách từ khóa phủ định để điều hướng lưu lượng giữa hai chiến dịch."
-      },
-      {
-        "heading": "Thời gian phản ứng và khả năng tương thích",
-        "body": "Công cụ chạy trực tiếp trên các chiến dịch hiện có mà không cần khởi tạo lại cấu trúc quảng cáo. Hệ thống tương thích hoàn toàn với Smart Bidding và Performance Max. Theo dữ liệu từ Revvim, hệ thống phản ứng trung bình trong 8 phút 45 giây đối với từ khóa có lượng tìm kiếm lớn và 35 phút đối với từ khóa có lượng tìm kiếm thấp. Mọi thao tác điều chỉnh đều được lưu lại trong lịch sử thay đổi của tài khoản."
-      },
-      {
-        "heading": "Quy trình triển khai và mô hình chi phí",
-        "body": "Để vận hành, doanh nghiệp cần cấp quyền truy cập Standard trên Google Ads và quyền truy cập Google Search Console. Sau khi thống nhất danh sách từ khóa phòng thủ, hệ thống trải qua giai đoạn học tối thiểu 7 ngày. Việc đánh giá hiệu quả được tiến hành vào ngày 10 và ngày 30. Doanh nghiệp không phải trả chi phí khởi tạo ban đầu mà trả phí dựa trên tỷ lệ phần trăm số tiền ngân sách đã thu hồi được."
-      },
-      {
-        "heading": "Kết quả thực tế từ các doanh nghiệp áp dụng",
-        "body": "Một thương hiệu giao đồ ăn trực tuyến đã tiết kiệm hơn 6,4 triệu USD trong năm 2025 và giảm 76% CPC trên 15 từ khóa thương hiệu. Dữ liệu phân tích cho thấy 31% lượng truy cập thương hiệu của đơn vị này hoàn toàn không có đối thủ đấu giá. Một hãng xe điện cũng thu hồi hơn 240.000 USD trong 6 tháng, trong khi một thương hiệu trang sức tại Anh giảm 42% CPC từ khóa thương hiệu vào thời điểm cao điểm."
-      }
-    ],
-    "impact": "Trực tiếp chấm dứt tình trạng lãng phí ngân sách khi phải trả giá thầu phòng thủ cao cho các nhấp chuột không có ai cạnh tranh trên Google Search.",
-    "ifIgnored": "Doanh nghiệp sẽ tiếp tục chi trả mức chi phí trên mỗi nhấp chuột (CPC) cao cho các từ khóa thương hiệu ngay cả trong những khoảng thời gian đối thủ không hề chạy quảng cáo.",
-    "actionChecklist": [
-      "Kiểm tra báo cáo Thông tin chi tiết về phiên đấu giá (Auction Insights) để xác định tỷ lệ phiên đấu giá từ khóa thương hiệu không có đối thủ.",
-      "Tách riêng chiến dịch từ khóa thương hiệu (Brand Search) khỏi các chiến dịch tìm kiếm chung để kiểm soát chi phí chính xác.",
-      "Cấp quyền truy cập Google Search Console để đối soát lượng truy cập tự nhiên với lưu lượng quảng cáo tìm kiếm trả phí.",
-      "Thử nghiệm kịch bản Google Ads Script để tự động hóa việc theo dõi và điều chỉnh giá thầu theo thời gian thực."
-    ],
-    "id": "real-2026-11-14-tu-dong-ha-gia-1da747",
-    "publishedAt": "14/11/2026",
-    "sourceUrl": "https://ppc.land/lunio-cuts-google-brand-bids-when-no-rival-is-in-the-auction/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/11/lunio-revvim-agentic-bid-optimization-google-brand-search-uncontested-auctions-toll-plaza-empty-lane.jpg",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
     "platformIcon": "Video",
     "title": "YouTube Studio nâng cấp Analytics thành Insights và đưa trợ lý AI Ask Studio lên di động",
     "isHot": false,
@@ -560,124 +688,6 @@
     "image": {
       "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/11/meta-muse-featured.jpg",
       "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Năng lực AI của nhân sự quảng cáo chưa được đánh giá đúng mức",
-    "isHot": false,
-    "illustration": "account-security",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Google Ads",
-      "Kỹ năng AI",
-      "Quản trị ngân sách",
-      "Đo lường hiệu suất"
-    ],
-    "summary": "Nghiên cứu mới cho thấy phần lớn nhân sự chưa bao giờ được đánh giá năng lực AI một cách chính thức, dù nhà quản lý rất coi trọng kỹ năng này khi tuyển dụng. Điều này tạo ra rủi ro lớn trong việc quản lý ngân sách quảng cáo tự động.",
-    "keyNumbers": [
-      {
-        "value": "72%",
-        "label": "nhân sự chưa từng được đánh giá kỹ năng AI"
-      },
-      {
-        "value": "69%",
-        "label": "quản lý coi trọng AI khi tuyển dụng"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Khoảng trống trong đánh giá năng lực AI",
-        "body": "Khảo sát cho thấy phần lớn nhân sự chưa từng được đánh giá năng lực AI một cách chính thức. Tuy nhiên, phần lớn nhà quản lý vẫn coi đây là yếu tố quan trọng khi tuyển dụng. Doanh nghiệp đang tuyển dụng và thăng遷 dựa trên các tiêu chí chưa được đo lường thực tế."
-      },
-      {
-        "heading": "Đào tạo nội bộ chưa đáp ứng thực tế",
-        "body": "Đa số nhân sự từng nhận được đào tạo về AI từ công ty nhưng không áp dụng được nhiều vào công việc. Hầu hết người làm nghề tự học qua tài nguyên miễn phí và qua quá trình thử sai thực tế. Việc thử nghiệm này diễn ra trực tiếp trên ngân sách quảng cáo của khách hàng."
-      },
-      {
-        "heading": "Vấn đề đo lường trong ngành quảng cáo",
-        "body": "Ngành quảng cáo vốn đo lường mọi chỉ số đến từng chữ số thập phân nhưng lại đánh giá nhân sự bằng cảm tính hàng năm. Việc thiếu các bài kiểm tra thực tế khiến những người chỉ biết nói về tự động hóa dễ được đánh giá cao hơn người thực tế tối ưu chiến dịch."
-      },
-      {
-        "heading": "Định nghĩa lại năng lực AI cho người chạy quảng cáo",
-        "body": "Năng lực AI thực sự không nằm ở việc viết câu lệnh hay hiểu lý thuyết chung chung. Kỹ năng cốt lõi là biết khi nào nên giao việc cho hệ thống tự động, khi nào cần kiểm tra lại kết quả và khi nào tuyệt đối không dùng tự động hóa."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing đang đánh giá năng lực đội ngũ phụ trách Google Ads dựa trên các tín hiệu bề nổi như chứng chỉ hoặc cách thuyết trình, thay vì kiểm tra khả năng kiểm soát hệ thống tự động thực tế.",
-    "ifIgnored": "Tiếp tục phân bổ ngân sách cho nhân sự dựa trên cảm tính, dẫn đến việc tài khoản bị thất thoát ngân sách do không kiểm soát chặt chẽ các quyết định của hệ thống tự động.",
-    "actionChecklist": [
-      "Kiểm tra lại cách đội ngũ đang giám sát các quyết định đặt giá thầu tự động trên tài khoản",
-      "Yêu cầu nhân sự báo cáo chi tiết về các từ khóa phủ định và vị trí hiển thị thay vì chỉ xem số liệu tổng quan",
-      "Đánh giá năng lực nhân sự dựa trên số lần họ can thiệp kịp thời để sửa lỗi của hệ thống tự động",
-      "Xây dựng tiêu chuẩn nội bộ để kiểm chứng kỹ năng xử lý tình huống thực tế của nhân sự chạy quảng cáo"
-    ],
-    "id": "real-2026-11-13-nang-luc-ai-cua-4b5425",
-    "publishedAt": "13/11/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/72-of-workers-say-their-ai-skills-are-untested-heres-how-ppc-managers-prove-theirs/596205/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/11/ppc-skill-957.png",
-      "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
-    "category": "Meta Ads",
-    "platformIcon": "Facebook",
-    "title": "Công cụ AI của Meta tự động lấy ưu đãi từ website đưa vào quảng cáo dù đã tắt tính năng khuyến mãi",
-    "isHot": false,
-    "illustration": "account-security",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Meta Ads",
-      "Quảng cáo AI",
-      "Lỗi hệ thống",
-      "Thương mại điện tử"
-    ],
-    "summary": "Các báo cáo gần đây cho thấy các công cụ quảng cáo tích hợp trí tuệ nhân tạo của Meta đã tự động lấy các ưu đãi từ website của cửa hàng và hiển thị chúng trong các chiến dịch quảng cáo trên Facebook và Instagram, ngay cả khi doanh nghiệp đã tắt tùy chọn khuyến mãi trên mẫu quảng cáo gốc.",
-    "keyNumbers": [
-      {
-        "value": "8%",
-        "label": "Tăng trưởng nhấp chuột"
-      },
-      {
-        "value": "15,7%",
-        "label": "Tăng trưởng chuyển đổi"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Lỗi tự động lấy ưu đãi từ website",
-        "body": "Cố vấn tiếp thị kỹ thuật số Bram Van der Hallen đã phát hiện ra rằng các công cụ AI của Meta có khả năng tự động phát hiện ưu đãi từ trang web doanh nghiệp. Những ưu đãi này sau đó được đưa vào các quảng cáo trên Meta mà không cần sự đồng ý. Sự cố xảy ra ngay cả khi người quản lý đã tắt tùy chọn quảng cáo gốc liên quan đến khuyến mãi. Điều này gây ra nhiều rủi ro lớn cho các nhà quảng cáo đang chạy nhiều chương trình cùng lúc."
-      },
-      {
-        "heading": "Nguyên nhân từ cài đặt Commerce Manager",
-        "body": "Vấn đề bắt nguồn từ việc tính năng hiển thị ưu đãi phát hiện từ trang web và quảng cáo được bật sẵn trong Commerce Manager. Khi tùy chọn này hoạt động, hệ thống AI sẽ tự động quét và áp dụng các chương trình giảm giá. Meta tận dụng khả năng xử lý mở rộng để tối ưu hóa hiệu suất nhưng lại tạo ra các lỗi không mong muốn. Các hệ thống AI luôn tìm kiếm sự hiệu quả và tối ưu ở mọi nơi có thể, dẫn đến việc áp dụng nhầm ưu đãi."
-      },
-      {
-        "heading": "Tác động đến các chiến dịch hiện tại",
-        "body": "Sự cố này ảnh hưởng trực tiếp đến bất kỳ doanh nghiệp nào đang chạy quảng cáo trên Meta với nhiều hơn một ưu đãi đang hoạt động. Một chương trình giảm giá dành riêng cho một chiến dịch hoặc một đối tượng cụ thể có thể bị lệch sang hiển thị ở nơi khác. Điều này làm sai lệch chiến lược giá và gây thất thoát doanh thu không đáng có cho doanh nghiệp. Các nhà quản lý ngân sách cần phải cực kỳ cẩn trọng với các tính năng tự động hóa này."
-      },
-      {
-        "heading": "Hiệu suất tổng thể của hệ thống Meta",
-        "body": "Trong một diễn biến liên quan, Meta cho biết các cải tiến đối với hệ thống xếp hạng quảng cáo đã mang lại kết quả tích cực trong quý 2 năm 2026. Cụ thể, lượng nhấp chuột vào quảng cáo trên Facebook đã tăng hơn 8%. Đồng thời, tỷ lệ chuyển đổi cũng ghi nhận mức tăng trưởng 15,7%. Tuy nhiên, sự gia tăng của tự động hóa đồng nghĩa với việc rủi ro vận hành cũng tăng theo."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing đối mặt với nguy cơ rò rỉ mã giảm giá sai đối tượng do tính năng tự động quét website của Meta AI.",
-    "ifIgnored": "Chiến dịch quảng cáo có thể tự động áp dụng mức ưu đãi không mong muốn, gây thất thoát ngân sách và sai lệch chiến lược giá bán.",
-    "actionChecklist": [
-      "Kiểm tra ngay cài đặt trong Commerce Manager của tài khoản quảng cáo.",
-      "Tắt tùy chọn tự động hiển thị ưu đãi phát hiện từ website nếu không sử dụng.",
-      "Rà soát lại toàn bộ các chiến dịch đang chạy có kèm mã giảm giá hoặc khuyến mãi.",
-      "Thông báo cho đội ngũ vận hành chiến dịch theo dõi sát sao các phản hồi từ khách hàng."
-    ],
-    "id": "real-2026-11-12-cong-cu-ai-cua-b9b778",
-    "publishedAt": "12/11/2026",
-    "sourceUrl": "https://www.marketingdive.com/news/sociable-metas-ai-ads-included-unapproved-discounts/874525/",
-    "source": "Marketing Dive",
-    "image": {
-      "url": "https://imgproxy.divecdn.com/jtFl8l6BsGmGnMdnKkBuXTUVcdNE3PFfV9vasuIPtAs/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9tZXRhX2xvZ28yLnBuZw==.webp",
-      "credit": "Ảnh: Marketing Dive"
     }
   },
   {
