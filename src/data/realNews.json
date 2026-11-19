@@ -2,6 +2,191 @@
   {
     "category": "Google Ads & SEO",
     "platformIcon": "Search",
+    "title": "Microsoft Advertising cập nhật mô hình đấu thầu tự động lớn nhất trong 10 năm",
+    "isHot": false,
+    "illustration": "ai-budget",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Microsoft Ads",
+      "Đấu thầu tự động",
+      "Target CPA",
+      "Target ROAS"
+    ],
+    "summary": "Microsoft Advertising vừa triển khai đợt nâng cấp mô hình đấu thầu tự động lớn nhất trong một thập kỷ qua. Hệ thống mới tích hợp nhiều tín hiệu dữ liệu hơn để dự đoán khả năng và giá trị chuyển đổi của từng lượt nhấp. Thay đổi này được áp dụng tự động trên các tài khoản, trực tiếp làm thay đổi tốc độ phân bổ ngân sách và khả năng bám sát mục tiêu chi phí.",
+    "keyNumbers": [
+      {
+        "value": "10%",
+        "label": "tăng giá trị chuyển đổi trên mỗi lượt nhấp với ROAS tương đương"
+      },
+      {
+        "value": "18%",
+        "label": "tăng lượt chuyển đổi khi chuyển từ Enhanced CPC sang Maximize Conversions"
+      },
+      {
+        "value": "5",
+        "label": "lượt chuyển đổi tối thiểu trong tài khoản để bắt đầu đấu thầu tự động"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Tốc độ phân bổ ngân sách và điều chỉnh giá thầu nhanh gấp đôi",
+        "body": "Mô hình mới giúp chiến dịch đạt mức chi tiêu ngân sách tối đa sớm hơn và phân bổ đều đặn hơn suốt cả ngày. Khi người vận hành nâng hoặc hạ mục tiêu CPA hay ROAS, hệ thống sẽ điều chỉnh giá thầu nhanh gấp gần hai lần so với trước đây. Thuật toán cải tiến giúp bám sát mục tiêu đề ra ổn định hơn mà không làm sụt giảm số lượng hay giá trị chuyển đổi. Tuy nhiên, việc đặt giới hạn giá thầu thủ công như CPC tối đa có thể vô tình ngăn cản thuật toán tiếp cận các lượt nhấp có khả năng mang lại chuyển đổi tốt."
+      },
+      {
+        "heading": "Quy tắc điều chỉnh mục tiêu 15% để tránh biến động",
+        "body": "Tăng mục tiêu CPA hoặc giảm mục tiêu ROAS sẽ giúp chiến dịch tham gia vào những phiên đấu giá mà trước đó hệ thống tự động bỏ qua. Để hạn chế biến động lớn về hiệu suất, Microsoft khuyến nghị chỉ nên thay đổi các mục tiêu này theo từng mức nhỏ 15% mỗi lần. Sau khi chỉnh sửa, nhà quảng cáo cần chờ hết một chu kỳ chuyển đổi để đánh giá lại kết quả trước khi thao tác tiếp. Với các thay đổi lớn hơn như đổi chiến lược đấu thầu hoặc thêm mục tiêu chuyển đổi mới, hệ thống cần từ một đến hai chu kỳ để học dữ liệu."
+      },
+      {
+        "heading": "Ngưỡng dữ liệu chuyển đổi tối thiểu để thuật toán tối ưu",
+        "body": "Microsoft khuyến nghị chiến dịch mới có thể chuyển sang đấu thầu dựa trên chuyển đổi ngay khi toàn bộ tài khoản tích lũy đủ tối thiểu 5 chuyển đổi. Trong trường hợp chưa đạt mốc này, chiến dịch có thể tạm thời duy trì hình thức Enhanced CPC. Để đánh giá chính xác hiệu quả vận hành của mô hình mới, hệ thống cần đạt mốc khoảng 30 chuyển đổi trong vòng 30 ngày ở cấp chiến dịch hoặc danh mục đầu tư. Các tài khoản có lượng chuyển đổi quá thấp sẽ cần nhiều thời gian hơn để thuật toán nhận diện tín hiệu chuẩn xác."
+      },
+      {
+        "heading": "Hiệu quả thực tế từ dữ liệu thử nghiệm của Microsoft",
+        "body": "Dữ liệu toàn cầu tháng 8/2026 trên mạng Tìm kiếm và Audience Network cho thấy giá trị chuyển đổi trên mỗi lượt nhấp tăng 10% ở mức ROAS tương đương đối với chiến dịch dùng Maximize Conversion Value hoặc Target ROAS. Nhóm nhà quảng cáo chuyển từ Target CPA sang Target ROAS ghi nhận giá trị chuyển đổi tăng 8%. Bên cạnh đó, việc chuyển từ Enhanced CPC sang Maximize Conversions có đặt mục tiêu CPA giúp tăng 18% số lượng chuyển đổi. Đáng chú ý, hiệu quả cải thiện cao nhất thuộc về những tài khoản gửi đúng giá trị giao dịch thực tế về hệ thống thông qua Conversions API hoặc mã theo dõi."
+      }
+    ],
+    "impact": "Chiến dịch trên Microsoft Ads sẽ tự động điều chỉnh giá thầu nhanh hơn gấp đôi và có thể tiêu hết ngân sách sớm hơn trong ngày. Nếu doanh nghiệp vẫn giữ thói quen đặt trần CPC thủ công hoặc gửi giá trị chuyển đổi cố định thay vì giá trị đơn hàng thực tế, thuật toán mới sẽ không thể tối ưu tối đa doanh thu trên mỗi chi phí bỏ ra.",
+    "ifIgnored": "Tài khoản quảng cáo có nguy cơ bị biến động hiệu suất mạnh do điều chỉnh mục tiêu quá tay, đồng thời bỏ lỡ mức tăng trưởng từ 10% đến 18% hiệu quả chuyển đổi so với các đối thủ đã tối ưu theo cơ chế đấu thầu mới.",
+    "actionChecklist": [
+      "Kiểm tra lại cấu hình đo lường chuyển đổi trên Microsoft Ads để đảm bảo đang truyền giá trị đơn hàng thực tế về hệ thống thay vì giá trị cố định",
+      "Rà soát các chiến dịch đang cài đặt trần CPC tối đa để cân nhắc tháo bỏ, giúp thuật toán linh hoạt đấu thầu theo mục tiêu CPA hoặc ROAS",
+      "Chỉ thực hiện tăng hoặc giảm mục tiêu CPA và ROAS theo từng bước nhỏ 15% và theo dõi hết một chu kỳ chuyển đổi trước khi điều chỉnh tiếp",
+      "Đảm bảo tài khoản đạt tối thiểu 5 chuyển đổi trước khi bật đấu thầu tự động và theo dõi mốc 30 chuyển đổi trong 30 ngày để đánh giá hiệu quả"
+    ],
+    "id": "real-2026-11-18-microsoft-advertising-cap-nhat-b37cc5",
+    "publishedAt": "18/11/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/microsoft-rolls-out-its-biggest-bidding-upgrade-in-a-decade/597963/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/11/shutterstock_2714845689_1600x840-358.png",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
+    "category": "TikTok Shop & Ads",
+    "platformIcon": "Video",
+    "title": "Quảng cáo trả phí trở thành động lực tăng trưởng lớn nhất của nội dung nhà sáng tạo",
+    "isHot": false,
+    "illustration": "creative-fatigue",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Creator Marketing",
+      "Paid Media",
+      "Phân bổ ngân sách",
+      "Sản xuất nội dung"
+    ],
+    "summary": "Chi tiêu cho quảng cáo trả phí chạy vào nội dung của nhà sáng tạo hiện chiếm tỷ trọng lớn nhất trong ngân sách tiếp thị creator. Doanh nghiệp đang rút dần ngân sách từ các kênh truyền thống và quảng cáo hiệu xuất để đổ vào mô hình kết hợp nội dung sáng tạo với ngân sách trả phí.",
+    "keyNumbers": [
+      {
+        "value": "44%",
+        "label": "Tỷ trọng ngân sách trả phí cho nội dung creator năm 2026"
+      },
+      {
+        "value": "116 tỷ USD",
+        "label": "Quy mô thị trường creator do thương hiệu tài trợ năm 2026"
+      },
+      {
+        "value": "12%",
+        "label": "Tỷ trọng thuê creator sản xuất nội dung, phân khúc tăng nhanh nhất"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Quảng cáo trả phí chiếm ưu thế trong ngân sách nhà sáng tạo",
+        "body": "Báo cáo từ Madison & Wall cho thấy quảng cáo trả phí thúc đẩy nội dung nhà sáng tạo chiếm 44% tổng ngân sách, tương đương 52 tỷ USD trong năm 2026. Mô hình này đã vượt xa hình thức bài đăng tài trợ truyền thống vốn chỉ chiếm 28% thị phần, tương đương 33 tỷ USD. Các thương hiệu lựa chọn đổ tiền chạy quảng cáo cho nội dung nhà sáng tạo có sẵn để đạt quy mô tiếp cận lớn mà không mang lại cảm giác khiên cưỡng như quảng cáo TV. Việc thuật toán nền tảng liên tục thay đổi khiến lượng tiếp cận tự nhiên trở nên kém ổn định, thúc đẩy doanh nghiệp phải dùng ngân sách paid media để đảm bảo hiệu quả."
+      },
+      {
+        "heading": "Dịch chuyển ngân sách từ các kênh tiếp thị truyền thống",
+        "body": "Thị trường tiếp thị nhà sáng tạo do doanh nghiệp tài trợ dự kiến tăng 15% trong năm nay lên 116 tỷ USD và đạt 178 tỷ USD vào năm 2030. Tốc độ này nhanh gấp hai lần tăng trưởng chung của toàn bộ thị trường quảng cáo. Để có ngân sách cho xu hướng này, các nhãn hàng không mở rộng tổng chi tiêu mà chủ yếu cắt giảm từ các kênh khác. Ngân sách đang được rút bớt từ truyền thông truyền thống, quảng cáo tìm kiếm kỹ thuật số, paid social và quảng cáo tự động lập trình. Sự chuyển dịch này biến nhà sáng tạo thành một mắt xích cốt lõi trong chuỗi cung ứng truyền thông thương mại."
+      },
+      {
+        "heading": "Creator trở thành xưởng sản xuất nội dung thay thế agency",
+        "body": "Hình thức thuê nhà sáng tạo đóng vai trò như một đơn vị sản xuất nội dung hiện chiếm 12% thị trường và là phân khúc có tốc độ tăng trưởng nhanh nhất. Doanh nghiệp chi trả trực tiếp để creator tạo ra hình ảnh, video phục vụ chiến dịch thay vì thông qua các đơn vị sản xuất truyền thống. Sự thay đổi này trực tiếp rút bớt ngân sách của các agency sáng tạo bên thứ ba và xưởng phim thương mại. Trong khi đó, các đơn vị trung gian tiếp thị, quản lý talent và nền tảng công nghệ giữ lại khoảng 8% tổng đầu tư cho hạ tầng, và 7% còn lại thuộc về các hoạt động sự kiện hoặc thỏa thuận hình ảnh."
+      },
+      {
+        "heading": "Dự báo quy mô và những thách thức tăng trưởng đến năm 2030",
+        "body": "Chi tiêu truyền thông cho nhà sáng tạo dự kiến sẽ đạt 83 tỷ USD vào năm 2030. Tuy nhiên, ngành tiếp thị này đang đối mặt với nhiều trở ngại trong giai đoạn phát triển tiếp theo. Sự phân mảnh thị trường, định giá không nhất quán và tắc nghẽn hợp đồng pháp lý đang làm chậm tiến độ triển khai. Bên cạnh đó, việc đo lường hiệu quả chưa chuẩn hóa cùng sự mệt mỏi của người tiêu dùng đối với nội dung quảng cáo từ nhà sáng tạo cũng là bài toán đòi hỏi nhà quản lý phải thay đổi chiến lược."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing cần tái cơ cấu lại ngân sách tiếp thị, giảm bớt chi phí sản xuất quảng cáo đắt đỏ theo kiểu truyền thống để chuyển sang hợp tác với creator. Cần ưu tiên ngân sách paid media để amplify các nội dung UGC có hiệu suất tốt thay vì chỉ phụ thuộc vào lượng tiếp cận tự nhiên của creator.",
+    "ifIgnored": "Nếu tiếp tục phụ thuộc vào bài đăng tài trợ tự nhiên hoặc chi ngân sách lớn cho agency sản xuất quảng cáo kiểu cũ, chiến dịch của bạn sẽ đối mặt với chi phí sản xuất cao nhưng lượt tiếp cận thấp do thuật toán giảm tương tác tự nhiên.",
+    "actionChecklist": [
+      "Rà soát lại tỷ trọng ngân sách sản xuất nội dung để chuyển một phần sang thuê creator làm clip ngắn",
+      "Cấu hình tài khoản quảng cáo để sẵn sàng chạy Spark Ads hoặc Whitelist Ads trên các clip UGC có tương tác tốt",
+      "Cắt giảm tỷ trọng chi tiêu ở các kênh quảng cáo hiển thị kém hiệu quả để tập trung cho paid creator media",
+      "Xây dựng lại bộ chỉ số đo lường hiệu quả ROI riêng cho nội dung nhà sáng tạo có gắn ngân sách trả phí"
+    ],
+    "id": "real-2026-11-18-quang-cao-tra-phi-54cf46",
+    "publishedAt": "18/11/2026",
+    "sourceUrl": "https://www.marketingdive.com/news/paid-media-now-plays-largest-role-in-brand-funded-creator-growth-report/875032/",
+    "source": "Marketing Dive",
+    "image": {
+      "url": "https://imgproxy.divecdn.com/OsipEDvXo_v0JqcXNOy4qKlVR3fQEapGl6IvEeR_qKI/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0xNjE4MzQyMTUwLmpwZw==.webp",
+      "credit": "Ảnh: Marketing Dive"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Chuyển đổi chiến lược Schema Markup để tối ưu hóa hiển thị trên AI Search",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Schema Markup",
+      "AI Search",
+      "SEO Entity",
+      "AI Overview"
+    ],
+    "summary": "Schema Markup không còn chỉ phục vụ cho việc tạo kết quả hiển thị giàu chi tiết (rich results) trên công cụ tìm kiếm truyền thống. Trong kỷ nguyên tìm kiếm bằng AI, dữ liệu cấu trúc đóng vai trò tạo lập ngữ cảnh kinh doanh, giúp các mô hình AI hiểu đúng và chính xác về thương hiệu. Lãnh đạo marketing cần nâng cấp chiến lược dữ liệu cấu trúc nhằm duy trì khả năng hiển thị thương hiệu trên các bảng kết quả tìm kiếm AI.",
+    "keyNumbers": [
+      {
+        "value": "2027",
+        "label": "Mốc thời gian Schema Markup cần nâng cấp để duy trì hiển thị trên AI SERP"
+      },
+      {
+        "value": "3",
+        "label": "Câu hỏi cốt lõi để đánh giá mức độ sẵn sàng của dữ liệu cấu trúc"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Vai trò mới của Schema Markup trong kỷ nguyên AI Search",
+        "body": "Trước đây, Schema Markup chủ yếu được sử dụng để tối ưu hiển thị cho từng trang riêng lẻ trên kết quả tìm kiếm. Hiện nay, AI tổng hợp thông tin từ nhiều nguồn trên internet để tự tạo câu trả lời cho người dùng thay vì chỉ dẫn họ truy cập website. Nếu thông tin không đầy đủ hoặc mâu thuẫn, AI có thể đưa ra câu trả lời sai lệch về doanh nghiệp. Việc tối ưu Schema Markup giúp doanh nghiệp chủ động cung cấp dữ liệu chính xác cho các cỗ máy AI xử lý. Website chính là nguồn dữ liệu chuẩn mực nhất mà doanh nghiệp sở hữu để định hình thương hiệu trong mắt công cụ AI."
+      },
+      {
+        "heading": "Đánh giá mức độ phủ của các thực thể kinh doanh cốt lõi",
+        "body": "Doanh nghiệp cần kiểm tra xem dữ liệu cấu trúc hiện tại đã mô tả đầy đủ các thực thể quan trọng như sản phẩm, dịch vụ, nhân sự và địa điểm hay chưa. Việc chỉ đáp ứng các yêu cầu tối thiểu của công cụ tìm kiếm là không đủ để AI hiểu sâu về doanh nghiệp. Đội ngũ marketing nên lựa chọn các trang chiến lược và sử dụng công cụ kiểm tra của Google hoặc Schema.org để đối soát. Mọi thuộc tính quan trọng hiển thị trên trang đều cần được khai báo tương ứng trong mã Schema. Khi phát hiện khoảng trống dữ liệu, doanh nghiệp cần bổ sung ngay các thuộc tính phù hợp để hoàn thiện bức tranh thông tin."
+      },
+      {
+        "heading": "Kết nối dữ liệu giữa các thực thể trên toàn hệ thống",
+        "body": "Việc mô tả riêng lẻ từng trang web không giúp AI hiểu được mối quan hệ giữa các bộ phận trong doanh nghiệp. Doanh nghiệp cần sử dụng các thuộc tính kết nối để liên kết chuyên gia, dịch vụ, sản phẩm và địa điểm lại với nhau. Việc gán định danh nhất quán thông qua thuộc tính @id giúp các cỗ máy AI nhận diện chính xác một thực thể khi nó xuất hiện ở nhiều trang khác nhau. Ví dụ trong ngành y tế, dữ liệu cần làm rõ bác sĩ nào thuộc chuyên khoa nào và làm việc tại chi nhánh bệnh viện nào. Sự kết nối rõ ràng này ngăn chặn việc AI hiểu sai hoặc tự tổng hợp thông tin thiếu căn cứ."
+      },
+      {
+        "heading": "Thiết lập quy trình quản trị dữ liệu đồng bộ và nhất quán",
+        "body": "Khi doanh nghiệp mở rộng dịch vụ hoặc địa điểm mới, dữ liệu cấu trúc phải được cập nhật tương ứng với nội dung trên website. Trường hợp thực tế tại Wells Fargo cho thấy AI Overview từng xác định sai một chi nhánh ngân hàng bị đóng cửa vĩnh viễn do thiếu đồng bộ dữ liệu. Sự mâu thuẫn giữa thông tin hiển thị trên web và dữ liệu cấu trúc là nguyên nhân khiến AI đưa ra câu trả lời sai. Doanh nghiệp không thể kiểm soát hoàn toàn mọi câu trả lời của AI nhưng có thể kiểm soát độ chính xác của dữ liệu đầu vào. Do đó, quản trị Schema Markup phải trở thành một bước bắt buộc trong quy trình cập nhật website."
+      }
+    ],
+    "impact": "Tối ưu hóa Schema Markup theo dạng mạng lưới thực thể giúp bảo vệ uy tín thương hiệu trên các công cụ tìm kiếm AI, ngăn chặn tình trạng AI tạo ra thông tin sai lệch về sản phẩm hay chi nhánh của doanh nghiệp.",
+    "ifIgnored": "Nếu giữ nguyên cách làm Schema cũ, doanh nghiệp có nguy cơ bị gián đoạn khả năng hiển thị trên các bảng kết quả tìm kiếm AI, dẫn đến việc AI trích dẫn thông tin sai hoặc ưu tiên đối thủ có dữ liệu cấu trúc rõ ràng hơn.",
+    "actionChecklist": [
+      "Sử dụng công cụ Schema Markup Validator để kiểm tra các trang sản phẩm và dịch vụ chủ lực",
+      "Thêm định danh @id thống nhất cho các thực thể quan trọng xuất hiện trên nhiều trang web",
+      "Bổ sung các thuộc tính liên kết giữa nhân sự, dịch vụ và địa điểm hoạt động",
+      "Đưa việc kiểm tra và cập nhật Schema Markup vào quy trình xuất bản nội dung của đội ngũ web"
+    ],
+    "id": "real-2026-11-18-chuyen-doi-chien-luoc-b53146",
+    "publishedAt": "18/11/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/schema-markup-ai-search-schemapp/596440/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/11/featured-image-206.png",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
     "title": "Google Ads tăng phụ phí quy định tại Pháp và Ý lên 3% từ năm 2027",
     "isHot": false,
     "illustration": "ai-budget",
@@ -188,69 +373,6 @@
     "image": {
       "url": "https://imgproxy.divecdn.com/AAQQVhyTYPQGgjVNFMKy9w2-ZAc709Y8LEzA6YMvxsc/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9NTV82LmpwZw==.webp",
       "credit": "Ảnh: Marketing Dive"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Biến động thị phần CMS tháng 11 năm 2026 và xu hướng nền tảng website",
-    "isHot": false,
-    "illustration": "page-speed",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "SEO",
-      "WordPress",
-      "Shopify",
-      "CMS"
-    ],
-    "summary": "Dữ liệu mới từ W3Techs cho thấy thị phần của WordPress đã giảm xuống dưới 60%, đạt 57,9% vào tháng 11 năm 2026. Trong khi đó, các nền tảng SaaS như Shopify và Wix tiếp tục duy trì đà tăng trưởng trên thị trường quản trị nội dung.",
-    "keyNumbers": [
-      {
-        "value": "57,9%",
-        "label": "Thị phần WordPress"
-      },
-      {
-        "value": "7,9%",
-        "label": "Thị phần Shopify"
-      },
-      {
-        "value": "6,2%",
-        "label": "Thị phần Wix"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Sự sụt giảm thị phần của WordPress",
-        "body": "Tính đến ngày 13 tháng 11 năm 2026, WordPress chiếm 57,9% thị phần CMS và được sử dụng trên 39,2% tổng số website được khảo sát. Con số này đánh dấu mức giảm từ đỉnh điểm năm 2022 và là mức thấp nhất kể từ năm 2013. Dù vẫn giữ vị trí dẫn đầu, tốc độ tăng trưởng dài hạn của nền tảng này đang đối mặt với xu hướng chững lại."
-      },
-      {
-        "heading": "Đà tăng trưởng của Shopify và Wix",
-        "body": "Shopify hiện đứng thứ hai với 7,9% thị phần CMS và xuất hiện trên 5,4% tổng số website. Wix cũng ghi nhận mức tăng trưởng lên 6,2% thị phần CMS, trong khi Squarespace đạt 3,6%. Sự dịch chuyển này cho thấy các nền tảng dạng SaaS đang thu hút thêm thị phần từ các hệ thống mã nguồn mở truyền thống."
-      },
-      {
-        "heading": "Xu hướng của Joomla và Drupal",
-        "body": "Ngược lại với nhóm SaaS, các hệ thống mã nguồn mở lâu đời như Joomla và Drupal tiếp tục sụt giảm thị phần. Joomla hiện chỉ còn chiếm 1,6% thị phần CMS còn Drupal giữ 0,9%. Nhóm nền tảng này đã mất đi thị phần vào tay các đối thủ linh hoạt và dễ sử dụng hơn đối với người dùng không chuyên kỹ thuật."
-      },
-      {
-        "heading": "Tỷ lệ website không sử dụng CMS giám sát",
-        "body": "Dữ liệu cũng chỉ ra rằng tỷ lệ các website không sử dụng bất kỳ CMS nào nằm trong danh sách giám sát của W3Techs đã tăng lên 32,3%. Con số này phản ánh sự thay đổi trong cấu trúc công nghệ của các trang web trên internet. Tuy nhiên, điều này không đồng nghĩa với việc toàn bộ các trang này đều dùng mã nguồn tự thiết kế."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing cần nắm bắt xu hướng dịch chuyển hạ tầng công nghệ của đối thủ và khách hàng để tối ưu hóa hiệu suất website, đặc biệt khi lập kế hoạch triển khai chiến dịch SEO và thương mại điện tử trên các nền tảng khác nhau.",
-    "ifIgnored": "Bỏ qua các xu hướng dịch chuyển nền tảng website có thể khiến doanh nghiệp chậm chân trong việc lựa chọn công cụ tối ưu cho phễu chuyển đổi kỹ thuật số và trải nghiệm người dùng.",
-    "actionChecklist": [
-      "Đánh giá lại hiệu suất và tốc độ tải trang của website hiện tại trên nền tảng đang sử dụng.",
-      "Theo dõi tỷ lệ chuyển đổi và khả năng tương thích SEO của website theo từng quý.",
-      "Nghiên cứu tính năng kỹ thuật của các nền tảng SaaS như Shopify hoặc Wix nếu có kế hoạch mở rộng kênh bán hàng.",
-      "Lên kế hoạch kiểm tra sự tương thích của các plugin và bản cập nhật hệ thống quản trị nội dung."
-    ],
-    "id": "real-2026-11-16-bien-dong-thi-phan-939fe7",
-    "publishedAt": "16/11/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/cms-market-share-trends-top-content-management-systems-nov-2026/596729/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2025/10/cms-market-share-trends-446.png",
-      "credit": "Ảnh: Search Engine Journal"
     }
   },
   {
@@ -566,128 +688,6 @@
     "image": {
       "url": "https://ppc.land/content/images/size/w1200/2026/11/youtube-skip-button-becomes-next-higman-unannounced-ad-change-slide-projector-arrow-button-corridor.jpg",
       "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Video",
-    "title": "YouTube Studio nâng cấp Analytics thành Insights và đưa trợ lý AI Ask Studio lên di động",
-    "isHot": false,
-    "illustration": "ai-video",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "YouTube Studio",
-      "Analytics",
-      "Ask Studio",
-      "AI Marketing"
-    ],
-    "summary": "YouTube chính thức triển khai giao diện Insights thay thế Analytics trên máy tính với các bản tóm tắt nguyên nhân biến động chỉ số bằng ngôn ngữ tự nhiên. Trợ lý AI Ask Studio cũng đã có mặt trên ứng dụng di động Android và iPhone với khả năng phân tích tối đa 10 hình ảnh tải lên cùng lúc.",
-    "keyNumbers": [
-      {
-        "value": "10",
-        "label": "hình ảnh tải lên cùng lúc được trợ lý Ask Studio xử lý trên di động"
-      },
-      {
-        "value": "4.431",
-        "label": "lượt xem video thông báo tính năng mới tính đến ngày 14/11/2026"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Analytics chuyển thành Insights với tóm tắt ngôn ngữ tự nhiên",
-        "body": "Ngày 13/11/2026, YouTube triển khai giao diện Insights trên giao diện máy tính để thay đổi cách hiển thị số liệu trong YouTube Studio. Thay vì bắt người dùng tự phân tích dữ liệu thô, Insights sử dụng câu văn tự nhiên để giải thích lý do số liệu tăng hoặc giảm. Các chỉ số chính được nhóm vào các thẻ có thể tùy chỉnh khoảng thời gian 7 ngày, 28 ngày hoặc 90 ngày. Những báo cáo chi tiết và công cụ phân tích nâng cao vẫn được giữ nguyên khi chọn nút Advanced mode ở góc phải."
-      },
-      {
-        "heading": "Đưa trợ lý AI Ask Studio lên ứng dụng di động",
-        "body": "Cùng ngày 13/11/2026, trợ lý trò chuyện Ask Studio tích hợp trong YouTube Studio chính thức có mặt trên ứng dụng di động Android và iPhone. Công cụ AI này bổ sung khả năng đọc và phân tích dữ liệu từ tối đa 10 hình ảnh tải lên cùng một lúc. Tuy nhiên, YouTube chưa công bố chi tiết tiêu chuẩn cụ thể để các kênh được xác định là đủ điều kiện sử dụng tính năng này. Đây là cải tiến giúp đội ngũ quản lý kênh làm việc linh hoạt ngay trên điện thoại."
-      },
-      {
-        "heading": "Tab Research thay thế hoàn toàn tab Trends",
-        "body": "YouTube chính thức thay thế công cụ Trends cũ bằng tab Research được cá nhân hóa theo từng lĩnh vực nội dung. Công cụ mới sử dụng dữ liệu người xem để xếp hạng các video đạt thành công nổi bật từ những kênh khác, hỗ trợ tìm kiếm ý tưởng nội dung và tiêu đề. Thay đổi này nối tiếp đợt thử nghiệm được ghi nhận từ ngày 16/07/2026. Tính năng lưu từ khóa cũ trên máy tính bị ngừng hỗ trợ và người dùng có 3 tháng để tải dữ liệu về dưới dạng tệp CSV."
-      },
-      {
-        "heading": "Phản ứng từ người dùng và giữ nguyên các chỉ số chuyên sâu",
-        "body": "Tính đến ngày 14/11/2026, video công bố cập nhật trên Creator Insider thu hút 4.431 lượt xem, 340 lượt thích và 123 bình luận. Một số nhà quản lý kênh phản ánh việc loại bỏ các tab nằm ngang khiến thao tác chuyển đổi báo cáo tốn nhiều bước hơn. YouTube khẳng định các chỉ số đo lường nâng cao như Unique Reach ra mắt ngày 22/05/2026 hay chỉ số xem chung trên TV vẫn được giữ nguyên trong chế độ nâng cao."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing sẽ rút ngắn thời gian đọc báo cáo hiệu suất YouTube nhờ các bản tóm tắt tự động, đồng thời sở hữu thêm công cụ AI nghiên cứu video đối thủ trên tab Research và phân tích hình ảnh hình thu nhỏ ngay trên di động.",
-    "ifIgnored": "Bỏ qua cập nhật sẽ khiến đội ngũ lúng túng khi giao diện báo cáo YouTube thay đổi, không khai thác được dữ liệu nghiên cứu ý tưởng từ đối thủ và bỏ lỡ thời hạn 3 tháng để xuất dữ liệu từ khóa đã lưu.",
-    "actionChecklist": [
-      "Đăng nhập YouTube Studio trên máy tính để làm quen với giao diện Insights và kiểm tra nút Advanced mode.",
-      "Cập nhật ứng dụng YouTube Studio trên di động để kiểm tra quyền truy cập trợ lý AI Ask Studio.",
-      "Truy cập tab Research mới trên máy tính để phân tích các video xu hướng trong cùng lĩnh vực nội dung.",
-      "Tải xuống tệp CSV lưu trữ danh sách từ khóa trên bản máy tính trước khi tính năng cũ bị đóng hoàn toàn."
-    ],
-    "id": "real-2026-11-14-youtube-studio-nang-cap-135406",
-    "publishedAt": "14/11/2026",
-    "sourceUrl": "https://ppc.land/youtube-studios-numbers-learn-to-talk-as-analytics-becomes-insights/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/2026/11/youtube-studio-analytics-becomes-insights-research-tab-plain-language-adding-machine-speech-bubble.jpg",
-      "credit": "Ảnh: PPC Land"
-    }
-  },
-  {
-    "category": "AI Marketing",
-    "platformIcon": "Sparkles",
-    "title": "Meta Muse và OpenAI chiếm gần 90% lượng truy cập AI Agent vào các trang thương mại điện tử",
-    "isHot": false,
-    "illustration": "data-signal",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "AI Agent",
-      "Meta Muse",
-      "Traffic Thương mại điện tử",
-      "Phân tích dữ liệu"
-    ],
-    "summary": "Báo cáo tháng 10 của HUMAN Security cho thấy các AI agent từ Meta và OpenAI chiếm gần 90% tổng lượt yêu cầu từ agent đến các website và ứng dụng được bảo vệ. Trong đó, riêng Meta Muse đã chiếm 59% và gửi số lượng yêu cầu gấp 3,7 lần so với ChatGPT Agent. Đáng chú ý, 85% lượt truy cập của AI agent tập trung vào trang sản phẩm và tìm kiếm, gây ảnh hưởng trực tiếp đến tính chính xác của dữ liệu phân tích website.",
-    "keyNumbers": [
-      {
-        "value": "59%",
-        "label": "Thị phần lượt yêu cầu từ Meta Muse trong tháng 10"
-      },
-      {
-        "value": "85%",
-        "label": "Lượt truy cập agent hướng vào trang sản phẩm và tìm kiếm"
-      },
-      {
-        "value": "gần 90%",
-        "label": "Tổng thị phần của Meta và OpenAI kết hợp"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Sự bùng nổ của Meta Muse và làn sóng AI Agent",
-        "body": "Lượng yêu cầu từ các AI agent trong tháng 10 đã tăng khoảng 8 lần so với tháng 8 và gấp khoảng 2,6 lần so với tháng 9. Meta Muse ra mắt vào ngày 8/9 đã tăng thêm 19 điểm phần trăm thị phần so với tháng 9, với số lượng yêu cầu tăng gần gấp 4 lần. Hiện tại, Muse gửi số lượng yêu cầu gấp 3,7 lần so với ChatGPT Agent. Trong khi đó, dù ChatGPT Agent tăng 44% số lượng yêu cầu, thị phần của công cụ này vẫn giảm từ 28,5% xuống 15,9% do sự tăng trưởng quá nhanh của Muse."
-      },
-      {
-        "heading": "Xu hướng chuyển dịch và sự suy giảm của các trình duyệt độc lập",
-        "body": "Báo cáo ghi nhận sự sụt giảm mạnh của các trình duyệt AI agent độc lập khi người dùng ưu tiên sử dụng agent tích hợp sẵn trên các nền tảng quen thuộc. Trình duyệt Genspark biến mất khỏi danh sách 10 agent hàng đầu, trong khi Perplexity Comet giảm từ 41% trong tháng 8 xuống 9,4% vào tháng 9 và chỉ còn 3,6% trong tháng 10. Comet cũng là agent duy nhất trong top 10 bị giảm khoảng 30% khối lượng yêu cầu kể từ tháng 8. Ngoài ra, OpenAI cũng đã ngừng cung cấp trình duyệt ChatGPT Atlas độc lập vào tháng 8."
-      },
-      {
-        "heading": "AI agent tập trung xem hàng thay vì hoàn tất đơn hàng",
-        "body": "Khoảng 60% lượt yêu cầu từ AI agent nhắm vào các website thương mại điện tử, đưa ngành này trở thành nhóm chịu ảnh hưởng lớn nhất. Trong tháng 10, có 85% lượt truy cập của agent hướng vào các trang sản phẩm và tìm kiếm, tăng so với mức 81% của tháng trước. Ngược lại, tỷ lệ truy cập vào trang thanh toán giảm từ 2,4% xuống 1,9%. Điều này cho thấy các AI agent hiện chủ yếu thực hiện hành vi duyệt sản phẩm và thu thập thông tin giá cả thay vì tiến hành đặt hàng."
-      },
-      {
-        "heading": "Thách thức trong việc nhận diện và xác thực kỹ thuật",
-        "body": "Theo báo cáo, công cụ phân tích dữ liệu trên hầu hết các website hiện nay không thể phân biệt được AI agent với người dùng thực tế. Meta Muse hoạt động bằng cách hiển thị truy cập dưới dạng hoạt động của người dùng thực. Từ ngày 7/11 đến 9/11, Muse đã chuyển chữ ký Web Bot Auth từ meta.com sang muse.ai. Tính đến ngày 10/11, khoảng một nửa số yêu cầu của Muse trên mạng lưới DataDome không được ký xác thực, gây khó khăn cho các hệ thống chống bot hiện tại."
-      }
-    ],
-    "impact": "Dữ liệu lượng truy cập, tỷ lệ chuyển đổi và hành vi người dùng trên các trang thương mại điện tử bị làm sai lệch nghiêm trọng do hệ thống phân tích không phân biệt được Meta Muse với khách hàng thực. Nếu không cập nhật quy tắc xác thực, doanh nghiệp sẽ lãng phí tài nguyên máy chủ và đọc sai báo cáo hiệu quả marketing.",
-    "ifIgnored": "Doanh nghiệp sẽ đưa ra các quyết định tối ưu hóa ngân sách và giao diện dựa trên dữ liệu ảo, lầm tưởng traffic tăng trưởng tốt nhưng tỷ lệ chuyển đổi thực tế lại sụt giảm. Đồng thời, hệ thống bảo vệ bot cũ kỹ có thể chặn nhầm truy cập hợp lệ hoặc bỏ sót các agent quét dữ liệu sản phẩm.",
-    "actionChecklist": [
-      "Yêu cầu đội ngũ IT/Bảo mật cập nhật danh mục xác thực chữ ký Web Bot Auth sang tên miền muse.ai",
-      "Rà soát hệ thống Google Analytics để thiết lập bộ lọc nhận diện lượng truy cập tự động từ các AI agent",
-      "Tính toán lại tỷ lệ chuyển đổi (CR) thực tế trên trang sản phẩm bằng cách loại trừ ảo giác truy cập từ agent",
-      "Cấu hình lại tường lửa WAF và CDN trước các đợt chạy chiến dịch quảng cáo mua sắm lớn"
-    ],
-    "id": "real-2026-11-14-meta-muse-va-openai-ab060b",
-    "publishedAt": "14/11/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/meta-muse-ai-agent-requests-human-security/597388/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/11/meta-muse-featured.jpg",
-      "credit": "Ảnh: Search Engine Journal"
     }
   },
   {
