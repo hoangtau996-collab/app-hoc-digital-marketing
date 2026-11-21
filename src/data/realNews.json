@@ -1,5 +1,128 @@
 [
   {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Nghiên cứu mới của Google hé lộ cơ chế cập nhật trí nhớ AI ngầm không qua chỉ mục",
+    "isHot": false,
+    "illustration": "zero-click",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "Google SEO",
+      "AI Search",
+      "Thuật toán Google",
+      "Tối ưu hóa AI"
+    ],
+    "summary": "Google Research vừa công bố nghiên cứu về mô hình sleep framework cho phép AI tự nạp thông tin mới vào trọng số dài hạn theo chu kỳ ẩn. Thay vì cập nhật chỉ mục tìm kiếm công khai, cơ chế này giúp mô hình ghi nhớ thương hiệu một cách tự động và định hình câu trả lời AI Search trong tương lai.",
+    "keyNumbers": [
+      {
+        "value": "10 triệu",
+        "label": "Token trong thử nghiệm khả năng truy xuất thông tin dài hạn"
+      },
+      {
+        "value": "800.000",
+        "label": "Số bài thử nghiệm chất lượng Tìm kiếm Google từng thực hiện trong một năm"
+      },
+      {
+        "value": "1,7 và 8 tỷ",
+        "label": "Số lượng tham số của các mô hình Qwen được thử nghiệm"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Cơ chế sleep framework chuyển đổi bộ nhớ AI",
+        "body": "Nghiên cứu công bố ngày 27/10 bởi Ali Behrouz và Vahab Mirrokni từ Google Research giới thiệu mô hình hoạt động hai giai đoạn gồm thức và ngủ. Trong giai đoạn thức, mô hình tiếp nhận thông tin mới và lưu trữ tạm thời trong bộ nhớ ngắn hạn. Đến giai đoạn ngủ, mô hình tiến hành cô đọng dữ liệu và tự tạo mẫu thử nghiệm để hợp nhất kiến thức mới vào trọng số dài hạn. Quá trình này giúp thông tin mới được tích hợp sâu mà không đè lên dữ liệu cũ."
+      },
+      {
+        "heading": "Sự thay đổi từ cập nhật chỉ mục sang cập nhật niềm tin mô hình",
+        "body": "Trước đây, các đợt cập nhật cốt lõi của Google được công khai trên bảng theo dõi và làm thay đổi thứ hạng chỉ mục. Với mô hình mới, sự thay đổi diễn ra ở lớp trí nhớ trực tiếp của mô hình sinh câu trả lời thay vì hệ thống truy xuất thông tin. Khi thông tin được củng cố vào trọng số, AI sẽ khẳng định thông tin thương hiệu với độ tin cậy cao hơn hẳn việc chỉ trích dẫn từ một trang web vừa cào về. Quá trình củng cố này diễn ra theo chu kỳ nội bộ mà người ngoài không thể quan sát."
+      },
+      {
+        "heading": "Kết quả thử nghiệm thực tế trên các mô hình mở",
+        "body": "Các tác giả đã chạy thử nghiệm trên mô hình Qwen mở với quy mô 1,7 tỷ và 8 tỷ tham số. Kết quả cho thấy mô hình duy trì hiệu suất tốt trong dịch thuật đa ngôn ngữ và truy xuất dữ liệu trên ngữ cảnh dài tới 10 triệu token. Trong bài kiểm tra tiếp nhận tri thức thực tế, phương pháp mới vượt trội hơn so với tinh chỉnh có giám sát thông thường. Dù chưa được triển khai chính thức trên Gemini, đây là định hướng kiến trúc mà Google đã theo đuổi qua các nghiên cứu kéo dài 2 năm."
+      },
+      {
+        "heading": "Tác động đến chiến lược nội dung và xuất bản của doanh nghiệp",
+        "body": "Doanh nghiệp không thể chờ đợi các đợt cập nhật thuật toán công khai để điều chỉnh chiến lược SEO. Nhãn hàng cần đưa thông tin chính xác về sản phẩm và thương hiệu xuất hiện liên tục trên mạng internet trước khi các chu kỳ củng cố trí nhớ AI diễn ra. Lịch cắt mốc dữ liệu không còn là một thời điểm cố định mà biến thành một chu kỳ chạy ẩn. Những thương hiệu xuất hiện muộn sẽ mất nhiều thời gian hơn để được AI công nhận và đưa vào câu trả lời mặc định."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing cần chuyển dịch tư duy từ SEO truyền thống (tối ưu để được lập chỉ mục) sang GEO/AISO (tối ưu để thông tin thương hiệu được ghi nhớ vào trọng số AI). Việc đưa dữ liệu đúng chuẩn vào hệ sinh thái nội dung sớm sẽ quyết định tần suất thương hiệu xuất hiện trong AI Overviews.",
+    "ifIgnored": "Doanh nghiệp sẽ tiếp tục phụ thuộc vào các đợt cập nhật chỉ mục công khai mà bỏ lỡ cơ hội đi trước trong các chu kỳ nạp tri thức ẩn của AI. Khi đối thủ đã được mô hình AI ghi nhớ vào bộ nhớ dài hạn, việc thay đổi nhận thức của AI về thương hiệu bạn sẽ tốn kém và mất nhiều thời gian hơn.",
+    "actionChecklist": [
+      "Rà soát tính nhất quán của thông tin thương hiệu trên các kênh truyền thông chính thức.",
+      "Xuất bản thông tin sản phẩm và thông cáo báo chí sớm hơn để kịp các chu kỳ củng cố dữ liệu AI.",
+      "Theo dõi sự xuất hiện của thương hiệu trong các câu trả lời tổng hợp của AI Search thay vì chỉ đo thứ hạng từ khóa.",
+      "Tối ưu cấu trúc dữ liệu schema để giúp các công cụ cào dữ liệu của AI dễ dàng trích xuất thông tin chuẩn xác."
+    ],
+    "id": "real-2026-11-19-nghien-cuu-moi-cua-9ae46f",
+    "publishedAt": "19/11/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/googles-next-update-wont-touch-the-index-and-nobody-will-announce-it/597481/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/11/duane-forrester-decodes-google-update-543.png",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "WordPress 7.2 tự động bật tính năng chuyển hướng ngẫu nhiên /random/ từ ngày 8/12",
+    "isHot": true,
+    "illustration": "page-speed",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "WordPress 7.2",
+      "Kỹ thuật SEO",
+      "Chuyển hướng 302",
+      "Quản trị Website"
+    ],
+    "summary": "Phiên bản WordPress 7.2 dự kiến phát hành ngày 8/12 sẽ mặc định bật đường dẫn chuyển hướng ngẫu nhiên /random/ tới một bài viết bất kỳ. Bảng điều khiển admin không có công cụ tắt tính năng này, buộc nhà quản trị phải sử dụng mã lập trình để can thiệp. Nếu không xử lý trước thời hạn, trải nghiệm người dùng và cấu trúc đường dẫn website có thể bị ảnh hưởng.",
+    "keyNumbers": [
+      {
+        "value": "7.2",
+        "label": "Phiên bản WordPress phát hành ngày 8/12"
+      },
+      {
+        "value": "302",
+        "label": "Mã chuyển hướng mặc định áp dụng cho /random/"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Tự động bật chuyển hướng ngẫu nhiên trên toàn hệ thống",
+        "body": "Trong bản thử nghiệm của WordPress 7.2, đường dẫn /random/ được mặc định kích hoạt để chuyển hướng người dùng đến một bài viết ngẫu nhiên đã xuất bản. Cơ chế này áp dụng cho cả danh mục, thẻ, tác giả và các loại nội dung tùy chỉnh đáp ứng điều kiện. Điểm đáng chú ý là bảng điều khiển WordPress không có tùy chọn bật tắt tính năng này. Nếu muốn vô hiệu hóa, người quản trị bắt buộc phải thêm đoạn mã lập trình vào hệ thống."
+      },
+      {
+        "heading": "Cơ chế kỹ thuật và các yếu tố ảnh hưởng SEO",
+        "body": "Hệ thống sử dụng phản hồi chuyển hướng 302 kèm theo thẻ X-Robots-Tag mang giá trị noindex, follow cho yêu cầu /random/ ban đầu. Thẻ này không áp dụng cho bài viết cuối cùng mà người dùng được chuyển hướng tới. Nếu trang web đã có sẵn bài viết hoặc trang với đường dẫn ngẫu nhiên trùng khớp, nội dung đó sẽ ghi đè lên lệnh chuyển hướng. Ngoài ra, việc gửi mã no-cache cũng làm thay đổi cách các công cụ tìm kiếm thu thập dữ liệu."
+      },
+      {
+        "heading": "Sai lệch thông tin trong tài liệu hướng dẫn lập trình",
+        "body": "Tài liệu hướng dẫn trên WordPress Developer Blog công bố tên bộ lọc là wp_enable_random_content_direct. Tuy nhiên, tên bộ lọc thực tế trong mã nguồn lại là wp_enable_random_content_redirect. Việc sao chép trực tiếp tên bộ lọc từ bài hướng dẫn sẽ không đem lại bất kỳ tác dụng nào. Sự bất nhất này đòi hỏi đội ngũ kỹ thuật phải kiểm tra kỹ mã nguồn thực tế trước khi triển khai."
+      },
+      {
+        "heading": "Lo ngại về hiệu năng và việc loại bỏ Secrets API",
+        "body": "Nhiều chuyên gia trong cộng đồng phát triển lo ngại tính năng này có thể khiến người dùng truy cập các trang không phù hợp. Song song đó, giao diện lập trình Secrets API dự kiến hỗ trợ mã hóa khóa API đã bị gỡ bỏ khỏi phiên bản 7.2 vào ngày 17/11. Quyết định rút Secrets API nhằm có thêm thời gian hoàn thiện thiết kế an toàn hơn. Do đó phiên bản mới sẽ chưa tích hợp công cụ quản lý khóa bảo mật này."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing đối mặt với nguy cơ trải nghiệm khách hàng bị ảnh hưởng khi người dùng ngẫu nhiên bị chuyển hướng tới các bài viết cũ hoặc không liên quan. Việc thiếu tùy chọn bật tắt trong giao diện quản trị đòi hỏi phải chủ động phối hợp với đội ngũ kỹ thuật để chặn tính năng này trước khi hệ thống tự động cập nhật.",
+    "ifIgnored": "Nếu bỏ qua, các truy vấn ngẫu nhiên có thể làm gia tăng tải cho máy chủ và đưa người dùng đến những trang nội dung không mong muốn, gây lãng phí ngân sách lưu lượng và giảm tỷ lệ chuyển đổi trên website.",
+    "actionChecklist": [
+      "Yêu cầu đội ngũ kỹ thuật chuẩn bị đoạn mã mu-plugin để tắt tính năng chuyển hướng ngẫu nhiên",
+      "Sử dụng chính xác tên bộ lọc wp_enable_random_content_redirect trong mã nguồn",
+      "Rà soát lại danh sách đường dẫn bài viết hiện tại để tránh trùng lặp với từ khóa random",
+      "Thực hiện xóa bộ nhớ đệm rewrite rules sau khi thêm bộ lọc trên môi trường kiểm thử"
+    ],
+    "deadline": "08/12/2026",
+    "id": "real-2026-11-19-wordpress-7-2-tu-3810f4",
+    "publishedAt": "19/11/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/wordpress-7-2-seo-ai-changes/597616/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/11/wordpress-7-2-featured.jpg",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
     "boQua": false,
     "category": "Meta Ads",
     "platformIcon": "Facebook",
@@ -117,128 +240,6 @@
     "source": "Search Engine Journal",
     "image": {
       "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/11/wp-sitemap-1-14.png",
-      "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Plugin Rank Math SEO ghi nhận 16 lỗ hổng bảo mật trong năm 2026",
-    "isHot": false,
-    "illustration": "account-security",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Bảo mật website",
-      "Rank Math",
-      "WordPress",
-      "SEO"
-    ],
-    "summary": "Plugin Rank Math SEO vừa ghi nhận kỷ lục 16 lỗ hổng bảo mật trong năm 2026, gây rủi ro lớn cho các website WordPress. Các lỗ hổng này bao gồm nguy cơ chiếm quyền kiểm soát website, rò rỉ dữ liệu và thay đổi nội dung trái phép.",
-    "keyNumbers": [
-      {
-        "value": "16",
-        "label": "tổng số lỗ hổng"
-      },
-      {
-        "value": "8,8",
-        "label": "điểm CVSS cao nhất"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Nguy cơ từ các lỗ hổng bảo mật",
-        "body": "Trong năm 2026, Rank Math SEO đối mặt với 16 lỗ hổng bảo mật, cao hơn bất kỳ plugin SEO nào khác. Các lỗ hổng này cho phép kẻ tấn công thực hiện chiếm quyền điều khiển website, truy cập thông tin được bảo vệ hoặc thay đổi dữ liệu SEO trái phép. Đáng chú ý, hai lỗ hổng thực thi mã từ xa (RCE) đạt mức điểm CVSS 8,8, cho phép kẻ tấn công thực thi mã độc trên máy chủ."
-      },
-      {
-        "heading": "Tần suất phát hiện dày đặc",
-        "body": "Phần lớn các lỗ hổng được phát hiện trong thời gian ngắn, với 11 trên 16 lỗ hổng xuất hiện từ ngày 27/8 đến 14/10/2026. Chỉ riêng trong khoảng thời gian 8 ngày từ 27/8 đến 3/9, đã có 8 lỗ hổng được báo cáo. Điều này đặt ra dấu hỏi lớn về quy trình kiểm soát chất lượng và rà soát mã nguồn của đội ngũ phát triển plugin."
-      },
-      {
-        "heading": "Các hình thức tấn công phổ biến",
-        "body": "Lỗi thiếu kiểm tra phân quyền là vấn đề nghiêm trọng nhất, xuất hiện trong 7 trên 16 trường hợp. Ngoài ra, plugin còn gặp các lỗi như tiêm mã PHP, tải tệp tin tùy ý và Cross-Site Scripting (XSS). Nhiều lỗ hổng có thể bị khai thác mà không cần người tấn công phải đăng nhập vào hệ thống."
-      },
-      {
-        "heading": "So sánh với các đối thủ",
-        "body": "Để so sánh, plugin Yoast SEO chỉ ghi nhận tổng cộng 4 lỗ hổng trong năm 2026 đối với phiên bản miễn phí và 2 lỗ hổng đối với phiên bản trả phí. Sự chênh lệch lớn này cho thấy Rank Math đang gặp vấn đề nghiêm trọng về cấu trúc mã nguồn. Các quản trị viên cần cân nhắc kỹ lưỡng khi duy trì sử dụng plugin này trên các website quan trọng."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing cần phối hợp ngay với đội ngũ IT để rà soát lại các plugin bảo mật và SEO trên hệ thống website doanh nghiệp, tránh rủi ro website bị chiếm quyền hoặc mất dữ liệu khách hàng.",
-    "ifIgnored": "Việc bỏ qua có thể dẫn đến website bị chèn mã độc, mất thứ hạng SEO do nội dung bị thay đổi trái phép hoặc lộ thông tin khách hàng, gây ảnh hưởng trực tiếp đến uy tín thương hiệu.",
-    "actionChecklist": [
-      "Kiểm tra phiên bản Rank Math đang sử dụng và cập nhật lên bản mới nhất ngay lập tức.",
-      "Yêu cầu đội ngũ IT quét lỗ hổng bảo mật trên toàn bộ website WordPress.",
-      "Rà soát lại danh sách người dùng có quyền Contributor hoặc Author để hạn chế rủi ro bị khai thác.",
-      "Đánh giá lại việc sử dụng Rank Math và cân nhắc chuyển đổi sang giải pháp thay thế nếu cần thiết."
-    ],
-    "id": "real-2026-11-18-plugin-rank-math-seo-b00872",
-    "publishedAt": "18/11/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/rank-math-seo-wordpress-plugin-hit-by-16-vulnerabilities-in-2026/597932/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/11/rank-math-seo-500.jpg",
-      "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Microsoft Advertising cập nhật mô hình đấu thầu tự động lớn nhất trong 10 năm",
-    "isHot": false,
-    "illustration": "ai-budget",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Microsoft Ads",
-      "Đấu thầu tự động",
-      "Target CPA",
-      "Target ROAS"
-    ],
-    "summary": "Microsoft Advertising vừa triển khai đợt nâng cấp mô hình đấu thầu tự động lớn nhất trong một thập kỷ qua. Hệ thống mới tích hợp nhiều tín hiệu dữ liệu hơn để dự đoán khả năng và giá trị chuyển đổi của từng lượt nhấp. Thay đổi này được áp dụng tự động trên các tài khoản, trực tiếp làm thay đổi tốc độ phân bổ ngân sách và khả năng bám sát mục tiêu chi phí.",
-    "keyNumbers": [
-      {
-        "value": "10%",
-        "label": "tăng giá trị chuyển đổi trên mỗi lượt nhấp với ROAS tương đương"
-      },
-      {
-        "value": "18%",
-        "label": "tăng lượt chuyển đổi khi chuyển từ Enhanced CPC sang Maximize Conversions"
-      },
-      {
-        "value": "5",
-        "label": "lượt chuyển đổi tối thiểu trong tài khoản để bắt đầu đấu thầu tự động"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Tốc độ phân bổ ngân sách và điều chỉnh giá thầu nhanh gấp đôi",
-        "body": "Mô hình mới giúp chiến dịch đạt mức chi tiêu ngân sách tối đa sớm hơn và phân bổ đều đặn hơn suốt cả ngày. Khi người vận hành nâng hoặc hạ mục tiêu CPA hay ROAS, hệ thống sẽ điều chỉnh giá thầu nhanh gấp gần hai lần so với trước đây. Thuật toán cải tiến giúp bám sát mục tiêu đề ra ổn định hơn mà không làm sụt giảm số lượng hay giá trị chuyển đổi. Tuy nhiên, việc đặt giới hạn giá thầu thủ công như CPC tối đa có thể vô tình ngăn cản thuật toán tiếp cận các lượt nhấp có khả năng mang lại chuyển đổi tốt."
-      },
-      {
-        "heading": "Quy tắc điều chỉnh mục tiêu 15% để tránh biến động",
-        "body": "Tăng mục tiêu CPA hoặc giảm mục tiêu ROAS sẽ giúp chiến dịch tham gia vào những phiên đấu giá mà trước đó hệ thống tự động bỏ qua. Để hạn chế biến động lớn về hiệu suất, Microsoft khuyến nghị chỉ nên thay đổi các mục tiêu này theo từng mức nhỏ 15% mỗi lần. Sau khi chỉnh sửa, nhà quảng cáo cần chờ hết một chu kỳ chuyển đổi để đánh giá lại kết quả trước khi thao tác tiếp. Với các thay đổi lớn hơn như đổi chiến lược đấu thầu hoặc thêm mục tiêu chuyển đổi mới, hệ thống cần từ một đến hai chu kỳ để học dữ liệu."
-      },
-      {
-        "heading": "Ngưỡng dữ liệu chuyển đổi tối thiểu để thuật toán tối ưu",
-        "body": "Microsoft khuyến nghị chiến dịch mới có thể chuyển sang đấu thầu dựa trên chuyển đổi ngay khi toàn bộ tài khoản tích lũy đủ tối thiểu 5 chuyển đổi. Trong trường hợp chưa đạt mốc này, chiến dịch có thể tạm thời duy trì hình thức Enhanced CPC. Để đánh giá chính xác hiệu quả vận hành của mô hình mới, hệ thống cần đạt mốc khoảng 30 chuyển đổi trong vòng 30 ngày ở cấp chiến dịch hoặc danh mục đầu tư. Các tài khoản có lượng chuyển đổi quá thấp sẽ cần nhiều thời gian hơn để thuật toán nhận diện tín hiệu chuẩn xác."
-      },
-      {
-        "heading": "Hiệu quả thực tế từ dữ liệu thử nghiệm của Microsoft",
-        "body": "Dữ liệu toàn cầu tháng 8/2026 trên mạng Tìm kiếm và Audience Network cho thấy giá trị chuyển đổi trên mỗi lượt nhấp tăng 10% ở mức ROAS tương đương đối với chiến dịch dùng Maximize Conversion Value hoặc Target ROAS. Nhóm nhà quảng cáo chuyển từ Target CPA sang Target ROAS ghi nhận giá trị chuyển đổi tăng 8%. Bên cạnh đó, việc chuyển từ Enhanced CPC sang Maximize Conversions có đặt mục tiêu CPA giúp tăng 18% số lượng chuyển đổi. Đáng chú ý, hiệu quả cải thiện cao nhất thuộc về những tài khoản gửi đúng giá trị giao dịch thực tế về hệ thống thông qua Conversions API hoặc mã theo dõi."
-      }
-    ],
-    "impact": "Chiến dịch trên Microsoft Ads sẽ tự động điều chỉnh giá thầu nhanh hơn gấp đôi và có thể tiêu hết ngân sách sớm hơn trong ngày. Nếu doanh nghiệp vẫn giữ thói quen đặt trần CPC thủ công hoặc gửi giá trị chuyển đổi cố định thay vì giá trị đơn hàng thực tế, thuật toán mới sẽ không thể tối ưu tối đa doanh thu trên mỗi chi phí bỏ ra.",
-    "ifIgnored": "Tài khoản quảng cáo có nguy cơ bị biến động hiệu suất mạnh do điều chỉnh mục tiêu quá tay, đồng thời bỏ lỡ mức tăng trưởng từ 10% đến 18% hiệu quả chuyển đổi so với các đối thủ đã tối ưu theo cơ chế đấu thầu mới.",
-    "actionChecklist": [
-      "Kiểm tra lại cấu hình đo lường chuyển đổi trên Microsoft Ads để đảm bảo đang truyền giá trị đơn hàng thực tế về hệ thống thay vì giá trị cố định",
-      "Rà soát các chiến dịch đang cài đặt trần CPC tối đa để cân nhắc tháo bỏ, giúp thuật toán linh hoạt đấu thầu theo mục tiêu CPA hoặc ROAS",
-      "Chỉ thực hiện tăng hoặc giảm mục tiêu CPA và ROAS theo từng bước nhỏ 15% và theo dõi hết một chu kỳ chuyển đổi trước khi điều chỉnh tiếp",
-      "Đảm bảo tài khoản đạt tối thiểu 5 chuyển đổi trước khi bật đấu thầu tự động và theo dõi mốc 30 chuyển đổi trong 30 ngày để đánh giá hiệu quả"
-    ],
-    "id": "real-2026-11-18-microsoft-advertising-cap-nhat-b37cc5",
-    "publishedAt": "18/11/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/microsoft-rolls-out-its-biggest-bidding-upgrade-in-a-decade/597963/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/11/shutterstock_2714845689_1600x840-358.png",
       "credit": "Ảnh: Search Engine Journal"
     }
   },
