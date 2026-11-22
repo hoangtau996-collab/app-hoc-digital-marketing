@@ -2,63 +2,118 @@
   {
     "category": "Google Ads & SEO",
     "platformIcon": "Search",
-    "title": "Nghiên cứu mới của Google hé lộ cơ chế cập nhật trí nhớ AI ngầm không qua chỉ mục",
+    "title": "Tranh cãi quanh tuyên bố Goodbye SEO của CEO Salesforce và góc nhìn từ giới chuyên gia",
     "isHot": false,
     "illustration": "zero-click",
     "readTime": "4 phút đọc",
     "tags": [
-      "Google SEO",
+      "SEO",
+      "AEO",
       "AI Search",
-      "Thuật toán Google",
-      "Tối ưu hóa AI"
+      "Salesforce"
     ],
-    "summary": "Google Research vừa công bố nghiên cứu về mô hình sleep framework cho phép AI tự nạp thông tin mới vào trọng số dài hạn theo chu kỳ ẩn. Thay vì cập nhật chỉ mục tìm kiếm công khai, cơ chế này giúp mô hình ghi nhớ thương hiệu một cách tự động và định hình câu trả lời AI Search trong tương lai.",
+    "summary": "Tuyên bố SEO đã chết của CEO Salesforce Marc Benioff khi giới thiệu công cụ AI Palmata đã gây ra tranh luận lớn trong cộng đồng tiếp thị. Dù vậy, tài liệu hướng dẫn chính thức của Salesforce và các chuyên gia SEO hàng đầu khẳng định SEO truyền thống vẫn là nền tảng cốt lõi cho mọi chiến lược tối ưu hóa tìm kiếm AI.",
     "keyNumbers": [
       {
-        "value": "10 triệu",
-        "label": "Token trong thử nghiệm khả năng truy xuất thông tin dài hạn"
+        "value": "18/11",
+        "label": "CEO Salesforce đăng phát biểu Goodbye SEO trên X"
       },
       {
-        "value": "800.000",
-        "label": "Số bài thử nghiệm chất lượng Tìm kiếm Google từng thực hiện trong một năm"
-      },
-      {
-        "value": "1,7 và 8 tỷ",
-        "label": "Số lượng tham số của các mô hình Qwen được thử nghiệm"
+        "value": "11/9",
+        "label": "Tài liệu Salesforce xuất bản khẳng định SEO là nền tảng"
       }
     ],
     "content": [
       {
-        "heading": "Cơ chế sleep framework chuyển đổi bộ nhớ AI",
-        "body": "Nghiên cứu công bố ngày 27/10 bởi Ali Behrouz và Vahab Mirrokni từ Google Research giới thiệu mô hình hoạt động hai giai đoạn gồm thức và ngủ. Trong giai đoạn thức, mô hình tiếp nhận thông tin mới và lưu trữ tạm thời trong bộ nhớ ngắn hạn. Đến giai đoạn ngủ, mô hình tiến hành cô đọng dữ liệu và tự tạo mẫu thử nghiệm để hợp nhất kiến thức mới vào trọng số dài hạn. Quá trình này giúp thông tin mới được tích hợp sâu mà không đè lên dữ liệu cũ."
+        "heading": "Tranh cãi xung quanh tuyên bố SEO đã chết của Marc Benioff",
+        "body": "Vào ngày 18/11, Marc Benioff đăng tải tuyên bố Goodbye SEO trên mạng xã hội X để giới thiệu công cụ theo dõi mức độ xuất hiện trong câu trả lời AI mang tên Palmata. Ông cho rằng khách hàng hiện không còn tìm kiếm theo cách truyền thống mà hỏi trực tiếp các trợ lý AI như Claude, ChatGPT hay Gemini. Theo Benioff, xu hướng này dẫn đến kịch bản không nhấp chuột, không giới thiệu và không ghi nhận dữ liệu trong công cụ phân tích. Từ đó, ông đề xuất sử dụng Palmata để mô phỏng và kiểm tra xem các trợ lý AI đang nói gì về thương hiệu."
       },
       {
-        "heading": "Sự thay đổi từ cập nhật chỉ mục sang cập nhật niềm tin mô hình",
-        "body": "Trước đây, các đợt cập nhật cốt lõi của Google được công khai trên bảng theo dõi và làm thay đổi thứ hạng chỉ mục. Với mô hình mới, sự thay đổi diễn ra ở lớp trí nhớ trực tiếp của mô hình sinh câu trả lời thay vì hệ thống truy xuất thông tin. Khi thông tin được củng cố vào trọng số, AI sẽ khẳng định thông tin thương hiệu với độ tin cậy cao hơn hẳn việc chỉ trích dẫn từ một trang web vừa cào về. Quá trình củng cố này diễn ra theo chu kỳ nội bộ mà người ngoài không thể quan sát."
+        "heading": "Tài liệu chính thức của Salesforce khẳng định vai trò của SEO",
+        "body": "Trái ngược với phát biểu của CEO, tài liệu hướng dẫn SEO và AEO do Salesforce xuất bản ngày 11/9 khẳng định SEO không hề biến mất và vẫn đóng vai trò là nền tảng. Giám đốc cao cấp về SEO của Salesforce, Graham Hardt, nhấn mạnh rằng SEO và AEO thực chất là hai lớp hiển thị phục vụ cho cùng một tập khách hàng. Bên cạnh đó, công cụ Palmata được Contentful ra mắt từ tháng 6 trước khi về tay Salesforce vào ngày 1/9. Trưởng bộ phận sản phẩm Palmata là Jason McGhee cũng tuyên bố công việc tối ưu hóa SEO vẫn giữ vai trò thiết yếu cho tổ chức."
       },
       {
-        "heading": "Kết quả thử nghiệm thực tế trên các mô hình mở",
-        "body": "Các tác giả đã chạy thử nghiệm trên mô hình Qwen mở với quy mô 1,7 tỷ và 8 tỷ tham số. Kết quả cho thấy mô hình duy trì hiệu suất tốt trong dịch thuật đa ngôn ngữ và truy xuất dữ liệu trên ngữ cảnh dài tới 10 triệu token. Trong bài kiểm tra tiếp nhận tri thức thực tế, phương pháp mới vượt trội hơn so với tinh chỉnh có giám sát thông thường. Dù chưa được triển khai chính thức trên Gemini, đây là định hướng kiến trúc mà Google đã theo đuổi qua các nghiên cứu kéo dài 2 năm."
+        "heading": "Phản ứng từ các chuyên gia hàng đầu trong ngành tiếp thị",
+        "body": "Chuyên gia tư vấn SEO và tìm kiếm AI Aleyda Solis cho biết tìm kiếm AI dựa trên nhiều nguyên lý nền tảng tương tự như SEO truyền thống. Bà khẳng định tối ưu hóa tìm kiếm AI mở rộng vượt ra ngoài SEO nhưng hoàn toàn không thể thay thế SEO. Trong khi đó, Pedro Dias, cựu chuyên gia Google, chỉ ra rằng SEO chưa bao giờ đơn thuần là lưu lượng truy cập mà là nền tảng kỹ thuật. Các chuyên gia như Lily Ray và Eli Schwartz cũng cảnh báo thị trường công cụ AEO đang dần trở nên bão hòa với sự xuất hiện của quá nhiều nền tảng mới."
       },
       {
-        "heading": "Tác động đến chiến lược nội dung và xuất bản của doanh nghiệp",
-        "body": "Doanh nghiệp không thể chờ đợi các đợt cập nhật thuật toán công khai để điều chỉnh chiến lược SEO. Nhãn hàng cần đưa thông tin chính xác về sản phẩm và thương hiệu xuất hiện liên tục trên mạng internet trước khi các chu kỳ củng cố trí nhớ AI diễn ra. Lịch cắt mốc dữ liệu không còn là một thời điểm cố định mà biến thành một chu kỳ chạy ẩn. Những thương hiệu xuất hiện muộn sẽ mất nhiều thời gian hơn để được AI công nhận và đưa vào câu trả lời mặc định."
+        "heading": "Chiến lược đo lường kép cho nhà quản lý tiếp thị",
+        "body": "Salesforce đưa ra lời khuyên rằng các doanh nghiệp nên theo dõi đồng thời cả hai nhóm chỉ số để đánh giá hiệu quả hiển thị. Điều này có nghĩa là đội ngũ tiếp thị vừa phải duy trì theo dõi thứ hạng và lưu lượng truy cập tự nhiên, vừa phải đo lường số lần thương hiệu được AI trích dẫn. Tối ưu hóa câu trả lời AI (AEO) chỉ phát huy tác dụng khi dữ liệu gốc của trang web được cấu trúc chuẩn hóa theo các tiêu chuẩn SEO cơ bản. Việc bỏ qua SEO sẽ khiến các mô hình ngôn ngữ lớn thiếu nguồn dữ liệu chính xác để trích dẫn."
       }
     ],
-    "impact": "Trưởng phòng Marketing cần chuyển dịch tư duy từ SEO truyền thống (tối ưu để được lập chỉ mục) sang GEO/AISO (tối ưu để thông tin thương hiệu được ghi nhớ vào trọng số AI). Việc đưa dữ liệu đúng chuẩn vào hệ sinh thái nội dung sớm sẽ quyết định tần suất thương hiệu xuất hiện trong AI Overviews.",
-    "ifIgnored": "Doanh nghiệp sẽ tiếp tục phụ thuộc vào các đợt cập nhật chỉ mục công khai mà bỏ lỡ cơ hội đi trước trong các chu kỳ nạp tri thức ẩn của AI. Khi đối thủ đã được mô hình AI ghi nhớ vào bộ nhớ dài hạn, việc thay đổi nhận thức của AI về thương hiệu bạn sẽ tốn kém và mất nhiều thời gian hơn.",
+    "impact": "Tránh sai lầm cắt giảm ngân sách SEO truyền thống để dồn toàn bộ nguồn lực vào các công cụ theo dõi AI mới nổi. Trưởng phòng Marketing có cơ sở luận điểm để giải thích với ban điều hành về việc duy trì SEO làm nền tảng cho chiến lược tối ưu hiển thị trên các cỗ máy tìm kiếm AI.",
+    "ifIgnored": "Doanh nghiệp vội vã bỏ qua SEO sẽ khiến website mất đi cấu trúc dữ liệu chuẩn hóa, dẫn đến việc các mô hình AI không thể quét hay trích dẫn thông tin thương hiệu, gây sụt giảm đồng thời cả lưu lượng tìm kiếm tự nhiên lẫn sự xuất hiện trong các câu trả lời AI.",
     "actionChecklist": [
-      "Rà soát tính nhất quán của thông tin thương hiệu trên các kênh truyền thông chính thức.",
-      "Xuất bản thông tin sản phẩm và thông cáo báo chí sớm hơn để kịp các chu kỳ củng cố dữ liệu AI.",
-      "Theo dõi sự xuất hiện của thương hiệu trong các câu trả lời tổng hợp của AI Search thay vì chỉ đo thứ hạng từ khóa.",
-      "Tối ưu cấu trúc dữ liệu schema để giúp các công cụ cào dữ liệu của AI dễ dàng trích xuất thông tin chuẩn xác."
+      "Duy trì nguồn lực tối ưu hóa SEO kỹ thuật để làm nền tảng dữ liệu cho công cụ AI quét.",
+      "Thiết lập khung đo lường kép theo dõi song song Organic Traffic và chỉ số AI Citations.",
+      "Rà soát và chuẩn hóa lại cấu trúc nội dung trên website để mô hình AI dễ trích xuất dữ liệu.",
+      "Thận trọng đánh giá giá trị thực tế của các công cụ AEO trước khi quyết định mua bản quyền."
     ],
-    "id": "real-2026-11-19-nghien-cuu-moi-cua-9ae46f",
-    "publishedAt": "19/11/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/googles-next-update-wont-touch-the-index-and-nobody-will-announce-it/597481/",
+    "id": "real-2026-11-20-tranh-cai-quanh-tuyen-c94e24",
+    "publishedAt": "20/11/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/salesforce-ceo-goodbye-seo-salesforce-seo-guide/598343/",
     "source": "Search Engine Journal",
     "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/11/duane-forrester-decodes-google-update-543.png",
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/11/salesforce-benioff-2640839201.jpg",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Google cảnh báo CMO: Bài viết danh sách Top 10 chung chung làm thương hiệu biến mất trên kết quả tìm kiếm",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "3 phút đọc",
+    "tags": [
+      "Google SEO",
+      "Content Marketing",
+      "AI Search",
+      "Chiến lược nội dung"
+    ],
+    "summary": "Google công khai gửi thông điệp tới các CMO khẳng định chất lượng nội dung kém chứ không phải AI khiến thương hiệu bị ẩn khỏi kết quả tìm kiếm. Nền tảng khuyến cáo doanh nghiệp ngừng xuất bản các bài viết tổng hợp dạng Top 10 mờ nhạt để chuyển sang nội dung chứa trải nghiệm thực tế.",
+    "keyNumbers": [
+      {
+        "value": "Top 10",
+        "label": "Dạng bài danh sách chung chung bị Google cảnh báo loại bỏ"
+      },
+      {
+        "value": "3",
+        "label": "Ưu tiên hàng đầu Google khuyến nghị CMO tập trung thực hiện"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Thông điệp trực tiếp từ lãnh đạo Google gửi các CMO",
+        "body": "Trong bài viết ngày 14/10 trên Think with Google và bài đăng ngày 19/11, đại diện Google đã đưa ra tuyên bố thẳng thắn dành cho các lãnh đạo tiếp thị. Google nhấn mạnh AI không làm thương hiệu biến mất trên kết quả tìm kiếm mà chính chất lượng nội dung hiện tại của doanh nghiệp gây ra điều đó. Nền tảng yêu cầu các thương hiệu dừng việc tạo ra bài viết dạng danh sách Top 10 chung chung. Thay vào đó, doanh nghiệp cần tập trung dẫn dắt người đọc bằng kiến thức và trải nghiệm thực tế."
+      },
+      {
+        "heading": "Sự đồng nhất giữa tài liệu SEO và khuyến nghị tiếp thị",
+        "body": "Lời khuyên dành cho các CMO hoàn toàn trùng khớp với hướng dẫn tối ưu hóa tính năng AI Generative xuất bản vào tháng 5 của Google Search. Trong hướng dẫn này, mẫu bài viết kiểu 7 Mẹo cho người mua nhà lần đầu bị xếp vào nhóm nội dung hàng hóa phổ thông chỉ lặp lại kiến thức thông thường. Google đánh giá cao những bài phân tích sâu có tính thực chiến cao. Ví dụ thay vì bài viết tổng hợp mờ nhạt, một cửa hàng chạy bộ nên làm video phân tích chính xác lý do một đôi giày cụ thể của khách hàng bị xẹp."
+      },
+      {
+        "heading": "Đo lường dựa trên mục tiêu kinh doanh thay vì chỉ số trung gian",
+        "body": "Google khuyến cáo các CMO thay đổi tư duy quản lý và lập kế hoạch nội dung. Doanh nghiệp cần dừng việc đánh giá hiệu quả dựa trên các chỉ số đo lường trung gian chưa được kiểm chứng. Mọi kế hoạch nội dung phải hướng tới kết quả kinh doanh đo lường được như số lượng lead hoặc doanh số thực tế. Các chuyên gia SEO cũng đồng tình rằng việc chạy theo các chỉ số hiển thị AI ảo không mang lại giá trị cho doanh nghiệp."
+      },
+      {
+        "heading": "Phương pháp rà soát nội dung dành cho đội ngũ Marketing",
+        "body": "Các tài liệu hướng dẫn của Google cung cấp tiêu chuẩn rõ ràng để kiểm tra toàn bộ kế hoạch bài viết dạng mẹo sắp xuất bản. Đội ngũ sản xuất nội dung phải đặt câu hỏi cho từng bài viết xem đó là kiến thức trải nghiệm thực tế hay chỉ lặp lại thông tin phổ thông trên mạng. Doanh nghiệp cũng nên theo dõi trang cập nhật tài liệu của Google Search qua RSS feed để nắm bắt kịp thời các thay đổi thuật toán. Việc điều chỉnh định hướng nội dung sớm sẽ giúp bảo vệ lượng truy cập tự nhiên của thương hiệu."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing cần thay đổi tiêu chí nghiệm thu bài viết SEO với team in-house và agency, loại bỏ ngay các bài tổng hợp kiến thức chung chung vốn không còn được Google và các công cụ AI Search ưu tiên hiển thị.",
+    "ifIgnored": "Doanh nghiệp sẽ tiếp tục lãng phí ngân sách sản xuất các bài viết danh sách Top 10 vô thưởng vô phạt, khiến lượng truy cập tự nhiên sụt giảm và thương hiệu dần vắng mặt trên các kết quả tìm kiếm AI.",
+    "actionChecklist": [
+      "Rà soát lại toàn bộ kế hoạch nội dung SEO hiện tại để loại bỏ các chủ đề dạng mẹo chung chung.",
+      "Yêu cầu team content và agency bổ sung dữ liệu thực tế và trải nghiệm thực chiến vào từng bài viết.",
+      "Chuyển đổi KPI đánh giá content từ chỉ số thứ hạng trung gian sang số lượng lead và doanh số.",
+      "Đăng ký theo dõi trang cập nhật tài liệu chính thức của Google Search để cập nhật thay đổi."
+    ],
+    "id": "real-2026-11-20-google-canh-bao-cmo-4e5c87",
+    "publishedAt": "20/11/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/google-told-cmos-to-stop-top-10-listicles/598310/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/11/google-listicle-guidance-featured.jpg",
       "credit": "Ảnh: Search Engine Journal"
     }
   },
@@ -304,65 +359,6 @@
     "image": {
       "url": "https://imgproxy.divecdn.com/OsipEDvXo_v0JqcXNOy4qKlVR3fQEapGl6IvEeR_qKI/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0xNjE4MzQyMTUwLmpwZw==.webp",
       "credit": "Ảnh: Marketing Dive"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Chuyển đổi chiến lược Schema Markup để tối ưu hóa hiển thị trên AI Search",
-    "isHot": false,
-    "illustration": "data-signal",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Schema Markup",
-      "AI Search",
-      "SEO Entity",
-      "AI Overview"
-    ],
-    "summary": "Schema Markup không còn chỉ phục vụ cho việc tạo kết quả hiển thị giàu chi tiết (rich results) trên công cụ tìm kiếm truyền thống. Trong kỷ nguyên tìm kiếm bằng AI, dữ liệu cấu trúc đóng vai trò tạo lập ngữ cảnh kinh doanh, giúp các mô hình AI hiểu đúng và chính xác về thương hiệu. Lãnh đạo marketing cần nâng cấp chiến lược dữ liệu cấu trúc nhằm duy trì khả năng hiển thị thương hiệu trên các bảng kết quả tìm kiếm AI.",
-    "keyNumbers": [
-      {
-        "value": "2027",
-        "label": "Mốc thời gian Schema Markup cần nâng cấp để duy trì hiển thị trên AI SERP"
-      },
-      {
-        "value": "3",
-        "label": "Câu hỏi cốt lõi để đánh giá mức độ sẵn sàng của dữ liệu cấu trúc"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Vai trò mới của Schema Markup trong kỷ nguyên AI Search",
-        "body": "Trước đây, Schema Markup chủ yếu được sử dụng để tối ưu hiển thị cho từng trang riêng lẻ trên kết quả tìm kiếm. Hiện nay, AI tổng hợp thông tin từ nhiều nguồn trên internet để tự tạo câu trả lời cho người dùng thay vì chỉ dẫn họ truy cập website. Nếu thông tin không đầy đủ hoặc mâu thuẫn, AI có thể đưa ra câu trả lời sai lệch về doanh nghiệp. Việc tối ưu Schema Markup giúp doanh nghiệp chủ động cung cấp dữ liệu chính xác cho các cỗ máy AI xử lý. Website chính là nguồn dữ liệu chuẩn mực nhất mà doanh nghiệp sở hữu để định hình thương hiệu trong mắt công cụ AI."
-      },
-      {
-        "heading": "Đánh giá mức độ phủ của các thực thể kinh doanh cốt lõi",
-        "body": "Doanh nghiệp cần kiểm tra xem dữ liệu cấu trúc hiện tại đã mô tả đầy đủ các thực thể quan trọng như sản phẩm, dịch vụ, nhân sự và địa điểm hay chưa. Việc chỉ đáp ứng các yêu cầu tối thiểu của công cụ tìm kiếm là không đủ để AI hiểu sâu về doanh nghiệp. Đội ngũ marketing nên lựa chọn các trang chiến lược và sử dụng công cụ kiểm tra của Google hoặc Schema.org để đối soát. Mọi thuộc tính quan trọng hiển thị trên trang đều cần được khai báo tương ứng trong mã Schema. Khi phát hiện khoảng trống dữ liệu, doanh nghiệp cần bổ sung ngay các thuộc tính phù hợp để hoàn thiện bức tranh thông tin."
-      },
-      {
-        "heading": "Kết nối dữ liệu giữa các thực thể trên toàn hệ thống",
-        "body": "Việc mô tả riêng lẻ từng trang web không giúp AI hiểu được mối quan hệ giữa các bộ phận trong doanh nghiệp. Doanh nghiệp cần sử dụng các thuộc tính kết nối để liên kết chuyên gia, dịch vụ, sản phẩm và địa điểm lại với nhau. Việc gán định danh nhất quán thông qua thuộc tính @id giúp các cỗ máy AI nhận diện chính xác một thực thể khi nó xuất hiện ở nhiều trang khác nhau. Ví dụ trong ngành y tế, dữ liệu cần làm rõ bác sĩ nào thuộc chuyên khoa nào và làm việc tại chi nhánh bệnh viện nào. Sự kết nối rõ ràng này ngăn chặn việc AI hiểu sai hoặc tự tổng hợp thông tin thiếu căn cứ."
-      },
-      {
-        "heading": "Thiết lập quy trình quản trị dữ liệu đồng bộ và nhất quán",
-        "body": "Khi doanh nghiệp mở rộng dịch vụ hoặc địa điểm mới, dữ liệu cấu trúc phải được cập nhật tương ứng với nội dung trên website. Trường hợp thực tế tại Wells Fargo cho thấy AI Overview từng xác định sai một chi nhánh ngân hàng bị đóng cửa vĩnh viễn do thiếu đồng bộ dữ liệu. Sự mâu thuẫn giữa thông tin hiển thị trên web và dữ liệu cấu trúc là nguyên nhân khiến AI đưa ra câu trả lời sai. Doanh nghiệp không thể kiểm soát hoàn toàn mọi câu trả lời của AI nhưng có thể kiểm soát độ chính xác của dữ liệu đầu vào. Do đó, quản trị Schema Markup phải trở thành một bước bắt buộc trong quy trình cập nhật website."
-      }
-    ],
-    "impact": "Tối ưu hóa Schema Markup theo dạng mạng lưới thực thể giúp bảo vệ uy tín thương hiệu trên các công cụ tìm kiếm AI, ngăn chặn tình trạng AI tạo ra thông tin sai lệch về sản phẩm hay chi nhánh của doanh nghiệp.",
-    "ifIgnored": "Nếu giữ nguyên cách làm Schema cũ, doanh nghiệp có nguy cơ bị gián đoạn khả năng hiển thị trên các bảng kết quả tìm kiếm AI, dẫn đến việc AI trích dẫn thông tin sai hoặc ưu tiên đối thủ có dữ liệu cấu trúc rõ ràng hơn.",
-    "actionChecklist": [
-      "Sử dụng công cụ Schema Markup Validator để kiểm tra các trang sản phẩm và dịch vụ chủ lực",
-      "Thêm định danh @id thống nhất cho các thực thể quan trọng xuất hiện trên nhiều trang web",
-      "Bổ sung các thuộc tính liên kết giữa nhân sự, dịch vụ và địa điểm hoạt động",
-      "Đưa việc kiểm tra và cập nhật Schema Markup vào quy trình xuất bản nội dung của đội ngũ web"
-    ],
-    "id": "real-2026-11-18-chuyen-doi-chien-luoc-b53146",
-    "publishedAt": "18/11/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/schema-markup-ai-search-schemapp/596440/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/11/featured-image-206.png",
-      "credit": "Ảnh: Search Engine Journal"
     }
   },
   {
