@@ -1,5 +1,191 @@
 [
   {
+    "category": "AI Marketing",
+    "platformIcon": "Sparkles",
+    "title": "Nghiên cứu mới về hành vi của trợ lý mua sắm AI khi gặp các ưu đãi giả",
+    "isHot": false,
+    "illustration": "ai-budget",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "AI Shopping",
+      "Agentic AI",
+      "Thương mại điện tử",
+      "Nghiên cứu AI"
+    ],
+    "summary": "Một thử nghiệm thực tế với chín mô hình AI thực hiện mua sắm 6.156 lần cho thấy các trợ lý mua sắm AI mua các ưu đãi giả 37% số lần. Nghiên cứu cung cấp góc nhìn quan trọng về cách AI xử lý dữ liệu giá và đánh giá sản phẩm.",
+    "keyNumbers": [
+      {
+        "value": "6.156",
+        "label": "lần mua sắm thử nghiệm"
+      },
+      {
+        "value": "37%",
+        "label": "tỷ lệ AI mua ưu đãi giả"
+      },
+      {
+        "value": "69,97 USD",
+        "label": "chi phí API cho thử nghiệm"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Thử nghiệm hành vi mua sắm của AI",
+        "body": "Nghiên cứu đã đưa chín mô hình AI khác nhau từ Anthropic, OpenAI và Google đi mua sắm sáu món quà Giáng sinh tổng cộng 6.156 lần. Các sản phẩm bao gồm nến thơm, dép, chăn, bộ chăm sóc da, loa Bluetooth và nồi chiên không dầu. Mỗi danh sách sản phẩm có mười lựa chọn, trong đó có một ưu đãi giả với điểm đánh giá tuyệt đối và giá rẻ bất thường."
+      },
+      {
+        "heading": "Tỷ lệ mắc lừa giữa các mô hình",
+        "body": "Kết quả cho thấy các mô hình AI mua ưu đãi giả 37% số lần xuất hiện. Đáng chú ý, mô hình Claude Opus là ngoại lệ duy nhất không mua ưu đãi giả lần nào trong 360 lần thử nghiệm của nó. Trong khi đó, các mô hình khác từ OpenAI và Google đều sập bẫy ở các mức độ từ 16% đến 60%."
+      },
+      {
+        "heading": "Sự mâu thuẫn trong lập luận của AI",
+        "body": "Có 315 lần AI tự viết rằng một ưu đãi trông đáng ngờ nhưng vẫn tiến hành mua ưu đãi giả đó 137 lần. Khi được yêu cầu tìm giá trị tốt nhất, tỷ lệ mua ưu đãi giả tăng lên 53%. Khi loại bỏ ưu đãi giả, các mô hình chọn danh sách có điểm đánh giá 4,9 sao chiếm 78% số lần mua."
+      },
+      {
+        "heading": "Phương pháp và quy mô dữ liệu",
+        "body": "Thử nghiệm sử dụng sáu món quà với mười danh sách giả lập định dạng Shopify, tiêu tốn 69,97 USD tiền phí gọi AI. Tác giả kiểm tra trực tiếp các mô hình thay vì thông qua ứng dụng giao diện người dùng thông thường để đảm bảo tính khách quan của dữ liệu."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing cần lưu ý rằng các tác nhân AI khi thực hiện mua sắm thay con người rất dễ bị đánh lừa bởi các chỉ số bề nổi như điểm đánh giá hoàn hảo và giá siêu rẻ, ảnh hưởng trực tiếp đến cách thương hiệu cần định vị uy tín trong kỷ nguyên AI shopping.",
+    "ifIgnored": "Nếu bỏ qua xu hướng tiêu dùng qua trợ lý AI, chiến lược tối ưu hóa sản phẩm của doanh nghiệp có thể bỏ lỡ việc xây dựng các tín hiệu dữ liệu đáng tin cậy mà các mô hình AI tìm kiếm khi đưa ra quyết định mua hàng thay khách hàng.",
+    "actionChecklist": [
+      "Đánh giá lại cách sản phẩm hiển thị các chỉ số đánh giá và mức giá trên các nền tảng thương mại điện tử.",
+      "Theo dõi sát sao cách các tác nhân AI tương tác và diễn giải dữ liệu sản phẩm của doanh nghiệp.",
+      "Kiểm tra tính minh bạch và độ chính xác của các thông tin định giá để không bị nhầm lẫn với các tín hiệu giả.",
+      "Chuẩn bị chiến lược tối ưu hóa dữ liệu cấu trúc để AI dễ dàng nhận diện giá trị thực của sản phẩm."
+    ],
+    "id": "real-2026-11-25-nghien-cuu-moi-ve-954b23",
+    "publishedAt": "25/11/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/ai-shopping-agents-bought-a-fake-deal-37-of-the-time-claude-opus-never-did/598682/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/11/ai-shopping-featured-598682-1600x840-1.webp",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
+    "category": "AI Marketing",
+    "platformIcon": "Sparkles",
+    "title": "Hiệu quả thực tế của quảng cáo trên ChatGPT: Góc nhìn từ dữ liệu doanh nghiệp",
+    "isHot": false,
+    "illustration": "ai-budget",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "ChatGPT Ads",
+      "AI Marketing",
+      "Hiệu quả quảng cáo",
+      "Chuyển đổi"
+    ],
+    "summary": "Sau hơn 200 ngày ra mắt, quảng cáo trên ChatGPT đã thu hút hơn 100.000 nhà quảng cáo với doanh thu hàng năm đạt 1 tỷ USD. Tuy nhiên, dữ liệu thực tế cho thấy sự phân hóa lớn về hiệu quả, đòi hỏi các nhà quản lý ngân sách cần thận trọng thay vì áp dụng máy móc các tiêu chuẩn từ Google Ads.",
+    "keyNumbers": [
+      {
+        "value": "100.000",
+        "label": "nhà quảng cáo đã chạy"
+      },
+      {
+        "value": "52%",
+        "label": "tỷ lệ gặp khó khăn về hoàn vốn"
+      },
+      {
+        "value": "0,89 USD",
+        "label": "doanh thu mỗi phiên từ ChatGPT Ads"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Thực trạng hiệu quả đầu tư",
+        "body": "Dữ liệu từ 30 thương hiệu doanh nghiệp cho thấy 52% nhà quảng cáo gặp khó khăn trong việc thu hồi chi phí, trong khi 26% đạt kết quả tương đương hoặc tốt hơn Google Ads. Một số đơn vị ghi nhận tình trạng 'lead rác' hoặc chi phí chuyển đổi cao dù volume thấp. Các vấn đề về theo dõi chuyển đổi và giới hạn nhắm mục tiêu vẫn là rào cản lớn trong giai đoạn đầu."
+      },
+      {
+        "heading": "Sự khác biệt so với Google Ads",
+        "body": "Việc so sánh trực tiếp với Google Ads có thể gây hiểu lầm do hành vi người dùng khác biệt. Nghiên cứu trên 102 trang web cho thấy doanh thu mỗi phiên từ ChatGPT Ads đạt 0,89 USD, thấp hơn đáng kể so với 2,45 USD từ Google Search. Người dùng trên ChatGPT có thể đang ở giai đoạn tìm hiểu thông tin thay vì sẵn sàng mua hàng ngay như trên Google."
+      },
+      {
+        "heading": "Thách thức về vận hành và đo lường",
+        "body": "Nhiều nhà quảng cáo báo cáo khó khăn trong việc kiểm soát vị trí hiển thị quảng cáo và gặp lỗi trong quá trình theo dõi chuyển đổi. Một số chiến dịch sau thời gian đầu hiệu quả đã sụt giảm nhanh chóng, khiến nhiều doanh nghiệp chuyển ngân sách trở lại Google. Việc tối ưu hóa dựa trên pixel chuyển đổi của OpenAI vẫn cần thời gian để hoàn thiện độ chính xác."
+      },
+      {
+        "heading": "Chiến lược tiếp cận phù hợp",
+        "body": "Thay vì kỳ vọng vào doanh số tức thì, nhiều agency hiện coi ngân sách ChatGPT Ads như một kênh bổ trợ cho branding. Các doanh nghiệp thành công thường tập trung vào việc kết nối dữ liệu từ Conversions API với quy trình bán hàng thực tế. Việc đánh giá hiệu quả cần dựa trên chất lượng lead cuối cùng thay vì chỉ nhìn vào chỉ số CPC hay CPA đơn thuần."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing cần thay đổi KPI đo lường cho ChatGPT Ads, tập trung vào chất lượng lead thay vì CPA, đồng thời không nên dùng ngân sách Google làm thước đo chuẩn cho kênh này.",
+    "ifIgnored": "Rủi ro lãng phí ngân sách vào các chiến dịch có CPC thấp nhưng không tạo ra giá trị chuyển đổi thực tế, đồng thời bỏ lỡ cơ hội tối ưu hóa sớm cho các nền tảng AI thế hệ mới.",
+    "actionChecklist": [
+      "Kiểm tra lại dữ liệu Conversions API để đảm bảo tracking chính xác",
+      "Phân tích chất lượng lead thực tế thay vì chỉ nhìn vào số lượng lead",
+      "Điều chỉnh kỳ vọng ROI dựa trên hành trình khách hàng ở giai đoạn tìm hiểu",
+      "Thử nghiệm ngân sách nhỏ để kiểm tra độ phù hợp của tệp khách hàng"
+    ],
+    "id": "real-2026-11-25-hieu-qua-thuc-te-36c427",
+    "publishedAt": "25/11/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/chatgpt-ads-are-growing-fast-but-are-advertisers-seeing-results/598052/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/11/peopleimages-featured-598052-1600x840-1.jpg",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
+    "category": "Meta Ads",
+    "platformIcon": "Facebook",
+    "title": "Chính phủ Úc thúc đẩy luật cho phép người dùng tắt thuật toán mạng xã hội",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "3 phút đọc",
+    "tags": [
+      "Chính sách quảng cáo",
+      "Thuật toán",
+      "Mạng xã hội",
+      "Dữ liệu người dùng"
+    ],
+    "summary": "Chính phủ Úc đang tiến gần hơn đến việc thông qua luật bắt buộc các nền tảng mạng xã hội phải cung cấp tùy chọn tắt thuật toán gợi ý nội dung. Nếu được thông qua, người dùng có thể chuyển sang chế độ hiển thị theo trình tự thời gian mặc định, làm thay đổi cách thức phân phối nội dung quảng cáo.",
+    "keyNumbers": [
+      {
+        "value": "5%",
+        "label": "Mức phạt tối đa trên doanh thu toàn cầu"
+      },
+      {
+        "value": "109.200.000",
+        "label": "Mức phạt đề xuất ban đầu bằng USD"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Dự luật về quyền kiểm soát thuật toán",
+        "body": "Chính phủ Úc đang thực hiện các bước tiếp theo để triển khai luật buộc các nền tảng mạng xã hội cung cấp tùy chọn tắt thuật toán dựa trên tương tác. Mục tiêu là cho phép người dùng chuyển sang chế độ hiển thị bài đăng theo trình tự thời gian. Khi đó, người dùng chỉ nhìn thấy nội dung từ các tài khoản họ chủ động theo dõi."
+      },
+      {
+        "heading": "Thay đổi về chế tài xử phạt",
+        "body": "Sau khi đạt được thỏa thuận với đảng Greens, dự luật đã có những điều chỉnh quan trọng về mức phạt. Mức phạt tối đa cho việc vi phạm nghĩa vụ này được nâng lên tới 5% doanh thu toàn cầu của nền tảng. Con số này thay thế cho đề xuất ban đầu của Công đảng là mức phạt lên tới 109.200.000 USD."
+      },
+      {
+        "heading": "Mở rộng phạm vi quản lý",
+        "body": "Dự luật hiện bao gồm các quy định cụ thể hơn về việc kiểm tra các tính năng thiết kế có khả năng gây nghiện. Chính phủ cũng dự kiến thành lập một cơ quan thanh tra khiếu nại kỹ thuật số để giải quyết các vấn đề nhỏ. Đồng thời, các quy định mới sẽ xem xét việc cho phép các nhà nghiên cứu tạo tài khoản để kiểm tra sự tuân thủ của nền tảng."
+      },
+      {
+        "heading": "Lộ trình thực thi dự kiến",
+        "body": "Dù vấp phải sự phản đối từ một số nhóm và lo ngại về quyền tự do ngôn luận, chính phủ Úc vẫn quyết tâm thúc đẩy dự luật này. Nếu được thông qua, các luật về quyền tắt thuật toán dự kiến sẽ có hiệu lực từ cuối năm 2027. Đây được xem là trường hợp thử nghiệm quan trọng có thể định hình các quy định tương tự tại các thị trường khác."
+      }
+    ],
+    "impact": "Nếu luật này được áp dụng, khả năng phân phối quảng cáo dựa trên hành vi và sở thích của người dùng tại Úc sẽ bị hạn chế đáng kể, buộc các nhà quảng cáo phải chuyển dịch ngân sách sang nội dung tự nhiên hoặc các kênh tiếp cận trực tiếp hơn.",
+    "ifIgnored": "Bỏ qua xu hướng này sẽ khiến chiến lược quảng cáo của bạn mất khả năng thích nghi khi các nền tảng bị buộc phải thay đổi cách hiển thị nội dung, dẫn đến sụt giảm hiệu quả tiếp cận khách hàng mục tiêu.",
+    "actionChecklist": [
+      "Đánh giá tỷ lệ ngân sách quảng cáo phụ thuộc vào thuật toán gợi ý tại thị trường Úc.",
+      "Xây dựng kế hoạch dự phòng cho các kênh sở hữu (owned media) để giảm phụ thuộc vào thuật toán nền tảng.",
+      "Tập trung tối ưu hóa nội dung để tăng tỷ lệ người dùng chủ động theo dõi thương hiệu.",
+      "Theo dõi sát sao các cập nhật chính sách từ Meta và TikTok liên quan đến thị trường Úc."
+    ],
+    "deadline": "Cuối năm 2027",
+    "id": "real-2026-11-24-chinh-phu-uc-thuc-abafae",
+    "publishedAt": "24/11/2026",
+    "sourceUrl": "https://www.socialmediatoday.com/news/australian-government-moves-ahead-with-algorithm-opt-out-legislation/875698/",
+    "source": "Social Media Today",
+    "image": {
+      "url": "https://imgproxy.divecdn.com/6JfDJ73mfV2owdq8yhMnrfITu3xWGej0UbMKnsdjTnI/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9hdXN0cmFsaWFuX2ZsYWcucG5n.webp",
+      "credit": "Ảnh: Social Media Today"
+    }
+  },
+  {
     "category": "Google Ads & SEO",
     "platformIcon": "Search",
     "title": "Google bổ sung cơ chế thông báo trước cập nhật xếp hạng và tiếp nhận phản hồi qua Search Console",
@@ -183,128 +369,6 @@
     "image": {
       "url": "https://imgproxy.divecdn.com/08BsmqkrNxGyK2RROv77ARRazsC4u6WkIM6hgYizXfs/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9lZGl0c19pcGFkLnBuZw==.webp",
       "credit": "Ảnh: Social Media Today"
-    }
-  },
-  {
-    "category": "AI Marketing",
-    "platformIcon": "Sparkles",
-    "title": "Thử nghiệm mù 3 mô hình Gemini cho SEO: Gemini 4 Neon áp đảo về chất lượng nhưng chi phí cao gấp 4 lần",
-    "isHot": false,
-    "illustration": "ai-budget",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "Gemini AI",
-      "Tối ưu SEO",
-      "Chi phí API",
-      "Thử nghiệm AI"
-    ],
-    "summary": "Nghiên cứu thử nghiệm mù trên 6 câu hỏi SEO thực tế cho thấy Gemini 4 Neon giành chiến thắng 5/6 lần trước Gemini 4 Hydrogen và Gemini 3.8 Flash nhờ khả năng truyền đạt tự nhiên. Tuy nhiên, việc vận hành các mô hình AI mới đòi hỏi tinh chỉnh prompt chặt chẽ để tránh lãng phí chi phí API.",
-    "keyNumbers": [
-      {
-        "value": "5/6",
-        "label": "Tỷ lệ thắng của Gemini 4 Neon trong thử nghiệm mù"
-      },
-      {
-        "value": "$0,1908",
-        "label": "Chi phí API trung bình mỗi lượt của Gemini 4 Neon"
-      },
-      {
-        "value": "$0,0455",
-        "label": "Chi phí API trung bình mỗi lượt của Gemini 3.8 Flash"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Kết quả thử nghiệm mù 3 mô hình Gemini cho tác vụ SEO",
-        "body": "Chuyên gia Marie Haynes đã tiến hành thử nghiệm mù 3 mô hình AI gồm Gemini 3.8 Flash, Gemini 4 Hydrogen và Gemini 4 Neon trên 6 câu hỏi SEO thực tế. Kết quả cho thấy Gemini 4 Neon giành chiến thắng áp đảo khi được chọn 5 trên 6 lần nhờ cách diễn đạt tự nhiên như người thật. Gemini 4 Hydrogen chỉ thắng 1 trên 6 lượt, trong khi Gemini 3.8 Flash không giành được chiến thắng nào. Dù cả 3 mô hình đều truy cập cùng nguồn dữ liệu chuẩn, Neon vượt trội ở khả năng tư duy và truyền đạt giải pháp dễ hiểu."
-      },
-      {
-        "heading": "Cạm bẫy chi phí khi để AI tự do tra cứu dữ liệu",
-        "body": "Ban đầu, hệ thống AI tự động chạy ở chế độ chi tiết mà không giới hạn số từ. Việc này khiến Gemini 4 Hydrogen rơi vào vòng lặp nghiên cứu quá đà, đọc trung bình 21 tệp dữ liệu, mất 68 giây và tạo ra bài viết 1.600 từ. Chi phí cho mỗi lượt truy vấn tăng lên tới $0,44, cao hơn cả chi phí của Gemini 4 Neon. Để khắc phục, tác giả phải cài đặt lại chế độ ngắn gọn từ 180 đến 280 từ và giới hạn tra cứu chỉ từ 1 đến 2 tệp dữ liệu cho mỗi lượt."
-      },
-      {
-        "heading": "So sánh chi phí API và tốc độ phản hồi giữa các mô hình",
-        "body": "Tính theo mức giá API không lưu tạm, Gemini 3.8 Flash có chi phí rẻ nhất với $0,0455 cho mỗi lượt phản hồi, tương đương $45,46 cho 1.000 lượt. Gemini 4 Hydrogen có mức chi phí trung bình là $0,0928 cho mỗi lượt, tương đương $92,82 cho 1.000 lượt. Gemini 4 Neon có chi phí cao nhất với $0,1908 cho mỗi lượt phản hồi, đạt $190,79 cho 1.000 lượt. Về tốc độ, Flash đạt 11,6 giây, Hydrogen đạt 12,8 giây, còn Neon mất trung bình 70,8 giây do một đợt nghẽn API kéo dài 3,5 phút."
-      },
-      {
-        "heading": "Tác động tài chính theo quy mô sử dụng hàng tháng",
-        "body": "Khi quy đổi theo mức độ sử dụng của nhân sự, việc nâng cấp lên Gemini 4 Neon làm tăng ngân sách ở mức kiểm soát được. Với người dùng trung bình khoảng 50 truy vấn mỗi tháng, chi phí chênh lệch tăng thêm $4,90 mỗi tháng (từ $4,64 lên $9,54). Người dùng tích cực với 125 truy vấn mỗi tháng sẽ tốn thêm $12,25 mỗi tháng (từ $11,60 lên $23,85). Với nhóm dùng nhiều đạt 300 truy vấn mỗi tháng, chi phí gia tăng là $29,39 mỗi tháng (từ $27,85 lên $57,24)."
-      }
-    ],
-    "impact": "Giúp Trưởng phòng Marketing cân đối chính xác giữa chất lượng đầu ra và ngân sách API khi triển khai công cụ AI SEO cho đội ngũ. Việc kiểm soát prompt và giới hạn tệp tra cứu giúp giảm chi phí truy vấn từ $0,44 xuống $0,1908 mỗi lượt mà vẫn duy trì chất lượng tư vấn vượt trội.",
-    "ifIgnored": "Doanh nghiệp có thể lãng phí ngân sách API gấp 2 đến 4 lần do AI sa vào vòng lặp nghiên cứu tạo văn bản dài dòng, đồng thời dễ chọn sai mô hình AI đắt tiền nhưng hiệu quả tư vấn thực tế không tương xứng.",
-    "actionChecklist": [
-      "Cài đặt chế độ phản hồi mặc định dạng ngắn gọn từ 180 đến 280 từ cho các công cụ AI nội bộ.",
-      "Giới hạn lượt tra cứu tài nguyên từ 1 đến 2 tệp dữ liệu cho mỗi lượt xử lý prompt.",
-      "Loại bỏ các thuật ngữ kỹ thuật nội bộ khỏi câu trả lời mặc định của AI để nhân sự dễ ứng dụng.",
-      "Tận dụng cơ chế lưu tạm ngữ cảnh (context caching) để giảm chi phí API cho các truy vấn lặp lại."
-    ],
-    "id": "real-2026-11-23-thu-nghiem-mu-3-5c223a",
-    "publishedAt": "23/11/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/blind-test-of-gemini-4-neon-vs-hydrogen-vs-3-8-flash-on-real-seo-questions-here-is-what-won-and-what-it-costs/598384/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/11/ai-chip-featured-598384-1600x840-v2.jpg",
-      "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Search",
-    "title": "Google mở rộng chính sách phạt thao túng nút Back sang lưu lượng từ mạng xã hội",
-    "isHot": false,
-    "illustration": "account-security",
-    "readTime": "3 phút đọc",
-    "tags": [
-      "Google SEO",
-      "Spam Policy",
-      "Back Button Hijacking",
-      "Truy cập Social"
-    ],
-    "summary": "Google vừa cập nhật tài liệu giải đáp cho biết chính sách chống thao túng nút Back áp dụng trên mọi lượt truy cập trình duyệt, bao gồm nguồn từ mạng xã hội và Google Discover. Chủ website vẫn được giữ mã quảng cáo của đối tác nhưng các trang có hành vi ngăn người dùng quay lại sẽ bị xử lý.",
-    "keyNumbers": [
-      {
-        "value": "15/6",
-        "label": "Thời điểm Google bắt đầu áp dụng chế tài xử phạt"
-      },
-      {
-        "value": "Tháng 4",
-        "label": "Thời điểm Google công bố chính sách Back Button Hijacking"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Mở rộng phạm vi xử lý sang nguồn truy cập mạng xã hội",
-        "body": "Google đã bổ sung phần giải đáp thắc mắc cho chính sách chống thao túng nút quay lại (Back Button Hijacking). Theo đó, quy định này áp dụng cho mọi trường hợp hành vi vi phạm xảy ra trong trình duyệt web, bao gồm cả khi người dùng nhấp vào liên kết từ các nền tảng mạng xã hội thay vì Google Search. Google cũng xác nhận trang Discover thuộc hệ thống Search nên các quy định chống spam đều áp dụng cho kênh này. Tuy nhiên, thao tác chuyển hướng sang ứng dụng bên ngoài (Open in app) nằm ngoài phạm vi điều chỉnh của chính sách."
-      },
-      {
-        "heading": "Cho phép giữ mã quảng cáo nhưng xử lý nghiêm trang vi phạm",
-        "body": "Trong công bố ban đầu vào tháng 4, Google từng nhận định hành vi chặn nút Back có thể phát sinh từ các thư viện mã hoặc nền tảng quảng cáo được tích hợp trên website. Trong bản cập nhật mới, Google làm rõ rằng chủ trang web không bị cấm chèn mã từ các mạng quảng cáo đối tác. Hệ thống chỉ tiến hành chế tài đối với những trang web cụ thể xuất hiện hành vi can thiệp vào nút Back. Do đó, doanh nghiệp không cần gỡ bỏ toàn bộ mạng quảng cáo mà chỉ cần loại bỏ đoạn mã hoặc thiết lập gây ra sự cố."
-      },
-      {
-        "heading": "Phương pháp kiểm tra tính tuân thủ trên landing page",
-        "body": "Việc kiểm tra trải nghiệm người dùng khi truy cập từ trang kết quả tìm kiếm Google là chưa đủ để đảm bảo tuân thủ. Đội ngũ vận hành cần thử nghiệm kiểm tra bằng cách nhấp vào bài viết từ liên kết mạng xã hội rồi nhấn nút Back trên trình duyệt để xem có bị giữ chân hay chuyển hướng bất thường hay không. Thao tác kiểm tra tương tự cũng cần thực hiện khi trang web xuất hiện trên Google Discover. Việc này giúp phát hiện sớm các đoạn mã quảng cáo tự động gây ảnh hưởng tới điều hướng của người dùng."
-      },
-      {
-        "heading": "Người dùng có thể báo cáo vi phạm trực tiếp cho Google",
-        "body": "Google đã mở tính năng cho phép người dùng báo cáo hành vi thao túng nút Back thông qua biểu mẫu báo cáo spam công khai. Các dữ liệu này được gửi trực tiếp để nâng cấp hệ thống tự động phát hiện vi phạm của Google. Khi người dùng gặp phải tình trạng chặn nút Back từ nguồn mạng xã hội hoặc Discover, họ có thể dễ dàng gắn cờ báo cáo website. Điều này làm tăng rủi ro website bị phạt tác vụ thủ công nếu không rà soát kỹ các đối tác quảng cáo."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing cần kiểm soát trải nghiệm điều hướng trên tất cả các trang đích (landing page) phục vụ chiến dịch Social Ads và SEO. Việc vi phạm quy định chặn nút Back từ nguồn traffic mạng xã hội vẫn có thể khiến toàn bộ website chịu án phạt từ Google Search, làm sụt giảm thứ hạng và lưu lượng truy cập tự nhiên.",
-    "ifIgnored": "Nếu phó mặc cho các mạng quảng cáo tự ý chèn mã can thiệp nút Back, website có nguy cơ cao bị người dùng báo cáo vi phạm tới Google. Hậu quả là toàn bộ tên miền bị giảm điểm uy tín, mất lưu lượng tự nhiên từ Google Search và Discover, làm lãng phí ngân sách kéo traffic từ mạng xã hội.",
-    "actionChecklist": [
-      "Yêu cầu đội ngũ kĩ thuật rà soát toàn bộ script quảng cáo và landing page để phát hiện hành vi chặn nút Back.",
-      "Thử nghiệm thủ công thao tác nhấn nút Back khi truy cập website qua các liên kết trên mạng xã hội.",
-      "Làm việc với các đối tác ad network để tắt các định dạng quảng cáo can thiệp vào điều hướng trình duyệt.",
-      "Thiết lập quy trình kiểm tra trải nghiệm điều hướng người dùng trước khi duyệt mã mạng quảng cáo mới."
-    ],
-    "id": "real-2026-11-23-google-mo-rong-chinh-bb03a2",
-    "publishedAt": "23/11/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/google-back-button-hijacking-policy-social-visits/598592/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/11/google-back-button-social-visits-featured.jpg",
-      "credit": "Ảnh: Search Engine Journal"
     }
   },
   {
@@ -618,69 +682,6 @@
     "image": {
       "url": "https://imgproxy.divecdn.com/3F-F4togOk240p7WIC--fObvElfSitGUr-agVzkAYjo/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9IZWFkZXJfaW1hZ2VfMTA0MHg2MTZfOEZuZml6OS5qcGc=.webp",
       "credit": "Ảnh: Social Media Today"
-    }
-  },
-  {
-    "category": "Google Ads & SEO",
-    "platformIcon": "Video",
-    "title": "YouTube thử nghiệm đổi nút Bỏ qua thành Tiếp theo trên một số quảng cáo video",
-    "isHot": false,
-    "illustration": "data-signal",
-    "readTime": "3 phút đọc",
-    "tags": [
-      "YouTube Ads",
-      "Google Ads",
-      "Quảng cáo Video",
-      "Nút Skip Ads"
-    ],
-    "summary": "YouTube bị phát hiện đang thử nghiệm thay thế nút Skip quen thuộc bằng nút Next trên một số định dạng quảng cáo video di động. Thay đổi này chưa được Google công bố chính thức, gây ra nhiều câu hỏi về cách tính phí CPV và hành vi xem của người dùng. Việc đổi nhãn nút bấm có thể ảnh hưởng trực tiếp đến tỷ lệ giữ chân người xem và cách ghi nhận lượt xem TrueView.",
-    "keyNumbers": [
-      {
-        "value": "5 giây",
-        "label": "thời gian tối thiểu người xem phải chờ trước khi bấm bỏ qua quảng cáo trong luồng"
-      },
-      {
-        "value": "30 giây",
-        "label": "ngưỡng thời gian xem quảng cáo để kích hoạt tính phí CPV cho nhà quảng cáo"
-      },
-      {
-        "value": "40%",
-        "label": "mức giảm tối đa sự gián đoạn quảng cáo mà Google từng công bố khi thử nghiệm ad pods năm 2018"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Ghi nhận thay đổi thực tế trên nút bấm quảng cáo YouTube",
-        "body": "Đầu tháng 11 năm 2026, chuyên gia tiếp thị Anthony Higman đã chia sẻ hình ảnh ghi lại nút bấm có chữ Next thay cho nút Skip ở góc dưới bên phải quảng cáo video dạng dọc. Đi kèm với nút Next là biểu tượng chuyển tiếp quen thuộc và nhãn thông báo Ít gián đoạn hơn sau khoảng nghỉ này nằm ở góc trên bên trái. Tuy nhiên, hình ảnh này chỉ là một khung hình tĩnh nên chưa rõ hành động bấm vào nút sẽ bỏ qua hoàn toàn quảng cáo để về video gốc hay chuyển sang một quảng cáo khác trong cùng cụm."
-      },
-      {
-        "heading": "Nghi vấn về hành vi của người dùng và trải nghiệm xem",
-        "body": "Một số nguồn tin cho rằng đây là dấu hiệu chấm dứt tính năng bỏ qua quảng cáo, khuyến khích người xem tiếp tục theo dõi thay vì thoát ra ngay lập tức. Tuy nhiên, cụm từ Ít gián đoạn hơn sau khoảng nghỉ này gợi ý đây có thể là một cụm gồm nhiều quảng cáo nối tiếp nhau. Nếu nút Next chỉ chuyển sang quảng cáo thứ hai trong cùng cụm thay vì quay lại video chính, tải lượng quảng cáo trong mỗi lần tạm dừng sẽ tăng lên đáng kể."
-      },
-      {
-        "heading": "Quy định tính phí và ghi nhận lượt xem của Google Ads",
-        "body": "Theo tài liệu trợ giúp của Google Ads tính đến ngày 15 tháng 11 năm 2026, quy định tính phí CPV vẫn áp dụng khi người xem theo dõi hết 30 giây hoặc toàn bộ video ngắn hơn. Đối với quảng cáo trên YouTube Shorts, lượt xem TrueView được tính khi người dùng xem 10 giây hoặc thực hiện thao tác tương tác như bấm nút kêu gọi hành động. Hiện tại, Google chưa công bố tài liệu nào xác nhận việc bấm nút Next có được hệ thống báo cáo ghi nhận giống như thao tác bỏ qua thông thường hay không."
-      },
-      {
-        "heading": "Chuỗi điều chỉnh liên tục xung quanh vị trí nút bỏ qua",
-        "body": "Đây không phải lần đầu tiên khu vực nút bỏ qua quảng cáo trên YouTube bị thay đổi trong năm 2026. Vào ngày 31 tháng 1 năm 2026, một biểu ngữ quảng cáo đã xuất hiện che một phần nút Skip Ad trên giao diện video. Tiếp đó, vào ngày 17 tháng 3 năm 2026, biểu ngữ liên quan vẫn tiếp tục hiển thị trên màn hình ngay cả khi người xem đã bấm bỏ qua quảng cáo."
-      }
-    ],
-    "impact": "Thay đổi nhãn nút bấm từ Skip sang Next có thể làm thay đổi tâm lý người xem, khiến họ nhầm tưởng phải xem tiếp quảng cáo khác thay vì thoát ra video chính. Điều này có thể làm gia tăng nhân tạo thời lượng xem trên 30 giây, đẩy chi phí CPV của doanh nghiệp lên cao dù chất lượng chú ý của khách hàng không tăng.",
-    "ifIgnored": "Nếu không theo dõi kỹ tỷ lệ xem hết (VTR) và chi phí trên mỗi lượt xem (CPV) trong giai đoạn thử nghiệm này, bạn có thể tốn ngân sách cho những lượt xem thụ động do người dùng bấm nhầm nút Next, dẫn đến báo cáo hiệu quả chiến dịch bị sai lệch.",
-    "actionChecklist": [
-      "Tăng cường theo dõi chỉ số VTR và CPV thực tế trên các chiến dịch YouTube Ads chạy dạng skippable",
-      "Phân tích lại tỷ lệ chuyển đổi từ các lượt xem trên 30 giây để kiểm tra chất lượng lượng truy cập",
-      "Thử nghiệm bổ sung các thông điệp thu hút mạnh mẽ ngay trong 5 giây đầu tiên của video quảng cáo",
-      "Cập nhật thường xuyên các thông báo kỹ thuật từ Google Ads về quy tắc ghi nhận lượt xem TrueView"
-    ],
-    "id": "real-2026-11-15-youtube-thu-nghiem-doi-11b65f",
-    "publishedAt": "15/11/2026",
-    "sourceUrl": "https://ppc.land/youtube-drops-the-word-skip-from-some-ad-buttons-in-favour-of-next/",
-    "source": "PPC Land",
-    "image": {
-      "url": "https://ppc.land/content/images/size/w1200/2026/11/youtube-skip-button-becomes-next-higman-unannounced-ad-change-slide-projector-arrow-button-corridor.jpg",
-      "credit": "Ảnh: PPC Land"
     }
   },
   {
