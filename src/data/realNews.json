@@ -1,5 +1,68 @@
 [
   {
+    "category": "Google Ads & SEO",
+    "platformIcon": "Search",
+    "title": "Google, Bing, ChatGPT và TikTok cập nhật hàng loạt công cụ đo lường và tính năng mới",
+    "isHot": false,
+    "illustration": "data-signal",
+    "readTime": "4 phút đọc",
+    "tags": [
+      "SEO 2026",
+      "Google Search Console",
+      "ChatGPT Business Hub",
+      "TikTok Search Ads"
+    ],
+    "summary": "Nhiều cập nhật quan trọng từ Google, Bing, ChatGPT và TikTok mang lại khả năng đo lường chi tiết cho lượt hiển thị AI Search, bài viết mạng xã hội và quảng cáo tìm kiếm. Các nhà quản lý tiếp thị hiện có thể dễ dàng tách biệt dữ liệu AI, theo dõi truy vấn thương hiệu và tối ưu tỷ lệ hiển thị quảng cáo.",
+    "keyNumbers": [
+      {
+        "value": "353.356",
+        "label": "Lượt nhắc website trên ChatGPT Business Hub từ 14/10 đến 10/11"
+      },
+      {
+        "value": "2.663",
+        "label": "Lượt nhấp vào website trực tiếp từ ChatGPT trong 28 ngày"
+      },
+      {
+        "value": "18 tháng",
+        "label": "Khung thời gian dữ liệu lượt xem bài viết trên Google Business Profile"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Google Search Console tách riêng báo cáo AI và đơn giản hóa bộ lọc thương hiệu",
+        "body": "Google Search Console đã triển khai các báo cáo riêng biệt cho lượt hiển thị trong AI Overviews, AI Mode và các tính năng AI tạo sinh trên Discover. Tính năng này được hoàn tất phủ sóng cho toàn bộ website trên toàn thế giới tính đến ngày 31/08/2026. Bên cạnh đó, bộ lọc truy vấn thương hiệu chính thức hỗ trợ phân tách từ khóa tìm kiếm thương hiệu mà không cần các danh sách Regex phức tạp. Dữ liệu phân tách này cũng đã được tích hợp vào Search Analytics API trong tháng này."
+      },
+      {
+        "heading": "Bing Webmaster Tools và ChatGPT Business Hub mở rộng đo lường AI Search",
+        "body": "Bing Webmaster Tools đã thêm báo cáo hiệu suất AI và tính năng Citation Share để hiển thị tỷ lệ trích dẫn nội dung trên Copilot. Ngày 10/11, OpenAI ra mắt ChatGPT Business Hub bản beta cho phép các doanh nghiệp xác minh tài khoản. Sau khi được duyệt, doanh nghiệp có thể theo dõi số lượt nhắc, lượt nhấp vào website và các chủ đề khám phá trong 28 ngày qua. Ví dụ thử nghiệm của SEJ cho thấy trang ghi nhận 353.356 lượt nhắc và 2.663 lượt nhấp từ ngày 14/10 đến ngày 10/11."
+      },
+      {
+        "heading": "Quản lý bài đăng mạng xã hội trên Search Console và khôi phục lượt xem Business Profile",
+        "body": "Google đã cập nhật tính năng theo dõi tài khoản mạng xã hội như Instagram, TikTok, X và YouTube trong Search Console từ ngày 29/07. Đội ngũ tiếp thị có thể xem lượt nhấp, lượt hiển thị, tỷ lệ CTR và vị trí trung bình của bài đăng trên Google Search. Cùng với đó, Google Business Profile khôi phục chỉ số lượt xem bài đăng trong 18 tháng gần nhất từ hoạt động Search và Maps. Thay vì phải đưa ra dự đoán, nhà quản lý hiện có thể biết chính xác bài viết nào thu hút nhiều lượt xem nhất."
+      },
+      {
+        "heading": "TikTok Search Ads bổ sung chỉ số thị phần và Google phạt kỹ thuật chiếm nút quay lại",
+        "body": "TikTok Ads Manager vừa giới thiệu chỉ số Impression Share và Top 1 Impression Share cho các chiến dịch quảng cáo tìm kiếm. Chỉ số này giúp nhà quảng cáo biết được tỷ lệ phần trăm lượt hiển thị tìm kiếm hợp lệ mà quảng cáo đã chiếm lĩnh. Ở mảng SEO, Google áp dụng chính sách xử lý hành vi chiếm đoạt nút quay lại (back button hijacking) từ ngày 15/06 với các hình thức hạ thứ hạng tự động hoặc phạt thủ công. Cập nhật FAQ ngày 23/11 làm rõ chính sách này áp dụng ngay cả khi người dùng truy cập trang qua liên kết từ mạng xã hội."
+      }
+    ],
+    "impact": "Trưởng phòng Marketing có thể chấm dứt việc đoán mò lưu lượng truy cập từ AI Search và mạng xã hội nhờ các báo cáo chính chủ từ Google, Bing và ChatGPT, đồng thời đánh giá được độ phủ chính xác của quảng cáo TikTok Search Ads để tối ưu chi phí.",
+    "ifIgnored": "Doanh nghiệp sẽ bỏ lỡ bức tranh toàn cảnh về lượng truy cập đến từ các công cụ AI, đánh giá sai hiệu quả từ khóa tìm kiếm thương hiệu và có nguy cơ bị Google phạt hạ thứ hạng nếu website đang sử dụng kỹ thuật điều hướng nút quay lại.",
+    "actionChecklist": [
+      "Đăng ký và xác minh tài khoản doanh nghiệp trên ChatGPT Business Hub để theo dõi lượt nhắc và nhấp trang web.",
+      "Tích hợp tài khoản TikTok, YouTube và Instagram vào Google Search Console để đo lường lưu lượng tìm kiếm tự nhiên.",
+      "Sử dụng bộ lọc Branded Queries mới trong Google Search Console API thay cho các quy tắc Regex thủ công.",
+      "Kích hoạt chỉ số Impression Share trong TikTok Ads Manager để đánh giá dư địa tăng trưởng của quảng cáo tìm kiếm."
+    ],
+    "id": "real-2026-11-26-google-bing-chatgpt-va-b470de",
+    "publishedAt": "26/11/2026",
+    "sourceUrl": "https://www.searchenginejournal.com/what-seos-can-be-thankful-for-2026/598921/",
+    "source": "Search Engine Journal",
+    "image": {
+      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/11/thanksgiving-toast-2680903279.jpg",
+      "credit": "Ảnh: Search Engine Journal"
+    }
+  },
+  {
     "category": "AI Marketing",
     "platformIcon": "Sparkles",
     "title": "Ứng dụng phương pháp từ năm 1995 để giải bài toán đo lường hiển thị thương hiệu trên AI",
@@ -118,69 +181,6 @@
     "source": "Search Engine Journal",
     "image": {
       "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/11/chatgpt-ads-openai-featured.jpg",
-      "credit": "Ảnh: Search Engine Journal"
-    }
-  },
-  {
-    "category": "AI Marketing",
-    "platformIcon": "Sparkles",
-    "title": "Nghiên cứu mới về hành vi của trợ lý mua sắm AI khi gặp các ưu đãi giả",
-    "isHot": false,
-    "illustration": "ai-budget",
-    "readTime": "4 phút đọc",
-    "tags": [
-      "AI Shopping",
-      "Agentic AI",
-      "Thương mại điện tử",
-      "Nghiên cứu AI"
-    ],
-    "summary": "Một thử nghiệm thực tế với chín mô hình AI thực hiện mua sắm 6.156 lần cho thấy các trợ lý mua sắm AI mua các ưu đãi giả 37% số lần. Nghiên cứu cung cấp góc nhìn quan trọng về cách AI xử lý dữ liệu giá và đánh giá sản phẩm.",
-    "keyNumbers": [
-      {
-        "value": "6.156",
-        "label": "lần mua sắm thử nghiệm"
-      },
-      {
-        "value": "37%",
-        "label": "tỷ lệ AI mua ưu đãi giả"
-      },
-      {
-        "value": "69,97 USD",
-        "label": "chi phí API cho thử nghiệm"
-      }
-    ],
-    "content": [
-      {
-        "heading": "Thử nghiệm hành vi mua sắm của AI",
-        "body": "Nghiên cứu đã đưa chín mô hình AI khác nhau từ Anthropic, OpenAI và Google đi mua sắm sáu món quà Giáng sinh tổng cộng 6.156 lần. Các sản phẩm bao gồm nến thơm, dép, chăn, bộ chăm sóc da, loa Bluetooth và nồi chiên không dầu. Mỗi danh sách sản phẩm có mười lựa chọn, trong đó có một ưu đãi giả với điểm đánh giá tuyệt đối và giá rẻ bất thường."
-      },
-      {
-        "heading": "Tỷ lệ mắc lừa giữa các mô hình",
-        "body": "Kết quả cho thấy các mô hình AI mua ưu đãi giả 37% số lần xuất hiện. Đáng chú ý, mô hình Claude Opus là ngoại lệ duy nhất không mua ưu đãi giả lần nào trong 360 lần thử nghiệm của nó. Trong khi đó, các mô hình khác từ OpenAI và Google đều sập bẫy ở các mức độ từ 16% đến 60%."
-      },
-      {
-        "heading": "Sự mâu thuẫn trong lập luận của AI",
-        "body": "Có 315 lần AI tự viết rằng một ưu đãi trông đáng ngờ nhưng vẫn tiến hành mua ưu đãi giả đó 137 lần. Khi được yêu cầu tìm giá trị tốt nhất, tỷ lệ mua ưu đãi giả tăng lên 53%. Khi loại bỏ ưu đãi giả, các mô hình chọn danh sách có điểm đánh giá 4,9 sao chiếm 78% số lần mua."
-      },
-      {
-        "heading": "Phương pháp và quy mô dữ liệu",
-        "body": "Thử nghiệm sử dụng sáu món quà với mười danh sách giả lập định dạng Shopify, tiêu tốn 69,97 USD tiền phí gọi AI. Tác giả kiểm tra trực tiếp các mô hình thay vì thông qua ứng dụng giao diện người dùng thông thường để đảm bảo tính khách quan của dữ liệu."
-      }
-    ],
-    "impact": "Trưởng phòng Marketing cần lưu ý rằng các tác nhân AI khi thực hiện mua sắm thay con người rất dễ bị đánh lừa bởi các chỉ số bề nổi như điểm đánh giá hoàn hảo và giá siêu rẻ, ảnh hưởng trực tiếp đến cách thương hiệu cần định vị uy tín trong kỷ nguyên AI shopping.",
-    "ifIgnored": "Nếu bỏ qua xu hướng tiêu dùng qua trợ lý AI, chiến lược tối ưu hóa sản phẩm của doanh nghiệp có thể bỏ lỡ việc xây dựng các tín hiệu dữ liệu đáng tin cậy mà các mô hình AI tìm kiếm khi đưa ra quyết định mua hàng thay khách hàng.",
-    "actionChecklist": [
-      "Đánh giá lại cách sản phẩm hiển thị các chỉ số đánh giá và mức giá trên các nền tảng thương mại điện tử.",
-      "Theo dõi sát sao cách các tác nhân AI tương tác và diễn giải dữ liệu sản phẩm của doanh nghiệp.",
-      "Kiểm tra tính minh bạch và độ chính xác của các thông tin định giá để không bị nhầm lẫn với các tín hiệu giả.",
-      "Chuẩn bị chiến lược tối ưu hóa dữ liệu cấu trúc để AI dễ dàng nhận diện giá trị thực của sản phẩm."
-    ],
-    "id": "real-2026-11-25-nghien-cuu-moi-ve-954b23",
-    "publishedAt": "25/11/2026",
-    "sourceUrl": "https://www.searchenginejournal.com/ai-shopping-agents-bought-a-fake-deal-37-of-the-time-claude-opus-never-did/598682/",
-    "source": "Search Engine Journal",
-    "image": {
-      "url": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/11/ai-shopping-featured-598682-1600x840-1.webp",
       "credit": "Ảnh: Search Engine Journal"
     }
   },
